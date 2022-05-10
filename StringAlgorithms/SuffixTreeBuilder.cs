@@ -1,4 +1,5 @@
-﻿
+﻿using static StringAlgorithms.StringUtilities;
+
 namespace StringAlgorithms
 {
     /// <summary>
@@ -17,6 +18,14 @@ namespace StringAlgorithms
     /// <param name="Children">The children of the node, indexed by prefix paths. Empty collection for leaves.</param>
     public record SuffixTreeNode(IDictionary<PrefixPath, SuffixTreeNode> Children)
     {
+        /// <summary>
+        /// Builds a Suffix Tree leaf, i.e. a node with no children.
+        /// </summary>
+        public SuffixTreeNode()
+            : this(new Dictionary<PrefixPath, SuffixTreeNode> { }) 
+        { 
+        }
+
         /// <summary>
         /// Indexes into the children of this node, by prefix path.
         /// </summary>
@@ -55,7 +64,7 @@ namespace StringAlgorithms
                 throw new ArgumentException($"{nameof(terminator)} shouldn't be included in {nameof(text)}");
 
             text += terminator;
-            var root = new SuffixTreeNode(new Dictionary<PrefixPath, SuffixTreeNode> { });
+            var root = new SuffixTreeNode();
 
             for (var currentSuffixBeginIndex = 0; currentSuffixBeginIndex < text.Length; currentSuffixBeginIndex++)
                 IncludeSuffixIntoTree(text, currentSuffixBeginIndex, root);
@@ -66,23 +75,47 @@ namespace StringAlgorithms
         private static void IncludeSuffixIntoTree(string text, int suffixBeginIndex, SuffixTreeNode root)
         {
             var currentNode = root;
-            var prefixPathWithTheSameFirstChar = currentNode.Children.Keys.SingleOrDefault(
+            var prefixPathSame1stChar = currentNode.Children.Keys.SingleOrDefault(
                 prefixPath => text[prefixPath.Start] == text[suffixBeginIndex]);
 
-            if (prefixPathWithTheSameFirstChar == null)
+            if (prefixPathSame1stChar == null)
             {
                 var prefixPath = new PrefixPath(suffixBeginIndex, text.Length - suffixBeginIndex);
-                currentNode.Children[prefixPath] =
-                    new SuffixTreeNode(new Dictionary<PrefixPath, SuffixTreeNode> { });
+                currentNode.Children[prefixPath] = new SuffixTreeNode(); 
             }
             else
             {
-                // Compare text[currentSuffixBeginIndex, ...] and text[prefixPathWithTheSameFirstChar.Start, ...] for
-                // longest prefix in common
+                // Compare text[suffixBeginIndex, ...] and text[prefixPathWithTheSameFirstChar.Start, ...] for longest
+                // prefix in common. If the prefix in common is shorter than the prefix path with the same first char,
+                // create an intermediate node, push down the child pointed by the prefix path in the current node and
+                // add a new node for the reminder of text[suffixBeginIndex, ...] as second child of the intermediate.
+                // Otherwise, eat prefixLength chars from the prefix path, move to the child pointed by the prefix path
+                // entirely matching the beginning of the current suffix and repeat the same operation.
 
-                //if (currentSuffixBeginIndex < )
+                var prefixLength = LongestPrefixInCommon(
+                    text[suffixBeginIndex..], 
+                    text.Substring(prefixPathSame1stChar.Start, prefixPathSame1stChar.Length));
 
-                //currentNode = currentNode.Children[prefixPathWithTheSameFirstChar]
+                if (prefixLength < prefixPathSame1stChar.Length)
+                {
+                    var oldChild = currentNode[prefixPathSame1stChar];
+                    var newLeaf = new SuffixTreeNode();
+                    var newIntermediate = new SuffixTreeNode(new Dictionary<PrefixPath, SuffixTreeNode>() 
+                    {
+                        [new (
+                            prefixPathSame1stChar.Start + prefixLength, 
+                            prefixPathSame1stChar.Length - prefixLength)] = oldChild,
+                        [new (
+                            suffixBeginIndex + prefixLength, 
+                            text.Length - suffixBeginIndex - prefixLength)] = newLeaf,
+                    });
+                    currentNode.Children.Remove(prefixPathSame1stChar);
+                    currentNode.Children[new (prefixPathSame1stChar.Start, prefixLength)] = newIntermediate;
+                }
+                else
+                {
+                    IncludeSuffixIntoTree(text, suffixBeginIndex + prefixLength, currentNode[prefixPathSame1stChar]);
+                }
             }
         }
     }
