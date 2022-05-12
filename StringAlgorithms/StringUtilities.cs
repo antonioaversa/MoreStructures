@@ -1,26 +1,25 @@
 ﻿
-namespace StringAlgorithms
+namespace StringAlgorithms;
+
+/// <summary>
+/// Generic utilities and extensions for strings.
+/// </summary>
+public class StringUtilities
 {
     /// <summary>
-    /// Generic utilities and extensions for strings.
+    /// Returns the length of the longest prefix in common between the provided strings.
     /// </summary>
-    public class StringUtilities
+    /// <returns>
+    /// An integer betwen 0 and the length of the shortest of the strings provided.
+    /// </returns>
+    public static int LongestPrefixInCommon(string s1, string s2)
     {
-        /// <summary>
-        /// Returns the length of the longest prefix in common between the provided strings.
-        /// </summary>
-        /// <returns>
-        /// An integer betwen 0 and the length of the shortest of the strings provided.
-        /// </returns>
-        public static int LongestPrefixInCommon(string s1, string s2)
+        var shortestLength = Math.Min(s1.Length, s2.Length);
+        for (int i = 0; i < shortestLength; i++)
         {
-            var shortestLength = Math.Min(s1.Length, s2.Length);
-            for (int i = 0; i < shortestLength; i++)
-            {
-                if (s1[i] != s2[i])
-                    return i;
-            }
-            return shortestLength;
+            if (s1[i] != s2[i])
+                return i;
         }
+        return shortestLength;
     }
 }
