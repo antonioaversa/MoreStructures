@@ -13,6 +13,20 @@ namespace StringAlgorithms;
 public record SuffixTreePath(IEnumerable<KeyValuePair<PrefixPath, SuffixTreeNode>> PathNodes)
 {
     /// <summary>
+    /// An empty path, i.e. an empty sequence of Suffix Tree nodes.
+    /// </summary>
+    public static SuffixTreePath Empty() => 
+        new(Enumerable.Empty<KeyValuePair<PrefixPath, SuffixTreeNode>>());
+
+    /// <summary>
+    /// A Suffix Tree path composed of a single node with its prefix path.
+    /// </summary>
+    /// <param name="prefixPath">The prefix path leading to the Suffix Tree node.</param>
+    /// <param name="node">The Suffix Tree node defining the singleton path.</param>
+    public static SuffixTreePath Singleton(PrefixPath prefixPath, SuffixTreeNode node) =>
+        new(Enumerable.Repeat(KeyValuePair.Create(prefixPath, node), 1));
+
+    /// <summary>
     /// A readonly view of the private collection of path nodes.
     /// </summary>
     public IEnumerable<KeyValuePair<PrefixPath, SuffixTreeNode>> PathNodes { get; } = PathNodes.ToList().AsReadOnly();

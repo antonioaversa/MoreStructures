@@ -51,8 +51,7 @@ public static class SuffixTreeBuilder
             // entirely matching the beginning of the current suffix and repeat the same operation.
 
             var prefixLength = LongestPrefixInCommon(
-                text.AsString[suffixBeginIndex..], 
-                text.AsString.Substring(prefixPathSame1stChar.Start, prefixPathSame1stChar.Length));
+                text.AsString[suffixBeginIndex..], prefixPathSame1stChar.Of(text));
 
             var oldChild = nodeChildren[prefixPathSame1stChar];
             if (prefixLength < prefixPathSame1stChar.Length)

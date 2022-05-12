@@ -63,6 +63,5 @@ public record SuffixTreeNode(IDictionary<PrefixPath, SuffixTreeNode> Children)
     /// <param name="text">The text with terminator, whose suffixes have to be extracted.</param>
     /// <returns>A sequence of strings, each one being a suffix.</returns>
     public IEnumerable<string> GetAllSuffixesFor(TextWithTerminator text) =>
-        GetAllNodeToLeafPaths().Select(rootToLeafPath => rootToLeafPath.Suffix(text));
-    
+        GetAllNodeToLeafPaths().Select(rootToLeafPath => rootToLeafPath.Suffix(text));   
 }

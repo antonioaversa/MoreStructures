@@ -31,4 +31,10 @@ public record PrefixPath(int Start, int Length)
         (order.HasFlag(AdjacencyOrder.Before) && Start + Length == prefixPath2.Start) || 
         (order.HasFlag(AdjacencyOrder.After) && prefixPath2.Start + prefixPath2.Length == Start);
 
+    /// <summary>
+    /// Returns the substring of the provided text with terminator, identified by this prefix path.
+    /// </summary>
+    /// <param name="text">The text, to apply the prefix path to.</param>
+    /// <returns>The substring of text, as a plain string.</returns>
+    public string Of(TextWithTerminator text) => text.AsString.Substring(Start, Length);
 }

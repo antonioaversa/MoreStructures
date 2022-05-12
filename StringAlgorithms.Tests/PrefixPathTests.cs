@@ -16,4 +16,15 @@ public class PrefixPathTests
         Assert.IsTrue(new PrefixPath(1, 2).IsAdjacentTo(new(0, 1), PrefixPath.AdjacencyOrder.After));
         Assert.IsTrue(new PrefixPath(1, 2).IsAdjacentTo(new(0, 1), PrefixPath.AdjacencyOrder.BeforeOrAfter));
     }
+
+    [TestMethod]
+    public void Of()
+    {
+        Assert.IsTrue(new PrefixPath(0, 0).Of(new("", '$')) == "");
+        Assert.IsTrue(new PrefixPath(0, 1).Of(new("", '$')) == "$");
+        Assert.IsTrue(new PrefixPath(0, 0).Of(new("a", '$')) == "");
+        Assert.IsTrue(new PrefixPath(0, 1).Of(new("a", '$')) == "a");
+        Assert.IsTrue(new PrefixPath(0, 2).Of(new("a", '$')) == "a$");
+    }
+
 }
