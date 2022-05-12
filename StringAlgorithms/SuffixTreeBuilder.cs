@@ -3,16 +3,10 @@
 namespace StringAlgorithms;
 
 /// <summary>
-/// Exposes utility methods to build Suffix Trees, such as <see cref="Build(string, char)"/>.
+/// Exposes utility methods to build Suffix Trees, such as <see cref="Build(TextWithTerminator)"/>.
 /// </summary>
 public static class SuffixTreeBuilder
 {
-    /// <summary>
-    /// The special character used as a default terminator for the text to build the Suffix Tree of, when no custom 
-    /// terminator is specified. Should not be present in the text.
-    /// </summary>
-    public const char DefaultTerminator = '$';
-
     /// <summary>
     /// Build a Suffix Tree of the provided text, which is a n-ary search tree in which edges coming out of a node
     /// are substrings of text which identify prefixes shared by all paths to leaves, starting from the node.
@@ -23,29 +17,28 @@ public static class SuffixTreeBuilder
     /// <remarks>
     /// Substrings of text are identified by their start position in text and their length.
     /// </remarks>
-    public static SuffixTreeNode Build(string text, char terminator = DefaultTerminator)
+    public static SuffixTreeNode Build(TextWithTerminator text)
     {
-        if (text.Contains(terminator))
-            throw new ArgumentException($"{nameof(terminator)} shouldn't be included in {nameof(text)}");
-
-        text += terminator;
         var root = new SuffixTreeNode();
 
-        for (var currentSuffixBeginIndex = 0; currentSuffixBeginIndex < text.Length; currentSuffixBeginIndex++)
-            root = IncludeSuffixIntoTree(text, currentSuffixBeginIndex, root);
+        for (var suffixBeginIndex = 0; suffixBeginIndex < text.ToString().Length; suffixBeginIndex++)
+            root = IncludeSuffixIntoTree(text, suffixBeginIndex, root);
 
         return root;
     }
 
-    private static SuffixTreeNode IncludeSuffixIntoTree(string text, int suffixBeginIndex, SuffixTreeNode node)
+    public static SuffixTreeNode Build(string text) => Build(new TextWithTerminator(text));
+
+    private static SuffixTreeNode IncludeSuffixIntoTree(
+        TextWithTerminator text, int suffixBeginIndex, SuffixTreeNode node)
     {
         var nodeChildren = new Dictionary<PrefixPath, SuffixTreeNode>(node.Children);
         var prefixPathSame1stChar = nodeChildren.Keys.SingleOrDefault(
-            prefixPath => text[prefixPath.Start] == text[suffixBeginIndex]);
+            prefixPath => text.AsString[prefixPath.Start] == text.AsString[suffixBeginIndex]);
 
         if (prefixPathSame1stChar == null)
         {
-            var prefixPath = new PrefixPath(suffixBeginIndex, text.Length - suffixBeginIndex);
+            var prefixPath = new PrefixPath(suffixBeginIndex, text.AsString.Length - suffixBeginIndex);
             nodeChildren[prefixPath] = new SuffixTreeNode();
         }
         else
@@ -58,8 +51,8 @@ public static class SuffixTreeBuilder
             // entirely matching the beginning of the current suffix and repeat the same operation.
 
             var prefixLength = LongestPrefixInCommon(
-                text[suffixBeginIndex..], 
-                text.Substring(prefixPathSame1stChar.Start, prefixPathSame1stChar.Length));
+                text.AsString[suffixBeginIndex..], 
+                text.AsString.Substring(prefixPathSame1stChar.Start, prefixPathSame1stChar.Length));
 
             var oldChild = nodeChildren[prefixPathSame1stChar];
             if (prefixLength < prefixPathSame1stChar.Length)
@@ -72,7 +65,7 @@ public static class SuffixTreeBuilder
                         prefixPathSame1stChar.Length - prefixLength)] = oldChild,
                     [new(
                         suffixBeginIndex + prefixLength,
-                        text.Length - suffixBeginIndex - prefixLength)] = newLeaf,
+                        text.AsString.Length - suffixBeginIndex - prefixLength)] = newLeaf,
                 });
                 nodeChildren.Remove(prefixPathSame1stChar);
                 nodeChildren[new(prefixPathSame1stChar.Start, prefixLength)] = newIntermediate;

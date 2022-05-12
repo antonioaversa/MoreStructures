@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Linq;
-using System.Text;
 using static StringAlgorithms.SuffixTreeBuilder;
+using static StringAlgorithms.TextWithTerminator;
 
 namespace StringAlgorithms.Tests;
 
@@ -159,29 +159,32 @@ public class SuffixTreeBuilderTests
     }
 
     [TestMethod]
-    public void Build_Invariant_AllRootToLeafPathsHaveToBeSuffixes()
+    public void Build_ReturnsOnlySuffixes()
     {
-        var text = "aababcabcd";
-        var terminator = DefaultTerminator;
-        var textWithTerminator = text + terminator;
-        SuffixTreeNode root = Build(text, terminator);
+        var text = new TextWithTerminator("aababcabcd");
+        SuffixTreeNode root = Build(text);
 
         foreach (var rootToLeafPath in root.GetAllNodeToLeafPaths())
         {
-            var suffix = rootToLeafPath.PathNodes.Aggregate(new StringBuilder(),
-                (acc, node) => acc.Append(textWithTerminator.AsSpan(node.Key.Start, node.Key.Length)));
-            Assert.IsTrue(textWithTerminator.EndsWith(suffix.ToString()));
+            var suffix = rootToLeafPath.Suffix(text);
+            Assert.IsTrue(text.AsString.EndsWith(suffix.ToString()));
         }
     }
 
     [TestMethod]
     public void Build_ReturnsAllSuffixes()
     {
-        var text = "aababcabcd";
-        var terminator = DefaultTerminator;
-        var textWithTerminator = text + terminator;
-        SuffixTreeNode root = Build(text, terminator);
+        var text = new TextWithTerminator("aababcabcd");
+        var allSuffixes = Enumerable
+            .Range(0, text.AsString.Length)
+            .Select(i => text.AsString[i..])
+            .ToHashSet();
 
+        var root = Build(text);
+        var suffixes = root
+            .GetAllSuffixesFor(text)
+            .ToHashSet();
 
+        Assert.IsTrue(allSuffixes.SetEquals(suffixes));
     }
 }

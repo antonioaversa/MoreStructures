@@ -45,6 +45,18 @@ public class SuffixTreeNodeTests
         Assert.AreEqual(1, CountOccurrencesByPrefixPaths(rootToLeafPaths, new PrefixPath(3, 1)));
     }
 
+    [TestMethod]
+    public void GetAllSuffixesFor_Correctness()
+    {
+        var text = new TextWithTerminator("abc");
+        var root = BuildSuffixTreeExample();
+        var suffixes = root.GetAllSuffixesFor(text);
+
+        var t = text.Terminator;
+        Assert.IsTrue(suffixes.OrderBy(s => s).SequenceEqual(
+            new List<string> { $"abc{t}", $"ab{t}", $"a{t}", $"{t}" }.OrderBy(s => s)));
+    }
+
     private static SuffixTreeNode BuildSuffixTreeExample()
     {
         return new SuffixTreeNode(new Dictionary<PrefixPath, SuffixTreeNode>
