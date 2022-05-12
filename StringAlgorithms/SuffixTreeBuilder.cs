@@ -2,40 +2,6 @@
 
 namespace StringAlgorithms
 {
-    /// <summary>
-    /// The index key of the collection of children of a Suffix Tree node, which identifies a substring in text, used 
-    /// as a selector to navigate the Suffix Tree.
-    /// </summary>
-    /// <param name="Start">The index of the first character of the prefix path in the text.</param>
-    /// <param name="Length">The length of the prefix path.</param>
-    public record PrefixPath(int Start, int Length)
-    {
-    }
-
-    /// <summary>
-    /// A node of a Suffix Tree, recursively pointing to its children node.
-    /// </summary>
-    /// <param name="Children">The children of the node, indexed by prefix paths. Empty collection for leaves.</param>
-    public record SuffixTreeNode(IDictionary<PrefixPath, SuffixTreeNode> Children)
-    {
-        /// <summary>
-        /// Builds a Suffix Tree leaf, i.e. a node with no children.
-        /// </summary>
-        public SuffixTreeNode()
-            : this(new Dictionary<PrefixPath, SuffixTreeNode> { }) 
-        { 
-        }
-
-        /// <summary>
-        /// Indexes into the children of this node, by prefix path.
-        /// </summary>
-        public SuffixTreeNode this[PrefixPath prefixPath] => Children[prefixPath];
-
-        /// <summary>
-        /// Whether this node is a leaf of the Suffix Tree (no children), or not.
-        /// </summary>
-        public bool IsLeaf => Children.Count == 0;
-    }
 
     /// <summary>
     /// Exposes utility methods to build Suffix Trees, such as <see cref="Build(string, char)"/>.

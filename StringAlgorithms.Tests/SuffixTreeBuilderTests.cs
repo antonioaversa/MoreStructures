@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using static StringAlgorithms.SuffixTreeBuilder;
 
@@ -155,6 +156,22 @@ namespace StringAlgorithms.Tests
             Assert.IsTrue(root[new(5, 1)][new(9, 2)].Children.Count == 0);
             Assert.IsTrue(root[new(9, 2)].Children.Count == 0);
             Assert.IsTrue(root[new(10, 1)].Children.Count == 0);
+        }
+
+        [TestMethod]
+        public void Build_Invariant_AllRootToLeafPathsHaveToBeSuffixes()
+        {
+            var text = "aababcabcd";
+            var terminator = DefaultTerminator;
+            var textWithTerminator = text + terminator;
+            SuffixTreeNode root = Build(text, terminator);
+
+            foreach (var rootToLeafPath in root.GetAllNodeToLeafPaths())
+            {
+                var suffix = rootToLeafPath.Aggregate(string.Empty,
+                    (acc, node) => acc + textWithTerminator.Substring(node.Key.Start, node.Key.Length));
+                Assert.IsTrue(textWithTerminator.EndsWith(suffix));
+            }
         }
     }
 }
