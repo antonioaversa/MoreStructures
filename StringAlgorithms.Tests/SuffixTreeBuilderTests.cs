@@ -7,7 +7,7 @@ using static StringAlgorithms.TextWithTerminator;
 namespace StringAlgorithms.Tests;
 
 [TestClass]
-public class SuffixTreeBuilderTests 
+public class SuffixTreeBuilderTests
 {
     [TestMethod]
     public void Build_EmptyString()
@@ -193,7 +193,32 @@ public class SuffixTreeBuilderTests
     {
         var text1 = new TextWithTerminator("abab");
         var root1 = Build(text1);
-        Assert.IsTrue(root1.Match(text1, "ab") is SuffixTreeMatch { Success : true });
+        Assert.IsTrue(root1.Match(text1, "ab") is SuffixTreeMatch { Success: true });
         Assert.IsTrue(root1.Match(text1, "abab") is SuffixTreeMatch { Success: true });
+    }
+
+    [TestMethod]
+    public void Build_StartLeftNullAtNonLeafNodes()
+    {
+        var text1 = new TextWithTerminator("abababab");
+        var root1 = Build(text1);
+        Assert.IsTrue((
+            from rootToLeafPath in root1.GetAllNodeToLeafPaths()
+            from nonLeafNode in rootToLeafPath.PathNodes.SkipLast(1)
+            select nonLeafNode.Value.Start == null)
+            .All(e => e));
+    }
+
+    [TestMethod]
+    public void Build_StartCorrectlySetAtLeafNodes()
+    {
+        var text1 = new TextWithTerminator("abababab");
+        var root1 = Build(text1);
+        Assert.IsTrue((
+            from rootToLeafPath in root1.GetAllNodeToLeafPaths()
+            let suffixStart = rootToLeafPath.PathNodes.Last().Value.Start ?? throw new Exception("Invalid leaf Start")
+            let suffix = rootToLeafPath.Suffix(text1)
+            select text1.AsString[suffixStart..] == suffix)
+            .All(e => e));
     }
 }

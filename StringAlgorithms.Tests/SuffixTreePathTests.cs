@@ -17,7 +17,7 @@ namespace StringAlgorithms
         [TestMethod]
         public void Singleton_Correctness()
         {
-            var node = new SuffixTreeNode();
+            var node = new SuffixTreeNode(0);
             var singletonPath = SuffixTreePath.Singleton(new(0, 1), node);
             Assert.AreEqual(1, singletonPath.PathNodes.Count());
             Assert.AreEqual(new(0, 1), singletonPath.PathNodes.Single().Key);
@@ -31,7 +31,7 @@ namespace StringAlgorithms
             if (path.PathNodes is IList<KeyValuePair<PrefixPath, SuffixTreeNode>> pathNodesAsList)
             {
                 Assert.ThrowsException<NotSupportedException>(() => 
-                    pathNodesAsList.Add(KeyValuePair.Create(new PrefixPath(0, 1), new SuffixTreeNode())));
+                    pathNodesAsList.Add(KeyValuePair.Create(new PrefixPath(0, 1), new SuffixTreeNode(0))));
             }
         }
 
@@ -41,7 +41,7 @@ namespace StringAlgorithms
             var pathNodes = new Dictionary<PrefixPath, SuffixTreeNode> { };
             var path = new SuffixTreePath(pathNodes);
             Assert.AreEqual(0, path.PathNodes.Count());
-            pathNodes[new(0, 1)] = new SuffixTreeNode();
+            pathNodes[new(0, 1)] = new SuffixTreeNode(0);
             Assert.AreEqual(0, path.PathNodes.Count());
         }
     }

@@ -18,11 +18,19 @@ public record SuffixTreeNode(IDictionary<PrefixPath, SuffixTreeNode> Children)
         = new ReadOnlyDictionary<PrefixPath, SuffixTreeNode>(new Dictionary<PrefixPath, SuffixTreeNode>(Children));
 
     /// <summary>
-    /// Builds a Suffix Tree leaf, i.e. a node with no children.
+    /// The index of the character, the path of Suffix Tree leading to this leaf starts with. Non-null for leaves only.
     /// </summary>
-    public SuffixTreeNode()
+    public int? Start { get; init; } = default;
+
+    /// <summary>
+    /// Builds a Suffix Tree leaf, i.e. a node with no children, and with the index of the 1st character of the suffix.
+    /// </summary>
+    public SuffixTreeNode(int start)
         : this(new Dictionary<PrefixPath, SuffixTreeNode> { }) 
-    { 
+    {
+        if (start < 0) throw new ArgumentOutOfRangeException(nameof(start), "Has to be non-negative.");
+
+        Start = start;
     }
 
     /// <summary>

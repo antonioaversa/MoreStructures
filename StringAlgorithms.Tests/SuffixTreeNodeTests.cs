@@ -15,7 +15,7 @@ public class SuffixTreeNodeTests
         Assert.ThrowsException<NotSupportedException>(
             () => root.Children.Clear());
         Assert.ThrowsException<NotSupportedException>(
-            () => root.Children[root.Children.First().Key] = new SuffixTreeNode());
+            () => root.Children[root.Children.First().Key] = new SuffixTreeNode(0));
         Assert.ThrowsException<NotSupportedException>(
             () => root.Children.Remove(root.Children.First().Key));
     }
@@ -27,7 +27,7 @@ public class SuffixTreeNodeTests
         var root = new SuffixTreeNode(rootChildren);
         Assert.IsTrue(root.IsLeaf);
 
-        rootChildren.Add(new(0, 1), new SuffixTreeNode());
+        rootChildren.Add(new(0, 1), new SuffixTreeNode(0));
         Assert.IsTrue(root.IsLeaf);
     }
 
@@ -65,12 +65,12 @@ public class SuffixTreeNodeTests
             {
                 [new(1, 1)] = new SuffixTreeNode(new Dictionary<PrefixPath, SuffixTreeNode>
                 {
-                    [new(2, 2)] = new SuffixTreeNode(),
-                    [new(3, 1)] = new SuffixTreeNode(),
+                    [new(2, 2)] = new SuffixTreeNode(0),
+                    [new(3, 1)] = new SuffixTreeNode(1),
                 }),
-                [new(3, 1)] = new SuffixTreeNode(),
+                [new(3, 1)] = new SuffixTreeNode(2),
             }),
-            [new(3, 1)] = new SuffixTreeNode(),
+            [new(3, 1)] = new SuffixTreeNode(3),
         });
     }
 
