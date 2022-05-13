@@ -26,9 +26,9 @@ public static class SuffixTreeMatcher
             throw new ArgumentException(nameof(pattern));
 
         var longestMatch = (
-            from prefixPath in node.Children.Keys
-            let length = LongestPrefixInCommon(prefixPath.Of(text), pattern[textStart..])
-            select new { Length = length, PrefixPath = prefixPath })
+            from edge in node.Children.Keys
+            let length = LongestPrefixInCommon(edge.Of(text), pattern[textStart..])
+            select new { Length = length, Edge = edge })
             .MaxBy(r => r.Length)
             .FirstOrDefault();
 
@@ -38,15 +38,15 @@ public static class SuffixTreeMatcher
 
         if (longestMatch.Length == pattern.Length - textStart)
             return new SuffixTreeMatch(
-                true, textStart + longestMatch.PrefixPath.Start, longestMatch.Length, SuffixTreePath.Empty());
+                true, textStart + longestMatch.Edge.Start, longestMatch.Length, SuffixTreePath.Empty());
 
-        // The prefix path has been fully matched but pattern is longer => chars left to match
-        var childNode = node.Children[longestMatch.PrefixPath];
+        // The edge has been fully matched but pattern is longer => chars left to match
+        var childNode = node.Children[longestMatch.Edge];
         var childMatch = Match(childNode, text, pattern, textStart + longestMatch.Length);
-        var pathToChild = SuffixTreePath.Singleton(longestMatch.PrefixPath, childNode);
+        var pathToChild = SuffixTreePath.Singleton(longestMatch.Edge, childNode);
         return new SuffixTreeMatch(
             childMatch.Success, 
-            textStart + longestMatch.PrefixPath.Start, 
+            textStart + longestMatch.Edge.Start, 
             longestMatch.Length + childMatch.MatchedChars,
             pathToChild.Concat(childMatch.Path));
     }

@@ -28,18 +28,18 @@ public class SuffixTreePathTests
     [TestMethod]
     public void PathNodes_ImmutabilityOnGet()
     {
-        var path = new SuffixTreePath(new Dictionary<PrefixPath, SuffixTreeNode> { });
-        if (path.PathNodes is IList<KeyValuePair<PrefixPath, SuffixTreeNode>> pathNodesAsList)
+        var path = new SuffixTreePath(new Dictionary<SuffixTreeEdge, SuffixTreeNode> { });
+        if (path.PathNodes is IList<KeyValuePair<SuffixTreeEdge, SuffixTreeNode>> pathNodesAsList)
         {
             Assert.ThrowsException<NotSupportedException>(() => 
-                pathNodesAsList.Add(KeyValuePair.Create(new PrefixPath(0, 1), new SuffixTreeNode(0))));
+                pathNodesAsList.Add(KeyValuePair.Create(new SuffixTreeEdge(0, 1), new SuffixTreeNode(0))));
         }
     }
 
     [TestMethod]
     public void PathNodes_ImmutabilityOnCtorParam()
     {
-        var pathNodes = new Dictionary<PrefixPath, SuffixTreeNode> { };
+        var pathNodes = new Dictionary<SuffixTreeEdge, SuffixTreeNode> { };
         var path = new SuffixTreePath(pathNodes);
         Assert.AreEqual(0, path.PathNodes.Count());
         pathNodes[new(0, 1)] = new SuffixTreeNode(0);

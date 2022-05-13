@@ -32,48 +32,48 @@ public static class SuffixTreeBuilder
     private static SuffixTreeNode IncludeSuffixIntoTree(
         TextWithTerminator text, int suffixCurrentIndex, int suffixIndex, SuffixTreeNode node)
     {
-        var nodeChildren = new Dictionary<PrefixPath, SuffixTreeNode>(node.Children);
-        var prefixPathSame1stChar = nodeChildren.Keys.SingleOrDefault(
-            prefixPath => text.AsString[prefixPath.Start] == text.AsString[suffixCurrentIndex]);
+        var nodeChildren = new Dictionary<SuffixTreeEdge, SuffixTreeNode>(node.Children);
+        var edgeSame1stChar = nodeChildren.Keys.SingleOrDefault(
+            edge => text.AsString[edge.Start] == text.AsString[suffixCurrentIndex]);
 
-        if (prefixPathSame1stChar == null)
+        if (edgeSame1stChar == null)
         {
-            var prefixPath = new PrefixPath(suffixCurrentIndex, text.AsString.Length - suffixCurrentIndex);
-            nodeChildren[prefixPath] = new SuffixTreeNode(suffixIndex);
+            var edge = new SuffixTreeEdge(suffixCurrentIndex, text.AsString.Length - suffixCurrentIndex);
+            nodeChildren[edge] = new SuffixTreeNode(suffixIndex);
         }
         else
         {
-            // Compare text[suffixBeginIndex, ...] and text[prefixPathWithTheSameFirstChar.Start, ...] for longest
-            // prefix in common. If the prefix in common is shorter than the prefix path with the same first char,
-            // create an intermediate node, push down the child pointed by the prefix path in the current node and
-            // add a new node for the reminder of text[suffixBeginIndex, ...] as second child of the intermediate.
-            // Otherwise, eat prefixLength chars from the prefix path, move to the child pointed by the prefix path
-            // entirely matching the beginning of the current suffix and repeat the same operation.
+            // Compare text[suffixCurrentIndex, ...] and text[edgeSame1stChar.Start, ...] for longest edge in common.
+            // If the prefix in common is shorter than the edge with the same first char, create an intermediate node,
+            // push down the child pointed by the edge in the current node and add a new node for the reminder of
+            // text[suffixCurrentIndex, ...] as second child of the intermediate.
+            // Otherwise, eat prefixLength chars from the edge, move to the child pointed by the edge entirely matching
+            // the beginning of the current suffix and repeat the same operation.
 
             var prefixLength = LongestPrefixInCommon(
-                text.AsString[suffixCurrentIndex..], prefixPathSame1stChar.Of(text));
+                text.AsString[suffixCurrentIndex..], edgeSame1stChar.Of(text));
 
-            var oldChild = nodeChildren[prefixPathSame1stChar];
-            if (prefixLength < prefixPathSame1stChar.Length)
+            var oldChild = nodeChildren[edgeSame1stChar];
+            if (prefixLength < edgeSame1stChar.Length)
             {
                 var newLeaf = new SuffixTreeNode(suffixIndex);
-                var newIntermediate = new SuffixTreeNode(new Dictionary<PrefixPath, SuffixTreeNode>()
+                var newIntermediate = new SuffixTreeNode(new Dictionary<SuffixTreeEdge, SuffixTreeNode>()
                 {
                     [new(
-                        prefixPathSame1stChar.Start + prefixLength,
-                        prefixPathSame1stChar.Length - prefixLength)] = oldChild,
+                        edgeSame1stChar.Start + prefixLength,
+                        edgeSame1stChar.Length - prefixLength)] = oldChild,
                     [new(
                         suffixCurrentIndex + prefixLength,
                         text.AsString.Length - suffixCurrentIndex - prefixLength)] = newLeaf,
                 });
-                nodeChildren.Remove(prefixPathSame1stChar);
-                nodeChildren[new(prefixPathSame1stChar.Start, prefixLength)] = newIntermediate;
+                nodeChildren.Remove(edgeSame1stChar);
+                nodeChildren[new(edgeSame1stChar.Start, prefixLength)] = newIntermediate;
             }
             else
             {
                 var newChild = IncludeSuffixIntoTree(text, suffixCurrentIndex + prefixLength, suffixIndex, oldChild);
-                nodeChildren.Remove(prefixPathSame1stChar);
-                nodeChildren[prefixPathSame1stChar] = newChild;
+                nodeChildren.Remove(edgeSame1stChar);
+                nodeChildren[edgeSame1stChar] = newChild;
             }
 
             return new SuffixTreeNode(nodeChildren);

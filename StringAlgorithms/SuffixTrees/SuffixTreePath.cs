@@ -8,28 +8,28 @@ namespace StringAlgorithms.SuffixTrees;
 /// <param name="PathNodes">The sequence of Suffix nodes respecting the parent-child relationship.</param>
 /// <remarks>
 /// Immutability is guaranteed by cloning the provided path nodes collection and exposing a readonly view, combined 
-/// with the immutability of underlying data structures (prefix paths and Suffix Tree nodes).
+/// with the immutability of underlying data structures (Suffix Tree edges and nodes).
 /// </remarks>
-public record SuffixTreePath(IEnumerable<KeyValuePair<PrefixPath, SuffixTreeNode>> PathNodes)
+public record SuffixTreePath(IEnumerable<KeyValuePair<SuffixTreeEdge, SuffixTreeNode>> PathNodes)
 {
     /// <summary>
     /// An empty path, i.e. an empty sequence of Suffix Tree nodes.
     /// </summary>
     public static SuffixTreePath Empty() => 
-        new(Enumerable.Empty<KeyValuePair<PrefixPath, SuffixTreeNode>>());
+        new(Enumerable.Empty<KeyValuePair<SuffixTreeEdge, SuffixTreeNode>>());
 
     /// <summary>
-    /// A Suffix Tree path composed of a single node with its prefix path.
+    /// A Suffix Tree path composed of a single node with its incoming edge.
     /// </summary>
-    /// <param name="prefixPath">The prefix path leading to the Suffix Tree node.</param>
+    /// <param name="edge">The Suffix Tree edge leading to the Suffix Tree node.</param>
     /// <param name="node">The Suffix Tree node defining the singleton path.</param>
-    public static SuffixTreePath Singleton(PrefixPath prefixPath, SuffixTreeNode node) =>
-        new(Enumerable.Repeat(KeyValuePair.Create(prefixPath, node), 1));
+    public static SuffixTreePath Singleton(SuffixTreeEdge edge, SuffixTreeNode node) =>
+        new(Enumerable.Repeat(KeyValuePair.Create(edge, node), 1));
 
     /// <summary>
     /// A readonly view of the private collection of path nodes.
     /// </summary>
-    public IEnumerable<KeyValuePair<PrefixPath, SuffixTreeNode>> PathNodes { get; } = PathNodes.ToList().AsReadOnly();
+    public IEnumerable<KeyValuePair<SuffixTreeEdge, SuffixTreeNode>> PathNodes { get; } = PathNodes.ToList().AsReadOnly();
 
     /// <summary>
     /// Append the provided path of Suffix Tree nodes to this path.

@@ -5,17 +5,17 @@ namespace StringAlgorithms.SuffixTrees;
 /// <summary>
 /// An immutable node of an immutable Suffix Tree, recursively pointing to its children node.
 /// </summary>
-/// <param name="Children">The children of the node, indexed by prefix paths. Empty collection for leaves.</param>
+/// <param name="Children">The children of the node, indexed by edges. Empty collection for leaves.</param>
 /// <remarks>
 /// Immutability is guaranteed by copying the provided children collection and exposing a readonly view.
 /// </remarks>
-public record SuffixTreeNode(IDictionary<PrefixPath, SuffixTreeNode> Children)
+public record SuffixTreeNode(IDictionary<SuffixTreeEdge, SuffixTreeNode> Children)
 {
     /// <summary>
     /// A readonly view of the children private collection of this Suffix Tree node.
     /// </summary>
-    public IDictionary<PrefixPath, SuffixTreeNode> Children { get; } 
-        = new ReadOnlyDictionary<PrefixPath, SuffixTreeNode>(new Dictionary<PrefixPath, SuffixTreeNode>(Children));
+    public IDictionary<SuffixTreeEdge, SuffixTreeNode> Children { get; } 
+        = new ReadOnlyDictionary<SuffixTreeEdge, SuffixTreeNode>(new Dictionary<SuffixTreeEdge, SuffixTreeNode>(Children));
 
     /// <summary>
     /// The index of the character, the path of Suffix Tree leading to this leaf starts with. Non-null for leaves only.
@@ -26,7 +26,7 @@ public record SuffixTreeNode(IDictionary<PrefixPath, SuffixTreeNode> Children)
     /// Builds a Suffix Tree leaf, i.e. a node with no children, and with the index of the 1st character of the suffix.
     /// </summary>
     public SuffixTreeNode(int start)
-        : this(new Dictionary<PrefixPath, SuffixTreeNode> { }) 
+        : this(new Dictionary<SuffixTreeEdge, SuffixTreeNode> { }) 
     {
         if (start < 0) throw new ArgumentOutOfRangeException(nameof(start), "Has to be non-negative.");
 
@@ -34,9 +34,9 @@ public record SuffixTreeNode(IDictionary<PrefixPath, SuffixTreeNode> Children)
     }
 
     /// <summary>
-    /// Indexes into the children of this node, by prefix path.
+    /// Indexes into the children of this node, by edge.
     /// </summary>
-    public SuffixTreeNode this[PrefixPath prefixPath] => Children[prefixPath];
+    public SuffixTreeNode this[SuffixTreeEdge edge] => Children[edge];
 
     /// <summary>
     /// Whether this node is a leaf of the Suffix Tree (no children), or not.
@@ -46,21 +46,21 @@ public record SuffixTreeNode(IDictionary<PrefixPath, SuffixTreeNode> Children)
     /// <summary>
     /// Returns all Suffix Tree paths from this node to a leaf.
     /// </summary>
-    /// <returns>A sequence of pairs of prefix path and Suffix Tree nodes.</returns>
+    /// <returns>A sequence of pairs of Suffix Tree node and its incoming edge.</returns>
     public IEnumerable<SuffixTreePath> GetAllNodeToLeafPaths()
     {
-        foreach (var prefixPathAndChild in Children)
+        foreach (var edgeAndChild in Children)
         {
-            var childToLeafPaths = prefixPathAndChild.Value.GetAllNodeToLeafPaths();
-            var prefixPathAndChildSingleton = Enumerable.Repeat(prefixPathAndChild, 1);
+            var childToLeafPaths = edgeAndChild.Value.GetAllNodeToLeafPaths();
+            var edgeAndChildSingleton = Enumerable.Repeat(edgeAndChild, 1);
             if (childToLeafPaths.Any())
             {
                 foreach (var childToLeafPath in childToLeafPaths)
-                    yield return new SuffixTreePath(prefixPathAndChildSingleton).Concat(childToLeafPath);
+                    yield return new SuffixTreePath(edgeAndChildSingleton).Concat(childToLeafPath);
             }
             else
             {
-                yield return new SuffixTreePath(prefixPathAndChildSingleton);
+                yield return new SuffixTreePath(edgeAndChildSingleton);
             }
         }
     }
