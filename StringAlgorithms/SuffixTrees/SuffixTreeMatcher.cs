@@ -1,4 +1,4 @@
-﻿namespace StringAlgorithms;
+﻿namespace StringAlgorithms.SuffixTrees;
 
 using MoreLinq;
 using static StringUtilities;

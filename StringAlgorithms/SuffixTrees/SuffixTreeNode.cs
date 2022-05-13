@@ -1,6 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 
-namespace StringAlgorithms;
+namespace StringAlgorithms.SuffixTrees;
 
 /// <summary>
 /// An immutable node of an immutable Suffix Tree, recursively pointing to its children node.

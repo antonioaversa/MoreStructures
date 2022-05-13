@@ -1,10 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using StringAlgorithms.SuffixTrees;
 using System;
 using System.Linq;
-using static StringAlgorithms.SuffixTreeBuilder;
+using static StringAlgorithms.SuffixTrees.SuffixTreeBuilder;
 using static StringAlgorithms.TextWithTerminator;
 
-namespace StringAlgorithms.Tests;
+namespace StringAlgorithms.Tests.SuffixTrees;
 
 [TestClass]
 public class SuffixTreeBuilderTests

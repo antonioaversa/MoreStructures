@@ -1,6 +1,6 @@
 ﻿using static StringAlgorithms.StringUtilities;
 
-namespace StringAlgorithms;
+namespace StringAlgorithms.SuffixTrees;
 
 /// <summary>
 /// Exposes utility methods to build Suffix Trees, such as <see cref="Build(TextWithTerminator)"/>.

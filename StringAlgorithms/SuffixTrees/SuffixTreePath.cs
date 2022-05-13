@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace StringAlgorithms;
+namespace StringAlgorithms.SuffixTrees;
 
 /// <summary>
 /// An immutable sequence of Suffix Tree nodes, where each node is child of its predecessor and parent of its successor.
