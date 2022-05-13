@@ -13,13 +13,13 @@ namespace StringAlgorithms.SuffixTrees;
 public record SuffixTreePath(IEnumerable<KeyValuePair<SuffixTreeEdge, SuffixTreeNode>> PathNodes)
 {
     /// <summary>
-    /// An empty path, i.e. an empty sequence of Suffix Tree nodes.
+    /// An empty path, i.e. an empty sequence of nodes.
     /// </summary>
-    public static SuffixTreePath Empty() => 
+    public static SuffixTreePath Empty() =>
         new(Enumerable.Empty<KeyValuePair<SuffixTreeEdge, SuffixTreeNode>>());
 
     /// <summary>
-    /// A Suffix Tree path composed of a single node with its incoming edge.
+    /// A path composed of a single node with its incoming edge.
     /// </summary>
     /// <param name="edge">The Suffix Tree edge leading to the Suffix Tree node.</param>
     /// <param name="node">The Suffix Tree node defining the singleton path.</param>
@@ -27,9 +27,22 @@ public record SuffixTreePath(IEnumerable<KeyValuePair<SuffixTreeEdge, SuffixTree
         new(Enumerable.Repeat(KeyValuePair.Create(edge, node), 1));
 
     /// <summary>
+    /// A path composed by the provided couples of edges and nodes.
+    /// </summary>
+    /// <param name="pathNodes">A sequence of couples (edge, node).</param>
+    public static SuffixTreePath From(params (SuffixTreeEdge edge, SuffixTreeNode node)[] pathNodes) =>
+        new(pathNodes.Select(pathNode => KeyValuePair.Create(pathNode.edge, pathNode.node)));
+
+    /// <summary>
     /// A readonly view of the private collection of path nodes.
     /// </summary>
     public IEnumerable<KeyValuePair<SuffixTreeEdge, SuffixTreeNode>> PathNodes { get; } = PathNodes.ToList().AsReadOnly();
+
+    /// <summary>
+    /// The total length of all the edges in the path, i.e. the length of the concatenation of all strings which act
+    /// as edge selectors.
+    /// </summary>
+    public int TotalEdgesLength => PathNodes.Sum(pathNode => pathNode.Key.Length);
 
     /// <summary>
     /// Append the provided path of Suffix Tree nodes to this path.

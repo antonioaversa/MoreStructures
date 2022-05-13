@@ -5,34 +5,43 @@ namespace StringAlgorithms.SuffixTrees;
 /// <summary>
 /// An immutable node of an immutable Suffix Tree, recursively pointing to its children node.
 /// </summary>
-/// <param name="Children">The children of the node, indexed by edges. Empty collection for leaves.</param>
+/// <param name="Children">The collection of children for the node, indexed by edges.</param>
+/// <param name="Start">
+/// The index of the character, the path of Suffix Tree leading to this leaf starts with. Non-null for leaves only.
+/// </param>
 /// <remarks>
 /// Immutability is guaranteed by copying the provided children collection and exposing a readonly view.
 /// </remarks>
-public record SuffixTreeNode(IDictionary<SuffixTreeEdge, SuffixTreeNode> Children)
+public abstract record SuffixTreeNode(IDictionary<SuffixTreeEdge, SuffixTreeNode> Children, int? Start)
 {
     /// <summary>
-    /// A readonly view of the children private collection of this Suffix Tree node.
+    /// Builds a Suffix Tree intermediate node, i.e. a node with children and their corresponding incoming edges.
+    /// </summary>
+    public record Intermediate(IDictionary<SuffixTreeEdge, SuffixTreeNode> Children) 
+        : SuffixTreeNode(Children, null) { }
+
+    /// <summary>
+    /// Builds a Suffix Tree leaf, i.e. a node with no children and the start index of the suffix in the text.
+    /// </summary>
+    public record Leaf(int LeafStart) 
+        : SuffixTreeNode(new Dictionary<SuffixTreeEdge, SuffixTreeNode> { }, LeafStart) { }
+
+    /// <summary>
+    /// A readonly view of the children private collection of this Suffix Tree node. Empty for leaves.
     /// </summary>
     public IDictionary<SuffixTreeEdge, SuffixTreeNode> Children { get; } 
-        = new ReadOnlyDictionary<SuffixTreeEdge, SuffixTreeNode>(new Dictionary<SuffixTreeEdge, SuffixTreeNode>(Children));
+        = (Children.Count > 0 && Start == null) || (Children.Count == 0 && Start != null)
+        ? new ReadOnlyDictionary<SuffixTreeEdge, SuffixTreeNode>(new Dictionary<SuffixTreeEdge, SuffixTreeNode>(Children))
+        : throw new ArgumentException($"Leafs needs to specificy a non-negative {nameof(Start)}.", nameof(Children));
 
     /// <summary>
-    /// The index of the character, the path of Suffix Tree leading to this leaf starts with. Non-null for leaves only.
+    /// <inheritdoc cref="SuffixTreeNode(IDictionary{SuffixTreeEdge, SuffixTreeNode}, int?)" 
+    /// path="/param[@name='Start']"/>
     /// </summary>
-    public int? Start { get; init; } = default;
-
-    /// <summary>
-    /// Builds a Suffix Tree leaf, i.e. a node with no children, and with the index of the 1st character of the suffix.
-    /// </summary>
-    /// <param name="start"><inheritdoc cref="Start" path="/summary"/></param>
-    public SuffixTreeNode(int start)
-        : this(new Dictionary<SuffixTreeEdge, SuffixTreeNode> { }) 
-    {
-        if (start < 0) throw new ArgumentOutOfRangeException(nameof(start), "Has to be non-negative.");
-
-        Start = start;
-    }
+    public int? Start { get; init; }
+        = (Children.Count > 0 && Start == null) || (Children.Count == 0 && Start != null)
+        ? Start
+        : throw new ArgumentException($"Leafs needs to specificy a non-negative {nameof(Start)}.", nameof(Children));
 
     /// <summary>
     /// Indexes into the children of this node, by edge.

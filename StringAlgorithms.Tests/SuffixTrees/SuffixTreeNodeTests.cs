@@ -23,7 +23,7 @@ public class SuffixTreeNodeTests
         Assert.ThrowsException<NotSupportedException>(
             () => root.Children.Clear());
         Assert.ThrowsException<NotSupportedException>(
-            () => root.Children[root.Children.First().Key] = new SuffixTreeNode(0));
+            () => root.Children[root.Children.First().Key] = new SuffixTreeNode.Leaf(0));
         Assert.ThrowsException<NotSupportedException>(
             () => root.Children.Remove(root.Children.First().Key));
     }
@@ -31,12 +31,16 @@ public class SuffixTreeNodeTests
     [TestMethod]
     public void Children_Immutability_FromCtorParam()
     {
-        var rootChildren = new Dictionary<SuffixTreeEdge, SuffixTreeNode> { };
-        var root = new SuffixTreeNode(rootChildren);
-        Assert.IsTrue(root.IsLeaf);
+        var rootChildren = new Dictionary<SuffixTreeEdge, SuffixTreeNode> 
+        {
+            [new(0, 2)] = new SuffixTreeNode.Leaf(0),
+            [new(1, 1)] = new SuffixTreeNode.Leaf(1),
+        };
+        var root = new SuffixTreeNode.Intermediate(rootChildren);
+        Assert.AreEqual(2, root.Children.Count);
 
-        rootChildren.Add(new(0, 1), new SuffixTreeNode(0));
-        Assert.IsTrue(root.IsLeaf);
+        rootChildren.Add(new(0, 1), new SuffixTreeNode.Leaf(0));
+        Assert.AreEqual(2, root.Children.Count);
     }
 
     [TestMethod]
@@ -68,20 +72,20 @@ public class SuffixTreeNodeTests
     /// <remarks>
     /// Built from "aaa".
     /// </remarks>
-    private static SuffixTreeNode BuildSuffixTreeExample()
+    internal static SuffixTreeNode BuildSuffixTreeExample()
     {
-        return new SuffixTreeNode(new Dictionary<SuffixTreeEdge, SuffixTreeNode>
+        return new SuffixTreeNode.Intermediate(new Dictionary<SuffixTreeEdge, SuffixTreeNode>
         {
-            [new(0, 1)] = new SuffixTreeNode(new Dictionary<SuffixTreeEdge, SuffixTreeNode>
+            [new(0, 1)] = new SuffixTreeNode.Intermediate(new Dictionary<SuffixTreeEdge, SuffixTreeNode>
             {
-                [new(1, 1)] = new SuffixTreeNode(new Dictionary<SuffixTreeEdge, SuffixTreeNode>
+                [new(1, 1)] = new SuffixTreeNode.Intermediate(new Dictionary<SuffixTreeEdge, SuffixTreeNode>
                 {
-                    [new(2, 2)] = new SuffixTreeNode(0),
-                    [new(3, 1)] = new SuffixTreeNode(1),
+                    [new(2, 2)] = new SuffixTreeNode.Leaf(0),
+                    [new(3, 1)] = new SuffixTreeNode.Leaf(1),
                 }),
-                [new(3, 1)] = new SuffixTreeNode(2),
+                [new(3, 1)] = new SuffixTreeNode.Leaf(2),
             }),
-            [new(3, 1)] = new SuffixTreeNode(3),
+            [new(3, 1)] = new SuffixTreeNode.Leaf(3),
         });
     }
 

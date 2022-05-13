@@ -11,15 +11,14 @@ public static class SuffixTreeBuilder
     /// Build a Suffix Tree of the provided text, which is a n-ary search tree in which edges coming out of a node
     /// are substrings of text which identify edges shared by all paths to leaves, starting from the node.
     /// </summary>
-    /// <param name="text">The text to build the Suffix Tree of.</param>
-    /// <param name="terminator">A special character used as string terminator, not present in text.</param>
+    /// <param name="text">The text to build the Suffix Tree of, with its terminator (required for traversal).</param>
     /// <returns>The root node of the Suffix Tree.</returns>
     /// <remarks>
     /// Substrings of text are identified by their start position in text and their length.
     /// </remarks>
     public static SuffixTreeNode Build(TextWithTerminator text)
     {
-        var root = new SuffixTreeNode(0);
+        SuffixTreeNode root = new SuffixTreeNode.Leaf(0);
 
         for (var suffixIndex = 0; suffixIndex < text.ToString().Length; suffixIndex++)
             root = IncludeSuffixIntoTree(text, suffixIndex, suffixIndex, root);
@@ -27,9 +26,12 @@ public static class SuffixTreeBuilder
         return root;
     }
 
+    /// <summary><inheritdoc cref="Build(TextWithTerminator)"/></summary>
+    /// <param name="text">The text to build the Suffix Tree of, without any terminator (automatically added).</param>
+    /// <returns><inheritdoc cref="Build(TextWithTerminator)"/></returns>
     public static SuffixTreeNode Build(string text) => Build(new TextWithTerminator(text));
 
-    private static SuffixTreeNode IncludeSuffixIntoTree(
+    private static SuffixTreeNode.Intermediate IncludeSuffixIntoTree(
         TextWithTerminator text, int suffixCurrentIndex, int suffixIndex, SuffixTreeNode node)
     {
         var nodeChildren = new Dictionary<SuffixTreeEdge, SuffixTreeNode>(node.Children);
@@ -39,7 +41,7 @@ public static class SuffixTreeBuilder
         if (edgeSame1stChar == null)
         {
             var edge = new SuffixTreeEdge(suffixCurrentIndex, text.AsString.Length - suffixCurrentIndex);
-            nodeChildren[edge] = new SuffixTreeNode(suffixIndex);
+            nodeChildren[edge] = new SuffixTreeNode.Leaf(suffixIndex);
         }
         else
         {
@@ -56,8 +58,8 @@ public static class SuffixTreeBuilder
             var oldChild = nodeChildren[edgeSame1stChar];
             if (prefixLength < edgeSame1stChar.Length)
             {
-                var newLeaf = new SuffixTreeNode(suffixIndex);
-                var newIntermediate = new SuffixTreeNode(new Dictionary<SuffixTreeEdge, SuffixTreeNode>()
+                var newLeaf = new SuffixTreeNode.Leaf(suffixIndex);
+                var newIntermediate = new SuffixTreeNode.Intermediate(new Dictionary<SuffixTreeEdge, SuffixTreeNode>()
                 {
                     [new(
                         edgeSame1stChar.Start + prefixLength,
@@ -75,10 +77,8 @@ public static class SuffixTreeBuilder
                 nodeChildren.Remove(edgeSame1stChar);
                 nodeChildren[edgeSame1stChar] = newChild;
             }
-
-            return new SuffixTreeNode(nodeChildren);
         }
 
-        return new SuffixTreeNode(nodeChildren);
+        return new SuffixTreeNode.Intermediate(nodeChildren);
     }
 }

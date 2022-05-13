@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
 
 namespace StringAlgorithms.SuffixTrees.Tests;
 
@@ -59,5 +60,19 @@ public class SuffixTreeBuilderMatcherTests
         Assert.IsTrue(match is SuffixTreeMatch { Success: false, MatchedChars: 17 });
         match = suffixTree.Match(text, new("zabcdaabcbcadaabca"));
         Assert.IsTrue(match is SuffixTreeMatch { Success: false, MatchedChars: 0 });
+    }
+
+    [TestMethod]
+    public void Match_SuccessBeginAndPathCorrectness()
+    {
+        var text = new TextWithTerminator("abcdaabcbcadaabca");
+        var suffixTree = SuffixTreeBuilder.Build(text);
+
+        foreach (var pattern in new string[] { "ab", "abc", "abcdaabcbcadaabca", "b", "bc", "bcdaabcbcadaabca", "aab" })
+        {
+            Assert.IsTrue(suffixTree.Match(text, new(pattern)) is
+                SuffixTreeMatch { Success: true, Begin: var begin1, Path: var path1 } &&
+                text.AsString.Substring(begin1, path1.TotalEdgesLength) == path1.Suffix(text));
+        }
     }
 }
