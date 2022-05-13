@@ -25,6 +25,7 @@ public record SuffixTreeNode(IDictionary<SuffixTreeEdge, SuffixTreeNode> Childre
     /// <summary>
     /// Builds a Suffix Tree leaf, i.e. a node with no children, and with the index of the 1st character of the suffix.
     /// </summary>
+    /// <param name="start"><inheritdoc cref="Start" path="/summary"/></param>
     public SuffixTreeNode(int start)
         : this(new Dictionary<SuffixTreeEdge, SuffixTreeNode> { }) 
     {

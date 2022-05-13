@@ -1,14 +1,21 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using StringAlgorithms.SuffixTrees;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace StringAlgorithms.Tests;
+namespace StringAlgorithms.SuffixTrees.Tests;
 
 [TestClass]
 public class SuffixTreeNodeTests
 {
+    [TestMethod]
+    public void Indexer_RetrievesChild()
+    {
+        var root = BuildSuffixTreeExample();
+        Assert.AreEqual(root.Children[new(0, 1)], root[new(0, 1)]);
+        Assert.AreEqual(root.Children[new(3, 1)], root[new(3, 1)]);
+    }
+
     [TestMethod]
     public void Children_Immutability_OnGet()
     {
@@ -58,6 +65,9 @@ public class SuffixTreeNodeTests
             new List<string> { $"abc{t}", $"ab{t}", $"a{t}", $"{t}" }.OrderBy(s => s)));
     }
 
+    /// <remarks>
+    /// Built from "aaa".
+    /// </remarks>
     private static SuffixTreeNode BuildSuffixTreeExample()
     {
         return new SuffixTreeNode(new Dictionary<SuffixTreeEdge, SuffixTreeNode>

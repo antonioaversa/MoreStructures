@@ -1,13 +1,27 @@
 ﻿namespace StringAlgorithms.SuffixTrees;
 
 /// <summary>
-/// The index key of the collection of children of a Suffix Tree node, which identifies a substring in text, used 
-/// as a selector to navigate the Suffix Tree.
+/// The index key of the collection of children of a Suffix Tree node, which identifies a non-empty substring in text, 
+/// used as a selector to navigate the Suffix Tree.
 /// </summary>
 /// <param name="Start">The index of the first character of the edge string in the text.</param>
 /// <param name="Length">The length of the edge string.</param>
 public record SuffixTreeEdge(int Start, int Length)
 {
+    /// <summary>
+    /// <inheritdoc cref="SuffixTreeEdge(int, int)" path="/param[@name='Start']"/>
+    /// </summary>
+    public int Start { get; init; } = Start >= 0 
+        ? Start 
+        : throw new ArgumentOutOfRangeException(nameof(Start), "Must be non-negative.");
+
+    /// <summary>
+    /// <inheritdoc cref="SuffixTreeEdge(int, int)" path="/param[@name='Length']"/>
+    /// </summary>
+    public int Length { get; init; } = Length >= 1
+        ? Length
+        : throw new ArgumentOutOfRangeException(nameof(Length), "Must be positive.");
+
     /// <summary>
     /// The possible adjacency order relationships between two edges by the strings they refer to in the text: 
     /// non-adjacent (overlapping on more than an extreme or not at all), adjacent with a specific order, or adjacent 
@@ -36,6 +50,6 @@ public record SuffixTreeEdge(int Start, int Length)
     /// Returns the substring of the provided text with terminator, identified by this edge.
     /// </summary>
     /// <param name="text">The text, to apply the edge to.</param>
-    /// <returns>The substring of text, as a plain string.</returns>
+    /// <returns>The substring of text, as a plain string. Always non-empty.</returns>
     public string Of(TextWithTerminator text) => text.AsString.Substring(Start, Length);
 }

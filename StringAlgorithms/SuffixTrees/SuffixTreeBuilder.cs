@@ -9,7 +9,7 @@ public static class SuffixTreeBuilder
 {
     /// <summary>
     /// Build a Suffix Tree of the provided text, which is a n-ary search tree in which edges coming out of a node
-    /// are substrings of text which identify prefixes shared by all paths to leaves, starting from the node.
+    /// are substrings of text which identify edges shared by all paths to leaves, starting from the node.
     /// </summary>
     /// <param name="text">The text to build the Suffix Tree of.</param>
     /// <param name="terminator">A special character used as string terminator, not present in text.</param>
