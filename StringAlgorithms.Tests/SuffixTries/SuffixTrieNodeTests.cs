@@ -23,7 +23,7 @@ namespace StringAlgorithms.SuffixTries.Tests
             Assert.ThrowsException<NotSupportedException>(
                 () => root.Children.Clear());
             Assert.ThrowsException<NotSupportedException>(
-                () => root.Children[root.Children.First().Key] = new SuffixTrieNode(0));
+                () => root.Children[root.Children.First().Key] = new SuffixTrieNode.Leaf(0));
             Assert.ThrowsException<NotSupportedException>(
                 () => root.Children.Remove(root.Children.First().Key));
         }
@@ -31,12 +31,27 @@ namespace StringAlgorithms.SuffixTries.Tests
         [TestMethod]
         public void Children_Immutability_FromCtorParam()
         {
-            var rootChildren = new Dictionary<SuffixTrieEdge, SuffixTrieNode> { };
-            var root = new SuffixTrieNode(rootChildren);
-            Assert.IsTrue(root.IsLeaf);
+            var rootChildren = new Dictionary<SuffixTrieEdge, SuffixTrieNode>
+            {
+                [new(0)] = new SuffixTrieNode.Intermediate(new Dictionary<SuffixTrieEdge, SuffixTrieNode>
+                {
+                    [new(1)] = new SuffixTrieNode.Leaf(1),
+                }),
+            };
+            var root = new SuffixTrieNode.Intermediate(rootChildren);
+            Assert.AreEqual(1, root.Children.Count);
 
-            rootChildren.Add(new(0), new SuffixTrieNode(0));
-            Assert.IsTrue(root.IsLeaf);
+            rootChildren.Add(new(1), new SuffixTrieNode.Leaf(1));
+            Assert.AreEqual(1, root.Children.Count);
+        }
+
+        [TestMethod]
+        public void IsLeaf()
+        {
+            var root = BuildSuffixTrieExample();
+            Assert.IsFalse(root.IsLeaf);
+            Assert.IsFalse(root[new(0)][new(1)].IsLeaf);
+            Assert.IsTrue(root[new(0)][new(1)][new(2)][new(3)].IsLeaf);
         }
 
         [TestMethod]
@@ -68,23 +83,23 @@ namespace StringAlgorithms.SuffixTries.Tests
         /// <remarks>
         /// Built from "aaa".
         /// </remarks>
-        private static SuffixTrieNode BuildSuffixTrieExample()
+        internal static SuffixTrieNode BuildSuffixTrieExample()
         {
-            return new SuffixTrieNode(new Dictionary<SuffixTrieEdge, SuffixTrieNode>
+            return new SuffixTrieNode.Intermediate(new Dictionary<SuffixTrieEdge, SuffixTrieNode>
             {
-                [new(0)] = new SuffixTrieNode(new Dictionary<SuffixTrieEdge, SuffixTrieNode>
+                [new(0)] = new SuffixTrieNode.Intermediate(new Dictionary<SuffixTrieEdge, SuffixTrieNode>
                 {
-                    [new(1)] = new SuffixTrieNode(new Dictionary<SuffixTrieEdge, SuffixTrieNode>
+                    [new(1)] = new SuffixTrieNode.Intermediate(new Dictionary<SuffixTrieEdge, SuffixTrieNode>
                     {
-                        [new(2)] = new SuffixTrieNode(new Dictionary<SuffixTrieEdge, SuffixTrieNode>
+                        [new(2)] = new SuffixTrieNode.Intermediate(new Dictionary<SuffixTrieEdge, SuffixTrieNode>
                         {
-                            [new(3)] = new SuffixTrieNode(0)
+                            [new(3)] = new SuffixTrieNode.Leaf(0)
                         }),
-                        [new(3)] = new SuffixTrieNode(1),
+                        [new(3)] = new SuffixTrieNode.Leaf(1),
                     }),
-                    [new(3)] = new SuffixTrieNode(2),
+                    [new(3)] = new SuffixTrieNode.Leaf(2),
                 }),
-                [new(3)] = new SuffixTrieNode(3),
+                [new(3)] = new SuffixTrieNode.Leaf(3),
             });
         }
 

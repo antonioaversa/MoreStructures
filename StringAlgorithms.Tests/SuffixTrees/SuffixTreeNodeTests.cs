@@ -44,6 +44,15 @@ public class SuffixTreeNodeTests
     }
 
     [TestMethod]
+    public void IsLeaf()
+    {
+        var root = BuildSuffixTreeExample();
+        Assert.IsFalse(root.IsLeaf);
+        Assert.IsFalse(root[new(0, 1)][new(1, 1)].IsLeaf);
+        Assert.IsTrue(root[new(0, 1)][new(1, 1)][new(3, 1)].IsLeaf);
+    }
+
+    [TestMethod]
     public void GetAllNodeToLeafPaths_Correctness()
     {
         var root = BuildSuffixTreeExample();

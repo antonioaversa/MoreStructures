@@ -15,8 +15,8 @@ public class SuffixTrieEdgeTests
     [TestMethod]
     public void Of_InboundIndexes()
     {
-        Assert.IsTrue(new SuffixTrieEdge(0).Of(new("a", '$')) == 'a');
-        Assert.IsTrue(new SuffixTrieEdge(1).Of(new("a", '$')) == '$');
+        Assert.IsTrue(new SuffixTrieEdge(0).Of(new("a", '$')) == "a");
+        Assert.IsTrue(new SuffixTrieEdge(1).Of(new("a", '$')) == "$");
     }
 
     [TestMethod]

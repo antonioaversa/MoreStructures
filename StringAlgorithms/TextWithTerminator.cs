@@ -14,6 +14,19 @@
 public record TextWithTerminator(string Text, char Terminator = TextWithTerminator.DefaultTerminator)
 {
     /// <summary>
+    /// A selector of a part of a text with terminator.
+    /// </summary>
+    public interface ISelector
+    {
+        /// <summary>
+        /// The selection method of the selector, extracting a substring out of the provided text.
+        /// </summary>
+        /// <param name="text">The text with terminator, to extract a substring of.</param>
+        /// <returns>A substring, whose length depends on the selector.</returns>
+        string Of(TextWithTerminator text);
+    }
+
+    /// <summary>
     /// The special character used as a default terminator for the text to build the Suffix Tree of, when no custom 
     /// terminator is specified. Should not be present in the text.
     /// </summary>
@@ -35,9 +48,44 @@ public record TextWithTerminator(string Text, char Terminator = TextWithTerminat
     private readonly string TextAndTerminator = Text + Terminator;
 
     /// <summary>
-    /// Returns this text with terminator in textual form, appending the terminator to the text.
+    /// Select a part of this text by the provided selector.
     /// </summary>
-    public string AsString => TextAndTerminator;
+    /// <param name="selector">Any selector acting on a <see cref="TextWithTerminator"/>.</param>
+    /// <returns>A string containing the selected part.</returns>
+    public string this[ISelector selector] => selector.Of(this);
+
+    /// <summary>
+    /// Select a part of this text by the provided range.
+    /// </summary>
+    /// <param name="range">The range applied to the underlying string.</param>
+    /// <returns>A string containing the selected part.</returns>
+    public string this[Range range] => TextAndTerminator[range];
+
+    /// <summary>
+    /// Select a part of this text by the provided index.
+    /// </summary>
+    /// <param name="range">The index applied to the underlying string.</param>
+    /// <returns>A char containing the selected part.</returns>
+    public char this[Index index] => TextAndTerminator[index];
+
+    /// <summary>
+    /// The total length of this text, including the terminator.
+    /// </summary>
+    public int Length => TextAndTerminator.Length;
+
+    /// <summary>
+    /// Whether this text starts with the provided suffix.
+    /// </summary>
+    /// <param name="prefix">A terminator-included string.</param>
+    /// <returns>True if this text starts by the prefix.</returns>
+    public bool StartsWith(string prefix) => TextAndTerminator.StartsWith(prefix);
+
+    /// <summary>
+    /// Whether this text ends with the provided suffix.
+    /// </summary>
+    /// <param name="suffix">A terminator-included string.</param>
+    /// <returns>True if this text ends by the suffix.</returns>
+    public bool EndsWith(string suffix) => TextAndTerminator.EndsWith(suffix);
 
     /// <summary>
     /// <inheritdoc/>

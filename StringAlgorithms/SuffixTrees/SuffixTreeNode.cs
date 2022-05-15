@@ -15,13 +15,13 @@ namespace StringAlgorithms.SuffixTrees;
 public abstract record SuffixTreeNode(IDictionary<SuffixTreeEdge, SuffixTreeNode> Children, int? Start)
 {
     /// <summary>
-    /// Builds a Suffix Tree intermediate node, i.e. a node with children and their corresponding incoming edges.
+    /// Builds a intermediate node, i.e. a node with children and their corresponding incoming edges.
     /// </summary>
     public record Intermediate(IDictionary<SuffixTreeEdge, SuffixTreeNode> Children) 
         : SuffixTreeNode(Children, null) { }
 
     /// <summary>
-    /// Builds a Suffix Tree leaf, i.e. a node with no children and the start index of the suffix in the text.
+    /// Builds a leaf, i.e. a node with no children and the start index of the suffix in the text.
     /// </summary>
     public record Leaf(int LeafStart) 
         : SuffixTreeNode(new Dictionary<SuffixTreeEdge, SuffixTreeNode> { }, LeafStart) { }
@@ -81,5 +81,5 @@ public abstract record SuffixTreeNode(IDictionary<SuffixTreeEdge, SuffixTreeNode
     /// <param name="text">The text with terminator, whose suffixes have to be extracted.</param>
     /// <returns>A sequence of strings, each one being a suffix.</returns>
     public IEnumerable<string> GetAllSuffixesFor(TextWithTerminator text) =>
-        GetAllNodeToLeafPaths().Select(rootToLeafPath => rootToLeafPath.Suffix(text));   
+        GetAllNodeToLeafPaths().Select(rootToLeafPath => rootToLeafPath.SuffixFor(text));   
 }

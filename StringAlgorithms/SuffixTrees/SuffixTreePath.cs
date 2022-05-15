@@ -59,8 +59,15 @@ public record SuffixTreePath(IEnumerable<KeyValuePair<SuffixTreeEdge, SuffixTree
     /// </summary>
     /// <param name="text">The text, including the terminator character.</param>
     /// <returns>A string containing the suffix.</returns>
-    public string Suffix(TextWithTerminator text) => PathNodes
-        .Aggregate(new StringBuilder(),
-            (acc, node) => acc.Append(text.AsString.AsSpan(node.Key.Start, node.Key.Length)))
+    public string SuffixFor(TextWithTerminator text) => PathNodes
+        .Aggregate(new StringBuilder(), (acc, node) => acc.Append(text[node.Key]))
         .ToString();
+
+    /// <summary>
+    /// Whether this path identifies a suffix of the provided text.
+    /// </summary>
+    /// <param name="text">The text, including the terminator character.</param>
+    /// <returns>True if a suffix.</returns>
+    public bool IsSuffixOf(TextWithTerminator text) =>
+        text.EndsWith(SuffixFor(text));
 }

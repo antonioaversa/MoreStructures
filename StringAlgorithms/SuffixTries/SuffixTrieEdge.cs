@@ -5,7 +5,7 @@
 /// as a selector to navigate the Suffix Trie.
 /// </summary>
 /// <param name="Index">The index of the character in the text.</param>
-public record SuffixTrieEdge(int Index)
+public record SuffixTrieEdge(int Index) : TextWithTerminator.ISelector
 {
     /// <summary>
     /// <inheritdoc cref="SuffixTrieEdge(int)" path="/param[@name='Index']"/>
@@ -19,5 +19,5 @@ public record SuffixTrieEdge(int Index)
     /// </summary>
     /// <param name="text">The text, to apply the edge to.</param>
     /// <returns>The character at the Index of this edge.</returns>
-    public char Of(TextWithTerminator text) => text.AsString[Index];
+    public string Of(TextWithTerminator text) => text[Index] + "";
 }

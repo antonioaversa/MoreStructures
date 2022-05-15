@@ -6,7 +6,7 @@
 /// </summary>
 /// <param name="Start">The index of the first character of the edge string in the text.</param>
 /// <param name="Length">The length of the edge string.</param>
-public record SuffixTreeEdge(int Start, int Length)
+public record SuffixTreeEdge(int Start, int Length) : TextWithTerminator.ISelector
 {
     /// <summary>
     /// <inheritdoc cref="SuffixTreeEdge(int, int)" path="/param[@name='Start']"/>
@@ -51,5 +51,5 @@ public record SuffixTreeEdge(int Start, int Length)
     /// </summary>
     /// <param name="text">The text, to apply the edge to.</param>
     /// <returns>The substring of text, as a plain string. Always non-empty.</returns>
-    public string Of(TextWithTerminator text) => text.AsString.Substring(Start, Length);
+    public string Of(TextWithTerminator text) => text[Start..(Start + Length)];
 }

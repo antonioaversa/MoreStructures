@@ -1,11 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.Collections.Generic;
 
 namespace StringAlgorithms.SuffixTrees.Tests;
 
 [TestClass]
-public class SuffixTreeBuilderMatcherTests
+public class SuffixTreeMatcherTests
 {
     [TestMethod]
     public void Match_Preconditions()
@@ -72,7 +71,7 @@ public class SuffixTreeBuilderMatcherTests
         {
             Assert.IsTrue(suffixTree.Match(text, new(pattern)) is
                 SuffixTreeMatch { Success: true, Begin: var begin1, Path: var path1 } &&
-                text.AsString.Substring(begin1, path1.TotalEdgesLength) == path1.Suffix(text));
+                text[begin1..(begin1 + path1.TotalEdgesLength)] == path1.SuffixFor(text));
         }
     }
 }

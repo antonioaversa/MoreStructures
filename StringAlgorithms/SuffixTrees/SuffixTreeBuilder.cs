@@ -36,11 +36,11 @@ public static class SuffixTreeBuilder
     {
         var nodeChildren = new Dictionary<SuffixTreeEdge, SuffixTreeNode>(node.Children);
         var edgeSame1stChar = nodeChildren.Keys.SingleOrDefault(
-            edge => text.AsString[edge.Start] == text.AsString[suffixCurrentIndex]);
+            edge => text[edge.Start] == text[suffixCurrentIndex]);
 
         if (edgeSame1stChar == null)
         {
-            var edge = new SuffixTreeEdge(suffixCurrentIndex, text.AsString.Length - suffixCurrentIndex);
+            var edge = new SuffixTreeEdge(suffixCurrentIndex, text.Length - suffixCurrentIndex);
             nodeChildren[edge] = new SuffixTreeNode.Leaf(suffixIndex);
         }
         else
@@ -53,7 +53,7 @@ public static class SuffixTreeBuilder
             // the beginning of the current suffix and repeat the same operation.
 
             var prefixLength = LongestPrefixInCommon(
-                text.AsString[suffixCurrentIndex..], edgeSame1stChar.Of(text));
+                text[suffixCurrentIndex..], edgeSame1stChar.Of(text));
 
             var oldChild = nodeChildren[edgeSame1stChar];
             if (prefixLength < edgeSame1stChar.Length)
@@ -66,7 +66,7 @@ public static class SuffixTreeBuilder
                         edgeSame1stChar.Length - prefixLength)] = oldChild,
                     [new(
                         suffixCurrentIndex + prefixLength,
-                        text.AsString.Length - suffixCurrentIndex - prefixLength)] = newLeaf,
+                        text.Length - suffixCurrentIndex - prefixLength)] = newLeaf,
                 });
                 nodeChildren.Remove(edgeSame1stChar);
                 nodeChildren[new(edgeSame1stChar.Start, prefixLength)] = newIntermediate;

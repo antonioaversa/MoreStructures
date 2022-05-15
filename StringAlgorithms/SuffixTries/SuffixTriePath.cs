@@ -46,8 +46,7 @@ public record SuffixTriePath(IEnumerable<KeyValuePair<SuffixTrieEdge, SuffixTrie
     /// </summary>
     /// <param name="text">The text, including the terminator character.</param>
     /// <returns>A string containing the suffix.</returns>
-    public string Suffix(TextWithTerminator text) => PathNodes
-        .Aggregate(new StringBuilder(),
-            (acc, node) => acc.Append(text.AsString[node.Key.Index]))
+    public string SuffixFor(TextWithTerminator text) => PathNodes
+        .Aggregate(new StringBuilder(), (acc, node) => acc.Append(text[node.Key]))
         .ToString();
 }

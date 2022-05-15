@@ -167,8 +167,7 @@ public class SuffixTreeBuilderTests
 
         foreach (var rootToLeafPath in root.GetAllNodeToLeafPaths())
         {
-            var suffix = rootToLeafPath.Suffix(text);
-            Assert.IsTrue(text.AsString.EndsWith(suffix.ToString()));
+            Assert.IsTrue(rootToLeafPath.IsSuffixOf(text));
         }
     }
 
@@ -177,8 +176,8 @@ public class SuffixTreeBuilderTests
     {
         var text = new TextWithTerminator("aababcabcd");
         var allSuffixes = Enumerable
-            .Range(0, text.AsString.Length)
-            .Select(i => text.AsString[i..])
+            .Range(0, text.Length)
+            .Select(i => text[i..])
             .ToHashSet();
 
         var root = Build(text);
@@ -218,8 +217,8 @@ public class SuffixTreeBuilderTests
         Assert.IsTrue((
             from rootToLeafPath in root1.GetAllNodeToLeafPaths()
             let suffixStart = rootToLeafPath.PathNodes.Last().Value.Start ?? throw new Exception("Invalid leaf Start")
-            let suffix = rootToLeafPath.Suffix(text1)
-            select text1.AsString[suffixStart..] == suffix)
+            let suffix = rootToLeafPath.SuffixFor(text1)
+            select text1[suffixStart..] == suffix)
             .All(e => e));
     }
 }

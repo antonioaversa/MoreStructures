@@ -5,34 +5,46 @@ namespace StringAlgorithms.SuffixTries;
 /// <summary>
 /// An immutable node of an immutable Suffix Trie, recursively pointing to its children node.
 /// </summary>
-/// <param name="Children">The children of the node, indexed by a single char. Empty collection for leaves.</param>
+/// <param name="Children">The collection of children for the node, indexed by a single chars.</param>
+/// <param name="Start">
+/// The index of the character, the path of Suffix Trie leading to this leaf starts with. Non-null for leaves only.
+/// </param>
 /// <remarks>
 /// Immutability is guaranteed by copying the provided children collection and exposing a readonly view.
 /// </remarks>
-public record SuffixTrieNode(IDictionary<SuffixTrieEdge, SuffixTrieNode> Children)
+public abstract record SuffixTrieNode(IDictionary<SuffixTrieEdge, SuffixTrieNode> Children, int? Start)
 {
     /// <summary>
-    /// A readonly view of the children private collection of this Suffix Trie node.
+    /// Builds an intermediate node, i.e. a node with children and their corresponding incoming edges.
     /// </summary>
-    public IDictionary<SuffixTrieEdge, SuffixTrieNode> Children { get; } 
-        = new ReadOnlyDictionary<SuffixTrieEdge, SuffixTrieNode>(
-            new Dictionary<SuffixTrieEdge, SuffixTrieNode>(Children));
+    public record Intermediate(IDictionary<SuffixTrieEdge, SuffixTrieNode> Children)
+        : SuffixTrieNode(Children, null)
+    { }
 
     /// <summary>
-    /// The index of the character, the path of Suffix Trie leading to this leaf starts with. Non-null for leaves only.
+    /// Builds a leaf, i.e. a node with no children and the start index of the suffix in the text.
     /// </summary>
-    public int? Start { get; init; } = default;
+    public record Leaf(int LeafStart)
+        : SuffixTrieNode(new Dictionary<SuffixTrieEdge, SuffixTrieNode> { }, LeafStart)
+    { }
 
     /// <summary>
-    /// Builds a Suffix Trie leaf, i.e. a node with no children, and with the index of the 1st character of the suffix.
+    /// A readonly view of the children private collection of this Suffix Trie node. Empty for leaves.
     /// </summary>
-    public SuffixTrieNode(int start)
-        : this(new Dictionary<SuffixTrieEdge, SuffixTrieNode> { }) 
-    {
-        if (start < 0) throw new ArgumentOutOfRangeException(nameof(start), "Has to be non-negative.");
+    public IDictionary<SuffixTrieEdge, SuffixTrieNode> Children { get; }
+        = (Children.Count > 0 && Start == null) || (Children.Count == 0 && Start != null)
+        ? new ReadOnlyDictionary<SuffixTrieEdge, SuffixTrieNode>(
+            new Dictionary<SuffixTrieEdge, SuffixTrieNode>(Children))
+        : throw new ArgumentException($"Leafs needs to specificy a non-negative {nameof(Start)}.", nameof(Children));
 
-        Start = start;
-    }
+    /// <summary>
+    /// <inheritdoc cref="SuffixTrieNode(IDictionary{SuffixTrieEdge, SuffixTrieNode}, int?)" 
+    /// path="/param[@name='Start']"/>
+    /// </summary>
+    public int? Start { get; init; }
+        = (Children.Count > 0 && Start == null) || (Children.Count == 0 && Start != null)
+        ? Start
+        : throw new ArgumentException($"Leafs needs to specificy a non-negative {nameof(Start)}.", nameof(Children));
 
     /// <summary>
     /// Indexes into the children of this node, by edge, which is a single char selector.
@@ -72,5 +84,5 @@ public record SuffixTrieNode(IDictionary<SuffixTrieEdge, SuffixTrieNode> Childre
     /// <param name="text">The text with terminator, whose suffixes have to be extracted.</param>
     /// <returns>A sequence of strings, each one being a suffix.</returns>
     public IEnumerable<string> GetAllSuffixesFor(TextWithTerminator text) =>
-        GetAllNodeToLeafPaths().Select(rootToLeafPath => rootToLeafPath.Suffix(text));   
+        GetAllNodeToLeafPaths().Select(rootToLeafPath => rootToLeafPath.SuffixFor(text));   
 }
