@@ -48,20 +48,20 @@ namespace StringAlgorithms.Tests
         }
 
         [TestMethod]
-        public void Length()
+        public void Length_IsCorrect()
         {
             Assert.AreEqual(4, new TextWithTerminator("abc", '$').Length);
             Assert.AreEqual(1, new TextWithTerminator("", '$').Length);
         }
 
         [TestMethod]
-        public void AsString_StartsWithText()
+        public void StartsWith_IsCorrect()
         {
             Assert.IsTrue(new TextWithTerminator("a", '$').StartsWith("a"));
         }
 
         [TestMethod]
-        public void AsString_EndsWithTerminator()
+        public void EndsWith_IsCorrect()
         {
             Assert.IsTrue(new TextWithTerminator("a", '$').EndsWith("$"));
         }

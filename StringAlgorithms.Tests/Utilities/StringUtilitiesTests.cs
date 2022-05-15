@@ -7,8 +7,9 @@ namespace StringAlgorithms.Tests;
 public class StringUtilitiesTests
 {
     [TestMethod]
-    public void LongestPrefixInCommon_Correctness()
+    public void LongestPrefixInCommon_IsCorrect()
     {
+        Assert.AreEqual(0, LongestPrefixInCommon("", ""));
         Assert.AreEqual(0, LongestPrefixInCommon("a", "b"));
         Assert.AreEqual(0, LongestPrefixInCommon("a", ""));
         Assert.AreEqual(0, LongestPrefixInCommon("", "a"));

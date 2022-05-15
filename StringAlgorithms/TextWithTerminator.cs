@@ -19,7 +19,7 @@ public record TextWithTerminator(string Text, char Terminator = TextWithTerminat
     public interface ISelector
     {
         /// <summary>
-        /// The selection method of the selector, extracting a substring out of the provided text.
+        /// Extract the substring identified by this selector, out of the provided text.
         /// </summary>
         /// <param name="text">The text with terminator, to extract a substring of.</param>
         /// <returns>A substring, whose length depends on the selector.</returns>
@@ -86,11 +86,4 @@ public record TextWithTerminator(string Text, char Terminator = TextWithTerminat
     /// <param name="suffix">A terminator-included string.</param>
     /// <returns>True if this text ends by the suffix.</returns>
     public bool EndsWith(string suffix) => TextAndTerminator.EndsWith(suffix);
-
-    /// <summary>
-    /// <inheritdoc/>
-    /// Specifically <see cref="AsString"/>.
-    /// </summary>
-    public override string ToString() => TextAndTerminator;
-
 }

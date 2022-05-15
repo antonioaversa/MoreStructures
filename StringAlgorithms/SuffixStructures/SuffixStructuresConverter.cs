@@ -6,7 +6,7 @@ namespace StringAlgorithms.SuffixStructures
     /// <summary>
     /// Conversion utilities between suffix data structures, such as Suffix Tree and Tries.
     /// </summary>
-    public static class SuffixStructuresConvert
+    public static class SuffixStructuresConverter
     {
         /// <summary>
         /// Converts the provided <see cref="SuffixTrieNode"/> into a <see cref="SuffixTreeNode"/>, building its

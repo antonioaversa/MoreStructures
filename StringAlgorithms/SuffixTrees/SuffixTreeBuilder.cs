@@ -1,12 +1,23 @@
-﻿using static StringAlgorithms.StringUtilities;
+﻿using StringAlgorithms.SuffixStructures;
+using static StringAlgorithms.StringUtilities;
 
 namespace StringAlgorithms.SuffixTrees;
 
-/// <summary>
-/// Exposes utility methods to build Suffix Trees, such as <see cref="Build(TextWithTerminator)"/>.
-/// </summary>
-public static class SuffixTreeBuilder
+public class SuffixTreeBuilder
+    : ISuffixStructureBuilder<SuffixTreeEdge, SuffixTreeNode, SuffixTreePath, SuffixTreeBuilder>
 {
+    public SuffixTreePath EmptyPath() =>
+        new (Enumerable.Empty<KeyValuePair<SuffixTreeEdge, SuffixTreeNode>>());
+
+    public SuffixTreePath SingletonPath(SuffixTreeEdge edge, SuffixTreeNode node) =>
+        new(Enumerable.Repeat(KeyValuePair.Create(edge, node), 1));
+
+    public SuffixTreePath MultistepsPath(params (SuffixTreeEdge edge, SuffixTreeNode node)[] pathNodes) =>
+        new(pathNodes.Select(pathNode => KeyValuePair.Create(pathNode.edge, pathNode.node)));
+
+    public SuffixTreePath MultistepsPath(IEnumerable<KeyValuePair<SuffixTreeEdge, SuffixTreeNode>> pathNodes) =>
+        new(pathNodes);
+
     /// <summary>
     /// Build a Suffix Tree of the provided text, which is a n-ary search tree in which edges coming out of a node
     /// are substrings of text which identify edges shared by all paths to leaves, starting from the node.
@@ -20,7 +31,7 @@ public static class SuffixTreeBuilder
     {
         SuffixTreeNode root = new SuffixTreeNode.Leaf(0);
 
-        for (var suffixIndex = 0; suffixIndex < text.ToString().Length; suffixIndex++)
+        for (var suffixIndex = 0; suffixIndex < text.Length; suffixIndex++)
             root = IncludeSuffixIntoTree(text, suffixIndex, suffixIndex, root);
 
         return root;

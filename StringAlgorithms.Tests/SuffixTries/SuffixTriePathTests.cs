@@ -9,22 +9,6 @@ namespace StringAlgorithms.SuffixTries.Tests;
 public class SuffixTriePathTests
 {
     [TestMethod]
-    public void Empty_Correctness()
-    {
-        Assert.IsFalse(SuffixTriePath.Empty().PathNodes.Any());
-    }
-
-    [TestMethod]
-    public void Singleton_Correctness()
-    {
-        var node = new SuffixTrieNode.Leaf(0);
-        var singletonPath = SuffixTriePath.Singleton(new(0), node);
-        Assert.AreEqual(1, singletonPath.PathNodes.Count());
-        Assert.AreEqual(new(0), singletonPath.PathNodes.Single().Key);
-        Assert.AreEqual(node, singletonPath.PathNodes.Single().Value);
-    }
-
-    [TestMethod]
     public void PathNodes_ImmutabilityOnGet()
     {
         var path = new SuffixTriePath(new Dictionary<SuffixTrieEdge, SuffixTrieNode> { });
@@ -43,5 +27,50 @@ public class SuffixTriePathTests
         Assert.AreEqual(0, path.PathNodes.Count());
         pathNodes[new(0)] = new SuffixTrieNode.Leaf(0);
         Assert.AreEqual(0, path.PathNodes.Count());
+    }
+
+    /// <remarks>
+    /// The example is the second "root to leaf"" path of the tree built from <see cref="ExampleText"/>: 
+    /// a -> b -> a -> a -> $.
+    /// </remarks>
+    internal static SuffixTriePath BuildSuffixTriePathExample()
+    {
+        var leaf = new SuffixTrieNode.Leaf(2);
+        var leafEdge = new SuffixTrieEdge(6);
+
+        var intermediate1 = new SuffixTrieNode.Intermediate(new Dictionary<SuffixTrieEdge, SuffixTrieNode>
+        {
+            [leafEdge] = leaf,
+        });
+        var intermediate1Edge = new SuffixTrieEdge(5);
+
+        var intermediate2 = new SuffixTrieNode.Intermediate(new Dictionary<SuffixTrieEdge, SuffixTrieNode>
+        {
+            // We ignore the child at new(3) and its sub-tree, as it's not relevant for the path
+            [intermediate1Edge] = intermediate1,
+        });
+        var intermediate2Edge = new SuffixTrieEdge(2);
+
+        var intermediate3 = new SuffixTrieNode.Intermediate(new Dictionary<SuffixTrieEdge, SuffixTrieNode>
+        {
+            [intermediate2Edge] = intermediate2,
+        });
+        var intermediate3Edge = new SuffixTrieEdge(1);
+        
+        var intermediate4 = new SuffixTrieNode.Intermediate(new Dictionary<SuffixTrieEdge, SuffixTrieNode>
+        {
+            [intermediate3Edge] = intermediate3,
+            // We ignore the child at new(5) and its sub-tree, as it's not relevant for the path
+        });
+        var intermediate4Edge = new SuffixTrieEdge(0);
+
+        return new SuffixTriePath(new List<KeyValuePair<SuffixTrieEdge, SuffixTrieNode>>
+        {            
+            new(intermediate4Edge, intermediate4),
+            new(intermediate3Edge, intermediate3),
+            new(intermediate2Edge, intermediate2),
+            new(intermediate1Edge, intermediate1),
+            new(leafEdge, leaf),
+        });
     }
 }

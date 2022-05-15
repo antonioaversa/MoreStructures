@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using StringAlgorithms.SuffixStructures;
 using StringAlgorithms.SuffixTries;
 using System;
 using System.Linq;
@@ -11,12 +12,20 @@ namespace StringAlgorithms.Tests.SuffixTries;
 public class SuffixTrieBuilderTests
 {
     [TestMethod]
+    public void Build_WithTextWithTerminatorInput()
+    {
+        Assert.AreEqual(Build(""), Build(new TextWithTerminator("")));
+        Assert.AreEqual(Build("a"), Build(new TextWithTerminator("a")));
+        Assert.AreEqual(Build("aa"), Build(new TextWithTerminator("aa")));
+    }
+
+    [TestMethod]
     public void Build_EmptyString()
     {
         var root = Build(string.Empty);
         Assert.AreEqual(1, root.Children.Count);
         Assert.AreEqual(new(0), root.Children.Keys.Single());
-        Assert.IsTrue(root.Children.Values.Single().IsLeaf);
+        Assert.IsTrue(root.Children.Values.Single().IsLeaf());
     }
     
     [TestMethod]
@@ -33,9 +42,9 @@ public class SuffixTrieBuilderTests
     {
         var root = Build("a");
         Assert.AreEqual(2, root.Children.Count);
-        Assert.IsFalse(root[new(0)].IsLeaf);
-        Assert.IsTrue(root[new(0)][new(1)].IsLeaf);
-        Assert.IsTrue(root[new(1)].IsLeaf);
+        Assert.IsFalse(root[new(0)].IsLeaf());
+        Assert.IsTrue(root[new(0)][new(1)].IsLeaf());
+        Assert.IsTrue(root[new(1)].IsLeaf());
     }
 
     [TestMethod]
@@ -44,9 +53,9 @@ public class SuffixTrieBuilderTests
         SuffixTrieNode root = Build("ab");
 
         Assert.AreEqual(3, root.Children.Count);
-        Assert.IsTrue(root[new(0)][new(1)][new(2)].IsLeaf);
-        Assert.IsTrue(root[new(1)][new(2)].IsLeaf);
-        Assert.IsTrue(root[new(2)].IsLeaf);
+        Assert.IsTrue(root[new(0)][new(1)][new(2)].IsLeaf());
+        Assert.IsTrue(root[new(1)][new(2)].IsLeaf());
+        Assert.IsTrue(root[new(2)].IsLeaf());
     }
 
     [TestMethod]
@@ -59,11 +68,11 @@ public class SuffixTrieBuilderTests
         var child1 = root[new(0)];
         Assert.IsTrue(child1.Children.Count == 2);
         Assert.IsTrue(child1[new(1)].Children.Count == 1);
-        Assert.IsTrue(child1[new(1)][new(2)].IsLeaf);
-        Assert.IsTrue(child1[new(2)].IsLeaf);
+        Assert.IsTrue(child1[new(1)][new(2)].IsLeaf());
+        Assert.IsTrue(child1[new(2)].IsLeaf());
 
         var child2 = root[new(2)];
-        Assert.IsTrue(child2.IsLeaf);
+        Assert.IsTrue(child2.IsLeaf());
     }
 
     [TestMethod]
@@ -146,6 +155,7 @@ public class SuffixTrieBuilderTests
         Assert.IsTrue(allSuffixes.SetEquals(suffixes));
     }
 
+    // TODO: fix the following test
     /*
     [TestMethod]
     public void Build_UsesTerminatorForMatchToDistinguishSuffixesFromAnySubstring()

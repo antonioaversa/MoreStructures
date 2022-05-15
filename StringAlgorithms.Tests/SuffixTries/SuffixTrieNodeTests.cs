@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using StringAlgorithms.SuffixStructures;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,20 @@ namespace StringAlgorithms.SuffixTries.Tests
     [TestClass]
     public class SuffixTrieNodeTests
     {
+        private record SuffixTrieNodeInvalidLeaf()
+            : SuffixTrieNode(new Dictionary<SuffixTrieEdge, SuffixTrieNode> { }, null);
+
+        private record SuffixTrieNodeInvalidIntermediate()
+            : SuffixTrieNode(new Dictionary<SuffixTrieEdge, SuffixTrieNode> { [new(0)] = new Leaf(0) }, 0);
+
+        [TestMethod]
+        public void Ctor_InvalidArguments()
+        {
+            Assert.ThrowsException<ArgumentException>(() => new SuffixTrieNode.Leaf(-1));
+            Assert.ThrowsException<ArgumentException>(() => new SuffixTrieNodeInvalidLeaf());
+            Assert.ThrowsException<ArgumentException>(() => new SuffixTrieNodeInvalidIntermediate());
+        }
+
         [TestMethod]
         public void Indexer_RetrievesChild()
         {
@@ -49,39 +64,15 @@ namespace StringAlgorithms.SuffixTries.Tests
         public void IsLeaf()
         {
             var root = BuildSuffixTrieExample();
-            Assert.IsFalse(root.IsLeaf);
-            Assert.IsFalse(root[new(0)][new(1)].IsLeaf);
-            Assert.IsTrue(root[new(0)][new(1)][new(2)][new(3)].IsLeaf);
+            Assert.IsFalse(root.IsLeaf());
+            Assert.IsFalse(root[new(0)][new(1)].IsLeaf());
+            Assert.IsTrue(root[new(0)][new(1)][new(2)][new(3)].IsLeaf());
         }
 
-        [TestMethod]
-        public void GetAllNodeToLeafPaths_Correctness()
-        {
-            var root = BuildSuffixTrieExample();
-            var rootToLeafPaths = root.GetAllNodeToLeafPaths().ToList();
-
-            Assert.AreEqual(4, rootToLeafPaths.Count);
-
-            Assert.AreEqual(1, CountOccurrencesByEdges(rootToLeafPaths, new(0), new(1), new(2), new(3)));
-            Assert.AreEqual(1, CountOccurrencesByEdges(rootToLeafPaths, new(0), new(1), new(3)));
-            Assert.AreEqual(1, CountOccurrencesByEdges(rootToLeafPaths, new(0), new(3)));
-            Assert.AreEqual(1, CountOccurrencesByEdges(rootToLeafPaths, new SuffixTrieEdge(3)));
-        }
-
-        [TestMethod]
-        public void GetAllSuffixesFor_Correctness()
-        {
-            var text = new TextWithTerminator("abc");
-            var root = BuildSuffixTrieExample();
-            var suffixes = root.GetAllSuffixesFor(text);
-
-            var t = text.Terminator;
-            Assert.IsTrue(suffixes.OrderBy(s => s).SequenceEqual(
-                new List<string> { $"abc{t}", $"ab{t}", $"a{t}", $"{t}" }.OrderBy(s => s)));
-        }
+        internal static TextWithTerminator ExampleText => new("ababaa");
 
         /// <remarks>
-        /// Built from "aaa".
+        /// The example is built from the text <see cref="ExampleText"/>.
         /// </remarks>
         internal static SuffixTrieNode BuildSuffixTrieExample()
         {
@@ -102,14 +93,5 @@ namespace StringAlgorithms.SuffixTries.Tests
                 [new(3)] = new SuffixTrieNode.Leaf(3),
             });
         }
-
-        private static int CountOccurrencesByEdges(
-            IEnumerable<SuffixTriePath> paths,
-            params SuffixTrieEdge[] pathToFind) => (
-                from path in paths
-                let pathKeys = path.PathNodes.Select(kvp => kvp.Key)
-                where pathKeys.SequenceEqual(pathToFind)
-                select path)
-                .Count();
     }
 }

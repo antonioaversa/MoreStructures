@@ -22,7 +22,7 @@ public class SuffixTrieEdgeTests
     [TestMethod]
     public void Of_OutOfBoundsIndexes()
     {
-        Assert.ThrowsException<IndexOutOfRangeException>(() => new SuffixTrieEdge(1).Of(new("", '$')));
-        Assert.ThrowsException<IndexOutOfRangeException>(() => new SuffixTrieEdge(2).Of(new("a", '$')));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new SuffixTrieEdge(1).Of(new("", '$')));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new SuffixTrieEdge(2).Of(new("a", '$')));
     }
 }

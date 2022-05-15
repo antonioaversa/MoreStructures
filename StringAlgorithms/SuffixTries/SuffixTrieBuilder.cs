@@ -1,12 +1,22 @@
-﻿using static StringAlgorithms.StringUtilities;
+﻿using StringAlgorithms.SuffixStructures;
 
 namespace StringAlgorithms.SuffixTries;
 
-/// <summary>
-/// Exposes utility methods to build Suffix Tries, such as <see cref="Build(TextWithTerminator)"/>.
-/// </summary>
-public static class SuffixTrieBuilder
+public class SuffixTrieBuilder
+    : ISuffixStructureBuilder<SuffixTrieEdge, SuffixTrieNode, SuffixTriePath, SuffixTrieBuilder>
 {
+    public SuffixTriePath EmptyPath() =>
+        new (Enumerable.Empty<KeyValuePair<SuffixTrieEdge, SuffixTrieNode>>());
+
+    public SuffixTriePath SingletonPath(SuffixTrieEdge edge, SuffixTrieNode node) =>
+        new(Enumerable.Repeat(KeyValuePair.Create(edge, node), 1));
+
+    public SuffixTriePath MultistepsPath(params (SuffixTrieEdge edge, SuffixTrieNode node)[] pathNodes) =>
+        new(pathNodes.Select(pathNode => KeyValuePair.Create(pathNode.edge, pathNode.node)));
+
+    public SuffixTriePath MultistepsPath(IEnumerable<KeyValuePair<SuffixTrieEdge, SuffixTrieNode>> pathNodes) =>
+        new(pathNodes);
+
     /// <summary>
     /// Build a Suffix Trie of the provided text, which is a n-ary search tree in which edges coming out of a node
     /// are single characters which identify edges shared by all paths to leaves, starting from the node.

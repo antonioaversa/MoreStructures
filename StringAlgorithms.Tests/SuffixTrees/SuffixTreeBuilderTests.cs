@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using StringAlgorithms.SuffixStructures;
 using StringAlgorithms.SuffixTrees;
 using System;
 using System.Linq;
@@ -16,7 +17,7 @@ public class SuffixTreeBuilderTests
         var root = Build(string.Empty);
         Assert.AreEqual(1, root.Children.Count);
         Assert.AreEqual(new(0, 1), root.Children.Keys.Single());
-        Assert.IsTrue(root.Children.Values.Single().IsLeaf);
+        Assert.IsTrue(root.Children.Values.Single().IsLeaf());
     }
 
     [TestMethod]
@@ -33,8 +34,8 @@ public class SuffixTreeBuilderTests
     {
         var root = Build("a");
         Assert.AreEqual(2, root.Children.Count);
-        Assert.IsTrue(root[new(0, 2)].IsLeaf);
-        Assert.IsTrue(root[new(1, 1)].IsLeaf);
+        Assert.IsTrue(root[new(0, 2)].IsLeaf());
+        Assert.IsTrue(root[new(1, 1)].IsLeaf());
     }
 
     [TestMethod]
@@ -43,9 +44,9 @@ public class SuffixTreeBuilderTests
         SuffixTreeNode root = Build("ab");
 
         Assert.AreEqual(3, root.Children.Count);
-        Assert.IsTrue(root[new(0, 3)].IsLeaf);
-        Assert.IsTrue(root[new(1, 2)].IsLeaf);
-        Assert.IsTrue(root[new(2, 1)].IsLeaf);
+        Assert.IsTrue(root[new(0, 3)].IsLeaf());
+        Assert.IsTrue(root[new(1, 2)].IsLeaf());
+        Assert.IsTrue(root[new(2, 1)].IsLeaf());
     }
 
     [TestMethod]
@@ -57,11 +58,11 @@ public class SuffixTreeBuilderTests
 
         var child1 = root[new(0, 1)];
         Assert.IsTrue(child1.Children.Count == 2);
-        Assert.IsTrue(child1[new(1, 2)].IsLeaf);
-        Assert.IsTrue(child1[new(2, 1)].IsLeaf);
+        Assert.IsTrue(child1[new(1, 2)].IsLeaf());
+        Assert.IsTrue(child1[new(2, 1)].IsLeaf());
 
         var child2 = root[new(2, 1)];
-        Assert.IsTrue(child2.IsLeaf);
+        Assert.IsTrue(child2.IsLeaf());
     }
 
     [TestMethod]
@@ -78,16 +79,16 @@ public class SuffixTreeBuilderTests
         Assert.IsTrue(grandChild1.Children.Count == 2);
 
         var grandGrandChild1 = grandChild1[new(2, 2)];
-        Assert.IsTrue(grandGrandChild1.IsLeaf);
+        Assert.IsTrue(grandGrandChild1.IsLeaf());
 
         var grandGrandChild2 = grandChild1[new(3, 1)];
-        Assert.IsTrue(grandGrandChild2.IsLeaf);
+        Assert.IsTrue(grandGrandChild2.IsLeaf());
 
         var grandChild2 = child1[new(3, 1)];
-        Assert.IsTrue(grandChild2.IsLeaf);
+        Assert.IsTrue(grandChild2.IsLeaf());
 
         var child2 = root[new(3, 1)];
-        Assert.IsTrue(child2.IsLeaf);
+        Assert.IsTrue(child2.IsLeaf());
     }
 
     [TestMethod]
@@ -101,16 +102,16 @@ public class SuffixTreeBuilderTests
         Assert.IsTrue(child1.Children.Count == 2);
 
         var grandChild1 = child1[new(1, 3)];
-        Assert.IsTrue(grandChild1.IsLeaf);
+        Assert.IsTrue(grandChild1.IsLeaf());
 
         var grandChild2 = child1[new(3, 1)];
-        Assert.IsTrue(grandChild2.IsLeaf);
+        Assert.IsTrue(grandChild2.IsLeaf());
 
         var child2 = root[new(1, 3)];
-        Assert.IsTrue(child2.IsLeaf);
+        Assert.IsTrue(child2.IsLeaf());
 
         var child3 = root[new(3, 1)];
-        Assert.IsTrue(child3.IsLeaf);
+        Assert.IsTrue(child3.IsLeaf());
     }
 
     [TestMethod]
@@ -121,16 +122,16 @@ public class SuffixTreeBuilderTests
         Assert.AreEqual(4, root.Children.Count);
 
         var child1 = root[new(0, 4)];
-        Assert.IsTrue(child1.IsLeaf);
+        Assert.IsTrue(child1.IsLeaf());
 
         var child2 = root[new(1, 3)];
-        Assert.IsTrue(child2.IsLeaf);
+        Assert.IsTrue(child2.IsLeaf());
 
         var child3 = root[new(2, 2)];
-        Assert.IsTrue(child3.IsLeaf);
+        Assert.IsTrue(child3.IsLeaf());
 
         var child4 = root[new(3, 1)];
-        Assert.IsTrue(child4.IsLeaf);
+        Assert.IsTrue(child4.IsLeaf());
     }
 
     [TestMethod]
@@ -193,8 +194,8 @@ public class SuffixTreeBuilderTests
     {
         var text1 = new TextWithTerminator("abab");
         var root1 = Build(text1);
-        Assert.IsTrue(root1.Match(text1, "ab") is SuffixTreeMatch { Success: true });
-        Assert.IsTrue(root1.Match(text1, "abab") is SuffixTreeMatch { Success: true });
+        Assert.IsTrue(root1.Match(text1, "ab") is { Success: true });
+        Assert.IsTrue(root1.Match(text1, "abab") is { Success: true });
     }
 
     [TestMethod]

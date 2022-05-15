@@ -9,45 +9,6 @@ namespace StringAlgorithms.SuffixTrees.Tests;
 public class SuffixTreePathTests
 {
     [TestMethod]
-    public void Empty_Correctness()
-    {
-        Assert.IsFalse(SuffixTreePath.Empty().PathNodes.Any());
-    }
-
-    [TestMethod]
-    public void Singleton_Correctness()
-    {
-        var node = new SuffixTreeNode.Leaf(0);
-        var singletonPath = SuffixTreePath.Singleton(new(0, 1), node);
-        Assert.AreEqual(1, singletonPath.PathNodes.Count());
-        Assert.AreEqual(new(0, 1), singletonPath.PathNodes.Single().Key);
-        Assert.AreEqual(node, singletonPath.PathNodes.Single().Value);
-    }
-
-    [TestMethod]
-    public void TotalEdgesLength_EmptyPath()
-    {
-        Assert.AreEqual(0, new SuffixTreePath(new Dictionary<SuffixTreeEdge, SuffixTreeNode> { }).TotalEdgesLength);
-    }
-
-    [TestMethod]
-    public void TotalEdgesLength_SingletonPath()
-    {
-        Assert.AreEqual(3, SuffixTreePath.Singleton(new(0, 3), new SuffixTreeNode.Leaf(0)).TotalEdgesLength);
-    }
-
-    [TestMethod]
-    public void TotalEdgesLength_MultipleNodesPath()
-    {
-        var root = SuffixTreeNodeTests.BuildSuffixTreeExample();
-        var path = SuffixTreePath.From(
-            (new SuffixTreeEdge(0, 1), root[new(0, 1)]),
-            (new SuffixTreeEdge(1, 1), root[new(0, 1)][new(1, 1)]),
-            (new SuffixTreeEdge(3, 1), root[new(0, 1)][new(1, 1)][new(3, 1)]));
-        Assert.AreEqual(3, path.TotalEdgesLength);
-    }
-
-    [TestMethod]
     public void PathNodes_ImmutabilityOnGet()
     {
         var path = new SuffixTreePath(new Dictionary<SuffixTreeEdge, SuffixTreeNode> { });
@@ -66,5 +27,35 @@ public class SuffixTreePathTests
         Assert.AreEqual(0, path.PathNodes.Count());
         pathNodes[new(0, 1)] = new SuffixTreeNode.Leaf(0);
         Assert.AreEqual(0, path.PathNodes.Count());
+    }
+
+    /// <remarks>
+    /// The example is the second "root to leaf"" path of the tree built from <see cref="ExampleText"/>: 
+    /// a -> ba -> a$.
+    /// </remarks>
+    internal static SuffixTreePath BuildSuffixTreePathExample()
+    {
+        var leaf = new SuffixTreeNode.Leaf(2);
+        var leafEdge = new SuffixTreeEdge(5, 2);
+
+        var intermediate1 = new SuffixTreeNode.Intermediate(new Dictionary<SuffixTreeEdge, SuffixTreeNode>
+        {
+            [new(3, 4)] = new SuffixTreeNode.Leaf(0),
+            [leafEdge] = leaf,
+        });
+        var intermediate1Edge = new SuffixTreeEdge(1, 2);
+        
+        var intermediate2 = new SuffixTreeNode.Intermediate(new Dictionary<SuffixTreeEdge, SuffixTreeNode>
+        {
+            [intermediate1Edge] = intermediate1,
+        });
+        var intermediate2Edge = new SuffixTreeEdge(0, 1);
+
+        return new SuffixTreePath(new List<KeyValuePair<SuffixTreeEdge, SuffixTreeNode>>
+        {
+            new(intermediate2Edge, intermediate2),
+            new(intermediate1Edge, intermediate1),
+            new(leafEdge, leaf),            
+        });
     }
 }
