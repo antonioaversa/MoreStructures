@@ -18,16 +18,8 @@ public class SuffixTreeBuilder
     public SuffixTreePath MultistepsPath(IEnumerable<KeyValuePair<SuffixTreeEdge, SuffixTreeNode>> pathNodes) =>
         new(pathNodes);
 
-    /// <summary>
-    /// Build a Suffix Tree of the provided text, which is a n-ary search tree in which edges coming out of a node
-    /// are substrings of text which identify edges shared by all paths to leaves, starting from the node.
-    /// </summary>
-    /// <param name="text">The text to build the Suffix Tree of, with its terminator (required for traversal).</param>
-    /// <returns>The root node of the Suffix Tree.</returns>
-    /// <remarks>
-    /// Substrings of text are identified by their start position in text and their length.
-    /// </remarks>
-    public static SuffixTreeNode Build(TextWithTerminator text)
+
+    public SuffixTreeNode BuildTree(TextWithTerminator text)
     {
         SuffixTreeNode root = new SuffixTreeNode.Leaf(0);
 
@@ -36,11 +28,6 @@ public class SuffixTreeBuilder
 
         return root;
     }
-
-    /// <summary><inheritdoc cref="Build(TextWithTerminator)"/></summary>
-    /// <param name="text">The text to build the Suffix Tree of, without any terminator (automatically added).</param>
-    /// <returns><inheritdoc cref="Build(TextWithTerminator)"/></returns>
-    public static SuffixTreeNode Build(string text) => Build(new TextWithTerminator(text));
 
     private static SuffixTreeNode.Intermediate IncludeSuffixIntoTree(
         TextWithTerminator text, int suffixCurrentIndex, int suffixIndex, SuffixTreeNode node)

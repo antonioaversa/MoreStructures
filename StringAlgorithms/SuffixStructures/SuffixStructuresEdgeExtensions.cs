@@ -1,7 +1,7 @@
 ﻿namespace StringAlgorithms.SuffixStructures;
 
 /// <summary>
-/// Extension methods for all Suffix Structure edge concretions.
+/// Extension methods for all <see cref="ISuffixStructureEdge{TEdge, TNode, TPath, TBuilder}"/> edge concretions.
 /// </summary>
 public static class SuffixStructuresEdgeExtensions
 {

@@ -7,11 +7,13 @@ namespace StringAlgorithms.SuffixTrees.Tests;
 [TestClass]
 public class SuffixStructureMatcherTests
 {
+    private readonly SuffixTreeBuilder Builder = new();
+
     [TestMethod]
     public void Match_Preconditions()
     {
         var text = new TextWithTerminator("abcdaabcbcadaabca");
-        var suffixTree = SuffixTreeBuilder.Build(text);
+        var suffixTree = Builder.BuildTree(text);
 
         Assert.ThrowsException<ArgumentException>(() => suffixTree.Match(text, new("")));
     }
@@ -20,7 +22,7 @@ public class SuffixStructureMatcherTests
     public void Match_SuccessAndMatchedCharsIsCorrect()
     {
         var text = new TextWithTerminator("abcdaabcbcadaabca");
-        var suffixTree = SuffixTreeBuilder.Build(text);
+        var suffixTree = Builder.BuildTree(text);
 
         SuffixStructureMatch<SuffixTreePath> match;
 
@@ -46,7 +48,7 @@ public class SuffixStructureMatcherTests
     public void Match_UnsuccessAndMatchedCharsIsCorrect()
     {
         var text = new TextWithTerminator("abcdaabcbcadaabca");
-        var suffixTree = SuffixTreeBuilder.Build(text);
+        var suffixTree = Builder.BuildTree(text);
 
         SuffixStructureMatch<SuffixTreePath> match;
 
@@ -66,7 +68,7 @@ public class SuffixStructureMatcherTests
     public void Match_SuccessBeginAndPathIsCorrect()
     {
         var text = new TextWithTerminator("abcdaabcbcadaabca");
-        var suffixTree = SuffixTreeBuilder.Build(text);
+        var suffixTree = Builder.BuildTree(text);
 
         foreach (var pattern in new string[] { "ab", "abc", "abcdaabcbcadaabca", "b", "bc", "bcdaabcbcadaabca", "aab" })
         {

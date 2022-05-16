@@ -19,6 +19,19 @@ public interface ISuffixStructureBuilder<TEdge, TNode, TPath, TBuilder>
     where TBuilder : ISuffixStructureBuilder<TEdge, TNode, TPath, TBuilder>
 {
     /// <summary>
+    /// Build a Suffix Structure of the provided text, which is a n-ary search tree in which edges coming out of a node
+    /// are substrings of text which identify edges shared by all paths to leaves, starting from the node.
+    /// </summary>
+    /// <param name="text">
+    /// The text to build the Suffix Structure of, with its terminator (required for traversal).
+    /// </param>
+    /// <returns>The root node of the Suffix Structure.</returns>
+    /// <remarks>
+    /// Substrings of text are identified by their start position in text and their length.
+    /// </remarks>
+    TNode BuildTree(TextWithTerminator text);
+
+    /// <summary>
     /// Builds an empty path, i.e. an empty sequence of nodes.
     /// </summary>
     TPath EmptyPath();

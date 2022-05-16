@@ -3,7 +3,7 @@
 namespace StringAlgorithms.SuffixStructures;
 
 /// <summary>
-/// Extension methods for all Suffix Structure path concretions.
+/// Extension methods for all <see cref="ISuffixStructurePath{TEdge, TNode, TPath, TBuilder}"/> path concretions.
 /// </summary>
 public static class SuffixStructuresPathExtensions
 {

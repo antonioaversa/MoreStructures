@@ -3,7 +3,6 @@ using StringAlgorithms.SuffixStructures;
 using StringAlgorithms.SuffixTrees;
 using System;
 using System.Linq;
-using static StringAlgorithms.SuffixTrees.SuffixTreeBuilder;
 using static StringAlgorithms.TextWithTerminator;
 
 namespace StringAlgorithms.Tests.SuffixTrees;
@@ -11,37 +10,39 @@ namespace StringAlgorithms.Tests.SuffixTrees;
 [TestClass]
 public class SuffixTreeBuilderTests
 {
+    private readonly SuffixTreeBuilder Builder = new();
+
     [TestMethod]
-    public void Build_EmptyString()
+    public void BuildTree_EmptyString()
     {
-        var root = Build(string.Empty);
+        var root = Builder.BuildTree(string.Empty);
         Assert.AreEqual(1, root.Children.Count);
         Assert.AreEqual(new(0, 1), root.Children.Keys.Single());
         Assert.IsTrue(root.Children.Values.Single().IsLeaf());
     }
 
     [TestMethod]
-    public void Build_StringIncludingTerminator()
+    public void BuildTree_StringIncludingTerminator()
     {
-        Assert.ThrowsException<ArgumentException>(() => Build(DefaultTerminator + string.Empty));
-        Assert.ThrowsException<ArgumentException>(() => Build($"{DefaultTerminator}a"));
-        Assert.ThrowsException<ArgumentException>(() => Build($"a{DefaultTerminator}"));
-        Assert.ThrowsException<ArgumentException>(() => Build($"a{DefaultTerminator}a"));
+        Assert.ThrowsException<ArgumentException>(() => Builder.BuildTree(DefaultTerminator + string.Empty));
+        Assert.ThrowsException<ArgumentException>(() => Builder.BuildTree($"{DefaultTerminator}a"));
+        Assert.ThrowsException<ArgumentException>(() => Builder.BuildTree($"a{DefaultTerminator}"));
+        Assert.ThrowsException<ArgumentException>(() => Builder.BuildTree($"a{DefaultTerminator}a"));
     }
 
     [TestMethod]
-    public void Build_SingleCharString()
+    public void BuildTree_SingleCharString()
     {
-        var root = Build("a");
+        var root = Builder.BuildTree("a");
         Assert.AreEqual(2, root.Children.Count);
         Assert.IsTrue(root[new(0, 2)].IsLeaf());
         Assert.IsTrue(root[new(1, 1)].IsLeaf());
     }
 
     [TestMethod]
-    public void Build_TwoCharsString_DifferentPrefixes()
+    public void BuildTree_TwoCharsString_DifferentPrefixes()
     {
-        SuffixTreeNode root = Build("ab");
+        SuffixTreeNode root = Builder.BuildTree("ab");
 
         Assert.AreEqual(3, root.Children.Count);
         Assert.IsTrue(root[new(0, 3)].IsLeaf());
@@ -50,9 +51,9 @@ public class SuffixTreeBuilderTests
     }
 
     [TestMethod]
-    public void Build_TwoCharsString_SamePrefixes()
+    public void BuildTree_TwoCharsString_SamePrefixes()
     {
-        SuffixTreeNode root = Build("aa");
+        SuffixTreeNode root = Builder.BuildTree("aa");
 
         Assert.AreEqual(2, root.Children.Count);
 
@@ -66,9 +67,9 @@ public class SuffixTreeBuilderTests
     }
 
     [TestMethod]
-    public void Build_ThreeCharsString_SamePrefixes()
+    public void BuildTree_ThreeCharsString_SamePrefixes()
     {
-        SuffixTreeNode root = Build("aaa");
+        SuffixTreeNode root = Builder.BuildTree("aaa");
 
         Assert.AreEqual(2, root.Children.Count);
 
@@ -92,9 +93,9 @@ public class SuffixTreeBuilderTests
     }
 
     [TestMethod]
-    public void Build_ThreeCharsString_PartiallySamePrefixes()
+    public void BuildTree_ThreeCharsString_PartiallySamePrefixes()
     {
-        SuffixTreeNode root = Build("aba");
+        SuffixTreeNode root = Builder.BuildTree("aba");
 
         Assert.AreEqual(3, root.Children.Count);
 
@@ -115,9 +116,9 @@ public class SuffixTreeBuilderTests
     }
 
     [TestMethod]
-    public void Build_ThreeCharsString_DifferentPrefixes()
+    public void BuildTree_ThreeCharsString_DifferentPrefixes()
     {
-        SuffixTreeNode root = Build("abc");
+        SuffixTreeNode root = Builder.BuildTree("abc");
 
         Assert.AreEqual(4, root.Children.Count);
 
@@ -135,9 +136,9 @@ public class SuffixTreeBuilderTests
     }
 
     [TestMethod]
-    public void Build_ThreeCharsString_ExtendingPrefixes()
+    public void BuildTree_ThreeCharsString_ExtendingPrefixes()
     {
-        SuffixTreeNode root = Build("aababcabcd");
+        SuffixTreeNode root = Builder.BuildTree("aababcabcd");
 
         Assert.AreEqual(5, root.Children.Count);
 
@@ -161,10 +162,10 @@ public class SuffixTreeBuilderTests
     }
 
     [TestMethod]
-    public void Build_ReturnsOnlySuffixes()
+    public void BuildTree_ReturnsOnlySuffixes()
     {
         var text = new TextWithTerminator("aababcabcd");
-        SuffixTreeNode root = Build(text);
+        SuffixTreeNode root = Builder.BuildTree(text);
 
         foreach (var rootToLeafPath in root.GetAllNodeToLeafPaths())
         {
@@ -173,7 +174,7 @@ public class SuffixTreeBuilderTests
     }
 
     [TestMethod]
-    public void Build_ReturnsAllSuffixes()
+    public void BuildTree_ReturnsAllSuffixes()
     {
         var text = new TextWithTerminator("aababcabcd");
         var allSuffixes = Enumerable
@@ -181,7 +182,7 @@ public class SuffixTreeBuilderTests
             .Select(i => text[i..])
             .ToHashSet();
 
-        var root = Build(text);
+        var root = Builder.BuildTree(text);
         var suffixes = root
             .GetAllSuffixesFor(text)
             .ToHashSet();
@@ -190,19 +191,19 @@ public class SuffixTreeBuilderTests
     }
 
     [TestMethod]
-    public void Build_UsesTerminatorForMatchToDistinguishSuffixesFromAnySubstring()
+    public void BuildTree_UsesTerminatorForMatchToDistinguishSuffixesFromAnySubstring()
     {
         var text1 = new TextWithTerminator("abab");
-        var root1 = Build(text1);
+        var root1 = Builder.BuildTree(text1);
         Assert.IsTrue(root1.Match(text1, "ab") is { Success: true });
         Assert.IsTrue(root1.Match(text1, "abab") is { Success: true });
     }
 
     [TestMethod]
-    public void Build_StartLeftNullAtNonLeafNodes()
+    public void BuildTree_StartLeftNullAtNonLeafNodes()
     {
         var text1 = new TextWithTerminator("abababab");
-        var root1 = Build(text1);
+        var root1 = Builder.BuildTree(text1);
         Assert.IsTrue((
             from rootToLeafPath in root1.GetAllNodeToLeafPaths()
             from nonLeafNode in rootToLeafPath.PathNodes.SkipLast(1)
@@ -211,10 +212,10 @@ public class SuffixTreeBuilderTests
     }
 
     [TestMethod]
-    public void Build_StartCorrectlySetAtLeafNodes()
+    public void BuildTree_StartCorrectlySetAtLeafNodes()
     {
         var text1 = new TextWithTerminator("abababab");
-        var root1 = Build(text1);
+        var root1 = Builder.BuildTree(text1);
         Assert.IsTrue((
             from rootToLeafPath in root1.GetAllNodeToLeafPaths()
             let suffixStart = rootToLeafPath.PathNodes.Last().Value.Start ?? throw new Exception("Invalid leaf Start")

@@ -17,16 +17,7 @@ public class SuffixTrieBuilder
     public SuffixTriePath MultistepsPath(IEnumerable<KeyValuePair<SuffixTrieEdge, SuffixTrieNode>> pathNodes) =>
         new(pathNodes);
 
-    /// <summary>
-    /// Build a Suffix Trie of the provided text, which is a n-ary search tree in which edges coming out of a node
-    /// are single characters which identify edges shared by all paths to leaves, starting from the node.
-    /// </summary>
-    /// <param name="text">The text to build the Suffix Trie of, with its terminator (required for traversal).</param>
-    /// <returns>The root node of the Suffix Trie.</returns>
-    /// <remarks>
-    /// Substrings of text are identified by their start position in text and their length.
-    /// </remarks>
-    public static SuffixTrieNode Build(TextWithTerminator text)
+    public SuffixTrieNode BuildTree(TextWithTerminator text)
     {
         SuffixTrieNode root = new SuffixTrieNode.Leaf(0);
 
@@ -35,11 +26,6 @@ public class SuffixTrieBuilder
 
         return root;
     }
-
-    /// <summary><inheritdoc cref="Build(TextWithTerminator)"/></summary>
-    /// <param name="text">The text to build the Suffix Trie of, without any terminator (automatically added).</param>
-    /// <returns><inheritdoc cref="Build(TextWithTerminator)"/></returns>
-    public static SuffixTrieNode Build(string text) => Build(new TextWithTerminator(text));
 
     private static SuffixTrieNode.Intermediate IncludeSuffixIntoTrie(
         TextWithTerminator text, int suffixCurrentIndex, int suffixIndex, SuffixTrieNode node)
