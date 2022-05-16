@@ -3,7 +3,7 @@
 /// <summary>
 /// Extension methods for all <see cref="ISuffixStructureBuilder{TEdge, TNode, TPath, TBuilder}"/> concretions.
 /// </summary>
-public static class SuffixStructuresBuilderExtensions
+public static class SuffixStructureBuilderExtensions
 {
     /// <summary>
     /// <inheritdoc cref="ISuffixStructureBuilder{TEdge, TNode, TPath, TBuilder}.BuildTree(TextWithTerminator)"/>

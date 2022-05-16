@@ -3,7 +3,7 @@
 /// <summary>
 /// Extension methods for all <see cref="ISuffixStructureNode{TEdge, TNode, TPath, TBuilder}"/> node concretions.
 /// </summary>
-public static class SuffixStructuresNodeExtensions
+public static class SuffixStructureNodeExtensions
 {
     /// <summary>
     /// Whether the provided node is a leaf (i.e. has no children), or not.

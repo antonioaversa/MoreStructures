@@ -3,7 +3,7 @@
 /// <summary>
 /// Extension methods for all <see cref="ISuffixStructureEdge{TEdge, TNode, TPath, TBuilder}"/> edge concretions.
 /// </summary>
-public static class SuffixStructuresEdgeExtensions
+public static class SuffixStructureEdgeExtensions
 {
     /// <summary>
     /// Whether the first edge is in adjacency order w.r.t. the second edge.

@@ -5,7 +5,7 @@ namespace StringAlgorithms.SuffixStructures;
 /// <summary>
 /// Extension methods for all <see cref="ISuffixStructurePath{TEdge, TNode, TPath, TBuilder}"/> path concretions.
 /// </summary>
-public static class SuffixStructuresPathExtensions
+public static class SuffixStructurePathExtensions
 {
     /// <summary>
     /// Calculate the suffix corresponding to this path on the provided terminator-including text.
