@@ -40,6 +40,12 @@ namespace StringAlgorithms.Utilities
             Items.Aggregate(0.GetHashCode(), (acc, item) => acc ^ item.GetHashCode());
 
         /// <summary>
+        /// <inheritdoc/> Format: "[v1, v2, ...]".
+        /// </summary>
+        public override string ToString() => 
+            $"[{string.Join(", ", Items)}]";
+
+        /// <summary>
         /// Compare the two provided value read-only collections for equality by value.
         /// </summary>
         /// <param name="left">The first term of comparison.</param>

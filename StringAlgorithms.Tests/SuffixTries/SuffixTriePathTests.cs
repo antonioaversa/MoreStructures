@@ -1,9 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using StringAlgorithms.SuffixTries;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace StringAlgorithms.SuffixTries.Tests;
+namespace StringAlgorithms.Tests.SuffixTries;
 
 [TestClass]
 public class SuffixTriePathTests

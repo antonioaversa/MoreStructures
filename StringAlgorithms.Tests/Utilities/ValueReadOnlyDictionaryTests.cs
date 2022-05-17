@@ -125,5 +125,19 @@ namespace StringAlgorithms.Tests.Utilities
             var valueDictionary2 = new ValueReadOnlyDictionary<DictionaryKey, DictionaryValue>(dictionary2);
             Assert.IsTrue(valueDictionary1.GetHashCode() == valueDictionary2.GetHashCode());
         }
+
+        [TestMethod]
+        public void ToString_IncludesToStringOfKeysAndValues()
+        {
+            var dictionary = new Dictionary<string, int> { ["el1"] = 123, ["el2"] = 456 };
+            var valueDictionary1 = new ValueReadOnlyDictionary<string, int>(dictionary);
+            var valueDictionary1Str = valueDictionary1.ToString();
+
+            foreach (var item in dictionary)
+            {
+                Assert.IsTrue(valueDictionary1Str.Contains(item.Key.ToString()));
+                Assert.IsTrue(valueDictionary1Str.Contains(item.Value.ToString()));
+            }
+        }
     }
 }
