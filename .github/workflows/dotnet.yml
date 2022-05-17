@@ -1,4 +1,4 @@
-name: .NET6
+name: .NET Build and Test
 
 on:
   push:
@@ -7,22 +7,25 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
+  dotnet-build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest, macOS-latest ]
+        configuration: [ Release ]
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 6.0.x
-    - name: Restore dependencies
+    - name: Restore .NET dependencies
       run: |
         dotnet restore
-    - name: Build
+    - name: Build .NET
       run: |
-        dotnet build --no-restore
-    - name: Test
+        dotnet build --no-restore --configuration ${{ matrix.configuration }}
+    - name: Test .NET
       run: |
-        dotnet test --no-build --verbosity normal
+        dotnet test --no-build --verbosity normal --configuration ${{ matrix.configuration }}
+
