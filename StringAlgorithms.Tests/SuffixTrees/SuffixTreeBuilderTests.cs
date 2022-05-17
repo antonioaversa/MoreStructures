@@ -223,4 +223,10 @@ public class SuffixTreeBuilderTests
             select text1[suffixStart..] == suffix)
             .All(e => e));
     }
+
+    [TestMethod]
+    public void BuildTree_BuildsExampleTreeFromExampleText()
+    {
+        Assert.AreEqual(SuffixTreeNodeTests.BuildSuffixTreeExample(), Builder.BuildTree(TestUtilities.ExampleText1));
+    }
 }

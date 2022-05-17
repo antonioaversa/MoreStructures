@@ -3,7 +3,6 @@ using StringAlgorithms.SuffixStructures;
 using StringAlgorithms.SuffixTries;
 using System;
 using System.Linq;
-using static StringAlgorithms.SuffixTries.SuffixTrieBuilder;
 using static StringAlgorithms.TextWithTerminator;
 
 namespace StringAlgorithms.Tests.SuffixTries;
@@ -192,5 +191,11 @@ public class SuffixTrieBuilderTests
             let suffix = rootToLeafPath.SuffixFor(text1)
             select text1[suffixStart..] == suffix)
             .All(e => e));
+    }
+
+    [TestMethod]
+    public void BuildTree_BuildsExampleTrieFromExampleText()
+    {
+        Assert.AreEqual(SuffixTrieNodeTests.BuildSuffixTrieExample(), Builder.BuildTree(TestUtilities.ExampleText1));
     }
 }

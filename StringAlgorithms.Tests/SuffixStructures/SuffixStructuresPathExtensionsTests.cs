@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using StringAlgorithms.SuffixStructures;
 using StringAlgorithms.SuffixTrees;
-using StringAlgorithms.SuffixTrees.Tests;
-using StringAlgorithms.SuffixTries.Tests;
+using StringAlgorithms.Tests.SuffixTrees;
+using StringAlgorithms.Tests.SuffixTries;
 using System.Linq;
 
 namespace StringAlgorithms.Tests.SuffixStructures
@@ -14,23 +14,23 @@ namespace StringAlgorithms.Tests.SuffixStructures
         public void SuffixFor_IsCorrectForNonEmptyPathOnSuffixTree()
         {
             var path = SuffixTreePathTests.BuildSuffixTreePathExample();
-            var suffix = path.SuffixFor(SuffixTreeNodeTests.ExampleText);
-            Assert.AreEqual($"abaa{SuffixTreeNodeTests.ExampleText.Terminator}", suffix);
+            var suffix = path.SuffixFor(TestUtilities.ExampleText2);
+            Assert.AreEqual($"abaa{TestUtilities.ExampleText2.Terminator}", suffix);
         }
 
         [TestMethod]
         public void SuffixFor_IsCorrectForNonEmptyPathOnSuffixTrie()
         {
             var path = SuffixTriePathTests.BuildSuffixTriePathExample();
-            var suffix = path.SuffixFor(SuffixTrieNodeTests.ExampleText);
-            Assert.AreEqual($"abaa{SuffixTrieNodeTests.ExampleText.Terminator}", suffix);
+            var suffix = path.SuffixFor(TestUtilities.ExampleText2);
+            Assert.AreEqual($"abaa{TestUtilities.ExampleText2.Terminator}", suffix);
         }
 
         [TestMethod]
         public void SuffixFor_IsCorrectForEmptyPath()
         {
             var path = new SuffixTreeBuilder().EmptyPath();
-            var suffix = path.SuffixFor(SuffixTreeNodeTests.ExampleText);
+            var suffix = path.SuffixFor(TestUtilities.ExampleText2);
             Assert.AreEqual(string.Empty, suffix);
         }
 
@@ -38,7 +38,7 @@ namespace StringAlgorithms.Tests.SuffixStructures
         public void IsSuffixOf_IsCorrectForNonEmtpyPath()
         {
             var path = SuffixTreePathTests.BuildSuffixTreePathExample();
-            Assert.IsTrue(path.IsSuffixOf(SuffixTreeNodeTests.ExampleText));
+            Assert.IsTrue(path.IsSuffixOf(TestUtilities.ExampleText2));
         }
 
         [TestMethod]

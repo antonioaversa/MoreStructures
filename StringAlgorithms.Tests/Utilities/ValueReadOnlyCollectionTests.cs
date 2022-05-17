@@ -89,5 +89,18 @@ namespace StringAlgorithms.Tests.Utilities
             var valueList2 = new ValueReadOnlyCollection<CollectionItem>(list2);
             Assert.IsTrue(valueList1.GetHashCode() == valueList2.GetHashCode());
         }
+
+        [TestMethod]
+        public void ToString_IncludesToStringOfItems()
+        {
+            var list = new List<string> { "el1", "el2" };
+            var valueList1 = new ValueReadOnlyCollection<string>(list);
+            var valueList1Str = valueList1.ToString();
+
+            foreach (var item in list)
+            {
+                Assert.IsTrue(valueList1Str.Contains(item.ToString()));
+            }
+        }
     }
 }

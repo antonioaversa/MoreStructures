@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using StringAlgorithms.SuffixStructures;
+using StringAlgorithms.SuffixTrees;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace StringAlgorithms.SuffixTrees.Tests;
+namespace StringAlgorithms.Tests.SuffixTrees;
 
 [TestClass]
 public class SuffixTreeNodeTests
@@ -58,19 +58,8 @@ public class SuffixTreeNodeTests
         Assert.AreEqual(2, root.Children.Count);
     }
 
-    [TestMethod]
-    public void IsLeaf()
-    {
-        var root = BuildSuffixTreeExample();
-        Assert.IsFalse(root.IsLeaf());
-        Assert.IsFalse(root[new(0, 1)][new(1, 1)].IsLeaf());
-        Assert.IsTrue(root[new(0, 1)][new(1, 1)][new(3, 1)].IsLeaf());
-    }
-
-    internal static TextWithTerminator ExampleText => new("ababaa");
-
     /// <remarks>
-    /// The example is built from the text <see cref="ExampleText"/>.
+    /// The example is built from the text <see cref="TestUtilities.ExampleText1"/>.
     /// </remarks>
     internal static SuffixTreeNode BuildSuffixTreeExample()
     {

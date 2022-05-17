@@ -45,6 +45,12 @@ namespace StringAlgorithms.Utilities
             this.Select(kvp => kvp.GetHashCode()).Aggregate((acc, v) => acc ^ v);
 
         /// <summary>
+        /// <inheritdoc/> Format: "{[k1] = v1, [k2] = v2, ...}".
+        /// </summary>
+        public override string ToString() => 
+            $"{{{string.Join(", ", this.Select(kvp => $"[{kvp.Key}] = {kvp.Value}"))}}}";
+
+        /// <summary>
         /// Compare the two provided value read-only dictionaries for equality by value.
         /// </summary>
         /// <param name="left">The first term of comparison.</param>

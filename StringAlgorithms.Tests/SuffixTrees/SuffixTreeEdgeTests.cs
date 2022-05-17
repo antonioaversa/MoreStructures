@@ -1,7 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using StringAlgorithms.SuffixTrees;
 using System;
 
-namespace StringAlgorithms.SuffixTrees.Tests;
+namespace StringAlgorithms.Tests.SuffixTrees;
 
 [TestClass]
 public class SuffixTreeEdgeTests

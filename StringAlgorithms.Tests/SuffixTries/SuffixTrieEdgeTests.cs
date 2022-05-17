@@ -1,7 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using StringAlgorithms.SuffixTries;
 using System;
 
-namespace StringAlgorithms.SuffixTries.Tests;
+namespace StringAlgorithms.Tests.SuffixTries;
 
 [TestClass]
 public class SuffixTrieEdgeTests
