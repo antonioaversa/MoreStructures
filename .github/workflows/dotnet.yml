@@ -1,5 +1,9 @@
 name: .NET Build and Test
 
+env:
+  DOTNET_VERSION: 6.0.x
+  JAVA_VERSION: 1.11
+
 on:
   push:
     branches: [ main ]
@@ -7,46 +11,136 @@ on:
     branches: [ main ]
 
 jobs:
-  dotnet-build:
+  dotnet-build-and-test:
     name: .NET Build and Test
-    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ ubuntu-latest, windows-latest, macOS-latest ]
         configuration: [ Release ]
+    runs-on: ${{ matrix.os }}
+
     steps:
     - uses: actions/checkout@v3
+    
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
       with:
-        dotnet-version: 6.0.x
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+
     - name: Restore .NET dependencies
       run: |
         dotnet restore
+
     - name: Build .NET
       run: |
         dotnet build --no-restore --configuration ${{ matrix.configuration }}
+
     - name: Test .NET
       run: |
         dotnet test --no-build --verbosity normal --configuration ${{ matrix.configuration }}
 
+  dotnet-coverage:
+    name: .NET Coverage
+    env:
+      DOTNET_CONFIGURATION: Debug
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+
+    - name: Run Coverage .NET
+      run: |
+        dotnet restore
+        dotnet build --no-restore --configuration ${{ env.DOTNET_CONFIGURATION }}
+        dotnet test --no-build --verbosity normal --configuration ${{ env.DOTNET_CONFIGURATION }} --results-directory ./coverage --collect:"XPlat Code Coverage"
+        cp coverage/*/coverage.cobertura.xml coverage/coverage.cobertura.xml
+    
+    - name: Coverage Detailed Report
+      run: |
+        dotnet tool install --global dotnet-reportgenerator-globaltool
+        reportgenerator -reports:"coverage/coverage.cobertura.xml" -targetdir:"coverage-report" -reporttypes:Html
+
+    - name: Upload Coverage Detailed Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: coverage-report
+        path: coverage-report/
+
+    - name: Coverage Summary Report
+      uses: irongut/CodeCoverageSummary@v1.2.0
+      with:
+        filename: coverage/coverage.cobertura.xml
+        badge: true
+        fail_below_min: true
+        format: 'markdown'
+        hide_branch_rate: false
+        hide_complexity: false
+        indicators: true
+        output: 'both'
+        thresholds: '95 97'
+
+    - name: Upload Coverage Summary Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: code-coverage-results.md
+        path: code-coverage-results.md
+
+    - name: Add Coverage Summary PR Comment
+      uses: actions/github-script@v6
+      if: github.event_name == 'pull_request'
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const fs = require("fs");
+          const codeCoverageResults = fs.readFileSync("code-coverage-results.md", "utf8");
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: codeCoverageResults
+          });
+
+    - name: Deploy Coverage .NET Badge
+      # Only once from ubuntu-latest and master
+      if: false
+      # We pin to the SHA, not the tag, for security reasons.
+      # https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/security-hardening-for-github-actions#using-third-party-actions
+      uses: peaceiris/actions-gh-pages@bbdfb200618d235585ad98e965f4aafc39b4c501  # v3.7.3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: docs
+        keep_files: true
+
   sonar:
     name: Sonar
+    env:
+      DOTNET_CONFIGURATION: Debug    
     runs-on: windows-latest
+
     steps:
-      - name: Set up JDK 11
+      - name: Set up JDK
         uses: actions/setup-java@v1
         with:
-          java-version: 1.11
+          java-version: ${{ env.JAVA_VERSION }} 
+
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+
       - name: Cache SonarCloud packages
         uses: actions/cache@v1
         with:
           path: ~\sonar\cache
           key: ${{ runner.os }}-sonar
           restore-keys: ${{ runner.os }}-sonar
+
       - name: Cache SonarCloud scanner
         id: cache-sonar-scanner
         uses: actions/cache@v1
@@ -54,20 +148,40 @@ jobs:
           path: .\.sonar\scanner
           key: ${{ runner.os }}-sonar-scanner
           restore-keys: ${{ runner.os }}-sonar-scanner
+
       - name: Install SonarCloud scanner
         if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
         shell: powershell
         run: |
           New-Item -Path .\.sonar\scanner -ItemType Directory
           dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
+
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          COVERAGE_FILENAME: coverage-opencover.xml
         shell: powershell
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"antonioaversa_mooc" /o:"antonioaversa" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          .\.sonar\scanner\dotnet-sonarscanner begin `
+            /k:"antonioaversa_mooc" `
+            /o:"antonioaversa" `
+            /d:sonar.login="${{ secrets.SONAR_TOKEN }}" `
+            /d:sonar.host.url="https://sonarcloud.io" `
+            /d:sonar.cs.opencover.reportsPaths="$env:COVERAGE_FILENAME"
           dotnet restore
-          dotnet build --no-restore --configuration Release
-          dotnet test --no-build --verbosity normal --configuration Release
+          dotnet build --no-restore --configuration ${{ env.DOTNET_CONFIGURATION }}
+          dotnet test --no-build --verbosity normal --configuration ${{ env.DOTNET_CONFIGURATION }} `
+            /p:CollectCoverage=true `
+            /p:CoverletOutputFormat=opencover `
+            /p:CoverletOutput="$env:GITHUB_WORKSPACE/$env:COVERAGE_FILENAME"
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+
+  # Checks aggregator
+  dotnet-success:
+    name: .NET CI Success
+    runs-on: ubuntu-latest
+    needs: [dotnet-build-and-test, dotnet-coverage, sonar]
+
+    steps:
+    - run: echo Done!
