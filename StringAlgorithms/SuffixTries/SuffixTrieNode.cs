@@ -30,11 +30,13 @@ public abstract record SuffixTrieNode(IDictionary<SuffixTrieEdge, SuffixTrieNode
         : SuffixTrieNode(new Dictionary<SuffixTrieEdge, SuffixTrieNode> { }, LeafStart)
     { }
 
+    /// <inheritdoc/>
     public IDictionary<SuffixTrieEdge, SuffixTrieNode> Children { get; }
         = (Children.Any() == (Start == null)) && Start.GetValueOrDefault(0) >= 0
         ? Children.ToValueReadOnlyDictionary()
         : throw new ArgumentException($"Leafs needs to specificy a non-negative {nameof(Start)}.", nameof(Children));
 
+    /// <inheritdoc/>
     public int? Start { get; } = Start;
 
     /// <summary>
