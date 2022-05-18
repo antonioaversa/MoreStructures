@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SuffixTrieEdge
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SuffixTrieEdge
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="StringAlgorithms.SuffixTries.SuffixTrieEdge">
+  
+  
+  <h1 id="StringAlgorithms_SuffixTries_SuffixTrieEdge" data-uid="StringAlgorithms.SuffixTries.SuffixTrieEdge" class="text-break">Class SuffixTrieEdge
+  </h1>
+  <div class="markdown level0 summary"><p>The index key of the collection of children of a Suffix Trie node, which identifies a single char in text, used
+as a selector to navigate the Suffix Trie in text pattern matching.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a></div>
+    <div class="level2"><span class="xref">SuffixTrieEdge</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureEdge-4.html">ISuffixStructureEdge</a>&lt;<a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreePath.html">SuffixTreePath</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeBuilder.html">SuffixTreeBuilder</a>&gt;</div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a>&gt;</div>
+    <div><a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureEdge-4.html">ISuffixStructureEdge</a>&lt;<a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieEdge.html">SuffixTrieEdge</a>, <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a>, <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTriePath.html">SuffixTriePath</a>, <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieBuilder.html">SuffixTrieBuilder</a>&gt;</div>
+    <div><a class="xref" href="StringAlgorithms.TextWithTerminator.ISelector.html">TextWithTerminator.ISelector</a></div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieEdge.html">SuffixTrieEdge</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeEdge.html#StringAlgorithms_SuffixTrees_SuffixTreeEdge_Start">SuffixTreeEdge.Start</a>
+    </div>
+    <div>
+      <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeEdge.html#StringAlgorithms_SuffixTrees_SuffixTreeEdge_Length">SuffixTreeEdge.Length</a>
+    </div>
+    <div>
+      <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeEdge.html#StringAlgorithms_SuffixTrees_SuffixTreeEdge_Of_StringAlgorithms_TextWithTerminator_">SuffixTreeEdge.Of(TextWithTerminator)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="StringAlgorithms.SuffixTries.html">StringAlgorithms.SuffixTries</a></h6>
+  <h6><strong>Assembly</strong>: StringAlgorithms.dll</h6>
+  <h5 id="StringAlgorithms_SuffixTries_SuffixTrieEdge_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SuffixTrieEdge : SuffixTreeEdge, ISuffixStructureEdge&lt;SuffixTreeEdge, SuffixTreeNode, SuffixTreePath, SuffixTreeBuilder&gt;, IEquatable&lt;SuffixTreeEdge&gt;, ISuffixStructureEdge&lt;SuffixTrieEdge, SuffixTrieNode, SuffixTriePath, SuffixTrieBuilder&gt;, TextWithTerminator.ISelector, IEquatable&lt;SuffixTrieEdge&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixTries_SuffixTrieEdge__ctor_System_Int32_.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixTries.SuffixTrieEdge.%23ctor(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixTries/SuffixTrieEdge.cs/#L11">View Source</a>
+  </span>
+  <a id="StringAlgorithms_SuffixTries_SuffixTrieEdge__ctor_" data-uid="StringAlgorithms.SuffixTries.SuffixTrieEdge.#ctor*"></a>
+  <h4 id="StringAlgorithms_SuffixTries_SuffixTrieEdge__ctor_System_Int32_" data-uid="StringAlgorithms.SuffixTries.SuffixTrieEdge.#ctor(System.Int32)">SuffixTrieEdge(Int32)</h4>
+  <div class="markdown level1 summary"><p>The index key of the collection of children of a Suffix Trie node, which identifies a single char in text, used
+as a selector to navigate the Suffix Trie in text pattern matching.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SuffixTrieEdge(int Index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">Index</span></td>
+        <td><p>The index of the character in the text.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixTries_SuffixTrieEdge_Index.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixTries.SuffixTrieEdge.Index%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixTries/SuffixTrieEdge.cs/#L11">View Source</a>
+  </span>
+  <a id="StringAlgorithms_SuffixTries_SuffixTrieEdge_Index_" data-uid="StringAlgorithms.SuffixTries.SuffixTrieEdge.Index*"></a>
+  <h4 id="StringAlgorithms_SuffixTries_SuffixTrieEdge_Index" data-uid="StringAlgorithms.SuffixTries.SuffixTrieEdge.Index">Index</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Index { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureEdge-4.html">ISuffixStructureEdge&lt;TEdge, TNode, TPath, TBuilder&gt;</a>
+  </div>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <div>
+      <a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureEdge-4.html">ISuffixStructureEdge&lt;TEdge, TNode, TPath, TBuilder&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="StringAlgorithms.TextWithTerminator.ISelector.html">TextWithTerminator.ISelector</a>
+  </div>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixTries_SuffixTrieEdge.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixTries.SuffixTrieEdge%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixTries/SuffixTrieEdge.cs/#L11" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

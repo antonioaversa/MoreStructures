@@ -1,0 +1,857 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/a/mooc/mooc/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.StringUtilities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.StringUtilities.html",
+          "hash": "ucaYIEbjgTBVQosieVPAOUs8sIr50GDcr4fVwDhwsKM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixStructures.AdjacencyOrder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixStructures.AdjacencyOrder.html",
+          "hash": "ebZbEn+dsbDyNzrv2QItmCEtO0IDIYHAbtmocYe84EE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixStructures.ISuffixStructureBuilder-4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixStructures.ISuffixStructureBuilder-4.html",
+          "hash": "dG3QtPSgRAGh8QGjlRiUMT6sex93V7NpOUUJckfQJxA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixStructures.ISuffixStructureEdge-4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixStructures.ISuffixStructureEdge-4.html",
+          "hash": "IHN/yuqW7l+UkapNt+oySEHmT+oAe8OOkEb6o7ZuBCE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixStructures.ISuffixStructureNode-4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixStructures.ISuffixStructureNode-4.html",
+          "hash": "Z7+ffQOPirBasWqHbqcQxNNT0AOJvPZwFLvuNkldEZU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixStructures.ISuffixStructurePath-4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixStructures.ISuffixStructurePath-4.html",
+          "hash": "adSPxjeWDpdRWcIYHW53W3ulrmxwdmtUcmDa49mS68A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixStructures.SuffixStructureBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixStructures.SuffixStructureBuilderExtensions.html",
+          "hash": "ReFUT883Rl3KFhvLnWxj+tVes5r7EJm5KiVt1i8uOsE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixStructures.SuffixStructureEdgeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixStructures.SuffixStructureEdgeExtensions.html",
+          "hash": "LbtKlKuY0jPOTvaSpvu0OSQRgRZE66SbulbUTRYbDo4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixStructures.SuffixStructureMatch-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixStructures.SuffixStructureMatch-1.html",
+          "hash": "satDPekRJ67FVG20VtkBWOmadkbQKLBT3Y8L/fBhSU8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixStructures.SuffixStructureMatcher.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixStructures.SuffixStructureMatcher.html",
+          "hash": "SMhZckhkynaJ15bzGtm97+PU0pUW7uX0QH6j8oIT2Pk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.html",
+          "hash": "+MWG6NcVwLlF0HWhYthvwS9E4cuU8kvsTPdQ/7J4ETs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.html",
+          "hash": "sf7uYWDGNX48p6zLHeEIX5zCrwSV9RsZfA8gzlNkB90="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixStructures.SuffixStructuresConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixStructures.SuffixStructuresConverter.html",
+          "hash": "aP37r7Y+0fG8hxE7DBttP3vSopl++WGm8EUDmho+q04="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.html",
+          "hash": "dd24QhD8MZTQWK3Pd8qZ0xNIahx77yEuEhAs3gzc+GE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixStructures.Tests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixStructures.Tests.html",
+          "hash": "AJItotAdjcbC3RELSEVjlImUZM2cwnmU3YsahXjdLLg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixStructures.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixStructures.html",
+          "hash": "N/S+2qq7+UHhTu9S1TWb77NqIIUGwMF8xtel616tM50="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixTrees.SuffixTreeBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixTrees.SuffixTreeBuilder.html",
+          "hash": "gM1XV1rbmnBvaHrEhPsZ4by4DzCtHqIYwp35nQ7wrHA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixTrees.SuffixTreeEdge.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixTrees.SuffixTreeEdge.html",
+          "hash": "VIIoQbWEzoDmoGwRTi3nzSYqzdJiczPALJhfurXYPQI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixTrees.SuffixTreeNode.Intermediate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixTrees.SuffixTreeNode.Intermediate.html",
+          "hash": "uhIGqh8XdtSoa8dS8LJSkWJQJmby6RuHX5Dt1vRHtmQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixTrees.SuffixTreeNode.Leaf.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixTrees.SuffixTreeNode.Leaf.html",
+          "hash": "9FJL/rsGvsQM+bYVHSYcC36T/HmUq0IxStjyKJ/5GdY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixTrees.SuffixTreeNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixTrees.SuffixTreeNode.html",
+          "hash": "C64Fo10MhI4sA3BfIh9XQbLzTB3u1IBM1jD6Lh6KzJc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixTrees.SuffixTreePath.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixTrees.SuffixTreePath.html",
+          "hash": "mdjEO2KAOhm9DjVX193Y283RgodkfdgTiLtz4Kjx6fI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixTrees.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixTrees.html",
+          "hash": "ETBrms1sUdTUw3qRL/GjfMimB56u4y/SgNCI5m/SJyo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixTries.SuffixTrieBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixTries.SuffixTrieBuilder.html",
+          "hash": "derjhUyExTIiVe7sC8iQmwie0lY2BBnCyE6hH82MeoU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixTries.SuffixTrieEdge.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixTries.SuffixTrieEdge.html",
+          "hash": "o8unOT8+dSxnqMuVPbdBr2bjiPeVRteoeMGmUuGsiGw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixTries.SuffixTrieNode.Intermediate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixTries.SuffixTrieNode.Intermediate.html",
+          "hash": "1p+zDRvNnU/FcDtluCmr1HFga7hh3dpsKyc+xrCzEkk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixTries.SuffixTrieNode.Leaf.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixTries.SuffixTrieNode.Leaf.html",
+          "hash": "qlFEMu9V7LZ3d/4XjpcHQW92ZuGaG8xTryOp3DYHzoU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixTries.SuffixTrieNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixTries.SuffixTrieNode.html",
+          "hash": "42YhhtIJtfcd3fGVGAEV9g7yO/eVEUdNTZA6M6umIRc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixTries.SuffixTriePath.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixTries.SuffixTriePath.html",
+          "hash": "hdrdBijkRu6C+ujitXl8nLti8nCzLV/Wt4L+Qzf3lRc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixTries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixTries.html",
+          "hash": "2jIVDKtkubx0141z0blgIGcbPzOxWy5bG5796xJizFo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Tests.StringUtilitiesTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Tests.StringUtilitiesTests.html",
+          "hash": "IF93BCmW07w6I7nzMaabZlneTYJ6jCgM2NwS0tlmm98="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Tests.SuffixStructures.SuffixStructuresConverterTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Tests.SuffixStructures.SuffixStructuresConverterTests.html",
+          "hash": "Md+8ftdeqFkhFkLGuZcp1T7hOEWBrlkFrOptwAk9nKg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Tests.SuffixStructures.SuffixStructuresEdgeExtensionsTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Tests.SuffixStructures.SuffixStructuresEdgeExtensionsTests.html",
+          "hash": "DwwzoYVylKgJQK6LbnsTWwqd+dqF+oQjB0alnyCKOGM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.html",
+          "hash": "jB0bELyc5/XlVYN2JI+s6lcJmrfzgLWPDqaWMViPYdg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Tests.SuffixStructures.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Tests.SuffixStructures.html",
+          "hash": "q6HRKMvu3yJPcwsF9lHR+m+CN2KHVp0vEd9z5coQxIY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.html",
+          "hash": "tdGsZ1tk6ZUf3G8dz/JM+g9HavIuGfmvGuPbuCOIsJU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Tests.SuffixTrees.SuffixTreeBuilderTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Tests.SuffixTrees.SuffixTreeBuilderTests.html",
+          "hash": "GTfii9hr7l8m0x1YNru8QOiq7ZaWqdo+8FF7fUOqTRI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Tests.SuffixTrees.SuffixTreeEdgeTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Tests.SuffixTrees.SuffixTreeEdgeTests.html",
+          "hash": "HyWWamlkPwlyNHkNez8yXKJDZcF36KRcINZrfvZCdRk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Tests.SuffixTrees.SuffixTreeFactoryTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Tests.SuffixTrees.SuffixTreeFactoryTests.html",
+          "hash": "f3K+w9NJBzzy11MMFb95ECJ4WWdEDNV2h0ycboIjJME="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Tests.SuffixTrees.SuffixTreeNodeTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Tests.SuffixTrees.SuffixTreeNodeTests.html",
+          "hash": "9M+PpEbi09jAp2ZuwfECnBqB9kCsS4/tHR51mqGWDao="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Tests.SuffixTrees.SuffixTreePathTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Tests.SuffixTrees.SuffixTreePathTests.html",
+          "hash": "z2Kac5mkRKNBXNAeVICV2b1yrhYqbY7gb88EoGAm1p4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Tests.SuffixTrees.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Tests.SuffixTrees.html",
+          "hash": "HSRNwUmV/cTe55EqbsgRVvtGNnx2y/jw7RTBqKL6WuI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Tests.SuffixTries.SuffixTrieBuilderTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Tests.SuffixTries.SuffixTrieBuilderTests.html",
+          "hash": "NqP9VPJUEvwrlMFr0jsrQ8UhefMKpZp2nL0tOrgcUn8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Tests.SuffixTries.SuffixTrieEdgeTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Tests.SuffixTries.SuffixTrieEdgeTests.html",
+          "hash": "YyMmUHi9V/bUn0kjUMpTVfvOKMMU2S2ZhhkAAt1qqB0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Tests.SuffixTries.SuffixTrieFactoryTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Tests.SuffixTries.SuffixTrieFactoryTests.html",
+          "hash": "IJPPDkUrpxPlwtgQBRBbuSnZXZ8zv0OSqbC9m5Vv72I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Tests.SuffixTries.SuffixTrieNodeTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Tests.SuffixTries.SuffixTrieNodeTests.html",
+          "hash": "zsqAhgi0yUSs3hEizcdf1lVUFAHkzdDIEA4Ihq8FYPQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Tests.SuffixTries.SuffixTriePathTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Tests.SuffixTries.SuffixTriePathTests.html",
+          "hash": "KE3iz9SSi2XQAUdqNqpw2i9Y1bpRFWq0dv++25SnlyM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Tests.SuffixTries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Tests.SuffixTries.html",
+          "hash": "16kPanMrVwzewYewJukbPWUtB1VW0DOkE9s6CVRntUw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Tests.TextWithTerminatorTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Tests.TextWithTerminatorTests.html",
+          "hash": "egrD95mXv+d+lKvInCkHwYyKzPJTWr2E4oOketZSUUo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionTests.html",
+          "hash": "7nAxXJdunGmS3Uqpsm0oeaoE/ZcD+T7LO3apbAqHMrE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Tests.Utilities.ValueReadOnlyDictionaryTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Tests.Utilities.ValueReadOnlyDictionaryTests.html",
+          "hash": "7JrEzQ8+tso4gyoqqqjrARXKw/kCMyZPjZ2/jCqh89c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Tests.Utilities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Tests.Utilities.html",
+          "hash": "O04AIObCVtAAcEr+Xpau6Nkf2Q2ofsdjVmMpPZx3BfY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Tests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Tests.html",
+          "hash": "f0qkf8l6JSD6FQb4a/E9Nkh689U3pxrmzO7TEyBPtyo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.TextWithTerminator.ISelector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.TextWithTerminator.ISelector.html",
+          "hash": "8LvPR1vxaHuuKmcb0LnSQQbD+Q8dhY7+397hpaWCeaE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.TextWithTerminator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.TextWithTerminator.html",
+          "hash": "auIQBjzOTe5B2E032VrzcFhVoje5oXfQvgREaqV8LZc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Utilities.ValueReadOnlyCollection-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Utilities.ValueReadOnlyCollection-1.html",
+          "hash": "2cTReeyfu9PSs2tgFOXtm1nwsbQQvyDU+gQe+FRl2Dg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Utilities.ValueReadOnlyCollectionsExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Utilities.ValueReadOnlyCollectionsExtensions.html",
+          "hash": "R3rAonH+jYOefvqX8uqdaYHqx4O2iA0VhtNn3Bhc3kY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Utilities.ValueReadOnlyDictionary-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Utilities.ValueReadOnlyDictionary-2.html",
+          "hash": "VRlBq6nY74AwS69HZde3FK0xjRE8NUFsiGSOAGMKdXo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Utilities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Utilities.html",
+          "hash": "U1QQD88+8yAJ3I6jNfhmhiw7qIRaWr5hmSQlWfkftW4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.html",
+          "hash": "O4QTATeqQYqgoFURCss0leu8A7W1wJ/GdFARMZCTLJY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "MJfDVUKP8Nd5l/QUBgRsLFxaYaXEpC72KMf415K9T5U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "PavjkG28784M7ZNnBvmeCPYdmFWmanhj5URrx2R/m5g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "gZcy02KRnB2pM/cmtuZbuz4m8Q34ZEklBmaRVtnFXz8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "hgbxzwwyPt5e/rORpijaPGbFUhYElA66GluTDnwJGrk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "WSuRrYiGwKKMbtdG9z8W9fXmLoCyTnGg9AxbPKLXm2Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 60,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
