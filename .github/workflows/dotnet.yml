@@ -1,4 +1,4 @@
-name: .NET Build and Test
+name: .NET CI
 
 env:
   DOTNET_VERSION: 6.0.x
@@ -11,6 +11,8 @@ on:
     branches: [ main ]
 
 jobs:
+
+  # Build and Test .NET projects on all platforms
   dotnet-build-and-test:
     name: .NET Build and Test
     strategy:
@@ -39,6 +41,7 @@ jobs:
       run: |
         dotnet test --no-build --verbosity normal --configuration ${{ matrix.configuration }}
 
+  # Runs Tests and Coverage on Linux only
   dotnet-coverage:
     name: .NET Coverage
     env:
@@ -55,14 +58,23 @@ jobs:
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }}
 
-    - name: Run Coverage .NET
+    - name: Run Tests and Coverage .NET
       run: |
         dotnet restore
         dotnet build --no-restore --configuration ${{ env.DOTNET_CONFIGURATION }}
-        dotnet test --no-build --verbosity normal --configuration ${{ env.DOTNET_CONFIGURATION }} --results-directory ./coverage --collect:"XPlat Code Coverage"
+        dotnet test --no-build --verbosity normal --configuration ${{ env.DOTNET_CONFIGURATION }} \
+          --results-directory ./coverage \
+          --collect:"XPlat Code Coverage" \
+          --logger "trx;LogFileName=tests.results.trx"
         cp coverage/*/coverage.cobertura.xml coverage/coverage.cobertura.xml
     
-    - name: Coverage Detailed Report
+    - name: Upload Tests Results Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: tests-results-trx
+        path: coverage/tests.results.trx
+    
+    - name: Generate Coverage Detailed Report
       run: |
         dotnet tool install --global dotnet-reportgenerator-globaltool
         reportgenerator -reports:"coverage/coverage.cobertura.xml" -targetdir:"coverage-report" -reporttypes:Html
@@ -73,7 +85,7 @@ jobs:
         name: coverage-report
         path: coverage-report/
 
-    - name: Coverage Summary Report
+    - name: Generate Coverage Summary Report
       uses: irongut/CodeCoverageSummary@v1.2.0
       with:
         filename: coverage/coverage.cobertura.xml
@@ -86,15 +98,10 @@ jobs:
         output: 'both'
         thresholds: '95 97'
 
-    - name: Upload Coverage Summary Report
-      uses: actions/upload-artifact@v3
-      with:
-        name: code-coverage-results.md
-        path: code-coverage-results.md
-
+    # Conditional steps
     - name: Add Coverage Summary PR Comment
-      uses: actions/github-script@v6
       if: github.event_name == 'pull_request'
+      uses: actions/github-script@v6
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
@@ -107,17 +114,22 @@ jobs:
             body: codeCoverageResults
           });
 
-    - name: Deploy Coverage .NET Badge
-      # Only once from ubuntu-latest and master
+    - name: Upload Coverage Detailed Report to Pages
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+      uses: JamesIves/github-pages-deploy-action@v4.3.3
+      with:
+        branch: docs
+        folder: coverage-report          
+
+    - name: Upload Coverage .NET Badge to Pages
       if: false
-      # We pin to the SHA, not the tag, for security reasons.
-      # https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/security-hardening-for-github-actions#using-third-party-actions
-      uses: peaceiris/actions-gh-pages@bbdfb200618d235585ad98e965f4aafc39b4c501  # v3.7.3
+      uses: peaceiris/actions-gh-pages@v3.7.3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: docs
         keep_files: true
 
+  # Run Sonar on Windows only
   sonar:
     name: Sonar
     env:
