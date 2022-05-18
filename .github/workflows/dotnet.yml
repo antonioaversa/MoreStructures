@@ -4,7 +4,7 @@ env:
   DOTNET_VERSION: 6.0.x
   JAVA_VERSION: 1.11
   DURING_PULL_REQUEST: ${{ github.event_name == 'pull_request' }}
-  MERGING_TO_MAIN: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+  MERGING_TO_MAIN: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
 
 on:
   push:
