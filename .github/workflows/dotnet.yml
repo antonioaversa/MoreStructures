@@ -43,12 +43,13 @@ jobs:
 
   # Runs Tests and Coverage on Linux only
   dotnet-coverage:
-    name: .NET Coverage
-    env:
-      DOTNET_CONFIGURATION: Debug
+    name: .NET Test and Coverage
+    concurrency: ci-${{ github.ref }} # To avoid issues with multiple deployments to Pages in quick succession.
     runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
+    permissions: write-all
+
+    env:
+      DOTNET_CONFIGURATION: Debug 
 
     steps:
     - uses: actions/checkout@v3
@@ -58,37 +59,37 @@ jobs:
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }}
 
-    - name: Run Tests and Coverage .NET
+    - name: Run Tests and Coverage
       run: |
         dotnet restore
         dotnet build --no-restore --configuration ${{ env.DOTNET_CONFIGURATION }}
         dotnet test --no-build --verbosity normal --configuration ${{ env.DOTNET_CONFIGURATION }} \
-          --results-directory ./coverage \
+          --results-directory ./dotnet-coverage \
           --collect:"XPlat Code Coverage" \
           --logger "trx;LogFileName=tests.results.trx"
-        cp coverage/*/coverage.cobertura.xml coverage/coverage.cobertura.xml
+        cp dotnet-coverage/*/coverage.cobertura.xml dotnet-coverage/coverage.cobertura.xml
     
     - name: Upload Tests Results Report
       uses: actions/upload-artifact@v3
       with:
         name: tests-results-trx
-        path: coverage/tests.results.trx
+        path: dotnet-coverage/tests.results.trx
     
     - name: Generate Coverage Detailed Report
       run: |
         dotnet tool install --global dotnet-reportgenerator-globaltool
-        reportgenerator -reports:"coverage/coverage.cobertura.xml" -targetdir:"coverage-report" -reporttypes:Html
+        reportgenerator -reports:"dotnet-coverage/coverage.cobertura.xml" -targetdir:"dotnet-coverage-report" -reporttypes:Html
 
     - name: Upload Coverage Detailed Report
       uses: actions/upload-artifact@v3
       with:
-        name: coverage-report
-        path: coverage-report/
+        name: dotnet-coverage-report
+        path: dotnet-coverage-report/
 
     - name: Generate Coverage Summary Report
       uses: irongut/CodeCoverageSummary@v1.2.0
       with:
-        filename: coverage/coverage.cobertura.xml
+        filename: dotnet-coverage/coverage.cobertura.xml
         badge: true
         fail_below_min: true
         format: 'markdown'
@@ -97,6 +98,19 @@ jobs:
         indicators: true
         output: 'both'
         thresholds: '95 97'
+
+    - name: Generate Coverage Badge
+      run: |
+        echo "Creating local folder..."
+        mkdir dotnet-coverage-badge
+        echo "Extracting badge URL..."
+        regex='\!\[Code Coverage\]\(([^\)]+)\)'
+        text=`cat "code-coverage-results.md"`
+        [[ $text =~ $regex ]]
+        badge_url="${BASH_REMATCH[1]}"
+        echo "Downloading $badge_url..."
+        curl "$badge_url" > "dotnet-coverage-badge/badge.svg"
+        echo "Done"
 
     # Conditional steps
     - name: Add Coverage Summary PR Comment
@@ -114,20 +128,72 @@ jobs:
             body: codeCoverageResults
           });
 
-    - name: Upload Coverage Detailed Report to Pages
+    - name: Publish Coverage Detailed Report to Pages
       if: github.event_name == 'push' && github.ref == 'refs/heads/master'
       uses: JamesIves/github-pages-deploy-action@v4.3.3
       with:
         branch: docs
-        folder: coverage-report          
+        folder: dotnet-coverage-report
+        target-folder: docs/dotnet-coverage-report
+        commit-message: Publish .NET Coverage Detailed Report
 
-    - name: Upload Coverage .NET Badge to Pages
-      if: false
-      uses: peaceiris/actions-gh-pages@v3.7.3
+    - name: Publish Coverage .NET Badge to Pages
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+      uses: JamesIves/github-pages-deploy-action@v4.3.3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: docs
-        keep_files: true
+        branch: docs
+        folder: dotnet-coverage-badge
+        target-folder: docs/dotnet-coverage-badge
+        commit-message: Publish .NET Coverage Badge
+
+  dotnet-docs-gen:
+    name: .NET Docs Generation
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }} 
+
+    - name: Generate API Docs
+      run: |
+        Invoke-RestMethod -Uri "https://github.com/dotnet/docfx/releases/download/v2.59.2/docfx.zip" -OutFile "docfx.zip"
+        Expand-Archive "./docfx.zip" -DestinationPath "./docfx/" -Force
+        cd "./docfx_project"
+        & "$env:GITHUB_WORKSPACE/docfx/docfx.exe" "docfx.json"
+
+    - name: Upload API Docs
+      uses: actions/upload-artifact@v3
+      with:
+        name: dotnet-docs-api
+        path: docfx_project/_site/
+
+  dotnet-docs-publish:
+    name: .NET Docs Publication
+    runs-on: ubuntu-latest
+    needs: dotnet-docs-gen
+    permissions: write-all
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Download API Docs
+      uses: actions/download-artifact@v3
+      with:
+        name: dotnet-docs-api
+        path: dotnet-docs-api/
+
+    - name: Publish API Docs to Pages
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+      uses: JamesIves/github-pages-deploy-action@v4.3.3
+      with:
+        branch: docs
+        folder: dotnet-docs-api/
+        target-folder: docs/dotnet-docs-api
+        commit-message: Publish .NET API Docs
 
   # Run Sonar on Windows only
   sonar:
@@ -193,7 +259,7 @@ jobs:
   dotnet-success:
     name: .NET CI Success
     runs-on: ubuntu-latest
-    needs: [dotnet-build-and-test, dotnet-coverage, sonar]
+    needs: [dotnet-build-and-test, dotnet-coverage, dotnet-docs-gen, dotnet-docs-publish, sonar]
 
     steps:
     - run: echo Done!
