@@ -4,7 +4,8 @@ using StringAlgorithms.Utilities;
 namespace StringAlgorithms.SuffixTries;
 
 /// <summary>
-/// An immutable node of an immutable Suffix Trie, recursively pointing to its children node.
+/// An immutable node of an immutable Suffix Trie, recursively pointing to its children nodes via 
+/// <see cref="SuffixTrieEdge"/> instances, associated with selector characters.
 /// </summary>
 /// <param name="Children">The collection of children for the node, indexed by single char edges.</param>
 /// <param name="Start">

@@ -3,8 +3,8 @@
 namespace StringAlgorithms.SuffixTrees;
 
 /// <summary>
-/// The index key of the collection of children of a Suffix Tree node, which identifies a non-empty substring in text, 
-/// used as a selector to navigate the Suffix Tree in text pattern matching.
+/// The index key of the collection of children of a <see cref="SuffixTreeNode"/>, which identifies a non-empty 
+/// substring in text used as a selector to navigate the <see cref="SuffixTreeNode"/> in text pattern matching.
 /// </summary>
 /// <param name="Start">
 ///     <inheritdoc cref="ISuffixStructureEdge{TEdge, TNode, TPath, TBuilder}.Start" path="/summary"/>
@@ -21,9 +21,9 @@ public record SuffixTreeEdge(int Start, int Length)
         : throw new ArgumentOutOfRangeException(nameof(Start), "Must be non-negative.");
 
     /// <inheritdoc/>
-    public int Length { get; init; } = Length >= 1
+    public int Length { get; init; } = Length >= 0
         ? Length
-        : throw new ArgumentOutOfRangeException(nameof(Length), "Must be positive.");
+        : throw new ArgumentOutOfRangeException(nameof(Length), "Must be non-negative.");
 
     /// <inheritdoc/>
     public virtual string Of(TextWithTerminator text) => text[Start..(Start + Length)];

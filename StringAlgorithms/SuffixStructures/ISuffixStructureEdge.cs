@@ -1,13 +1,25 @@
-﻿namespace StringAlgorithms.SuffixStructures;
+﻿using StringAlgorithms.RecImmTrees;
+
+namespace StringAlgorithms.SuffixStructures;
 
 /// <summary>
-/// An edge of a Suffix Structure, directionally linking two nodes and forming a path hop. Represents prefix matching.
+/// An edge of a <see cref="ISuffixStructureEdge{TEdge, TNode, TPath, TBuilder}"/>, directionally linking two nodes and 
+/// forming a path hop. Represents prefix matching.
 /// </summary>
-/// <typeparam name="TEdge">The type of edges of the specific Suffix Structure.</typeparam>
-/// <typeparam name="TNode">The type of nodes of the specific Suffix Structure.</typeparam>
-/// <typeparam name="TPath">The type of paths of the specific Suffix Structure.</typeparam>
-/// <typeparam name="TBuilder">The type of builder for the specific Suffix Structure.</typeparam>
-public interface ISuffixStructureEdge<TEdge, TNode, TPath, TBuilder> : TextWithTerminator.ISelector
+/// <typeparam name="TEdge">
+///     <inheritdoc cref="IRecImmDictIndexedTreeEdge{TEdge, TNode, TPath, TBuilder}" path="/typeparam[@name='TEdge']"/>
+/// </typeparam>
+/// <typeparam name="TNode">
+///     <inheritdoc cref="IRecImmDictIndexedTreeEdge{TEdge, TNode, TPath, TBuilder}" path="/typeparam[@name='TNode']"/>
+/// </typeparam>
+/// <typeparam name="TPath">
+///     <inheritdoc cref="IRecImmDictIndexedTreeEdge{TEdge, TNode, TPath, TBuilder}" path="/typeparam[@name='TPath']"/>
+/// </typeparam>
+/// <typeparam name="TBuilder">
+///     <inheritdoc cref="IRecImmDictIndexedTreeEdge{TEdge, TNode, TPath, TBuilder}" path="/typeparam[@name='TBuilder']"/>
+/// </typeparam>
+public interface ISuffixStructureEdge<TEdge, TNode, TPath, TBuilder> 
+    : TextWithTerminator.ISelector, IRecImmDictIndexedTreeEdge<TEdge, TNode, TPath, TBuilder>
     where TEdge : ISuffixStructureEdge<TEdge, TNode, TPath, TBuilder>
     where TNode : ISuffixStructureNode<TEdge, TNode, TPath, TBuilder>
     where TPath : ISuffixStructurePath<TEdge, TNode, TPath, TBuilder>

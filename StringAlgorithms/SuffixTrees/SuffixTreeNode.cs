@@ -4,7 +4,8 @@ using StringAlgorithms.Utilities;
 namespace StringAlgorithms.SuffixTrees;
 
 /// <summary>
-/// An immutable node of an immutable Suffix Tree, recursively pointing to its children node.
+/// An immutable node of an immutable Suffix Tree, recursively pointing to its children nodes via 
+/// <see cref="SuffixTreeEdge"/> instances, associated with selector strings.
 /// </summary>
 /// <param name="Children">The collection of children for the node, indexed by string edges.</param>
 /// <param name="Start">

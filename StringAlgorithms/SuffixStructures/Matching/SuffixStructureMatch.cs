@@ -1,4 +1,4 @@
-﻿namespace StringAlgorithms.SuffixStructures;
+﻿namespace StringAlgorithms.SuffixStructures.Matching;
 
 /// <summary>
 /// The result of matching a <see cref="TextWithTerminator"/> against a 

@@ -9,6 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="SuffixStructures\Transformations\FullyRecursiveSuffixStructuresConverter.cs" />
+    <Compile Remove="SuffixStructures\Transformations\SuffixStructureStringifier.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <InternalsVisibleTo Include="$(MSBuildProjectName).Tests" />
   </ItemGroup>
 
