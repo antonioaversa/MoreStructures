@@ -13,6 +13,7 @@ namespace StringAlgorithms.SuffixTrees;
 public record SuffixTreePath(IEnumerable<KeyValuePair<SuffixTreeEdge, SuffixTreeNode>> PathNodes)
     : ISuffixStructurePath<SuffixTreeEdge, SuffixTreeNode, SuffixTreePath, SuffixTreeBuilder>
 {
+    /// <inheritdoc/>
     public IEnumerable<KeyValuePair<SuffixTreeEdge, SuffixTreeNode>> PathNodes { get; } = 
         PathNodes.ToValueReadOnlyCollection();
 }

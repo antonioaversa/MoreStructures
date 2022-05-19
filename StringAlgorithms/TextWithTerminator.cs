@@ -64,7 +64,7 @@ public record TextWithTerminator(string Text, char Terminator = TextWithTerminat
     /// <summary>
     /// Select a part of this text by the provided index.
     /// </summary>
-    /// <param name="range">The index applied to the underlying string.</param>
+    /// <param name="index">The index applied to the underlying string.</param>
     /// <returns>A char containing the selected part.</returns>
     public char this[Index index] => TextAndTerminator[index];
 

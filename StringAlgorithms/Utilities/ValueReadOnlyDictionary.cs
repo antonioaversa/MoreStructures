@@ -10,8 +10,8 @@ namespace StringAlgorithms.Utilities
     /// <typeparam name="TValue">The type of values in the dictionary.</typeparam>
     /// <remarks>
     /// Immutability can be guaranteed by cloning the provided dictionary and exposing a readonly view of it, but only 
-    /// if immutability of underlying <see cref="TKey"/> and <see cref="TValue"></see> is provided, for example, by 
-    /// using immutable records.
+    /// if immutability of underlying <typeparamref name="TKey"/> and <typeparamref name="TValue"/> is provided, for 
+    /// example, by using immutable records.
     /// </remarks>
     public class ValueReadOnlyDictionary<TKey, TValue> : ReadOnlyDictionary<TKey, TValue>
         where TKey : notnull

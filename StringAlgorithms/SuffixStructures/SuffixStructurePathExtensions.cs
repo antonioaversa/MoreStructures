@@ -27,8 +27,9 @@ public static class SuffixStructurePathExtensions
     /// <summary>
     /// Whether this path identifies a suffix of the provided text.
     /// </summary>
+    /// <param name="path">The path, identifying a segment of the provided text.</param>
     /// <param name="text">The text, including the terminator character.</param>
-    /// <returns>True if a suffix.</returns>
+    /// <returns>True if the segment of text is also a suffix the text.</returns>
     public static bool IsSuffixOf<TEdge, TNode, TPath, TBuilder>
         (this ISuffixStructurePath<TEdge, TNode, TPath, TBuilder> path, 
         TextWithTerminator text)
@@ -56,7 +57,7 @@ public static class SuffixStructurePathExtensions
     /// <summary>
     /// Append the provided node with its incoming edge to the provided path, bulding a new path.
     /// </summary>
-    /// <param name="edge">The path, to appended the node and the edge to.</param>
+    /// <param name="path">The path, to appended the node and the edge to.</param>
     /// <param name="edge">The edge, pointing to the node to be appended.</param>
     /// <param name="node">The node to be appended.</param>
     /// <returns>

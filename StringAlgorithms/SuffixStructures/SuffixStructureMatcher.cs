@@ -4,7 +4,7 @@ using MoreLinq;
 using static StringUtilities;
 
 /// <summary>
-/// Exposes utility methods to match a <see cref="Build(TextWithTerminator)"/> against a 
+/// Exposes utility methods to match a <see cref="TextWithTerminator"/> against a 
 /// <see cref="ISuffixStructureNode{TEdge, TNode, TPath, TBuilder}"/> concretion. 
 /// </summary>
 public static class SuffixStructureMatcher
@@ -14,7 +14,7 @@ public static class SuffixStructureMatcher
     /// </summary>
     /// <param name="node">The root of the Suffix Tree, to match the suffix of text against.</param>
     /// <param name="text">The text whose Suffix Tree has to be matched against the pattern.</param>
-    /// <param name="text">The pattern to match. Unlike text, is a string without terminator.</param>
+    /// <param name="pattern">The pattern to match. Unlike text, is a string without terminator.</param>
     /// <returns>A successful or non-successful match.</returns>
     public static SuffixStructureMatch<TPath> Match<TEdge, TNode, TPath, TBuilder>(
         this ISuffixStructureNode<TEdge, TNode, TPath, TBuilder> node, 

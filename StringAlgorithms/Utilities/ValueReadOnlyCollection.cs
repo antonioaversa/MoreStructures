@@ -8,7 +8,7 @@ namespace StringAlgorithms.Utilities
     /// <typeparam name="T">The type of elements in the collection.</typeparam>
     /// <remarks>
     /// Immutability can be guaranteed by cloning the provided enumerable and exposing a readonly view of it, but only 
-    /// if immutability of underlying <see cref="T"/> is provided, for example, by using immutable records.
+    /// if immutability of underlying <typeparamref name="T"/> is provided, for example, by using immutable records.
     /// </remarks>
     public class ValueReadOnlyCollection<T> : ReadOnlyCollection<T>
         where T : notnull
