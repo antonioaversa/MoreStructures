@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using StringAlgorithms.RecImmTrees;
 using StringAlgorithms.SuffixStructures;
 using StringAlgorithms.SuffixTries;
 using System;

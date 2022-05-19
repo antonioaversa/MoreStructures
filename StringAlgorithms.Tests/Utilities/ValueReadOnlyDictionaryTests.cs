@@ -32,6 +32,24 @@ namespace StringAlgorithms.Tests.Utilities
         }
 
         [TestMethod]
+        public void Ctor_WithEnumerableOfEntries()
+        {
+            var dictionary = new Dictionary<string, int>() 
+            { 
+                ["a"] = 1, 
+                ["b"] = 2 
+            };
+            var entries = new List<KeyValuePair<string, int>> 
+            {
+                KeyValuePair.Create("a", 1),
+                KeyValuePair.Create("b", 2),
+            };
+            var valueDictionary1 = new ValueReadOnlyDictionary<string, int>(dictionary);
+            var valueDictionary2 = new ValueReadOnlyDictionary<string, int>(entries);
+            Assert.AreEqual(valueDictionary1, valueDictionary2);
+        }
+
+        [TestMethod]
         public void Equals_CheckType()
         {
             var valueDictionary1 = new ValueReadOnlyDictionary<string, int>(

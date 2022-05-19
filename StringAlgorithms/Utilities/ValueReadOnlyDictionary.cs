@@ -27,6 +27,17 @@ namespace StringAlgorithms.Utilities
         }
 
         /// <summary>
+        /// Creates value readonly dictionary out of the provided entries, and independent from the provided
+        /// enumerable of them.
+        /// </summary>
+        /// <param name="entries">The enumerable of entries to be used to build the readonly dictionary.</param>
+
+        public ValueReadOnlyDictionary(IEnumerable<KeyValuePair<TKey, TValue>> entries)
+            : base(new Dictionary<TKey, TValue>(entries))
+        { 
+        }
+
+        /// <summary>
         /// <inheritdoc/> Equality is calculated by value, i.e. on the dictionary key-value pairs directly.
         /// </summary>
         /// <param name="obj"><inheritdoc cref="object.Equals(object?)" path="/param[@name='obj']"/></param>

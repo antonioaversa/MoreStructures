@@ -12,7 +12,13 @@ public class SuffixTreeEdgeTests
     {
         Assert.ThrowsException<ArgumentOutOfRangeException>(() => new SuffixTreeEdge(-1, 1));
         Assert.ThrowsException<ArgumentOutOfRangeException>(() => new SuffixTreeEdge(0, -1));
-        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new SuffixTreeEdge(0, 0));
+    }
+
+    [TestMethod]
+    public void Ctor_ZeroLengthIsValid()
+    {
+        var edge = new SuffixTreeEdge(0, 0);
+        Assert.AreEqual(0, edge.Length);
     }
 
     [TestMethod]

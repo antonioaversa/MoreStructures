@@ -4,7 +4,8 @@ using StringAlgorithms.Utilities;
 namespace StringAlgorithms.SuffixTrees;
 
 /// <summary>
-/// An immutable sequence of Suffix Tree nodes, where each node is child of its predecessor and parent of its successor.
+/// An immutable sequence of <see cref="SuffixTreeNode"/>, where each node is child of its predecessor and parent of 
+/// its successor and where node relationships are stored in <see cref="SuffixTreeEdge"/> instances.
 /// </summary>
 /// <param name="PathNodes">The sequence of nodes respecting the parent-child relationship.</param>
 /// <remarks>

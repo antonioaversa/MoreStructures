@@ -1,9 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using StringAlgorithms.SuffixStructures;
+using StringAlgorithms.SuffixStructures.Matching;
 using StringAlgorithms.SuffixTrees;
 using System;
 
-namespace StringAlgorithms.Tests.SuffixTrees;
+namespace StringAlgorithms.Tests.SuffixTrees.Matching;
 
 [TestClass]
 public class SuffixStructureMatcherTests

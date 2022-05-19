@@ -10,10 +10,10 @@ public static class SuffixStructureBuilderExtensions
     /// Text is provided as a plain string.
     /// </summary>
     /// <param name="builder">
-    /// The builder to be used, to build the Suffix Structure.
+    /// The builder to be used, to build the structure.
     /// </param>
     /// <param name="text">
-    /// The text to build the Suffix Structure of, without any terminator (automatically added).
+    /// The text to build the structure of, without any terminator (automatically added).
     /// </param>
     /// <returns>
     /// <inheritdoc cref="ISuffixStructureBuilder{TEdge, TNode, TPath, TBuilder}.BuildTree(TextWithTerminator)"/>

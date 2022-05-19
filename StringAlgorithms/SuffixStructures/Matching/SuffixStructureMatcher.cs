@@ -1,6 +1,7 @@
-﻿namespace StringAlgorithms.SuffixStructures;
+﻿namespace StringAlgorithms.SuffixStructures.Matching;
 
 using MoreLinq;
+using StringAlgorithms.RecImmTrees;
 using static StringUtilities;
 
 /// <summary>
