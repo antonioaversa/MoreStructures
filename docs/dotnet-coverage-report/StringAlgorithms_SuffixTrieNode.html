@@ -41,7 +41,7 @@
 <table>
 <tr>
 <th>Covered lines:</th>
-<td class="limit-width right" title="29">29</td>
+<td class="limit-width right" title="31">31</td>
 </tr>
 <tr>
 <th>Uncovered lines:</th>
@@ -49,15 +49,15 @@
 </tr>
 <tr>
 <th>Coverable lines:</th>
-<td class="limit-width right" title="29">29</td>
+<td class="limit-width right" title="31">31</td>
 </tr>
 <tr>
 <th>Total lines:</th>
-<td class="limit-width right" title="44">44</td>
+<td class="limit-width right" title="46">46</td>
 </tr>
 <tr>
 <th>Line coverage:</th>
-<td class="limit-width right" title="29 of 29">100%</td>
+<td class="limit-width right" title="31 of 31">100%</td>
 </tr>
 </table>
 </div>
@@ -101,9 +101,9 @@
 <thead><tr><th>Method</th><th>Branch coverage <a href="https://en.wikipedia.org/wiki/Code_coverage"><i class="icon-info-circled"></i></a></th><th>Cyclomatic complexity <a href="https://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon-info-circled"></i></a></th><th>Line coverage <a href="https://en.wikipedia.org/wiki/Code_coverage"><i class="icon-info-circled"></i></a></th></tr></thead>
 <tbody>
 <tr><td title=".ctor(System.Collections.Generic.IDictionary`2&lt;StringAlgorithms.SuffixTries.SuffixTrieEdge,StringAlgorithms.SuffixTries.SuffixTrieNode&gt;,System.Nullable`1&lt;System.Int32&gt;)"><a href="#file0_line16" class="navigatetohash">.ctor(...)</a></td><td>100%</td><td>4</td><td>100%</td></tr>
-<tr><td title="get_Children()"><a href="#file0_line33" class="navigatetohash">get_Children()</a></td><td>100%</td><td>1</td><td>100%</td></tr>
-<tr><td title="get_Start()"><a href="#file0_line38" class="navigatetohash">get_Start()</a></td><td>100%</td><td>1</td><td>100%</td></tr>
-<tr><td title="get_Item(StringAlgorithms.SuffixTries.SuffixTrieEdge)"><a href="#file0_line43" class="navigatetohash">get_Item(...)</a></td><td>100%</td><td>1</td><td>100%</td></tr>
+<tr><td title="get_Children()"><a href="#file0_line34" class="navigatetohash">get_Children()</a></td><td>100%</td><td>1</td><td>100%</td></tr>
+<tr><td title="get_Start()"><a href="#file0_line40" class="navigatetohash">get_Start()</a></td><td>100%</td><td>1</td><td>100%</td></tr>
+<tr><td title="get_Item(StringAlgorithms.SuffixTries.SuffixTrieEdge)"><a href="#file0_line45" class="navigatetohash">get_Item(...)</a></td><td>100%</td><td>1</td><td>100%</td></tr>
 </tbody>
 </table>
 </div>
@@ -145,29 +145,31 @@
 <tr class="coverableline" title="Covered (134 visits)" data-coverage="{'AllTestMethods': {'VC': '134', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">134</td><td class="rightmargin right"><a id="file0_line30"></a><code>30</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;SuffixTrieNode(new&nbsp;Dictionary&lt;SuffixTrieEdge,&nbsp;SuffixTrieNode&gt;&nbsp;{&nbsp;},&nbsp;LeafStart)</code></td></tr>
 <tr class="coverableline" title="Covered (467 visits)" data-coverage="{'AllTestMethods': {'VC': '467', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">467</td><td class="rightmargin right"><a id="file0_line31"></a><code>31</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;}</code></td></tr>
 <tr class="coverableline" title="Covered (467 visits)" data-coverage="{'AllTestMethods': {'VC': '467', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">467</td><td class="rightmargin right"><a id="file0_line32"></a><code>32</code></td><td></td><td class="lightgreen"><code></code></td></tr>
-<tr class="coverableline" title="Covered (12455 visits)" data-coverage="{'AllTestMethods': {'VC': '12455', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">12455</td><td class="rightmargin right"><a id="file0_line33"></a><code>33</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;IDictionary&lt;SuffixTrieEdge,&nbsp;SuffixTrieNode&gt;&nbsp;Children&nbsp;{&nbsp;get;&nbsp;}</code></td></tr>
-<tr class="coverableline" title="Covered (470 visits, 4 of 4 branches are covered)" data-coverage="{'AllTestMethods': {'VC': '470', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">470</td><td class="rightmargin right"><a id="file0_line34"></a><code>34</code></td><td class="percentagebar percentagebar100"><i class="icon-fork"></i></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;(Children.Any()&nbsp;==&nbsp;(Start&nbsp;==&nbsp;null))&nbsp;&amp;&amp;&nbsp;Start.GetValueOrDefault(0)&nbsp;&gt;=&nbsp;0</code></td></tr>
-<tr class="coverableline" title="Covered (470 visits)" data-coverage="{'AllTestMethods': {'VC': '470', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">470</td><td class="rightmargin right"><a id="file0_line35"></a><code>35</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;Children.ToValueReadOnlyDictionary()</code></td></tr>
-<tr class="coverableline" title="Covered (470 visits)" data-coverage="{'AllTestMethods': {'VC': '470', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">470</td><td class="rightmargin right"><a id="file0_line36"></a><code>36</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;throw&nbsp;new&nbsp;ArgumentException($&quot;Leafs&nbsp;needs&nbsp;to&nbsp;specificy&nbsp;a&nbsp;non-negative&nbsp;{nameof(Start)}.&quot;,&nbsp;nameof(Children));</code></td></tr>
-<tr class="coverableline" title="Covered (467 visits)" data-coverage="{'AllTestMethods': {'VC': '467', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">467</td><td class="rightmargin right"><a id="file0_line37"></a><code>37</code></td><td></td><td class="lightgreen"><code></code></td></tr>
-<tr class="coverableline" title="Covered (512 visits)" data-coverage="{'AllTestMethods': {'VC': '512', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">512</td><td class="rightmargin right"><a id="file0_line38"></a><code>38</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;int?&nbsp;Start&nbsp;{&nbsp;get;&nbsp;}&nbsp;=&nbsp;Start;</code></td></tr>
-<tr class="coverableline" title="Covered (467 visits)" data-coverage="{'AllTestMethods': {'VC': '467', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">467</td><td class="rightmargin right"><a id="file0_line39"></a><code>39</code></td><td></td><td class="lightgreen"><code></code></td></tr>
-<tr class="coverableline" title="Covered (467 visits)" data-coverage="{'AllTestMethods': {'VC': '467', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">467</td><td class="rightmargin right"><a id="file0_line40"></a><code>40</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;summary&gt;</code></td></tr>
-<tr class="coverableline" title="Covered (467 visits)" data-coverage="{'AllTestMethods': {'VC': '467', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">467</td><td class="rightmargin right"><a id="file0_line41"></a><code>41</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;Indexes&nbsp;into&nbsp;the&nbsp;children&nbsp;of&nbsp;this&nbsp;node,&nbsp;by&nbsp;edge,&nbsp;which&nbsp;is&nbsp;a&nbsp;single&nbsp;char&nbsp;selector.</code></td></tr>
-<tr class="coverableline" title="Covered (467 visits)" data-coverage="{'AllTestMethods': {'VC': '467', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">467</td><td class="rightmargin right"><a id="file0_line42"></a><code>42</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;/summary&gt;</code></td></tr>
-<tr class="coverableline" title="Covered (79 visits)" data-coverage="{'AllTestMethods': {'VC': '79', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">79</td><td class="rightmargin right"><a id="file0_line43"></a><code>43</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;SuffixTrieNode&nbsp;this[SuffixTrieEdge&nbsp;edge]&nbsp;=&gt;&nbsp;Children[edge];</code></td></tr>
-<tr class="coverableline" title="Covered (467 visits)" data-coverage="{'AllTestMethods': {'VC': '467', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">467</td><td class="rightmargin right"><a id="file0_line44"></a><code>44</code></td><td></td><td class="lightgreen"><code>}</code></td></tr>
+<tr class="coverableline" title="Covered (467 visits)" data-coverage="{'AllTestMethods': {'VC': '467', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">467</td><td class="rightmargin right"><a id="file0_line33"></a><code>33</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;inheritdoc/&gt;</code></td></tr>
+<tr class="coverableline" title="Covered (12455 visits)" data-coverage="{'AllTestMethods': {'VC': '12455', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">12455</td><td class="rightmargin right"><a id="file0_line34"></a><code>34</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;IDictionary&lt;SuffixTrieEdge,&nbsp;SuffixTrieNode&gt;&nbsp;Children&nbsp;{&nbsp;get;&nbsp;}</code></td></tr>
+<tr class="coverableline" title="Covered (470 visits, 4 of 4 branches are covered)" data-coverage="{'AllTestMethods': {'VC': '470', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">470</td><td class="rightmargin right"><a id="file0_line35"></a><code>35</code></td><td class="percentagebar percentagebar100"><i class="icon-fork"></i></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;(Children.Any()&nbsp;==&nbsp;(Start&nbsp;==&nbsp;null))&nbsp;&amp;&amp;&nbsp;Start.GetValueOrDefault(0)&nbsp;&gt;=&nbsp;0</code></td></tr>
+<tr class="coverableline" title="Covered (470 visits)" data-coverage="{'AllTestMethods': {'VC': '470', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">470</td><td class="rightmargin right"><a id="file0_line36"></a><code>36</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;Children.ToValueReadOnlyDictionary()</code></td></tr>
+<tr class="coverableline" title="Covered (470 visits)" data-coverage="{'AllTestMethods': {'VC': '470', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">470</td><td class="rightmargin right"><a id="file0_line37"></a><code>37</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;throw&nbsp;new&nbsp;ArgumentException($&quot;Leafs&nbsp;needs&nbsp;to&nbsp;specificy&nbsp;a&nbsp;non-negative&nbsp;{nameof(Start)}.&quot;,&nbsp;nameof(Children));</code></td></tr>
+<tr class="coverableline" title="Covered (467 visits)" data-coverage="{'AllTestMethods': {'VC': '467', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">467</td><td class="rightmargin right"><a id="file0_line38"></a><code>38</code></td><td></td><td class="lightgreen"><code></code></td></tr>
+<tr class="coverableline" title="Covered (467 visits)" data-coverage="{'AllTestMethods': {'VC': '467', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">467</td><td class="rightmargin right"><a id="file0_line39"></a><code>39</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;inheritdoc/&gt;</code></td></tr>
+<tr class="coverableline" title="Covered (512 visits)" data-coverage="{'AllTestMethods': {'VC': '512', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">512</td><td class="rightmargin right"><a id="file0_line40"></a><code>40</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;int?&nbsp;Start&nbsp;{&nbsp;get;&nbsp;}&nbsp;=&nbsp;Start;</code></td></tr>
+<tr class="coverableline" title="Covered (467 visits)" data-coverage="{'AllTestMethods': {'VC': '467', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">467</td><td class="rightmargin right"><a id="file0_line41"></a><code>41</code></td><td></td><td class="lightgreen"><code></code></td></tr>
+<tr class="coverableline" title="Covered (467 visits)" data-coverage="{'AllTestMethods': {'VC': '467', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">467</td><td class="rightmargin right"><a id="file0_line42"></a><code>42</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;summary&gt;</code></td></tr>
+<tr class="coverableline" title="Covered (467 visits)" data-coverage="{'AllTestMethods': {'VC': '467', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">467</td><td class="rightmargin right"><a id="file0_line43"></a><code>43</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;Indexes&nbsp;into&nbsp;the&nbsp;children&nbsp;of&nbsp;this&nbsp;node,&nbsp;by&nbsp;edge,&nbsp;which&nbsp;is&nbsp;a&nbsp;single&nbsp;char&nbsp;selector.</code></td></tr>
+<tr class="coverableline" title="Covered (467 visits)" data-coverage="{'AllTestMethods': {'VC': '467', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">467</td><td class="rightmargin right"><a id="file0_line44"></a><code>44</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;/summary&gt;</code></td></tr>
+<tr class="coverableline" title="Covered (79 visits)" data-coverage="{'AllTestMethods': {'VC': '79', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">79</td><td class="rightmargin right"><a id="file0_line45"></a><code>45</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;SuffixTrieNode&nbsp;this[SuffixTrieEdge&nbsp;edge]&nbsp;=&gt;&nbsp;Children[edge];</code></td></tr>
+<tr class="coverableline" title="Covered (467 visits)" data-coverage="{'AllTestMethods': {'VC': '467', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">467</td><td class="rightmargin right"><a id="file0_line46"></a><code>46</code></td><td></td><td class="lightgreen"><code>}</code></td></tr>
 </tbody>
 </table>
 </div>
-<div class="footer">Generated by: ReportGenerator 5.1.9.0<br />05/18/2022 - 19:37:13<br /><a href="https://github.com/danielpalme/ReportGenerator">GitHub</a> | <a href="http://www.palmmedia.de">www.palmmedia.de</a></div></div>
+<div class="footer">Generated by: ReportGenerator 5.1.9.0<br />05/19/2022 - 06:00:55<br /><a href="https://github.com/danielpalme/ReportGenerator">GitHub</a> | <a href="http://www.palmmedia.de">www.palmmedia.de</a></div></div>
 <div class="containerright">
 <div class="containerrightfixed">
 <h1>Methods/Properties</h1>
 <a href="#file0_line16" class="navigatetohash percentagebar percentagebar100" title="Line coverage: 100% - .ctor(System.Collections.Generic.IDictionary`2&lt;StringAlgorithms.SuffixTries.SuffixTrieEdge,StringAlgorithms.SuffixTries.SuffixTrieNode&gt;,System.Nullable`1&lt;System.Int32&gt;)"><i class="icon-cube"></i>.ctor(System.Collections.Generic.IDictionary`2&lt;StringAlgorithms.SuffixTries.SuffixTrieEdge,StringAlgorithms.SuffixTries.SuffixTrieNode&gt;,System.Nullable`1&lt;System.Int32&gt;)</a><br />
-<a href="#file0_line33" class="navigatetohash percentagebar percentagebar100" title="Line coverage: 100% - get_Children()"><i class="icon-cube"></i>get_Children()</a><br />
-<a href="#file0_line38" class="navigatetohash percentagebar percentagebar100" title="Line coverage: 100% - get_Start()"><i class="icon-cube"></i>get_Start()</a><br />
-<a href="#file0_line43" class="navigatetohash percentagebar percentagebar100" title="Line coverage: 100% - get_Item(StringAlgorithms.SuffixTries.SuffixTrieEdge)"><i class="icon-cube"></i>get_Item(StringAlgorithms.SuffixTries.SuffixTrieEdge)</a><br />
+<a href="#file0_line34" class="navigatetohash percentagebar percentagebar100" title="Line coverage: 100% - get_Children()"><i class="icon-cube"></i>get_Children()</a><br />
+<a href="#file0_line40" class="navigatetohash percentagebar percentagebar100" title="Line coverage: 100% - get_Start()"><i class="icon-cube"></i>get_Start()</a><br />
+<a href="#file0_line45" class="navigatetohash percentagebar percentagebar100" title="Line coverage: 100% - get_Item(StringAlgorithms.SuffixTries.SuffixTrieEdge)"><i class="icon-cube"></i>get_Item(StringAlgorithms.SuffixTries.SuffixTrieEdge)</a><br />
 <br/></div>
 </div></div>
 <script type="text/javascript">
