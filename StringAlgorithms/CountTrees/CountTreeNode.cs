@@ -39,10 +39,18 @@ public sealed record CountTreeNode<TEdge, TNode, TPath, TBuilder>(TNode WrappedN
 {
     /// <inheritdoc/>
     public IDictionary<
-        CountTreeEdge<TEdge, TNode, TPath, TBuilder>, 
-        CountTreeNode<TEdge, TNode, TPath, TBuilder>> Children { get; init; } = 
+        CountTreeEdge<TEdge, TNode, TPath, TBuilder>,
+        CountTreeNode<TEdge, TNode, TPath, TBuilder>> Children { get; init; } =
             Wrap(WrappedNode).ToValueReadOnlyDictionary();
 
+    /// <summary>
+    /// A private readonly object used for synchronization across multiple calls on the same instance.
+    /// </summary>
+    /// <remarks>
+    /// A <see cref="ValueReadOnlyCollection{T}"/> is used not to break value equality of this record.
+    /// </remarks>
+    private readonly ValueReadOnlyCollection<object> _descendantsCountLock = new(Array.Empty<object>());
+    
     private int? _descendantsCount = null;
 
     /// <summary>
@@ -58,7 +66,7 @@ public sealed record CountTreeNode<TEdge, TNode, TPath, TBuilder>(TNode WrappedN
             if (_descendantsCount != null)
                 return _descendantsCount.Value;
 
-            lock (this)
+            lock (_descendantsCountLock)
             {
                 if (_descendantsCount == null)
                     _descendantsCount = Children.Count + Children.Select(c => c.Value.DescendantsCount).Sum();
