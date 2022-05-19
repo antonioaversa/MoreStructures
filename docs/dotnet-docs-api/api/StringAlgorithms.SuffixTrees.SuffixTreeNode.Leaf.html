@@ -95,6 +95,7 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureNode-4.html">ISuffixStructureNode</a>&lt;<a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreePath.html">SuffixTreePath</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeBuilder.html">SuffixTreeBuilder</a>&gt;</div>
+    <div><a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode-4.html">IRecImmDictIndexedTreeNode</a>&lt;<a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreePath.html">SuffixTreePath</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeBuilder.html">SuffixTreeBuilder</a>&gt;</div>
     <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a>&gt;</div>
     <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeNode.Leaf.html">SuffixTreeNode.Leaf</a>&gt;</div>
   </div>
@@ -135,7 +136,7 @@
   <h6><strong>Assembly</strong>: StringAlgorithms.dll</h6>
   <h5 id="StringAlgorithms_SuffixTrees_SuffixTreeNode_Leaf_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Leaf : SuffixTreeNode, ISuffixStructureNode&lt;SuffixTreeEdge, SuffixTreeNode, SuffixTreePath, SuffixTreeBuilder&gt;, IEquatable&lt;SuffixTreeNode&gt;, IEquatable&lt;SuffixTreeNode.Leaf&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class Leaf : SuffixTreeNode, ISuffixStructureNode&lt;SuffixTreeEdge, SuffixTreeNode, SuffixTreePath, SuffixTreeBuilder&gt;, IRecImmDictIndexedTreeNode&lt;SuffixTreeEdge, SuffixTreeNode, SuffixTreePath, SuffixTreeBuilder&gt;, IEquatable&lt;SuffixTreeNode&gt;, IEquatable&lt;SuffixTreeNode.Leaf&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -144,7 +145,7 @@
     <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixTrees_SuffixTreeNode_Leaf__ctor_System_Int32_.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixTrees.SuffixTreeNode.Leaf.%23ctor(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixTrees/SuffixTreeNode.cs/#L29">View Source</a>
+    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixTrees/SuffixTreeNode.cs/#L30">View Source</a>
   </span>
   <a id="StringAlgorithms_SuffixTrees_SuffixTreeNode_Leaf__ctor_" data-uid="StringAlgorithms.SuffixTrees.SuffixTreeNode.Leaf.#ctor*"></a>
   <h4 id="StringAlgorithms_SuffixTrees_SuffixTreeNode_Leaf__ctor_System_Int32_" data-uid="StringAlgorithms.SuffixTrees.SuffixTreeNode.Leaf.#ctor(System.Int32)">Leaf(Int32)</h4>
@@ -179,7 +180,7 @@
     <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixTrees_SuffixTreeNode_Leaf_LeafStart.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixTrees.SuffixTreeNode.Leaf.LeafStart%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixTrees/SuffixTreeNode.cs/#L29">View Source</a>
+    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixTrees/SuffixTreeNode.cs/#L30">View Source</a>
   </span>
   <a id="StringAlgorithms_SuffixTrees_SuffixTreeNode_Leaf_LeafStart_" data-uid="StringAlgorithms.SuffixTrees.SuffixTreeNode.Leaf.LeafStart*"></a>
   <h4 id="StringAlgorithms_SuffixTrees_SuffixTreeNode_Leaf_LeafStart" data-uid="StringAlgorithms.SuffixTrees.SuffixTreeNode.Leaf.LeafStart">LeafStart</h4>
@@ -209,6 +210,9 @@
       <a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureNode-4.html">ISuffixStructureNode&lt;TEdge, TNode, TPath, TBuilder&gt;</a>
   </div>
   <div>
+      <a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode-4.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode, TPath, TBuilder&gt;</a>
+  </div>
+  <div>
       <span class="xref">System.IEquatable&lt;T&gt;</span>
   </div>
   <div>
@@ -216,16 +220,16 @@
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="StringAlgorithms.SuffixStructures.SuffixStructureMatcher.html#StringAlgorithms_SuffixStructures_SuffixStructureMatcher_Match__4_StringAlgorithms_SuffixStructures_ISuffixStructureNode___0___1___2___3__StringAlgorithms_TextWithTerminator_System_String_">SuffixStructureMatcher.Match&lt;TEdge, TNode, TPath, TBuilder&gt;(ISuffixStructureNode&lt;TEdge, TNode, TPath, TBuilder&gt;, TextWithTerminator, String)</a>
+      <a class="xref" href="StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.html#StringAlgorithms_RecImmTrees_RecImmDictIndexedTreeNodeExtensions_IsLeaf__4_StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreeNode___0___1___2___3__">RecImmDictIndexedTreeNodeExtensions.IsLeaf&lt;TEdge, TNode, TPath, TBuilder&gt;(IRecImmDictIndexedTreeNode&lt;TEdge, TNode, TPath, TBuilder&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.html#StringAlgorithms_SuffixStructures_SuffixStructureNodeExtensions_IsLeaf__4_StringAlgorithms_SuffixStructures_ISuffixStructureNode___0___1___2___3__">SuffixStructureNodeExtensions.IsLeaf&lt;TEdge, TNode, TPath, TBuilder&gt;(ISuffixStructureNode&lt;TEdge, TNode, TPath, TBuilder&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.html#StringAlgorithms_SuffixStructures_SuffixStructureNodeExtensions_GetAllNodeToLeafPaths__4_StringAlgorithms_SuffixStructures_ISuffixStructureNode___0___1___2___3__">SuffixStructureNodeExtensions.GetAllNodeToLeafPaths&lt;TEdge, TNode, TPath, TBuilder&gt;(ISuffixStructureNode&lt;TEdge, TNode, TPath, TBuilder&gt;)</a>
+      <a class="xref" href="StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.html#StringAlgorithms_RecImmTrees_RecImmDictIndexedTreeNodeExtensions_GetAllNodeToLeafPaths__4_StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreeNode___0___1___2___3__">RecImmDictIndexedTreeNodeExtensions.GetAllNodeToLeafPaths&lt;TEdge, TNode, TPath, TBuilder&gt;(IRecImmDictIndexedTreeNode&lt;TEdge, TNode, TPath, TBuilder&gt;)</a>
   </div>
   <div>
       <a class="xref" href="StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.html#StringAlgorithms_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__4_StringAlgorithms_SuffixStructures_ISuffixStructureNode___0___1___2___3__StringAlgorithms_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode, TPath, TBuilder&gt;(ISuffixStructureNode&lt;TEdge, TNode, TPath, TBuilder&gt;, TextWithTerminator)</a>
+  </div>
+  <div>
+      <a class="xref" href="StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatcher.html#StringAlgorithms_SuffixStructures_Matching_SuffixStructureMatcher_Match__4_StringAlgorithms_SuffixStructures_ISuffixStructureNode___0___1___2___3__StringAlgorithms_TextWithTerminator_System_String_">SuffixStructureMatcher.Match&lt;TEdge, TNode, TPath, TBuilder&gt;(ISuffixStructureNode&lt;TEdge, TNode, TPath, TBuilder&gt;, TextWithTerminator, String)</a>
   </div>
 </article>
           </div>
@@ -238,7 +242,7 @@
                     <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixTrees_SuffixTreeNode_Leaf.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixTrees.SuffixTreeNode.Leaf%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixTrees/SuffixTreeNode.cs/#L29" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixTrees/SuffixTreeNode.cs/#L30" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

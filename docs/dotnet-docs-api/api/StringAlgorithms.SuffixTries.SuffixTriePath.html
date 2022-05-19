@@ -83,7 +83,8 @@
   
   <h1 id="StringAlgorithms_SuffixTries_SuffixTriePath" data-uid="StringAlgorithms.SuffixTries.SuffixTriePath" class="text-break">Class SuffixTriePath
   </h1>
-  <div class="markdown level0 summary"><p>An immutable sequence of Suffix Trie nodes, where each node is child of its predecessor and parent of its successor.</p>
+  <div class="markdown level0 summary"><p>An immutable sequence of <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a>, where each node is child of its predecessor and parent of
+its successor and where node relationships are stored in <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieEdge.html">SuffixTrieEdge</a> instances.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -94,6 +95,7 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructurePath-4.html">ISuffixStructurePath</a>&lt;<a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieEdge.html">SuffixTrieEdge</a>, <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a>, <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTriePath.html">SuffixTriePath</a>, <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieBuilder.html">SuffixTrieBuilder</a>&gt;</div>
+    <div><a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath-4.html">IRecImmDictIndexedTreePath</a>&lt;<a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieEdge.html">SuffixTrieEdge</a>, <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a>, <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTriePath.html">SuffixTriePath</a>, <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieBuilder.html">SuffixTrieBuilder</a>&gt;</div>
     <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="StringAlgorithms.SuffixTries.SuffixTriePath.html">SuffixTriePath</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
@@ -124,7 +126,7 @@
   <h6><strong>Assembly</strong>: StringAlgorithms.dll</h6>
   <h5 id="StringAlgorithms_SuffixTries_SuffixTriePath_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SuffixTriePath : ISuffixStructurePath&lt;SuffixTrieEdge, SuffixTrieNode, SuffixTriePath, SuffixTrieBuilder&gt;, IEquatable&lt;SuffixTriePath&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class SuffixTriePath : ISuffixStructurePath&lt;SuffixTrieEdge, SuffixTrieNode, SuffixTriePath, SuffixTrieBuilder&gt;, IRecImmDictIndexedTreePath&lt;SuffixTrieEdge, SuffixTrieNode, SuffixTriePath, SuffixTrieBuilder&gt;, IEquatable&lt;SuffixTriePath&gt;</code></pre>
   </div>
   <h5 id="StringAlgorithms_SuffixTries_SuffixTriePath_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>Immutability is guaranteed by using <a class="xref" href="StringAlgorithms.Utilities.ValueReadOnlyDictionary-2.html">ValueReadOnlyDictionary&lt;TKey, TValue&gt;</a>.</p>
@@ -136,11 +138,12 @@
     <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixTries_SuffixTriePath__ctor_IEnumerable_KeyValuePair_StringAlgorithms_SuffixTries_SuffixTrieEdge_StringAlgorithms_SuffixTries_SuffixTrieNode___.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixTries.SuffixTriePath.%23ctor(IEnumerable%7BKeyValuePair%7BStringAlgorithms.SuffixTries.SuffixTrieEdge%2CStringAlgorithms.SuffixTries.SuffixTrieNode%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixTries/SuffixTriePath.cs/#L13">View Source</a>
+    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixTries/SuffixTriePath.cs/#L14">View Source</a>
   </span>
   <a id="StringAlgorithms_SuffixTries_SuffixTriePath__ctor_" data-uid="StringAlgorithms.SuffixTries.SuffixTriePath.#ctor*"></a>
   <h4 id="StringAlgorithms_SuffixTries_SuffixTriePath__ctor_IEnumerable_KeyValuePair_StringAlgorithms_SuffixTries_SuffixTrieEdge_StringAlgorithms_SuffixTries_SuffixTrieNode___" data-uid="StringAlgorithms.SuffixTries.SuffixTriePath.#ctor(IEnumerable{KeyValuePair{StringAlgorithms.SuffixTries.SuffixTrieEdge,StringAlgorithms.SuffixTries.SuffixTrieNode}})">SuffixTriePath(IEnumerable&lt;KeyValuePair&lt;SuffixTrieEdge, SuffixTrieNode&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p>An immutable sequence of Suffix Trie nodes, where each node is child of its predecessor and parent of its successor.</p>
+  <div class="markdown level1 summary"><p>An immutable sequence of <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a>, where each node is child of its predecessor and parent of
+its successor and where node relationships are stored in <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieEdge.html">SuffixTrieEdge</a> instances.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -175,7 +178,7 @@
     <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixTries_SuffixTriePath_PathNodes.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixTries.SuffixTriePath.PathNodes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixTries/SuffixTriePath.cs/#L17">View Source</a>
+    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixTries/SuffixTriePath.cs/#L18">View Source</a>
   </span>
   <a id="StringAlgorithms_SuffixTries_SuffixTriePath_PathNodes_" data-uid="StringAlgorithms.SuffixTries.SuffixTriePath.PathNodes*"></a>
   <h4 id="StringAlgorithms_SuffixTries_SuffixTriePath_PathNodes" data-uid="StringAlgorithms.SuffixTries.SuffixTriePath.PathNodes">PathNodes</h4>
@@ -206,20 +209,23 @@
       <a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructurePath-4.html">ISuffixStructurePath&lt;TEdge, TNode, TPath, TBuilder&gt;</a>
   </div>
   <div>
+      <a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath-4.html">IRecImmDictIndexedTreePath&lt;TEdge, TNode, TPath, TBuilder&gt;</a>
+  </div>
+  <div>
       <span class="xref">System.IEquatable&lt;T&gt;</span>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="StringAlgorithms.RecImmTrees.RecImmDictIndexedTreePathExtensions.html#StringAlgorithms_RecImmTrees_RecImmDictIndexedTreePathExtensions_Concat__4_StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreePath___0___1___2___3__StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreePath___0___1___2___3__">RecImmDictIndexedTreePathExtensions.Concat&lt;TEdge, TNode, TPath, TBuilder&gt;(IRecImmDictIndexedTreePath&lt;TEdge, TNode, TPath, TBuilder&gt;, IRecImmDictIndexedTreePath&lt;TEdge, TNode, TPath, TBuilder&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="StringAlgorithms.RecImmTrees.RecImmDictIndexedTreePathExtensions.html#StringAlgorithms_RecImmTrees_RecImmDictIndexedTreePathExtensions_Append__4_StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreePath___0___1___2___3____0___1_">RecImmDictIndexedTreePathExtensions.Append&lt;TEdge, TNode, TPath, TBuilder&gt;(IRecImmDictIndexedTreePath&lt;TEdge, TNode, TPath, TBuilder&gt;, TEdge, TNode)</a>
+  </div>
   <div>
       <a class="xref" href="StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.html#StringAlgorithms_SuffixStructures_SuffixStructurePathExtensions_SuffixFor__4_StringAlgorithms_SuffixStructures_ISuffixStructurePath___0___1___2___3__StringAlgorithms_TextWithTerminator_">SuffixStructurePathExtensions.SuffixFor&lt;TEdge, TNode, TPath, TBuilder&gt;(ISuffixStructurePath&lt;TEdge, TNode, TPath, TBuilder&gt;, TextWithTerminator)</a>
   </div>
   <div>
       <a class="xref" href="StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.html#StringAlgorithms_SuffixStructures_SuffixStructurePathExtensions_IsSuffixOf__4_StringAlgorithms_SuffixStructures_ISuffixStructurePath___0___1___2___3__StringAlgorithms_TextWithTerminator_">SuffixStructurePathExtensions.IsSuffixOf&lt;TEdge, TNode, TPath, TBuilder&gt;(ISuffixStructurePath&lt;TEdge, TNode, TPath, TBuilder&gt;, TextWithTerminator)</a>
-  </div>
-  <div>
-      <a class="xref" href="StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.html#StringAlgorithms_SuffixStructures_SuffixStructurePathExtensions_Concat__4_StringAlgorithms_SuffixStructures_ISuffixStructurePath___0___1___2___3__StringAlgorithms_SuffixStructures_ISuffixStructurePath___0___1___2___3__">SuffixStructurePathExtensions.Concat&lt;TEdge, TNode, TPath, TBuilder&gt;(ISuffixStructurePath&lt;TEdge, TNode, TPath, TBuilder&gt;, ISuffixStructurePath&lt;TEdge, TNode, TPath, TBuilder&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.html#StringAlgorithms_SuffixStructures_SuffixStructurePathExtensions_Append__4_StringAlgorithms_SuffixStructures_ISuffixStructurePath___0___1___2___3____0___1_">SuffixStructurePathExtensions.Append&lt;TEdge, TNode, TPath, TBuilder&gt;(ISuffixStructurePath&lt;TEdge, TNode, TPath, TBuilder&gt;, TEdge, TNode)</a>
   </div>
 </article>
           </div>
@@ -232,7 +238,7 @@
                     <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixTries_SuffixTriePath.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixTries.SuffixTriePath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixTries/SuffixTriePath.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixTries/SuffixTriePath.cs/#L14" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

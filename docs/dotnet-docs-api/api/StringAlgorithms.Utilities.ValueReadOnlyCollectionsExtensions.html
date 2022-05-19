@@ -83,7 +83,7 @@
   
   <h1 id="StringAlgorithms_Utilities_ValueReadOnlyCollectionsExtensions" data-uid="StringAlgorithms.Utilities.ValueReadOnlyCollectionsExtensions" class="text-break">Class ValueReadOnlyCollectionsExtensions
   </h1>
-  <div class="markdown level0 summary"><p>Extension methods for value readonly collections.</p>
+  <div class="markdown level0 summary"><p>Extension methods for value readonly collections defined in <a class="xref" href="StringAlgorithms.Utilities.html">StringAlgorithms.Utilities</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -235,6 +235,78 @@
       <tr>
         <td><a class="xref" href="StringAlgorithms.Utilities.ValueReadOnlyDictionary-2.html">ValueReadOnlyDictionary</a>&lt;TKey, TValue&gt;</td>
         <td><p>An instance of <a class="xref" href="StringAlgorithms.Utilities.ValueReadOnlyDictionary-2.html">ValueReadOnlyDictionary&lt;TKey, TValue&gt;</a>, independent from the provided dictionary.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TKey</span></td>
+        <td><p><inheritdoc cref="T:StringAlgorithms.Utilities.ValueReadOnlyDictionary`2" path="/typeparam[@name=&apos;TKey&apos;]"></inheritdoc></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p><inheritdoc cref="T:StringAlgorithms.Utilities.ValueReadOnlyDictionary`2" path="/typeparam[@name=&apos;TValue&apos;]"></inheritdoc></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_Utilities_ValueReadOnlyCollectionsExtensions_ToValueReadOnlyDictionary__2_IEnumerable_KeyValuePair___0___1___.md&amp;value=---%0Auid%3A%20StringAlgorithms.Utilities.ValueReadOnlyCollectionsExtensions.ToValueReadOnlyDictionary%60%602(IEnumerable%7BKeyValuePair%7B%60%600%2C%60%601%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/Utilities/ValueReadOnlyCollectionsExtensions.cs/#L65">View Source</a>
+  </span>
+  <a id="StringAlgorithms_Utilities_ValueReadOnlyCollectionsExtensions_ToValueReadOnlyDictionary_" data-uid="StringAlgorithms.Utilities.ValueReadOnlyCollectionsExtensions.ToValueReadOnlyDictionary*"></a>
+  <h4 id="StringAlgorithms_Utilities_ValueReadOnlyCollectionsExtensions_ToValueReadOnlyDictionary__2_IEnumerable_KeyValuePair___0___1___" data-uid="StringAlgorithms.Utilities.ValueReadOnlyCollectionsExtensions.ToValueReadOnlyDictionary``2(IEnumerable{KeyValuePair{``0,``1}})">ToValueReadOnlyDictionary&lt;TKey, TValue&gt;(IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Builds a <a class="xref" href="StringAlgorithms.Utilities.ValueReadOnlyDictionary-2.html">ValueReadOnlyDictionary&lt;TKey, TValue&gt;</a> out of the provided enumerable of entries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ValueReadOnlyDictionary&lt;TKey, TValue&gt; ToValueReadOnlyDictionary&lt;TKey, TValue&gt;(this IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt; entries)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">KeyValuePair</span>&lt;TKey, TValue&gt;&gt;</td>
+        <td><span class="parametername">entries</span></td>
+        <td><p><inheritdoc cref="M:StringAlgorithms.Utilities.ValueReadOnlyDictionary`2.#ctor(IEnumerable{KeyValuePair{`0,`1}})" path="/param[@name=&apos;entries&apos;]"></inheritdoc></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="StringAlgorithms.Utilities.ValueReadOnlyDictionary-2.html">ValueReadOnlyDictionary</a>&lt;TKey, TValue&gt;</td>
+        <td><p>An instance of <a class="xref" href="StringAlgorithms.Utilities.ValueReadOnlyDictionary-2.html">ValueReadOnlyDictionary&lt;TKey, TValue&gt;</a>, independent from the provided enumerable
+of entries.</p>
 </td>
       </tr>
     </tbody>

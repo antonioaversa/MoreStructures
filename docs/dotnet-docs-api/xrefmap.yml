@@ -7,6 +7,493 @@ references:
   commentId: N:StringAlgorithms
   fullName: StringAlgorithms
   nameWithType: StringAlgorithms
+- uid: StringAlgorithms.CountTrees
+  name: StringAlgorithms.CountTrees
+  href: api/StringAlgorithms.CountTrees.html
+  commentId: N:StringAlgorithms.CountTrees
+  fullName: StringAlgorithms.CountTrees
+  nameWithType: StringAlgorithms.CountTrees
+- uid: StringAlgorithms.CountTrees.CountTreeBuilder`4
+  name: CountTreeBuilder<TEdge, TNode, TPath, TBuilder>
+  href: api/StringAlgorithms.CountTrees.CountTreeBuilder-4.html
+  commentId: T:StringAlgorithms.CountTrees.CountTreeBuilder`4
+  name.vb: CountTreeBuilder(Of TEdge, TNode, TPath, TBuilder)
+  fullName: StringAlgorithms.CountTrees.CountTreeBuilder<TEdge, TNode, TPath, TBuilder>
+  fullName.vb: StringAlgorithms.CountTrees.CountTreeBuilder(Of TEdge, TNode, TPath, TBuilder)
+  nameWithType: CountTreeBuilder<TEdge, TNode, TPath, TBuilder>
+  nameWithType.vb: CountTreeBuilder(Of TEdge, TNode, TPath, TBuilder)
+- uid: StringAlgorithms.CountTrees.CountTreeBuilder`4.#ctor
+  name: CountTreeBuilder()
+  href: api/StringAlgorithms.CountTrees.CountTreeBuilder-4.html#StringAlgorithms_CountTrees_CountTreeBuilder_4__ctor
+  commentId: M:StringAlgorithms.CountTrees.CountTreeBuilder`4.#ctor
+  fullName: StringAlgorithms.CountTrees.CountTreeBuilder<TEdge, TNode, TPath, TBuilder>.CountTreeBuilder()
+  fullName.vb: StringAlgorithms.CountTrees.CountTreeBuilder(Of TEdge, TNode, TPath, TBuilder).CountTreeBuilder()
+  nameWithType: CountTreeBuilder<TEdge, TNode, TPath, TBuilder>.CountTreeBuilder()
+  nameWithType.vb: CountTreeBuilder(Of TEdge, TNode, TPath, TBuilder).CountTreeBuilder()
+- uid: StringAlgorithms.CountTrees.CountTreeBuilder`4.#ctor*
+  name: CountTreeBuilder
+  href: api/StringAlgorithms.CountTrees.CountTreeBuilder-4.html#StringAlgorithms_CountTrees_CountTreeBuilder_4__ctor_
+  commentId: Overload:StringAlgorithms.CountTrees.CountTreeBuilder`4.#ctor
+  isSpec: "True"
+  fullName: StringAlgorithms.CountTrees.CountTreeBuilder<TEdge, TNode, TPath, TBuilder>.CountTreeBuilder
+  fullName.vb: StringAlgorithms.CountTrees.CountTreeBuilder(Of TEdge, TNode, TPath, TBuilder).CountTreeBuilder
+  nameWithType: CountTreeBuilder<TEdge, TNode, TPath, TBuilder>.CountTreeBuilder
+  nameWithType.vb: CountTreeBuilder(Of TEdge, TNode, TPath, TBuilder).CountTreeBuilder
+- uid: StringAlgorithms.CountTrees.CountTreeBuilder`4.EmptyPath
+  name: EmptyPath()
+  href: api/StringAlgorithms.CountTrees.CountTreeBuilder-4.html#StringAlgorithms_CountTrees_CountTreeBuilder_4_EmptyPath
+  commentId: M:StringAlgorithms.CountTrees.CountTreeBuilder`4.EmptyPath
+  fullName: StringAlgorithms.CountTrees.CountTreeBuilder<TEdge, TNode, TPath, TBuilder>.EmptyPath()
+  fullName.vb: StringAlgorithms.CountTrees.CountTreeBuilder(Of TEdge, TNode, TPath, TBuilder).EmptyPath()
+  nameWithType: CountTreeBuilder<TEdge, TNode, TPath, TBuilder>.EmptyPath()
+  nameWithType.vb: CountTreeBuilder(Of TEdge, TNode, TPath, TBuilder).EmptyPath()
+- uid: StringAlgorithms.CountTrees.CountTreeBuilder`4.EmptyPath*
+  name: EmptyPath
+  href: api/StringAlgorithms.CountTrees.CountTreeBuilder-4.html#StringAlgorithms_CountTrees_CountTreeBuilder_4_EmptyPath_
+  commentId: Overload:StringAlgorithms.CountTrees.CountTreeBuilder`4.EmptyPath
+  isSpec: "True"
+  fullName: StringAlgorithms.CountTrees.CountTreeBuilder<TEdge, TNode, TPath, TBuilder>.EmptyPath
+  fullName.vb: StringAlgorithms.CountTrees.CountTreeBuilder(Of TEdge, TNode, TPath, TBuilder).EmptyPath
+  nameWithType: CountTreeBuilder<TEdge, TNode, TPath, TBuilder>.EmptyPath
+  nameWithType.vb: CountTreeBuilder(Of TEdge, TNode, TPath, TBuilder).EmptyPath
+- uid: StringAlgorithms.CountTrees.CountTreeBuilder`4.MultistepsPath(IEnumerable{KeyValuePair{StringAlgorithms.CountTrees.CountTreeEdge{`0,`1,`2,`3},StringAlgorithms.CountTrees.CountTreeNode{`0,`1,`2,`3}}})
+  name: MultistepsPath(IEnumerable<KeyValuePair<CountTreeEdge<TEdge, TNode, TPath, TBuilder>, CountTreeNode<TEdge, TNode, TPath, TBuilder>>>)
+  href: api/StringAlgorithms.CountTrees.CountTreeBuilder-4.html#StringAlgorithms_CountTrees_CountTreeBuilder_4_MultistepsPath_IEnumerable_KeyValuePair_StringAlgorithms_CountTrees_CountTreeEdge__0__1__2__3__StringAlgorithms_CountTrees_CountTreeNode__0__1__2__3____
+  commentId: M:StringAlgorithms.CountTrees.CountTreeBuilder`4.MultistepsPath(IEnumerable{KeyValuePair{StringAlgorithms.CountTrees.CountTreeEdge{`0,`1,`2,`3},StringAlgorithms.CountTrees.CountTreeNode{`0,`1,`2,`3}}})
+  name.vb: MultistepsPath(IEnumerable(Of KeyValuePair(Of CountTreeEdge(Of TEdge, TNode, TPath, TBuilder), CountTreeNode(Of TEdge, TNode, TPath, TBuilder))))
+  fullName: StringAlgorithms.CountTrees.CountTreeBuilder<TEdge, TNode, TPath, TBuilder>.MultistepsPath(IEnumerable<KeyValuePair<StringAlgorithms.CountTrees.CountTreeEdge<TEdge, TNode, TPath, TBuilder>, StringAlgorithms.CountTrees.CountTreeNode<TEdge, TNode, TPath, TBuilder>>>)
+  fullName.vb: StringAlgorithms.CountTrees.CountTreeBuilder(Of TEdge, TNode, TPath, TBuilder).MultistepsPath(IEnumerable(Of KeyValuePair(Of StringAlgorithms.CountTrees.CountTreeEdge(Of TEdge, TNode, TPath, TBuilder), StringAlgorithms.CountTrees.CountTreeNode(Of TEdge, TNode, TPath, TBuilder))))
+  nameWithType: CountTreeBuilder<TEdge, TNode, TPath, TBuilder>.MultistepsPath(IEnumerable<KeyValuePair<CountTreeEdge<TEdge, TNode, TPath, TBuilder>, CountTreeNode<TEdge, TNode, TPath, TBuilder>>>)
+  nameWithType.vb: CountTreeBuilder(Of TEdge, TNode, TPath, TBuilder).MultistepsPath(IEnumerable(Of KeyValuePair(Of CountTreeEdge(Of TEdge, TNode, TPath, TBuilder), CountTreeNode(Of TEdge, TNode, TPath, TBuilder))))
+- uid: StringAlgorithms.CountTrees.CountTreeBuilder`4.MultistepsPath(System.ValueTuple{StringAlgorithms.CountTrees.CountTreeEdge{`0,`1,`2,`3},StringAlgorithms.CountTrees.CountTreeNode{`0,`1,`2,`3}}[])
+  name: MultistepsPath((CountTreeEdge<TEdge, TNode, TPath, TBuilder> edge, CountTreeNode<TEdge, TNode, TPath, TBuilder> node)[])
+  href: api/StringAlgorithms.CountTrees.CountTreeBuilder-4.html#StringAlgorithms_CountTrees_CountTreeBuilder_4_MultistepsPath_System_ValueTuple_StringAlgorithms_CountTrees_CountTreeEdge__0__1__2__3__StringAlgorithms_CountTrees_CountTreeNode__0__1__2__3_____
+  commentId: M:StringAlgorithms.CountTrees.CountTreeBuilder`4.MultistepsPath(System.ValueTuple{StringAlgorithms.CountTrees.CountTreeEdge{`0,`1,`2,`3},StringAlgorithms.CountTrees.CountTreeNode{`0,`1,`2,`3}}[])
+  name.vb: MultistepsPath((edge As CountTreeEdge(Of TEdge, TNode, TPath, TBuilder), node As CountTreeNode(Of TEdge, TNode, TPath, TBuilder))(Of CountTreeEdge(Of TEdge, TNode, TPath, TBuilder), CountTreeNode(Of TEdge, TNode, TPath, TBuilder))())
+  fullName: StringAlgorithms.CountTrees.CountTreeBuilder<TEdge, TNode, TPath, TBuilder>.MultistepsPath(System.ValueTuple<StringAlgorithms.CountTrees.CountTreeEdge<TEdge, TNode, TPath, TBuilder>, StringAlgorithms.CountTrees.CountTreeNode<TEdge, TNode, TPath, TBuilder>>[])
+  fullName.vb: StringAlgorithms.CountTrees.CountTreeBuilder(Of TEdge, TNode, TPath, TBuilder).MultistepsPath(System.ValueTuple(Of StringAlgorithms.CountTrees.CountTreeEdge(Of TEdge, TNode, TPath, TBuilder), StringAlgorithms.CountTrees.CountTreeNode(Of TEdge, TNode, TPath, TBuilder))())
+  nameWithType: CountTreeBuilder<TEdge, TNode, TPath, TBuilder>.MultistepsPath((CountTreeEdge<TEdge, TNode, TPath, TBuilder> edge, CountTreeNode<TEdge, TNode, TPath, TBuilder> node)[])
+  nameWithType.vb: CountTreeBuilder(Of TEdge, TNode, TPath, TBuilder).MultistepsPath((edge As CountTreeEdge(Of TEdge, TNode, TPath, TBuilder), node As CountTreeNode(Of TEdge, TNode, TPath, TBuilder))(Of CountTreeEdge(Of TEdge, TNode, TPath, TBuilder), CountTreeNode(Of TEdge, TNode, TPath, TBuilder))())
+- uid: StringAlgorithms.CountTrees.CountTreeBuilder`4.MultistepsPath*
+  name: MultistepsPath
+  href: api/StringAlgorithms.CountTrees.CountTreeBuilder-4.html#StringAlgorithms_CountTrees_CountTreeBuilder_4_MultistepsPath_
+  commentId: Overload:StringAlgorithms.CountTrees.CountTreeBuilder`4.MultistepsPath
+  isSpec: "True"
+  fullName: StringAlgorithms.CountTrees.CountTreeBuilder<TEdge, TNode, TPath, TBuilder>.MultistepsPath
+  fullName.vb: StringAlgorithms.CountTrees.CountTreeBuilder(Of TEdge, TNode, TPath, TBuilder).MultistepsPath
+  nameWithType: CountTreeBuilder<TEdge, TNode, TPath, TBuilder>.MultistepsPath
+  nameWithType.vb: CountTreeBuilder(Of TEdge, TNode, TPath, TBuilder).MultistepsPath
+- uid: StringAlgorithms.CountTrees.CountTreeBuilder`4.SingletonPath(StringAlgorithms.CountTrees.CountTreeEdge{`0,`1,`2,`3},StringAlgorithms.CountTrees.CountTreeNode{`0,`1,`2,`3})
+  name: SingletonPath(CountTreeEdge<TEdge, TNode, TPath, TBuilder>, CountTreeNode<TEdge, TNode, TPath, TBuilder>)
+  href: api/StringAlgorithms.CountTrees.CountTreeBuilder-4.html#StringAlgorithms_CountTrees_CountTreeBuilder_4_SingletonPath_StringAlgorithms_CountTrees_CountTreeEdge__0__1__2__3__StringAlgorithms_CountTrees_CountTreeNode__0__1__2__3__
+  commentId: M:StringAlgorithms.CountTrees.CountTreeBuilder`4.SingletonPath(StringAlgorithms.CountTrees.CountTreeEdge{`0,`1,`2,`3},StringAlgorithms.CountTrees.CountTreeNode{`0,`1,`2,`3})
+  name.vb: SingletonPath(CountTreeEdge(Of TEdge, TNode, TPath, TBuilder), CountTreeNode(Of TEdge, TNode, TPath, TBuilder))
+  fullName: StringAlgorithms.CountTrees.CountTreeBuilder<TEdge, TNode, TPath, TBuilder>.SingletonPath(StringAlgorithms.CountTrees.CountTreeEdge<TEdge, TNode, TPath, TBuilder>, StringAlgorithms.CountTrees.CountTreeNode<TEdge, TNode, TPath, TBuilder>)
+  fullName.vb: StringAlgorithms.CountTrees.CountTreeBuilder(Of TEdge, TNode, TPath, TBuilder).SingletonPath(StringAlgorithms.CountTrees.CountTreeEdge(Of TEdge, TNode, TPath, TBuilder), StringAlgorithms.CountTrees.CountTreeNode(Of TEdge, TNode, TPath, TBuilder))
+  nameWithType: CountTreeBuilder<TEdge, TNode, TPath, TBuilder>.SingletonPath(CountTreeEdge<TEdge, TNode, TPath, TBuilder>, CountTreeNode<TEdge, TNode, TPath, TBuilder>)
+  nameWithType.vb: CountTreeBuilder(Of TEdge, TNode, TPath, TBuilder).SingletonPath(CountTreeEdge(Of TEdge, TNode, TPath, TBuilder), CountTreeNode(Of TEdge, TNode, TPath, TBuilder))
+- uid: StringAlgorithms.CountTrees.CountTreeBuilder`4.SingletonPath*
+  name: SingletonPath
+  href: api/StringAlgorithms.CountTrees.CountTreeBuilder-4.html#StringAlgorithms_CountTrees_CountTreeBuilder_4_SingletonPath_
+  commentId: Overload:StringAlgorithms.CountTrees.CountTreeBuilder`4.SingletonPath
+  isSpec: "True"
+  fullName: StringAlgorithms.CountTrees.CountTreeBuilder<TEdge, TNode, TPath, TBuilder>.SingletonPath
+  fullName.vb: StringAlgorithms.CountTrees.CountTreeBuilder(Of TEdge, TNode, TPath, TBuilder).SingletonPath
+  nameWithType: CountTreeBuilder<TEdge, TNode, TPath, TBuilder>.SingletonPath
+  nameWithType.vb: CountTreeBuilder(Of TEdge, TNode, TPath, TBuilder).SingletonPath
+- uid: StringAlgorithms.CountTrees.CountTreeEdge`4
+  name: CountTreeEdge<TEdge, TNode, TPath, TBuilder>
+  href: api/StringAlgorithms.CountTrees.CountTreeEdge-4.html
+  commentId: T:StringAlgorithms.CountTrees.CountTreeEdge`4
+  name.vb: CountTreeEdge(Of TEdge, TNode, TPath, TBuilder)
+  fullName: StringAlgorithms.CountTrees.CountTreeEdge<TEdge, TNode, TPath, TBuilder>
+  fullName.vb: StringAlgorithms.CountTrees.CountTreeEdge(Of TEdge, TNode, TPath, TBuilder)
+  nameWithType: CountTreeEdge<TEdge, TNode, TPath, TBuilder>
+  nameWithType.vb: CountTreeEdge(Of TEdge, TNode, TPath, TBuilder)
+- uid: StringAlgorithms.CountTrees.CountTreeEdge`4.#ctor(`0)
+  name: CountTreeEdge(TEdge)
+  href: api/StringAlgorithms.CountTrees.CountTreeEdge-4.html#StringAlgorithms_CountTrees_CountTreeEdge_4__ctor__0_
+  commentId: M:StringAlgorithms.CountTrees.CountTreeEdge`4.#ctor(`0)
+  fullName: StringAlgorithms.CountTrees.CountTreeEdge<TEdge, TNode, TPath, TBuilder>.CountTreeEdge(TEdge)
+  fullName.vb: StringAlgorithms.CountTrees.CountTreeEdge(Of TEdge, TNode, TPath, TBuilder).CountTreeEdge(TEdge)
+  nameWithType: CountTreeEdge<TEdge, TNode, TPath, TBuilder>.CountTreeEdge(TEdge)
+  nameWithType.vb: CountTreeEdge(Of TEdge, TNode, TPath, TBuilder).CountTreeEdge(TEdge)
+- uid: StringAlgorithms.CountTrees.CountTreeEdge`4.#ctor*
+  name: CountTreeEdge
+  href: api/StringAlgorithms.CountTrees.CountTreeEdge-4.html#StringAlgorithms_CountTrees_CountTreeEdge_4__ctor_
+  commentId: Overload:StringAlgorithms.CountTrees.CountTreeEdge`4.#ctor
+  isSpec: "True"
+  fullName: StringAlgorithms.CountTrees.CountTreeEdge<TEdge, TNode, TPath, TBuilder>.CountTreeEdge
+  fullName.vb: StringAlgorithms.CountTrees.CountTreeEdge(Of TEdge, TNode, TPath, TBuilder).CountTreeEdge
+  nameWithType: CountTreeEdge<TEdge, TNode, TPath, TBuilder>.CountTreeEdge
+  nameWithType.vb: CountTreeEdge(Of TEdge, TNode, TPath, TBuilder).CountTreeEdge
+- uid: StringAlgorithms.CountTrees.CountTreeEdge`4.WrappedEdge
+  name: WrappedEdge
+  href: api/StringAlgorithms.CountTrees.CountTreeEdge-4.html#StringAlgorithms_CountTrees_CountTreeEdge_4_WrappedEdge
+  commentId: P:StringAlgorithms.CountTrees.CountTreeEdge`4.WrappedEdge
+  fullName: StringAlgorithms.CountTrees.CountTreeEdge<TEdge, TNode, TPath, TBuilder>.WrappedEdge
+  fullName.vb: StringAlgorithms.CountTrees.CountTreeEdge(Of TEdge, TNode, TPath, TBuilder).WrappedEdge
+  nameWithType: CountTreeEdge<TEdge, TNode, TPath, TBuilder>.WrappedEdge
+  nameWithType.vb: CountTreeEdge(Of TEdge, TNode, TPath, TBuilder).WrappedEdge
+- uid: StringAlgorithms.CountTrees.CountTreeEdge`4.WrappedEdge*
+  name: WrappedEdge
+  href: api/StringAlgorithms.CountTrees.CountTreeEdge-4.html#StringAlgorithms_CountTrees_CountTreeEdge_4_WrappedEdge_
+  commentId: Overload:StringAlgorithms.CountTrees.CountTreeEdge`4.WrappedEdge
+  isSpec: "True"
+  fullName: StringAlgorithms.CountTrees.CountTreeEdge<TEdge, TNode, TPath, TBuilder>.WrappedEdge
+  fullName.vb: StringAlgorithms.CountTrees.CountTreeEdge(Of TEdge, TNode, TPath, TBuilder).WrappedEdge
+  nameWithType: CountTreeEdge<TEdge, TNode, TPath, TBuilder>.WrappedEdge
+  nameWithType.vb: CountTreeEdge(Of TEdge, TNode, TPath, TBuilder).WrappedEdge
+- uid: StringAlgorithms.CountTrees.CountTreeNode`4
+  name: CountTreeNode<TEdge, TNode, TPath, TBuilder>
+  href: api/StringAlgorithms.CountTrees.CountTreeNode-4.html
+  commentId: T:StringAlgorithms.CountTrees.CountTreeNode`4
+  name.vb: CountTreeNode(Of TEdge, TNode, TPath, TBuilder)
+  fullName: StringAlgorithms.CountTrees.CountTreeNode<TEdge, TNode, TPath, TBuilder>
+  fullName.vb: StringAlgorithms.CountTrees.CountTreeNode(Of TEdge, TNode, TPath, TBuilder)
+  nameWithType: CountTreeNode<TEdge, TNode, TPath, TBuilder>
+  nameWithType.vb: CountTreeNode(Of TEdge, TNode, TPath, TBuilder)
+- uid: StringAlgorithms.CountTrees.CountTreeNode`4.#ctor(`1)
+  name: CountTreeNode(TNode)
+  href: api/StringAlgorithms.CountTrees.CountTreeNode-4.html#StringAlgorithms_CountTrees_CountTreeNode_4__ctor__1_
+  commentId: M:StringAlgorithms.CountTrees.CountTreeNode`4.#ctor(`1)
+  fullName: StringAlgorithms.CountTrees.CountTreeNode<TEdge, TNode, TPath, TBuilder>.CountTreeNode(TNode)
+  fullName.vb: StringAlgorithms.CountTrees.CountTreeNode(Of TEdge, TNode, TPath, TBuilder).CountTreeNode(TNode)
+  nameWithType: CountTreeNode<TEdge, TNode, TPath, TBuilder>.CountTreeNode(TNode)
+  nameWithType.vb: CountTreeNode(Of TEdge, TNode, TPath, TBuilder).CountTreeNode(TNode)
+- uid: StringAlgorithms.CountTrees.CountTreeNode`4.#ctor*
+  name: CountTreeNode
+  href: api/StringAlgorithms.CountTrees.CountTreeNode-4.html#StringAlgorithms_CountTrees_CountTreeNode_4__ctor_
+  commentId: Overload:StringAlgorithms.CountTrees.CountTreeNode`4.#ctor
+  isSpec: "True"
+  fullName: StringAlgorithms.CountTrees.CountTreeNode<TEdge, TNode, TPath, TBuilder>.CountTreeNode
+  fullName.vb: StringAlgorithms.CountTrees.CountTreeNode(Of TEdge, TNode, TPath, TBuilder).CountTreeNode
+  nameWithType: CountTreeNode<TEdge, TNode, TPath, TBuilder>.CountTreeNode
+  nameWithType.vb: CountTreeNode(Of TEdge, TNode, TPath, TBuilder).CountTreeNode
+- uid: StringAlgorithms.CountTrees.CountTreeNode`4.Children
+  name: Children
+  href: api/StringAlgorithms.CountTrees.CountTreeNode-4.html#StringAlgorithms_CountTrees_CountTreeNode_4_Children
+  commentId: P:StringAlgorithms.CountTrees.CountTreeNode`4.Children
+  fullName: StringAlgorithms.CountTrees.CountTreeNode<TEdge, TNode, TPath, TBuilder>.Children
+  fullName.vb: StringAlgorithms.CountTrees.CountTreeNode(Of TEdge, TNode, TPath, TBuilder).Children
+  nameWithType: CountTreeNode<TEdge, TNode, TPath, TBuilder>.Children
+  nameWithType.vb: CountTreeNode(Of TEdge, TNode, TPath, TBuilder).Children
+- uid: StringAlgorithms.CountTrees.CountTreeNode`4.Children*
+  name: Children
+  href: api/StringAlgorithms.CountTrees.CountTreeNode-4.html#StringAlgorithms_CountTrees_CountTreeNode_4_Children_
+  commentId: Overload:StringAlgorithms.CountTrees.CountTreeNode`4.Children
+  isSpec: "True"
+  fullName: StringAlgorithms.CountTrees.CountTreeNode<TEdge, TNode, TPath, TBuilder>.Children
+  fullName.vb: StringAlgorithms.CountTrees.CountTreeNode(Of TEdge, TNode, TPath, TBuilder).Children
+  nameWithType: CountTreeNode<TEdge, TNode, TPath, TBuilder>.Children
+  nameWithType.vb: CountTreeNode(Of TEdge, TNode, TPath, TBuilder).Children
+- uid: StringAlgorithms.CountTrees.CountTreeNode`4.DescendantsCount
+  name: DescendantsCount
+  href: api/StringAlgorithms.CountTrees.CountTreeNode-4.html#StringAlgorithms_CountTrees_CountTreeNode_4_DescendantsCount
+  commentId: P:StringAlgorithms.CountTrees.CountTreeNode`4.DescendantsCount
+  fullName: StringAlgorithms.CountTrees.CountTreeNode<TEdge, TNode, TPath, TBuilder>.DescendantsCount
+  fullName.vb: StringAlgorithms.CountTrees.CountTreeNode(Of TEdge, TNode, TPath, TBuilder).DescendantsCount
+  nameWithType: CountTreeNode<TEdge, TNode, TPath, TBuilder>.DescendantsCount
+  nameWithType.vb: CountTreeNode(Of TEdge, TNode, TPath, TBuilder).DescendantsCount
+- uid: StringAlgorithms.CountTrees.CountTreeNode`4.DescendantsCount*
+  name: DescendantsCount
+  href: api/StringAlgorithms.CountTrees.CountTreeNode-4.html#StringAlgorithms_CountTrees_CountTreeNode_4_DescendantsCount_
+  commentId: Overload:StringAlgorithms.CountTrees.CountTreeNode`4.DescendantsCount
+  isSpec: "True"
+  fullName: StringAlgorithms.CountTrees.CountTreeNode<TEdge, TNode, TPath, TBuilder>.DescendantsCount
+  fullName.vb: StringAlgorithms.CountTrees.CountTreeNode(Of TEdge, TNode, TPath, TBuilder).DescendantsCount
+  nameWithType: CountTreeNode<TEdge, TNode, TPath, TBuilder>.DescendantsCount
+  nameWithType.vb: CountTreeNode(Of TEdge, TNode, TPath, TBuilder).DescendantsCount
+- uid: StringAlgorithms.CountTrees.CountTreeNode`4.WrappedNode
+  name: WrappedNode
+  href: api/StringAlgorithms.CountTrees.CountTreeNode-4.html#StringAlgorithms_CountTrees_CountTreeNode_4_WrappedNode
+  commentId: P:StringAlgorithms.CountTrees.CountTreeNode`4.WrappedNode
+  fullName: StringAlgorithms.CountTrees.CountTreeNode<TEdge, TNode, TPath, TBuilder>.WrappedNode
+  fullName.vb: StringAlgorithms.CountTrees.CountTreeNode(Of TEdge, TNode, TPath, TBuilder).WrappedNode
+  nameWithType: CountTreeNode<TEdge, TNode, TPath, TBuilder>.WrappedNode
+  nameWithType.vb: CountTreeNode(Of TEdge, TNode, TPath, TBuilder).WrappedNode
+- uid: StringAlgorithms.CountTrees.CountTreeNode`4.WrappedNode*
+  name: WrappedNode
+  href: api/StringAlgorithms.CountTrees.CountTreeNode-4.html#StringAlgorithms_CountTrees_CountTreeNode_4_WrappedNode_
+  commentId: Overload:StringAlgorithms.CountTrees.CountTreeNode`4.WrappedNode
+  isSpec: "True"
+  fullName: StringAlgorithms.CountTrees.CountTreeNode<TEdge, TNode, TPath, TBuilder>.WrappedNode
+  fullName.vb: StringAlgorithms.CountTrees.CountTreeNode(Of TEdge, TNode, TPath, TBuilder).WrappedNode
+  nameWithType: CountTreeNode<TEdge, TNode, TPath, TBuilder>.WrappedNode
+  nameWithType.vb: CountTreeNode(Of TEdge, TNode, TPath, TBuilder).WrappedNode
+- uid: StringAlgorithms.CountTrees.CountTreePath`4
+  name: CountTreePath<TEdge, TNode, TPath, TBuilder>
+  href: api/StringAlgorithms.CountTrees.CountTreePath-4.html
+  commentId: T:StringAlgorithms.CountTrees.CountTreePath`4
+  name.vb: CountTreePath(Of TEdge, TNode, TPath, TBuilder)
+  fullName: StringAlgorithms.CountTrees.CountTreePath<TEdge, TNode, TPath, TBuilder>
+  fullName.vb: StringAlgorithms.CountTrees.CountTreePath(Of TEdge, TNode, TPath, TBuilder)
+  nameWithType: CountTreePath<TEdge, TNode, TPath, TBuilder>
+  nameWithType.vb: CountTreePath(Of TEdge, TNode, TPath, TBuilder)
+- uid: StringAlgorithms.CountTrees.CountTreePath`4.#ctor(`2)
+  name: CountTreePath(TPath)
+  href: api/StringAlgorithms.CountTrees.CountTreePath-4.html#StringAlgorithms_CountTrees_CountTreePath_4__ctor__2_
+  commentId: M:StringAlgorithms.CountTrees.CountTreePath`4.#ctor(`2)
+  fullName: StringAlgorithms.CountTrees.CountTreePath<TEdge, TNode, TPath, TBuilder>.CountTreePath(TPath)
+  fullName.vb: StringAlgorithms.CountTrees.CountTreePath(Of TEdge, TNode, TPath, TBuilder).CountTreePath(TPath)
+  nameWithType: CountTreePath<TEdge, TNode, TPath, TBuilder>.CountTreePath(TPath)
+  nameWithType.vb: CountTreePath(Of TEdge, TNode, TPath, TBuilder).CountTreePath(TPath)
+- uid: StringAlgorithms.CountTrees.CountTreePath`4.#ctor*
+  name: CountTreePath
+  href: api/StringAlgorithms.CountTrees.CountTreePath-4.html#StringAlgorithms_CountTrees_CountTreePath_4__ctor_
+  commentId: Overload:StringAlgorithms.CountTrees.CountTreePath`4.#ctor
+  isSpec: "True"
+  fullName: StringAlgorithms.CountTrees.CountTreePath<TEdge, TNode, TPath, TBuilder>.CountTreePath
+  fullName.vb: StringAlgorithms.CountTrees.CountTreePath(Of TEdge, TNode, TPath, TBuilder).CountTreePath
+  nameWithType: CountTreePath<TEdge, TNode, TPath, TBuilder>.CountTreePath
+  nameWithType.vb: CountTreePath(Of TEdge, TNode, TPath, TBuilder).CountTreePath
+- uid: StringAlgorithms.CountTrees.CountTreePath`4.PathNodes
+  name: PathNodes
+  href: api/StringAlgorithms.CountTrees.CountTreePath-4.html#StringAlgorithms_CountTrees_CountTreePath_4_PathNodes
+  commentId: P:StringAlgorithms.CountTrees.CountTreePath`4.PathNodes
+  fullName: StringAlgorithms.CountTrees.CountTreePath<TEdge, TNode, TPath, TBuilder>.PathNodes
+  fullName.vb: StringAlgorithms.CountTrees.CountTreePath(Of TEdge, TNode, TPath, TBuilder).PathNodes
+  nameWithType: CountTreePath<TEdge, TNode, TPath, TBuilder>.PathNodes
+  nameWithType.vb: CountTreePath(Of TEdge, TNode, TPath, TBuilder).PathNodes
+- uid: StringAlgorithms.CountTrees.CountTreePath`4.PathNodes*
+  name: PathNodes
+  href: api/StringAlgorithms.CountTrees.CountTreePath-4.html#StringAlgorithms_CountTrees_CountTreePath_4_PathNodes_
+  commentId: Overload:StringAlgorithms.CountTrees.CountTreePath`4.PathNodes
+  isSpec: "True"
+  fullName: StringAlgorithms.CountTrees.CountTreePath<TEdge, TNode, TPath, TBuilder>.PathNodes
+  fullName.vb: StringAlgorithms.CountTrees.CountTreePath(Of TEdge, TNode, TPath, TBuilder).PathNodes
+  nameWithType: CountTreePath<TEdge, TNode, TPath, TBuilder>.PathNodes
+  nameWithType.vb: CountTreePath(Of TEdge, TNode, TPath, TBuilder).PathNodes
+- uid: StringAlgorithms.CountTrees.CountTreePath`4.WrappedPath
+  name: WrappedPath
+  href: api/StringAlgorithms.CountTrees.CountTreePath-4.html#StringAlgorithms_CountTrees_CountTreePath_4_WrappedPath
+  commentId: P:StringAlgorithms.CountTrees.CountTreePath`4.WrappedPath
+  fullName: StringAlgorithms.CountTrees.CountTreePath<TEdge, TNode, TPath, TBuilder>.WrappedPath
+  fullName.vb: StringAlgorithms.CountTrees.CountTreePath(Of TEdge, TNode, TPath, TBuilder).WrappedPath
+  nameWithType: CountTreePath<TEdge, TNode, TPath, TBuilder>.WrappedPath
+  nameWithType.vb: CountTreePath(Of TEdge, TNode, TPath, TBuilder).WrappedPath
+- uid: StringAlgorithms.CountTrees.CountTreePath`4.WrappedPath*
+  name: WrappedPath
+  href: api/StringAlgorithms.CountTrees.CountTreePath-4.html#StringAlgorithms_CountTrees_CountTreePath_4_WrappedPath_
+  commentId: Overload:StringAlgorithms.CountTrees.CountTreePath`4.WrappedPath
+  isSpec: "True"
+  fullName: StringAlgorithms.CountTrees.CountTreePath<TEdge, TNode, TPath, TBuilder>.WrappedPath
+  fullName.vb: StringAlgorithms.CountTrees.CountTreePath(Of TEdge, TNode, TPath, TBuilder).WrappedPath
+  nameWithType: CountTreePath<TEdge, TNode, TPath, TBuilder>.WrappedPath
+  nameWithType.vb: CountTreePath(Of TEdge, TNode, TPath, TBuilder).WrappedPath
+- uid: StringAlgorithms.RecImmTrees
+  name: StringAlgorithms.RecImmTrees
+  href: api/StringAlgorithms.RecImmTrees.html
+  commentId: N:StringAlgorithms.RecImmTrees
+  fullName: StringAlgorithms.RecImmTrees
+  nameWithType: StringAlgorithms.RecImmTrees
+- uid: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder`4
+  name: IRecImmDictIndexedTreeBuilder<TEdge, TNode, TPath, TBuilder>
+  href: api/StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder-4.html
+  commentId: T:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder`4
+  name.vb: IRecImmDictIndexedTreeBuilder(Of TEdge, TNode, TPath, TBuilder)
+  fullName: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder<TEdge, TNode, TPath, TBuilder>
+  fullName.vb: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder(Of TEdge, TNode, TPath, TBuilder)
+  nameWithType: IRecImmDictIndexedTreeBuilder<TEdge, TNode, TPath, TBuilder>
+  nameWithType.vb: IRecImmDictIndexedTreeBuilder(Of TEdge, TNode, TPath, TBuilder)
+- uid: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder`4.EmptyPath
+  name: EmptyPath()
+  href: api/StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder-4.html#StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreeBuilder_4_EmptyPath
+  commentId: M:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder`4.EmptyPath
+  fullName: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder<TEdge, TNode, TPath, TBuilder>.EmptyPath()
+  fullName.vb: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder(Of TEdge, TNode, TPath, TBuilder).EmptyPath()
+  nameWithType: IRecImmDictIndexedTreeBuilder<TEdge, TNode, TPath, TBuilder>.EmptyPath()
+  nameWithType.vb: IRecImmDictIndexedTreeBuilder(Of TEdge, TNode, TPath, TBuilder).EmptyPath()
+- uid: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder`4.EmptyPath*
+  name: EmptyPath
+  href: api/StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder-4.html#StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreeBuilder_4_EmptyPath_
+  commentId: Overload:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder`4.EmptyPath
+  isSpec: "True"
+  fullName: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder<TEdge, TNode, TPath, TBuilder>.EmptyPath
+  fullName.vb: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder(Of TEdge, TNode, TPath, TBuilder).EmptyPath
+  nameWithType: IRecImmDictIndexedTreeBuilder<TEdge, TNode, TPath, TBuilder>.EmptyPath
+  nameWithType.vb: IRecImmDictIndexedTreeBuilder(Of TEdge, TNode, TPath, TBuilder).EmptyPath
+- uid: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder`4.MultistepsPath(IEnumerable{KeyValuePair{`0,`1}})
+  name: MultistepsPath(IEnumerable<KeyValuePair<TEdge, TNode>>)
+  href: api/StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder-4.html#StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreeBuilder_4_MultistepsPath_IEnumerable_KeyValuePair__0__1___
+  commentId: M:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder`4.MultistepsPath(IEnumerable{KeyValuePair{`0,`1}})
+  name.vb: MultistepsPath(IEnumerable(Of KeyValuePair(Of TEdge, TNode)))
+  fullName: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder<TEdge, TNode, TPath, TBuilder>.MultistepsPath(IEnumerable<KeyValuePair<TEdge, TNode>>)
+  fullName.vb: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder(Of TEdge, TNode, TPath, TBuilder).MultistepsPath(IEnumerable(Of KeyValuePair(Of TEdge, TNode)))
+  nameWithType: IRecImmDictIndexedTreeBuilder<TEdge, TNode, TPath, TBuilder>.MultistepsPath(IEnumerable<KeyValuePair<TEdge, TNode>>)
+  nameWithType.vb: IRecImmDictIndexedTreeBuilder(Of TEdge, TNode, TPath, TBuilder).MultistepsPath(IEnumerable(Of KeyValuePair(Of TEdge, TNode)))
+- uid: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder`4.MultistepsPath(System.ValueTuple{`0,`1}[])
+  name: MultistepsPath((TEdge edge, TNode node)[])
+  href: api/StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder-4.html#StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreeBuilder_4_MultistepsPath_System_ValueTuple__0__1____
+  commentId: M:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder`4.MultistepsPath(System.ValueTuple{`0,`1}[])
+  name.vb: MultistepsPath((edge As TEdge, node As TNode)(Of TEdge, TNode)())
+  fullName: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder<TEdge, TNode, TPath, TBuilder>.MultistepsPath(System.ValueTuple<TEdge, TNode>[])
+  fullName.vb: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder(Of TEdge, TNode, TPath, TBuilder).MultistepsPath(System.ValueTuple(Of TEdge, TNode)())
+  nameWithType: IRecImmDictIndexedTreeBuilder<TEdge, TNode, TPath, TBuilder>.MultistepsPath((TEdge edge, TNode node)[])
+  nameWithType.vb: IRecImmDictIndexedTreeBuilder(Of TEdge, TNode, TPath, TBuilder).MultistepsPath((edge As TEdge, node As TNode)(Of TEdge, TNode)())
+- uid: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder`4.MultistepsPath*
+  name: MultistepsPath
+  href: api/StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder-4.html#StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreeBuilder_4_MultistepsPath_
+  commentId: Overload:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder`4.MultistepsPath
+  isSpec: "True"
+  fullName: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder<TEdge, TNode, TPath, TBuilder>.MultistepsPath
+  fullName.vb: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder(Of TEdge, TNode, TPath, TBuilder).MultistepsPath
+  nameWithType: IRecImmDictIndexedTreeBuilder<TEdge, TNode, TPath, TBuilder>.MultistepsPath
+  nameWithType.vb: IRecImmDictIndexedTreeBuilder(Of TEdge, TNode, TPath, TBuilder).MultistepsPath
+- uid: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder`4.SingletonPath(`0,`1)
+  name: SingletonPath(TEdge, TNode)
+  href: api/StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder-4.html#StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreeBuilder_4_SingletonPath__0__1_
+  commentId: M:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder`4.SingletonPath(`0,`1)
+  fullName: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder<TEdge, TNode, TPath, TBuilder>.SingletonPath(TEdge, TNode)
+  fullName.vb: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder(Of TEdge, TNode, TPath, TBuilder).SingletonPath(TEdge, TNode)
+  nameWithType: IRecImmDictIndexedTreeBuilder<TEdge, TNode, TPath, TBuilder>.SingletonPath(TEdge, TNode)
+  nameWithType.vb: IRecImmDictIndexedTreeBuilder(Of TEdge, TNode, TPath, TBuilder).SingletonPath(TEdge, TNode)
+- uid: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder`4.SingletonPath*
+  name: SingletonPath
+  href: api/StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder-4.html#StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreeBuilder_4_SingletonPath_
+  commentId: Overload:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder`4.SingletonPath
+  isSpec: "True"
+  fullName: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder<TEdge, TNode, TPath, TBuilder>.SingletonPath
+  fullName.vb: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeBuilder(Of TEdge, TNode, TPath, TBuilder).SingletonPath
+  nameWithType: IRecImmDictIndexedTreeBuilder<TEdge, TNode, TPath, TBuilder>.SingletonPath
+  nameWithType.vb: IRecImmDictIndexedTreeBuilder(Of TEdge, TNode, TPath, TBuilder).SingletonPath
+- uid: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeEdge`4
+  name: IRecImmDictIndexedTreeEdge<TEdge, TNode, TPath, TBuilder>
+  href: api/StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeEdge-4.html
+  commentId: T:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeEdge`4
+  name.vb: IRecImmDictIndexedTreeEdge(Of TEdge, TNode, TPath, TBuilder)
+  fullName: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeEdge<TEdge, TNode, TPath, TBuilder>
+  fullName.vb: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeEdge(Of TEdge, TNode, TPath, TBuilder)
+  nameWithType: IRecImmDictIndexedTreeEdge<TEdge, TNode, TPath, TBuilder>
+  nameWithType.vb: IRecImmDictIndexedTreeEdge(Of TEdge, TNode, TPath, TBuilder)
+- uid: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode`4
+  name: IRecImmDictIndexedTreeNode<TEdge, TNode, TPath, TBuilder>
+  href: api/StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode-4.html
+  commentId: T:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode`4
+  name.vb: IRecImmDictIndexedTreeNode(Of TEdge, TNode, TPath, TBuilder)
+  fullName: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode<TEdge, TNode, TPath, TBuilder>
+  fullName.vb: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode(Of TEdge, TNode, TPath, TBuilder)
+  nameWithType: IRecImmDictIndexedTreeNode<TEdge, TNode, TPath, TBuilder>
+  nameWithType.vb: IRecImmDictIndexedTreeNode(Of TEdge, TNode, TPath, TBuilder)
+- uid: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode`4.Children
+  name: Children
+  href: api/StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode-4.html#StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreeNode_4_Children
+  commentId: P:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode`4.Children
+  fullName: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode<TEdge, TNode, TPath, TBuilder>.Children
+  fullName.vb: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode(Of TEdge, TNode, TPath, TBuilder).Children
+  nameWithType: IRecImmDictIndexedTreeNode<TEdge, TNode, TPath, TBuilder>.Children
+  nameWithType.vb: IRecImmDictIndexedTreeNode(Of TEdge, TNode, TPath, TBuilder).Children
+- uid: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode`4.Children*
+  name: Children
+  href: api/StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode-4.html#StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreeNode_4_Children_
+  commentId: Overload:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode`4.Children
+  isSpec: "True"
+  fullName: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode<TEdge, TNode, TPath, TBuilder>.Children
+  fullName.vb: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode(Of TEdge, TNode, TPath, TBuilder).Children
+  nameWithType: IRecImmDictIndexedTreeNode<TEdge, TNode, TPath, TBuilder>.Children
+  nameWithType.vb: IRecImmDictIndexedTreeNode(Of TEdge, TNode, TPath, TBuilder).Children
+- uid: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath`4
+  name: IRecImmDictIndexedTreePath<TEdge, TNode, TPath, TBuilder>
+  href: api/StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath-4.html
+  commentId: T:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath`4
+  name.vb: IRecImmDictIndexedTreePath(Of TEdge, TNode, TPath, TBuilder)
+  fullName: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath<TEdge, TNode, TPath, TBuilder>
+  fullName.vb: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath(Of TEdge, TNode, TPath, TBuilder)
+  nameWithType: IRecImmDictIndexedTreePath<TEdge, TNode, TPath, TBuilder>
+  nameWithType.vb: IRecImmDictIndexedTreePath(Of TEdge, TNode, TPath, TBuilder)
+- uid: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath`4.PathNodes
+  name: PathNodes
+  href: api/StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath-4.html#StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreePath_4_PathNodes
+  commentId: P:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath`4.PathNodes
+  fullName: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath<TEdge, TNode, TPath, TBuilder>.PathNodes
+  fullName.vb: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath(Of TEdge, TNode, TPath, TBuilder).PathNodes
+  nameWithType: IRecImmDictIndexedTreePath<TEdge, TNode, TPath, TBuilder>.PathNodes
+  nameWithType.vb: IRecImmDictIndexedTreePath(Of TEdge, TNode, TPath, TBuilder).PathNodes
+- uid: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath`4.PathNodes*
+  name: PathNodes
+  href: api/StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath-4.html#StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreePath_4_PathNodes_
+  commentId: Overload:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath`4.PathNodes
+  isSpec: "True"
+  fullName: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath<TEdge, TNode, TPath, TBuilder>.PathNodes
+  fullName.vb: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath(Of TEdge, TNode, TPath, TBuilder).PathNodes
+  nameWithType: IRecImmDictIndexedTreePath<TEdge, TNode, TPath, TBuilder>.PathNodes
+  nameWithType.vb: IRecImmDictIndexedTreePath(Of TEdge, TNode, TPath, TBuilder).PathNodes
+- uid: StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions
+  name: RecImmDictIndexedTreeNodeExtensions
+  href: api/StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.html
+  commentId: T:StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions
+  fullName: StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions
+  nameWithType: RecImmDictIndexedTreeNodeExtensions
+- uid: StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.GetAllNodeToLeafPaths*
+  name: GetAllNodeToLeafPaths
+  href: api/StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.html#StringAlgorithms_RecImmTrees_RecImmDictIndexedTreeNodeExtensions_GetAllNodeToLeafPaths_
+  commentId: Overload:StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.GetAllNodeToLeafPaths
+  isSpec: "True"
+  fullName: StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.GetAllNodeToLeafPaths
+  nameWithType: RecImmDictIndexedTreeNodeExtensions.GetAllNodeToLeafPaths
+- uid: StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.GetAllNodeToLeafPaths``4(StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode{``0,``1,``2,``3})
+  name: GetAllNodeToLeafPaths<TEdge, TNode, TPath, TBuilder>(IRecImmDictIndexedTreeNode<TEdge, TNode, TPath, TBuilder>)
+  href: api/StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.html#StringAlgorithms_RecImmTrees_RecImmDictIndexedTreeNodeExtensions_GetAllNodeToLeafPaths__4_StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreeNode___0___1___2___3__
+  commentId: M:StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.GetAllNodeToLeafPaths``4(StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode{``0,``1,``2,``3})
+  name.vb: GetAllNodeToLeafPaths(Of TEdge, TNode, TPath, TBuilder)(IRecImmDictIndexedTreeNode(Of TEdge, TNode, TPath, TBuilder))
+  fullName: StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.GetAllNodeToLeafPaths<TEdge, TNode, TPath, TBuilder>(StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode<TEdge, TNode, TPath, TBuilder>)
+  fullName.vb: StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.GetAllNodeToLeafPaths(Of TEdge, TNode, TPath, TBuilder)(StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode(Of TEdge, TNode, TPath, TBuilder))
+  nameWithType: RecImmDictIndexedTreeNodeExtensions.GetAllNodeToLeafPaths<TEdge, TNode, TPath, TBuilder>(IRecImmDictIndexedTreeNode<TEdge, TNode, TPath, TBuilder>)
+  nameWithType.vb: RecImmDictIndexedTreeNodeExtensions.GetAllNodeToLeafPaths(Of TEdge, TNode, TPath, TBuilder)(IRecImmDictIndexedTreeNode(Of TEdge, TNode, TPath, TBuilder))
+- uid: StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.IsLeaf*
+  name: IsLeaf
+  href: api/StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.html#StringAlgorithms_RecImmTrees_RecImmDictIndexedTreeNodeExtensions_IsLeaf_
+  commentId: Overload:StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.IsLeaf
+  isSpec: "True"
+  fullName: StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.IsLeaf
+  nameWithType: RecImmDictIndexedTreeNodeExtensions.IsLeaf
+- uid: StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.IsLeaf``4(StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode{``0,``1,``2,``3})
+  name: IsLeaf<TEdge, TNode, TPath, TBuilder>(IRecImmDictIndexedTreeNode<TEdge, TNode, TPath, TBuilder>)
+  href: api/StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.html#StringAlgorithms_RecImmTrees_RecImmDictIndexedTreeNodeExtensions_IsLeaf__4_StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreeNode___0___1___2___3__
+  commentId: M:StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.IsLeaf``4(StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode{``0,``1,``2,``3})
+  name.vb: IsLeaf(Of TEdge, TNode, TPath, TBuilder)(IRecImmDictIndexedTreeNode(Of TEdge, TNode, TPath, TBuilder))
+  fullName: StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.IsLeaf<TEdge, TNode, TPath, TBuilder>(StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode<TEdge, TNode, TPath, TBuilder>)
+  fullName.vb: StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.IsLeaf(Of TEdge, TNode, TPath, TBuilder)(StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode(Of TEdge, TNode, TPath, TBuilder))
+  nameWithType: RecImmDictIndexedTreeNodeExtensions.IsLeaf<TEdge, TNode, TPath, TBuilder>(IRecImmDictIndexedTreeNode<TEdge, TNode, TPath, TBuilder>)
+  nameWithType.vb: RecImmDictIndexedTreeNodeExtensions.IsLeaf(Of TEdge, TNode, TPath, TBuilder)(IRecImmDictIndexedTreeNode(Of TEdge, TNode, TPath, TBuilder))
+- uid: StringAlgorithms.RecImmTrees.RecImmDictIndexedTreePathExtensions
+  name: RecImmDictIndexedTreePathExtensions
+  href: api/StringAlgorithms.RecImmTrees.RecImmDictIndexedTreePathExtensions.html
+  commentId: T:StringAlgorithms.RecImmTrees.RecImmDictIndexedTreePathExtensions
+  fullName: StringAlgorithms.RecImmTrees.RecImmDictIndexedTreePathExtensions
+  nameWithType: RecImmDictIndexedTreePathExtensions
+- uid: StringAlgorithms.RecImmTrees.RecImmDictIndexedTreePathExtensions.Append*
+  name: Append
+  href: api/StringAlgorithms.RecImmTrees.RecImmDictIndexedTreePathExtensions.html#StringAlgorithms_RecImmTrees_RecImmDictIndexedTreePathExtensions_Append_
+  commentId: Overload:StringAlgorithms.RecImmTrees.RecImmDictIndexedTreePathExtensions.Append
+  isSpec: "True"
+  fullName: StringAlgorithms.RecImmTrees.RecImmDictIndexedTreePathExtensions.Append
+  nameWithType: RecImmDictIndexedTreePathExtensions.Append
+- uid: StringAlgorithms.RecImmTrees.RecImmDictIndexedTreePathExtensions.Append``4(StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath{``0,``1,``2,``3},``0,``1)
+  name: Append<TEdge, TNode, TPath, TBuilder>(IRecImmDictIndexedTreePath<TEdge, TNode, TPath, TBuilder>, TEdge, TNode)
+  href: api/StringAlgorithms.RecImmTrees.RecImmDictIndexedTreePathExtensions.html#StringAlgorithms_RecImmTrees_RecImmDictIndexedTreePathExtensions_Append__4_StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreePath___0___1___2___3____0___1_
+  commentId: M:StringAlgorithms.RecImmTrees.RecImmDictIndexedTreePathExtensions.Append``4(StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath{``0,``1,``2,``3},``0,``1)
+  name.vb: Append(Of TEdge, TNode, TPath, TBuilder)(IRecImmDictIndexedTreePath(Of TEdge, TNode, TPath, TBuilder), TEdge, TNode)
+  fullName: StringAlgorithms.RecImmTrees.RecImmDictIndexedTreePathExtensions.Append<TEdge, TNode, TPath, TBuilder>(StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath<TEdge, TNode, TPath, TBuilder>, TEdge, TNode)
+  fullName.vb: StringAlgorithms.RecImmTrees.RecImmDictIndexedTreePathExtensions.Append(Of TEdge, TNode, TPath, TBuilder)(StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath(Of TEdge, TNode, TPath, TBuilder), TEdge, TNode)
+  nameWithType: RecImmDictIndexedTreePathExtensions.Append<TEdge, TNode, TPath, TBuilder>(IRecImmDictIndexedTreePath<TEdge, TNode, TPath, TBuilder>, TEdge, TNode)
+  nameWithType.vb: RecImmDictIndexedTreePathExtensions.Append(Of TEdge, TNode, TPath, TBuilder)(IRecImmDictIndexedTreePath(Of TEdge, TNode, TPath, TBuilder), TEdge, TNode)
+- uid: StringAlgorithms.RecImmTrees.RecImmDictIndexedTreePathExtensions.Concat*
+  name: Concat
+  href: api/StringAlgorithms.RecImmTrees.RecImmDictIndexedTreePathExtensions.html#StringAlgorithms_RecImmTrees_RecImmDictIndexedTreePathExtensions_Concat_
+  commentId: Overload:StringAlgorithms.RecImmTrees.RecImmDictIndexedTreePathExtensions.Concat
+  isSpec: "True"
+  fullName: StringAlgorithms.RecImmTrees.RecImmDictIndexedTreePathExtensions.Concat
+  nameWithType: RecImmDictIndexedTreePathExtensions.Concat
+- uid: StringAlgorithms.RecImmTrees.RecImmDictIndexedTreePathExtensions.Concat``4(StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath{``0,``1,``2,``3},StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath{``0,``1,``2,``3})
+  name: Concat<TEdge, TNode, TPath, TBuilder>(IRecImmDictIndexedTreePath<TEdge, TNode, TPath, TBuilder>, IRecImmDictIndexedTreePath<TEdge, TNode, TPath, TBuilder>)
+  href: api/StringAlgorithms.RecImmTrees.RecImmDictIndexedTreePathExtensions.html#StringAlgorithms_RecImmTrees_RecImmDictIndexedTreePathExtensions_Concat__4_StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreePath___0___1___2___3__StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreePath___0___1___2___3__
+  commentId: M:StringAlgorithms.RecImmTrees.RecImmDictIndexedTreePathExtensions.Concat``4(StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath{``0,``1,``2,``3},StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath{``0,``1,``2,``3})
+  name.vb: Concat(Of TEdge, TNode, TPath, TBuilder)(IRecImmDictIndexedTreePath(Of TEdge, TNode, TPath, TBuilder), IRecImmDictIndexedTreePath(Of TEdge, TNode, TPath, TBuilder))
+  fullName: StringAlgorithms.RecImmTrees.RecImmDictIndexedTreePathExtensions.Concat<TEdge, TNode, TPath, TBuilder>(StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath<TEdge, TNode, TPath, TBuilder>, StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath<TEdge, TNode, TPath, TBuilder>)
+  fullName.vb: StringAlgorithms.RecImmTrees.RecImmDictIndexedTreePathExtensions.Concat(Of TEdge, TNode, TPath, TBuilder)(StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath(Of TEdge, TNode, TPath, TBuilder), StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath(Of TEdge, TNode, TPath, TBuilder))
+  nameWithType: RecImmDictIndexedTreePathExtensions.Concat<TEdge, TNode, TPath, TBuilder>(IRecImmDictIndexedTreePath<TEdge, TNode, TPath, TBuilder>, IRecImmDictIndexedTreePath<TEdge, TNode, TPath, TBuilder>)
+  nameWithType.vb: RecImmDictIndexedTreePathExtensions.Concat(Of TEdge, TNode, TPath, TBuilder)(IRecImmDictIndexedTreePath(Of TEdge, TNode, TPath, TBuilder), IRecImmDictIndexedTreePath(Of TEdge, TNode, TPath, TBuilder))
 - uid: StringAlgorithms.StringUtilities
   name: StringUtilities
   href: api/StringAlgorithms.StringUtilities.html
@@ -88,67 +575,6 @@ references:
   fullName.vb: StringAlgorithms.SuffixStructures.ISuffixStructureBuilder(Of TEdge, TNode, TPath, TBuilder).BuildTree
   nameWithType: ISuffixStructureBuilder<TEdge, TNode, TPath, TBuilder>.BuildTree
   nameWithType.vb: ISuffixStructureBuilder(Of TEdge, TNode, TPath, TBuilder).BuildTree
-- uid: StringAlgorithms.SuffixStructures.ISuffixStructureBuilder`4.EmptyPath
-  name: EmptyPath()
-  href: api/StringAlgorithms.SuffixStructures.ISuffixStructureBuilder-4.html#StringAlgorithms_SuffixStructures_ISuffixStructureBuilder_4_EmptyPath
-  commentId: M:StringAlgorithms.SuffixStructures.ISuffixStructureBuilder`4.EmptyPath
-  fullName: StringAlgorithms.SuffixStructures.ISuffixStructureBuilder<TEdge, TNode, TPath, TBuilder>.EmptyPath()
-  fullName.vb: StringAlgorithms.SuffixStructures.ISuffixStructureBuilder(Of TEdge, TNode, TPath, TBuilder).EmptyPath()
-  nameWithType: ISuffixStructureBuilder<TEdge, TNode, TPath, TBuilder>.EmptyPath()
-  nameWithType.vb: ISuffixStructureBuilder(Of TEdge, TNode, TPath, TBuilder).EmptyPath()
-- uid: StringAlgorithms.SuffixStructures.ISuffixStructureBuilder`4.EmptyPath*
-  name: EmptyPath
-  href: api/StringAlgorithms.SuffixStructures.ISuffixStructureBuilder-4.html#StringAlgorithms_SuffixStructures_ISuffixStructureBuilder_4_EmptyPath_
-  commentId: Overload:StringAlgorithms.SuffixStructures.ISuffixStructureBuilder`4.EmptyPath
-  isSpec: "True"
-  fullName: StringAlgorithms.SuffixStructures.ISuffixStructureBuilder<TEdge, TNode, TPath, TBuilder>.EmptyPath
-  fullName.vb: StringAlgorithms.SuffixStructures.ISuffixStructureBuilder(Of TEdge, TNode, TPath, TBuilder).EmptyPath
-  nameWithType: ISuffixStructureBuilder<TEdge, TNode, TPath, TBuilder>.EmptyPath
-  nameWithType.vb: ISuffixStructureBuilder(Of TEdge, TNode, TPath, TBuilder).EmptyPath
-- uid: StringAlgorithms.SuffixStructures.ISuffixStructureBuilder`4.MultistepsPath(IEnumerable{KeyValuePair{`0,`1}})
-  name: MultistepsPath(IEnumerable<KeyValuePair<TEdge, TNode>>)
-  href: api/StringAlgorithms.SuffixStructures.ISuffixStructureBuilder-4.html#StringAlgorithms_SuffixStructures_ISuffixStructureBuilder_4_MultistepsPath_IEnumerable_KeyValuePair__0__1___
-  commentId: M:StringAlgorithms.SuffixStructures.ISuffixStructureBuilder`4.MultistepsPath(IEnumerable{KeyValuePair{`0,`1}})
-  name.vb: MultistepsPath(IEnumerable(Of KeyValuePair(Of TEdge, TNode)))
-  fullName: StringAlgorithms.SuffixStructures.ISuffixStructureBuilder<TEdge, TNode, TPath, TBuilder>.MultistepsPath(IEnumerable<KeyValuePair<TEdge, TNode>>)
-  fullName.vb: StringAlgorithms.SuffixStructures.ISuffixStructureBuilder(Of TEdge, TNode, TPath, TBuilder).MultistepsPath(IEnumerable(Of KeyValuePair(Of TEdge, TNode)))
-  nameWithType: ISuffixStructureBuilder<TEdge, TNode, TPath, TBuilder>.MultistepsPath(IEnumerable<KeyValuePair<TEdge, TNode>>)
-  nameWithType.vb: ISuffixStructureBuilder(Of TEdge, TNode, TPath, TBuilder).MultistepsPath(IEnumerable(Of KeyValuePair(Of TEdge, TNode)))
-- uid: StringAlgorithms.SuffixStructures.ISuffixStructureBuilder`4.MultistepsPath(System.ValueTuple{`0,`1}[])
-  name: MultistepsPath((TEdge edge, TNode node)[])
-  href: api/StringAlgorithms.SuffixStructures.ISuffixStructureBuilder-4.html#StringAlgorithms_SuffixStructures_ISuffixStructureBuilder_4_MultistepsPath_System_ValueTuple__0__1____
-  commentId: M:StringAlgorithms.SuffixStructures.ISuffixStructureBuilder`4.MultistepsPath(System.ValueTuple{`0,`1}[])
-  name.vb: MultistepsPath((edge As TEdge, node As TNode)(Of TEdge, TNode)())
-  fullName: StringAlgorithms.SuffixStructures.ISuffixStructureBuilder<TEdge, TNode, TPath, TBuilder>.MultistepsPath(System.ValueTuple<TEdge, TNode>[])
-  fullName.vb: StringAlgorithms.SuffixStructures.ISuffixStructureBuilder(Of TEdge, TNode, TPath, TBuilder).MultistepsPath(System.ValueTuple(Of TEdge, TNode)())
-  nameWithType: ISuffixStructureBuilder<TEdge, TNode, TPath, TBuilder>.MultistepsPath((TEdge edge, TNode node)[])
-  nameWithType.vb: ISuffixStructureBuilder(Of TEdge, TNode, TPath, TBuilder).MultistepsPath((edge As TEdge, node As TNode)(Of TEdge, TNode)())
-- uid: StringAlgorithms.SuffixStructures.ISuffixStructureBuilder`4.MultistepsPath*
-  name: MultistepsPath
-  href: api/StringAlgorithms.SuffixStructures.ISuffixStructureBuilder-4.html#StringAlgorithms_SuffixStructures_ISuffixStructureBuilder_4_MultistepsPath_
-  commentId: Overload:StringAlgorithms.SuffixStructures.ISuffixStructureBuilder`4.MultistepsPath
-  isSpec: "True"
-  fullName: StringAlgorithms.SuffixStructures.ISuffixStructureBuilder<TEdge, TNode, TPath, TBuilder>.MultistepsPath
-  fullName.vb: StringAlgorithms.SuffixStructures.ISuffixStructureBuilder(Of TEdge, TNode, TPath, TBuilder).MultistepsPath
-  nameWithType: ISuffixStructureBuilder<TEdge, TNode, TPath, TBuilder>.MultistepsPath
-  nameWithType.vb: ISuffixStructureBuilder(Of TEdge, TNode, TPath, TBuilder).MultistepsPath
-- uid: StringAlgorithms.SuffixStructures.ISuffixStructureBuilder`4.SingletonPath(`0,`1)
-  name: SingletonPath(TEdge, TNode)
-  href: api/StringAlgorithms.SuffixStructures.ISuffixStructureBuilder-4.html#StringAlgorithms_SuffixStructures_ISuffixStructureBuilder_4_SingletonPath__0__1_
-  commentId: M:StringAlgorithms.SuffixStructures.ISuffixStructureBuilder`4.SingletonPath(`0,`1)
-  fullName: StringAlgorithms.SuffixStructures.ISuffixStructureBuilder<TEdge, TNode, TPath, TBuilder>.SingletonPath(TEdge, TNode)
-  fullName.vb: StringAlgorithms.SuffixStructures.ISuffixStructureBuilder(Of TEdge, TNode, TPath, TBuilder).SingletonPath(TEdge, TNode)
-  nameWithType: ISuffixStructureBuilder<TEdge, TNode, TPath, TBuilder>.SingletonPath(TEdge, TNode)
-  nameWithType.vb: ISuffixStructureBuilder(Of TEdge, TNode, TPath, TBuilder).SingletonPath(TEdge, TNode)
-- uid: StringAlgorithms.SuffixStructures.ISuffixStructureBuilder`4.SingletonPath*
-  name: SingletonPath
-  href: api/StringAlgorithms.SuffixStructures.ISuffixStructureBuilder-4.html#StringAlgorithms_SuffixStructures_ISuffixStructureBuilder_4_SingletonPath_
-  commentId: Overload:StringAlgorithms.SuffixStructures.ISuffixStructureBuilder`4.SingletonPath
-  isSpec: "True"
-  fullName: StringAlgorithms.SuffixStructures.ISuffixStructureBuilder<TEdge, TNode, TPath, TBuilder>.SingletonPath
-  fullName.vb: StringAlgorithms.SuffixStructures.ISuffixStructureBuilder(Of TEdge, TNode, TPath, TBuilder).SingletonPath
-  nameWithType: ISuffixStructureBuilder<TEdge, TNode, TPath, TBuilder>.SingletonPath
-  nameWithType.vb: ISuffixStructureBuilder(Of TEdge, TNode, TPath, TBuilder).SingletonPath
 - uid: StringAlgorithms.SuffixStructures.ISuffixStructureEdge`4
   name: ISuffixStructureEdge<TEdge, TNode, TPath, TBuilder>
   href: api/StringAlgorithms.SuffixStructures.ISuffixStructureEdge-4.html
@@ -201,23 +627,6 @@ references:
   fullName.vb: StringAlgorithms.SuffixStructures.ISuffixStructureNode(Of TEdge, TNode, TPath, TBuilder)
   nameWithType: ISuffixStructureNode<TEdge, TNode, TPath, TBuilder>
   nameWithType.vb: ISuffixStructureNode(Of TEdge, TNode, TPath, TBuilder)
-- uid: StringAlgorithms.SuffixStructures.ISuffixStructureNode`4.Children
-  name: Children
-  href: api/StringAlgorithms.SuffixStructures.ISuffixStructureNode-4.html#StringAlgorithms_SuffixStructures_ISuffixStructureNode_4_Children
-  commentId: P:StringAlgorithms.SuffixStructures.ISuffixStructureNode`4.Children
-  fullName: StringAlgorithms.SuffixStructures.ISuffixStructureNode<TEdge, TNode, TPath, TBuilder>.Children
-  fullName.vb: StringAlgorithms.SuffixStructures.ISuffixStructureNode(Of TEdge, TNode, TPath, TBuilder).Children
-  nameWithType: ISuffixStructureNode<TEdge, TNode, TPath, TBuilder>.Children
-  nameWithType.vb: ISuffixStructureNode(Of TEdge, TNode, TPath, TBuilder).Children
-- uid: StringAlgorithms.SuffixStructures.ISuffixStructureNode`4.Children*
-  name: Children
-  href: api/StringAlgorithms.SuffixStructures.ISuffixStructureNode-4.html#StringAlgorithms_SuffixStructures_ISuffixStructureNode_4_Children_
-  commentId: Overload:StringAlgorithms.SuffixStructures.ISuffixStructureNode`4.Children
-  isSpec: "True"
-  fullName: StringAlgorithms.SuffixStructures.ISuffixStructureNode<TEdge, TNode, TPath, TBuilder>.Children
-  fullName.vb: StringAlgorithms.SuffixStructures.ISuffixStructureNode(Of TEdge, TNode, TPath, TBuilder).Children
-  nameWithType: ISuffixStructureNode<TEdge, TNode, TPath, TBuilder>.Children
-  nameWithType.vb: ISuffixStructureNode(Of TEdge, TNode, TPath, TBuilder).Children
 - uid: StringAlgorithms.SuffixStructures.ISuffixStructureNode`4.Start
   name: Start
   href: api/StringAlgorithms.SuffixStructures.ISuffixStructureNode-4.html#StringAlgorithms_SuffixStructures_ISuffixStructureNode_4_Start
@@ -244,23 +653,128 @@ references:
   fullName.vb: StringAlgorithms.SuffixStructures.ISuffixStructurePath(Of TEdge, TNode, TPath, TBuilder)
   nameWithType: ISuffixStructurePath<TEdge, TNode, TPath, TBuilder>
   nameWithType.vb: ISuffixStructurePath(Of TEdge, TNode, TPath, TBuilder)
-- uid: StringAlgorithms.SuffixStructures.ISuffixStructurePath`4.PathNodes
-  name: PathNodes
-  href: api/StringAlgorithms.SuffixStructures.ISuffixStructurePath-4.html#StringAlgorithms_SuffixStructures_ISuffixStructurePath_4_PathNodes
-  commentId: P:StringAlgorithms.SuffixStructures.ISuffixStructurePath`4.PathNodes
-  fullName: StringAlgorithms.SuffixStructures.ISuffixStructurePath<TEdge, TNode, TPath, TBuilder>.PathNodes
-  fullName.vb: StringAlgorithms.SuffixStructures.ISuffixStructurePath(Of TEdge, TNode, TPath, TBuilder).PathNodes
-  nameWithType: ISuffixStructurePath<TEdge, TNode, TPath, TBuilder>.PathNodes
-  nameWithType.vb: ISuffixStructurePath(Of TEdge, TNode, TPath, TBuilder).PathNodes
-- uid: StringAlgorithms.SuffixStructures.ISuffixStructurePath`4.PathNodes*
-  name: PathNodes
-  href: api/StringAlgorithms.SuffixStructures.ISuffixStructurePath-4.html#StringAlgorithms_SuffixStructures_ISuffixStructurePath_4_PathNodes_
-  commentId: Overload:StringAlgorithms.SuffixStructures.ISuffixStructurePath`4.PathNodes
+- uid: StringAlgorithms.SuffixStructures.Matching
+  name: StringAlgorithms.SuffixStructures.Matching
+  href: api/StringAlgorithms.SuffixStructures.Matching.html
+  commentId: N:StringAlgorithms.SuffixStructures.Matching
+  fullName: StringAlgorithms.SuffixStructures.Matching
+  nameWithType: StringAlgorithms.SuffixStructures.Matching
+- uid: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch`1
+  name: SuffixStructureMatch<TPath>
+  href: api/StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch-1.html
+  commentId: T:StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch`1
+  name.vb: SuffixStructureMatch(Of TPath)
+  fullName: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch<TPath>
+  fullName.vb: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch(Of TPath)
+  nameWithType: SuffixStructureMatch<TPath>
+  nameWithType.vb: SuffixStructureMatch(Of TPath)
+- uid: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch`1.#ctor(System.Boolean,System.Int32,System.Int32,`0)
+  name: SuffixStructureMatch(Boolean, Int32, Int32, TPath)
+  href: api/StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch-1.html#StringAlgorithms_SuffixStructures_Matching_SuffixStructureMatch_1__ctor_System_Boolean_System_Int32_System_Int32__0_
+  commentId: M:StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch`1.#ctor(System.Boolean,System.Int32,System.Int32,`0)
+  fullName: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch<TPath>.SuffixStructureMatch(System.Boolean, System.Int32, System.Int32, TPath)
+  fullName.vb: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch(Of TPath).SuffixStructureMatch(System.Boolean, System.Int32, System.Int32, TPath)
+  nameWithType: SuffixStructureMatch<TPath>.SuffixStructureMatch(Boolean, Int32, Int32, TPath)
+  nameWithType.vb: SuffixStructureMatch(Of TPath).SuffixStructureMatch(Boolean, Int32, Int32, TPath)
+- uid: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch`1.#ctor*
+  name: SuffixStructureMatch
+  href: api/StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch-1.html#StringAlgorithms_SuffixStructures_Matching_SuffixStructureMatch_1__ctor_
+  commentId: Overload:StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch`1.#ctor
   isSpec: "True"
-  fullName: StringAlgorithms.SuffixStructures.ISuffixStructurePath<TEdge, TNode, TPath, TBuilder>.PathNodes
-  fullName.vb: StringAlgorithms.SuffixStructures.ISuffixStructurePath(Of TEdge, TNode, TPath, TBuilder).PathNodes
-  nameWithType: ISuffixStructurePath<TEdge, TNode, TPath, TBuilder>.PathNodes
-  nameWithType.vb: ISuffixStructurePath(Of TEdge, TNode, TPath, TBuilder).PathNodes
+  fullName: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch<TPath>.SuffixStructureMatch
+  fullName.vb: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch(Of TPath).SuffixStructureMatch
+  nameWithType: SuffixStructureMatch<TPath>.SuffixStructureMatch
+  nameWithType.vb: SuffixStructureMatch(Of TPath).SuffixStructureMatch
+- uid: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch`1.Begin
+  name: Begin
+  href: api/StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch-1.html#StringAlgorithms_SuffixStructures_Matching_SuffixStructureMatch_1_Begin
+  commentId: P:StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch`1.Begin
+  fullName: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch<TPath>.Begin
+  fullName.vb: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch(Of TPath).Begin
+  nameWithType: SuffixStructureMatch<TPath>.Begin
+  nameWithType.vb: SuffixStructureMatch(Of TPath).Begin
+- uid: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch`1.Begin*
+  name: Begin
+  href: api/StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch-1.html#StringAlgorithms_SuffixStructures_Matching_SuffixStructureMatch_1_Begin_
+  commentId: Overload:StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch`1.Begin
+  isSpec: "True"
+  fullName: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch<TPath>.Begin
+  fullName.vb: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch(Of TPath).Begin
+  nameWithType: SuffixStructureMatch<TPath>.Begin
+  nameWithType.vb: SuffixStructureMatch(Of TPath).Begin
+- uid: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch`1.MatchedChars
+  name: MatchedChars
+  href: api/StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch-1.html#StringAlgorithms_SuffixStructures_Matching_SuffixStructureMatch_1_MatchedChars
+  commentId: P:StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch`1.MatchedChars
+  fullName: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch<TPath>.MatchedChars
+  fullName.vb: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch(Of TPath).MatchedChars
+  nameWithType: SuffixStructureMatch<TPath>.MatchedChars
+  nameWithType.vb: SuffixStructureMatch(Of TPath).MatchedChars
+- uid: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch`1.MatchedChars*
+  name: MatchedChars
+  href: api/StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch-1.html#StringAlgorithms_SuffixStructures_Matching_SuffixStructureMatch_1_MatchedChars_
+  commentId: Overload:StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch`1.MatchedChars
+  isSpec: "True"
+  fullName: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch<TPath>.MatchedChars
+  fullName.vb: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch(Of TPath).MatchedChars
+  nameWithType: SuffixStructureMatch<TPath>.MatchedChars
+  nameWithType.vb: SuffixStructureMatch(Of TPath).MatchedChars
+- uid: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch`1.Path
+  name: Path
+  href: api/StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch-1.html#StringAlgorithms_SuffixStructures_Matching_SuffixStructureMatch_1_Path
+  commentId: P:StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch`1.Path
+  fullName: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch<TPath>.Path
+  fullName.vb: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch(Of TPath).Path
+  nameWithType: SuffixStructureMatch<TPath>.Path
+  nameWithType.vb: SuffixStructureMatch(Of TPath).Path
+- uid: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch`1.Path*
+  name: Path
+  href: api/StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch-1.html#StringAlgorithms_SuffixStructures_Matching_SuffixStructureMatch_1_Path_
+  commentId: Overload:StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch`1.Path
+  isSpec: "True"
+  fullName: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch<TPath>.Path
+  fullName.vb: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch(Of TPath).Path
+  nameWithType: SuffixStructureMatch<TPath>.Path
+  nameWithType.vb: SuffixStructureMatch(Of TPath).Path
+- uid: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch`1.Success
+  name: Success
+  href: api/StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch-1.html#StringAlgorithms_SuffixStructures_Matching_SuffixStructureMatch_1_Success
+  commentId: P:StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch`1.Success
+  fullName: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch<TPath>.Success
+  fullName.vb: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch(Of TPath).Success
+  nameWithType: SuffixStructureMatch<TPath>.Success
+  nameWithType.vb: SuffixStructureMatch(Of TPath).Success
+- uid: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch`1.Success*
+  name: Success
+  href: api/StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch-1.html#StringAlgorithms_SuffixStructures_Matching_SuffixStructureMatch_1_Success_
+  commentId: Overload:StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch`1.Success
+  isSpec: "True"
+  fullName: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch<TPath>.Success
+  fullName.vb: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch(Of TPath).Success
+  nameWithType: SuffixStructureMatch<TPath>.Success
+  nameWithType.vb: SuffixStructureMatch(Of TPath).Success
+- uid: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatcher
+  name: SuffixStructureMatcher
+  href: api/StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatcher.html
+  commentId: T:StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatcher
+  fullName: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatcher
+  nameWithType: SuffixStructureMatcher
+- uid: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatcher.Match*
+  name: Match
+  href: api/StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatcher.html#StringAlgorithms_SuffixStructures_Matching_SuffixStructureMatcher_Match_
+  commentId: Overload:StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatcher.Match
+  isSpec: "True"
+  fullName: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatcher.Match
+  nameWithType: SuffixStructureMatcher.Match
+- uid: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatcher.Match``4(StringAlgorithms.SuffixStructures.ISuffixStructureNode{``0,``1,``2,``3},StringAlgorithms.TextWithTerminator,System.String)
+  name: Match<TEdge, TNode, TPath, TBuilder>(ISuffixStructureNode<TEdge, TNode, TPath, TBuilder>, TextWithTerminator, String)
+  href: api/StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatcher.html#StringAlgorithms_SuffixStructures_Matching_SuffixStructureMatcher_Match__4_StringAlgorithms_SuffixStructures_ISuffixStructureNode___0___1___2___3__StringAlgorithms_TextWithTerminator_System_String_
+  commentId: M:StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatcher.Match``4(StringAlgorithms.SuffixStructures.ISuffixStructureNode{``0,``1,``2,``3},StringAlgorithms.TextWithTerminator,System.String)
+  name.vb: Match(Of TEdge, TNode, TPath, TBuilder)(ISuffixStructureNode(Of TEdge, TNode, TPath, TBuilder), TextWithTerminator, String)
+  fullName: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatcher.Match<TEdge, TNode, TPath, TBuilder>(StringAlgorithms.SuffixStructures.ISuffixStructureNode<TEdge, TNode, TPath, TBuilder>, StringAlgorithms.TextWithTerminator, System.String)
+  fullName.vb: StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatcher.Match(Of TEdge, TNode, TPath, TBuilder)(StringAlgorithms.SuffixStructures.ISuffixStructureNode(Of TEdge, TNode, TPath, TBuilder), StringAlgorithms.TextWithTerminator, System.String)
+  nameWithType: SuffixStructureMatcher.Match<TEdge, TNode, TPath, TBuilder>(ISuffixStructureNode<TEdge, TNode, TPath, TBuilder>, TextWithTerminator, String)
+  nameWithType.vb: SuffixStructureMatcher.Match(Of TEdge, TNode, TPath, TBuilder)(ISuffixStructureNode(Of TEdge, TNode, TPath, TBuilder), TextWithTerminator, String)
 - uid: StringAlgorithms.SuffixStructures.SuffixStructureBuilderExtensions
   name: SuffixStructureBuilderExtensions
   href: api/StringAlgorithms.SuffixStructures.SuffixStructureBuilderExtensions.html
@@ -305,144 +819,12 @@ references:
   fullName.vb: StringAlgorithms.SuffixStructures.SuffixStructureEdgeExtensions.IsAdjacentTo(Of TEdge, TNode, TPath, TBuilder)(StringAlgorithms.SuffixStructures.ISuffixStructureEdge(Of TEdge, TNode, TPath, TBuilder), TEdge, StringAlgorithms.SuffixStructures.AdjacencyOrder)
   nameWithType: SuffixStructureEdgeExtensions.IsAdjacentTo<TEdge, TNode, TPath, TBuilder>(ISuffixStructureEdge<TEdge, TNode, TPath, TBuilder>, TEdge, AdjacencyOrder)
   nameWithType.vb: SuffixStructureEdgeExtensions.IsAdjacentTo(Of TEdge, TNode, TPath, TBuilder)(ISuffixStructureEdge(Of TEdge, TNode, TPath, TBuilder), TEdge, AdjacencyOrder)
-- uid: StringAlgorithms.SuffixStructures.SuffixStructureMatch`1
-  name: SuffixStructureMatch<TPath>
-  href: api/StringAlgorithms.SuffixStructures.SuffixStructureMatch-1.html
-  commentId: T:StringAlgorithms.SuffixStructures.SuffixStructureMatch`1
-  name.vb: SuffixStructureMatch(Of TPath)
-  fullName: StringAlgorithms.SuffixStructures.SuffixStructureMatch<TPath>
-  fullName.vb: StringAlgorithms.SuffixStructures.SuffixStructureMatch(Of TPath)
-  nameWithType: SuffixStructureMatch<TPath>
-  nameWithType.vb: SuffixStructureMatch(Of TPath)
-- uid: StringAlgorithms.SuffixStructures.SuffixStructureMatch`1.#ctor(System.Boolean,System.Int32,System.Int32,`0)
-  name: SuffixStructureMatch(Boolean, Int32, Int32, TPath)
-  href: api/StringAlgorithms.SuffixStructures.SuffixStructureMatch-1.html#StringAlgorithms_SuffixStructures_SuffixStructureMatch_1__ctor_System_Boolean_System_Int32_System_Int32__0_
-  commentId: M:StringAlgorithms.SuffixStructures.SuffixStructureMatch`1.#ctor(System.Boolean,System.Int32,System.Int32,`0)
-  fullName: StringAlgorithms.SuffixStructures.SuffixStructureMatch<TPath>.SuffixStructureMatch(System.Boolean, System.Int32, System.Int32, TPath)
-  fullName.vb: StringAlgorithms.SuffixStructures.SuffixStructureMatch(Of TPath).SuffixStructureMatch(System.Boolean, System.Int32, System.Int32, TPath)
-  nameWithType: SuffixStructureMatch<TPath>.SuffixStructureMatch(Boolean, Int32, Int32, TPath)
-  nameWithType.vb: SuffixStructureMatch(Of TPath).SuffixStructureMatch(Boolean, Int32, Int32, TPath)
-- uid: StringAlgorithms.SuffixStructures.SuffixStructureMatch`1.#ctor*
-  name: SuffixStructureMatch
-  href: api/StringAlgorithms.SuffixStructures.SuffixStructureMatch-1.html#StringAlgorithms_SuffixStructures_SuffixStructureMatch_1__ctor_
-  commentId: Overload:StringAlgorithms.SuffixStructures.SuffixStructureMatch`1.#ctor
-  isSpec: "True"
-  fullName: StringAlgorithms.SuffixStructures.SuffixStructureMatch<TPath>.SuffixStructureMatch
-  fullName.vb: StringAlgorithms.SuffixStructures.SuffixStructureMatch(Of TPath).SuffixStructureMatch
-  nameWithType: SuffixStructureMatch<TPath>.SuffixStructureMatch
-  nameWithType.vb: SuffixStructureMatch(Of TPath).SuffixStructureMatch
-- uid: StringAlgorithms.SuffixStructures.SuffixStructureMatch`1.Begin
-  name: Begin
-  href: api/StringAlgorithms.SuffixStructures.SuffixStructureMatch-1.html#StringAlgorithms_SuffixStructures_SuffixStructureMatch_1_Begin
-  commentId: P:StringAlgorithms.SuffixStructures.SuffixStructureMatch`1.Begin
-  fullName: StringAlgorithms.SuffixStructures.SuffixStructureMatch<TPath>.Begin
-  fullName.vb: StringAlgorithms.SuffixStructures.SuffixStructureMatch(Of TPath).Begin
-  nameWithType: SuffixStructureMatch<TPath>.Begin
-  nameWithType.vb: SuffixStructureMatch(Of TPath).Begin
-- uid: StringAlgorithms.SuffixStructures.SuffixStructureMatch`1.Begin*
-  name: Begin
-  href: api/StringAlgorithms.SuffixStructures.SuffixStructureMatch-1.html#StringAlgorithms_SuffixStructures_SuffixStructureMatch_1_Begin_
-  commentId: Overload:StringAlgorithms.SuffixStructures.SuffixStructureMatch`1.Begin
-  isSpec: "True"
-  fullName: StringAlgorithms.SuffixStructures.SuffixStructureMatch<TPath>.Begin
-  fullName.vb: StringAlgorithms.SuffixStructures.SuffixStructureMatch(Of TPath).Begin
-  nameWithType: SuffixStructureMatch<TPath>.Begin
-  nameWithType.vb: SuffixStructureMatch(Of TPath).Begin
-- uid: StringAlgorithms.SuffixStructures.SuffixStructureMatch`1.MatchedChars
-  name: MatchedChars
-  href: api/StringAlgorithms.SuffixStructures.SuffixStructureMatch-1.html#StringAlgorithms_SuffixStructures_SuffixStructureMatch_1_MatchedChars
-  commentId: P:StringAlgorithms.SuffixStructures.SuffixStructureMatch`1.MatchedChars
-  fullName: StringAlgorithms.SuffixStructures.SuffixStructureMatch<TPath>.MatchedChars
-  fullName.vb: StringAlgorithms.SuffixStructures.SuffixStructureMatch(Of TPath).MatchedChars
-  nameWithType: SuffixStructureMatch<TPath>.MatchedChars
-  nameWithType.vb: SuffixStructureMatch(Of TPath).MatchedChars
-- uid: StringAlgorithms.SuffixStructures.SuffixStructureMatch`1.MatchedChars*
-  name: MatchedChars
-  href: api/StringAlgorithms.SuffixStructures.SuffixStructureMatch-1.html#StringAlgorithms_SuffixStructures_SuffixStructureMatch_1_MatchedChars_
-  commentId: Overload:StringAlgorithms.SuffixStructures.SuffixStructureMatch`1.MatchedChars
-  isSpec: "True"
-  fullName: StringAlgorithms.SuffixStructures.SuffixStructureMatch<TPath>.MatchedChars
-  fullName.vb: StringAlgorithms.SuffixStructures.SuffixStructureMatch(Of TPath).MatchedChars
-  nameWithType: SuffixStructureMatch<TPath>.MatchedChars
-  nameWithType.vb: SuffixStructureMatch(Of TPath).MatchedChars
-- uid: StringAlgorithms.SuffixStructures.SuffixStructureMatch`1.Path
-  name: Path
-  href: api/StringAlgorithms.SuffixStructures.SuffixStructureMatch-1.html#StringAlgorithms_SuffixStructures_SuffixStructureMatch_1_Path
-  commentId: P:StringAlgorithms.SuffixStructures.SuffixStructureMatch`1.Path
-  fullName: StringAlgorithms.SuffixStructures.SuffixStructureMatch<TPath>.Path
-  fullName.vb: StringAlgorithms.SuffixStructures.SuffixStructureMatch(Of TPath).Path
-  nameWithType: SuffixStructureMatch<TPath>.Path
-  nameWithType.vb: SuffixStructureMatch(Of TPath).Path
-- uid: StringAlgorithms.SuffixStructures.SuffixStructureMatch`1.Path*
-  name: Path
-  href: api/StringAlgorithms.SuffixStructures.SuffixStructureMatch-1.html#StringAlgorithms_SuffixStructures_SuffixStructureMatch_1_Path_
-  commentId: Overload:StringAlgorithms.SuffixStructures.SuffixStructureMatch`1.Path
-  isSpec: "True"
-  fullName: StringAlgorithms.SuffixStructures.SuffixStructureMatch<TPath>.Path
-  fullName.vb: StringAlgorithms.SuffixStructures.SuffixStructureMatch(Of TPath).Path
-  nameWithType: SuffixStructureMatch<TPath>.Path
-  nameWithType.vb: SuffixStructureMatch(Of TPath).Path
-- uid: StringAlgorithms.SuffixStructures.SuffixStructureMatch`1.Success
-  name: Success
-  href: api/StringAlgorithms.SuffixStructures.SuffixStructureMatch-1.html#StringAlgorithms_SuffixStructures_SuffixStructureMatch_1_Success
-  commentId: P:StringAlgorithms.SuffixStructures.SuffixStructureMatch`1.Success
-  fullName: StringAlgorithms.SuffixStructures.SuffixStructureMatch<TPath>.Success
-  fullName.vb: StringAlgorithms.SuffixStructures.SuffixStructureMatch(Of TPath).Success
-  nameWithType: SuffixStructureMatch<TPath>.Success
-  nameWithType.vb: SuffixStructureMatch(Of TPath).Success
-- uid: StringAlgorithms.SuffixStructures.SuffixStructureMatch`1.Success*
-  name: Success
-  href: api/StringAlgorithms.SuffixStructures.SuffixStructureMatch-1.html#StringAlgorithms_SuffixStructures_SuffixStructureMatch_1_Success_
-  commentId: Overload:StringAlgorithms.SuffixStructures.SuffixStructureMatch`1.Success
-  isSpec: "True"
-  fullName: StringAlgorithms.SuffixStructures.SuffixStructureMatch<TPath>.Success
-  fullName.vb: StringAlgorithms.SuffixStructures.SuffixStructureMatch(Of TPath).Success
-  nameWithType: SuffixStructureMatch<TPath>.Success
-  nameWithType.vb: SuffixStructureMatch(Of TPath).Success
-- uid: StringAlgorithms.SuffixStructures.SuffixStructureMatcher
-  name: SuffixStructureMatcher
-  href: api/StringAlgorithms.SuffixStructures.SuffixStructureMatcher.html
-  commentId: T:StringAlgorithms.SuffixStructures.SuffixStructureMatcher
-  fullName: StringAlgorithms.SuffixStructures.SuffixStructureMatcher
-  nameWithType: SuffixStructureMatcher
-- uid: StringAlgorithms.SuffixStructures.SuffixStructureMatcher.Match*
-  name: Match
-  href: api/StringAlgorithms.SuffixStructures.SuffixStructureMatcher.html#StringAlgorithms_SuffixStructures_SuffixStructureMatcher_Match_
-  commentId: Overload:StringAlgorithms.SuffixStructures.SuffixStructureMatcher.Match
-  isSpec: "True"
-  fullName: StringAlgorithms.SuffixStructures.SuffixStructureMatcher.Match
-  nameWithType: SuffixStructureMatcher.Match
-- uid: StringAlgorithms.SuffixStructures.SuffixStructureMatcher.Match``4(StringAlgorithms.SuffixStructures.ISuffixStructureNode{``0,``1,``2,``3},StringAlgorithms.TextWithTerminator,System.String)
-  name: Match<TEdge, TNode, TPath, TBuilder>(ISuffixStructureNode<TEdge, TNode, TPath, TBuilder>, TextWithTerminator, String)
-  href: api/StringAlgorithms.SuffixStructures.SuffixStructureMatcher.html#StringAlgorithms_SuffixStructures_SuffixStructureMatcher_Match__4_StringAlgorithms_SuffixStructures_ISuffixStructureNode___0___1___2___3__StringAlgorithms_TextWithTerminator_System_String_
-  commentId: M:StringAlgorithms.SuffixStructures.SuffixStructureMatcher.Match``4(StringAlgorithms.SuffixStructures.ISuffixStructureNode{``0,``1,``2,``3},StringAlgorithms.TextWithTerminator,System.String)
-  name.vb: Match(Of TEdge, TNode, TPath, TBuilder)(ISuffixStructureNode(Of TEdge, TNode, TPath, TBuilder), TextWithTerminator, String)
-  fullName: StringAlgorithms.SuffixStructures.SuffixStructureMatcher.Match<TEdge, TNode, TPath, TBuilder>(StringAlgorithms.SuffixStructures.ISuffixStructureNode<TEdge, TNode, TPath, TBuilder>, StringAlgorithms.TextWithTerminator, System.String)
-  fullName.vb: StringAlgorithms.SuffixStructures.SuffixStructureMatcher.Match(Of TEdge, TNode, TPath, TBuilder)(StringAlgorithms.SuffixStructures.ISuffixStructureNode(Of TEdge, TNode, TPath, TBuilder), StringAlgorithms.TextWithTerminator, System.String)
-  nameWithType: SuffixStructureMatcher.Match<TEdge, TNode, TPath, TBuilder>(ISuffixStructureNode<TEdge, TNode, TPath, TBuilder>, TextWithTerminator, String)
-  nameWithType.vb: SuffixStructureMatcher.Match(Of TEdge, TNode, TPath, TBuilder)(ISuffixStructureNode(Of TEdge, TNode, TPath, TBuilder), TextWithTerminator, String)
 - uid: StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions
   name: SuffixStructureNodeExtensions
   href: api/StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.html
   commentId: T:StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions
   fullName: StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions
   nameWithType: SuffixStructureNodeExtensions
-- uid: StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.GetAllNodeToLeafPaths*
-  name: GetAllNodeToLeafPaths
-  href: api/StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.html#StringAlgorithms_SuffixStructures_SuffixStructureNodeExtensions_GetAllNodeToLeafPaths_
-  commentId: Overload:StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.GetAllNodeToLeafPaths
-  isSpec: "True"
-  fullName: StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.GetAllNodeToLeafPaths
-  nameWithType: SuffixStructureNodeExtensions.GetAllNodeToLeafPaths
-- uid: StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.GetAllNodeToLeafPaths``4(StringAlgorithms.SuffixStructures.ISuffixStructureNode{``0,``1,``2,``3})
-  name: GetAllNodeToLeafPaths<TEdge, TNode, TPath, TBuilder>(ISuffixStructureNode<TEdge, TNode, TPath, TBuilder>)
-  href: api/StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.html#StringAlgorithms_SuffixStructures_SuffixStructureNodeExtensions_GetAllNodeToLeafPaths__4_StringAlgorithms_SuffixStructures_ISuffixStructureNode___0___1___2___3__
-  commentId: M:StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.GetAllNodeToLeafPaths``4(StringAlgorithms.SuffixStructures.ISuffixStructureNode{``0,``1,``2,``3})
-  name.vb: GetAllNodeToLeafPaths(Of TEdge, TNode, TPath, TBuilder)(ISuffixStructureNode(Of TEdge, TNode, TPath, TBuilder))
-  fullName: StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.GetAllNodeToLeafPaths<TEdge, TNode, TPath, TBuilder>(StringAlgorithms.SuffixStructures.ISuffixStructureNode<TEdge, TNode, TPath, TBuilder>)
-  fullName.vb: StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.GetAllNodeToLeafPaths(Of TEdge, TNode, TPath, TBuilder)(StringAlgorithms.SuffixStructures.ISuffixStructureNode(Of TEdge, TNode, TPath, TBuilder))
-  nameWithType: SuffixStructureNodeExtensions.GetAllNodeToLeafPaths<TEdge, TNode, TPath, TBuilder>(ISuffixStructureNode<TEdge, TNode, TPath, TBuilder>)
-  nameWithType.vb: SuffixStructureNodeExtensions.GetAllNodeToLeafPaths(Of TEdge, TNode, TPath, TBuilder)(ISuffixStructureNode(Of TEdge, TNode, TPath, TBuilder))
 - uid: StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.GetAllSuffixesFor*
   name: GetAllSuffixesFor
   href: api/StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.html#StringAlgorithms_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor_
@@ -459,60 +841,12 @@ references:
   fullName.vb: StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.GetAllSuffixesFor(Of TEdge, TNode, TPath, TBuilder)(StringAlgorithms.SuffixStructures.ISuffixStructureNode(Of TEdge, TNode, TPath, TBuilder), StringAlgorithms.TextWithTerminator)
   nameWithType: SuffixStructureNodeExtensions.GetAllSuffixesFor<TEdge, TNode, TPath, TBuilder>(ISuffixStructureNode<TEdge, TNode, TPath, TBuilder>, TextWithTerminator)
   nameWithType.vb: SuffixStructureNodeExtensions.GetAllSuffixesFor(Of TEdge, TNode, TPath, TBuilder)(ISuffixStructureNode(Of TEdge, TNode, TPath, TBuilder), TextWithTerminator)
-- uid: StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.IsLeaf*
-  name: IsLeaf
-  href: api/StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.html#StringAlgorithms_SuffixStructures_SuffixStructureNodeExtensions_IsLeaf_
-  commentId: Overload:StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.IsLeaf
-  isSpec: "True"
-  fullName: StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.IsLeaf
-  nameWithType: SuffixStructureNodeExtensions.IsLeaf
-- uid: StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.IsLeaf``4(StringAlgorithms.SuffixStructures.ISuffixStructureNode{``0,``1,``2,``3})
-  name: IsLeaf<TEdge, TNode, TPath, TBuilder>(ISuffixStructureNode<TEdge, TNode, TPath, TBuilder>)
-  href: api/StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.html#StringAlgorithms_SuffixStructures_SuffixStructureNodeExtensions_IsLeaf__4_StringAlgorithms_SuffixStructures_ISuffixStructureNode___0___1___2___3__
-  commentId: M:StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.IsLeaf``4(StringAlgorithms.SuffixStructures.ISuffixStructureNode{``0,``1,``2,``3})
-  name.vb: IsLeaf(Of TEdge, TNode, TPath, TBuilder)(ISuffixStructureNode(Of TEdge, TNode, TPath, TBuilder))
-  fullName: StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.IsLeaf<TEdge, TNode, TPath, TBuilder>(StringAlgorithms.SuffixStructures.ISuffixStructureNode<TEdge, TNode, TPath, TBuilder>)
-  fullName.vb: StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.IsLeaf(Of TEdge, TNode, TPath, TBuilder)(StringAlgorithms.SuffixStructures.ISuffixStructureNode(Of TEdge, TNode, TPath, TBuilder))
-  nameWithType: SuffixStructureNodeExtensions.IsLeaf<TEdge, TNode, TPath, TBuilder>(ISuffixStructureNode<TEdge, TNode, TPath, TBuilder>)
-  nameWithType.vb: SuffixStructureNodeExtensions.IsLeaf(Of TEdge, TNode, TPath, TBuilder)(ISuffixStructureNode(Of TEdge, TNode, TPath, TBuilder))
 - uid: StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions
   name: SuffixStructurePathExtensions
   href: api/StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.html
   commentId: T:StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions
   fullName: StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions
   nameWithType: SuffixStructurePathExtensions
-- uid: StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.Append*
-  name: Append
-  href: api/StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.html#StringAlgorithms_SuffixStructures_SuffixStructurePathExtensions_Append_
-  commentId: Overload:StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.Append
-  isSpec: "True"
-  fullName: StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.Append
-  nameWithType: SuffixStructurePathExtensions.Append
-- uid: StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.Append``4(StringAlgorithms.SuffixStructures.ISuffixStructurePath{``0,``1,``2,``3},``0,``1)
-  name: Append<TEdge, TNode, TPath, TBuilder>(ISuffixStructurePath<TEdge, TNode, TPath, TBuilder>, TEdge, TNode)
-  href: api/StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.html#StringAlgorithms_SuffixStructures_SuffixStructurePathExtensions_Append__4_StringAlgorithms_SuffixStructures_ISuffixStructurePath___0___1___2___3____0___1_
-  commentId: M:StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.Append``4(StringAlgorithms.SuffixStructures.ISuffixStructurePath{``0,``1,``2,``3},``0,``1)
-  name.vb: Append(Of TEdge, TNode, TPath, TBuilder)(ISuffixStructurePath(Of TEdge, TNode, TPath, TBuilder), TEdge, TNode)
-  fullName: StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.Append<TEdge, TNode, TPath, TBuilder>(StringAlgorithms.SuffixStructures.ISuffixStructurePath<TEdge, TNode, TPath, TBuilder>, TEdge, TNode)
-  fullName.vb: StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.Append(Of TEdge, TNode, TPath, TBuilder)(StringAlgorithms.SuffixStructures.ISuffixStructurePath(Of TEdge, TNode, TPath, TBuilder), TEdge, TNode)
-  nameWithType: SuffixStructurePathExtensions.Append<TEdge, TNode, TPath, TBuilder>(ISuffixStructurePath<TEdge, TNode, TPath, TBuilder>, TEdge, TNode)
-  nameWithType.vb: SuffixStructurePathExtensions.Append(Of TEdge, TNode, TPath, TBuilder)(ISuffixStructurePath(Of TEdge, TNode, TPath, TBuilder), TEdge, TNode)
-- uid: StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.Concat*
-  name: Concat
-  href: api/StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.html#StringAlgorithms_SuffixStructures_SuffixStructurePathExtensions_Concat_
-  commentId: Overload:StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.Concat
-  isSpec: "True"
-  fullName: StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.Concat
-  nameWithType: SuffixStructurePathExtensions.Concat
-- uid: StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.Concat``4(StringAlgorithms.SuffixStructures.ISuffixStructurePath{``0,``1,``2,``3},StringAlgorithms.SuffixStructures.ISuffixStructurePath{``0,``1,``2,``3})
-  name: Concat<TEdge, TNode, TPath, TBuilder>(ISuffixStructurePath<TEdge, TNode, TPath, TBuilder>, ISuffixStructurePath<TEdge, TNode, TPath, TBuilder>)
-  href: api/StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.html#StringAlgorithms_SuffixStructures_SuffixStructurePathExtensions_Concat__4_StringAlgorithms_SuffixStructures_ISuffixStructurePath___0___1___2___3__StringAlgorithms_SuffixStructures_ISuffixStructurePath___0___1___2___3__
-  commentId: M:StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.Concat``4(StringAlgorithms.SuffixStructures.ISuffixStructurePath{``0,``1,``2,``3},StringAlgorithms.SuffixStructures.ISuffixStructurePath{``0,``1,``2,``3})
-  name.vb: Concat(Of TEdge, TNode, TPath, TBuilder)(ISuffixStructurePath(Of TEdge, TNode, TPath, TBuilder), ISuffixStructurePath(Of TEdge, TNode, TPath, TBuilder))
-  fullName: StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.Concat<TEdge, TNode, TPath, TBuilder>(StringAlgorithms.SuffixStructures.ISuffixStructurePath<TEdge, TNode, TPath, TBuilder>, StringAlgorithms.SuffixStructures.ISuffixStructurePath<TEdge, TNode, TPath, TBuilder>)
-  fullName.vb: StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.Concat(Of TEdge, TNode, TPath, TBuilder)(StringAlgorithms.SuffixStructures.ISuffixStructurePath(Of TEdge, TNode, TPath, TBuilder), StringAlgorithms.SuffixStructures.ISuffixStructurePath(Of TEdge, TNode, TPath, TBuilder))
-  nameWithType: SuffixStructurePathExtensions.Concat<TEdge, TNode, TPath, TBuilder>(ISuffixStructurePath<TEdge, TNode, TPath, TBuilder>, ISuffixStructurePath<TEdge, TNode, TPath, TBuilder>)
-  nameWithType.vb: SuffixStructurePathExtensions.Concat(Of TEdge, TNode, TPath, TBuilder)(ISuffixStructurePath(Of TEdge, TNode, TPath, TBuilder), ISuffixStructurePath(Of TEdge, TNode, TPath, TBuilder))
 - uid: StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.IsSuffixOf*
   name: IsSuffixOf
   href: api/StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.html#StringAlgorithms_SuffixStructures_SuffixStructurePathExtensions_IsSuffixOf_
@@ -545,25 +879,6 @@ references:
   fullName.vb: StringAlgorithms.SuffixStructures.SuffixStructurePathExtensions.SuffixFor(Of TEdge, TNode, TPath, TBuilder)(StringAlgorithms.SuffixStructures.ISuffixStructurePath(Of TEdge, TNode, TPath, TBuilder), StringAlgorithms.TextWithTerminator)
   nameWithType: SuffixStructurePathExtensions.SuffixFor<TEdge, TNode, TPath, TBuilder>(ISuffixStructurePath<TEdge, TNode, TPath, TBuilder>, TextWithTerminator)
   nameWithType.vb: SuffixStructurePathExtensions.SuffixFor(Of TEdge, TNode, TPath, TBuilder)(ISuffixStructurePath(Of TEdge, TNode, TPath, TBuilder), TextWithTerminator)
-- uid: StringAlgorithms.SuffixStructures.SuffixStructuresConverter
-  name: SuffixStructuresConverter
-  href: api/StringAlgorithms.SuffixStructures.SuffixStructuresConverter.html
-  commentId: T:StringAlgorithms.SuffixStructures.SuffixStructuresConverter
-  fullName: StringAlgorithms.SuffixStructures.SuffixStructuresConverter
-  nameWithType: SuffixStructuresConverter
-- uid: StringAlgorithms.SuffixStructures.SuffixStructuresConverter.TrieToTree(StringAlgorithms.SuffixTries.SuffixTrieNode)
-  name: TrieToTree(SuffixTrieNode)
-  href: api/StringAlgorithms.SuffixStructures.SuffixStructuresConverter.html#StringAlgorithms_SuffixStructures_SuffixStructuresConverter_TrieToTree_StringAlgorithms_SuffixTries_SuffixTrieNode_
-  commentId: M:StringAlgorithms.SuffixStructures.SuffixStructuresConverter.TrieToTree(StringAlgorithms.SuffixTries.SuffixTrieNode)
-  fullName: StringAlgorithms.SuffixStructures.SuffixStructuresConverter.TrieToTree(StringAlgorithms.SuffixTries.SuffixTrieNode)
-  nameWithType: SuffixStructuresConverter.TrieToTree(SuffixTrieNode)
-- uid: StringAlgorithms.SuffixStructures.SuffixStructuresConverter.TrieToTree*
-  name: TrieToTree
-  href: api/StringAlgorithms.SuffixStructures.SuffixStructuresConverter.html#StringAlgorithms_SuffixStructures_SuffixStructuresConverter_TrieToTree_
-  commentId: Overload:StringAlgorithms.SuffixStructures.SuffixStructuresConverter.TrieToTree
-  isSpec: "True"
-  fullName: StringAlgorithms.SuffixStructures.SuffixStructuresConverter.TrieToTree
-  nameWithType: SuffixStructuresConverter.TrieToTree
 - uid: StringAlgorithms.SuffixStructures.Tests
   name: StringAlgorithms.SuffixStructures.Tests
   href: api/StringAlgorithms.SuffixStructures.Tests.html
@@ -576,32 +891,6 @@ references:
   commentId: T:StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests
   fullName: StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests
   nameWithType: SuffixStructuresNodeExtensionsTests
-- uid: StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect
-  name: GetAllNodeToLeafPaths_IsCorrect()
-  href: api/StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.html#StringAlgorithms_SuffixStructures_Tests_SuffixStructuresNodeExtensionsTests_GetAllNodeToLeafPaths_IsCorrect
-  commentId: M:StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect
-  fullName: StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect()
-  nameWithType: SuffixStructuresNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect()
-- uid: StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect*
-  name: GetAllNodeToLeafPaths_IsCorrect
-  href: api/StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.html#StringAlgorithms_SuffixStructures_Tests_SuffixStructuresNodeExtensionsTests_GetAllNodeToLeafPaths_IsCorrect_
-  commentId: Overload:StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect
-  isSpec: "True"
-  fullName: StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect
-  nameWithType: SuffixStructuresNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect
-- uid: StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect2
-  name: GetAllNodeToLeafPaths_IsCorrect2()
-  href: api/StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.html#StringAlgorithms_SuffixStructures_Tests_SuffixStructuresNodeExtensionsTests_GetAllNodeToLeafPaths_IsCorrect2
-  commentId: M:StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect2
-  fullName: StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect2()
-  nameWithType: SuffixStructuresNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect2()
-- uid: StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect2*
-  name: GetAllNodeToLeafPaths_IsCorrect2
-  href: api/StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.html#StringAlgorithms_SuffixStructures_Tests_SuffixStructuresNodeExtensionsTests_GetAllNodeToLeafPaths_IsCorrect2_
-  commentId: Overload:StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect2
-  isSpec: "True"
-  fullName: StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect2
-  nameWithType: SuffixStructuresNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect2
 - uid: StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrect
   name: GetAllSuffixesFor_IsCorrect()
   href: api/StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.html#StringAlgorithms_SuffixStructures_Tests_SuffixStructuresNodeExtensionsTests_GetAllSuffixesFor_IsCorrect
@@ -628,32 +917,50 @@ references:
   isSpec: "True"
   fullName: StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrect2
   nameWithType: SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrect2
-- uid: StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTree
-  name: IsLeaf_IsCorrectForSuffixTree()
-  href: api/StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.html#StringAlgorithms_SuffixStructures_Tests_SuffixStructuresNodeExtensionsTests_IsLeaf_IsCorrectForSuffixTree
-  commentId: M:StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTree
-  fullName: StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTree()
-  nameWithType: SuffixStructuresNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTree()
-- uid: StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTree*
-  name: IsLeaf_IsCorrectForSuffixTree
-  href: api/StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.html#StringAlgorithms_SuffixStructures_Tests_SuffixStructuresNodeExtensionsTests_IsLeaf_IsCorrectForSuffixTree_
-  commentId: Overload:StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTree
+- uid: StringAlgorithms.SuffixStructures.Transformations
+  name: StringAlgorithms.SuffixStructures.Transformations
+  href: api/StringAlgorithms.SuffixStructures.Transformations.html
+  commentId: N:StringAlgorithms.SuffixStructures.Transformations
+  fullName: StringAlgorithms.SuffixStructures.Transformations
+  nameWithType: StringAlgorithms.SuffixStructures.Transformations
+- uid: StringAlgorithms.SuffixStructures.Transformations.ISuffixStructuresConverter
+  name: ISuffixStructuresConverter
+  href: api/StringAlgorithms.SuffixStructures.Transformations.ISuffixStructuresConverter.html
+  commentId: T:StringAlgorithms.SuffixStructures.Transformations.ISuffixStructuresConverter
+  fullName: StringAlgorithms.SuffixStructures.Transformations.ISuffixStructuresConverter
+  nameWithType: ISuffixStructuresConverter
+- uid: StringAlgorithms.SuffixStructures.Transformations.ISuffixStructuresConverter.TrieToTree(StringAlgorithms.SuffixTries.SuffixTrieNode)
+  name: TrieToTree(SuffixTrieNode)
+  href: api/StringAlgorithms.SuffixStructures.Transformations.ISuffixStructuresConverter.html#StringAlgorithms_SuffixStructures_Transformations_ISuffixStructuresConverter_TrieToTree_StringAlgorithms_SuffixTries_SuffixTrieNode_
+  commentId: M:StringAlgorithms.SuffixStructures.Transformations.ISuffixStructuresConverter.TrieToTree(StringAlgorithms.SuffixTries.SuffixTrieNode)
+  fullName: StringAlgorithms.SuffixStructures.Transformations.ISuffixStructuresConverter.TrieToTree(StringAlgorithms.SuffixTries.SuffixTrieNode)
+  nameWithType: ISuffixStructuresConverter.TrieToTree(SuffixTrieNode)
+- uid: StringAlgorithms.SuffixStructures.Transformations.ISuffixStructuresConverter.TrieToTree*
+  name: TrieToTree
+  href: api/StringAlgorithms.SuffixStructures.Transformations.ISuffixStructuresConverter.html#StringAlgorithms_SuffixStructures_Transformations_ISuffixStructuresConverter_TrieToTree_
+  commentId: Overload:StringAlgorithms.SuffixStructures.Transformations.ISuffixStructuresConverter.TrieToTree
   isSpec: "True"
-  fullName: StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTree
-  nameWithType: SuffixStructuresNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTree
-- uid: StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTrie
-  name: IsLeaf_IsCorrectForSuffixTrie()
-  href: api/StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.html#StringAlgorithms_SuffixStructures_Tests_SuffixStructuresNodeExtensionsTests_IsLeaf_IsCorrectForSuffixTrie
-  commentId: M:StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTrie
-  fullName: StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTrie()
-  nameWithType: SuffixStructuresNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTrie()
-- uid: StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTrie*
-  name: IsLeaf_IsCorrectForSuffixTrie
-  href: api/StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.html#StringAlgorithms_SuffixStructures_Tests_SuffixStructuresNodeExtensionsTests_IsLeaf_IsCorrectForSuffixTrie_
-  commentId: Overload:StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTrie
+  fullName: StringAlgorithms.SuffixStructures.Transformations.ISuffixStructuresConverter.TrieToTree
+  nameWithType: ISuffixStructuresConverter.TrieToTree
+- uid: StringAlgorithms.SuffixStructures.Transformations.PartiallyIterativeSuffixStructuresConverter
+  name: PartiallyIterativeSuffixStructuresConverter
+  href: api/StringAlgorithms.SuffixStructures.Transformations.PartiallyIterativeSuffixStructuresConverter.html
+  commentId: T:StringAlgorithms.SuffixStructures.Transformations.PartiallyIterativeSuffixStructuresConverter
+  fullName: StringAlgorithms.SuffixStructures.Transformations.PartiallyIterativeSuffixStructuresConverter
+  nameWithType: PartiallyIterativeSuffixStructuresConverter
+- uid: StringAlgorithms.SuffixStructures.Transformations.PartiallyIterativeSuffixStructuresConverter.TrieToTree(StringAlgorithms.SuffixTries.SuffixTrieNode)
+  name: TrieToTree(SuffixTrieNode)
+  href: api/StringAlgorithms.SuffixStructures.Transformations.PartiallyIterativeSuffixStructuresConverter.html#StringAlgorithms_SuffixStructures_Transformations_PartiallyIterativeSuffixStructuresConverter_TrieToTree_StringAlgorithms_SuffixTries_SuffixTrieNode_
+  commentId: M:StringAlgorithms.SuffixStructures.Transformations.PartiallyIterativeSuffixStructuresConverter.TrieToTree(StringAlgorithms.SuffixTries.SuffixTrieNode)
+  fullName: StringAlgorithms.SuffixStructures.Transformations.PartiallyIterativeSuffixStructuresConverter.TrieToTree(StringAlgorithms.SuffixTries.SuffixTrieNode)
+  nameWithType: PartiallyIterativeSuffixStructuresConverter.TrieToTree(SuffixTrieNode)
+- uid: StringAlgorithms.SuffixStructures.Transformations.PartiallyIterativeSuffixStructuresConverter.TrieToTree*
+  name: TrieToTree
+  href: api/StringAlgorithms.SuffixStructures.Transformations.PartiallyIterativeSuffixStructuresConverter.html#StringAlgorithms_SuffixStructures_Transformations_PartiallyIterativeSuffixStructuresConverter_TrieToTree_
+  commentId: Overload:StringAlgorithms.SuffixStructures.Transformations.PartiallyIterativeSuffixStructuresConverter.TrieToTree
   isSpec: "True"
-  fullName: StringAlgorithms.SuffixStructures.Tests.SuffixStructuresNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTrie
-  nameWithType: SuffixStructuresNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTrie
+  fullName: StringAlgorithms.SuffixStructures.Transformations.PartiallyIterativeSuffixStructuresConverter.TrieToTree
+  nameWithType: PartiallyIterativeSuffixStructuresConverter.TrieToTree
 - uid: StringAlgorithms.SuffixTrees
   name: StringAlgorithms.SuffixTrees
   href: api/StringAlgorithms.SuffixTrees.html
@@ -1208,6 +1515,327 @@ references:
   commentId: N:StringAlgorithms.Tests
   fullName: StringAlgorithms.Tests
   nameWithType: StringAlgorithms.Tests
+- uid: StringAlgorithms.Tests.CountTrees
+  name: StringAlgorithms.Tests.CountTrees
+  href: api/StringAlgorithms.Tests.CountTrees.html
+  commentId: N:StringAlgorithms.Tests.CountTrees
+  fullName: StringAlgorithms.Tests.CountTrees
+  nameWithType: StringAlgorithms.Tests.CountTrees
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests
+  name: CountTreeBuilderTests
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.html
+  commentId: T:StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests
+  nameWithType: CountTreeBuilderTests
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.EmptyPath_WrapsUnderlyingEmptyPath
+  name: EmptyPath_WrapsUnderlyingEmptyPath()
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.html#StringAlgorithms_Tests_CountTrees_CountTreeBuilderTests_EmptyPath_WrapsUnderlyingEmptyPath
+  commentId: M:StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.EmptyPath_WrapsUnderlyingEmptyPath
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.EmptyPath_WrapsUnderlyingEmptyPath()
+  nameWithType: CountTreeBuilderTests.EmptyPath_WrapsUnderlyingEmptyPath()
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.EmptyPath_WrapsUnderlyingEmptyPath*
+  name: EmptyPath_WrapsUnderlyingEmptyPath
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.html#StringAlgorithms_Tests_CountTrees_CountTreeBuilderTests_EmptyPath_WrapsUnderlyingEmptyPath_
+  commentId: Overload:StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.EmptyPath_WrapsUnderlyingEmptyPath
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.EmptyPath_WrapsUnderlyingEmptyPath
+  nameWithType: CountTreeBuilderTests.EmptyPath_WrapsUnderlyingEmptyPath
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.MultistepsPath_WrapsUnderlyingMultistepsPath_WithEnumerable
+  name: MultistepsPath_WrapsUnderlyingMultistepsPath_WithEnumerable()
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.html#StringAlgorithms_Tests_CountTrees_CountTreeBuilderTests_MultistepsPath_WrapsUnderlyingMultistepsPath_WithEnumerable
+  commentId: M:StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.MultistepsPath_WrapsUnderlyingMultistepsPath_WithEnumerable
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.MultistepsPath_WrapsUnderlyingMultistepsPath_WithEnumerable()
+  nameWithType: CountTreeBuilderTests.MultistepsPath_WrapsUnderlyingMultistepsPath_WithEnumerable()
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.MultistepsPath_WrapsUnderlyingMultistepsPath_WithEnumerable*
+  name: MultistepsPath_WrapsUnderlyingMultistepsPath_WithEnumerable
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.html#StringAlgorithms_Tests_CountTrees_CountTreeBuilderTests_MultistepsPath_WrapsUnderlyingMultistepsPath_WithEnumerable_
+  commentId: Overload:StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.MultistepsPath_WrapsUnderlyingMultistepsPath_WithEnumerable
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.MultistepsPath_WrapsUnderlyingMultistepsPath_WithEnumerable
+  nameWithType: CountTreeBuilderTests.MultistepsPath_WrapsUnderlyingMultistepsPath_WithEnumerable
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.MultistepsPath_WrapsUnderlyingMultistepsPath_WithValueTuples
+  name: MultistepsPath_WrapsUnderlyingMultistepsPath_WithValueTuples()
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.html#StringAlgorithms_Tests_CountTrees_CountTreeBuilderTests_MultistepsPath_WrapsUnderlyingMultistepsPath_WithValueTuples
+  commentId: M:StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.MultistepsPath_WrapsUnderlyingMultistepsPath_WithValueTuples
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.MultistepsPath_WrapsUnderlyingMultistepsPath_WithValueTuples()
+  nameWithType: CountTreeBuilderTests.MultistepsPath_WrapsUnderlyingMultistepsPath_WithValueTuples()
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.MultistepsPath_WrapsUnderlyingMultistepsPath_WithValueTuples*
+  name: MultistepsPath_WrapsUnderlyingMultistepsPath_WithValueTuples
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.html#StringAlgorithms_Tests_CountTrees_CountTreeBuilderTests_MultistepsPath_WrapsUnderlyingMultistepsPath_WithValueTuples_
+  commentId: Overload:StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.MultistepsPath_WrapsUnderlyingMultistepsPath_WithValueTuples
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.MultistepsPath_WrapsUnderlyingMultistepsPath_WithValueTuples
+  nameWithType: CountTreeBuilderTests.MultistepsPath_WrapsUnderlyingMultistepsPath_WithValueTuples
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.SingletonPath_WrapsUnderlyingSingletonPath
+  name: SingletonPath_WrapsUnderlyingSingletonPath()
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.html#StringAlgorithms_Tests_CountTrees_CountTreeBuilderTests_SingletonPath_WrapsUnderlyingSingletonPath
+  commentId: M:StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.SingletonPath_WrapsUnderlyingSingletonPath
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.SingletonPath_WrapsUnderlyingSingletonPath()
+  nameWithType: CountTreeBuilderTests.SingletonPath_WrapsUnderlyingSingletonPath()
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.SingletonPath_WrapsUnderlyingSingletonPath*
+  name: SingletonPath_WrapsUnderlyingSingletonPath
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.html#StringAlgorithms_Tests_CountTrees_CountTreeBuilderTests_SingletonPath_WrapsUnderlyingSingletonPath_
+  commentId: Overload:StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.SingletonPath_WrapsUnderlyingSingletonPath
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeBuilderTests.SingletonPath_WrapsUnderlyingSingletonPath
+  nameWithType: CountTreeBuilderTests.SingletonPath_WrapsUnderlyingSingletonPath
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeEdgeTests
+  name: CountTreeEdgeTests
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeEdgeTests.html
+  commentId: T:StringAlgorithms.Tests.CountTrees.CountTreeEdgeTests
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeEdgeTests
+  nameWithType: CountTreeEdgeTests
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeEdgeTests.Equals_BasedOnWrappedEdge
+  name: Equals_BasedOnWrappedEdge()
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeEdgeTests.html#StringAlgorithms_Tests_CountTrees_CountTreeEdgeTests_Equals_BasedOnWrappedEdge
+  commentId: M:StringAlgorithms.Tests.CountTrees.CountTreeEdgeTests.Equals_BasedOnWrappedEdge
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeEdgeTests.Equals_BasedOnWrappedEdge()
+  nameWithType: CountTreeEdgeTests.Equals_BasedOnWrappedEdge()
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeEdgeTests.Equals_BasedOnWrappedEdge*
+  name: Equals_BasedOnWrappedEdge
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeEdgeTests.html#StringAlgorithms_Tests_CountTrees_CountTreeEdgeTests_Equals_BasedOnWrappedEdge_
+  commentId: Overload:StringAlgorithms.Tests.CountTrees.CountTreeEdgeTests.Equals_BasedOnWrappedEdge
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeEdgeTests.Equals_BasedOnWrappedEdge
+  nameWithType: CountTreeEdgeTests.Equals_BasedOnWrappedEdge
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeEdgeTests.WrappedEdge_IsPreserved
+  name: WrappedEdge_IsPreserved()
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeEdgeTests.html#StringAlgorithms_Tests_CountTrees_CountTreeEdgeTests_WrappedEdge_IsPreserved
+  commentId: M:StringAlgorithms.Tests.CountTrees.CountTreeEdgeTests.WrappedEdge_IsPreserved
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeEdgeTests.WrappedEdge_IsPreserved()
+  nameWithType: CountTreeEdgeTests.WrappedEdge_IsPreserved()
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeEdgeTests.WrappedEdge_IsPreserved*
+  name: WrappedEdge_IsPreserved
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeEdgeTests.html#StringAlgorithms_Tests_CountTrees_CountTreeEdgeTests_WrappedEdge_IsPreserved_
+  commentId: Overload:StringAlgorithms.Tests.CountTrees.CountTreeEdgeTests.WrappedEdge_IsPreserved
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeEdgeTests.WrappedEdge_IsPreserved
+  nameWithType: CountTreeEdgeTests.WrappedEdge_IsPreserved
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests
+  name: CountTreeNodeTests
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.html
+  commentId: T:StringAlgorithms.Tests.CountTrees.CountTreeNodeTests
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests
+  nameWithType: CountTreeNodeTests
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_GivesConsistentResults
+  name: DescendantsCount_GivesConsistentResults()
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.html#StringAlgorithms_Tests_CountTrees_CountTreeNodeTests_DescendantsCount_GivesConsistentResults
+  commentId: M:StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_GivesConsistentResults
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_GivesConsistentResults()
+  nameWithType: CountTreeNodeTests.DescendantsCount_GivesConsistentResults()
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_GivesConsistentResults*
+  name: DescendantsCount_GivesConsistentResults
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.html#StringAlgorithms_Tests_CountTrees_CountTreeNodeTests_DescendantsCount_GivesConsistentResults_
+  commentId: Overload:StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_GivesConsistentResults
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_GivesConsistentResults
+  nameWithType: CountTreeNodeTests.DescendantsCount_GivesConsistentResults
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_OfLeafIsZero
+  name: DescendantsCount_OfLeafIsZero()
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.html#StringAlgorithms_Tests_CountTrees_CountTreeNodeTests_DescendantsCount_OfLeafIsZero
+  commentId: M:StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_OfLeafIsZero
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_OfLeafIsZero()
+  nameWithType: CountTreeNodeTests.DescendantsCount_OfLeafIsZero()
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_OfLeafIsZero*
+  name: DescendantsCount_OfLeafIsZero
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.html#StringAlgorithms_Tests_CountTrees_CountTreeNodeTests_DescendantsCount_OfLeafIsZero_
+  commentId: Overload:StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_OfLeafIsZero
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_OfLeafIsZero
+  nameWithType: CountTreeNodeTests.DescendantsCount_OfLeafIsZero
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_OfSingletonIsOne
+  name: DescendantsCount_OfSingletonIsOne()
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.html#StringAlgorithms_Tests_CountTrees_CountTreeNodeTests_DescendantsCount_OfSingletonIsOne
+  commentId: M:StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_OfSingletonIsOne
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_OfSingletonIsOne()
+  nameWithType: CountTreeNodeTests.DescendantsCount_OfSingletonIsOne()
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_OfSingletonIsOne*
+  name: DescendantsCount_OfSingletonIsOne
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.html#StringAlgorithms_Tests_CountTrees_CountTreeNodeTests_DescendantsCount_OfSingletonIsOne_
+  commentId: Overload:StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_OfSingletonIsOne
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_OfSingletonIsOne
+  nameWithType: CountTreeNodeTests.DescendantsCount_OfSingletonIsOne
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_OfThreeWithNNodesIsN
+  name: DescendantsCount_OfThreeWithNNodesIsN()
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.html#StringAlgorithms_Tests_CountTrees_CountTreeNodeTests_DescendantsCount_OfThreeWithNNodesIsN
+  commentId: M:StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_OfThreeWithNNodesIsN
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_OfThreeWithNNodesIsN()
+  nameWithType: CountTreeNodeTests.DescendantsCount_OfThreeWithNNodesIsN()
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_OfThreeWithNNodesIsN*
+  name: DescendantsCount_OfThreeWithNNodesIsN
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.html#StringAlgorithms_Tests_CountTrees_CountTreeNodeTests_DescendantsCount_OfThreeWithNNodesIsN_
+  commentId: Overload:StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_OfThreeWithNNodesIsN
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_OfThreeWithNNodesIsN
+  nameWithType: CountTreeNodeTests.DescendantsCount_OfThreeWithNNodesIsN
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.Equals_BasedOnWrappedNode
+  name: Equals_BasedOnWrappedNode()
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.html#StringAlgorithms_Tests_CountTrees_CountTreeNodeTests_Equals_BasedOnWrappedNode
+  commentId: M:StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.Equals_BasedOnWrappedNode
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.Equals_BasedOnWrappedNode()
+  nameWithType: CountTreeNodeTests.Equals_BasedOnWrappedNode()
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.Equals_BasedOnWrappedNode*
+  name: Equals_BasedOnWrappedNode
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.html#StringAlgorithms_Tests_CountTrees_CountTreeNodeTests_Equals_BasedOnWrappedNode_
+  commentId: Overload:StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.Equals_BasedOnWrappedNode
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.Equals_BasedOnWrappedNode
+  nameWithType: CountTreeNodeTests.Equals_BasedOnWrappedNode
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.WrappedNode_IsPreserved
+  name: WrappedNode_IsPreserved()
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.html#StringAlgorithms_Tests_CountTrees_CountTreeNodeTests_WrappedNode_IsPreserved
+  commentId: M:StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.WrappedNode_IsPreserved
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.WrappedNode_IsPreserved()
+  nameWithType: CountTreeNodeTests.WrappedNode_IsPreserved()
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.WrappedNode_IsPreserved*
+  name: WrappedNode_IsPreserved
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.html#StringAlgorithms_Tests_CountTrees_CountTreeNodeTests_WrappedNode_IsPreserved_
+  commentId: Overload:StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.WrappedNode_IsPreserved
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.WrappedNode_IsPreserved
+  nameWithType: CountTreeNodeTests.WrappedNode_IsPreserved
+- uid: StringAlgorithms.Tests.CountTrees.CountTreePathTests
+  name: CountTreePathTests
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreePathTests.html
+  commentId: T:StringAlgorithms.Tests.CountTrees.CountTreePathTests
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreePathTests
+  nameWithType: CountTreePathTests
+- uid: StringAlgorithms.Tests.CountTrees.CountTreePathTests.Equals_BasedOnWrappedPath
+  name: Equals_BasedOnWrappedPath()
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreePathTests.html#StringAlgorithms_Tests_CountTrees_CountTreePathTests_Equals_BasedOnWrappedPath
+  commentId: M:StringAlgorithms.Tests.CountTrees.CountTreePathTests.Equals_BasedOnWrappedPath
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreePathTests.Equals_BasedOnWrappedPath()
+  nameWithType: CountTreePathTests.Equals_BasedOnWrappedPath()
+- uid: StringAlgorithms.Tests.CountTrees.CountTreePathTests.Equals_BasedOnWrappedPath*
+  name: Equals_BasedOnWrappedPath
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreePathTests.html#StringAlgorithms_Tests_CountTrees_CountTreePathTests_Equals_BasedOnWrappedPath_
+  commentId: Overload:StringAlgorithms.Tests.CountTrees.CountTreePathTests.Equals_BasedOnWrappedPath
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreePathTests.Equals_BasedOnWrappedPath
+  nameWithType: CountTreePathTests.Equals_BasedOnWrappedPath
+- uid: StringAlgorithms.Tests.RecImmTrees
+  name: StringAlgorithms.Tests.RecImmTrees
+  href: api/StringAlgorithms.Tests.RecImmTrees.html
+  commentId: N:StringAlgorithms.Tests.RecImmTrees
+  fullName: StringAlgorithms.Tests.RecImmTrees
+  nameWithType: StringAlgorithms.Tests.RecImmTrees
+- uid: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests
+  name: RecImmDictIndexedTreeNodeExtensionsTests
+  href: api/StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.html
+  commentId: T:StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests
+  fullName: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests
+  nameWithType: RecImmDictIndexedTreeNodeExtensionsTests
+- uid: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect
+  name: GetAllNodeToLeafPaths_IsCorrect()
+  href: api/StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.html#StringAlgorithms_Tests_RecImmTrees_RecImmDictIndexedTreeNodeExtensionsTests_GetAllNodeToLeafPaths_IsCorrect
+  commentId: M:StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect
+  fullName: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect()
+  nameWithType: RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect()
+- uid: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect*
+  name: GetAllNodeToLeafPaths_IsCorrect
+  href: api/StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.html#StringAlgorithms_Tests_RecImmTrees_RecImmDictIndexedTreeNodeExtensionsTests_GetAllNodeToLeafPaths_IsCorrect_
+  commentId: Overload:StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect
+  nameWithType: RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect
+- uid: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect2
+  name: GetAllNodeToLeafPaths_IsCorrect2()
+  href: api/StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.html#StringAlgorithms_Tests_RecImmTrees_RecImmDictIndexedTreeNodeExtensionsTests_GetAllNodeToLeafPaths_IsCorrect2
+  commentId: M:StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect2
+  fullName: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect2()
+  nameWithType: RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect2()
+- uid: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect2*
+  name: GetAllNodeToLeafPaths_IsCorrect2
+  href: api/StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.html#StringAlgorithms_Tests_RecImmTrees_RecImmDictIndexedTreeNodeExtensionsTests_GetAllNodeToLeafPaths_IsCorrect2_
+  commentId: Overload:StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect2
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect2
+  nameWithType: RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect2
+- uid: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTree
+  name: IsLeaf_IsCorrectForSuffixTree()
+  href: api/StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.html#StringAlgorithms_Tests_RecImmTrees_RecImmDictIndexedTreeNodeExtensionsTests_IsLeaf_IsCorrectForSuffixTree
+  commentId: M:StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTree
+  fullName: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTree()
+  nameWithType: RecImmDictIndexedTreeNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTree()
+- uid: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTree*
+  name: IsLeaf_IsCorrectForSuffixTree
+  href: api/StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.html#StringAlgorithms_Tests_RecImmTrees_RecImmDictIndexedTreeNodeExtensionsTests_IsLeaf_IsCorrectForSuffixTree_
+  commentId: Overload:StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTree
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTree
+  nameWithType: RecImmDictIndexedTreeNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTree
+- uid: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTrie
+  name: IsLeaf_IsCorrectForSuffixTrie()
+  href: api/StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.html#StringAlgorithms_Tests_RecImmTrees_RecImmDictIndexedTreeNodeExtensionsTests_IsLeaf_IsCorrectForSuffixTrie
+  commentId: M:StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTrie
+  fullName: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTrie()
+  nameWithType: RecImmDictIndexedTreeNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTrie()
+- uid: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTrie*
+  name: IsLeaf_IsCorrectForSuffixTrie
+  href: api/StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.html#StringAlgorithms_Tests_RecImmTrees_RecImmDictIndexedTreeNodeExtensionsTests_IsLeaf_IsCorrectForSuffixTrie_
+  commentId: Overload:StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTrie
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTrie
+  nameWithType: RecImmDictIndexedTreeNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTrie
+- uid: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests
+  name: RecImmDictIndexedTreePathExtensionsTests
+  href: api/StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.html
+  commentId: T:StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests
+  fullName: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests
+  nameWithType: RecImmDictIndexedTreePathExtensionsTests
+- uid: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.Append_IsCorrect
+  name: Append_IsCorrect()
+  href: api/StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.html#StringAlgorithms_Tests_RecImmTrees_RecImmDictIndexedTreePathExtensionsTests_Append_IsCorrect
+  commentId: M:StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.Append_IsCorrect
+  fullName: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.Append_IsCorrect()
+  nameWithType: RecImmDictIndexedTreePathExtensionsTests.Append_IsCorrect()
+- uid: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.Append_IsCorrect*
+  name: Append_IsCorrect
+  href: api/StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.html#StringAlgorithms_Tests_RecImmTrees_RecImmDictIndexedTreePathExtensionsTests_Append_IsCorrect_
+  commentId: Overload:StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.Append_IsCorrect
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.Append_IsCorrect
+  nameWithType: RecImmDictIndexedTreePathExtensionsTests.Append_IsCorrect
+- uid: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.Concat_IsCorrectAppendingEmptyPath
+  name: Concat_IsCorrectAppendingEmptyPath()
+  href: api/StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.html#StringAlgorithms_Tests_RecImmTrees_RecImmDictIndexedTreePathExtensionsTests_Concat_IsCorrectAppendingEmptyPath
+  commentId: M:StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.Concat_IsCorrectAppendingEmptyPath
+  fullName: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.Concat_IsCorrectAppendingEmptyPath()
+  nameWithType: RecImmDictIndexedTreePathExtensionsTests.Concat_IsCorrectAppendingEmptyPath()
+- uid: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.Concat_IsCorrectAppendingEmptyPath*
+  name: Concat_IsCorrectAppendingEmptyPath
+  href: api/StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.html#StringAlgorithms_Tests_RecImmTrees_RecImmDictIndexedTreePathExtensionsTests_Concat_IsCorrectAppendingEmptyPath_
+  commentId: Overload:StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.Concat_IsCorrectAppendingEmptyPath
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.Concat_IsCorrectAppendingEmptyPath
+  nameWithType: RecImmDictIndexedTreePathExtensionsTests.Concat_IsCorrectAppendingEmptyPath
+- uid: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.Concat_IsCorrectPrependingEmptyPath
+  name: Concat_IsCorrectPrependingEmptyPath()
+  href: api/StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.html#StringAlgorithms_Tests_RecImmTrees_RecImmDictIndexedTreePathExtensionsTests_Concat_IsCorrectPrependingEmptyPath
+  commentId: M:StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.Concat_IsCorrectPrependingEmptyPath
+  fullName: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.Concat_IsCorrectPrependingEmptyPath()
+  nameWithType: RecImmDictIndexedTreePathExtensionsTests.Concat_IsCorrectPrependingEmptyPath()
+- uid: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.Concat_IsCorrectPrependingEmptyPath*
+  name: Concat_IsCorrectPrependingEmptyPath
+  href: api/StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.html#StringAlgorithms_Tests_RecImmTrees_RecImmDictIndexedTreePathExtensionsTests_Concat_IsCorrectPrependingEmptyPath_
+  commentId: Overload:StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.Concat_IsCorrectPrependingEmptyPath
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.Concat_IsCorrectPrependingEmptyPath
+  nameWithType: RecImmDictIndexedTreePathExtensionsTests.Concat_IsCorrectPrependingEmptyPath
+- uid: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.Concat_IsCorrectWithTwoNonEmptyPaths
+  name: Concat_IsCorrectWithTwoNonEmptyPaths()
+  href: api/StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.html#StringAlgorithms_Tests_RecImmTrees_RecImmDictIndexedTreePathExtensionsTests_Concat_IsCorrectWithTwoNonEmptyPaths
+  commentId: M:StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.Concat_IsCorrectWithTwoNonEmptyPaths
+  fullName: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.Concat_IsCorrectWithTwoNonEmptyPaths()
+  nameWithType: RecImmDictIndexedTreePathExtensionsTests.Concat_IsCorrectWithTwoNonEmptyPaths()
+- uid: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.Concat_IsCorrectWithTwoNonEmptyPaths*
+  name: Concat_IsCorrectWithTwoNonEmptyPaths
+  href: api/StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.html#StringAlgorithms_Tests_RecImmTrees_RecImmDictIndexedTreePathExtensionsTests_Concat_IsCorrectWithTwoNonEmptyPaths_
+  commentId: Overload:StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.Concat_IsCorrectWithTwoNonEmptyPaths
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.RecImmTrees.RecImmDictIndexedTreePathExtensionsTests.Concat_IsCorrectWithTwoNonEmptyPaths
+  nameWithType: RecImmDictIndexedTreePathExtensionsTests.Concat_IsCorrectWithTwoNonEmptyPaths
 - uid: StringAlgorithms.Tests.StringUtilitiesTests
   name: StringUtilitiesTests
   href: api/StringAlgorithms.Tests.StringUtilitiesTests.html
@@ -1233,25 +1861,25 @@ references:
   commentId: N:StringAlgorithms.Tests.SuffixStructures
   fullName: StringAlgorithms.Tests.SuffixStructures
   nameWithType: StringAlgorithms.Tests.SuffixStructures
-- uid: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresConverterTests
-  name: SuffixStructuresConverterTests
-  href: api/StringAlgorithms.Tests.SuffixStructures.SuffixStructuresConverterTests.html
-  commentId: T:StringAlgorithms.Tests.SuffixStructures.SuffixStructuresConverterTests
-  fullName: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresConverterTests
-  nameWithType: SuffixStructuresConverterTests
-- uid: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresConverterTests.TrieToTree_BuildsCorrectTree
-  name: TrieToTree_BuildsCorrectTree()
-  href: api/StringAlgorithms.Tests.SuffixStructures.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_SuffixStructuresConverterTests_TrieToTree_BuildsCorrectTree
-  commentId: M:StringAlgorithms.Tests.SuffixStructures.SuffixStructuresConverterTests.TrieToTree_BuildsCorrectTree
-  fullName: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresConverterTests.TrieToTree_BuildsCorrectTree()
-  nameWithType: SuffixStructuresConverterTests.TrieToTree_BuildsCorrectTree()
-- uid: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresConverterTests.TrieToTree_BuildsCorrectTree*
-  name: TrieToTree_BuildsCorrectTree
-  href: api/StringAlgorithms.Tests.SuffixStructures.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_SuffixStructuresConverterTests_TrieToTree_BuildsCorrectTree_
-  commentId: Overload:StringAlgorithms.Tests.SuffixStructures.SuffixStructuresConverterTests.TrieToTree_BuildsCorrectTree
+- uid: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresBuilderExtensionsTests
+  name: SuffixStructuresBuilderExtensionsTests
+  href: api/StringAlgorithms.Tests.SuffixStructures.SuffixStructuresBuilderExtensionsTests.html
+  commentId: T:StringAlgorithms.Tests.SuffixStructures.SuffixStructuresBuilderExtensionsTests
+  fullName: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresBuilderExtensionsTests
+  nameWithType: SuffixStructuresBuilderExtensionsTests
+- uid: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresBuilderExtensionsTests.BuildTree_CallsTheBuilderWithAnEquivalentTextWithTerminator
+  name: BuildTree_CallsTheBuilderWithAnEquivalentTextWithTerminator()
+  href: api/StringAlgorithms.Tests.SuffixStructures.SuffixStructuresBuilderExtensionsTests.html#StringAlgorithms_Tests_SuffixStructures_SuffixStructuresBuilderExtensionsTests_BuildTree_CallsTheBuilderWithAnEquivalentTextWithTerminator
+  commentId: M:StringAlgorithms.Tests.SuffixStructures.SuffixStructuresBuilderExtensionsTests.BuildTree_CallsTheBuilderWithAnEquivalentTextWithTerminator
+  fullName: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresBuilderExtensionsTests.BuildTree_CallsTheBuilderWithAnEquivalentTextWithTerminator()
+  nameWithType: SuffixStructuresBuilderExtensionsTests.BuildTree_CallsTheBuilderWithAnEquivalentTextWithTerminator()
+- uid: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresBuilderExtensionsTests.BuildTree_CallsTheBuilderWithAnEquivalentTextWithTerminator*
+  name: BuildTree_CallsTheBuilderWithAnEquivalentTextWithTerminator
+  href: api/StringAlgorithms.Tests.SuffixStructures.SuffixStructuresBuilderExtensionsTests.html#StringAlgorithms_Tests_SuffixStructures_SuffixStructuresBuilderExtensionsTests_BuildTree_CallsTheBuilderWithAnEquivalentTextWithTerminator_
+  commentId: Overload:StringAlgorithms.Tests.SuffixStructures.SuffixStructuresBuilderExtensionsTests.BuildTree_CallsTheBuilderWithAnEquivalentTextWithTerminator
   isSpec: "True"
-  fullName: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresConverterTests.TrieToTree_BuildsCorrectTree
-  nameWithType: SuffixStructuresConverterTests.TrieToTree_BuildsCorrectTree
+  fullName: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresBuilderExtensionsTests.BuildTree_CallsTheBuilderWithAnEquivalentTextWithTerminator
+  nameWithType: SuffixStructuresBuilderExtensionsTests.BuildTree_CallsTheBuilderWithAnEquivalentTextWithTerminator
 - uid: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresEdgeExtensionsTests
   name: SuffixStructuresEdgeExtensionsTests
   href: api/StringAlgorithms.Tests.SuffixStructures.SuffixStructuresEdgeExtensionsTests.html
@@ -1277,58 +1905,6 @@ references:
   commentId: T:StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests
   fullName: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests
   nameWithType: SuffixStructuresPathExtensionsTests
-- uid: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.Append_IsCorrect
-  name: Append_IsCorrect()
-  href: api/StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.html#StringAlgorithms_Tests_SuffixStructures_SuffixStructuresPathExtensionsTests_Append_IsCorrect
-  commentId: M:StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.Append_IsCorrect
-  fullName: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.Append_IsCorrect()
-  nameWithType: SuffixStructuresPathExtensionsTests.Append_IsCorrect()
-- uid: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.Append_IsCorrect*
-  name: Append_IsCorrect
-  href: api/StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.html#StringAlgorithms_Tests_SuffixStructures_SuffixStructuresPathExtensionsTests_Append_IsCorrect_
-  commentId: Overload:StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.Append_IsCorrect
-  isSpec: "True"
-  fullName: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.Append_IsCorrect
-  nameWithType: SuffixStructuresPathExtensionsTests.Append_IsCorrect
-- uid: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.Concat_IsCorrectAppendingEmptyPath
-  name: Concat_IsCorrectAppendingEmptyPath()
-  href: api/StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.html#StringAlgorithms_Tests_SuffixStructures_SuffixStructuresPathExtensionsTests_Concat_IsCorrectAppendingEmptyPath
-  commentId: M:StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.Concat_IsCorrectAppendingEmptyPath
-  fullName: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.Concat_IsCorrectAppendingEmptyPath()
-  nameWithType: SuffixStructuresPathExtensionsTests.Concat_IsCorrectAppendingEmptyPath()
-- uid: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.Concat_IsCorrectAppendingEmptyPath*
-  name: Concat_IsCorrectAppendingEmptyPath
-  href: api/StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.html#StringAlgorithms_Tests_SuffixStructures_SuffixStructuresPathExtensionsTests_Concat_IsCorrectAppendingEmptyPath_
-  commentId: Overload:StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.Concat_IsCorrectAppendingEmptyPath
-  isSpec: "True"
-  fullName: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.Concat_IsCorrectAppendingEmptyPath
-  nameWithType: SuffixStructuresPathExtensionsTests.Concat_IsCorrectAppendingEmptyPath
-- uid: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.Concat_IsCorrectPrependingEmptyPath
-  name: Concat_IsCorrectPrependingEmptyPath()
-  href: api/StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.html#StringAlgorithms_Tests_SuffixStructures_SuffixStructuresPathExtensionsTests_Concat_IsCorrectPrependingEmptyPath
-  commentId: M:StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.Concat_IsCorrectPrependingEmptyPath
-  fullName: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.Concat_IsCorrectPrependingEmptyPath()
-  nameWithType: SuffixStructuresPathExtensionsTests.Concat_IsCorrectPrependingEmptyPath()
-- uid: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.Concat_IsCorrectPrependingEmptyPath*
-  name: Concat_IsCorrectPrependingEmptyPath
-  href: api/StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.html#StringAlgorithms_Tests_SuffixStructures_SuffixStructuresPathExtensionsTests_Concat_IsCorrectPrependingEmptyPath_
-  commentId: Overload:StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.Concat_IsCorrectPrependingEmptyPath
-  isSpec: "True"
-  fullName: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.Concat_IsCorrectPrependingEmptyPath
-  nameWithType: SuffixStructuresPathExtensionsTests.Concat_IsCorrectPrependingEmptyPath
-- uid: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.Concat_IsCorrectWithTwoNonEmptyPaths
-  name: Concat_IsCorrectWithTwoNonEmptyPaths()
-  href: api/StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.html#StringAlgorithms_Tests_SuffixStructures_SuffixStructuresPathExtensionsTests_Concat_IsCorrectWithTwoNonEmptyPaths
-  commentId: M:StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.Concat_IsCorrectWithTwoNonEmptyPaths
-  fullName: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.Concat_IsCorrectWithTwoNonEmptyPaths()
-  nameWithType: SuffixStructuresPathExtensionsTests.Concat_IsCorrectWithTwoNonEmptyPaths()
-- uid: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.Concat_IsCorrectWithTwoNonEmptyPaths*
-  name: Concat_IsCorrectWithTwoNonEmptyPaths
-  href: api/StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.html#StringAlgorithms_Tests_SuffixStructures_SuffixStructuresPathExtensionsTests_Concat_IsCorrectWithTwoNonEmptyPaths_
-  commentId: Overload:StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.Concat_IsCorrectWithTwoNonEmptyPaths
-  isSpec: "True"
-  fullName: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.Concat_IsCorrectWithTwoNonEmptyPaths
-  nameWithType: SuffixStructuresPathExtensionsTests.Concat_IsCorrectWithTwoNonEmptyPaths
 - uid: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.IsSuffixOf_IsCorrectForNonEmtpyPath
   name: IsSuffixOf_IsCorrectForNonEmtpyPath()
   href: api/StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.html#StringAlgorithms_Tests_SuffixStructures_SuffixStructuresPathExtensionsTests_IsSuffixOf_IsCorrectForNonEmtpyPath
@@ -1394,69 +1970,314 @@ references:
   isSpec: "True"
   fullName: StringAlgorithms.Tests.SuffixStructures.SuffixStructuresPathExtensionsTests.SuffixFor_IsCorrectForNonEmptyPathOnSuffixTrie
   nameWithType: SuffixStructuresPathExtensionsTests.SuffixFor_IsCorrectForNonEmptyPathOnSuffixTrie
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations
+  name: StringAlgorithms.Tests.SuffixStructures.Transformations
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.html
+  commentId: N:StringAlgorithms.Tests.SuffixStructures.Transformations
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations
+  nameWithType: StringAlgorithms.Tests.SuffixStructures.Transformations
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.PartiallyIterativeSuffixStructuresConverterTests
+  name: PartiallyIterativeSuffixStructuresConverterTests
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.PartiallyIterativeSuffixStructuresConverterTests.html
+  commentId: T:StringAlgorithms.Tests.SuffixStructures.Transformations.PartiallyIterativeSuffixStructuresConverterTests
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.PartiallyIterativeSuffixStructuresConverterTests
+  nameWithType: PartiallyIterativeSuffixStructuresConverterTests
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.PartiallyIterativeSuffixStructuresConverterTests.#ctor
+  name: PartiallyIterativeSuffixStructuresConverterTests()
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.PartiallyIterativeSuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_PartiallyIterativeSuffixStructuresConverterTests__ctor
+  commentId: M:StringAlgorithms.Tests.SuffixStructures.Transformations.PartiallyIterativeSuffixStructuresConverterTests.#ctor
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.PartiallyIterativeSuffixStructuresConverterTests.PartiallyIterativeSuffixStructuresConverterTests()
+  nameWithType: PartiallyIterativeSuffixStructuresConverterTests.PartiallyIterativeSuffixStructuresConverterTests()
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.PartiallyIterativeSuffixStructuresConverterTests.#ctor*
+  name: PartiallyIterativeSuffixStructuresConverterTests
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.PartiallyIterativeSuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_PartiallyIterativeSuffixStructuresConverterTests__ctor_
+  commentId: Overload:StringAlgorithms.Tests.SuffixStructures.Transformations.PartiallyIterativeSuffixStructuresConverterTests.#ctor
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.PartiallyIterativeSuffixStructuresConverterTests.PartiallyIterativeSuffixStructuresConverterTests
+  nameWithType: PartiallyIterativeSuffixStructuresConverterTests.PartiallyIterativeSuffixStructuresConverterTests
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests
+  name: SuffixStructuresConverterTests
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html
+  commentId: T:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests
+  nameWithType: SuffixStructuresConverterTests
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.#ctor(StringAlgorithms.SuffixStructures.Transformations.ISuffixStructuresConverter)
+  name: SuffixStructuresConverterTests(ISuffixStructuresConverter)
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests__ctor_StringAlgorithms_SuffixStructures_Transformations_ISuffixStructuresConverter_
+  commentId: M:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.#ctor(StringAlgorithms.SuffixStructures.Transformations.ISuffixStructuresConverter)
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.SuffixStructuresConverterTests(StringAlgorithms.SuffixStructures.Transformations.ISuffixStructuresConverter)
+  nameWithType: SuffixStructuresConverterTests.SuffixStructuresConverterTests(ISuffixStructuresConverter)
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.#ctor*
+  name: SuffixStructuresConverterTests
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests__ctor_
+  commentId: Overload:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.#ctor
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.SuffixStructuresConverterTests
+  nameWithType: SuffixStructuresConverterTests.SuffixStructuresConverterTests
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.SuffixStructuresConverter
+  name: SuffixStructuresConverter
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_SuffixStructuresConverter
+  commentId: P:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.SuffixStructuresConverter
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.SuffixStructuresConverter
+  nameWithType: SuffixStructuresConverterTests.SuffixStructuresConverter
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.SuffixStructuresConverter*
+  name: SuffixStructuresConverter
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_SuffixStructuresConverter_
+  commentId: Overload:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.SuffixStructuresConverter
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.SuffixStructuresConverter
+  nameWithType: SuffixStructuresConverterTests.SuffixStructuresConverter
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_Builds1LevelIntermediateFrom2LevelsCoalesceableIntermediate
+  name: TrieToTree_Builds1LevelIntermediateFrom2LevelsCoalesceableIntermediate()
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_Builds1LevelIntermediateFrom2LevelsCoalesceableIntermediate
+  commentId: M:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_Builds1LevelIntermediateFrom2LevelsCoalesceableIntermediate
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_Builds1LevelIntermediateFrom2LevelsCoalesceableIntermediate()
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_Builds1LevelIntermediateFrom2LevelsCoalesceableIntermediate()
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_Builds1LevelIntermediateFrom2LevelsCoalesceableIntermediate*
+  name: TrieToTree_Builds1LevelIntermediateFrom2LevelsCoalesceableIntermediate
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_Builds1LevelIntermediateFrom2LevelsCoalesceableIntermediate_
+  commentId: Overload:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_Builds1LevelIntermediateFrom2LevelsCoalesceableIntermediate
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_Builds1LevelIntermediateFrom2LevelsCoalesceableIntermediate
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_Builds1LevelIntermediateFrom2LevelsCoalesceableIntermediate
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_Builds1LevelIntermediateFrom2LevelsNonCoalesceableIntermediate
+  name: TrieToTree_Builds1LevelIntermediateFrom2LevelsNonCoalesceableIntermediate()
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_Builds1LevelIntermediateFrom2LevelsNonCoalesceableIntermediate
+  commentId: M:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_Builds1LevelIntermediateFrom2LevelsNonCoalesceableIntermediate
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_Builds1LevelIntermediateFrom2LevelsNonCoalesceableIntermediate()
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_Builds1LevelIntermediateFrom2LevelsNonCoalesceableIntermediate()
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_Builds1LevelIntermediateFrom2LevelsNonCoalesceableIntermediate*
+  name: TrieToTree_Builds1LevelIntermediateFrom2LevelsNonCoalesceableIntermediate
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_Builds1LevelIntermediateFrom2LevelsNonCoalesceableIntermediate_
+  commentId: Overload:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_Builds1LevelIntermediateFrom2LevelsNonCoalesceableIntermediate
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_Builds1LevelIntermediateFrom2LevelsNonCoalesceableIntermediate
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_Builds1LevelIntermediateFrom2LevelsNonCoalesceableIntermediate
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_Builds1LevelIntermediateFrom3LevelsCoalesceableIntermediate
+  name: TrieToTree_Builds1LevelIntermediateFrom3LevelsCoalesceableIntermediate()
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_Builds1LevelIntermediateFrom3LevelsCoalesceableIntermediate
+  commentId: M:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_Builds1LevelIntermediateFrom3LevelsCoalesceableIntermediate
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_Builds1LevelIntermediateFrom3LevelsCoalesceableIntermediate()
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_Builds1LevelIntermediateFrom3LevelsCoalesceableIntermediate()
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_Builds1LevelIntermediateFrom3LevelsCoalesceableIntermediate*
+  name: TrieToTree_Builds1LevelIntermediateFrom3LevelsCoalesceableIntermediate
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_Builds1LevelIntermediateFrom3LevelsCoalesceableIntermediate_
+  commentId: Overload:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_Builds1LevelIntermediateFrom3LevelsCoalesceableIntermediate
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_Builds1LevelIntermediateFrom3LevelsCoalesceableIntermediate
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_Builds1LevelIntermediateFrom3LevelsCoalesceableIntermediate
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_BuildsCorrectTree
+  name: TrieToTree_BuildsCorrectTree()
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_BuildsCorrectTree
+  commentId: M:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_BuildsCorrectTree
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_BuildsCorrectTree()
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_BuildsCorrectTree()
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_BuildsCorrectTree*
+  name: TrieToTree_BuildsCorrectTree
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_BuildsCorrectTree_
+  commentId: Overload:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_BuildsCorrectTree
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_BuildsCorrectTree
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_BuildsCorrectTree
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_BuildsLeafTreeFromLeafTrie
+  name: TrieToTree_BuildsLeafTreeFromLeafTrie()
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_BuildsLeafTreeFromLeafTrie
+  commentId: M:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_BuildsLeafTreeFromLeafTrie
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_BuildsLeafTreeFromLeafTrie()
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_BuildsLeafTreeFromLeafTrie()
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_BuildsLeafTreeFromLeafTrie*
+  name: TrieToTree_BuildsLeafTreeFromLeafTrie
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_BuildsLeafTreeFromLeafTrie_
+  commentId: Overload:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_BuildsLeafTreeFromLeafTrie
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_BuildsLeafTreeFromLeafTrie
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_BuildsLeafTreeFromLeafTrie
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownNLevels_EndingOnLeaf
+  name: TrieToTree_GoesDownNLevels_EndingOnLeaf()
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_GoesDownNLevels_EndingOnLeaf
+  commentId: M:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownNLevels_EndingOnLeaf
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownNLevels_EndingOnLeaf()
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_GoesDownNLevels_EndingOnLeaf()
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownNLevels_EndingOnLeaf*
+  name: TrieToTree_GoesDownNLevels_EndingOnLeaf
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_GoesDownNLevels_EndingOnLeaf_
+  commentId: Overload:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownNLevels_EndingOnLeaf
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownNLevels_EndingOnLeaf
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_GoesDownNLevels_EndingOnLeaf
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownOneLevel_EndingOnIntermediateWithMultipleChildren
+  name: TrieToTree_GoesDownOneLevel_EndingOnIntermediateWithMultipleChildren()
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_GoesDownOneLevel_EndingOnIntermediateWithMultipleChildren
+  commentId: M:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownOneLevel_EndingOnIntermediateWithMultipleChildren
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownOneLevel_EndingOnIntermediateWithMultipleChildren()
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_GoesDownOneLevel_EndingOnIntermediateWithMultipleChildren()
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownOneLevel_EndingOnIntermediateWithMultipleChildren*
+  name: TrieToTree_GoesDownOneLevel_EndingOnIntermediateWithMultipleChildren
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_GoesDownOneLevel_EndingOnIntermediateWithMultipleChildren_
+  commentId: Overload:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownOneLevel_EndingOnIntermediateWithMultipleChildren
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownOneLevel_EndingOnIntermediateWithMultipleChildren
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_GoesDownOneLevel_EndingOnIntermediateWithMultipleChildren
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownOneLevel_EndingOnLeaf
+  name: TrieToTree_GoesDownOneLevel_EndingOnLeaf()
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_GoesDownOneLevel_EndingOnLeaf
+  commentId: M:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownOneLevel_EndingOnLeaf
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownOneLevel_EndingOnLeaf()
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_GoesDownOneLevel_EndingOnLeaf()
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownOneLevel_EndingOnLeaf*
+  name: TrieToTree_GoesDownOneLevel_EndingOnLeaf
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_GoesDownOneLevel_EndingOnLeaf_
+  commentId: Overload:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownOneLevel_EndingOnLeaf
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownOneLevel_EndingOnLeaf
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_GoesDownOneLevel_EndingOnLeaf
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownTwoLevels_EndingOnIntermediateWithMultipleChildren
+  name: TrieToTree_GoesDownTwoLevels_EndingOnIntermediateWithMultipleChildren()
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_GoesDownTwoLevels_EndingOnIntermediateWithMultipleChildren
+  commentId: M:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownTwoLevels_EndingOnIntermediateWithMultipleChildren
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownTwoLevels_EndingOnIntermediateWithMultipleChildren()
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_GoesDownTwoLevels_EndingOnIntermediateWithMultipleChildren()
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownTwoLevels_EndingOnIntermediateWithMultipleChildren*
+  name: TrieToTree_GoesDownTwoLevels_EndingOnIntermediateWithMultipleChildren
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_GoesDownTwoLevels_EndingOnIntermediateWithMultipleChildren_
+  commentId: Overload:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownTwoLevels_EndingOnIntermediateWithMultipleChildren
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownTwoLevels_EndingOnIntermediateWithMultipleChildren
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_GoesDownTwoLevels_EndingOnIntermediateWithMultipleChildren
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownTwoLevels_EndingOnLeaf
+  name: TrieToTree_GoesDownTwoLevels_EndingOnLeaf()
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_GoesDownTwoLevels_EndingOnLeaf
+  commentId: M:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownTwoLevels_EndingOnLeaf
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownTwoLevels_EndingOnLeaf()
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_GoesDownTwoLevels_EndingOnLeaf()
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownTwoLevels_EndingOnLeaf*
+  name: TrieToTree_GoesDownTwoLevels_EndingOnLeaf
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_GoesDownTwoLevels_EndingOnLeaf_
+  commentId: Overload:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownTwoLevels_EndingOnLeaf
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_GoesDownTwoLevels_EndingOnLeaf
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_GoesDownTwoLevels_EndingOnLeaf
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_OnlySupportsLeafAndIntermediateNodes_AsArgument
+  name: TrieToTree_OnlySupportsLeafAndIntermediateNodes_AsArgument()
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_OnlySupportsLeafAndIntermediateNodes_AsArgument
+  commentId: M:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_OnlySupportsLeafAndIntermediateNodes_AsArgument
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_OnlySupportsLeafAndIntermediateNodes_AsArgument()
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_OnlySupportsLeafAndIntermediateNodes_AsArgument()
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_OnlySupportsLeafAndIntermediateNodes_AsArgument*
+  name: TrieToTree_OnlySupportsLeafAndIntermediateNodes_AsArgument
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_OnlySupportsLeafAndIntermediateNodes_AsArgument_
+  commentId: Overload:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_OnlySupportsLeafAndIntermediateNodes_AsArgument
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_OnlySupportsLeafAndIntermediateNodes_AsArgument
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_OnlySupportsLeafAndIntermediateNodes_AsArgument
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_OnlySupportsLeafAndIntermediateNodes_DeepInTheStructure
+  name: TrieToTree_OnlySupportsLeafAndIntermediateNodes_DeepInTheStructure()
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_OnlySupportsLeafAndIntermediateNodes_DeepInTheStructure
+  commentId: M:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_OnlySupportsLeafAndIntermediateNodes_DeepInTheStructure
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_OnlySupportsLeafAndIntermediateNodes_DeepInTheStructure()
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_OnlySupportsLeafAndIntermediateNodes_DeepInTheStructure()
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_OnlySupportsLeafAndIntermediateNodes_DeepInTheStructure*
+  name: TrieToTree_OnlySupportsLeafAndIntermediateNodes_DeepInTheStructure
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_OnlySupportsLeafAndIntermediateNodes_DeepInTheStructure_
+  commentId: Overload:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_OnlySupportsLeafAndIntermediateNodes_DeepInTheStructure
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_OnlySupportsLeafAndIntermediateNodes_DeepInTheStructure
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_OnlySupportsLeafAndIntermediateNodes_DeepInTheStructure
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_RecurseOnChildren
+  name: TrieToTree_RecurseOnChildren()
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_RecurseOnChildren
+  commentId: M:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_RecurseOnChildren
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_RecurseOnChildren()
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_RecurseOnChildren()
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_RecurseOnChildren*
+  name: TrieToTree_RecurseOnChildren
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_RecurseOnChildren_
+  commentId: Overload:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_RecurseOnChildren
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_RecurseOnChildren
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_RecurseOnChildren
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_ReproducesALeafAsIs
+  name: TrieToTree_ReproducesALeafAsIs()
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_ReproducesALeafAsIs
+  commentId: M:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_ReproducesALeafAsIs
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_ReproducesALeafAsIs()
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_ReproducesALeafAsIs()
+- uid: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_ReproducesALeafAsIs*
+  name: TrieToTree_ReproducesALeafAsIs
+  href: api/StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Transformations_SuffixStructuresConverterTests_TrieToTree_ReproducesALeafAsIs_
+  commentId: Overload:StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_ReproducesALeafAsIs
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.SuffixStructures.Transformations.SuffixStructuresConverterTests.TrieToTree_ReproducesALeafAsIs
+  nameWithType: SuffixStructuresConverterTests.TrieToTree_ReproducesALeafAsIs
 - uid: StringAlgorithms.Tests.SuffixTrees
   name: StringAlgorithms.Tests.SuffixTrees
   href: api/StringAlgorithms.Tests.SuffixTrees.html
   commentId: N:StringAlgorithms.Tests.SuffixTrees
   fullName: StringAlgorithms.Tests.SuffixTrees
   nameWithType: StringAlgorithms.Tests.SuffixTrees
-- uid: StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests
+- uid: StringAlgorithms.Tests.SuffixTrees.Matching
+  name: StringAlgorithms.Tests.SuffixTrees.Matching
+  href: api/StringAlgorithms.Tests.SuffixTrees.Matching.html
+  commentId: N:StringAlgorithms.Tests.SuffixTrees.Matching
+  fullName: StringAlgorithms.Tests.SuffixTrees.Matching
+  nameWithType: StringAlgorithms.Tests.SuffixTrees.Matching
+- uid: StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests
   name: SuffixStructureMatcherTests
-  href: api/StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.html
-  commentId: T:StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests
-  fullName: StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests
+  href: api/StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.html
+  commentId: T:StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests
+  fullName: StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests
   nameWithType: SuffixStructureMatcherTests
-- uid: StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.Match_Preconditions
+- uid: StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.Match_Preconditions
   name: Match_Preconditions()
-  href: api/StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.html#StringAlgorithms_Tests_SuffixTrees_SuffixStructureMatcherTests_Match_Preconditions
-  commentId: M:StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.Match_Preconditions
-  fullName: StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.Match_Preconditions()
+  href: api/StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.html#StringAlgorithms_Tests_SuffixTrees_Matching_SuffixStructureMatcherTests_Match_Preconditions
+  commentId: M:StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.Match_Preconditions
+  fullName: StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.Match_Preconditions()
   nameWithType: SuffixStructureMatcherTests.Match_Preconditions()
-- uid: StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.Match_Preconditions*
+- uid: StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.Match_Preconditions*
   name: Match_Preconditions
-  href: api/StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.html#StringAlgorithms_Tests_SuffixTrees_SuffixStructureMatcherTests_Match_Preconditions_
-  commentId: Overload:StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.Match_Preconditions
+  href: api/StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.html#StringAlgorithms_Tests_SuffixTrees_Matching_SuffixStructureMatcherTests_Match_Preconditions_
+  commentId: Overload:StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.Match_Preconditions
   isSpec: "True"
-  fullName: StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.Match_Preconditions
+  fullName: StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.Match_Preconditions
   nameWithType: SuffixStructureMatcherTests.Match_Preconditions
-- uid: StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.Match_SuccessAndMatchedCharsIsCorrect
+- uid: StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.Match_SuccessAndMatchedCharsIsCorrect
   name: Match_SuccessAndMatchedCharsIsCorrect()
-  href: api/StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.html#StringAlgorithms_Tests_SuffixTrees_SuffixStructureMatcherTests_Match_SuccessAndMatchedCharsIsCorrect
-  commentId: M:StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.Match_SuccessAndMatchedCharsIsCorrect
-  fullName: StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.Match_SuccessAndMatchedCharsIsCorrect()
+  href: api/StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.html#StringAlgorithms_Tests_SuffixTrees_Matching_SuffixStructureMatcherTests_Match_SuccessAndMatchedCharsIsCorrect
+  commentId: M:StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.Match_SuccessAndMatchedCharsIsCorrect
+  fullName: StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.Match_SuccessAndMatchedCharsIsCorrect()
   nameWithType: SuffixStructureMatcherTests.Match_SuccessAndMatchedCharsIsCorrect()
-- uid: StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.Match_SuccessAndMatchedCharsIsCorrect*
+- uid: StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.Match_SuccessAndMatchedCharsIsCorrect*
   name: Match_SuccessAndMatchedCharsIsCorrect
-  href: api/StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.html#StringAlgorithms_Tests_SuffixTrees_SuffixStructureMatcherTests_Match_SuccessAndMatchedCharsIsCorrect_
-  commentId: Overload:StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.Match_SuccessAndMatchedCharsIsCorrect
+  href: api/StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.html#StringAlgorithms_Tests_SuffixTrees_Matching_SuffixStructureMatcherTests_Match_SuccessAndMatchedCharsIsCorrect_
+  commentId: Overload:StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.Match_SuccessAndMatchedCharsIsCorrect
   isSpec: "True"
-  fullName: StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.Match_SuccessAndMatchedCharsIsCorrect
+  fullName: StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.Match_SuccessAndMatchedCharsIsCorrect
   nameWithType: SuffixStructureMatcherTests.Match_SuccessAndMatchedCharsIsCorrect
-- uid: StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.Match_SuccessBeginAndPathIsCorrect
+- uid: StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.Match_SuccessBeginAndPathIsCorrect
   name: Match_SuccessBeginAndPathIsCorrect()
-  href: api/StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.html#StringAlgorithms_Tests_SuffixTrees_SuffixStructureMatcherTests_Match_SuccessBeginAndPathIsCorrect
-  commentId: M:StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.Match_SuccessBeginAndPathIsCorrect
-  fullName: StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.Match_SuccessBeginAndPathIsCorrect()
+  href: api/StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.html#StringAlgorithms_Tests_SuffixTrees_Matching_SuffixStructureMatcherTests_Match_SuccessBeginAndPathIsCorrect
+  commentId: M:StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.Match_SuccessBeginAndPathIsCorrect
+  fullName: StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.Match_SuccessBeginAndPathIsCorrect()
   nameWithType: SuffixStructureMatcherTests.Match_SuccessBeginAndPathIsCorrect()
-- uid: StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.Match_SuccessBeginAndPathIsCorrect*
+- uid: StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.Match_SuccessBeginAndPathIsCorrect*
   name: Match_SuccessBeginAndPathIsCorrect
-  href: api/StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.html#StringAlgorithms_Tests_SuffixTrees_SuffixStructureMatcherTests_Match_SuccessBeginAndPathIsCorrect_
-  commentId: Overload:StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.Match_SuccessBeginAndPathIsCorrect
+  href: api/StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.html#StringAlgorithms_Tests_SuffixTrees_Matching_SuffixStructureMatcherTests_Match_SuccessBeginAndPathIsCorrect_
+  commentId: Overload:StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.Match_SuccessBeginAndPathIsCorrect
   isSpec: "True"
-  fullName: StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.Match_SuccessBeginAndPathIsCorrect
+  fullName: StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.Match_SuccessBeginAndPathIsCorrect
   nameWithType: SuffixStructureMatcherTests.Match_SuccessBeginAndPathIsCorrect
-- uid: StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.Match_UnsuccessAndMatchedCharsIsCorrect
+- uid: StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.Match_UnsuccessAndMatchedCharsIsCorrect
   name: Match_UnsuccessAndMatchedCharsIsCorrect()
-  href: api/StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.html#StringAlgorithms_Tests_SuffixTrees_SuffixStructureMatcherTests_Match_UnsuccessAndMatchedCharsIsCorrect
-  commentId: M:StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.Match_UnsuccessAndMatchedCharsIsCorrect
-  fullName: StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.Match_UnsuccessAndMatchedCharsIsCorrect()
+  href: api/StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.html#StringAlgorithms_Tests_SuffixTrees_Matching_SuffixStructureMatcherTests_Match_UnsuccessAndMatchedCharsIsCorrect
+  commentId: M:StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.Match_UnsuccessAndMatchedCharsIsCorrect
+  fullName: StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.Match_UnsuccessAndMatchedCharsIsCorrect()
   nameWithType: SuffixStructureMatcherTests.Match_UnsuccessAndMatchedCharsIsCorrect()
-- uid: StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.Match_UnsuccessAndMatchedCharsIsCorrect*
+- uid: StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.Match_UnsuccessAndMatchedCharsIsCorrect*
   name: Match_UnsuccessAndMatchedCharsIsCorrect
-  href: api/StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.html#StringAlgorithms_Tests_SuffixTrees_SuffixStructureMatcherTests_Match_UnsuccessAndMatchedCharsIsCorrect_
-  commentId: Overload:StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.Match_UnsuccessAndMatchedCharsIsCorrect
+  href: api/StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.html#StringAlgorithms_Tests_SuffixTrees_Matching_SuffixStructureMatcherTests_Match_UnsuccessAndMatchedCharsIsCorrect_
+  commentId: Overload:StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.Match_UnsuccessAndMatchedCharsIsCorrect
   isSpec: "True"
-  fullName: StringAlgorithms.Tests.SuffixTrees.SuffixStructureMatcherTests.Match_UnsuccessAndMatchedCharsIsCorrect
+  fullName: StringAlgorithms.Tests.SuffixTrees.Matching.SuffixStructureMatcherTests.Match_UnsuccessAndMatchedCharsIsCorrect
   nameWithType: SuffixStructureMatcherTests.Match_UnsuccessAndMatchedCharsIsCorrect
 - uid: StringAlgorithms.Tests.SuffixTrees.SuffixTreeBuilderTests
   name: SuffixTreeBuilderTests
@@ -1678,6 +2499,19 @@ references:
   isSpec: "True"
   fullName: StringAlgorithms.Tests.SuffixTrees.SuffixTreeEdgeTests.Ctor_ValidIndex
   nameWithType: SuffixTreeEdgeTests.Ctor_ValidIndex
+- uid: StringAlgorithms.Tests.SuffixTrees.SuffixTreeEdgeTests.Ctor_ZeroLengthIsValid
+  name: Ctor_ZeroLengthIsValid()
+  href: api/StringAlgorithms.Tests.SuffixTrees.SuffixTreeEdgeTests.html#StringAlgorithms_Tests_SuffixTrees_SuffixTreeEdgeTests_Ctor_ZeroLengthIsValid
+  commentId: M:StringAlgorithms.Tests.SuffixTrees.SuffixTreeEdgeTests.Ctor_ZeroLengthIsValid
+  fullName: StringAlgorithms.Tests.SuffixTrees.SuffixTreeEdgeTests.Ctor_ZeroLengthIsValid()
+  nameWithType: SuffixTreeEdgeTests.Ctor_ZeroLengthIsValid()
+- uid: StringAlgorithms.Tests.SuffixTrees.SuffixTreeEdgeTests.Ctor_ZeroLengthIsValid*
+  name: Ctor_ZeroLengthIsValid
+  href: api/StringAlgorithms.Tests.SuffixTrees.SuffixTreeEdgeTests.html#StringAlgorithms_Tests_SuffixTrees_SuffixTreeEdgeTests_Ctor_ZeroLengthIsValid_
+  commentId: Overload:StringAlgorithms.Tests.SuffixTrees.SuffixTreeEdgeTests.Ctor_ZeroLengthIsValid
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.SuffixTrees.SuffixTreeEdgeTests.Ctor_ZeroLengthIsValid
+  nameWithType: SuffixTreeEdgeTests.Ctor_ZeroLengthIsValid
 - uid: StringAlgorithms.Tests.SuffixTrees.SuffixTreeEdgeTests.Of_InboundIndexes
   name: Of_InboundIndexes()
   href: api/StringAlgorithms.Tests.SuffixTrees.SuffixTreeEdgeTests.html#StringAlgorithms_Tests_SuffixTrees_SuffixTreeEdgeTests_Of_InboundIndexes
@@ -2342,6 +3176,51 @@ references:
   commentId: N:StringAlgorithms.Tests.Utilities
   fullName: StringAlgorithms.Tests.Utilities
   nameWithType: StringAlgorithms.Tests.Utilities
+- uid: StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests
+  name: ValueReadOnlyCollectionsExtensionsTests
+  href: api/StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests.html
+  commentId: T:StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests
+  fullName: StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests
+  nameWithType: ValueReadOnlyCollectionsExtensionsTests
+- uid: StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests.ToValueReadOnlyCollection_IsCorrect
+  name: ToValueReadOnlyCollection_IsCorrect()
+  href: api/StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests.html#StringAlgorithms_Tests_Utilities_ValueReadOnlyCollectionsExtensionsTests_ToValueReadOnlyCollection_IsCorrect
+  commentId: M:StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests.ToValueReadOnlyCollection_IsCorrect
+  fullName: StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests.ToValueReadOnlyCollection_IsCorrect()
+  nameWithType: ValueReadOnlyCollectionsExtensionsTests.ToValueReadOnlyCollection_IsCorrect()
+- uid: StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests.ToValueReadOnlyCollection_IsCorrect*
+  name: ToValueReadOnlyCollection_IsCorrect
+  href: api/StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests.html#StringAlgorithms_Tests_Utilities_ValueReadOnlyCollectionsExtensionsTests_ToValueReadOnlyCollection_IsCorrect_
+  commentId: Overload:StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests.ToValueReadOnlyCollection_IsCorrect
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests.ToValueReadOnlyCollection_IsCorrect
+  nameWithType: ValueReadOnlyCollectionsExtensionsTests.ToValueReadOnlyCollection_IsCorrect
+- uid: StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests.ToValueReadOnlyDictionary_IsCorrectWithDictionary
+  name: ToValueReadOnlyDictionary_IsCorrectWithDictionary()
+  href: api/StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests.html#StringAlgorithms_Tests_Utilities_ValueReadOnlyCollectionsExtensionsTests_ToValueReadOnlyDictionary_IsCorrectWithDictionary
+  commentId: M:StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests.ToValueReadOnlyDictionary_IsCorrectWithDictionary
+  fullName: StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests.ToValueReadOnlyDictionary_IsCorrectWithDictionary()
+  nameWithType: ValueReadOnlyCollectionsExtensionsTests.ToValueReadOnlyDictionary_IsCorrectWithDictionary()
+- uid: StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests.ToValueReadOnlyDictionary_IsCorrectWithDictionary*
+  name: ToValueReadOnlyDictionary_IsCorrectWithDictionary
+  href: api/StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests.html#StringAlgorithms_Tests_Utilities_ValueReadOnlyCollectionsExtensionsTests_ToValueReadOnlyDictionary_IsCorrectWithDictionary_
+  commentId: Overload:StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests.ToValueReadOnlyDictionary_IsCorrectWithDictionary
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests.ToValueReadOnlyDictionary_IsCorrectWithDictionary
+  nameWithType: ValueReadOnlyCollectionsExtensionsTests.ToValueReadOnlyDictionary_IsCorrectWithDictionary
+- uid: StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests.ToValueReadOnlyDictionary_IsCorrectWithEnumerable
+  name: ToValueReadOnlyDictionary_IsCorrectWithEnumerable()
+  href: api/StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests.html#StringAlgorithms_Tests_Utilities_ValueReadOnlyCollectionsExtensionsTests_ToValueReadOnlyDictionary_IsCorrectWithEnumerable
+  commentId: M:StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests.ToValueReadOnlyDictionary_IsCorrectWithEnumerable
+  fullName: StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests.ToValueReadOnlyDictionary_IsCorrectWithEnumerable()
+  nameWithType: ValueReadOnlyCollectionsExtensionsTests.ToValueReadOnlyDictionary_IsCorrectWithEnumerable()
+- uid: StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests.ToValueReadOnlyDictionary_IsCorrectWithEnumerable*
+  name: ToValueReadOnlyDictionary_IsCorrectWithEnumerable
+  href: api/StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests.html#StringAlgorithms_Tests_Utilities_ValueReadOnlyCollectionsExtensionsTests_ToValueReadOnlyDictionary_IsCorrectWithEnumerable_
+  commentId: Overload:StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests.ToValueReadOnlyDictionary_IsCorrectWithEnumerable
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests.ToValueReadOnlyDictionary_IsCorrectWithEnumerable
+  nameWithType: ValueReadOnlyCollectionsExtensionsTests.ToValueReadOnlyDictionary_IsCorrectWithEnumerable
 - uid: StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionTests
   name: ValueReadOnlyCollectionTests
   href: api/StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionTests.html
@@ -2497,6 +3376,19 @@ references:
   isSpec: "True"
   fullName: StringAlgorithms.Tests.Utilities.ValueReadOnlyDictionaryTests.Ctor_IndependenceFromInputEnumerable
   nameWithType: ValueReadOnlyDictionaryTests.Ctor_IndependenceFromInputEnumerable
+- uid: StringAlgorithms.Tests.Utilities.ValueReadOnlyDictionaryTests.Ctor_WithEnumerableOfEntries
+  name: Ctor_WithEnumerableOfEntries()
+  href: api/StringAlgorithms.Tests.Utilities.ValueReadOnlyDictionaryTests.html#StringAlgorithms_Tests_Utilities_ValueReadOnlyDictionaryTests_Ctor_WithEnumerableOfEntries
+  commentId: M:StringAlgorithms.Tests.Utilities.ValueReadOnlyDictionaryTests.Ctor_WithEnumerableOfEntries
+  fullName: StringAlgorithms.Tests.Utilities.ValueReadOnlyDictionaryTests.Ctor_WithEnumerableOfEntries()
+  nameWithType: ValueReadOnlyDictionaryTests.Ctor_WithEnumerableOfEntries()
+- uid: StringAlgorithms.Tests.Utilities.ValueReadOnlyDictionaryTests.Ctor_WithEnumerableOfEntries*
+  name: Ctor_WithEnumerableOfEntries
+  href: api/StringAlgorithms.Tests.Utilities.ValueReadOnlyDictionaryTests.html#StringAlgorithms_Tests_Utilities_ValueReadOnlyDictionaryTests_Ctor_WithEnumerableOfEntries_
+  commentId: Overload:StringAlgorithms.Tests.Utilities.ValueReadOnlyDictionaryTests.Ctor_WithEnumerableOfEntries
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.Utilities.ValueReadOnlyDictionaryTests.Ctor_WithEnumerableOfEntries
+  nameWithType: ValueReadOnlyDictionaryTests.Ctor_WithEnumerableOfEntries
 - uid: StringAlgorithms.Tests.Utilities.ValueReadOnlyDictionaryTests.DifferentOperator_IsByValue
   name: DifferentOperator_IsByValue()
   href: api/StringAlgorithms.Tests.Utilities.ValueReadOnlyDictionaryTests.html#StringAlgorithms_Tests_Utilities_ValueReadOnlyDictionaryTests_DifferentOperator_IsByValue
@@ -2889,6 +3781,15 @@ references:
   fullName.vb: StringAlgorithms.Utilities.ValueReadOnlyCollectionsExtensions.ToValueReadOnlyDictionary(Of TKey, TValue)(IDictionary(Of TKey, TValue))
   nameWithType: ValueReadOnlyCollectionsExtensions.ToValueReadOnlyDictionary<TKey, TValue>(IDictionary<TKey, TValue>)
   nameWithType.vb: ValueReadOnlyCollectionsExtensions.ToValueReadOnlyDictionary(Of TKey, TValue)(IDictionary(Of TKey, TValue))
+- uid: StringAlgorithms.Utilities.ValueReadOnlyCollectionsExtensions.ToValueReadOnlyDictionary``2(IEnumerable{KeyValuePair{``0,``1}})
+  name: ToValueReadOnlyDictionary<TKey, TValue>(IEnumerable<KeyValuePair<TKey, TValue>>)
+  href: api/StringAlgorithms.Utilities.ValueReadOnlyCollectionsExtensions.html#StringAlgorithms_Utilities_ValueReadOnlyCollectionsExtensions_ToValueReadOnlyDictionary__2_IEnumerable_KeyValuePair___0___1___
+  commentId: M:StringAlgorithms.Utilities.ValueReadOnlyCollectionsExtensions.ToValueReadOnlyDictionary``2(IEnumerable{KeyValuePair{``0,``1}})
+  name.vb: ToValueReadOnlyDictionary(Of TKey, TValue)(IEnumerable(Of KeyValuePair(Of TKey, TValue)))
+  fullName: StringAlgorithms.Utilities.ValueReadOnlyCollectionsExtensions.ToValueReadOnlyDictionary<TKey, TValue>(IEnumerable<KeyValuePair<TKey, TValue>>)
+  fullName.vb: StringAlgorithms.Utilities.ValueReadOnlyCollectionsExtensions.ToValueReadOnlyDictionary(Of TKey, TValue)(IEnumerable(Of KeyValuePair(Of TKey, TValue)))
+  nameWithType: ValueReadOnlyCollectionsExtensions.ToValueReadOnlyDictionary<TKey, TValue>(IEnumerable<KeyValuePair<TKey, TValue>>)
+  nameWithType.vb: ValueReadOnlyCollectionsExtensions.ToValueReadOnlyDictionary(Of TKey, TValue)(IEnumerable(Of KeyValuePair(Of TKey, TValue)))
 - uid: StringAlgorithms.Utilities.ValueReadOnlyDictionary`2
   name: ValueReadOnlyDictionary<TKey, TValue>
   href: api/StringAlgorithms.Utilities.ValueReadOnlyDictionary-2.html
@@ -2907,6 +3808,15 @@ references:
   fullName.vb: StringAlgorithms.Utilities.ValueReadOnlyDictionary(Of TKey, TValue).ValueReadOnlyDictionary(IDictionary(Of TKey, TValue))
   nameWithType: ValueReadOnlyDictionary<TKey, TValue>.ValueReadOnlyDictionary(IDictionary<TKey, TValue>)
   nameWithType.vb: ValueReadOnlyDictionary(Of TKey, TValue).ValueReadOnlyDictionary(IDictionary(Of TKey, TValue))
+- uid: StringAlgorithms.Utilities.ValueReadOnlyDictionary`2.#ctor(IEnumerable{KeyValuePair{`0,`1}})
+  name: ValueReadOnlyDictionary(IEnumerable<KeyValuePair<TKey, TValue>>)
+  href: api/StringAlgorithms.Utilities.ValueReadOnlyDictionary-2.html#StringAlgorithms_Utilities_ValueReadOnlyDictionary_2__ctor_IEnumerable_KeyValuePair__0__1___
+  commentId: M:StringAlgorithms.Utilities.ValueReadOnlyDictionary`2.#ctor(IEnumerable{KeyValuePair{`0,`1}})
+  name.vb: ValueReadOnlyDictionary(IEnumerable(Of KeyValuePair(Of TKey, TValue)))
+  fullName: StringAlgorithms.Utilities.ValueReadOnlyDictionary<TKey, TValue>.ValueReadOnlyDictionary(IEnumerable<KeyValuePair<TKey, TValue>>)
+  fullName.vb: StringAlgorithms.Utilities.ValueReadOnlyDictionary(Of TKey, TValue).ValueReadOnlyDictionary(IEnumerable(Of KeyValuePair(Of TKey, TValue)))
+  nameWithType: ValueReadOnlyDictionary<TKey, TValue>.ValueReadOnlyDictionary(IEnumerable<KeyValuePair<TKey, TValue>>)
+  nameWithType.vb: ValueReadOnlyDictionary(Of TKey, TValue).ValueReadOnlyDictionary(IEnumerable(Of KeyValuePair(Of TKey, TValue)))
 - uid: StringAlgorithms.Utilities.ValueReadOnlyDictionary`2.#ctor*
   name: ValueReadOnlyDictionary
   href: api/StringAlgorithms.Utilities.ValueReadOnlyDictionary-2.html#StringAlgorithms_Utilities_ValueReadOnlyDictionary_2__ctor_

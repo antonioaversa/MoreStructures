@@ -83,8 +83,8 @@
   
   <h1 id="StringAlgorithms_SuffixTries_SuffixTrieEdge" data-uid="StringAlgorithms.SuffixTries.SuffixTrieEdge" class="text-break">Class SuffixTrieEdge
   </h1>
-  <div class="markdown level0 summary"><p>The index key of the collection of children of a Suffix Trie node, which identifies a single char in text, used
-as a selector to navigate the Suffix Trie in text pattern matching.</p>
+  <div class="markdown level0 summary"><p>The index key of the collection of children of a <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a>, which identifies a single char in
+text, used as a selector to navigate the <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a> in text pattern matching.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -96,9 +96,11 @@ as a selector to navigate the Suffix Trie in text pattern matching.</p>
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureEdge-4.html">ISuffixStructureEdge</a>&lt;<a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreePath.html">SuffixTreePath</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeBuilder.html">SuffixTreeBuilder</a>&gt;</div>
+    <div><a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeEdge-4.html">IRecImmDictIndexedTreeEdge</a>&lt;<a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreePath.html">SuffixTreePath</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeBuilder.html">SuffixTreeBuilder</a>&gt;</div>
     <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a>&gt;</div>
     <div><a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureEdge-4.html">ISuffixStructureEdge</a>&lt;<a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieEdge.html">SuffixTrieEdge</a>, <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a>, <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTriePath.html">SuffixTriePath</a>, <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieBuilder.html">SuffixTrieBuilder</a>&gt;</div>
     <div><a class="xref" href="StringAlgorithms.TextWithTerminator.ISelector.html">TextWithTerminator.ISelector</a></div>
+    <div><a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeEdge-4.html">IRecImmDictIndexedTreeEdge</a>&lt;<a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieEdge.html">SuffixTrieEdge</a>, <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a>, <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTriePath.html">SuffixTriePath</a>, <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieBuilder.html">SuffixTrieBuilder</a>&gt;</div>
     <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieEdge.html">SuffixTrieEdge</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
@@ -138,7 +140,7 @@ as a selector to navigate the Suffix Trie in text pattern matching.</p>
   <h6><strong>Assembly</strong>: StringAlgorithms.dll</h6>
   <h5 id="StringAlgorithms_SuffixTries_SuffixTrieEdge_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SuffixTrieEdge : SuffixTreeEdge, ISuffixStructureEdge&lt;SuffixTreeEdge, SuffixTreeNode, SuffixTreePath, SuffixTreeBuilder&gt;, IEquatable&lt;SuffixTreeEdge&gt;, ISuffixStructureEdge&lt;SuffixTrieEdge, SuffixTrieNode, SuffixTriePath, SuffixTrieBuilder&gt;, TextWithTerminator.ISelector, IEquatable&lt;SuffixTrieEdge&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class SuffixTrieEdge : SuffixTreeEdge, ISuffixStructureEdge&lt;SuffixTreeEdge, SuffixTreeNode, SuffixTreePath, SuffixTreeBuilder&gt;, IRecImmDictIndexedTreeEdge&lt;SuffixTreeEdge, SuffixTreeNode, SuffixTreePath, SuffixTreeBuilder&gt;, IEquatable&lt;SuffixTreeEdge&gt;, ISuffixStructureEdge&lt;SuffixTrieEdge, SuffixTrieNode, SuffixTriePath, SuffixTrieBuilder&gt;, TextWithTerminator.ISelector, IRecImmDictIndexedTreeEdge&lt;SuffixTrieEdge, SuffixTrieNode, SuffixTriePath, SuffixTrieBuilder&gt;, IEquatable&lt;SuffixTrieEdge&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -151,8 +153,8 @@ as a selector to navigate the Suffix Trie in text pattern matching.</p>
   </span>
   <a id="StringAlgorithms_SuffixTries_SuffixTrieEdge__ctor_" data-uid="StringAlgorithms.SuffixTries.SuffixTrieEdge.#ctor*"></a>
   <h4 id="StringAlgorithms_SuffixTries_SuffixTrieEdge__ctor_System_Int32_" data-uid="StringAlgorithms.SuffixTries.SuffixTrieEdge.#ctor(System.Int32)">SuffixTrieEdge(Int32)</h4>
-  <div class="markdown level1 summary"><p>The index key of the collection of children of a Suffix Trie node, which identifies a single char in text, used
-as a selector to navigate the Suffix Trie in text pattern matching.</p>
+  <div class="markdown level1 summary"><p>The index key of the collection of children of a <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a>, which identifies a single char in
+text, used as a selector to navigate the <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a> in text pattern matching.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -214,6 +216,9 @@ as a selector to navigate the Suffix Trie in text pattern matching.</p>
       <a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureEdge-4.html">ISuffixStructureEdge&lt;TEdge, TNode, TPath, TBuilder&gt;</a>
   </div>
   <div>
+      <a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeEdge-4.html">IRecImmDictIndexedTreeEdge&lt;TEdge, TNode, TPath, TBuilder&gt;</a>
+  </div>
+  <div>
       <span class="xref">System.IEquatable&lt;T&gt;</span>
   </div>
   <div>
@@ -221,6 +226,9 @@ as a selector to navigate the Suffix Trie in text pattern matching.</p>
   </div>
   <div>
       <a class="xref" href="StringAlgorithms.TextWithTerminator.ISelector.html">TextWithTerminator.ISelector</a>
+  </div>
+  <div>
+      <a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeEdge-4.html">IRecImmDictIndexedTreeEdge&lt;TEdge, TNode, TPath, TBuilder&gt;</a>
   </div>
   <div>
       <span class="xref">System.IEquatable&lt;T&gt;</span>

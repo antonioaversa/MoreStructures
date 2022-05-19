@@ -83,8 +83,8 @@
   
   <h1 id="StringAlgorithms_SuffixTrees_SuffixTreeEdge" data-uid="StringAlgorithms.SuffixTrees.SuffixTreeEdge" class="text-break">Class SuffixTreeEdge
   </h1>
-  <div class="markdown level0 summary"><p>The index key of the collection of children of a Suffix Tree node, which identifies a non-empty substring in text,
-used as a selector to navigate the Suffix Tree in text pattern matching.</p>
+  <div class="markdown level0 summary"><p>The index key of the collection of children of a <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a>, which identifies a non-empty
+substring in text used as a selector to navigate the <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a> in text pattern matching.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -97,6 +97,7 @@ used as a selector to navigate the Suffix Tree in text pattern matching.</p>
     <h5>Implements</h5>
     <div><a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureEdge-4.html">ISuffixStructureEdge</a>&lt;<a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreePath.html">SuffixTreePath</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeBuilder.html">SuffixTreeBuilder</a>&gt;</div>
     <div><a class="xref" href="StringAlgorithms.TextWithTerminator.ISelector.html">TextWithTerminator.ISelector</a></div>
+    <div><a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeEdge-4.html">IRecImmDictIndexedTreeEdge</a>&lt;<a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreePath.html">SuffixTreePath</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeBuilder.html">SuffixTreeBuilder</a>&gt;</div>
     <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
@@ -127,7 +128,7 @@ used as a selector to navigate the Suffix Tree in text pattern matching.</p>
   <h6><strong>Assembly</strong>: StringAlgorithms.dll</h6>
   <h5 id="StringAlgorithms_SuffixTrees_SuffixTreeEdge_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SuffixTreeEdge : ISuffixStructureEdge&lt;SuffixTreeEdge, SuffixTreeNode, SuffixTreePath, SuffixTreeBuilder&gt;, TextWithTerminator.ISelector, IEquatable&lt;SuffixTreeEdge&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class SuffixTreeEdge : ISuffixStructureEdge&lt;SuffixTreeEdge, SuffixTreeNode, SuffixTreePath, SuffixTreeBuilder&gt;, TextWithTerminator.ISelector, IRecImmDictIndexedTreeEdge&lt;SuffixTreeEdge, SuffixTreeNode, SuffixTreePath, SuffixTreeBuilder&gt;, IEquatable&lt;SuffixTreeEdge&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -140,8 +141,8 @@ used as a selector to navigate the Suffix Tree in text pattern matching.</p>
   </span>
   <a id="StringAlgorithms_SuffixTrees_SuffixTreeEdge__ctor_" data-uid="StringAlgorithms.SuffixTrees.SuffixTreeEdge.#ctor*"></a>
   <h4 id="StringAlgorithms_SuffixTrees_SuffixTreeEdge__ctor_System_Int32_System_Int32_" data-uid="StringAlgorithms.SuffixTrees.SuffixTreeEdge.#ctor(System.Int32,System.Int32)">SuffixTreeEdge(Int32, Int32)</h4>
-  <div class="markdown level1 summary"><p>The index key of the collection of children of a Suffix Tree node, which identifies a non-empty substring in text,
-used as a selector to navigate the Suffix Tree in text pattern matching.</p>
+  <div class="markdown level1 summary"><p>The index key of the collection of children of a <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a>, which identifies a non-empty
+substring in text used as a selector to navigate the <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a> in text pattern matching.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -294,6 +295,9 @@ used as a selector to navigate the Suffix Tree in text pattern matching.</p>
   </div>
   <div>
       <a class="xref" href="StringAlgorithms.TextWithTerminator.ISelector.html">TextWithTerminator.ISelector</a>
+  </div>
+  <div>
+      <a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeEdge-4.html">IRecImmDictIndexedTreeEdge&lt;TEdge, TNode, TPath, TBuilder&gt;</a>
   </div>
   <div>
       <span class="xref">System.IEquatable&lt;T&gt;</span>

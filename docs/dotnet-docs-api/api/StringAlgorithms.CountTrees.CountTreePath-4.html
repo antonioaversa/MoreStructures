@@ -1,0 +1,319 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CountTreePath&lt;TEdge, TNode, TPath, TBuilder&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CountTreePath&lt;TEdge, TNode, TPath, TBuilder&gt;
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="StringAlgorithms.CountTrees.CountTreePath`4">
+  
+  
+  <h1 id="StringAlgorithms_CountTrees_CountTreePath_4" data-uid="StringAlgorithms.CountTrees.CountTreePath`4" class="text-break">Class CountTreePath&lt;TEdge, TNode, TPath, TBuilder&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>A path of a <a class="xref" href="StringAlgorithms.CountTrees.CountTreeNode-4.html">CountTreeNode&lt;TEdge, TNode, TPath, TBuilder&gt;</a>, a sequence of nodes and their incoming
+edges <a class="xref" href="StringAlgorithms.CountTrees.CountTreeEdge-4.html">CountTreeEdge&lt;TEdge, TNode, TPath, TBuilder&gt;</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">CountTreePath&lt;TEdge, TNode, TPath, TBuilder&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath-4.html">IRecImmDictIndexedTreePath</a>&lt;<a class="xref" href="StringAlgorithms.CountTrees.CountTreeEdge-4.html">CountTreeEdge</a>&lt;TEdge, TNode, TPath, TBuilder&gt;, <a class="xref" href="StringAlgorithms.CountTrees.CountTreeNode-4.html">CountTreeNode</a>&lt;TEdge, TNode, TPath, TBuilder&gt;, <a class="xref" href="StringAlgorithms.CountTrees.CountTreePath-4.html">CountTreePath</a>&lt;TEdge, TNode, TPath, TBuilder&gt;, <a class="xref" href="StringAlgorithms.CountTrees.CountTreeBuilder-4.html">CountTreeBuilder</a>&lt;TEdge, TNode, TPath, TBuilder&gt;&gt;</div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="StringAlgorithms.CountTrees.CountTreePath-4.html">CountTreePath</a>&lt;TEdge, TNode, TPath, TBuilder&gt;&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="StringAlgorithms.CountTrees.html">StringAlgorithms.CountTrees</a></h6>
+  <h6><strong>Assembly</strong>: StringAlgorithms.dll</h6>
+  <h5 id="StringAlgorithms_CountTrees_CountTreePath_4_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class CountTreePath&lt;TEdge, TNode, TPath, TBuilder&gt; : IRecImmDictIndexedTreePath&lt;CountTreeEdge&lt;TEdge, TNode, TPath, TBuilder&gt;, CountTreeNode&lt;TEdge, TNode, TPath, TBuilder&gt;, CountTreePath&lt;TEdge, TNode, TPath, TBuilder&gt;, CountTreeBuilder&lt;TEdge, TNode, TPath, TBuilder&gt;&gt;, IEquatable&lt;CountTreePath&lt;TEdge, TNode, TPath, TBuilder&gt;&gt; where TEdge : IRecImmDictIndexedTreeEdge&lt;TEdge, TNode, TPath, TBuilder&gt; where TNode : IRecImmDictIndexedTreeNode&lt;TEdge, TNode, TPath, TBuilder&gt; where TPath : IRecImmDictIndexedTreePath&lt;TEdge, TNode, TPath, TBuilder&gt; where TBuilder : IRecImmDictIndexedTreeBuilder&lt;TEdge, TNode, TPath, TBuilder&gt;, new()</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TEdge</span></td>
+        <td><p><inheritdoc cref="T:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode`4" path="/typeparam[@name=&apos;TEdge&apos;]"></inheritdoc></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TNode</span></td>
+        <td><p><inheritdoc cref="T:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode`4" path="/typeparam[@name=&apos;TNode&apos;]"></inheritdoc></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TPath</span></td>
+        <td><p><inheritdoc cref="T:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode`4" path="/typeparam[@name=&apos;TPath&apos;]"></inheritdoc></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TBuilder</span></td>
+        <td><p><inheritdoc cref="T:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode`4" path="/typeparam[@name=&apos;TBuilder&apos;]"></inheritdoc></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_CountTrees_CountTreePath_4__ctor__2_.md&amp;value=---%0Auid%3A%20StringAlgorithms.CountTrees.CountTreePath%604.%23ctor(%602)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/CountTrees/CountTreePath.cs/#L23">View Source</a>
+  </span>
+  <a id="StringAlgorithms_CountTrees_CountTreePath_4__ctor_" data-uid="StringAlgorithms.CountTrees.CountTreePath`4.#ctor*"></a>
+  <h4 id="StringAlgorithms_CountTrees_CountTreePath_4__ctor__2_" data-uid="StringAlgorithms.CountTrees.CountTreePath`4.#ctor(`2)">CountTreePath(TPath)</h4>
+  <div class="markdown level1 summary"><p>A path of a <a class="xref" href="StringAlgorithms.CountTrees.CountTreeNode-4.html">CountTreeNode&lt;TEdge, TNode, TPath, TBuilder&gt;</a>, a sequence of nodes and their incoming
+edges <a class="xref" href="StringAlgorithms.CountTrees.CountTreeEdge-4.html">CountTreeEdge&lt;TEdge, TNode, TPath, TBuilder&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CountTreePath(TPath WrappedPath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TPath</span></td>
+        <td><span class="parametername">WrappedPath</span></td>
+        <td><blockquote>
+<p>The path being wrapped.</p>
+</blockquote>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_CountTrees_CountTreePath_4_PathNodes.md&amp;value=---%0Auid%3A%20StringAlgorithms.CountTrees.CountTreePath%604.PathNodes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/CountTrees/CountTreePath.cs/#L35">View Source</a>
+  </span>
+  <a id="StringAlgorithms_CountTrees_CountTreePath_4_PathNodes_" data-uid="StringAlgorithms.CountTrees.CountTreePath`4.PathNodes*"></a>
+  <h4 id="StringAlgorithms_CountTrees_CountTreePath_4_PathNodes" data-uid="StringAlgorithms.CountTrees.CountTreePath`4.PathNodes">PathNodes</h4>
+  <div class="markdown level1 summary"><p>A readonly view of the private collection of path nodes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;KeyValuePair&lt;CountTreeEdge&lt;TEdge, TNode, TPath, TBuilder&gt;, CountTreeNode&lt;TEdge, TNode, TPath, TBuilder&gt;&gt;&gt; PathNodes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">KeyValuePair</span>&lt;<a class="xref" href="StringAlgorithms.CountTrees.CountTreeEdge-4.html">CountTreeEdge</a>&lt;TEdge, TNode, TPath, TBuilder&gt;, <a class="xref" href="StringAlgorithms.CountTrees.CountTreeNode-4.html">CountTreeNode</a>&lt;TEdge, TNode, TPath, TBuilder&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_CountTrees_CountTreePath_4_WrappedPath.md&amp;value=---%0Auid%3A%20StringAlgorithms.CountTrees.CountTreePath%604.WrappedPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/CountTrees/CountTreePath.cs/#L23">View Source</a>
+  </span>
+  <a id="StringAlgorithms_CountTrees_CountTreePath_4_WrappedPath_" data-uid="StringAlgorithms.CountTrees.CountTreePath`4.WrappedPath*"></a>
+  <h4 id="StringAlgorithms_CountTrees_CountTreePath_4_WrappedPath" data-uid="StringAlgorithms.CountTrees.CountTreePath`4.WrappedPath">WrappedPath</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TPath WrappedPath { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TPath</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath-4.html">IRecImmDictIndexedTreePath&lt;TEdge, TNode, TPath, TBuilder&gt;</a>
+  </div>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="StringAlgorithms.RecImmTrees.RecImmDictIndexedTreePathExtensions.html#StringAlgorithms_RecImmTrees_RecImmDictIndexedTreePathExtensions_Concat__4_StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreePath___0___1___2___3__StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreePath___0___1___2___3__">RecImmDictIndexedTreePathExtensions.Concat&lt;TEdge, TNode, TPath, TBuilder&gt;(IRecImmDictIndexedTreePath&lt;TEdge, TNode, TPath, TBuilder&gt;, IRecImmDictIndexedTreePath&lt;TEdge, TNode, TPath, TBuilder&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="StringAlgorithms.RecImmTrees.RecImmDictIndexedTreePathExtensions.html#StringAlgorithms_RecImmTrees_RecImmDictIndexedTreePathExtensions_Append__4_StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreePath___0___1___2___3____0___1_">RecImmDictIndexedTreePathExtensions.Append&lt;TEdge, TNode, TPath, TBuilder&gt;(IRecImmDictIndexedTreePath&lt;TEdge, TNode, TPath, TBuilder&gt;, TEdge, TNode)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_CountTrees_CountTreePath_4.md&amp;value=---%0Auid%3A%20StringAlgorithms.CountTrees.CountTreePath%604%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/CountTrees/CountTreePath.cs/#L23" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
