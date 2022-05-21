@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class SuffixStructureMatcher
+    <title>Class PartiallyIterativeConverter
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class SuffixStructureMatcher
+    <meta name="title" content="Class PartiallyIterativeConverter
    ">
     <meta name="generator" content="docfx 2.59.2.0">
     
@@ -78,19 +78,23 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatcher">
+            <article class="content wrap" id="_content" data-uid="StringAlgorithms.SuffixStructures.Conversions.PartiallyIterativeConverter">
   
   
-  <h1 id="StringAlgorithms_SuffixStructures_Matching_SuffixStructureMatcher" data-uid="StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatcher" class="text-break">Class SuffixStructureMatcher
+  <h1 id="StringAlgorithms_SuffixStructures_Conversions_PartiallyIterativeConverter" data-uid="StringAlgorithms.SuffixStructures.Conversions.PartiallyIterativeConverter" class="text-break">Class PartiallyIterativeConverter
   </h1>
-  <div class="markdown level0 summary"><p>Exposes utility methods to match a <a class="xref" href="StringAlgorithms.TextWithTerminator.html">TextWithTerminator</a> against a
-<a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureNode-4.html">ISuffixStructureNode&lt;TEdge, TNode, TPath, TBuilder&gt;</a> concretion.</p>
+  <div class="markdown level0 summary"><p><inheritdoc cref="T:StringAlgorithms.SuffixStructures.Conversions.IConverter"></inheritdoc>
+<a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a> a &quot;reasonable&quot; height of the expect output <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">SuffixStructureMatcher</span></div>
+    <div class="level1"><span class="xref">PartiallyIterativeConverter</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="StringAlgorithms.SuffixStructures.Conversions.IConverter.html">IConverter</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -116,30 +120,36 @@
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="StringAlgorithms.SuffixStructures.Matching.html">StringAlgorithms.SuffixStructures.Matching</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="StringAlgorithms.SuffixStructures.Conversions.html">StringAlgorithms.SuffixStructures.Conversions</a></h6>
   <h6><strong>Assembly</strong>: StringAlgorithms.dll</h6>
-  <h5 id="StringAlgorithms_SuffixStructures_Matching_SuffixStructureMatcher_syntax">Syntax</h5>
+  <h5 id="StringAlgorithms_SuffixStructures_Conversions_PartiallyIterativeConverter_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class SuffixStructureMatcher</code></pre>
+    <pre><code class="lang-csharp hljs">public class PartiallyIterativeConverter : IConverter</code></pre>
   </div>
+  <h5 id="StringAlgorithms_SuffixStructures_Conversions_PartiallyIterativeConverter_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Conversion is iteratively for no-branching paths (i.e. on nodes having a single child) and recursively on
+branching of the input <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a>, with occasional mutation of internal state of the
+conversion.
+Limited by stack depth (but less than <a class="xref" href="StringAlgorithms.SuffixStructures.Conversions.FullyRecursiveConverter.html">FullyRecursiveConverter</a> and usable with</p>
+</div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixStructures_Matching_SuffixStructureMatcher_Match__4_StringAlgorithms_SuffixStructures_ISuffixStructureNode___0___1___2___3__StringAlgorithms_TextWithTerminator_System_String_.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatcher.Match%60%604(StringAlgorithms.SuffixStructures.ISuffixStructureNode%7B%60%600%2C%60%601%2C%60%602%2C%60%603%7D%2CStringAlgorithms.TextWithTerminator%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixStructures_Conversions_PartiallyIterativeConverter_TrieToTree_StringAlgorithms_SuffixTries_SuffixTrieNode_.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixStructures.Conversions.PartiallyIterativeConverter.TrieToTree(StringAlgorithms.SuffixTries.SuffixTrieNode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixStructures/Matching/SuffixStructureMatcher.cs/#L20">View Source</a>
+    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixStructures/Conversions/PartiallyIterativeConverter.cs/#L19">View Source</a>
   </span>
-  <a id="StringAlgorithms_SuffixStructures_Matching_SuffixStructureMatcher_Match_" data-uid="StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatcher.Match*"></a>
-  <h4 id="StringAlgorithms_SuffixStructures_Matching_SuffixStructureMatcher_Match__4_StringAlgorithms_SuffixStructures_ISuffixStructureNode___0___1___2___3__StringAlgorithms_TextWithTerminator_System_String_" data-uid="StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatcher.Match``4(StringAlgorithms.SuffixStructures.ISuffixStructureNode{``0,``1,``2,``3},StringAlgorithms.TextWithTerminator,System.String)">Match&lt;TEdge, TNode, TPath, TBuilder&gt;(ISuffixStructureNode&lt;TEdge, TNode, TPath, TBuilder&gt;, TextWithTerminator, String)</h4>
-  <div class="markdown level1 summary"><p>Tries to match a pattern against a Suffix Tree built on a text.</p>
+  <a id="StringAlgorithms_SuffixStructures_Conversions_PartiallyIterativeConverter_TrieToTree_" data-uid="StringAlgorithms.SuffixStructures.Conversions.PartiallyIterativeConverter.TrieToTree*"></a>
+  <h4 id="StringAlgorithms_SuffixStructures_Conversions_PartiallyIterativeConverter_TrieToTree_StringAlgorithms_SuffixTries_SuffixTrieNode_" data-uid="StringAlgorithms.SuffixStructures.Conversions.PartiallyIterativeConverter.TrieToTree(StringAlgorithms.SuffixTries.SuffixTrieNode)">TrieToTree(SuffixTrieNode)</h4>
+  <div class="markdown level1 summary"><p>Converts the provided <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a> instance into an equivalent instance of
+<a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a>, building its entire structure.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static SuffixStructureMatch&lt;TPath&gt; Match&lt;TEdge, TNode, TPath, TBuilder&gt;(this ISuffixStructureNode&lt;TEdge, TNode, TPath, TBuilder&gt; node, TextWithTerminator text, string pattern)
-    where TEdge : ISuffixStructureEdge&lt;TEdge, TNode, TPath, TBuilder&gt; where TNode : ISuffixStructureNode&lt;TEdge, TNode, TPath, TBuilder&gt; where TPath : ISuffixStructurePath&lt;TEdge, TNode, TPath, TBuilder&gt; where TBuilder : ISuffixStructureBuilder&lt;TEdge, TNode, TPath, TBuilder&gt;, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public SuffixTreeNode TrieToTree(SuffixTrieNode trieNode)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -152,21 +162,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureNode-4.html">ISuffixStructureNode</a>&lt;TEdge, TNode, TPath, TBuilder&gt;</td>
-        <td><span class="parametername">node</span></td>
-        <td><p>The root of the Suffix Tree, to match the suffix of text against.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="StringAlgorithms.TextWithTerminator.html">TextWithTerminator</a></td>
-        <td><span class="parametername">text</span></td>
-        <td><p>The text whose Suffix Tree has to be matched against the pattern.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">pattern</span></td>
-        <td><p>The pattern to match. Unlike text, is a string without terminator.</p>
+        <td><a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a></td>
+        <td><span class="parametername">trieNode</span></td>
+        <td><p>The node identifying the trie structure to be converted.</p>
 </td>
       </tr>
     </tbody>
@@ -181,39 +179,16 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatch-1.html">SuffixStructureMatch</a>&lt;TPath&gt;</td>
-        <td><p>A successful or non-successful match.</p>
+        <td><a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a></td>
+        <td><p>A Suffix Tree, equivalent to the provided trie.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TEdge</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TNode</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TPath</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TBuilder</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="StringAlgorithms.SuffixStructures.Conversions.IConverter.html">IConverter</a>
+  </div>
 </article>
           </div>
           
@@ -222,10 +197,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixStructures_Matching_SuffixStructureMatcher.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixStructures.Matching.SuffixStructureMatcher%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixStructures_Conversions_PartiallyIterativeConverter.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixStructures.Conversions.PartiallyIterativeConverter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixStructures/Matching/SuffixStructureMatcher.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixStructures/Conversions/PartiallyIterativeConverter.cs/#L16" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
