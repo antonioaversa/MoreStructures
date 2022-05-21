@@ -11,13 +11,13 @@ namespace StringAlgorithms.SuffixTrees;
 /// </summary>
 /// <param name="Children">The collection of children for the node, indexed by string edges.</param>
 /// <param name="Start">
-/// <inheritdoc cref="ISuffixStructureNode{TEdge, TNode, TPath, TBuilder}.Start" path="/summary"/>
+/// <inheritdoc cref="ISuffixStructureNode{TEdge, TNode, TBuilder}.Start" path="/summary"/>
 /// </param>
 /// <remarks>
 /// Immutability is guaranteed by using <see cref="ValueReadOnlyCollection{T}"/>.
 /// </remarks>
 public abstract record SuffixTreeNode(IDictionary<SuffixTreeEdge, SuffixTreeNode> Children, int? Start)
-    : ISuffixStructureNode<SuffixTreeEdge, SuffixTreeNode, SuffixTreePath, SuffixTreeBuilder>
+    : ISuffixStructureNode<SuffixTreeEdge, SuffixTreeNode, SuffixTreeBuilder>
 {
     /// <summary>
     /// Builds an intermediate node, i.e. a node with children and their corresponding incoming edges.
@@ -55,14 +55,14 @@ public abstract record SuffixTreeNode(IDictionary<SuffixTreeEdge, SuffixTreeNode
     /// </summary>
     public SuffixTreeNode this[SuffixTreeEdge edge] => Children[edge];
 
-    private static readonly IStringifier<SuffixTreeEdge, SuffixTreeNode, SuffixTreePath, SuffixTreeBuilder> Stringifier =
-        new FullyRecursiveStringifier<SuffixTreeEdge, SuffixTreeNode, SuffixTreePath, SuffixTreeBuilder>(
+    private static readonly IStringifier<SuffixTreeEdge, SuffixTreeNode, SuffixTreeBuilder> Stringifier =
+        new FullyRecursiveStringifier<SuffixTreeEdge, SuffixTreeNode, SuffixTreeBuilder>(
             r => r.IsLeaf() ? $"R from {r.Start}" : "R",
             (e, n) => $"({e.Start},{e.Length}) -> ({(n.IsLeaf() ? $"L from {n.Start}" : "I")}");
 
     /// <summary>
     /// <inheritdoc/>
-    /// Uses a <see cref="IStringifier{TEdge, TNode, TPath, TBuilder}"/> to generate the string.
+    /// Uses a <see cref="IStringifier{TEdge, TNode, TBuilder}"/> to generate the string.
     /// </summary>
     /// <returns><inheritdoc/></returns>
     public override string ToString() => Stringifier.Stringify(this);

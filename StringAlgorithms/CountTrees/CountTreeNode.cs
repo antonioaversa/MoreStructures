@@ -4,43 +4,39 @@ using StringAlgorithms.Utilities;
 namespace StringAlgorithms.CountTrees;
 
 /// <summary>
-/// An implementation of <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode, TPath, TBuilder}"/>, wrapping another
-/// implementation of <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode, TPath, TBuilder}"/>, and counting the total
+/// An implementation of <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode, TBuilder}"/>, wrapping another
+/// implementation of <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode, TBuilder}"/>, and counting the total
 /// number of descendands the wrapped node has below (node itself excluded).
 /// </summary>
 /// <typeparam name="TEdge">
-///     <inheritdoc cref="IRecImmDictIndexedTreeNode{TEdge, TNode, TPath, TBuilder}" path="/typeparam[@name='TEdge']"/>
+///     <inheritdoc cref="IRecImmDictIndexedTreeNode{TEdge, TNode, TBuilder}" path="/typeparam[@name='TEdge']"/>
 /// </typeparam>
 /// <typeparam name="TNode">
-///     <inheritdoc cref="IRecImmDictIndexedTreeNode{TEdge, TNode, TPath, TBuilder}" path="/typeparam[@name='TNode']"/>
-/// </typeparam>
-/// <typeparam name="TPath">
-///     <inheritdoc cref="IRecImmDictIndexedTreeNode{TEdge, TNode, TPath, TBuilder}" path="/typeparam[@name='TPath']"/>
+///     <inheritdoc cref="IRecImmDictIndexedTreeNode{TEdge, TNode, TBuilder}" path="/typeparam[@name='TNode']"/>
 /// </typeparam>
 /// <typeparam name="TBuilder">
-///     <inheritdoc cref="IRecImmDictIndexedTreeNode{TEdge, TNode, TPath, TBuilder}" path="/typeparam[@name='TBuilder']"/>
+///     <inheritdoc cref="IRecImmDictIndexedTreeNode{TEdge, TNode, TBuilder}" path="/typeparam[@name='TBuilder']"/>
 /// </typeparam>
 /// <param name="WrappedNode">The node being wrapped, and whose descendants are going to be counted.</param>
 /// <remarks>
 /// Due to records semantics, and the use of value readonly dictionaries, two 
-/// <see cref="CountTreeNode{TEdge, TNode, TPath, TBuilder}"/> instances wrapping the same underlying node, or two 
+/// <see cref="CountTreeNode{TEdge, TNode, TBuilder}"/> instances wrapping the same underlying node, or two 
 /// equivalent nodes, will be equal. 
 /// </remarks>
-public sealed record CountTreeNode<TEdge, TNode, TPath, TBuilder>(TNode WrappedNode)
+public sealed record CountTreeNode<TEdge, TNode, TBuilder>(TNode WrappedNode)
     : IRecImmDictIndexedTreeNode<
-        CountTreeEdge<TEdge, TNode, TPath, TBuilder>,
-        CountTreeNode<TEdge, TNode, TPath, TBuilder>,
-        CountTreePath<TEdge, TNode, TPath, TBuilder>,
-        CountTreeBuilder<TEdge, TNode, TPath, TBuilder>>
-    where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode, TPath, TBuilder>
-    where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode, TPath, TBuilder>
-    where TPath : IRecImmDictIndexedTreePath<TEdge, TNode, TPath, TBuilder>
-    where TBuilder : IRecImmDictIndexedTreeBuilder<TEdge, TNode, TPath, TBuilder>, new()
+        CountTreeEdge<TEdge, TNode, TBuilder>,
+        CountTreeNode<TEdge, TNode, TBuilder>,
+        CountTreeBuilder<TEdge, TNode, TBuilder>>
+    where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode, TBuilder>
+    where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode, TBuilder>
+    
+    where TBuilder : IRecImmDictIndexedTreeBuilder<TEdge, TNode, TBuilder>, new()
 {
     /// <inheritdoc/>
     public IDictionary<
-        CountTreeEdge<TEdge, TNode, TPath, TBuilder>,
-        CountTreeNode<TEdge, TNode, TPath, TBuilder>> Children { get; init; } =
+        CountTreeEdge<TEdge, TNode, TBuilder>,
+        CountTreeNode<TEdge, TNode, TBuilder>> Children { get; init; } =
             Wrap(WrappedNode).ToValueReadOnlyDictionary();
 
     /// <summary>
@@ -76,10 +72,10 @@ public sealed record CountTreeNode<TEdge, TNode, TPath, TBuilder>(TNode WrappedN
     }
 
     private static IEnumerable<KeyValuePair<
-        CountTreeEdge<TEdge, TNode, TPath, TBuilder>, 
-        CountTreeNode<TEdge, TNode, TPath, TBuilder>>> Wrap(TNode wrappedNode) =>
+        CountTreeEdge<TEdge, TNode, TBuilder>, 
+        CountTreeNode<TEdge, TNode, TBuilder>>> Wrap(TNode wrappedNode) =>
         from edgeAndChild in wrappedNode.Children
-        let childCountTreeEdge = new CountTreeEdge<TEdge, TNode, TPath, TBuilder>(edgeAndChild.Key)
-        let childCountTreeNode = new CountTreeNode<TEdge, TNode, TPath, TBuilder>(edgeAndChild.Value)
+        let childCountTreeEdge = new CountTreeEdge<TEdge, TNode, TBuilder>(edgeAndChild.Key)
+        let childCountTreeNode = new CountTreeNode<TEdge, TNode, TBuilder>(edgeAndChild.Value)
         select KeyValuePair.Create(childCountTreeEdge, childCountTreeNode);
 }

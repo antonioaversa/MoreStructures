@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using StringAlgorithms.RecImmTrees;
 using StringAlgorithms.SuffixStructures;
 using StringAlgorithms.SuffixStructures.Matching;
 using StringAlgorithms.SuffixTrees;
@@ -26,7 +27,7 @@ public class MatcherTests
         var text = new TextWithTerminator("abcdaabcbcadaabca");
         var suffixTree = Builder.BuildTree(text);
 
-        Match<SuffixTreePath> match;
+        Match<TreePath<SuffixTreeEdge, SuffixTreeNode, SuffixTreeBuilder>> match;
 
         match = suffixTree.Match(text, new("ab"));
         Assert.IsTrue(match is { Success: true, MatchedChars: 2 });
@@ -52,7 +53,7 @@ public class MatcherTests
         var text = new TextWithTerminator("abcdaabcbcadaabca");
         var suffixTree = Builder.BuildTree(text);
 
-        Match<SuffixTreePath> match;
+        Match<TreePath<SuffixTreeEdge, SuffixTreeNode, SuffixTreeBuilder>> match;
 
         match = suffixTree.Match(text, new("z"));
         Assert.IsTrue(match is { Success: false, MatchedChars: 0 });
@@ -71,8 +72,8 @@ public class MatcherTests
     {
         var text = new TextWithTerminator("abcdaabcbcadaabca");
         var suffixTree = Builder.BuildTree(text);
-
-        foreach (var pattern in new string[] { "ab", "abc", "abcdaabcbcadaabca", "b", "bc", "bcdaabcbcadaabca", "aab" })
+        var patterns = new string[] { "ab", "abc", "abcdaabcbcadaabca", "b", "bc", "bcdaabcbcadaabca", "aab" };
+        foreach (var pattern in patterns)
         {
             Assert.IsTrue(suffixTree.Match(text, new(pattern)) is
                 { Success: true, Begin: var begin1, Path: var path1 } &&

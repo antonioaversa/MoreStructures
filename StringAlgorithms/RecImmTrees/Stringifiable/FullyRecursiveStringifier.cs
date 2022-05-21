@@ -3,17 +3,16 @@
 namespace StringAlgorithms.RecImmTrees.Stringifiable;
 
 /// <summary>
-/// <inheritdoc cref="IStringifier"/>
+/// <inheritdoc cref="IStringifier{TEdge, TNode, TBuilder}"/>
 /// </summary>
 /// <remarks>
 /// Implemented fully recursively, so limited by stack depth and usable with tree a "reasonable" height.
 /// </remarks>
-public class FullyRecursiveStringifier<TEdge, TNode, TPath, TBuilder> 
-    : IStringifier<TEdge, TNode, TPath, TBuilder>
-    where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode, TPath, TBuilder>
-    where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode, TPath, TBuilder>
-    where TPath : IRecImmDictIndexedTreePath<TEdge, TNode, TPath, TBuilder>
-    where TBuilder : IRecImmDictIndexedTreeBuilder<TEdge, TNode, TPath, TBuilder>, new()
+public class FullyRecursiveStringifier<TEdge, TNode, TBuilder> 
+    : IStringifier<TEdge, TNode, TBuilder>
+    where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode, TBuilder>
+    where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode, TBuilder>
+    where TBuilder : IRecImmDictIndexedTreeBuilder<TEdge, TNode, TBuilder>, new()
 {
     /// <summary>
     /// <inheritdoc/>
@@ -34,7 +33,7 @@ public class FullyRecursiveStringifier<TEdge, TNode, TPath, TBuilder>
     public Func<TEdge, TNode, string> EdgeAndNodeStringifier { get; init; }
 
     /// <summary>
-    /// Builds an instance of <see cref="FullyRecursiveStringifier{TEdge, TNode, TPath, TBuilder}"/> with the 
+    /// Builds an instance of <see cref="FullyRecursiveStringifier{TEdge, TNode, TBuilder}"/> with the 
     /// provided stringifiers, for the root and for all other nodes in the three, and with default new line and indent.
     /// </summary>
     /// <param name="rootStringifier"><inheritdoc cref="RootStringifier" path="/summary"/></param>
@@ -47,7 +46,7 @@ public class FullyRecursiveStringifier<TEdge, TNode, TPath, TBuilder>
     }
 
     /// <inheritdoc/>
-    /// <inheritdoc cref="FullyRecursiveStringifier{TEdge, TNode, TPath, TBuilder}" path="/remarks"/>
+    /// <inheritdoc cref="FullyRecursiveStringifier{TEdge, TNode, TBuilder}" path="/remarks"/>
     public string Stringify(TNode node)
     {
         var stringBuilder = new StringBuilder();

@@ -6,7 +6,7 @@ using static StringUtilities;
 
 /// <summary>
 /// Exposes utility methods to match a <see cref="TextWithTerminator"/> against a 
-/// <see cref="ISuffixStructureNode{TEdge, TNode, TPath, TBuilder}"/> concretion. 
+/// <see cref="ISuffixStructureNode{TEdge, TNode, TBuilder}"/> concretion. 
 /// </summary>
 public static class Matcher
 {
@@ -17,25 +17,23 @@ public static class Matcher
     /// <param name="text">The text whose Suffix Tree has to be matched against the pattern.</param>
     /// <param name="pattern">The pattern to match. Unlike text, is a string without terminator.</param>
     /// <returns>A successful or non-successful match.</returns>
-    public static Match<TPath> Match<TEdge, TNode, TPath, TBuilder>(
-        this ISuffixStructureNode<TEdge, TNode, TPath, TBuilder> node, 
+    public static Match<TreePath<TEdge, TNode, TBuilder>> Match<TEdge, TNode, TBuilder>(
+        this ISuffixStructureNode<TEdge, TNode, TBuilder> node, 
         TextWithTerminator text, 
         string pattern) 
-        where TEdge : ISuffixStructureEdge<TEdge, TNode, TPath, TBuilder>
-        where TNode : ISuffixStructureNode<TEdge, TNode, TPath, TBuilder>
-        where TPath : ISuffixStructurePath<TEdge, TNode, TPath, TBuilder>
-        where TBuilder : ISuffixStructureBuilder<TEdge, TNode, TPath, TBuilder>, new() =>
+        where TEdge : ISuffixStructureEdge<TEdge, TNode, TBuilder>
+        where TNode : ISuffixStructureNode<TEdge, TNode, TBuilder>
+        where TBuilder : ISuffixStructureBuilder<TEdge, TNode, TBuilder>, new() =>
         Match(node, text, pattern, 0);
 
-    private static Match<TPath> Match<TEdge, TNode, TPath, TBuilder>(
-        this ISuffixStructureNode<TEdge, TNode, TPath, TBuilder> node, 
+    private static Match<TreePath<TEdge, TNode, TBuilder>> Match<TEdge, TNode, TBuilder>(
+        this ISuffixStructureNode<TEdge, TNode, TBuilder> node, 
         TextWithTerminator text, 
         string pattern, 
         int textStart)
-        where TEdge : ISuffixStructureEdge<TEdge, TNode, TPath, TBuilder>
-        where TNode : ISuffixStructureNode<TEdge, TNode, TPath, TBuilder>
-        where TPath : ISuffixStructurePath<TEdge, TNode, TPath, TBuilder>
-        where TBuilder : ISuffixStructureBuilder<TEdge, TNode, TPath, TBuilder>, new()
+        where TEdge : ISuffixStructureEdge<TEdge, TNode, TBuilder>
+        where TNode : ISuffixStructureNode<TEdge, TNode, TBuilder>
+        where TBuilder : ISuffixStructureBuilder<TEdge, TNode, TBuilder>, new()
     {
         if (string.IsNullOrEmpty(pattern))
             throw new ArgumentException("Must be non-null and non-emtpy.", nameof(pattern));
@@ -50,18 +48,18 @@ public static class Matcher
         var builder = new TBuilder();
 
         if (longestMatch == null)
-            return new Match<TPath>(
-                false, textStart, 0, builder.EmptyPath());
+            return new Match<TreePath<TEdge, TNode, TBuilder>>(
+                false, textStart, 0, new());
 
         if (longestMatch.Length == pattern.Length - textStart)
-            return new Match<TPath>(
-                true, textStart + longestMatch.Edge.Start, longestMatch.Length, builder.EmptyPath());
+            return new Match<TreePath<TEdge, TNode, TBuilder>>(
+                true, textStart + longestMatch.Edge.Start, longestMatch.Length, new());
 
         // The edge has been fully matched but pattern is longer => chars left to match
         var childNode = node.Children[longestMatch.Edge];
         var childMatch = Match(childNode, text, pattern, textStart + longestMatch.Length);
-        var pathToChild = builder.SingletonPath(longestMatch.Edge, childNode);
-        return new Match<TPath>(
+        var pathToChild = new TreePath<TEdge, TNode, TBuilder>(longestMatch.Edge, childNode);
+        return new Match<TreePath<TEdge, TNode, TBuilder>>(
             childMatch.Success, 
             textStart + longestMatch.Edge.Start, 
             longestMatch.Length + childMatch.MatchedChars,

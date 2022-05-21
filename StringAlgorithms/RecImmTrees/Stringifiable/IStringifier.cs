@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace StringAlgorithms.RecImmTrees.Stringifiable;
+﻿namespace StringAlgorithms.RecImmTrees.Stringifiable;
 
 /// <summary>
-/// A converter from <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode, TPath, TBuilder}"/> structures to string.
+/// A converter from <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode, TBuilder}"/> structures to string.
 /// </summary>
-public interface IStringifier<TEdge, TNode, TPath, TBuilder>
-    where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode, TPath, TBuilder>
-    where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode, TPath, TBuilder>
-    where TPath : IRecImmDictIndexedTreePath<TEdge, TNode, TPath, TBuilder>
-    where TBuilder : IRecImmDictIndexedTreeBuilder<TEdge, TNode, TPath, TBuilder>, new()
+public interface IStringifier<TEdge, TNode, TBuilder>
+    where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode, TBuilder>
+    where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode, TBuilder>
+    where TBuilder : IRecImmDictIndexedTreeBuilder<TEdge, TNode, TBuilder>, new()
 {
     /// <summary>
     /// The character or string used to separate lines of the output.
@@ -38,7 +32,7 @@ public interface IStringifier<TEdge, TNode, TPath, TBuilder>
     Func<TEdge, TNode, string> EdgeAndNodeStringifier { get; init; }
 
     /// <summary>
-    /// Converts the provided <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode, TPath, TBuilder}"/> into a string.
+    /// Converts the provided <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode, TBuilder}"/> into a string.
     /// </summary>
     /// <param name="node">The root of the tree to stringify.</param>
     /// <returns>A string version of the provided structure.</returns>

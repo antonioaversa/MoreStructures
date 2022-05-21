@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using StringAlgorithms.RecImmTrees;
 using StringAlgorithms.SuffixTries;
 using System;
 using System.Collections.Generic;
@@ -7,12 +8,12 @@ using System.Linq;
 namespace StringAlgorithms.Tests.SuffixTries;
 
 [TestClass]
-public class SuffixTriePathTests
+public class SuffixTrieTreePathTests
 {
     [TestMethod]
     public void PathNodes_ImmutabilityOnGet()
     {
-        var path = new SuffixTriePath(new Dictionary<SuffixTrieEdge, SuffixTrieNode> { });
+        var path = new TreePath<SuffixTrieEdge, SuffixTrieNode, SuffixTrieBuilder>(new Dictionary<SuffixTrieEdge, SuffixTrieNode> { });
         if (path.PathNodes is IList<KeyValuePair<SuffixTrieEdge, SuffixTrieNode>> pathNodesAsList)
         {
             Assert.ThrowsException<NotSupportedException>(() => pathNodesAsList.Add(KeyValuePair.Create(
@@ -24,7 +25,7 @@ public class SuffixTriePathTests
     public void PathNodes_ImmutabilityOnCtorParam()
     {
         var pathNodes = new Dictionary<SuffixTrieEdge, SuffixTrieNode> { };
-        var path = new SuffixTriePath(pathNodes);
+        var path = new TreePath<SuffixTrieEdge, SuffixTrieNode, SuffixTrieBuilder>(pathNodes);
         Assert.AreEqual(0, path.PathNodes.Count());
         pathNodes[new(0)] = new SuffixTrieNode.Leaf(0);
         Assert.AreEqual(0, path.PathNodes.Count());
@@ -34,7 +35,7 @@ public class SuffixTriePathTests
     /// The example is the second "root to leaf"" path of the tree built from <see cref="ExampleText"/>: 
     /// a -> b -> a -> a -> $.
     /// </remarks>
-    internal static SuffixTriePath BuildSuffixTriePathExample()
+    internal static TreePath<SuffixTrieEdge, SuffixTrieNode, SuffixTrieBuilder> BuildSuffixTriePathExample()
     {
         var leaf = new SuffixTrieNode.Leaf(2);
         var leafEdge = new SuffixTrieEdge(6);
@@ -65,7 +66,7 @@ public class SuffixTriePathTests
         });
         var intermediate4Edge = new SuffixTrieEdge(0);
 
-        return new SuffixTriePath(new List<KeyValuePair<SuffixTrieEdge, SuffixTrieNode>>
+        return new TreePath<SuffixTrieEdge, SuffixTrieNode, SuffixTrieBuilder>(new List<KeyValuePair<SuffixTrieEdge, SuffixTrieNode>>
         {            
             new(intermediate4Edge, intermediate4),
             new(intermediate3Edge, intermediate3),
