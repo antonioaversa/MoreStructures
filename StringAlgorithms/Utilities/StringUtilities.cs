@@ -4,7 +4,7 @@ namespace StringAlgorithms;
 /// <summary>
 /// Generic utilities and extensions for strings.
 /// </summary>
-public class StringUtilities
+public static class StringUtilities
 {
     /// <summary>
     /// Returns the length of the longest prefix in common between the provided strings.

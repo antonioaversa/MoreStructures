@@ -7,7 +7,7 @@ using System;
 namespace StringAlgorithms.Tests.SuffixTrees.Matching;
 
 [TestClass]
-public class SuffixStructureMatcherTests
+public class MatcherTests
 {
     private readonly SuffixTreeBuilder Builder = new();
 
@@ -26,7 +26,7 @@ public class SuffixStructureMatcherTests
         var text = new TextWithTerminator("abcdaabcbcadaabca");
         var suffixTree = Builder.BuildTree(text);
 
-        SuffixStructureMatch<SuffixTreePath> match;
+        Match<SuffixTreePath> match;
 
         match = suffixTree.Match(text, new("ab"));
         Assert.IsTrue(match is { Success: true, MatchedChars: 2 });
@@ -52,7 +52,7 @@ public class SuffixStructureMatcherTests
         var text = new TextWithTerminator("abcdaabcbcadaabca");
         var suffixTree = Builder.BuildTree(text);
 
-        SuffixStructureMatch<SuffixTreePath> match;
+        Match<SuffixTreePath> match;
 
         match = suffixTree.Match(text, new("z"));
         Assert.IsTrue(match is { Success: false, MatchedChars: 0 });

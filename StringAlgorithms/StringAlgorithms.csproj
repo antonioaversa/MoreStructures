@@ -9,8 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="SuffixStructures\Transformations\FullyRecursiveSuffixStructuresConverter.cs" />
-    <Compile Remove="SuffixStructures\Transformations\SuffixStructureStringifier.cs" />
+    <Compile Remove="SuffixStructures\Conversions\FullyRecursiveSuffixStructuresConverter.cs" />
   </ItemGroup>
 
   <ItemGroup>
