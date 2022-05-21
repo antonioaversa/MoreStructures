@@ -8,7 +8,7 @@ namespace StringAlgorithms.SuffixStructures.Conversions;
 /// </summary>
 /// <remarks>
 /// Implemented fully recursively, with one level of recursion per level of the input <see cref="SuffixTrieNode"/>.
-/// Limited by stack depth and usable with tree a "reasonable" height of the input <see cref="SuffixTrieNode"/>.
+/// Limited by stack depth and usable with input trees of a "reasonable" height.
 /// </remarks>
 public class FullyRecursiveConverter : IConverter
 {

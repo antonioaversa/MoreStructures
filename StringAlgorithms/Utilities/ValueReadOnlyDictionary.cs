@@ -42,9 +42,14 @@ public class ValueReadOnlyDictionary<TKey, TValue> : ReadOnlyDictionary<TKey, TV
     /// <param name="obj"><inheritdoc cref="object.Equals(object?)" path="/param[@name='obj']"/></param>
     /// <returns>
     /// True if the specified object is equal to the current dictionary by value; otherwise, false.
+    /// Two dictionaries are considered equal by value if they have the same set of keys and the value associated
+    /// with each of the key by the two dictionaries are equal with each other.
     /// </returns>
     public override bool Equals(object? obj) => 
-        obj is ValueReadOnlyDictionary<TKey, TValue> other && this.SequenceEqual(other);
+        obj is ValueReadOnlyDictionary<TKey, TValue> other &&
+        Count == other.Count &&
+        Keys.ToHashSet().SetEquals(other.Keys.ToHashSet()) &&
+        Keys.All(k => Equals(this[k], other[k]));
 
     /// <summary>
     /// <inheritdoc/> The hash code is calculated by value, as an aggregate of the hash codes of its key value 

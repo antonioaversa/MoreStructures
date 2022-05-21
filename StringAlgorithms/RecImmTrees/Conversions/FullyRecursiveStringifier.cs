@@ -3,50 +3,27 @@
 namespace StringAlgorithms.RecImmTrees.Conversions;
 
 /// <summary>
-/// <inheritdoc cref="IStringifier{TEdge, TNode}"/>
+/// <inheritdoc/>
 /// </summary>
 /// <remarks>
-/// Implemented fully recursively, so limited by stack depth and usable with tree a "reasonable" height.
+/// Implemented fully recursively, so limited by stack depth and usable with tree of a "reasonable" height.
 /// </remarks>
 public class FullyRecursiveStringifier<TEdge, TNode> 
-    : IStringifier<TEdge, TNode>
+    : StringifierBase<TEdge, TNode>, IStringifier<TEdge, TNode>
     where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>
     where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode>
 {
-    /// <summary>
     /// <inheritdoc/>
-    /// By default is <see cref="Environment.NewLine"/>.
-    /// </summary>
-    public string NewLine { get; init; } = Environment.NewLine;
-
-    /// <summary>
-    /// <inheritdoc/>
-    /// By default is 4 spaces.
-    /// </summary>
-    public string Indent { get; init; } = new string(' ', 4);
-
-    /// <inheritdoc/>
-    public Func<TNode, string> RootStringifier { get; init; }
-
-    /// <inheritdoc/>
-    public Func<TEdge, TNode, string> EdgeAndNodeStringifier { get; init; }
-
-    /// <summary>
-    /// Builds an instance of <see cref="FullyRecursiveStringifier{TEdge, TNode}"/> with the provided stringifiers, 
-    /// for the root and for all other nodes in the three, and with default new line and indent.
-    /// </summary>
-    /// <param name="rootStringifier"><inheritdoc cref="RootStringifier" path="/summary"/></param>
-    /// <param name="edgeAndNodeStringifier"><inheritdoc cref="EdgeAndNodeStringifier" path="/summary"/></param>
+    /// <inheritdoc cref="FullyRecursiveStringifier{TEdge, TNode}" path="/remarks"/>
     public FullyRecursiveStringifier(
-        Func<TNode, string> rootStringifier, Func<TEdge, TNode, string> edgeAndNodeStringifier)
+        Func<TNode, string> rootStringifier, Func<TEdge, TNode, string> edgeAndNodeStringifier) 
+        : base(rootStringifier, edgeAndNodeStringifier)
     {
-        RootStringifier = rootStringifier;
-        EdgeAndNodeStringifier = edgeAndNodeStringifier;
     }
 
     /// <inheritdoc/>
     /// <inheritdoc cref="FullyRecursiveStringifier{TEdge, TNode}" path="/remarks"/>
-    public string Stringify(TNode node)
+    public override string Stringify(TNode node)
     {
         var stringBuilder = new StringBuilder();
         stringBuilder.Append(RootStringifier(node));
