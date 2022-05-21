@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface ISuffixStructurePath&lt;TEdge, TNode, TPath, TBuilder&gt;
+    <title>Interface IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface ISuffixStructurePath&lt;TEdge, TNode, TPath, TBuilder&gt;
+    <meta name="title" content="Interface IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;
    ">
     <meta name="generator" content="docfx 2.59.2.0">
     
@@ -78,27 +78,21 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="StringAlgorithms.SuffixStructures.ISuffixStructurePath`4">
+            <article class="content wrap" id="_content" data-uid="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode`2">
   
   
-  <h1 id="StringAlgorithms_SuffixStructures_ISuffixStructurePath_4" data-uid="StringAlgorithms.SuffixStructures.ISuffixStructurePath`4" class="text-break">Interface ISuffixStructurePath&lt;TEdge, TNode, TPath, TBuilder&gt;
+  <h1 id="StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreeNode_2" data-uid="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode`2" class="text-break">Interface IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;
   </h1>
-  <div class="markdown level0 summary"><p>A path of a <a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureEdge-4.html">ISuffixStructureEdge&lt;TEdge, TNode, TPath, TBuilder&gt;</a>, a sequence of nodes and their
-incoming edges <a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureEdge-4.html">ISuffixStructureEdge&lt;TEdge, TNode, TPath, TBuilder&gt;</a>. Represents multi-step pattern
-matching.</p>
+  <div class="markdown level0 summary"><p>The node of a generic Tree Structure recursively defined and whose nodes are indexed in an immutable dictionary of
+edges. Has no specific use case in mind and can be a root node, an intermediate node or a leaf node.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath-4.html#StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreePath_4_PathNodes">IRecImmDictIndexedTreePath&lt;TEdge, TNode, TPath, TBuilder&gt;.PathNodes</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="StringAlgorithms.SuffixStructures.html">StringAlgorithms.SuffixStructures</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="StringAlgorithms.RecImmTrees.html">StringAlgorithms.RecImmTrees</a></h6>
   <h6><strong>Assembly</strong>: StringAlgorithms.dll</h6>
-  <h5 id="StringAlgorithms_SuffixStructures_ISuffixStructurePath_4_syntax">Syntax</h5>
+  <h5 id="StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreeNode_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ISuffixStructurePath&lt;TEdge, TNode, TPath, TBuilder&gt; : IRecImmDictIndexedTreePath&lt;TEdge, TNode, TPath, TBuilder&gt; where TEdge : ISuffixStructureEdge&lt;TEdge, TNode, TPath, TBuilder&gt; where TNode : ISuffixStructureNode&lt;TEdge, TNode, TPath, TBuilder&gt; where TPath : ISuffixStructurePath&lt;TEdge, TNode, TPath, TBuilder&gt; where TBuilder : ISuffixStructureBuilder&lt;TEdge, TNode, TPath, TBuilder&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;
+    where TEdge : IRecImmDictIndexedTreeEdge&lt;TEdge, TNode&gt; where TNode : IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -111,26 +105,56 @@ matching.</p>
     <tbody>
       <tr>
         <td><span class="parametername">TEdge</span></td>
-        <td><p><inheritdoc cref="T:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath`4" path="/typeparam[@name=&apos;TEdge&apos;]"></inheritdoc></p>
+        <td><p>The type of edges of the specific structure.</p>
 </td>
       </tr>
       <tr>
         <td><span class="parametername">TNode</span></td>
-        <td><p><inheritdoc cref="T:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath`4" path="/typeparam[@name=&apos;TNode&apos;]"></inheritdoc></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TPath</span></td>
-        <td><p><inheritdoc cref="T:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath`4" path="/typeparam[@name=&apos;TPath&apos;]"></inheritdoc></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TBuilder</span></td>
-        <td><p><inheritdoc cref="T:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreePath`4" path="/typeparam[@name=&apos;TBuilder&apos;]"></inheritdoc></p>
+        <td><p>The type of nodes of the specific structure.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreeNode_2_Children.md&amp;value=---%0Auid%3A%20StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode%602.Children%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/RecImmTrees/IRecImmDictIndexedTreeNode.cs/#L16">View Source</a>
+  </span>
+  <a id="StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreeNode_2_Children_" data-uid="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode`2.Children*"></a>
+  <h4 id="StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreeNode_2_Children" data-uid="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode`2.Children">Children</h4>
+  <div class="markdown level1 summary"><p>A readonly view of the children private collection of this node. Empty for leaves.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDictionary&lt;TEdge, TNode&gt; Children { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IDictionary</span>&lt;TEdge, TNode&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.html#StringAlgorithms_RecImmTrees_RecImmDictIndexedTreeNodeExtensions_IsLeaf__2_StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreeNode___0___1__">RecImmDictIndexedTreeNodeExtensions.IsLeaf&lt;TEdge, TNode&gt;(IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.html#StringAlgorithms_RecImmTrees_RecImmDictIndexedTreeNodeExtensions_GetAllNodeToLeafPaths__2_StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreeNode___0___1__">RecImmDictIndexedTreeNodeExtensions.GetAllNodeToLeafPaths&lt;TEdge, TNode&gt;(IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;)</a>
+  </div>
 </article>
           </div>
           
@@ -139,10 +163,10 @@ matching.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixStructures_ISuffixStructurePath_4.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixStructures.ISuffixStructurePath%604%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreeNode_2.md&amp;value=---%0Auid%3A%20StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixStructures/ISuffixStructurePath.cs/#L22" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/RecImmTrees/IRecImmDictIndexedTreeNode.cs/#L9" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

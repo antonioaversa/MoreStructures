@@ -83,7 +83,7 @@
   
   <h1 id="StringAlgorithms_SuffixStructures_SuffixStructureNodeExtensions" data-uid="StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions" class="text-break">Class SuffixStructureNodeExtensions
   </h1>
-  <div class="markdown level0 summary"><p>Extension methods for all <a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureNode-4.html">ISuffixStructureNode&lt;TEdge, TNode, TPath, TBuilder&gt;</a> node concretions.</p>
+  <div class="markdown level0 summary"><p>Extension methods for all <a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureNode-3.html">ISuffixStructureNode&lt;TEdge, TNode, TBuilder&gt;</a> node concretions.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -125,21 +125,21 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__4_StringAlgorithms_SuffixStructures_ISuffixStructureNode___0___1___2___3__StringAlgorithms_TextWithTerminator_.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.GetAllSuffixesFor%60%604(StringAlgorithms.SuffixStructures.ISuffixStructureNode%7B%60%600%2C%60%601%2C%60%602%2C%60%603%7D%2CStringAlgorithms.TextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__3_StringAlgorithms_SuffixStructures_ISuffixStructureNode___0___1___2__StringAlgorithms_TextWithTerminator_.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.GetAllSuffixesFor%60%603(StringAlgorithms.SuffixStructures.ISuffixStructureNode%7B%60%600%2C%60%601%2C%60%602%7D%2CStringAlgorithms.TextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixStructures/SuffixStructureNodeExtensions.cs/#L17">View Source</a>
   </span>
   <a id="StringAlgorithms_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor_" data-uid="StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.GetAllSuffixesFor*"></a>
-  <h4 id="StringAlgorithms_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__4_StringAlgorithms_SuffixStructures_ISuffixStructureNode___0___1___2___3__StringAlgorithms_TextWithTerminator_" data-uid="StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.GetAllSuffixesFor``4(StringAlgorithms.SuffixStructures.ISuffixStructureNode{``0,``1,``2,``3},StringAlgorithms.TextWithTerminator)">GetAllSuffixesFor&lt;TEdge, TNode, TPath, TBuilder&gt;(ISuffixStructureNode&lt;TEdge, TNode, TPath, TBuilder&gt;, TextWithTerminator)</h4>
+  <h4 id="StringAlgorithms_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__3_StringAlgorithms_SuffixStructures_ISuffixStructureNode___0___1___2__StringAlgorithms_TextWithTerminator_" data-uid="StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.GetAllSuffixesFor``3(StringAlgorithms.SuffixStructures.ISuffixStructureNode{``0,``1,``2},StringAlgorithms.TextWithTerminator)">GetAllSuffixesFor&lt;TEdge, TNode, TBuilder&gt;(ISuffixStructureNode&lt;TEdge, TNode, TBuilder&gt;, TextWithTerminator)</h4>
   <div class="markdown level1 summary"><p>Returns all suffixes for the provided text from the node down the
-<a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureNode-4.html">ISuffixStructureNode&lt;TEdge, TNode, TPath, TBuilder&gt;</a>, up to leaves.</p>
+<a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureNode-3.html">ISuffixStructureNode&lt;TEdge, TNode, TBuilder&gt;</a>, up to leaves.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;string&gt; GetAllSuffixesFor&lt;TEdge, TNode, TPath, TBuilder&gt;(this ISuffixStructureNode&lt;TEdge, TNode, TPath, TBuilder&gt; node, TextWithTerminator text)
-    where TEdge : ISuffixStructureEdge&lt;TEdge, TNode, TPath, TBuilder&gt; where TNode : ISuffixStructureNode&lt;TEdge, TNode, TPath, TBuilder&gt; where TPath : ISuffixStructurePath&lt;TEdge, TNode, TPath, TBuilder&gt; where TBuilder : ISuffixStructureBuilder&lt;TEdge, TNode, TPath, TBuilder&gt;, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;string&gt; GetAllSuffixesFor&lt;TEdge, TNode, TBuilder&gt;(this ISuffixStructureNode&lt;TEdge, TNode, TBuilder&gt; node, TextWithTerminator text)
+    where TEdge : ISuffixStructureEdge&lt;TEdge, TNode, TBuilder&gt; where TNode : ISuffixStructureNode&lt;TEdge, TNode, TBuilder&gt; where TBuilder : ISuffixStructureBuilder&lt;TEdge, TNode, TBuilder&gt;, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -152,7 +152,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureNode-4.html">ISuffixStructureNode</a>&lt;TEdge, TNode, TPath, TBuilder&gt;</td>
+        <td><a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureNode-3.html">ISuffixStructureNode</a>&lt;TEdge, TNode, TBuilder&gt;</td>
         <td><span class="parametername">node</span></td>
         <td><p>The node, to start the structure traversal from.</p>
 </td>
@@ -196,10 +196,6 @@
       </tr>
       <tr>
         <td><span class="parametername">TNode</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TPath</span></td>
         <td></td>
       </tr>
       <tr>

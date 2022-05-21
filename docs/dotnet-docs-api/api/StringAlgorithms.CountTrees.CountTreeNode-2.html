@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class CountTreeNode&lt;TEdge, TNode, TPath, TBuilder&gt;
+    <title>Class CountTreeNode&lt;TEdge, TNode&gt;
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class CountTreeNode&lt;TEdge, TNode, TPath, TBuilder&gt;
+    <meta name="title" content="Class CountTreeNode&lt;TEdge, TNode&gt;
    ">
     <meta name="generator" content="docfx 2.59.2.0">
     
@@ -78,25 +78,25 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="StringAlgorithms.CountTrees.CountTreeNode`4">
+            <article class="content wrap" id="_content" data-uid="StringAlgorithms.CountTrees.CountTreeNode`2">
   
   
-  <h1 id="StringAlgorithms_CountTrees_CountTreeNode_4" data-uid="StringAlgorithms.CountTrees.CountTreeNode`4" class="text-break">Class CountTreeNode&lt;TEdge, TNode, TPath, TBuilder&gt;
+  <h1 id="StringAlgorithms_CountTrees_CountTreeNode_2" data-uid="StringAlgorithms.CountTrees.CountTreeNode`2" class="text-break">Class CountTreeNode&lt;TEdge, TNode&gt;
   </h1>
-  <div class="markdown level0 summary"><p>An implementation of <a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode-4.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode, TPath, TBuilder&gt;</a>, wrapping another
-implementation of <a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode-4.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode, TPath, TBuilder&gt;</a>, and counting the total
+  <div class="markdown level0 summary"><p>An implementation of <a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</a>, wrapping another
+implementation of <a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</a>, and counting the total
 number of descendands the wrapped node has below (node itself excluded).</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">CountTreeNode&lt;TEdge, TNode, TPath, TBuilder&gt;</span></div>
+    <div class="level1"><span class="xref">CountTreeNode&lt;TEdge, TNode&gt;</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode-4.html">IRecImmDictIndexedTreeNode</a>&lt;<a class="xref" href="StringAlgorithms.CountTrees.CountTreeEdge-4.html">CountTreeEdge</a>&lt;TEdge, TNode, TPath, TBuilder&gt;, <a class="xref" href="StringAlgorithms.CountTrees.CountTreeNode-4.html">CountTreeNode</a>&lt;TEdge, TNode, TPath, TBuilder&gt;, <a class="xref" href="StringAlgorithms.CountTrees.CountTreePath-4.html">CountTreePath</a>&lt;TEdge, TNode, TPath, TBuilder&gt;, <a class="xref" href="StringAlgorithms.CountTrees.CountTreeBuilder-4.html">CountTreeBuilder</a>&lt;TEdge, TNode, TPath, TBuilder&gt;&gt;</div>
-    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="StringAlgorithms.CountTrees.CountTreeNode-4.html">CountTreeNode</a>&lt;TEdge, TNode, TPath, TBuilder&gt;&gt;</div>
+    <div><a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode</a>&lt;<a class="xref" href="StringAlgorithms.CountTrees.CountTreeEdge-2.html">CountTreeEdge</a>&lt;TEdge, TNode&gt;, <a class="xref" href="StringAlgorithms.CountTrees.CountTreeNode-2.html">CountTreeNode</a>&lt;TEdge, TNode&gt;&gt;</div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="StringAlgorithms.CountTrees.CountTreeNode-2.html">CountTreeNode</a>&lt;TEdge, TNode&gt;&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -124,9 +124,9 @@ number of descendands the wrapped node has below (node itself excluded).</p>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="StringAlgorithms.CountTrees.html">StringAlgorithms.CountTrees</a></h6>
   <h6><strong>Assembly</strong>: StringAlgorithms.dll</h6>
-  <h5 id="StringAlgorithms_CountTrees_CountTreeNode_4_syntax">Syntax</h5>
+  <h5 id="StringAlgorithms_CountTrees_CountTreeNode_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class CountTreeNode&lt;TEdge, TNode, TPath, TBuilder&gt; : IRecImmDictIndexedTreeNode&lt;CountTreeEdge&lt;TEdge, TNode, TPath, TBuilder&gt;, CountTreeNode&lt;TEdge, TNode, TPath, TBuilder&gt;, CountTreePath&lt;TEdge, TNode, TPath, TBuilder&gt;, CountTreeBuilder&lt;TEdge, TNode, TPath, TBuilder&gt;&gt;, IEquatable&lt;CountTreeNode&lt;TEdge, TNode, TPath, TBuilder&gt;&gt; where TEdge : IRecImmDictIndexedTreeEdge&lt;TEdge, TNode, TPath, TBuilder&gt; where TNode : IRecImmDictIndexedTreeNode&lt;TEdge, TNode, TPath, TBuilder&gt; where TPath : IRecImmDictIndexedTreePath&lt;TEdge, TNode, TPath, TBuilder&gt; where TBuilder : IRecImmDictIndexedTreeBuilder&lt;TEdge, TNode, TPath, TBuilder&gt;, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class CountTreeNode&lt;TEdge, TNode&gt; : IRecImmDictIndexedTreeNode&lt;CountTreeEdge&lt;TEdge, TNode&gt;, CountTreeNode&lt;TEdge, TNode&gt;&gt;, IEquatable&lt;CountTreeNode&lt;TEdge, TNode&gt;&gt; where TEdge : IRecImmDictIndexedTreeEdge&lt;TEdge, TNode&gt; where TNode : IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -139,44 +139,34 @@ number of descendands the wrapped node has below (node itself excluded).</p>
     <tbody>
       <tr>
         <td><span class="parametername">TEdge</span></td>
-        <td><p><inheritdoc cref="T:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode`4" path="/typeparam[@name=&apos;TEdge&apos;]"></inheritdoc></p>
+        <td><p><inheritdoc cref="T:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode`2" path="/typeparam[@name=&apos;TEdge&apos;]"></inheritdoc></p>
 </td>
       </tr>
       <tr>
         <td><span class="parametername">TNode</span></td>
-        <td><p><inheritdoc cref="T:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode`4" path="/typeparam[@name=&apos;TNode&apos;]"></inheritdoc></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TPath</span></td>
-        <td><p><inheritdoc cref="T:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode`4" path="/typeparam[@name=&apos;TPath&apos;]"></inheritdoc></p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TBuilder</span></td>
-        <td><p><inheritdoc cref="T:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode`4" path="/typeparam[@name=&apos;TBuilder&apos;]"></inheritdoc></p>
+        <td><p><inheritdoc cref="T:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode`2" path="/typeparam[@name=&apos;TNode&apos;]"></inheritdoc></p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 id="StringAlgorithms_CountTrees_CountTreeNode_4_remarks"><strong>Remarks</strong></h5>
+  <h5 id="StringAlgorithms_CountTrees_CountTreeNode_2_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>Due to records semantics, and the use of value readonly dictionaries, two
-<a class="xref" href="StringAlgorithms.CountTrees.CountTreeNode-4.html">CountTreeNode&lt;TEdge, TNode, TPath, TBuilder&gt;</a> instances wrapping the same underlying node, or two
+<a class="xref" href="StringAlgorithms.CountTrees.CountTreeNode-2.html">CountTreeNode&lt;TEdge, TNode&gt;</a> instances wrapping the same underlying node, or two
 equivalent nodes, will be equal.</p>
 </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_CountTrees_CountTreeNode_4__ctor__1_.md&amp;value=---%0Auid%3A%20StringAlgorithms.CountTrees.CountTreeNode%604.%23ctor(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_CountTrees_CountTreeNode_2__ctor__1_.md&amp;value=---%0Auid%3A%20StringAlgorithms.CountTrees.CountTreeNode%602.%23ctor(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/CountTrees/CountTreeNode.cs/#L29">View Source</a>
+    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/CountTrees/CountTreeNode.cs/#L23">View Source</a>
   </span>
-  <a id="StringAlgorithms_CountTrees_CountTreeNode_4__ctor_" data-uid="StringAlgorithms.CountTrees.CountTreeNode`4.#ctor*"></a>
-  <h4 id="StringAlgorithms_CountTrees_CountTreeNode_4__ctor__1_" data-uid="StringAlgorithms.CountTrees.CountTreeNode`4.#ctor(`1)">CountTreeNode(TNode)</h4>
-  <div class="markdown level1 summary"><p>An implementation of <a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode-4.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode, TPath, TBuilder&gt;</a>, wrapping another
-implementation of <a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode-4.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode, TPath, TBuilder&gt;</a>, and counting the total
+  <a id="StringAlgorithms_CountTrees_CountTreeNode_2__ctor_" data-uid="StringAlgorithms.CountTrees.CountTreeNode`2.#ctor*"></a>
+  <h4 id="StringAlgorithms_CountTrees_CountTreeNode_2__ctor__1_" data-uid="StringAlgorithms.CountTrees.CountTreeNode`2.#ctor(`1)">CountTreeNode(TNode)</h4>
+  <div class="markdown level1 summary"><p>An implementation of <a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</a>, wrapping another
+implementation of <a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</a>, and counting the total
 number of descendands the wrapped node has below (node itself excluded).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -202,28 +192,28 @@ number of descendands the wrapped node has below (node itself excluded).</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="StringAlgorithms_CountTrees_CountTreeNode_4__ctor__1__remarks">Remarks</h5>
+  <h5 id="StringAlgorithms_CountTrees_CountTreeNode_2__ctor__1__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Due to records semantics, and the use of value readonly dictionaries, two
-<a class="xref" href="StringAlgorithms.CountTrees.CountTreeNode-4.html">CountTreeNode&lt;TEdge, TNode, TPath, TBuilder&gt;</a> instances wrapping the same underlying node, or two
+<a class="xref" href="StringAlgorithms.CountTrees.CountTreeNode-2.html">CountTreeNode&lt;TEdge, TNode&gt;</a> instances wrapping the same underlying node, or two
 equivalent nodes, will be equal.</p>
 </div>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_CountTrees_CountTreeNode_4_Children.md&amp;value=---%0Auid%3A%20StringAlgorithms.CountTrees.CountTreeNode%604.Children%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_CountTrees_CountTreeNode_2_Children.md&amp;value=---%0Auid%3A%20StringAlgorithms.CountTrees.CountTreeNode%602.Children%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/CountTrees/CountTreeNode.cs/#L41">View Source</a>
+    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/CountTrees/CountTreeNode.cs/#L31">View Source</a>
   </span>
-  <a id="StringAlgorithms_CountTrees_CountTreeNode_4_Children_" data-uid="StringAlgorithms.CountTrees.CountTreeNode`4.Children*"></a>
-  <h4 id="StringAlgorithms_CountTrees_CountTreeNode_4_Children" data-uid="StringAlgorithms.CountTrees.CountTreeNode`4.Children">Children</h4>
+  <a id="StringAlgorithms_CountTrees_CountTreeNode_2_Children_" data-uid="StringAlgorithms.CountTrees.CountTreeNode`2.Children*"></a>
+  <h4 id="StringAlgorithms_CountTrees_CountTreeNode_2_Children" data-uid="StringAlgorithms.CountTrees.CountTreeNode`2.Children">Children</h4>
   <div class="markdown level1 summary"><p>A readonly view of the children private collection of this node. Empty for leaves.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IDictionary&lt;CountTreeEdge&lt;TEdge, TNode, TPath, TBuilder&gt;, CountTreeNode&lt;TEdge, TNode, TPath, TBuilder&gt;&gt; Children { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IDictionary&lt;CountTreeEdge&lt;TEdge, TNode&gt;, CountTreeNode&lt;TEdge, TNode&gt;&gt; Children { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,20 +225,20 @@ equivalent nodes, will be equal.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IDictionary</span>&lt;<a class="xref" href="StringAlgorithms.CountTrees.CountTreeEdge-4.html">CountTreeEdge</a>&lt;TEdge, TNode, TPath, TBuilder&gt;, <a class="xref" href="StringAlgorithms.CountTrees.CountTreeNode-4.html">CountTreeNode</a>&lt;TEdge, TNode, TPath, TBuilder&gt;&gt;</td>
+        <td><span class="xref">IDictionary</span>&lt;<a class="xref" href="StringAlgorithms.CountTrees.CountTreeEdge-2.html">CountTreeEdge</a>&lt;TEdge, TNode&gt;, <a class="xref" href="StringAlgorithms.CountTrees.CountTreeNode-2.html">CountTreeNode</a>&lt;TEdge, TNode&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_CountTrees_CountTreeNode_4_DescendantsCount.md&amp;value=---%0Auid%3A%20StringAlgorithms.CountTrees.CountTreeNode%604.DescendantsCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_CountTrees_CountTreeNode_2_DescendantsCount.md&amp;value=---%0Auid%3A%20StringAlgorithms.CountTrees.CountTreeNode%602.DescendantsCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/CountTrees/CountTreeNode.cs/#L62">View Source</a>
+    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/CountTrees/CountTreeNode.cs/#L52">View Source</a>
   </span>
-  <a id="StringAlgorithms_CountTrees_CountTreeNode_4_DescendantsCount_" data-uid="StringAlgorithms.CountTrees.CountTreeNode`4.DescendantsCount*"></a>
-  <h4 id="StringAlgorithms_CountTrees_CountTreeNode_4_DescendantsCount" data-uid="StringAlgorithms.CountTrees.CountTreeNode`4.DescendantsCount">DescendantsCount</h4>
+  <a id="StringAlgorithms_CountTrees_CountTreeNode_2_DescendantsCount_" data-uid="StringAlgorithms.CountTrees.CountTreeNode`2.DescendantsCount*"></a>
+  <h4 id="StringAlgorithms_CountTrees_CountTreeNode_2_DescendantsCount" data-uid="StringAlgorithms.CountTrees.CountTreeNode`2.DescendantsCount">DescendantsCount</h4>
   <div class="markdown level1 summary"><p>The number of descendands below this node (node itself excluded).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -271,18 +261,18 @@ equivalent nodes, will be equal.</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="StringAlgorithms_CountTrees_CountTreeNode_4_DescendantsCount_remarks">Remarks</h5>
+  <h5 id="StringAlgorithms_CountTrees_CountTreeNode_2_DescendantsCount_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Lazy evaluated and thread-safe.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_CountTrees_CountTreeNode_4_WrappedNode.md&amp;value=---%0Auid%3A%20StringAlgorithms.CountTrees.CountTreeNode%604.WrappedNode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_CountTrees_CountTreeNode_2_WrappedNode.md&amp;value=---%0Auid%3A%20StringAlgorithms.CountTrees.CountTreeNode%602.WrappedNode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/CountTrees/CountTreeNode.cs/#L29">View Source</a>
+    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/CountTrees/CountTreeNode.cs/#L23">View Source</a>
   </span>
-  <a id="StringAlgorithms_CountTrees_CountTreeNode_4_WrappedNode_" data-uid="StringAlgorithms.CountTrees.CountTreeNode`4.WrappedNode*"></a>
-  <h4 id="StringAlgorithms_CountTrees_CountTreeNode_4_WrappedNode" data-uid="StringAlgorithms.CountTrees.CountTreeNode`4.WrappedNode">WrappedNode</h4>
+  <a id="StringAlgorithms_CountTrees_CountTreeNode_2_WrappedNode_" data-uid="StringAlgorithms.CountTrees.CountTreeNode`2.WrappedNode*"></a>
+  <h4 id="StringAlgorithms_CountTrees_CountTreeNode_2_WrappedNode" data-uid="StringAlgorithms.CountTrees.CountTreeNode`2.WrappedNode">WrappedNode</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -306,17 +296,17 @@ equivalent nodes, will be equal.</p>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode-4.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode, TPath, TBuilder&gt;</a>
+      <a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</a>
   </div>
   <div>
       <span class="xref">System.IEquatable&lt;T&gt;</span>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.html#StringAlgorithms_RecImmTrees_RecImmDictIndexedTreeNodeExtensions_IsLeaf__4_StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreeNode___0___1___2___3__">RecImmDictIndexedTreeNodeExtensions.IsLeaf&lt;TEdge, TNode, TPath, TBuilder&gt;(IRecImmDictIndexedTreeNode&lt;TEdge, TNode, TPath, TBuilder&gt;)</a>
+      <a class="xref" href="StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.html#StringAlgorithms_RecImmTrees_RecImmDictIndexedTreeNodeExtensions_IsLeaf__2_StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreeNode___0___1__">RecImmDictIndexedTreeNodeExtensions.IsLeaf&lt;TEdge, TNode&gt;(IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.html#StringAlgorithms_RecImmTrees_RecImmDictIndexedTreeNodeExtensions_GetAllNodeToLeafPaths__4_StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreeNode___0___1___2___3__">RecImmDictIndexedTreeNodeExtensions.GetAllNodeToLeafPaths&lt;TEdge, TNode, TPath, TBuilder&gt;(IRecImmDictIndexedTreeNode&lt;TEdge, TNode, TPath, TBuilder&gt;)</a>
+      <a class="xref" href="StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.html#StringAlgorithms_RecImmTrees_RecImmDictIndexedTreeNodeExtensions_GetAllNodeToLeafPaths__2_StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreeNode___0___1__">RecImmDictIndexedTreeNodeExtensions.GetAllNodeToLeafPaths&lt;TEdge, TNode&gt;(IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;)</a>
   </div>
 </article>
           </div>
@@ -326,10 +316,10 @@ equivalent nodes, will be equal.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_CountTrees_CountTreeNode_4.md&amp;value=---%0Auid%3A%20StringAlgorithms.CountTrees.CountTreeNode%604%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_CountTrees_CountTreeNode_2.md&amp;value=---%0Auid%3A%20StringAlgorithms.CountTrees.CountTreeNode%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/CountTrees/CountTreeNode.cs/#L29" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/CountTrees/CountTreeNode.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

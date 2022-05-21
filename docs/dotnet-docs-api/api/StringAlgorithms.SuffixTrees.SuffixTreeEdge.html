@@ -95,9 +95,9 @@ substring in text used as a selector to navigate the <a class="xref" href="Strin
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureEdge-4.html">ISuffixStructureEdge</a>&lt;<a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreePath.html">SuffixTreePath</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeBuilder.html">SuffixTreeBuilder</a>&gt;</div>
+    <div><a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureEdge-3.html">ISuffixStructureEdge</a>&lt;<a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeBuilder.html">SuffixTreeBuilder</a>&gt;</div>
     <div><a class="xref" href="StringAlgorithms.TextWithTerminator.ISelector.html">TextWithTerminator.ISelector</a></div>
-    <div><a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeEdge-4.html">IRecImmDictIndexedTreeEdge</a>&lt;<a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreePath.html">SuffixTreePath</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeBuilder.html">SuffixTreeBuilder</a>&gt;</div>
+    <div><a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeEdge-2.html">IRecImmDictIndexedTreeEdge</a>&lt;<a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a>&gt;</div>
     <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
@@ -128,7 +128,7 @@ substring in text used as a selector to navigate the <a class="xref" href="Strin
   <h6><strong>Assembly</strong>: StringAlgorithms.dll</h6>
   <h5 id="StringAlgorithms_SuffixTrees_SuffixTreeEdge_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SuffixTreeEdge : ISuffixStructureEdge&lt;SuffixTreeEdge, SuffixTreeNode, SuffixTreePath, SuffixTreeBuilder&gt;, TextWithTerminator.ISelector, IRecImmDictIndexedTreeEdge&lt;SuffixTreeEdge, SuffixTreeNode, SuffixTreePath, SuffixTreeBuilder&gt;, IEquatable&lt;SuffixTreeEdge&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class SuffixTreeEdge : ISuffixStructureEdge&lt;SuffixTreeEdge, SuffixTreeNode, SuffixTreeBuilder&gt;, TextWithTerminator.ISelector, IRecImmDictIndexedTreeEdge&lt;SuffixTreeEdge, SuffixTreeNode&gt;, IEquatable&lt;SuffixTreeEdge&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -162,13 +162,13 @@ substring in text used as a selector to navigate the <a class="xref" href="Strin
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">Start</span></td>
-        <td><p><inheritdoc cref="P:StringAlgorithms.SuffixStructures.ISuffixStructureEdge`4.Start" path="/summary"></inheritdoc></p>
+        <td><p><inheritdoc cref="P:StringAlgorithms.SuffixStructures.ISuffixStructureEdge`3.Start" path="/summary"></inheritdoc></p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">Length</span></td>
-        <td><p><inheritdoc cref="P:StringAlgorithms.SuffixStructures.ISuffixStructureEdge`4.Length" path="/summary"></inheritdoc></p>
+        <td><p><inheritdoc cref="P:StringAlgorithms.SuffixStructures.ISuffixStructureEdge`3.Length" path="/summary"></inheritdoc></p>
 </td>
       </tr>
     </tbody>
@@ -291,20 +291,20 @@ substring in text used as a selector to navigate the <a class="xref" href="Strin
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureEdge-4.html">ISuffixStructureEdge&lt;TEdge, TNode, TPath, TBuilder&gt;</a>
+      <a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureEdge-3.html">ISuffixStructureEdge&lt;TEdge, TNode, TBuilder&gt;</a>
   </div>
   <div>
       <a class="xref" href="StringAlgorithms.TextWithTerminator.ISelector.html">TextWithTerminator.ISelector</a>
   </div>
   <div>
-      <a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeEdge-4.html">IRecImmDictIndexedTreeEdge&lt;TEdge, TNode, TPath, TBuilder&gt;</a>
+      <a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeEdge-2.html">IRecImmDictIndexedTreeEdge&lt;TEdge, TNode&gt;</a>
   </div>
   <div>
       <span class="xref">System.IEquatable&lt;T&gt;</span>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="StringAlgorithms.SuffixStructures.SuffixStructureEdgeExtensions.html#StringAlgorithms_SuffixStructures_SuffixStructureEdgeExtensions_IsAdjacentTo__4_StringAlgorithms_SuffixStructures_ISuffixStructureEdge___0___1___2___3____0_StringAlgorithms_SuffixStructures_AdjacencyOrders_">SuffixStructureEdgeExtensions.IsAdjacentTo&lt;TEdge, TNode, TPath, TBuilder&gt;(ISuffixStructureEdge&lt;TEdge, TNode, TPath, TBuilder&gt;, TEdge, AdjacencyOrders)</a>
+      <a class="xref" href="StringAlgorithms.SuffixStructures.SuffixStructureEdgeExtensions.html#StringAlgorithms_SuffixStructures_SuffixStructureEdgeExtensions_IsAdjacentTo__3_StringAlgorithms_SuffixStructures_ISuffixStructureEdge___0___1___2____0_StringAlgorithms_SuffixStructures_AdjacencyOrders_">SuffixStructureEdgeExtensions.IsAdjacentTo&lt;TEdge, TNode, TBuilder&gt;(ISuffixStructureEdge&lt;TEdge, TNode, TBuilder&gt;, TEdge, AdjacencyOrders)</a>
   </div>
 </article>
           </div>

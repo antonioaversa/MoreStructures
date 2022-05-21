@@ -83,7 +83,7 @@
   
   <h1 id="StringAlgorithms_SuffixStructures_SuffixStructureBuilderExtensions" data-uid="StringAlgorithms.SuffixStructures.SuffixStructureBuilderExtensions" class="text-break">Class SuffixStructureBuilderExtensions
   </h1>
-  <div class="markdown level0 summary"><p>Extension methods for all <a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureBuilder-4.html">ISuffixStructureBuilder&lt;TEdge, TNode, TPath, TBuilder&gt;</a> concretions.</p>
+  <div class="markdown level0 summary"><p>Extension methods for all <a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureBuilder-3.html">ISuffixStructureBuilder&lt;TEdge, TNode, TBuilder&gt;</a> concretions.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -125,21 +125,21 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixStructures_SuffixStructureBuilderExtensions_BuildTree__4_StringAlgorithms_SuffixStructures_ISuffixStructureBuilder___0___1___2___3__System_String_.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixStructures.SuffixStructureBuilderExtensions.BuildTree%60%604(StringAlgorithms.SuffixStructures.ISuffixStructureBuilder%7B%60%600%2C%60%601%2C%60%602%2C%60%603%7D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixStructures_SuffixStructureBuilderExtensions_BuildTree__3_StringAlgorithms_SuffixStructures_ISuffixStructureBuilder___0___1___2__System_String_.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixStructures.SuffixStructureBuilderExtensions.BuildTree%60%603(StringAlgorithms.SuffixStructures.ISuffixStructureBuilder%7B%60%600%2C%60%601%2C%60%602%7D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixStructures/SuffixStructureBuilderExtensions.cs/#L21">View Source</a>
   </span>
   <a id="StringAlgorithms_SuffixStructures_SuffixStructureBuilderExtensions_BuildTree_" data-uid="StringAlgorithms.SuffixStructures.SuffixStructureBuilderExtensions.BuildTree*"></a>
-  <h4 id="StringAlgorithms_SuffixStructures_SuffixStructureBuilderExtensions_BuildTree__4_StringAlgorithms_SuffixStructures_ISuffixStructureBuilder___0___1___2___3__System_String_" data-uid="StringAlgorithms.SuffixStructures.SuffixStructureBuilderExtensions.BuildTree``4(StringAlgorithms.SuffixStructures.ISuffixStructureBuilder{``0,``1,``2,``3},System.String)">BuildTree&lt;TEdge, TNode, TPath, TBuilder&gt;(ISuffixStructureBuilder&lt;TEdge, TNode, TPath, TBuilder&gt;, String)</h4>
-  <div class="markdown level1 summary"><p><inheritdoc cref="M:StringAlgorithms.SuffixStructures.ISuffixStructureBuilder`4.BuildTree(StringAlgorithms.TextWithTerminator)"></inheritdoc>
+  <h4 id="StringAlgorithms_SuffixStructures_SuffixStructureBuilderExtensions_BuildTree__3_StringAlgorithms_SuffixStructures_ISuffixStructureBuilder___0___1___2__System_String_" data-uid="StringAlgorithms.SuffixStructures.SuffixStructureBuilderExtensions.BuildTree``3(StringAlgorithms.SuffixStructures.ISuffixStructureBuilder{``0,``1,``2},System.String)">BuildTree&lt;TEdge, TNode, TBuilder&gt;(ISuffixStructureBuilder&lt;TEdge, TNode, TBuilder&gt;, String)</h4>
+  <div class="markdown level1 summary"><p><inheritdoc cref="M:StringAlgorithms.SuffixStructures.ISuffixStructureBuilder`3.BuildTree(StringAlgorithms.TextWithTerminator)"></inheritdoc>
 Text is provided as a plain string.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static TNode BuildTree&lt;TEdge, TNode, TPath, TBuilder&gt;(this ISuffixStructureBuilder&lt;TEdge, TNode, TPath, TBuilder&gt; builder, string text)
-    where TEdge : ISuffixStructureEdge&lt;TEdge, TNode, TPath, TBuilder&gt; where TNode : ISuffixStructureNode&lt;TEdge, TNode, TPath, TBuilder&gt; where TPath : ISuffixStructurePath&lt;TEdge, TNode, TPath, TBuilder&gt; where TBuilder : ISuffixStructureBuilder&lt;TEdge, TNode, TPath, TBuilder&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static TNode BuildTree&lt;TEdge, TNode, TBuilder&gt;(this ISuffixStructureBuilder&lt;TEdge, TNode, TBuilder&gt; builder, string text)
+    where TEdge : ISuffixStructureEdge&lt;TEdge, TNode, TBuilder&gt; where TNode : ISuffixStructureNode&lt;TEdge, TNode, TBuilder&gt; where TBuilder : ISuffixStructureBuilder&lt;TEdge, TNode, TBuilder&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -152,7 +152,7 @@ Text is provided as a plain string.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureBuilder-4.html">ISuffixStructureBuilder</a>&lt;TEdge, TNode, TPath, TBuilder&gt;</td>
+        <td><a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureBuilder-3.html">ISuffixStructureBuilder</a>&lt;TEdge, TNode, TBuilder&gt;</td>
         <td><span class="parametername">builder</span></td>
         <td><p>The builder to be used, to build the structure.</p>
 </td>
@@ -176,7 +176,7 @@ Text is provided as a plain string.</p>
     <tbody>
       <tr>
         <td><span class="xref">TNode</span></td>
-        <td><p><inheritdoc cref="M:StringAlgorithms.SuffixStructures.ISuffixStructureBuilder`4.BuildTree(StringAlgorithms.TextWithTerminator)"></inheritdoc></p>
+        <td><p><inheritdoc cref="M:StringAlgorithms.SuffixStructures.ISuffixStructureBuilder`3.BuildTree(StringAlgorithms.TextWithTerminator)"></inheritdoc></p>
 </td>
       </tr>
     </tbody>
@@ -196,10 +196,6 @@ Text is provided as a plain string.</p>
       </tr>
       <tr>
         <td><span class="parametername">TNode</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TPath</span></td>
         <td></td>
       </tr>
       <tr>
