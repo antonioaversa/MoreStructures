@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class StringUtilitiesTests
+    <title>Class SuffixTreeBuilder
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class StringUtilitiesTests
+    <meta name="title" content="Class SuffixTreeBuilder
    ">
     <meta name="generator" content="docfx 2.59.2.0">
     
@@ -78,17 +78,22 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="StringAlgorithms.Tests.StringUtilitiesTests">
+            <article class="content wrap" id="_content" data-uid="StringAlgorithms.SuffixTrees.Builders.SuffixTreeBuilder">
   
   
-  <h1 id="StringAlgorithms_Tests_StringUtilitiesTests" data-uid="StringAlgorithms.Tests.StringUtilitiesTests" class="text-break">Class StringUtilitiesTests
+  <h1 id="StringAlgorithms_SuffixTrees_Builders_SuffixTreeBuilder" data-uid="StringAlgorithms.SuffixTrees.Builders.SuffixTreeBuilder" class="text-break">Class SuffixTreeBuilder
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Builds objects, such as edges and nodes, for <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a> structures.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">StringUtilitiesTests</span></div>
+    <div class="level1"><span class="xref">SuffixTreeBuilder</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="StringAlgorithms.SuffixStructures.Builders.IBuilder-2.html">IBuilder</a>&lt;<a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a>, <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -114,28 +119,76 @@
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="StringAlgorithms.Tests.html">StringAlgorithms.Tests</a></h6>
-  <h6><strong>Assembly</strong>: StringAlgorithms.Tests.dll</h6>
-  <h5 id="StringAlgorithms_Tests_StringUtilitiesTests_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="StringAlgorithms.SuffixTrees.Builders.html">StringAlgorithms.SuffixTrees.Builders</a></h6>
+  <h6><strong>Assembly</strong>: StringAlgorithms.dll</h6>
+  <h5 id="StringAlgorithms_SuffixTrees_Builders_SuffixTreeBuilder_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class StringUtilitiesTests</code></pre>
+    <pre><code class="lang-csharp hljs">public class SuffixTreeBuilder : IBuilder&lt;SuffixTreeEdge, SuffixTreeNode&gt;</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_Tests_StringUtilitiesTests_LongestPrefixInCommon_IsCorrect.md&amp;value=---%0Auid%3A%20StringAlgorithms.Tests.StringUtilitiesTests.LongestPrefixInCommon_IsCorrect%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixTrees_Builders_SuffixTreeBuilder_BuildTree_StringAlgorithms_TextWithTerminator_.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixTrees.Builders.SuffixTreeBuilder.BuildTree(StringAlgorithms.TextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms.Tests/Utilities/StringUtilitiesTests.cs/#L9">View Source</a>
+    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixTrees/Builders/SuffixTreeBuilder.cs/#L13">View Source</a>
   </span>
-  <a id="StringAlgorithms_Tests_StringUtilitiesTests_LongestPrefixInCommon_IsCorrect_" data-uid="StringAlgorithms.Tests.StringUtilitiesTests.LongestPrefixInCommon_IsCorrect*"></a>
-  <h4 id="StringAlgorithms_Tests_StringUtilitiesTests_LongestPrefixInCommon_IsCorrect" data-uid="StringAlgorithms.Tests.StringUtilitiesTests.LongestPrefixInCommon_IsCorrect">LongestPrefixInCommon_IsCorrect()</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="StringAlgorithms_SuffixTrees_Builders_SuffixTreeBuilder_BuildTree_" data-uid="StringAlgorithms.SuffixTrees.Builders.SuffixTreeBuilder.BuildTree*"></a>
+  <h4 id="StringAlgorithms_SuffixTrees_Builders_SuffixTreeBuilder_BuildTree_StringAlgorithms_TextWithTerminator_" data-uid="StringAlgorithms.SuffixTrees.Builders.SuffixTreeBuilder.BuildTree(StringAlgorithms.TextWithTerminator)">BuildTree(TextWithTerminator)</h4>
+  <div class="markdown level1 summary"><p>Build a <a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureEdge-2.html">ISuffixStructureEdge&lt;TEdge, TNode&gt;</a> of the provided text, which is a
+n-ary search tree in which edges coming out of a node are substrings of text which identify edges shared by all
+paths to leaves, starting from the node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void LongestPrefixInCommon_IsCorrect()</code></pre>
+    <pre><code class="lang-csharp hljs">public SuffixTreeNode BuildTree(TextWithTerminator text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="StringAlgorithms.TextWithTerminator.html">TextWithTerminator</a></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>The text to build the Suffix Structure of, with its terminator (required for traversal).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a></td>
+        <td><p>The root node of the Suffix Structure.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="StringAlgorithms_SuffixTrees_Builders_SuffixTreeBuilder_BuildTree_StringAlgorithms_TextWithTerminator__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Substrings of text are identified by their start position in text and their length.</p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="StringAlgorithms.SuffixStructures.Builders.IBuilder-2.html">IBuilder&lt;TEdge, TNode&gt;</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="StringAlgorithms.SuffixStructures.Builders.BuilderExtensions.html#StringAlgorithms_SuffixStructures_Builders_BuilderExtensions_BuildTree__2_StringAlgorithms_SuffixStructures_Builders_IBuilder___0___1__System_String_">BuilderExtensions.BuildTree&lt;TEdge, TNode&gt;(IBuilder&lt;TEdge, TNode&gt;, String)</a>
   </div>
 </article>
           </div>
@@ -145,10 +198,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_Tests_StringUtilitiesTests.md&amp;value=---%0Auid%3A%20StringAlgorithms.Tests.StringUtilitiesTests%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixTrees_Builders_SuffixTreeBuilder.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixTrees.Builders.SuffixTreeBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms.Tests/Utilities/StringUtilitiesTests.cs/#L6" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixTrees/Builders/SuffixTreeBuilder.cs/#L9" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -94,7 +94,7 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureNode-3.html">ISuffixStructureNode</a>&lt;<a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieEdge.html">SuffixTrieEdge</a>, <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a>, <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieBuilder.html">SuffixTrieBuilder</a>&gt;</div>
+    <div><a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureNode-2.html">ISuffixStructureNode</a>&lt;<a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieEdge.html">SuffixTrieEdge</a>, <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a>&gt;</div>
     <div><a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode</a>&lt;<a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieEdge.html">SuffixTrieEdge</a>, <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a>&gt;</div>
     <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a>&gt;</div>
     <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieNode.Intermediate.html">SuffixTrieNode.Intermediate</a>&gt;</div>
@@ -133,7 +133,7 @@
   <h6><strong>Assembly</strong>: StringAlgorithms.dll</h6>
   <h5 id="StringAlgorithms_SuffixTries_SuffixTrieNode_Intermediate_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Intermediate : SuffixTrieNode, ISuffixStructureNode&lt;SuffixTrieEdge, SuffixTrieNode, SuffixTrieBuilder&gt;, IRecImmDictIndexedTreeNode&lt;SuffixTrieEdge, SuffixTrieNode&gt;, IEquatable&lt;SuffixTrieNode&gt;, IEquatable&lt;SuffixTrieNode.Intermediate&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class Intermediate : SuffixTrieNode, ISuffixStructureNode&lt;SuffixTrieEdge, SuffixTrieNode&gt;, IRecImmDictIndexedTreeNode&lt;SuffixTrieEdge, SuffixTrieNode&gt;, IEquatable&lt;SuffixTrieNode&gt;, IEquatable&lt;SuffixTrieNode.Intermediate&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -182,7 +182,7 @@
   <a id="StringAlgorithms_SuffixTries_SuffixTrieNode_Intermediate_ToString_" data-uid="StringAlgorithms.SuffixTries.SuffixTrieNode.Intermediate.ToString*"></a>
   <h4 id="StringAlgorithms_SuffixTries_SuffixTrieNode_Intermediate_ToString" data-uid="StringAlgorithms.SuffixTries.SuffixTrieNode.Intermediate.ToString">ToString()</h4>
   <div class="markdown level1 summary"><p><inheritdoc></inheritdoc>
-Uses a <a class="xref" href="StringAlgorithms.RecImmTrees.Stringifiable.IStringifier-2.html">IStringifier&lt;TEdge, TNode&gt;</a> to generate the string.</p>
+Uses a <a class="xref" href="StringAlgorithms.RecImmTrees.Conversions.IStringifier-2.html">IStringifier&lt;TEdge, TNode&gt;</a> to generate the string.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -209,7 +209,7 @@ Uses a <a class="xref" href="StringAlgorithms.RecImmTrees.Stringifiable.IStringi
   <div><a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieNode.html#StringAlgorithms_SuffixTries_SuffixTrieNode_ToString">SuffixTrieNode.ToString()</a></div>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureNode-3.html">ISuffixStructureNode&lt;TEdge, TNode, TBuilder&gt;</a>
+      <a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureNode-2.html">ISuffixStructureNode&lt;TEdge, TNode&gt;</a>
   </div>
   <div>
       <a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</a>
@@ -228,10 +228,10 @@ Uses a <a class="xref" href="StringAlgorithms.RecImmTrees.Stringifiable.IStringi
       <a class="xref" href="StringAlgorithms.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.html#StringAlgorithms_RecImmTrees_RecImmDictIndexedTreeNodeExtensions_GetAllNodeToLeafPaths__2_StringAlgorithms_RecImmTrees_IRecImmDictIndexedTreeNode___0___1__">RecImmDictIndexedTreeNodeExtensions.GetAllNodeToLeafPaths&lt;TEdge, TNode&gt;(IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;)</a>
   </div>
   <div>
-      <a class="xref" href="StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.html#StringAlgorithms_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__3_StringAlgorithms_SuffixStructures_ISuffixStructureNode___0___1___2__StringAlgorithms_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode, TBuilder&gt;(ISuffixStructureNode&lt;TEdge, TNode, TBuilder&gt;, TextWithTerminator)</a>
+      <a class="xref" href="StringAlgorithms.SuffixStructures.SuffixStructureNodeExtensions.html#StringAlgorithms_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2_StringAlgorithms_SuffixStructures_ISuffixStructureNode___0___1__StringAlgorithms_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(ISuffixStructureNode&lt;TEdge, TNode&gt;, TextWithTerminator)</a>
   </div>
   <div>
-      <a class="xref" href="StringAlgorithms.SuffixStructures.Matching.Matcher.html#StringAlgorithms_SuffixStructures_Matching_Matcher_Match__3_StringAlgorithms_SuffixStructures_ISuffixStructureNode___0___1___2__StringAlgorithms_TextWithTerminator_System_String_">Matcher.Match&lt;TEdge, TNode, TBuilder&gt;(ISuffixStructureNode&lt;TEdge, TNode, TBuilder&gt;, TextWithTerminator, String)</a>
+      <a class="xref" href="StringAlgorithms.SuffixStructures.Matching.Matcher.html#StringAlgorithms_SuffixStructures_Matching_Matcher_Match__2_StringAlgorithms_SuffixStructures_ISuffixStructureNode___0___1__StringAlgorithms_TextWithTerminator_System_String_">Matcher.Match&lt;TEdge, TNode&gt;(ISuffixStructureNode&lt;TEdge, TNode&gt;, TextWithTerminator, String)</a>
   </div>
 </article>
           </div>

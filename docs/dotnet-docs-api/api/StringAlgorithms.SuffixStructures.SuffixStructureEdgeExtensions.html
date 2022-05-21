@@ -83,7 +83,7 @@
   
   <h1 id="StringAlgorithms_SuffixStructures_SuffixStructureEdgeExtensions" data-uid="StringAlgorithms.SuffixStructures.SuffixStructureEdgeExtensions" class="text-break">Class SuffixStructureEdgeExtensions
   </h1>
-  <div class="markdown level0 summary"><p>Extension methods for all <a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureEdge-3.html">ISuffixStructureEdge&lt;TEdge, TNode, TBuilder&gt;</a> edge concretions.</p>
+  <div class="markdown level0 summary"><p>Extension methods for all <a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureEdge-2.html">ISuffixStructureEdge&lt;TEdge, TNode&gt;</a> edge concretions.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -125,20 +125,20 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixStructures_SuffixStructureEdgeExtensions_IsAdjacentTo__3_StringAlgorithms_SuffixStructures_ISuffixStructureEdge___0___1___2____0_StringAlgorithms_SuffixStructures_AdjacencyOrders_.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixStructures.SuffixStructureEdgeExtensions.IsAdjacentTo%60%603(StringAlgorithms.SuffixStructures.ISuffixStructureEdge%7B%60%600%2C%60%601%2C%60%602%7D%2C%60%600%2CStringAlgorithms.SuffixStructures.AdjacencyOrders)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixStructures_SuffixStructureEdgeExtensions_IsAdjacentTo__2_StringAlgorithms_SuffixStructures_ISuffixStructureEdge___0___1____0_StringAlgorithms_SuffixStructures_AdjacencyOrders_.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixStructures.SuffixStructureEdgeExtensions.IsAdjacentTo%60%602(StringAlgorithms.SuffixStructures.ISuffixStructureEdge%7B%60%600%2C%60%601%7D%2C%60%600%2CStringAlgorithms.SuffixStructures.AdjacencyOrders)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixStructures/SuffixStructureEdgeExtensions.cs/#L15">View Source</a>
   </span>
   <a id="StringAlgorithms_SuffixStructures_SuffixStructureEdgeExtensions_IsAdjacentTo_" data-uid="StringAlgorithms.SuffixStructures.SuffixStructureEdgeExtensions.IsAdjacentTo*"></a>
-  <h4 id="StringAlgorithms_SuffixStructures_SuffixStructureEdgeExtensions_IsAdjacentTo__3_StringAlgorithms_SuffixStructures_ISuffixStructureEdge___0___1___2____0_StringAlgorithms_SuffixStructures_AdjacencyOrders_" data-uid="StringAlgorithms.SuffixStructures.SuffixStructureEdgeExtensions.IsAdjacentTo``3(StringAlgorithms.SuffixStructures.ISuffixStructureEdge{``0,``1,``2},``0,StringAlgorithms.SuffixStructures.AdjacencyOrders)">IsAdjacentTo&lt;TEdge, TNode, TBuilder&gt;(ISuffixStructureEdge&lt;TEdge, TNode, TBuilder&gt;, TEdge, AdjacencyOrders)</h4>
+  <h4 id="StringAlgorithms_SuffixStructures_SuffixStructureEdgeExtensions_IsAdjacentTo__2_StringAlgorithms_SuffixStructures_ISuffixStructureEdge___0___1____0_StringAlgorithms_SuffixStructures_AdjacencyOrders_" data-uid="StringAlgorithms.SuffixStructures.SuffixStructureEdgeExtensions.IsAdjacentTo``2(StringAlgorithms.SuffixStructures.ISuffixStructureEdge{``0,``1},``0,StringAlgorithms.SuffixStructures.AdjacencyOrders)">IsAdjacentTo&lt;TEdge, TNode&gt;(ISuffixStructureEdge&lt;TEdge, TNode&gt;, TEdge, AdjacencyOrders)</h4>
   <div class="markdown level1 summary"><p>Whether the first edge is in adjacency order w.r.t. the second edge.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool IsAdjacentTo&lt;TEdge, TNode, TBuilder&gt;(this ISuffixStructureEdge&lt;TEdge, TNode, TBuilder&gt; first, TEdge second, AdjacencyOrders order = AdjacencyOrders.BeforeOrAfter)
-    where TEdge : ISuffixStructureEdge&lt;TEdge, TNode, TBuilder&gt; where TNode : ISuffixStructureNode&lt;TEdge, TNode, TBuilder&gt; where TBuilder : ISuffixStructureBuilder&lt;TEdge, TNode, TBuilder&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool IsAdjacentTo&lt;TEdge, TNode&gt;(this ISuffixStructureEdge&lt;TEdge, TNode&gt; first, TEdge second, AdjacencyOrders order = AdjacencyOrders.BeforeOrAfter)
+    where TEdge : ISuffixStructureEdge&lt;TEdge, TNode&gt; where TNode : ISuffixStructureNode&lt;TEdge, TNode&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,7 +151,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureEdge-3.html">ISuffixStructureEdge</a>&lt;TEdge, TNode, TBuilder&gt;</td>
+        <td><a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureEdge-2.html">ISuffixStructureEdge</a>&lt;TEdge, TNode&gt;</td>
         <td><span class="parametername">first</span></td>
         <td><p>The edge to be compared for adjacency.</p>
 </td>
@@ -201,10 +201,6 @@
       </tr>
       <tr>
         <td><span class="parametername">TNode</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TBuilder</span></td>
         <td></td>
       </tr>
     </tbody>

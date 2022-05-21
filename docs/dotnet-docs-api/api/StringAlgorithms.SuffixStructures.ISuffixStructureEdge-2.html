@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface ISuffixStructureEdge&lt;TEdge, TNode, TBuilder&gt;
+    <title>Interface ISuffixStructureEdge&lt;TEdge, TNode&gt;
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface ISuffixStructureEdge&lt;TEdge, TNode, TBuilder&gt;
+    <meta name="title" content="Interface ISuffixStructureEdge&lt;TEdge, TNode&gt;
    ">
     <meta name="generator" content="docfx 2.59.2.0">
     
@@ -78,12 +78,12 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="StringAlgorithms.SuffixStructures.ISuffixStructureEdge`3">
+            <article class="content wrap" id="_content" data-uid="StringAlgorithms.SuffixStructures.ISuffixStructureEdge`2">
   
   
-  <h1 id="StringAlgorithms_SuffixStructures_ISuffixStructureEdge_3" data-uid="StringAlgorithms.SuffixStructures.ISuffixStructureEdge`3" class="text-break">Interface ISuffixStructureEdge&lt;TEdge, TNode, TBuilder&gt;
+  <h1 id="StringAlgorithms_SuffixStructures_ISuffixStructureEdge_2" data-uid="StringAlgorithms.SuffixStructures.ISuffixStructureEdge`2" class="text-break">Interface ISuffixStructureEdge&lt;TEdge, TNode&gt;
   </h1>
-  <div class="markdown level0 summary"><p>An edge of a <a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureEdge-3.html">ISuffixStructureEdge&lt;TEdge, TNode, TBuilder&gt;</a>, directionally linking two nodes and
+  <div class="markdown level0 summary"><p>An edge of a <a class="xref" href="StringAlgorithms.SuffixStructures.ISuffixStructureEdge-2.html">ISuffixStructureEdge&lt;TEdge, TNode&gt;</a>, directionally linking two nodes and
 forming a path hop. Represents prefix matching.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -95,9 +95,9 @@ forming a path hop. Represents prefix matching.</p>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="StringAlgorithms.SuffixStructures.html">StringAlgorithms.SuffixStructures</a></h6>
   <h6><strong>Assembly</strong>: StringAlgorithms.dll</h6>
-  <h5 id="StringAlgorithms_SuffixStructures_ISuffixStructureEdge_3_syntax">Syntax</h5>
+  <h5 id="StringAlgorithms_SuffixStructures_ISuffixStructureEdge_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ISuffixStructureEdge&lt;TEdge, TNode, TBuilder&gt; : TextWithTerminator.ISelector, IRecImmDictIndexedTreeEdge&lt;TEdge, TNode&gt; where TEdge : ISuffixStructureEdge&lt;TEdge, TNode, TBuilder&gt; where TNode : ISuffixStructureNode&lt;TEdge, TNode, TBuilder&gt; where TBuilder : ISuffixStructureBuilder&lt;TEdge, TNode, TBuilder&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public interface ISuffixStructureEdge&lt;TEdge, TNode&gt; : TextWithTerminator.ISelector, IRecImmDictIndexedTreeEdge&lt;TEdge, TNode&gt; where TEdge : ISuffixStructureEdge&lt;TEdge, TNode&gt; where TNode : ISuffixStructureNode&lt;TEdge, TNode&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -118,24 +118,19 @@ forming a path hop. Represents prefix matching.</p>
         <td><p><inheritdoc cref="T:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeEdge`2" path="/typeparam[@name=&apos;TNode&apos;]"></inheritdoc></p>
 </td>
       </tr>
-      <tr>
-        <td><span class="parametername">TBuilder</span></td>
-        <td><p><inheritdoc cref="T:StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeEdge`2" path="/typeparam[@name=&apos;TBuilder&apos;]"></inheritdoc></p>
-</td>
-      </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixStructures_ISuffixStructureEdge_3_Length.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixStructures.ISuffixStructureEdge%603.Length%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixStructures_ISuffixStructureEdge_2_Length.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixStructures.ISuffixStructureEdge%602.Length%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixStructures/ISuffixStructureEdge.cs/#L32">View Source</a>
+    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixStructures/ISuffixStructureEdge.cs/#L28">View Source</a>
   </span>
-  <a id="StringAlgorithms_SuffixStructures_ISuffixStructureEdge_3_Length_" data-uid="StringAlgorithms.SuffixStructures.ISuffixStructureEdge`3.Length*"></a>
-  <h4 id="StringAlgorithms_SuffixStructures_ISuffixStructureEdge_3_Length" data-uid="StringAlgorithms.SuffixStructures.ISuffixStructureEdge`3.Length">Length</h4>
+  <a id="StringAlgorithms_SuffixStructures_ISuffixStructureEdge_2_Length_" data-uid="StringAlgorithms.SuffixStructures.ISuffixStructureEdge`2.Length*"></a>
+  <h4 id="StringAlgorithms_SuffixStructures_ISuffixStructureEdge_2_Length" data-uid="StringAlgorithms.SuffixStructures.ISuffixStructureEdge`2.Length">Length</h4>
   <div class="markdown level1 summary"><p>The length of the edge string.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -160,13 +155,13 @@ forming a path hop. Represents prefix matching.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixStructures_ISuffixStructureEdge_3_Start.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixStructures.ISuffixStructureEdge%603.Start%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixStructures_ISuffixStructureEdge_2_Start.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixStructures.ISuffixStructureEdge%602.Start%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixStructures/ISuffixStructureEdge.cs/#L27">View Source</a>
+    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixStructures/ISuffixStructureEdge.cs/#L23">View Source</a>
   </span>
-  <a id="StringAlgorithms_SuffixStructures_ISuffixStructureEdge_3_Start_" data-uid="StringAlgorithms.SuffixStructures.ISuffixStructureEdge`3.Start*"></a>
-  <h4 id="StringAlgorithms_SuffixStructures_ISuffixStructureEdge_3_Start" data-uid="StringAlgorithms.SuffixStructures.ISuffixStructureEdge`3.Start">Start</h4>
+  <a id="StringAlgorithms_SuffixStructures_ISuffixStructureEdge_2_Start_" data-uid="StringAlgorithms.SuffixStructures.ISuffixStructureEdge`2.Start*"></a>
+  <h4 id="StringAlgorithms_SuffixStructures_ISuffixStructureEdge_2_Start" data-uid="StringAlgorithms.SuffixStructures.ISuffixStructureEdge`2.Start">Start</h4>
   <div class="markdown level1 summary"><p>The index of the first character of the edge string in the text.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -191,7 +186,7 @@ forming a path hop. Represents prefix matching.</p>
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
-      <a class="xref" href="StringAlgorithms.SuffixStructures.SuffixStructureEdgeExtensions.html#StringAlgorithms_SuffixStructures_SuffixStructureEdgeExtensions_IsAdjacentTo__3_StringAlgorithms_SuffixStructures_ISuffixStructureEdge___0___1___2____0_StringAlgorithms_SuffixStructures_AdjacencyOrders_">SuffixStructureEdgeExtensions.IsAdjacentTo&lt;TEdge, TNode, TBuilder&gt;(ISuffixStructureEdge&lt;TEdge, TNode, TBuilder&gt;, TEdge, AdjacencyOrders)</a>
+      <a class="xref" href="StringAlgorithms.SuffixStructures.SuffixStructureEdgeExtensions.html#StringAlgorithms_SuffixStructures_SuffixStructureEdgeExtensions_IsAdjacentTo__2_StringAlgorithms_SuffixStructures_ISuffixStructureEdge___0___1____0_StringAlgorithms_SuffixStructures_AdjacencyOrders_">SuffixStructureEdgeExtensions.IsAdjacentTo&lt;TEdge, TNode&gt;(ISuffixStructureEdge&lt;TEdge, TNode&gt;, TEdge, AdjacencyOrders)</a>
   </div>
 </article>
           </div>
@@ -201,10 +196,10 @@ forming a path hop. Represents prefix matching.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixStructures_ISuffixStructureEdge_3.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixStructures.ISuffixStructureEdge%603%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_SuffixStructures_ISuffixStructureEdge_2.md&amp;value=---%0Auid%3A%20StringAlgorithms.SuffixStructures.ISuffixStructureEdge%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixStructures/ISuffixStructureEdge.cs/#L18" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/SuffixStructures/ISuffixStructureEdge.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
