@@ -8,7 +8,7 @@ namespace StringAlgorithms.Tests.RecImmTrees.Stringifiable;
 
 public abstract class StringifierTests
 {
-    protected IStringifier<Edge, Node, Builder> Stringifier { get; init; }
+    protected IStringifier<Edge, Node> Stringifier { get; init; }
     protected string NL => Stringifier.NewLine;
     protected string I => Stringifier.Indent;
 
@@ -21,7 +21,7 @@ public abstract class StringifierTests
     protected static readonly Func<Edge, Node, string> DefaultEdgeAndNodeStringifier =
         (e, n) => $"e({e.Id}):N({n.Id})";
 
-    public StringifierTests(IStringifier<Edge, Node, Builder> stringifier)
+    public StringifierTests(IStringifier<Edge, Node> stringifier)
     {
         Stringifier = stringifier;
     }

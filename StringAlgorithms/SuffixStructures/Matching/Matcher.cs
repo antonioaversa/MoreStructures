@@ -17,7 +17,7 @@ public static class Matcher
     /// <param name="text">The text whose Suffix Tree has to be matched against the pattern.</param>
     /// <param name="pattern">The pattern to match. Unlike text, is a string without terminator.</param>
     /// <returns>A successful or non-successful match.</returns>
-    public static Match<TreePath<TEdge, TNode, TBuilder>> Match<TEdge, TNode, TBuilder>(
+    public static Match<TreePath<TEdge, TNode>> Match<TEdge, TNode, TBuilder>(
         this ISuffixStructureNode<TEdge, TNode, TBuilder> node, 
         TextWithTerminator text, 
         string pattern) 
@@ -26,7 +26,7 @@ public static class Matcher
         where TBuilder : ISuffixStructureBuilder<TEdge, TNode, TBuilder>, new() =>
         Match(node, text, pattern, 0);
 
-    private static Match<TreePath<TEdge, TNode, TBuilder>> Match<TEdge, TNode, TBuilder>(
+    private static Match<TreePath<TEdge, TNode>> Match<TEdge, TNode, TBuilder>(
         this ISuffixStructureNode<TEdge, TNode, TBuilder> node, 
         TextWithTerminator text, 
         string pattern, 
@@ -45,21 +45,19 @@ public static class Matcher
             .MaxBy(r => r.Length)
             .FirstOrDefault();
 
-        var builder = new TBuilder();
-
         if (longestMatch == null)
-            return new Match<TreePath<TEdge, TNode, TBuilder>>(
+            return new Match<TreePath<TEdge, TNode>>(
                 false, textStart, 0, new());
 
         if (longestMatch.Length == pattern.Length - textStart)
-            return new Match<TreePath<TEdge, TNode, TBuilder>>(
+            return new Match<TreePath<TEdge, TNode>>(
                 true, textStart + longestMatch.Edge.Start, longestMatch.Length, new());
 
         // The edge has been fully matched but pattern is longer => chars left to match
         var childNode = node.Children[longestMatch.Edge];
         var childMatch = Match(childNode, text, pattern, textStart + longestMatch.Length);
-        var pathToChild = new TreePath<TEdge, TNode, TBuilder>(longestMatch.Edge, childNode);
-        return new Match<TreePath<TEdge, TNode, TBuilder>>(
+        var pathToChild = new TreePath<TEdge, TNode>(longestMatch.Edge, childNode);
+        return new Match<TreePath<TEdge, TNode>>(
             childMatch.Success, 
             textStart + longestMatch.Edge.Start, 
             longestMatch.Length + childMatch.MatchedChars,

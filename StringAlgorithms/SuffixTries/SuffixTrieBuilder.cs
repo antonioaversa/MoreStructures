@@ -3,7 +3,7 @@
 namespace StringAlgorithms.SuffixTries;
 
 /// <summary>
-/// Builds objects, such as edges, nodes and paths, for <see cref="SuffixTrieNode"/> structures.
+/// Builds objects, such as edges and nodes, for <see cref="SuffixTrieNode"/> structures.
 /// </summary>
 public class SuffixTrieBuilder
     : ISuffixStructureBuilder<SuffixTrieEdge, SuffixTrieNode, SuffixTrieBuilder>

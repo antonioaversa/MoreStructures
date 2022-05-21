@@ -1,7 +1,7 @@
 ﻿namespace StringAlgorithms.RecImmTrees;
 
 /// <summary>
-/// Extension methods for <see cref="TreePath{TEdge, TNode, TBuilder}"/>.
+/// Extension methods for <see cref="TreePath{TEdge, TNode}"/>.
 /// </summary>
 public static class TreePathExtensions
 {
@@ -11,12 +11,11 @@ public static class TreePathExtensions
     /// <param name="first">The path, to append nodes to.</param>
     /// <param name="second">The path, whose nodes have to be appended.</param>
     /// <returns>A new path, whose nodes are the concatenation of the nodes of the two paths.</returns>
-    public static TreePath<TEdge, TNode, TBuilder> Concat<TEdge, TNode, TBuilder>(
-        this TreePath<TEdge, TNode, TBuilder> first,
-        TreePath<TEdge, TNode, TBuilder> second)
-        where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode, TBuilder>
-        where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode, TBuilder>
-        where TBuilder : IRecImmDictIndexedTreeBuilder<TEdge, TNode, TBuilder>, new() =>
+    public static TreePath<TEdge, TNode> Concat<TEdge, TNode>(
+        this TreePath<TEdge, TNode> first,
+        TreePath<TEdge, TNode> second)
+        where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>
+        where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode> =>
         new(first.PathNodes.Concat(second.PathNodes));
 
     /// <summary>
@@ -28,12 +27,11 @@ public static class TreePathExtensions
     /// <returns>
     /// A new path, whose nodes are the concatenation of the nodes of the provided path and the one appended.
     /// </returns>
-    public static TreePath<TEdge, TNode, TBuilder> Append<TEdge, TNode, TBuilder>(
-        this TreePath<TEdge, TNode, TBuilder> path,
+    public static TreePath<TEdge, TNode> Append<TEdge, TNode>(
+        this TreePath<TEdge, TNode> path,
         TEdge edge,
         TNode node)
-        where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode, TBuilder>
-        where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode, TBuilder>
-        where TBuilder : IRecImmDictIndexedTreeBuilder<TEdge, TNode, TBuilder>, new() =>
+        where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>
+        where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode> =>
         new(path.PathNodes.Concat(Enumerable.Repeat(KeyValuePair.Create(edge, node), 1)));
 }

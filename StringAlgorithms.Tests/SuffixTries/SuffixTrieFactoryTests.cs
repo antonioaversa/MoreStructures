@@ -12,14 +12,14 @@ public class SuffixTrieFactoryTests
     [TestMethod]
     public void EmptyPath_IsCorrect()
     {
-        Assert.IsFalse(new TreePath<SuffixTrieEdge, SuffixTrieNode, SuffixTrieBuilder>().PathNodes.Any());
+        Assert.IsFalse(new TreePath<SuffixTrieEdge, SuffixTrieNode>().PathNodes.Any());
     }
 
     [TestMethod]
     public void SingletonPath_IsCorrect()
     {
         var node = new SuffixTrieNode.Leaf(0);
-        var path = new TreePath<SuffixTrieEdge, SuffixTrieNode, SuffixTrieBuilder>(new(0), node);
+        var path = new TreePath<SuffixTrieEdge, SuffixTrieNode>(new(0), node);
         Assert.AreEqual(1, path.PathNodes.Count());
         Assert.AreEqual(new(0), path.PathNodes.Single().Key);
         Assert.AreEqual(node, path.PathNodes.Single().Value);
@@ -33,7 +33,7 @@ public class SuffixTrieFactoryTests
         {
             [new(1)] = node2
         });
-        var path = new TreePath<SuffixTrieEdge, SuffixTrieNode, SuffixTrieBuilder>((new(0), node1), (new(1), node2));
+        var path = new TreePath<SuffixTrieEdge, SuffixTrieNode>((new(0), node1), (new(1), node2));
         AssertPath(node2, node1, path);
     }
 
@@ -45,13 +45,13 @@ public class SuffixTrieFactoryTests
         {
             [new(1)] = node2
         });
-        var path = new TreePath<SuffixTrieEdge, SuffixTrieNode, SuffixTrieBuilder>(
+        var path = new TreePath<SuffixTrieEdge, SuffixTrieNode>(
             new List<KeyValuePair<SuffixTrieEdge, SuffixTrieNode>> { new(new(0), node1), new(new(1), node2) });
         AssertPath(node2, node1, path);
     }
 
     private static void AssertPath(SuffixTrieNode.Leaf node2, SuffixTrieNode.Intermediate node1, 
-        TreePath<SuffixTrieEdge, SuffixTrieNode, SuffixTrieBuilder> path)
+        TreePath<SuffixTrieEdge, SuffixTrieNode> path)
     {
         Assert.AreEqual(2, path.PathNodes.Count());
         Assert.AreEqual(new(0), path.PathNodes.ElementAt(0).Key);

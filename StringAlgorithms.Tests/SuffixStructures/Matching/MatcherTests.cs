@@ -27,7 +27,7 @@ public class MatcherTests
         var text = new TextWithTerminator("abcdaabcbcadaabca");
         var suffixTree = Builder.BuildTree(text);
 
-        Match<TreePath<SuffixTreeEdge, SuffixTreeNode, SuffixTreeBuilder>> match;
+        Match<TreePath<SuffixTreeEdge, SuffixTreeNode>> match;
 
         match = suffixTree.Match(text, new("ab"));
         Assert.IsTrue(match is { Success: true, MatchedChars: 2 });
@@ -53,7 +53,7 @@ public class MatcherTests
         var text = new TextWithTerminator("abcdaabcbcadaabca");
         var suffixTree = Builder.BuildTree(text);
 
-        Match<TreePath<SuffixTreeEdge, SuffixTreeNode, SuffixTreeBuilder>> match;
+        Match<TreePath<SuffixTreeEdge, SuffixTreeNode>> match;
 
         match = suffixTree.Match(text, new("z"));
         Assert.IsTrue(match is { Success: false, MatchedChars: 0 });

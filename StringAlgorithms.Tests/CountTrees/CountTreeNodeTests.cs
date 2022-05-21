@@ -11,17 +11,17 @@ public class CountTreeNodeTests
     [TestMethod]
     public void Equals_BasedOnWrappedNode()
     {
-        var wrapping1 = new CountTreeNode<Edge, Node, Builder>(
+        var wrapping1 = new CountTreeNode<Edge, Node>(
             new Node(12) { Children = new Dictionary<Edge, Node> { [new(2)] = new(20) } });
-        var wrapping2 = new CountTreeNode<Edge, Node, Builder>(
+        var wrapping2 = new CountTreeNode<Edge, Node>(
             new Node(12) { Children = new Dictionary<Edge, Node> { [new(2)] = new(20) } });
         Assert.AreEqual(wrapping1, wrapping2);
 
-        var wrapping3 = new CountTreeNode<Edge, Node, Builder>(
+        var wrapping3 = new CountTreeNode<Edge, Node>(
             new Node(13) { Children = new Dictionary<Edge, Node> { [new(2)] = new(20) } });
         Assert.AreNotEqual(wrapping1, wrapping3);
 
-        var wrapping4 = new CountTreeNode<Edge, Node, Builder>(
+        var wrapping4 = new CountTreeNode<Edge, Node>(
             new Node(12) { Children = new Dictionary<Edge, Node> { [new(2)] = new(21) } });
         Assert.AreNotEqual(wrapping1, wrapping4);
     }
@@ -30,7 +30,7 @@ public class CountTreeNodeTests
     public void WrappedNode_IsPreserved()
     {
         var wrapped = new Node(12) { Children = new Dictionary<Edge, Node> { [new(2)] = new(20) } };
-        var wrapping = new CountTreeNode<Edge, Node, Builder>(wrapped);
+        var wrapping = new CountTreeNode<Edge, Node>(wrapped);
         Assert.AreEqual(wrapped, wrapping.WrappedNode);
     }
 
@@ -38,7 +38,7 @@ public class CountTreeNodeTests
     public void DescendantsCount_OfLeafIsZero()
     {
         var leafWrapped = new Node(12) { Children = new Dictionary<Edge, Node> { } };
-        var leafWrapping = new CountTreeNode<Edge, Node, Builder>(leafWrapped);
+        var leafWrapping = new CountTreeNode<Edge, Node>(leafWrapped);
         Assert.AreEqual(0, leafWrapping.DescendantsCount);
     }
 
@@ -46,7 +46,7 @@ public class CountTreeNodeTests
     public void DescendantsCount_OfSingletonIsOne()
     {
         var leafWrapped = new Node(12) { Children = new Dictionary<Edge, Node> { [new(2)] = new(20) } };
-        var leafWrapping = new CountTreeNode<Edge, Node, Builder>(leafWrapped);
+        var leafWrapping = new CountTreeNode<Edge, Node>(leafWrapped);
         Assert.AreEqual(1, leafWrapping.DescendantsCount);
     }
 
@@ -54,7 +54,7 @@ public class CountTreeNodeTests
     public void DescendantsCount_OfThreeWithNNodesIsN()
     {
         Node leafWrapped = BuildExampleNode();
-        var leafWrapping = new CountTreeNode<Edge, Node, Builder>(leafWrapped);
+        var leafWrapping = new CountTreeNode<Edge, Node>(leafWrapped);
         Assert.AreEqual(4, leafWrapping.DescendantsCount);
     }
 
@@ -62,7 +62,7 @@ public class CountTreeNodeTests
     public void DescendantsCount_GivesConsistentResults()
     {
         Node leafWrapped = BuildExampleNode();
-        var leafWrapping = new CountTreeNode<Edge, Node, Builder>(leafWrapped);
+        var leafWrapping = new CountTreeNode<Edge, Node>(leafWrapped);
         Assert.AreEqual(4, leafWrapping.DescendantsCount);
         Assert.AreEqual(4, leafWrapping.DescendantsCount);
         Assert.AreEqual(4, leafWrapping.DescendantsCount);

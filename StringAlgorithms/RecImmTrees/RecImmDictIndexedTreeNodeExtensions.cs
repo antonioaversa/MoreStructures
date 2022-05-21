@@ -1,7 +1,7 @@
 ﻿namespace StringAlgorithms.RecImmTrees;
 
 /// <summary>
-/// Extension methods for all <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode, TBuilder}"/> node concretions.
+/// Extension methods for all <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode}"/> node concretions.
 /// </summary>
 public static class RecImmDictIndexedTreeNodeExtensions
 {
@@ -9,11 +9,10 @@ public static class RecImmDictIndexedTreeNodeExtensions
     /// Whether the provided node is a leaf (i.e. has no children), or not.
     /// </summary>
     /// <param name="node">The node whose children have to be checked.</param>
-    public static bool IsLeaf<TEdge, TNode, TBuilder>(
-        this IRecImmDictIndexedTreeNode<TEdge, TNode, TBuilder> node)
-        where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode, TBuilder>
-        where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode, TBuilder>
-        where TBuilder : IRecImmDictIndexedTreeBuilder<TEdge, TNode, TBuilder>, new() => 
+    public static bool IsLeaf<TEdge, TNode>(
+        this IRecImmDictIndexedTreeNode<TEdge, TNode> node)
+        where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>
+        where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode> => 
         node.Children.Count == 0;
 
     /// <summary>
@@ -21,11 +20,10 @@ public static class RecImmDictIndexedTreeNodeExtensions
     /// </summary>
     /// <param name="node">The node, to start the structure traversal from.</param>
     /// <returns>A sequence of pairs of node and its incoming edge.</returns>
-    public static IEnumerable<TreePath<TEdge, TNode, TBuilder>> GetAllNodeToLeafPaths<TEdge, TNode, TBuilder>(
-        this IRecImmDictIndexedTreeNode<TEdge, TNode, TBuilder> node)
-        where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode, TBuilder>
-        where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode, TBuilder>
-        where TBuilder : IRecImmDictIndexedTreeBuilder<TEdge, TNode, TBuilder>, new()
+    public static IEnumerable<TreePath<TEdge, TNode>> GetAllNodeToLeafPaths<TEdge, TNode>(
+        this IRecImmDictIndexedTreeNode<TEdge, TNode> node)
+        where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>
+        where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode>
     {
         foreach (var edgeAndChild in node.Children)
         {
@@ -33,12 +31,12 @@ public static class RecImmDictIndexedTreeNodeExtensions
             if (childToLeafPaths.Any())
             {
                 foreach (var childToLeafPath in childToLeafPaths)
-                    yield return new TreePath<TEdge, TNode, TBuilder>(edgeAndChild.Key, edgeAndChild.Value)
+                    yield return new TreePath<TEdge, TNode>(edgeAndChild.Key, edgeAndChild.Value)
                         .Concat(childToLeafPath);
             }
             else
             {
-                yield return new TreePath<TEdge, TNode, TBuilder>(edgeAndChild.Key, edgeAndChild.Value);
+                yield return new TreePath<TEdge, TNode>(edgeAndChild.Key, edgeAndChild.Value);
             }
         }
     }

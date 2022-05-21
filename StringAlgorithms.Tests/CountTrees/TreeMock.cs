@@ -8,11 +8,11 @@ namespace StringAlgorithms.Tests.CountTrees;
 [ExcludeFromCodeCoverage]
 internal static class TreeMock
 {
-    public record Edge(int Id) : IRecImmDictIndexedTreeEdge<Edge, Node, Builder>
+    public record Edge(int Id) : IRecImmDictIndexedTreeEdge<Edge, Node>
     {
     }
 
-    public record Node(int Id) : IRecImmDictIndexedTreeNode<Edge, Node, Builder>
+    public record Node(int Id) : IRecImmDictIndexedTreeNode<Edge, Node>
     {
         private ValueReadOnlyDictionary<Edge, Node> _children = new(new Dictionary<Edge, Node> { });
         public IDictionary<Edge, Node> Children 
@@ -20,9 +20,5 @@ internal static class TreeMock
             get => _children;
             set => _children = new(new Dictionary<Edge, Node>(value));
         }
-    }
-
-    public class Builder : IRecImmDictIndexedTreeBuilder<Edge, Node, Builder>
-    {
     }
 }

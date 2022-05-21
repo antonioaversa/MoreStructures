@@ -13,7 +13,7 @@ public class SuffixTreeTreePathTests
     [TestMethod]
     public void PathNodes_ImmutabilityOnGet()
     {
-        var path = new TreePath<SuffixTreeEdge, SuffixTreeNode, SuffixTreeBuilder>();
+        var path = new TreePath<SuffixTreeEdge, SuffixTreeNode>();
         if (path.PathNodes is IList<KeyValuePair<SuffixTreeEdge, SuffixTreeNode>> pathNodesAsList)
         {
             Assert.ThrowsException<NotSupportedException>(() => pathNodesAsList.Add(
@@ -25,7 +25,7 @@ public class SuffixTreeTreePathTests
     public void PathNodes_ImmutabilityOnCtorParam()
     {
         var pathNodes = new Dictionary<SuffixTreeEdge, SuffixTreeNode> { };
-        var path = new TreePath<SuffixTreeEdge, SuffixTreeNode, SuffixTreeBuilder>(pathNodes);
+        var path = new TreePath<SuffixTreeEdge, SuffixTreeNode>(pathNodes);
         Assert.AreEqual(0, path.PathNodes.Count());
         pathNodes[new(0, 1)] = new SuffixTreeNode.Leaf(0);
         Assert.AreEqual(0, path.PathNodes.Count());
@@ -35,7 +35,7 @@ public class SuffixTreeTreePathTests
     /// The example is the second "root to leaf"" path of the tree built from <see cref="ExampleText"/>: 
     /// a -> ba -> a$.
     /// </remarks>
-    internal static TreePath<SuffixTreeEdge, SuffixTreeNode, SuffixTreeBuilder> BuildSuffixTreePathExample()
+    internal static TreePath<SuffixTreeEdge, SuffixTreeNode> BuildSuffixTreePathExample()
     {
         var leaf = new SuffixTreeNode.Leaf(2);
         var leafEdge = new SuffixTreeEdge(5, 2);

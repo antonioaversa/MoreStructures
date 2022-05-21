@@ -4,7 +4,7 @@ using System.Text;
 namespace StringAlgorithms.SuffixStructures;
 
 /// <summary>
-/// Extension methods for all <see cref="TreePath{TEdge, TNode, TBuilder}"/> used in 
+/// Extension methods for all <see cref="TreePath{TEdge, TNode}"/> used in 
 /// <see cref="ISuffixStructureNode{TEdge, TNode, TBuilder}"/> structures.
 /// </summary>
 public static class SuffixStructureTreePathExtensions
@@ -15,12 +15,10 @@ public static class SuffixStructureTreePathExtensions
     /// <param name="path">The path to traverse to build the suffix.</param>
     /// <param name="text">The text, including the terminator character.</param>
     /// <returns>A string containing the suffix.</returns>
-    public static string SuffixFor<TEdge, TNode, TBuilder>(
-        this TreePath<TEdge, TNode, TBuilder> path,
+    public static string SuffixFor<TEdge, TNode>(
+        this TreePath<TEdge, TNode> path,
         TextWithTerminator text)
-        where TEdge : ISuffixStructureEdge<TEdge, TNode, TBuilder>
-        where TNode : ISuffixStructureNode<TEdge, TNode, TBuilder>
-        where TBuilder : ISuffixStructureBuilder<TEdge, TNode, TBuilder>, new() => 
+        where TEdge : TextWithTerminator.ISelector => 
         path.PathNodes
             .Aggregate(new StringBuilder(), (acc, node) => acc.Append(text[node.Key]))
             .ToString();
@@ -31,11 +29,9 @@ public static class SuffixStructureTreePathExtensions
     /// <param name="path">The path, identifying a segment of the provided text.</param>
     /// <param name="text">The text, including the terminator character.</param>
     /// <returns>True if the segment of text is also a suffix the text.</returns>
-    public static bool IsSuffixOf<TEdge, TNode, TBuilder>
-        (this TreePath<TEdge, TNode, TBuilder> path, 
+    public static bool IsSuffixOf<TEdge, TNode>
+        (this TreePath<TEdge, TNode> path, 
         TextWithTerminator text)
-        where TEdge : ISuffixStructureEdge<TEdge, TNode, TBuilder>
-        where TNode : ISuffixStructureNode<TEdge, TNode, TBuilder>
-        where TBuilder : ISuffixStructureBuilder<TEdge, TNode, TBuilder>, new() =>
-        text.EndsWith(path.SuffixFor<TEdge, TNode, TBuilder>(text));
+        where TEdge : TextWithTerminator.ISelector =>
+        text.EndsWith(path.SuffixFor(text));
 }

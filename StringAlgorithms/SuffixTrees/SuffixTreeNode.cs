@@ -55,14 +55,14 @@ public abstract record SuffixTreeNode(IDictionary<SuffixTreeEdge, SuffixTreeNode
     /// </summary>
     public SuffixTreeNode this[SuffixTreeEdge edge] => Children[edge];
 
-    private static readonly IStringifier<SuffixTreeEdge, SuffixTreeNode, SuffixTreeBuilder> Stringifier =
-        new FullyRecursiveStringifier<SuffixTreeEdge, SuffixTreeNode, SuffixTreeBuilder>(
+    private static readonly IStringifier<SuffixTreeEdge, SuffixTreeNode> Stringifier =
+        new FullyRecursiveStringifier<SuffixTreeEdge, SuffixTreeNode>(
             r => r.IsLeaf() ? $"R from {r.Start}" : "R",
             (e, n) => $"({e.Start},{e.Length}) -> ({(n.IsLeaf() ? $"L from {n.Start}" : "I")}");
 
     /// <summary>
     /// <inheritdoc/>
-    /// Uses a <see cref="IStringifier{TEdge, TNode, TBuilder}"/> to generate the string.
+    /// Uses a <see cref="IStringifier{TEdge, TNode}"/> to generate the string.
     /// </summary>
     /// <returns><inheritdoc/></returns>
     public override string ToString() => Stringifier.Stringify(this);

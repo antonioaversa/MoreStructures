@@ -9,17 +9,13 @@ namespace StringAlgorithms.Tests.RecImmTrees.Stringifiable;
 public static class TreeMock
 {
     public record Edge(int Id) 
-        : IRecImmDictIndexedTreeEdge<Edge, Node, Builder>
+        : IRecImmDictIndexedTreeEdge<Edge, Node>
     {
     }
 
     public record Node(int Id, IDictionary<Edge, Node> Children) 
-        : IRecImmDictIndexedTreeNode<Edge, Node, Builder>
+        : IRecImmDictIndexedTreeNode<Edge, Node>
     {
         public Node(int id) : this(id, new Dictionary<Edge, Node> { }) { }
-    }
-
-    public class Builder : IRecImmDictIndexedTreeBuilder<Edge, Node, Builder>
-    {
     }
 }

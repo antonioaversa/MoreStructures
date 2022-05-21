@@ -9,11 +9,10 @@ namespace StringAlgorithms.RecImmTrees;
 /// <param name="PathNodes">The sequence of nodes respecting the parent-child relationship.</param>
 /// <typeparam name="TEdge">The type of edges of the specific structure.</typeparam>
 /// <typeparam name="TNode">The type of nodes of the specific structure.</typeparam>
-/// <typeparam name="TBuilder">The type of builder for the specific structure.</typeparam>
 /// <remarks>
 /// Immutability is guaranteed by using <see cref="ValueReadOnlyDictionary{TKey, TValue}"/>.
 /// </remarks>
-public record TreePath<TEdge, TNode, TBuilder>(IEnumerable<KeyValuePair<TEdge, TNode>> PathNodes)
+public record TreePath<TEdge, TNode>(IEnumerable<KeyValuePair<TEdge, TNode>> PathNodes)
 {
     /// <summary>
     /// Builds an empty path, i.e. an empty sequence of nodes.

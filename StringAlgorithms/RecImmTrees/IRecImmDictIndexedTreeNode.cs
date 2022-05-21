@@ -6,11 +6,9 @@
 /// </summary>
 /// <typeparam name="TEdge">The type of edges of the specific structure.</typeparam>
 /// <typeparam name="TNode">The type of nodes of the specific structure.</typeparam>
-/// <typeparam name="TBuilder">The type of builder for the specific structure.</typeparam>
-public interface IRecImmDictIndexedTreeNode<TEdge, TNode, TBuilder>
-    where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode, TBuilder>
-    where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode, TBuilder>
-    where TBuilder : IRecImmDictIndexedTreeBuilder<TEdge, TNode, TBuilder>
+public interface IRecImmDictIndexedTreeNode<TEdge, TNode>
+    where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>
+    where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode>
 {
     /// <summary>
     /// A readonly view of the children private collection of this node. Empty for leaves.

@@ -7,16 +7,16 @@ namespace StringAlgorithms.SuffixStructures;
 /// forming a path hop. Represents prefix matching.
 /// </summary>
 /// <typeparam name="TEdge">
-///     <inheritdoc cref="IRecImmDictIndexedTreeEdge{TEdge, TNode, TBuilder}" path="/typeparam[@name='TEdge']"/>
+///     <inheritdoc cref="IRecImmDictIndexedTreeEdge{TEdge, TNode}" path="/typeparam[@name='TEdge']"/>
 /// </typeparam>
 /// <typeparam name="TNode">
-///     <inheritdoc cref="IRecImmDictIndexedTreeEdge{TEdge, TNode, TBuilder}" path="/typeparam[@name='TNode']"/>
+///     <inheritdoc cref="IRecImmDictIndexedTreeEdge{TEdge, TNode}" path="/typeparam[@name='TNode']"/>
 /// </typeparam>
 /// <typeparam name="TBuilder">
-///     <inheritdoc cref="IRecImmDictIndexedTreeEdge{TEdge, TNode, TBuilder}" path="/typeparam[@name='TBuilder']"/>
+///     <inheritdoc cref="IRecImmDictIndexedTreeEdge{TEdge, TNode}" path="/typeparam[@name='TBuilder']"/>
 /// </typeparam>
 public interface ISuffixStructureEdge<TEdge, TNode, TBuilder> 
-    : TextWithTerminator.ISelector, IRecImmDictIndexedTreeEdge<TEdge, TNode, TBuilder>
+    : TextWithTerminator.ISelector, IRecImmDictIndexedTreeEdge<TEdge, TNode>
     where TEdge : ISuffixStructureEdge<TEdge, TNode, TBuilder>
     where TNode : ISuffixStructureNode<TEdge, TNode, TBuilder>
     where TBuilder : ISuffixStructureBuilder<TEdge, TNode, TBuilder>

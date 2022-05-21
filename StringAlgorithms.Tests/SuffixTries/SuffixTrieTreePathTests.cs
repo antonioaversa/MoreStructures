@@ -13,7 +13,7 @@ public class SuffixTrieTreePathTests
     [TestMethod]
     public void PathNodes_ImmutabilityOnGet()
     {
-        var path = new TreePath<SuffixTrieEdge, SuffixTrieNode, SuffixTrieBuilder>(new Dictionary<SuffixTrieEdge, SuffixTrieNode> { });
+        var path = new TreePath<SuffixTrieEdge, SuffixTrieNode>(new Dictionary<SuffixTrieEdge, SuffixTrieNode> { });
         if (path.PathNodes is IList<KeyValuePair<SuffixTrieEdge, SuffixTrieNode>> pathNodesAsList)
         {
             Assert.ThrowsException<NotSupportedException>(() => pathNodesAsList.Add(KeyValuePair.Create(
@@ -25,7 +25,7 @@ public class SuffixTrieTreePathTests
     public void PathNodes_ImmutabilityOnCtorParam()
     {
         var pathNodes = new Dictionary<SuffixTrieEdge, SuffixTrieNode> { };
-        var path = new TreePath<SuffixTrieEdge, SuffixTrieNode, SuffixTrieBuilder>(pathNodes);
+        var path = new TreePath<SuffixTrieEdge, SuffixTrieNode>(pathNodes);
         Assert.AreEqual(0, path.PathNodes.Count());
         pathNodes[new(0)] = new SuffixTrieNode.Leaf(0);
         Assert.AreEqual(0, path.PathNodes.Count());
@@ -35,7 +35,7 @@ public class SuffixTrieTreePathTests
     /// The example is the second "root to leaf"" path of the tree built from <see cref="ExampleText"/>: 
     /// a -> b -> a -> a -> $.
     /// </remarks>
-    internal static TreePath<SuffixTrieEdge, SuffixTrieNode, SuffixTrieBuilder> BuildSuffixTriePathExample()
+    internal static TreePath<SuffixTrieEdge, SuffixTrieNode> BuildSuffixTriePathExample()
     {
         var leaf = new SuffixTrieNode.Leaf(2);
         var leafEdge = new SuffixTrieEdge(6);
@@ -66,7 +66,7 @@ public class SuffixTrieTreePathTests
         });
         var intermediate4Edge = new SuffixTrieEdge(0);
 
-        return new TreePath<SuffixTrieEdge, SuffixTrieNode, SuffixTrieBuilder>(new List<KeyValuePair<SuffixTrieEdge, SuffixTrieNode>>
+        return new TreePath<SuffixTrieEdge, SuffixTrieNode>(new List<KeyValuePair<SuffixTrieEdge, SuffixTrieNode>>
         {            
             new(intermediate4Edge, intermediate4),
             new(intermediate3Edge, intermediate3),

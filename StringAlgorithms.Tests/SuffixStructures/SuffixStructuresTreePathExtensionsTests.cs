@@ -29,7 +29,7 @@ public class SuffixStructuresTreePathExtensionsTests
     [TestMethod]
     public void SuffixFor_IsCorrectForEmptyPath()
     {
-        var path = new TreePath<SuffixTreeEdge, SuffixTreeNode, SuffixTreeBuilder>();
+        var path = new TreePath<SuffixTreeEdge, SuffixTreeNode>();
         var suffix = path.SuffixFor(TestUtilities.ExampleText2);
         Assert.AreEqual(string.Empty, suffix);
     }
@@ -44,7 +44,7 @@ public class SuffixStructuresTreePathExtensionsTests
     [TestMethod]
     public void IsSuffixOf_IsTrueForEmtpyPath()
     {
-        var path = new TreePath<SuffixTreeEdge, SuffixTreeNode, SuffixTreeBuilder>();
+        var path = new TreePath<SuffixTreeEdge, SuffixTreeNode>();
         Assert.IsTrue(path.IsSuffixOf(new("anytext")));
     }
 }

@@ -4,7 +4,7 @@ using static StringAlgorithms.StringUtilities;
 namespace StringAlgorithms.SuffixTrees;
 
 /// <summary>
-/// Builds objects, such as edges, nodes and paths, for <see cref="SuffixTreeNode"/> structures.
+/// Builds objects, such as edges and nodes, for <see cref="SuffixTreeNode"/> structures.
 /// </summary>
 public class SuffixTreeBuilder
     : ISuffixStructureBuilder<SuffixTreeEdge, SuffixTreeNode, SuffixTreeBuilder>
