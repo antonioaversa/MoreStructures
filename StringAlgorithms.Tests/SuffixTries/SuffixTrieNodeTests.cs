@@ -24,6 +24,16 @@ public class SuffixTrieNodeTests
     }
 
     [TestMethod]
+    public void Equality_IsAlwaysByValue()
+    {
+        var root1 = BuildSuffixTrieExample();
+        var root2 = BuildSuffixTrieExample();
+        Assert.AreEqual(root1, root2);
+        Assert.IsTrue(root1 == root2);
+        Assert.IsFalse(root1 != root2);
+    }
+
+    [TestMethod]
     public void Indexer_RetrievesChild()
     {
         var root = BuildSuffixTrieExample();
@@ -58,6 +68,21 @@ public class SuffixTrieNodeTests
 
         rootChildren.Add(new(1), new SuffixTrieNode.Leaf(1));
         Assert.AreEqual(1, root.Children.Count);
+    }
+
+    [TestMethod]
+    public void ToString_IsTheSameOnEquivalentTrees()
+    {
+        var root1Str = BuildSuffixTrieExample().ToString();
+        var root2Str = BuildSuffixTrieExample().ToString();
+        Assert.AreEqual(root1Str, root2Str);
+    }
+
+    [TestMethod]
+    public void ToString_OnLeafIncludesStart()
+    {
+        var root1Str = new SuffixTrieNode.Leaf(123).ToString();
+        Assert.IsTrue(root1Str.Contains(123.ToString()));
     }
 
     /// <remarks>

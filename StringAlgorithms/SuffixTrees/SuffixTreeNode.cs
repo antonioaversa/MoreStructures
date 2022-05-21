@@ -1,4 +1,6 @@
-﻿using StringAlgorithms.SuffixStructures;
+﻿using StringAlgorithms.RecImmTrees;
+using StringAlgorithms.RecImmTrees.Stringifiable;
+using StringAlgorithms.SuffixStructures;
 using StringAlgorithms.Utilities;
 
 namespace StringAlgorithms.SuffixTrees;
@@ -22,14 +24,22 @@ public abstract record SuffixTreeNode(IDictionary<SuffixTreeEdge, SuffixTreeNode
     /// </summary>
     public record Intermediate(IDictionary<SuffixTreeEdge, SuffixTreeNode> Children) 
         : SuffixTreeNode(Children, null)
-    { }
+    {
+        /// <inheritdoc/>
+        public override string ToString() => 
+            base.ToString(); // To prevent compiler from superceding ToString from base record.
+    }
 
     /// <summary>
     /// Builds a leaf, i.e. a node with no children and the start index of the suffix in the text.
     /// </summary>
     public record Leaf(int LeafStart) 
         : SuffixTreeNode(new Dictionary<SuffixTreeEdge, SuffixTreeNode> { }, LeafStart) 
-    { }
+    {
+        /// <inheritdoc/>
+        public override string ToString() => 
+            base.ToString(); // To prevent compiler from superceding ToString from base record.
+    }
 
     /// <inheritdoc/>
     public IDictionary<SuffixTreeEdge, SuffixTreeNode> Children { get; } 
@@ -44,4 +54,16 @@ public abstract record SuffixTreeNode(IDictionary<SuffixTreeEdge, SuffixTreeNode
     /// Indexes into the children of this node, by edge.
     /// </summary>
     public SuffixTreeNode this[SuffixTreeEdge edge] => Children[edge];
+
+    private static readonly IStringifier<SuffixTreeEdge, SuffixTreeNode, SuffixTreePath, SuffixTreeBuilder> Stringifier =
+        new FullyRecursiveStringifier<SuffixTreeEdge, SuffixTreeNode, SuffixTreePath, SuffixTreeBuilder>(
+            r => r.IsLeaf() ? $"R from {r.Start}" : "R",
+            (e, n) => $"({e.Start},{e.Length}) -> ({(n.IsLeaf() ? $"L from {n.Start}" : "I")}");
+
+    /// <summary>
+    /// <inheritdoc/>
+    /// Uses a <see cref="IStringifier{TEdge, TNode, TPath, TBuilder}"/> to generate the string.
+    /// </summary>
+    /// <returns><inheritdoc/></returns>
+    public override string ToString() => Stringifier.Stringify(this);
 }

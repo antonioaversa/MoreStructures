@@ -15,11 +15,11 @@ public static class SuffixStructureEdgeExtensions
     public static bool IsAdjacentTo<TEdge, TNode, TPath, TBuilder>(
         this ISuffixStructureEdge<TEdge, TNode, TPath, TBuilder> first,
         TEdge second,
-        AdjacencyOrder order = AdjacencyOrder.BeforeOrAfter)
+        AdjacencyOrders order = AdjacencyOrders.BeforeOrAfter)
         where TEdge : ISuffixStructureEdge<TEdge, TNode, TPath, TBuilder>
         where TNode : ISuffixStructureNode<TEdge, TNode, TPath, TBuilder>
         where TPath : ISuffixStructurePath<TEdge, TNode, TPath, TBuilder>
         where TBuilder : ISuffixStructureBuilder<TEdge, TNode, TPath, TBuilder> =>
-        (order.HasFlag(AdjacencyOrder.Before) && first.Start + first.Length == second.Start) ||
-        (order.HasFlag(AdjacencyOrder.After) && second.Start + second.Length == first.Start);
+        (order.HasFlag(AdjacencyOrders.Before) && first.Start + first.Length == second.Start) ||
+        (order.HasFlag(AdjacencyOrders.After) && second.Start + second.Length == first.Start);
 }

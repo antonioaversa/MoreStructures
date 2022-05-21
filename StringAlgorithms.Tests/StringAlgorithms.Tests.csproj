@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="SuffixStructures\Transformations\FullyRecursiveSuffixStructuresConverterTests.cs" />
-    <Compile Remove="SuffixStructures\Transformations\SuffixStructureStringifierTests.cs" />
+    <Compile Remove="SuffixStructures\Conversions\FullyRecursiveSuffixStructuresConverterTests.cs" />
+    <Compile Remove="SuffixStructures\Conversions\SuffixStructureStringifierTests.cs" />
   </ItemGroup>
 
   <ItemGroup>

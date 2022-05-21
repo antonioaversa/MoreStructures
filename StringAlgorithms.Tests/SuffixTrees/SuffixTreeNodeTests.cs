@@ -24,6 +24,16 @@ public class SuffixTreeNodeTests
     }
 
     [TestMethod]
+    public void Equality_IsAlwaysByValue()
+    {
+        var root1 = BuildSuffixTreeExample();
+        var root2 = BuildSuffixTreeExample();
+        Assert.AreEqual(root1, root2);
+        Assert.IsTrue(root1 == root2);
+        Assert.IsFalse(root1 != root2);
+    }
+
+    [TestMethod]
     public void Indexer_RetrievesChild()
     {
         var root = BuildSuffixTreeExample();
@@ -46,7 +56,7 @@ public class SuffixTreeNodeTests
     [TestMethod]
     public void Children_Immutability_FromCtorParam()
     {
-        var rootChildren = new Dictionary<SuffixTreeEdge, SuffixTreeNode> 
+        var rootChildren = new Dictionary<SuffixTreeEdge, SuffixTreeNode>
         {
             [new(0, 2)] = new SuffixTreeNode.Leaf(0),
             [new(1, 1)] = new SuffixTreeNode.Leaf(1),
@@ -56,6 +66,21 @@ public class SuffixTreeNodeTests
 
         rootChildren.Add(new(0, 1), new SuffixTreeNode.Leaf(0));
         Assert.AreEqual(2, root.Children.Count);
+    }
+
+    [TestMethod]
+    public void ToString_IsTheSameOnEquivalentTrees()
+    {
+        var root1Str = BuildSuffixTreeExample().ToString();
+        var root2Str = BuildSuffixTreeExample().ToString();
+        Assert.AreEqual(root1Str, root2Str);
+    }
+
+    [TestMethod]
+    public void ToString_OnLeafIncludesStart()
+    {
+        var root1Str = new SuffixTreeNode.Leaf(123).ToString();
+        Assert.IsTrue(root1Str.Contains(123.ToString()));
     }
 
     /// <remarks>

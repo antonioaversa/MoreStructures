@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using StringAlgorithms.SuffixStructures.Transformations;
+using StringAlgorithms.SuffixStructures.Conversions;
 using StringAlgorithms.SuffixTrees;
 using StringAlgorithms.SuffixTries;
 using StringAlgorithms.Tests.SuffixTrees;
@@ -7,13 +7,13 @@ using StringAlgorithms.Tests.SuffixTries;
 using System;
 using System.Collections.Generic;
 
-namespace StringAlgorithms.Tests.SuffixStructures.Transformations;
+namespace StringAlgorithms.Tests.SuffixStructures.Conversions;
 
-public abstract class SuffixStructuresConverterTests
+public abstract class ConverterTests
 {
-    protected ISuffixStructuresConverter SuffixStructuresConverter { get; init; }
+    protected IConverter SuffixStructuresConverter { get; init; }
 
-    public SuffixStructuresConverterTests(ISuffixStructuresConverter suffixStructuresConverter)
+    public ConverterTests(IConverter suffixStructuresConverter)
     {
         SuffixStructuresConverter = suffixStructuresConverter;
     }

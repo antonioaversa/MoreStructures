@@ -4,7 +4,7 @@
 /// The possible adjacency order relationships between two edges by the parts they refer to in the text.
 /// </summary>
 [Flags]
-public enum AdjacencyOrder
+public enum AdjacencyOrders
 {
     /// <summary>
     /// Non-adjacent (overlapping on more than an extreme or not at all).

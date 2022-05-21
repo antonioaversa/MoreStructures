@@ -1,4 +1,7 @@
-﻿namespace StringAlgorithms.RecImmTrees;
+﻿using StringAlgorithms.CountTrees;
+using System.Text;
+
+namespace StringAlgorithms.RecImmTrees;
 
 /// <summary>
 /// Extension methods for all <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode, TPath, TBuilder}"/> node concretions.
