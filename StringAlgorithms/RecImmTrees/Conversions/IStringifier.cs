@@ -1,4 +1,4 @@
-﻿namespace StringAlgorithms.RecImmTrees.Stringifiable;
+﻿namespace StringAlgorithms.RecImmTrees.Conversions;
 
 /// <summary>
 /// A converter from <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode}"/> structures to string.

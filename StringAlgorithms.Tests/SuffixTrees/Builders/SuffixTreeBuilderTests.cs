@@ -1,13 +1,15 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using StringAlgorithms.RecImmTrees;
 using StringAlgorithms.SuffixStructures;
+using StringAlgorithms.SuffixStructures.Builders;
 using StringAlgorithms.SuffixStructures.Matching;
 using StringAlgorithms.SuffixTrees;
+using StringAlgorithms.SuffixTrees.Builders;
 using System;
 using System.Linq;
 using static StringAlgorithms.TextWithTerminator;
 
-namespace StringAlgorithms.Tests.SuffixTrees;
+namespace StringAlgorithms.Tests.SuffixTrees.Builders;
 
 [TestClass]
 public class SuffixTreeBuilderTests

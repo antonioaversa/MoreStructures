@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using StringAlgorithms.SuffixStructures;
+using StringAlgorithms.SuffixStructures.Builders;
 
 namespace StringAlgorithms.Tests.SuffixStructures;
 
 [TestClass] 
-public class SuffixStructuresBuilderExtensionsTests
+public class BuilderExtensionsTests
 {
     [TestMethod]
     public void BuildTree_CallsTheBuilderWithAnEquivalentTextWithTerminator()

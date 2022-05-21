@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using static StringAlgorithms.StringUtilities;
+using static StringAlgorithms.Utilities.StringUtilities;
 
-namespace StringAlgorithms.Tests;
+namespace StringAlgorithms.Tests.Utilities;
 
 [TestClass]
 public class StringUtilitiesTests

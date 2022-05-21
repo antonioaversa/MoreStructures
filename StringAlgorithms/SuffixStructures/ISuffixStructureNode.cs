@@ -11,14 +11,10 @@ namespace StringAlgorithms.SuffixStructures;
 /// <typeparam name="TNode">
 ///     <inheritdoc cref="IRecImmDictIndexedTreeNode{TEdge, TNode}" path="/typeparam[@name='TNode']"/>
 /// </typeparam>
-/// <typeparam name="TBuilder">
-///     <inheritdoc cref="IRecImmDictIndexedTreeNode{TEdge, TNode}" path="/typeparam[@name='TBuilder']"/>
-/// </typeparam>
-public interface ISuffixStructureNode<TEdge, TNode, TBuilder>
+public interface ISuffixStructureNode<TEdge, TNode>
     : IRecImmDictIndexedTreeNode<TEdge, TNode>
-    where TEdge : ISuffixStructureEdge<TEdge, TNode, TBuilder>
-    where TNode : ISuffixStructureNode<TEdge, TNode, TBuilder>
-    where TBuilder : ISuffixStructureBuilder<TEdge, TNode, TBuilder>
+    where TEdge : ISuffixStructureEdge<TEdge, TNode>
+    where TNode : ISuffixStructureNode<TEdge, TNode>
 {
     /// <summary>
     /// The index of the character, the path from the root leading to this leaf starts with. Non-null for leaves only.

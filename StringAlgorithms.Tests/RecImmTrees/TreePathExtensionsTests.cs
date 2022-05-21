@@ -13,7 +13,7 @@ namespace StringAlgorithms.Tests.RecImmTrees
         public void Concat_IsCorrectPrependingEmptyPath()
         {
             var path1 = new TreePath<SuffixTreeEdge, SuffixTreeNode>();
-            var path2 = SuffixTreeTreePathTests.BuildSuffixTreePathExample();
+            var path2 = TreePathTests.BuildSuffixTreePathExample();
             var mergedPath = path1.Concat(path2);
             Assert.AreEqual(path2, mergedPath);
         }
@@ -22,7 +22,7 @@ namespace StringAlgorithms.Tests.RecImmTrees
         public void Concat_IsCorrectAppendingEmptyPath()
         {
             var path1 = new TreePath<SuffixTreeEdge, SuffixTreeNode>();
-            var path2 = SuffixTreeTreePathTests.BuildSuffixTreePathExample();
+            var path2 = TreePathTests.BuildSuffixTreePathExample();
             var mergedPath = path2.Concat(path1);
             Assert.AreEqual(path2, mergedPath);
         }
@@ -30,7 +30,7 @@ namespace StringAlgorithms.Tests.RecImmTrees
         [TestMethod]
         public void Concat_IsCorrectWithTwoNonEmptyPaths()
         {
-            var path = SuffixTreeTreePathTests.BuildSuffixTreePathExample();
+            var path = TreePathTests.BuildSuffixTreePathExample();
             var path1 = new TreePath<SuffixTreeEdge, SuffixTreeNode>(path.PathNodes.Take(1));
             var path2 = new TreePath<SuffixTreeEdge, SuffixTreeNode>(path.PathNodes.Skip(1));
             var mergedPath = path1.Concat(path2);
@@ -40,7 +40,7 @@ namespace StringAlgorithms.Tests.RecImmTrees
         [TestMethod]
         public void Append_IsCorrect()
         {
-            var path = SuffixTreeTreePathTests.BuildSuffixTreePathExample();
+            var path = TreePathTests.BuildSuffixTreePathExample();
             var path1 = new TreePath<SuffixTreeEdge, SuffixTreeNode>(path.PathNodes.SkipLast(1));
             var last = new TreePath<SuffixTreeEdge, SuffixTreeNode>(path.PathNodes.TakeLast(1))
                 .PathNodes.Single();

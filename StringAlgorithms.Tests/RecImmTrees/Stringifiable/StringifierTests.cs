@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using StringAlgorithms.RecImmTrees.Stringifiable;
+using StringAlgorithms.RecImmTrees.Conversions;
 using System;
 using System.Collections.Generic;
-using static StringAlgorithms.Tests.RecImmTrees.Stringifiable.TreeMock;
+using static StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock;
 
-namespace StringAlgorithms.Tests.RecImmTrees.Stringifiable;
+namespace StringAlgorithms.Tests.RecImmTrees.Conversions;
 
 public abstract class StringifierTests
 {

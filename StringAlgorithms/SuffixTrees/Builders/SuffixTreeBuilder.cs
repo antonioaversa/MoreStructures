@@ -1,13 +1,13 @@
-﻿using StringAlgorithms.SuffixStructures;
-using static StringAlgorithms.StringUtilities;
+﻿using StringAlgorithms.SuffixStructures.Builders;
+using static StringAlgorithms.Utilities.StringUtilities;
 
-namespace StringAlgorithms.SuffixTrees;
+namespace StringAlgorithms.SuffixTrees.Builders;
 
 /// <summary>
 /// Builds objects, such as edges and nodes, for <see cref="SuffixTreeNode"/> structures.
 /// </summary>
 public class SuffixTreeBuilder
-    : ISuffixStructureBuilder<SuffixTreeEdge, SuffixTreeNode, SuffixTreeBuilder>
+    : IBuilder<SuffixTreeEdge, SuffixTreeNode>
 {
     /// <inheritdoc/>
     public SuffixTreeNode BuildTree(TextWithTerminator text)

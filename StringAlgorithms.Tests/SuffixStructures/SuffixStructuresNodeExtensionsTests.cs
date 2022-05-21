@@ -1,11 +1,12 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using StringAlgorithms.SuffixStructures;
 using StringAlgorithms.Tests.SuffixTrees;
 using StringAlgorithms.Tests.SuffixTries;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace StringAlgorithms.SuffixStructures.Tests;
+namespace StringAlgorithms.Tests.SuffixStructures;
 
 [TestClass]
 public class SuffixStructuresNodeExtensionsTests

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 
-namespace StringAlgorithms.Tests.RecImmTrees.Stringifiable;
+namespace StringAlgorithms.Tests.RecImmTrees.Conversions;
 
 [ExcludeFromCodeCoverage]
 public static class TreeMock

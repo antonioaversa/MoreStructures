@@ -3,7 +3,7 @@
 namespace StringAlgorithms.SuffixStructures;
 
 /// <summary>
-/// An edge of a <see cref="ISuffixStructureEdge{TEdge, TNode, TBuilder}"/>, directionally linking two nodes and 
+/// An edge of a <see cref="ISuffixStructureEdge{TEdge, TNode}"/>, directionally linking two nodes and 
 /// forming a path hop. Represents prefix matching.
 /// </summary>
 /// <typeparam name="TEdge">
@@ -12,14 +12,10 @@ namespace StringAlgorithms.SuffixStructures;
 /// <typeparam name="TNode">
 ///     <inheritdoc cref="IRecImmDictIndexedTreeEdge{TEdge, TNode}" path="/typeparam[@name='TNode']"/>
 /// </typeparam>
-/// <typeparam name="TBuilder">
-///     <inheritdoc cref="IRecImmDictIndexedTreeEdge{TEdge, TNode}" path="/typeparam[@name='TBuilder']"/>
-/// </typeparam>
-public interface ISuffixStructureEdge<TEdge, TNode, TBuilder> 
+public interface ISuffixStructureEdge<TEdge, TNode> 
     : TextWithTerminator.ISelector, IRecImmDictIndexedTreeEdge<TEdge, TNode>
-    where TEdge : ISuffixStructureEdge<TEdge, TNode, TBuilder>
-    where TNode : ISuffixStructureNode<TEdge, TNode, TBuilder>
-    where TBuilder : ISuffixStructureBuilder<TEdge, TNode, TBuilder>
+    where TEdge : ISuffixStructureEdge<TEdge, TNode>
+    where TNode : ISuffixStructureNode<TEdge, TNode>
 {
     /// <summary>
     /// The index of the first character of the edge string in the text.

@@ -1,5 +1,5 @@
 ﻿
-namespace StringAlgorithms;
+namespace StringAlgorithms.Utilities;
 
 /// <summary>
 /// Generic utilities and extensions for strings.
