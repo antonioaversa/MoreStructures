@@ -4,7 +4,7 @@ using StringAlgorithms.SuffixTries;
 namespace StringAlgorithms.SuffixStructures.Conversions;
 
 /// <summary>
-/// A converter between different <see cref="ISuffixStructureNode{TEdge, TNode, TPath, TBuilder}"/> structures, 
+/// A converter between different <see cref="ISuffixStructureNode{TEdge, TNode, TBuilder}"/> structures, 
 /// such as <see cref="SuffixTrieNode"/> and <see cref="SuffixTreeNode"/>.
 /// </summary>
 public interface IConverter

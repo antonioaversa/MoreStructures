@@ -4,28 +4,11 @@ using static StringAlgorithms.StringUtilities;
 namespace StringAlgorithms.SuffixTrees;
 
 /// <summary>
-/// Builds objects, such as edges, nodes and paths, for <see cref="SuffixTreeNode"/> structures.
+/// Builds objects, such as edges and nodes, for <see cref="SuffixTreeNode"/> structures.
 /// </summary>
 public class SuffixTreeBuilder
-    : ISuffixStructureBuilder<SuffixTreeEdge, SuffixTreeNode, SuffixTreePath, SuffixTreeBuilder>
+    : ISuffixStructureBuilder<SuffixTreeEdge, SuffixTreeNode, SuffixTreeBuilder>
 {
-    /// <inheritdoc/>
-    public SuffixTreePath EmptyPath() =>
-        new (Enumerable.Empty<KeyValuePair<SuffixTreeEdge, SuffixTreeNode>>());
-
-    /// <inheritdoc/>
-    public SuffixTreePath SingletonPath(SuffixTreeEdge edge, SuffixTreeNode node) =>
-        new(Enumerable.Repeat(KeyValuePair.Create(edge, node), 1));
-
-    /// <inheritdoc/>
-    public SuffixTreePath MultistepsPath(params (SuffixTreeEdge edge, SuffixTreeNode node)[] pathNodes) =>
-        new(pathNodes.Select(pathNode => KeyValuePair.Create(pathNode.edge, pathNode.node)));
-
-    /// <inheritdoc/>
-    public SuffixTreePath MultistepsPath(IEnumerable<KeyValuePair<SuffixTreeEdge, SuffixTreeNode>> pathNodes) =>
-        new(pathNodes);
-
-
     /// <inheritdoc/>
     public SuffixTreeNode BuildTree(TextWithTerminator text)
     {

@@ -2,7 +2,7 @@
 
 /// <summary>
 /// The result of matching a <see cref="TextWithTerminator"/> against a 
-/// <see cref="ISuffixStructureNode{TEdge, TNode, TPath, TBuilder}"/> concretion.
+/// <see cref="ISuffixStructureNode{TEdge, TNode, TBuilder}"/> concretion.
 /// </summary>
 /// <param name="Success">Whether the text has been completely matched or not.</param>
 /// <param name="Begin">The index in text of the best match in the Suffix Tree.</param>

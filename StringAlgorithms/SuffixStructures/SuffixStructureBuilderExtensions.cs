@@ -1,12 +1,12 @@
 ﻿namespace StringAlgorithms.SuffixStructures;
 
 /// <summary>
-/// Extension methods for all <see cref="ISuffixStructureBuilder{TEdge, TNode, TPath, TBuilder}"/> concretions.
+/// Extension methods for all <see cref="ISuffixStructureBuilder{TEdge, TNode, TBuilder}"/> concretions.
 /// </summary>
 public static class SuffixStructureBuilderExtensions
 {
     /// <summary>
-    /// <inheritdoc cref="ISuffixStructureBuilder{TEdge, TNode, TPath, TBuilder}.BuildTree(TextWithTerminator)"/>
+    /// <inheritdoc cref="ISuffixStructureBuilder{TEdge, TNode, TBuilder}.BuildTree(TextWithTerminator)"/>
     /// Text is provided as a plain string.
     /// </summary>
     /// <param name="builder">
@@ -16,14 +16,13 @@ public static class SuffixStructureBuilderExtensions
     /// The text to build the structure of, without any terminator (automatically added).
     /// </param>
     /// <returns>
-    /// <inheritdoc cref="ISuffixStructureBuilder{TEdge, TNode, TPath, TBuilder}.BuildTree(TextWithTerminator)"/>
+    /// <inheritdoc cref="ISuffixStructureBuilder{TEdge, TNode, TBuilder}.BuildTree(TextWithTerminator)"/>
     /// </returns>
-    public static TNode BuildTree<TEdge, TNode, TPath, TBuilder>(
-        this ISuffixStructureBuilder<TEdge, TNode, TPath, TBuilder> builder,
+    public static TNode BuildTree<TEdge, TNode, TBuilder>(
+        this ISuffixStructureBuilder<TEdge, TNode, TBuilder> builder,
         string text)
-        where TEdge : ISuffixStructureEdge<TEdge, TNode, TPath, TBuilder>
-        where TNode : ISuffixStructureNode<TEdge, TNode, TPath, TBuilder>
-        where TPath : ISuffixStructurePath<TEdge, TNode, TPath, TBuilder>
-        where TBuilder : ISuffixStructureBuilder<TEdge, TNode, TPath, TBuilder> =>
+        where TEdge : ISuffixStructureEdge<TEdge, TNode, TBuilder>
+        where TNode : ISuffixStructureNode<TEdge, TNode, TBuilder>
+        where TBuilder : ISuffixStructureBuilder<TEdge, TNode, TBuilder> =>
         builder.BuildTree(new TextWithTerminator(text));
 }

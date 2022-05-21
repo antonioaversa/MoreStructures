@@ -35,7 +35,7 @@ public class RecImmDictIndexedTreeNodeExtensionsTests
     public void GetAllNodeToLeafPaths_IsCorrect()
     {
         int CountOccurrencesByEdges(
-            IEnumerable<SuffixTriePath> paths,
+            IEnumerable<TreePath<SuffixTrieEdge, SuffixTrieNode>> paths,
             params SuffixTrieEdge[] pathToFind) => (
                 from path in paths
                 let pathKeys = path.PathNodes.Select(kvp => kvp.Key)
@@ -58,7 +58,7 @@ public class RecImmDictIndexedTreeNodeExtensionsTests
     public void GetAllNodeToLeafPaths_IsCorrect2()
     {
         int CountOccurrencesByEdges(
-            IEnumerable<SuffixTreePath> paths,
+            IEnumerable<TreePath<SuffixTreeEdge, SuffixTreeNode>> paths,
             params SuffixTreeEdge[] pathToFind) => (
                 from path in paths
                 let pathKeys = path.PathNodes.Select(kvp => kvp.Key)

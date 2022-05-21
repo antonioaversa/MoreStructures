@@ -9,7 +9,7 @@ namespace StringAlgorithms.Tests.RecImmTrees.Stringifiable;
 public class FullyRecursiveStringifierTests : StringifierTests
 {
     public FullyRecursiveStringifierTests() : base(
-        new FullyRecursiveStringifier<Edge, Node, Path, Builder>(
+        new FullyRecursiveStringifier<Edge, Node>(
             DefaultRootStringifier, DefaultEdgeAndNodeStringifier)
         {
             NewLine = DefaultNewLine,
@@ -21,7 +21,7 @@ public class FullyRecursiveStringifierTests : StringifierTests
     [TestMethod] 
     public void CustomNewLine_IsReflectedIntoOutput()
     {
-        var customStringifier = new FullyRecursiveStringifier<Edge, Node, Path, Builder>(
+        var customStringifier = new FullyRecursiveStringifier<Edge, Node>(
             DefaultRootStringifier, DefaultEdgeAndNodeStringifier) 
         { 
             NewLine = "a",
@@ -37,7 +37,7 @@ public class FullyRecursiveStringifierTests : StringifierTests
     [TestMethod]
     public void CustomIndent_IsReflectedIntoOutput()
     {
-        var customStringifier = new FullyRecursiveStringifier<Edge, Node, Path, Builder>(
+        var customStringifier = new FullyRecursiveStringifier<Edge, Node>(
             DefaultRootStringifier, DefaultEdgeAndNodeStringifier)
         {
             NewLine = DefaultNewLine,

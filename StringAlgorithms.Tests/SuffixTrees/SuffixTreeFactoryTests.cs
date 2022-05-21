@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using StringAlgorithms.RecImmTrees;
 using StringAlgorithms.SuffixTrees;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,14 +12,14 @@ public class SuffixTreeFactoryTests
     [TestMethod]
     public void EmptyPath_IsCorrect()
     {
-        Assert.IsFalse(new SuffixTreeBuilder().EmptyPath().PathNodes.Any());
+        Assert.IsFalse(new TreePath<SuffixTreeEdge, SuffixTreeNode>().PathNodes.Any());
     }
 
     [TestMethod]
     public void SingletonPath_IsCorrect()
     {
         var node = new SuffixTreeNode.Leaf(0);
-        var path = new SuffixTreeBuilder().SingletonPath(new(0, 1), node);
+        var path = new TreePath<SuffixTreeEdge, SuffixTreeNode>(new(0, 1), node);
         Assert.AreEqual(1, path.PathNodes.Count());
         Assert.AreEqual(new(0, 1), path.PathNodes.Single().Key);
         Assert.AreEqual(node, path.PathNodes.Single().Value);
@@ -32,7 +33,8 @@ public class SuffixTreeFactoryTests
         {
             [new(1, 1)] = node2
         });
-        var path = new SuffixTreeBuilder().MultistepsPath((new(0, 1), node1), (new(1, 1), node2));
+        var path = new TreePath<SuffixTreeEdge, SuffixTreeNode>(
+            (new(0, 1), node1), (new(1, 1), node2));
         AssertPath(node2, node1, path);
     }
 
@@ -44,12 +46,13 @@ public class SuffixTreeFactoryTests
         {
             [new(1, 1)] = node2
         });
-        var path = new SuffixTreeBuilder().MultistepsPath(
+        var path = new TreePath<SuffixTreeEdge, SuffixTreeNode>(
             new List<KeyValuePair<SuffixTreeEdge, SuffixTreeNode>> { new(new(0, 1), node1), new(new(1, 1), node2) });
         AssertPath(node2, node1, path);
     }
 
-    private static void AssertPath(SuffixTreeNode.Leaf node2, SuffixTreeNode.Intermediate node1, SuffixTreePath path)
+    private static void AssertPath(SuffixTreeNode.Leaf node2, SuffixTreeNode.Intermediate node1, 
+        TreePath<SuffixTreeEdge, SuffixTreeNode> path)
     {
         Assert.AreEqual(2, path.PathNodes.Count());
         Assert.AreEqual(new(0, 1), path.PathNodes.ElementAt(0).Key);

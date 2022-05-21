@@ -9,6 +9,6 @@ namespace StringAlgorithms.SuffixTries;
 /// </summary>
 /// <param name="Index">The index of the character in the text.</param>
 public record SuffixTrieEdge(int Index) 
-    : SuffixTreeEdge(Index, 1), ISuffixStructureEdge<SuffixTrieEdge, SuffixTrieNode, SuffixTriePath, SuffixTrieBuilder>
+    : SuffixTreeEdge(Index, 1), ISuffixStructureEdge<SuffixTrieEdge, SuffixTrieNode, SuffixTrieBuilder>
 {
 }

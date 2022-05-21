@@ -1,7 +1,7 @@
 ﻿namespace StringAlgorithms.SuffixStructures;
 
 /// <summary>
-/// Extension methods for all <see cref="ISuffixStructureEdge{TEdge, TNode, TPath, TBuilder}"/> edge concretions.
+/// Extension methods for all <see cref="ISuffixStructureEdge{TEdge, TNode, TBuilder}"/> edge concretions.
 /// </summary>
 public static class SuffixStructureEdgeExtensions
 {
@@ -12,14 +12,13 @@ public static class SuffixStructureEdgeExtensions
     /// <param name="second">The edge to compare the first edge against.</param>
     /// <param name="order">The adjacency relationship order to use for comparison.</param>
     /// <returns>True if the specified adjacency relationship is respected.</returns>
-    public static bool IsAdjacentTo<TEdge, TNode, TPath, TBuilder>(
-        this ISuffixStructureEdge<TEdge, TNode, TPath, TBuilder> first,
+    public static bool IsAdjacentTo<TEdge, TNode, TBuilder>(
+        this ISuffixStructureEdge<TEdge, TNode, TBuilder> first,
         TEdge second,
         AdjacencyOrders order = AdjacencyOrders.BeforeOrAfter)
-        where TEdge : ISuffixStructureEdge<TEdge, TNode, TPath, TBuilder>
-        where TNode : ISuffixStructureNode<TEdge, TNode, TPath, TBuilder>
-        where TPath : ISuffixStructurePath<TEdge, TNode, TPath, TBuilder>
-        where TBuilder : ISuffixStructureBuilder<TEdge, TNode, TPath, TBuilder> =>
+        where TEdge : ISuffixStructureEdge<TEdge, TNode, TBuilder>
+        where TNode : ISuffixStructureNode<TEdge, TNode, TBuilder>
+        where TBuilder : ISuffixStructureBuilder<TEdge, TNode, TBuilder> =>
         (order.HasFlag(AdjacencyOrders.Before) && first.Start + first.Length == second.Start) ||
         (order.HasFlag(AdjacencyOrders.After) && second.Start + second.Length == first.Start);
 }

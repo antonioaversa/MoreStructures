@@ -11,13 +11,13 @@ namespace StringAlgorithms.SuffixTries;
 /// </summary>
 /// <param name="Children">The collection of children for the node, indexed by single char edges.</param>
 /// <param name="Start">
-///     <inheritdoc cref="ISuffixStructureNode{TEdge, TNode, TPath, TBuilder}.Start" path="/summary"/>
+///     <inheritdoc cref="ISuffixStructureNode{TEdge, TNode, TBuilder}.Start" path="/summary"/>
 /// </param>
 /// <remarks>
 /// Immutability is guaranteed by using <see cref="ValueReadOnlyCollection{T}"/>.
 /// </remarks>
 public abstract record SuffixTrieNode(IDictionary<SuffixTrieEdge, SuffixTrieNode> Children, int? Start)
-    : ISuffixStructureNode<SuffixTrieEdge, SuffixTrieNode, SuffixTriePath, SuffixTrieBuilder>
+    : ISuffixStructureNode<SuffixTrieEdge, SuffixTrieNode, SuffixTrieBuilder>
 {
     /// <summary>
     /// Builds an intermediate node, i.e. a node with children and their corresponding incoming edges.
@@ -55,14 +55,14 @@ public abstract record SuffixTrieNode(IDictionary<SuffixTrieEdge, SuffixTrieNode
     /// </summary>
     public SuffixTrieNode this[SuffixTrieEdge edge] => Children[edge];
 
-    private static readonly IStringifier<SuffixTrieEdge, SuffixTrieNode, SuffixTriePath, SuffixTrieBuilder> Stringifier =
-        new FullyRecursiveStringifier<SuffixTrieEdge, SuffixTrieNode, SuffixTriePath, SuffixTrieBuilder>(
+    private static readonly IStringifier<SuffixTrieEdge, SuffixTrieNode> Stringifier =
+        new FullyRecursiveStringifier<SuffixTrieEdge, SuffixTrieNode>(
             r => r.IsLeaf() ? $"R from {r.Start}" : "R",
             (e, n) => $"({e.Start}) -> {(n.IsLeaf() ? $"L from {n.Start}" : "I")}");
 
     /// <summary>
     /// <inheritdoc/>
-    /// Uses a <see cref="IStringifier{TEdge, TNode, TPath, TBuilder}"/> to generate the string.
+    /// Uses a <see cref="IStringifier{TEdge, TNode}"/> to generate the string.
     /// </summary>
     /// <returns><inheritdoc/></returns>
     public override string ToString() => Stringifier.Stringify(this);
