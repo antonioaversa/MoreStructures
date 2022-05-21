@@ -7,13 +7,13 @@ namespace StringAlgorithms.SuffixTrees;
 /// substring in text used as a selector to navigate the <see cref="SuffixTreeNode"/> in text pattern matching.
 /// </summary>
 /// <param name="Start">
-///     <inheritdoc cref="ISuffixStructureEdge{TEdge, TNode, TBuilder}.Start" path="/summary"/>
+///     <inheritdoc cref="ISuffixStructureEdge{TEdge, TNode}.Start" path="/summary"/>
 /// </param>
 /// <param name="Length">
-///     <inheritdoc cref="ISuffixStructureEdge{TEdge, TNode, TBuilder}.Length" path="/summary"/>
+///     <inheritdoc cref="ISuffixStructureEdge{TEdge, TNode}.Length" path="/summary"/>
 /// </param>
 public record SuffixTreeEdge(int Start, int Length)
-    : ISuffixStructureEdge<SuffixTreeEdge, SuffixTreeNode, SuffixTreeBuilder>
+    : ISuffixStructureEdge<SuffixTreeEdge, SuffixTreeNode>
 {
     /// <inheritdoc/>
     public int Start { get; init; } = Start >= 0 

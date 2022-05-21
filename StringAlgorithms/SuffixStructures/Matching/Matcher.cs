@@ -2,11 +2,11 @@
 
 using MoreLinq;
 using StringAlgorithms.RecImmTrees;
-using static StringUtilities;
+using static StringAlgorithms.Utilities.StringUtilities;
 
 /// <summary>
 /// Exposes utility methods to match a <see cref="TextWithTerminator"/> against a 
-/// <see cref="ISuffixStructureNode{TEdge, TNode, TBuilder}"/> concretion. 
+/// <see cref="ISuffixStructureNode{TEdge, TNode}"/> concretion. 
 /// </summary>
 public static class Matcher
 {
@@ -17,23 +17,21 @@ public static class Matcher
     /// <param name="text">The text whose Suffix Tree has to be matched against the pattern.</param>
     /// <param name="pattern">The pattern to match. Unlike text, is a string without terminator.</param>
     /// <returns>A successful or non-successful match.</returns>
-    public static Match<TreePath<TEdge, TNode>> Match<TEdge, TNode, TBuilder>(
-        this ISuffixStructureNode<TEdge, TNode, TBuilder> node, 
+    public static Match<TreePath<TEdge, TNode>> Match<TEdge, TNode>(
+        this ISuffixStructureNode<TEdge, TNode> node, 
         TextWithTerminator text, 
         string pattern) 
-        where TEdge : ISuffixStructureEdge<TEdge, TNode, TBuilder>
-        where TNode : ISuffixStructureNode<TEdge, TNode, TBuilder>
-        where TBuilder : ISuffixStructureBuilder<TEdge, TNode, TBuilder>, new() =>
+        where TEdge : ISuffixStructureEdge<TEdge, TNode>
+        where TNode : ISuffixStructureNode<TEdge, TNode> =>
         Match(node, text, pattern, 0);
 
-    private static Match<TreePath<TEdge, TNode>> Match<TEdge, TNode, TBuilder>(
-        this ISuffixStructureNode<TEdge, TNode, TBuilder> node, 
+    private static Match<TreePath<TEdge, TNode>> Match<TEdge, TNode>(
+        this ISuffixStructureNode<TEdge, TNode> node, 
         TextWithTerminator text, 
         string pattern, 
         int textStart)
-        where TEdge : ISuffixStructureEdge<TEdge, TNode, TBuilder>
-        where TNode : ISuffixStructureNode<TEdge, TNode, TBuilder>
-        where TBuilder : ISuffixStructureBuilder<TEdge, TNode, TBuilder>, new()
+        where TEdge : ISuffixStructureEdge<TEdge, TNode>
+        where TNode : ISuffixStructureNode<TEdge, TNode>
     {
         if (string.IsNullOrEmpty(pattern))
             throw new ArgumentException("Must be non-null and non-emtpy.", nameof(pattern));

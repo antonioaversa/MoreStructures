@@ -1,12 +1,14 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using StringAlgorithms.RecImmTrees;
 using StringAlgorithms.SuffixStructures;
+using StringAlgorithms.SuffixStructures.Builders;
 using StringAlgorithms.SuffixTries;
+using StringAlgorithms.SuffixTries.Builders;
 using System;
 using System.Linq;
 using static StringAlgorithms.TextWithTerminator;
 
-namespace StringAlgorithms.Tests.SuffixTries;
+namespace StringAlgorithms.Tests.SuffixTries.Builders;
 
 [TestClass]
 public class SuffixTrieBuilderTests

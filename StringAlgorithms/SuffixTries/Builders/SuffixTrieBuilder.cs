@@ -1,12 +1,12 @@
-﻿using StringAlgorithms.SuffixStructures;
+﻿using StringAlgorithms.SuffixStructures.Builders;
 
-namespace StringAlgorithms.SuffixTries;
+namespace StringAlgorithms.SuffixTries.Builders;
 
 /// <summary>
 /// Builds objects, such as edges and nodes, for <see cref="SuffixTrieNode"/> structures.
 /// </summary>
 public class SuffixTrieBuilder
-    : ISuffixStructureBuilder<SuffixTrieEdge, SuffixTrieNode, SuffixTrieBuilder>
+    : IBuilder<SuffixTrieEdge, SuffixTrieNode>
 {
     /// <inheritdoc/>
     public SuffixTrieNode BuildTree(TextWithTerminator text)

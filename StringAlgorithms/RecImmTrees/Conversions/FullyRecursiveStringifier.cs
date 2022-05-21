@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace StringAlgorithms.RecImmTrees.Stringifiable;
+namespace StringAlgorithms.RecImmTrees.Conversions;
 
 /// <summary>
 /// <inheritdoc cref="IStringifier{TEdge, TNode}"/>

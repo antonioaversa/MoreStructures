@@ -5,7 +5,7 @@ namespace StringAlgorithms.SuffixStructures;
 
 /// <summary>
 /// Extension methods for all <see cref="TreePath{TEdge, TNode}"/> used in 
-/// <see cref="ISuffixStructureNode{TEdge, TNode, TBuilder}"/> structures.
+/// <see cref="ISuffixStructureNode{TEdge, TNode}"/> structures.
 /// </summary>
 public static class SuffixStructureTreePathExtensions
 {

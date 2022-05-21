@@ -3,6 +3,7 @@ using StringAlgorithms.RecImmTrees;
 using StringAlgorithms.SuffixStructures;
 using StringAlgorithms.SuffixStructures.Matching;
 using StringAlgorithms.SuffixTrees;
+using StringAlgorithms.SuffixTrees.Builders;
 using System;
 
 namespace StringAlgorithms.Tests.SuffixTrees.Matching;

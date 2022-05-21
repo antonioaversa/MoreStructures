@@ -1,5 +1,5 @@
 ﻿using StringAlgorithms.RecImmTrees;
-using StringAlgorithms.RecImmTrees.Stringifiable;
+using StringAlgorithms.RecImmTrees.Conversions;
 using StringAlgorithms.SuffixStructures;
 using StringAlgorithms.Utilities;
 
@@ -11,13 +11,13 @@ namespace StringAlgorithms.SuffixTrees;
 /// </summary>
 /// <param name="Children">The collection of children for the node, indexed by string edges.</param>
 /// <param name="Start">
-/// <inheritdoc cref="ISuffixStructureNode{TEdge, TNode, TBuilder}.Start" path="/summary"/>
+/// <inheritdoc cref="ISuffixStructureNode{TEdge, TNode}.Start" path="/summary"/>
 /// </param>
 /// <remarks>
 /// Immutability is guaranteed by using <see cref="ValueReadOnlyCollection{T}"/>.
 /// </remarks>
 public abstract record SuffixTreeNode(IDictionary<SuffixTreeEdge, SuffixTreeNode> Children, int? Start)
-    : ISuffixStructureNode<SuffixTreeEdge, SuffixTreeNode, SuffixTreeBuilder>
+    : ISuffixStructureNode<SuffixTreeEdge, SuffixTreeNode>
 {
     /// <summary>
     /// Builds an intermediate node, i.e. a node with children and their corresponding incoming edges.

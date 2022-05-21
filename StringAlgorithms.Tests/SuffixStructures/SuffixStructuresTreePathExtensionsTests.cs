@@ -2,8 +2,7 @@
 using StringAlgorithms.RecImmTrees;
 using StringAlgorithms.SuffixStructures;
 using StringAlgorithms.SuffixTrees;
-using StringAlgorithms.Tests.SuffixTrees;
-using StringAlgorithms.Tests.SuffixTries;
+using StringAlgorithms.Tests.RecImmTrees;
 
 namespace StringAlgorithms.Tests.SuffixStructures;
 
@@ -13,7 +12,7 @@ public class SuffixStructuresTreePathExtensionsTests
     [TestMethod]
     public void SuffixFor_IsCorrectForNonEmptyPathOnSuffixTree()
     {
-        var path = SuffixTreeTreePathTests.BuildSuffixTreePathExample();
+        var path = TreePathTests.BuildSuffixTreePathExample();
         var suffix = path.SuffixFor(TestUtilities.ExampleText2);
         Assert.AreEqual($"abaa{TestUtilities.ExampleText2.Terminator}", suffix);
     }
@@ -21,7 +20,7 @@ public class SuffixStructuresTreePathExtensionsTests
     [TestMethod]
     public void SuffixFor_IsCorrectForNonEmptyPathOnSuffixTrie()
     {
-        var path = SuffixTrieTreePathTests.BuildSuffixTriePathExample();
+        var path = TreePathTests.BuildSuffixTriePathExample();
         var suffix = path.SuffixFor(TestUtilities.ExampleText2);
         Assert.AreEqual($"abaa{TestUtilities.ExampleText2.Terminator}", suffix);
     }
@@ -37,7 +36,7 @@ public class SuffixStructuresTreePathExtensionsTests
     [TestMethod]
     public void IsSuffixOf_IsCorrectForNonEmtpyPath()
     {
-        var path = SuffixTreeTreePathTests.BuildSuffixTreePathExample();
+        var path = TreePathTests.BuildSuffixTreePathExample();
         Assert.IsTrue(path.IsSuffixOf(TestUtilities.ExampleText2));
     }
 
