@@ -78,6 +78,16 @@ namespace StringAlgorithms.Tests.Utilities
         }
 
         [TestMethod]
+        public void Equals_IsInsensitiveToTheOrderOfAddition()
+        {
+            var valueDictionary1 = new ValueReadOnlyDictionary<string, int>(
+                new Dictionary<string, int> { ["a"] = 1, ["b"] = 2 });
+            var valueDictionary2 = new ValueReadOnlyDictionary<string, int>(
+                new Dictionary<string, int> { ["b"] = 2, ["a"] = 1 });
+            Assert.IsTrue(valueDictionary1.Equals(valueDictionary2));
+        }
+
+        [TestMethod]
         public void EqualsOperator_IsByValue()
         {
             var valueDictionary1 = new ValueReadOnlyDictionary<string, int>(

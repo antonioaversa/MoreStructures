@@ -5,16 +5,10 @@ using static StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock;
 
 namespace StringAlgorithms.Tests.RecImmTrees.Conversions;
 
-[TestClass]
-public class FullyRecursiveStringifierTests : StringifierTests
+public abstract class StringifierBaseTests : StringifierTests
 {
-    public FullyRecursiveStringifierTests() : base(
-        new FullyRecursiveStringifier<Edge, Node>(
-            DefaultRootStringifier, DefaultEdgeAndNodeStringifier)
-        {
-            NewLine = DefaultNewLine,
-            Indent = DefaultIndent,
-        })
+    public StringifierBaseTests(IStringifier<Edge, Node> stringifier) 
+        : base(stringifier)
     {
     }
 

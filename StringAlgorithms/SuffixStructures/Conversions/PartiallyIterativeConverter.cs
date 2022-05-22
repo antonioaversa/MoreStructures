@@ -5,13 +5,13 @@ namespace StringAlgorithms.SuffixStructures.Conversions;
 
 /// <summary>
 /// <inheritdoc cref="IConverter"/>
-/// <see cref="SuffixTrieNode"/> a "reasonable" height of the expect output <see cref="SuffixTreeNode"/>.
 /// </summary>
 /// <remarks>
 /// Conversion is iteratively for no-branching paths (i.e. on nodes having a single child) and recursively on 
 /// branching of the input <see cref="SuffixTrieNode"/>, with occasional mutation of internal state of the 
 /// conversion.
-/// Limited by stack depth (but less than <see cref="FullyRecursiveConverter"/> and usable with 
+/// Limited by stack depth (but less than <see cref="FullyRecursiveConverter"/> and usable with output trees of a 
+/// "reasonable" height.
 /// </remarks>
 public class PartiallyIterativeConverter : IConverter
 {

@@ -47,6 +47,14 @@ namespace StringAlgorithms.Tests.Utilities
         }
 
         [TestMethod]
+        public void Equals_IsSensitiveToTheOrderOfAddition()
+        {
+            var valueList1 = new ValueReadOnlyCollection<string>(new List<string> { "a", "b" });
+            var valueList2 = new ValueReadOnlyCollection<string>(new List<string> { "b", "a" });
+            Assert.IsFalse(valueList1.Equals(valueList2));
+        }
+
+        [TestMethod]
         public void EqualsOperator_IsByValue()
         {
             var valueList1 = new ValueReadOnlyCollection<string>(new List<string> { "a", "a" });
