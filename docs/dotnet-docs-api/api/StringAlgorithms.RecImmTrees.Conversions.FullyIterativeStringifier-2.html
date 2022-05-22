@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class FullyRecursiveStringifier&lt;TEdge, TNode&gt;
+    <title>Class FullyIterativeStringifier&lt;TEdge, TNode&gt;
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class FullyRecursiveStringifier&lt;TEdge, TNode&gt;
+    <meta name="title" content="Class FullyIterativeStringifier&lt;TEdge, TNode&gt;
    ">
     <meta name="generator" content="docfx 2.59.2.0">
     
@@ -78,10 +78,10 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier`2">
+            <article class="content wrap" id="_content" data-uid="StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier`2">
   
   
-  <h1 id="StringAlgorithms_RecImmTrees_Conversions_FullyRecursiveStringifier_2" data-uid="StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier`2" class="text-break">Class FullyRecursiveStringifier&lt;TEdge, TNode&gt;
+  <h1 id="StringAlgorithms_RecImmTrees_Conversions_FullyIterativeStringifier_2" data-uid="StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier`2" class="text-break">Class FullyIterativeStringifier&lt;TEdge, TNode&gt;
   </h1>
   <div class="markdown level0 summary"><p><inheritdoc></inheritdoc></p>
 </div>
@@ -90,7 +90,7 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="StringAlgorithms.RecImmTrees.Conversions.StringifierBase-2.html">StringifierBase</a>&lt;TEdge, TNode&gt;</div>
-    <div class="level2"><span class="xref">FullyRecursiveStringifier&lt;TEdge, TNode&gt;</span></div>
+    <div class="level2"><span class="xref">FullyIterativeStringifier&lt;TEdge, TNode&gt;</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -137,9 +137,9 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="StringAlgorithms.RecImmTrees.Conversions.html">StringAlgorithms.RecImmTrees.Conversions</a></h6>
   <h6><strong>Assembly</strong>: StringAlgorithms.dll</h6>
-  <h5 id="StringAlgorithms_RecImmTrees_Conversions_FullyRecursiveStringifier_2_syntax">Syntax</h5>
+  <h5 id="StringAlgorithms_RecImmTrees_Conversions_FullyIterativeStringifier_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class FullyRecursiveStringifier&lt;TEdge, TNode&gt; : StringifierBase&lt;TEdge, TNode&gt;, IStringifier&lt;TEdge, TNode&gt; where TEdge : IRecImmDictIndexedTreeEdge&lt;TEdge, TNode&gt; where TNode : IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class FullyIterativeStringifier&lt;TEdge, TNode&gt; : StringifierBase&lt;TEdge, TNode&gt;, IStringifier&lt;TEdge, TNode&gt; where TEdge : IRecImmDictIndexedTreeEdge&lt;TEdge, TNode&gt; where TNode : IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -160,25 +160,26 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="StringAlgorithms_RecImmTrees_Conversions_FullyRecursiveStringifier_2_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>Implemented fully recursively, so limited by stack depth and usable with tree of a &quot;reasonable&quot; height.</p>
+  <h5 id="StringAlgorithms_RecImmTrees_Conversions_FullyIterativeStringifier_2_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Implemented fully iteratively, so not limited by stack depth but rather by the maximum size of the stack
+stored in the heap. Convenient with deep trees (i.e. trees having a much bigger height).</p>
 </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_RecImmTrees_Conversions_FullyRecursiveStringifier_2__ctor_Func__1_System_String__Func__0__1_System_String__.md&amp;value=---%0Auid%3A%20StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier%602.%23ctor(Func%7B%601%2CSystem.String%7D%2CFunc%7B%600%2C%601%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_RecImmTrees_Conversions_FullyIterativeStringifier_2__ctor_Func__1_System_String__Func__0__1_System_String__.md&amp;value=---%0Auid%3A%20StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier%602.%23ctor(Func%7B%601%2CSystem.String%7D%2CFunc%7B%600%2C%601%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/RecImmTrees/Conversions/FullyRecursiveStringifier.cs/#L18">View Source</a>
+    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/RecImmTrees/Conversions/FullyIterativeStringifier.cs/#L19">View Source</a>
   </span>
-  <a id="StringAlgorithms_RecImmTrees_Conversions_FullyRecursiveStringifier_2__ctor_" data-uid="StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier`2.#ctor*"></a>
-  <h4 id="StringAlgorithms_RecImmTrees_Conversions_FullyRecursiveStringifier_2__ctor_Func__1_System_String__Func__0__1_System_String__" data-uid="StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier`2.#ctor(Func{`1,System.String},Func{`0,`1,System.String})">FullyRecursiveStringifier(Func&lt;TNode, String&gt;, Func&lt;TEdge, TNode, String&gt;)</h4>
+  <a id="StringAlgorithms_RecImmTrees_Conversions_FullyIterativeStringifier_2__ctor_" data-uid="StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier`2.#ctor*"></a>
+  <h4 id="StringAlgorithms_RecImmTrees_Conversions_FullyIterativeStringifier_2__ctor_Func__1_System_String__Func__0__1_System_String__" data-uid="StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier`2.#ctor(Func{`1,System.String},Func{`0,`1,System.String})">FullyIterativeStringifier(Func&lt;TNode, String&gt;, Func&lt;TEdge, TNode, String&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FullyRecursiveStringifier(Func&lt;TNode, string&gt; rootStringifier, Func&lt;TEdge, TNode, string&gt; edgeAndNodeStringifier)</code></pre>
+    <pre><code class="lang-csharp hljs">public FullyIterativeStringifier(Func&lt;TNode, string&gt; rootStringifier, Func&lt;TEdge, TNode, string&gt; edgeAndNodeStringifier)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,13 +207,13 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_RecImmTrees_Conversions_FullyRecursiveStringifier_2_Stringify__1_.md&amp;value=---%0Auid%3A%20StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier%602.Stringify(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_RecImmTrees_Conversions_FullyIterativeStringifier_2_Stringify__1_.md&amp;value=---%0Auid%3A%20StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier%602.Stringify(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/RecImmTrees/Conversions/FullyRecursiveStringifier.cs/#L26">View Source</a>
+    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/RecImmTrees/Conversions/FullyIterativeStringifier.cs/#L27">View Source</a>
   </span>
-  <a id="StringAlgorithms_RecImmTrees_Conversions_FullyRecursiveStringifier_2_Stringify_" data-uid="StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier`2.Stringify*"></a>
-  <h4 id="StringAlgorithms_RecImmTrees_Conversions_FullyRecursiveStringifier_2_Stringify__1_" data-uid="StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier`2.Stringify(`1)">Stringify(TNode)</h4>
+  <a id="StringAlgorithms_RecImmTrees_Conversions_FullyIterativeStringifier_2_Stringify_" data-uid="StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier`2.Stringify*"></a>
+  <h4 id="StringAlgorithms_RecImmTrees_Conversions_FullyIterativeStringifier_2_Stringify__1_" data-uid="StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier`2.Stringify(`1)">Stringify(TNode)</h4>
   <div class="markdown level1 summary"><p>Converts the provided <a class="xref" href="StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</a> into a string.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -268,10 +269,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_RecImmTrees_Conversions_FullyRecursiveStringifier_2.md&amp;value=---%0Auid%3A%20StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_RecImmTrees_Conversions_FullyIterativeStringifier_2.md&amp;value=---%0Auid%3A%20StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/RecImmTrees/Conversions/FullyRecursiveStringifier.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/RecImmTrees/Conversions/FullyIterativeStringifier.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

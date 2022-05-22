@@ -83,8 +83,7 @@
   
   <h1 id="StringAlgorithms_SuffixStructures_Conversions_PartiallyIterativeConverter" data-uid="StringAlgorithms.SuffixStructures.Conversions.PartiallyIterativeConverter" class="text-break">Class PartiallyIterativeConverter
   </h1>
-  <div class="markdown level0 summary"><p><inheritdoc cref="T:StringAlgorithms.SuffixStructures.Conversions.IConverter"></inheritdoc>
-<a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a> a &quot;reasonable&quot; height of the expect output <a class="xref" href="StringAlgorithms.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a>.</p>
+  <div class="markdown level0 summary"><p><inheritdoc cref="T:StringAlgorithms.SuffixStructures.Conversions.IConverter"></inheritdoc></p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -130,7 +129,8 @@
   <div class="markdown level0 remarks"><p>Conversion is iteratively for no-branching paths (i.e. on nodes having a single child) and recursively on
 branching of the input <a class="xref" href="StringAlgorithms.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a>, with occasional mutation of internal state of the
 conversion.
-Limited by stack depth (but less than <a class="xref" href="StringAlgorithms.SuffixStructures.Conversions.FullyRecursiveConverter.html">FullyRecursiveConverter</a> and usable with</p>
+Limited by stack depth (but less than <a class="xref" href="StringAlgorithms.SuffixStructures.Conversions.FullyRecursiveConverter.html">FullyRecursiveConverter</a> and usable with output trees of a
+&quot;reasonable&quot; height.</p>
 </div>
   <h3 id="methods">Methods
   </h3>

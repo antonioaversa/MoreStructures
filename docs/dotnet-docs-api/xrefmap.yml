@@ -145,6 +145,50 @@ references:
   commentId: N:StringAlgorithms.RecImmTrees.Conversions
   fullName: StringAlgorithms.RecImmTrees.Conversions
   nameWithType: StringAlgorithms.RecImmTrees.Conversions
+- uid: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier`2
+  name: FullyIterativeStringifier<TEdge, TNode>
+  href: api/StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier-2.html
+  commentId: T:StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier`2
+  name.vb: FullyIterativeStringifier(Of TEdge, TNode)
+  fullName: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier<TEdge, TNode>
+  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier(Of TEdge, TNode)
+  nameWithType: FullyIterativeStringifier<TEdge, TNode>
+  nameWithType.vb: FullyIterativeStringifier(Of TEdge, TNode)
+- uid: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier`2.#ctor(Func{`1,System.String},Func{`0,`1,System.String})
+  name: FullyIterativeStringifier(Func<TNode, String>, Func<TEdge, TNode, String>)
+  href: api/StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier-2.html#StringAlgorithms_RecImmTrees_Conversions_FullyIterativeStringifier_2__ctor_Func__1_System_String__Func__0__1_System_String__
+  commentId: M:StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier`2.#ctor(Func{`1,System.String},Func{`0,`1,System.String})
+  name.vb: FullyIterativeStringifier(Func(Of TNode, String), Func(Of TEdge, TNode, String))
+  fullName: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier<TEdge, TNode>.FullyIterativeStringifier(Func<TNode, System.String>, Func<TEdge, TNode, System.String>)
+  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier(Of TEdge, TNode).FullyIterativeStringifier(Func(Of TNode, System.String), Func(Of TEdge, TNode, System.String))
+  nameWithType: FullyIterativeStringifier<TEdge, TNode>.FullyIterativeStringifier(Func<TNode, String>, Func<TEdge, TNode, String>)
+  nameWithType.vb: FullyIterativeStringifier(Of TEdge, TNode).FullyIterativeStringifier(Func(Of TNode, String), Func(Of TEdge, TNode, String))
+- uid: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier`2.#ctor*
+  name: FullyIterativeStringifier
+  href: api/StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier-2.html#StringAlgorithms_RecImmTrees_Conversions_FullyIterativeStringifier_2__ctor_
+  commentId: Overload:StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier`2.#ctor
+  isSpec: "True"
+  fullName: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier<TEdge, TNode>.FullyIterativeStringifier
+  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier(Of TEdge, TNode).FullyIterativeStringifier
+  nameWithType: FullyIterativeStringifier<TEdge, TNode>.FullyIterativeStringifier
+  nameWithType.vb: FullyIterativeStringifier(Of TEdge, TNode).FullyIterativeStringifier
+- uid: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier`2.Stringify(`1)
+  name: Stringify(TNode)
+  href: api/StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier-2.html#StringAlgorithms_RecImmTrees_Conversions_FullyIterativeStringifier_2_Stringify__1_
+  commentId: M:StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier`2.Stringify(`1)
+  fullName: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier<TEdge, TNode>.Stringify(TNode)
+  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier(Of TEdge, TNode).Stringify(TNode)
+  nameWithType: FullyIterativeStringifier<TEdge, TNode>.Stringify(TNode)
+  nameWithType.vb: FullyIterativeStringifier(Of TEdge, TNode).Stringify(TNode)
+- uid: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier`2.Stringify*
+  name: Stringify
+  href: api/StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier-2.html#StringAlgorithms_RecImmTrees_Conversions_FullyIterativeStringifier_2_Stringify_
+  commentId: Overload:StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier`2.Stringify
+  isSpec: "True"
+  fullName: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier<TEdge, TNode>.Stringify
+  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier(Of TEdge, TNode).Stringify
+  nameWithType: FullyIterativeStringifier<TEdge, TNode>.Stringify
+  nameWithType.vb: FullyIterativeStringifier(Of TEdge, TNode).Stringify
 - uid: StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier`2
   name: FullyRecursiveStringifier<TEdge, TNode>
   href: api/StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier-2.html
@@ -172,74 +216,6 @@ references:
   fullName.vb: StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier(Of TEdge, TNode).FullyRecursiveStringifier
   nameWithType: FullyRecursiveStringifier<TEdge, TNode>.FullyRecursiveStringifier
   nameWithType.vb: FullyRecursiveStringifier(Of TEdge, TNode).FullyRecursiveStringifier
-- uid: StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier`2.EdgeAndNodeStringifier
-  name: EdgeAndNodeStringifier
-  href: api/StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier-2.html#StringAlgorithms_RecImmTrees_Conversions_FullyRecursiveStringifier_2_EdgeAndNodeStringifier
-  commentId: P:StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier`2.EdgeAndNodeStringifier
-  fullName: StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier<TEdge, TNode>.EdgeAndNodeStringifier
-  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier(Of TEdge, TNode).EdgeAndNodeStringifier
-  nameWithType: FullyRecursiveStringifier<TEdge, TNode>.EdgeAndNodeStringifier
-  nameWithType.vb: FullyRecursiveStringifier(Of TEdge, TNode).EdgeAndNodeStringifier
-- uid: StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier`2.EdgeAndNodeStringifier*
-  name: EdgeAndNodeStringifier
-  href: api/StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier-2.html#StringAlgorithms_RecImmTrees_Conversions_FullyRecursiveStringifier_2_EdgeAndNodeStringifier_
-  commentId: Overload:StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier`2.EdgeAndNodeStringifier
-  isSpec: "True"
-  fullName: StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier<TEdge, TNode>.EdgeAndNodeStringifier
-  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier(Of TEdge, TNode).EdgeAndNodeStringifier
-  nameWithType: FullyRecursiveStringifier<TEdge, TNode>.EdgeAndNodeStringifier
-  nameWithType.vb: FullyRecursiveStringifier(Of TEdge, TNode).EdgeAndNodeStringifier
-- uid: StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier`2.Indent
-  name: Indent
-  href: api/StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier-2.html#StringAlgorithms_RecImmTrees_Conversions_FullyRecursiveStringifier_2_Indent
-  commentId: P:StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier`2.Indent
-  fullName: StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier<TEdge, TNode>.Indent
-  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier(Of TEdge, TNode).Indent
-  nameWithType: FullyRecursiveStringifier<TEdge, TNode>.Indent
-  nameWithType.vb: FullyRecursiveStringifier(Of TEdge, TNode).Indent
-- uid: StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier`2.Indent*
-  name: Indent
-  href: api/StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier-2.html#StringAlgorithms_RecImmTrees_Conversions_FullyRecursiveStringifier_2_Indent_
-  commentId: Overload:StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier`2.Indent
-  isSpec: "True"
-  fullName: StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier<TEdge, TNode>.Indent
-  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier(Of TEdge, TNode).Indent
-  nameWithType: FullyRecursiveStringifier<TEdge, TNode>.Indent
-  nameWithType.vb: FullyRecursiveStringifier(Of TEdge, TNode).Indent
-- uid: StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier`2.NewLine
-  name: NewLine
-  href: api/StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier-2.html#StringAlgorithms_RecImmTrees_Conversions_FullyRecursiveStringifier_2_NewLine
-  commentId: P:StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier`2.NewLine
-  fullName: StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier<TEdge, TNode>.NewLine
-  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier(Of TEdge, TNode).NewLine
-  nameWithType: FullyRecursiveStringifier<TEdge, TNode>.NewLine
-  nameWithType.vb: FullyRecursiveStringifier(Of TEdge, TNode).NewLine
-- uid: StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier`2.NewLine*
-  name: NewLine
-  href: api/StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier-2.html#StringAlgorithms_RecImmTrees_Conversions_FullyRecursiveStringifier_2_NewLine_
-  commentId: Overload:StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier`2.NewLine
-  isSpec: "True"
-  fullName: StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier<TEdge, TNode>.NewLine
-  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier(Of TEdge, TNode).NewLine
-  nameWithType: FullyRecursiveStringifier<TEdge, TNode>.NewLine
-  nameWithType.vb: FullyRecursiveStringifier(Of TEdge, TNode).NewLine
-- uid: StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier`2.RootStringifier
-  name: RootStringifier
-  href: api/StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier-2.html#StringAlgorithms_RecImmTrees_Conversions_FullyRecursiveStringifier_2_RootStringifier
-  commentId: P:StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier`2.RootStringifier
-  fullName: StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier<TEdge, TNode>.RootStringifier
-  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier(Of TEdge, TNode).RootStringifier
-  nameWithType: FullyRecursiveStringifier<TEdge, TNode>.RootStringifier
-  nameWithType.vb: FullyRecursiveStringifier(Of TEdge, TNode).RootStringifier
-- uid: StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier`2.RootStringifier*
-  name: RootStringifier
-  href: api/StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier-2.html#StringAlgorithms_RecImmTrees_Conversions_FullyRecursiveStringifier_2_RootStringifier_
-  commentId: Overload:StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier`2.RootStringifier
-  isSpec: "True"
-  fullName: StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier<TEdge, TNode>.RootStringifier
-  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier(Of TEdge, TNode).RootStringifier
-  nameWithType: FullyRecursiveStringifier<TEdge, TNode>.RootStringifier
-  nameWithType.vb: FullyRecursiveStringifier(Of TEdge, TNode).RootStringifier
 - uid: StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier`2.Stringify(`1)
   name: Stringify(TNode)
   href: api/StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier-2.html#StringAlgorithms_RecImmTrees_Conversions_FullyRecursiveStringifier_2_Stringify__1_
@@ -351,6 +327,118 @@ references:
   fullName.vb: StringAlgorithms.RecImmTrees.Conversions.IStringifier(Of TEdge, TNode).Stringify
   nameWithType: IStringifier<TEdge, TNode>.Stringify
   nameWithType.vb: IStringifier(Of TEdge, TNode).Stringify
+- uid: StringAlgorithms.RecImmTrees.Conversions.StringifierBase`2
+  name: StringifierBase<TEdge, TNode>
+  href: api/StringAlgorithms.RecImmTrees.Conversions.StringifierBase-2.html
+  commentId: T:StringAlgorithms.RecImmTrees.Conversions.StringifierBase`2
+  name.vb: StringifierBase(Of TEdge, TNode)
+  fullName: StringAlgorithms.RecImmTrees.Conversions.StringifierBase<TEdge, TNode>
+  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.StringifierBase(Of TEdge, TNode)
+  nameWithType: StringifierBase<TEdge, TNode>
+  nameWithType.vb: StringifierBase(Of TEdge, TNode)
+- uid: StringAlgorithms.RecImmTrees.Conversions.StringifierBase`2.#ctor(Func{`1,System.String},Func{`0,`1,System.String})
+  name: StringifierBase(Func<TNode, String>, Func<TEdge, TNode, String>)
+  href: api/StringAlgorithms.RecImmTrees.Conversions.StringifierBase-2.html#StringAlgorithms_RecImmTrees_Conversions_StringifierBase_2__ctor_Func__1_System_String__Func__0__1_System_String__
+  commentId: M:StringAlgorithms.RecImmTrees.Conversions.StringifierBase`2.#ctor(Func{`1,System.String},Func{`0,`1,System.String})
+  name.vb: StringifierBase(Func(Of TNode, String), Func(Of TEdge, TNode, String))
+  fullName: StringAlgorithms.RecImmTrees.Conversions.StringifierBase<TEdge, TNode>.StringifierBase(Func<TNode, System.String>, Func<TEdge, TNode, System.String>)
+  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.StringifierBase(Of TEdge, TNode).StringifierBase(Func(Of TNode, System.String), Func(Of TEdge, TNode, System.String))
+  nameWithType: StringifierBase<TEdge, TNode>.StringifierBase(Func<TNode, String>, Func<TEdge, TNode, String>)
+  nameWithType.vb: StringifierBase(Of TEdge, TNode).StringifierBase(Func(Of TNode, String), Func(Of TEdge, TNode, String))
+- uid: StringAlgorithms.RecImmTrees.Conversions.StringifierBase`2.#ctor*
+  name: StringifierBase
+  href: api/StringAlgorithms.RecImmTrees.Conversions.StringifierBase-2.html#StringAlgorithms_RecImmTrees_Conversions_StringifierBase_2__ctor_
+  commentId: Overload:StringAlgorithms.RecImmTrees.Conversions.StringifierBase`2.#ctor
+  isSpec: "True"
+  fullName: StringAlgorithms.RecImmTrees.Conversions.StringifierBase<TEdge, TNode>.StringifierBase
+  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.StringifierBase(Of TEdge, TNode).StringifierBase
+  nameWithType: StringifierBase<TEdge, TNode>.StringifierBase
+  nameWithType.vb: StringifierBase(Of TEdge, TNode).StringifierBase
+- uid: StringAlgorithms.RecImmTrees.Conversions.StringifierBase`2.EdgeAndNodeStringifier
+  name: EdgeAndNodeStringifier
+  href: api/StringAlgorithms.RecImmTrees.Conversions.StringifierBase-2.html#StringAlgorithms_RecImmTrees_Conversions_StringifierBase_2_EdgeAndNodeStringifier
+  commentId: P:StringAlgorithms.RecImmTrees.Conversions.StringifierBase`2.EdgeAndNodeStringifier
+  fullName: StringAlgorithms.RecImmTrees.Conversions.StringifierBase<TEdge, TNode>.EdgeAndNodeStringifier
+  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.StringifierBase(Of TEdge, TNode).EdgeAndNodeStringifier
+  nameWithType: StringifierBase<TEdge, TNode>.EdgeAndNodeStringifier
+  nameWithType.vb: StringifierBase(Of TEdge, TNode).EdgeAndNodeStringifier
+- uid: StringAlgorithms.RecImmTrees.Conversions.StringifierBase`2.EdgeAndNodeStringifier*
+  name: EdgeAndNodeStringifier
+  href: api/StringAlgorithms.RecImmTrees.Conversions.StringifierBase-2.html#StringAlgorithms_RecImmTrees_Conversions_StringifierBase_2_EdgeAndNodeStringifier_
+  commentId: Overload:StringAlgorithms.RecImmTrees.Conversions.StringifierBase`2.EdgeAndNodeStringifier
+  isSpec: "True"
+  fullName: StringAlgorithms.RecImmTrees.Conversions.StringifierBase<TEdge, TNode>.EdgeAndNodeStringifier
+  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.StringifierBase(Of TEdge, TNode).EdgeAndNodeStringifier
+  nameWithType: StringifierBase<TEdge, TNode>.EdgeAndNodeStringifier
+  nameWithType.vb: StringifierBase(Of TEdge, TNode).EdgeAndNodeStringifier
+- uid: StringAlgorithms.RecImmTrees.Conversions.StringifierBase`2.Indent
+  name: Indent
+  href: api/StringAlgorithms.RecImmTrees.Conversions.StringifierBase-2.html#StringAlgorithms_RecImmTrees_Conversions_StringifierBase_2_Indent
+  commentId: P:StringAlgorithms.RecImmTrees.Conversions.StringifierBase`2.Indent
+  fullName: StringAlgorithms.RecImmTrees.Conversions.StringifierBase<TEdge, TNode>.Indent
+  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.StringifierBase(Of TEdge, TNode).Indent
+  nameWithType: StringifierBase<TEdge, TNode>.Indent
+  nameWithType.vb: StringifierBase(Of TEdge, TNode).Indent
+- uid: StringAlgorithms.RecImmTrees.Conversions.StringifierBase`2.Indent*
+  name: Indent
+  href: api/StringAlgorithms.RecImmTrees.Conversions.StringifierBase-2.html#StringAlgorithms_RecImmTrees_Conversions_StringifierBase_2_Indent_
+  commentId: Overload:StringAlgorithms.RecImmTrees.Conversions.StringifierBase`2.Indent
+  isSpec: "True"
+  fullName: StringAlgorithms.RecImmTrees.Conversions.StringifierBase<TEdge, TNode>.Indent
+  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.StringifierBase(Of TEdge, TNode).Indent
+  nameWithType: StringifierBase<TEdge, TNode>.Indent
+  nameWithType.vb: StringifierBase(Of TEdge, TNode).Indent
+- uid: StringAlgorithms.RecImmTrees.Conversions.StringifierBase`2.NewLine
+  name: NewLine
+  href: api/StringAlgorithms.RecImmTrees.Conversions.StringifierBase-2.html#StringAlgorithms_RecImmTrees_Conversions_StringifierBase_2_NewLine
+  commentId: P:StringAlgorithms.RecImmTrees.Conversions.StringifierBase`2.NewLine
+  fullName: StringAlgorithms.RecImmTrees.Conversions.StringifierBase<TEdge, TNode>.NewLine
+  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.StringifierBase(Of TEdge, TNode).NewLine
+  nameWithType: StringifierBase<TEdge, TNode>.NewLine
+  nameWithType.vb: StringifierBase(Of TEdge, TNode).NewLine
+- uid: StringAlgorithms.RecImmTrees.Conversions.StringifierBase`2.NewLine*
+  name: NewLine
+  href: api/StringAlgorithms.RecImmTrees.Conversions.StringifierBase-2.html#StringAlgorithms_RecImmTrees_Conversions_StringifierBase_2_NewLine_
+  commentId: Overload:StringAlgorithms.RecImmTrees.Conversions.StringifierBase`2.NewLine
+  isSpec: "True"
+  fullName: StringAlgorithms.RecImmTrees.Conversions.StringifierBase<TEdge, TNode>.NewLine
+  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.StringifierBase(Of TEdge, TNode).NewLine
+  nameWithType: StringifierBase<TEdge, TNode>.NewLine
+  nameWithType.vb: StringifierBase(Of TEdge, TNode).NewLine
+- uid: StringAlgorithms.RecImmTrees.Conversions.StringifierBase`2.RootStringifier
+  name: RootStringifier
+  href: api/StringAlgorithms.RecImmTrees.Conversions.StringifierBase-2.html#StringAlgorithms_RecImmTrees_Conversions_StringifierBase_2_RootStringifier
+  commentId: P:StringAlgorithms.RecImmTrees.Conversions.StringifierBase`2.RootStringifier
+  fullName: StringAlgorithms.RecImmTrees.Conversions.StringifierBase<TEdge, TNode>.RootStringifier
+  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.StringifierBase(Of TEdge, TNode).RootStringifier
+  nameWithType: StringifierBase<TEdge, TNode>.RootStringifier
+  nameWithType.vb: StringifierBase(Of TEdge, TNode).RootStringifier
+- uid: StringAlgorithms.RecImmTrees.Conversions.StringifierBase`2.RootStringifier*
+  name: RootStringifier
+  href: api/StringAlgorithms.RecImmTrees.Conversions.StringifierBase-2.html#StringAlgorithms_RecImmTrees_Conversions_StringifierBase_2_RootStringifier_
+  commentId: Overload:StringAlgorithms.RecImmTrees.Conversions.StringifierBase`2.RootStringifier
+  isSpec: "True"
+  fullName: StringAlgorithms.RecImmTrees.Conversions.StringifierBase<TEdge, TNode>.RootStringifier
+  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.StringifierBase(Of TEdge, TNode).RootStringifier
+  nameWithType: StringifierBase<TEdge, TNode>.RootStringifier
+  nameWithType.vb: StringifierBase(Of TEdge, TNode).RootStringifier
+- uid: StringAlgorithms.RecImmTrees.Conversions.StringifierBase`2.Stringify(`1)
+  name: Stringify(TNode)
+  href: api/StringAlgorithms.RecImmTrees.Conversions.StringifierBase-2.html#StringAlgorithms_RecImmTrees_Conversions_StringifierBase_2_Stringify__1_
+  commentId: M:StringAlgorithms.RecImmTrees.Conversions.StringifierBase`2.Stringify(`1)
+  fullName: StringAlgorithms.RecImmTrees.Conversions.StringifierBase<TEdge, TNode>.Stringify(TNode)
+  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.StringifierBase(Of TEdge, TNode).Stringify(TNode)
+  nameWithType: StringifierBase<TEdge, TNode>.Stringify(TNode)
+  nameWithType.vb: StringifierBase(Of TEdge, TNode).Stringify(TNode)
+- uid: StringAlgorithms.RecImmTrees.Conversions.StringifierBase`2.Stringify*
+  name: Stringify
+  href: api/StringAlgorithms.RecImmTrees.Conversions.StringifierBase-2.html#StringAlgorithms_RecImmTrees_Conversions_StringifierBase_2_Stringify_
+  commentId: Overload:StringAlgorithms.RecImmTrees.Conversions.StringifierBase`2.Stringify
+  isSpec: "True"
+  fullName: StringAlgorithms.RecImmTrees.Conversions.StringifierBase<TEdge, TNode>.Stringify
+  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.StringifierBase(Of TEdge, TNode).Stringify
+  nameWithType: StringifierBase<TEdge, TNode>.Stringify
+  nameWithType.vb: StringifierBase(Of TEdge, TNode).Stringify
 - uid: StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeEdge`2
   name: IRecImmDictIndexedTreeEdge<TEdge, TNode>
   href: api/StringAlgorithms.RecImmTrees.IRecImmDictIndexedTreeEdge-2.html
@@ -1563,6 +1651,38 @@ references:
   commentId: N:StringAlgorithms.Tests.RecImmTrees.Conversions
   fullName: StringAlgorithms.Tests.RecImmTrees.Conversions
   nameWithType: StringAlgorithms.Tests.RecImmTrees.Conversions
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests
+  name: FullyIterativeStringifierTests
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.html
+  commentId: T:StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests
+  nameWithType: FullyIterativeStringifierTests
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.#ctor
+  name: FullyIterativeStringifierTests()
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_FullyIterativeStringifierTests__ctor
+  commentId: M:StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.#ctor
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.FullyIterativeStringifierTests()
+  nameWithType: FullyIterativeStringifierTests.FullyIterativeStringifierTests()
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.#ctor*
+  name: FullyIterativeStringifierTests
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_FullyIterativeStringifierTests__ctor_
+  commentId: Overload:StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.#ctor
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.FullyIterativeStringifierTests
+  nameWithType: FullyIterativeStringifierTests.FullyIterativeStringifierTests
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.Stringify_RunsOnDeepStructures
+  name: Stringify_RunsOnDeepStructures()
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_FullyIterativeStringifierTests_Stringify_RunsOnDeepStructures
+  commentId: M:StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.Stringify_RunsOnDeepStructures
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.Stringify_RunsOnDeepStructures()
+  nameWithType: FullyIterativeStringifierTests.Stringify_RunsOnDeepStructures()
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.Stringify_RunsOnDeepStructures*
+  name: Stringify_RunsOnDeepStructures
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_FullyIterativeStringifierTests_Stringify_RunsOnDeepStructures_
+  commentId: Overload:StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.Stringify_RunsOnDeepStructures
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.Stringify_RunsOnDeepStructures
+  nameWithType: FullyIterativeStringifierTests.Stringify_RunsOnDeepStructures
 - uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests
   name: FullyRecursiveStringifierTests
   href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.html
@@ -1582,32 +1702,67 @@ references:
   isSpec: "True"
   fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.FullyRecursiveStringifierTests
   nameWithType: FullyRecursiveStringifierTests.FullyRecursiveStringifierTests
-- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.CustomIndent_IsReflectedIntoOutput
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.Stringify_RunsOnNotSoDeepStructures
+  name: Stringify_RunsOnNotSoDeepStructures()
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_FullyRecursiveStringifierTests_Stringify_RunsOnNotSoDeepStructures
+  commentId: M:StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.Stringify_RunsOnNotSoDeepStructures
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.Stringify_RunsOnNotSoDeepStructures()
+  nameWithType: FullyRecursiveStringifierTests.Stringify_RunsOnNotSoDeepStructures()
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.Stringify_RunsOnNotSoDeepStructures*
+  name: Stringify_RunsOnNotSoDeepStructures
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_FullyRecursiveStringifierTests_Stringify_RunsOnNotSoDeepStructures_
+  commentId: Overload:StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.Stringify_RunsOnNotSoDeepStructures
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.Stringify_RunsOnNotSoDeepStructures
+  nameWithType: FullyRecursiveStringifierTests.Stringify_RunsOnNotSoDeepStructures
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests
+  name: StringifierBaseTests
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.html
+  commentId: T:StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests
+  nameWithType: StringifierBaseTests
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.#ctor(StringAlgorithms.RecImmTrees.Conversions.IStringifier{StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock.Edge,StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock.Node})
+  name: StringifierBaseTests(IStringifier<TreeMock.Edge, TreeMock.Node>)
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_StringifierBaseTests__ctor_StringAlgorithms_RecImmTrees_Conversions_IStringifier_StringAlgorithms_Tests_RecImmTrees_Conversions_TreeMock_Edge_StringAlgorithms_Tests_RecImmTrees_Conversions_TreeMock_Node__
+  commentId: M:StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.#ctor(StringAlgorithms.RecImmTrees.Conversions.IStringifier{StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock.Edge,StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock.Node})
+  name.vb: StringifierBaseTests(IStringifier(Of TreeMock.Edge, TreeMock.Node))
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.StringifierBaseTests(StringAlgorithms.RecImmTrees.Conversions.IStringifier<StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock.Edge, StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock.Node>)
+  fullName.vb: StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.StringifierBaseTests(StringAlgorithms.RecImmTrees.Conversions.IStringifier(Of StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock.Edge, StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock.Node))
+  nameWithType: StringifierBaseTests.StringifierBaseTests(IStringifier<TreeMock.Edge, TreeMock.Node>)
+  nameWithType.vb: StringifierBaseTests.StringifierBaseTests(IStringifier(Of TreeMock.Edge, TreeMock.Node))
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.#ctor*
+  name: StringifierBaseTests
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_StringifierBaseTests__ctor_
+  commentId: Overload:StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.#ctor
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.StringifierBaseTests
+  nameWithType: StringifierBaseTests.StringifierBaseTests
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.CustomIndent_IsReflectedIntoOutput
   name: CustomIndent_IsReflectedIntoOutput()
-  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_FullyRecursiveStringifierTests_CustomIndent_IsReflectedIntoOutput
-  commentId: M:StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.CustomIndent_IsReflectedIntoOutput
-  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.CustomIndent_IsReflectedIntoOutput()
-  nameWithType: FullyRecursiveStringifierTests.CustomIndent_IsReflectedIntoOutput()
-- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.CustomIndent_IsReflectedIntoOutput*
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_StringifierBaseTests_CustomIndent_IsReflectedIntoOutput
+  commentId: M:StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.CustomIndent_IsReflectedIntoOutput
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.CustomIndent_IsReflectedIntoOutput()
+  nameWithType: StringifierBaseTests.CustomIndent_IsReflectedIntoOutput()
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.CustomIndent_IsReflectedIntoOutput*
   name: CustomIndent_IsReflectedIntoOutput
-  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_FullyRecursiveStringifierTests_CustomIndent_IsReflectedIntoOutput_
-  commentId: Overload:StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.CustomIndent_IsReflectedIntoOutput
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_StringifierBaseTests_CustomIndent_IsReflectedIntoOutput_
+  commentId: Overload:StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.CustomIndent_IsReflectedIntoOutput
   isSpec: "True"
-  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.CustomIndent_IsReflectedIntoOutput
-  nameWithType: FullyRecursiveStringifierTests.CustomIndent_IsReflectedIntoOutput
-- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.CustomNewLine_IsReflectedIntoOutput
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.CustomIndent_IsReflectedIntoOutput
+  nameWithType: StringifierBaseTests.CustomIndent_IsReflectedIntoOutput
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.CustomNewLine_IsReflectedIntoOutput
   name: CustomNewLine_IsReflectedIntoOutput()
-  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_FullyRecursiveStringifierTests_CustomNewLine_IsReflectedIntoOutput
-  commentId: M:StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.CustomNewLine_IsReflectedIntoOutput
-  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.CustomNewLine_IsReflectedIntoOutput()
-  nameWithType: FullyRecursiveStringifierTests.CustomNewLine_IsReflectedIntoOutput()
-- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.CustomNewLine_IsReflectedIntoOutput*
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_StringifierBaseTests_CustomNewLine_IsReflectedIntoOutput
+  commentId: M:StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.CustomNewLine_IsReflectedIntoOutput
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.CustomNewLine_IsReflectedIntoOutput()
+  nameWithType: StringifierBaseTests.CustomNewLine_IsReflectedIntoOutput()
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.CustomNewLine_IsReflectedIntoOutput*
   name: CustomNewLine_IsReflectedIntoOutput
-  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_FullyRecursiveStringifierTests_CustomNewLine_IsReflectedIntoOutput_
-  commentId: Overload:StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.CustomNewLine_IsReflectedIntoOutput
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_StringifierBaseTests_CustomNewLine_IsReflectedIntoOutput_
+  commentId: Overload:StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.CustomNewLine_IsReflectedIntoOutput
   isSpec: "True"
-  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.CustomNewLine_IsReflectedIntoOutput
-  nameWithType: FullyRecursiveStringifierTests.CustomNewLine_IsReflectedIntoOutput
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.CustomNewLine_IsReflectedIntoOutput
+  nameWithType: StringifierBaseTests.CustomNewLine_IsReflectedIntoOutput
 - uid: StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierTests
   name: StringifierTests
   href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierTests.html
@@ -1693,6 +1848,19 @@ references:
   isSpec: "True"
   fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierTests.Stringifier
   nameWithType: StringifierTests.Stringifier
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfFourLevelsTree
+  name: Stringify_OfFourLevelsTree()
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_StringifierTests_Stringify_OfFourLevelsTree
+  commentId: M:StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfFourLevelsTree
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfFourLevelsTree()
+  nameWithType: StringifierTests.Stringify_OfFourLevelsTree()
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfFourLevelsTree*
+  name: Stringify_OfFourLevelsTree
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_StringifierTests_Stringify_OfFourLevelsTree_
+  commentId: Overload:StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfFourLevelsTree
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfFourLevelsTree
+  nameWithType: StringifierTests.Stringify_OfFourLevelsTree
 - uid: StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfLeaf
   name: Stringify_OfLeaf()
   href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_StringifierTests_Stringify_OfLeaf
@@ -3538,6 +3706,19 @@ references:
   isSpec: "True"
   fullName: StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionTests.Equals_IsByValue
   nameWithType: ValueReadOnlyCollectionTests.Equals_IsByValue
+- uid: StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionTests.Equals_IsSensitiveToTheOrderOfAddition
+  name: Equals_IsSensitiveToTheOrderOfAddition()
+  href: api/StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionTests.html#StringAlgorithms_Tests_Utilities_ValueReadOnlyCollectionTests_Equals_IsSensitiveToTheOrderOfAddition
+  commentId: M:StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionTests.Equals_IsSensitiveToTheOrderOfAddition
+  fullName: StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionTests.Equals_IsSensitiveToTheOrderOfAddition()
+  nameWithType: ValueReadOnlyCollectionTests.Equals_IsSensitiveToTheOrderOfAddition()
+- uid: StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionTests.Equals_IsSensitiveToTheOrderOfAddition*
+  name: Equals_IsSensitiveToTheOrderOfAddition
+  href: api/StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionTests.html#StringAlgorithms_Tests_Utilities_ValueReadOnlyCollectionTests_Equals_IsSensitiveToTheOrderOfAddition_
+  commentId: Overload:StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionTests.Equals_IsSensitiveToTheOrderOfAddition
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionTests.Equals_IsSensitiveToTheOrderOfAddition
+  nameWithType: ValueReadOnlyCollectionTests.Equals_IsSensitiveToTheOrderOfAddition
 - uid: StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionTests.EqualsOperator_IsByValue
   name: EqualsOperator_IsByValue()
   href: api/StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionTests.html#StringAlgorithms_Tests_Utilities_ValueReadOnlyCollectionTests_EqualsOperator_IsByValue
@@ -3674,6 +3855,19 @@ references:
   isSpec: "True"
   fullName: StringAlgorithms.Tests.Utilities.ValueReadOnlyDictionaryTests.Equals_IsByValue
   nameWithType: ValueReadOnlyDictionaryTests.Equals_IsByValue
+- uid: StringAlgorithms.Tests.Utilities.ValueReadOnlyDictionaryTests.Equals_IsInsensitiveToTheOrderOfAddition
+  name: Equals_IsInsensitiveToTheOrderOfAddition()
+  href: api/StringAlgorithms.Tests.Utilities.ValueReadOnlyDictionaryTests.html#StringAlgorithms_Tests_Utilities_ValueReadOnlyDictionaryTests_Equals_IsInsensitiveToTheOrderOfAddition
+  commentId: M:StringAlgorithms.Tests.Utilities.ValueReadOnlyDictionaryTests.Equals_IsInsensitiveToTheOrderOfAddition
+  fullName: StringAlgorithms.Tests.Utilities.ValueReadOnlyDictionaryTests.Equals_IsInsensitiveToTheOrderOfAddition()
+  nameWithType: ValueReadOnlyDictionaryTests.Equals_IsInsensitiveToTheOrderOfAddition()
+- uid: StringAlgorithms.Tests.Utilities.ValueReadOnlyDictionaryTests.Equals_IsInsensitiveToTheOrderOfAddition*
+  name: Equals_IsInsensitiveToTheOrderOfAddition
+  href: api/StringAlgorithms.Tests.Utilities.ValueReadOnlyDictionaryTests.html#StringAlgorithms_Tests_Utilities_ValueReadOnlyDictionaryTests_Equals_IsInsensitiveToTheOrderOfAddition_
+  commentId: Overload:StringAlgorithms.Tests.Utilities.ValueReadOnlyDictionaryTests.Equals_IsInsensitiveToTheOrderOfAddition
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.Utilities.ValueReadOnlyDictionaryTests.Equals_IsInsensitiveToTheOrderOfAddition
+  nameWithType: ValueReadOnlyDictionaryTests.Equals_IsInsensitiveToTheOrderOfAddition
 - uid: StringAlgorithms.Tests.Utilities.ValueReadOnlyDictionaryTests.EqualsOperator_IsByValue
   name: EqualsOperator_IsByValue()
   href: api/StringAlgorithms.Tests.Utilities.ValueReadOnlyDictionaryTests.html#StringAlgorithms_Tests_Utilities_ValueReadOnlyDictionaryTests_EqualsOperator_IsByValue

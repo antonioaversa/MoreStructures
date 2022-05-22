@@ -50,11 +50,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier-2.html",
+          "hash": "6p0UmstqQhZwYsr0AO9PhJD3cZHhEY7U9fku/1ugu1s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier-2.yml",
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.RecImmTrees.Conversions.FullyRecursiveStringifier-2.html",
-          "hash": "TGuk8kP0izOgqUQxRXtRZBNwPYzJz7ar2htaQlsMWoE="
+          "hash": "u0rZufG/UJzHfZPQ1REbyPvq34r5mp14LtamE6cO2PQ="
         }
       },
       "is_incremental": false,
@@ -74,11 +86,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.RecImmTrees.Conversions.StringifierBase-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.RecImmTrees.Conversions.StringifierBase-2.html",
+          "hash": "E+FPxdDshhXXI1IpONbVnMigtBoG7g/dCZMl0r0O0Vg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/StringAlgorithms.RecImmTrees.Conversions.yml",
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.RecImmTrees.Conversions.html",
-          "hash": "WgZUYYLlj2MKGbv5f25RemBhyMbUQxdF+3vXEI9SblE="
+          "hash": "ePQYHvVj4g6CWdh0tcUY9IMWTONhg+Uxfg0ObCIAK5M="
         }
       },
       "is_incremental": false,
@@ -210,7 +234,7 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.SuffixStructures.Conversions.FullyRecursiveConverter.html",
-          "hash": "WKaHt3bV9pz4AVEpXfbB9eUjYQuCU7x1Y4vqBQ8vKjE="
+          "hash": "1Ssl86WYwrrp5a8YgQUxgvLB5lM/2AaUXOi12hpxGuc="
         }
       },
       "is_incremental": false,
@@ -234,7 +258,7 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.SuffixStructures.Conversions.PartiallyIterativeConverter.html",
-          "hash": "DzFyLHwkKxcSJB0IWKKHlSMeWCWWWXb5ChVHwjLwnTU="
+          "hash": "7j6qU9f4hZvLf4pOxhNmBbgkDi/W89LsNC2kXEvnEDs="
         }
       },
       "is_incremental": false,
@@ -246,7 +270,7 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.SuffixStructures.Conversions.html",
-          "hash": "LwN+lNRiyVw5IqnmgDUdi0RDSmoWel3iBSwWp0DpV/I="
+          "hash": "3lkMUrAXxb42ZRKXIVhdLamsdq8n0xSY1n7gUS+z+Hc="
         }
       },
       "is_incremental": false,
@@ -566,11 +590,35 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.html",
+          "hash": "NZRGJLZq+S8g0MXpCaknYKVRQs4h5pj6wwQ2n8ipyG0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.yml",
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.html",
-          "hash": "fBwzQoBkh+CdfuNXRwJcizh8HMYSS+yv4wgE9a1y7Os="
+          "hash": "UepoTA+EYNlpcS6yolJspBuJA2q5Mxchd4K3jDmn9Vk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.html",
+          "hash": "/9C1CcK9iA+KBCSYc9k1ewzrSbZEZFdzgcT5yKxbI+U="
         }
       },
       "is_incremental": false,
@@ -582,7 +630,7 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierTests.html",
-          "hash": "vEGpkk24uw22ifyDbqp0ObNRk3mlLpeYNiNePtO66e0="
+          "hash": "ylMThT7LkY1E//E1BMwZJVdzpAsiWrym+xXuwawe4Ls="
         }
       },
       "is_incremental": false,
@@ -594,7 +642,7 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock.Edge.html",
-          "hash": "r107rMTB7RBd/qtP7dLb8Rl3nAbFGNgxtrncfGE4CAE="
+          "hash": "vzGwkdMfcySQetFdI3uq72OyAzwD87tuwxbYx3MZXTc="
         }
       },
       "is_incremental": false,
@@ -606,7 +654,7 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock.Node.html",
-          "hash": "lTYQHbVC7Wl45OeX2VOud+beY7sgh7N3P0dCPTJmk9A="
+          "hash": "7CfiT8OXdlq2FYyYiRPDB8jWaMVD3b3twulG/5v9b6E="
         }
       },
       "is_incremental": false,
@@ -618,7 +666,7 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock.html",
-          "hash": "4zbCsPzd7BNIRR2FUTlHnumLocdB1JIeQIlveoyLBoI="
+          "hash": "yhFYVyqYdpOveZuW3DAchsuInZ1IiS3MvRH/hpQpBqE="
         }
       },
       "is_incremental": false,
@@ -630,7 +678,7 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.Tests.RecImmTrees.Conversions.html",
-          "hash": "t/hxM0ozOT6647z5nsWeDTRK8tRIOYeNwYualYqpzkE="
+          "hash": "WhoDOj3xOYvSgjovkODoMFHP1InAS0PM8BRkZQEz5wQ="
         }
       },
       "is_incremental": false,
@@ -978,7 +1026,7 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.Tests.Utilities.ValueReadOnlyCollectionTests.html",
-          "hash": "7nAxXJdunGmS3Uqpsm0oeaoE/ZcD+T7LO3apbAqHMrE="
+          "hash": "YjZ4hNk+ztKaDAsEcLUhpP8HA4av5uFO1c/Bul4RccI="
         }
       },
       "is_incremental": false,
@@ -1002,7 +1050,7 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.Tests.Utilities.ValueReadOnlyDictionaryTests.html",
-          "hash": "QRP3+Flno/U1KTi5E1DIr+6TJ9ho3cR0OV6KkDrMWM0="
+          "hash": "MxE89zdGbzrLLi6XvmOL6mLP2PIN9yUdUi94j2xZemM="
         }
       },
       "is_incremental": false,
@@ -1098,7 +1146,7 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.Utilities.ValueReadOnlyDictionary-2.html",
-          "hash": "JTw2+GIQQNyYsg4GvtuK/JPumZ20OKQQRNQAkO9qB/o="
+          "hash": "S5dV1BRJeAXrQX3sP8Kna04Isp9hrM795t/Kl/2mqHk="
         }
       },
       "is_incremental": false,
@@ -1146,7 +1194,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "zUVMqdgqlKjZKr5b7bNwpI7PFBqP1OKuBwO9q2skGf8="
+          "hash": "zk4PjgtkftxQX5f6vMGEe7WGTiUm1VLxRAAGGXGB5MY="
         }
       },
       "is_incremental": false,
@@ -1221,7 +1269,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 93,
+          "total_file_count": 97,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
