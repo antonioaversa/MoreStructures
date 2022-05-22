@@ -21,4 +21,18 @@ internal static class TreeMock
             set => _children = new(new Dictionary<Edge, Node>(value));
         }
     }
+
+    public static Node BuildMostUnbalancedTree(int numberOfIntermediateNodes)
+    {
+        Node root = new(numberOfIntermediateNodes);
+        for (int i = numberOfIntermediateNodes; i >= 1; i--)
+            root = new Node(i - 1)
+            {
+                Children = new Dictionary<Edge, Node>
+                {
+                    [new(i - 1)] = root,
+                }
+            };
+        return root;
+    }
 }

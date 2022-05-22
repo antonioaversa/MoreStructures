@@ -56,9 +56,12 @@ public abstract record SuffixTreeNode(IDictionary<SuffixTreeEdge, SuffixTreeNode
     public SuffixTreeNode this[SuffixTreeEdge edge] => Children[edge];
 
     private static readonly IStringifier<SuffixTreeEdge, SuffixTreeNode> Stringifier =
-        new FullyRecursiveStringifier<SuffixTreeEdge, SuffixTreeNode>(
+        new FullyIterativeStringifier<SuffixTreeEdge, SuffixTreeNode>(
             r => r.IsLeaf() ? $"R from {r.Start}" : "R",
-            (e, n) => $"({e.Start},{e.Length}) -> ({(n.IsLeaf() ? $"L from {n.Start}" : "I")}");
+            (e, n) => $"({e.Start},{e.Length}) -> {(n.IsLeaf() ? $"L from {n.Start}" : "I")}")
+            {
+                StopIndentingLevel = 10,
+            };
 
     /// <summary>
     /// <inheritdoc/>

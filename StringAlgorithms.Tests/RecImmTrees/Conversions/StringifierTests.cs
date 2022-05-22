@@ -92,21 +92,32 @@ public abstract class StringifierTests
                 [new(9)] = new(10),
             }),
         });
-        var rootStr = Stringifier.Stringify(root);
-        var rootStrLines = rootStr.Split(NL).ToHashSet();
-        var validResultsLines = new HashSet<string>
-        {
+
+        AssertAreEqualBySetOfLines(
+            Stringifier, 
+            root,
             $"R(1)",
-            $"{I}e(1):N(2)", 
-            $"{I}{I}e(3):N(4)", 
-            $"{I}{I}e(4):N(5)", 
-            $"{I}{I}e(5):N(6)", 
+            $"{I}e(1):N(2)",
+            $"{I}{I}e(3):N(4)",
+            $"{I}{I}e(4):N(5)",
+            $"{I}{I}e(5):N(6)",
             $"{I}{I}{I}e(6):N(7)",
             $"{I}{I}e(7):N(8)",
             $"{I}e(2):N(3)",
             $"{I}e(8):N(9)",
-            $"{I}{I}e(9):N(10)",
-        };
-        Assert.IsTrue(validResultsLines.SetEquals(rootStrLines));
+            $"{I}{I}e(9):N(10)"
+        );
+    }
+
+    protected static void AssertAreEqualBySetOfLines(
+        IStringifier<Edge, Node> stringifier, Node root, params string[] validResultsLines)
+    {
+        var rootStr = stringifier.Stringify(root);
+        var rootStrLinesSet = rootStr.Split(stringifier.NewLine).ToHashSet();
+        var validResultsLinesSet = validResultsLines.ToHashSet();
+        if (!validResultsLinesSet.SetEquals(rootStrLinesSet))
+            Assert.Fail(
+                $"Expected: [{string.Join(", ", validResultsLinesSet.Select(s => $"\"{s}\""))}]. " +
+                $"Actual: [{string.Join(", ", rootStrLinesSet.Select(s => $"\"{s}\""))}]");
     }
 }

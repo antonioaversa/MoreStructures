@@ -18,4 +18,15 @@ public static class TreeMock
     {
         public Node(int id) : this(id, new Dictionary<Edge, Node> { }) { }
     }
+
+    public static Node BuildMostUnbalancedTree(int numberOfIntermediateNodes)
+    {
+        Node root = new(numberOfIntermediateNodes);
+        for (int i = numberOfIntermediateNodes; i >= 1; i--)
+            root = new Node(i - 1, new Dictionary<Edge, Node>
+            {
+                [new(i - 1)] = root,
+            });
+        return root;
+    }
 }

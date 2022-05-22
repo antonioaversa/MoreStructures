@@ -10,7 +10,7 @@ namespace StringAlgorithms.SuffixStructures.Conversions;
 /// Conversion is iteratively for no-branching paths (i.e. on nodes having a single child) and recursively on 
 /// branching of the input <see cref="SuffixTrieNode"/>, with occasional mutation of internal state of the 
 /// conversion.
-/// Limited by stack depth (but less than <see cref="FullyRecursiveConverter"/> and usable with output trees of a 
+/// Limited by stack depth (but less than <see cref="FullyRecursiveConverter"/>) and usable with output trees of a 
 /// "reasonable" height.
 /// </remarks>
 public class PartiallyIterativeConverter : IConverter

@@ -68,6 +68,15 @@ public class CountTreeNodeTests
         Assert.AreEqual(4, leafWrapping.DescendantsCount);
     }
 
+    [TestMethod]
+    public void DescendantsCount_DoesntStackOverflowWithDeepStructures()
+    {
+        var numberOfIntermediateNodes = 10000;
+        var root = BuildMostUnbalancedTree(numberOfIntermediateNodes);
+        var countTreeRoot = new CountTreeNode<Edge, Node>(root);
+        Assert.AreEqual(numberOfIntermediateNodes, countTreeRoot.DescendantsCount); // Root node excluded
+    }
+
     private static Node BuildExampleNode()
     {
         return new Node(12)
