@@ -40,7 +40,7 @@ public sealed record CountTreeNode<TEdge, TNode>(TNode WrappedNode)
     /// </remarks>
     private readonly LockValueObject _lockObject = new();
 
-    private record StackFrame(CountTreeNode<TEdge, TNode> Node, TNode WrappedNode, bool ChildrenProcessed);
+    private record struct StackFrame(CountTreeNode<TEdge, TNode> Node, TNode WrappedNode, bool ChildrenProcessed);
 
     private void Compute()
     {
