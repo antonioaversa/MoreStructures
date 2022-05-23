@@ -11,7 +11,7 @@ namespace MoreStructures.Tests.SuffixTrees.Matching;
 [TestClass]
 public class MatcherTests
 {
-    private readonly SuffixTreeBuilder Builder = new();
+    private readonly NaivePartiallyRecursiveSuffixTreeBuilder Builder = new();
 
     [TestMethod]
     public void Match_Preconditions()

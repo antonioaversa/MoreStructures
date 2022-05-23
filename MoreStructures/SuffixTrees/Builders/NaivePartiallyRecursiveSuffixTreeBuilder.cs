@@ -6,10 +6,17 @@ namespace MoreStructures.SuffixTrees.Builders;
 /// <summary>
 /// Builds objects, such as edges and nodes, for <see cref="SuffixTreeNode"/> structures.
 /// </summary>
-public class SuffixTreeBuilder
+/// <remarks>
+/// Implemented recursively, with one level of recursion per char of each suffix of the input 
+/// <see cref="TextWithTerminator"/> (where the longest suffix is the length of the text itself). 
+/// Limited by call stack depth and usable with input text of a "reasonable" length (i.e. string having a length &lt; 
+/// ~1K chars).
+/// </remarks>
+public class NaivePartiallyRecursiveSuffixTreeBuilder
     : IBuilder<SuffixTreeEdge, SuffixTreeNode>
 {
     /// <inheritdoc/>
+    /// <inheritdoc cref="NaivePartiallyRecursiveSuffixTreeBuilder" path="/remarks"/>
     public SuffixTreeNode BuildTree(TextWithTerminator text)
     {
         SuffixTreeNode root = new SuffixTreeNode.Leaf(0);

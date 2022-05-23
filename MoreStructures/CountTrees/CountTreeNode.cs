@@ -20,8 +20,20 @@ namespace MoreStructures.CountTrees;
 /// Due to records semantics, and the use of value readonly dictionaries, two <see cref="CountTreeNode{TEdge, TNode}"/> 
 /// instances wrapping the same underlying node, or two equivalent nodes, will be equal. 
 /// </para>
-/// <para>
-/// Immutability of the wrapped tree is also required by the caching strategy applied by <see cref="DescendantsCount"/>.
+/// <para id="info">
+///     <para id="iterativity">
+///     <see cref="CountTreeNode{TEdge, TNode}"/> structure construction and properties calculation are done lazily and 
+///     fully iteratively, so the use of this structure is not limited by call stack depth but rather by the maximum 
+///     size of the stack stored in the heap. Convenient with deep trees (i.e. trees having a height > ~1K nodes).
+///     </para>
+///     <para id="caching">
+///     Once <see cref="Children"/> and <see cref="DescendantsCount"/> properties are calculated, they are cached to 
+///     avoid multiple calculation. This is also one of the reasons why immutability of the wrapped tree is a 
+///     requirement to use <see cref="CountTreeNode{TEdge, TNode}"/>.
+///     </para>
+///     <para id="complexity">
+///     Complexity = O(n) where n = number of nodes in <see cref="WrappedNode"/> structure.
+///     </para>
 /// </para>
 /// </remarks>
 public sealed record CountTreeNode<TEdge, TNode>(TNode WrappedNode)
@@ -91,6 +103,9 @@ public sealed record CountTreeNode<TEdge, TNode>(TNode WrappedNode)
     }
 
     /// <inheritdoc/>
+    /// <remarks>
+    /// <inheritdoc cref="CountTreeNode{TEdge, TNode}" path="/remarks/para[@id='info']"/>
+    /// </remarks>
     public IDictionary<CountTreeEdge<TEdge, TNode>, CountTreeNode<TEdge, TNode>> Children 
     { 
         get
@@ -106,7 +121,7 @@ public sealed record CountTreeNode<TEdge, TNode>(TNode WrappedNode)
     /// The number of descendands below this node (node itself excluded).
     /// </summary>
     /// <remarks>
-    /// Lazy evaluated and thread-safe. Once calculated, it is cached and returned.
+    /// <inheritdoc cref="CountTreeNode{TEdge, TNode}" path="/remarks/para[@id='info']"/>
     /// </remarks>
     public int DescendantsCount 
     {
