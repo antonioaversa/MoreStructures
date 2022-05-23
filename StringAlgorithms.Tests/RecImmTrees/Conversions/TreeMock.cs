@@ -5,7 +5,7 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace StringAlgorithms.Tests.RecImmTrees.Conversions;
 
-[ExcludeFromCodeCoverage]
+[ExcludeFromCodeCoverage(Justification = "Mock structure only partially used")]
 public static class TreeMock
 {
     public record Edge(int Id) 

@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using StringAlgorithms.RecImmTrees.Conversions;
-using System.Collections.Generic;
 using System.Linq;
 using static StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock;
+using static StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierTestsHelpers;
 
 namespace StringAlgorithms.Tests.RecImmTrees.Conversions;
 

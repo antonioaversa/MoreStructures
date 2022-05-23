@@ -19,8 +19,6 @@ namespace StringAlgorithms.CountTrees;
 /// same underlying edge, or two equivalent edges, will be equal. 
 /// </remarks>
 public sealed record CountTreeEdge<TEdge, TNode>(TEdge WrappedEdge) 
-    : IRecImmDictIndexedTreeEdge<
-        CountTreeEdge<TEdge, TNode>, 
-        CountTreeNode<TEdge, TNode>>
+    : IRecImmDictIndexedTreeEdge<CountTreeEdge<TEdge, TNode>, CountTreeNode<TEdge, TNode>>
     where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>
     where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode>;

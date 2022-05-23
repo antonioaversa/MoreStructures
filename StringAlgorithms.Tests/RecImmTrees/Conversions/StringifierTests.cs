@@ -3,6 +3,7 @@ using StringAlgorithms.RecImmTrees.Conversions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using static StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierTestsHelpers;
 using static StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock;
 
 namespace StringAlgorithms.Tests.RecImmTrees.Conversions;
@@ -92,7 +93,6 @@ public abstract class StringifierTests
                 [new(9)] = new(10),
             }),
         });
-
         AssertAreEqualBySetOfLines(
             Stringifier, 
             root,
@@ -107,17 +107,5 @@ public abstract class StringifierTests
             $"{I}e(8):N(9)",
             $"{I}{I}e(9):N(10)"
         );
-    }
-
-    protected static void AssertAreEqualBySetOfLines(
-        IStringifier<Edge, Node> stringifier, Node root, params string[] validResultsLines)
-    {
-        var rootStr = stringifier.Stringify(root);
-        var rootStrLinesSet = rootStr.Split(stringifier.NewLine).ToHashSet();
-        var validResultsLinesSet = validResultsLines.ToHashSet();
-        if (!validResultsLinesSet.SetEquals(rootStrLinesSet))
-            Assert.Fail(
-                $"Expected: [{string.Join(", ", validResultsLinesSet.Select(s => $"\"{s}\""))}]. " +
-                $"Actual: [{string.Join(", ", rootStrLinesSet.Select(s => $"\"{s}\""))}]");
     }
 }

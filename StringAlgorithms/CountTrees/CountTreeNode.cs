@@ -38,7 +38,7 @@ public sealed record CountTreeNode<TEdge, TNode>(TNode WrappedNode)
     /// <remarks>
     /// A <see cref="LockValueObject"/> is used not to break value equality of this record.
     /// </remarks>
-    private readonly LockValueObject _lockObject = new LockValueObject();
+    private readonly LockValueObject _lockObject = new();
 
     private record StackFrame(CountTreeNode<TEdge, TNode> Node, TNode WrappedNode, bool ChildrenProcessed);
 
@@ -84,7 +84,10 @@ public sealed record CountTreeNode<TEdge, TNode>(TNode WrappedNode)
             return;
         }
 
-        node._descendantsCount = node.Children.Count + node.Children.Select(c => c.Value._descendantsCount).Sum();
+        // At this point _children has been initialized in previous ProcessStack execution for the same node
+        // and _descendantsCount has been set for all the children of the node (due to the fact that the node has
+        // been re-pushed to the stack just before all its children).
+        node._descendantsCount = node._children!.Sum(c => c.Value._descendantsCount!.Value + 1);
     }
 
     /// <inheritdoc/>
@@ -95,10 +98,7 @@ public sealed record CountTreeNode<TEdge, TNode>(TNode WrappedNode)
             if (_children == null)
                 Compute();
 
-            if  (_children == null)
-                throw new InvalidOperationException($"{nameof(_children)} not set");
-
-            return _children;
+            return _children!; // Initialized in Compute
         }
     }
 
@@ -115,10 +115,7 @@ public sealed record CountTreeNode<TEdge, TNode>(TNode WrappedNode)
             if (_descendantsCount == null)
                 Compute();
 
-            if (_descendantsCount == null)
-                throw new InvalidOperationException($"{nameof(_descendantsCount)} not set");
-
-            return _descendantsCount.Value;
+            return _descendantsCount!.Value; // Initialized in Compute
         }
     }
 }

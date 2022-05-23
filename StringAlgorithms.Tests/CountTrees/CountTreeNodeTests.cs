@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using StringAlgorithms.CountTrees;
 using System.Collections.Generic;
+using System.Linq;
 using static StringAlgorithms.Tests.CountTrees.TreeMock;
 
 namespace StringAlgorithms.Tests.CountTrees;
@@ -24,6 +25,36 @@ public class CountTreeNodeTests
         var wrapping4 = new CountTreeNode<Edge, Node>(
             new Node(12) { Children = new Dictionary<Edge, Node> { [new(2)] = new(21) } });
         Assert.AreNotEqual(wrapping1, wrapping4);
+    }
+
+    [TestMethod]
+    public void Children_PreservedWrappedStructure()
+    {
+        var wrapped = new Node(1) 
+        { 
+            Children = new Dictionary<Edge, Node> 
+            {
+                [new(1)] = new(2),
+                [new(2)] = new(3)
+                {
+                    Children = new Dictionary<Edge, Node>
+                    {
+                        [new(3)] = new(4),
+                        [new(4)] = new(5),
+                    }
+                },
+                [new(5)] = new(6),
+            } 
+        };
+
+        var wrapping = new CountTreeNode<Edge, Node>(wrapped);
+        Assert.AreEqual(3, wrapping.Children.Count);
+        Assert.AreEqual(2, wrapping.Children.Single(n => n.Key.WrappedEdge.Id == 1).Value.WrappedNode.Id);
+        Assert.AreEqual(0, wrapping.Children.Single(n => n.Key.WrappedEdge.Id == 1).Value.WrappedNode.Children.Count);
+        Assert.AreEqual(3, wrapping.Children.Single(n => n.Key.WrappedEdge.Id == 2).Value.WrappedNode.Id);
+        Assert.AreEqual(2, wrapping.Children.Single(n => n.Key.WrappedEdge.Id == 2).Value.WrappedNode.Children.Count);
+        Assert.AreEqual(6, wrapping.Children.Single(n => n.Key.WrappedEdge.Id == 5).Value.WrappedNode.Id);
+        Assert.AreEqual(0, wrapping.Children.Single(n => n.Key.WrappedEdge.Id == 5).Value.WrappedNode.Children.Count);
     }
 
     [TestMethod]

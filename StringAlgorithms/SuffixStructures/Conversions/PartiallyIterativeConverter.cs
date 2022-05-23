@@ -26,22 +26,8 @@ public class PartiallyIterativeConverter : IConverter
             var treeNodeChildren = new Dictionary<SuffixTreeEdge, SuffixTreeNode> { };
             foreach (var (trieChildEdge, trieChildNode) in trieNodeChildren)
             {
-                var treeChildEdge1 = new SuffixTreeEdge(trieChildEdge.Start, trieChildEdge.Length);
-                var trieChildNode1 = trieChildNode;
-
-                while (trieChildNode1.Children.Count == 1)
-                {
-                    if (trieChildNode1 is not SuffixTrieNode.Intermediate)
-                        throw new NotSupportedException(
-                            $"{trieChildNode1} of type {trieChildNode1.GetType().Name} not supported");
-
-                    var trieChild = trieChildNode1.Children.Single();
-                    treeChildEdge1 = new SuffixTreeEdge(
-                        treeChildEdge1.Start, treeChildEdge1.Length + trieChild.Key.Length);
-                    trieChildNode1 = trieChildNode1.Children.Single().Value;
-                }
-
-                treeNodeChildren[treeChildEdge1] = TrieToTree(trieChildNode1);
+                var (coalescedChildEdge, coalescedChildNode) = ConverterHelpers.Coalesce(trieChildEdge, trieChildNode);
+                treeNodeChildren[coalescedChildEdge] = TrieToTree(coalescedChildNode);
             }
 
             return new SuffixTreeNode.Intermediate(treeNodeChildren);
