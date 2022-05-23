@@ -25,7 +25,7 @@ public class FullyIterativeConverter : IConverter
         stack.Push(new StackFrameTrieToTree(null, dictionaryToRoot, edgeToRoot, trieNode));
 
         while (stack.Count > 0)
-            ProcessStack(stack);
+            ProcessTrieToTreeStack(stack);
 
         return dictionaryToRoot[edgeToRoot];
     }
@@ -37,7 +37,7 @@ public class FullyIterativeConverter : IConverter
         SuffixTreeEdge TreeEdge,
         SuffixTrieNode TrieNode);
 
-    private static void ProcessStack(Stack<StackFrameTrieToTree> stack)
+    private static void ProcessTrieToTreeStack(Stack<StackFrameTrieToTree> stack)
     {
         var (treeNodeChildrenMaybe, treeNodeParentChildren, treeEdge, trieNode) = stack.Pop();
 
@@ -88,12 +88,12 @@ public class FullyIterativeConverter : IConverter
         var parentChildren = new Dictionary<SuffixTrieEdge, SuffixTrieNode> { };
         stack.Push(new(null, edgeToRoot, treeNode, parentChildren));
         while (stack.Count > 0)
-            ProcessStack(stack);
+            ProcessTreeToTrieStack(stack);
 
         return parentChildren[edgeToRoot];
     }
 
-    private static void ProcessStack(Stack<StackFrameTreeToTrie> stack)
+    private static void ProcessTreeToTrieStack(Stack<StackFrameTreeToTrie> stack)
     {
         var (trieNodeChildrenMaybe, treeEdge, treeNode, parentChildren) = stack.Pop();
 
