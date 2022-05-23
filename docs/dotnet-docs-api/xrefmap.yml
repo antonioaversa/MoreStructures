@@ -1162,25 +1162,25 @@ references:
   commentId: N:MoreStructures.SuffixTrees.Builders
   fullName: MoreStructures.SuffixTrees.Builders
   nameWithType: MoreStructures.SuffixTrees.Builders
-- uid: MoreStructures.SuffixTrees.Builders.SuffixTreeBuilder
-  name: SuffixTreeBuilder
-  href: api/MoreStructures.SuffixTrees.Builders.SuffixTreeBuilder.html
-  commentId: T:MoreStructures.SuffixTrees.Builders.SuffixTreeBuilder
-  fullName: MoreStructures.SuffixTrees.Builders.SuffixTreeBuilder
-  nameWithType: SuffixTreeBuilder
-- uid: MoreStructures.SuffixTrees.Builders.SuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator)
+- uid: MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder
+  name: NaivePartiallyRecursiveSuffixTreeBuilder
+  href: api/MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.html
+  commentId: T:MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder
+  fullName: MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder
+  nameWithType: NaivePartiallyRecursiveSuffixTreeBuilder
+- uid: MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator)
   name: BuildTree(TextWithTerminator)
-  href: api/MoreStructures.SuffixTrees.Builders.SuffixTreeBuilder.html#MoreStructures_SuffixTrees_Builders_SuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator_
-  commentId: M:MoreStructures.SuffixTrees.Builders.SuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator)
-  fullName: MoreStructures.SuffixTrees.Builders.SuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator)
-  nameWithType: SuffixTreeBuilder.BuildTree(TextWithTerminator)
-- uid: MoreStructures.SuffixTrees.Builders.SuffixTreeBuilder.BuildTree*
+  href: api/MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.html#MoreStructures_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator_
+  commentId: M:MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator)
+  fullName: MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator)
+  nameWithType: NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree(TextWithTerminator)
+- uid: MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree*
   name: BuildTree
-  href: api/MoreStructures.SuffixTrees.Builders.SuffixTreeBuilder.html#MoreStructures_SuffixTrees_Builders_SuffixTreeBuilder_BuildTree_
-  commentId: Overload:MoreStructures.SuffixTrees.Builders.SuffixTreeBuilder.BuildTree
+  href: api/MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.html#MoreStructures_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilder_BuildTree_
+  commentId: Overload:MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree
   isSpec: "True"
-  fullName: MoreStructures.SuffixTrees.Builders.SuffixTreeBuilder.BuildTree
-  nameWithType: SuffixTreeBuilder.BuildTree
+  fullName: MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree
+  nameWithType: NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree
 - uid: MoreStructures.SuffixTrees.SuffixTreeEdge
   name: SuffixTreeEdge
   href: api/MoreStructures.SuffixTrees.SuffixTreeEdge.html

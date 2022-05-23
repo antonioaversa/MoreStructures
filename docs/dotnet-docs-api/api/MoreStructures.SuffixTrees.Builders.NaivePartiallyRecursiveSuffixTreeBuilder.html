@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class SuffixTreeBuilder
+    <title>Class NaivePartiallyRecursiveSuffixTreeBuilder
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class SuffixTreeBuilder
+    <meta name="title" content="Class NaivePartiallyRecursiveSuffixTreeBuilder
    ">
     <meta name="generator" content="docfx 2.59.2.0">
     
@@ -78,10 +78,10 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MoreStructures.SuffixTrees.Builders.SuffixTreeBuilder">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder">
   
   
-  <h1 id="MoreStructures_SuffixTrees_Builders_SuffixTreeBuilder" data-uid="MoreStructures.SuffixTrees.Builders.SuffixTreeBuilder" class="text-break">Class SuffixTreeBuilder
+  <h1 id="MoreStructures_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilder" data-uid="MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder" class="text-break">Class NaivePartiallyRecursiveSuffixTreeBuilder
   </h1>
   <div class="markdown level0 summary"><p>Builds objects, such as edges and nodes, for <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a> structures.</p>
 </div>
@@ -89,7 +89,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">SuffixTreeBuilder</span></div>
+    <div class="level1"><span class="xref">NaivePartiallyRecursiveSuffixTreeBuilder</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -121,21 +121,27 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.SuffixTrees.Builders.html">MoreStructures.SuffixTrees.Builders</a></h6>
   <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
-  <h5 id="MoreStructures_SuffixTrees_Builders_SuffixTreeBuilder_syntax">Syntax</h5>
+  <h5 id="MoreStructures_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilder_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SuffixTreeBuilder : IBuilder&lt;SuffixTreeEdge, SuffixTreeNode&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class NaivePartiallyRecursiveSuffixTreeBuilder : IBuilder&lt;SuffixTreeEdge, SuffixTreeNode&gt;</code></pre>
   </div>
+  <h5 id="MoreStructures_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilder_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Implemented recursively, with one level of recursion per char of each suffix of the input
+<a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a> (where the longest suffix is the length of the text itself).
+Limited by call stack depth and usable with input text of a &quot;reasonable&quot; length (i.e. string having a length &lt;
+~1K chars).</p>
+</div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTrees_Builders_SuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTrees.Builders.SuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/SuffixTreeBuilder.cs/#L13">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/NaivePartiallyRecursiveSuffixTreeBuilder.cs/#L20">View Source</a>
   </span>
-  <a id="MoreStructures_SuffixTrees_Builders_SuffixTreeBuilder_BuildTree_" data-uid="MoreStructures.SuffixTrees.Builders.SuffixTreeBuilder.BuildTree*"></a>
-  <h4 id="MoreStructures_SuffixTrees_Builders_SuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator_" data-uid="MoreStructures.SuffixTrees.Builders.SuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator)">BuildTree(TextWithTerminator)</h4>
+  <a id="MoreStructures_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilder_BuildTree_" data-uid="MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree*"></a>
+  <h4 id="MoreStructures_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator_" data-uid="MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator)">BuildTree(TextWithTerminator)</h4>
   <div class="markdown level1 summary"><p>Build a <a class="xref" href="MoreStructures.SuffixStructures.ISuffixStructureEdge-2.html">ISuffixStructureEdge&lt;TEdge, TNode&gt;</a> of the provided text, which is a
 n-ary search tree in which edges coming out of a node are substrings of text which identify edges shared by all
 paths to leaves, starting from the node.</p>
@@ -179,7 +185,7 @@ paths to leaves, starting from the node.</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="MoreStructures_SuffixTrees_Builders_SuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator__remarks">Remarks</h5>
+  <h5 id="MoreStructures_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Substrings of text are identified by their start position in text and their length.</p>
 </div>
   <h3 id="implements">Implements</h3>
@@ -198,10 +204,10 @@ paths to leaves, starting from the node.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTrees_Builders_SuffixTreeBuilder.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTrees.Builders.SuffixTreeBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilder.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/SuffixTreeBuilder.cs/#L9" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/NaivePartiallyRecursiveSuffixTreeBuilder.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

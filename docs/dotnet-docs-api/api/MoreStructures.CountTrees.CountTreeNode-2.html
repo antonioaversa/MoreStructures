@@ -155,7 +155,19 @@ Due to records semantics, and the use of value readonly dictionaries, two <a cla
 instances wrapping the same underlying node, or two equivalent nodes, will be equal. 
 </p>
 <p>
-Immutability of the wrapped tree is also required by the caching strategy applied by <a class="xref" href="MoreStructures.CountTrees.CountTreeNode-2.html#MoreStructures_CountTrees_CountTreeNode_2_DescendantsCount">DescendantsCount</a>.
+<p>
+<a class="xref" href="MoreStructures.CountTrees.CountTreeNode-2.html">CountTreeNode&lt;TEdge, TNode&gt;</a> structure construction and properties calculation are done lazily and 
+fully iteratively, so the use of this structure is not limited by call stack depth but rather by the maximum 
+size of the stack stored in the heap. Convenient with deep trees (i.e. trees having a height > ~1K nodes).
+</p>
+<p>
+Once <a class="xref" href="MoreStructures.CountTrees.CountTreeNode-2.html#MoreStructures_CountTrees_CountTreeNode_2_Children">Children</a> and <a class="xref" href="MoreStructures.CountTrees.CountTreeNode-2.html#MoreStructures_CountTrees_CountTreeNode_2_DescendantsCount">DescendantsCount</a> properties are calculated, they are cached to 
+avoid multiple calculation. This is also one of the reasons why immutability of the wrapped tree is a 
+requirement to use <a class="xref" href="MoreStructures.CountTrees.CountTreeNode-2.html">CountTreeNode&lt;TEdge, TNode&gt;</a>.
+</p>
+<p>
+Complexity = O(n) where n = number of nodes in <a class="xref" href="MoreStructures.CountTrees.CountTreeNode-2.html#MoreStructures_CountTrees_CountTreeNode_2_WrappedNode">WrappedNode</a> structure.
+</p>
 </p>
 </div>
   <h3 id="constructors">Constructors
@@ -165,7 +177,7 @@ Immutability of the wrapped tree is also required by the caching strategy applie
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_CountTrees_CountTreeNode_2__ctor__1_.md&amp;value=---%0Auid%3A%20MoreStructures.CountTrees.CountTreeNode%602.%23ctor(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/CountTrees/CountTreeNode.cs/#L27">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/CountTrees/CountTreeNode.cs/#L39">View Source</a>
   </span>
   <a id="MoreStructures_CountTrees_CountTreeNode_2__ctor_" data-uid="MoreStructures.CountTrees.CountTreeNode`2.#ctor*"></a>
   <h4 id="MoreStructures_CountTrees_CountTreeNode_2__ctor__1_" data-uid="MoreStructures.CountTrees.CountTreeNode`2.#ctor(`1)">CountTreeNode(TNode)</h4>
@@ -202,7 +214,19 @@ Due to records semantics, and the use of value readonly dictionaries, two <a cla
 instances wrapping the same underlying node, or two equivalent nodes, will be equal. 
 </p>
 <p>
-Immutability of the wrapped tree is also required by the caching strategy applied by <a class="xref" href="MoreStructures.CountTrees.CountTreeNode-2.html#MoreStructures_CountTrees_CountTreeNode_2_DescendantsCount">DescendantsCount</a>.
+<p>
+<a class="xref" href="MoreStructures.CountTrees.CountTreeNode-2.html">CountTreeNode&lt;TEdge, TNode&gt;</a> structure construction and properties calculation are done lazily and 
+fully iteratively, so the use of this structure is not limited by call stack depth but rather by the maximum 
+size of the stack stored in the heap. Convenient with deep trees (i.e. trees having a height > ~1K nodes).
+</p>
+<p>
+Once <a class="xref" href="MoreStructures.CountTrees.CountTreeNode-2.html#MoreStructures_CountTrees_CountTreeNode_2_Children">Children</a> and <a class="xref" href="MoreStructures.CountTrees.CountTreeNode-2.html#MoreStructures_CountTrees_CountTreeNode_2_DescendantsCount">DescendantsCount</a> properties are calculated, they are cached to 
+avoid multiple calculation. This is also one of the reasons why immutability of the wrapped tree is a 
+requirement to use <a class="xref" href="MoreStructures.CountTrees.CountTreeNode-2.html">CountTreeNode&lt;TEdge, TNode&gt;</a>.
+</p>
+<p>
+Complexity = O(n) where n = number of nodes in <a class="xref" href="MoreStructures.CountTrees.CountTreeNode-2.html#MoreStructures_CountTrees_CountTreeNode_2_WrappedNode">WrappedNode</a> structure.
+</p>
 </p>
 </div>
   <h3 id="properties">Properties
@@ -212,7 +236,7 @@ Immutability of the wrapped tree is also required by the caching strategy applie
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_CountTrees_CountTreeNode_2_Children.md&amp;value=---%0Auid%3A%20MoreStructures.CountTrees.CountTreeNode%602.Children%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/CountTrees/CountTreeNode.cs/#L94">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/CountTrees/CountTreeNode.cs/#L109">View Source</a>
   </span>
   <a id="MoreStructures_CountTrees_CountTreeNode_2_Children_" data-uid="MoreStructures.CountTrees.CountTreeNode`2.Children*"></a>
   <h4 id="MoreStructures_CountTrees_CountTreeNode_2_Children" data-uid="MoreStructures.CountTrees.CountTreeNode`2.Children">Children</h4>
@@ -238,12 +262,15 @@ Immutability of the wrapped tree is also required by the caching strategy applie
       </tr>
     </tbody>
   </table>
+  <h5 id="MoreStructures_CountTrees_CountTreeNode_2_Children_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.CountTrees.CountTreeNode`2" path="/remarks/para[@id=&apos;info&apos;]"></inheritdoc></p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_CountTrees_CountTreeNode_2_DescendantsCount.md&amp;value=---%0Auid%3A%20MoreStructures.CountTrees.CountTreeNode%602.DescendantsCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/CountTrees/CountTreeNode.cs/#L111">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/CountTrees/CountTreeNode.cs/#L126">View Source</a>
   </span>
   <a id="MoreStructures_CountTrees_CountTreeNode_2_DescendantsCount_" data-uid="MoreStructures.CountTrees.CountTreeNode`2.DescendantsCount*"></a>
   <h4 id="MoreStructures_CountTrees_CountTreeNode_2_DescendantsCount" data-uid="MoreStructures.CountTrees.CountTreeNode`2.DescendantsCount">DescendantsCount</h4>
@@ -270,14 +297,14 @@ Immutability of the wrapped tree is also required by the caching strategy applie
     </tbody>
   </table>
   <h5 id="MoreStructures_CountTrees_CountTreeNode_2_DescendantsCount_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Lazy evaluated and thread-safe. Once calculated, it is cached and returned.</p>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.CountTrees.CountTreeNode`2" path="/remarks/para[@id=&apos;info&apos;]"></inheritdoc></p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_CountTrees_CountTreeNode_2_WrappedNode.md&amp;value=---%0Auid%3A%20MoreStructures.CountTrees.CountTreeNode%602.WrappedNode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/CountTrees/CountTreeNode.cs/#L27">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/CountTrees/CountTreeNode.cs/#L39">View Source</a>
   </span>
   <a id="MoreStructures_CountTrees_CountTreeNode_2_WrappedNode_" data-uid="MoreStructures.CountTrees.CountTreeNode`2.WrappedNode*"></a>
   <h4 id="MoreStructures_CountTrees_CountTreeNode_2_WrappedNode" data-uid="MoreStructures.CountTrees.CountTreeNode`2.WrappedNode">WrappedNode</h4>
@@ -327,7 +354,7 @@ Immutability of the wrapped tree is also required by the caching strategy applie
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_CountTrees_CountTreeNode_2.md&amp;value=---%0Auid%3A%20MoreStructures.CountTrees.CountTreeNode%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/CountTrees/CountTreeNode.cs/#L27" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/CountTrees/CountTreeNode.cs/#L39" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
