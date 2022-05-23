@@ -3,6 +3,7 @@ using StringAlgorithms.RecImmTrees.Conversions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using static StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierTestsHelpers;
 using static StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock;
 
 namespace StringAlgorithms.Tests.RecImmTrees.Conversions;
@@ -92,21 +93,19 @@ public abstract class StringifierTests
                 [new(9)] = new(10),
             }),
         });
-        var rootStr = Stringifier.Stringify(root);
-        var rootStrLines = rootStr.Split(NL).ToHashSet();
-        var validResultsLines = new HashSet<string>
-        {
+        AssertAreEqualBySetOfLines(
+            Stringifier, 
+            root,
             $"R(1)",
-            $"{I}e(1):N(2)", 
-            $"{I}{I}e(3):N(4)", 
-            $"{I}{I}e(4):N(5)", 
-            $"{I}{I}e(5):N(6)", 
+            $"{I}e(1):N(2)",
+            $"{I}{I}e(3):N(4)",
+            $"{I}{I}e(4):N(5)",
+            $"{I}{I}e(5):N(6)",
             $"{I}{I}{I}e(6):N(7)",
             $"{I}{I}e(7):N(8)",
             $"{I}e(2):N(3)",
             $"{I}e(8):N(9)",
-            $"{I}{I}e(9):N(10)",
-        };
-        Assert.IsTrue(validResultsLines.SetEquals(rootStrLines));
+            $"{I}{I}e(9):N(10)"
+        );
     }
 }

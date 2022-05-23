@@ -30,7 +30,7 @@
         /// </summary>
         /// <param name="rootStringifier"><inheritdoc cref="RootStringifier" path="/summary"/></param>
         /// <param name="edgeAndNodeStringifier"><inheritdoc cref="EdgeAndNodeStringifier" path="/summary"/></param>
-        public StringifierBase(
+        protected StringifierBase(
             Func<TNode, string> rootStringifier, Func<TEdge, TNode, string> edgeAndNodeStringifier)
         {
             RootStringifier = rootStringifier;

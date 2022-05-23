@@ -6,7 +6,7 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace StringAlgorithms.Tests.SuffixStructures;
 
-[ExcludeFromCodeCoverage]
+[ExcludeFromCodeCoverage(Justification = "Mock structure only partially used")]
 internal static class SuffixStructureMock
 {
     public class Edge : ISuffixStructureEdge<Edge, Node>

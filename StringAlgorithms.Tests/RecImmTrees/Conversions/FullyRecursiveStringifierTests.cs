@@ -19,7 +19,7 @@ public class FullyRecursiveStringifierTests : StringifierBaseTests
     }
 
     [TestMethod]
-    public void Stringify_RunsOnNotSoDeepStructures()
+    public void Stringify_DoesntStackOverflowWithNotSoDeepStructures()
     {
         var numberOfNodes = 100;
         var root = new Node(0);

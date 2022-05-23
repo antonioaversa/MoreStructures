@@ -11,18 +11,18 @@ namespace StringAlgorithms.Tests.SuffixStructures.Conversions;
 
 public abstract class ConverterTests
 {
-    protected IConverter SuffixStructuresConverter { get; init; }
+    protected IConverter Converter { get; init; }
 
     public ConverterTests(IConverter suffixStructuresConverter)
     {
-        SuffixStructuresConverter = suffixStructuresConverter;
+        Converter = suffixStructuresConverter;
     }
 
     [TestMethod]
     public void TrieToTree_BuildsCorrectTree()
     {
         var trieRoot = SuffixTrieNodeTests.BuildSuffixTrieExample();
-        var treeRoot = SuffixStructuresConverter.TrieToTree(trieRoot);
+        var treeRoot = Converter.TrieToTree(trieRoot);
         Assert.AreEqual(SuffixTreeNodeTests.BuildSuffixTreeExample(), treeRoot);
     }
 
@@ -33,7 +33,7 @@ public abstract class ConverterTests
     public void TrieToTree_OnlySupportsLeafAndIntermediateNodes_AsArgument()
     {
         var trieRoot = new SingletonSuffixTrieNode(new(0), new SuffixTrieNode.Leaf(7));
-        Assert.ThrowsException<NotSupportedException>(() => SuffixStructuresConverter.TrieToTree(trieRoot));
+        Assert.ThrowsException<NotSupportedException>(() => Converter.TrieToTree(trieRoot));
     }
 
     [TestMethod]
@@ -47,14 +47,14 @@ public abstract class ConverterTests
                 [new(4)] = new SuffixTrieNode.Leaf(8),
             }),
         });
-        Assert.ThrowsException<NotSupportedException>(() => SuffixStructuresConverter.TrieToTree(trieRoot));
+        Assert.ThrowsException<NotSupportedException>(() => Converter.TrieToTree(trieRoot));
     }
 
     [TestMethod]
     public void TrieToTree_BuildsLeafTreeFromLeafTrie()
     {
         var trieRoot = new SuffixTrieNode.Leaf(2);
-        var treeRoot = SuffixStructuresConverter.TrieToTree(trieRoot);
+        var treeRoot = Converter.TrieToTree(trieRoot);
         Assert.IsTrue(treeRoot is SuffixTreeNode.Leaf treeLeaf && treeLeaf.LeafStart == trieRoot.LeafStart);
     }
 
@@ -68,7 +68,7 @@ public abstract class ConverterTests
                 [new(4)] = new SuffixTrieNode.Leaf(7),
             }),
         });
-        var treeRoot = SuffixStructuresConverter.TrieToTree(trieRoot);
+        var treeRoot = Converter.TrieToTree(trieRoot);
         var expectedTreeRoot = new SuffixTreeNode.Intermediate(new Dictionary<SuffixTreeEdge, SuffixTreeNode>
         {
             [new(3, 2)] = new SuffixTreeNode.Leaf(7),
@@ -89,7 +89,7 @@ public abstract class ConverterTests
                 }),
             }),
         });
-        var treeRoot = SuffixStructuresConverter.TrieToTree(trieRoot);
+        var treeRoot = Converter.TrieToTree(trieRoot);
         var expectedTreeRoot = new SuffixTreeNode.Intermediate(new Dictionary<SuffixTreeEdge, SuffixTreeNode>
         {
             [new(3, 3)] = new SuffixTreeNode.Leaf(7),
@@ -123,7 +123,7 @@ public abstract class ConverterTests
                 }),
             }),
         });
-        var treeRoot = SuffixStructuresConverter.TrieToTree(trieRoot);
+        var treeRoot = Converter.TrieToTree(trieRoot);
         var expectedTreeRoot = new SuffixTreeNode.Intermediate(new Dictionary<SuffixTreeEdge, SuffixTreeNode>
         {
             [new(3, 1)] = new SuffixTreeNode.Intermediate(new Dictionary<SuffixTreeEdge, SuffixTreeNode>
@@ -146,7 +146,7 @@ public abstract class ConverterTests
             }),
             [new(4)] = new SuffixTrieNode.Leaf(8),
         });
-        var treeRoot = SuffixStructuresConverter.TrieToTree(trieRoot);
+        var treeRoot = Converter.TrieToTree(trieRoot);
         var expectedTreeRoot = new SuffixTreeNode.Intermediate(new Dictionary<SuffixTreeEdge, SuffixTreeNode>
         {
             [new(3, 2)] = new SuffixTreeNode.Leaf(7),
@@ -159,7 +159,7 @@ public abstract class ConverterTests
     public void TrieToTree_ReproducesALeafAsIs()
     {
         var trieRoot = new SuffixTrieNode.Leaf(2);
-        var treeRoot = SuffixStructuresConverter.TrieToTree(trieRoot);
+        var treeRoot = Converter.TrieToTree(trieRoot);
         var expectedTreeRoot = new SuffixTreeNode.Leaf(2);
         Assert.AreEqual(expectedTreeRoot, treeRoot);
     }
@@ -172,7 +172,7 @@ public abstract class ConverterTests
             [new(3)] = new SuffixTrieNode.Leaf(1),
         });
 
-        var treeRoot = SuffixStructuresConverter.TrieToTree(trieRoot);
+        var treeRoot = Converter.TrieToTree(trieRoot);
         var expectedTreeRoot = new SuffixTreeNode.Intermediate(new Dictionary<SuffixTreeEdge, SuffixTreeNode>
         {
             [new(3, 1)] = new SuffixTreeNode.Leaf(1),
@@ -191,7 +191,7 @@ public abstract class ConverterTests
                 [new(4)] = new SuffixTrieNode.Leaf(8),
             }),
         });
-        var treeRoot = SuffixStructuresConverter.TrieToTree(trieRoot);
+        var treeRoot = Converter.TrieToTree(trieRoot);
         var expectedTreeRoot = new SuffixTreeNode.Intermediate(new Dictionary<SuffixTreeEdge, SuffixTreeNode>
         {
             [new(2, 1)] = new SuffixTreeNode.Intermediate(new Dictionary<SuffixTreeEdge, SuffixTreeNode>()
@@ -213,7 +213,7 @@ public abstract class ConverterTests
                 [new(4)] = new SuffixTrieNode.Leaf(7),
             }),
         });
-        var treeRoot = SuffixStructuresConverter.TrieToTree(trieRoot);
+        var treeRoot = Converter.TrieToTree(trieRoot);
         var expectedTreeRoot = new SuffixTreeNode.Intermediate(new Dictionary<SuffixTreeEdge, SuffixTreeNode>
         {
             [new(3, 2)] = new SuffixTreeNode.Leaf(7),
@@ -235,7 +235,7 @@ public abstract class ConverterTests
                 }),
             }),
         });
-        var treeRoot = SuffixStructuresConverter.TrieToTree(trieRoot);
+        var treeRoot = Converter.TrieToTree(trieRoot);
         var expectedTreeRoot = new SuffixTreeNode.Intermediate(new Dictionary<SuffixTreeEdge, SuffixTreeNode>
         {
             [new(3, 2)] = new SuffixTreeNode.Intermediate(new Dictionary<SuffixTreeEdge, SuffixTreeNode>
@@ -259,7 +259,7 @@ public abstract class ConverterTests
                 [new(i)] = trieRoot,
             });
         }
-        var treeRoot = SuffixStructuresConverter.TrieToTree(trieRoot);
+        var treeRoot = Converter.TrieToTree(trieRoot);
         var expectedTreeRoot = new SuffixTreeNode.Intermediate(new Dictionary<SuffixTreeEdge, SuffixTreeNode>
         {
             [new(0, depth)] = new SuffixTreeNode.Leaf(7),
