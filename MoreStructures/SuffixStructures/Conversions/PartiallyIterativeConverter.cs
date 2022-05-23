@@ -1,8 +1,9 @@
 ﻿using MoreStructures.SuffixTrees;
 using MoreStructures.SuffixTries;
-using static MoreStructures.SuffixStructures.Conversions.ConverterHelpers;
 
 namespace MoreStructures.SuffixStructures.Conversions;
+
+using static ConverterHelpers;
 
 /// <summary>
 /// <inheritdoc cref="IConverter"/>
@@ -16,8 +17,13 @@ namespace MoreStructures.SuffixStructures.Conversions;
 /// </remarks>
 public class PartiallyIterativeConverter : IConverter
 {
-    /// <inheritdoc/>
-    /// <inheritdoc cref="PartiallyIterativeConverter" path="/remarks"/>
+    /// <summary>
+    ///     <inheritdoc/>
+    /// </summary>
+    /// <remarks>
+    ///     <inheritdoc cref="PartiallyIterativeConverter" path="/remarks"/>
+    ///     <inheritdoc cref="IConverter.TrieToTree(SuffixTrieNode)" path="/remarks"/>
+    /// </remarks>
     public SuffixTreeNode TrieToTree(SuffixTrieNode trieNode) => 
         trieNode switch
         {
@@ -34,8 +40,13 @@ public class PartiallyIterativeConverter : IConverter
             _ => throw new NotSupportedException($"{trieNode} of type {trieNode.GetType().Name} not supported")
         };
 
-    /// <inheritdoc/>
-    /// <inheritdoc cref="PartiallyIterativeConverter" path="/remarks"/>
+    /// <summary>
+    ///     <inheritdoc/>
+    /// </summary>
+    /// <remarks>
+    ///     <inheritdoc cref="PartiallyIterativeConverter" path="/remarks"/>
+    ///     <inheritdoc cref="IConverter.TreeToTrie(SuffixTreeNode)" path="/remarks"/>
+    /// </remarks>
     public SuffixTrieNode TreeToTrie(SuffixTreeNode treeNode) => 
         treeNode switch
         {

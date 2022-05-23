@@ -14,6 +14,16 @@ public class SuffixTrieEdgeTests
     }
 
     [TestMethod]
+    public void CompareTo_IsCorrect()
+    {
+        Assert.IsTrue(new SuffixTrieEdge(0).CompareTo(new SuffixTrieEdge(0)) == 0);
+        Assert.IsTrue(new SuffixTrieEdge(0).CompareTo(new SuffixTrieEdge(1)) < 0);
+        Assert.IsTrue(new SuffixTrieEdge(1).CompareTo(new SuffixTrieEdge(0)) > 0);
+        Assert.ThrowsException<ArgumentException>(() =>
+            new SuffixTrieEdge(1).CompareTo(null));
+    }
+
+    [TestMethod]
     public void Of_InboundIndexes()
     {
         Assert.IsTrue(new SuffixTrieEdge(0).Of(new("a", '$')) == "a");

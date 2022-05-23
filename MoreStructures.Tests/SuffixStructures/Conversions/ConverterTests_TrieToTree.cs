@@ -3,9 +3,10 @@ using MoreStructures.SuffixStructures.Conversions;
 using MoreStructures.SuffixTries;
 using System;
 using System.Collections.Generic;
-using static MoreStructures.Tests.SuffixStructures.Conversions.ConversionEquivalences.EquivalenceId;
 
 namespace MoreStructures.Tests.SuffixStructures.Conversions;
+
+using static ConversionEquivalences.EquivalenceId;
 
 public abstract partial class ConverterTests
 {

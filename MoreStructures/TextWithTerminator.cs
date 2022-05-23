@@ -55,14 +55,14 @@ public record TextWithTerminator(string Text, char Terminator = TextWithTerminat
     public string this[ISelector selector] => selector.Of(this);
 
     /// <summary>
-    /// Select a part of this text by the provided range.
+    /// Select a part of this text by the provided range (start index included, end index excluded).
     /// </summary>
     /// <param name="range">The range applied to the underlying string.</param>
     /// <returns>A string containing the selected part.</returns>
     public string this[Range range] => TextAndTerminator[range];
 
     /// <summary>
-    /// Select a part of this text by the provided index.
+    /// Select a part of this text by the provided index (either w.r.t. the start or to the end of the text).
     /// </summary>
     /// <param name="index">The index applied to the underlying string.</param>
     /// <returns>A char containing the selected part.</returns>

@@ -3,10 +3,11 @@ using MoreStructures.RecImmTrees.Conversions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using static MoreStructures.Tests.RecImmTrees.Conversions.StringifierTestsHelpers;
-using static MoreStructures.Tests.RecImmTrees.Conversions.TreeMock;
 
 namespace MoreStructures.Tests.RecImmTrees.Conversions;
+
+using static TreeMock;
+using static StringifierTestsHelpers;
 
 public abstract class StringifierTests
 {

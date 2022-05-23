@@ -8,9 +8,10 @@ namespace MoreStructures.Tests.RecImmTrees.Conversions;
 [ExcludeFromCodeCoverage(Justification = "Mock structure only partially used")]
 public static class TreeMock
 {
-    public record Edge(int Id) 
-        : IRecImmDictIndexedTreeEdge<Edge, Node>
+    public record Edge(int Id)
+        : IRecImmDictIndexedTreeEdge<Edge, Node>, IComparable<Edge>
     {
+        public int CompareTo(Edge? other) => other is Edge otherEdge ? Id - otherEdge.Id : -1;
     }
 
     public record Node(int Id, IDictionary<Edge, Node> Children) 

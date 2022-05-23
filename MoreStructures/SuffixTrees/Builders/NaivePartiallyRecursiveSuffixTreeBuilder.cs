@@ -7,16 +7,34 @@ namespace MoreStructures.SuffixTrees.Builders;
 /// Builds objects, such as edges and nodes, for <see cref="SuffixTreeNode"/> structures.
 /// </summary>
 /// <remarks>
-/// Implemented recursively, with one level of recursion per char of each suffix of the input 
-/// <see cref="TextWithTerminator"/> (where the longest suffix is the length of the text itself). 
-/// Limited by call stack depth and usable with input text of a "reasonable" length (i.e. string having a length &lt; 
-/// ~1K chars).
+///     <para>
+///     Implemented as an iteration of recursive visit of the tree being built, with as many iterations as the number 
+///     of suffix of the input (where the longest suffix is the text itself) and one level of recursion per char of 
+///     each suffix. 
+///     </para>
+///     <para>
+///     Limited by call stack depth and usable with input text of a "reasonable" length (i.e. string having a length 
+///     &lt; ~1K chars).
+///     </para>
+///     <para id="complexity">
+///     Time Complexity = O(t^2 * as) and Space Complexity = O(t) where t = length of the text to match and
+///     as = size of the alphabet of the text. If the alphabet is of constant size, Time Complexity is quadratic.
+///         <para>
+///         Compared to tries, trees are more compact due to edge coalescing and edge label compression (i.e. edge 
+///         strings stored as pair (start, length), rather than as a substring of length chars). Each recursion add a 
+///         leaf and at most one intermediate node, so Space Complexity ~ 2 * t = O(t). 
+///         </para>
+///     </para>
 /// </remarks>
 public class NaivePartiallyRecursiveSuffixTreeBuilder
     : IBuilder<SuffixTreeEdge, SuffixTreeNode>
 {
-    /// <inheritdoc/>
-    /// <inheritdoc cref="NaivePartiallyRecursiveSuffixTreeBuilder" path="/remarks"/>
+    /// <summary>
+    ///     <inheritdoc/>
+    /// </summary>
+    /// <remarks>
+    ///     <inheritdoc cref="NaivePartiallyRecursiveSuffixTreeBuilder" path="/remarks"/>
+    /// </remarks>
     public SuffixTreeNode BuildTree(TextWithTerminator text)
     {
         SuffixTreeNode root = new SuffixTreeNode.Leaf(0);

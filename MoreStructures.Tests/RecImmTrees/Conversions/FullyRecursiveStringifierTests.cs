@@ -1,9 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MoreStructures.RecImmTrees.Conversions;
 using System.Collections.Generic;
-using static MoreStructures.Tests.RecImmTrees.Conversions.TreeMock;
 
 namespace MoreStructures.Tests.RecImmTrees.Conversions;
+
+using static TreeMock;
 
 [TestClass]
 public class FullyRecursiveStringifierTests : StringifierBaseTests
