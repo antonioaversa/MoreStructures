@@ -150,9 +150,13 @@ number of descendands the wrapped node has below (node itself excluded).</p>
     </tbody>
   </table>
   <h5 id="StringAlgorithms_CountTrees_CountTreeNode_2_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>Due to records semantics, and the use of value readonly dictionaries, two
-<a class="xref" href="StringAlgorithms.CountTrees.CountTreeNode-2.html">CountTreeNode&lt;TEdge, TNode&gt;</a> instances wrapping the same underlying node, or two
-equivalent nodes, will be equal.</p>
+  <div class="markdown level0 remarks"><p>
+Due to records semantics, and the use of value readonly dictionaries, two <a class="xref" href="StringAlgorithms.CountTrees.CountTreeNode-2.html">CountTreeNode&lt;TEdge, TNode&gt;</a> 
+instances wrapping the same underlying node, or two equivalent nodes, will be equal. 
+</p>
+<p>
+Immutability of the wrapped tree is also required by the caching strategy applied by <a class="xref" href="StringAlgorithms.CountTrees.CountTreeNode-2.html#StringAlgorithms_CountTrees_CountTreeNode_2_DescendantsCount">DescendantsCount</a>.
+</p>
 </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -161,7 +165,7 @@ equivalent nodes, will be equal.</p>
     <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_CountTrees_CountTreeNode_2__ctor__1_.md&amp;value=---%0Auid%3A%20StringAlgorithms.CountTrees.CountTreeNode%602.%23ctor(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/CountTrees/CountTreeNode.cs/#L23">View Source</a>
+    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/CountTrees/CountTreeNode.cs/#L27">View Source</a>
   </span>
   <a id="StringAlgorithms_CountTrees_CountTreeNode_2__ctor_" data-uid="StringAlgorithms.CountTrees.CountTreeNode`2.#ctor*"></a>
   <h4 id="StringAlgorithms_CountTrees_CountTreeNode_2__ctor__1_" data-uid="StringAlgorithms.CountTrees.CountTreeNode`2.#ctor(`1)">CountTreeNode(TNode)</h4>
@@ -193,9 +197,13 @@ number of descendands the wrapped node has below (node itself excluded).</p>
     </tbody>
   </table>
   <h5 id="StringAlgorithms_CountTrees_CountTreeNode_2__ctor__1__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Due to records semantics, and the use of value readonly dictionaries, two
-<a class="xref" href="StringAlgorithms.CountTrees.CountTreeNode-2.html">CountTreeNode&lt;TEdge, TNode&gt;</a> instances wrapping the same underlying node, or two
-equivalent nodes, will be equal.</p>
+  <div class="markdown level1 remarks"><p>
+Due to records semantics, and the use of value readonly dictionaries, two <a class="xref" href="StringAlgorithms.CountTrees.CountTreeNode-2.html">CountTreeNode&lt;TEdge, TNode&gt;</a> 
+instances wrapping the same underlying node, or two equivalent nodes, will be equal. 
+</p>
+<p>
+Immutability of the wrapped tree is also required by the caching strategy applied by <a class="xref" href="StringAlgorithms.CountTrees.CountTreeNode-2.html#StringAlgorithms_CountTrees_CountTreeNode_2_DescendantsCount">DescendantsCount</a>.
+</p>
 </div>
   <h3 id="properties">Properties
   </h3>
@@ -204,7 +212,7 @@ equivalent nodes, will be equal.</p>
     <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_CountTrees_CountTreeNode_2_Children.md&amp;value=---%0Auid%3A%20StringAlgorithms.CountTrees.CountTreeNode%602.Children%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/CountTrees/CountTreeNode.cs/#L31">View Source</a>
+    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/CountTrees/CountTreeNode.cs/#L94">View Source</a>
   </span>
   <a id="StringAlgorithms_CountTrees_CountTreeNode_2_Children_" data-uid="StringAlgorithms.CountTrees.CountTreeNode`2.Children*"></a>
   <h4 id="StringAlgorithms_CountTrees_CountTreeNode_2_Children" data-uid="StringAlgorithms.CountTrees.CountTreeNode`2.Children">Children</h4>
@@ -213,7 +221,7 @@ equivalent nodes, will be equal.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IDictionary&lt;CountTreeEdge&lt;TEdge, TNode&gt;, CountTreeNode&lt;TEdge, TNode&gt;&gt; Children { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IDictionary&lt;CountTreeEdge&lt;TEdge, TNode&gt;, CountTreeNode&lt;TEdge, TNode&gt;&gt; Children { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,7 +243,7 @@ equivalent nodes, will be equal.</p>
     <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_CountTrees_CountTreeNode_2_DescendantsCount.md&amp;value=---%0Auid%3A%20StringAlgorithms.CountTrees.CountTreeNode%602.DescendantsCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/CountTrees/CountTreeNode.cs/#L52">View Source</a>
+    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/CountTrees/CountTreeNode.cs/#L111">View Source</a>
   </span>
   <a id="StringAlgorithms_CountTrees_CountTreeNode_2_DescendantsCount_" data-uid="StringAlgorithms.CountTrees.CountTreeNode`2.DescendantsCount*"></a>
   <h4 id="StringAlgorithms_CountTrees_CountTreeNode_2_DescendantsCount" data-uid="StringAlgorithms.CountTrees.CountTreeNode`2.DescendantsCount">DescendantsCount</h4>
@@ -262,14 +270,14 @@ equivalent nodes, will be equal.</p>
     </tbody>
   </table>
   <h5 id="StringAlgorithms_CountTrees_CountTreeNode_2_DescendantsCount_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Lazy evaluated and thread-safe.</p>
+  <div class="markdown level1 remarks"><p>Lazy evaluated and thread-safe. Once calculated, it is cached and returned.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_CountTrees_CountTreeNode_2_WrappedNode.md&amp;value=---%0Auid%3A%20StringAlgorithms.CountTrees.CountTreeNode%602.WrappedNode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/CountTrees/CountTreeNode.cs/#L23">View Source</a>
+    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/CountTrees/CountTreeNode.cs/#L27">View Source</a>
   </span>
   <a id="StringAlgorithms_CountTrees_CountTreeNode_2_WrappedNode_" data-uid="StringAlgorithms.CountTrees.CountTreeNode`2.WrappedNode*"></a>
   <h4 id="StringAlgorithms_CountTrees_CountTreeNode_2_WrappedNode" data-uid="StringAlgorithms.CountTrees.CountTreeNode`2.WrappedNode">WrappedNode</h4>
@@ -319,7 +327,7 @@ equivalent nodes, will be equal.</p>
                     <a href="https://github.com/antonioaversa/mooc/new/main/apiSpec/new?filename=StringAlgorithms_CountTrees_CountTreeNode_2.md&amp;value=---%0Auid%3A%20StringAlgorithms.CountTrees.CountTreeNode%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/CountTrees/CountTreeNode.cs/#L23" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/mooc/blob/main/StringAlgorithms/CountTrees/CountTreeNode.cs/#L27" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

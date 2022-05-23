@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.CountTrees.CountTreeNode-2.html",
-          "hash": "Tb4kgbCLjw2EcNLcFBrSbMLCre2lCRWePivNytFXK88="
+          "hash": "Cc6c+bXtSP7Uts6ZASnaDTWG7KG+pEfnfC6AGGahiSI="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier-2.html",
-          "hash": "6p0UmstqQhZwYsr0AO9PhJD3cZHhEY7U9fku/1ugu1s="
+          "hash": "PjGfAY4x2a5I2WGeImvK3sVV2mIte0BlQqScxQtsKls="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.RecImmTrees.Conversions.StringifierBase-2.html",
-          "hash": "E+FPxdDshhXXI1IpONbVnMigtBoG7g/dCZMl0r0O0Vg="
+          "hash": "JfMFpxrw2LxG4ywMwWhS1JK51Ht3nNW40/TNN6r//NI="
         }
       },
       "is_incremental": false,
@@ -230,11 +230,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.SuffixStructures.Conversions.FullyIterativeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.SuffixStructures.Conversions.FullyIterativeConverter.html",
+          "hash": "ChA8dru0usap2iULDyXIo9MK/dOvb2gfthfJMw/7uWw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/StringAlgorithms.SuffixStructures.Conversions.FullyRecursiveConverter.yml",
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.SuffixStructures.Conversions.FullyRecursiveConverter.html",
-          "hash": "1Ssl86WYwrrp5a8YgQUxgvLB5lM/2AaUXOi12hpxGuc="
+          "hash": "AJdmgmVw0O2j2H7Qw3dujsHkXGVOKzq7LQw4Ms4XEPI="
         }
       },
       "is_incremental": false,
@@ -258,7 +270,7 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.SuffixStructures.Conversions.PartiallyIterativeConverter.html",
-          "hash": "7j6qU9f4hZvLf4pOxhNmBbgkDi/W89LsNC2kXEvnEDs="
+          "hash": "vmxuFnTiPa3CEsFRquaekXeOKF6UopKAOz919NEcqgY="
         }
       },
       "is_incremental": false,
@@ -270,7 +282,7 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.SuffixStructures.Conversions.html",
-          "hash": "3lkMUrAXxb42ZRKXIVhdLamsdq8n0xSY1n7gUS+z+Hc="
+          "hash": "6otFcNkE9Dig9POWqGNMsS54U0MJnSxOMHLCiUDkRwI="
         }
       },
       "is_incremental": false,
@@ -450,7 +462,7 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.SuffixTrees.SuffixTreeNode.html",
-          "hash": "MQjx/VIMwdRX1ju7/cZXENa+Im7zp+LSL/LERuhiGWg="
+          "hash": "kpqlWqh4rojKXgL+2KfHsN64lHI1d2bf+YOR7FNd4gg="
         }
       },
       "is_incremental": false,
@@ -534,7 +546,7 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.SuffixTries.SuffixTrieNode.html",
-          "hash": "TjyiuRSniRZbLjoKZclVnbUOtZs9hSASxafYFk0abdk="
+          "hash": "frgzIOoh0QRvJJCPbSfzmtrzeo2S/S8vcc/DnYkIg3M="
         }
       },
       "is_incremental": false,
@@ -570,7 +582,7 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.html",
-          "hash": "5CO8MJJQfv2Y8u9gw20JdfFMHrDYYfYQNf5FJFvES5Y="
+          "hash": "WWEZo1wX66c3d8/8FbSm3TVqnk0S+jkrTb0HZUcdfN8="
         }
       },
       "is_incremental": false,
@@ -594,7 +606,7 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.html",
-          "hash": "NZRGJLZq+S8g0MXpCaknYKVRQs4h5pj6wwQ2n8ipyG0="
+          "hash": "/yS9bxw7opDljIomzhtYzKk+02Unwh83fgQpITQgi2A="
         }
       },
       "is_incremental": false,
@@ -606,7 +618,7 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.html",
-          "hash": "UepoTA+EYNlpcS6yolJspBuJA2q5Mxchd4K3jDmn9Vk="
+          "hash": "GNtdKu1sE/xQi/toY7gAL00/gyXyHSGiFitGeFo1M5g="
         }
       },
       "is_incremental": false,
@@ -630,7 +642,7 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierTests.html",
-          "hash": "ylMThT7LkY1E//E1BMwZJVdzpAsiWrym+xXuwawe4Ls="
+          "hash": "2+hjDpXaIZwW4YqKKKxbRmi9n5swDKK8Uao97lk0nRU="
         }
       },
       "is_incremental": false,
@@ -666,7 +678,7 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock.html",
-          "hash": "yhFYVyqYdpOveZuW3DAchsuInZ1IiS3MvRH/hpQpBqE="
+          "hash": "z8g4afq2pA4Jr66WwBp4f5PCDWYnOPdAAK5AOKLIKZU="
         }
       },
       "is_incremental": false,
@@ -762,7 +774,19 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.Tests.SuffixStructures.Conversions.ConverterTests.html",
-          "hash": "S7x/9JGjh1HL6UJHfXl1qox8fikOtqu9x/HF8J/1Qqw="
+          "hash": "ihUh+dVkIHh/J2+hvoXvuVYOAs6xoVPCy1qrgxIuU4s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Tests.SuffixStructures.Conversions.FullyIterativeConverterTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Tests.SuffixStructures.Conversions.FullyIterativeConverterTests.html",
+          "hash": "m49ynjEJpx1rKoRVWlYwkhtz2/D/p8MXkdwqdLyF0Mw="
         }
       },
       "is_incremental": false,
@@ -774,7 +798,7 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.Tests.SuffixStructures.Conversions.FullyRecursiveConverterTests.html",
-          "hash": "YOBbDvN5+IHAavwQ0p5qpooKGT6yStyCPCp10VZOCDY="
+          "hash": "zU/Ghj+tVtM0EzOmFXw1su773A2yz/2DG9GJ30ssnaI="
         }
       },
       "is_incremental": false,
@@ -786,7 +810,7 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.Tests.SuffixStructures.Conversions.PartiallyIterativeConverterTests.html",
-          "hash": "RaWUgBGsnoG/9ydONlxmhbJqupphTOPxS/a9vI5u6ls="
+          "hash": "uk/908cDT+oXQbiFgDI3wfXnLvJKehavF2bw8y91dTs="
         }
       },
       "is_incremental": false,
@@ -798,7 +822,7 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.Tests.SuffixStructures.Conversions.html",
-          "hash": "5WkTVKSZsgj0IB72oAHxZMuxl+1Gc+j3CpAUE9Bwqqk="
+          "hash": "cKlg8Xpq93XjXt8oJJFxu3V5R+fYErm3eP7lveh/rYE="
         }
       },
       "is_incremental": false,
@@ -1106,6 +1130,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/StringAlgorithms.Utilities.LockValueObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/StringAlgorithms.Utilities.LockValueObject.html",
+          "hash": "BeX3QHcq+UUCd2ovOfLJbdU2oj77d3lptuVyAlNC7Cg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/StringAlgorithms.Utilities.StringUtilities.yml",
       "output": {
         ".html": {
@@ -1158,7 +1194,7 @@
       "output": {
         ".html": {
           "relative_path": "api/StringAlgorithms.Utilities.html",
-          "hash": "oKynBQc9QOJzicSVKss8pmXDJUmfHVfJFikzKcwRS+4="
+          "hash": "GykGnq3xUdNSzCdj5MFxjwwH6+vCcwlbBTjQG5QRiWk="
         }
       },
       "is_incremental": false,
@@ -1194,7 +1230,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "zk4PjgtkftxQX5f6vMGEe7WGTiUm1VLxRAAGGXGB5MY="
+          "hash": "OBS54Y2npCPq7RYDj/25h/OVjbrMkOrw62RnlFVztoU="
         }
       },
       "is_incremental": false,
@@ -1269,7 +1305,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 97,
+          "total_file_count": 100,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

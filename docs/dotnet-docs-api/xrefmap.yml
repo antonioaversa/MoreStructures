@@ -172,6 +172,40 @@ references:
   fullName.vb: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier(Of TEdge, TNode).FullyIterativeStringifier
   nameWithType: FullyIterativeStringifier<TEdge, TNode>.FullyIterativeStringifier
   nameWithType.vb: FullyIterativeStringifier(Of TEdge, TNode).FullyIterativeStringifier
+- uid: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier`2.PrependLevelAfterStopIndenting
+  name: PrependLevelAfterStopIndenting
+  href: api/StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier-2.html#StringAlgorithms_RecImmTrees_Conversions_FullyIterativeStringifier_2_PrependLevelAfterStopIndenting
+  commentId: P:StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier`2.PrependLevelAfterStopIndenting
+  fullName: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier<TEdge, TNode>.PrependLevelAfterStopIndenting
+  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier(Of TEdge, TNode).PrependLevelAfterStopIndenting
+  nameWithType: FullyIterativeStringifier<TEdge, TNode>.PrependLevelAfterStopIndenting
+  nameWithType.vb: FullyIterativeStringifier(Of TEdge, TNode).PrependLevelAfterStopIndenting
+- uid: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier`2.PrependLevelAfterStopIndenting*
+  name: PrependLevelAfterStopIndenting
+  href: api/StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier-2.html#StringAlgorithms_RecImmTrees_Conversions_FullyIterativeStringifier_2_PrependLevelAfterStopIndenting_
+  commentId: Overload:StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier`2.PrependLevelAfterStopIndenting
+  isSpec: "True"
+  fullName: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier<TEdge, TNode>.PrependLevelAfterStopIndenting
+  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier(Of TEdge, TNode).PrependLevelAfterStopIndenting
+  nameWithType: FullyIterativeStringifier<TEdge, TNode>.PrependLevelAfterStopIndenting
+  nameWithType.vb: FullyIterativeStringifier(Of TEdge, TNode).PrependLevelAfterStopIndenting
+- uid: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier`2.StopIndentingLevel
+  name: StopIndentingLevel
+  href: api/StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier-2.html#StringAlgorithms_RecImmTrees_Conversions_FullyIterativeStringifier_2_StopIndentingLevel
+  commentId: P:StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier`2.StopIndentingLevel
+  fullName: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier<TEdge, TNode>.StopIndentingLevel
+  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier(Of TEdge, TNode).StopIndentingLevel
+  nameWithType: FullyIterativeStringifier<TEdge, TNode>.StopIndentingLevel
+  nameWithType.vb: FullyIterativeStringifier(Of TEdge, TNode).StopIndentingLevel
+- uid: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier`2.StopIndentingLevel*
+  name: StopIndentingLevel
+  href: api/StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier-2.html#StringAlgorithms_RecImmTrees_Conversions_FullyIterativeStringifier_2_StopIndentingLevel_
+  commentId: Overload:StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier`2.StopIndentingLevel
+  isSpec: "True"
+  fullName: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier<TEdge, TNode>.StopIndentingLevel
+  fullName.vb: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier(Of TEdge, TNode).StopIndentingLevel
+  nameWithType: FullyIterativeStringifier<TEdge, TNode>.StopIndentingLevel
+  nameWithType.vb: FullyIterativeStringifier(Of TEdge, TNode).StopIndentingLevel
 - uid: StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier`2.Stringify(`1)
   name: Stringify(TNode)
   href: api/StringAlgorithms.RecImmTrees.Conversions.FullyIterativeStringifier-2.html#StringAlgorithms_RecImmTrees_Conversions_FullyIterativeStringifier_2_Stringify__1_
@@ -715,6 +749,25 @@ references:
   commentId: N:StringAlgorithms.SuffixStructures.Conversions
   fullName: StringAlgorithms.SuffixStructures.Conversions
   nameWithType: StringAlgorithms.SuffixStructures.Conversions
+- uid: StringAlgorithms.SuffixStructures.Conversions.FullyIterativeConverter
+  name: FullyIterativeConverter
+  href: api/StringAlgorithms.SuffixStructures.Conversions.FullyIterativeConverter.html
+  commentId: T:StringAlgorithms.SuffixStructures.Conversions.FullyIterativeConverter
+  fullName: StringAlgorithms.SuffixStructures.Conversions.FullyIterativeConverter
+  nameWithType: FullyIterativeConverter
+- uid: StringAlgorithms.SuffixStructures.Conversions.FullyIterativeConverter.TrieToTree(StringAlgorithms.SuffixTries.SuffixTrieNode)
+  name: TrieToTree(SuffixTrieNode)
+  href: api/StringAlgorithms.SuffixStructures.Conversions.FullyIterativeConverter.html#StringAlgorithms_SuffixStructures_Conversions_FullyIterativeConverter_TrieToTree_StringAlgorithms_SuffixTries_SuffixTrieNode_
+  commentId: M:StringAlgorithms.SuffixStructures.Conversions.FullyIterativeConverter.TrieToTree(StringAlgorithms.SuffixTries.SuffixTrieNode)
+  fullName: StringAlgorithms.SuffixStructures.Conversions.FullyIterativeConverter.TrieToTree(StringAlgorithms.SuffixTries.SuffixTrieNode)
+  nameWithType: FullyIterativeConverter.TrieToTree(SuffixTrieNode)
+- uid: StringAlgorithms.SuffixStructures.Conversions.FullyIterativeConverter.TrieToTree*
+  name: TrieToTree
+  href: api/StringAlgorithms.SuffixStructures.Conversions.FullyIterativeConverter.html#StringAlgorithms_SuffixStructures_Conversions_FullyIterativeConverter_TrieToTree_
+  commentId: Overload:StringAlgorithms.SuffixStructures.Conversions.FullyIterativeConverter.TrieToTree
+  isSpec: "True"
+  fullName: StringAlgorithms.SuffixStructures.Conversions.FullyIterativeConverter.TrieToTree
+  nameWithType: FullyIterativeConverter.TrieToTree
 - uid: StringAlgorithms.SuffixStructures.Conversions.FullyRecursiveConverter
   name: FullyRecursiveConverter
   href: api/StringAlgorithms.SuffixStructures.Conversions.FullyRecursiveConverter.html
@@ -1561,6 +1614,32 @@ references:
   commentId: T:StringAlgorithms.Tests.CountTrees.CountTreeNodeTests
   fullName: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests
   nameWithType: CountTreeNodeTests
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.Children_PreservedWrappedStructure
+  name: Children_PreservedWrappedStructure()
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.html#StringAlgorithms_Tests_CountTrees_CountTreeNodeTests_Children_PreservedWrappedStructure
+  commentId: M:StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.Children_PreservedWrappedStructure
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.Children_PreservedWrappedStructure()
+  nameWithType: CountTreeNodeTests.Children_PreservedWrappedStructure()
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.Children_PreservedWrappedStructure*
+  name: Children_PreservedWrappedStructure
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.html#StringAlgorithms_Tests_CountTrees_CountTreeNodeTests_Children_PreservedWrappedStructure_
+  commentId: Overload:StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.Children_PreservedWrappedStructure
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.Children_PreservedWrappedStructure
+  nameWithType: CountTreeNodeTests.Children_PreservedWrappedStructure
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_DoesntStackOverflowWithDeepStructures
+  name: DescendantsCount_DoesntStackOverflowWithDeepStructures()
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.html#StringAlgorithms_Tests_CountTrees_CountTreeNodeTests_DescendantsCount_DoesntStackOverflowWithDeepStructures
+  commentId: M:StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_DoesntStackOverflowWithDeepStructures
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_DoesntStackOverflowWithDeepStructures()
+  nameWithType: CountTreeNodeTests.DescendantsCount_DoesntStackOverflowWithDeepStructures()
+- uid: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_DoesntStackOverflowWithDeepStructures*
+  name: DescendantsCount_DoesntStackOverflowWithDeepStructures
+  href: api/StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.html#StringAlgorithms_Tests_CountTrees_CountTreeNodeTests_DescendantsCount_DoesntStackOverflowWithDeepStructures_
+  commentId: Overload:StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_DoesntStackOverflowWithDeepStructures
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_DoesntStackOverflowWithDeepStructures
+  nameWithType: CountTreeNodeTests.DescendantsCount_DoesntStackOverflowWithDeepStructures
 - uid: StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.DescendantsCount_GivesConsistentResults
   name: DescendantsCount_GivesConsistentResults()
   href: api/StringAlgorithms.Tests.CountTrees.CountTreeNodeTests.html#StringAlgorithms_Tests_CountTrees_CountTreeNodeTests_DescendantsCount_GivesConsistentResults
@@ -1670,19 +1749,71 @@ references:
   isSpec: "True"
   fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.FullyIterativeStringifierTests
   nameWithType: FullyIterativeStringifierTests.FullyIterativeStringifierTests
-- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.Stringify_RunsOnDeepStructures
-  name: Stringify_RunsOnDeepStructures()
-  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_FullyIterativeStringifierTests_Stringify_RunsOnDeepStructures
-  commentId: M:StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.Stringify_RunsOnDeepStructures
-  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.Stringify_RunsOnDeepStructures()
-  nameWithType: FullyIterativeStringifierTests.Stringify_RunsOnDeepStructures()
-- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.Stringify_RunsOnDeepStructures*
-  name: Stringify_RunsOnDeepStructures
-  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_FullyIterativeStringifierTests_Stringify_RunsOnDeepStructures_
-  commentId: Overload:StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.Stringify_RunsOnDeepStructures
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.PrependLevelAfterStopIndenting_RendersLevelWhenStopIndentingLevelIsReached
+  name: PrependLevelAfterStopIndenting_RendersLevelWhenStopIndentingLevelIsReached()
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_FullyIterativeStringifierTests_PrependLevelAfterStopIndenting_RendersLevelWhenStopIndentingLevelIsReached
+  commentId: M:StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.PrependLevelAfterStopIndenting_RendersLevelWhenStopIndentingLevelIsReached
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.PrependLevelAfterStopIndenting_RendersLevelWhenStopIndentingLevelIsReached()
+  nameWithType: FullyIterativeStringifierTests.PrependLevelAfterStopIndenting_RendersLevelWhenStopIndentingLevelIsReached()
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.PrependLevelAfterStopIndenting_RendersLevelWhenStopIndentingLevelIsReached*
+  name: PrependLevelAfterStopIndenting_RendersLevelWhenStopIndentingLevelIsReached
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_FullyIterativeStringifierTests_PrependLevelAfterStopIndenting_RendersLevelWhenStopIndentingLevelIsReached_
+  commentId: Overload:StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.PrependLevelAfterStopIndenting_RendersLevelWhenStopIndentingLevelIsReached
   isSpec: "True"
-  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.Stringify_RunsOnDeepStructures
-  nameWithType: FullyIterativeStringifierTests.Stringify_RunsOnDeepStructures
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.PrependLevelAfterStopIndenting_RendersLevelWhenStopIndentingLevelIsReached
+  nameWithType: FullyIterativeStringifierTests.PrependLevelAfterStopIndenting_RendersLevelWhenStopIndentingLevelIsReached
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.StopIndentingLevel_StopsIndentingWhenReached_WithOne
+  name: StopIndentingLevel_StopsIndentingWhenReached_WithOne()
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_FullyIterativeStringifierTests_StopIndentingLevel_StopsIndentingWhenReached_WithOne
+  commentId: M:StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.StopIndentingLevel_StopsIndentingWhenReached_WithOne
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.StopIndentingLevel_StopsIndentingWhenReached_WithOne()
+  nameWithType: FullyIterativeStringifierTests.StopIndentingLevel_StopsIndentingWhenReached_WithOne()
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.StopIndentingLevel_StopsIndentingWhenReached_WithOne*
+  name: StopIndentingLevel_StopsIndentingWhenReached_WithOne
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_FullyIterativeStringifierTests_StopIndentingLevel_StopsIndentingWhenReached_WithOne_
+  commentId: Overload:StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.StopIndentingLevel_StopsIndentingWhenReached_WithOne
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.StopIndentingLevel_StopsIndentingWhenReached_WithOne
+  nameWithType: FullyIterativeStringifierTests.StopIndentingLevel_StopsIndentingWhenReached_WithOne
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.StopIndentingLevel_StopsIndentingWhenReached_WithTwo
+  name: StopIndentingLevel_StopsIndentingWhenReached_WithTwo()
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_FullyIterativeStringifierTests_StopIndentingLevel_StopsIndentingWhenReached_WithTwo
+  commentId: M:StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.StopIndentingLevel_StopsIndentingWhenReached_WithTwo
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.StopIndentingLevel_StopsIndentingWhenReached_WithTwo()
+  nameWithType: FullyIterativeStringifierTests.StopIndentingLevel_StopsIndentingWhenReached_WithTwo()
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.StopIndentingLevel_StopsIndentingWhenReached_WithTwo*
+  name: StopIndentingLevel_StopsIndentingWhenReached_WithTwo
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_FullyIterativeStringifierTests_StopIndentingLevel_StopsIndentingWhenReached_WithTwo_
+  commentId: Overload:StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.StopIndentingLevel_StopsIndentingWhenReached_WithTwo
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.StopIndentingLevel_StopsIndentingWhenReached_WithTwo
+  nameWithType: FullyIterativeStringifierTests.StopIndentingLevel_StopsIndentingWhenReached_WithTwo
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.StopIndentingLevel_StopsIndentingWhenReached_WithZero
+  name: StopIndentingLevel_StopsIndentingWhenReached_WithZero()
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_FullyIterativeStringifierTests_StopIndentingLevel_StopsIndentingWhenReached_WithZero
+  commentId: M:StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.StopIndentingLevel_StopsIndentingWhenReached_WithZero
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.StopIndentingLevel_StopsIndentingWhenReached_WithZero()
+  nameWithType: FullyIterativeStringifierTests.StopIndentingLevel_StopsIndentingWhenReached_WithZero()
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.StopIndentingLevel_StopsIndentingWhenReached_WithZero*
+  name: StopIndentingLevel_StopsIndentingWhenReached_WithZero
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_FullyIterativeStringifierTests_StopIndentingLevel_StopsIndentingWhenReached_WithZero_
+  commentId: Overload:StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.StopIndentingLevel_StopsIndentingWhenReached_WithZero
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.StopIndentingLevel_StopsIndentingWhenReached_WithZero
+  nameWithType: FullyIterativeStringifierTests.StopIndentingLevel_StopsIndentingWhenReached_WithZero
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.Stringify_DoesntStackOverflowWithDeepStructures
+  name: Stringify_DoesntStackOverflowWithDeepStructures()
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_FullyIterativeStringifierTests_Stringify_DoesntStackOverflowWithDeepStructures
+  commentId: M:StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.Stringify_DoesntStackOverflowWithDeepStructures
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.Stringify_DoesntStackOverflowWithDeepStructures()
+  nameWithType: FullyIterativeStringifierTests.Stringify_DoesntStackOverflowWithDeepStructures()
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.Stringify_DoesntStackOverflowWithDeepStructures*
+  name: Stringify_DoesntStackOverflowWithDeepStructures
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_FullyIterativeStringifierTests_Stringify_DoesntStackOverflowWithDeepStructures_
+  commentId: Overload:StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.Stringify_DoesntStackOverflowWithDeepStructures
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.Stringify_DoesntStackOverflowWithDeepStructures
+  nameWithType: FullyIterativeStringifierTests.Stringify_DoesntStackOverflowWithDeepStructures
 - uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests
   name: FullyRecursiveStringifierTests
   href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.html
@@ -1702,19 +1833,19 @@ references:
   isSpec: "True"
   fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.FullyRecursiveStringifierTests
   nameWithType: FullyRecursiveStringifierTests.FullyRecursiveStringifierTests
-- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.Stringify_RunsOnNotSoDeepStructures
-  name: Stringify_RunsOnNotSoDeepStructures()
-  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_FullyRecursiveStringifierTests_Stringify_RunsOnNotSoDeepStructures
-  commentId: M:StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.Stringify_RunsOnNotSoDeepStructures
-  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.Stringify_RunsOnNotSoDeepStructures()
-  nameWithType: FullyRecursiveStringifierTests.Stringify_RunsOnNotSoDeepStructures()
-- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.Stringify_RunsOnNotSoDeepStructures*
-  name: Stringify_RunsOnNotSoDeepStructures
-  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_FullyRecursiveStringifierTests_Stringify_RunsOnNotSoDeepStructures_
-  commentId: Overload:StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.Stringify_RunsOnNotSoDeepStructures
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.Stringify_DoesntStackOverflowWithNotSoDeepStructures
+  name: Stringify_DoesntStackOverflowWithNotSoDeepStructures()
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_FullyRecursiveStringifierTests_Stringify_DoesntStackOverflowWithNotSoDeepStructures
+  commentId: M:StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.Stringify_DoesntStackOverflowWithNotSoDeepStructures
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.Stringify_DoesntStackOverflowWithNotSoDeepStructures()
+  nameWithType: FullyRecursiveStringifierTests.Stringify_DoesntStackOverflowWithNotSoDeepStructures()
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.Stringify_DoesntStackOverflowWithNotSoDeepStructures*
+  name: Stringify_DoesntStackOverflowWithNotSoDeepStructures
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.html#StringAlgorithms_Tests_RecImmTrees_Conversions_FullyRecursiveStringifierTests_Stringify_DoesntStackOverflowWithNotSoDeepStructures_
+  commentId: Overload:StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.Stringify_DoesntStackOverflowWithNotSoDeepStructures
   isSpec: "True"
-  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.Stringify_RunsOnNotSoDeepStructures
-  nameWithType: FullyRecursiveStringifierTests.Stringify_RunsOnNotSoDeepStructures
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.Stringify_DoesntStackOverflowWithNotSoDeepStructures
+  nameWithType: FullyRecursiveStringifierTests.Stringify_DoesntStackOverflowWithNotSoDeepStructures
 - uid: StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests
   name: StringifierBaseTests
   href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.StringifierBaseTests.html
@@ -1906,6 +2037,19 @@ references:
   commentId: T:StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock
   fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock
   nameWithType: TreeMock
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock.BuildMostUnbalancedTree(System.Int32)
+  name: BuildMostUnbalancedTree(Int32)
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock.html#StringAlgorithms_Tests_RecImmTrees_Conversions_TreeMock_BuildMostUnbalancedTree_System_Int32_
+  commentId: M:StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock.BuildMostUnbalancedTree(System.Int32)
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock.BuildMostUnbalancedTree(System.Int32)
+  nameWithType: TreeMock.BuildMostUnbalancedTree(Int32)
+- uid: StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock.BuildMostUnbalancedTree*
+  name: BuildMostUnbalancedTree
+  href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock.html#StringAlgorithms_Tests_RecImmTrees_Conversions_TreeMock_BuildMostUnbalancedTree_
+  commentId: Overload:StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock.BuildMostUnbalancedTree
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock.BuildMostUnbalancedTree
+  nameWithType: TreeMock.BuildMostUnbalancedTree
 - uid: StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock.Edge
   name: TreeMock.Edge
   href: api/StringAlgorithms.Tests.RecImmTrees.Conversions.TreeMock.Edge.html
@@ -2339,19 +2483,19 @@ references:
   isSpec: "True"
   fullName: StringAlgorithms.Tests.SuffixStructures.Conversions.ConverterTests.ConverterTests
   nameWithType: ConverterTests.ConverterTests
-- uid: StringAlgorithms.Tests.SuffixStructures.Conversions.ConverterTests.SuffixStructuresConverter
-  name: SuffixStructuresConverter
-  href: api/StringAlgorithms.Tests.SuffixStructures.Conversions.ConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Conversions_ConverterTests_SuffixStructuresConverter
-  commentId: P:StringAlgorithms.Tests.SuffixStructures.Conversions.ConverterTests.SuffixStructuresConverter
-  fullName: StringAlgorithms.Tests.SuffixStructures.Conversions.ConverterTests.SuffixStructuresConverter
-  nameWithType: ConverterTests.SuffixStructuresConverter
-- uid: StringAlgorithms.Tests.SuffixStructures.Conversions.ConverterTests.SuffixStructuresConverter*
-  name: SuffixStructuresConverter
-  href: api/StringAlgorithms.Tests.SuffixStructures.Conversions.ConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Conversions_ConverterTests_SuffixStructuresConverter_
-  commentId: Overload:StringAlgorithms.Tests.SuffixStructures.Conversions.ConverterTests.SuffixStructuresConverter
+- uid: StringAlgorithms.Tests.SuffixStructures.Conversions.ConverterTests.Converter
+  name: Converter
+  href: api/StringAlgorithms.Tests.SuffixStructures.Conversions.ConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Conversions_ConverterTests_Converter
+  commentId: P:StringAlgorithms.Tests.SuffixStructures.Conversions.ConverterTests.Converter
+  fullName: StringAlgorithms.Tests.SuffixStructures.Conversions.ConverterTests.Converter
+  nameWithType: ConverterTests.Converter
+- uid: StringAlgorithms.Tests.SuffixStructures.Conversions.ConverterTests.Converter*
+  name: Converter
+  href: api/StringAlgorithms.Tests.SuffixStructures.Conversions.ConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Conversions_ConverterTests_Converter_
+  commentId: Overload:StringAlgorithms.Tests.SuffixStructures.Conversions.ConverterTests.Converter
   isSpec: "True"
-  fullName: StringAlgorithms.Tests.SuffixStructures.Conversions.ConverterTests.SuffixStructuresConverter
-  nameWithType: ConverterTests.SuffixStructuresConverter
+  fullName: StringAlgorithms.Tests.SuffixStructures.Conversions.ConverterTests.Converter
+  nameWithType: ConverterTests.Converter
 - uid: StringAlgorithms.Tests.SuffixStructures.Conversions.ConverterTests.TrieToTree_Builds1LevelIntermediateFrom2LevelsCoalesceableIntermediate
   name: TrieToTree_Builds1LevelIntermediateFrom2LevelsCoalesceableIntermediate()
   href: api/StringAlgorithms.Tests.SuffixStructures.Conversions.ConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Conversions_ConverterTests_TrieToTree_Builds1LevelIntermediateFrom2LevelsCoalesceableIntermediate
@@ -2534,6 +2678,38 @@ references:
   isSpec: "True"
   fullName: StringAlgorithms.Tests.SuffixStructures.Conversions.ConverterTests.TrieToTree_ReproducesALeafAsIs
   nameWithType: ConverterTests.TrieToTree_ReproducesALeafAsIs
+- uid: StringAlgorithms.Tests.SuffixStructures.Conversions.FullyIterativeConverterTests
+  name: FullyIterativeConverterTests
+  href: api/StringAlgorithms.Tests.SuffixStructures.Conversions.FullyIterativeConverterTests.html
+  commentId: T:StringAlgorithms.Tests.SuffixStructures.Conversions.FullyIterativeConverterTests
+  fullName: StringAlgorithms.Tests.SuffixStructures.Conversions.FullyIterativeConverterTests
+  nameWithType: FullyIterativeConverterTests
+- uid: StringAlgorithms.Tests.SuffixStructures.Conversions.FullyIterativeConverterTests.#ctor
+  name: FullyIterativeConverterTests()
+  href: api/StringAlgorithms.Tests.SuffixStructures.Conversions.FullyIterativeConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Conversions_FullyIterativeConverterTests__ctor
+  commentId: M:StringAlgorithms.Tests.SuffixStructures.Conversions.FullyIterativeConverterTests.#ctor
+  fullName: StringAlgorithms.Tests.SuffixStructures.Conversions.FullyIterativeConverterTests.FullyIterativeConverterTests()
+  nameWithType: FullyIterativeConverterTests.FullyIterativeConverterTests()
+- uid: StringAlgorithms.Tests.SuffixStructures.Conversions.FullyIterativeConverterTests.#ctor*
+  name: FullyIterativeConverterTests
+  href: api/StringAlgorithms.Tests.SuffixStructures.Conversions.FullyIterativeConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Conversions_FullyIterativeConverterTests__ctor_
+  commentId: Overload:StringAlgorithms.Tests.SuffixStructures.Conversions.FullyIterativeConverterTests.#ctor
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.SuffixStructures.Conversions.FullyIterativeConverterTests.FullyIterativeConverterTests
+  nameWithType: FullyIterativeConverterTests.FullyIterativeConverterTests
+- uid: StringAlgorithms.Tests.SuffixStructures.Conversions.FullyIterativeConverterTests.TrieToTree_DoesntStackOverflowWithDeepStructures
+  name: TrieToTree_DoesntStackOverflowWithDeepStructures()
+  href: api/StringAlgorithms.Tests.SuffixStructures.Conversions.FullyIterativeConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Conversions_FullyIterativeConverterTests_TrieToTree_DoesntStackOverflowWithDeepStructures
+  commentId: M:StringAlgorithms.Tests.SuffixStructures.Conversions.FullyIterativeConverterTests.TrieToTree_DoesntStackOverflowWithDeepStructures
+  fullName: StringAlgorithms.Tests.SuffixStructures.Conversions.FullyIterativeConverterTests.TrieToTree_DoesntStackOverflowWithDeepStructures()
+  nameWithType: FullyIterativeConverterTests.TrieToTree_DoesntStackOverflowWithDeepStructures()
+- uid: StringAlgorithms.Tests.SuffixStructures.Conversions.FullyIterativeConverterTests.TrieToTree_DoesntStackOverflowWithDeepStructures*
+  name: TrieToTree_DoesntStackOverflowWithDeepStructures
+  href: api/StringAlgorithms.Tests.SuffixStructures.Conversions.FullyIterativeConverterTests.html#StringAlgorithms_Tests_SuffixStructures_Conversions_FullyIterativeConverterTests_TrieToTree_DoesntStackOverflowWithDeepStructures_
+  commentId: Overload:StringAlgorithms.Tests.SuffixStructures.Conversions.FullyIterativeConverterTests.TrieToTree_DoesntStackOverflowWithDeepStructures
+  isSpec: "True"
+  fullName: StringAlgorithms.Tests.SuffixStructures.Conversions.FullyIterativeConverterTests.TrieToTree_DoesntStackOverflowWithDeepStructures
+  nameWithType: FullyIterativeConverterTests.TrieToTree_DoesntStackOverflowWithDeepStructures
 - uid: StringAlgorithms.Tests.SuffixStructures.Conversions.FullyRecursiveConverterTests
   name: FullyRecursiveConverterTests
   href: api/StringAlgorithms.Tests.SuffixStructures.Conversions.FullyRecursiveConverterTests.html
@@ -4069,6 +4245,12 @@ references:
   commentId: N:StringAlgorithms.Utilities
   fullName: StringAlgorithms.Utilities
   nameWithType: StringAlgorithms.Utilities
+- uid: StringAlgorithms.Utilities.LockValueObject
+  name: LockValueObject
+  href: api/StringAlgorithms.Utilities.LockValueObject.html
+  commentId: T:StringAlgorithms.Utilities.LockValueObject
+  fullName: StringAlgorithms.Utilities.LockValueObject
+  nameWithType: LockValueObject
 - uid: StringAlgorithms.Utilities.StringUtilities
   name: StringUtilities
   href: api/StringAlgorithms.Utilities.StringUtilities.html
