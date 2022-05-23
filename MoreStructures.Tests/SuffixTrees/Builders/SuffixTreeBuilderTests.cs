@@ -14,7 +14,7 @@ namespace MoreStructures.Tests.SuffixTrees.Builders;
 [TestClass]
 public class SuffixTreeBuilderTests
 {
-    private readonly SuffixTreeBuilder Builder = new();
+    private readonly NaivePartiallyRecursiveSuffixTreeBuilder Builder = new();
 
     [TestMethod]
     public void BuildTree_EmptyString()
