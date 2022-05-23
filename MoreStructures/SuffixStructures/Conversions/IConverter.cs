@@ -14,6 +14,14 @@ public interface IConverter
     /// <see cref="SuffixTreeNode"/>, building its entire structure.
     /// </summary>
     /// <param name="trieNode">The node identifying the trie structure to be converted.</param>
-    /// <returns>A Suffix Tree, equivalent to the provided trie.</returns>
+    /// <returns>A tree, equivalent to the provided trie.</returns>
     SuffixTreeNode TrieToTree(SuffixTrieNode trieNode);
+
+    /// <summary>
+    /// Converts the provided <see cref="SuffixTreeNode"/> instance into an equivalent instance of 
+    /// <see cref="SuffixTrieNode"/>, building its entire structure.
+    /// </summary>
+    /// <param name="treeNode">The node identifying the trie structure to be converted.</param>
+    /// <returns>A trie, equivalent to the provided tree.</returns>
+    SuffixTrieNode TreeToTrie(SuffixTreeNode treeNode);
 }
