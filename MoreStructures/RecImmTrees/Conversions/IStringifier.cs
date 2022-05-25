@@ -3,8 +3,18 @@
 /// <summary>
 /// A converter from <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode}"/> structures to string.
 /// </summary>
+/// <remarks>
+///     <para>
+///     Requires <typeparamref name="TEdge"/> to implement <see cref="IComparable{T}"/>, so that output lines are 
+///     sorted.
+///     </para>
+///     <para id="complexity">
+///     Time Complexity = O(n) and Space Complexity = O(n) where n = number of nodes in the 
+///     <typeparamref name="TNode"/> structure. Each node and its incoming edge is visited once.
+///     </para>
+/// </remarks>
 public interface IStringifier<TEdge, TNode>
-    where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>
+    where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>, IComparable<TEdge>
     where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode>
 {
     /// <summary>

@@ -1,8 +1,7 @@
-﻿namespace MoreStructures.SuffixStructures.Matching;
-
-using MoreLinq;
-using MoreStructures.RecImmTrees;
+﻿using MoreStructures.RecImmTrees;
 using static MoreStructures.Utilities.StringUtilities;
+
+namespace MoreStructures.SuffixStructures.Matching;
 
 /// <summary>
 /// Exposes utility methods to match a <see cref="TextWithTerminator"/> against a 
@@ -17,6 +16,12 @@ public static class Matcher
     /// <param name="text">The text whose Suffix Tree has to be matched against the pattern.</param>
     /// <param name="pattern">The pattern to match. Unlike text, is a string without terminator.</param>
     /// <returns>A successful or non-successful match.</returns>
+    /// <remarks>
+    ///     <para id="complexity">
+    ///     Time Complexity = O(t * as) and Space Complexity = O(t * as) where t = length of the text to match and
+    ///     as = size of the alphabet of the text. If the alphabet is of constant size, complexity is linear.
+    ///     </para>
+    /// </remarks>
     public static Match<TreePath<TEdge, TNode>> Match<TEdge, TNode>(
         this ISuffixStructureNode<TEdge, TNode> node, 
         TextWithTerminator text, 
@@ -40,8 +45,7 @@ public static class Matcher
             from edge in node.Children.Keys
             let length = LongestPrefixInCommon(edge.Of(text), pattern[textStart..])
             select new { Length = length, Edge = edge })
-            .MaxBy(r => r.Length)
-            .FirstOrDefault();
+            .MaxBy(r => r.Length);
 
         if (longestMatch == null)
             return new Match<TreePath<TEdge, TNode>>(

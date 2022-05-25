@@ -1,8 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MoreStructures.CountTrees;
-using static MoreStructures.Tests.CountTrees.TreeMock;
 
 namespace MoreStructures.Tests.CountTrees;
+
+using static TreeMock;
 
 [TestClass]
 public class CountTreeEdgeTests

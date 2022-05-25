@@ -32,7 +32,8 @@ namespace MoreStructures.CountTrees;
 ///     requirement to use <see cref="CountTreeNode{TEdge, TNode}"/>.
 ///     </para>
 ///     <para id="complexity">
-///     Complexity = O(n) where n = number of nodes in <see cref="WrappedNode"/> structure.
+///     Time Complexity = O(n) and Space Complexity = O(n) where n = number of nodes in <see cref="WrappedNode"/> 
+///     structure. Leafs are visited only once, intermediate nodes are visited (at most) twice.
 ///     </para>
 /// </para>
 /// </remarks>

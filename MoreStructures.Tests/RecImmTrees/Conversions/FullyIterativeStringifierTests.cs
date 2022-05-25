@@ -1,10 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MoreStructures.RecImmTrees.Conversions;
 using System.Linq;
-using static MoreStructures.Tests.RecImmTrees.Conversions.TreeMock;
-using static MoreStructures.Tests.RecImmTrees.Conversions.StringifierTestsHelpers;
 
 namespace MoreStructures.Tests.RecImmTrees.Conversions;
+
+using static TreeMock;
+using static StringifierTestsHelpers;
 
 [TestClass]
 public class FullyIterativeStringifierTests : StringifierTests

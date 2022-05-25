@@ -6,11 +6,14 @@ namespace MoreStructures.RecImmTrees.Conversions;
 /// <inheritdoc/>
 /// </summary>
 /// <remarks>
-/// Implemented fully recursively, so limited by stack depth and usable with tree of a "reasonable" height.
+///     <inheritdoc cref="IStringifier{TEdge, TNode}" path="/remarks"/>
+///     <para>
+///     Implemented fully recursively, so limited by stack depth and usable with tree of a "reasonable" height.
+///     </para>
 /// </remarks>
 public class FullyRecursiveStringifier<TEdge, TNode> 
     : StringifierBase<TEdge, TNode>, IStringifier<TEdge, TNode>
-    where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>
+    where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>, IComparable<TEdge>
     where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode>
 {
     /// <inheritdoc/>
@@ -33,7 +36,7 @@ public class FullyRecursiveStringifier<TEdge, TNode>
 
     private void Stringify(StringBuilder stringBuilder, TNode node, int level)
     {
-        foreach (var (childEdge, childNode) in node.Children)
+        foreach (var (childEdge, childNode) in node.Children.OrderBy(c => c.Key))
         {
             stringBuilder.Append(NewLine);
             for (int i = 0; i < level; i++)

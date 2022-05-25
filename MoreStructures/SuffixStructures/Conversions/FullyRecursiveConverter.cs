@@ -13,8 +13,13 @@ namespace MoreStructures.SuffixStructures.Conversions;
 /// </remarks>
 public class FullyRecursiveConverter : IConverter
 {
-    /// <inheritdoc/>
-    /// <inheritdoc cref="FullyRecursiveConverter" path="/remarks"/>
+    /// <summary>
+    ///     <inheritdoc/>
+    /// </summary>
+    /// <remarks>
+    ///     <inheritdoc cref="FullyRecursiveConverter" path="/remarks"/>
+    ///     <inheritdoc cref="IConverter.TrieToTree(SuffixTrieNode)" path="/remarks"/>
+    /// </remarks>
     public SuffixTreeNode TrieToTree(SuffixTrieNode trieNode) => 
         trieNode switch
         {
@@ -51,8 +56,13 @@ public class FullyRecursiveConverter : IConverter
             _ => throw new NotSupportedException($"{trieNode} of type {trieNode.GetType().Name} not supported"),
         };
 
-    /// <inheritdoc/>
-    /// <inheritdoc cref="FullyRecursiveConverter" path="/remarks"/>
+    /// <summary>
+    ///     <inheritdoc/>
+    /// </summary>
+    /// <remarks>
+    ///     <inheritdoc cref="FullyRecursiveConverter" path="/remarks"/>
+    ///     <inheritdoc cref="IConverter.TreeToTrie(SuffixTreeNode)" path="/remarks"/>
+    /// </remarks>
     public SuffixTrieNode TreeToTrie(SuffixTreeNode treeNode) =>
         treeNode switch
         {

@@ -10,10 +10,14 @@ using static MoreStructures.TextWithTerminator;
 
 namespace MoreStructures.Tests.SuffixTries.Builders;
 
-[TestClass]
-public class SuffixTrieBuilderTests
+public abstract class SuffixTrieBuilderTests
 {
-    private readonly SuffixTrieBuilder Builder = new();
+    private readonly IBuilder<SuffixTrieEdge, SuffixTrieNode> Builder;
+
+    public SuffixTrieBuilderTests(IBuilder<SuffixTrieEdge, SuffixTrieNode> builder)
+    {
+        Builder = builder;
+    }
 
     [TestMethod]
     public void BuildTree_WithTextWithTerminatorInput()

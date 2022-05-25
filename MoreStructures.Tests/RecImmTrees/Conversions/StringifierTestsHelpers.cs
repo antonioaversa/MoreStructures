@@ -2,9 +2,10 @@
 using MoreStructures.RecImmTrees.Conversions;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using static MoreStructures.Tests.RecImmTrees.Conversions.TreeMock;
 
 namespace MoreStructures.Tests.RecImmTrees.Conversions;
+
+using static TreeMock;
 
 [ExcludeFromCodeCoverage(Justification = "Testing API extension")]
 internal static class StringifierTestsHelpers

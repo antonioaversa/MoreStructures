@@ -2,9 +2,10 @@
 using MoreStructures.SuffixTrees;
 using System;
 using System.Collections.Generic;
-using static MoreStructures.Tests.SuffixStructures.Conversions.ConversionEquivalences.EquivalenceId;
 
 namespace MoreStructures.Tests.SuffixStructures.Conversions;
+
+using static ConversionEquivalences.EquivalenceId;
 
 public abstract partial class ConverterTests
 {
@@ -23,8 +24,8 @@ public abstract partial class ConverterTests
     public void TreeToTrie_IsCorrect(ConversionEquivalences.EquivalenceId equivalenceId)
     {
         var (treeNode, expectedTrieNode) = ConversionEquivalences.Equivalences[equivalenceId];
-        var trieRoot = Converter.TreeToTrie(treeNode);
-        Assert.AreEqual(expectedTrieNode, trieRoot);
+        var trieNode = Converter.TreeToTrie(treeNode);
+        Assert.AreEqual(expectedTrieNode, trieNode);
     }
 
     private record SingletonSuffixTreeNode(SuffixTreeEdge SingleEdge, SuffixTreeNode SingleNode) : SuffixTreeNode(

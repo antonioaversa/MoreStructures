@@ -2,9 +2,10 @@
 using MoreStructures.CountTrees;
 using System.Collections.Generic;
 using System.Linq;
-using static MoreStructures.Tests.CountTrees.TreeMock;
 
 namespace MoreStructures.Tests.CountTrees;
+
+using static TreeMock;
 
 [TestClass]
 public class CountTreeNodeTests
