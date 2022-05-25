@@ -128,7 +128,17 @@
     <pre><code class="lang-csharp hljs">public abstract class SuffixTreeNode : ISuffixStructureNode&lt;SuffixTreeEdge, SuffixTreeNode&gt;, IRecImmDictIndexedTreeNode&lt;SuffixTreeEdge, SuffixTreeNode&gt;, IEquatable&lt;SuffixTreeNode&gt;</code></pre>
   </div>
   <h5 id="MoreStructures_SuffixTrees_SuffixTreeNode_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>Immutability is guaranteed by using <a class="xref" href="MoreStructures.Utilities.ValueReadOnlyCollection-1.html">ValueReadOnlyCollection&lt;T&gt;</a>.</p>
+  <div class="markdown level0 remarks"><p>
+Suffix Trees are more space-efficient than Suffix Tries due to the reduced number of 
+<a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a> and their <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a>, compare to the corresponding
+<a class="xref" href="MoreStructures.SuffixTries.SuffixTrieEdge.html">SuffixTrieEdge</a> and their <a class="xref" href="MoreStructures.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a>, due to entire 
+paths of single chains of chars in Suffix Tries being coalesced into a single selector string, which is stored
+on the edge with path label compression, i.e. using two fixed sized numbers (<a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeEdge.html#MoreStructures_SuffixTrees_SuffixTreeEdge_Start">Start</a> 
+and <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeEdge.html#MoreStructures_SuffixTrees_SuffixTreeEdge_Length">Length</a>) instead of a variable-length string of characters.
+</p>
+<p>
+Immutability is guaranteed by using <a class="xref" href="MoreStructures.Utilities.ValueReadOnlyCollection-1.html">ValueReadOnlyCollection&lt;T&gt;</a>.
+</p>
 </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -137,7 +147,7 @@
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTrees_SuffixTreeNode__ctor_IDictionary_MoreStructures_SuffixTrees_SuffixTreeEdge_MoreStructures_SuffixTrees_SuffixTreeNode__System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTrees.SuffixTreeNode.%23ctor(IDictionary%7BMoreStructures.SuffixTrees.SuffixTreeEdge%2CMoreStructures.SuffixTrees.SuffixTreeNode%7D%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/SuffixTreeNode.cs/#L19">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/SuffixTreeNode.cs/#L29">View Source</a>
   </span>
   <a id="MoreStructures_SuffixTrees_SuffixTreeNode__ctor_" data-uid="MoreStructures.SuffixTrees.SuffixTreeNode.#ctor*"></a>
   <h4 id="MoreStructures_SuffixTrees_SuffixTreeNode__ctor_IDictionary_MoreStructures_SuffixTrees_SuffixTreeEdge_MoreStructures_SuffixTrees_SuffixTreeNode__System_Nullable_System_Int32__" data-uid="MoreStructures.SuffixTrees.SuffixTreeNode.#ctor(IDictionary{MoreStructures.SuffixTrees.SuffixTreeEdge,MoreStructures.SuffixTrees.SuffixTreeNode},System.Nullable{System.Int32})">SuffixTreeNode(IDictionary&lt;SuffixTreeEdge, SuffixTreeNode&gt;, Nullable&lt;Int32&gt;)</h4>
@@ -174,7 +184,17 @@
     </tbody>
   </table>
   <h5 id="MoreStructures_SuffixTrees_SuffixTreeNode__ctor_IDictionary_MoreStructures_SuffixTrees_SuffixTreeEdge_MoreStructures_SuffixTrees_SuffixTreeNode__System_Nullable_System_Int32___remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Immutability is guaranteed by using <a class="xref" href="MoreStructures.Utilities.ValueReadOnlyCollection-1.html">ValueReadOnlyCollection&lt;T&gt;</a>.</p>
+  <div class="markdown level1 remarks"><p>
+Suffix Trees are more space-efficient than Suffix Tries due to the reduced number of 
+<a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a> and their <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a>, compare to the corresponding
+<a class="xref" href="MoreStructures.SuffixTries.SuffixTrieEdge.html">SuffixTrieEdge</a> and their <a class="xref" href="MoreStructures.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a>, due to entire 
+paths of single chains of chars in Suffix Tries being coalesced into a single selector string, which is stored
+on the edge with path label compression, i.e. using two fixed sized numbers (<a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeEdge.html#MoreStructures_SuffixTrees_SuffixTreeEdge_Start">Start</a> 
+and <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeEdge.html#MoreStructures_SuffixTrees_SuffixTreeEdge_Length">Length</a>) instead of a variable-length string of characters.
+</p>
+<p>
+Immutability is guaranteed by using <a class="xref" href="MoreStructures.Utilities.ValueReadOnlyCollection-1.html">ValueReadOnlyCollection&lt;T&gt;</a>.
+</p>
 </div>
   <h3 id="properties">Properties
   </h3>
@@ -183,7 +203,7 @@
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTrees_SuffixTreeNode_Children.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTrees.SuffixTreeNode.Children%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/SuffixTreeNode.cs/#L45">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/SuffixTreeNode.cs/#L55">View Source</a>
   </span>
   <a id="MoreStructures_SuffixTrees_SuffixTreeNode_Children_" data-uid="MoreStructures.SuffixTrees.SuffixTreeNode.Children*"></a>
   <h4 id="MoreStructures_SuffixTrees_SuffixTreeNode_Children" data-uid="MoreStructures.SuffixTrees.SuffixTreeNode.Children">Children</h4>
@@ -214,7 +234,7 @@
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTrees_SuffixTreeNode_Item_MoreStructures_SuffixTrees_SuffixTreeEdge_.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTrees.SuffixTreeNode.Item(MoreStructures.SuffixTrees.SuffixTreeEdge)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/SuffixTreeNode.cs/#L56">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/SuffixTreeNode.cs/#L66">View Source</a>
   </span>
   <a id="MoreStructures_SuffixTrees_SuffixTreeNode_Item_" data-uid="MoreStructures.SuffixTrees.SuffixTreeNode.Item*"></a>
   <h4 id="MoreStructures_SuffixTrees_SuffixTreeNode_Item_MoreStructures_SuffixTrees_SuffixTreeEdge_" data-uid="MoreStructures.SuffixTrees.SuffixTreeNode.Item(MoreStructures.SuffixTrees.SuffixTreeEdge)">Item[SuffixTreeEdge]</h4>
@@ -262,7 +282,7 @@
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTrees_SuffixTreeNode_Start.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTrees.SuffixTreeNode.Start%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/SuffixTreeNode.cs/#L51">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/SuffixTreeNode.cs/#L61">View Source</a>
   </span>
   <a id="MoreStructures_SuffixTrees_SuffixTreeNode_Start_" data-uid="MoreStructures.SuffixTrees.SuffixTreeNode.Start*"></a>
   <h4 id="MoreStructures_SuffixTrees_SuffixTreeNode_Start" data-uid="MoreStructures.SuffixTrees.SuffixTreeNode.Start">Start</h4>
@@ -295,7 +315,7 @@
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTrees_SuffixTreeNode_ToString.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTrees.SuffixTreeNode.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/SuffixTreeNode.cs/#L71">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/SuffixTreeNode.cs/#L81">View Source</a>
   </span>
   <a id="MoreStructures_SuffixTrees_SuffixTreeNode_ToString_" data-uid="MoreStructures.SuffixTrees.SuffixTreeNode.ToString*"></a>
   <h4 id="MoreStructures_SuffixTrees_SuffixTreeNode_ToString" data-uid="MoreStructures.SuffixTrees.SuffixTreeNode.ToString">ToString()</h4>
@@ -359,7 +379,7 @@ Uses a <a class="xref" href="MoreStructures.RecImmTrees.Conversions.IStringifier
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTrees_SuffixTreeNode.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTrees.SuffixTreeNode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/SuffixTreeNode.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/SuffixTreeNode.cs/#L29" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

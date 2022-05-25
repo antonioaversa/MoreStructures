@@ -100,7 +100,7 @@ such as <a class="xref" href="MoreStructures.SuffixTries.SuffixTrieNode.html">Su
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixStructures_Conversions_IConverter_TreeToTrie_MoreStructures_SuffixTrees_SuffixTreeNode_.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixStructures.Conversions.IConverter.TreeToTrie(MoreStructures.SuffixTrees.SuffixTreeNode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixStructures/Conversions/IConverter.cs/#L26">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixStructures/Conversions/IConverter.cs/#L39">View Source</a>
   </span>
   <a id="MoreStructures_SuffixStructures_Conversions_IConverter_TreeToTrie_" data-uid="MoreStructures.SuffixStructures.Conversions.IConverter.TreeToTrie*"></a>
   <h4 id="MoreStructures_SuffixStructures_Conversions_IConverter_TreeToTrie_MoreStructures_SuffixTrees_SuffixTreeNode_" data-uid="MoreStructures.SuffixStructures.Conversions.IConverter.TreeToTrie(MoreStructures.SuffixTrees.SuffixTreeNode)">TreeToTrie(SuffixTreeNode)</h4>
@@ -146,12 +146,19 @@ such as <a class="xref" href="MoreStructures.SuffixTries.SuffixTrieNode.html">Su
       </tr>
     </tbody>
   </table>
+  <h5 id="MoreStructures_SuffixStructures_Conversions_IConverter_TreeToTrie_MoreStructures_SuffixTrees_SuffixTreeNode__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Time Complexity = O(n^2) and Space Complexity = O(n^2) where n = number of nodes in the input structure.
+Each node of the input tree is visited at most twice, but expansion increase the number of nodes, in the
+worst case to the number of characters in all suffixes of the text which has generated the tree.
+</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixStructures_Conversions_IConverter_TrieToTree_MoreStructures_SuffixTries_SuffixTrieNode_.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixStructures.Conversions.IConverter.TrieToTree(MoreStructures.SuffixTries.SuffixTrieNode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixStructures/Conversions/IConverter.cs/#L18">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixStructures/Conversions/IConverter.cs/#L24">View Source</a>
   </span>
   <a id="MoreStructures_SuffixStructures_Conversions_IConverter_TrieToTree_" data-uid="MoreStructures.SuffixStructures.Conversions.IConverter.TrieToTree*"></a>
   <h4 id="MoreStructures_SuffixStructures_Conversions_IConverter_TrieToTree_MoreStructures_SuffixTries_SuffixTrieNode_" data-uid="MoreStructures.SuffixStructures.Conversions.IConverter.TrieToTree(MoreStructures.SuffixTries.SuffixTrieNode)">TrieToTree(SuffixTrieNode)</h4>
@@ -197,6 +204,12 @@ such as <a class="xref" href="MoreStructures.SuffixTries.SuffixTrieNode.html">Su
       </tr>
     </tbody>
   </table>
+  <h5 id="MoreStructures_SuffixStructures_Conversions_IConverter_TrieToTree_MoreStructures_SuffixTries_SuffixTrieNode__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Time Complexity = O(n) and Space Complexity = O(n) where n = number of nodes in the input structure.
+Each node of the input trie is visited at most twice and coalescing reduces the number of nodes.
+</p>
+</div>
 </article>
           </div>
           

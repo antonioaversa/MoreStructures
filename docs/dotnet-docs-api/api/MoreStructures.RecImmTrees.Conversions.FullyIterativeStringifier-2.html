@@ -139,7 +139,7 @@
   <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
   <h5 id="MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class FullyIterativeStringifier&lt;TEdge, TNode&gt; : StringifierBase&lt;TEdge, TNode&gt;, IStringifier&lt;TEdge, TNode&gt; where TEdge : IRecImmDictIndexedTreeEdge&lt;TEdge, TNode&gt; where TNode : IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class FullyIterativeStringifier&lt;TEdge, TNode&gt; : StringifierBase&lt;TEdge, TNode&gt;, IStringifier&lt;TEdge, TNode&gt; where TEdge : IRecImmDictIndexedTreeEdge&lt;TEdge, TNode&gt;, IComparable&lt;TEdge&gt; where TNode : IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -161,8 +161,11 @@
     </tbody>
   </table>
   <h5 id="MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>Implemented fully iteratively, so not limited by call stack depth but rather by the maximum size of the stack
-stored in the heap. Convenient with deep trees (i.e. trees having a height &gt; ~1K nodes).</p>
+  <div class="markdown level0 remarks"><p><inheritdoc cref="T:MoreStructures.RecImmTrees.Conversions.IStringifier`2" path="/remarks"></inheritdoc></p>
+<p>
+Implemented fully iteratively, so not limited by call stack depth but rather by the maximum size of the stack
+stored in the heap. Convenient with deep trees (i.e. trees having a height > ~1K nodes).
+</p>
 </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -171,7 +174,7 @@ stored in the heap. Convenient with deep trees (i.e. trees having a height &gt; 
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2__ctor_Func__1_System_String__Func__0__1_System_String__.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier%602.%23ctor(Func%7B%601%2CSystem.String%7D%2CFunc%7B%600%2C%601%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/FullyIterativeStringifier.cs/#L41">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/FullyIterativeStringifier.cs/#L47">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2__ctor_" data-uid="MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier`2.#ctor*"></a>
   <h4 id="MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2__ctor_Func__1_System_String__Func__0__1_System_String__" data-uid="MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier`2.#ctor(Func{`1,System.String},Func{`0,`1,System.String})">FullyIterativeStringifier(Func&lt;TNode, String&gt;, Func&lt;TEdge, TNode, String&gt;)</h4>
@@ -210,7 +213,7 @@ stored in the heap. Convenient with deep trees (i.e. trees having a height &gt; 
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_PrependLevelAfterStopIndenting.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier%602.PrependLevelAfterStopIndenting%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/FullyIterativeStringifier.cs/#L37">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/FullyIterativeStringifier.cs/#L43">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_PrependLevelAfterStopIndenting_" data-uid="MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier`2.PrependLevelAfterStopIndenting*"></a>
   <h4 id="MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_PrependLevelAfterStopIndenting" data-uid="MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier`2.PrependLevelAfterStopIndenting">PrependLevelAfterStopIndenting</h4>
@@ -242,7 +245,7 @@ stored in the heap. Convenient with deep trees (i.e. trees having a height &gt; 
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_StopIndentingLevel.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier%602.StopIndentingLevel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/FullyIterativeStringifier.cs/#L31">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/FullyIterativeStringifier.cs/#L37">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_StopIndentingLevel_" data-uid="MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier`2.StopIndentingLevel*"></a>
   <h4 id="MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_StopIndentingLevel" data-uid="MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier`2.StopIndentingLevel">StopIndentingLevel</h4>
@@ -269,14 +272,17 @@ stored in the heap. Convenient with deep trees (i.e. trees having a height &gt; 
     </tbody>
   </table>
   <h5 id="MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_StopIndentingLevel_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>When trying to render a very deep structure to string, the resulting string can become extremely big due to
-indentation. This can easily happen with structures like <a class="xref" href="MoreStructures.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a>. Less with
-<a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a>, due to their coalescing of paths of nodes with single child.</p>
+  <div class="markdown level1 remarks"><p>
+When trying to render a very deep structure to string, the resulting string can become extremely big due to 
+indentation. This can easily happen with structures like <a class="xref" href="MoreStructures.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a>. Less 
+with <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a>, due to their coalescing of paths of nodes with single child.
+</p>
 <p>
 For example if the structure is a linear chain of n in depth, 4 chars of indentation per line would yield a 
 string of 2n(n-1) chars = O(n^2). For n = 10000 nodes the produced string would be ~ 200M.
-To avoid that <a class="xref" href="MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier-2.html#MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_StopIndentingLevel">StopIndentingLevel</a> can be set to a constant c, limiting the size of the resulting
-string by an upper bound of cn = O(n). For n = 10000 nodes and c = 10 levels the produced string would be 100K.
+To avoid that <a class="xref" href="MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier-2.html#MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_StopIndentingLevel">StopIndentingLevel</a> can be set to a constant c, limiting the size of the 
+resulting string by an upper bound of cn = O(n). For n = 10000 nodes and c = 10 levels the produced string 
+would be 100K.
 </p>
 </div>
   <h3 id="methods">Methods
@@ -286,7 +292,7 @@ string by an upper bound of cn = O(n). For n = 10000 nodes and c = 10 levels the
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_Stringify__1_.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier%602.Stringify(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/FullyIterativeStringifier.cs/#L49">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/FullyIterativeStringifier.cs/#L55">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_Stringify_" data-uid="MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier`2.Stringify*"></a>
   <h4 id="MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_Stringify__1_" data-uid="MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier`2.Stringify(`1)">Stringify(TNode)</h4>
@@ -348,7 +354,7 @@ string by an upper bound of cn = O(n). For n = 10000 nodes and c = 10 levels the
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/FullyIterativeStringifier.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/FullyIterativeStringifier.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class TreeMock
+    <title>Class UkkonenSuffixTreeBuilder
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class TreeMock
+    <meta name="title" content="Class UkkonenSuffixTreeBuilder
    ">
     <meta name="generator" content="docfx 2.59.2.0">
     
@@ -78,17 +78,22 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MoreStructures.Tests.RecImmTrees.Conversions.TreeMock">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder">
   
   
-  <h1 id="MoreStructures_Tests_RecImmTrees_Conversions_TreeMock" data-uid="MoreStructures.Tests.RecImmTrees.Conversions.TreeMock" class="text-break">Class TreeMock
+  <h1 id="MoreStructures_SuffixTrees_Builders_UkkonenSuffixTreeBuilder" data-uid="MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder" class="text-break">Class UkkonenSuffixTreeBuilder
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Builds objects, such as edges and nodes, for <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a> structures.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">TreeMock</span></div>
+    <div class="level1"><span class="xref">UkkonenSuffixTreeBuilder</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.SuffixStructures.Builders.IBuilder-2.html">IBuilder</a>&lt;<a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a>, <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -114,28 +119,57 @@
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.Tests.RecImmTrees.Conversions.html">MoreStructures.Tests.RecImmTrees.Conversions</a></h6>
-  <h6><strong>Assembly</strong>: MoreStructures.Tests.dll</h6>
-  <h5 id="MoreStructures_Tests_RecImmTrees_Conversions_TreeMock_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.SuffixTrees.Builders.html">MoreStructures.SuffixTrees.Builders</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_SuffixTrees_Builders_UkkonenSuffixTreeBuilder_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class TreeMock</code></pre>
+    <pre><code class="lang-csharp hljs">public class UkkonenSuffixTreeBuilder : IBuilder&lt;SuffixTreeEdge, SuffixTreeNode&gt;</code></pre>
   </div>
+  <h5 id="MoreStructures_SuffixTrees_Builders_UkkonenSuffixTreeBuilder_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+Iterative implementation of the Ukkonen algorithm: see 
+<a href="https://en.wikipedia.org/wiki/Ukkonen%27s_algorithm">https://en.wikipedia.org/wiki/Ukkonen%27s_algorithm</a> for an introduction and
+<a href="https://www.cs.helsinki.fi/u/ukkonen/SuffixT1withFigs.pdf">https://www.cs.helsinki.fi/u/ukkonen/SuffixT1withFigs.pdf</a> for the original paper.
+</p>
+<p>
+The algorithm implies some optimizations to achieve linear complexity:
+<ul><li></li><li></li><li></li></ul>
+</p>
+<p>
+The algorithm is structured in phases, as many as the number of chars in the text.
+At the beginning of a new phase, both the number of remaining suffixes to take care of, and the global end
+pointer are both increased by 1.
+Each phase is composed of at least 1 iteration, each one taking care of remaining suffixes.
+At the beginning 
+</p>
+<p>
+Not limited by call stack depth. Convenient with long input text (i.e. string having a length &lt; ~1K chars).
+</p>
+<p>
+Time Complexity = O(t * as) and Space Complexity = O(2 * t) where t = length of the text to match and
+as = size of the alphabet of the text. If the alphabet is of constant size, Time Complexity is linear.
+Otherwise it is O(t * log(t)).
+While there are as many phases as number of chars in text (t), and there can be multiple iterations per
+phase (as many as the number of remaining suffixes to process), the complexity is still linear, ~ 2t.
+</p>
+</div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_RecImmTrees_Conversions_TreeMock_BuildMostUnbalancedTree_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.BuildMostUnbalancedTree(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTrees_Builders_UkkonenSuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/RecImmTrees/Conversions/TreeMock.cs/#L23">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/UkkonenSuffixTreeBuilder.cs/#L63">View Source</a>
   </span>
-  <a id="MoreStructures_Tests_RecImmTrees_Conversions_TreeMock_BuildMostUnbalancedTree_" data-uid="MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.BuildMostUnbalancedTree*"></a>
-  <h4 id="MoreStructures_Tests_RecImmTrees_Conversions_TreeMock_BuildMostUnbalancedTree_System_Int32_" data-uid="MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.BuildMostUnbalancedTree(System.Int32)">BuildMostUnbalancedTree(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="MoreStructures_SuffixTrees_Builders_UkkonenSuffixTreeBuilder_BuildTree_" data-uid="MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.BuildTree*"></a>
+  <h4 id="MoreStructures_SuffixTrees_Builders_UkkonenSuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator_" data-uid="MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator)">BuildTree(TextWithTerminator)</h4>
+  <div class="markdown level1 summary"><p><inheritdoc></inheritdoc></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static TreeMock.Node BuildMostUnbalancedTree(int numberOfIntermediateNodes)</code></pre>
+    <pre><code class="lang-csharp hljs">public SuffixTreeNode BuildTree(TextWithTerminator text)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,8 +182,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">numberOfIntermediateNodes</span></td>
+        <td><a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a></td>
+        <td><span class="parametername">text</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -164,11 +198,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Node.html">TreeMock.Node</a></td>
+        <td><a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 id="MoreStructures_SuffixTrees_Builders_UkkonenSuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder" path="/remarks"></inheritdoc></p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.Builders.IBuilder-2.html">IBuilder&lt;TEdge, TNode&gt;</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.Builders.BuilderExtensions.html#MoreStructures_SuffixStructures_Builders_BuilderExtensions_BuildTree__2_MoreStructures_SuffixStructures_Builders_IBuilder___0___1__System_String_">BuilderExtensions.BuildTree&lt;TEdge, TNode&gt;(IBuilder&lt;TEdge, TNode&gt;, String)</a>
+  </div>
 </article>
           </div>
           
@@ -177,10 +222,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_RecImmTrees_Conversions_TreeMock.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.RecImmTrees.Conversions.TreeMock%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTrees_Builders_UkkonenSuffixTreeBuilder.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/RecImmTrees/Conversions/TreeMock.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/UkkonenSuffixTreeBuilder.cs/#L54" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -93,6 +93,7 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="MoreStructures.RecImmTrees.IRecImmDictIndexedTreeEdge-2.html">IRecImmDictIndexedTreeEdge</a>&lt;<a class="xref" href="MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Edge.html">TreeMock.Edge</a>, <a class="xref" href="MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Node.html">TreeMock.Node</a>&gt;</div>
+    <div><span class="xref">System.IComparable</span>&lt;<a class="xref" href="MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Edge.html">TreeMock.Edge</a>&gt;</div>
     <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Edge.html">TreeMock.Edge</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
@@ -123,7 +124,7 @@
   <h6><strong>Assembly</strong>: MoreStructures.Tests.dll</h6>
   <h5 id="MoreStructures_Tests_RecImmTrees_Conversions_TreeMock_Edge_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Edge : IRecImmDictIndexedTreeEdge&lt;TreeMock.Edge, TreeMock.Node&gt;, IEquatable&lt;TreeMock.Edge&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class Edge : IRecImmDictIndexedTreeEdge&lt;TreeMock.Edge, TreeMock.Node&gt;, IComparable&lt;TreeMock.Edge&gt;, IEquatable&lt;TreeMock.Edge&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -191,9 +192,61 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_RecImmTrees_Conversions_TreeMock_Edge_CompareTo_MoreStructures_Tests_RecImmTrees_Conversions_TreeMock_Edge_.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Edge.CompareTo(MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Edge)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/RecImmTrees/Conversions/TreeMock.cs/#L14">View Source</a>
+  </span>
+  <a id="MoreStructures_Tests_RecImmTrees_Conversions_TreeMock_Edge_CompareTo_" data-uid="MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Edge.CompareTo*"></a>
+  <h4 id="MoreStructures_Tests_RecImmTrees_Conversions_TreeMock_Edge_CompareTo_MoreStructures_Tests_RecImmTrees_Conversions_TreeMock_Edge_" data-uid="MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Edge.CompareTo(MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Edge)">CompareTo(TreeMock.Edge)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CompareTo(TreeMock.Edge other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Edge.html">TreeMock.Edge</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="MoreStructures.RecImmTrees.IRecImmDictIndexedTreeEdge-2.html">IRecImmDictIndexedTreeEdge&lt;TEdge, TNode&gt;</a>
+  </div>
+  <div>
+      <span class="xref">System.IComparable&lt;T&gt;</span>
   </div>
   <div>
       <span class="xref">System.IEquatable&lt;T&gt;</span>

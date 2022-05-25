@@ -1181,6 +1181,25 @@ references:
   isSpec: "True"
   fullName: MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree
   nameWithType: NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree
+- uid: MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder
+  name: UkkonenSuffixTreeBuilder
+  href: api/MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.html
+  commentId: T:MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder
+  fullName: MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder
+  nameWithType: UkkonenSuffixTreeBuilder
+- uid: MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator)
+  name: BuildTree(TextWithTerminator)
+  href: api/MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.html#MoreStructures_SuffixTrees_Builders_UkkonenSuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator_
+  commentId: M:MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator)
+  fullName: MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator)
+  nameWithType: UkkonenSuffixTreeBuilder.BuildTree(TextWithTerminator)
+- uid: MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.BuildTree*
+  name: BuildTree
+  href: api/MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.html#MoreStructures_SuffixTrees_Builders_UkkonenSuffixTreeBuilder_BuildTree_
+  commentId: Overload:MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.BuildTree
+  isSpec: "True"
+  fullName: MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.BuildTree
+  nameWithType: UkkonenSuffixTreeBuilder.BuildTree
 - uid: MoreStructures.SuffixTrees.SuffixTreeEdge
   name: SuffixTreeEdge
   href: api/MoreStructures.SuffixTrees.SuffixTreeEdge.html
@@ -1200,6 +1219,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.SuffixTrees.SuffixTreeEdge.SuffixTreeEdge
   nameWithType: SuffixTreeEdge.SuffixTreeEdge
+- uid: MoreStructures.SuffixTrees.SuffixTreeEdge.CompareTo(MoreStructures.SuffixTrees.SuffixTreeEdge)
+  name: CompareTo(SuffixTreeEdge)
+  href: api/MoreStructures.SuffixTrees.SuffixTreeEdge.html#MoreStructures_SuffixTrees_SuffixTreeEdge_CompareTo_MoreStructures_SuffixTrees_SuffixTreeEdge_
+  commentId: M:MoreStructures.SuffixTrees.SuffixTreeEdge.CompareTo(MoreStructures.SuffixTrees.SuffixTreeEdge)
+  fullName: MoreStructures.SuffixTrees.SuffixTreeEdge.CompareTo(MoreStructures.SuffixTrees.SuffixTreeEdge)
+  nameWithType: SuffixTreeEdge.CompareTo(SuffixTreeEdge)
+- uid: MoreStructures.SuffixTrees.SuffixTreeEdge.CompareTo*
+  name: CompareTo
+  href: api/MoreStructures.SuffixTrees.SuffixTreeEdge.html#MoreStructures_SuffixTrees_SuffixTreeEdge_CompareTo_
+  commentId: Overload:MoreStructures.SuffixTrees.SuffixTreeEdge.CompareTo
+  isSpec: "True"
+  fullName: MoreStructures.SuffixTrees.SuffixTreeEdge.CompareTo
+  nameWithType: SuffixTreeEdge.CompareTo
 - uid: MoreStructures.SuffixTrees.SuffixTreeEdge.Length
   name: Length
   href: api/MoreStructures.SuffixTrees.SuffixTreeEdge.html#MoreStructures_SuffixTrees_SuffixTreeEdge_Length
@@ -1408,25 +1440,25 @@ references:
   commentId: N:MoreStructures.SuffixTries.Builders
   fullName: MoreStructures.SuffixTries.Builders
   nameWithType: MoreStructures.SuffixTries.Builders
-- uid: MoreStructures.SuffixTries.Builders.SuffixTrieBuilder
-  name: SuffixTrieBuilder
-  href: api/MoreStructures.SuffixTries.Builders.SuffixTrieBuilder.html
-  commentId: T:MoreStructures.SuffixTries.Builders.SuffixTrieBuilder
-  fullName: MoreStructures.SuffixTries.Builders.SuffixTrieBuilder
-  nameWithType: SuffixTrieBuilder
-- uid: MoreStructures.SuffixTries.Builders.SuffixTrieBuilder.BuildTree(MoreStructures.TextWithTerminator)
+- uid: MoreStructures.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilder
+  name: NaivePartiallyRecursiveSuffixTrieBuilder
+  href: api/MoreStructures.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilder.html
+  commentId: T:MoreStructures.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilder
+  fullName: MoreStructures.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilder
+  nameWithType: NaivePartiallyRecursiveSuffixTrieBuilder
+- uid: MoreStructures.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilder.BuildTree(MoreStructures.TextWithTerminator)
   name: BuildTree(TextWithTerminator)
-  href: api/MoreStructures.SuffixTries.Builders.SuffixTrieBuilder.html#MoreStructures_SuffixTries_Builders_SuffixTrieBuilder_BuildTree_MoreStructures_TextWithTerminator_
-  commentId: M:MoreStructures.SuffixTries.Builders.SuffixTrieBuilder.BuildTree(MoreStructures.TextWithTerminator)
-  fullName: MoreStructures.SuffixTries.Builders.SuffixTrieBuilder.BuildTree(MoreStructures.TextWithTerminator)
-  nameWithType: SuffixTrieBuilder.BuildTree(TextWithTerminator)
-- uid: MoreStructures.SuffixTries.Builders.SuffixTrieBuilder.BuildTree*
+  href: api/MoreStructures.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilder.html#MoreStructures_SuffixTries_Builders_NaivePartiallyRecursiveSuffixTrieBuilder_BuildTree_MoreStructures_TextWithTerminator_
+  commentId: M:MoreStructures.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilder.BuildTree(MoreStructures.TextWithTerminator)
+  fullName: MoreStructures.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilder.BuildTree(MoreStructures.TextWithTerminator)
+  nameWithType: NaivePartiallyRecursiveSuffixTrieBuilder.BuildTree(TextWithTerminator)
+- uid: MoreStructures.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilder.BuildTree*
   name: BuildTree
-  href: api/MoreStructures.SuffixTries.Builders.SuffixTrieBuilder.html#MoreStructures_SuffixTries_Builders_SuffixTrieBuilder_BuildTree_
-  commentId: Overload:MoreStructures.SuffixTries.Builders.SuffixTrieBuilder.BuildTree
+  href: api/MoreStructures.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilder.html#MoreStructures_SuffixTries_Builders_NaivePartiallyRecursiveSuffixTrieBuilder_BuildTree_
+  commentId: Overload:MoreStructures.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilder.BuildTree
   isSpec: "True"
-  fullName: MoreStructures.SuffixTries.Builders.SuffixTrieBuilder.BuildTree
-  nameWithType: SuffixTrieBuilder.BuildTree
+  fullName: MoreStructures.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilder.BuildTree
+  nameWithType: NaivePartiallyRecursiveSuffixTrieBuilder.BuildTree
 - uid: MoreStructures.SuffixTries.SuffixTrieEdge
   name: SuffixTrieEdge
   href: api/MoreStructures.SuffixTries.SuffixTrieEdge.html
@@ -1446,6 +1478,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.SuffixTries.SuffixTrieEdge.SuffixTrieEdge
   nameWithType: SuffixTrieEdge.SuffixTrieEdge
+- uid: MoreStructures.SuffixTries.SuffixTrieEdge.CompareTo(MoreStructures.SuffixTries.SuffixTrieEdge)
+  name: CompareTo(SuffixTrieEdge)
+  href: api/MoreStructures.SuffixTries.SuffixTrieEdge.html#MoreStructures_SuffixTries_SuffixTrieEdge_CompareTo_MoreStructures_SuffixTries_SuffixTrieEdge_
+  commentId: M:MoreStructures.SuffixTries.SuffixTrieEdge.CompareTo(MoreStructures.SuffixTries.SuffixTrieEdge)
+  fullName: MoreStructures.SuffixTries.SuffixTrieEdge.CompareTo(MoreStructures.SuffixTries.SuffixTrieEdge)
+  nameWithType: SuffixTrieEdge.CompareTo(SuffixTrieEdge)
+- uid: MoreStructures.SuffixTries.SuffixTrieEdge.CompareTo*
+  name: CompareTo
+  href: api/MoreStructures.SuffixTries.SuffixTrieEdge.html#MoreStructures_SuffixTries_SuffixTrieEdge_CompareTo_
+  commentId: Overload:MoreStructures.SuffixTries.SuffixTrieEdge.CompareTo
+  isSpec: "True"
+  fullName: MoreStructures.SuffixTries.SuffixTrieEdge.CompareTo
+  nameWithType: SuffixTrieEdge.CompareTo
 - uid: MoreStructures.SuffixTries.SuffixTrieEdge.Index
   name: Index
   href: api/MoreStructures.SuffixTries.SuffixTrieEdge.html#MoreStructures_SuffixTries_SuffixTrieEdge_Index
@@ -2121,6 +2166,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Edge.Edge
   nameWithType: TreeMock.Edge.Edge
+- uid: MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Edge.CompareTo(MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Edge)
+  name: CompareTo(TreeMock.Edge)
+  href: api/MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Edge.html#MoreStructures_Tests_RecImmTrees_Conversions_TreeMock_Edge_CompareTo_MoreStructures_Tests_RecImmTrees_Conversions_TreeMock_Edge_
+  commentId: M:MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Edge.CompareTo(MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Edge)
+  fullName: MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Edge.CompareTo(MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Edge)
+  nameWithType: TreeMock.Edge.CompareTo(TreeMock.Edge)
+- uid: MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Edge.CompareTo*
+  name: CompareTo
+  href: api/MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Edge.html#MoreStructures_Tests_RecImmTrees_Conversions_TreeMock_Edge_CompareTo_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Edge.CompareTo
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Edge.CompareTo
+  nameWithType: TreeMock.Edge.CompareTo
 - uid: MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Edge.Id
   name: Id
   href: api/MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Edge.html#MoreStructures_Tests_RecImmTrees_Conversions_TreeMock_Edge_Id
@@ -2914,12 +2972,125 @@ references:
   commentId: N:MoreStructures.Tests.SuffixTrees.Builders
   fullName: MoreStructures.Tests.SuffixTrees.Builders
   nameWithType: MoreStructures.Tests.SuffixTrees.Builders
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences
+  name: BuilderEquivalences
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.html
+  commentId: T:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences
+  nameWithType: BuilderEquivalences
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId
+  name: BuilderEquivalences.EquivalenceId
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.html
+  commentId: T:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId
+  nameWithType: BuilderEquivalences.EquivalenceId
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.EmptyString
+  name: EmptyString
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_EmptyString
+  commentId: F:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.EmptyString
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.EmptyString
+  nameWithType: BuilderEquivalences.EquivalenceId.EmptyString
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.SingleChar
+  name: SingleChar
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_SingleChar
+  commentId: F:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.SingleChar
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.SingleChar
+  nameWithType: BuilderEquivalences.EquivalenceId.SingleChar
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.ThreeChars_ExtendingPrefixes
+  name: ThreeChars_ExtendingPrefixes
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_ThreeChars_ExtendingPrefixes
+  commentId: F:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.ThreeChars_ExtendingPrefixes
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.ThreeChars_ExtendingPrefixes
+  nameWithType: BuilderEquivalences.EquivalenceId.ThreeChars_ExtendingPrefixes
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.ThreeCharsString_DifferentPrefixes
+  name: ThreeCharsString_DifferentPrefixes
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_ThreeCharsString_DifferentPrefixes
+  commentId: F:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.ThreeCharsString_DifferentPrefixes
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.ThreeCharsString_DifferentPrefixes
+  nameWithType: BuilderEquivalences.EquivalenceId.ThreeCharsString_DifferentPrefixes
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.ThreeCharsString_PartiallySamePrefixes
+  name: ThreeCharsString_PartiallySamePrefixes
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_ThreeCharsString_PartiallySamePrefixes
+  commentId: F:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.ThreeCharsString_PartiallySamePrefixes
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.ThreeCharsString_PartiallySamePrefixes
+  nameWithType: BuilderEquivalences.EquivalenceId.ThreeCharsString_PartiallySamePrefixes
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.ThreeCharsString_SamePrefixes
+  name: ThreeCharsString_SamePrefixes
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_ThreeCharsString_SamePrefixes
+  commentId: F:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.ThreeCharsString_SamePrefixes
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.ThreeCharsString_SamePrefixes
+  nameWithType: BuilderEquivalences.EquivalenceId.ThreeCharsString_SamePrefixes
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoChars_ExtendingPrefixes
+  name: TwoChars_ExtendingPrefixes
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_TwoChars_ExtendingPrefixes
+  commentId: F:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoChars_ExtendingPrefixes
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoChars_ExtendingPrefixes
+  nameWithType: BuilderEquivalences.EquivalenceId.TwoChars_ExtendingPrefixes
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoCharsString_DifferentPrefixes
+  name: TwoCharsString_DifferentPrefixes
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_TwoCharsString_DifferentPrefixes
+  commentId: F:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoCharsString_DifferentPrefixes
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoCharsString_DifferentPrefixes
+  nameWithType: BuilderEquivalences.EquivalenceId.TwoCharsString_DifferentPrefixes
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoCharsString_SamePrefixes
+  name: TwoCharsString_SamePrefixes
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_TwoCharsString_SamePrefixes
+  commentId: F:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoCharsString_SamePrefixes
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoCharsString_SamePrefixes
+  nameWithType: BuilderEquivalences.EquivalenceId.TwoCharsString_SamePrefixes
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.Equivalences
+  name: Equivalences
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_Equivalences
+  commentId: F:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.Equivalences
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.Equivalences
+  nameWithType: BuilderEquivalences.Equivalences
+- uid: MoreStructures.Tests.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilderTests
+  name: NaivePartiallyRecursiveSuffixTreeBuilderTests
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilderTests.html
+  commentId: T:MoreStructures.Tests.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilderTests
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilderTests
+  nameWithType: NaivePartiallyRecursiveSuffixTreeBuilderTests
+- uid: MoreStructures.Tests.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilderTests.#ctor
+  name: NaivePartiallyRecursiveSuffixTreeBuilderTests()
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilderTests__ctor
+  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilderTests.#ctor
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilderTests.NaivePartiallyRecursiveSuffixTreeBuilderTests()
+  nameWithType: NaivePartiallyRecursiveSuffixTreeBuilderTests.NaivePartiallyRecursiveSuffixTreeBuilderTests()
+- uid: MoreStructures.Tests.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilderTests.#ctor*
+  name: NaivePartiallyRecursiveSuffixTreeBuilderTests
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilderTests__ctor_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilderTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilderTests.NaivePartiallyRecursiveSuffixTreeBuilderTests
+  nameWithType: NaivePartiallyRecursiveSuffixTreeBuilderTests.NaivePartiallyRecursiveSuffixTreeBuilderTests
 - uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests
   name: SuffixTreeBuilderTests
   href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html
   commentId: T:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests
   fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests
   nameWithType: SuffixTreeBuilderTests
+- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.#ctor(MoreStructures.SuffixStructures.Builders.IBuilder{MoreStructures.SuffixTrees.SuffixTreeEdge,MoreStructures.SuffixTrees.SuffixTreeNode})
+  name: SuffixTreeBuilderTests(IBuilder<SuffixTreeEdge, SuffixTreeNode>)
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests__ctor_MoreStructures_SuffixStructures_Builders_IBuilder_MoreStructures_SuffixTrees_SuffixTreeEdge_MoreStructures_SuffixTrees_SuffixTreeNode__
+  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.#ctor(MoreStructures.SuffixStructures.Builders.IBuilder{MoreStructures.SuffixTrees.SuffixTreeEdge,MoreStructures.SuffixTrees.SuffixTreeNode})
+  name.vb: SuffixTreeBuilderTests(IBuilder(Of SuffixTreeEdge, SuffixTreeNode))
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.SuffixTreeBuilderTests(MoreStructures.SuffixStructures.Builders.IBuilder<MoreStructures.SuffixTrees.SuffixTreeEdge, MoreStructures.SuffixTrees.SuffixTreeNode>)
+  fullName.vb: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.SuffixTreeBuilderTests(MoreStructures.SuffixStructures.Builders.IBuilder(Of MoreStructures.SuffixTrees.SuffixTreeEdge, MoreStructures.SuffixTrees.SuffixTreeNode))
+  nameWithType: SuffixTreeBuilderTests.SuffixTreeBuilderTests(IBuilder<SuffixTreeEdge, SuffixTreeNode>)
+  nameWithType.vb: SuffixTreeBuilderTests.SuffixTreeBuilderTests(IBuilder(Of SuffixTreeEdge, SuffixTreeNode))
+- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.#ctor*
+  name: SuffixTreeBuilderTests
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests__ctor_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.SuffixTreeBuilderTests
+  nameWithType: SuffixTreeBuilderTests.SuffixTreeBuilderTests
+- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.Builder
+  name: Builder
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_Builder
+  commentId: F:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.Builder
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.Builder
+  nameWithType: SuffixTreeBuilderTests.Builder
 - uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_BuildsExampleTreeFromExampleText
   name: BuildTree_BuildsExampleTreeFromExampleText()
   href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_BuildsExampleTreeFromExampleText
@@ -2933,19 +3104,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_BuildsExampleTreeFromExampleText
   nameWithType: SuffixTreeBuilderTests.BuildTree_BuildsExampleTreeFromExampleText
-- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_EmptyString
-  name: BuildTree_EmptyString()
-  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_EmptyString
-  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_EmptyString
-  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_EmptyString()
-  nameWithType: SuffixTreeBuilderTests.BuildTree_EmptyString()
-- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_EmptyString*
-  name: BuildTree_EmptyString
-  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_EmptyString_
-  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_EmptyString
+- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_IsCorrect(MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId)
+  name: BuildTree_IsCorrect(BuilderEquivalences.EquivalenceId)
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_IsCorrect_MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_
+  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_IsCorrect(MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId)
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_IsCorrect(MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId)
+  nameWithType: SuffixTreeBuilderTests.BuildTree_IsCorrect(BuilderEquivalences.EquivalenceId)
+- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_IsCorrect*
+  name: BuildTree_IsCorrect
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_IsCorrect
   isSpec: "True"
-  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_EmptyString
-  nameWithType: SuffixTreeBuilderTests.BuildTree_EmptyString
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_IsCorrect
+  nameWithType: SuffixTreeBuilderTests.BuildTree_IsCorrect
 - uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_ReturnsAllSuffixes
   name: BuildTree_ReturnsAllSuffixes()
   href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_ReturnsAllSuffixes
@@ -2972,19 +3143,6 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_ReturnsOnlySuffixes
   nameWithType: SuffixTreeBuilderTests.BuildTree_ReturnsOnlySuffixes
-- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_SingleCharString
-  name: BuildTree_SingleCharString()
-  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_SingleCharString
-  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_SingleCharString
-  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_SingleCharString()
-  nameWithType: SuffixTreeBuilderTests.BuildTree_SingleCharString()
-- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_SingleCharString*
-  name: BuildTree_SingleCharString
-  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_SingleCharString_
-  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_SingleCharString
-  isSpec: "True"
-  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_SingleCharString
-  nameWithType: SuffixTreeBuilderTests.BuildTree_SingleCharString
 - uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_StartCorrectlySetAtLeafNodes
   name: BuildTree_StartCorrectlySetAtLeafNodes()
   href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_StartCorrectlySetAtLeafNodes
@@ -3024,84 +3182,6 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_StringIncludingTerminator
   nameWithType: SuffixTreeBuilderTests.BuildTree_StringIncludingTerminator
-- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_ThreeCharsString_DifferentPrefixes
-  name: BuildTree_ThreeCharsString_DifferentPrefixes()
-  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_ThreeCharsString_DifferentPrefixes
-  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_ThreeCharsString_DifferentPrefixes
-  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_ThreeCharsString_DifferentPrefixes()
-  nameWithType: SuffixTreeBuilderTests.BuildTree_ThreeCharsString_DifferentPrefixes()
-- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_ThreeCharsString_DifferentPrefixes*
-  name: BuildTree_ThreeCharsString_DifferentPrefixes
-  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_ThreeCharsString_DifferentPrefixes_
-  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_ThreeCharsString_DifferentPrefixes
-  isSpec: "True"
-  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_ThreeCharsString_DifferentPrefixes
-  nameWithType: SuffixTreeBuilderTests.BuildTree_ThreeCharsString_DifferentPrefixes
-- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_ThreeCharsString_ExtendingPrefixes
-  name: BuildTree_ThreeCharsString_ExtendingPrefixes()
-  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_ThreeCharsString_ExtendingPrefixes
-  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_ThreeCharsString_ExtendingPrefixes
-  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_ThreeCharsString_ExtendingPrefixes()
-  nameWithType: SuffixTreeBuilderTests.BuildTree_ThreeCharsString_ExtendingPrefixes()
-- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_ThreeCharsString_ExtendingPrefixes*
-  name: BuildTree_ThreeCharsString_ExtendingPrefixes
-  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_ThreeCharsString_ExtendingPrefixes_
-  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_ThreeCharsString_ExtendingPrefixes
-  isSpec: "True"
-  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_ThreeCharsString_ExtendingPrefixes
-  nameWithType: SuffixTreeBuilderTests.BuildTree_ThreeCharsString_ExtendingPrefixes
-- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_ThreeCharsString_PartiallySamePrefixes
-  name: BuildTree_ThreeCharsString_PartiallySamePrefixes()
-  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_ThreeCharsString_PartiallySamePrefixes
-  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_ThreeCharsString_PartiallySamePrefixes
-  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_ThreeCharsString_PartiallySamePrefixes()
-  nameWithType: SuffixTreeBuilderTests.BuildTree_ThreeCharsString_PartiallySamePrefixes()
-- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_ThreeCharsString_PartiallySamePrefixes*
-  name: BuildTree_ThreeCharsString_PartiallySamePrefixes
-  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_ThreeCharsString_PartiallySamePrefixes_
-  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_ThreeCharsString_PartiallySamePrefixes
-  isSpec: "True"
-  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_ThreeCharsString_PartiallySamePrefixes
-  nameWithType: SuffixTreeBuilderTests.BuildTree_ThreeCharsString_PartiallySamePrefixes
-- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_ThreeCharsString_SamePrefixes
-  name: BuildTree_ThreeCharsString_SamePrefixes()
-  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_ThreeCharsString_SamePrefixes
-  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_ThreeCharsString_SamePrefixes
-  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_ThreeCharsString_SamePrefixes()
-  nameWithType: SuffixTreeBuilderTests.BuildTree_ThreeCharsString_SamePrefixes()
-- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_ThreeCharsString_SamePrefixes*
-  name: BuildTree_ThreeCharsString_SamePrefixes
-  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_ThreeCharsString_SamePrefixes_
-  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_ThreeCharsString_SamePrefixes
-  isSpec: "True"
-  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_ThreeCharsString_SamePrefixes
-  nameWithType: SuffixTreeBuilderTests.BuildTree_ThreeCharsString_SamePrefixes
-- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_TwoCharsString_DifferentPrefixes
-  name: BuildTree_TwoCharsString_DifferentPrefixes()
-  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_TwoCharsString_DifferentPrefixes
-  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_TwoCharsString_DifferentPrefixes
-  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_TwoCharsString_DifferentPrefixes()
-  nameWithType: SuffixTreeBuilderTests.BuildTree_TwoCharsString_DifferentPrefixes()
-- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_TwoCharsString_DifferentPrefixes*
-  name: BuildTree_TwoCharsString_DifferentPrefixes
-  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_TwoCharsString_DifferentPrefixes_
-  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_TwoCharsString_DifferentPrefixes
-  isSpec: "True"
-  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_TwoCharsString_DifferentPrefixes
-  nameWithType: SuffixTreeBuilderTests.BuildTree_TwoCharsString_DifferentPrefixes
-- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_TwoCharsString_SamePrefixes
-  name: BuildTree_TwoCharsString_SamePrefixes()
-  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_TwoCharsString_SamePrefixes
-  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_TwoCharsString_SamePrefixes
-  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_TwoCharsString_SamePrefixes()
-  nameWithType: SuffixTreeBuilderTests.BuildTree_TwoCharsString_SamePrefixes()
-- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_TwoCharsString_SamePrefixes*
-  name: BuildTree_TwoCharsString_SamePrefixes
-  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_TwoCharsString_SamePrefixes_
-  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_TwoCharsString_SamePrefixes
-  isSpec: "True"
-  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_TwoCharsString_SamePrefixes
-  nameWithType: SuffixTreeBuilderTests.BuildTree_TwoCharsString_SamePrefixes
 - uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_UsesTerminatorForMatchToDistinguishSuffixesFromAnySubstring
   name: BuildTree_UsesTerminatorForMatchToDistinguishSuffixesFromAnySubstring()
   href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_UsesTerminatorForMatchToDistinguishSuffixesFromAnySubstring
@@ -3115,6 +3195,154 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_UsesTerminatorForMatchToDistinguishSuffixesFromAnySubstring
   nameWithType: SuffixTreeBuilderTests.BuildTree_UsesTerminatorForMatchToDistinguishSuffixesFromAnySubstring
+- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen
+  name: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.html
+  commentId: N:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen
+  nameWithType: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen
+- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests
+  name: IterationStateTests
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.html
+  commentId: T:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests
+  nameWithType: IterationStateTests
+- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_NullAtStart
+  name: ActivePointFollowedByCurrentChar_NullAtStart()
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_IterationStateTests_ActivePointFollowedByCurrentChar_NullAtStart
+  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_NullAtStart
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_NullAtStart()
+  nameWithType: IterationStateTests.ActivePointFollowedByCurrentChar_NullAtStart()
+- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_NullAtStart*
+  name: ActivePointFollowedByCurrentChar_NullAtStart
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_IterationStateTests_ActivePointFollowedByCurrentChar_NullAtStart_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_NullAtStart
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_NullAtStart
+  nameWithType: IterationStateTests.ActivePointFollowedByCurrentChar_NullAtStart
+- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_ThrowsExceptionBeforeStartingAPhase
+  name: ActivePointFollowedByCurrentChar_ThrowsExceptionBeforeStartingAPhase()
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_IterationStateTests_ActivePointFollowedByCurrentChar_ThrowsExceptionBeforeStartingAPhase
+  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_ThrowsExceptionBeforeStartingAPhase
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_ThrowsExceptionBeforeStartingAPhase()
+  nameWithType: IterationStateTests.ActivePointFollowedByCurrentChar_ThrowsExceptionBeforeStartingAPhase()
+- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_ThrowsExceptionBeforeStartingAPhase*
+  name: ActivePointFollowedByCurrentChar_ThrowsExceptionBeforeStartingAPhase
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_IterationStateTests_ActivePointFollowedByCurrentChar_ThrowsExceptionBeforeStartingAPhase_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_ThrowsExceptionBeforeStartingAPhase
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_ThrowsExceptionBeforeStartingAPhase
+  nameWithType: IterationStateTests.ActivePointFollowedByCurrentChar_ThrowsExceptionBeforeStartingAPhase
+- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_ThrowsExceptionWhenInvalidActivePoint
+  name: ActivePointFollowedByCurrentChar_ThrowsExceptionWhenInvalidActivePoint()
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_IterationStateTests_ActivePointFollowedByCurrentChar_ThrowsExceptionWhenInvalidActivePoint
+  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_ThrowsExceptionWhenInvalidActivePoint
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_ThrowsExceptionWhenInvalidActivePoint()
+  nameWithType: IterationStateTests.ActivePointFollowedByCurrentChar_ThrowsExceptionWhenInvalidActivePoint()
+- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_ThrowsExceptionWhenInvalidActivePoint*
+  name: ActivePointFollowedByCurrentChar_ThrowsExceptionWhenInvalidActivePoint
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_IterationStateTests_ActivePointFollowedByCurrentChar_ThrowsExceptionWhenInvalidActivePoint_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_ThrowsExceptionWhenInvalidActivePoint
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_ThrowsExceptionWhenInvalidActivePoint
+  nameWithType: IterationStateTests.ActivePointFollowedByCurrentChar_ThrowsExceptionWhenInvalidActivePoint
+- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_FalseCases
+  name: ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_FalseCases()
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_IterationStateTests_ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_FalseCases
+  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_FalseCases
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_FalseCases()
+  nameWithType: IterationStateTests.ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_FalseCases()
+- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_FalseCases*
+  name: ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_FalseCases
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_IterationStateTests_ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_FalseCases_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_FalseCases
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_FalseCases
+  nameWithType: IterationStateTests.ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_FalseCases
+- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_TrueCases
+  name: ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_TrueCases()
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_IterationStateTests_ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_TrueCases
+  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_TrueCases
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_TrueCases()
+  nameWithType: IterationStateTests.ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_TrueCases()
+- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_TrueCases*
+  name: ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_TrueCases
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_IterationStateTests_ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_TrueCases_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_TrueCases
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_TrueCases
+  nameWithType: IterationStateTests.ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_TrueCases
+- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.IsThereANextPhase_IsCorrect
+  name: IsThereANextPhase_IsCorrect()
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_IterationStateTests_IsThereANextPhase_IsCorrect
+  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.IsThereANextPhase_IsCorrect
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.IsThereANextPhase_IsCorrect()
+  nameWithType: IterationStateTests.IsThereANextPhase_IsCorrect()
+- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.IsThereANextPhase_IsCorrect*
+  name: IsThereANextPhase_IsCorrect
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_IterationStateTests_IsThereANextPhase_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.IsThereANextPhase_IsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.IsThereANextPhase_IsCorrect
+  nameWithType: IterationStateTests.IsThereANextPhase_IsCorrect
+- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.Root_IsSetOnConstruction
+  name: Root_IsSetOnConstruction()
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_IterationStateTests_Root_IsSetOnConstruction
+  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.Root_IsSetOnConstruction
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.Root_IsSetOnConstruction()
+  nameWithType: IterationStateTests.Root_IsSetOnConstruction()
+- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.Root_IsSetOnConstruction*
+  name: Root_IsSetOnConstruction
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_IterationStateTests_Root_IsSetOnConstruction_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.Root_IsSetOnConstruction
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.Root_IsSetOnConstruction
+  nameWithType: IterationStateTests.Root_IsSetOnConstruction
+- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.StillRemainingSuffixesInCurrentPhase_AccessProtectedWhenNotInPhase
+  name: StillRemainingSuffixesInCurrentPhase_AccessProtectedWhenNotInPhase()
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_IterationStateTests_StillRemainingSuffixesInCurrentPhase_AccessProtectedWhenNotInPhase
+  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.StillRemainingSuffixesInCurrentPhase_AccessProtectedWhenNotInPhase
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.StillRemainingSuffixesInCurrentPhase_AccessProtectedWhenNotInPhase()
+  nameWithType: IterationStateTests.StillRemainingSuffixesInCurrentPhase_AccessProtectedWhenNotInPhase()
+- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.StillRemainingSuffixesInCurrentPhase_AccessProtectedWhenNotInPhase*
+  name: StillRemainingSuffixesInCurrentPhase_AccessProtectedWhenNotInPhase
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_IterationStateTests_StillRemainingSuffixesInCurrentPhase_AccessProtectedWhenNotInPhase_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.StillRemainingSuffixesInCurrentPhase_AccessProtectedWhenNotInPhase
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.StillRemainingSuffixesInCurrentPhase_AccessProtectedWhenNotInPhase
+  nameWithType: IterationStateTests.StillRemainingSuffixesInCurrentPhase_AccessProtectedWhenNotInPhase
+- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.Text_IsSetOnConstruction
+  name: Text_IsSetOnConstruction()
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_IterationStateTests_Text_IsSetOnConstruction
+  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.Text_IsSetOnConstruction
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.Text_IsSetOnConstruction()
+  nameWithType: IterationStateTests.Text_IsSetOnConstruction()
+- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.Text_IsSetOnConstruction*
+  name: Text_IsSetOnConstruction
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_IterationStateTests_Text_IsSetOnConstruction_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.Text_IsSetOnConstruction
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.Text_IsSetOnConstruction
+  nameWithType: IterationStateTests.Text_IsSetOnConstruction
+- uid: MoreStructures.Tests.SuffixTrees.Builders.UkkonenSuffixTreeBuilderTests
+  name: UkkonenSuffixTreeBuilderTests
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.UkkonenSuffixTreeBuilderTests.html
+  commentId: T:MoreStructures.Tests.SuffixTrees.Builders.UkkonenSuffixTreeBuilderTests
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.UkkonenSuffixTreeBuilderTests
+  nameWithType: UkkonenSuffixTreeBuilderTests
+- uid: MoreStructures.Tests.SuffixTrees.Builders.UkkonenSuffixTreeBuilderTests.#ctor
+  name: UkkonenSuffixTreeBuilderTests()
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.UkkonenSuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_UkkonenSuffixTreeBuilderTests__ctor
+  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.UkkonenSuffixTreeBuilderTests.#ctor
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.UkkonenSuffixTreeBuilderTests.UkkonenSuffixTreeBuilderTests()
+  nameWithType: UkkonenSuffixTreeBuilderTests.UkkonenSuffixTreeBuilderTests()
+- uid: MoreStructures.Tests.SuffixTrees.Builders.UkkonenSuffixTreeBuilderTests.#ctor*
+  name: UkkonenSuffixTreeBuilderTests
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.UkkonenSuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_UkkonenSuffixTreeBuilderTests__ctor_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.UkkonenSuffixTreeBuilderTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.UkkonenSuffixTreeBuilderTests.UkkonenSuffixTreeBuilderTests
+  nameWithType: UkkonenSuffixTreeBuilderTests.UkkonenSuffixTreeBuilderTests
 - uid: MoreStructures.Tests.SuffixTrees.Matching
   name: MoreStructures.Tests.SuffixTrees.Matching
   href: api/MoreStructures.Tests.SuffixTrees.Matching.html
@@ -3185,6 +3413,19 @@ references:
   commentId: T:MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests
   fullName: MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests
   nameWithType: SuffixTreeEdgeTests
+- uid: MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.CompareTo_IsCorrect
+  name: CompareTo_IsCorrect()
+  href: api/MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.html#MoreStructures_Tests_SuffixTrees_SuffixTreeEdgeTests_CompareTo_IsCorrect
+  commentId: M:MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.CompareTo_IsCorrect
+  fullName: MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.CompareTo_IsCorrect()
+  nameWithType: SuffixTreeEdgeTests.CompareTo_IsCorrect()
+- uid: MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.CompareTo_IsCorrect*
+  name: CompareTo_IsCorrect
+  href: api/MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.html#MoreStructures_Tests_SuffixTrees_SuffixTreeEdgeTests_CompareTo_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.CompareTo_IsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.CompareTo_IsCorrect
+  nameWithType: SuffixTreeEdgeTests.CompareTo_IsCorrect
 - uid: MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.Ctor_ValidIndex
   name: Ctor_ValidIndex()
   href: api/MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.html#MoreStructures_Tests_SuffixTrees_SuffixTreeEdgeTests_Ctor_ValidIndex
@@ -3346,12 +3587,47 @@ references:
   commentId: N:MoreStructures.Tests.SuffixTries.Builders
   fullName: MoreStructures.Tests.SuffixTries.Builders
   nameWithType: MoreStructures.Tests.SuffixTries.Builders
+- uid: MoreStructures.Tests.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilderTests
+  name: NaivePartiallyRecursiveSuffixTrieBuilderTests
+  href: api/MoreStructures.Tests.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilderTests.html
+  commentId: T:MoreStructures.Tests.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilderTests
+  fullName: MoreStructures.Tests.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilderTests
+  nameWithType: NaivePartiallyRecursiveSuffixTrieBuilderTests
+- uid: MoreStructures.Tests.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilderTests.#ctor
+  name: NaivePartiallyRecursiveSuffixTrieBuilderTests()
+  href: api/MoreStructures.Tests.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilderTests.html#MoreStructures_Tests_SuffixTries_Builders_NaivePartiallyRecursiveSuffixTrieBuilderTests__ctor
+  commentId: M:MoreStructures.Tests.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilderTests.#ctor
+  fullName: MoreStructures.Tests.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilderTests.NaivePartiallyRecursiveSuffixTrieBuilderTests()
+  nameWithType: NaivePartiallyRecursiveSuffixTrieBuilderTests.NaivePartiallyRecursiveSuffixTrieBuilderTests()
+- uid: MoreStructures.Tests.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilderTests.#ctor*
+  name: NaivePartiallyRecursiveSuffixTrieBuilderTests
+  href: api/MoreStructures.Tests.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilderTests.html#MoreStructures_Tests_SuffixTries_Builders_NaivePartiallyRecursiveSuffixTrieBuilderTests__ctor_
+  commentId: Overload:MoreStructures.Tests.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilderTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilderTests.NaivePartiallyRecursiveSuffixTrieBuilderTests
+  nameWithType: NaivePartiallyRecursiveSuffixTrieBuilderTests.NaivePartiallyRecursiveSuffixTrieBuilderTests
 - uid: MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests
   name: SuffixTrieBuilderTests
   href: api/MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.html
   commentId: T:MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests
   fullName: MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests
   nameWithType: SuffixTrieBuilderTests
+- uid: MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.#ctor(MoreStructures.SuffixStructures.Builders.IBuilder{MoreStructures.SuffixTries.SuffixTrieEdge,MoreStructures.SuffixTries.SuffixTrieNode})
+  name: SuffixTrieBuilderTests(IBuilder<SuffixTrieEdge, SuffixTrieNode>)
+  href: api/MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.html#MoreStructures_Tests_SuffixTries_Builders_SuffixTrieBuilderTests__ctor_MoreStructures_SuffixStructures_Builders_IBuilder_MoreStructures_SuffixTries_SuffixTrieEdge_MoreStructures_SuffixTries_SuffixTrieNode__
+  commentId: M:MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.#ctor(MoreStructures.SuffixStructures.Builders.IBuilder{MoreStructures.SuffixTries.SuffixTrieEdge,MoreStructures.SuffixTries.SuffixTrieNode})
+  name.vb: SuffixTrieBuilderTests(IBuilder(Of SuffixTrieEdge, SuffixTrieNode))
+  fullName: MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.SuffixTrieBuilderTests(MoreStructures.SuffixStructures.Builders.IBuilder<MoreStructures.SuffixTries.SuffixTrieEdge, MoreStructures.SuffixTries.SuffixTrieNode>)
+  fullName.vb: MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.SuffixTrieBuilderTests(MoreStructures.SuffixStructures.Builders.IBuilder(Of MoreStructures.SuffixTries.SuffixTrieEdge, MoreStructures.SuffixTries.SuffixTrieNode))
+  nameWithType: SuffixTrieBuilderTests.SuffixTrieBuilderTests(IBuilder<SuffixTrieEdge, SuffixTrieNode>)
+  nameWithType.vb: SuffixTrieBuilderTests.SuffixTrieBuilderTests(IBuilder(Of SuffixTrieEdge, SuffixTrieNode))
+- uid: MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.#ctor*
+  name: SuffixTrieBuilderTests
+  href: api/MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.html#MoreStructures_Tests_SuffixTries_Builders_SuffixTrieBuilderTests__ctor_
+  commentId: Overload:MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.SuffixTrieBuilderTests
+  nameWithType: SuffixTrieBuilderTests.SuffixTrieBuilderTests
 - uid: MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.BuildTree_BuildsExampleTrieFromExampleText
   name: BuildTree_BuildsExampleTrieFromExampleText()
   href: api/MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.html#MoreStructures_Tests_SuffixTries_Builders_SuffixTrieBuilderTests_BuildTree_BuildsExampleTrieFromExampleText
@@ -3540,6 +3816,19 @@ references:
   commentId: T:MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests
   fullName: MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests
   nameWithType: SuffixTrieEdgeTests
+- uid: MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.CompareTo_IsCorrect
+  name: CompareTo_IsCorrect()
+  href: api/MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.html#MoreStructures_Tests_SuffixTries_SuffixTrieEdgeTests_CompareTo_IsCorrect
+  commentId: M:MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.CompareTo_IsCorrect
+  fullName: MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.CompareTo_IsCorrect()
+  nameWithType: SuffixTrieEdgeTests.CompareTo_IsCorrect()
+- uid: MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.CompareTo_IsCorrect*
+  name: CompareTo_IsCorrect
+  href: api/MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.html#MoreStructures_Tests_SuffixTries_SuffixTrieEdgeTests_CompareTo_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.CompareTo_IsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.CompareTo_IsCorrect
+  nameWithType: SuffixTrieEdgeTests.CompareTo_IsCorrect
 - uid: MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.Ctor_ValidIndex
   name: Ctor_ValidIndex()
   href: api/MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.html#MoreStructures_Tests_SuffixTries_SuffixTrieEdgeTests_Ctor_ValidIndex

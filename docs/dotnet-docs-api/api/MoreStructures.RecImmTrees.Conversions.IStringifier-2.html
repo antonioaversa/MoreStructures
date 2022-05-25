@@ -91,7 +91,7 @@
   <h5 id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface IStringifier&lt;TEdge, TNode&gt;
-    where TEdge : IRecImmDictIndexedTreeEdge&lt;TEdge, TNode&gt; where TNode : IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</code></pre>
+    where TEdge : IRecImmDictIndexedTreeEdge&lt;TEdge, TNode&gt;, IComparable&lt;TEdge&gt; where TNode : IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -112,6 +112,16 @@
       </tr>
     </tbody>
   </table>
+  <h5 id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+Requires <code data-dev-comment-type="typeparamref" class="typeparamref">TEdge</code> to implement <see cref="!:IComparable&lt;T>"></see>, so that output lines are 
+sorted.
+</p>
+<p>
+Time Complexity = O(n) and Space Complexity = O(n) where n = number of nodes in the 
+<code data-dev-comment-type="typeparamref" class="typeparamref">TNode</code> structure. Each node and its incoming edge is visited once.
+</p>
+</div>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
@@ -119,7 +129,7 @@
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Conversions_IStringifier_2_EdgeAndNodeStringifier.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Conversions.IStringifier%602.EdgeAndNodeStringifier%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L31">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L41">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_EdgeAndNodeStringifier_" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.EdgeAndNodeStringifier*"></a>
   <h4 id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_EdgeAndNodeStringifier" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.EdgeAndNodeStringifier">EdgeAndNodeStringifier</h4>
@@ -150,7 +160,7 @@
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Conversions_IStringifier_2_Indent.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Conversions.IStringifier%602.Indent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L21">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L31">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_Indent_" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.Indent*"></a>
   <h4 id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_Indent" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.Indent">Indent</h4>
@@ -184,7 +194,7 @@
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Conversions_IStringifier_2_NewLine.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Conversions.IStringifier%602.NewLine%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L13">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L23">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_NewLine_" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.NewLine*"></a>
   <h4 id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_NewLine" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.NewLine">NewLine</h4>
@@ -215,7 +225,7 @@
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Conversions_IStringifier_2_RootStringifier.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Conversions.IStringifier%602.RootStringifier%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L26">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L36">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_RootStringifier_" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.RootStringifier*"></a>
   <h4 id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_RootStringifier" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.RootStringifier">RootStringifier</h4>
@@ -248,7 +258,7 @@
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Conversions_IStringifier_2_Stringify__1_.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Conversions.IStringifier%602.Stringify(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L48">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L58">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_Stringify_" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.Stringify*"></a>
   <h4 id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_Stringify__1_" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.Stringify(`1)">Stringify(TNode)</h4>
@@ -314,7 +324,7 @@ e6 -&gt; N</p>
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Conversions_IStringifier_2.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Conversions.IStringifier%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L6" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L16" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
