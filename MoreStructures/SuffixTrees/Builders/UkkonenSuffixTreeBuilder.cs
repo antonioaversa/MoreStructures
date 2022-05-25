@@ -103,7 +103,7 @@ public class UkkonenSuffixTreeBuilder
         return BuildResult(state.Root);
     }
 
-    private record BuildResultStackFrame(
+    private record struct BuildResultStackFrame(
         SuffixTreeEdge SuffixTreeEdge, 
         MutableNode MutableNode, 
         IDictionary<SuffixTreeEdge, SuffixTreeNode> ParentChildren,
