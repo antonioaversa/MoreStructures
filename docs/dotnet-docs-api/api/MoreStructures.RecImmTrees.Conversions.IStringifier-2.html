@@ -122,6 +122,17 @@ Time Complexity = O(n) and Space Complexity = O(n) where n = number of nodes in 
 <code data-dev-comment-type="typeparamref" class="typeparamref">TNode</code> structure. Each node and its incoming edge is visited once.
 </p>
 </div>
+  <h5 id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_examples"><strong>Examples</strong></h5>
+  <pre><code>var stringifier = ...
+{
+    NewLine = Environment.NewLine,
+    Indent = &apos;\t&apos;,
+    RootStringifier = n => &quot;R&quot;,
+    EdgeAndNodeStringifier = (e, n) => $&quot;{e} -> {n}&quot;,
+};
+var node = ...
+Console.WriteLine(stringifier.Stringify(node));</code></pre>
+
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
@@ -129,7 +140,7 @@ Time Complexity = O(n) and Space Complexity = O(n) where n = number of nodes in 
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Conversions_IStringifier_2_EdgeAndNodeStringifier.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Conversions.IStringifier%602.EdgeAndNodeStringifier%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L41">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L54">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_EdgeAndNodeStringifier_" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.EdgeAndNodeStringifier*"></a>
   <h4 id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_EdgeAndNodeStringifier" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.EdgeAndNodeStringifier">EdgeAndNodeStringifier</h4>
@@ -160,7 +171,7 @@ Time Complexity = O(n) and Space Complexity = O(n) where n = number of nodes in 
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Conversions_IStringifier_2_Indent.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Conversions.IStringifier%602.Indent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L31">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L44">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_Indent_" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.Indent*"></a>
   <h4 id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_Indent" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.Indent">Indent</h4>
@@ -194,7 +205,7 @@ Time Complexity = O(n) and Space Complexity = O(n) where n = number of nodes in 
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Conversions_IStringifier_2_NewLine.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Conversions.IStringifier%602.NewLine%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L23">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L36">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_NewLine_" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.NewLine*"></a>
   <h4 id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_NewLine" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.NewLine">NewLine</h4>
@@ -225,7 +236,7 @@ Time Complexity = O(n) and Space Complexity = O(n) where n = number of nodes in 
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Conversions_IStringifier_2_RootStringifier.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Conversions.IStringifier%602.RootStringifier%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L36">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L49">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_RootStringifier_" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.RootStringifier*"></a>
   <h4 id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_RootStringifier" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.RootStringifier">RootStringifier</h4>
@@ -258,7 +269,7 @@ Time Complexity = O(n) and Space Complexity = O(n) where n = number of nodes in 
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Conversions_IStringifier_2_Stringify__1_.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Conversions.IStringifier%602.Stringify(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L58">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L71">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_Stringify_" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.Stringify*"></a>
   <h4 id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_Stringify__1_" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.Stringify(`1)">Stringify(TNode)</h4>
@@ -324,7 +335,7 @@ e6 -&gt; N</p>
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Conversions_IStringifier_2.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Conversions.IStringifier%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L29" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

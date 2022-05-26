@@ -83,7 +83,8 @@
   
   <h1 id="MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2" data-uid="MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier`2" class="text-break">Class FullyIterativeStringifier&lt;TEdge, TNode&gt;
   </h1>
-  <div class="markdown level0 summary"><p><inheritdoc></inheritdoc></p>
+  <div class="markdown level0 summary"><p><inheritdoc></inheritdoc>
+Iterative implementation.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -163,8 +164,9 @@
   <h5 id="MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p><inheritdoc cref="T:MoreStructures.RecImmTrees.Conversions.IStringifier`2" path="/remarks"></inheritdoc></p>
 <p>
-Implemented fully iteratively, so not limited by call stack depth but rather by the maximum size of the stack
-stored in the heap. Convenient with deep trees (i.e. trees having a height > ~1K nodes).
+Implemented fully iteratively via a <see cref="!:Stack&lt;T>"></see>, so not limited by call stack depth but rather by 
+the maximum size of the stack stored in the heap. Convenient with deep trees (i.e. trees having a height > 
+~1K nodes).
 </p>
 </div>
   <h3 id="constructors">Constructors
@@ -174,7 +176,7 @@ stored in the heap. Convenient with deep trees (i.e. trees having a height > ~1K
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2__ctor_Func__1_System_String__Func__0__1_System_String__.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier%602.%23ctor(Func%7B%601%2CSystem.String%7D%2CFunc%7B%600%2C%601%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/FullyIterativeStringifier.cs/#L47">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/FullyIterativeStringifier.cs/#L49">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2__ctor_" data-uid="MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier`2.#ctor*"></a>
   <h4 id="MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2__ctor_Func__1_System_String__Func__0__1_System_String__" data-uid="MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier`2.#ctor(Func{`1,System.String},Func{`0,`1,System.String})">FullyIterativeStringifier(Func&lt;TNode, String&gt;, Func&lt;TEdge, TNode, String&gt;)</h4>
@@ -213,7 +215,7 @@ stored in the heap. Convenient with deep trees (i.e. trees having a height > ~1K
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_PrependLevelAfterStopIndenting.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier%602.PrependLevelAfterStopIndenting%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/FullyIterativeStringifier.cs/#L43">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/FullyIterativeStringifier.cs/#L45">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_PrependLevelAfterStopIndenting_" data-uid="MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier`2.PrependLevelAfterStopIndenting*"></a>
   <h4 id="MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_PrependLevelAfterStopIndenting" data-uid="MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier`2.PrependLevelAfterStopIndenting">PrependLevelAfterStopIndenting</h4>
@@ -245,7 +247,7 @@ stored in the heap. Convenient with deep trees (i.e. trees having a height > ~1K
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_StopIndentingLevel.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier%602.StopIndentingLevel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/FullyIterativeStringifier.cs/#L37">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/FullyIterativeStringifier.cs/#L39">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_StopIndentingLevel_" data-uid="MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier`2.StopIndentingLevel*"></a>
   <h4 id="MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_StopIndentingLevel" data-uid="MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier`2.StopIndentingLevel">StopIndentingLevel</h4>
@@ -292,7 +294,7 @@ would be 100K.
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_Stringify__1_.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier%602.Stringify(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/FullyIterativeStringifier.cs/#L55">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/FullyIterativeStringifier.cs/#L57">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_Stringify_" data-uid="MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier`2.Stringify*"></a>
   <h4 id="MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_Stringify__1_" data-uid="MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier`2.Stringify(`1)">Stringify(TNode)</h4>
@@ -354,7 +356,7 @@ would be 100K.
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/FullyIterativeStringifier.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/FullyIterativeStringifier.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
