@@ -4,12 +4,14 @@ namespace MoreStructures.RecImmTrees.Conversions;
 
 /// <summary>
 /// <inheritdoc/>
+/// Iterative implementation.
 /// </summary>
 /// <remarks>
 ///     <inheritdoc cref="IStringifier{TEdge, TNode}" path="/remarks"/>
 ///     <para>
-///     Implemented fully iteratively, so not limited by call stack depth but rather by the maximum size of the stack
-///     stored in the heap. Convenient with deep trees (i.e. trees having a height > ~1K nodes).
+///     Implemented fully iteratively via a <see cref="Stack{T}"/>, so not limited by call stack depth but rather by 
+///     the maximum size of the stack stored in the heap. Convenient with deep trees (i.e. trees having a height > 
+///     ~1K nodes).
 ///     </para>
 /// </remarks>
 public class FullyIterativeStringifier<TEdge, TNode> 

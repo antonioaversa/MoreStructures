@@ -13,6 +13,19 @@
 ///     <typeparamref name="TNode"/> structure. Each node and its incoming edge is visited once.
 ///     </para>
 /// </remarks>
+/// <example>
+/// <code>
+/// var stringifier = ...
+/// {
+///     NewLine = Environment.NewLine,
+///     Indent = '\t',
+///     RootStringifier = n => "R",
+///     EdgeAndNodeStringifier = (e, n) => $"{e} -> {n}",
+/// };
+/// var node = ...
+/// Console.WriteLine(stringifier.Stringify(node));
+/// </code>
+/// </example>
 public interface IStringifier<TEdge, TNode>
     where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>, IComparable<TEdge>
     where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode>

@@ -37,6 +37,25 @@ namespace MoreStructures.CountTrees;
 ///     </para>
 /// </para>
 /// </remarks>
+/// <example>
+/// <code>
+/// var wrapped = new Node(1) 
+/// { 
+///     Children = new Dictionary&lt;Edge, Node&gt; 
+///     {
+///         [new(1)] = new(2),
+///         [new(2)] = new(3)
+///         {
+///             ...
+///         },
+///         [new(5)] = new(6),
+///     } 
+/// };
+/// 
+/// var wrapping = new CountTreeNode&lt;Edge, Node&gt;(wrapped);
+/// Assert.AreEqual(3, wrapping.Children.Count);
+/// </code>
+/// </example>
 public sealed record CountTreeNode<TEdge, TNode>(TNode WrappedNode)
     : IRecImmDictIndexedTreeNode<CountTreeEdge<TEdge, TNode>, CountTreeNode<TEdge, TNode>>
     where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>

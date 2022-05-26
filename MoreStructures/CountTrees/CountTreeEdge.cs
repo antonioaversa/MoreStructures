@@ -18,6 +18,12 @@ namespace MoreStructures.CountTrees;
 /// Due to records semantics, two <see cref="CountTreeEdge{TEdge, TNode}"/> instances wrapping the
 /// same underlying edge, or two equivalent edges, will be equal. 
 /// </remarks>
+/// <example>
+/// <code>
+/// Edge edge = ...
+/// CountTreeEdge&lt;Edge, Node&gt; countEdge = new(edge);
+/// </code>
+/// </example>
 public sealed record CountTreeEdge<TEdge, TNode>(TEdge WrappedEdge) 
     : IRecImmDictIndexedTreeEdge<CountTreeEdge<TEdge, TNode>, CountTreeNode<TEdge, TNode>>
     where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>
