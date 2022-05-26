@@ -4,6 +4,7 @@ namespace MoreStructures.RecImmTrees.Conversions;
 
 /// <summary>
 /// <inheritdoc/>
+/// Recursive implementation.
 /// </summary>
 /// <remarks>
 ///     <inheritdoc cref="IStringifier{TEdge, TNode}" path="/remarks"/>
