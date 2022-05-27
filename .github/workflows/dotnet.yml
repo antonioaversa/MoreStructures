@@ -101,7 +101,7 @@ jobs:
         hide_complexity: false
         indicators: true
         output: 'both'
-        thresholds: '95 97'
+        thresholds: '99 99'
 
     - name: Generate Coverage Badge
       run: |
