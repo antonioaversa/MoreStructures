@@ -37,11 +37,11 @@ public class NaiveBuilder : IBuilder
     /// </remarks>
     public BWMatrix BuildMatrix(TextWithTerminator text)
     {
-        var charComparer = new CharOrTerminatorComparer(text.Terminator);
+        var comparer = new StringIncludingTerminatorComparer(text.Terminator);
         var content = Enumerable
             .Range(0, text.Length)
             .Select(i => new string(text.Skip(i).Take(text.Length - i).Concat(text.Take(i)).ToArray()))
-            .OrderBy(i => i, new StringIncludingTerminatorComparer(text.Terminator))
+            .OrderBy(i => i, comparer)
             .ToValueReadOnlyCollection();
 
         return new(text, content);
