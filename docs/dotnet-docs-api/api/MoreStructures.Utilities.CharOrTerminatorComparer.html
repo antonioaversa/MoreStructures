@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface TextWithTerminator.ISelector
+    <title>Class CharOrTerminatorComparer
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface TextWithTerminator.ISelector
+    <meta name="title" content="Class CharOrTerminatorComparer
    ">
     <meta name="generator" content="docfx 2.59.2.0">
     
@@ -78,37 +78,81 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MoreStructures.TextWithTerminator.ISelector">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.Utilities.CharOrTerminatorComparer">
   
   
-  <h1 id="MoreStructures_TextWithTerminator_ISelector" data-uid="MoreStructures.TextWithTerminator.ISelector" class="text-break">Interface TextWithTerminator.ISelector
+  <h1 id="MoreStructures_Utilities_CharOrTerminatorComparer" data-uid="MoreStructures.Utilities.CharOrTerminatorComparer" class="text-break">Class CharOrTerminatorComparer
   </h1>
-  <div class="markdown level0 summary"><p>A selector of a part of a <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a> or <a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a>.</p>
+  <div class="markdown level0 summary"><p>An implementation of <see cref="!:IComparer&lt;T>"></see> for <span class="xref">System.Char</span>, which compares chars taking into account
+the fact that the char may be a special char, called terminator, which has to be considered smaller than any other
+char.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.html">MoreStructures</a></h6>
-  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
-  <h5 id="MoreStructures_TextWithTerminator_ISelector_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ISelector</code></pre>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">CharOrTerminatorComparer</span></div>
   </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.Utilities.html">MoreStructures.Utilities</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_Utilities_CharOrTerminatorComparer_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class CharOrTerminatorComparer : IComparer&lt;char&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Utilities_CharOrTerminatorComparer__ctor_System_Char_.md&amp;value=---%0Auid%3A%20MoreStructures.Utilities.CharOrTerminatorComparer.%23ctor(System.Char)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/CharOrTerminatorComparer.cs/#L17">View Source</a>
+  </span>
+  <a id="MoreStructures_Utilities_CharOrTerminatorComparer__ctor_" data-uid="MoreStructures.Utilities.CharOrTerminatorComparer.#ctor*"></a>
+  <h4 id="MoreStructures_Utilities_CharOrTerminatorComparer__ctor_System_Char_" data-uid="MoreStructures.Utilities.CharOrTerminatorComparer.#ctor(System.Char)">CharOrTerminatorComparer(Char)</h4>
+  <div class="markdown level1 summary"><p>Builds a <a class="xref" href="MoreStructures.Utilities.CharOrTerminatorComparer.html">CharOrTerminatorComparer</a>.
+<inheritdoc cref="T:MoreStructures.Utilities.CharOrTerminatorComparer"></inheritdoc></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CharOrTerminatorComparer(char terminator)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Char</span></td>
+        <td><span class="parametername">terminator</span></td>
+        <td><p>The char to be considered as terminator.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminator_ISelector_Of_MoreStructures_TextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminator.ISelector.Of(MoreStructures.TextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Utilities_CharOrTerminatorComparer_Compare_System_Char_System_Char_.md&amp;value=---%0Auid%3A%20MoreStructures.Utilities.CharOrTerminatorComparer.Compare(System.Char%2CSystem.Char)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L34">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/CharOrTerminatorComparer.cs/#L40">View Source</a>
   </span>
-  <a id="MoreStructures_TextWithTerminator_ISelector_Of_" data-uid="MoreStructures.TextWithTerminator.ISelector.Of*"></a>
-  <h4 id="MoreStructures_TextWithTerminator_ISelector_Of_MoreStructures_TextWithTerminator_" data-uid="MoreStructures.TextWithTerminator.ISelector.Of(MoreStructures.TextWithTerminator)">Of(TextWithTerminator)</h4>
-  <div class="markdown level1 summary"><p>Extract the substring identified by this selector, out of the provided <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>.</p>
+  <a id="MoreStructures_Utilities_CharOrTerminatorComparer_Compare_" data-uid="MoreStructures.Utilities.CharOrTerminatorComparer.Compare*"></a>
+  <h4 id="MoreStructures_Utilities_CharOrTerminatorComparer_Compare_System_Char_System_Char_" data-uid="MoreStructures.Utilities.CharOrTerminatorComparer.Compare(System.Char,System.Char)">Compare(Char, Char)</h4>
+  <div class="markdown level1 summary"><p><inheritdoc></inheritdoc></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string Of(TextWithTerminator text)</code></pre>
+    <pre><code class="lang-csharp hljs">public int Compare(char x, char y)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,9 +165,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a></td>
-        <td><span class="parametername">text</span></td>
-        <td><p>The text with terminator, to extract a substring of.</p>
+        <td><span class="xref">System.Char</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p><inheritdoc path="/param[@name=&apos;x&apos;]"></inheritdoc></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Char</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p><inheritdoc path="/param[@name=&apos;y&apos;]"></inheritdoc></p>
 </td>
       </tr>
     </tbody>
@@ -138,63 +188,16 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><p>A substring, whose length depends on the selector.</p>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p><inheritdoc></inheritdoc></p>
 </td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminator_ISelector_OfRotated_MoreStructures_RotatedTextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminator.ISelector.OfRotated(MoreStructures.RotatedTextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L42">View Source</a>
-  </span>
-  <a id="MoreStructures_TextWithTerminator_ISelector_OfRotated_" data-uid="MoreStructures.TextWithTerminator.ISelector.OfRotated*"></a>
-  <h4 id="MoreStructures_TextWithTerminator_ISelector_OfRotated_MoreStructures_RotatedTextWithTerminator_" data-uid="MoreStructures.TextWithTerminator.ISelector.OfRotated(MoreStructures.RotatedTextWithTerminator)">OfRotated(RotatedTextWithTerminator)</h4>
-  <div class="markdown level1 summary"><p>Extract the substring identified by this selector, out of the provided
-<a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a>.</p>
+  <h5 id="MoreStructures_Utilities_CharOrTerminatorComparer_Compare_System_Char_System_Char__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Special rules applied by <a class="xref" href="MoreStructures.Utilities.CharOrTerminatorComparer.html">CharOrTerminatorComparer</a>:</p>
+<ul><li></li><li></li></ul>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string OfRotated(RotatedTextWithTerminator text)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a></td>
-        <td><span class="parametername">text</span></td>
-        <td><p>The text with terminator, to extract a substring of.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><p>A substring, whose length depends on the selector.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
 </article>
           </div>
           
@@ -203,10 +206,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminator_ISelector.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminator.ISelector%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Utilities_CharOrTerminatorComparer.md&amp;value=---%0Auid%3A%20MoreStructures.Utilities.CharOrTerminatorComparer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L27" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/CharOrTerminatorComparer.cs/#L8" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

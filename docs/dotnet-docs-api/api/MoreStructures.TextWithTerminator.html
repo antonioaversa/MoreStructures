@@ -93,6 +93,7 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><span class="xref">System.Collections.IEnumerable</span>&lt;<span class="xref">System.Char</span>&gt;</div>
     <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
@@ -126,8 +127,13 @@
     <pre><code class="lang-csharp hljs">public class TextWithTerminator : IEquatable&lt;TextWithTerminator&gt;</code></pre>
   </div>
   <h5 id="MoreStructures_TextWithTerminator_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>A terminator-terminated text is required by data structures like Suffix Trees.
-This object provides type safety, as it allows to tell apart terminator-terminated strings from generic ones.</p>
+  <div class="markdown level0 remarks"><p>A terminator-terminated text is required by data structures like Suffix Tries, Trees or Arrays.
+This object provides type safety, as it allows to tell apart terminator-terminated strings from generic ones.
+Consistently using <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>, rather than <span class="xref">System.String</span>, in all library
+functionalities ensures that the invariant of a terminator-terminated string is always respected.
+Most string-related functionalities provided by <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>, such as <a class="xref" href="MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_Length">Length</a> and
+<a class="xref" href="MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_Item_Index_">Item[Index]</a>, as well as <see cref="!:IEnumerable&lt;T>"></see> and <span class="xref">System.Collections.IEnumerable</span> support, are
+delegated to the underlying string.</p>
 </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -136,7 +142,7 @@ This object provides type safety, as it allows to tell apart terminator-terminat
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminator__ctor_System_String_System_Char_.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminator.%23ctor(System.String%2CSystem.Char)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L14">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L21">View Source</a>
   </span>
   <a id="MoreStructures_TextWithTerminator__ctor_" data-uid="MoreStructures.TextWithTerminator.#ctor*"></a>
   <h4 id="MoreStructures_TextWithTerminator__ctor_System_String_System_Char_" data-uid="MoreStructures.TextWithTerminator.#ctor(System.String,System.Char)">TextWithTerminator(String, Char)</h4>
@@ -160,7 +166,7 @@ This object provides type safety, as it allows to tell apart terminator-terminat
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">Text</span></td>
-        <td><p>A text string.</p>
+        <td><p>A text string, of any length (including the empty string).</p>
 </td>
       </tr>
       <tr>
@@ -172,8 +178,13 @@ This object provides type safety, as it allows to tell apart terminator-terminat
     </tbody>
   </table>
   <h5 id="MoreStructures_TextWithTerminator__ctor_System_String_System_Char__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>A terminator-terminated text is required by data structures like Suffix Trees.
-This object provides type safety, as it allows to tell apart terminator-terminated strings from generic ones.</p>
+  <div class="markdown level1 remarks"><p>A terminator-terminated text is required by data structures like Suffix Tries, Trees or Arrays.
+This object provides type safety, as it allows to tell apart terminator-terminated strings from generic ones.
+Consistently using <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>, rather than <span class="xref">System.String</span>, in all library
+functionalities ensures that the invariant of a terminator-terminated string is always respected.
+Most string-related functionalities provided by <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>, such as <a class="xref" href="MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_Length">Length</a> and
+<a class="xref" href="MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_Item_Index_">Item[Index]</a>, as well as <see cref="!:IEnumerable&lt;T>"></see> and <span class="xref">System.Collections.IEnumerable</span> support, are
+delegated to the underlying string.</p>
 </div>
   <h3 id="fields">Fields
   </h3>
@@ -182,7 +193,7 @@ This object provides type safety, as it allows to tell apart terminator-terminat
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminator_DefaultTerminator.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminator.DefaultTerminator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L33">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L49">View Source</a>
   </span>
   <h4 id="MoreStructures_TextWithTerminator_DefaultTerminator" data-uid="MoreStructures.TextWithTerminator.DefaultTerminator">DefaultTerminator</h4>
   <div class="markdown level1 summary"><p>The special character used as a default terminator for the text to build the Suffix Tree of, when no custom
@@ -215,7 +226,7 @@ terminator is specified. Should not be present in the text.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminator_Item_Index_.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminator.Item(Index)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L69">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L85">View Source</a>
   </span>
   <a id="MoreStructures_TextWithTerminator_Item_" data-uid="MoreStructures.TextWithTerminator.Item*"></a>
   <h4 id="MoreStructures_TextWithTerminator_Item_Index_" data-uid="MoreStructures.TextWithTerminator.Item(Index)">Item[Index]</h4>
@@ -265,7 +276,7 @@ terminator is specified. Should not be present in the text.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminator_Item_MoreStructures_TextWithTerminator_ISelector_.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminator.Item(MoreStructures.TextWithTerminator.ISelector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L55">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L71">View Source</a>
   </span>
   <a id="MoreStructures_TextWithTerminator_Item_" data-uid="MoreStructures.TextWithTerminator.Item*"></a>
   <h4 id="MoreStructures_TextWithTerminator_Item_MoreStructures_TextWithTerminator_ISelector_" data-uid="MoreStructures.TextWithTerminator.Item(MoreStructures.TextWithTerminator.ISelector)">Item[TextWithTerminator.ISelector]</h4>
@@ -315,7 +326,7 @@ terminator is specified. Should not be present in the text.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminator_Item_Range_.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminator.Item(Range)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L62">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L78">View Source</a>
   </span>
   <a id="MoreStructures_TextWithTerminator_Item_" data-uid="MoreStructures.TextWithTerminator.Item*"></a>
   <h4 id="MoreStructures_TextWithTerminator_Item_Range_" data-uid="MoreStructures.TextWithTerminator.Item(Range)">Item[Range]</h4>
@@ -365,7 +376,7 @@ terminator is specified. Should not be present in the text.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminator_Length.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminator.Length%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L74">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L90">View Source</a>
   </span>
   <a id="MoreStructures_TextWithTerminator_Length_" data-uid="MoreStructures.TextWithTerminator.Length*"></a>
   <h4 id="MoreStructures_TextWithTerminator_Length" data-uid="MoreStructures.TextWithTerminator.Length">Length</h4>
@@ -396,11 +407,11 @@ terminator is specified. Should not be present in the text.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminator_Terminator.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminator.Terminator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L43">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L59">View Source</a>
   </span>
   <a id="MoreStructures_TextWithTerminator_Terminator_" data-uid="MoreStructures.TextWithTerminator.Terminator*"></a>
   <h4 id="MoreStructures_TextWithTerminator_Terminator" data-uid="MoreStructures.TextWithTerminator.Terminator">Terminator</h4>
-  <div class="markdown level1 summary"><p>A terminator character, not present in the text.</p>
+  <div class="markdown level1 summary"><p><inheritdoc cref="T:MoreStructures.TextWithTerminator" path="/param[@name=&apos;Terminator&apos;]"></inheritdoc></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -427,11 +438,11 @@ terminator is specified. Should not be present in the text.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminator_Text.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminator.Text%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L38">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L54">View Source</a>
   </span>
   <a id="MoreStructures_TextWithTerminator_Text_" data-uid="MoreStructures.TextWithTerminator.Text*"></a>
   <h4 id="MoreStructures_TextWithTerminator_Text" data-uid="MoreStructures.TextWithTerminator.Text">Text</h4>
-  <div class="markdown level1 summary"><p>A text string.</p>
+  <div class="markdown level1 summary"><p><inheritdoc cref="T:MoreStructures.TextWithTerminator" path="/param[@name=&apos;Text&apos;]"></inheritdoc></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -460,7 +471,7 @@ terminator is specified. Should not be present in the text.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminator_EndsWith_System_String_.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminator.EndsWith(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L88">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L104">View Source</a>
   </span>
   <a id="MoreStructures_TextWithTerminator_EndsWith_" data-uid="MoreStructures.TextWithTerminator.EndsWith*"></a>
   <h4 id="MoreStructures_TextWithTerminator_EndsWith_System_String_" data-uid="MoreStructures.TextWithTerminator.EndsWith(System.String)">EndsWith(String)</h4>
@@ -507,10 +518,43 @@ terminator is specified. Should not be present in the text.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminator_GetEnumerator.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminator.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L111">View Source</a>
+  </span>
+  <a id="MoreStructures_TextWithTerminator_GetEnumerator_" data-uid="MoreStructures.TextWithTerminator.GetEnumerator*"></a>
+  <h4 id="MoreStructures_TextWithTerminator_GetEnumerator" data-uid="MoreStructures.TextWithTerminator.GetEnumerator">GetEnumerator()</h4>
+  <div class="markdown level1 summary"><p>Returns an enumerator that iterates through the collection of chars of the underlying <a class="xref" href="MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_Text">Text</a>
+string, including the <a class="xref" href="MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_Terminator">Terminator</a> char.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;char&gt; GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span>&lt;<span class="xref">System.Char</span>&gt;</td>
+        <td><p><inheritdoc></inheritdoc></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminator_StartsWith_System_String_.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminator.StartsWith(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L81">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L97">View Source</a>
   </span>
   <a id="MoreStructures_TextWithTerminator_StartsWith_" data-uid="MoreStructures.TextWithTerminator.StartsWith*"></a>
   <h4 id="MoreStructures_TextWithTerminator_StartsWith_System_String_" data-uid="MoreStructures.TextWithTerminator.StartsWith(System.String)">StartsWith(String)</h4>
@@ -555,7 +599,45 @@ terminator is specified. Should not be present in the text.</p>
       </tr>
     </tbody>
   </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminator_System_Collections_IEnumerable_GetEnumerator.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminator.System%23Collections%23IEnumerable%23GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L118">View Source</a>
+  </span>
+  <a id="MoreStructures_TextWithTerminator_System_Collections_IEnumerable_GetEnumerator_" data-uid="MoreStructures.TextWithTerminator.System#Collections#IEnumerable#GetEnumerator*"></a>
+  <h4 id="MoreStructures_TextWithTerminator_System_Collections_IEnumerable_GetEnumerator" data-uid="MoreStructures.TextWithTerminator.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+  <div class="markdown level1 summary"><p>Returns an enumerator that iterates through the collection of chars of the underlying <a class="xref" href="MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_Text">Text</a>
+string, including the <a class="xref" href="MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_Terminator">Terminator</a> char.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td><p><inheritdoc></inheritdoc></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Collections.IEnumerable&lt;&gt;</span>
+  </div>
   <div>
       <span class="xref">System.IEquatable&lt;T&gt;</span>
   </div>
@@ -570,7 +652,7 @@ terminator is specified. Should not be present in the text.</p>
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminator.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L14" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L21" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

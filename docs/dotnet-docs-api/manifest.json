@@ -14,6 +14,78 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.BurrowsWheelerTransform.BWMatrix.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.BurrowsWheelerTransform.BWMatrix.html",
+          "hash": "/DqVs3goNFkYkEGE/JFxesycY/0XW2jhE5VI9y3JJK8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.BurrowsWheelerTransform.BWTransform.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.BurrowsWheelerTransform.BWTransform.html",
+          "hash": "1OUXIUbYAlu6tR3xtpFFVbgPJjx0xgvTj/J6iuxnm3o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.html",
+          "hash": "WS9dXBmRPhsdRiSkBfqoy68t6gzYrzBfeXYvYD8IXsY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.html",
+          "hash": "kenWXBs2Q84q+LOosetZDAzt8mpMqzaGbYDLTo8lfHQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builder.html",
+          "hash": "hQZjuIiiMNEDuLPlLlFMpsPxDX8616d7MKwVGgIlKCE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.BurrowsWheelerTransform.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.BurrowsWheelerTransform.html",
+          "hash": "148mfj43GNMWdcXVh2fmCZp5QbW7sdNy1CoewXIngKg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.CountTrees.CountTreeEdge-2.yml",
       "output": {
         ".html": {
@@ -182,6 +254,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.RotatedTextWithTerminator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.RotatedTextWithTerminator.html",
+          "hash": "jH2pRF9Xt3AxLdEqq0zO/GlzYXSQXfk3HeJ7Jy6mIA8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.SuffixStructures.AdjacencyOrders.yml",
       "output": {
         ".html": {
@@ -294,7 +378,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.SuffixStructures.ISuffixStructureEdge-2.html",
-          "hash": "egRYFupz9u9ara4Ul495JIePrJO4C/AQyXYjjoTwd+0="
+          "hash": "gfD67bpGYZ6NlU0jHfm+vtgC9+jCT8XwfDZZoI17F4w="
         }
       },
       "is_incremental": false,
@@ -438,7 +522,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.SuffixTrees.SuffixTreeEdge.html",
-          "hash": "F1AajWN6056YGK65rzdu9Q33tjv4/YspMPNx0xpQ11s="
+          "hash": "TfHWITPUbS/TcCydVUZE9iW00nxcttoJYm28T/8qyag="
         }
       },
       "is_incremental": false,
@@ -522,7 +606,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.SuffixTries.SuffixTrieEdge.html",
-          "hash": "duQabRR6MuzrVSkPY9+2mIENrwIjSNpIS7HvwadvPJg="
+          "hash": "x83skZwMwOGOpGYF+MBBRoIBGqqOI0aG2EiwShBiQrg="
         }
       },
       "is_incremental": false,
@@ -571,6 +655,90 @@
         ".html": {
           "relative_path": "api/MoreStructures.SuffixTries.html",
           "hash": "cCbZqRowzGRGX92dLrrc+zBE7tJs3v9vS7Xl/c0iXNo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.BWMatrixTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.BWMatrixTests.html",
+          "hash": "ZmU+l755DOxW4ScgY5lJv+M3qQR/VdYrds42CTTFpWc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.BWTransformTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.BWTransformTests.html",
+          "hash": "VF9eZd9BtJ4l79Upo1FcgD2n7Hpy8aYVknhSlJjJbSM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.TestCase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.TestCase.html",
+          "hash": "92RQrY/Rx7xFLbou1NEGvKsY3ALIyHvIL3U9JXPRUfA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.html",
+          "hash": "pIFQX3a2i17Eqio8ZoRslDf6MsRUIqH+M4MtveJ76lY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.NaiveBuilderTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.NaiveBuilderTests.html",
+          "hash": "Spq12OH9dGW0ycvLaWSbSM3tbILYp5q3OG5ueBcBURc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.html",
+          "hash": "fFexJ4+L9YDzbHOt/gKb92YNMnIHhgkcrsCkWvc60O4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.html",
+          "hash": "d8DOV1YyTb3JjEY0vdu5HU8CaUCqsySM0OTgtgdvUxM="
         }
       },
       "is_incremental": false,
@@ -751,6 +919,30 @@
         ".html": {
           "relative_path": "api/MoreStructures.Tests.RecImmTrees.html",
           "hash": "KJnoLivGwnx2m4aegxN2Rap3f3Q9SE3VDrac+ZiK/iE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.RotatedTextWithTerminatorTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html",
+          "hash": "cG1UKk/Z6X4f+dwbrcMchDiGmMtYCHQfDLnS2jVBrmE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.StringIncludingTerminatorComparerTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.StringIncludingTerminatorComparerTests.html",
+          "hash": "ywUozfIPrwsnHcZcyz2qMp9rdGMvB6nAxySZBdb4efA="
         }
       },
       "is_incremental": false,
@@ -1038,7 +1230,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.html",
-          "hash": "Bdq1OOSs5r49zGrXtQivnUbRYw4p/CcSfLVIJCl6d3A="
+          "hash": "rwb+ETRvWRX9Xk4PdOucDj++iwYia9OApeELmeoOYpo="
         }
       },
       "is_incremental": false,
@@ -1146,7 +1338,19 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.TextWithTerminatorTests.html",
-          "hash": "e0nS5/soN4l+SPfV/gfO484zYcTlbpg3UulDRov3Qs8="
+          "hash": "z5vDUT928f7cvXnGzsiujr4chIXW6zaZho4dijeXfYo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.html",
+          "hash": "krJ812Yc8LpcvzisOESuUWuTWqfXl+CQYXOy0VVzIAs="
         }
       },
       "is_incremental": false,
@@ -1206,7 +1410,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Utilities.html",
-          "hash": "iprlgqimW7E8o1+1S3jQYZay8JjwjNxMxhppCRr/LKA="
+          "hash": "s8gMfF2s2VNvtAqMtX9iLVTp0qrD0+0JBSGNRtxFXEs="
         }
       },
       "is_incremental": false,
@@ -1218,7 +1422,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.html",
-          "hash": "TRtnk9fASPLhFbrkUAEn4yqf1zQzSBLLTjkRJmkGpe4="
+          "hash": "aVisKMkmcPzt5yC1ph4GdiO5xDCLFkiojtPmQqO+xVo="
         }
       },
       "is_incremental": false,
@@ -1230,7 +1434,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.TextWithTerminator.ISelector.html",
-          "hash": "ITU5TTS7TH2SIX5cR0Tx+/nlQrkHH5lw899m6PxQ2C0="
+          "hash": "2tNXKIvJQSuTbtmAhHStaJfCKdGOsRajV61sm172Lpg="
         }
       },
       "is_incremental": false,
@@ -1242,7 +1446,19 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.TextWithTerminator.html",
-          "hash": "+4SCn9Aaomu0wqXXR2awrYPBOY0znXVM3qwavaWiTdc="
+          "hash": "NyTa7nqtH+ECSnEuS5F0JnOwv8Nwa8f1rhGtz7ObXWo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Utilities.CharOrTerminatorComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Utilities.CharOrTerminatorComparer.html",
+          "hash": "FDVqoibZyP0xfPYxEiamY339zAUpIAkhTLLBLqlmxn8="
         }
       },
       "is_incremental": false,
@@ -1255,6 +1471,18 @@
         ".html": {
           "relative_path": "api/MoreStructures.Utilities.LockValueObject.html",
           "hash": "o3ZNDL4m0pJASU48cQK63iKzJGGKxgj8OKJNIaS/R8U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Utilities.StringIncludingTerminatorComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Utilities.StringIncludingTerminatorComparer.html",
+          "hash": "KeZfzJwOvgbKpgPljXSiahPPoVxg1GTGkrahS1Z97rw="
         }
       },
       "is_incremental": false,
@@ -1314,7 +1542,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Utilities.html",
-          "hash": "S4lz40WIN5Xdakcd0Mw7/bAeFVMgaBDsHqI0cAd6R2g="
+          "hash": "ZgdNDe4IjZy/ffOUZGRzMW1Y2yFph++QGzC9uafReZQ="
         }
       },
       "is_incremental": false,
@@ -1326,7 +1554,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.html",
-          "hash": "cXkQQ6wgQrhAfP0JMwcqCbi+acZQngoYj7g0MUkqVVQ="
+          "hash": "4RJTmc4uI38bzmOVjTjNhBvhUsaMnisQUiPSjoZKerE="
         }
       },
       "is_incremental": false,
@@ -1350,7 +1578,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "XpkBm8poMqmq19bGhuxJcDat94+NDE2s7TKMWqZdzkI="
+          "hash": "QRjAnsX043Sa1eCFr3Zt+RJZZzH9TADW7WrbVUb1DRo="
         }
       },
       "is_incremental": false,
@@ -1425,7 +1653,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 110,
+          "total_file_count": 129,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
