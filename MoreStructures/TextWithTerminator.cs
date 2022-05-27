@@ -1,4 +1,6 @@
-﻿namespace MoreStructures;
+﻿using System.Collections;
+
+namespace MoreStructures;
 
 /// <summary>
 /// A text string with a terminator character, not present in the text.
@@ -8,10 +10,16 @@
 /// A terminator character, not present in the text. If not specified <see cref="DefaultTerminator"/> is used.
 /// </param>
 /// <remarks>
-/// A terminator-terminated text is required by data structures like Suffix Trees. 
+/// A terminator-terminated text is required by data structures like Suffix Tries, Trees or Arrays. 
 /// This object provides type safety, as it allows to tell apart terminator-terminated strings from generic ones.
+/// Consistently using <see cref="TextWithTerminator"/>, rather than <see cref="string"/>, in all library 
+/// functionalities ensures that the invariant of a terminator-terminated string is always respected.
+/// Most string-related functionalities provided by <see cref="TextWithTerminator"/>, such as <see cref="Length"/> and
+/// <see cref="this[Index]"/>, as well as <see cref="IEnumerable{T}"/> and <see cref="IEnumerable"/> support, are 
+/// delegated to the underlying string.
 /// </remarks>
 public record TextWithTerminator(string Text, char Terminator = TextWithTerminator.DefaultTerminator)
+    : IEnumerable<char>
 {
     /// <summary>
     /// A selector of a part of a text with terminator.
@@ -86,4 +94,18 @@ public record TextWithTerminator(string Text, char Terminator = TextWithTerminat
     /// <param name="suffix">A terminator-included string.</param>
     /// <returns>True if this text ends by the suffix.</returns>
     public bool EndsWith(string suffix) => TextAndTerminator.EndsWith(suffix);
+
+    /// <summary>
+    /// Returns an enumerator that iterates through the collection of chars of the underlying <see cref="Text"/> 
+    /// string, including the <see cref="Terminator"/> char.
+    /// </summary>
+    /// <returns><inheritdoc/></returns>
+    public IEnumerator<char> GetEnumerator() => TextAndTerminator.GetEnumerator();
+
+    /// <summary>
+    /// Returns an enumerator that iterates through the collection of chars of the underlying <see cref="Text"/> 
+    /// string, including the <see cref="Terminator"/> char.
+    /// </summary>
+    /// <returns><inheritdoc/></returns>
+    IEnumerator IEnumerable.GetEnumerator() => ((IEnumerable)TextAndTerminator).GetEnumerator();
 }

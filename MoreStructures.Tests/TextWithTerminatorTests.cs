@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Linq;
 
 namespace MoreStructures.Tests
 {
@@ -64,6 +65,43 @@ namespace MoreStructures.Tests
         public void EndsWith_IsCorrect()
         {
             Assert.IsTrue(new TextWithTerminator("a", '$').EndsWith("$"));
+        }
+
+        [TestMethod]
+        public void GetEnumerator_Generic_IsCorrect()
+        {
+            var text = new TextWithTerminator("abc");
+            var enumerator = text.GetEnumerator();
+            Assert.IsTrue(enumerator.MoveNext());
+            Assert.AreEqual(text[0], enumerator.Current);
+            Assert.IsTrue(enumerator.MoveNext());
+            Assert.AreEqual(text[1], enumerator.Current);
+            Assert.IsTrue(enumerator.MoveNext());
+            Assert.AreEqual(text[2], enumerator.Current);
+            Assert.IsTrue(enumerator.MoveNext());
+            Assert.AreEqual(text.Terminator, enumerator.Current);
+        }
+
+        [TestMethod]
+        public void GetEnumerator_Generic_WorksWithLinq()
+        {
+            var text = new TextWithTerminator("abc");
+            Assert.AreEqual($"ac{text.Terminator}", string.Join(string.Empty, from c in text where c != 'b' select c));
+        }
+
+        [TestMethod]
+        public void GetEnumerator_NonGeneric_IsCorrect()
+        {
+            var text = new TextWithTerminator("abc");
+            var enumerator = ((System.Collections.IEnumerable)text).GetEnumerator();
+            Assert.IsTrue(enumerator.MoveNext());
+            Assert.AreEqual(text[0], enumerator.Current);
+            Assert.IsTrue(enumerator.MoveNext());
+            Assert.AreEqual(text[1], enumerator.Current);
+            Assert.IsTrue(enumerator.MoveNext());
+            Assert.AreEqual(text[2], enumerator.Current);
+            Assert.IsTrue(enumerator.MoveNext());
+            Assert.AreEqual(text.Terminator, enumerator.Current);
         }
 
     }
