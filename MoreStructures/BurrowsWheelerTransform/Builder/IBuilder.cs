@@ -66,5 +66,31 @@ public interface IBuilder
     /// <inheritdoc cref="BWTransform" path="/summary"/>
     /// </remarks>
     BWTransform BuildTransform(TextWithTerminator text);
+
+    /// <summary>
+    /// Rebuilds the original <see cref="TextWithTerminator"/> from the <see cref="BWMatrix"/>.
+    /// </summary>
+    /// <param name="matrix"></param>
+    /// <returns>The text which corresponds to the provided matrix.</returns>
+    TextWithTerminator InvertMatrix(BWMatrix matrix);
+
+    /// <summary>
+    /// Rebuilds the original <see cref="TextWithTerminator"/> from a <see cref="RotatedTextWithTerminator"/> 
+    /// representing the last column of the Barrows-Wheeler Matrix (which is also the Barrows-Wheeler Transform).
+    /// </summary>
+    /// <param name="lastBWMColumn">The last column of the Barrows-Wheeler Matrix.</param>
+    /// <returns>
+    /// The text which corresponds to the provided text which produced a BWM whose last column is the one provided.
+    /// </returns>
+    /// <remarks>
+    ///     <para id="terminator-required">
+    ///     <paramref name="lastBWMColumn"/> requires a terminator to be specified in order to correctly compare 
+    ///     strings, since the terminator should always be considered smaller than any other char.
+    ///     </para>
+    ///     <para id="possible-strategies">
+    ///     Multiple strategies for inversion are possible: via n-mers construction, via last-first property, ...
+    ///     </para>
+    /// </remarks>
+    TextWithTerminator InvertTransform(RotatedTextWithTerminator lastBWMColumn);
 }
 

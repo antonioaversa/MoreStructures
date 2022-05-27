@@ -4,13 +4,94 @@ using MoreStructures.BurrowsWheelerTransform.Builder;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MoreStructures.Tests.BurrowsWheelerTransform.Builder;
 
+using static BuilderTests.TestCase;
+
 public abstract class BuilderTests
 {
+    public enum TestCase { Banana, Allele, Mississippi, BurrowsWheelerTransform }
+
+    private readonly Dictionary<TestCase, (BWTransform, BWMatrix)> TestCases = new()
+    {
+        [Banana] = (
+            new(new("banana"), "annb$aa"),
+            new(new("banana"), new string[]
+            {
+                "$banana",
+                "a$banan",
+                "ana$ban",
+                "anana$b",
+                "banana$",
+                "na$bana",
+                "nana$ba",
+            })),
+
+        [Allele] = (
+            new(new("allele"), "e$llela"),
+            new(new("allele"), new string[]
+            {
+                "$allele",
+                "allele$",
+                "e$allel",
+                "ele$all",
+                "le$alle",
+                "lele$al",
+                "llele$a",
+            })),
+
+        [Mississippi] = (
+            new(new("mississippi"), "ipssm$pissii"),
+            new(new("mississippi"), new string[]
+            {
+                "$mississippi",
+                "i$mississipp",
+                "ippi$mississ",
+                "issippi$miss",
+                "ississippi$m",
+                "mississippi$",
+                "pi$mississip",
+                "ppi$mississi",
+                "sippi$missis",
+                "sissippi$mis",
+                "ssippi$missi",
+                "ssissippi$mi",
+            })),
+
+        [BurrowsWheelerTransform] = (
+            new(new("Burrows-Wheeler Transform"), "mrs$ -rhelsWerafreToruwnBo"),
+            new(new("Burrows-Wheeler Transform"), new string[]
+            {
+                "$Burrows-Wheeler Transform",
+                " Transform$Burrows-Wheeler",
+                "-Wheeler Transform$Burrows",
+                "Burrows-Wheeler Transform$",
+                "Transform$Burrows-Wheeler ",
+                "Wheeler Transform$Burrows-",
+                "ansform$Burrows-Wheeler Tr",
+                "eeler Transform$Burrows-Wh",
+                "eler Transform$Burrows-Whe",
+                "er Transform$Burrows-Wheel",
+                "form$Burrows-Wheeler Trans",
+                "heeler Transform$Burrows-W",
+                "ler Transform$Burrows-Whee",
+                "m$Burrows-Wheeler Transfor",
+                "nsform$Burrows-Wheeler Tra",
+                "orm$Burrows-Wheeler Transf",
+                "ows-Wheeler Transform$Burr",
+                "r Transform$Burrows-Wheele",
+                "ransform$Burrows-Wheeler T",
+                "rm$Burrows-Wheeler Transfo",
+                "rows-Wheeler Transform$Bur",
+                "rrows-Wheeler Transform$Bu",
+                "s-Wheeler Transform$Burrow",
+                "sform$Burrows-Wheeler Tran",
+                "urrows-Wheeler Transform$B",
+                "ws-Wheeler Transform$Burro",
+            })),
+    };
+
     private IBuilder Builder { get; }
 
     public BuilderTests(IBuilder builder)
@@ -74,30 +155,47 @@ public abstract class BuilderTests
         }
     }
 
-    [TestMethod]
-    public void BuildTransform_WithText_IsCorrect()
+    [DataRow(Banana)]
+    [DataRow(Allele)]
+    [DataRow(Mississippi)]
+    [DataRow(BurrowsWheelerTransform)]
+    [DataTestMethod]
+    public void BuildTransform_WithText_IsCorrect(TestCase testCase)
     {
-        var text1 = new TextWithTerminator("mississippi");
-        Assert.AreEqual(new BWTransform(text1, "ipssm$pissii"), Builder.BuildTransform(text1));
-
-        var text2 = new TextWithTerminator("Burrows-Wheeler Transform");
-        Assert.AreEqual(new BWTransform(text2, "mrs$ -rhelsWerafreToruwnBo"), Builder.BuildTransform(text2));
+        var (transform, _) = TestCases[testCase];
+        Assert.AreEqual(transform, Builder.BuildTransform(transform.Text));
     }
 
-    [TestMethod]
-    public void BuildTransform_WithMatrix_IsCorrect()
+    [DataRow(Banana)]
+    [DataRow(Allele)]
+    [DataRow(Mississippi)]
+    [DataRow(BurrowsWheelerTransform)]
+    [DataTestMethod]
+    public void BuildTransform_WithMatrix_IsCorrect(TestCase testCase)
     {
-        var text = new TextWithTerminator("banana");
-        var matrix = new BWMatrix(text, new string[]
-        {
-            "$banana",
-            "a$banan",
-            "ana$ban",
-            "anana$b",
-            "banana$",
-            "na$bana",
-            "nana$ba",
-        });
-        Assert.AreEqual(new BWTransform(text, "annb$aa"), Builder.BuildTransform(matrix));
+        var (transform, matrix) = TestCases[testCase];
+        Assert.AreEqual(transform, Builder.BuildTransform(matrix));
+    }
+
+    [DataRow(Banana)]
+    [DataRow(Allele)]
+    [DataRow(Mississippi)]
+    [DataRow(BurrowsWheelerTransform)]
+    [DataTestMethod]
+    public void InvertMatrix_IsCorrect(TestCase testCase)
+    {
+        var (_, matrix) = TestCases[testCase];
+        Assert.AreEqual(matrix.Text, Builder.InvertMatrix(matrix));
+    }
+
+    [DataRow(Banana)]
+    [DataRow(Allele)]
+    [DataRow(Mississippi)]
+    [DataRow(BurrowsWheelerTransform)]
+    [DataTestMethod]
+    public void InvertTransform_IsCorrect(TestCase testCase)
+    {
+        var (transform, _) = TestCases[testCase];
+        Assert.AreEqual(transform.Text, Builder.InvertTransform(new(transform.Content, transform.Text.Terminator)));
     }
 }

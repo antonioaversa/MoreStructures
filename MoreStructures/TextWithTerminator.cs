@@ -5,7 +5,7 @@ namespace MoreStructures;
 /// <summary>
 /// A text string with a terminator character, not present in the text.
 /// </summary>
-/// <param name="Text">A text string.</param>
+/// <param name="Text">A text string, of any length (including the empty string).</param>
 /// <param name="Terminator">
 /// A terminator character, not present in the text. If not specified <see cref="DefaultTerminator"/> is used.
 /// </param>
@@ -22,16 +22,24 @@ public record TextWithTerminator(string Text, char Terminator = TextWithTerminat
     : IEnumerable<char>
 {
     /// <summary>
-    /// A selector of a part of a text with terminator.
+    /// A selector of a part of a <see cref="TextWithTerminator"/> or <see cref="RotatedTextWithTerminator"/>.
     /// </summary>
     public interface ISelector
     {
         /// <summary>
-        /// Extract the substring identified by this selector, out of the provided text.
+        /// Extract the substring identified by this selector, out of the provided <see cref="TextWithTerminator"/>.
         /// </summary>
         /// <param name="text">The text with terminator, to extract a substring of.</param>
         /// <returns>A substring, whose length depends on the selector.</returns>
         string Of(TextWithTerminator text);
+
+        /// <summary>
+        /// Extract the substring identified by this selector, out of the provided 
+        /// <see cref="RotatedTextWithTerminator"/>.
+        /// </summary>
+        /// <param name="text">The text with terminator, to extract a substring of.</param>
+        /// <returns>A substring, whose length depends on the selector.</returns>
+        string OfRotated(RotatedTextWithTerminator text);
     }
 
     /// <summary>
@@ -41,12 +49,12 @@ public record TextWithTerminator(string Text, char Terminator = TextWithTerminat
     public const char DefaultTerminator = '$';
 
     /// <summary>
-    /// A text string.
+    /// <inheritdoc cref="TextWithTerminator" path="/param[@name='Text']"/>
     /// </summary>
     public string Text { get; init; } = Text;
 
     /// <summary>
-    /// A terminator character, not present in the text.
+    /// <inheritdoc cref="TextWithTerminator" path="/param[@name='Terminator']"/>
     /// </summary>
     public char Terminator { get; init; } =
         !Text.Contains(Terminator) 
