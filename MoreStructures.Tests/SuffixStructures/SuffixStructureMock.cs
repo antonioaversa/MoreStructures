@@ -14,6 +14,7 @@ internal static class SuffixStructureMock
         public int Start => throw new NotImplementedException();
         public int Length => throw new NotImplementedException();
         public string Of(TextWithTerminator text) => throw new NotImplementedException();
+        public string OfRotated(RotatedTextWithTerminator text) => throw new NotImplementedException();
     }
 
     public class Node : ISuffixStructureNode<Edge, Node>

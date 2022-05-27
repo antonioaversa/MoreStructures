@@ -49,4 +49,7 @@ public record SuffixTreeEdge(int Start, int Length)
 
     /// <inheritdoc/>
     public virtual string Of(TextWithTerminator text) => text[Start..(Start + Length)];
+
+    /// <inheritdoc/>
+    public virtual string OfRotated(RotatedTextWithTerminator text) => text[Start..(Start + Length)];
 }

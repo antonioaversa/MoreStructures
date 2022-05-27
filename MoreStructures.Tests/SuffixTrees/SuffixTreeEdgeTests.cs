@@ -51,4 +51,19 @@ public class SuffixTreeEdgeTests
         Assert.ThrowsException<ArgumentOutOfRangeException>(() => new SuffixTreeEdge(2, 2).Of(new("a", '$')));
     }
 
+    [TestMethod]
+    public void OfRotated_InboundIndexes()
+    {
+        Assert.IsTrue(new SuffixTreeEdge(0, 1).OfRotated(new("$", '$')) == "$");
+        Assert.IsTrue(new SuffixTreeEdge(0, 1).OfRotated(new("$abcd", '$')) == "$");
+        Assert.IsTrue(new SuffixTreeEdge(0, 2).OfRotated(new("$abcd", '$')) == "$a");
+    }
+
+    [TestMethod]
+    public void OfRotated_OutOfBoundsIndexes()
+    {
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new SuffixTreeEdge(1, 1).OfRotated(new("$", '$')));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new SuffixTreeEdge(2, 1).OfRotated(new("$a", '$')));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new SuffixTreeEdge(2, 2).OfRotated(new("$ab", '$')));
+    }
 }
