@@ -35,7 +35,7 @@ public record BWMatrix(TextWithTerminator Text)
     public BWMatrix(TextWithTerminator text, IList<string> content)
         : this(text)
     {
-        _content = content.ToList().ToValueReadOnlyCollection();
+        _content = content.ToValueReadOnlyCollection();
     }
 
     /// <summary>
@@ -105,7 +105,6 @@ public record BWMatrix(TextWithTerminator Text)
                             .Range(0, Text.Length)
                             .Select(i => new string(Text.Skip(i).Take(Text.Length - i).Concat(Text.Take(i)).ToArray()))
                             .OrderBy(i => i, new StringIncludingTerminatorComparer(Text.Terminator))
-                            .ToList()
                             .ToValueReadOnlyCollection();
                     }
                 }
