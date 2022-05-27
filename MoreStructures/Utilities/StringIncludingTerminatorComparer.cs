@@ -30,7 +30,7 @@ public class StringIncludingTerminatorComparer : IComparer<string>
     /// Special rules applied by <see cref="StringIncludingTerminatorComparer"/>:
     /// <list type="bullet">
     ///     <item>
-    ///     If either string is null or emtpy, the standard <see cref="string.Compare(string?, string?)"/> is used.
+    ///     If either string is null or empty, the standard <see cref="string.Compare(string?, string?)"/> is used.
     ///     </item>
     ///     <item>
     ///     If one string starts with the terminator, and the other doesn't, the one which does is smaller.
