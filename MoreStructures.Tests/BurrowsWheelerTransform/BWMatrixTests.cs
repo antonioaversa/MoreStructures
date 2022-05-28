@@ -3,7 +3,7 @@ using System;
 using System.Linq;
 using MoreStructures.BurrowsWheelerTransform;
 using System.Collections.Generic;
-using MoreStructures.BurrowsWheelerTransform.Builder;
+using MoreStructures.BurrowsWheelerTransform.Builders;
 
 namespace MoreStructures.Tests.BurrowsWheelerTransform;
 

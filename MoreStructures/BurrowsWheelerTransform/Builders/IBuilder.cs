@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MoreStructures.BurrowsWheelerTransform.Builder;
+namespace MoreStructures.BurrowsWheelerTransform.Builders;
 
 /// <summary>
 /// Builds Burrows-Wheeler objects, such as <see cref="BWMatrix"/> and <see cref="BWTransform"/> of the provided

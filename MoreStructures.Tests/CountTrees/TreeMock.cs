@@ -5,7 +5,7 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace MoreStructures.Tests.CountTrees;
 
-[ExcludeFromCodeCoverage]
+[ExcludeFromCodeCoverage(Justification = "Mock structure only partially used")]
 internal static class TreeMock
 {
     public record Edge(int Id) : IRecImmDictIndexedTreeEdge<Edge, Node>
