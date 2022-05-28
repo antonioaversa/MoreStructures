@@ -33,7 +33,7 @@ public record RotatedTextWithTerminator(string RotatedText, char Terminator = Te
     /// <inheritdoc cref="RotatedTextWithTerminator" path="/param[@name='Terminator']"/>
     /// </summary>
     public char Terminator { get; init; } =
-        RotatedText.Where(c => c == Terminator).Count() == 1 
+        RotatedText.Count(c => c == Terminator) == 1 
         ? Terminator 
         : throw new ArgumentException($"{nameof(Terminator)} should occur in {nameof(RotatedText)} exactly once");
 
