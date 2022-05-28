@@ -215,7 +215,7 @@ If the alphabet can be considered of constant size, the complexity is O(n^2).
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildTransform_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildTransform*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildTransform_MoreStructures_BurrowsWheelerTransform_BWMatrix_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildTransform(MoreStructures.BurrowsWheelerTransform.BWMatrix)">BuildTransform(BWMatrix)</h4>
-  <div class="markdown level1 summary"><p>Builds the Barrows-Wheeler Transform from the provided <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a>.</p>
+  <div class="markdown level1 summary"><p>Builds the Burrows-Wheeler Transform from the provided <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -316,7 +316,7 @@ Done by first constructing the <a class="xref" href="MoreStructures.BurrowsWheel
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertMatrix_MoreStructures_BurrowsWheelerTransform_BWMatrix_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertMatrix(MoreStructures.BurrowsWheelerTransform.BWMatrix)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/NaiveBuilder.cs/#L63">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/NaiveBuilder.cs/#L67">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertMatrix_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertMatrix*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertMatrix_MoreStructures_BurrowsWheelerTransform_BWMatrix_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertMatrix(MoreStructures.BurrowsWheelerTransform.BWMatrix)">InvertMatrix(BWMatrix)</h4>
@@ -360,18 +360,20 @@ Done by first constructing the <a class="xref" href="MoreStructures.BurrowsWheel
       </tr>
     </tbody>
   </table>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertMatrix_MoreStructures_BurrowsWheelerTransform_BWMatrix__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>No computation to be done, except for building the string of the <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>.
+Time Complexity = O(n), Space Complexity = O(n), where n = edge of <code data-dev-comment-type="paramref" class="paramref">matrix</code>.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/NaiveBuilder.cs/#L95">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/NaiveBuilder.cs/#L110">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertTransform_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertTransform*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)">InvertTransform(RotatedTextWithTerminator)</h4>
-  <div class="markdown level1 summary"><p>Rebuilds the original <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a> from a <a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a>
-representing the last column of the Barrows-Wheeler Matrix (which is also the Barrows-Wheeler Transform).</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -390,8 +392,7 @@ representing the last column of the Barrows-Wheeler Matrix (which is also the Ba
       <tr>
         <td><a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a></td>
         <td><span class="parametername">lastBWMColumn</span></td>
-        <td><p>The last column of the Barrows-Wheeler Matrix.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -406,8 +407,7 @@ representing the last column of the Barrows-Wheeler Matrix (which is also the Ba
     <tbody>
       <tr>
         <td><a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a></td>
-        <td><p>The text which corresponds to the provided text which produced a BWM whose last column is the one provided.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -432,6 +432,17 @@ That gives a matrix M1 of 2 columns and n rows.
 <p>
 - The last column is already known (BWT), so the text can be extracted from the first line: the first
   char is the separator, the rest is the text without separator.
+</p>
+</p>
+<p>
+<p>
+There are n top-level iterations, where n is the length of <code data-dev-comment-type="paramref" class="paramref">lastBWMColumn</code>.
+</p>
+<p>
+Each iteration takes n * log(n) * m time to sort, where m is the length of strings to compare = n.
+</p>
+<p>
+So total Time Complexity is O(n^3 * log(n)) and Space Complexity is O(n^2).
 </p>
 </p>
 </div>
