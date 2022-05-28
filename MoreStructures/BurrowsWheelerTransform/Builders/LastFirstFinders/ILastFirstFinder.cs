@@ -6,14 +6,23 @@
 public interface ILastFirstFinder
 {
     /// <summary>
-    /// The Barrows-Wheeler Transform.
+    /// The <see cref="IComparer{T}"/> used to compare chars of <see cref="BWT"/> or <see cref="SortedBWT"/>.
     /// </summary>
-    public IList<char> BWT { get; }
+    /// <remarks>
+    /// The <see cref="Comparer{T}.Default"/> of <see cref="char"/> cannot be used because the terminator in
+    /// <see cref="BWT"/> and <see cref="SortedBWT"/> has to be treated in a special way.
+    /// </remarks>
+    IComparer<char> CharComparer { get; }
 
     /// <summary>
-    /// The sorted version of the Barrows-Wheeler Transform.
+    /// The Burrows-Wheeler Transform.
     /// </summary>
-    public IList<char> SortedBWT { get; }
+    public string BWT { get; }
+
+    /// <summary>
+    /// The sorted version of the Burrows-Wheeler Transform.
+    /// </summary>
+    public string SortedBWT { get; }
 
     /// <summary>
     /// Find the index of the n-th occurrence (0-based) of the provided <paramref name="charToFind"/> in 
