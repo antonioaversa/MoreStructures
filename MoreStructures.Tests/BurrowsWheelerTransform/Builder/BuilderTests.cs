@@ -11,7 +11,7 @@ using static BuilderTests.TestCase;
 
 public abstract class BuilderTests
 {
-    public enum TestCase { Banana, Allele, Mississippi, BurrowsWheelerTransform }
+    public enum TestCase { Banana, Allele, Mississippi, BurrowsWheelerTransform, PanamaBananas }
 
     private readonly Dictionary<TestCase, (BWTransform, BWMatrix)> TestCases = new()
     {
@@ -90,6 +90,26 @@ public abstract class BuilderTests
                 "urrows-Wheeler Transform$B",
                 "ws-Wheeler Transform$Burro",
             })),
+
+        [PanamaBananas] = (
+            new(new("panamabananas"), "smnpbnnaaaaa$a"),
+            new(new("panamabananas"), new string[]
+            {
+                "$panamabananas",
+                "abananas$panam",
+                "amabananas$pan",
+                "anamabananas$p",
+                "ananas$panamab",
+                "anas$panamaban",
+                "as$panamabanan",
+                "bananas$panama",
+                "mabananas$pana",
+                "namabananas$pa",
+                "nanas$panamaba",
+                "nas$panamabana",
+                "panamabananas$",
+                "s$panamabanana",
+            })),
     };
 
     private IBuilder Builder { get; }
@@ -159,6 +179,7 @@ public abstract class BuilderTests
     [DataRow(Allele)]
     [DataRow(Mississippi)]
     [DataRow(BurrowsWheelerTransform)]
+    [DataRow(PanamaBananas)]
     [DataTestMethod]
     public void BuildTransform_WithText_IsCorrect(TestCase testCase)
     {
@@ -170,6 +191,7 @@ public abstract class BuilderTests
     [DataRow(Allele)]
     [DataRow(Mississippi)]
     [DataRow(BurrowsWheelerTransform)]
+    [DataRow(PanamaBananas)]
     [DataTestMethod]
     public void BuildTransform_WithMatrix_IsCorrect(TestCase testCase)
     {
@@ -181,6 +203,7 @@ public abstract class BuilderTests
     [DataRow(Allele)]
     [DataRow(Mississippi)]
     [DataRow(BurrowsWheelerTransform)]
+    [DataRow(PanamaBananas)]
     [DataTestMethod]
     public void InvertMatrix_IsCorrect(TestCase testCase)
     {
@@ -192,6 +215,7 @@ public abstract class BuilderTests
     [DataRow(Allele)]
     [DataRow(Mississippi)]
     [DataRow(BurrowsWheelerTransform)]
+    [DataRow(PanamaBananas)]
     [DataTestMethod]
     public void InvertTransform_IsCorrect(TestCase testCase)
     {

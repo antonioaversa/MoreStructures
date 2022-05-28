@@ -52,7 +52,7 @@ public interface IBuilder
     BWMatrix BuildMatrix(TextWithTerminator text);
 
     /// <summary>
-    /// Builds the Barrows-Wheeler Transform from the provided <see cref="BWMatrix"/>.
+    /// Builds the Burrows-Wheeler Transform from the provided <see cref="BWMatrix"/>.
     /// </summary>
     /// <remarks>
     /// <inheritdoc cref="BWTransform" path="/summary"/>
@@ -60,7 +60,7 @@ public interface IBuilder
     BWTransform BuildTransform(BWMatrix matrix);
 
     /// <summary>
-    /// Builds the Barrows-Wheeler Transform from the provided <see cref="TextWithTerminator"/>.
+    /// Builds the Burrows-Wheeler Transform from the provided <see cref="TextWithTerminator"/>.
     /// </summary>
     /// <remarks>
     /// <inheritdoc cref="BWTransform" path="/summary"/>
@@ -76,9 +76,9 @@ public interface IBuilder
 
     /// <summary>
     /// Rebuilds the original <see cref="TextWithTerminator"/> from a <see cref="RotatedTextWithTerminator"/> 
-    /// representing the last column of the Barrows-Wheeler Matrix (which is also the Barrows-Wheeler Transform).
+    /// representing the last column of the Burrows-Wheeler Matrix (which is also the Burrows-Wheeler Transform).
     /// </summary>
-    /// <param name="lastBWMColumn">The last column of the Barrows-Wheeler Matrix.</param>
+    /// <param name="lastBWMColumn">The last column of the Burrows-Wheeler Matrix.</param>
     /// <returns>
     /// The text which corresponds to the provided text which produced a BWM whose last column is the one provided.
     /// </returns>

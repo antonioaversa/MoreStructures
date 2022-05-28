@@ -9,7 +9,7 @@ namespace MoreStructures.BurrowsWheelerTransform;
 /// <see cref="TextWithTerminator.Terminator"/> is to be considered smaller than any other char in the text.
 /// </summary>
 /// <param name="Text">The text, corresponding to the provided BWM.</param>
-/// <param name="Content">The content of the Barrows-Wheeler Matrix (BWM) of <see cref="Text"/>.</param>
+/// <param name="Content">The content of the Burrows-Wheeler Matrix (BWM) of <see cref="Text"/>.</param>
 /// <remarks>
 /// This <see langword="record"/> is a typed wrapped of the underlying <see langword="IList{string}"/> representing 
 /// the BWM. It guarantes immutability and strong typing, and also keeps together the <see cref="Text"/> and its 
@@ -44,11 +44,11 @@ public record BWMatrix(TextWithTerminator Text, IList<string> Content)
     public IList<string> Content { get; init; } = Content.ToValueReadOnlyCollection();
 
     /// <summary>
-    /// Builds the Barrows-Wheeler Transform from this <see cref="BWMatrix"/>, which corresponds to the last column
+    /// Builds the Burrows-Wheeler Transform from this <see cref="BWMatrix"/>, which corresponds to the last column
     /// of the matrix, stored in <see cref="Content"/>.
     /// </summary>
     /// <returns>
-    /// A <see cref="BWTransform"/> object wrapping the string containing the Barrows-Wheeler transform.
+    /// A <see cref="BWTransform"/> object wrapping the string containing the Burrows-Wheeler transform.
     /// </returns>
     /// <example>
     ///     Code: 

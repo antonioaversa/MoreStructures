@@ -60,13 +60,17 @@ public class NaiveBuilder : IBuilder
     public virtual BWTransform BuildTransform(TextWithTerminator text) => BuildTransform(BuildMatrix(text));
 
     /// <inheritdoc/>
+    /// <remarks>
+    /// No computation to be done, except for building the string of the <see cref="TextWithTerminator"/>.
+    /// Time Complexity = O(n), Space Complexity = O(n), where n = edge of <paramref name="matrix"/>.
+    /// </remarks>
     public virtual TextWithTerminator InvertMatrix(BWMatrix matrix)
     {
         var firstBWMRow = matrix.Content[0]; // In the form "$..." where $ is separator
         return new TextWithTerminator(firstBWMRow[1..], firstBWMRow[0]);
     }
 
-    /// <inheritdoc cref="IBuilder.InvertTransform(RotatedTextWithTerminator)" path="//*[not(self::remarks)]"/>
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     ///     <inheritdoc cref="IBuilder.InvertTransform(RotatedTextWithTerminator)" 
     ///         path="/remarks/para[@id='terminator-required']"/>
@@ -89,6 +93,17 @@ public class NaiveBuilder : IBuilder
     ///         <para>
     ///         - The last column is already known (BWT), so the text can be extracted from the first line: the first
     ///           char is the separator, the rest is the text without separator.
+    ///         </para>
+    ///     </para>
+    ///     <para id="complexity">
+    ///         <para>
+    ///         There are n top-level iterations, where n is the length of <paramref name="lastBWMColumn"/>.
+    ///         </para>
+    ///         <para>
+    ///         Each iteration takes n * log(n) * m time to sort, where m is the length of strings to compare = n.
+    ///         </para>
+    ///         <para>
+    ///         So total Time Complexity is O(n^3 * log(n)) and Space Complexity is O(n^2).
     ///         </para>
     ///     </para>
     /// </remarks>

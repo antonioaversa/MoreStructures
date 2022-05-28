@@ -12,7 +12,7 @@ namespace MoreStructures;
 /// <see cref="TextWithTerminator.DefaultTerminator"/> is used.
 /// </param>
 /// <remarks>
-/// A terminator-terminated rotated text is required by Barrows-Wheeler Transform operations, such as inversion. 
+/// A terminator-terminated rotated text is required by Burrows-Wheeler Transform operations, such as inversion. 
 /// This object provides type safety, as it allows to tell apart rotated terminator-terminated strings from generic 
 /// ones.
 /// Consistently using <see cref="RotatedTextWithTerminator"/>, rather than <see cref="string"/>, in all library 

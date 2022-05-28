@@ -5,12 +5,12 @@ using MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders;
 namespace MoreStructures.Tests.BurrowsWheelerTransform.Builder;
 
 [TestClass]
-public class LastFirstPropertyBasedBuilderWithNaiveFinderTests : BuilderTests
+public class LastFirstPropertyBasedBuilderWithBinarySearchFinderTests : BuilderTests
 {
-    public LastFirstPropertyBasedBuilderWithNaiveFinderTests() : base(
+    public LastFirstPropertyBasedBuilderWithBinarySearchFinderTests() : base(
         new LastFirstPropertyBasedBuilder() 
         { 
-            FirstLastFinderBuilder = lastBWMColumn => new NaiveFinder(lastBWMColumn),
+            FirstLastFinderBuilder = lastBWMColumn => new BinarySearchFinder(lastBWMColumn),
         })
     {
     }

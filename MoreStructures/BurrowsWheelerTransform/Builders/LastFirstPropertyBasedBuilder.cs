@@ -17,22 +17,52 @@ public partial class LastFirstPropertyBasedBuilder : NaiveBuilder
     /// The strategy by which this builder finds chars in the BWT and its sorted version.
     /// </summary>
     public Func<RotatedTextWithTerminator, ILastFirstFinder> FirstLastFinderBuilder { get; init; } =
-        (lastBWMColumn) => new PrecomputedDictionaryLastFirstFinder(lastBWMColumn);
+        (lastBWMColumn) => new PrecomputedFinder(lastBWMColumn);
 
-    /// <inheritdoc cref="IBuilder.InvertTransform(RotatedTextWithTerminator)" path="//*[not(self::remarks)]"/>
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
-    ///     <inheritdoc cref="IBuilder.InvertTransform(RotatedTextWithTerminator)" 
-    ///         path="/remarks/para[@id='terminator-required']"/>
+    ///     <inheritdoc path="/remarks/para[@id='terminator-required']"/>
     ///     <para id="algo">
     ///         This implementation inverts the BWT by using the last-first property.
-    ///         <para>
     ///         - First column of the matrix (sBWT) is just the last column (BWT), sorted.
+    ///           <br/>
     ///         - By last-first property, the 1-st (and only) occurrence of terminator in sBWT at sBWT[0] corresponds 
     ///           to the 1st occurrence of terminator in BWT at BWT[i0]. BWTs[i0] is the 1-st char of the text.
+    ///           <br/>
     ///         - Again by last-first property, the n-th occurrence of c in BWTs at sBWTs[i0] corresponds to the n-th
     ///           occurrence of c in BWT at BWT[i1]. BWTs[i1] is the 2-st char of the text.
+    ///           <br/>
     ///         - And so on, until BWTs[i(n-1)], the terminator, is reached.
-    ///         </para>
+    ///     </para>
+    ///     <para id="complexity">
+    ///         Complexity:
+    ///         <br/>
+    ///         - Before any iteration, Sorted BWT is computed, taking O(n * log(n)) time, where n is the length of 
+    ///           <paramref name="lastBWMColumn"/>. If the alphabet is of constant size sigma, Counting Sort reduces 
+    ///           the overall Time Complexity of this step to O(n).
+    ///           <br/>
+    ///         - After that the finder may also preallocate other supporting structures, to speed up searches (such
+    ///           the dictionary used in <see cref="PrecomputedFinder"/>. Although it depends on the specific
+    ///           implementation built by <see cref="FirstLastFinderBuilder"/>, we may assume this cost to also be 
+    ///           linear with n.
+    ///           <br/>
+    ///         - From terminator to terminator, there are n top-level iterations. Each iteration takes m1 + m2, 
+    ///           where m1 is the cost of <see cref="ILastFirstFinder.FindIndexOfNthOccurrenceInBWT(char, int)"/> 
+    ///           and m2 is the cost of <see cref="ILastFirstFinder.FindOccurrenceOfCharInSortedBWT(int)"/>.
+    ///           <br/>
+    ///         - Finally, the <see cref="StringBuilder"/> used as accumulator generates the text string. At most O(n).
+    ///           <br/>
+    ///         - So total Time Complexity is O(n * (m1 + m2)) and Space Complexity is O(n).
+    ///         <br/>
+    ///         <br/>
+    ///         Using <see cref="NaiveFinder"/>, m1 and m2 are both O(n), so Time Complexity is O(n^2).
+    ///         <br/>
+    ///         Using <see cref="BinarySearchFinder"/>, m1 is O(n) and m2 is O(log(n)), so overall Time 
+    ///         Complexity is still O(n^2).
+    ///         <br/>
+    ///         Using <see cref="PrecomputedFinder"/>, m1 is O(1), whereas m2 is O(log(n / sigma)) where 
+    ///         sigma is the size of the alphabet, so overall Time Complexity is O(n * log(n)) if sigma is constant.
+    ///         <br/>
     ///     </para>
     /// </remarks>
     public override TextWithTerminator InvertTransform(RotatedTextWithTerminator lastBWMColumn)
