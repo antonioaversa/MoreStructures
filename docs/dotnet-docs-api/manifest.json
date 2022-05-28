@@ -38,11 +38,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.yml",
+      "source_relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.html",
-          "hash": "WS9dXBmRPhsdRiSkBfqoy68t6gzYrzBfeXYvYD8IXsY="
+          "relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.html",
+          "hash": "v2M3USA07hgTaBUGptpWPwRYH0a/G5zY4G9cAbkj1H0="
         }
       },
       "is_incremental": false,
@@ -50,11 +50,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.yml",
+      "source_relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.html",
-          "hash": "kenWXBs2Q84q+LOosetZDAzt8mpMqzaGbYDLTo8lfHQ="
+          "relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html",
+          "hash": "KG2Hp+3EUZ2R7gRhk0xoWaH74lNivV3eJXgevyHJjic="
         }
       },
       "is_incremental": false,
@@ -62,11 +62,71 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builder.yml",
+      "source_relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builder.html",
-          "hash": "hQZjuIiiMNEDuLPlLlFMpsPxDX8616d7MKwVGgIlKCE="
+          "relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.html",
+          "hash": "O0YjjI53d+KURkGa43O32uKy8V0veYF0sYV/POb37dE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.html",
+          "hash": "nzhya27oyceJ+YrKTp4WK8HeFWZN2iPbJv1D+VL0l7E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.html",
+          "hash": "F/z4XvXHq83o1AdRT57g9282ZyTCJFkuuGnD76jG2WY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.html",
+          "hash": "OOqYhGvc8RwcSIUw/7ysO61zvZhEZqV0UUGuuYU+URs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.html",
+          "hash": "AxoC+GHY5HAlVUinU+fGUbIqiMOve6qaObmxC6L8b8A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builders.html",
+          "hash": "oE5vMG7u4Qu23U4LXoaH+/iggB8lfhKhf9tVhMQqXLw="
         }
       },
       "is_incremental": false,
@@ -702,7 +762,31 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.html",
-          "hash": "pIFQX3a2i17Eqio8ZoRslDf6MsRUIqH+M4MtveJ76lY="
+          "hash": "CrP006Og3jx2ZOSzQD0PMfTXfxDj2KKeR/xQ7eAzX24="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithNaiveFinderTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithNaiveFinderTests.html",
+          "hash": "G2zC9izDLzAZQErMGWBL8UFrYoH4JD/jh6JwMA2Pjyg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests.html",
+          "hash": "Em3nGpR6UYPZj7lcPyHndOOd7ODe/YQGZcQ4HWIPDyU="
         }
       },
       "is_incremental": false,
@@ -726,7 +810,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.html",
-          "hash": "fFexJ4+L9YDzbHOt/gKb92YNMnIHhgkcrsCkWvc60O4="
+          "hash": "Kw+eoFolUShnOc0qEDvywYT8q9MMbikNGoCCyudrie4="
         }
       },
       "is_incremental": false,
@@ -1338,7 +1422,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.TextWithTerminatorTests.html",
-          "hash": "z5vDUT928f7cvXnGzsiujr4chIXW6zaZho4dijeXfYo="
+          "hash": "qlh5ogXRklLtS8kGbcP4NSc72gaaayyILtvO6OJ+BCI="
         }
       },
       "is_incremental": false,
@@ -1578,7 +1662,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "QRjAnsX043Sa1eCFr3Zt+RJZZzH9TADW7WrbVUb1DRo="
+          "hash": "LoRY1IV4bIT8RMZ0Kg/MDm8D/iUj9VKAsowRldk8b5o="
         }
       },
       "is_incremental": false,
@@ -1653,7 +1737,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 129,
+          "total_file_count": 136,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

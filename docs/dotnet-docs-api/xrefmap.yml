@@ -13,139 +13,390 @@ references:
   commentId: N:MoreStructures.BurrowsWheelerTransform
   fullName: MoreStructures.BurrowsWheelerTransform
   nameWithType: MoreStructures.BurrowsWheelerTransform
-- uid: MoreStructures.BurrowsWheelerTransform.Builder
-  name: MoreStructures.BurrowsWheelerTransform.Builder
-  href: api/MoreStructures.BurrowsWheelerTransform.Builder.html
-  commentId: N:MoreStructures.BurrowsWheelerTransform.Builder
-  fullName: MoreStructures.BurrowsWheelerTransform.Builder
-  nameWithType: MoreStructures.BurrowsWheelerTransform.Builder
-- uid: MoreStructures.BurrowsWheelerTransform.Builder.IBuilder
+- uid: MoreStructures.BurrowsWheelerTransform.Builders
+  name: MoreStructures.BurrowsWheelerTransform.Builders
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.html
+  commentId: N:MoreStructures.BurrowsWheelerTransform.Builders
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders
+  nameWithType: MoreStructures.BurrowsWheelerTransform.Builders
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.IBuilder
   name: IBuilder
-  href: api/MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.html
-  commentId: T:MoreStructures.BurrowsWheelerTransform.Builder.IBuilder
-  fullName: MoreStructures.BurrowsWheelerTransform.Builder.IBuilder
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.html
+  commentId: T:MoreStructures.BurrowsWheelerTransform.Builders.IBuilder
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.IBuilder
   nameWithType: IBuilder
-- uid: MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.BuildMatrix(MoreStructures.TextWithTerminator)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildMatrix(MoreStructures.TextWithTerminator)
   name: BuildMatrix(TextWithTerminator)
-  href: api/MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.html#MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_BuildMatrix_MoreStructures_TextWithTerminator_
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.BuildMatrix(MoreStructures.TextWithTerminator)
-  fullName: MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.BuildMatrix(MoreStructures.TextWithTerminator)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildMatrix_MoreStructures_TextWithTerminator_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildMatrix(MoreStructures.TextWithTerminator)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildMatrix(MoreStructures.TextWithTerminator)
   nameWithType: IBuilder.BuildMatrix(TextWithTerminator)
-- uid: MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.BuildMatrix*
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildMatrix*
   name: BuildMatrix
-  href: api/MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.html#MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_BuildMatrix_
-  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.BuildMatrix
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildMatrix_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildMatrix
   isSpec: "True"
-  fullName: MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.BuildMatrix
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildMatrix
   nameWithType: IBuilder.BuildMatrix
-- uid: MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.BuildTransform(MoreStructures.BurrowsWheelerTransform.BWMatrix)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildTransform(MoreStructures.BurrowsWheelerTransform.BWMatrix)
   name: BuildTransform(BWMatrix)
-  href: api/MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.html#MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_BuildTransform_MoreStructures_BurrowsWheelerTransform_BWMatrix_
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.BuildTransform(MoreStructures.BurrowsWheelerTransform.BWMatrix)
-  fullName: MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.BuildTransform(MoreStructures.BurrowsWheelerTransform.BWMatrix)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildTransform_MoreStructures_BurrowsWheelerTransform_BWMatrix_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildTransform(MoreStructures.BurrowsWheelerTransform.BWMatrix)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildTransform(MoreStructures.BurrowsWheelerTransform.BWMatrix)
   nameWithType: IBuilder.BuildTransform(BWMatrix)
-- uid: MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.BuildTransform(MoreStructures.TextWithTerminator)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildTransform(MoreStructures.TextWithTerminator)
   name: BuildTransform(TextWithTerminator)
-  href: api/MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.html#MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_BuildTransform_MoreStructures_TextWithTerminator_
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.BuildTransform(MoreStructures.TextWithTerminator)
-  fullName: MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.BuildTransform(MoreStructures.TextWithTerminator)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildTransform_MoreStructures_TextWithTerminator_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildTransform(MoreStructures.TextWithTerminator)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildTransform(MoreStructures.TextWithTerminator)
   nameWithType: IBuilder.BuildTransform(TextWithTerminator)
-- uid: MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.BuildTransform*
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildTransform*
   name: BuildTransform
-  href: api/MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.html#MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_BuildTransform_
-  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.BuildTransform
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildTransform_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildTransform
   isSpec: "True"
-  fullName: MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.BuildTransform
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildTransform
   nameWithType: IBuilder.BuildTransform
-- uid: MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.InvertMatrix(MoreStructures.BurrowsWheelerTransform.BWMatrix)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.InvertMatrix(MoreStructures.BurrowsWheelerTransform.BWMatrix)
   name: InvertMatrix(BWMatrix)
-  href: api/MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.html#MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_InvertMatrix_MoreStructures_BurrowsWheelerTransform_BWMatrix_
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.InvertMatrix(MoreStructures.BurrowsWheelerTransform.BWMatrix)
-  fullName: MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.InvertMatrix(MoreStructures.BurrowsWheelerTransform.BWMatrix)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_InvertMatrix_MoreStructures_BurrowsWheelerTransform_BWMatrix_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.InvertMatrix(MoreStructures.BurrowsWheelerTransform.BWMatrix)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.InvertMatrix(MoreStructures.BurrowsWheelerTransform.BWMatrix)
   nameWithType: IBuilder.InvertMatrix(BWMatrix)
-- uid: MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.InvertMatrix*
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.InvertMatrix*
   name: InvertMatrix
-  href: api/MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.html#MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_InvertMatrix_
-  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.InvertMatrix
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_InvertMatrix_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.InvertMatrix
   isSpec: "True"
-  fullName: MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.InvertMatrix
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.InvertMatrix
   nameWithType: IBuilder.InvertMatrix
-- uid: MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)
   name: InvertTransform(RotatedTextWithTerminator)
-  href: api/MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.html#MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator_
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)
-  fullName: MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)
   nameWithType: IBuilder.InvertTransform(RotatedTextWithTerminator)
-- uid: MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.InvertTransform*
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.InvertTransform*
   name: InvertTransform
-  href: api/MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.html#MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_InvertTransform_
-  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.InvertTransform
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_InvertTransform_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.InvertTransform
   isSpec: "True"
-  fullName: MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.InvertTransform
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.InvertTransform
   nameWithType: IBuilder.InvertTransform
-- uid: MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder
-  name: NaiveBuilder
-  href: api/MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.html
-  commentId: T:MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder
-  fullName: MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder
-  nameWithType: NaiveBuilder
-- uid: MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.BuildMatrix(MoreStructures.TextWithTerminator)
-  name: BuildMatrix(TextWithTerminator)
-  href: api/MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.html#MoreStructures_BurrowsWheelerTransform_Builder_NaiveBuilder_BuildMatrix_MoreStructures_TextWithTerminator_
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.BuildMatrix(MoreStructures.TextWithTerminator)
-  fullName: MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.BuildMatrix(MoreStructures.TextWithTerminator)
-  nameWithType: NaiveBuilder.BuildMatrix(TextWithTerminator)
-- uid: MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.BuildMatrix*
-  name: BuildMatrix
-  href: api/MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.html#MoreStructures_BurrowsWheelerTransform_Builder_NaiveBuilder_BuildMatrix_
-  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.BuildMatrix
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders
+  name: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.html
+  commentId: N:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders
+  nameWithType: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder
+  name: ILastFirstFinder
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html
+  commentId: T:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder
+  nameWithType: ILastFirstFinder
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.BWT
+  name: BWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT
+  commentId: P:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.BWT
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.BWT
+  nameWithType: ILastFirstFinder.BWT
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.BWT*
+  name: BWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.BWT
   isSpec: "True"
-  fullName: MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.BuildMatrix
-  nameWithType: NaiveBuilder.BuildMatrix
-- uid: MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.BuildTransform(MoreStructures.BurrowsWheelerTransform.BWMatrix)
-  name: BuildTransform(BWMatrix)
-  href: api/MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.html#MoreStructures_BurrowsWheelerTransform_Builder_NaiveBuilder_BuildTransform_MoreStructures_BurrowsWheelerTransform_BWMatrix_
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.BuildTransform(MoreStructures.BurrowsWheelerTransform.BWMatrix)
-  fullName: MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.BuildTransform(MoreStructures.BurrowsWheelerTransform.BWMatrix)
-  nameWithType: NaiveBuilder.BuildTransform(BWMatrix)
-- uid: MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.BuildTransform(MoreStructures.TextWithTerminator)
-  name: BuildTransform(TextWithTerminator)
-  href: api/MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.html#MoreStructures_BurrowsWheelerTransform_Builder_NaiveBuilder_BuildTransform_MoreStructures_TextWithTerminator_
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.BuildTransform(MoreStructures.TextWithTerminator)
-  fullName: MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.BuildTransform(MoreStructures.TextWithTerminator)
-  nameWithType: NaiveBuilder.BuildTransform(TextWithTerminator)
-- uid: MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.BuildTransform*
-  name: BuildTransform
-  href: api/MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.html#MoreStructures_BurrowsWheelerTransform_Builder_NaiveBuilder_BuildTransform_
-  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.BuildTransform
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.BWT
+  nameWithType: ILastFirstFinder.BWT
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInBWT(System.Char,System.Int32)
+  name: FindIndexOfNthOccurrenceInBWT(Char, Int32)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindIndexOfNthOccurrenceInBWT_System_Char_System_Int32_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInBWT(System.Char,System.Int32)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInBWT(System.Char, System.Int32)
+  nameWithType: ILastFirstFinder.FindIndexOfNthOccurrenceInBWT(Char, Int32)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInBWT*
+  name: FindIndexOfNthOccurrenceInBWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindIndexOfNthOccurrenceInBWT_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInBWT
   isSpec: "True"
-  fullName: MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.BuildTransform
-  nameWithType: NaiveBuilder.BuildTransform
-- uid: MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.InvertMatrix(MoreStructures.BurrowsWheelerTransform.BWMatrix)
-  name: InvertMatrix(BWMatrix)
-  href: api/MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.html#MoreStructures_BurrowsWheelerTransform_Builder_NaiveBuilder_InvertMatrix_MoreStructures_BurrowsWheelerTransform_BWMatrix_
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.InvertMatrix(MoreStructures.BurrowsWheelerTransform.BWMatrix)
-  fullName: MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.InvertMatrix(MoreStructures.BurrowsWheelerTransform.BWMatrix)
-  nameWithType: NaiveBuilder.InvertMatrix(BWMatrix)
-- uid: MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.InvertMatrix*
-  name: InvertMatrix
-  href: api/MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.html#MoreStructures_BurrowsWheelerTransform_Builder_NaiveBuilder_InvertMatrix_
-  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.InvertMatrix
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInBWT
+  nameWithType: ILastFirstFinder.FindIndexOfNthOccurrenceInBWT
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindOccurrenceOfCharInSortedBWT(System.Int32)
+  name: FindOccurrenceOfCharInSortedBWT(Int32)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindOccurrenceOfCharInSortedBWT_System_Int32_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindOccurrenceOfCharInSortedBWT(System.Int32)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindOccurrenceOfCharInSortedBWT(System.Int32)
+  nameWithType: ILastFirstFinder.FindOccurrenceOfCharInSortedBWT(Int32)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindOccurrenceOfCharInSortedBWT*
+  name: FindOccurrenceOfCharInSortedBWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindOccurrenceOfCharInSortedBWT_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindOccurrenceOfCharInSortedBWT
   isSpec: "True"
-  fullName: MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.InvertMatrix
-  nameWithType: NaiveBuilder.InvertMatrix
-- uid: MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindOccurrenceOfCharInSortedBWT
+  nameWithType: ILastFirstFinder.FindOccurrenceOfCharInSortedBWT
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortedBWT
+  name: SortedBWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortedBWT
+  commentId: P:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortedBWT
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortedBWT
+  nameWithType: ILastFirstFinder.SortedBWT
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortedBWT*
+  name: SortedBWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortedBWT_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortedBWT
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortedBWT
+  nameWithType: ILastFirstFinder.SortedBWT
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder
+  name: NaiveLastFirstFinder
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.html
+  commentId: T:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder
+  nameWithType: NaiveLastFirstFinder
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.#ctor(MoreStructures.RotatedTextWithTerminator)
+  name: NaiveLastFirstFinder(RotatedTextWithTerminator)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveLastFirstFinder__ctor_MoreStructures_RotatedTextWithTerminator_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.#ctor(MoreStructures.RotatedTextWithTerminator)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.NaiveLastFirstFinder(MoreStructures.RotatedTextWithTerminator)
+  nameWithType: NaiveLastFirstFinder.NaiveLastFirstFinder(RotatedTextWithTerminator)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.#ctor*
+  name: NaiveLastFirstFinder
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveLastFirstFinder__ctor_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.NaiveLastFirstFinder
+  nameWithType: NaiveLastFirstFinder.NaiveLastFirstFinder
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.BWT
+  name: BWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveLastFirstFinder_BWT
+  commentId: P:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.BWT
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.BWT
+  nameWithType: NaiveLastFirstFinder.BWT
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.BWT*
+  name: BWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveLastFirstFinder_BWT_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.BWT
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.BWT
+  nameWithType: NaiveLastFirstFinder.BWT
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.FindIndexOfNthOccurrenceInBWT(System.Char,System.Int32)
+  name: FindIndexOfNthOccurrenceInBWT(Char, Int32)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveLastFirstFinder_FindIndexOfNthOccurrenceInBWT_System_Char_System_Int32_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.FindIndexOfNthOccurrenceInBWT(System.Char,System.Int32)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.FindIndexOfNthOccurrenceInBWT(System.Char, System.Int32)
+  nameWithType: NaiveLastFirstFinder.FindIndexOfNthOccurrenceInBWT(Char, Int32)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.FindIndexOfNthOccurrenceInBWT*
+  name: FindIndexOfNthOccurrenceInBWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveLastFirstFinder_FindIndexOfNthOccurrenceInBWT_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.FindIndexOfNthOccurrenceInBWT
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.FindIndexOfNthOccurrenceInBWT
+  nameWithType: NaiveLastFirstFinder.FindIndexOfNthOccurrenceInBWT
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.FindOccurrenceOfCharInSortedBWT(System.Int32)
+  name: FindOccurrenceOfCharInSortedBWT(Int32)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveLastFirstFinder_FindOccurrenceOfCharInSortedBWT_System_Int32_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.FindOccurrenceOfCharInSortedBWT(System.Int32)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.FindOccurrenceOfCharInSortedBWT(System.Int32)
+  nameWithType: NaiveLastFirstFinder.FindOccurrenceOfCharInSortedBWT(Int32)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.FindOccurrenceOfCharInSortedBWT*
+  name: FindOccurrenceOfCharInSortedBWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveLastFirstFinder_FindOccurrenceOfCharInSortedBWT_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.FindOccurrenceOfCharInSortedBWT
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.FindOccurrenceOfCharInSortedBWT
+  nameWithType: NaiveLastFirstFinder.FindOccurrenceOfCharInSortedBWT
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.LastBWMColumn
+  name: LastBWMColumn
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveLastFirstFinder_LastBWMColumn
+  commentId: P:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.LastBWMColumn
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.LastBWMColumn
+  nameWithType: NaiveLastFirstFinder.LastBWMColumn
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.LastBWMColumn*
+  name: LastBWMColumn
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveLastFirstFinder_LastBWMColumn_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.LastBWMColumn
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.LastBWMColumn
+  nameWithType: NaiveLastFirstFinder.LastBWMColumn
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.SortedBWT
+  name: SortedBWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveLastFirstFinder_SortedBWT
+  commentId: P:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.SortedBWT
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.SortedBWT
+  nameWithType: NaiveLastFirstFinder.SortedBWT
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.SortedBWT*
+  name: SortedBWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveLastFirstFinder_SortedBWT_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.SortedBWT
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.SortedBWT
+  nameWithType: NaiveLastFirstFinder.SortedBWT
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder
+  name: PrecomputedDictionaryLastFirstFinder
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.html
+  commentId: T:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder
+  nameWithType: PrecomputedDictionaryLastFirstFinder
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.#ctor(MoreStructures.RotatedTextWithTerminator)
+  name: PrecomputedDictionaryLastFirstFinder(RotatedTextWithTerminator)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedDictionaryLastFirstFinder__ctor_MoreStructures_RotatedTextWithTerminator_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.#ctor(MoreStructures.RotatedTextWithTerminator)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.PrecomputedDictionaryLastFirstFinder(MoreStructures.RotatedTextWithTerminator)
+  nameWithType: PrecomputedDictionaryLastFirstFinder.PrecomputedDictionaryLastFirstFinder(RotatedTextWithTerminator)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.#ctor*
+  name: PrecomputedDictionaryLastFirstFinder
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedDictionaryLastFirstFinder__ctor_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.PrecomputedDictionaryLastFirstFinder
+  nameWithType: PrecomputedDictionaryLastFirstFinder.PrecomputedDictionaryLastFirstFinder
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.BWT
+  name: BWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedDictionaryLastFirstFinder_BWT
+  commentId: P:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.BWT
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.BWT
+  nameWithType: PrecomputedDictionaryLastFirstFinder.BWT
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.BWT*
+  name: BWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedDictionaryLastFirstFinder_BWT_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.BWT
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.BWT
+  nameWithType: PrecomputedDictionaryLastFirstFinder.BWT
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.FindIndexOfNthOccurrenceInBWT(System.Char,System.Int32)
+  name: FindIndexOfNthOccurrenceInBWT(Char, Int32)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedDictionaryLastFirstFinder_FindIndexOfNthOccurrenceInBWT_System_Char_System_Int32_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.FindIndexOfNthOccurrenceInBWT(System.Char,System.Int32)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.FindIndexOfNthOccurrenceInBWT(System.Char, System.Int32)
+  nameWithType: PrecomputedDictionaryLastFirstFinder.FindIndexOfNthOccurrenceInBWT(Char, Int32)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.FindIndexOfNthOccurrenceInBWT*
+  name: FindIndexOfNthOccurrenceInBWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedDictionaryLastFirstFinder_FindIndexOfNthOccurrenceInBWT_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.FindIndexOfNthOccurrenceInBWT
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.FindIndexOfNthOccurrenceInBWT
+  nameWithType: PrecomputedDictionaryLastFirstFinder.FindIndexOfNthOccurrenceInBWT
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.FindOccurrenceOfCharInSortedBWT(System.Int32)
+  name: FindOccurrenceOfCharInSortedBWT(Int32)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedDictionaryLastFirstFinder_FindOccurrenceOfCharInSortedBWT_System_Int32_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.FindOccurrenceOfCharInSortedBWT(System.Int32)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.FindOccurrenceOfCharInSortedBWT(System.Int32)
+  nameWithType: PrecomputedDictionaryLastFirstFinder.FindOccurrenceOfCharInSortedBWT(Int32)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.FindOccurrenceOfCharInSortedBWT*
+  name: FindOccurrenceOfCharInSortedBWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedDictionaryLastFirstFinder_FindOccurrenceOfCharInSortedBWT_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.FindOccurrenceOfCharInSortedBWT
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.FindOccurrenceOfCharInSortedBWT
+  nameWithType: PrecomputedDictionaryLastFirstFinder.FindOccurrenceOfCharInSortedBWT
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.SortedBWT
+  name: SortedBWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedDictionaryLastFirstFinder_SortedBWT
+  commentId: P:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.SortedBWT
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.SortedBWT
+  nameWithType: PrecomputedDictionaryLastFirstFinder.SortedBWT
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.SortedBWT*
+  name: SortedBWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedDictionaryLastFirstFinder_SortedBWT_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.SortedBWT
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.SortedBWT
+  nameWithType: PrecomputedDictionaryLastFirstFinder.SortedBWT
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder
+  name: LastFirstPropertyBasedBuilder
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.html
+  commentId: T:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder
+  nameWithType: LastFirstPropertyBasedBuilder
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.FirstLastFinderBuilder
+  name: FirstLastFinderBuilder
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstPropertyBasedBuilder_FirstLastFinderBuilder
+  commentId: P:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.FirstLastFinderBuilder
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.FirstLastFinderBuilder
+  nameWithType: LastFirstPropertyBasedBuilder.FirstLastFinderBuilder
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.FirstLastFinderBuilder*
+  name: FirstLastFinderBuilder
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstPropertyBasedBuilder_FirstLastFinderBuilder_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.FirstLastFinderBuilder
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.FirstLastFinderBuilder
+  nameWithType: LastFirstPropertyBasedBuilder.FirstLastFinderBuilder
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)
   name: InvertTransform(RotatedTextWithTerminator)
-  href: api/MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.html#MoreStructures_BurrowsWheelerTransform_Builder_NaiveBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator_
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)
-  fullName: MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)
-  nameWithType: NaiveBuilder.InvertTransform(RotatedTextWithTerminator)
-- uid: MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.InvertTransform*
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstPropertyBasedBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)
+  nameWithType: LastFirstPropertyBasedBuilder.InvertTransform(RotatedTextWithTerminator)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.InvertTransform*
   name: InvertTransform
-  href: api/MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.html#MoreStructures_BurrowsWheelerTransform_Builder_NaiveBuilder_InvertTransform_
-  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.InvertTransform
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstPropertyBasedBuilder_InvertTransform_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.InvertTransform
   isSpec: "True"
-  fullName: MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.InvertTransform
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.InvertTransform
+  nameWithType: LastFirstPropertyBasedBuilder.InvertTransform
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder
+  name: NaiveBuilder
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.html
+  commentId: T:MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder
+  nameWithType: NaiveBuilder
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildMatrix(MoreStructures.TextWithTerminator)
+  name: BuildMatrix(TextWithTerminator)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildMatrix_MoreStructures_TextWithTerminator_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildMatrix(MoreStructures.TextWithTerminator)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildMatrix(MoreStructures.TextWithTerminator)
+  nameWithType: NaiveBuilder.BuildMatrix(TextWithTerminator)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildMatrix*
+  name: BuildMatrix
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildMatrix_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildMatrix
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildMatrix
+  nameWithType: NaiveBuilder.BuildMatrix
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildTransform(MoreStructures.BurrowsWheelerTransform.BWMatrix)
+  name: BuildTransform(BWMatrix)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildTransform_MoreStructures_BurrowsWheelerTransform_BWMatrix_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildTransform(MoreStructures.BurrowsWheelerTransform.BWMatrix)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildTransform(MoreStructures.BurrowsWheelerTransform.BWMatrix)
+  nameWithType: NaiveBuilder.BuildTransform(BWMatrix)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildTransform(MoreStructures.TextWithTerminator)
+  name: BuildTransform(TextWithTerminator)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildTransform_MoreStructures_TextWithTerminator_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildTransform(MoreStructures.TextWithTerminator)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildTransform(MoreStructures.TextWithTerminator)
+  nameWithType: NaiveBuilder.BuildTransform(TextWithTerminator)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildTransform*
+  name: BuildTransform
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildTransform_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildTransform
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildTransform
+  nameWithType: NaiveBuilder.BuildTransform
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertMatrix(MoreStructures.BurrowsWheelerTransform.BWMatrix)
+  name: InvertMatrix(BWMatrix)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertMatrix_MoreStructures_BurrowsWheelerTransform_BWMatrix_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertMatrix(MoreStructures.BurrowsWheelerTransform.BWMatrix)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertMatrix(MoreStructures.BurrowsWheelerTransform.BWMatrix)
+  nameWithType: NaiveBuilder.InvertMatrix(BWMatrix)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertMatrix*
+  name: InvertMatrix
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertMatrix_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertMatrix
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertMatrix
+  nameWithType: NaiveBuilder.InvertMatrix
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)
+  name: InvertTransform(RotatedTextWithTerminator)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)
+  nameWithType: NaiveBuilder.InvertTransform(RotatedTextWithTerminator)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertTransform*
+  name: InvertTransform
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertTransform_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertTransform
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertTransform
   nameWithType: NaiveBuilder.InvertTransform
 - uid: MoreStructures.BurrowsWheelerTransform.BWMatrix
   name: BWMatrix
@@ -2144,11 +2395,11 @@ references:
   commentId: T:MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests
   fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests
   nameWithType: BuilderTests
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.#ctor(MoreStructures.BurrowsWheelerTransform.Builder.IBuilder)
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.#ctor(MoreStructures.BurrowsWheelerTransform.Builders.IBuilder)
   name: BuilderTests(IBuilder)
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_BuilderTests__ctor_MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_
-  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.#ctor(MoreStructures.BurrowsWheelerTransform.Builder.IBuilder)
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.BuilderTests(MoreStructures.BurrowsWheelerTransform.Builder.IBuilder)
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_BuilderTests__ctor_MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.#ctor(MoreStructures.BurrowsWheelerTransform.Builders.IBuilder)
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.BuilderTests(MoreStructures.BurrowsWheelerTransform.Builders.IBuilder)
   nameWithType: BuilderTests.BuilderTests(IBuilder)
 - uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.#ctor*
   name: BuilderTests
@@ -2291,6 +2542,44 @@ references:
   commentId: F:MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.TestCase.Mississippi
   fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.TestCase.Mississippi
   nameWithType: BuilderTests.TestCase.Mississippi
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithNaiveFinderTests
+  name: LastFirstPropertyBasedBuilderWithNaiveFinderTests
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithNaiveFinderTests.html
+  commentId: T:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithNaiveFinderTests
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithNaiveFinderTests
+  nameWithType: LastFirstPropertyBasedBuilderWithNaiveFinderTests
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithNaiveFinderTests.#ctor
+  name: LastFirstPropertyBasedBuilderWithNaiveFinderTests()
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithNaiveFinderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstPropertyBasedBuilderWithNaiveFinderTests__ctor
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithNaiveFinderTests.#ctor
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithNaiveFinderTests.LastFirstPropertyBasedBuilderWithNaiveFinderTests()
+  nameWithType: LastFirstPropertyBasedBuilderWithNaiveFinderTests.LastFirstPropertyBasedBuilderWithNaiveFinderTests()
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithNaiveFinderTests.#ctor*
+  name: LastFirstPropertyBasedBuilderWithNaiveFinderTests
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithNaiveFinderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstPropertyBasedBuilderWithNaiveFinderTests__ctor_
+  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithNaiveFinderTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithNaiveFinderTests.LastFirstPropertyBasedBuilderWithNaiveFinderTests
+  nameWithType: LastFirstPropertyBasedBuilderWithNaiveFinderTests.LastFirstPropertyBasedBuilderWithNaiveFinderTests
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests
+  name: LastFirstPropertyBasedBuilderWithPrecomputedFinderTests
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests.html
+  commentId: T:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests
+  nameWithType: LastFirstPropertyBasedBuilderWithPrecomputedFinderTests
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests.#ctor
+  name: LastFirstPropertyBasedBuilderWithPrecomputedFinderTests()
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstPropertyBasedBuilderWithPrecomputedFinderTests__ctor
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests.#ctor
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests()
+  nameWithType: LastFirstPropertyBasedBuilderWithPrecomputedFinderTests.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests()
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests.#ctor*
+  name: LastFirstPropertyBasedBuilderWithPrecomputedFinderTests
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstPropertyBasedBuilderWithPrecomputedFinderTests__ctor_
+  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests
+  nameWithType: LastFirstPropertyBasedBuilderWithPrecomputedFinderTests.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests
 - uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.NaiveBuilderTests
   name: NaiveBuilderTests
   href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.NaiveBuilderTests.html

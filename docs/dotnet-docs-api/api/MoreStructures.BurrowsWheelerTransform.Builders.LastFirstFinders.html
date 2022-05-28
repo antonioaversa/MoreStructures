@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace MoreStructures.BurrowsWheelerTransform.Builder
+    <title>Namespace MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace MoreStructures.BurrowsWheelerTransform.Builder
+    <meta name="title" content="Namespace MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders
    ">
     <meta name="generator" content="docfx 2.59.2.0">
     
@@ -78,26 +78,28 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MoreStructures.BurrowsWheelerTransform.Builder">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders">
   
-  <h1 id="MoreStructures_BurrowsWheelerTransform_Builder" data-uid="MoreStructures.BurrowsWheelerTransform.Builder" class="text-break">Namespace MoreStructures.BurrowsWheelerTransform.Builder
+  <h1 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders" class="text-break">Namespace MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builder.NaiveBuilder.html">NaiveBuilder</a></h4>
-      <section><p><inheritdoc cref="T:MoreStructures.BurrowsWheelerTransform.Builder.IBuilder"></inheritdoc>
-This implementation adopts the simplest approach at <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a> building, which results in a more than
-quadratic time and space. <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.html">BWTransform</a> is calculated via the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a>, therefore same
-level of Time and Space Complexity.</p>
+      <h4><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveLastFirstFinder.html">NaiveLastFirstFinder</a></h4>
+      <section><p>A <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html">ILastFirstFinder</a> implementation which just iterate over BWT and its sorted version every time.
+Each operation has Time Complexity = O(n) and Space Complexity = O(1).</p>
+</section>
+      <h4><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedDictionaryLastFirstFinder.html">PrecomputedDictionaryLastFirstFinder</a></h4>
+      <section><p>A <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html">ILastFirstFinder</a> implementation which precalculate an hash-map of all the positions by each
+char, for both BWT and its sorted version, which takes ~ 2 * n space. Every call then takes constant amortized
+time. Time Complexity = O(1) and Space Complexity = O(n).</p>
 </section>
     <h3 id="interfaces">Interfaces
   </h3>
-      <h4><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.html">IBuilder</a></h4>
-      <section><p>Builds Burrows-Wheeler objects, such as <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a> and <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.html">BWTransform</a> of the provided
-<a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>.</p>
+      <h4><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html">ILastFirstFinder</a></h4>
+      <section><p>A stategy used by a builder to find chars in the BWT and its sorted version.</p>
 </section>
 </article>
           </div>

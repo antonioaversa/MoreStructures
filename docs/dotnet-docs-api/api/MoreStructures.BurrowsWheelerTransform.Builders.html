@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace MoreStructures.Tests.BurrowsWheelerTransform.Builder
+    <title>Namespace MoreStructures.BurrowsWheelerTransform.Builders
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace MoreStructures.Tests.BurrowsWheelerTransform.Builder
+    <meta name="title" content="Namespace MoreStructures.BurrowsWheelerTransform.Builders
    ">
     <meta name="generator" content="docfx 2.59.2.0">
     
@@ -78,27 +78,31 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MoreStructures.Tests.BurrowsWheelerTransform.Builder">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.BurrowsWheelerTransform.Builders">
   
-  <h1 id="MoreStructures_Tests_BurrowsWheelerTransform_Builder" data-uid="MoreStructures.Tests.BurrowsWheelerTransform.Builder" class="text-break">Namespace MoreStructures.Tests.BurrowsWheelerTransform.Builder
+  <h1 id="MoreStructures_BurrowsWheelerTransform_Builders" data-uid="MoreStructures.BurrowsWheelerTransform.Builders" class="text-break">Namespace MoreStructures.BurrowsWheelerTransform.Builders
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.html">BuilderTests</a></h4>
-      <section></section>
-      <h4><a class="xref" href="MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithNaiveFinderTests.html">LastFirstPropertyBasedBuilderWithNaiveFinderTests</a></h4>
-      <section></section>
-      <h4><a class="xref" href="MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests.html">LastFirstPropertyBasedBuilderWithPrecomputedFinderTests</a></h4>
-      <section></section>
-      <h4><a class="xref" href="MoreStructures.Tests.BurrowsWheelerTransform.Builder.NaiveBuilderTests.html">NaiveBuilderTests</a></h4>
-      <section></section>
-    <h3 id="enums">Enums
+      <h4><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.html">LastFirstPropertyBasedBuilder</a></h4>
+      <section><p>An extension of <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.html">NaiveBuilder</a> which takes advantange of the last-first property to reduce the
+complexity of <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator_">InvertTransform(RotatedTextWithTerminator)</a>.</p>
+</section>
+      <h4><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.html">NaiveBuilder</a></h4>
+      <section><p><inheritdoc cref="T:MoreStructures.BurrowsWheelerTransform.Builders.IBuilder"></inheritdoc>
+This implementation adopts the simplest approach at <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a> building, which results in a more than
+quadratic time and space. <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.html">BWTransform</a> is calculated via the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a>, therefore same
+level of Time and Space Complexity.</p>
+</section>
+    <h3 id="interfaces">Interfaces
   </h3>
-      <h4><a class="xref" href="MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.TestCase.html">BuilderTests.TestCase</a></h4>
-      <section></section>
+      <h4><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.html">IBuilder</a></h4>
+      <section><p>Builds Burrows-Wheeler objects, such as <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a> and <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.html">BWTransform</a> of the provided
+<a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>.</p>
+</section>
 </article>
           </div>
           

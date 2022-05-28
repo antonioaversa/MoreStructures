@@ -78,18 +78,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MoreStructures.BurrowsWheelerTransform.Builder.IBuilder">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder">
   
   
-  <h1 id="MoreStructures_BurrowsWheelerTransform_Builder_IBuilder" data-uid="MoreStructures.BurrowsWheelerTransform.Builder.IBuilder" class="text-break">Interface IBuilder
+  <h1 id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder" class="text-break">Interface IBuilder
   </h1>
   <div class="markdown level0 summary"><p>Builds Burrows-Wheeler objects, such as <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a> and <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.html">BWTransform</a> of the provided
 <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builder.html">MoreStructures.BurrowsWheelerTransform.Builder</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.html">MoreStructures.BurrowsWheelerTransform.Builders</a></h6>
   <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
-  <h5 id="MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_syntax">Syntax</h5>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface IBuilder</code></pre>
   </div>
@@ -97,13 +97,13 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_BuildMatrix_MoreStructures_TextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.BuildMatrix(MoreStructures.TextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildMatrix_MoreStructures_TextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildMatrix(MoreStructures.TextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builder/IBuilder.cs/#L52">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/IBuilder.cs/#L52">View Source</a>
   </span>
-  <a id="MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_BuildMatrix_" data-uid="MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.BuildMatrix*"></a>
-  <h4 id="MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_BuildMatrix_MoreStructures_TextWithTerminator_" data-uid="MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.BuildMatrix(MoreStructures.TextWithTerminator)">BuildMatrix(TextWithTerminator)</h4>
+  <a id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildMatrix_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildMatrix*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildMatrix_MoreStructures_TextWithTerminator_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildMatrix(MoreStructures.TextWithTerminator)">BuildMatrix(TextWithTerminator)</h4>
   <div class="markdown level1 summary"><p>Build a <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a> of the provided text, which is a
 n-ary search tree in which edges coming out of a node are substrings of text which identify edges shared by all
 paths to leaves, starting from the node.</p>
@@ -147,10 +147,10 @@ paths to leaves, starting from the node.</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_BuildMatrix_MoreStructures_TextWithTerminator__remarks">Remarks</h5>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildMatrix_MoreStructures_TextWithTerminator__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.BurrowsWheelerTransform.BWMatrix" path="/summary"></inheritdoc></p>
 </div>
-  <h5 id="MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_BuildMatrix_MoreStructures_TextWithTerminator__examples">Examples</h5>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildMatrix_MoreStructures_TextWithTerminator__examples">Examples</h5>
   <p>Code:</p>
 <pre><code>var builder = ...
 builder.BuildMatrix(new(&quot;mississippi&quot;)).Content</code></pre>
@@ -172,13 +172,13 @@ builder.BuildMatrix(new(&quot;mississippi&quot;)).Content</code></pre>
 
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_BuildTransform_MoreStructures_BurrowsWheelerTransform_BWMatrix_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.BuildTransform(MoreStructures.BurrowsWheelerTransform.BWMatrix)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildTransform_MoreStructures_BurrowsWheelerTransform_BWMatrix_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildTransform(MoreStructures.BurrowsWheelerTransform.BWMatrix)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builder/IBuilder.cs/#L60">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/IBuilder.cs/#L60">View Source</a>
   </span>
-  <a id="MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_BuildTransform_" data-uid="MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.BuildTransform*"></a>
-  <h4 id="MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_BuildTransform_MoreStructures_BurrowsWheelerTransform_BWMatrix_" data-uid="MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.BuildTransform(MoreStructures.BurrowsWheelerTransform.BWMatrix)">BuildTransform(BWMatrix)</h4>
+  <a id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildTransform_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildTransform*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildTransform_MoreStructures_BurrowsWheelerTransform_BWMatrix_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildTransform(MoreStructures.BurrowsWheelerTransform.BWMatrix)">BuildTransform(BWMatrix)</h4>
   <div class="markdown level1 summary"><p>Builds the Barrows-Wheeler Transform from the provided <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -218,18 +218,18 @@ builder.BuildMatrix(new(&quot;mississippi&quot;)).Content</code></pre>
       </tr>
     </tbody>
   </table>
-  <h5 id="MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_BuildTransform_MoreStructures_BurrowsWheelerTransform_BWMatrix__remarks">Remarks</h5>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildTransform_MoreStructures_BurrowsWheelerTransform_BWMatrix__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.BurrowsWheelerTransform.BWTransform" path="/summary"></inheritdoc></p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_BuildTransform_MoreStructures_TextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.BuildTransform(MoreStructures.TextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildTransform_MoreStructures_TextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildTransform(MoreStructures.TextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builder/IBuilder.cs/#L68">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/IBuilder.cs/#L68">View Source</a>
   </span>
-  <a id="MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_BuildTransform_" data-uid="MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.BuildTransform*"></a>
-  <h4 id="MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_BuildTransform_MoreStructures_TextWithTerminator_" data-uid="MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.BuildTransform(MoreStructures.TextWithTerminator)">BuildTransform(TextWithTerminator)</h4>
+  <a id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildTransform_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildTransform*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildTransform_MoreStructures_TextWithTerminator_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildTransform(MoreStructures.TextWithTerminator)">BuildTransform(TextWithTerminator)</h4>
   <div class="markdown level1 summary"><p>Builds the Barrows-Wheeler Transform from the provided <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -269,18 +269,18 @@ builder.BuildMatrix(new(&quot;mississippi&quot;)).Content</code></pre>
       </tr>
     </tbody>
   </table>
-  <h5 id="MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_BuildTransform_MoreStructures_TextWithTerminator__remarks">Remarks</h5>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildTransform_MoreStructures_TextWithTerminator__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.BurrowsWheelerTransform.BWTransform" path="/summary"></inheritdoc></p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_InvertMatrix_MoreStructures_BurrowsWheelerTransform_BWMatrix_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.InvertMatrix(MoreStructures.BurrowsWheelerTransform.BWMatrix)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_InvertMatrix_MoreStructures_BurrowsWheelerTransform_BWMatrix_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.InvertMatrix(MoreStructures.BurrowsWheelerTransform.BWMatrix)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builder/IBuilder.cs/#L75">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/IBuilder.cs/#L75">View Source</a>
   </span>
-  <a id="MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_InvertMatrix_" data-uid="MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.InvertMatrix*"></a>
-  <h4 id="MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_InvertMatrix_MoreStructures_BurrowsWheelerTransform_BWMatrix_" data-uid="MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.InvertMatrix(MoreStructures.BurrowsWheelerTransform.BWMatrix)">InvertMatrix(BWMatrix)</h4>
+  <a id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_InvertMatrix_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.InvertMatrix*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_InvertMatrix_MoreStructures_BurrowsWheelerTransform_BWMatrix_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.InvertMatrix(MoreStructures.BurrowsWheelerTransform.BWMatrix)">InvertMatrix(BWMatrix)</h4>
   <div class="markdown level1 summary"><p>Rebuilds the original <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a> from the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -323,13 +323,13 @@ builder.BuildMatrix(new(&quot;mississippi&quot;)).Content</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builder/IBuilder.cs/#L94">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/IBuilder.cs/#L94">View Source</a>
   </span>
-  <a id="MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_InvertTransform_" data-uid="MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.InvertTransform*"></a>
-  <h4 id="MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator_" data-uid="MoreStructures.BurrowsWheelerTransform.Builder.IBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)">InvertTransform(RotatedTextWithTerminator)</h4>
+  <a id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_InvertTransform_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.InvertTransform*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)">InvertTransform(RotatedTextWithTerminator)</h4>
   <div class="markdown level1 summary"><p>Rebuilds the original <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a> from a <a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a>
 representing the last column of the Barrows-Wheeler Matrix (which is also the Barrows-Wheeler Transform).</p>
 </div>
@@ -372,7 +372,7 @@ representing the last column of the Barrows-Wheeler Matrix (which is also the Ba
       </tr>
     </tbody>
   </table>
-  <h5 id="MoreStructures_BurrowsWheelerTransform_Builder_IBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator__remarks">Remarks</h5>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
 <code data-dev-comment-type="paramref" class="paramref">lastBWMColumn</code> requires a terminator to be specified in order to correctly compare 
 strings, since the terminator should always be considered smaller than any other char.
@@ -389,10 +389,10 @@ Multiple strategies for inversion are possible: via n-mers construction, via las
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builder_IBuilder.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builder.IBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_IBuilder.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.IBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builder/IBuilder.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/IBuilder.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
