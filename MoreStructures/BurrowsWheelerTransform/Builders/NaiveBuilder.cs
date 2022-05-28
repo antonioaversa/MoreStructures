@@ -1,7 +1,7 @@
 ﻿using MoreLinq;
 using MoreStructures.Utilities;
 
-namespace MoreStructures.BurrowsWheelerTransform.Builder;
+namespace MoreStructures.BurrowsWheelerTransform.Builders;
 
 /// <summary>
 /// <inheritdoc cref="IBuilder"/>
@@ -36,7 +36,7 @@ public class NaiveBuilder : IBuilder
     ///     </para>
     ///     </para>
     /// </remarks>
-    public BWMatrix BuildMatrix(TextWithTerminator text)
+    public virtual BWMatrix BuildMatrix(TextWithTerminator text)
     {
         var stringsComparer = new StringIncludingTerminatorComparer(text.Terminator);
         var content = Enumerable
@@ -49,7 +49,7 @@ public class NaiveBuilder : IBuilder
     }
 
     /// <inheritdoc/>
-    public BWTransform BuildTransform(BWMatrix matrix) => matrix.Transform;
+    public virtual BWTransform BuildTransform(BWMatrix matrix) => matrix.Transform;
 
     /// <inheritdoc cref="IBuilder" path="//*[not(self::remarks)]"/>
     /// <remarks>
@@ -57,10 +57,10 @@ public class NaiveBuilder : IBuilder
     /// Done by first constructing the <see cref="BWMatrix"/> of <paramref name="text"/>, and then invoking 
     /// <see cref="BuildTransform(BWMatrix)"/> on it.
     /// </remarks>
-    public BWTransform BuildTransform(TextWithTerminator text) => BuildTransform(BuildMatrix(text));
+    public virtual BWTransform BuildTransform(TextWithTerminator text) => BuildTransform(BuildMatrix(text));
 
     /// <inheritdoc/>
-    public TextWithTerminator InvertMatrix(BWMatrix matrix)
+    public virtual TextWithTerminator InvertMatrix(BWMatrix matrix)
     {
         var firstBWMRow = matrix.Content[0]; // In the form "$..." where $ is separator
         return new TextWithTerminator(firstBWMRow[1..], firstBWMRow[0]);
@@ -70,16 +70,31 @@ public class NaiveBuilder : IBuilder
     /// <remarks>
     ///     <inheritdoc cref="IBuilder.InvertTransform(RotatedTextWithTerminator)" 
     ///         path="/remarks/para[@id='terminator-required']"/>
-    ///     <para>
-    ///     This implementation inverts the BWT by iteratively building n+1-mers from n-mers. 2-mers are just the 
-    ///     juxtaposition of the column given by the sorted BWT and the column given by the BWT provided as input into
-    ///     a matrix of 2 columns and n rows (where n = length of <paramref name="lastBWMColumn"/>).
-    ///     3-mers are derived from matching with sorted 2-mers and so on...
+    ///     <para id="algo">
+    ///         This implementation inverts the BWT by iteratively building n+1-mers from n-mers.
+    ///         <para>
+    ///         - 1-mers (first column of the matrix) is just the last column (BWT), sorted.
+    ///           That gives a matrix M0 of 1 columns and n rows (where n = length of 
+    ///           <paramref name="lastBWMColumn"/>).
+    ///         - 2-mers are derived from 1-mers, by juxtaposing side-by-side last column (BWT) and M0, sorted.
+    ///           That gives a matrix M1 of 2 columns and n rows.
+    ///         </para>
+    ///         <para>
+    ///         - 3-mers are derived from 2-mers, by juxtaposing side-by-side last column (BWT) and M1, sorted.
+    ///           That gives a matrix M2 of 3 columns and n rows.
+    ///         </para>
+    ///         <para>
+    ///         - And so on, up to (n - 1)-mers and matrix M(n - 2) of n - 1 columns and n rows.
+    ///         </para>
+    ///         <para>
+    ///         - The last column is already known (BWT), so the text can be extracted from the first line: the first
+    ///           char is the separator, the rest is the text without separator.
+    ///         </para>
     ///     </para>
     /// </remarks>
-    public TextWithTerminator InvertTransform(RotatedTextWithTerminator lastBWMColumn)
+    public virtual TextWithTerminator InvertTransform(RotatedTextWithTerminator lastBWMColumn)
     {
-        var charsComparer = new StringIncludingTerminatorComparer(lastBWMColumn.Terminator);
+        var stringsComparer = new StringIncludingTerminatorComparer(lastBWMColumn.Terminator);
 
         var allBWMColumnsExceptLast = new List<List<char>> { };
         foreach (var columnIndex in Enumerable.Range(0, lastBWMColumn.Length - 1)) // # columns in the BWM - 1
@@ -93,11 +108,12 @@ public class NaiveBuilder : IBuilder
                 let lastAndIthFirstElementsOfRow = 
                     string.Join(string.Empty, lastElementOfRow.Concat(ithFirstElementsOfRow))
                 select lastAndIthFirstElementsOfRow)
-                .OrderBy(lastAndIthFirstElementsOfRow => lastAndIthFirstElementsOfRow, charsComparer)
+                .OrderBy(lastAndIthFirstElementsOfRow => lastAndIthFirstElementsOfRow, stringsComparer)
                 .Select(lastAndIthFirstElementsOfRow => lastAndIthFirstElementsOfRow[^1]);
             allBWMColumnsExceptLast.Add(nextBWMColumn.ToList());
         }
 
+        // The text is in the first row of the matrix
         var text = string.Join(
             string.Empty, 
             Enumerable

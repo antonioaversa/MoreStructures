@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 
 namespace MoreStructures.Tests
@@ -7,12 +8,14 @@ namespace MoreStructures.Tests
     [TestClass]
     public class TextWithTerminatorTests
     {
+        [ExcludeFromCodeCoverage(Justification = "Mock structure only partially used")]
         private record HardcodedSelector(string Selection) : TextWithTerminator.ISelector
         {
             public string Of(TextWithTerminator text) => Selection;
             public string OfRotated(RotatedTextWithTerminator text) => Selection;
         }
 
+        [ExcludeFromCodeCoverage(Justification = "Mock structure only partially used")]
         private record FirstCharSelector() : TextWithTerminator.ISelector
         {
             public string Of(TextWithTerminator text) => text[0..1];
