@@ -18,6 +18,7 @@ using static ConverterHelpers;
 /// </remarks>
 public class FullyIterativeConverter : IConverter
 {
+    /// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
     /// <summary>
     ///     <inheritdoc/>
     /// </summary>
@@ -87,6 +88,7 @@ public class FullyIterativeConverter : IConverter
         SuffixTreeNode TreeNode, 
         IDictionary<SuffixTrieEdge, SuffixTrieNode> ParentChildren);
 
+    /// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
     /// <summary>
     ///     <inheritdoc/>
     /// </summary>

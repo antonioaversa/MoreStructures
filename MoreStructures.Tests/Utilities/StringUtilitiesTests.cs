@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
 using static MoreStructures.Utilities.StringUtilities;
 
 namespace MoreStructures.Tests.Utilities;
@@ -6,19 +7,24 @@ namespace MoreStructures.Tests.Utilities;
 [TestClass]
 public class StringUtilitiesTests
 {
-    [TestMethod]
-    public void LongestPrefixInCommon_IsCorrect()
+
+    [DataRow("", "", 0)]
+    [DataRow("", "", 0)]
+    [DataRow("a", "b", 0)]
+    [DataRow("a", "", 0)]
+    [DataRow("", "a", 0)]
+    [DataRow("a", "a", 1)]
+    [DataRow("aa", "a", 1)]
+    [DataRow("a", "aa", 1)]
+    [DataRow("aab", "aa", 2)]
+    [DataRow("aab", "aac", 2)]
+    [DataRow("aab", "aacbaab", 2)]
+    [DataRow("aabc", "aabaabc", 3)]
+    [DataTestMethod]
+    public void LongestPrefixInCommon_IsCorrect(string first, string second, int expected)
     {
-        Assert.AreEqual(0, LongestPrefixInCommon("", ""));
-        Assert.AreEqual(0, LongestPrefixInCommon("a", "b"));
-        Assert.AreEqual(0, LongestPrefixInCommon("a", ""));
-        Assert.AreEqual(0, LongestPrefixInCommon("", "a"));
-        Assert.AreEqual(1, LongestPrefixInCommon("a", "a"));
-        Assert.AreEqual(1, LongestPrefixInCommon("aa", "a"));
-        Assert.AreEqual(1, LongestPrefixInCommon("a", "aa"));
-        Assert.AreEqual(2, LongestPrefixInCommon("aab", "aa"));
-        Assert.AreEqual(2, LongestPrefixInCommon("aab", "aac"));
-        Assert.AreEqual(2, LongestPrefixInCommon("aab", "aacbaab"));
-        Assert.AreEqual(3, LongestPrefixInCommon("aabc", "aabaabc"));
+        Assert.AreEqual(expected, LongestPrefixInCommon(first, second));
+        Assert.AreEqual(expected, LongestPrefixInCommon(first.ToCharArray(), second.ToCharArray()));
+        Assert.AreEqual(expected, LongestPrefixInCommon(first.ToList(), second.ToList()));
     }
 }

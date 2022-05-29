@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections.Concurrent;
+using System.Collections.Generic;
 
 namespace MoreStructures.Utilities;
 
@@ -9,16 +10,29 @@ namespace MoreStructures.Utilities;
 /// </summary>
 public class StringIncludingTerminatorComparer : IComparer<string>
 {
-    private readonly char _terminator;
+    /// <summary>
+    /// The character acting as terminator, and which has to be considered smaller than any other char.
+    /// </summary>
+    public char Terminator { get; }
+
+    private StringIncludingTerminatorComparer(char terminator)
+    {
+        Terminator = terminator;
+    }
+
+    private static readonly ConcurrentDictionary<char, StringIncludingTerminatorComparer> _instances = new();
 
     /// <summary>
-    /// Builds a <see cref="StringIncludingTerminatorComparer"/>.
-    /// <inheritdoc cref="StringIncludingTerminatorComparer"/>
+    /// Builds a <see cref="StringIncludingTerminatorComparer"/> with the provided <paramref name="terminator"/>. 
+    /// Caches instances.
     /// </summary>
-    /// <param name="terminator">The char to be considered as terminator.</param>
-    public StringIncludingTerminatorComparer(char terminator)
+    /// <param name="terminator"><inheritdoc cref="Terminator" path="/summary"/></param>
+    /// <returns>
+    /// An instance of <see cref="StringIncludingTerminatorComparer"/>, new or previously created and cached.
+    /// </returns>
+    public static StringIncludingTerminatorComparer Build(char terminator)
     {
-        _terminator = terminator;
+        return _instances.GetOrAdd(terminator, t => new StringIncludingTerminatorComparer(t));
     }
 
     /// <summary>
@@ -47,10 +61,10 @@ public class StringIncludingTerminatorComparer : IComparer<string>
         if (x == null || y == null || x.Length == 0 || y.Length == 0)
             return string.Compare(x, y);
 
-        if (x[0] == _terminator && y[0] != _terminator)
+        if (x[0] == Terminator && y[0] != Terminator)
             return -1;
         
-        if (x[0] != _terminator && y[0] == _terminator)
+        if (x[0] != Terminator && y[0] == Terminator)
             return 1;
 
         var firstCharDifference = x[0] - y[0];

@@ -184,7 +184,7 @@ public abstract class SuffixTrieBuilderTests
             from rootToLeafPath in root1.GetAllNodeToLeafPaths()
             let suffixStart = rootToLeafPath.PathNodes.Last().Value.Start ?? throw new Exception("Invalid leaf Start")
             let suffix = rootToLeafPath.SuffixFor(text1)
-            select text1[suffixStart..] == suffix)
+            select text1[suffixStart..].SequenceEqual(suffix))
             .All(e => e));
     }
 

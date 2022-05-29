@@ -15,12 +15,10 @@ namespace MoreStructures;
 /// length of the text is too high to build the Burrows-Wheeler Matrix, which would have n^2 elements.
 /// </remarks>
 public record VirtuallyRotatedTextWithTerminator(RotatedTextWithTerminator Underlying, int Rotation) 
-    : IEnumerable<char>, IComparable<VirtuallyRotatedTextWithTerminator>
+    : IValueEnumerable<char>, IComparable<VirtuallyRotatedTextWithTerminator>
 {
-    private readonly int _length = Underlying.Length;
-
     // CharOrTerminatorComparer is a record, so compared by value
-    private readonly IComparer<char> _charsComparer = new CharOrTerminatorComparer(Underlying.Terminator);
+    private readonly IComparer<char> _charsComparer = CharOrTerminatorComparer.Build(Underlying.Terminator);
 
     private class Enumerator : IEnumerator<char>
     {
@@ -66,8 +64,9 @@ public record VirtuallyRotatedTextWithTerminator(RotatedTextWithTerminator Under
     {
         get
         {
-            var rotatedIndex = (index.GetOffset(_length) - Rotation) % _length;
-            return Underlying[rotatedIndex >= 0 ? rotatedIndex : _length + rotatedIndex];
+            var length = Underlying.Length;
+            var rotatedIndex = (index.GetOffset(length) - Rotation) % length;
+            return Underlying[rotatedIndex >= 0 ? rotatedIndex : length + rotatedIndex];
         }
     }
 

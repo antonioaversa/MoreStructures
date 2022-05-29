@@ -16,7 +16,7 @@ public class SuffixStructuresNodeExtensionsTests
     {
         var text = new TextWithTerminator("abc");
         var root = SuffixTrieNodeTests.BuildSuffixTrieExample();
-        var suffixes = root.GetAllSuffixesFor(text);
+        var suffixes = root.GetAllSuffixesFor(text).Select(s => string.Concat(s));
 
         var t = text.Terminator;
         Assert.IsTrue(suffixes.OrderBy(s => s).SequenceEqual(
@@ -28,7 +28,7 @@ public class SuffixStructuresNodeExtensionsTests
     {
         var text = new TextWithTerminator("abc");
         var root = SuffixTreeNodeTests.BuildSuffixTreeExample();
-        var suffixes = root.GetAllSuffixesFor(text);
+        var suffixes = root.GetAllSuffixesFor(text).Select(s => string.Concat(s)); ;
 
         var t = text.Terminator;
         Assert.IsTrue(suffixes.OrderBy(s => s).SequenceEqual(

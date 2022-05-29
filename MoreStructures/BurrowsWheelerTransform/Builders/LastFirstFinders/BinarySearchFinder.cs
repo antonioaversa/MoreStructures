@@ -30,8 +30,7 @@ public class BinarySearchFinder : NaiveFinder
     /// Time Complexity = O(log(n)). Space Complexity = O(1).
     /// </remarks>
     public override int FindOccurrenceOfCharInSortedBWT(int indexOfChar)
-    {
-        if (indexOfChar < 0 || indexOfChar >= SortedBWT.Length)
+    { if (indexOfChar < 0 || indexOfChar >= SortedBWT.Length)
             throw new ArgumentException($"Invalid {nameof(indexOfChar)}: {indexOfChar}");
 
         return indexOfChar - BinarySearchWithRepetitions(
@@ -39,29 +38,38 @@ public class BinarySearchFinder : NaiveFinder
     }
 
     /// <summary>
-    /// Find the index of the first element in the sub-sequence of elements of <paramref name="list"/> from 
+    /// Find the index of the first element in the sub-sequence of elements of <paramref name="enumerable"/> from 
     /// <paramref name="fromIndex"/> to <paramref name="toIndex"/> included, which is equal to 
-    /// <paramref name="elementToFind"/>, assuming that <paramref name="list"/> is sorted in ascending order.
+    /// <paramref name="element"/>, assuming that <paramref name="enumerable"/> is sorted in ascending order.
     /// </summary>
-    /// <param name="list">The directly addressable sequence where to seach the element.</param>
-    /// <param name="elementToFind">The element to search for.</param>
+    /// <param name="enumerable">The enumerable where to search for <paramref name="element"/>.</param>
+    /// <param name="element">The element to search for.</param>
     /// <param name="comparer">The comparer to be used when performing the search.</param>
     /// <param name="fromIndex">
-    /// The first index, marking the begin of the sub-sequence of <paramref name="list"/> where to search.
+    /// The first index, marking the begin of the sub-sequence of <paramref name="enumerable"/> where to search.
     /// </param>
     /// <param name="toIndex">
-    /// The last index, marking the end of the sub-sequence of <paramref name="list"/> where to search.
+    /// The last index, marking the end of the sub-sequence of <paramref name="enumerable"/> where to search.
     /// </param>
-    /// <returns>The index.</returns>
+    /// <returns>The index of <paramref name="element"/> in <paramref name="enumerable"/>.</returns>
     protected static int BinarySearchWithRepetitions<T>(
-        IEnumerable<T> list, T elementToFind, IComparer<T> comparer, int fromIndex, int toIndex)
+        IEnumerable<T> enumerable, T element, IComparer<T> comparer, int fromIndex, int toIndex)
     {
+        // Optimization for strings
+        if (enumerable is IEnumerable<char> chars && 
+            element is char charToFind && 
+            comparer is IComparer<char> charComparer)
+        {
+            var str = string.Concat(chars);
+            return BinarySearchWithRepetitionsInText(str, charToFind, charComparer, fromIndex, toIndex);
+        }
+
         var start = fromIndex;
         var end = toIndex;
-        while (!Equals(list.ElementAt(start), elementToFind))
+        while (!Equals(enumerable.ElementAt(start), element))
         {
             var middle = (start + end) / 2;
-            if (comparer.Compare(list.ElementAt(middle), elementToFind) >= 0)
+            if (comparer.Compare(enumerable.ElementAt(middle), element) >= 0)
                 end = middle;
             else
                 start = middle + 1;
@@ -75,7 +83,7 @@ public class BinarySearchFinder : NaiveFinder
     /// <paramref name="fromIndex"/> to <paramref name="toIndex"/> included, which is equal to 
     /// <paramref name="charToFind"/>, assuming that <paramref name="text"/> is sorted in ascending order.
     /// </summary>
-    /// <param name="text">The string where to seach the char.</param>
+    /// <param name="text">The string where to search for <paramref name="charToFind"/>.</param>
     /// <param name="charToFind">The char to search for.</param>
     /// <param name="comparer">The comparer to be used when performing the search.</param>
     /// <param name="fromIndex">
@@ -84,8 +92,8 @@ public class BinarySearchFinder : NaiveFinder
     /// <param name="toIndex">
     /// The last index, marking the end of the substring of <paramref name="text"/> where to search.
     /// </param>
-    /// <returns>The index.</returns>
-    protected static int BinarySearchWithRepetitions(
+    /// <returns>The index of <paramref name="charToFind"/> in <paramref name="text"/>.</returns>
+    private static int BinarySearchWithRepetitionsInText(
         string text, char charToFind, IComparer<char> comparer, int fromIndex, int toIndex)
     {
         var start = fromIndex;

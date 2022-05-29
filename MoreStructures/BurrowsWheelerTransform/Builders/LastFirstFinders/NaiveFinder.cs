@@ -14,22 +14,22 @@ public class NaiveFinder : ILastFirstFinder
     public IComparer<char> CharComparer { get; }
 
     /// <inheritdoc/>
-    public string BWT { get; }
+    public RotatedTextWithTerminator BWT { get; }
 
     /// <inheritdoc/>
-    public string SortedBWT { get; }
+    public RotatedTextWithTerminator SortedBWT { get; }
 
     /// <summary>
-    /// A function sorting the provided string into a sorted string, according to the provided 
-    /// <see cref="IComparer{T}"/> of chars.
+    /// A function sorting the provided <see cref="RotatedTextWithTerminator"/> into a sorted 
+    /// <see cref="RotatedTextWithTerminator"/>, according to the provided <see cref="IComparer{T}"/> of chars.
     /// </summary>
     /// <remarks>
     /// Used to calculate <see cref="SortedBWT"/> from <see cref="BWT"/>. The default uses 
     /// <see cref="Enumerable.OrderBy{TSource, TKey}(IEnumerable{TSource}, Func{TSource, TKey}, IComparer{TKey}?)"/>,
     /// which uses a QuickSort with Time Complexity = O(n * log(n)) in average and O(n^2) in the worst case.
     /// </remarks>
-    public Func<string, IComparer<char>, string> BWTSorter { get; init; }
-        = (text, charComparer) => string.Concat(text.OrderBy(c => c, charComparer));
+    public Func<RotatedTextWithTerminator, IComparer<char>, RotatedTextWithTerminator> BWTSorter { get; init; }
+        = (text, charComparer) => new(text.OrderBy(c => c, charComparer), text.Terminator);
 
     /// <summary>
     /// Builds an instance of this finder, for the provided <paramref name="lastBWMColumn"/>.
@@ -37,8 +37,8 @@ public class NaiveFinder : ILastFirstFinder
     /// <param name="lastBWMColumn">The last column of the Burrows-Wheeler Matrix. Corresponds to the BWT.</param>
     public NaiveFinder(RotatedTextWithTerminator lastBWMColumn)
     {
-        CharComparer = new CharOrTerminatorComparer(lastBWMColumn.Terminator);
-        BWT = lastBWMColumn.RotatedText;
+        CharComparer = CharOrTerminatorComparer.Build(lastBWMColumn.Terminator);
+        BWT = lastBWMColumn;
         SortedBWT = BWTSorter(BWT, CharComparer);
     }
 

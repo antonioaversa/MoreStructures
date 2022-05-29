@@ -17,6 +17,7 @@ using static ConverterHelpers;
 /// </remarks>
 public class PartiallyIterativeConverter : IConverter
 {
+    /// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
     /// <summary>
     ///     <inheritdoc/>
     /// </summary>
@@ -40,6 +41,7 @@ public class PartiallyIterativeConverter : IConverter
             _ => throw new NotSupportedException($"{trieNode} of type {trieNode.GetType().Name} not supported")
         };
 
+    /// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
     /// <summary>
     ///     <inheritdoc/>
     /// </summary>

@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MoreLinq;
 using MoreStructures.RecImmTrees;
 using MoreStructures.SuffixStructures;
 using MoreStructures.SuffixStructures.Matching;

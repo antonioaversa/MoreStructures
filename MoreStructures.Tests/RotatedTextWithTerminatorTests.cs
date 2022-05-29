@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MoreStructures.Utilities;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
@@ -18,8 +19,8 @@ public class RotatedTextWithTerminatorTests
     [ExcludeFromCodeCoverage(Justification = "Mock structure only partially used")]
     private record FirstCharSelector() : TextWithTerminator.ISelector
     {
-        public string Of(TextWithTerminator text) => text[0..1];
-        public string OfRotated(RotatedTextWithTerminator text) => text[0..1];
+        public string Of(TextWithTerminator text) => string.Concat(text[0..1]);
+        public string OfRotated(RotatedTextWithTerminator text) => string.Concat(text[0..1]);
     }
 
     [TestMethod]
@@ -40,10 +41,10 @@ public class RotatedTextWithTerminatorTests
     [TestMethod]
     public void Indexer_WithRange()
     {
-        Assert.AreEqual("c", new RotatedTextWithTerminator("c$ab", '$')[0..1]);
-        Assert.AreEqual(string.Empty, new RotatedTextWithTerminator("c$ab", '$')[0..0]);
-        Assert.AreEqual("c$ab", new RotatedTextWithTerminator("c$ab", '$')[0..]);
-        Assert.AreEqual("c$", new RotatedTextWithTerminator("c$ab", '$')[..^2]);
+        Assert.AreEqual("c".AsValueEnumerable(), new RotatedTextWithTerminator("c$ab", '$')[0..1]);
+        Assert.AreEqual(string.Empty.AsValueEnumerable(), new RotatedTextWithTerminator("c$ab", '$')[0..0]);
+        Assert.AreEqual("c$ab".AsValueEnumerable(), new RotatedTextWithTerminator("c$ab", '$')[0..]);
+        Assert.AreEqual("c$".AsValueEnumerable(), new RotatedTextWithTerminator("c$ab", '$')[..^2]);
     }
 
     [TestMethod]
@@ -92,7 +93,7 @@ public class RotatedTextWithTerminatorTests
     public void GetEnumerator_Generic_WorksWithLinq()
     {
         var text = new RotatedTextWithTerminator("c$ab");
-        Assert.AreEqual($"c$a", string.Join(string.Empty, from c in text where c != 'b' select c));
+        Assert.AreEqual($"c$a", string.Concat(from c in text where c != 'b' select c));
     }
 
     [TestMethod]

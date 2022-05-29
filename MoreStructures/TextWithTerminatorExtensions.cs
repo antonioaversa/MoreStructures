@@ -33,5 +33,7 @@ public static class TextWithTerminatorExtensions
     ///     </para>
     /// </remarks>
     public static VirtuallyRotatedTextWithTerminator ToVirtuallyRotated(this TextWithTerminator text, int rotation) =>
-        new(new(text.Text + text.Terminator), rotation);
+        // TODO: avoid building RotatedTextWithTerminator and have VirtuallyRotatedTextWithTerminator access directly
+        // into the underlying TextWithTerminator
+        new(new(text, text.Terminator, false), rotation);
 }

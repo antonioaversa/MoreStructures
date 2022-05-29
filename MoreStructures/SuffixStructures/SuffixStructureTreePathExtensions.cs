@@ -1,4 +1,5 @@
 ﻿using MoreStructures.RecImmTrees;
+using MoreStructures.Utilities;
 using System.Text;
 
 namespace MoreStructures.SuffixStructures;
@@ -14,20 +15,32 @@ public static class SuffixStructureTreePathExtensions
     /// </summary>
     /// <param name="path">The path to traverse to build the suffix.</param>
     /// <param name="text">The text, including the terminator character.</param>
-    /// <returns>A string containing the suffix.</returns>
-    public static string SuffixFor<TEdge, TNode>(
+    /// <typeparam name="TEdge">
+    ///     <inheritdoc cref="ISuffixStructureEdge{TEdge, TNode}" path="/typeparam[@name='TEdge']"/>
+    /// </typeparam>
+    /// <typeparam name="TNode">
+    ///     <inheritdoc cref="ISuffixStructureNode{TEdge, TNode}" path="/typeparam[@name='TNode']"/>
+    /// </typeparam>
+    /// <returns>A <see cref="IValueEnumerable{T}"/> sequence of <see cref="char"/> containing the suffix.</returns>
+    public static IValueEnumerable<char> SuffixFor<TEdge, TNode>(
         this TreePath<TEdge, TNode> path,
         TextWithTerminator text)
         where TEdge : TextWithTerminator.ISelector => 
         path.PathNodes
-            .Aggregate(new StringBuilder(), (acc, node) => acc.Append(text[node.Key]))
-            .ToString();
+            .SelectMany(node => text[node.Key])
+            .AsValueEnumerable();
 
     /// <summary>
     /// Whether this path identifies a suffix of the provided text.
     /// </summary>
     /// <param name="path">The path, identifying a segment of the provided text.</param>
     /// <param name="text">The text, including the terminator character.</param>
+    /// <typeparam name="TEdge">
+    ///     <inheritdoc cref="ISuffixStructureEdge{TEdge, TNode}" path="/typeparam[@name='TEdge']"/>
+    /// </typeparam>
+    /// <typeparam name="TNode">
+    ///     <inheritdoc cref="ISuffixStructureNode{TEdge, TNode}" path="/typeparam[@name='TNode']"/>
+    /// </typeparam>
     /// <returns>True if the segment of text is also a suffix the text.</returns>
     public static bool IsSuffixOf<TEdge, TNode>
         (this TreePath<TEdge, TNode> path, 

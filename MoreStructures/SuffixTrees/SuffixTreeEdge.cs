@@ -48,8 +48,10 @@ public record SuffixTreeEdge(int Start, int Length)
     }
 
     /// <inheritdoc/>
-    public virtual string Of(TextWithTerminator text) => text[Start..(Start + Length)];
+    public virtual string Of(TextWithTerminator text) => 
+        string.Concat(text[Start..(Start + Length)])[0..Length];
 
     /// <inheritdoc/>
-    public virtual string OfRotated(RotatedTextWithTerminator text) => text[Start..(Start + Length)];
+    public virtual string OfRotated(RotatedTextWithTerminator text) => 
+        string.Concat(text[Start..(Start + Length)])[0..Length];
 }

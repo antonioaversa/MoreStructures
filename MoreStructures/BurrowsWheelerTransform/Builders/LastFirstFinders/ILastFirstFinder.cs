@@ -1,7 +1,8 @@
 ﻿namespace MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders;
 
 /// <summary>
-/// A stategy used by a builder to find chars in the BWT and its sorted version.
+/// A stategy used by a <see cref="IBuilder"/> to find chars in <see cref="BWT"/> and in its sorted version 
+/// <see cref="SortedBWT"/>.
 /// </summary>
 public interface ILastFirstFinder
 {
@@ -10,19 +11,20 @@ public interface ILastFirstFinder
     /// </summary>
     /// <remarks>
     /// The <see cref="Comparer{T}.Default"/> of <see cref="char"/> cannot be used because the terminator in
-    /// <see cref="BWT"/> and <see cref="SortedBWT"/> has to be treated in a special way.
+    /// <see cref="BWT"/> and <see cref="SortedBWT"/> has to be treated in a special way 
+    /// (<see cref="TextWithTerminator.Terminator"/> is always to be considered smaller than any other char).
     /// </remarks>
     IComparer<char> CharComparer { get; }
 
     /// <summary>
     /// The Burrows-Wheeler Transform.
     /// </summary>
-    public string BWT { get; }
+    public RotatedTextWithTerminator BWT { get; }
 
     /// <summary>
     /// The sorted version of the Burrows-Wheeler Transform.
     /// </summary>
-    public string SortedBWT { get; }
+    public RotatedTextWithTerminator SortedBWT { get; }
 
     /// <summary>
     /// Find the index of the n-th occurrence (0-based) of the provided <paramref name="charToFind"/> in 

@@ -38,7 +38,7 @@ public class NaiveBuilder : IBuilder
     /// </remarks>
     public virtual BWMatrix BuildMatrix(TextWithTerminator text)
     {
-        var stringsComparer = new StringIncludingTerminatorComparer(text.Terminator);
+        var stringsComparer = StringIncludingTerminatorComparer.Build(text.Terminator);
         var content = Enumerable
             .Range(0, text.Length)
             .Select(i => new string(text.Skip(i).Take(text.Length - i).Concat(text.Take(i)).ToArray()))
@@ -54,11 +54,11 @@ public class NaiveBuilder : IBuilder
         var allBWMColumnsExceptLast = BuildAllBWMColumnsExceptLast(lastBWMColumn.Content);
         var allBWMRows = (
             from rowIndex in Enumerable.Range(0, lastBWMColumn.Length)
-            let rpwExceptLastChar = string.Concat(
+            let rowExceptLastChar = string.Concat(
                 from columnIndex in Enumerable.Range(0, allBWMColumnsExceptLast.Count)
                 select allBWMColumnsExceptLast[columnIndex][rowIndex])
-            select rpwExceptLastChar + lastBWMColumn.Content[rowIndex])
-            .ToList();
+            select rowExceptLastChar + lastBWMColumn.Content[rowIndex])
+            .ToList(); // The Burrows-Wheeler Matrix requires direct random access to any of its elements
         return new(lastBWMColumn.Text, allBWMRows);
     }
 
@@ -82,11 +82,11 @@ public class NaiveBuilder : IBuilder
     /// </remarks>
     public virtual BWTransform BuildTransform(TextWithTerminator text)
     {
-        var content = string.Concat(Enumerable
+        var content = Enumerable
             .Range(0, text.Length)
             .Select(i => text.ToVirtuallyRotated(i))
             .OrderBy(i => i)
-            .Select(vrtext => vrtext[^1]));
+            .Select(vrtext => vrtext[^1]);
         return new(text, new(content, text.Terminator));
     }
 
@@ -98,7 +98,7 @@ public class NaiveBuilder : IBuilder
     public virtual TextWithTerminator InvertMatrix(BWMatrix matrix)
     {
         var firstBWMRow = matrix.Content[0]; // In the form "$..." where $ is separator
-        return new TextWithTerminator(firstBWMRow[1..], firstBWMRow[0]);
+        return new TextWithTerminator(firstBWMRow[1..].AsValueEnumerable(), firstBWMRow[0]);
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
@@ -143,18 +143,17 @@ public class NaiveBuilder : IBuilder
         var allBWMColumnsExceptLast = BuildAllBWMColumnsExceptLast(lastBWMColumn);
 
         // The text is in the first row of the matrix
-        var text = string.Join(
-            string.Empty,
+        var text = 
             Enumerable
                 .Range(1, lastBWMColumn.Length - 2) // # columns in the BWM - 1
                 .Select(i => allBWMColumnsExceptLast[i][0])
-                .Concat(new char[] { lastBWMColumn[0] }));
+                .Concat(new char[] { lastBWMColumn[0] });
         return new TextWithTerminator(text, lastBWMColumn.Terminator);
     }
 
     private static IList<IList<char>> BuildAllBWMColumnsExceptLast(RotatedTextWithTerminator lastBWMColumn)
     {
-        var stringsComparer = new StringIncludingTerminatorComparer(lastBWMColumn.Terminator);
+        var stringsComparer = StringIncludingTerminatorComparer.Build(lastBWMColumn.Terminator);
 
         var allBWMColumnsExceptLast = new List<IList<char>> { };
         foreach (var columnIndex in Enumerable.Range(0, lastBWMColumn.Length - 1)) // # columns in the BWM - 1
@@ -166,7 +165,7 @@ public class NaiveBuilder : IBuilder
                     from j in Enumerable.Range(0, columnIndex)
                     select allBWMColumnsExceptLast[j][rowIndex])
                 let lastAndIthFirstElementsOfRow =
-                    string.Join(string.Empty, lastElementOfRow.Concat(ithFirstElementsOfRow))
+                    string.Concat(lastElementOfRow.Concat(ithFirstElementsOfRow))
                 select lastAndIthFirstElementsOfRow)
                 .OrderBy(lastAndIthFirstElementsOfRow => lastAndIthFirstElementsOfRow, stringsComparer)
                 .Select(lastAndIthFirstElementsOfRow => lastAndIthFirstElementsOfRow[^1]);

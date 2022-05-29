@@ -112,7 +112,7 @@ public abstract class BuilderTests
             })),
     };
 
-    private IBuilder Builder { get; }
+    protected IBuilder Builder { get; }
 
     public BuilderTests(IBuilder builder)
     {
@@ -127,7 +127,7 @@ public abstract class BuilderTests
 
         Assert.AreEqual(text.Length, matrixContent.Count);
         Assert.IsTrue(matrixContent.All(
-            rotation => string.Join(string.Empty, rotation.Split(text.Terminator).Reverse()) == text.Text));
+            rotation => rotation.Split(text.Terminator).Reverse().SelectMany(s => s).SequenceEqual(text.Text)));
     }
 
     [TestMethod]

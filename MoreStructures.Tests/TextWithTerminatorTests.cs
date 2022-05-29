@@ -2,6 +2,7 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using MoreStructures.Utilities;
 
 namespace MoreStructures.Tests;
 
@@ -18,16 +19,25 @@ public class TextWithTerminatorTests
     [ExcludeFromCodeCoverage(Justification = "Mock structure only partially used")]
     private record FirstCharSelector() : TextWithTerminator.ISelector
     {
-        public string Of(TextWithTerminator text) => text[0..1];
-        public string OfRotated(RotatedTextWithTerminator text) => text[0..1];
+        public string Of(TextWithTerminator text) => string.Concat(text[0..1]);
+        public string OfRotated(RotatedTextWithTerminator text) => string.Concat(text[0..1]);
     }
 
     [TestMethod]
-    public void Ctor_Preconditions()
+    public void Ctor_Preconditions_WithValidateInput()
     {
         Assert.IsNotNull(new TextWithTerminator("a", '$'));
         Assert.ThrowsException<ArgumentException>(() => new TextWithTerminator("a", 'a'));
         Assert.ThrowsException<ArgumentException>(() => new TextWithTerminator("a$a", '$'));
+    }
+
+    [TestMethod]
+    public void Ctor_BrokenInvariant_WithoutValidateInput()
+    {
+        var text1 = new TextWithTerminator("a", 'a', false);
+        Assert.IsTrue(text1.Text.Contains(text1.Terminator));
+        var text2 = new TextWithTerminator("a$a", '$', false);
+        Assert.IsTrue(text2.Text.Contains(text2.Terminator));
     }
 
     [TestMethod]
@@ -40,10 +50,10 @@ public class TextWithTerminatorTests
     [TestMethod]
     public void Indexer_WithRange()
     {
-        Assert.AreEqual("a", new TextWithTerminator("abc", '$')[0..1]);
-        Assert.AreEqual(string.Empty, new TextWithTerminator("abc", '$')[0..0]);
-        Assert.AreEqual("abc$", new TextWithTerminator("abc", '$')[0..]);
-        Assert.AreEqual("ab", new TextWithTerminator("abc", '$')[..^2]);
+        Assert.AreEqual("a".AsValueEnumerable(), new TextWithTerminator("abc", '$')[0..1]);
+        Assert.AreEqual(string.Empty.AsValueEnumerable(), new TextWithTerminator("abc", '$')[0..0]);
+        Assert.AreEqual("abc$".AsValueEnumerable(), new TextWithTerminator("abc", '$')[0..]);
+        Assert.AreEqual("ab".AsValueEnumerable(), new TextWithTerminator("abc", '$')[..^2]);
     }
 
     [TestMethod]
@@ -91,7 +101,7 @@ public class TextWithTerminatorTests
     public void GetEnumerator_Generic_WorksWithLinq()
     {
         var text = new TextWithTerminator("abc");
-        Assert.AreEqual($"ac{text.Terminator}", string.Join(string.Empty, from c in text where c != 'b' select c));
+        Assert.AreEqual($"ac{text.Terminator}", string.Concat(from c in text where c != 'b' select c));
     }
 
     [TestMethod]
