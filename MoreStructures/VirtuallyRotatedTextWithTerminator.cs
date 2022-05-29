@@ -20,7 +20,7 @@ public record VirtuallyRotatedTextWithTerminator(RotatedTextWithTerminator Under
     // CharOrTerminatorComparer is a record, so compared by value
     private readonly IComparer<char> _charsComparer = CharOrTerminatorComparer.Build(Underlying.Terminator);
 
-    private class Enumerator : IEnumerator<char>
+    private sealed class Enumerator : IEnumerator<char>
     {
         private readonly RotatedTextWithTerminator _underlying;
         private readonly int _rotation;
@@ -48,7 +48,10 @@ public record VirtuallyRotatedTextWithTerminator(RotatedTextWithTerminator Under
 
         object System.Collections.IEnumerator.Current => Current;
 
-        public void Dispose() { }
+        public void Dispose() 
+        {
+            // Nothing, for the time being
+        }
         public bool MoveNext() => ++_current < _underlying.Length;
         public void Reset() => _current = -1;
     }
@@ -96,7 +99,7 @@ public record VirtuallyRotatedTextWithTerminator(RotatedTextWithTerminator Under
 
         if (moveNext && !otherMoveNext) return 1;
         if (!moveNext && otherMoveNext) return -1;
-        if (moveNext && otherMoveNext) return _charsComparer.Compare(enumerator.Current, otherEnumerator.Current);
+        if (moveNext) return _charsComparer.Compare(enumerator.Current, otherEnumerator.Current);
         return 0;
     }
 }
