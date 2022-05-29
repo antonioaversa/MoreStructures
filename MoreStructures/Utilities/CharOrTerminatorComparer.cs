@@ -5,20 +5,8 @@
 /// the fact that the char may be a special char, called terminator, which has to be considered smaller than any other 
 /// char.
 /// </summary>
-public class CharOrTerminatorComparer : IComparer<char>
+public record CharOrTerminatorComparer(char Terminator) : IComparer<char>
 {
-    private readonly char _terminator;
-
-    /// <summary>
-    /// Builds a <see cref="CharOrTerminatorComparer"/>.
-    /// <inheritdoc cref="CharOrTerminatorComparer"/>
-    /// </summary>
-    /// <param name="terminator">The char to be considered as terminator.</param>
-    public CharOrTerminatorComparer(char terminator)
-    {
-        _terminator = terminator;
-    }
-
     /// <summary>
     /// <inheritdoc/>
     /// </summary>
@@ -39,9 +27,9 @@ public class CharOrTerminatorComparer : IComparer<char>
     /// <returns><inheritdoc/></returns>
     public int Compare(char x, char y)
     {
-        if (x == _terminator && y != _terminator)
+        if (x == Terminator && y != Terminator)
             return -1;
-        if (x != _terminator && y == _terminator)
+        if (x != Terminator && y == Terminator)
             return 1;
         return x.CompareTo(y);
     }

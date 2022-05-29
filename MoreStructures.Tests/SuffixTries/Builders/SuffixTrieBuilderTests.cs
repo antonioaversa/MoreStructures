@@ -163,18 +163,6 @@ public abstract class SuffixTrieBuilderTests
         Assert.IsTrue(allSuffixes.SetEquals(suffixes));
     }
 
-    // TODO: fix the following test
-    /*
-    [TestMethod]
-    public void BuildTree_UsesTerminatorForMatchToDistinguishSuffixesFromAnySubstring()
-    {
-        var text1 = new TextWithTerminator("abab");
-        var root1 = Build(text1);
-        Assert.IsTrue(root1.Match(text1, "ab") is SuffixTrieMatch { Success: true });
-        Assert.IsTrue(root1.Match(text1, "abab") is SuffixTrieMatch { Success: true });
-    }
-    */
-
     [TestMethod]
     public void BuildTree_StartLeftNullAtNonLeafNodes()
     {

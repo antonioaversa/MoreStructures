@@ -38,7 +38,9 @@ public class BWMatrixTests
     {
         var text = new TextWithTerminator("ab");
         var t = text.Terminator;
-        Assert.AreEqual(new BWTransform(text, $"b{t}a"), new BWMatrix(text, new string[] { $"{t}ab", $"ab{t}", $"b{t}a" }).Transform);
+        Assert.AreEqual(
+            new BWTransform(text, new($"b{t}a")), 
+            new BWMatrix(text, new string[] { $"{t}ab", $"ab{t}", $"b{t}a" }).Transform);
     }
 
     [TestMethod]

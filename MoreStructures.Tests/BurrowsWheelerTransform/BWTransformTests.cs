@@ -7,9 +7,9 @@ namespace MoreStructures.Tests.BurrowsWheelerTransform;
 public class BWTransformTests
 {
     [TestMethod]
-    public void ToString_IncludesTheContent()
+    public void Length_IsTheSameOfLengthOfText()
     {
-        var transform = new BWTransform(new("ab"), "ttes$");
-        Assert.IsTrue(transform.ToString().Contains(transform.Content));
+        var transform = new BWTransform(new("test"), new("ttes$"));
+        Assert.AreEqual(transform.Text.Length, transform.Length);
     }
 }

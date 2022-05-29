@@ -17,6 +17,7 @@ namespace MoreStructures.BurrowsWheelerTransform;
 /// </remarks>
 public record BWMatrix(TextWithTerminator Text, IList<string> Content)
 {
+    // CharOrTerminatorComparer is a record, so compared by value
     private readonly IComparer<char> _charComparer = new CharOrTerminatorComparer(Text.Terminator);
 
     /// <summary>
@@ -66,7 +67,7 @@ public record BWMatrix(TextWithTerminator Text, IList<string> Content)
     /// <inheritdoc cref="BWMatrix" path="/remarks/para[@id='lazy-initialization']"/>
     /// </remarks>
     public BWTransform Transform =>
-        new(Text, string.Join(string.Empty, Content.Select(r => r[^1])));
+        new(Text, new(string.Join(string.Empty, Content.Select(r => r[^1])), Text.Terminator));
 
     /// <summary>
     /// Returns the first column of this <see cref="BWMatrix"/>. Corresponds to the sorted <see cref="Text"/> and 
@@ -110,5 +111,5 @@ public record BWMatrix(TextWithTerminator Text, IList<string> Content)
     /// Requires <see cref="Content"/> calculation.
     /// <inheritdoc cref="BWMatrix" path="/remarks/para[@id='lazy-initialization']"/>
     /// </remarks>
-    public string LastColumn => Transform.Content;
+    public string LastColumn => Transform.Content.RotatedText;
 }

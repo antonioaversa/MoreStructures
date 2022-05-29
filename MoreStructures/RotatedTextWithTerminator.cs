@@ -6,7 +6,7 @@ namespace MoreStructures;
 /// A text string with a terminator character which has been rotated leftwards or rightwards, of a number of positions 
 /// (0 included).
 /// </summary>
-/// <param name="RotatedText">The  text string, containing the terminator character once, in any position of the text.</param>
+/// <param name="RotatedText">The text string, containing the terminator character once, in any position of the text.</param>
 /// <param name="Terminator">
 /// A terminator character, present in the text at most once. If not specified 
 /// <see cref="TextWithTerminator.DefaultTerminator"/> is used.
