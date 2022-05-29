@@ -83,7 +83,8 @@
   
   <h1 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder" class="text-break">Interface ILastFirstFinder
   </h1>
-  <div class="markdown level0 summary"><p>A stategy used by a builder to find chars in the BWT and its sorted version.</p>
+  <div class="markdown level0 summary"><p>A stategy used by a <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.html">IBuilder</a> to find chars in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT">BWT</a> and in its sorted version
+<a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortedBWT">SortedBWT</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.html">MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders</a></h6>
@@ -99,7 +100,7 @@
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.BWT%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L20">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L22">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.BWT*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.BWT">BWT</h4>
@@ -108,7 +109,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string BWT { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">RotatedTextWithTerminator BWT { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -120,7 +121,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -130,7 +131,7 @@
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_CharComparer.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.CharComparer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L15">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L17">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_CharComparer_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.CharComparer*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_CharComparer" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.CharComparer">CharComparer</h4>
@@ -158,14 +159,15 @@
   </table>
   <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_CharComparer_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>The <see cref="!:Comparer&lt;T>.Default"></see> of <span class="xref">System.Char</span> cannot be used because the terminator in
-<a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT">BWT</a> and <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortedBWT">SortedBWT</a> has to be treated in a special way.</p>
+<a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT">BWT</a> and <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortedBWT">SortedBWT</a> has to be treated in a special way
+(<a class="xref" href="MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_Terminator">Terminator</a> is always to be considered smaller than any other char).</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortedBWT.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortedBWT%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L25">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L27">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortedBWT_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortedBWT*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortedBWT" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortedBWT">SortedBWT</h4>
@@ -174,7 +176,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string SortedBWT { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">RotatedTextWithTerminator SortedBWT { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -186,7 +188,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -198,7 +200,7 @@
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindIndexOfNthOccurrenceInBWT_System_Char_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInBWT(System.Char%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L34">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L36">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindIndexOfNthOccurrenceInBWT_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInBWT*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindIndexOfNthOccurrenceInBWT_System_Char_System_Int32_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInBWT(System.Char,System.Int32)">FindIndexOfNthOccurrenceInBWT(Char, Int32)</h4>
@@ -255,7 +257,7 @@
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindOccurrenceOfCharInSortedBWT_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindOccurrenceOfCharInSortedBWT(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L41">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L43">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindOccurrenceOfCharInSortedBWT_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindOccurrenceOfCharInSortedBWT*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindOccurrenceOfCharInSortedBWT_System_Int32_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindOccurrenceOfCharInSortedBWT(System.Int32)">FindOccurrenceOfCharInSortedBWT(Int32)</h4>
@@ -311,7 +313,7 @@
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L6" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L7" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -128,7 +128,7 @@
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2_MoreStructures_SuffixStructures_ISuffixStructureNode___0___1__MoreStructures_TextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.GetAllSuffixesFor%60%602(MoreStructures.SuffixStructures.ISuffixStructureNode%7B%60%600%2C%60%601%7D%2CMoreStructures.TextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixStructures/SuffixStructureNodeExtensions.cs/#L17">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixStructures/SuffixStructureNodeExtensions.cs/#L24">View Source</a>
   </span>
   <a id="MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor_" data-uid="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.GetAllSuffixesFor*"></a>
   <h4 id="MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2_MoreStructures_SuffixStructures_ISuffixStructureNode___0___1__MoreStructures_TextWithTerminator_" data-uid="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.GetAllSuffixesFor``2(MoreStructures.SuffixStructures.ISuffixStructureNode{``0,``1},MoreStructures.TextWithTerminator)">GetAllSuffixesFor&lt;TEdge, TNode&gt;(ISuffixStructureNode&lt;TEdge, TNode&gt;, TextWithTerminator)</h4>
@@ -138,7 +138,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;string&gt; GetAllSuffixesFor&lt;TEdge, TNode&gt;(this ISuffixStructureNode&lt;TEdge, TNode&gt; node, TextWithTerminator text)
+    <pre><code class="lang-csharp hljs">public static IValueEnumerable&lt;IValueEnumerable&lt;char&gt;&gt; GetAllSuffixesFor&lt;TEdge, TNode&gt;(this ISuffixStructureNode&lt;TEdge, TNode&gt; node, TextWithTerminator text)
     where TEdge : ISuffixStructureEdge&lt;TEdge, TNode&gt; where TNode : ISuffixStructureNode&lt;TEdge, TNode&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -175,8 +175,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
-        <td><p>A sequence of strings, each one being a suffix.</p>
+        <td><a class="xref" href="MoreStructures.Utilities.IValueEnumerable-1.html">IValueEnumerable</a>&lt;<a class="xref" href="MoreStructures.Utilities.IValueEnumerable-1.html">IValueEnumerable</a>&lt;<span class="xref">System.Char</span>&gt;&gt;</td>
+        <td><p>A sequence of <a class="xref" href="MoreStructures.Utilities.IValueEnumerable-1.html">IValueEnumerable&lt;T&gt;</a>, each one being a suffix.</p>
 </td>
       </tr>
     </tbody>
@@ -192,11 +192,13 @@
     <tbody>
       <tr>
         <td><span class="parametername">TEdge</span></td>
-        <td></td>
+        <td><p><inheritdoc cref="T:MoreStructures.SuffixStructures.ISuffixStructureEdge`2" path="/typeparam[@name=&apos;TEdge&apos;]"></inheritdoc></p>
+</td>
       </tr>
       <tr>
         <td><span class="parametername">TNode</span></td>
-        <td></td>
+        <td><p><inheritdoc cref="T:MoreStructures.SuffixStructures.ISuffixStructureNode`2" path="/typeparam[@name=&apos;TNode&apos;]"></inheritdoc></p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -211,7 +213,7 @@
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixStructures_SuffixStructureNodeExtensions.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixStructures.SuffixStructureNodeExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixStructures/SuffixStructureNodeExtensions.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixStructures/SuffixStructureNodeExtensions.cs/#L9" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

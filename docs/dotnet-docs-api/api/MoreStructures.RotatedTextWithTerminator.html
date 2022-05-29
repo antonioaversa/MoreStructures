@@ -94,7 +94,8 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">System.Collections.IEnumerable</span>&lt;<span class="xref">System.Char</span>&gt;</div>
+    <div><a class="xref" href="MoreStructures.Utilities.IValueEnumerable-1.html">IValueEnumerable</a>&lt;<span class="xref">System.Char</span>&gt;</div>
+    <div><span class="xref">IEnumerable</span>&lt;<span class="xref">System.Char</span>&gt;</div>
     <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
@@ -125,7 +126,7 @@
   <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
   <h5 id="MoreStructures_RotatedTextWithTerminator_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class RotatedTextWithTerminator : IEquatable&lt;RotatedTextWithTerminator&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class RotatedTextWithTerminator : IValueEnumerable&lt;char&gt;, IEquatable&lt;RotatedTextWithTerminator&gt;</code></pre>
   </div>
   <h5 id="MoreStructures_RotatedTextWithTerminator_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>A terminator-terminated rotated text is required by Burrows-Wheeler Transform operations, such as inversion.
@@ -141,20 +142,20 @@ Most string-related functionalities provided by <a class="xref" href="MoreStruct
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RotatedTextWithTerminator__ctor_System_String_System_Char_.md&amp;value=---%0Auid%3A%20MoreStructures.RotatedTextWithTerminator.%23ctor(System.String%2CSystem.Char)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RotatedTextWithTerminator__ctor_System_Collections_IEnumerable_System_Char__System_Char_System_Boolean_.md&amp;value=---%0Auid%3A%20MoreStructures.RotatedTextWithTerminator.%23ctor(System.Collections.IEnumerable%7BSystem.Char%7D%2CSystem.Char%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RotatedTextWithTerminator.cs/#L24">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RotatedTextWithTerminator.cs/#L32">View Source</a>
   </span>
   <a id="MoreStructures_RotatedTextWithTerminator__ctor_" data-uid="MoreStructures.RotatedTextWithTerminator.#ctor*"></a>
-  <h4 id="MoreStructures_RotatedTextWithTerminator__ctor_System_String_System_Char_" data-uid="MoreStructures.RotatedTextWithTerminator.#ctor(System.String,System.Char)">RotatedTextWithTerminator(String, Char)</h4>
+  <h4 id="MoreStructures_RotatedTextWithTerminator__ctor_System_Collections_IEnumerable_System_Char__System_Char_System_Boolean_" data-uid="MoreStructures.RotatedTextWithTerminator.#ctor(System.Collections.IEnumerable{System.Char},System.Char,System.Boolean)">RotatedTextWithTerminator(IEnumerable&lt;Char&gt;, Char, Boolean)</h4>
   <div class="markdown level1 summary"><p>A text string with a terminator character which has been rotated leftwards or rightwards, of a number of positions
 (0 included).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public RotatedTextWithTerminator(string RotatedText, char Terminator = '$')</code></pre>
+    <pre><code class="lang-csharp hljs">public RotatedTextWithTerminator(IEnumerable&lt;char&gt; RotatedText, char Terminator = '$', bool ValidateInput = true)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -167,9 +168,10 @@ Most string-related functionalities provided by <a class="xref" href="MoreStruct
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Collections.IEnumerable</span>&lt;<span class="xref">System.Char</span>&gt;</td>
         <td><span class="parametername">RotatedText</span></td>
-        <td><p>The  text string, containing the terminator character once, in any position of the text.</p>
+        <td><p>The text, defined ad an <see cref="!:IEnumerable&lt;T>"></see> of chars and containing the terminator character once, in any
+position of the text.</p>
 </td>
       </tr>
       <tr>
@@ -179,9 +181,16 @@ Most string-related functionalities provided by <a class="xref" href="MoreStruct
 <a class="xref" href="MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_DefaultTerminator">DefaultTerminator</a> is used.</p>
 </td>
       </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">ValidateInput</span></td>
+        <td><p>Whether the input, and in particular <a class="xref" href="MoreStructures.RotatedTextWithTerminator.html#MoreStructures_RotatedTextWithTerminator_RotatedText">RotatedText</a> should be validated, while this object is created.
+Validation takes O(n) time, where n = number of chars in <a class="xref" href="MoreStructures.RotatedTextWithTerminator.html#MoreStructures_RotatedTextWithTerminator_RotatedText">RotatedText</a> and can be an heavy operation.</p>
+</td>
+      </tr>
     </tbody>
   </table>
-  <h5 id="MoreStructures_RotatedTextWithTerminator__ctor_System_String_System_Char__remarks">Remarks</h5>
+  <h5 id="MoreStructures_RotatedTextWithTerminator__ctor_System_Collections_IEnumerable_System_Char__System_Char_System_Boolean__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>A terminator-terminated rotated text is required by Burrows-Wheeler Transform operations, such as inversion.
 This object provides type safety, as it allows to tell apart rotated terminator-terminated strings from generic
 ones.
@@ -198,7 +207,7 @@ Most string-related functionalities provided by <a class="xref" href="MoreStruct
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RotatedTextWithTerminator_Item_Index_.md&amp;value=---%0Auid%3A%20MoreStructures.RotatedTextWithTerminator.Item(Index)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RotatedTextWithTerminator.cs/#L60">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RotatedTextWithTerminator.cs/#L76">View Source</a>
   </span>
   <a id="MoreStructures_RotatedTextWithTerminator_Item_" data-uid="MoreStructures.RotatedTextWithTerminator.Item*"></a>
   <h4 id="MoreStructures_RotatedTextWithTerminator_Item_Index_" data-uid="MoreStructures.RotatedTextWithTerminator.Item(Index)">Item[Index]</h4>
@@ -249,7 +258,7 @@ text).</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RotatedTextWithTerminator_Item_MoreStructures_TextWithTerminator_ISelector_.md&amp;value=---%0Auid%3A%20MoreStructures.RotatedTextWithTerminator.Item(MoreStructures.TextWithTerminator.ISelector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RotatedTextWithTerminator.cs/#L45">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RotatedTextWithTerminator.cs/#L61">View Source</a>
   </span>
   <a id="MoreStructures_RotatedTextWithTerminator_Item_" data-uid="MoreStructures.RotatedTextWithTerminator.Item*"></a>
   <h4 id="MoreStructures_RotatedTextWithTerminator_Item_MoreStructures_TextWithTerminator_ISelector_" data-uid="MoreStructures.RotatedTextWithTerminator.Item(MoreStructures.TextWithTerminator.ISelector)">Item[TextWithTerminator.ISelector]</h4>
@@ -299,7 +308,7 @@ text).</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RotatedTextWithTerminator_Item_Range_.md&amp;value=---%0Auid%3A%20MoreStructures.RotatedTextWithTerminator.Item(Range)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RotatedTextWithTerminator.cs/#L52">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RotatedTextWithTerminator.cs/#L68">View Source</a>
   </span>
   <a id="MoreStructures_RotatedTextWithTerminator_Item_" data-uid="MoreStructures.RotatedTextWithTerminator.Item*"></a>
   <h4 id="MoreStructures_RotatedTextWithTerminator_Item_Range_" data-uid="MoreStructures.RotatedTextWithTerminator.Item(Range)">Item[Range]</h4>
@@ -308,7 +317,7 @@ text).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string this[Range range] { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;char&gt; this[Range range] { get; }</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -338,8 +347,8 @@ text).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><p>A string containing the selected part.</p>
+        <td><span class="xref">System.Collections.IEnumerable</span>&lt;<span class="xref">System.Char</span>&gt;</td>
+        <td><p>An <see cref="!:IEnumerable&lt;T>"></see> of chars containing the selected part.</p>
 </td>
       </tr>
     </tbody>
@@ -349,7 +358,7 @@ text).</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RotatedTextWithTerminator_Length.md&amp;value=---%0Auid%3A%20MoreStructures.RotatedTextWithTerminator.Length%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RotatedTextWithTerminator.cs/#L65">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RotatedTextWithTerminator.cs/#L84">View Source</a>
   </span>
   <a id="MoreStructures_RotatedTextWithTerminator_Length_" data-uid="MoreStructures.RotatedTextWithTerminator.Length*"></a>
   <h4 id="MoreStructures_RotatedTextWithTerminator_Length" data-uid="MoreStructures.RotatedTextWithTerminator.Length">Length</h4>
@@ -375,12 +384,15 @@ text).</p>
       </tr>
     </tbody>
   </table>
+  <h5 id="MoreStructures_RotatedTextWithTerminator_Length_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>After the first call, the value is cached for all subsequent calls.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RotatedTextWithTerminator_RotatedText.md&amp;value=---%0Auid%3A%20MoreStructures.RotatedTextWithTerminator.RotatedText%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RotatedTextWithTerminator.cs/#L30">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RotatedTextWithTerminator.cs/#L46">View Source</a>
   </span>
   <a id="MoreStructures_RotatedTextWithTerminator_RotatedText_" data-uid="MoreStructures.RotatedTextWithTerminator.RotatedText*"></a>
   <h4 id="MoreStructures_RotatedTextWithTerminator_RotatedText" data-uid="MoreStructures.RotatedTextWithTerminator.RotatedText">RotatedText</h4>
@@ -389,7 +401,7 @@ text).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string RotatedText { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;char&gt; RotatedText { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -401,17 +413,20 @@ text).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Collections.IEnumerable</span>&lt;<span class="xref">System.Char</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 id="MoreStructures_RotatedTextWithTerminator_RotatedText_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Wrapped into a <a class="xref" href="MoreStructures.Utilities.IValueEnumerable-1.html">IValueEnumerable&lt;T&gt;</a> to preserve value equality.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RotatedTextWithTerminator_Terminator.md&amp;value=---%0Auid%3A%20MoreStructures.RotatedTextWithTerminator.Terminator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RotatedTextWithTerminator.cs/#L35">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RotatedTextWithTerminator.cs/#L51">View Source</a>
   </span>
   <a id="MoreStructures_RotatedTextWithTerminator_Terminator_" data-uid="MoreStructures.RotatedTextWithTerminator.Terminator*"></a>
   <h4 id="MoreStructures_RotatedTextWithTerminator_Terminator" data-uid="MoreStructures.RotatedTextWithTerminator.Terminator">Terminator</h4>
@@ -437,6 +452,36 @@ text).</p>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RotatedTextWithTerminator_ValidateInput.md&amp;value=---%0Auid%3A%20MoreStructures.RotatedTextWithTerminator.ValidateInput%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RotatedTextWithTerminator.cs/#L35">View Source</a>
+  </span>
+  <a id="MoreStructures_RotatedTextWithTerminator_ValidateInput_" data-uid="MoreStructures.RotatedTextWithTerminator.ValidateInput*"></a>
+  <h4 id="MoreStructures_RotatedTextWithTerminator_ValidateInput" data-uid="MoreStructures.RotatedTextWithTerminator.ValidateInput">ValidateInput</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ValidateInput { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -444,7 +489,7 @@ text).</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RotatedTextWithTerminator_EndsWith_System_String_.md&amp;value=---%0Auid%3A%20MoreStructures.RotatedTextWithTerminator.EndsWith(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RotatedTextWithTerminator.cs/#L79">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RotatedTextWithTerminator.cs/#L106">View Source</a>
   </span>
   <a id="MoreStructures_RotatedTextWithTerminator_EndsWith_" data-uid="MoreStructures.RotatedTextWithTerminator.EndsWith*"></a>
   <h4 id="MoreStructures_RotatedTextWithTerminator_EndsWith_System_String_" data-uid="MoreStructures.RotatedTextWithTerminator.EndsWith(System.String)">EndsWith(String)</h4>
@@ -494,7 +539,7 @@ text).</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RotatedTextWithTerminator_GetEnumerator.md&amp;value=---%0Auid%3A%20MoreStructures.RotatedTextWithTerminator.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RotatedTextWithTerminator.cs/#L86">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RotatedTextWithTerminator.cs/#L113">View Source</a>
   </span>
   <a id="MoreStructures_RotatedTextWithTerminator_GetEnumerator_" data-uid="MoreStructures.RotatedTextWithTerminator.GetEnumerator*"></a>
   <h4 id="MoreStructures_RotatedTextWithTerminator_GetEnumerator" data-uid="MoreStructures.RotatedTextWithTerminator.GetEnumerator">GetEnumerator()</h4>
@@ -527,7 +572,7 @@ string, including the <a class="xref" href="MoreStructures.RotatedTextWithTermin
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RotatedTextWithTerminator_StartsWith_System_String_.md&amp;value=---%0Auid%3A%20MoreStructures.RotatedTextWithTerminator.StartsWith(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RotatedTextWithTerminator.cs/#L72">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RotatedTextWithTerminator.cs/#L99">View Source</a>
   </span>
   <a id="MoreStructures_RotatedTextWithTerminator_StartsWith_" data-uid="MoreStructures.RotatedTextWithTerminator.StartsWith*"></a>
   <h4 id="MoreStructures_RotatedTextWithTerminator_StartsWith_System_String_" data-uid="MoreStructures.RotatedTextWithTerminator.StartsWith(System.String)">StartsWith(String)</h4>
@@ -579,7 +624,7 @@ string, including the <a class="xref" href="MoreStructures.RotatedTextWithTermin
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RotatedTextWithTerminator_System_Collections_IEnumerable_GetEnumerator.md&amp;value=---%0Auid%3A%20MoreStructures.RotatedTextWithTerminator.System%23Collections%23IEnumerable%23GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RotatedTextWithTerminator.cs/#L93">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RotatedTextWithTerminator.cs/#L120">View Source</a>
   </span>
   <a id="MoreStructures_RotatedTextWithTerminator_System_Collections_IEnumerable_GetEnumerator_" data-uid="MoreStructures.RotatedTextWithTerminator.System#Collections#IEnumerable#GetEnumerator*"></a>
   <h4 id="MoreStructures_RotatedTextWithTerminator_System_Collections_IEnumerable_GetEnumerator" data-uid="MoreStructures.RotatedTextWithTerminator.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
@@ -609,7 +654,10 @@ string, including the <a class="xref" href="MoreStructures.RotatedTextWithTermin
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">System.Collections.IEnumerable&lt;&gt;</span>
+      <a class="xref" href="MoreStructures.Utilities.IValueEnumerable-1.html">IValueEnumerable&lt;T&gt;</a>
+  </div>
+  <div>
+      <span class="xref">IEnumerable&lt;&gt;</span>
   </div>
   <div>
       <span class="xref">System.IEquatable&lt;T&gt;</span>
@@ -625,7 +673,7 @@ string, including the <a class="xref" href="MoreStructures.RotatedTextWithTermin
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RotatedTextWithTerminator.md&amp;value=---%0Auid%3A%20MoreStructures.RotatedTextWithTerminator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RotatedTextWithTerminator.cs/#L24" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RotatedTextWithTerminator.cs/#L32" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -179,7 +179,7 @@ Each operation has Time Complexity = O(n) and Space Complexity = O(1).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string BWT { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public RotatedTextWithTerminator BWT { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -191,7 +191,7 @@ Each operation has Time Complexity = O(n) and Space Complexity = O(1).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -205,13 +205,13 @@ Each operation has Time Complexity = O(n) and Space Complexity = O(1).</p>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_BWTSorter_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.BWTSorter*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_BWTSorter" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.BWTSorter">BWTSorter</h4>
-  <div class="markdown level1 summary"><p>A function sorting the provided string into a sorted string, according to the provided
-<see cref="!:IComparer&lt;T>"></see> of chars.</p>
+  <div class="markdown level1 summary"><p>A function sorting the provided <a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a> into a sorted
+<a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a>, according to the provided <see cref="!:IComparer&lt;T>"></see> of chars.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Func&lt;string, IComparer&lt;char&gt;, string&gt; BWTSorter { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Func&lt;RotatedTextWithTerminator, IComparer&lt;char&gt;, RotatedTextWithTerminator&gt; BWTSorter { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -223,7 +223,7 @@ Each operation has Time Complexity = O(n) and Space Complexity = O(1).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Func</span>&lt;<span class="xref">System.String</span>, <span class="xref">IComparer</span>&lt;<span class="xref">System.Char</span>&gt;, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a>, <span class="xref">IComparer</span>&lt;<span class="xref">System.Char</span>&gt;, <a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -266,7 +266,8 @@ which uses a QuickSort with Time Complexity = O(n * log(n)) in average and O(n^2
   </table>
   <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_CharComparer_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>The <see cref="!:Comparer&lt;T>.Default"></see> of <span class="xref">System.Char</span> cannot be used because the terminator in
-<a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT">BWT</a> and <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortedBWT">SortedBWT</a> has to be treated in a special way.</p>
+<a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT">BWT</a> and <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortedBWT">SortedBWT</a> has to be treated in a special way
+(<a class="xref" href="MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_Terminator">Terminator</a> is always to be considered smaller than any other char).</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
@@ -282,7 +283,7 @@ which uses a QuickSort with Time Complexity = O(n * log(n)) in average and O(n^2
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string SortedBWT { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public RotatedTextWithTerminator SortedBWT { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -294,7 +295,7 @@ which uses a QuickSort with Time Complexity = O(n * log(n)) in average and O(n^2
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a></td>
         <td></td>
       </tr>
     </tbody>

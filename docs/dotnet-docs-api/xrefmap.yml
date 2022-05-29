@@ -25,6 +25,12 @@ references:
   commentId: T:MoreStructures.BurrowsWheelerTransform.Builders.IBuilder
   fullName: MoreStructures.BurrowsWheelerTransform.Builders.IBuilder
   nameWithType: IBuilder
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildMatrix(MoreStructures.BurrowsWheelerTransform.BWTransform)
+  name: BuildMatrix(BWTransform)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildMatrix_MoreStructures_BurrowsWheelerTransform_BWTransform_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildMatrix(MoreStructures.BurrowsWheelerTransform.BWTransform)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildMatrix(MoreStructures.BurrowsWheelerTransform.BWTransform)
+  nameWithType: IBuilder.BuildMatrix(BWTransform)
 - uid: MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildMatrix(MoreStructures.TextWithTerminator)
   name: BuildMatrix(TextWithTerminator)
   href: api/MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildMatrix_MoreStructures_TextWithTerminator_
@@ -108,15 +114,6 @@ references:
   isSpec: "True"
   fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.BinarySearchFinder
   nameWithType: BinarySearchFinder.BinarySearchFinder
-- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.BinarySearchWithRepetitions(System.String,System.Char,IComparer{System.Char},System.Int32,System.Int32)
-  name: BinarySearchWithRepetitions(String, Char, IComparer<Char>, Int32, Int32)
-  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_BinarySearchFinder_BinarySearchWithRepetitions_System_String_System_Char_IComparer_System_Char__System_Int32_System_Int32_
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.BinarySearchWithRepetitions(System.String,System.Char,IComparer{System.Char},System.Int32,System.Int32)
-  name.vb: BinarySearchWithRepetitions(String, Char, IComparer(Of Char), Int32, Int32)
-  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.BinarySearchWithRepetitions(System.String, System.Char, IComparer<System.Char>, System.Int32, System.Int32)
-  fullName.vb: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.BinarySearchWithRepetitions(System.String, System.Char, IComparer(Of System.Char), System.Int32, System.Int32)
-  nameWithType: BinarySearchFinder.BinarySearchWithRepetitions(String, Char, IComparer<Char>, Int32, Int32)
-  nameWithType.vb: BinarySearchFinder.BinarySearchWithRepetitions(String, Char, IComparer(Of Char), Int32, Int32)
 - uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.BinarySearchWithRepetitions*
   name: BinarySearchWithRepetitions
   href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_BinarySearchFinder_BinarySearchWithRepetitions_
@@ -397,6 +394,12 @@ references:
   commentId: T:MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder
   fullName: MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder
   nameWithType: NaiveBuilder
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildMatrix(MoreStructures.BurrowsWheelerTransform.BWTransform)
+  name: BuildMatrix(BWTransform)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildMatrix_MoreStructures_BurrowsWheelerTransform_BWTransform_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildMatrix(MoreStructures.BurrowsWheelerTransform.BWTransform)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildMatrix(MoreStructures.BurrowsWheelerTransform.BWTransform)
+  nameWithType: NaiveBuilder.BuildMatrix(BWTransform)
 - uid: MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildMatrix(MoreStructures.TextWithTerminator)
   name: BuildMatrix(TextWithTerminator)
   href: api/MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildMatrix_MoreStructures_TextWithTerminator_
@@ -548,12 +551,12 @@ references:
   commentId: T:MoreStructures.BurrowsWheelerTransform.BWTransform
   fullName: MoreStructures.BurrowsWheelerTransform.BWTransform
   nameWithType: BWTransform
-- uid: MoreStructures.BurrowsWheelerTransform.BWTransform.#ctor(MoreStructures.TextWithTerminator,System.String)
-  name: BWTransform(TextWithTerminator, String)
-  href: api/MoreStructures.BurrowsWheelerTransform.BWTransform.html#MoreStructures_BurrowsWheelerTransform_BWTransform__ctor_MoreStructures_TextWithTerminator_System_String_
-  commentId: M:MoreStructures.BurrowsWheelerTransform.BWTransform.#ctor(MoreStructures.TextWithTerminator,System.String)
-  fullName: MoreStructures.BurrowsWheelerTransform.BWTransform.BWTransform(MoreStructures.TextWithTerminator, System.String)
-  nameWithType: BWTransform.BWTransform(TextWithTerminator, String)
+- uid: MoreStructures.BurrowsWheelerTransform.BWTransform.#ctor(MoreStructures.TextWithTerminator,MoreStructures.RotatedTextWithTerminator)
+  name: BWTransform(TextWithTerminator, RotatedTextWithTerminator)
+  href: api/MoreStructures.BurrowsWheelerTransform.BWTransform.html#MoreStructures_BurrowsWheelerTransform_BWTransform__ctor_MoreStructures_TextWithTerminator_MoreStructures_RotatedTextWithTerminator_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.BWTransform.#ctor(MoreStructures.TextWithTerminator,MoreStructures.RotatedTextWithTerminator)
+  fullName: MoreStructures.BurrowsWheelerTransform.BWTransform.BWTransform(MoreStructures.TextWithTerminator, MoreStructures.RotatedTextWithTerminator)
+  nameWithType: BWTransform.BWTransform(TextWithTerminator, RotatedTextWithTerminator)
 - uid: MoreStructures.BurrowsWheelerTransform.BWTransform.#ctor*
   name: BWTransform
   href: api/MoreStructures.BurrowsWheelerTransform.BWTransform.html#MoreStructures_BurrowsWheelerTransform_BWTransform__ctor_
@@ -600,19 +603,6 @@ references:
   isSpec: "True"
   fullName: MoreStructures.BurrowsWheelerTransform.BWTransform.Text
   nameWithType: BWTransform.Text
-- uid: MoreStructures.BurrowsWheelerTransform.BWTransform.ToString
-  name: ToString()
-  href: api/MoreStructures.BurrowsWheelerTransform.BWTransform.html#MoreStructures_BurrowsWheelerTransform_BWTransform_ToString
-  commentId: M:MoreStructures.BurrowsWheelerTransform.BWTransform.ToString
-  fullName: MoreStructures.BurrowsWheelerTransform.BWTransform.ToString()
-  nameWithType: BWTransform.ToString()
-- uid: MoreStructures.BurrowsWheelerTransform.BWTransform.ToString*
-  name: ToString
-  href: api/MoreStructures.BurrowsWheelerTransform.BWTransform.html#MoreStructures_BurrowsWheelerTransform_BWTransform_ToString_
-  commentId: Overload:MoreStructures.BurrowsWheelerTransform.BWTransform.ToString
-  isSpec: "True"
-  fullName: MoreStructures.BurrowsWheelerTransform.BWTransform.ToString
-  nameWithType: BWTransform.ToString
 - uid: MoreStructures.CountTrees
   name: MoreStructures.CountTrees
   href: api/MoreStructures.CountTrees.html
@@ -1265,12 +1255,15 @@ references:
   commentId: T:MoreStructures.RotatedTextWithTerminator
   fullName: MoreStructures.RotatedTextWithTerminator
   nameWithType: RotatedTextWithTerminator
-- uid: MoreStructures.RotatedTextWithTerminator.#ctor(System.String,System.Char)
-  name: RotatedTextWithTerminator(String, Char)
-  href: api/MoreStructures.RotatedTextWithTerminator.html#MoreStructures_RotatedTextWithTerminator__ctor_System_String_System_Char_
-  commentId: M:MoreStructures.RotatedTextWithTerminator.#ctor(System.String,System.Char)
-  fullName: MoreStructures.RotatedTextWithTerminator.RotatedTextWithTerminator(System.String, System.Char)
-  nameWithType: RotatedTextWithTerminator.RotatedTextWithTerminator(String, Char)
+- uid: MoreStructures.RotatedTextWithTerminator.#ctor(System.Collections.IEnumerable{System.Char},System.Char,System.Boolean)
+  name: RotatedTextWithTerminator(IEnumerable<Char>, Char, Boolean)
+  href: api/MoreStructures.RotatedTextWithTerminator.html#MoreStructures_RotatedTextWithTerminator__ctor_System_Collections_IEnumerable_System_Char__System_Char_System_Boolean_
+  commentId: M:MoreStructures.RotatedTextWithTerminator.#ctor(System.Collections.IEnumerable{System.Char},System.Char,System.Boolean)
+  name.vb: RotatedTextWithTerminator(IEnumerable(Of Char), Char, Boolean)
+  fullName: MoreStructures.RotatedTextWithTerminator.RotatedTextWithTerminator(System.Collections.IEnumerable<System.Char>, System.Char, System.Boolean)
+  fullName.vb: MoreStructures.RotatedTextWithTerminator.RotatedTextWithTerminator(System.Collections.IEnumerable(Of System.Char), System.Char, System.Boolean)
+  nameWithType: RotatedTextWithTerminator.RotatedTextWithTerminator(IEnumerable<Char>, Char, Boolean)
+  nameWithType.vb: RotatedTextWithTerminator.RotatedTextWithTerminator(IEnumerable(Of Char), Char, Boolean)
 - uid: MoreStructures.RotatedTextWithTerminator.#ctor*
   name: RotatedTextWithTerminator
   href: api/MoreStructures.RotatedTextWithTerminator.html#MoreStructures_RotatedTextWithTerminator__ctor_
@@ -1407,6 +1400,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.RotatedTextWithTerminator.Terminator
   nameWithType: RotatedTextWithTerminator.Terminator
+- uid: MoreStructures.RotatedTextWithTerminator.ValidateInput
+  name: ValidateInput
+  href: api/MoreStructures.RotatedTextWithTerminator.html#MoreStructures_RotatedTextWithTerminator_ValidateInput
+  commentId: P:MoreStructures.RotatedTextWithTerminator.ValidateInput
+  fullName: MoreStructures.RotatedTextWithTerminator.ValidateInput
+  nameWithType: RotatedTextWithTerminator.ValidateInput
+- uid: MoreStructures.RotatedTextWithTerminator.ValidateInput*
+  name: ValidateInput
+  href: api/MoreStructures.RotatedTextWithTerminator.html#MoreStructures_RotatedTextWithTerminator_ValidateInput_
+  commentId: Overload:MoreStructures.RotatedTextWithTerminator.ValidateInput
+  isSpec: "True"
+  fullName: MoreStructures.RotatedTextWithTerminator.ValidateInput
+  nameWithType: RotatedTextWithTerminator.ValidateInput
 - uid: MoreStructures.SuffixStructures
   name: MoreStructures.SuffixStructures
   href: api/MoreStructures.SuffixStructures.html
@@ -2465,6 +2471,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.BuilderTests
   nameWithType: BuilderTests.BuilderTests
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.Builder
+  name: Builder
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_BuilderTests_Builder
+  commentId: P:MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.Builder
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.Builder
+  nameWithType: BuilderTests.Builder
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.Builder*
+  name: Builder
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_BuilderTests_Builder_
+  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.Builder
+  isSpec: "True"
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.Builder
+  nameWithType: BuilderTests.Builder
 - uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.BuildMatrix_AllRotationsAreDifferent
   name: BuildMatrix_AllRotationsAreDifferent()
   href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_BuilderTests_BuildMatrix_AllRotationsAreDifferent
@@ -2478,6 +2497,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.BuildMatrix_AllRotationsAreDifferent
   nameWithType: BuilderTests.BuildMatrix_AllRotationsAreDifferent
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.BuildMatrix_FromTransform_IsCorrect(MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.TestCase)
+  name: BuildMatrix_FromTransform_IsCorrect(BuilderTests.TestCase)
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_BuilderTests_BuildMatrix_FromTransform_IsCorrect_MoreStructures_Tests_BurrowsWheelerTransform_Builder_BuilderTests_TestCase_
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.BuildMatrix_FromTransform_IsCorrect(MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.TestCase)
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.BuildMatrix_FromTransform_IsCorrect(MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.TestCase)
+  nameWithType: BuilderTests.BuildMatrix_FromTransform_IsCorrect(BuilderTests.TestCase)
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.BuildMatrix_FromTransform_IsCorrect*
+  name: BuildMatrix_FromTransform_IsCorrect
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_BuilderTests_BuildMatrix_FromTransform_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.BuildMatrix_FromTransform_IsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.BuildMatrix_FromTransform_IsCorrect
+  nameWithType: BuilderTests.BuildMatrix_FromTransform_IsCorrect
 - uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.BuildMatrix_LastFirstProperty
   name: BuildMatrix_LastFirstProperty()
   href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.BuilderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_BuilderTests_BuildMatrix_LastFirstProperty
@@ -2863,6 +2895,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.BurrowsWheelerTransform.BWMatrixTests.Ctor_AssignsContentSpecified
   nameWithType: BWMatrixTests.Ctor_AssignsContentSpecified
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.BWMatrixTests.Equals_ByValue
+  name: Equals_ByValue()
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.BWMatrixTests.html#MoreStructures_Tests_BurrowsWheelerTransform_BWMatrixTests_Equals_ByValue
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.BWMatrixTests.Equals_ByValue
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.BWMatrixTests.Equals_ByValue()
+  nameWithType: BWMatrixTests.Equals_ByValue()
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.BWMatrixTests.Equals_ByValue*
+  name: Equals_ByValue
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.BWMatrixTests.html#MoreStructures_Tests_BurrowsWheelerTransform_BWMatrixTests_Equals_ByValue_
+  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.BWMatrixTests.Equals_ByValue
+  isSpec: "True"
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.BWMatrixTests.Equals_ByValue
+  nameWithType: BWMatrixTests.Equals_ByValue
 - uid: MoreStructures.Tests.BurrowsWheelerTransform.BWMatrixTests.FirstColumn_IsATextPermutation
   name: FirstColumn_IsATextPermutation()
   href: api/MoreStructures.Tests.BurrowsWheelerTransform.BWMatrixTests.html#MoreStructures_Tests_BurrowsWheelerTransform_BWMatrixTests_FirstColumn_IsATextPermutation
@@ -2889,6 +2934,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.BurrowsWheelerTransform.BWMatrixTests.FirstColumnAndLastColumn_AreConsistent
   nameWithType: BWMatrixTests.FirstColumnAndLastColumn_AreConsistent
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.BWMatrixTests.GetHashCode_ByValue
+  name: GetHashCode_ByValue()
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.BWMatrixTests.html#MoreStructures_Tests_BurrowsWheelerTransform_BWMatrixTests_GetHashCode_ByValue
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.BWMatrixTests.GetHashCode_ByValue
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.BWMatrixTests.GetHashCode_ByValue()
+  nameWithType: BWMatrixTests.GetHashCode_ByValue()
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.BWMatrixTests.GetHashCode_ByValue*
+  name: GetHashCode_ByValue
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.BWMatrixTests.html#MoreStructures_Tests_BurrowsWheelerTransform_BWMatrixTests_GetHashCode_ByValue_
+  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.BWMatrixTests.GetHashCode_ByValue
+  isSpec: "True"
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.BWMatrixTests.GetHashCode_ByValue
+  nameWithType: BWMatrixTests.GetHashCode_ByValue
 - uid: MoreStructures.Tests.BurrowsWheelerTransform.BWMatrixTests.LastColumn_IsATextPermutation
   name: LastColumn_IsATextPermutation()
   href: api/MoreStructures.Tests.BurrowsWheelerTransform.BWMatrixTests.html#MoreStructures_Tests_BurrowsWheelerTransform_BWMatrixTests_LastColumn_IsATextPermutation
@@ -2934,19 +2992,19 @@ references:
   commentId: T:MoreStructures.Tests.BurrowsWheelerTransform.BWTransformTests
   fullName: MoreStructures.Tests.BurrowsWheelerTransform.BWTransformTests
   nameWithType: BWTransformTests
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.BWTransformTests.ToString_IncludesTheContent
-  name: ToString_IncludesTheContent()
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.BWTransformTests.html#MoreStructures_Tests_BurrowsWheelerTransform_BWTransformTests_ToString_IncludesTheContent
-  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.BWTransformTests.ToString_IncludesTheContent
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.BWTransformTests.ToString_IncludesTheContent()
-  nameWithType: BWTransformTests.ToString_IncludesTheContent()
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.BWTransformTests.ToString_IncludesTheContent*
-  name: ToString_IncludesTheContent
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.BWTransformTests.html#MoreStructures_Tests_BurrowsWheelerTransform_BWTransformTests_ToString_IncludesTheContent_
-  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.BWTransformTests.ToString_IncludesTheContent
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.BWTransformTests.Length_IsTheSameOfLengthOfText
+  name: Length_IsTheSameOfLengthOfText()
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.BWTransformTests.html#MoreStructures_Tests_BurrowsWheelerTransform_BWTransformTests_Length_IsTheSameOfLengthOfText
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.BWTransformTests.Length_IsTheSameOfLengthOfText
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.BWTransformTests.Length_IsTheSameOfLengthOfText()
+  nameWithType: BWTransformTests.Length_IsTheSameOfLengthOfText()
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.BWTransformTests.Length_IsTheSameOfLengthOfText*
+  name: Length_IsTheSameOfLengthOfText
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.BWTransformTests.html#MoreStructures_Tests_BurrowsWheelerTransform_BWTransformTests_Length_IsTheSameOfLengthOfText_
+  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.BWTransformTests.Length_IsTheSameOfLengthOfText
   isSpec: "True"
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.BWTransformTests.ToString_IncludesTheContent
-  nameWithType: BWTransformTests.ToString_IncludesTheContent
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.BWTransformTests.Length_IsTheSameOfLengthOfText
+  nameWithType: BWTransformTests.Length_IsTheSameOfLengthOfText
 - uid: MoreStructures.Tests.CountTrees
   name: MoreStructures.Tests.CountTrees
   href: api/MoreStructures.Tests.CountTrees.html
@@ -3985,6 +4043,45 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.StringIncludingTerminatorComparerTests.Compare_IsCorrect_WithTerminatorIncludedLowerInASCII
   nameWithType: StringIncludingTerminatorComparerTests.Compare_IsCorrect_WithTerminatorIncludedLowerInASCII
+- uid: MoreStructures.Tests.StringIncludingTerminatorComparerTests.Equals_ByValue
+  name: Equals_ByValue()
+  href: api/MoreStructures.Tests.StringIncludingTerminatorComparerTests.html#MoreStructures_Tests_StringIncludingTerminatorComparerTests_Equals_ByValue
+  commentId: M:MoreStructures.Tests.StringIncludingTerminatorComparerTests.Equals_ByValue
+  fullName: MoreStructures.Tests.StringIncludingTerminatorComparerTests.Equals_ByValue()
+  nameWithType: StringIncludingTerminatorComparerTests.Equals_ByValue()
+- uid: MoreStructures.Tests.StringIncludingTerminatorComparerTests.Equals_ByValue*
+  name: Equals_ByValue
+  href: api/MoreStructures.Tests.StringIncludingTerminatorComparerTests.html#MoreStructures_Tests_StringIncludingTerminatorComparerTests_Equals_ByValue_
+  commentId: Overload:MoreStructures.Tests.StringIncludingTerminatorComparerTests.Equals_ByValue
+  isSpec: "True"
+  fullName: MoreStructures.Tests.StringIncludingTerminatorComparerTests.Equals_ByValue
+  nameWithType: StringIncludingTerminatorComparerTests.Equals_ByValue
+- uid: MoreStructures.Tests.StringIncludingTerminatorComparerTests.GetHashCode_ByValue
+  name: GetHashCode_ByValue()
+  href: api/MoreStructures.Tests.StringIncludingTerminatorComparerTests.html#MoreStructures_Tests_StringIncludingTerminatorComparerTests_GetHashCode_ByValue
+  commentId: M:MoreStructures.Tests.StringIncludingTerminatorComparerTests.GetHashCode_ByValue
+  fullName: MoreStructures.Tests.StringIncludingTerminatorComparerTests.GetHashCode_ByValue()
+  nameWithType: StringIncludingTerminatorComparerTests.GetHashCode_ByValue()
+- uid: MoreStructures.Tests.StringIncludingTerminatorComparerTests.GetHashCode_ByValue*
+  name: GetHashCode_ByValue
+  href: api/MoreStructures.Tests.StringIncludingTerminatorComparerTests.html#MoreStructures_Tests_StringIncludingTerminatorComparerTests_GetHashCode_ByValue_
+  commentId: Overload:MoreStructures.Tests.StringIncludingTerminatorComparerTests.GetHashCode_ByValue
+  isSpec: "True"
+  fullName: MoreStructures.Tests.StringIncludingTerminatorComparerTests.GetHashCode_ByValue
+  nameWithType: StringIncludingTerminatorComparerTests.GetHashCode_ByValue
+- uid: MoreStructures.Tests.StringIncludingTerminatorComparerTests.Terminator_IsSet
+  name: Terminator_IsSet()
+  href: api/MoreStructures.Tests.StringIncludingTerminatorComparerTests.html#MoreStructures_Tests_StringIncludingTerminatorComparerTests_Terminator_IsSet
+  commentId: M:MoreStructures.Tests.StringIncludingTerminatorComparerTests.Terminator_IsSet
+  fullName: MoreStructures.Tests.StringIncludingTerminatorComparerTests.Terminator_IsSet()
+  nameWithType: StringIncludingTerminatorComparerTests.Terminator_IsSet()
+- uid: MoreStructures.Tests.StringIncludingTerminatorComparerTests.Terminator_IsSet*
+  name: Terminator_IsSet
+  href: api/MoreStructures.Tests.StringIncludingTerminatorComparerTests.html#MoreStructures_Tests_StringIncludingTerminatorComparerTests_Terminator_IsSet_
+  commentId: Overload:MoreStructures.Tests.StringIncludingTerminatorComparerTests.Terminator_IsSet
+  isSpec: "True"
+  fullName: MoreStructures.Tests.StringIncludingTerminatorComparerTests.Terminator_IsSet
+  nameWithType: StringIncludingTerminatorComparerTests.Terminator_IsSet
 - uid: MoreStructures.Tests.SuffixStructures
   name: MoreStructures.Tests.SuffixStructures
   href: api/MoreStructures.Tests.SuffixStructures.html
@@ -4816,6 +4913,19 @@ references:
   commentId: T:MoreStructures.Tests.SuffixTrees.Matching.MatcherTests
   fullName: MoreStructures.Tests.SuffixTrees.Matching.MatcherTests
   nameWithType: MatcherTests
+- uid: MoreStructures.Tests.SuffixTrees.Matching.MatcherTests.BuildTree_UsesTerminatorForMatchToDistinguishSuffixesFromAnySubstring
+  name: BuildTree_UsesTerminatorForMatchToDistinguishSuffixesFromAnySubstring()
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.MatcherTests.html#MoreStructures_Tests_SuffixTrees_Matching_MatcherTests_BuildTree_UsesTerminatorForMatchToDistinguishSuffixesFromAnySubstring
+  commentId: M:MoreStructures.Tests.SuffixTrees.Matching.MatcherTests.BuildTree_UsesTerminatorForMatchToDistinguishSuffixesFromAnySubstring
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.MatcherTests.BuildTree_UsesTerminatorForMatchToDistinguishSuffixesFromAnySubstring()
+  nameWithType: MatcherTests.BuildTree_UsesTerminatorForMatchToDistinguishSuffixesFromAnySubstring()
+- uid: MoreStructures.Tests.SuffixTrees.Matching.MatcherTests.BuildTree_UsesTerminatorForMatchToDistinguishSuffixesFromAnySubstring*
+  name: BuildTree_UsesTerminatorForMatchToDistinguishSuffixesFromAnySubstring
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.MatcherTests.html#MoreStructures_Tests_SuffixTrees_Matching_MatcherTests_BuildTree_UsesTerminatorForMatchToDistinguishSuffixesFromAnySubstring_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Matching.MatcherTests.BuildTree_UsesTerminatorForMatchToDistinguishSuffixesFromAnySubstring
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.MatcherTests.BuildTree_UsesTerminatorForMatchToDistinguishSuffixesFromAnySubstring
+  nameWithType: MatcherTests.BuildTree_UsesTerminatorForMatchToDistinguishSuffixesFromAnySubstring
 - uid: MoreStructures.Tests.SuffixTrees.Matching.MatcherTests.Match_Preconditions
   name: Match_Preconditions()
   href: api/MoreStructures.Tests.SuffixTrees.Matching.MatcherTests.html#MoreStructures_Tests_SuffixTrees_Matching_MatcherTests_Match_Preconditions
@@ -5452,25 +5562,57 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.SuffixTries.SuffixTrieNodeTests.ToString_OnLeafIncludesStart
   nameWithType: SuffixTrieNodeTests.ToString_OnLeafIncludesStart
+- uid: MoreStructures.Tests.TextWithTerminatorExtensionsTests
+  name: TextWithTerminatorExtensionsTests
+  href: api/MoreStructures.Tests.TextWithTerminatorExtensionsTests.html
+  commentId: T:MoreStructures.Tests.TextWithTerminatorExtensionsTests
+  fullName: MoreStructures.Tests.TextWithTerminatorExtensionsTests
+  nameWithType: TextWithTerminatorExtensionsTests
+- uid: MoreStructures.Tests.TextWithTerminatorExtensionsTests.ToVirtuallyRotated
+  name: ToVirtuallyRotated()
+  href: api/MoreStructures.Tests.TextWithTerminatorExtensionsTests.html#MoreStructures_Tests_TextWithTerminatorExtensionsTests_ToVirtuallyRotated
+  commentId: M:MoreStructures.Tests.TextWithTerminatorExtensionsTests.ToVirtuallyRotated
+  fullName: MoreStructures.Tests.TextWithTerminatorExtensionsTests.ToVirtuallyRotated()
+  nameWithType: TextWithTerminatorExtensionsTests.ToVirtuallyRotated()
+- uid: MoreStructures.Tests.TextWithTerminatorExtensionsTests.ToVirtuallyRotated*
+  name: ToVirtuallyRotated
+  href: api/MoreStructures.Tests.TextWithTerminatorExtensionsTests.html#MoreStructures_Tests_TextWithTerminatorExtensionsTests_ToVirtuallyRotated_
+  commentId: Overload:MoreStructures.Tests.TextWithTerminatorExtensionsTests.ToVirtuallyRotated
+  isSpec: "True"
+  fullName: MoreStructures.Tests.TextWithTerminatorExtensionsTests.ToVirtuallyRotated
+  nameWithType: TextWithTerminatorExtensionsTests.ToVirtuallyRotated
 - uid: MoreStructures.Tests.TextWithTerminatorTests
   name: TextWithTerminatorTests
   href: api/MoreStructures.Tests.TextWithTerminatorTests.html
   commentId: T:MoreStructures.Tests.TextWithTerminatorTests
   fullName: MoreStructures.Tests.TextWithTerminatorTests
   nameWithType: TextWithTerminatorTests
-- uid: MoreStructures.Tests.TextWithTerminatorTests.Ctor_Preconditions
-  name: Ctor_Preconditions()
-  href: api/MoreStructures.Tests.TextWithTerminatorTests.html#MoreStructures_Tests_TextWithTerminatorTests_Ctor_Preconditions
-  commentId: M:MoreStructures.Tests.TextWithTerminatorTests.Ctor_Preconditions
-  fullName: MoreStructures.Tests.TextWithTerminatorTests.Ctor_Preconditions()
-  nameWithType: TextWithTerminatorTests.Ctor_Preconditions()
-- uid: MoreStructures.Tests.TextWithTerminatorTests.Ctor_Preconditions*
-  name: Ctor_Preconditions
-  href: api/MoreStructures.Tests.TextWithTerminatorTests.html#MoreStructures_Tests_TextWithTerminatorTests_Ctor_Preconditions_
-  commentId: Overload:MoreStructures.Tests.TextWithTerminatorTests.Ctor_Preconditions
+- uid: MoreStructures.Tests.TextWithTerminatorTests.Ctor_BrokenInvariant_WithoutValidateInput
+  name: Ctor_BrokenInvariant_WithoutValidateInput()
+  href: api/MoreStructures.Tests.TextWithTerminatorTests.html#MoreStructures_Tests_TextWithTerminatorTests_Ctor_BrokenInvariant_WithoutValidateInput
+  commentId: M:MoreStructures.Tests.TextWithTerminatorTests.Ctor_BrokenInvariant_WithoutValidateInput
+  fullName: MoreStructures.Tests.TextWithTerminatorTests.Ctor_BrokenInvariant_WithoutValidateInput()
+  nameWithType: TextWithTerminatorTests.Ctor_BrokenInvariant_WithoutValidateInput()
+- uid: MoreStructures.Tests.TextWithTerminatorTests.Ctor_BrokenInvariant_WithoutValidateInput*
+  name: Ctor_BrokenInvariant_WithoutValidateInput
+  href: api/MoreStructures.Tests.TextWithTerminatorTests.html#MoreStructures_Tests_TextWithTerminatorTests_Ctor_BrokenInvariant_WithoutValidateInput_
+  commentId: Overload:MoreStructures.Tests.TextWithTerminatorTests.Ctor_BrokenInvariant_WithoutValidateInput
   isSpec: "True"
-  fullName: MoreStructures.Tests.TextWithTerminatorTests.Ctor_Preconditions
-  nameWithType: TextWithTerminatorTests.Ctor_Preconditions
+  fullName: MoreStructures.Tests.TextWithTerminatorTests.Ctor_BrokenInvariant_WithoutValidateInput
+  nameWithType: TextWithTerminatorTests.Ctor_BrokenInvariant_WithoutValidateInput
+- uid: MoreStructures.Tests.TextWithTerminatorTests.Ctor_Preconditions_WithValidateInput
+  name: Ctor_Preconditions_WithValidateInput()
+  href: api/MoreStructures.Tests.TextWithTerminatorTests.html#MoreStructures_Tests_TextWithTerminatorTests_Ctor_Preconditions_WithValidateInput
+  commentId: M:MoreStructures.Tests.TextWithTerminatorTests.Ctor_Preconditions_WithValidateInput
+  fullName: MoreStructures.Tests.TextWithTerminatorTests.Ctor_Preconditions_WithValidateInput()
+  nameWithType: TextWithTerminatorTests.Ctor_Preconditions_WithValidateInput()
+- uid: MoreStructures.Tests.TextWithTerminatorTests.Ctor_Preconditions_WithValidateInput*
+  name: Ctor_Preconditions_WithValidateInput
+  href: api/MoreStructures.Tests.TextWithTerminatorTests.html#MoreStructures_Tests_TextWithTerminatorTests_Ctor_Preconditions_WithValidateInput_
+  commentId: Overload:MoreStructures.Tests.TextWithTerminatorTests.Ctor_Preconditions_WithValidateInput
+  isSpec: "True"
+  fullName: MoreStructures.Tests.TextWithTerminatorTests.Ctor_Preconditions_WithValidateInput
+  nameWithType: TextWithTerminatorTests.Ctor_Preconditions_WithValidateInput
 - uid: MoreStructures.Tests.TextWithTerminatorTests.EndsWith_IsCorrect
   name: EndsWith_IsCorrect()
   href: api/MoreStructures.Tests.TextWithTerminatorTests.html#MoreStructures_Tests_TextWithTerminatorTests_EndsWith_IsCorrect
@@ -5626,18 +5768,57 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.Compare_IsCorrect_WithTerminatorLowerInASCII
   nameWithType: CharOrTerminatorComparerTests.Compare_IsCorrect_WithTerminatorLowerInASCII
+- uid: MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.Equals_ByValue
+  name: Equals_ByValue()
+  href: api/MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.html#MoreStructures_Tests_Utilities_CharOrTerminatorComparerTests_Equals_ByValue
+  commentId: M:MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.Equals_ByValue
+  fullName: MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.Equals_ByValue()
+  nameWithType: CharOrTerminatorComparerTests.Equals_ByValue()
+- uid: MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.Equals_ByValue*
+  name: Equals_ByValue
+  href: api/MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.html#MoreStructures_Tests_Utilities_CharOrTerminatorComparerTests_Equals_ByValue_
+  commentId: Overload:MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.Equals_ByValue
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.Equals_ByValue
+  nameWithType: CharOrTerminatorComparerTests.Equals_ByValue
+- uid: MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.GetHashCode_ByValue
+  name: GetHashCode_ByValue()
+  href: api/MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.html#MoreStructures_Tests_Utilities_CharOrTerminatorComparerTests_GetHashCode_ByValue
+  commentId: M:MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.GetHashCode_ByValue
+  fullName: MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.GetHashCode_ByValue()
+  nameWithType: CharOrTerminatorComparerTests.GetHashCode_ByValue()
+- uid: MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.GetHashCode_ByValue*
+  name: GetHashCode_ByValue
+  href: api/MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.html#MoreStructures_Tests_Utilities_CharOrTerminatorComparerTests_GetHashCode_ByValue_
+  commentId: Overload:MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.GetHashCode_ByValue
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.GetHashCode_ByValue
+  nameWithType: CharOrTerminatorComparerTests.GetHashCode_ByValue
+- uid: MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.Terminator_IsSet
+  name: Terminator_IsSet()
+  href: api/MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.html#MoreStructures_Tests_Utilities_CharOrTerminatorComparerTests_Terminator_IsSet
+  commentId: M:MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.Terminator_IsSet
+  fullName: MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.Terminator_IsSet()
+  nameWithType: CharOrTerminatorComparerTests.Terminator_IsSet()
+- uid: MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.Terminator_IsSet*
+  name: Terminator_IsSet
+  href: api/MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.html#MoreStructures_Tests_Utilities_CharOrTerminatorComparerTests_Terminator_IsSet_
+  commentId: Overload:MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.Terminator_IsSet
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.Terminator_IsSet
+  nameWithType: CharOrTerminatorComparerTests.Terminator_IsSet
 - uid: MoreStructures.Tests.Utilities.StringUtilitiesTests
   name: StringUtilitiesTests
   href: api/MoreStructures.Tests.Utilities.StringUtilitiesTests.html
   commentId: T:MoreStructures.Tests.Utilities.StringUtilitiesTests
   fullName: MoreStructures.Tests.Utilities.StringUtilitiesTests
   nameWithType: StringUtilitiesTests
-- uid: MoreStructures.Tests.Utilities.StringUtilitiesTests.LongestPrefixInCommon_IsCorrect
-  name: LongestPrefixInCommon_IsCorrect()
-  href: api/MoreStructures.Tests.Utilities.StringUtilitiesTests.html#MoreStructures_Tests_Utilities_StringUtilitiesTests_LongestPrefixInCommon_IsCorrect
-  commentId: M:MoreStructures.Tests.Utilities.StringUtilitiesTests.LongestPrefixInCommon_IsCorrect
-  fullName: MoreStructures.Tests.Utilities.StringUtilitiesTests.LongestPrefixInCommon_IsCorrect()
-  nameWithType: StringUtilitiesTests.LongestPrefixInCommon_IsCorrect()
+- uid: MoreStructures.Tests.Utilities.StringUtilitiesTests.LongestPrefixInCommon_IsCorrect(System.String,System.String,System.Int32)
+  name: LongestPrefixInCommon_IsCorrect(String, String, Int32)
+  href: api/MoreStructures.Tests.Utilities.StringUtilitiesTests.html#MoreStructures_Tests_Utilities_StringUtilitiesTests_LongestPrefixInCommon_IsCorrect_System_String_System_String_System_Int32_
+  commentId: M:MoreStructures.Tests.Utilities.StringUtilitiesTests.LongestPrefixInCommon_IsCorrect(System.String,System.String,System.Int32)
+  fullName: MoreStructures.Tests.Utilities.StringUtilitiesTests.LongestPrefixInCommon_IsCorrect(System.String, System.String, System.Int32)
+  nameWithType: StringUtilitiesTests.LongestPrefixInCommon_IsCorrect(String, String, Int32)
 - uid: MoreStructures.Tests.Utilities.StringUtilitiesTests.LongestPrefixInCommon_IsCorrect*
   name: LongestPrefixInCommon_IsCorrect
   href: api/MoreStructures.Tests.Utilities.StringUtilitiesTests.html#MoreStructures_Tests_Utilities_StringUtilitiesTests_LongestPrefixInCommon_IsCorrect_
@@ -5645,6 +5826,96 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Utilities.StringUtilitiesTests.LongestPrefixInCommon_IsCorrect
   nameWithType: StringUtilitiesTests.LongestPrefixInCommon_IsCorrect
+- uid: MoreStructures.Tests.Utilities.ValueEnumerableExtensionsTests
+  name: ValueEnumerableExtensionsTests
+  href: api/MoreStructures.Tests.Utilities.ValueEnumerableExtensionsTests.html
+  commentId: T:MoreStructures.Tests.Utilities.ValueEnumerableExtensionsTests
+  fullName: MoreStructures.Tests.Utilities.ValueEnumerableExtensionsTests
+  nameWithType: ValueEnumerableExtensionsTests
+- uid: MoreStructures.Tests.Utilities.ValueEnumerableExtensionsTests.AsValueEnumerable_WrapsProvidedEnumerableIntoAValueEnumerable
+  name: AsValueEnumerable_WrapsProvidedEnumerableIntoAValueEnumerable()
+  href: api/MoreStructures.Tests.Utilities.ValueEnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_ValueEnumerableExtensionsTests_AsValueEnumerable_WrapsProvidedEnumerableIntoAValueEnumerable
+  commentId: M:MoreStructures.Tests.Utilities.ValueEnumerableExtensionsTests.AsValueEnumerable_WrapsProvidedEnumerableIntoAValueEnumerable
+  fullName: MoreStructures.Tests.Utilities.ValueEnumerableExtensionsTests.AsValueEnumerable_WrapsProvidedEnumerableIntoAValueEnumerable()
+  nameWithType: ValueEnumerableExtensionsTests.AsValueEnumerable_WrapsProvidedEnumerableIntoAValueEnumerable()
+- uid: MoreStructures.Tests.Utilities.ValueEnumerableExtensionsTests.AsValueEnumerable_WrapsProvidedEnumerableIntoAValueEnumerable*
+  name: AsValueEnumerable_WrapsProvidedEnumerableIntoAValueEnumerable
+  href: api/MoreStructures.Tests.Utilities.ValueEnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_ValueEnumerableExtensionsTests_AsValueEnumerable_WrapsProvidedEnumerableIntoAValueEnumerable_
+  commentId: Overload:MoreStructures.Tests.Utilities.ValueEnumerableExtensionsTests.AsValueEnumerable_WrapsProvidedEnumerableIntoAValueEnumerable
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.ValueEnumerableExtensionsTests.AsValueEnumerable_WrapsProvidedEnumerableIntoAValueEnumerable
+  nameWithType: ValueEnumerableExtensionsTests.AsValueEnumerable_WrapsProvidedEnumerableIntoAValueEnumerable
+- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests
+  name: ValueEnumerableTests
+  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html
+  commentId: T:MoreStructures.Tests.Utilities.ValueEnumerableTests
+  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests
+  nameWithType: ValueEnumerableTests
+- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.Equals_ByValueOnElementsOfUnderlyingEnumerable
+  name: Equals_ByValueOnElementsOfUnderlyingEnumerable()
+  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_Equals_ByValueOnElementsOfUnderlyingEnumerable
+  commentId: M:MoreStructures.Tests.Utilities.ValueEnumerableTests.Equals_ByValueOnElementsOfUnderlyingEnumerable
+  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.Equals_ByValueOnElementsOfUnderlyingEnumerable()
+  nameWithType: ValueEnumerableTests.Equals_ByValueOnElementsOfUnderlyingEnumerable()
+- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.Equals_ByValueOnElementsOfUnderlyingEnumerable*
+  name: Equals_ByValueOnElementsOfUnderlyingEnumerable
+  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_Equals_ByValueOnElementsOfUnderlyingEnumerable_
+  commentId: Overload:MoreStructures.Tests.Utilities.ValueEnumerableTests.Equals_ByValueOnElementsOfUnderlyingEnumerable
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.Equals_ByValueOnElementsOfUnderlyingEnumerable
+  nameWithType: ValueEnumerableTests.Equals_ByValueOnElementsOfUnderlyingEnumerable
+- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithGeneric_GivesElementsOfUnderlyingEnumerable
+  name: GetEnumerator_WithGeneric_GivesElementsOfUnderlyingEnumerable()
+  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_GetEnumerator_WithGeneric_GivesElementsOfUnderlyingEnumerable
+  commentId: M:MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithGeneric_GivesElementsOfUnderlyingEnumerable
+  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithGeneric_GivesElementsOfUnderlyingEnumerable()
+  nameWithType: ValueEnumerableTests.GetEnumerator_WithGeneric_GivesElementsOfUnderlyingEnumerable()
+- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithGeneric_GivesElementsOfUnderlyingEnumerable*
+  name: GetEnumerator_WithGeneric_GivesElementsOfUnderlyingEnumerable
+  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_GetEnumerator_WithGeneric_GivesElementsOfUnderlyingEnumerable_
+  commentId: Overload:MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithGeneric_GivesElementsOfUnderlyingEnumerable
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithGeneric_GivesElementsOfUnderlyingEnumerable
+  nameWithType: ValueEnumerableTests.GetEnumerator_WithGeneric_GivesElementsOfUnderlyingEnumerable
+- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithoutGeneric_GivesElementsOfUnderlyingEnumerable
+  name: GetEnumerator_WithoutGeneric_GivesElementsOfUnderlyingEnumerable()
+  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_GetEnumerator_WithoutGeneric_GivesElementsOfUnderlyingEnumerable
+  commentId: M:MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithoutGeneric_GivesElementsOfUnderlyingEnumerable
+  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithoutGeneric_GivesElementsOfUnderlyingEnumerable()
+  nameWithType: ValueEnumerableTests.GetEnumerator_WithoutGeneric_GivesElementsOfUnderlyingEnumerable()
+- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithoutGeneric_GivesElementsOfUnderlyingEnumerable*
+  name: GetEnumerator_WithoutGeneric_GivesElementsOfUnderlyingEnumerable
+  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_GetEnumerator_WithoutGeneric_GivesElementsOfUnderlyingEnumerable_
+  commentId: Overload:MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithoutGeneric_GivesElementsOfUnderlyingEnumerable
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithoutGeneric_GivesElementsOfUnderlyingEnumerable
+  nameWithType: ValueEnumerableTests.GetEnumerator_WithoutGeneric_GivesElementsOfUnderlyingEnumerable
+- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetHashCode_ByValueOnElementsOfUnderlyingEnumerable
+  name: GetHashCode_ByValueOnElementsOfUnderlyingEnumerable()
+  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_GetHashCode_ByValueOnElementsOfUnderlyingEnumerable
+  commentId: M:MoreStructures.Tests.Utilities.ValueEnumerableTests.GetHashCode_ByValueOnElementsOfUnderlyingEnumerable
+  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetHashCode_ByValueOnElementsOfUnderlyingEnumerable()
+  nameWithType: ValueEnumerableTests.GetHashCode_ByValueOnElementsOfUnderlyingEnumerable()
+- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetHashCode_ByValueOnElementsOfUnderlyingEnumerable*
+  name: GetHashCode_ByValueOnElementsOfUnderlyingEnumerable
+  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_GetHashCode_ByValueOnElementsOfUnderlyingEnumerable_
+  commentId: Overload:MoreStructures.Tests.Utilities.ValueEnumerableTests.GetHashCode_ByValueOnElementsOfUnderlyingEnumerable
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetHashCode_ByValueOnElementsOfUnderlyingEnumerable
+  nameWithType: ValueEnumerableTests.GetHashCode_ByValueOnElementsOfUnderlyingEnumerable
+- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.ToString_IncludesUnderlyingEnumerableToString
+  name: ToString_IncludesUnderlyingEnumerableToString()
+  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_ToString_IncludesUnderlyingEnumerableToString
+  commentId: M:MoreStructures.Tests.Utilities.ValueEnumerableTests.ToString_IncludesUnderlyingEnumerableToString
+  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.ToString_IncludesUnderlyingEnumerableToString()
+  nameWithType: ValueEnumerableTests.ToString_IncludesUnderlyingEnumerableToString()
+- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.ToString_IncludesUnderlyingEnumerableToString*
+  name: ToString_IncludesUnderlyingEnumerableToString
+  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_ToString_IncludesUnderlyingEnumerableToString_
+  commentId: Overload:MoreStructures.Tests.Utilities.ValueEnumerableTests.ToString_IncludesUnderlyingEnumerableToString
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.ToString_IncludesUnderlyingEnumerableToString
+  nameWithType: ValueEnumerableTests.ToString_IncludesUnderlyingEnumerableToString
 - uid: MoreStructures.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests
   name: ValueReadOnlyCollectionsExtensionsTests
   href: api/MoreStructures.Tests.Utilities.ValueReadOnlyCollectionsExtensionsTests.html
@@ -5975,18 +6246,118 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Utilities.ValueReadOnlyDictionaryTests.ToString_IncludesToStringOfKeysAndValues
   nameWithType: ValueReadOnlyDictionaryTests.ToString_IncludesToStringOfKeysAndValues
+- uid: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests
+  name: VirtuallyRotatedTextWithTerminatorTests
+  href: api/MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.html
+  commentId: T:MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests
+  fullName: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests
+  nameWithType: VirtuallyRotatedTextWithTerminatorTests
+- uid: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.CompareTo_IsCorrect
+  name: CompareTo_IsCorrect()
+  href: api/MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.html#MoreStructures_Tests_VirtuallyRotatedTextWithTerminatorTests_CompareTo_IsCorrect
+  commentId: M:MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.CompareTo_IsCorrect
+  fullName: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.CompareTo_IsCorrect()
+  nameWithType: VirtuallyRotatedTextWithTerminatorTests.CompareTo_IsCorrect()
+- uid: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.CompareTo_IsCorrect*
+  name: CompareTo_IsCorrect
+  href: api/MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.html#MoreStructures_Tests_VirtuallyRotatedTextWithTerminatorTests_CompareTo_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.CompareTo_IsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.CompareTo_IsCorrect
+  nameWithType: VirtuallyRotatedTextWithTerminatorTests.CompareTo_IsCorrect
+- uid: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_AsIEnumerable_IteratesCorrectly
+  name: GetEnumerator_AsIEnumerable_IteratesCorrectly()
+  href: api/MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.html#MoreStructures_Tests_VirtuallyRotatedTextWithTerminatorTests_GetEnumerator_AsIEnumerable_IteratesCorrectly
+  commentId: M:MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_AsIEnumerable_IteratesCorrectly
+  fullName: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_AsIEnumerable_IteratesCorrectly()
+  nameWithType: VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_AsIEnumerable_IteratesCorrectly()
+- uid: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_AsIEnumerable_IteratesCorrectly*
+  name: GetEnumerator_AsIEnumerable_IteratesCorrectly
+  href: api/MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.html#MoreStructures_Tests_VirtuallyRotatedTextWithTerminatorTests_GetEnumerator_AsIEnumerable_IteratesCorrectly_
+  commentId: Overload:MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_AsIEnumerable_IteratesCorrectly
+  isSpec: "True"
+  fullName: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_AsIEnumerable_IteratesCorrectly
+  nameWithType: VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_AsIEnumerable_IteratesCorrectly
+- uid: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_AsIEnumerable_ResetsCorrectly
+  name: GetEnumerator_AsIEnumerable_ResetsCorrectly()
+  href: api/MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.html#MoreStructures_Tests_VirtuallyRotatedTextWithTerminatorTests_GetEnumerator_AsIEnumerable_ResetsCorrectly
+  commentId: M:MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_AsIEnumerable_ResetsCorrectly
+  fullName: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_AsIEnumerable_ResetsCorrectly()
+  nameWithType: VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_AsIEnumerable_ResetsCorrectly()
+- uid: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_AsIEnumerable_ResetsCorrectly*
+  name: GetEnumerator_AsIEnumerable_ResetsCorrectly
+  href: api/MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.html#MoreStructures_Tests_VirtuallyRotatedTextWithTerminatorTests_GetEnumerator_AsIEnumerable_ResetsCorrectly_
+  commentId: Overload:MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_AsIEnumerable_ResetsCorrectly
+  isSpec: "True"
+  fullName: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_AsIEnumerable_ResetsCorrectly
+  nameWithType: VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_AsIEnumerable_ResetsCorrectly
+- uid: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_CurrentRaisesExceptionBeforeAndAfter
+  name: GetEnumerator_CurrentRaisesExceptionBeforeAndAfter()
+  href: api/MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.html#MoreStructures_Tests_VirtuallyRotatedTextWithTerminatorTests_GetEnumerator_CurrentRaisesExceptionBeforeAndAfter
+  commentId: M:MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_CurrentRaisesExceptionBeforeAndAfter
+  fullName: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_CurrentRaisesExceptionBeforeAndAfter()
+  nameWithType: VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_CurrentRaisesExceptionBeforeAndAfter()
+- uid: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_CurrentRaisesExceptionBeforeAndAfter*
+  name: GetEnumerator_CurrentRaisesExceptionBeforeAndAfter
+  href: api/MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.html#MoreStructures_Tests_VirtuallyRotatedTextWithTerminatorTests_GetEnumerator_CurrentRaisesExceptionBeforeAndAfter_
+  commentId: Overload:MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_CurrentRaisesExceptionBeforeAndAfter
+  isSpec: "True"
+  fullName: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_CurrentRaisesExceptionBeforeAndAfter
+  nameWithType: VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_CurrentRaisesExceptionBeforeAndAfter
+- uid: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_IteratesCorrectly
+  name: GetEnumerator_IteratesCorrectly()
+  href: api/MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.html#MoreStructures_Tests_VirtuallyRotatedTextWithTerminatorTests_GetEnumerator_IteratesCorrectly
+  commentId: M:MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_IteratesCorrectly
+  fullName: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_IteratesCorrectly()
+  nameWithType: VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_IteratesCorrectly()
+- uid: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_IteratesCorrectly*
+  name: GetEnumerator_IteratesCorrectly
+  href: api/MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.html#MoreStructures_Tests_VirtuallyRotatedTextWithTerminatorTests_GetEnumerator_IteratesCorrectly_
+  commentId: Overload:MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_IteratesCorrectly
+  isSpec: "True"
+  fullName: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_IteratesCorrectly
+  nameWithType: VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_IteratesCorrectly
+- uid: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_ResetsCorrectly
+  name: GetEnumerator_ResetsCorrectly()
+  href: api/MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.html#MoreStructures_Tests_VirtuallyRotatedTextWithTerminatorTests_GetEnumerator_ResetsCorrectly
+  commentId: M:MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_ResetsCorrectly
+  fullName: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_ResetsCorrectly()
+  nameWithType: VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_ResetsCorrectly()
+- uid: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_ResetsCorrectly*
+  name: GetEnumerator_ResetsCorrectly
+  href: api/MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.html#MoreStructures_Tests_VirtuallyRotatedTextWithTerminatorTests_GetEnumerator_ResetsCorrectly_
+  commentId: Overload:MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_ResetsCorrectly
+  isSpec: "True"
+  fullName: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_ResetsCorrectly
+  nameWithType: VirtuallyRotatedTextWithTerminatorTests.GetEnumerator_ResetsCorrectly
+- uid: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.Indexer_FollowsRotation
+  name: Indexer_FollowsRotation()
+  href: api/MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.html#MoreStructures_Tests_VirtuallyRotatedTextWithTerminatorTests_Indexer_FollowsRotation
+  commentId: M:MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.Indexer_FollowsRotation
+  fullName: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.Indexer_FollowsRotation()
+  nameWithType: VirtuallyRotatedTextWithTerminatorTests.Indexer_FollowsRotation()
+- uid: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.Indexer_FollowsRotation*
+  name: Indexer_FollowsRotation
+  href: api/MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.html#MoreStructures_Tests_VirtuallyRotatedTextWithTerminatorTests_Indexer_FollowsRotation_
+  commentId: Overload:MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.Indexer_FollowsRotation
+  isSpec: "True"
+  fullName: MoreStructures.Tests.VirtuallyRotatedTextWithTerminatorTests.Indexer_FollowsRotation
+  nameWithType: VirtuallyRotatedTextWithTerminatorTests.Indexer_FollowsRotation
 - uid: MoreStructures.TextWithTerminator
   name: TextWithTerminator
   href: api/MoreStructures.TextWithTerminator.html
   commentId: T:MoreStructures.TextWithTerminator
   fullName: MoreStructures.TextWithTerminator
   nameWithType: TextWithTerminator
-- uid: MoreStructures.TextWithTerminator.#ctor(System.String,System.Char)
-  name: TextWithTerminator(String, Char)
-  href: api/MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator__ctor_System_String_System_Char_
-  commentId: M:MoreStructures.TextWithTerminator.#ctor(System.String,System.Char)
-  fullName: MoreStructures.TextWithTerminator.TextWithTerminator(System.String, System.Char)
-  nameWithType: TextWithTerminator.TextWithTerminator(String, Char)
+- uid: MoreStructures.TextWithTerminator.#ctor(System.Collections.IEnumerable{System.Char},System.Char,System.Boolean)
+  name: TextWithTerminator(IEnumerable<Char>, Char, Boolean)
+  href: api/MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator__ctor_System_Collections_IEnumerable_System_Char__System_Char_System_Boolean_
+  commentId: M:MoreStructures.TextWithTerminator.#ctor(System.Collections.IEnumerable{System.Char},System.Char,System.Boolean)
+  name.vb: TextWithTerminator(IEnumerable(Of Char), Char, Boolean)
+  fullName: MoreStructures.TextWithTerminator.TextWithTerminator(System.Collections.IEnumerable<System.Char>, System.Char, System.Boolean)
+  fullName.vb: MoreStructures.TextWithTerminator.TextWithTerminator(System.Collections.IEnumerable(Of System.Char), System.Char, System.Boolean)
+  nameWithType: TextWithTerminator.TextWithTerminator(IEnumerable<Char>, Char, Boolean)
+  nameWithType.vb: TextWithTerminator.TextWithTerminator(IEnumerable(Of Char), Char, Boolean)
 - uid: MoreStructures.TextWithTerminator.#ctor*
   name: TextWithTerminator
   href: api/MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator__ctor_
@@ -6000,12 +6371,15 @@ references:
   commentId: F:MoreStructures.TextWithTerminator.DefaultTerminator
   fullName: MoreStructures.TextWithTerminator.DefaultTerminator
   nameWithType: TextWithTerminator.DefaultTerminator
-- uid: MoreStructures.TextWithTerminator.EndsWith(System.String)
-  name: EndsWith(String)
-  href: api/MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_EndsWith_System_String_
-  commentId: M:MoreStructures.TextWithTerminator.EndsWith(System.String)
-  fullName: MoreStructures.TextWithTerminator.EndsWith(System.String)
-  nameWithType: TextWithTerminator.EndsWith(String)
+- uid: MoreStructures.TextWithTerminator.EndsWith(System.Collections.IEnumerable{System.Char})
+  name: EndsWith(IEnumerable<Char>)
+  href: api/MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_EndsWith_System_Collections_IEnumerable_System_Char__
+  commentId: M:MoreStructures.TextWithTerminator.EndsWith(System.Collections.IEnumerable{System.Char})
+  name.vb: EndsWith(IEnumerable(Of Char))
+  fullName: MoreStructures.TextWithTerminator.EndsWith(System.Collections.IEnumerable<System.Char>)
+  fullName.vb: MoreStructures.TextWithTerminator.EndsWith(System.Collections.IEnumerable(Of System.Char))
+  nameWithType: TextWithTerminator.EndsWith(IEnumerable<Char>)
+  nameWithType.vb: TextWithTerminator.EndsWith(IEnumerable(Of Char))
 - uid: MoreStructures.TextWithTerminator.EndsWith*
   name: EndsWith
   href: api/MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_EndsWith_
@@ -6105,12 +6479,15 @@ references:
   isSpec: "True"
   fullName: MoreStructures.TextWithTerminator.Length
   nameWithType: TextWithTerminator.Length
-- uid: MoreStructures.TextWithTerminator.StartsWith(System.String)
-  name: StartsWith(String)
-  href: api/MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_StartsWith_System_String_
-  commentId: M:MoreStructures.TextWithTerminator.StartsWith(System.String)
-  fullName: MoreStructures.TextWithTerminator.StartsWith(System.String)
-  nameWithType: TextWithTerminator.StartsWith(String)
+- uid: MoreStructures.TextWithTerminator.StartsWith(System.Collections.IEnumerable{System.Char})
+  name: StartsWith(IEnumerable<Char>)
+  href: api/MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_StartsWith_System_Collections_IEnumerable_System_Char__
+  commentId: M:MoreStructures.TextWithTerminator.StartsWith(System.Collections.IEnumerable{System.Char})
+  name.vb: StartsWith(IEnumerable(Of Char))
+  fullName: MoreStructures.TextWithTerminator.StartsWith(System.Collections.IEnumerable<System.Char>)
+  fullName.vb: MoreStructures.TextWithTerminator.StartsWith(System.Collections.IEnumerable(Of System.Char))
+  nameWithType: TextWithTerminator.StartsWith(IEnumerable<Char>)
+  nameWithType.vb: TextWithTerminator.StartsWith(IEnumerable(Of Char))
 - uid: MoreStructures.TextWithTerminator.StartsWith*
   name: StartsWith
   href: api/MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_StartsWith_
@@ -6161,6 +6538,38 @@ references:
   isSpec: "True"
   fullName: MoreStructures.TextWithTerminator.Text
   nameWithType: TextWithTerminator.Text
+- uid: MoreStructures.TextWithTerminator.ValidateInput
+  name: ValidateInput
+  href: api/MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_ValidateInput
+  commentId: P:MoreStructures.TextWithTerminator.ValidateInput
+  fullName: MoreStructures.TextWithTerminator.ValidateInput
+  nameWithType: TextWithTerminator.ValidateInput
+- uid: MoreStructures.TextWithTerminator.ValidateInput*
+  name: ValidateInput
+  href: api/MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_ValidateInput_
+  commentId: Overload:MoreStructures.TextWithTerminator.ValidateInput
+  isSpec: "True"
+  fullName: MoreStructures.TextWithTerminator.ValidateInput
+  nameWithType: TextWithTerminator.ValidateInput
+- uid: MoreStructures.TextWithTerminatorExtensions
+  name: TextWithTerminatorExtensions
+  href: api/MoreStructures.TextWithTerminatorExtensions.html
+  commentId: T:MoreStructures.TextWithTerminatorExtensions
+  fullName: MoreStructures.TextWithTerminatorExtensions
+  nameWithType: TextWithTerminatorExtensions
+- uid: MoreStructures.TextWithTerminatorExtensions.ToVirtuallyRotated(MoreStructures.TextWithTerminator,System.Int32)
+  name: ToVirtuallyRotated(TextWithTerminator, Int32)
+  href: api/MoreStructures.TextWithTerminatorExtensions.html#MoreStructures_TextWithTerminatorExtensions_ToVirtuallyRotated_MoreStructures_TextWithTerminator_System_Int32_
+  commentId: M:MoreStructures.TextWithTerminatorExtensions.ToVirtuallyRotated(MoreStructures.TextWithTerminator,System.Int32)
+  fullName: MoreStructures.TextWithTerminatorExtensions.ToVirtuallyRotated(MoreStructures.TextWithTerminator, System.Int32)
+  nameWithType: TextWithTerminatorExtensions.ToVirtuallyRotated(TextWithTerminator, Int32)
+- uid: MoreStructures.TextWithTerminatorExtensions.ToVirtuallyRotated*
+  name: ToVirtuallyRotated
+  href: api/MoreStructures.TextWithTerminatorExtensions.html#MoreStructures_TextWithTerminatorExtensions_ToVirtuallyRotated_
+  commentId: Overload:MoreStructures.TextWithTerminatorExtensions.ToVirtuallyRotated
+  isSpec: "True"
+  fullName: MoreStructures.TextWithTerminatorExtensions.ToVirtuallyRotated
+  nameWithType: TextWithTerminatorExtensions.ToVirtuallyRotated
 - uid: MoreStructures.Utilities
   name: MoreStructures.Utilities
   href: api/MoreStructures.Utilities.html
@@ -6173,19 +6582,19 @@ references:
   commentId: T:MoreStructures.Utilities.CharOrTerminatorComparer
   fullName: MoreStructures.Utilities.CharOrTerminatorComparer
   nameWithType: CharOrTerminatorComparer
-- uid: MoreStructures.Utilities.CharOrTerminatorComparer.#ctor(System.Char)
-  name: CharOrTerminatorComparer(Char)
-  href: api/MoreStructures.Utilities.CharOrTerminatorComparer.html#MoreStructures_Utilities_CharOrTerminatorComparer__ctor_System_Char_
-  commentId: M:MoreStructures.Utilities.CharOrTerminatorComparer.#ctor(System.Char)
-  fullName: MoreStructures.Utilities.CharOrTerminatorComparer.CharOrTerminatorComparer(System.Char)
-  nameWithType: CharOrTerminatorComparer.CharOrTerminatorComparer(Char)
-- uid: MoreStructures.Utilities.CharOrTerminatorComparer.#ctor*
-  name: CharOrTerminatorComparer
-  href: api/MoreStructures.Utilities.CharOrTerminatorComparer.html#MoreStructures_Utilities_CharOrTerminatorComparer__ctor_
-  commentId: Overload:MoreStructures.Utilities.CharOrTerminatorComparer.#ctor
+- uid: MoreStructures.Utilities.CharOrTerminatorComparer.Build(System.Char)
+  name: Build(Char)
+  href: api/MoreStructures.Utilities.CharOrTerminatorComparer.html#MoreStructures_Utilities_CharOrTerminatorComparer_Build_System_Char_
+  commentId: M:MoreStructures.Utilities.CharOrTerminatorComparer.Build(System.Char)
+  fullName: MoreStructures.Utilities.CharOrTerminatorComparer.Build(System.Char)
+  nameWithType: CharOrTerminatorComparer.Build(Char)
+- uid: MoreStructures.Utilities.CharOrTerminatorComparer.Build*
+  name: Build
+  href: api/MoreStructures.Utilities.CharOrTerminatorComparer.html#MoreStructures_Utilities_CharOrTerminatorComparer_Build_
+  commentId: Overload:MoreStructures.Utilities.CharOrTerminatorComparer.Build
   isSpec: "True"
-  fullName: MoreStructures.Utilities.CharOrTerminatorComparer.CharOrTerminatorComparer
-  nameWithType: CharOrTerminatorComparer.CharOrTerminatorComparer
+  fullName: MoreStructures.Utilities.CharOrTerminatorComparer.Build
+  nameWithType: CharOrTerminatorComparer.Build
 - uid: MoreStructures.Utilities.CharOrTerminatorComparer.Compare(System.Char,System.Char)
   name: Compare(Char, Char)
   href: api/MoreStructures.Utilities.CharOrTerminatorComparer.html#MoreStructures_Utilities_CharOrTerminatorComparer_Compare_System_Char_System_Char_
@@ -6199,6 +6608,54 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Utilities.CharOrTerminatorComparer.Compare
   nameWithType: CharOrTerminatorComparer.Compare
+- uid: MoreStructures.Utilities.CharOrTerminatorComparer.Equals(System.Object)
+  name: Equals(Object)
+  href: api/MoreStructures.Utilities.CharOrTerminatorComparer.html#MoreStructures_Utilities_CharOrTerminatorComparer_Equals_System_Object_
+  commentId: M:MoreStructures.Utilities.CharOrTerminatorComparer.Equals(System.Object)
+  fullName: MoreStructures.Utilities.CharOrTerminatorComparer.Equals(System.Object)
+  nameWithType: CharOrTerminatorComparer.Equals(Object)
+- uid: MoreStructures.Utilities.CharOrTerminatorComparer.Equals*
+  name: Equals
+  href: api/MoreStructures.Utilities.CharOrTerminatorComparer.html#MoreStructures_Utilities_CharOrTerminatorComparer_Equals_
+  commentId: Overload:MoreStructures.Utilities.CharOrTerminatorComparer.Equals
+  isSpec: "True"
+  fullName: MoreStructures.Utilities.CharOrTerminatorComparer.Equals
+  nameWithType: CharOrTerminatorComparer.Equals
+- uid: MoreStructures.Utilities.CharOrTerminatorComparer.GetHashCode
+  name: GetHashCode()
+  href: api/MoreStructures.Utilities.CharOrTerminatorComparer.html#MoreStructures_Utilities_CharOrTerminatorComparer_GetHashCode
+  commentId: M:MoreStructures.Utilities.CharOrTerminatorComparer.GetHashCode
+  fullName: MoreStructures.Utilities.CharOrTerminatorComparer.GetHashCode()
+  nameWithType: CharOrTerminatorComparer.GetHashCode()
+- uid: MoreStructures.Utilities.CharOrTerminatorComparer.GetHashCode*
+  name: GetHashCode
+  href: api/MoreStructures.Utilities.CharOrTerminatorComparer.html#MoreStructures_Utilities_CharOrTerminatorComparer_GetHashCode_
+  commentId: Overload:MoreStructures.Utilities.CharOrTerminatorComparer.GetHashCode
+  isSpec: "True"
+  fullName: MoreStructures.Utilities.CharOrTerminatorComparer.GetHashCode
+  nameWithType: CharOrTerminatorComparer.GetHashCode
+- uid: MoreStructures.Utilities.CharOrTerminatorComparer.Terminator
+  name: Terminator
+  href: api/MoreStructures.Utilities.CharOrTerminatorComparer.html#MoreStructures_Utilities_CharOrTerminatorComparer_Terminator
+  commentId: P:MoreStructures.Utilities.CharOrTerminatorComparer.Terminator
+  fullName: MoreStructures.Utilities.CharOrTerminatorComparer.Terminator
+  nameWithType: CharOrTerminatorComparer.Terminator
+- uid: MoreStructures.Utilities.CharOrTerminatorComparer.Terminator*
+  name: Terminator
+  href: api/MoreStructures.Utilities.CharOrTerminatorComparer.html#MoreStructures_Utilities_CharOrTerminatorComparer_Terminator_
+  commentId: Overload:MoreStructures.Utilities.CharOrTerminatorComparer.Terminator
+  isSpec: "True"
+  fullName: MoreStructures.Utilities.CharOrTerminatorComparer.Terminator
+  nameWithType: CharOrTerminatorComparer.Terminator
+- uid: MoreStructures.Utilities.IValueEnumerable`1
+  name: IValueEnumerable<T>
+  href: api/MoreStructures.Utilities.IValueEnumerable-1.html
+  commentId: T:MoreStructures.Utilities.IValueEnumerable`1
+  name.vb: IValueEnumerable(Of T)
+  fullName: MoreStructures.Utilities.IValueEnumerable<T>
+  fullName.vb: MoreStructures.Utilities.IValueEnumerable(Of T)
+  nameWithType: IValueEnumerable<T>
+  nameWithType.vb: IValueEnumerable(Of T)
 - uid: MoreStructures.Utilities.LockValueObject
   name: LockValueObject
   href: api/MoreStructures.Utilities.LockValueObject.html
@@ -6211,19 +6668,19 @@ references:
   commentId: T:MoreStructures.Utilities.StringIncludingTerminatorComparer
   fullName: MoreStructures.Utilities.StringIncludingTerminatorComparer
   nameWithType: StringIncludingTerminatorComparer
-- uid: MoreStructures.Utilities.StringIncludingTerminatorComparer.#ctor(System.Char)
-  name: StringIncludingTerminatorComparer(Char)
-  href: api/MoreStructures.Utilities.StringIncludingTerminatorComparer.html#MoreStructures_Utilities_StringIncludingTerminatorComparer__ctor_System_Char_
-  commentId: M:MoreStructures.Utilities.StringIncludingTerminatorComparer.#ctor(System.Char)
-  fullName: MoreStructures.Utilities.StringIncludingTerminatorComparer.StringIncludingTerminatorComparer(System.Char)
-  nameWithType: StringIncludingTerminatorComparer.StringIncludingTerminatorComparer(Char)
-- uid: MoreStructures.Utilities.StringIncludingTerminatorComparer.#ctor*
-  name: StringIncludingTerminatorComparer
-  href: api/MoreStructures.Utilities.StringIncludingTerminatorComparer.html#MoreStructures_Utilities_StringIncludingTerminatorComparer__ctor_
-  commentId: Overload:MoreStructures.Utilities.StringIncludingTerminatorComparer.#ctor
+- uid: MoreStructures.Utilities.StringIncludingTerminatorComparer.Build(System.Char)
+  name: Build(Char)
+  href: api/MoreStructures.Utilities.StringIncludingTerminatorComparer.html#MoreStructures_Utilities_StringIncludingTerminatorComparer_Build_System_Char_
+  commentId: M:MoreStructures.Utilities.StringIncludingTerminatorComparer.Build(System.Char)
+  fullName: MoreStructures.Utilities.StringIncludingTerminatorComparer.Build(System.Char)
+  nameWithType: StringIncludingTerminatorComparer.Build(Char)
+- uid: MoreStructures.Utilities.StringIncludingTerminatorComparer.Build*
+  name: Build
+  href: api/MoreStructures.Utilities.StringIncludingTerminatorComparer.html#MoreStructures_Utilities_StringIncludingTerminatorComparer_Build_
+  commentId: Overload:MoreStructures.Utilities.StringIncludingTerminatorComparer.Build
   isSpec: "True"
-  fullName: MoreStructures.Utilities.StringIncludingTerminatorComparer.StringIncludingTerminatorComparer
-  nameWithType: StringIncludingTerminatorComparer.StringIncludingTerminatorComparer
+  fullName: MoreStructures.Utilities.StringIncludingTerminatorComparer.Build
+  nameWithType: StringIncludingTerminatorComparer.Build
 - uid: MoreStructures.Utilities.StringIncludingTerminatorComparer.Compare(System.String,System.String)
   name: Compare(String, String)
   href: api/MoreStructures.Utilities.StringIncludingTerminatorComparer.html#MoreStructures_Utilities_StringIncludingTerminatorComparer_Compare_System_String_System_String_
@@ -6237,18 +6694,34 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Utilities.StringIncludingTerminatorComparer.Compare
   nameWithType: StringIncludingTerminatorComparer.Compare
+- uid: MoreStructures.Utilities.StringIncludingTerminatorComparer.Terminator
+  name: Terminator
+  href: api/MoreStructures.Utilities.StringIncludingTerminatorComparer.html#MoreStructures_Utilities_StringIncludingTerminatorComparer_Terminator
+  commentId: P:MoreStructures.Utilities.StringIncludingTerminatorComparer.Terminator
+  fullName: MoreStructures.Utilities.StringIncludingTerminatorComparer.Terminator
+  nameWithType: StringIncludingTerminatorComparer.Terminator
+- uid: MoreStructures.Utilities.StringIncludingTerminatorComparer.Terminator*
+  name: Terminator
+  href: api/MoreStructures.Utilities.StringIncludingTerminatorComparer.html#MoreStructures_Utilities_StringIncludingTerminatorComparer_Terminator_
+  commentId: Overload:MoreStructures.Utilities.StringIncludingTerminatorComparer.Terminator
+  isSpec: "True"
+  fullName: MoreStructures.Utilities.StringIncludingTerminatorComparer.Terminator
+  nameWithType: StringIncludingTerminatorComparer.Terminator
 - uid: MoreStructures.Utilities.StringUtilities
   name: StringUtilities
   href: api/MoreStructures.Utilities.StringUtilities.html
   commentId: T:MoreStructures.Utilities.StringUtilities
   fullName: MoreStructures.Utilities.StringUtilities
   nameWithType: StringUtilities
-- uid: MoreStructures.Utilities.StringUtilities.LongestPrefixInCommon(System.String,System.String)
-  name: LongestPrefixInCommon(String, String)
-  href: api/MoreStructures.Utilities.StringUtilities.html#MoreStructures_Utilities_StringUtilities_LongestPrefixInCommon_System_String_System_String_
-  commentId: M:MoreStructures.Utilities.StringUtilities.LongestPrefixInCommon(System.String,System.String)
-  fullName: MoreStructures.Utilities.StringUtilities.LongestPrefixInCommon(System.String, System.String)
-  nameWithType: StringUtilities.LongestPrefixInCommon(String, String)
+- uid: MoreStructures.Utilities.StringUtilities.LongestPrefixInCommon(IEnumerable{System.Char},IEnumerable{System.Char})
+  name: LongestPrefixInCommon(IEnumerable<Char>, IEnumerable<Char>)
+  href: api/MoreStructures.Utilities.StringUtilities.html#MoreStructures_Utilities_StringUtilities_LongestPrefixInCommon_IEnumerable_System_Char__IEnumerable_System_Char__
+  commentId: M:MoreStructures.Utilities.StringUtilities.LongestPrefixInCommon(IEnumerable{System.Char},IEnumerable{System.Char})
+  name.vb: LongestPrefixInCommon(IEnumerable(Of Char), IEnumerable(Of Char))
+  fullName: MoreStructures.Utilities.StringUtilities.LongestPrefixInCommon(IEnumerable<System.Char>, IEnumerable<System.Char>)
+  fullName.vb: MoreStructures.Utilities.StringUtilities.LongestPrefixInCommon(IEnumerable(Of System.Char), IEnumerable(Of System.Char))
+  nameWithType: StringUtilities.LongestPrefixInCommon(IEnumerable<Char>, IEnumerable<Char>)
+  nameWithType.vb: StringUtilities.LongestPrefixInCommon(IEnumerable(Of Char), IEnumerable(Of Char))
 - uid: MoreStructures.Utilities.StringUtilities.LongestPrefixInCommon*
   name: LongestPrefixInCommon
   href: api/MoreStructures.Utilities.StringUtilities.html#MoreStructures_Utilities_StringUtilities_LongestPrefixInCommon_
@@ -6256,6 +6729,142 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Utilities.StringUtilities.LongestPrefixInCommon
   nameWithType: StringUtilities.LongestPrefixInCommon
+- uid: MoreStructures.Utilities.ValueEnumerable`1
+  name: ValueEnumerable<T>
+  href: api/MoreStructures.Utilities.ValueEnumerable-1.html
+  commentId: T:MoreStructures.Utilities.ValueEnumerable`1
+  name.vb: ValueEnumerable(Of T)
+  fullName: MoreStructures.Utilities.ValueEnumerable<T>
+  fullName.vb: MoreStructures.Utilities.ValueEnumerable(Of T)
+  nameWithType: ValueEnumerable<T>
+  nameWithType.vb: ValueEnumerable(Of T)
+- uid: MoreStructures.Utilities.ValueEnumerable`1.#ctor(System.Collections.IEnumerable{`0})
+  name: ValueEnumerable(IEnumerable<T>)
+  href: api/MoreStructures.Utilities.ValueEnumerable-1.html#MoreStructures_Utilities_ValueEnumerable_1__ctor_System_Collections_IEnumerable__0__
+  commentId: M:MoreStructures.Utilities.ValueEnumerable`1.#ctor(System.Collections.IEnumerable{`0})
+  name.vb: ValueEnumerable(IEnumerable(Of T))
+  fullName: MoreStructures.Utilities.ValueEnumerable<T>.ValueEnumerable(System.Collections.IEnumerable<T>)
+  fullName.vb: MoreStructures.Utilities.ValueEnumerable(Of T).ValueEnumerable(System.Collections.IEnumerable(Of T))
+  nameWithType: ValueEnumerable<T>.ValueEnumerable(IEnumerable<T>)
+  nameWithType.vb: ValueEnumerable(Of T).ValueEnumerable(IEnumerable(Of T))
+- uid: MoreStructures.Utilities.ValueEnumerable`1.#ctor*
+  name: ValueEnumerable
+  href: api/MoreStructures.Utilities.ValueEnumerable-1.html#MoreStructures_Utilities_ValueEnumerable_1__ctor_
+  commentId: Overload:MoreStructures.Utilities.ValueEnumerable`1.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Utilities.ValueEnumerable<T>.ValueEnumerable
+  fullName.vb: MoreStructures.Utilities.ValueEnumerable(Of T).ValueEnumerable
+  nameWithType: ValueEnumerable<T>.ValueEnumerable
+  nameWithType.vb: ValueEnumerable(Of T).ValueEnumerable
+- uid: MoreStructures.Utilities.ValueEnumerable`1.Equals(System.Object)
+  name: Equals(Object)
+  href: api/MoreStructures.Utilities.ValueEnumerable-1.html#MoreStructures_Utilities_ValueEnumerable_1_Equals_System_Object_
+  commentId: M:MoreStructures.Utilities.ValueEnumerable`1.Equals(System.Object)
+  fullName: MoreStructures.Utilities.ValueEnumerable<T>.Equals(System.Object)
+  fullName.vb: MoreStructures.Utilities.ValueEnumerable(Of T).Equals(System.Object)
+  nameWithType: ValueEnumerable<T>.Equals(Object)
+  nameWithType.vb: ValueEnumerable(Of T).Equals(Object)
+- uid: MoreStructures.Utilities.ValueEnumerable`1.Equals*
+  name: Equals
+  href: api/MoreStructures.Utilities.ValueEnumerable-1.html#MoreStructures_Utilities_ValueEnumerable_1_Equals_
+  commentId: Overload:MoreStructures.Utilities.ValueEnumerable`1.Equals
+  isSpec: "True"
+  fullName: MoreStructures.Utilities.ValueEnumerable<T>.Equals
+  fullName.vb: MoreStructures.Utilities.ValueEnumerable(Of T).Equals
+  nameWithType: ValueEnumerable<T>.Equals
+  nameWithType.vb: ValueEnumerable(Of T).Equals
+- uid: MoreStructures.Utilities.ValueEnumerable`1.GetEnumerator
+  name: GetEnumerator()
+  href: api/MoreStructures.Utilities.ValueEnumerable-1.html#MoreStructures_Utilities_ValueEnumerable_1_GetEnumerator
+  commentId: M:MoreStructures.Utilities.ValueEnumerable`1.GetEnumerator
+  fullName: MoreStructures.Utilities.ValueEnumerable<T>.GetEnumerator()
+  fullName.vb: MoreStructures.Utilities.ValueEnumerable(Of T).GetEnumerator()
+  nameWithType: ValueEnumerable<T>.GetEnumerator()
+  nameWithType.vb: ValueEnumerable(Of T).GetEnumerator()
+- uid: MoreStructures.Utilities.ValueEnumerable`1.GetEnumerator*
+  name: GetEnumerator
+  href: api/MoreStructures.Utilities.ValueEnumerable-1.html#MoreStructures_Utilities_ValueEnumerable_1_GetEnumerator_
+  commentId: Overload:MoreStructures.Utilities.ValueEnumerable`1.GetEnumerator
+  isSpec: "True"
+  fullName: MoreStructures.Utilities.ValueEnumerable<T>.GetEnumerator
+  fullName.vb: MoreStructures.Utilities.ValueEnumerable(Of T).GetEnumerator
+  nameWithType: ValueEnumerable<T>.GetEnumerator
+  nameWithType.vb: ValueEnumerable(Of T).GetEnumerator
+- uid: MoreStructures.Utilities.ValueEnumerable`1.GetHashCode
+  name: GetHashCode()
+  href: api/MoreStructures.Utilities.ValueEnumerable-1.html#MoreStructures_Utilities_ValueEnumerable_1_GetHashCode
+  commentId: M:MoreStructures.Utilities.ValueEnumerable`1.GetHashCode
+  fullName: MoreStructures.Utilities.ValueEnumerable<T>.GetHashCode()
+  fullName.vb: MoreStructures.Utilities.ValueEnumerable(Of T).GetHashCode()
+  nameWithType: ValueEnumerable<T>.GetHashCode()
+  nameWithType.vb: ValueEnumerable(Of T).GetHashCode()
+- uid: MoreStructures.Utilities.ValueEnumerable`1.GetHashCode*
+  name: GetHashCode
+  href: api/MoreStructures.Utilities.ValueEnumerable-1.html#MoreStructures_Utilities_ValueEnumerable_1_GetHashCode_
+  commentId: Overload:MoreStructures.Utilities.ValueEnumerable`1.GetHashCode
+  isSpec: "True"
+  fullName: MoreStructures.Utilities.ValueEnumerable<T>.GetHashCode
+  fullName.vb: MoreStructures.Utilities.ValueEnumerable(Of T).GetHashCode
+  nameWithType: ValueEnumerable<T>.GetHashCode
+  nameWithType.vb: ValueEnumerable(Of T).GetHashCode
+- uid: MoreStructures.Utilities.ValueEnumerable`1.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: api/MoreStructures.Utilities.ValueEnumerable-1.html#MoreStructures_Utilities_ValueEnumerable_1_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:MoreStructures.Utilities.ValueEnumerable`1.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: MoreStructures.Utilities.ValueEnumerable<T>.System.Collections.IEnumerable.GetEnumerator()
+  fullName.vb: MoreStructures.Utilities.ValueEnumerable(Of T).System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: ValueEnumerable<T>.IEnumerable.GetEnumerator()
+  nameWithType.vb: ValueEnumerable(Of T).System.Collections.IEnumerable.GetEnumerator()
+- uid: MoreStructures.Utilities.ValueEnumerable`1.System#Collections#IEnumerable#GetEnumerator*
+  name: IEnumerable.GetEnumerator
+  href: api/MoreStructures.Utilities.ValueEnumerable-1.html#MoreStructures_Utilities_ValueEnumerable_1_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:MoreStructures.Utilities.ValueEnumerable`1.System#Collections#IEnumerable#GetEnumerator
+  isSpec: "True"
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+  fullName: MoreStructures.Utilities.ValueEnumerable<T>.System.Collections.IEnumerable.GetEnumerator
+  fullName.vb: MoreStructures.Utilities.ValueEnumerable(Of T).System.Collections.IEnumerable.GetEnumerator
+  nameWithType: ValueEnumerable<T>.IEnumerable.GetEnumerator
+  nameWithType.vb: ValueEnumerable(Of T).System.Collections.IEnumerable.GetEnumerator
+- uid: MoreStructures.Utilities.ValueEnumerable`1.ToString
+  name: ToString()
+  href: api/MoreStructures.Utilities.ValueEnumerable-1.html#MoreStructures_Utilities_ValueEnumerable_1_ToString
+  commentId: M:MoreStructures.Utilities.ValueEnumerable`1.ToString
+  fullName: MoreStructures.Utilities.ValueEnumerable<T>.ToString()
+  fullName.vb: MoreStructures.Utilities.ValueEnumerable(Of T).ToString()
+  nameWithType: ValueEnumerable<T>.ToString()
+  nameWithType.vb: ValueEnumerable(Of T).ToString()
+- uid: MoreStructures.Utilities.ValueEnumerable`1.ToString*
+  name: ToString
+  href: api/MoreStructures.Utilities.ValueEnumerable-1.html#MoreStructures_Utilities_ValueEnumerable_1_ToString_
+  commentId: Overload:MoreStructures.Utilities.ValueEnumerable`1.ToString
+  isSpec: "True"
+  fullName: MoreStructures.Utilities.ValueEnumerable<T>.ToString
+  fullName.vb: MoreStructures.Utilities.ValueEnumerable(Of T).ToString
+  nameWithType: ValueEnumerable<T>.ToString
+  nameWithType.vb: ValueEnumerable(Of T).ToString
+- uid: MoreStructures.Utilities.ValueEnumerableExtensions
+  name: ValueEnumerableExtensions
+  href: api/MoreStructures.Utilities.ValueEnumerableExtensions.html
+  commentId: T:MoreStructures.Utilities.ValueEnumerableExtensions
+  fullName: MoreStructures.Utilities.ValueEnumerableExtensions
+  nameWithType: ValueEnumerableExtensions
+- uid: MoreStructures.Utilities.ValueEnumerableExtensions.AsValueEnumerable*
+  name: AsValueEnumerable
+  href: api/MoreStructures.Utilities.ValueEnumerableExtensions.html#MoreStructures_Utilities_ValueEnumerableExtensions_AsValueEnumerable_
+  commentId: Overload:MoreStructures.Utilities.ValueEnumerableExtensions.AsValueEnumerable
+  isSpec: "True"
+  fullName: MoreStructures.Utilities.ValueEnumerableExtensions.AsValueEnumerable
+  nameWithType: ValueEnumerableExtensions.AsValueEnumerable
+- uid: MoreStructures.Utilities.ValueEnumerableExtensions.AsValueEnumerable``1(IEnumerable{``0})
+  name: AsValueEnumerable<T>(IEnumerable<T>)
+  href: api/MoreStructures.Utilities.ValueEnumerableExtensions.html#MoreStructures_Utilities_ValueEnumerableExtensions_AsValueEnumerable__1_IEnumerable___0__
+  commentId: M:MoreStructures.Utilities.ValueEnumerableExtensions.AsValueEnumerable``1(IEnumerable{``0})
+  name.vb: AsValueEnumerable(Of T)(IEnumerable(Of T))
+  fullName: MoreStructures.Utilities.ValueEnumerableExtensions.AsValueEnumerable<T>(IEnumerable<T>)
+  fullName.vb: MoreStructures.Utilities.ValueEnumerableExtensions.AsValueEnumerable(Of T)(IEnumerable(Of T))
+  nameWithType: ValueEnumerableExtensions.AsValueEnumerable<T>(IEnumerable<T>)
+  nameWithType.vb: ValueEnumerableExtensions.AsValueEnumerable(Of T)(IEnumerable(Of T))
 - uid: MoreStructures.Utilities.ValueReadOnlyCollection`1
   name: ValueReadOnlyCollection<T>
   href: api/MoreStructures.Utilities.ValueReadOnlyCollection-1.html
@@ -6540,3 +7149,107 @@ references:
   fullName.vb: MoreStructures.Utilities.ValueReadOnlyDictionary(Of TKey, TValue).ToString
   nameWithType: ValueReadOnlyDictionary<TKey, TValue>.ToString
   nameWithType.vb: ValueReadOnlyDictionary(Of TKey, TValue).ToString
+- uid: MoreStructures.VirtuallyRotatedTextWithTerminator
+  name: VirtuallyRotatedTextWithTerminator
+  href: api/MoreStructures.VirtuallyRotatedTextWithTerminator.html
+  commentId: T:MoreStructures.VirtuallyRotatedTextWithTerminator
+  fullName: MoreStructures.VirtuallyRotatedTextWithTerminator
+  nameWithType: VirtuallyRotatedTextWithTerminator
+- uid: MoreStructures.VirtuallyRotatedTextWithTerminator.#ctor(MoreStructures.RotatedTextWithTerminator,System.Int32)
+  name: VirtuallyRotatedTextWithTerminator(RotatedTextWithTerminator, Int32)
+  href: api/MoreStructures.VirtuallyRotatedTextWithTerminator.html#MoreStructures_VirtuallyRotatedTextWithTerminator__ctor_MoreStructures_RotatedTextWithTerminator_System_Int32_
+  commentId: M:MoreStructures.VirtuallyRotatedTextWithTerminator.#ctor(MoreStructures.RotatedTextWithTerminator,System.Int32)
+  fullName: MoreStructures.VirtuallyRotatedTextWithTerminator.VirtuallyRotatedTextWithTerminator(MoreStructures.RotatedTextWithTerminator, System.Int32)
+  nameWithType: VirtuallyRotatedTextWithTerminator.VirtuallyRotatedTextWithTerminator(RotatedTextWithTerminator, Int32)
+- uid: MoreStructures.VirtuallyRotatedTextWithTerminator.#ctor*
+  name: VirtuallyRotatedTextWithTerminator
+  href: api/MoreStructures.VirtuallyRotatedTextWithTerminator.html#MoreStructures_VirtuallyRotatedTextWithTerminator__ctor_
+  commentId: Overload:MoreStructures.VirtuallyRotatedTextWithTerminator.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.VirtuallyRotatedTextWithTerminator.VirtuallyRotatedTextWithTerminator
+  nameWithType: VirtuallyRotatedTextWithTerminator.VirtuallyRotatedTextWithTerminator
+- uid: MoreStructures.VirtuallyRotatedTextWithTerminator.CompareTo(MoreStructures.VirtuallyRotatedTextWithTerminator)
+  name: CompareTo(VirtuallyRotatedTextWithTerminator)
+  href: api/MoreStructures.VirtuallyRotatedTextWithTerminator.html#MoreStructures_VirtuallyRotatedTextWithTerminator_CompareTo_MoreStructures_VirtuallyRotatedTextWithTerminator_
+  commentId: M:MoreStructures.VirtuallyRotatedTextWithTerminator.CompareTo(MoreStructures.VirtuallyRotatedTextWithTerminator)
+  fullName: MoreStructures.VirtuallyRotatedTextWithTerminator.CompareTo(MoreStructures.VirtuallyRotatedTextWithTerminator)
+  nameWithType: VirtuallyRotatedTextWithTerminator.CompareTo(VirtuallyRotatedTextWithTerminator)
+- uid: MoreStructures.VirtuallyRotatedTextWithTerminator.CompareTo*
+  name: CompareTo
+  href: api/MoreStructures.VirtuallyRotatedTextWithTerminator.html#MoreStructures_VirtuallyRotatedTextWithTerminator_CompareTo_
+  commentId: Overload:MoreStructures.VirtuallyRotatedTextWithTerminator.CompareTo
+  isSpec: "True"
+  fullName: MoreStructures.VirtuallyRotatedTextWithTerminator.CompareTo
+  nameWithType: VirtuallyRotatedTextWithTerminator.CompareTo
+- uid: MoreStructures.VirtuallyRotatedTextWithTerminator.GetEnumerator
+  name: GetEnumerator()
+  href: api/MoreStructures.VirtuallyRotatedTextWithTerminator.html#MoreStructures_VirtuallyRotatedTextWithTerminator_GetEnumerator
+  commentId: M:MoreStructures.VirtuallyRotatedTextWithTerminator.GetEnumerator
+  fullName: MoreStructures.VirtuallyRotatedTextWithTerminator.GetEnumerator()
+  nameWithType: VirtuallyRotatedTextWithTerminator.GetEnumerator()
+- uid: MoreStructures.VirtuallyRotatedTextWithTerminator.GetEnumerator*
+  name: GetEnumerator
+  href: api/MoreStructures.VirtuallyRotatedTextWithTerminator.html#MoreStructures_VirtuallyRotatedTextWithTerminator_GetEnumerator_
+  commentId: Overload:MoreStructures.VirtuallyRotatedTextWithTerminator.GetEnumerator
+  isSpec: "True"
+  fullName: MoreStructures.VirtuallyRotatedTextWithTerminator.GetEnumerator
+  nameWithType: VirtuallyRotatedTextWithTerminator.GetEnumerator
+- uid: MoreStructures.VirtuallyRotatedTextWithTerminator.Item(Index)
+  name: Item[Index]
+  href: api/MoreStructures.VirtuallyRotatedTextWithTerminator.html#MoreStructures_VirtuallyRotatedTextWithTerminator_Item_Index_
+  commentId: P:MoreStructures.VirtuallyRotatedTextWithTerminator.Item(Index)
+  name.vb: Item(Index)
+  fullName: MoreStructures.VirtuallyRotatedTextWithTerminator.Item[Index]
+  fullName.vb: MoreStructures.VirtuallyRotatedTextWithTerminator.Item(Index)
+  nameWithType: VirtuallyRotatedTextWithTerminator.Item[Index]
+  nameWithType.vb: VirtuallyRotatedTextWithTerminator.Item(Index)
+- uid: MoreStructures.VirtuallyRotatedTextWithTerminator.Item*
+  name: Item
+  href: api/MoreStructures.VirtuallyRotatedTextWithTerminator.html#MoreStructures_VirtuallyRotatedTextWithTerminator_Item_
+  commentId: Overload:MoreStructures.VirtuallyRotatedTextWithTerminator.Item
+  isSpec: "True"
+  fullName: MoreStructures.VirtuallyRotatedTextWithTerminator.Item
+  nameWithType: VirtuallyRotatedTextWithTerminator.Item
+- uid: MoreStructures.VirtuallyRotatedTextWithTerminator.Rotation
+  name: Rotation
+  href: api/MoreStructures.VirtuallyRotatedTextWithTerminator.html#MoreStructures_VirtuallyRotatedTextWithTerminator_Rotation
+  commentId: P:MoreStructures.VirtuallyRotatedTextWithTerminator.Rotation
+  fullName: MoreStructures.VirtuallyRotatedTextWithTerminator.Rotation
+  nameWithType: VirtuallyRotatedTextWithTerminator.Rotation
+- uid: MoreStructures.VirtuallyRotatedTextWithTerminator.Rotation*
+  name: Rotation
+  href: api/MoreStructures.VirtuallyRotatedTextWithTerminator.html#MoreStructures_VirtuallyRotatedTextWithTerminator_Rotation_
+  commentId: Overload:MoreStructures.VirtuallyRotatedTextWithTerminator.Rotation
+  isSpec: "True"
+  fullName: MoreStructures.VirtuallyRotatedTextWithTerminator.Rotation
+  nameWithType: VirtuallyRotatedTextWithTerminator.Rotation
+- uid: MoreStructures.VirtuallyRotatedTextWithTerminator.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: api/MoreStructures.VirtuallyRotatedTextWithTerminator.html#MoreStructures_VirtuallyRotatedTextWithTerminator_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:MoreStructures.VirtuallyRotatedTextWithTerminator.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: MoreStructures.VirtuallyRotatedTextWithTerminator.System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: VirtuallyRotatedTextWithTerminator.IEnumerable.GetEnumerator()
+  nameWithType.vb: VirtuallyRotatedTextWithTerminator.System.Collections.IEnumerable.GetEnumerator()
+- uid: MoreStructures.VirtuallyRotatedTextWithTerminator.System#Collections#IEnumerable#GetEnumerator*
+  name: IEnumerable.GetEnumerator
+  href: api/MoreStructures.VirtuallyRotatedTextWithTerminator.html#MoreStructures_VirtuallyRotatedTextWithTerminator_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:MoreStructures.VirtuallyRotatedTextWithTerminator.System#Collections#IEnumerable#GetEnumerator
+  isSpec: "True"
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+  fullName: MoreStructures.VirtuallyRotatedTextWithTerminator.System.Collections.IEnumerable.GetEnumerator
+  nameWithType: VirtuallyRotatedTextWithTerminator.IEnumerable.GetEnumerator
+  nameWithType.vb: VirtuallyRotatedTextWithTerminator.System.Collections.IEnumerable.GetEnumerator
+- uid: MoreStructures.VirtuallyRotatedTextWithTerminator.Underlying
+  name: Underlying
+  href: api/MoreStructures.VirtuallyRotatedTextWithTerminator.html#MoreStructures_VirtuallyRotatedTextWithTerminator_Underlying
+  commentId: P:MoreStructures.VirtuallyRotatedTextWithTerminator.Underlying
+  fullName: MoreStructures.VirtuallyRotatedTextWithTerminator.Underlying
+  nameWithType: VirtuallyRotatedTextWithTerminator.Underlying
+- uid: MoreStructures.VirtuallyRotatedTextWithTerminator.Underlying*
+  name: Underlying
+  href: api/MoreStructures.VirtuallyRotatedTextWithTerminator.html#MoreStructures_VirtuallyRotatedTextWithTerminator_Underlying_
+  commentId: Overload:MoreStructures.VirtuallyRotatedTextWithTerminator.Underlying
+  isSpec: "True"
+  fullName: MoreStructures.VirtuallyRotatedTextWithTerminator.Underlying
+  nameWithType: VirtuallyRotatedTextWithTerminator.Underlying

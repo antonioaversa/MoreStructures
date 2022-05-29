@@ -103,6 +103,12 @@ which has to be considered smaller than any other char.</p>
       <h4><a class="xref" href="MoreStructures.Utilities.StringUtilities.html">StringUtilities</a></h4>
       <section><p>Generic utilities and extensions for strings.</p>
 </section>
+      <h4><a class="xref" href="MoreStructures.Utilities.ValueEnumerable-1.html">ValueEnumerable&lt;T&gt;</a></h4>
+      <section><p>A <a class="xref" href="MoreStructures.Utilities.IValueEnumerable-1.html">IValueEnumerable&lt;T&gt;</a> implementation, wrapping a generic <see cref="!:IEnumerable&lt;T>"></see>.</p>
+</section>
+      <h4><a class="xref" href="MoreStructures.Utilities.ValueEnumerableExtensions.html">ValueEnumerableExtensions</a></h4>
+      <section><p>Extension methods for <a class="xref" href="MoreStructures.Utilities.IValueEnumerable-1.html">IValueEnumerable&lt;T&gt;</a>.</p>
+</section>
       <h4><a class="xref" href="MoreStructures.Utilities.ValueReadOnlyCollection-1.html">ValueReadOnlyCollection&lt;T&gt;</a></h4>
       <section><p>A readonly immutable generic collection of non-null items which performs equality by value.</p>
 </section>
@@ -111,6 +117,13 @@ which has to be considered smaller than any other char.</p>
 </section>
       <h4><a class="xref" href="MoreStructures.Utilities.ValueReadOnlyDictionary-2.html">ValueReadOnlyDictionary&lt;TKey, TValue&gt;</a></h4>
       <section><p>A readonly immutable generic dictionary of non-null keys and values which performs equality by value.</p>
+</section>
+    <h3 id="interfaces">Interfaces
+  </h3>
+      <h4><a class="xref" href="MoreStructures.Utilities.IValueEnumerable-1.html">IValueEnumerable&lt;T&gt;</a></h4>
+      <section><p>An <see cref="!:IEnumerable&lt;T>"></see> which is compared by value, by using
+<see cref="!:Enumerable.SequenceEqual&lt;TSource>(IEnumerable&lt;TSource>, IEnumerable&lt;TSource>)"></see>.
+To be used to be used as interface for enumerables in records and other value structures.</p>
 </section>
 </article>
           </div>

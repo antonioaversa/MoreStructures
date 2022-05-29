@@ -97,6 +97,62 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildMatrix_MoreStructures_BurrowsWheelerTransform_BWTransform_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildMatrix(MoreStructures.BurrowsWheelerTransform.BWTransform)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/IBuilder.cs/#L65">View Source</a>
+  </span>
+  <a id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildMatrix_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildMatrix*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildMatrix_MoreStructures_BurrowsWheelerTransform_BWTransform_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildMatrix(MoreStructures.BurrowsWheelerTransform.BWTransform)">BuildMatrix(BWTransform)</h4>
+  <div class="markdown level1 summary"><p>Rebuilds the original <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a> from a <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.html">BWTransform</a>
+representing the last column of the Burrows-Wheeler Matrix (which is also the Burrows-Wheeler Transform).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">BWMatrix BuildMatrix(BWTransform lastBWMColumn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.html">BWTransform</a></td>
+        <td><span class="parametername">lastBWMColumn</span></td>
+        <td><p>The last column of the Burrows-Wheeler Matrix.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a></td>
+        <td><p>The matrix, wrapped into a <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a> object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildMatrix_MoreStructures_BurrowsWheelerTransform_BWTransform__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Because the entire Burrows-Wheeler Matrix is built from the text with an invertible function, and the same
+happens for the Burrows-Wheeler Transform of the text, it's possible to get back the entire matrix from its
+last column.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildMatrix_MoreStructures_TextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildMatrix(MoreStructures.TextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -175,7 +231,7 @@ builder.BuildMatrix(new(&quot;mississippi&quot;)).Content</code></pre>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildTransform_MoreStructures_BurrowsWheelerTransform_BWMatrix_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildTransform(MoreStructures.BurrowsWheelerTransform.BWMatrix)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/IBuilder.cs/#L60">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/IBuilder.cs/#L75">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildTransform_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildTransform*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildTransform_MoreStructures_BurrowsWheelerTransform_BWMatrix_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildTransform(MoreStructures.BurrowsWheelerTransform.BWMatrix)">BuildTransform(BWMatrix)</h4>
@@ -199,7 +255,8 @@ builder.BuildMatrix(new(&quot;mississippi&quot;)).Content</code></pre>
       <tr>
         <td><a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a></td>
         <td><span class="parametername">matrix</span></td>
-        <td></td>
+        <td><p>The matrix, whose BWT has to be calculated.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -214,7 +271,8 @@ builder.BuildMatrix(new(&quot;mississippi&quot;)).Content</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.html">BWTransform</a></td>
-        <td></td>
+        <td><p>The transform, wrapped into a <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.html">BWTransform</a> object.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -226,7 +284,7 @@ builder.BuildMatrix(new(&quot;mississippi&quot;)).Content</code></pre>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildTransform_MoreStructures_TextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildTransform(MoreStructures.TextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/IBuilder.cs/#L68">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/IBuilder.cs/#L85">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildTransform_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildTransform*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_BuildTransform_MoreStructures_TextWithTerminator_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.BuildTransform(MoreStructures.TextWithTerminator)">BuildTransform(TextWithTerminator)</h4>
@@ -250,7 +308,8 @@ builder.BuildMatrix(new(&quot;mississippi&quot;)).Content</code></pre>
       <tr>
         <td><a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a></td>
         <td><span class="parametername">text</span></td>
-        <td></td>
+        <td><p>The text, whose BWT has to be calculated.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -265,7 +324,8 @@ builder.BuildMatrix(new(&quot;mississippi&quot;)).Content</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.html">BWTransform</a></td>
-        <td></td>
+        <td><p>The transform, wrapped into a <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.html">BWTransform</a> object.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -277,7 +337,7 @@ builder.BuildMatrix(new(&quot;mississippi&quot;)).Content</code></pre>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_InvertMatrix_MoreStructures_BurrowsWheelerTransform_BWMatrix_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.InvertMatrix(MoreStructures.BurrowsWheelerTransform.BWMatrix)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/IBuilder.cs/#L75">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/IBuilder.cs/#L92">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_InvertMatrix_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.InvertMatrix*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_InvertMatrix_MoreStructures_BurrowsWheelerTransform_BWMatrix_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.InvertMatrix(MoreStructures.BurrowsWheelerTransform.BWMatrix)">InvertMatrix(BWMatrix)</h4>
@@ -301,7 +361,8 @@ builder.BuildMatrix(new(&quot;mississippi&quot;)).Content</code></pre>
       <tr>
         <td><a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a></td>
         <td><span class="parametername">matrix</span></td>
-        <td></td>
+        <td><p>The matrix, whose original text has to be calculated.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -326,7 +387,7 @@ builder.BuildMatrix(new(&quot;mississippi&quot;)).Content</code></pre>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/IBuilder.cs/#L94">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/IBuilder.cs/#L111">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_InvertTransform_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.InvertTransform*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)">InvertTransform(RotatedTextWithTerminator)</h4>

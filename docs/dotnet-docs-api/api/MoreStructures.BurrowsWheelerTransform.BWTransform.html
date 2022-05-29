@@ -117,6 +117,9 @@ of the chars of <code data-dev-comment-type="paramref" class="paramref">Text</co
     <div>
       <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
     </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.BurrowsWheelerTransform.html">MoreStructures.BurrowsWheelerTransform</a></h6>
   <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
@@ -133,13 +136,13 @@ It guarantes immutability and strong typing, and also keeps together the <a clas
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_BWTransform__ctor_MoreStructures_TextWithTerminator_System_String_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.BWTransform.%23ctor(MoreStructures.TextWithTerminator%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_BWTransform__ctor_MoreStructures_TextWithTerminator_MoreStructures_RotatedTextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.BWTransform.%23ctor(MoreStructures.TextWithTerminator%2CMoreStructures.RotatedTextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/BWTransform.cs/#L15">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_BWTransform__ctor_" data-uid="MoreStructures.BurrowsWheelerTransform.BWTransform.#ctor*"></a>
-  <h4 id="MoreStructures_BurrowsWheelerTransform_BWTransform__ctor_MoreStructures_TextWithTerminator_System_String_" data-uid="MoreStructures.BurrowsWheelerTransform.BWTransform.#ctor(MoreStructures.TextWithTerminator,System.String)">BWTransform(TextWithTerminator, String)</h4>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_BWTransform__ctor_MoreStructures_TextWithTerminator_MoreStructures_RotatedTextWithTerminator_" data-uid="MoreStructures.BurrowsWheelerTransform.BWTransform.#ctor(MoreStructures.TextWithTerminator,MoreStructures.RotatedTextWithTerminator)">BWTransform(TextWithTerminator, RotatedTextWithTerminator)</h4>
   <div class="markdown level1 summary"><p>The Burrows-Wheeler Transform (BWT) of a <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a> <code data-dev-comment-type="paramref" class="paramref">Text</code> is a permutation
 of the chars of <code data-dev-comment-type="paramref" class="paramref">Text</code> which corresponds to the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html#MoreStructures_BurrowsWheelerTransform_BWMatrix_LastColumn">LastColumn</a> of the
 <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a> of <code data-dev-comment-type="paramref" class="paramref">Text</code>.</p>
@@ -147,7 +150,7 @@ of the chars of <code data-dev-comment-type="paramref" class="paramref">Text</co
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BWTransform(TextWithTerminator Text, string Content)</code></pre>
+    <pre><code class="lang-csharp hljs">public BWTransform(TextWithTerminator Text, RotatedTextWithTerminator Content)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -166,14 +169,14 @@ of the chars of <code data-dev-comment-type="paramref" class="paramref">Text</co
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a></td>
         <td><span class="parametername">Content</span></td>
         <td><p>The string which corresponds to the transform of the text.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 id="MoreStructures_BurrowsWheelerTransform_BWTransform__ctor_MoreStructures_TextWithTerminator_System_String__remarks">Remarks</h5>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_BWTransform__ctor_MoreStructures_TextWithTerminator_MoreStructures_RotatedTextWithTerminator__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>This <span class="xref">langword_csharp_record</span> is a typed wrapped of the underlying <span class="xref">langword_csharp_string</span> representing the BWT.
 It guarantes immutability and strong typing, and also keeps together the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.html#MoreStructures_BurrowsWheelerTransform_BWTransform_Text">Text</a> and its transform
 <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.html#MoreStructures_BurrowsWheelerTransform_BWTransform_Content">Content</a>.</p>
@@ -193,7 +196,7 @@ It guarantes immutability and strong typing, and also keeps together the <a clas
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Content { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public RotatedTextWithTerminator Content { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,7 +208,7 @@ It guarantes immutability and strong typing, and also keeps together the <a clas
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -271,42 +274,6 @@ It guarantes immutability and strong typing, and also keeps together the <a clas
       </tr>
     </tbody>
   </table>
-  <h3 id="methods">Methods
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_BWTransform_ToString.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.BWTransform.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/BWTransform.cs/#L26">View Source</a>
-  </span>
-  <a id="MoreStructures_BurrowsWheelerTransform_BWTransform_ToString_" data-uid="MoreStructures.BurrowsWheelerTransform.BWTransform.ToString*"></a>
-  <h4 id="MoreStructures_BurrowsWheelerTransform_BWTransform_ToString" data-uid="MoreStructures.BurrowsWheelerTransform.BWTransform.ToString">ToString()</h4>
-  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.html#MoreStructures_BurrowsWheelerTransform_BWTransform_ToString">ToString()</a> of the underlying <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.html#MoreStructures_BurrowsWheelerTransform_BWTransform_Content">Content</a> of this transform.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><p><inheritdoc></inheritdoc></p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">System.Object.ToString()</span></div>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">System.IEquatable&lt;T&gt;</span>

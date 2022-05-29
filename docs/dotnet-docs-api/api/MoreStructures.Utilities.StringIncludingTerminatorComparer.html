@@ -127,24 +127,57 @@ which has to be considered smaller than any other char.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class StringIncludingTerminatorComparer : IComparer&lt;string&gt;</code></pre>
   </div>
-  <h3 id="constructors">Constructors
+  <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Utilities_StringIncludingTerminatorComparer__ctor_System_Char_.md&amp;value=---%0Auid%3A%20MoreStructures.Utilities.StringIncludingTerminatorComparer.%23ctor(System.Char)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Utilities_StringIncludingTerminatorComparer_Terminator.md&amp;value=---%0Auid%3A%20MoreStructures.Utilities.StringIncludingTerminatorComparer.Terminator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/StringIncludingTerminatorComparer.cs/#L19">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/StringIncludingTerminatorComparer.cs/#L16">View Source</a>
   </span>
-  <a id="MoreStructures_Utilities_StringIncludingTerminatorComparer__ctor_" data-uid="MoreStructures.Utilities.StringIncludingTerminatorComparer.#ctor*"></a>
-  <h4 id="MoreStructures_Utilities_StringIncludingTerminatorComparer__ctor_System_Char_" data-uid="MoreStructures.Utilities.StringIncludingTerminatorComparer.#ctor(System.Char)">StringIncludingTerminatorComparer(Char)</h4>
-  <div class="markdown level1 summary"><p>Builds a <a class="xref" href="MoreStructures.Utilities.StringIncludingTerminatorComparer.html">StringIncludingTerminatorComparer</a>.
-<inheritdoc cref="T:MoreStructures.Utilities.StringIncludingTerminatorComparer"></inheritdoc></p>
+  <a id="MoreStructures_Utilities_StringIncludingTerminatorComparer_Terminator_" data-uid="MoreStructures.Utilities.StringIncludingTerminatorComparer.Terminator*"></a>
+  <h4 id="MoreStructures_Utilities_StringIncludingTerminatorComparer_Terminator" data-uid="MoreStructures.Utilities.StringIncludingTerminatorComparer.Terminator">Terminator</h4>
+  <div class="markdown level1 summary"><p>The character acting as terminator, and which has to be considered smaller than any other char.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringIncludingTerminatorComparer(char terminator)</code></pre>
+    <pre><code class="lang-csharp hljs">public char Terminator { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Char</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Utilities_StringIncludingTerminatorComparer_Build_System_Char_.md&amp;value=---%0Auid%3A%20MoreStructures.Utilities.StringIncludingTerminatorComparer.Build(System.Char)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/StringIncludingTerminatorComparer.cs/#L33">View Source</a>
+  </span>
+  <a id="MoreStructures_Utilities_StringIncludingTerminatorComparer_Build_" data-uid="MoreStructures.Utilities.StringIncludingTerminatorComparer.Build*"></a>
+  <h4 id="MoreStructures_Utilities_StringIncludingTerminatorComparer_Build_System_Char_" data-uid="MoreStructures.Utilities.StringIncludingTerminatorComparer.Build(System.Char)">Build(Char)</h4>
+  <div class="markdown level1 summary"><p>Builds a <a class="xref" href="MoreStructures.Utilities.StringIncludingTerminatorComparer.html">StringIncludingTerminatorComparer</a> with the provided <code data-dev-comment-type="paramref" class="paramref">terminator</code>.
+Caches instances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StringIncludingTerminatorComparer Build(char terminator)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,19 +192,33 @@ which has to be considered smaller than any other char.</p>
       <tr>
         <td><span class="xref">System.Char</span></td>
         <td><span class="parametername">terminator</span></td>
-        <td><p>The char to be considered as terminator.</p>
+        <td><p><inheritdoc cref="P:MoreStructures.Utilities.StringIncludingTerminatorComparer.Terminator" path="/summary"></inheritdoc></p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h3 id="methods">Methods
-  </h3>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Utilities.StringIncludingTerminatorComparer.html">StringIncludingTerminatorComparer</a></td>
+        <td><p>An instance of <a class="xref" href="MoreStructures.Utilities.StringIncludingTerminatorComparer.html">StringIncludingTerminatorComparer</a>, new or previously created and cached.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Utilities_StringIncludingTerminatorComparer_Compare_System_String_System_String_.md&amp;value=---%0Auid%3A%20MoreStructures.Utilities.StringIncludingTerminatorComparer.Compare(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/StringIncludingTerminatorComparer.cs/#L45">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/StringIncludingTerminatorComparer.cs/#L59">View Source</a>
   </span>
   <a id="MoreStructures_Utilities_StringIncludingTerminatorComparer_Compare_" data-uid="MoreStructures.Utilities.StringIncludingTerminatorComparer.Compare*"></a>
   <h4 id="MoreStructures_Utilities_StringIncludingTerminatorComparer_Compare_System_String_System_String_" data-uid="MoreStructures.Utilities.StringIncludingTerminatorComparer.Compare(System.String,System.String)">Compare(String, String)</h4>
@@ -241,7 +288,7 @@ which has to be considered smaller than any other char.</p>
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Utilities_StringIncludingTerminatorComparer.md&amp;value=---%0Auid%3A%20MoreStructures.Utilities.StringIncludingTerminatorComparer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/StringIncludingTerminatorComparer.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/StringIncludingTerminatorComparer.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
