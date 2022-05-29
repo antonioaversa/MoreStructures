@@ -6,6 +6,8 @@ namespace MoreStructures.RecImmTrees.Conversions;
 /// <inheritdoc/>
 /// Iterative implementation.
 /// </summary>
+/// <typeparam name="TEdge">The type of edges of the specific structure.</typeparam>
+/// <typeparam name="TNode">The type of nodes of the specific structure.</typeparam>
 /// <remarks>
 ///     <inheritdoc cref="IStringifier{TEdge, TNode}" path="/remarks"/>
 ///     <para>

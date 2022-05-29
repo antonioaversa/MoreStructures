@@ -11,6 +11,12 @@ public static class SuffixStructureEdgeExtensions
     /// <param name="first">The edge to be compared for adjacency.</param>
     /// <param name="second">The edge to compare the first edge against.</param>
     /// <param name="order">The adjacency relationship order to use for comparison.</param>
+    /// <typeparam name="TEdge">
+    ///     <inheritdoc cref="ISuffixStructureEdge{TEdge, TNode}" path="/typeparam[@name='TEdge']"/>
+    /// </typeparam>
+    /// <typeparam name="TNode">
+    ///     <inheritdoc cref="ISuffixStructureNode{TEdge, TNode}" path="/typeparam[@name='TNode']"/>
+    /// </typeparam>
     /// <returns>True if the specified adjacency relationship is respected.</returns>
     public static bool IsAdjacentTo<TEdge, TNode>(
         this ISuffixStructureEdge<TEdge, TNode> first,

@@ -10,11 +10,17 @@ namespace MoreStructures.SuffixStructures.Matching;
 public static class Matcher
 {
     /// <summary>
-    /// Tries to match a pattern against a Suffix Tree built on a text.
+    /// Tries to match a pattern against a <see cref="ISuffixStructureNode{TEdge, TNode}"/> built on a text.
     /// </summary>
     /// <param name="node">The root of the Suffix Tree, to match the suffix of text against.</param>
     /// <param name="text">The text whose Suffix Tree has to be matched against the pattern.</param>
     /// <param name="pattern">The pattern to match. Unlike text, is a string without terminator.</param>
+    /// <typeparam name="TEdge">
+    ///     <inheritdoc cref="IRecImmDictIndexedTreeNode{TEdge, TNode}" path="/typeparam[@name='TEdge']"/>
+    /// </typeparam>
+    /// <typeparam name="TNode">
+    ///     <inheritdoc cref="IRecImmDictIndexedTreeNode{TEdge, TNode}" path="/typeparam[@name='TNode']"/>
+    /// </typeparam>
     /// <returns>A successful or non-successful match.</returns>
     /// <remarks>
     ///     <para id="complexity">

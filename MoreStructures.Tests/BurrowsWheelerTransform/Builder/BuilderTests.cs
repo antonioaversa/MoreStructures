@@ -16,7 +16,7 @@ public abstract class BuilderTests
     private readonly Dictionary<TestCase, (BWTransform, BWMatrix)> TestCases = new()
     {
         [Banana] = (
-            new(new("banana"), "annb$aa"),
+            new(new("banana"), new("annb$aa")),
             new(new("banana"), new string[]
             {
                 "$banana",
@@ -29,7 +29,7 @@ public abstract class BuilderTests
             })),
 
         [Allele] = (
-            new(new("allele"), "e$llela"),
+            new(new("allele"), new("e$llela")),
             new(new("allele"), new string[]
             {
                 "$allele",
@@ -42,7 +42,7 @@ public abstract class BuilderTests
             })),
 
         [Mississippi] = (
-            new(new("mississippi"), "ipssm$pissii"),
+            new(new("mississippi"), new("ipssm$pissii")),
             new(new("mississippi"), new string[]
             {
                 "$mississippi",
@@ -60,7 +60,7 @@ public abstract class BuilderTests
             })),
 
         [BurrowsWheelerTransform] = (
-            new(new("Burrows-Wheeler Transform"), "mrs$ -rhelsWerafreToruwnBo"),
+            new(new("Burrows-Wheeler Transform"), new("mrs$ -rhelsWerafreToruwnBo")),
             new(new("Burrows-Wheeler Transform"), new string[]
             {
                 "$Burrows-Wheeler Transform",
@@ -92,7 +92,7 @@ public abstract class BuilderTests
             })),
 
         [PanamaBananas] = (
-            new(new("panamabananas"), "smnpbnnaaaaa$a"),
+            new(new("panamabananas"), new("smnpbnnaaaaa$a")),
             new(new("panamabananas"), new string[]
             {
                 "$panamabananas",
@@ -112,7 +112,7 @@ public abstract class BuilderTests
             })),
     };
 
-    private IBuilder Builder { get; }
+    protected IBuilder Builder { get; }
 
     public BuilderTests(IBuilder builder)
     {
@@ -127,7 +127,7 @@ public abstract class BuilderTests
 
         Assert.AreEqual(text.Length, matrixContent.Count);
         Assert.IsTrue(matrixContent.All(
-            rotation => string.Join(string.Empty, rotation.Split(text.Terminator).Reverse()) == text.Text));
+            rotation => rotation.Split(text.Terminator).Reverse().SelectMany(s => s).SequenceEqual(text.Text)));
     }
 
     [TestMethod]
@@ -181,6 +181,18 @@ public abstract class BuilderTests
     [DataRow(BurrowsWheelerTransform)]
     [DataRow(PanamaBananas)]
     [DataTestMethod]
+    public void BuildMatrix_FromTransform_IsCorrect(TestCase testCase)
+    {
+        var (transform, matrix) = TestCases[testCase];
+        Assert.AreEqual(matrix, Builder.BuildMatrix(transform));
+    }
+
+    [DataRow(Banana)]
+    [DataRow(Allele)]
+    [DataRow(Mississippi)]
+    [DataRow(BurrowsWheelerTransform)]
+    [DataRow(PanamaBananas)]
+    [DataTestMethod]
     public void BuildTransform_WithText_IsCorrect(TestCase testCase)
     {
         var (transform, _) = TestCases[testCase];
@@ -220,6 +232,6 @@ public abstract class BuilderTests
     public void InvertTransform_IsCorrect(TestCase testCase)
     {
         var (transform, _) = TestCases[testCase];
-        Assert.AreEqual(transform.Text, Builder.InvertTransform(new(transform.Content, transform.Text.Terminator)));
+        Assert.AreEqual(transform.Text, Builder.InvertTransform(transform.Content));
     }
 }

@@ -13,6 +13,7 @@ namespace MoreStructures.SuffixStructures.Conversions;
 /// </remarks>
 public class FullyRecursiveConverter : IConverter
 {
+    /// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
     /// <summary>
     ///     <inheritdoc/>
     /// </summary>
@@ -56,6 +57,7 @@ public class FullyRecursiveConverter : IConverter
             _ => throw new NotSupportedException($"{trieNode} of type {trieNode.GetType().Name} not supported"),
         };
 
+    /// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
     /// <summary>
     ///     <inheritdoc/>
     /// </summary>

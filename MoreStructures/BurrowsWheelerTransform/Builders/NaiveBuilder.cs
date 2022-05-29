@@ -38,7 +38,7 @@ public class NaiveBuilder : IBuilder
     /// </remarks>
     public virtual BWMatrix BuildMatrix(TextWithTerminator text)
     {
-        var stringsComparer = new StringIncludingTerminatorComparer(text.Terminator);
+        var stringsComparer = StringIncludingTerminatorComparer.Build(text.Terminator);
         var content = Enumerable
             .Range(0, text.Length)
             .Select(i => new string(text.Skip(i).Take(text.Length - i).Concat(text.Take(i)).ToArray()))
@@ -47,6 +47,20 @@ public class NaiveBuilder : IBuilder
 
         return new(text, content);
     }
+    
+    /// <inheritdoc/>
+    public BWMatrix BuildMatrix(BWTransform lastBWMColumn)
+    {
+        var allBWMColumnsExceptLast = BuildAllBWMColumnsExceptLast(lastBWMColumn.Content);
+        var allBWMRows = (
+            from rowIndex in Enumerable.Range(0, lastBWMColumn.Length)
+            let rowExceptLastChar = string.Concat(
+                from columnIndex in Enumerable.Range(0, allBWMColumnsExceptLast.Count)
+                select allBWMColumnsExceptLast[columnIndex][rowIndex])
+            select rowExceptLastChar + lastBWMColumn.Content[rowIndex])
+            .ToList(); // The Burrows-Wheeler Matrix requires direct random access to any of its elements
+        return new(lastBWMColumn.Text, allBWMRows);
+    }
 
     /// <inheritdoc/>
     public virtual BWTransform BuildTransform(BWMatrix matrix) => matrix.Transform;
@@ -54,10 +68,27 @@ public class NaiveBuilder : IBuilder
     /// <inheritdoc cref="IBuilder" path="//*[not(self::remarks)]"/>
     /// <remarks>
     /// <inheritdoc/>
-    /// Done by first constructing the <see cref="BWMatrix"/> of <paramref name="text"/>, and then invoking 
-    /// <see cref="BuildTransform(BWMatrix)"/> on it.
+    ///     <para>
+    ///     Done without constructing the <see cref="BWMatrix"/> of <paramref name="text"/>, which would requires 
+    ///     O(n^2) space.
+    ///     </para>
+    ///     <para>
+    ///     Instead, n <see cref="VirtuallyRotatedTextWithTerminator"/> objects are created (one per char of 
+    ///     <paramref name="text"/>), mapping a specific rotation of the original <paramref name="text"/> and taking 
+    ///     into account the rotation in its all its char-position dependent functionalities, such as
+    ///     <see cref="VirtuallyRotatedTextWithTerminator.CompareTo(VirtuallyRotatedTextWithTerminator?)"/>, 
+    ///     <see cref="VirtuallyRotatedTextWithTerminator.GetEnumerator"/> etc.
+    ///     </para>
     /// </remarks>
-    public virtual BWTransform BuildTransform(TextWithTerminator text) => BuildTransform(BuildMatrix(text));
+    public virtual BWTransform BuildTransform(TextWithTerminator text)
+    {
+        var content = Enumerable
+            .Range(0, text.Length)
+            .Select(i => text.ToVirtuallyRotated(i))
+            .OrderBy(i => i)
+            .Select(vrtext => vrtext[^1]);
+        return new(text, new(content, text.Terminator));
+    }
 
     /// <inheritdoc/>
     /// <remarks>
@@ -67,7 +98,7 @@ public class NaiveBuilder : IBuilder
     public virtual TextWithTerminator InvertMatrix(BWMatrix matrix)
     {
         var firstBWMRow = matrix.Content[0]; // In the form "$..." where $ is separator
-        return new TextWithTerminator(firstBWMRow[1..], firstBWMRow[0]);
+        return new TextWithTerminator(firstBWMRow[1..].AsValueEnumerable(), firstBWMRow[0]);
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
@@ -109,9 +140,22 @@ public class NaiveBuilder : IBuilder
     /// </remarks>
     public virtual TextWithTerminator InvertTransform(RotatedTextWithTerminator lastBWMColumn)
     {
-        var stringsComparer = new StringIncludingTerminatorComparer(lastBWMColumn.Terminator);
+        var allBWMColumnsExceptLast = BuildAllBWMColumnsExceptLast(lastBWMColumn);
 
-        var allBWMColumnsExceptLast = new List<List<char>> { };
+        // The text is in the first row of the matrix
+        var text = 
+            Enumerable
+                .Range(1, lastBWMColumn.Length - 2) // # columns in the BWM - 1
+                .Select(i => allBWMColumnsExceptLast[i][0])
+                .Concat(new char[] { lastBWMColumn[0] });
+        return new TextWithTerminator(text, lastBWMColumn.Terminator);
+    }
+
+    private static IList<IList<char>> BuildAllBWMColumnsExceptLast(RotatedTextWithTerminator lastBWMColumn)
+    {
+        var stringsComparer = StringIncludingTerminatorComparer.Build(lastBWMColumn.Terminator);
+
+        var allBWMColumnsExceptLast = new List<IList<char>> { };
         foreach (var columnIndex in Enumerable.Range(0, lastBWMColumn.Length - 1)) // # columns in the BWM - 1
         {
             var nextBWMColumn = (
@@ -120,21 +164,14 @@ public class NaiveBuilder : IBuilder
                 let ithFirstElementsOfRow = (
                     from j in Enumerable.Range(0, columnIndex)
                     select allBWMColumnsExceptLast[j][rowIndex])
-                let lastAndIthFirstElementsOfRow = 
-                    string.Join(string.Empty, lastElementOfRow.Concat(ithFirstElementsOfRow))
+                let lastAndIthFirstElementsOfRow =
+                    string.Concat(lastElementOfRow.Concat(ithFirstElementsOfRow))
                 select lastAndIthFirstElementsOfRow)
                 .OrderBy(lastAndIthFirstElementsOfRow => lastAndIthFirstElementsOfRow, stringsComparer)
                 .Select(lastAndIthFirstElementsOfRow => lastAndIthFirstElementsOfRow[^1]);
             allBWMColumnsExceptLast.Add(nextBWMColumn.ToList());
         }
 
-        // The text is in the first row of the matrix
-        var text = string.Join(
-            string.Empty, 
-            Enumerable
-                .Range(1, lastBWMColumn.Length - 2) // # columns in the BWM - 1
-                .Select(i => allBWMColumnsExceptLast[i][0])
-                .Concat(new char[] { lastBWMColumn[0] }));
-        return new TextWithTerminator(text, lastBWMColumn.Terminator);
+        return allBWMColumnsExceptLast;
     }
 }

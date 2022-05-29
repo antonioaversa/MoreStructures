@@ -163,18 +163,6 @@ public abstract class SuffixTrieBuilderTests
         Assert.IsTrue(allSuffixes.SetEquals(suffixes));
     }
 
-    // TODO: fix the following test
-    /*
-    [TestMethod]
-    public void BuildTree_UsesTerminatorForMatchToDistinguishSuffixesFromAnySubstring()
-    {
-        var text1 = new TextWithTerminator("abab");
-        var root1 = Build(text1);
-        Assert.IsTrue(root1.Match(text1, "ab") is SuffixTrieMatch { Success: true });
-        Assert.IsTrue(root1.Match(text1, "abab") is SuffixTrieMatch { Success: true });
-    }
-    */
-
     [TestMethod]
     public void BuildTree_StartLeftNullAtNonLeafNodes()
     {
@@ -196,7 +184,7 @@ public abstract class SuffixTrieBuilderTests
             from rootToLeafPath in root1.GetAllNodeToLeafPaths()
             let suffixStart = rootToLeafPath.PathNodes.Last().Value.Start ?? throw new Exception("Invalid leaf Start")
             let suffix = rootToLeafPath.SuffixFor(text1)
-            select text1[suffixStart..] == suffix)
+            select text1[suffixStart..].SequenceEqual(suffix))
             .All(e => e));
     }
 

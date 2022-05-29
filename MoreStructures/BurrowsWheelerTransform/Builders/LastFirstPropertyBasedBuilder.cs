@@ -1,4 +1,5 @@
 ﻿using MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders;
+using MoreStructures.Utilities;
 using System.Text;
 
 namespace MoreStructures.BurrowsWheelerTransform.Builders;
@@ -85,6 +86,6 @@ public partial class LastFirstPropertyBasedBuilder : NaiveBuilder
         }
         while (sbwt[index] != terminator);
 
-        return new(text.ToString(), terminator);
+        return new(text.ToString().AsValueEnumerable(), terminator);
     }
 }

@@ -52,8 +52,23 @@ public interface IBuilder
     BWMatrix BuildMatrix(TextWithTerminator text);
 
     /// <summary>
+    /// Rebuilds the original <see cref="BWMatrix"/> from a <see cref="BWTransform"/> 
+    /// representing the last column of the Burrows-Wheeler Matrix (which is also the Burrows-Wheeler Transform).
+    /// </summary>
+    /// <param name="lastBWMColumn">The last column of the Burrows-Wheeler Matrix.</param>
+    /// <returns>The matrix, wrapped into a <see cref="BWMatrix"/> object.</returns>
+    /// <remarks>
+    /// Because the entire Burrows-Wheeler Matrix is built from the text with an invertible function, and the same
+    /// happens for the Burrows-Wheeler Transform of the text, it's possible to get back the entire matrix from its
+    /// last column.
+    /// </remarks>
+    BWMatrix BuildMatrix(BWTransform lastBWMColumn);
+
+    /// <summary>
     /// Builds the Burrows-Wheeler Transform from the provided <see cref="BWMatrix"/>.
     /// </summary>
+    /// <param name="matrix">The matrix, whose BWT has to be calculated.</param>
+    /// <returns>The transform, wrapped into a <see cref="BWTransform"/> object.</returns>
     /// <remarks>
     /// <inheritdoc cref="BWTransform" path="/summary"/>
     /// </remarks>
@@ -62,6 +77,8 @@ public interface IBuilder
     /// <summary>
     /// Builds the Burrows-Wheeler Transform from the provided <see cref="TextWithTerminator"/>.
     /// </summary>
+    /// <param name="text">The text, whose BWT has to be calculated.</param>
+    /// <returns>The transform, wrapped into a <see cref="BWTransform"/> object.</returns>
     /// <remarks>
     /// <inheritdoc cref="BWTransform" path="/summary"/>
     /// </remarks>
@@ -70,7 +87,7 @@ public interface IBuilder
     /// <summary>
     /// Rebuilds the original <see cref="TextWithTerminator"/> from the <see cref="BWMatrix"/>.
     /// </summary>
-    /// <param name="matrix"></param>
+    /// <param name="matrix">The matrix, whose original text has to be calculated.</param>
     /// <returns>The text which corresponds to the provided matrix.</returns>
     TextWithTerminator InvertMatrix(BWMatrix matrix);
 

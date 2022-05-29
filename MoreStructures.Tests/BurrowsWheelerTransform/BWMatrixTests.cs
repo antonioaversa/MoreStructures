@@ -23,6 +23,51 @@ public class BWMatrixTests
     }
 
     [TestMethod]
+    public void Equals_ByValue()
+    {
+        var text1 = new TextWithTerminator("ac");
+        var t1 = text1.Terminator;
+        var matrixContent1 = new string[] { $"{t1}test", $"est{t1}t", $"st{t1}te", $"t{t1}tes", $"test{t1}" };
+        var matrix1 = new BWMatrix(text1, matrixContent1);
+
+        var text2 = new TextWithTerminator("ac");
+        var t2 = text1.Terminator;
+        var matrixContent2 = new string[] { $"{t2}test", $"est{t2}t", $"st{t2}te", $"t{t2}tes", $"test{t2}" };
+        var matrix2 = new BWMatrix(text2, matrixContent2);
+
+        Assert.AreEqual(matrix1, matrix2);
+        Assert.IsTrue(matrix1.Equals(matrix2));
+        Assert.IsTrue(matrix2.Equals(matrix1));
+        Assert.IsTrue(matrix1 == matrix2);
+
+        var text3 = new TextWithTerminator("ac");
+        var t3 = text1.Terminator;
+        var matrixContent3 = new string[] { $"{t3}txst", $"est{t3}t", $"st{t3}te", $"t{t3}tes", $"test{t3}" };
+        var matrix3 = new BWMatrix(text3, matrixContent3);
+
+        Assert.AreNotEqual(matrix1, matrix3);
+        Assert.IsFalse(matrix1.Equals(matrix3));
+        Assert.IsFalse(matrix3.Equals(matrix1));
+        Assert.IsFalse(matrix1 == matrix3);
+    }
+
+    [TestMethod]
+    public void GetHashCode_ByValue()
+    {
+        var text1 = new TextWithTerminator("ac");
+        var t1 = text1.Terminator;
+        var matrixContent1 = new string[] { $"{t1}test", $"est{t1}t", $"st{t1}te", $"t{t1}tes", $"test{t1}" };
+        var matrix1 = new BWMatrix(text1, matrixContent1);
+
+        var text2 = new TextWithTerminator("ac");
+        var t2 = text1.Terminator;
+        var matrixContent2 = new string[] { $"{t2}test", $"est{t2}t", $"st{t2}te", $"t{t2}tes", $"test{t2}" };
+        var matrix2 = new BWMatrix(text2, matrixContent2);
+
+        Assert.AreEqual(matrix1.GetHashCode(), matrix2.GetHashCode());
+    }
+
+    [TestMethod]
     public void Content_ReturnsAnImmutableCollection()
     { 
         var text = new TextWithTerminator("ac");
@@ -38,7 +83,9 @@ public class BWMatrixTests
     {
         var text = new TextWithTerminator("ab");
         var t = text.Terminator;
-        Assert.AreEqual(new BWTransform(text, $"b{t}a"), new BWMatrix(text, new string[] { $"{t}ab", $"ab{t}", $"b{t}a" }).Transform);
+        Assert.AreEqual(
+            new BWTransform(text, new($"b{t}a")), 
+            new BWMatrix(text, new string[] { $"{t}ab", $"ab{t}", $"b{t}a" }).Transform);
     }
 
     [TestMethod]

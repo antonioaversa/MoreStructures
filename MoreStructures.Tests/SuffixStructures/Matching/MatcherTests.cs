@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MoreLinq;
 using MoreStructures.RecImmTrees;
 using MoreStructures.SuffixStructures;
 using MoreStructures.SuffixStructures.Matching;
@@ -80,5 +81,14 @@ public class MatcherTests
                 { Success: true, Begin: var begin1, Path: var path1 } &&
                 text[begin1..].StartsWith(path1.SuffixFor(text)));
         }
+    }
+
+    [TestMethod]
+    public void BuildTree_UsesTerminatorForMatchToDistinguishSuffixesFromAnySubstring()
+    {
+        var text = new TextWithTerminator("abab");
+        var suffixTree = Builder.BuildTree(text);
+        Assert.IsTrue(suffixTree.Match(text, "ab") is { Success: true });
+        Assert.IsTrue(suffixTree.Match(text, "abab") is { Success: true });
     }
 }

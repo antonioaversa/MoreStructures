@@ -3,6 +3,8 @@
 /// <summary>
 /// A converter from <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode}"/> structures to string.
 /// </summary>
+/// <typeparam name="TEdge">The type of edges of the specific structure.</typeparam>
+/// <typeparam name="TNode">The type of nodes of the specific structure.</typeparam>
 /// <remarks>
 ///     <para>
 ///     Requires <typeparamref name="TEdge"/> to implement <see cref="IComparable{T}"/>, so that output lines are 

@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MoreStructures.Utilities;
+using System;
 
 namespace MoreStructures.Tests;
 
@@ -7,9 +8,31 @@ namespace MoreStructures.Tests;
 public class StringIncludingTerminatorComparerTests
 {
     [TestMethod]
+    public void Equals_ByValue()
+    {
+        Assert.AreEqual(StringIncludingTerminatorComparer.Build('a'), StringIncludingTerminatorComparer.Build('a'));
+        Assert.AreNotEqual(StringIncludingTerminatorComparer.Build('a'), StringIncludingTerminatorComparer.Build('b'));
+        Assert.IsFalse(StringIncludingTerminatorComparer.Build('a').Equals(null));
+    }
+
+    [TestMethod]
+    public void GetHashCode_ByValue()
+    {
+        Assert.AreEqual(
+            StringIncludingTerminatorComparer.Build('a').GetHashCode(),
+            StringIncludingTerminatorComparer.Build('a').GetHashCode());
+    }
+
+    [TestMethod]
+    public void Terminator_IsSet()
+    {
+        Assert.AreEqual('a', StringIncludingTerminatorComparer.Build('a').Terminator);
+    }
+
+    [TestMethod]
     public void Compare_IsCorrect_WithNoTerminatorIncluded()
     {
-        var comparer = new StringIncludingTerminatorComparer('$');
+        var comparer = StringIncludingTerminatorComparer.Build('$');
 
         Assert.IsTrue(comparer.Compare(string.Empty, string.Empty) == 0);
         Assert.IsTrue(comparer.Compare("a", string.Empty) > 0);
@@ -27,7 +50,7 @@ public class StringIncludingTerminatorComparerTests
     [TestMethod]
     public void Compare_IsCorrect_WithTerminatorIncludedLowerInASCII()
     {
-        var comparer = new StringIncludingTerminatorComparer('$');
+        var comparer = StringIncludingTerminatorComparer.Build('$');
 
         Assert.IsTrue(comparer.Compare(string.Empty, "$") < 0);
         Assert.IsTrue(comparer.Compare("$", string.Empty) > 0);
@@ -44,7 +67,7 @@ public class StringIncludingTerminatorComparerTests
     [TestMethod]
     public void Compare_IsCorrect_WithTerminatorIncludedHigherInASCII()
     {
-        var comparer = new StringIncludingTerminatorComparer('z');
+        var comparer = StringIncludingTerminatorComparer.Build('z');
 
         Assert.IsTrue(comparer.Compare(string.Empty, "z") < 0);
         Assert.IsTrue(comparer.Compare("z", string.Empty) > 0);

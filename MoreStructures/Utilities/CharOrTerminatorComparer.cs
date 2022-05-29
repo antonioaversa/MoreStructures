@@ -1,4 +1,6 @@
-﻿namespace MoreStructures.Utilities;
+﻿using System.Collections.Concurrent;
+
+namespace MoreStructures.Utilities;
 
 /// <summary>
 /// An implementation of <see cref="IComparer{T}"/> for <see cref="char"/>, which compares chars taking into account
@@ -7,16 +9,27 @@
 /// </summary>
 public class CharOrTerminatorComparer : IComparer<char>
 {
-    private readonly char _terminator;
+    /// <summary>
+    /// The character acting as terminator, and which has to be considered smaller than any other char.
+    /// </summary>
+    public char Terminator { get; }
+
+    private CharOrTerminatorComparer(char terminator)
+    { 
+        Terminator = terminator;
+    }
+
+    private static readonly ConcurrentDictionary<char, CharOrTerminatorComparer> _instances = new();
 
     /// <summary>
-    /// Builds a <see cref="CharOrTerminatorComparer"/>.
-    /// <inheritdoc cref="CharOrTerminatorComparer"/>
+    /// Builds a <see cref="CharOrTerminatorComparer"/> with the provided <paramref name="terminator"/>. Caches 
+    /// instances.
     /// </summary>
-    /// <param name="terminator">The char to be considered as terminator.</param>
-    public CharOrTerminatorComparer(char terminator)
+    /// <param name="terminator"><inheritdoc cref="Terminator" path="/summary"/></param>
+    /// <returns>An instance of <see cref="CharOrTerminatorComparer"/>, new or previously created and cached.</returns>
+    public static CharOrTerminatorComparer Build(char terminator)
     {
-        _terminator = terminator;
+        return _instances.GetOrAdd(terminator, t => new CharOrTerminatorComparer(t));
     }
 
     /// <summary>
@@ -39,10 +52,24 @@ public class CharOrTerminatorComparer : IComparer<char>
     /// <returns><inheritdoc/></returns>
     public int Compare(char x, char y)
     {
-        if (x == _terminator && y != _terminator)
+        if (x == Terminator && y != Terminator)
             return -1;
-        if (x != _terminator && y == _terminator)
+        if (x != Terminator && y == Terminator)
             return 1;
         return x.CompareTo(y);
     }
+
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
+    /// <remarks>
+    /// Two <see cref="CharOrTerminatorComparer"/> are equal if they have the same <see cref="Terminator"/>.
+    /// </remarks>
+    public override bool Equals(object? obj) => 
+        obj is CharOrTerminatorComparer other && other.Terminator == Terminator;
+
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
+    /// <remarks>
+    /// The <see cref="GetHashCode"/> is based on <see cref="Terminator"/> hash.
+    /// </remarks>
+    public override int GetHashCode() =>
+        Terminator.GetHashCode();
 }
