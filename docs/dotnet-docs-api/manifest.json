@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.html",
-          "hash": "a4PIuCZ1Bf1bKINxciblhntv/eXORCa8iUtuQ+3bsYI="
+          "hash": "XZ2PLP2gEBc9lVG3Xqq+rC6cYqGCtoBid+eLdik8Faw="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html",
-          "hash": "W4hiS9dh6dmtLq4W/Sw7IsVdyeW4QyxIERCP8RWWaoM="
+          "hash": "YA8gqVNOUsl63OGYBij4cRPD9zZoexCvw2Ckcz49WjY="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html",
-          "hash": "dda6zFULVHx0A42yHuf7QzBM96Ly3+0RCVRCZ9wj4LI="
+          "hash": "Eix1Q4S2ELrfY10YB6Qd12NcQt09npUojZCzJ5u08jw="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.html",
-          "hash": "ra5IFHfd/ApYKEcmWFStkWBy7VKdmbcHXXkVufdAIZE="
+          "hash": "4n0JY7x4V9v/uZYOv/LfRQvEJFPEhe/anFaLChQHr5o="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.html",
-          "hash": "7p7ABvjqXIE8faHkPMpDogkbtKakwSZAkqa/Pwkkab4="
+          "hash": "RfhZIEzhmH0lgHlt41ZtxB5nOZtPQk0xZOnAfdCwUBM="
         }
       },
       "is_incremental": false,
@@ -139,6 +139,54 @@
         ".html": {
           "relative_path": "api/MoreStructures.BurrowsWheelerTransform.Builders.html",
           "hash": "oE5vMG7u4Qu23U4LXoaH+/iggB8lfhKhf9tVhMQqXLw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html",
+          "hash": "wGwPCUpXpy0L1Ig82WWR8E57uQNGGJ9QgccBeHqiAys="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.BurrowsWheelerTransform.Matching.Match.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.BurrowsWheelerTransform.Matching.Match.html",
+          "hash": "wuhHYU6JM/0KzHq2uptQDvg9srnR+Cdo3dhVBoI7qXM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html",
+          "hash": "2on8Z5nvi43/vCXuyGxvnT2yESmJXthzhL87b22TlYM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.BurrowsWheelerTransform.Matching.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.BurrowsWheelerTransform.Matching.html",
+          "hash": "mewZaTsdcJJGcwhcFIBetnIXgJBx1LF4upxIGZKxq0o="
         }
       },
       "is_incremental": false,
@@ -187,6 +235,30 @@
         ".html": {
           "relative_path": "api/MoreStructures.CountTrees.html",
           "hash": "k1U4qJB/73t+6YOBD8XTYf+Ua2oL7SqQYMorLfUH1yg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Lists.Searching.Search.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Lists.Searching.Search.html",
+          "hash": "JFAY9zv4F860QYoMWUnuGTjLvDoMlko0EpnmRs6SJj0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Lists.Searching.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Lists.Searching.html",
+          "hash": "rBxJjoTUFBdJbq+WRLcpokC8zW9k9YTVA9Fw7pqzh+8="
         }
       },
       "is_incremental": false,
@@ -786,7 +858,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.BinarySearchFinderTests.html",
-          "hash": "tIqxkB/jqCNSygM4t4qQVvVz2fyEEe5qciBwcF1dk8I="
+          "hash": "orWAwtLTiWbiGW7n5vc472ONq1KzwHhJxGebMrV4nog="
         }
       },
       "is_incremental": false,
@@ -798,7 +870,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.html",
-          "hash": "4Jyjz7rJNvajaHnio8jegPpTQ+qci8SfQNYfIqRpt94="
+          "hash": "kmOzoNiq/bssP6eA4PA66WnyACYj15opOSN2fMDTQKU="
         }
       },
       "is_incremental": false,
@@ -810,7 +882,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.NaiveFinderTests.html",
-          "hash": "yyzzRP46CpuYbRb/mWCNSdktOJU+XwVVxapmSxtWa5U="
+          "hash": "679qy+f7z0m1CDafSxfWAYwQMZwhB2sq1rJmPUcza+8="
         }
       },
       "is_incremental": false,
@@ -822,7 +894,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.PrecomputedFinderTests.html",
-          "hash": "KPSmf2EaQ9oQoQVW/raswnFQDyl8BvZLajfpDnZQLVA="
+          "hash": "k0lFw0Ansac2lRV9DdwRrZ3RNlEbWmsCKu+wbZjpSzQ="
         }
       },
       "is_incremental": false,
@@ -902,6 +974,42 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.html",
+          "hash": "8PGLg/aP3ptMal0fLPuR5XHzS79mQjL9yJ7SsRq40Nk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.html",
+          "hash": "d5n5i1muSU1MfLBd1idOc7tH7tEvfM0XjvyC7HKlZsE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.html",
+          "hash": "Mgc8yOGhmAJaeB22yiDX20GmK5YPR3YxEtMJfbHEcWc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Tests.BurrowsWheelerTransform.yml",
       "output": {
         ".html": {
@@ -943,6 +1051,42 @@
         ".html": {
           "relative_path": "api/MoreStructures.Tests.CountTrees.html",
           "hash": "LlE4jy2mXoqKHg2ySMBm05yC34M1TBw6TNiHKc3Hbe4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId.html",
+          "hash": "tH9eNOO3w+2v6a4rWaqDBsxRRPLfarlYJxSCQU8XCLY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Searching.SearchTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Searching.SearchTests.html",
+          "hash": "WGBhPS/tqANYCLgtgVkuFR+xfnckRHCWIcCCersJXDI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Searching.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Searching.html",
+          "hash": "detXivoX9SBq83in4ut8OtezFR/RA5Jh0z8UD6uJKrI="
         }
       },
       "is_incremental": false,
@@ -1554,7 +1698,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Utilities.ValueEnumerableExtensionsTests.html",
-          "hash": "Avep4oC/gQqQxeltwuS/Hr1ekwUMZTaUXwSlMuFIQLg="
+          "hash": "/fus3mx5VuRs8tmdAk43Vhpgk6vhCOlSFrIe41/b2X4="
         }
       },
       "is_incremental": false,
@@ -1758,7 +1902,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Utilities.ValueEnumerableExtensions.html",
-          "hash": "TPH23DdRt5joX8KXVlDOh5GJ1c/5Xoxl1jJKXnoeMF8="
+          "hash": "ZA0k99AGxlWxEGiQhUFVbTZM8Dq2b94dxlDDaLR/ifM="
         }
       },
       "is_incremental": false,
@@ -1854,7 +1998,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "KIhJzEM97TDVQBVBc/FzyuQsC9xwTeo7trsaH0tKdbo="
+          "hash": "itmQ+6BLIaxZNZRajWGXJ1ogptRdK4lqxEX+pcn49fQ="
         }
       },
       "is_incremental": false,
@@ -1929,7 +2073,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 152,
+          "total_file_count": 164,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
