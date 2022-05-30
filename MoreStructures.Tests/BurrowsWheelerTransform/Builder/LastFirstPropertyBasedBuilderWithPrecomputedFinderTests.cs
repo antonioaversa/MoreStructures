@@ -10,7 +10,7 @@ public class LastFirstPropertyBasedBuilderWithPrecomputedFinderTests : BuilderTe
     public LastFirstPropertyBasedBuilderWithPrecomputedFinderTests() : base(
         new LastFirstPropertyBasedBuilder() 
         { 
-            FirstLastFinderBuilder = lastBWMColumn => new PrecomputedFinder(lastBWMColumn),
+            FirstLastFinderBuilder = lastBWMColumn => new PrecomputedFinder(lastBWMColumn, ILastFirstFinder.QuickSort),
         })
     {
     }

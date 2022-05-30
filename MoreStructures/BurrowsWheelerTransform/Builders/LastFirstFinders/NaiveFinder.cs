@@ -20,26 +20,38 @@ public class NaiveFinder : ILastFirstFinder
     public RotatedTextWithTerminator SortedBWT { get; }
 
     /// <summary>
-    /// A function sorting the provided <see cref="RotatedTextWithTerminator"/> into a sorted 
-    /// <see cref="RotatedTextWithTerminator"/>, according to the provided <see cref="IComparer{T}"/> of chars.
-    /// </summary>
-    /// <remarks>
-    /// Used to calculate <see cref="SortedBWT"/> from <see cref="BWT"/>. The default uses 
-    /// <see cref="Enumerable.OrderBy{TSource, TKey}(IEnumerable{TSource}, Func{TSource, TKey}, IComparer{TKey}?)"/>,
-    /// which uses a QuickSort with Time Complexity = O(n * log(n)) in average and O(n^2) in the worst case.
-    /// </remarks>
-    public Func<RotatedTextWithTerminator, IComparer<char>, RotatedTextWithTerminator> BWTSorter { get; init; }
-        = (text, charComparer) => new(text.OrderBy(c => c, charComparer), text.Terminator);
-
-    /// <summary>
-    /// Builds an instance of this finder, for the provided <paramref name="lastBWMColumn"/>.
+    /// Builds an instance of this finder, for the provided <paramref name="lastBWMColumn"/>, using 
+    /// <paramref name="bwtSorter"/> to calculate <see cref="SortedBWT"/> from it.
     /// </summary>
     /// <param name="lastBWMColumn">The last column of the Burrows-Wheeler Matrix. Corresponds to the BWT.</param>
-    public NaiveFinder(RotatedTextWithTerminator lastBWMColumn)
+    /// <param name="bwtSorter">
+    /// A function sorting the provided<see cref="RotatedTextWithTerminator"/> into a sorted
+    /// <see cref="RotatedTextWithTerminator"/>, according to the provided <see cref="IComparer{T}"/> of chars.
+    /// </param>
+    public NaiveFinder(
+        RotatedTextWithTerminator lastBWMColumn, 
+        Func<RotatedTextWithTerminator, IComparer<char>, RotatedTextWithTerminator> bwtSorter)
     {
         CharComparer = CharOrTerminatorComparer.Build(lastBWMColumn.Terminator);
         BWT = lastBWMColumn;
-        SortedBWT = BWTSorter(BWT, CharComparer);
+        SortedBWT = bwtSorter(BWT, CharComparer);
+    }
+
+    /// <summary>
+    /// Builds an instance of this finder, for the provided <paramref name="lastBWMColumn"/> and 
+    /// <paramref name="firstBWMColumn"/>. Because both columns of the BWM are provided, no sorting happens.
+    /// </summary>
+    /// <param name="lastBWMColumn">
+    /// The last column of the Burrows-Wheeler Matrix. Corresponds to the BWT.
+    /// </param>
+    /// <param name="firstBWMColumn">
+    /// The first column of the Burrows-Wheeler Matrix. Corresponds to the Sorted BWT.
+    /// </param>
+    public NaiveFinder(RotatedTextWithTerminator lastBWMColumn, RotatedTextWithTerminator firstBWMColumn)
+    {
+        CharComparer = CharOrTerminatorComparer.Build(lastBWMColumn.Terminator);
+        BWT = lastBWMColumn;
+        SortedBWT = firstBWMColumn;
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>

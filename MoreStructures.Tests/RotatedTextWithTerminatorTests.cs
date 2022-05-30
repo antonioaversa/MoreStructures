@@ -41,10 +41,10 @@ public class RotatedTextWithTerminatorTests
     [TestMethod]
     public void Indexer_WithRange()
     {
-        Assert.AreEqual("c".AsValueEnumerable(), new RotatedTextWithTerminator("c$ab", '$')[0..1]);
-        Assert.AreEqual(string.Empty.AsValueEnumerable(), new RotatedTextWithTerminator("c$ab", '$')[0..0]);
-        Assert.AreEqual("c$ab".AsValueEnumerable(), new RotatedTextWithTerminator("c$ab", '$')[0..]);
-        Assert.AreEqual("c$".AsValueEnumerable(), new RotatedTextWithTerminator("c$ab", '$')[..^2]);
+        Assert.AreEqual("c".AsValue(), new RotatedTextWithTerminator("c$ab", '$')[0..1].AsValue());
+        Assert.AreEqual(string.Empty.AsValue(), new RotatedTextWithTerminator("c$ab", '$')[0..0].AsValue());
+        Assert.AreEqual("c$ab".AsValue(), new RotatedTextWithTerminator("c$ab", '$')[0..].AsValue());
+        Assert.AreEqual("c$".AsValue(), new RotatedTextWithTerminator("c$ab", '$')[..^2].AsValue());
     }
 
     [TestMethod]

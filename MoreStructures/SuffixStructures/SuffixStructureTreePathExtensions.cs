@@ -28,7 +28,7 @@ public static class SuffixStructureTreePathExtensions
         where TEdge : TextWithTerminator.ISelector => 
         path.PathNodes
             .SelectMany(node => text[node.Key])
-            .AsValueEnumerable();
+            .AsValue();
 
     /// <summary>
     /// Whether this path identifies a suffix of the provided text.

@@ -15,7 +15,7 @@ public class SuffixStructuresTreePathExtensionsTests
     {
         var path = TreePathTests.BuildSuffixTreePathExample();
         var suffix = path.SuffixFor(TestUtilities.ExampleText2);
-        Assert.AreEqual($"abaa{TestUtilities.ExampleText2.Terminator}".AsValueEnumerable(), suffix);
+        Assert.AreEqual($"abaa{TestUtilities.ExampleText2.Terminator}".AsValue(), suffix);
     }
 
     [TestMethod]
@@ -23,7 +23,7 @@ public class SuffixStructuresTreePathExtensionsTests
     {
         var path = TreePathTests.BuildSuffixTriePathExample();
         var suffix = path.SuffixFor(TestUtilities.ExampleText2);
-        Assert.AreEqual($"abaa{TestUtilities.ExampleText2.Terminator}".AsValueEnumerable(), suffix);
+        Assert.AreEqual($"abaa{TestUtilities.ExampleText2.Terminator}".AsValue(), suffix);
     }
 
     [TestMethod]
@@ -31,7 +31,7 @@ public class SuffixStructuresTreePathExtensionsTests
     {
         var path = new TreePath<SuffixTreeEdge, SuffixTreeNode>();
         var suffix = path.SuffixFor(TestUtilities.ExampleText2);
-        Assert.AreEqual(string.Empty.AsValueEnumerable(), suffix);
+        Assert.AreEqual(string.Empty.AsValue(), suffix);
     }
 
     [TestMethod]

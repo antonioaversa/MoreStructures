@@ -10,7 +10,8 @@ public class LastFirstPropertyBasedBuilderWithBinarySearchFinderTests : BuilderT
     public LastFirstPropertyBasedBuilderWithBinarySearchFinderTests() : base(
         new LastFirstPropertyBasedBuilder() 
         { 
-            FirstLastFinderBuilder = lastBWMColumn => new BinarySearchFinder(lastBWMColumn),
+            FirstLastFinderBuilder = lastBWMColumn => 
+                new BinarySearchFinder(lastBWMColumn, ILastFirstFinder.QuickSort),
         })
     {
     }

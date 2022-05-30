@@ -10,7 +10,7 @@ public class LastFirstPropertyBasedBuilderWithNaiveFinderTests : BuilderTests
     public LastFirstPropertyBasedBuilderWithNaiveFinderTests() : base(
         new LastFirstPropertyBasedBuilder() 
         { 
-            FirstLastFinderBuilder = lastBWMColumn => new NaiveFinder(lastBWMColumn),
+            FirstLastFinderBuilder = lastBWMColumn => new NaiveFinder(lastBWMColumn, ILastFirstFinder.QuickSort),
         })
     {
     }

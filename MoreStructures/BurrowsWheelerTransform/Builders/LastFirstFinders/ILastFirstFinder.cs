@@ -7,6 +7,14 @@
 public interface ILastFirstFinder
 {
     /// <summary>
+    /// A strategy to sort a <see cref="RotatedTextWithTerminator"/> (tipically containing the <see cref="BWT"/>) using
+    /// <see cref="Enumerable.OrderBy{TSource, TKey}(IEnumerable{TSource}, Func{TSource, TKey}, IComparer{TKey}?)"/>,
+    /// which uses a QuickSort with Time Complexity = O(n * log(n)) in average and O(n^2) in the worst case.
+    /// </summary>
+    public static readonly Func<RotatedTextWithTerminator, IComparer<char>, RotatedTextWithTerminator> QuickSort =
+        (text, charComparer) => new(text.OrderBy(c => c, charComparer), text.Terminator);
+
+    /// <summary>
     /// The <see cref="IComparer{T}"/> used to compare chars of <see cref="BWT"/> or <see cref="SortedBWT"/>.
     /// </summary>
     /// <remarks>

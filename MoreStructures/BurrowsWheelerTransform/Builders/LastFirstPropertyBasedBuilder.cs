@@ -12,13 +12,13 @@ namespace MoreStructures.BurrowsWheelerTransform.Builders;
 /// A <see cref="ILastFirstFinder"/>, built by <see cref="FirstLastFinderBuilder"/> is used to jump between the BWT 
 /// and its sorted version.
 /// </remarks>
-public partial class LastFirstPropertyBasedBuilder : NaiveBuilder
+public class LastFirstPropertyBasedBuilder : NaiveBuilder
 {
     /// <summary>
     /// The strategy by which this builder finds chars in the BWT and its sorted version.
     /// </summary>
     public Func<RotatedTextWithTerminator, ILastFirstFinder> FirstLastFinderBuilder { get; init; } =
-        (lastBWMColumn) => new PrecomputedFinder(lastBWMColumn);
+        (lastBWMColumn) => new PrecomputedFinder(lastBWMColumn, ILastFirstFinder.QuickSort);
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
@@ -86,6 +86,6 @@ public partial class LastFirstPropertyBasedBuilder : NaiveBuilder
         }
         while (sbwt[index] != terminator);
 
-        return new(text.ToString().AsValueEnumerable(), terminator);
+        return new(text.ToString().AsValue(), terminator);
     }
 }

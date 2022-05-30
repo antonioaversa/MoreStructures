@@ -11,15 +11,27 @@ public class PrecomputedFinder : BinarySearchFinder
     private readonly IDictionary<char, IList<int>> _bwtOccurrencesByChar;
     private readonly IDictionary<char, IList<int>> _sbwtOccurrencesByChar;
 
-    /// <summary>
-    /// Builds a <see cref="PrecomputedFinder"/>.
-    /// </summary>
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     /// <inheritdoc cref="PrecomputedFinder" path="/summary"/>
     /// </remarks>
-    /// <param name="lastBWMColumn">The last column of the Burrows-Wheeler Matrix. Corresponds to the BWT.</param>
-    public PrecomputedFinder(RotatedTextWithTerminator lastBWMColumn)
-        :base(lastBWMColumn)
+    public PrecomputedFinder(
+        RotatedTextWithTerminator lastBWMColumn,
+        Func<RotatedTextWithTerminator, IComparer<char>, RotatedTextWithTerminator> bwtSorter)
+        : base(lastBWMColumn, bwtSorter)
+    {
+        _bwtOccurrencesByChar = GetOccurrencesByChar(BWT);
+        _sbwtOccurrencesByChar = GetOccurrencesByChar(SortedBWT);
+    }
+
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
+    /// <remarks>
+    /// <inheritdoc cref="PrecomputedFinder" path="/summary"/>
+    /// </remarks>
+    public PrecomputedFinder(
+        RotatedTextWithTerminator lastBWMColumn,
+        RotatedTextWithTerminator firstBWMColumn)
+        : base(lastBWMColumn, firstBWMColumn)
     {
         _bwtOccurrencesByChar = GetOccurrencesByChar(BWT);
         _sbwtOccurrencesByChar = GetOccurrencesByChar(SortedBWT);
@@ -76,6 +88,7 @@ public class PrecomputedFinder : BinarySearchFinder
             throw new ArgumentException($"Invalid {nameof(indexOfChar)}: {indexOfChar}");
 
         var indexesOfChar = _sbwtOccurrencesByChar[SortedBWT[indexOfChar]];
-        return BinarySearchWithRepetitions(indexesOfChar, indexOfChar, Comparer<int>.Default, 0, indexesOfChar.Count);
+        return Lists.Searching.Search.BinarySearchFirst(
+            indexesOfChar, indexOfChar, Comparer<int>.Default, 0, indexesOfChar.Count);
     }
 }

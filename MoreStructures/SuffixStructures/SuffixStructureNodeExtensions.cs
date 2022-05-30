@@ -29,5 +29,5 @@ public static class SuffixStructureNodeExtensions
         node
             .GetAllNodeToLeafPaths()
             .Select(rootToLeafPath => rootToLeafPath.SuffixFor(text))
-            .AsValueEnumerable();
+            .AsValue();
 }

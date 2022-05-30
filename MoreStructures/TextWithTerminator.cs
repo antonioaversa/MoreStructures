@@ -30,7 +30,7 @@ public record TextWithTerminator(
     : IValueEnumerable<char>
 {
     // Wrapped into a value enumerable to preserve value equality.
-    private readonly IEnumerable<char> TextAndTerminator = Text.Append(Terminator).AsValueEnumerable();
+    private readonly IEnumerable<char> TextAndTerminator = Text.Append(Terminator).AsValue();
 
     /// <summary>
     /// A selector of a part of a <see cref="TextWithTerminator"/> or <see cref="RotatedTextWithTerminator"/>.
@@ -65,7 +65,7 @@ public record TextWithTerminator(
     /// <remarks>
     /// Wrapped into a <see cref="IValueEnumerable{T}"/> to preserve value equality.
     /// </remarks>
-    public IEnumerable<char> Text { get; init; } = Text.AsValueEnumerable();
+    public IEnumerable<char> Text { get; init; } = Text.AsValue();
 
     /// <summary>
     /// <inheritdoc cref="TextWithTerminator" path="/param[@name='Terminator']"/>
@@ -87,7 +87,7 @@ public record TextWithTerminator(
     /// </summary>
     /// <param name="range">The range applied to the underlying string.</param>
     /// <returns>An <see cref="IEnumerable{T}"/> of chars containing the selected part.</returns>
-    public IEnumerable<char> this[Range range] => TextAndTerminator.Take(range).AsValueEnumerable();
+    public IEnumerable<char> this[Range range] => TextAndTerminator.Take(range).AsValue();
 
     /// <summary>
     /// Select a part of this text by the provided index (either w.r.t. the start or to the end of the text).
