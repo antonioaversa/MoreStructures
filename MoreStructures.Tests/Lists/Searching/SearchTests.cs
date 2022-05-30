@@ -55,13 +55,28 @@ public class SearchTests
         BinarySearchMethods_OnEnumerable((string)TestCases[testCaseId]);
     }
 
-    [TestMethod]
-    public void BinarySearchMethods_ElementNotFound()
+    [DataRow(4)]
+    [DataRow(5)]
+    [DataTestMethod]
+    public void BinarySearchMethods_ElementNotFound(int length)
     {
-        var enumerable1 = Enumerable.Range(0, 5);
-        Assert.IsTrue(Search.BinarySearchFirst(enumerable1, 5) < 0);
-        Assert.IsTrue(Search.BinarySearchLast(enumerable1, 5) < 0);
-        Assert.IsTrue(Search.BinarySearchInterval(enumerable1, 5) is var (x, y) && x < 0 && y < 0);
+        var enumerable1 = Enumerable.Range(0, length);
+        Assert.IsTrue(Search.BinarySearchFirst(enumerable1, length) < 0);
+        Assert.IsTrue(Search.BinarySearchLast(enumerable1, length) < 0);
+        Assert.IsTrue(Search.BinarySearchInterval(enumerable1, length) is var (x, y) && x < 0 && y < 0);
+        Assert.IsTrue(Search.BinarySearchNth(enumerable1, length, 0) < 0);
+        Assert.IsTrue(Search.BinarySearchNth(enumerable1, length - 1, 1) < 0);
+    }
+
+    [TestMethod]
+    public void BinarySearchMethods_ElementNotFound_OnStrings()
+    {
+        var enumerable1 = "abcde";
+        Assert.IsTrue(Search.BinarySearchFirst(enumerable1, 'f') < 0);
+        Assert.IsTrue(Search.BinarySearchLast(enumerable1, 'f') < 0);
+        Assert.IsTrue(Search.BinarySearchInterval(enumerable1, 'f') is var (x, y) && x < 0 && y < 0);
+        Assert.IsTrue(Search.BinarySearchNth(enumerable1, 'f', 0) < 0);
+        Assert.IsTrue(Search.BinarySearchNth(enumerable1, 'e', 1) < 0);
     }
 
     [TestMethod]
@@ -71,10 +86,20 @@ public class SearchTests
         Assert.IsTrue(Search.BinarySearchFirst(enumerable1, 1.1) < 0);
         Assert.IsTrue(Search.BinarySearchLast(enumerable1, 2) < 0);
         Assert.IsTrue(Search.BinarySearchInterval(enumerable1, -1.3) is var (x, y) && x < 0 && y < 0);
+        Assert.IsTrue(Search.BinarySearchNth(enumerable1, 1, 0) < 0);
+    }
+
+    [TestMethod]
+    public void BinarySearchNth_RaisesExceptionOnInvalidOccurrenceRank()
+    {
+        Assert.ThrowsException<ArgumentOutOfRangeException>(
+            () => Search.BinarySearchNth(Enumerable.Empty<double>(), 1, -4));
     }
 
     private static void BinarySearchMethods_OnEnumerable<T>(IEnumerable<T> enumerable)
+        where T : notnull
     {
+        var occurrences = new Dictionary<T, int> { };
         foreach (var element in enumerable)
         {
             var first = Search.BinarySearchFirst(enumerable, element, Comparer<T>.Default, 0, enumerable.Count() - 1);
@@ -88,6 +113,16 @@ public class SearchTests
                 enumerable, element, Comparer<T>.Default, 0, enumerable.Count() - 1);
             Assert.AreEqual(expectedFirst, first1);
             Assert.AreEqual(expectedLast, last1);
+
+            if (!occurrences.TryGetValue(element, out var currentOccurrence))
+                currentOccurrence = -1;
+            ++currentOccurrence;
+            occurrences[element] = currentOccurrence;
+
+            var expectedNth = enumerable.Index().Where(e => Equals(e.Value, element)).Skip(currentOccurrence).First().Key;
+            var nth = Search.BinarySearchNth(
+                    enumerable, element, currentOccurrence, Comparer<T>.Default, 0, enumerable.Count() - 1);
+            Assert.AreEqual(expectedNth, nth);
         }
     }
 }

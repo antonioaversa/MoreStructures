@@ -17,35 +17,38 @@ public abstract class MatcherTests
         Matcher = matcher;
     }
 
-    [DataRow("mississippi", "issi", true, 4)]
-    [DataRow("mississippi", "issip", true, 5)]
-    [DataRow("mississippi", "xissi", false, 4)] // Matching goes backwards
-    [DataRow("mississippi", "issix", false, 0)]
-    [DataRow("mississippi", "x", false, 0)]
-
+    [DataRow("mississippi", "issi", true, 4, 3, 4)]
+    [DataRow("mississippi", "issip", true, 5, 3, 3)]
+    [DataRow("mississippi", "xissi", false, 4, 3, 4)] // Matching goes backwards => matches 4 chars then fails
+    [DataRow("mississippi", "issix", false, 0, -1, -1)] // Matching goes backwards => matches no char
+    [DataRow("mississippi", "x", false, 0, -1, -1)]
+    [DataRow("mississippi", "s", true, 1, 8, 11)]
+    [DataRow("mississippi", "mi", true, 2, 5, 5)]
+    [DataRow("mississippi", "mis", true, 3, 5, 5)]
     [DataTestMethod]
     public void Match_IsCorrect(
-        string textContent, string patternContent, bool expectedSuccess, int expectedMatchedChars)
+        string textContent, string patternContent, bool expectedSuccess, int expectedMatchedChars, int expectedStart,
+        int expectedEnd)
     {
         var text = new TextWithTerminator(textContent);
         var bwt = Builder.BuildTransform(text).Content;
         var sbwt = ILastFirstFinder.QuickSort(bwt, CharOrTerminatorComparer.Build(text.Terminator));
-        var match = Matcher.Match(sbwt, bwt, patternContent);
-        Assert.IsTrue(
-            match is { Success: var success, MatchedChars: var matchedChars } && 
-            success == expectedSuccess && 
-            matchedChars == expectedMatchedChars);
+        var (success, matchedChars, startIndex, endIndex) = Matcher.Match(bwt, sbwt, patternContent);
+        Assert.AreEqual(expectedSuccess, success);
+        Assert.AreEqual(expectedMatchedChars, matchedChars);
+        Assert.AreEqual(expectedStart, startIndex);
+        Assert.AreEqual(expectedEnd, endIndex);
     }
 
     [TestMethod]
     public void Match_RaisesExceptionWithIncosistentBWTAndSortedBWT()
     {
-        Assert.ThrowsException<ArgumentException>(() => Matcher.Match(new("$a", '$'), new("a#", '#'), "a"));
+        Assert.ThrowsException<ArgumentException>(() => Matcher.Match(new("a#", '#'), new("$a", '$'), "a"));
     }
 
     [TestMethod]
     public void Match_RaisesExceptionWithEmptyPattern()
     {
-        Assert.ThrowsException<ArgumentException>(() => Matcher.Match(new("$a"), new("a$"), ""));
+        Assert.ThrowsException<ArgumentException>(() => Matcher.Match(new("a$"), new("$a"), ""));
     }
 }

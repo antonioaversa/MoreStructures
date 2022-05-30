@@ -25,9 +25,10 @@ public class NarrowingIntervalMatcher : IMatcher
     ///    <br/>
     /// 5. By last-first property, new indexes (first3, last3) of the chars in Sorted BWT corresponding to first2 and 
     ///    last2 in BWT, can be found. Those are the first and last of the new narrowed range, ready for step 4.
-    /// 6. When all chars of P, up to P[0], have been consumed, all matches have been identified.
+    /// 6. When all chars of P, up to P[0], have been consumed, all matches have been identified as an interval in
+    ///    Sorted BWT.
     /// </remarks>
-    public Match Match(RotatedTextWithTerminator sbwt, RotatedTextWithTerminator bwt, IEnumerable<char> pattern)
+    public Match Match(RotatedTextWithTerminator bwt, RotatedTextWithTerminator sbwt, IEnumerable<char> pattern)
     {
         if (bwt.Terminator != sbwt.Terminator || bwt.Length != sbwt.Length)
             throw new ArgumentException($"{nameof(bwt)} and {nameof(sbwt)} are not consistent with each other.");
@@ -35,36 +36,34 @@ public class NarrowingIntervalMatcher : IMatcher
             throw new ArgumentException("The pattern should be non-empty.", nameof(pattern));
         
         var patternReversed = pattern.Reverse();
-        var finder = new PrecomputedFinder(sbwt, bwt);
+        var finder = new PrecomputedFinder(bwt, sbwt);
         var charComparer = CharOrTerminatorComparer.Build(bwt.Terminator);
         
         var (startIndex, endIndex) = Search.BinarySearchInterval(sbwt, patternReversed.First(), charComparer);
         if (startIndex < 0)
-            return new Match(false, 0);
+            return new Match(false, 0, -1, -1);
 
-        var occurrenceStart = 0; // Occurrence is 0-based: 0 is 1st occurrence, 1 is 2nd occurrence, ...
-        var occurrenceEnd = endIndex - startIndex;
+        var (occurrenceRankStart, occurrenceRankEnd) = (0, endIndex - startIndex); // Occurrence ranks are 0-based
+
         var charsMatched = 1;
         foreach (var c in patternReversed.Skip(1))
         {
-            var startIndex1 = Enumerable
+            var startIndexNarrowed = Enumerable
                 .Range(startIndex, endIndex - startIndex + 1)
                 .FirstOrDefault(i => bwt[i] == c, -1);
-            if (startIndex1 == -1)
-                return new Match(false, charsMatched);
+            if (startIndexNarrowed == -1)
+                return new Match(false, charsMatched, startIndex, endIndex);
 
-            var endIndex1 = Enumerable
+            var endIndexNarrowed = Enumerable
                 .Range(startIndex, endIndex - startIndex + 1)
                 .Reverse()
                 .First(i => bwt[i] == c);
 
-            startIndex = finder.FindIndexOfNthOccurrenceInBWT(c, occurrenceStart);
-            endIndex = finder.FindIndexOfNthOccurrenceInBWT(c, occurrenceEnd);
-            occurrenceStart = finder.FindOccurrenceOfCharInSortedBWT(startIndex);
-            occurrenceEnd = finder.FindOccurrenceOfCharInSortedBWT(endIndex);
+            (startIndex, occurrenceRankStart) = finder.LastToFirst(startIndexNarrowed);
+            (endIndex, occurrenceRankEnd) = finder.LastToFirst(endIndexNarrowed);        
             charsMatched++;
         }
 
-        return new Match(true, charsMatched);
+        return new Match(true, charsMatched, startIndex, endIndex);
     }
 }

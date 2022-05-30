@@ -38,15 +38,45 @@ public interface ILastFirstFinder
     /// Find the index of the n-th occurrence (0-based) of the provided <paramref name="charToFind"/> in 
     /// <see cref="BWT"/>.
     /// </summary>
-    /// <param name="charToFind">The char to find in the BWT.</param>
-    /// <param name="occurrence">The 0-based occurrence to find. 0 = 1st occurrence.</param>
-    /// <returns>The index of the n-th occurrence of <paramref name="charToFind"/> in the BWT.</returns>
-    int FindIndexOfNthOccurrenceInBWT(char charToFind, int occurrence);
+    /// <param name="charToFind">The char to find in <see cref="BWT"/>.</param>
+    /// <param name="occurrenceRank">The 0-based occurrence rank to find. 0 = 1st occurrence.</param>
+    /// <returns>
+    /// The index of the n-th occurrence of <paramref name="charToFind"/>, if it exists. 
+    /// If it doesn't exist, returns -1.
+    /// </returns>
+    int FindIndexOfNthOccurrenceInBWT(char charToFind, int occurrenceRank);
 
     /// <summary>
-    /// Find the number of occurrence (0-based) of the char at the provided index in <see cref="SortedBWT"/>.
+    /// Find the index of the n-th occurrence (0-based) of the provided <paramref name="charToFind"/> in 
+    /// <see cref="SortedBWT"/>.
+    /// </summary>
+    /// <param name="charToFind">The char to find in <see cref="SortedBWT"/>.</param>
+    /// <param name="occurrenceRank">The 0-based occurrence rank to find. 0 = 1st occurrence.</param>
+    /// <returns>
+    /// The index of the n-th occurrence of <paramref name="charToFind"/>.
+    /// If it doesn't exist, returns -1.
+    /// </returns>
+    int FindIndexOfNthOccurrenceInSortedBWT(char charToFind, int occurrenceRank);
+
+    /// <summary>
+    /// Find the rank of occurrence rank (0-based) of the char at the provided index in <see cref="BWT"/>.
     /// </summary>
     /// <param name="indexOfChar">The index of the char, whose occurrence has to be found.</param>
-    /// <returns>The 0-based number of occurrence of the char at index <paramref name="indexOfChar"/>.</returns>
-    int FindOccurrenceOfCharInSortedBWT(int indexOfChar);
+    /// <returns>The 0-based occurrence rank of the char at index <paramref name="indexOfChar"/>.</returns>
+    int FindOccurrenceRankOfCharInBWT(int indexOfChar);
+
+    /// <summary>
+    /// Find the rank of occurrence rank (0-based) of the char at the provided index in <see cref="SortedBWT"/>.
+    /// </summary>
+    /// <param name="indexOfChar">The index of the char, whose occurrence has to be found.</param>
+    /// <returns>The 0-based occurrence rank of the char at index <paramref name="indexOfChar"/>.</returns>
+    int FindOccurrenceRankOfCharInSortedBWT(int indexOfChar);
+
+    /// <summary>
+    /// Given the index (0-based) of a char in the <see cref="BWT"/>, it finds the index of the corresponding char in 
+    /// the <see cref="SortedBWT"/> and its occurrence rank (0-based).
+    /// </summary>
+    /// <param name="indexOfChar">The index of the char, to locate in the <see cref="SortedBWT"/>.</param>
+    /// <returns>The index of the char in the <see cref="SortedBWT"/> and its occurence rank (0-based).</returns>
+    (int indexInSortedBWT, int occurrenceRank) LastToFirst(int indexOfChar);
 }

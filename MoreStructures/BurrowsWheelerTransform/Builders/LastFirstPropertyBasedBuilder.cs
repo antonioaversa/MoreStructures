@@ -49,7 +49,7 @@ public class LastFirstPropertyBasedBuilder : NaiveBuilder
     ///           <br/>
     ///         - From terminator to terminator, there are n top-level iterations. Each iteration takes m1 + m2, 
     ///           where m1 is the cost of <see cref="ILastFirstFinder.FindIndexOfNthOccurrenceInBWT(char, int)"/> 
-    ///           and m2 is the cost of <see cref="ILastFirstFinder.FindOccurrenceOfCharInSortedBWT(int)"/>.
+    ///           and m2 is the cost of <see cref="ILastFirstFinder.FindOccurrenceRankOfCharInSortedBWT(int)"/>.
     ///           <br/>
     ///         - Finally, the <see cref="StringBuilder"/> used as accumulator generates the text string. At most O(n).
     ///           <br/>
@@ -75,12 +75,12 @@ public class LastFirstPropertyBasedBuilder : NaiveBuilder
         var text = new StringBuilder();
 
         var index = 0;
-        var occurrence = 0; // Remark: occurrences are 0-based (0 is 1st occurrence)
+        var occurrenceRank = 0; // Remark: occurrence ranks are 0-based (0 is 1st occurrence)
 
         do
         {
-            index = firstLastFinder.FindIndexOfNthOccurrenceInBWT(sbwt[index], occurrence);
-            occurrence = firstLastFinder.FindOccurrenceOfCharInSortedBWT(index);
+            index = firstLastFinder.FindIndexOfNthOccurrenceInBWT(sbwt[index], occurrenceRank);
+            occurrenceRank = firstLastFinder.FindOccurrenceRankOfCharInSortedBWT(index);
             if (sbwt[index] != terminator) 
                 text.Append(sbwt[index]);
         }
