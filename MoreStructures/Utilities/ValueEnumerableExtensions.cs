@@ -16,6 +16,6 @@ public static class ValueEnumerableExtensions
     /// <remarks>
     /// Useful to preserve equality by value in records and other value structures which contain enumerable objects.
     /// </remarks>
-    public static IValueEnumerable<T> AsValueEnumerable<T>(this IEnumerable<T> enumerable) =>
+    public static IValueEnumerable<T> AsValue<T>(this IEnumerable<T> enumerable) =>
         new ValueEnumerable<T>(enumerable);
 }

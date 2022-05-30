@@ -43,7 +43,7 @@ public record RotatedTextWithTerminator(
     /// <remarks>
     /// Wrapped into a <see cref="IValueEnumerable{T}"/> to preserve value equality.
     /// </remarks>
-    public IEnumerable<char> RotatedText { get; init; } = RotatedText.AsValueEnumerable();
+    public IEnumerable<char> RotatedText { get; init; } = RotatedText.AsValue();
 
     /// <summary>
     /// <inheritdoc cref="RotatedTextWithTerminator" path="/param[@name='Terminator']"/>
@@ -65,7 +65,7 @@ public record RotatedTextWithTerminator(
     /// </summary>
     /// <param name="range">The range applied to the underlying string.</param>
     /// <returns>An <see cref="IEnumerable{T}"/> of chars containing the selected part.</returns>
-    public IEnumerable<char> this[Range range] => RotatedText.Take(range).AsValueEnumerable();
+    public IEnumerable<char> this[Range range] => RotatedText.Take(range);
 
     /// <summary>
     /// Select a part of <see cref="RotatedText"/> by the provided index (either w.r.t. the start or to the end of the 

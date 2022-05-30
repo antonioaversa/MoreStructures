@@ -12,13 +12,13 @@ namespace MoreStructures.BurrowsWheelerTransform.Builders;
 /// A <see cref="ILastFirstFinder"/>, built by <see cref="FirstLastFinderBuilder"/> is used to jump between the BWT 
 /// and its sorted version.
 /// </remarks>
-public partial class LastFirstPropertyBasedBuilder : NaiveBuilder
+public class LastFirstPropertyBasedBuilder : NaiveBuilder
 {
     /// <summary>
     /// The strategy by which this builder finds chars in the BWT and its sorted version.
     /// </summary>
     public Func<RotatedTextWithTerminator, ILastFirstFinder> FirstLastFinderBuilder { get; init; } =
-        (lastBWMColumn) => new PrecomputedFinder(lastBWMColumn);
+        (lastBWMColumn) => new PrecomputedFinder(lastBWMColumn, ILastFirstFinder.QuickSort);
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
@@ -49,7 +49,7 @@ public partial class LastFirstPropertyBasedBuilder : NaiveBuilder
     ///           <br/>
     ///         - From terminator to terminator, there are n top-level iterations. Each iteration takes m1 + m2, 
     ///           where m1 is the cost of <see cref="ILastFirstFinder.FindIndexOfNthOccurrenceInBWT(char, int)"/> 
-    ///           and m2 is the cost of <see cref="ILastFirstFinder.FindOccurrenceOfCharInSortedBWT(int)"/>.
+    ///           and m2 is the cost of <see cref="ILastFirstFinder.FindOccurrenceRankOfCharInSortedBWT(int)"/>.
     ///           <br/>
     ///         - Finally, the <see cref="StringBuilder"/> used as accumulator generates the text string. At most O(n).
     ///           <br/>
@@ -75,17 +75,17 @@ public partial class LastFirstPropertyBasedBuilder : NaiveBuilder
         var text = new StringBuilder();
 
         var index = 0;
-        var occurrence = 0; // Remark: occurrences are 0-based (0 is 1st occurrence)
+        var occurrenceRank = 0; // Remark: occurrence ranks are 0-based (0 is 1st occurrence)
 
         do
         {
-            index = firstLastFinder.FindIndexOfNthOccurrenceInBWT(sbwt[index], occurrence);
-            occurrence = firstLastFinder.FindOccurrenceOfCharInSortedBWT(index);
+            index = firstLastFinder.FindIndexOfNthOccurrenceInBWT(sbwt[index], occurrenceRank);
+            occurrenceRank = firstLastFinder.FindOccurrenceRankOfCharInSortedBWT(index);
             if (sbwt[index] != terminator) 
                 text.Append(sbwt[index]);
         }
         while (sbwt[index] != terminator);
 
-        return new(text.ToString().AsValueEnumerable(), terminator);
+        return new(text.ToString().AsValue(), terminator);
     }
 }

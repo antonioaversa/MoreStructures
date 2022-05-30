@@ -8,24 +8,36 @@ namespace MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders;
 /// </summary>
 public class PrecomputedFinder : BinarySearchFinder
 {
-    private readonly IDictionary<char, IList<int>> _bwtOccurrencesByChar;
-    private readonly IDictionary<char, IList<int>> _sbwtOccurrencesByChar;
+    private readonly IDictionary<char, IList<int>> _bwtOccurrenceIndexesByChar;
+    private readonly IDictionary<char, IList<int>> _sbwtOccurrenceIndexesByChar;
 
-    /// <summary>
-    /// Builds a <see cref="PrecomputedFinder"/>.
-    /// </summary>
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     /// <inheritdoc cref="PrecomputedFinder" path="/summary"/>
     /// </remarks>
-    /// <param name="lastBWMColumn">The last column of the Burrows-Wheeler Matrix. Corresponds to the BWT.</param>
-    public PrecomputedFinder(RotatedTextWithTerminator lastBWMColumn)
-        :base(lastBWMColumn)
+    public PrecomputedFinder(
+        RotatedTextWithTerminator lastBWMColumn,
+        Func<RotatedTextWithTerminator, IComparer<char>, RotatedTextWithTerminator> bwtSorter)
+        : base(lastBWMColumn, bwtSorter)
     {
-        _bwtOccurrencesByChar = GetOccurrencesByChar(BWT);
-        _sbwtOccurrencesByChar = GetOccurrencesByChar(SortedBWT);
+        _bwtOccurrenceIndexesByChar = GetOccurrenceIndexesByChar(BWT);
+        _sbwtOccurrenceIndexesByChar = GetOccurrenceIndexesByChar(SortedBWT);
     }
 
-    private static IDictionary<char, IList<int>> GetOccurrencesByChar(IEnumerable<char> chars)
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
+    /// <remarks>
+    /// <inheritdoc cref="PrecomputedFinder" path="/summary"/>
+    /// </remarks>
+    public PrecomputedFinder(
+        RotatedTextWithTerminator lastBWMColumn,
+        RotatedTextWithTerminator firstBWMColumn)
+        : base(lastBWMColumn, firstBWMColumn)
+    {
+        _bwtOccurrenceIndexesByChar = GetOccurrenceIndexesByChar(BWT);
+        _sbwtOccurrenceIndexesByChar = GetOccurrenceIndexesByChar(SortedBWT);
+    }
+
+    private static IDictionary<char, IList<int>> GetOccurrenceIndexesByChar(IEnumerable<char> chars)
     {
         var result = new Dictionary<char, IList<int>>() { };
         var index = 0;
@@ -44,11 +56,21 @@ public class PrecomputedFinder : BinarySearchFinder
     /// This implementation úses a precomputed hash-map of all the positions by each char.
     /// Time Complexity = O(1). Space Complexity = O(1).
     /// </remarks>
-    public override int FindIndexOfNthOccurrenceInBWT(char charToFind, int occurrence) =>
-        _bwtOccurrencesByChar.ContainsKey(charToFind) && 
-        occurrence >= 0 && occurrence < _bwtOccurrencesByChar[charToFind].Count
-        ? _bwtOccurrencesByChar[charToFind][occurrence]
-        : throw new ArgumentException($"Invalid {nameof(charToFind)} or {nameof(occurrence)}");
+    public override int FindIndexOfNthOccurrenceInBWT(char charToFind, int occurrenceRank) =>
+        _bwtOccurrenceIndexesByChar.ContainsKey(charToFind) && 
+        occurrenceRank >= 0 && occurrenceRank < _bwtOccurrenceIndexesByChar[charToFind].Count
+        ? _bwtOccurrenceIndexesByChar[charToFind][occurrenceRank]
+        : throw new ArgumentException($"Invalid {nameof(charToFind)} or {nameof(occurrenceRank)}");
+
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
+    /// <remarks>
+    ///     <inheritdoc cref="FindIndexOfNthOccurrenceInBWT(char, int)"/>
+    /// </remarks>
+    public override int FindIndexOfNthOccurrenceInSortedBWT(char charToFind, int occurrenceRank) =>
+        _sbwtOccurrenceIndexesByChar.ContainsKey(charToFind) &&
+        occurrenceRank >= 0 && occurrenceRank < _sbwtOccurrenceIndexesByChar[charToFind].Count
+        ? _sbwtOccurrenceIndexesByChar[charToFind].First() + occurrenceRank
+        : throw new ArgumentException($"Invalid {nameof(charToFind)} or {nameof(occurrenceRank)}");
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
@@ -70,12 +92,27 @@ public class PrecomputedFinder : BinarySearchFinder
     ///     Therefore, Time Complexity = O(log(n)) and Space Complexity = O(1).
     ///     </para>
     /// </remarks>
-    public override int FindOccurrenceOfCharInSortedBWT(int indexOfChar)
+    public override int FindOccurrenceRankOfCharInBWT(int indexOfChar)
+    {
+        if (indexOfChar < 0 || indexOfChar >= BWT.Length)
+            throw new ArgumentException($"Invalid {nameof(indexOfChar)}: {indexOfChar}");
+
+        var indexesOfChar = _bwtOccurrenceIndexesByChar[BWT[indexOfChar]];
+        return Lists.Searching.Search.BinarySearchFirst(
+            indexesOfChar, indexOfChar, Comparer<int>.Default, 0, indexesOfChar.Count);
+    }
+
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
+    /// <remarks>
+    ///     <inheritdoc cref="FindOccurrenceRankOfCharInBWT(int)"/>
+    /// </remarks>
+    public override int FindOccurrenceRankOfCharInSortedBWT(int indexOfChar)
     {
         if (indexOfChar < 0 || indexOfChar >= SortedBWT.Length)
             throw new ArgumentException($"Invalid {nameof(indexOfChar)}: {indexOfChar}");
 
-        var indexesOfChar = _sbwtOccurrencesByChar[SortedBWT[indexOfChar]];
-        return BinarySearchWithRepetitions(indexesOfChar, indexOfChar, Comparer<int>.Default, 0, indexesOfChar.Count);
+        var indexesOfChar = _sbwtOccurrenceIndexesByChar[SortedBWT[indexOfChar]];
+        return Lists.Searching.Search.BinarySearchFirst(
+            indexesOfChar, indexOfChar, Comparer<int>.Default, 0, indexesOfChar.Count);
     }
 }

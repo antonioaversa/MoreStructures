@@ -98,7 +98,7 @@ public class NaiveBuilder : IBuilder
     public virtual TextWithTerminator InvertMatrix(BWMatrix matrix)
     {
         var firstBWMRow = matrix.Content[0]; // In the form "$..." where $ is separator
-        return new TextWithTerminator(firstBWMRow[1..].AsValueEnumerable(), firstBWMRow[0]);
+        return new TextWithTerminator(firstBWMRow[1..].AsValue(), firstBWMRow[0]);
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>

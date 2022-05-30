@@ -15,7 +15,7 @@ public class NaiveBuilderTests : BuilderTests
     {
     }
 
-    // FIXME: fix issue with ElementAt being O(n) instead of O(1) for strings
+    // TODO: fix issue with ElementAt being O(n) instead of O(1) for strings
     // [TestMethod]
     // public void Memory()
     // {

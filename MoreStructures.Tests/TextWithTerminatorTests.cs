@@ -50,10 +50,10 @@ public class TextWithTerminatorTests
     [TestMethod]
     public void Indexer_WithRange()
     {
-        Assert.AreEqual("a".AsValueEnumerable(), new TextWithTerminator("abc", '$')[0..1]);
-        Assert.AreEqual(string.Empty.AsValueEnumerable(), new TextWithTerminator("abc", '$')[0..0]);
-        Assert.AreEqual("abc$".AsValueEnumerable(), new TextWithTerminator("abc", '$')[0..]);
-        Assert.AreEqual("ab".AsValueEnumerable(), new TextWithTerminator("abc", '$')[..^2]);
+        Assert.AreEqual("a".AsValue(), new TextWithTerminator("abc", '$')[0..1].AsValue());
+        Assert.AreEqual(string.Empty.AsValue(), new TextWithTerminator("abc", '$')[0..0].AsValue());
+        Assert.AreEqual("abc$".AsValue(), new TextWithTerminator("abc", '$')[0..].AsValue());
+        Assert.AreEqual("ab".AsValue(), new TextWithTerminator("abc", '$')[..^2].AsValue());
     }
 
     [TestMethod]
