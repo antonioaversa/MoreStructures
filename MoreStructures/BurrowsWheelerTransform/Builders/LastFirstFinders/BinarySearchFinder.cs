@@ -19,6 +19,12 @@
 /// </remarks>
 public class BinarySearchFinder : NaiveFinder
 {
+    /// <summary>
+    /// The <see cref="Lists.Searching.ISearch"/> implementation to be used when searching for elements in lists sorted 
+    /// in ascending order.
+    /// </summary>
+    protected static Lists.Searching.ISearch OrderedAscListSearch { get; } = new Lists.Searching.BinarySearch();
+
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     /// <inheritdoc cref="BinarySearchFinder" path="/summary"/>
@@ -51,8 +57,7 @@ public class BinarySearchFinder : NaiveFinder
         if (occurrenceRank < 0)
             throw new ArgumentException("Must be non-negative.", nameof(occurrenceRank));
 
-        var index = Lists.Searching.Search.BinarySearchNth(
-            SortedBWT, charToFind, occurrenceRank, CharComparer);
+        var index = OrderedAscListSearch.Nth(SortedBWT, charToFind, occurrenceRank, CharComparer);
 
         if (index < 0)
             throw new ArgumentException($"Invalid {nameof(occurrenceRank)}: {occurrenceRank}");
@@ -69,7 +74,6 @@ public class BinarySearchFinder : NaiveFinder
         if (indexOfChar < 0 || indexOfChar >= SortedBWT.Length)
             throw new ArgumentException($"Invalid {nameof(indexOfChar)}: {indexOfChar}");
 
-        return indexOfChar - Lists.Searching.Search.BinarySearchFirst(
-            SortedBWT, SortedBWT[indexOfChar], CharComparer, 0, indexOfChar);
+        return indexOfChar - OrderedAscListSearch.First(SortedBWT, SortedBWT[indexOfChar], CharComparer, 0, indexOfChar);
     }
 }

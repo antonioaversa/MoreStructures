@@ -1,9 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace MoreStructures.Lists.Searching;
 
 /// <summary>
-/// Searching methods for all direct random access structures, such as lists and arrays.
+/// An object able to search for elements in direct random access structures, such as lists and arrays, which are 
+/// monodimensional and implement the <see cref="IEnumerable{T}"/> interface.
 /// </summary>
 /// <remarks>
 /// In .NET, random access structures usually have an indexer defined, which takes as an index the address of the 
@@ -15,49 +20,8 @@ namespace MoreStructures.Lists.Searching;
 /// access in O(1) time.
 /// <br/>
 /// </remarks>
-public static class Search
+public interface ISearch
 {
-    private static int BinarySearch<T>(
-        IEnumerable<T> source, T element, IComparer<T>? comparer, int? fromIndex, int? toIndex, bool first)
-    {
-        comparer ??= Comparer<T>.Default;
-
-        // Optimization for strings, due to LINQ ElementAt(index) being O(n) for strings.
-        Func<int, int> compareWith =
-            (source is string str) && element is char charToFind && comparer is IComparer<char> charComparer
-            ? i => charComparer.Compare(str[i], charToFind)
-            : i => comparer.Compare(source.ElementAt(i), element);
-
-        var length = source is string str1 ? str1.Length : source.Count();
-        var start = fromIndex ?? 0;
-        var end = toIndex ?? length - 1;
-        var result = -1;
-        while (start <= end)
-        {
-            var middle = (start + end) / 2;
-            var comparison = compareWith(middle);
-            if (comparison < 0)
-            {
-                start = middle + 1;
-            }
-            else if (comparison == 0)
-            {
-                result = middle;
-
-                if (first)
-                    end = middle - 1;
-                else
-                    start = middle + 1;
-            }
-            else
-            {
-                end = middle - 1;
-            }
-        }
-
-        return result;
-    }
-
     /// <summary>
     /// Find the index of the first element in the sub-sequence of elements of <paramref name="source"/> from 
     /// <paramref name="fromIndex"/> to <paramref name="toIndex"/> included, which is equal to 
@@ -88,11 +52,10 @@ public static class Search
     /// instead.
     /// </param>
     /// <returns>The first index of <paramref name="element"/> in <paramref name="source"/>.</returns>
-    public static int BinarySearchFirst<T>(
-        IEnumerable<T> source, T element, IComparer<T>? comparer = null, int? fromIndex = null, int? toIndex = null) => 
-        BinarySearch(source, element, comparer, fromIndex, toIndex, true);
+    int First<T>(
+        IEnumerable<T> source, T element, IComparer<T>? comparer = null, int? fromIndex = null, int? toIndex = null);
 
-    /// <inheritdoc cref="BinarySearchFirst{T}(IEnumerable{T}, T, IComparer{T}?, int?, int?)" 
+    /// <inheritdoc cref="First{T}(IEnumerable{T}, T, IComparer{T}?, int?, int?)" 
     ///     path="//*[not(self::summary or self::returns)]"/>
     ///     
     /// <summary>
@@ -103,11 +66,10 @@ public static class Search
     /// <returns>
     /// The first and last index, marking the end of the sub-sequence of <paramref name="source"/> where to search.
     /// </returns>
-    public static int BinarySearchLast<T>(
-        IEnumerable<T> source, T element, IComparer<T>? comparer = null, int? fromIndex = null, int? toIndex = null) =>
-        BinarySearch(source, element, comparer, fromIndex, toIndex, false);
+    int Last<T>(
+        IEnumerable<T> source, T element, IComparer<T>? comparer = null, int? fromIndex = null, int? toIndex = null);
 
-    /// <inheritdoc cref="BinarySearchFirst{T}(IEnumerable{T}, T, IComparer{T}?, int?, int?)" 
+    /// <inheritdoc cref="First{T}(IEnumerable{T}, T, IComparer{T}?, int?, int?)" 
     ///     path="//*[not(self::summary or self::returns)]"/>
     ///     
     /// <summary>
@@ -119,18 +81,10 @@ public static class Search
     /// <returns>
     /// The first and last index, marking the end of the sub-sequence of <paramref name="source"/> where to search.
     /// </returns>
-    public static (int first, int last) BinarySearchInterval<T>(
-        IEnumerable<T> source, T element, IComparer<T>? comparer = null, int? fromIndex = null, int? toIndex = null)
-    {
-        var first = BinarySearchFirst(source, element, comparer, fromIndex, toIndex);
-        if (first < 0)
-            return (-1, -1);
+    (int first, int last) Interval<T>(
+        IEnumerable<T> source, T element, IComparer<T>? comparer = null, int? fromIndex = null, int? toIndex = null);
 
-        var last = BinarySearchLast(source, element, comparer, first, toIndex);
-        return (first, last);
-    }
-
-    /// <inheritdoc cref="BinarySearchFirst{T}(IEnumerable{T}, T, IComparer{T}?, int?, int?)" 
+    /// <inheritdoc cref="First{T}(IEnumerable{T}, T, IComparer{T}?, int?, int?)" 
     ///     path="//*[not(self::summary or self::returns)]"/>
     ///     
     /// <summary>
@@ -141,31 +95,7 @@ public static class Search
     /// <returns>
     /// The n-th index, marking the end of the sub-sequence of <paramref name="source"/> where to search.
     /// </returns>
-    public static int BinarySearchNth<T>(
-        IEnumerable<T> source, T element, int occurrenceRank, IComparer<T>? comparer = null, int? fromIndex = null, 
-        int? toIndex = null)
-    {
-        if (occurrenceRank < 0)
-            throw new ArgumentOutOfRangeException(nameof(occurrenceRank), "Must be a non-negative value.");
-
-        comparer ??= Comparer<T>.Default;
-
-        var first = BinarySearchFirst(source, element, comparer, fromIndex, toIndex);
-        if (first < 0)
-            return -1;
-
-        var index = first + occurrenceRank;
-
-        // Optimization for strings, due to LINQ ElementAt(index) being O(n) for strings.
-        if (source is string str)
-        {
-            if (index < str.Length && Equals(str[index], element))
-                return index;
-            return -1;
-        }
-
-        if (comparer.Compare(source.ElementAtOrDefault(index), element) == 0)
-            return index;
-        return -1;
-    }
+    int Nth<T>(
+        IEnumerable<T> source, T element, int occurrenceRank, IComparer<T>? comparer = null, int? fromIndex = null,
+        int? toIndex = null);
 }
