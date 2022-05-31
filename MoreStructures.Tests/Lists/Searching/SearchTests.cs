@@ -96,7 +96,19 @@ public abstract class SearchTests
     }
 
     [TestMethod]
-    public void BinarySearchNth_RaisesExceptionOnInvalidOccurrenceRank()
+    public void SearchMethods_FromIndexAndToIndexNull()
+    {
+        var length = 5;
+        var enumerable1 = Enumerable.Range(0, length);
+        Assert.AreEqual(2, Search.First(enumerable1, 2, null, null, null));
+        Assert.AreEqual(2, Search.First(enumerable1, 2, null, 0, null));
+        Assert.AreEqual(-1, Search.First(enumerable1, 2, null, 3, null));
+        Assert.AreEqual(2, Search.First(enumerable1, 2, null, null, 2));
+        Assert.AreEqual(-1, Search.First(enumerable1, 2, null, null, 1));
+    }
+
+    [TestMethod]
+    public void Nth_RaisesExceptionOnInvalidOccurrenceRank()
     {
         Assert.ThrowsException<ArgumentOutOfRangeException>(
             () => Search.Nth(Enumerable.Empty<double>(), 1, -4));

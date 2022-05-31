@@ -95,7 +95,7 @@ public class LinearSearch : ISearch
         int? toIndex = null)
     {
         if (occurrenceRank < 0)
-            throw new ArgumentOutOfRangeException("Must be non-negative.", nameof(occurrenceRank));
+            throw new ArgumentOutOfRangeException(nameof(occurrenceRank), "Must be non-negative.");
 
         return GetIndexedElementInRangeEqualTo(source, element, comparer, fromIndex, toIndex, false)
             .Select(e => e.Key as int?)
