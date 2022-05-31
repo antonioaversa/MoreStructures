@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>PLACEHOLDER </title>
+    <title>More Structures .NET API Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="PLACEHOLDER ">
+    <meta name="title" content="More Structures .NET API Documentation ">
     <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -77,9 +77,118 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="placeholder">PLACEHOLDER</h1>
+<h1 id="more-structures-net-api-documentation">More Structures .NET API Documentation</h1>
 
-<p>TODO: Add .NET projects to the <em>src</em> folder and run <code>docfx</code> to generate <strong>REAL</strong> <em>API Documentation</em>!</p>
+<p>This is the entrypoint of the .NET API documentation of More Structures.</p>
+<p>More Structures provides:</p>
+<ul>
+<li><strong>mostly basic, and some more advanced, data structures</strong> such as Trees, Tries, Burrows-Wheeler Transform and Matrix wrappers etc.</li>
+<li><strong>implementation of well-known algorithms</strong> running on them, such as Suffix Trie and Tree construction, Hukkonen algorithm, Burrows-Wheeler Transform pattern matching, etc.</li>
+</ul>
+<h2 id="functionalities-provided">Functionalities provided</h2>
+<ul>
+<li><strong>Burrows-Wheeler Transform and Matrix</strong>: builders, inversion, pattern matching</li>
+<li><strong>Recursively Defined Trees</strong>: descendants counting, stringification</li>
+<li><strong>Lists</strong>: binary search</li>
+<li><strong>Suffix Tries</strong>: builders, pattern matching, conversion into trees</li>
+<li><strong>Suffix Trees</strong>: builders, pattern matching, conversion into tries, Hukkonen algorithm for linear time building</li>
+</ul>
+<h2 id="design-aspects">Design aspects</h2>
+<p>The library is conceived with a few key aspects in mind:</p>
+<ul>
+<li>type-safety</li>
+<li>immutability</li>
+<li>value-based semantics</li>
+<li>performance</li>
+<li>100% statement and condition coverage</li>
+<li>extensive auto-generated documentation</li>
+<li>warnings as errors</li>
+</ul>
+<h3 id="type-safety">Type-safety</h3>
+<p>All concepts have wrappers around standard types provided by the framework, enforcing data structure-specific constraints:</p>
+<p>For example, all terminator-terminated strings used by Suffix Trees and Tries are mapped to a specific <code>record</code> named <code>TextWithTerminator</code>, which ensures that the string is properly formed. Similarly, all cyclic rotations of a text are wrapped into a <code>RotatedTextWithTerminator</code>.</p>
+<p>This approch allows to avoid in most cases dangerous casting operations, sometimes leading to runtime errors. Type-safety is preserved by generic constraints whenever possible.</p>
+<p>For example, by binding together interfaces of different objects of the same data structure by some variants of the <a href="https://en.wikipedia.org/wiki/Curiously_recurring_template_pattern">Curiously recurring template pattern</a>:</p>
+<pre><code class="lang-cs">public interface IRecImmDictIndexedTreeEdge&lt;TEdge, TNode&gt;
+    where TEdge : IRecImmDictIndexedTreeEdge&lt;TEdge, TNode&gt;
+    where TNode : IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;
+{
+}
+
+public interface IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;
+    where TEdge : IRecImmDictIndexedTreeEdge&lt;TEdge, TNode&gt;
+    where TNode : IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;
+{
+    IDictionary&lt;TEdge, TNode&gt; Children { get; }
+}
+</code></pre>
+<p>The notation can be heavy at times, especially when defining new data structures implementing such interfaces.</p>
+<pre><code class="lang-cs">public record SuffixTreeEdge(int Start, int Length)
+    : ISuffixStructureEdge&lt;SuffixTreeEdge, SuffixTreeNode&gt;, IComparable&lt;SuffixTreeEdge&gt;
+{
+    ...
+}
+
+public abstract record SuffixTreeNode(IDictionary&lt;SuffixTreeEdge, SuffixTreeNode&gt; Children, int? Start)
+    : ISuffixStructureNode&lt;SuffixTreeEdge, SuffixTreeNode&gt;
+{
+    ...
+}
+
+</code></pre>
+<p>However, the advantages of type-safety more often than not outrun the disadvantages, keeping data structures coherent and predictable at compile time.</p>
+<p>Another typical source of runtime errors are null reference exceptions. These are avoided by:</p>
+<ul>
+<li>requiring use of <em>nullable reference types</em>, introduced in C# 8, everywhere in the project;</li>
+<li>limiting to the maximum extent possible the use of <em>null-forgiving operator</em>;</li>
+<li>avoiding the semantic abuse of <code>null</code>.</li>
+</ul>
+<h3 id="immutability">Immutability</h3>
+<p>Whenever possible, structures are kept immutable, meaning that, whenever possible:</p>
+<ul>
+<li>fields are made <code>readonly</code>, and either assigned in-line or in the constructor;</li>
+<li>properties are made either <code>{ get; }</code> or <code>{ get; init; }</code>, and either assigned in-line or in the constructor;</li>
+<li>methods don't change object state;</li>
+<li>complex object initialization which may require multiple steps and intermediate incoherent states are externalized to a <em>Builder</em> object.</li>
+</ul>
+<h3 id="value-based-semantics">Value-based semantics</h3>
+<p>C# 9 introduced <code>records</code> which are <code>classes</code> or <code>struct</code> with <em>value-based equality</em>.</p>
+<p>This library makes extensive use of such construct, especially when wrapping other objects, in order to give them a domain-specific semantics:</p>
+<pre><code class="lang-cs">public record TextWithTerminator(
+    IEnumerable&lt;char&gt; Text, 
+    char Terminator = TextWithTerminator.DefaultTerminator,
+    bool ValidateInput = true)
+    : IValueEnumerable&lt;char&gt;
+    ...
+
+public record BWTransform(TextWithTerminator Text, RotatedTextWithTerminator Content)
+    ...
+
+public record BWMatrix(TextWithTerminator Text, IList&lt;string&gt; Content)
+    ...
+
+public sealed record CountTreeEdge&lt;TEdge, TNode&gt;(TEdge WrappedEdge) 
+    : IRecImmDictIndexedTreeEdge&lt;CountTreeEdge&lt;TEdge, TNode&gt;, CountTreeNode&lt;TEdge, TNode&gt;&gt;
+    where TEdge : IRecImmDictIndexedTreeEdge&lt;TEdge, TNode&gt;
+    where TNode : IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;
+    ...
+</code></pre>
+<h3 id="performance">Performance</h3>
+<p>While type soundness has the priority in the design of this library, performance is measured and optimized.</p>
+<p>Due to lack of proper tail-recurse optimization in the .NET runtime, all operations on deep recursive structures are implemented in at least two variants:</p>
+<ul>
+<li>a fully recursive, typically functional fashion, where no mutation of any type (not even local) happens;</li>
+<li>an iterative, <code>Stack</code> or <code>Queue</code> based, where some local mutations are allowed;</li>
+<li>sometimes the two approaches are combined.</li>
+</ul>
+<h3 id="100-statement-and-condition-coverage">100% statement and condition coverage</h3>
+<p>The code is currently covered by tests in its entirety. There is mostly a 1-to-1 mapping between every public class and method, and their corresponding test class and method in the <code>MoreStructures.Test</code> project.</p>
+<ul>
+<li>Tests are a great source of documentation, showing working and reproducible examples of how to use this library. When looking for directions about how to use a data structure or invoke an algorithm, it's highly recommended to also have a look at unit tests covering that functionality.</li>
+</ul>
+<h3 id="extensive-auto-generated-documentation">Extensive auto-generated documentation</h3>
+<p>All public members and their parameters and generic types are documented.</p>
+<h2 id="warnings-as-errors">Warnings as errors</h2>
 </article>
           </div>
           
