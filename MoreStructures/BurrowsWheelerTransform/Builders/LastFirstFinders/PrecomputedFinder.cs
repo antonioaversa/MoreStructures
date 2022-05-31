@@ -8,6 +8,12 @@ namespace MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders;
 /// </summary>
 public class PrecomputedFinder : BinarySearchFinder
 {
+    /// <summary>
+    /// The <see cref="Lists.Searching.ISearch"/> implementation to be used when searching for elements in lists not 
+    /// sorted in any order.
+    /// </summary>
+    protected static Lists.Searching.ISearch UnorderedListSearch { get; } = new Lists.Searching.LinearSearch();
+
     private readonly IDictionary<char, IList<int>> _bwtOccurrenceIndexesByChar;
     private readonly IDictionary<char, IList<int>> _sbwtOccurrenceIndexesByChar;
 
@@ -73,6 +79,16 @@ public class PrecomputedFinder : BinarySearchFinder
         : throw new ArgumentException($"Invalid {nameof(charToFind)} or {nameof(occurrenceRank)}");
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
+    public override int FindOccurrenceRankOfCharInBWT(int indexOfChar)
+    {
+        if (indexOfChar < 0 || indexOfChar >= BWT.Length)
+            throw new ArgumentException($"Invalid {nameof(indexOfChar)}: {indexOfChar}");
+
+        var indexesOfChar = _bwtOccurrenceIndexesByChar[BWT[indexOfChar]];
+        return UnorderedListSearch.First(indexesOfChar, indexOfChar, Comparer<int>.Default, 0, indexesOfChar.Count);
+    }
+
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     ///     <para>
     ///     This implementation uses a precomputed hash-map of all the positions by each char.
@@ -92,27 +108,12 @@ public class PrecomputedFinder : BinarySearchFinder
     ///     Therefore, Time Complexity = O(log(n)) and Space Complexity = O(1).
     ///     </para>
     /// </remarks>
-    public override int FindOccurrenceRankOfCharInBWT(int indexOfChar)
-    {
-        if (indexOfChar < 0 || indexOfChar >= BWT.Length)
-            throw new ArgumentException($"Invalid {nameof(indexOfChar)}: {indexOfChar}");
-
-        var indexesOfChar = _bwtOccurrenceIndexesByChar[BWT[indexOfChar]];
-        return Lists.Searching.Search.BinarySearchFirst(
-            indexesOfChar, indexOfChar, Comparer<int>.Default, 0, indexesOfChar.Count);
-    }
-
-    /// <inheritdoc path="//*[not(self::remarks)]"/>
-    /// <remarks>
-    ///     <inheritdoc cref="FindOccurrenceRankOfCharInBWT(int)"/>
-    /// </remarks>
     public override int FindOccurrenceRankOfCharInSortedBWT(int indexOfChar)
     {
         if (indexOfChar < 0 || indexOfChar >= SortedBWT.Length)
             throw new ArgumentException($"Invalid {nameof(indexOfChar)}: {indexOfChar}");
 
         var indexesOfChar = _sbwtOccurrenceIndexesByChar[SortedBWT[indexOfChar]];
-        return Lists.Searching.Search.BinarySearchFirst(
-            indexesOfChar, indexOfChar, Comparer<int>.Default, 0, indexesOfChar.Count);
+        return OrderedAscListSearch.First(indexesOfChar, indexOfChar, Comparer<int>.Default, 0, indexesOfChar.Count);
     }
 }

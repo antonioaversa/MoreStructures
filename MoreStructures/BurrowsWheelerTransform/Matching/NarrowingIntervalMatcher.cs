@@ -10,6 +10,12 @@ namespace MoreStructures.BurrowsWheelerTransform.Matching;
 /// </remarks>
 public class NarrowingIntervalMatcher : IMatcher
 {
+    /// <summary>
+    /// The <see cref="Lists.Searching.ISearch"/> implementation to be used when searching for elements in lists sorted 
+    /// in ascending order.
+    /// </summary>
+    protected static Lists.Searching.ISearch OrderedAscListSearch { get; } = new Lists.Searching.BinarySearch();
+
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     /// The pattern matching is done via successive narrowing of a interval, defined by a start and an end index.<br/>
@@ -39,7 +45,7 @@ public class NarrowingIntervalMatcher : IMatcher
         var finder = new PrecomputedFinder(bwt, sbwt);
         var charComparer = CharOrTerminatorComparer.Build(bwt.Terminator);
         
-        var (startIndex, endIndex) = Search.BinarySearchInterval(sbwt, patternReversed.First(), charComparer);
+        var (startIndex, endIndex) = OrderedAscListSearch.Interval(sbwt, patternReversed.First(), charComparer);
         if (startIndex < 0)
             return new Match(false, 0, -1, -1);
 

@@ -112,10 +112,20 @@ Due to lack of proper tail-recurse optimization in the .NET runtime, all operati
 - sometimes the two approaches are combined.
 
 ### 100% statement and condition coverage
-The code is currently covered by tests in its entirety. There is mostly a 1-to-1 mapping between every public class and method, and their corresponding test class and method in the `MoreStructures.Test` project.
-  - Tests are a great source of documentation, showing working and reproducible examples of how to use this library. When looking for directions about how to use a data structure or invoke an algorithm, it's highly recommended to also have a look at unit tests covering that functionality. 
+The code is currently covered by tests in its entirety. 
+
+There is mostly a 1-to-1 mapping between every public class and method, and their corresponding test class and method in the `MoreStructures.Test` project.
+- Every folder under the `MoreStructure` project, containing source code, has its counterpart under `MoreStructure.Tests`;
+- Most public method `MethodX` of public class `MoreStructures.Package.ClassA` have a `MethodX_Aspect` unit test, defined under the class `MoreStructures.Tests.Package.ClassATests`.
+
+Tests are a great source of documentation, showing working and reproducible examples of how to use this library. When looking for directions about how to use a data structure or invoke an algorithm, it's highly recommended to also have a look at unit tests covering that functionality. 
 
 ### Extensive auto-generated documentation
 All public members and their parameters and generic types are documented.
 
-## Warnings as errors
+### Warnings as errors
+All warnings according to the `Latest` .NET analyzer are treated as errors. 
+
+## Coding style
+[File Scoped Namespaces](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-10.0/file-scoped-namespaces) are encouraged, as they reduce the levels of nesting, making the code more readable. They also promote the use of a single namespace per file, which is strongly encouraged.
+  
