@@ -20,14 +20,20 @@ namespace MoreStructures;
 /// Validation takes O(n) time, where n = number of chars in <see cref="RotatedText"/> and can be an heavy operation.
 /// </param>
 /// <remarks>
-/// A terminator-terminated rotated text is required by Burrows-Wheeler Transform operations, such as inversion. 
-/// This object provides type safety, as it allows to tell apart rotated terminator-terminated strings from generic 
-/// ones.
-/// Consistently using <see cref="RotatedTextWithTerminator"/>, rather than <see cref="string"/>, in all library 
-/// functionalities ensures that the invariant of a rotated terminator-terminated string is always respected.
-/// Most string-related functionalities provided by <see cref="RotatedTextWithTerminator"/>, such as 
-/// <see cref="Length"/> and <see cref="this[Index]"/>, as well as <see cref="IEnumerable{T}"/> and 
-/// <see cref="IEnumerable"/> support, are delegated to the underlying string.
+///     <para>
+///     A terminator-terminated rotated text is required by Burrows-Wheeler Transform operations, such as inversion.
+///     </para>
+///     <para>
+///     This object provides type safety, as it allows to tell apart rotated terminator-terminated strings from generic 
+///     ones.
+///     Consistently using <see cref="RotatedTextWithTerminator"/>, rather than <see cref="string"/>, in all library 
+///     functionalities ensures that the invariant of a rotated terminator-terminated string is always respected.
+///     </para>
+///     <para>
+///     Most string-related functionalities provided by <see cref="RotatedTextWithTerminator"/>, such as 
+///     <see cref="Length"/> and <see cref="this[Index]"/>, as well as <see cref="IEnumerable{T}"/> and 
+///     <see cref="IEnumerable"/> support, are delegated to the underlying string.
+///     </para>
 /// </remarks>
 public record RotatedTextWithTerminator(
     IEnumerable<char> RotatedText, 
