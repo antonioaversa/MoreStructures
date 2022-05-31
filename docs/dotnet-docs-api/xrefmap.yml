@@ -149,6 +149,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.FindOccurrenceRankOfCharInSortedBWT
   nameWithType: BinarySearchFinder.FindOccurrenceRankOfCharInSortedBWT
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.OrderedAscListSearch
+  name: OrderedAscListSearch
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_BinarySearchFinder_OrderedAscListSearch
+  commentId: P:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.OrderedAscListSearch
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.OrderedAscListSearch
+  nameWithType: BinarySearchFinder.OrderedAscListSearch
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.OrderedAscListSearch*
+  name: OrderedAscListSearch
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_BinarySearchFinder_OrderedAscListSearch_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.OrderedAscListSearch
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.OrderedAscListSearch
+  nameWithType: BinarySearchFinder.OrderedAscListSearch
 - uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder
   name: ILastFirstFinder
   href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html
@@ -477,6 +490,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.FindOccurrenceRankOfCharInSortedBWT
   nameWithType: PrecomputedFinder.FindOccurrenceRankOfCharInSortedBWT
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.UnorderedListSearch
+  name: UnorderedListSearch
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder_UnorderedListSearch
+  commentId: P:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.UnorderedListSearch
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.UnorderedListSearch
+  nameWithType: PrecomputedFinder.UnorderedListSearch
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.UnorderedListSearch*
+  name: UnorderedListSearch
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder_UnorderedListSearch_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.UnorderedListSearch
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.UnorderedListSearch
+  nameWithType: PrecomputedFinder.UnorderedListSearch
 - uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder
   name: LastFirstPropertyBasedBuilder
   href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.html
@@ -845,6 +871,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.Match
   nameWithType: NarrowingIntervalMatcher.Match
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.OrderedAscListSearch
+  name: OrderedAscListSearch
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_OrderedAscListSearch
+  commentId: P:MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.OrderedAscListSearch
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.OrderedAscListSearch
+  nameWithType: NarrowingIntervalMatcher.OrderedAscListSearch
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.OrderedAscListSearch*
+  name: OrderedAscListSearch
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_OrderedAscListSearch_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.OrderedAscListSearch
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.OrderedAscListSearch
+  nameWithType: NarrowingIntervalMatcher.OrderedAscListSearch
 - uid: MoreStructures.CountTrees
   name: MoreStructures.CountTrees
   href: api/MoreStructures.CountTrees.html
@@ -977,76 +1016,216 @@ references:
   commentId: N:MoreStructures.Lists.Searching
   fullName: MoreStructures.Lists.Searching
   nameWithType: MoreStructures.Lists.Searching
-- uid: MoreStructures.Lists.Searching.Search
-  name: Search
-  href: api/MoreStructures.Lists.Searching.Search.html
-  commentId: T:MoreStructures.Lists.Searching.Search
-  fullName: MoreStructures.Lists.Searching.Search
-  nameWithType: Search
-- uid: MoreStructures.Lists.Searching.Search.BinarySearchFirst*
-  name: BinarySearchFirst
-  href: api/MoreStructures.Lists.Searching.Search.html#MoreStructures_Lists_Searching_Search_BinarySearchFirst_
-  commentId: Overload:MoreStructures.Lists.Searching.Search.BinarySearchFirst
+- uid: MoreStructures.Lists.Searching.BinarySearch
+  name: BinarySearch
+  href: api/MoreStructures.Lists.Searching.BinarySearch.html
+  commentId: T:MoreStructures.Lists.Searching.BinarySearch
+  fullName: MoreStructures.Lists.Searching.BinarySearch
+  nameWithType: BinarySearch
+- uid: MoreStructures.Lists.Searching.BinarySearch.First*
+  name: First
+  href: api/MoreStructures.Lists.Searching.BinarySearch.html#MoreStructures_Lists_Searching_BinarySearch_First_
+  commentId: Overload:MoreStructures.Lists.Searching.BinarySearch.First
   isSpec: "True"
-  fullName: MoreStructures.Lists.Searching.Search.BinarySearchFirst
-  nameWithType: Search.BinarySearchFirst
-- uid: MoreStructures.Lists.Searching.Search.BinarySearchFirst``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name: BinarySearchFirst<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  href: api/MoreStructures.Lists.Searching.Search.html#MoreStructures_Lists_Searching_Search_BinarySearchFirst__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__
-  commentId: M:MoreStructures.Lists.Searching.Search.BinarySearchFirst``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name.vb: BinarySearchFirst(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
-  fullName: MoreStructures.Lists.Searching.Search.BinarySearchFirst<T>(System.Collections.Generic.IEnumerable<T>, T, System.Collections.Generic.IComparer<T>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
-  fullName.vb: MoreStructures.Lists.Searching.Search.BinarySearchFirst(Of T)(System.Collections.Generic.IEnumerable(Of T), T, System.Collections.Generic.IComparer(Of T), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
-  nameWithType: Search.BinarySearchFirst<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  nameWithType.vb: Search.BinarySearchFirst(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
-- uid: MoreStructures.Lists.Searching.Search.BinarySearchInterval*
-  name: BinarySearchInterval
-  href: api/MoreStructures.Lists.Searching.Search.html#MoreStructures_Lists_Searching_Search_BinarySearchInterval_
-  commentId: Overload:MoreStructures.Lists.Searching.Search.BinarySearchInterval
+  fullName: MoreStructures.Lists.Searching.BinarySearch.First
+  nameWithType: BinarySearch.First
+- uid: MoreStructures.Lists.Searching.BinarySearch.First``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: First<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
+  href: api/MoreStructures.Lists.Searching.BinarySearch.html#MoreStructures_Lists_Searching_BinarySearch_First__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:MoreStructures.Lists.Searching.BinarySearch.First``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: First(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+  fullName: MoreStructures.Lists.Searching.BinarySearch.First<T>(System.Collections.Generic.IEnumerable<T>, T, System.Collections.Generic.IComparer<T>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
+  fullName.vb: MoreStructures.Lists.Searching.BinarySearch.First(Of T)(System.Collections.Generic.IEnumerable(Of T), T, System.Collections.Generic.IComparer(Of T), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
+  nameWithType: BinarySearch.First<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
+  nameWithType.vb: BinarySearch.First(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+- uid: MoreStructures.Lists.Searching.BinarySearch.Interval*
+  name: Interval
+  href: api/MoreStructures.Lists.Searching.BinarySearch.html#MoreStructures_Lists_Searching_BinarySearch_Interval_
+  commentId: Overload:MoreStructures.Lists.Searching.BinarySearch.Interval
   isSpec: "True"
-  fullName: MoreStructures.Lists.Searching.Search.BinarySearchInterval
-  nameWithType: Search.BinarySearchInterval
-- uid: MoreStructures.Lists.Searching.Search.BinarySearchInterval``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name: BinarySearchInterval<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  href: api/MoreStructures.Lists.Searching.Search.html#MoreStructures_Lists_Searching_Search_BinarySearchInterval__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__
-  commentId: M:MoreStructures.Lists.Searching.Search.BinarySearchInterval``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name.vb: BinarySearchInterval(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
-  fullName: MoreStructures.Lists.Searching.Search.BinarySearchInterval<T>(System.Collections.Generic.IEnumerable<T>, T, System.Collections.Generic.IComparer<T>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
-  fullName.vb: MoreStructures.Lists.Searching.Search.BinarySearchInterval(Of T)(System.Collections.Generic.IEnumerable(Of T), T, System.Collections.Generic.IComparer(Of T), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
-  nameWithType: Search.BinarySearchInterval<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  nameWithType.vb: Search.BinarySearchInterval(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
-- uid: MoreStructures.Lists.Searching.Search.BinarySearchLast*
-  name: BinarySearchLast
-  href: api/MoreStructures.Lists.Searching.Search.html#MoreStructures_Lists_Searching_Search_BinarySearchLast_
-  commentId: Overload:MoreStructures.Lists.Searching.Search.BinarySearchLast
+  fullName: MoreStructures.Lists.Searching.BinarySearch.Interval
+  nameWithType: BinarySearch.Interval
+- uid: MoreStructures.Lists.Searching.BinarySearch.Interval``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: Interval<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
+  href: api/MoreStructures.Lists.Searching.BinarySearch.html#MoreStructures_Lists_Searching_BinarySearch_Interval__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:MoreStructures.Lists.Searching.BinarySearch.Interval``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: Interval(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+  fullName: MoreStructures.Lists.Searching.BinarySearch.Interval<T>(System.Collections.Generic.IEnumerable<T>, T, System.Collections.Generic.IComparer<T>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
+  fullName.vb: MoreStructures.Lists.Searching.BinarySearch.Interval(Of T)(System.Collections.Generic.IEnumerable(Of T), T, System.Collections.Generic.IComparer(Of T), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
+  nameWithType: BinarySearch.Interval<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
+  nameWithType.vb: BinarySearch.Interval(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+- uid: MoreStructures.Lists.Searching.BinarySearch.Last*
+  name: Last
+  href: api/MoreStructures.Lists.Searching.BinarySearch.html#MoreStructures_Lists_Searching_BinarySearch_Last_
+  commentId: Overload:MoreStructures.Lists.Searching.BinarySearch.Last
   isSpec: "True"
-  fullName: MoreStructures.Lists.Searching.Search.BinarySearchLast
-  nameWithType: Search.BinarySearchLast
-- uid: MoreStructures.Lists.Searching.Search.BinarySearchLast``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name: BinarySearchLast<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  href: api/MoreStructures.Lists.Searching.Search.html#MoreStructures_Lists_Searching_Search_BinarySearchLast__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__
-  commentId: M:MoreStructures.Lists.Searching.Search.BinarySearchLast``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name.vb: BinarySearchLast(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
-  fullName: MoreStructures.Lists.Searching.Search.BinarySearchLast<T>(System.Collections.Generic.IEnumerable<T>, T, System.Collections.Generic.IComparer<T>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
-  fullName.vb: MoreStructures.Lists.Searching.Search.BinarySearchLast(Of T)(System.Collections.Generic.IEnumerable(Of T), T, System.Collections.Generic.IComparer(Of T), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
-  nameWithType: Search.BinarySearchLast<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  nameWithType.vb: Search.BinarySearchLast(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
-- uid: MoreStructures.Lists.Searching.Search.BinarySearchNth*
-  name: BinarySearchNth
-  href: api/MoreStructures.Lists.Searching.Search.html#MoreStructures_Lists_Searching_Search_BinarySearchNth_
-  commentId: Overload:MoreStructures.Lists.Searching.Search.BinarySearchNth
+  fullName: MoreStructures.Lists.Searching.BinarySearch.Last
+  nameWithType: BinarySearch.Last
+- uid: MoreStructures.Lists.Searching.BinarySearch.Last``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: Last<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
+  href: api/MoreStructures.Lists.Searching.BinarySearch.html#MoreStructures_Lists_Searching_BinarySearch_Last__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:MoreStructures.Lists.Searching.BinarySearch.Last``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: Last(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+  fullName: MoreStructures.Lists.Searching.BinarySearch.Last<T>(System.Collections.Generic.IEnumerable<T>, T, System.Collections.Generic.IComparer<T>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
+  fullName.vb: MoreStructures.Lists.Searching.BinarySearch.Last(Of T)(System.Collections.Generic.IEnumerable(Of T), T, System.Collections.Generic.IComparer(Of T), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
+  nameWithType: BinarySearch.Last<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
+  nameWithType.vb: BinarySearch.Last(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+- uid: MoreStructures.Lists.Searching.BinarySearch.Nth*
+  name: Nth
+  href: api/MoreStructures.Lists.Searching.BinarySearch.html#MoreStructures_Lists_Searching_BinarySearch_Nth_
+  commentId: Overload:MoreStructures.Lists.Searching.BinarySearch.Nth
   isSpec: "True"
-  fullName: MoreStructures.Lists.Searching.Search.BinarySearchNth
-  nameWithType: Search.BinarySearchNth
-- uid: MoreStructures.Lists.Searching.Search.BinarySearchNth``1(System.Collections.Generic.IEnumerable{``0},``0,System.Int32,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name: BinarySearchNth<T>(IEnumerable<T>, T, Int32, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  href: api/MoreStructures.Lists.Searching.Search.html#MoreStructures_Lists_Searching_Search_BinarySearchNth__1_System_Collections_Generic_IEnumerable___0____0_System_Int32_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__
-  commentId: M:MoreStructures.Lists.Searching.Search.BinarySearchNth``1(System.Collections.Generic.IEnumerable{``0},``0,System.Int32,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name.vb: BinarySearchNth(Of T)(IEnumerable(Of T), T, Int32, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
-  fullName: MoreStructures.Lists.Searching.Search.BinarySearchNth<T>(System.Collections.Generic.IEnumerable<T>, T, System.Int32, System.Collections.Generic.IComparer<T>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
-  fullName.vb: MoreStructures.Lists.Searching.Search.BinarySearchNth(Of T)(System.Collections.Generic.IEnumerable(Of T), T, System.Int32, System.Collections.Generic.IComparer(Of T), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
-  nameWithType: Search.BinarySearchNth<T>(IEnumerable<T>, T, Int32, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  nameWithType.vb: Search.BinarySearchNth(Of T)(IEnumerable(Of T), T, Int32, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+  fullName: MoreStructures.Lists.Searching.BinarySearch.Nth
+  nameWithType: BinarySearch.Nth
+- uid: MoreStructures.Lists.Searching.BinarySearch.Nth``1(System.Collections.Generic.IEnumerable{``0},``0,System.Int32,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: Nth<T>(IEnumerable<T>, T, Int32, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
+  href: api/MoreStructures.Lists.Searching.BinarySearch.html#MoreStructures_Lists_Searching_BinarySearch_Nth__1_System_Collections_Generic_IEnumerable___0____0_System_Int32_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:MoreStructures.Lists.Searching.BinarySearch.Nth``1(System.Collections.Generic.IEnumerable{``0},``0,System.Int32,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: Nth(Of T)(IEnumerable(Of T), T, Int32, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+  fullName: MoreStructures.Lists.Searching.BinarySearch.Nth<T>(System.Collections.Generic.IEnumerable<T>, T, System.Int32, System.Collections.Generic.IComparer<T>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
+  fullName.vb: MoreStructures.Lists.Searching.BinarySearch.Nth(Of T)(System.Collections.Generic.IEnumerable(Of T), T, System.Int32, System.Collections.Generic.IComparer(Of T), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
+  nameWithType: BinarySearch.Nth<T>(IEnumerable<T>, T, Int32, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
+  nameWithType.vb: BinarySearch.Nth(Of T)(IEnumerable(Of T), T, Int32, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+- uid: MoreStructures.Lists.Searching.ISearch
+  name: ISearch
+  href: api/MoreStructures.Lists.Searching.ISearch.html
+  commentId: T:MoreStructures.Lists.Searching.ISearch
+  fullName: MoreStructures.Lists.Searching.ISearch
+  nameWithType: ISearch
+- uid: MoreStructures.Lists.Searching.ISearch.First*
+  name: First
+  href: api/MoreStructures.Lists.Searching.ISearch.html#MoreStructures_Lists_Searching_ISearch_First_
+  commentId: Overload:MoreStructures.Lists.Searching.ISearch.First
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Searching.ISearch.First
+  nameWithType: ISearch.First
+- uid: MoreStructures.Lists.Searching.ISearch.First``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: First<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
+  href: api/MoreStructures.Lists.Searching.ISearch.html#MoreStructures_Lists_Searching_ISearch_First__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:MoreStructures.Lists.Searching.ISearch.First``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: First(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+  fullName: MoreStructures.Lists.Searching.ISearch.First<T>(System.Collections.Generic.IEnumerable<T>, T, System.Collections.Generic.IComparer<T>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
+  fullName.vb: MoreStructures.Lists.Searching.ISearch.First(Of T)(System.Collections.Generic.IEnumerable(Of T), T, System.Collections.Generic.IComparer(Of T), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
+  nameWithType: ISearch.First<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
+  nameWithType.vb: ISearch.First(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+- uid: MoreStructures.Lists.Searching.ISearch.Interval*
+  name: Interval
+  href: api/MoreStructures.Lists.Searching.ISearch.html#MoreStructures_Lists_Searching_ISearch_Interval_
+  commentId: Overload:MoreStructures.Lists.Searching.ISearch.Interval
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Searching.ISearch.Interval
+  nameWithType: ISearch.Interval
+- uid: MoreStructures.Lists.Searching.ISearch.Interval``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: Interval<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
+  href: api/MoreStructures.Lists.Searching.ISearch.html#MoreStructures_Lists_Searching_ISearch_Interval__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:MoreStructures.Lists.Searching.ISearch.Interval``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: Interval(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+  fullName: MoreStructures.Lists.Searching.ISearch.Interval<T>(System.Collections.Generic.IEnumerable<T>, T, System.Collections.Generic.IComparer<T>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
+  fullName.vb: MoreStructures.Lists.Searching.ISearch.Interval(Of T)(System.Collections.Generic.IEnumerable(Of T), T, System.Collections.Generic.IComparer(Of T), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
+  nameWithType: ISearch.Interval<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
+  nameWithType.vb: ISearch.Interval(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+- uid: MoreStructures.Lists.Searching.ISearch.Last*
+  name: Last
+  href: api/MoreStructures.Lists.Searching.ISearch.html#MoreStructures_Lists_Searching_ISearch_Last_
+  commentId: Overload:MoreStructures.Lists.Searching.ISearch.Last
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Searching.ISearch.Last
+  nameWithType: ISearch.Last
+- uid: MoreStructures.Lists.Searching.ISearch.Last``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: Last<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
+  href: api/MoreStructures.Lists.Searching.ISearch.html#MoreStructures_Lists_Searching_ISearch_Last__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:MoreStructures.Lists.Searching.ISearch.Last``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: Last(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+  fullName: MoreStructures.Lists.Searching.ISearch.Last<T>(System.Collections.Generic.IEnumerable<T>, T, System.Collections.Generic.IComparer<T>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
+  fullName.vb: MoreStructures.Lists.Searching.ISearch.Last(Of T)(System.Collections.Generic.IEnumerable(Of T), T, System.Collections.Generic.IComparer(Of T), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
+  nameWithType: ISearch.Last<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
+  nameWithType.vb: ISearch.Last(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+- uid: MoreStructures.Lists.Searching.ISearch.Nth*
+  name: Nth
+  href: api/MoreStructures.Lists.Searching.ISearch.html#MoreStructures_Lists_Searching_ISearch_Nth_
+  commentId: Overload:MoreStructures.Lists.Searching.ISearch.Nth
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Searching.ISearch.Nth
+  nameWithType: ISearch.Nth
+- uid: MoreStructures.Lists.Searching.ISearch.Nth``1(System.Collections.Generic.IEnumerable{``0},``0,System.Int32,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: Nth<T>(IEnumerable<T>, T, Int32, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
+  href: api/MoreStructures.Lists.Searching.ISearch.html#MoreStructures_Lists_Searching_ISearch_Nth__1_System_Collections_Generic_IEnumerable___0____0_System_Int32_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:MoreStructures.Lists.Searching.ISearch.Nth``1(System.Collections.Generic.IEnumerable{``0},``0,System.Int32,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: Nth(Of T)(IEnumerable(Of T), T, Int32, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+  fullName: MoreStructures.Lists.Searching.ISearch.Nth<T>(System.Collections.Generic.IEnumerable<T>, T, System.Int32, System.Collections.Generic.IComparer<T>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
+  fullName.vb: MoreStructures.Lists.Searching.ISearch.Nth(Of T)(System.Collections.Generic.IEnumerable(Of T), T, System.Int32, System.Collections.Generic.IComparer(Of T), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
+  nameWithType: ISearch.Nth<T>(IEnumerable<T>, T, Int32, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
+  nameWithType.vb: ISearch.Nth(Of T)(IEnumerable(Of T), T, Int32, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+- uid: MoreStructures.Lists.Searching.LinearSearch
+  name: LinearSearch
+  href: api/MoreStructures.Lists.Searching.LinearSearch.html
+  commentId: T:MoreStructures.Lists.Searching.LinearSearch
+  fullName: MoreStructures.Lists.Searching.LinearSearch
+  nameWithType: LinearSearch
+- uid: MoreStructures.Lists.Searching.LinearSearch.First*
+  name: First
+  href: api/MoreStructures.Lists.Searching.LinearSearch.html#MoreStructures_Lists_Searching_LinearSearch_First_
+  commentId: Overload:MoreStructures.Lists.Searching.LinearSearch.First
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Searching.LinearSearch.First
+  nameWithType: LinearSearch.First
+- uid: MoreStructures.Lists.Searching.LinearSearch.First``1(IEnumerable{``0},``0,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: First<T>(IEnumerable<T>, T, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  href: api/MoreStructures.Lists.Searching.LinearSearch.html#MoreStructures_Lists_Searching_LinearSearch_First__1_IEnumerable___0____0_System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:MoreStructures.Lists.Searching.LinearSearch.First``1(IEnumerable{``0},``0,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: First(Of T)(IEnumerable(Of T), T, Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
+  fullName: MoreStructures.Lists.Searching.LinearSearch.First<T>(IEnumerable<T>, T, System.Nullable<IComparer<T>>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
+  fullName.vb: MoreStructures.Lists.Searching.LinearSearch.First(Of T)(IEnumerable(Of T), T, System.Nullable(Of IComparer(Of T)), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
+  nameWithType: LinearSearch.First<T>(IEnumerable<T>, T, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  nameWithType.vb: LinearSearch.First(Of T)(IEnumerable(Of T), T, Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
+- uid: MoreStructures.Lists.Searching.LinearSearch.Interval*
+  name: Interval
+  href: api/MoreStructures.Lists.Searching.LinearSearch.html#MoreStructures_Lists_Searching_LinearSearch_Interval_
+  commentId: Overload:MoreStructures.Lists.Searching.LinearSearch.Interval
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Searching.LinearSearch.Interval
+  nameWithType: LinearSearch.Interval
+- uid: MoreStructures.Lists.Searching.LinearSearch.Interval``1(IEnumerable{``0},``0,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: Interval<T>(IEnumerable<T>, T, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  href: api/MoreStructures.Lists.Searching.LinearSearch.html#MoreStructures_Lists_Searching_LinearSearch_Interval__1_IEnumerable___0____0_System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:MoreStructures.Lists.Searching.LinearSearch.Interval``1(IEnumerable{``0},``0,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: Interval(Of T)(IEnumerable(Of T), T, Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
+  fullName: MoreStructures.Lists.Searching.LinearSearch.Interval<T>(IEnumerable<T>, T, System.Nullable<IComparer<T>>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
+  fullName.vb: MoreStructures.Lists.Searching.LinearSearch.Interval(Of T)(IEnumerable(Of T), T, System.Nullable(Of IComparer(Of T)), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
+  nameWithType: LinearSearch.Interval<T>(IEnumerable<T>, T, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  nameWithType.vb: LinearSearch.Interval(Of T)(IEnumerable(Of T), T, Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
+- uid: MoreStructures.Lists.Searching.LinearSearch.Last*
+  name: Last
+  href: api/MoreStructures.Lists.Searching.LinearSearch.html#MoreStructures_Lists_Searching_LinearSearch_Last_
+  commentId: Overload:MoreStructures.Lists.Searching.LinearSearch.Last
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Searching.LinearSearch.Last
+  nameWithType: LinearSearch.Last
+- uid: MoreStructures.Lists.Searching.LinearSearch.Last``1(IEnumerable{``0},``0,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: Last<T>(IEnumerable<T>, T, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  href: api/MoreStructures.Lists.Searching.LinearSearch.html#MoreStructures_Lists_Searching_LinearSearch_Last__1_IEnumerable___0____0_System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:MoreStructures.Lists.Searching.LinearSearch.Last``1(IEnumerable{``0},``0,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: Last(Of T)(IEnumerable(Of T), T, Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
+  fullName: MoreStructures.Lists.Searching.LinearSearch.Last<T>(IEnumerable<T>, T, System.Nullable<IComparer<T>>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
+  fullName.vb: MoreStructures.Lists.Searching.LinearSearch.Last(Of T)(IEnumerable(Of T), T, System.Nullable(Of IComparer(Of T)), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
+  nameWithType: LinearSearch.Last<T>(IEnumerable<T>, T, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  nameWithType.vb: LinearSearch.Last(Of T)(IEnumerable(Of T), T, Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
+- uid: MoreStructures.Lists.Searching.LinearSearch.Nth*
+  name: Nth
+  href: api/MoreStructures.Lists.Searching.LinearSearch.html#MoreStructures_Lists_Searching_LinearSearch_Nth_
+  commentId: Overload:MoreStructures.Lists.Searching.LinearSearch.Nth
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Searching.LinearSearch.Nth
+  nameWithType: LinearSearch.Nth
+- uid: MoreStructures.Lists.Searching.LinearSearch.Nth``1(IEnumerable{``0},``0,System.Int32,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: Nth<T>(IEnumerable<T>, T, Int32, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  href: api/MoreStructures.Lists.Searching.LinearSearch.html#MoreStructures_Lists_Searching_LinearSearch_Nth__1_IEnumerable___0____0_System_Int32_System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:MoreStructures.Lists.Searching.LinearSearch.Nth``1(IEnumerable{``0},``0,System.Int32,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: Nth(Of T)(IEnumerable(Of T), T, Int32, Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
+  fullName: MoreStructures.Lists.Searching.LinearSearch.Nth<T>(IEnumerable<T>, T, System.Int32, System.Nullable<IComparer<T>>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
+  fullName.vb: MoreStructures.Lists.Searching.LinearSearch.Nth(Of T)(IEnumerable(Of T), T, System.Int32, System.Nullable(Of IComparer(Of T)), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
+  nameWithType: LinearSearch.Nth<T>(IEnumerable<T>, T, Int32, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  nameWithType.vb: LinearSearch.Nth(Of T)(IEnumerable(Of T), T, Int32, Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
 - uid: MoreStructures.RecImmTrees
   name: MoreStructures.RecImmTrees
   href: api/MoreStructures.RecImmTrees.html
@@ -3586,103 +3765,180 @@ references:
   commentId: N:MoreStructures.Tests.Lists.Searching
   fullName: MoreStructures.Tests.Lists.Searching
   nameWithType: MoreStructures.Tests.Lists.Searching
+- uid: MoreStructures.Tests.Lists.Searching.BinarySearchTests
+  name: BinarySearchTests
+  href: api/MoreStructures.Tests.Lists.Searching.BinarySearchTests.html
+  commentId: T:MoreStructures.Tests.Lists.Searching.BinarySearchTests
+  fullName: MoreStructures.Tests.Lists.Searching.BinarySearchTests
+  nameWithType: BinarySearchTests
+- uid: MoreStructures.Tests.Lists.Searching.BinarySearchTests.#ctor
+  name: BinarySearchTests()
+  href: api/MoreStructures.Tests.Lists.Searching.BinarySearchTests.html#MoreStructures_Tests_Lists_Searching_BinarySearchTests__ctor
+  commentId: M:MoreStructures.Tests.Lists.Searching.BinarySearchTests.#ctor
+  fullName: MoreStructures.Tests.Lists.Searching.BinarySearchTests.BinarySearchTests()
+  nameWithType: BinarySearchTests.BinarySearchTests()
+- uid: MoreStructures.Tests.Lists.Searching.BinarySearchTests.#ctor*
+  name: BinarySearchTests
+  href: api/MoreStructures.Tests.Lists.Searching.BinarySearchTests.html#MoreStructures_Tests_Lists_Searching_BinarySearchTests__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Searching.BinarySearchTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Searching.BinarySearchTests.BinarySearchTests
+  nameWithType: BinarySearchTests.BinarySearchTests
+- uid: MoreStructures.Tests.Lists.Searching.LinearSearchTests
+  name: LinearSearchTests
+  href: api/MoreStructures.Tests.Lists.Searching.LinearSearchTests.html
+  commentId: T:MoreStructures.Tests.Lists.Searching.LinearSearchTests
+  fullName: MoreStructures.Tests.Lists.Searching.LinearSearchTests
+  nameWithType: LinearSearchTests
+- uid: MoreStructures.Tests.Lists.Searching.LinearSearchTests.#ctor
+  name: LinearSearchTests()
+  href: api/MoreStructures.Tests.Lists.Searching.LinearSearchTests.html#MoreStructures_Tests_Lists_Searching_LinearSearchTests__ctor
+  commentId: M:MoreStructures.Tests.Lists.Searching.LinearSearchTests.#ctor
+  fullName: MoreStructures.Tests.Lists.Searching.LinearSearchTests.LinearSearchTests()
+  nameWithType: LinearSearchTests.LinearSearchTests()
+- uid: MoreStructures.Tests.Lists.Searching.LinearSearchTests.#ctor*
+  name: LinearSearchTests
+  href: api/MoreStructures.Tests.Lists.Searching.LinearSearchTests.html#MoreStructures_Tests_Lists_Searching_LinearSearchTests__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Searching.LinearSearchTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Searching.LinearSearchTests.LinearSearchTests
+  nameWithType: LinearSearchTests.LinearSearchTests
 - uid: MoreStructures.Tests.Lists.Searching.SearchTests
   name: SearchTests
   href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html
   commentId: T:MoreStructures.Tests.Lists.Searching.SearchTests
   fullName: MoreStructures.Tests.Lists.Searching.SearchTests
   nameWithType: SearchTests
-- uid: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_ElementNotFound(System.Int32)
-  name: BinarySearchMethods_ElementNotFound(Int32)
-  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_ElementNotFound_System_Int32_
-  commentId: M:MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_ElementNotFound(System.Int32)
-  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_ElementNotFound(System.Int32)
-  nameWithType: SearchTests.BinarySearchMethods_ElementNotFound(Int32)
-- uid: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_ElementNotFound*
-  name: BinarySearchMethods_ElementNotFound
-  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_ElementNotFound_
-  commentId: Overload:MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_ElementNotFound
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.#ctor(MoreStructures.Lists.Searching.ISearch)
+  name: SearchTests(ISearch)
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests__ctor_MoreStructures_Lists_Searching_ISearch_
+  commentId: M:MoreStructures.Tests.Lists.Searching.SearchTests.#ctor(MoreStructures.Lists.Searching.ISearch)
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.SearchTests(MoreStructures.Lists.Searching.ISearch)
+  nameWithType: SearchTests.SearchTests(ISearch)
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.#ctor*
+  name: SearchTests
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Searching.SearchTests.#ctor
   isSpec: "True"
-  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_ElementNotFound
-  nameWithType: SearchTests.BinarySearchMethods_ElementNotFound
-- uid: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_ElementNotFound_OnStrings
-  name: BinarySearchMethods_ElementNotFound_OnStrings()
-  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_ElementNotFound_OnStrings
-  commentId: M:MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_ElementNotFound_OnStrings
-  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_ElementNotFound_OnStrings()
-  nameWithType: SearchTests.BinarySearchMethods_ElementNotFound_OnStrings()
-- uid: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_ElementNotFound_OnStrings*
-  name: BinarySearchMethods_ElementNotFound_OnStrings
-  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_ElementNotFound_OnStrings_
-  commentId: Overload:MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_ElementNotFound_OnStrings
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.SearchTests
+  nameWithType: SearchTests.SearchTests
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.Nth_RaisesExceptionOnInvalidOccurrenceRank
+  name: Nth_RaisesExceptionOnInvalidOccurrenceRank()
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_Nth_RaisesExceptionOnInvalidOccurrenceRank
+  commentId: M:MoreStructures.Tests.Lists.Searching.SearchTests.Nth_RaisesExceptionOnInvalidOccurrenceRank
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.Nth_RaisesExceptionOnInvalidOccurrenceRank()
+  nameWithType: SearchTests.Nth_RaisesExceptionOnInvalidOccurrenceRank()
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.Nth_RaisesExceptionOnInvalidOccurrenceRank*
+  name: Nth_RaisesExceptionOnInvalidOccurrenceRank
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_Nth_RaisesExceptionOnInvalidOccurrenceRank_
+  commentId: Overload:MoreStructures.Tests.Lists.Searching.SearchTests.Nth_RaisesExceptionOnInvalidOccurrenceRank
   isSpec: "True"
-  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_ElementNotFound_OnStrings
-  nameWithType: SearchTests.BinarySearchMethods_ElementNotFound_OnStrings
-- uid: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnCharArray(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)
-  name: BinarySearchMethods_OnCharArray(SearchTests.TestCaseId)
-  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_OnCharArray_MoreStructures_Tests_Lists_Searching_SearchTests_TestCaseId_
-  commentId: M:MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnCharArray(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)
-  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnCharArray(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)
-  nameWithType: SearchTests.BinarySearchMethods_OnCharArray(SearchTests.TestCaseId)
-- uid: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnCharArray*
-  name: BinarySearchMethods_OnCharArray
-  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_OnCharArray_
-  commentId: Overload:MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnCharArray
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.Nth_RaisesExceptionOnInvalidOccurrenceRank
+  nameWithType: SearchTests.Nth_RaisesExceptionOnInvalidOccurrenceRank
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.Search
+  name: Search
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_Search
+  commentId: P:MoreStructures.Tests.Lists.Searching.SearchTests.Search
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.Search
+  nameWithType: SearchTests.Search
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.Search*
+  name: Search
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_Search_
+  commentId: Overload:MoreStructures.Tests.Lists.Searching.SearchTests.Search
   isSpec: "True"
-  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnCharArray
-  nameWithType: SearchTests.BinarySearchMethods_OnCharArray
-- uid: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnEmptyEnumerable
-  name: BinarySearchMethods_OnEmptyEnumerable()
-  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_OnEmptyEnumerable
-  commentId: M:MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnEmptyEnumerable
-  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnEmptyEnumerable()
-  nameWithType: SearchTests.BinarySearchMethods_OnEmptyEnumerable()
-- uid: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnEmptyEnumerable*
-  name: BinarySearchMethods_OnEmptyEnumerable
-  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_OnEmptyEnumerable_
-  commentId: Overload:MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnEmptyEnumerable
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.Search
+  nameWithType: SearchTests.Search
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound(System.Int32)
+  name: SearchMethods_ElementNotFound(Int32)
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_ElementNotFound_System_Int32_
+  commentId: M:MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound(System.Int32)
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound(System.Int32)
+  nameWithType: SearchTests.SearchMethods_ElementNotFound(Int32)
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound*
+  name: SearchMethods_ElementNotFound
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_ElementNotFound_
+  commentId: Overload:MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound
   isSpec: "True"
-  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnEmptyEnumerable
-  nameWithType: SearchTests.BinarySearchMethods_OnEmptyEnumerable
-- uid: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnListOfIntegers(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)
-  name: BinarySearchMethods_OnListOfIntegers(SearchTests.TestCaseId)
-  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_OnListOfIntegers_MoreStructures_Tests_Lists_Searching_SearchTests_TestCaseId_
-  commentId: M:MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnListOfIntegers(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)
-  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnListOfIntegers(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)
-  nameWithType: SearchTests.BinarySearchMethods_OnListOfIntegers(SearchTests.TestCaseId)
-- uid: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnListOfIntegers*
-  name: BinarySearchMethods_OnListOfIntegers
-  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_OnListOfIntegers_
-  commentId: Overload:MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnListOfIntegers
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound
+  nameWithType: SearchTests.SearchMethods_ElementNotFound
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound_OnStrings
+  name: SearchMethods_ElementNotFound_OnStrings()
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_ElementNotFound_OnStrings
+  commentId: M:MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound_OnStrings
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound_OnStrings()
+  nameWithType: SearchTests.SearchMethods_ElementNotFound_OnStrings()
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound_OnStrings*
+  name: SearchMethods_ElementNotFound_OnStrings
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_ElementNotFound_OnStrings_
+  commentId: Overload:MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound_OnStrings
   isSpec: "True"
-  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnListOfIntegers
-  nameWithType: SearchTests.BinarySearchMethods_OnListOfIntegers
-- uid: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnString(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)
-  name: BinarySearchMethods_OnString(SearchTests.TestCaseId)
-  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_OnString_MoreStructures_Tests_Lists_Searching_SearchTests_TestCaseId_
-  commentId: M:MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnString(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)
-  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnString(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)
-  nameWithType: SearchTests.BinarySearchMethods_OnString(SearchTests.TestCaseId)
-- uid: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnString*
-  name: BinarySearchMethods_OnString
-  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_OnString_
-  commentId: Overload:MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnString
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound_OnStrings
+  nameWithType: SearchTests.SearchMethods_ElementNotFound_OnStrings
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_FromIndexAndToIndexNull
+  name: SearchMethods_FromIndexAndToIndexNull()
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_FromIndexAndToIndexNull
+  commentId: M:MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_FromIndexAndToIndexNull
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_FromIndexAndToIndexNull()
+  nameWithType: SearchTests.SearchMethods_FromIndexAndToIndexNull()
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_FromIndexAndToIndexNull*
+  name: SearchMethods_FromIndexAndToIndexNull
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_FromIndexAndToIndexNull_
+  commentId: Overload:MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_FromIndexAndToIndexNull
   isSpec: "True"
-  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnString
-  nameWithType: SearchTests.BinarySearchMethods_OnString
-- uid: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchNth_RaisesExceptionOnInvalidOccurrenceRank
-  name: BinarySearchNth_RaisesExceptionOnInvalidOccurrenceRank()
-  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchNth_RaisesExceptionOnInvalidOccurrenceRank
-  commentId: M:MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchNth_RaisesExceptionOnInvalidOccurrenceRank
-  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchNth_RaisesExceptionOnInvalidOccurrenceRank()
-  nameWithType: SearchTests.BinarySearchNth_RaisesExceptionOnInvalidOccurrenceRank()
-- uid: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchNth_RaisesExceptionOnInvalidOccurrenceRank*
-  name: BinarySearchNth_RaisesExceptionOnInvalidOccurrenceRank
-  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchNth_RaisesExceptionOnInvalidOccurrenceRank_
-  commentId: Overload:MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchNth_RaisesExceptionOnInvalidOccurrenceRank
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_FromIndexAndToIndexNull
+  nameWithType: SearchTests.SearchMethods_FromIndexAndToIndexNull
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnCharArray(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)
+  name: SearchMethods_OnCharArray(SearchTests.TestCaseId)
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_OnCharArray_MoreStructures_Tests_Lists_Searching_SearchTests_TestCaseId_
+  commentId: M:MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnCharArray(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnCharArray(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)
+  nameWithType: SearchTests.SearchMethods_OnCharArray(SearchTests.TestCaseId)
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnCharArray*
+  name: SearchMethods_OnCharArray
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_OnCharArray_
+  commentId: Overload:MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnCharArray
   isSpec: "True"
-  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchNth_RaisesExceptionOnInvalidOccurrenceRank
-  nameWithType: SearchTests.BinarySearchNth_RaisesExceptionOnInvalidOccurrenceRank
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnCharArray
+  nameWithType: SearchTests.SearchMethods_OnCharArray
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnEmptyEnumerable
+  name: SearchMethods_OnEmptyEnumerable()
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_OnEmptyEnumerable
+  commentId: M:MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnEmptyEnumerable
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnEmptyEnumerable()
+  nameWithType: SearchTests.SearchMethods_OnEmptyEnumerable()
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnEmptyEnumerable*
+  name: SearchMethods_OnEmptyEnumerable
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_OnEmptyEnumerable_
+  commentId: Overload:MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnEmptyEnumerable
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnEmptyEnumerable
+  nameWithType: SearchTests.SearchMethods_OnEmptyEnumerable
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnListOfIntegers(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)
+  name: SearchMethods_OnListOfIntegers(SearchTests.TestCaseId)
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_OnListOfIntegers_MoreStructures_Tests_Lists_Searching_SearchTests_TestCaseId_
+  commentId: M:MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnListOfIntegers(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnListOfIntegers(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)
+  nameWithType: SearchTests.SearchMethods_OnListOfIntegers(SearchTests.TestCaseId)
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnListOfIntegers*
+  name: SearchMethods_OnListOfIntegers
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_OnListOfIntegers_
+  commentId: Overload:MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnListOfIntegers
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnListOfIntegers
+  nameWithType: SearchTests.SearchMethods_OnListOfIntegers
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnString(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)
+  name: SearchMethods_OnString(SearchTests.TestCaseId)
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_OnString_MoreStructures_Tests_Lists_Searching_SearchTests_TestCaseId_
+  commentId: M:MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnString(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnString(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)
+  nameWithType: SearchTests.SearchMethods_OnString(SearchTests.TestCaseId)
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnString*
+  name: SearchMethods_OnString
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_OnString_
+  commentId: Overload:MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnString
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnString
+  nameWithType: SearchTests.SearchMethods_OnString
 - uid: MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId
   name: SearchTests.TestCaseId
   href: api/MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId.html

@@ -89,6 +89,8 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">SearchTests</span></div>
+      <div class="level2"><a class="xref" href="MoreStructures.Tests.Lists.Searching.BinarySearchTests.html">BinarySearchTests</a></div>
+      <div class="level2"><a class="xref" href="MoreStructures.Tests.Lists.Searching.LinearSearchTests.html">LinearSearchTests</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -118,24 +120,105 @@
   <h6><strong>Assembly</strong>: MoreStructures.Tests.dll</h6>
   <h5 id="MoreStructures_Tests_Lists_Searching_SearchTests_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SearchTests</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class SearchTests</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_ElementNotFound_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_ElementNotFound(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_Lists_Searching_SearchTests__ctor_MoreStructures_Lists_Searching_ISearch_.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.Lists.Searching.SearchTests.%23ctor(MoreStructures.Lists.Searching.ISearch)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/Lists/Searching/SearchTests.cs/#L58">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/Lists/Searching/SearchTests.cs/#L17">View Source</a>
   </span>
-  <a id="MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_ElementNotFound_" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_ElementNotFound*"></a>
-  <h4 id="MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_ElementNotFound_System_Int32_" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_ElementNotFound(System.Int32)">BinarySearchMethods_ElementNotFound(Int32)</h4>
+  <a id="MoreStructures_Tests_Lists_Searching_SearchTests__ctor_" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.#ctor*"></a>
+  <h4 id="MoreStructures_Tests_Lists_Searching_SearchTests__ctor_MoreStructures_Lists_Searching_ISearch_" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.#ctor(MoreStructures.Lists.Searching.ISearch)">SearchTests(ISearch)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void BinarySearchMethods_ElementNotFound(int length)</code></pre>
+    <pre><code class="lang-csharp hljs">protected SearchTests(ISearch search)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Lists.Searching.ISearch.html">ISearch</a></td>
+        <td><span class="parametername">search</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_Lists_Searching_SearchTests_Search.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.Lists.Searching.SearchTests.Search%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/Lists/Searching/SearchTests.cs/#L15">View Source</a>
+  </span>
+  <a id="MoreStructures_Tests_Lists_Searching_SearchTests_Search_" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.Search*"></a>
+  <h4 id="MoreStructures_Tests_Lists_Searching_SearchTests_Search" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.Search">Search</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ISearch Search { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Lists.Searching.ISearch.html">ISearch</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_Lists_Searching_SearchTests_Nth_RaisesExceptionOnInvalidOccurrenceRank.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.Lists.Searching.SearchTests.Nth_RaisesExceptionOnInvalidOccurrenceRank%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/Lists/Searching/SearchTests.cs/#L110">View Source</a>
+  </span>
+  <a id="MoreStructures_Tests_Lists_Searching_SearchTests_Nth_RaisesExceptionOnInvalidOccurrenceRank_" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.Nth_RaisesExceptionOnInvalidOccurrenceRank*"></a>
+  <h4 id="MoreStructures_Tests_Lists_Searching_SearchTests_Nth_RaisesExceptionOnInvalidOccurrenceRank" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.Nth_RaisesExceptionOnInvalidOccurrenceRank">Nth_RaisesExceptionOnInvalidOccurrenceRank()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Nth_RaisesExceptionOnInvalidOccurrenceRank()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_ElementNotFound_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/Lists/Searching/SearchTests.cs/#L64">View Source</a>
+  </span>
+  <a id="MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_ElementNotFound_" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound*"></a>
+  <h4 id="MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_ElementNotFound_System_Int32_" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound(System.Int32)">SearchMethods_ElementNotFound(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SearchMethods_ElementNotFound(int length)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,33 +239,48 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_ElementNotFound_OnStrings.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_ElementNotFound_OnStrings%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_ElementNotFound_OnStrings.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound_OnStrings%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/Lists/Searching/SearchTests.cs/#L71">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/Lists/Searching/SearchTests.cs/#L77">View Source</a>
   </span>
-  <a id="MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_ElementNotFound_OnStrings_" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_ElementNotFound_OnStrings*"></a>
-  <h4 id="MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_ElementNotFound_OnStrings" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_ElementNotFound_OnStrings">BinarySearchMethods_ElementNotFound_OnStrings()</h4>
+  <a id="MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_ElementNotFound_OnStrings_" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound_OnStrings*"></a>
+  <h4 id="MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_ElementNotFound_OnStrings" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound_OnStrings">SearchMethods_ElementNotFound_OnStrings()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void BinarySearchMethods_ElementNotFound_OnStrings()</code></pre>
+    <pre><code class="lang-csharp hljs">public void SearchMethods_ElementNotFound_OnStrings()</code></pre>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_OnCharArray_MoreStructures_Tests_Lists_Searching_SearchTests_TestCaseId_.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnCharArray(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_FromIndexAndToIndexNull.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_FromIndexAndToIndexNull%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/Lists/Searching/SearchTests.cs/#L43">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/Lists/Searching/SearchTests.cs/#L98">View Source</a>
   </span>
-  <a id="MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_OnCharArray_" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnCharArray*"></a>
-  <h4 id="MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_OnCharArray_MoreStructures_Tests_Lists_Searching_SearchTests_TestCaseId_" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnCharArray(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)">BinarySearchMethods_OnCharArray(SearchTests.TestCaseId)</h4>
+  <a id="MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_FromIndexAndToIndexNull_" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_FromIndexAndToIndexNull*"></a>
+  <h4 id="MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_FromIndexAndToIndexNull" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_FromIndexAndToIndexNull">SearchMethods_FromIndexAndToIndexNull()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void BinarySearchMethods_OnCharArray(SearchTests.TestCaseId testCaseId)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SearchMethods_FromIndexAndToIndexNull()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_OnCharArray_MoreStructures_Tests_Lists_Searching_SearchTests_TestCaseId_.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnCharArray(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/Lists/Searching/SearchTests.cs/#L49">View Source</a>
+  </span>
+  <a id="MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_OnCharArray_" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnCharArray*"></a>
+  <h4 id="MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_OnCharArray_MoreStructures_Tests_Lists_Searching_SearchTests_TestCaseId_" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnCharArray(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)">SearchMethods_OnCharArray(SearchTests.TestCaseId)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SearchMethods_OnCharArray(SearchTests.TestCaseId testCaseId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -203,33 +301,33 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_OnEmptyEnumerable.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnEmptyEnumerable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_OnEmptyEnumerable.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnEmptyEnumerable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/Lists/Searching/SearchTests.cs/#L82">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/Lists/Searching/SearchTests.cs/#L88">View Source</a>
   </span>
-  <a id="MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_OnEmptyEnumerable_" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnEmptyEnumerable*"></a>
-  <h4 id="MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_OnEmptyEnumerable" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnEmptyEnumerable">BinarySearchMethods_OnEmptyEnumerable()</h4>
+  <a id="MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_OnEmptyEnumerable_" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnEmptyEnumerable*"></a>
+  <h4 id="MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_OnEmptyEnumerable" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnEmptyEnumerable">SearchMethods_OnEmptyEnumerable()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void BinarySearchMethods_OnEmptyEnumerable()</code></pre>
+    <pre><code class="lang-csharp hljs">public void SearchMethods_OnEmptyEnumerable()</code></pre>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_OnListOfIntegers_MoreStructures_Tests_Lists_Searching_SearchTests_TestCaseId_.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnListOfIntegers(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_OnListOfIntegers_MoreStructures_Tests_Lists_Searching_SearchTests_TestCaseId_.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnListOfIntegers(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/Lists/Searching/SearchTests.cs/#L35">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/Lists/Searching/SearchTests.cs/#L41">View Source</a>
   </span>
-  <a id="MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_OnListOfIntegers_" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnListOfIntegers*"></a>
-  <h4 id="MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_OnListOfIntegers_MoreStructures_Tests_Lists_Searching_SearchTests_TestCaseId_" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnListOfIntegers(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)">BinarySearchMethods_OnListOfIntegers(SearchTests.TestCaseId)</h4>
+  <a id="MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_OnListOfIntegers_" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnListOfIntegers*"></a>
+  <h4 id="MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_OnListOfIntegers_MoreStructures_Tests_Lists_Searching_SearchTests_TestCaseId_" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnListOfIntegers(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)">SearchMethods_OnListOfIntegers(SearchTests.TestCaseId)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void BinarySearchMethods_OnListOfIntegers(SearchTests.TestCaseId testCaseId)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SearchMethods_OnListOfIntegers(SearchTests.TestCaseId testCaseId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -250,18 +348,18 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_OnString_MoreStructures_Tests_Lists_Searching_SearchTests_TestCaseId_.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnString(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_OnString_MoreStructures_Tests_Lists_Searching_SearchTests_TestCaseId_.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnString(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/Lists/Searching/SearchTests.cs/#L50">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/Lists/Searching/SearchTests.cs/#L56">View Source</a>
   </span>
-  <a id="MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_OnString_" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnString*"></a>
-  <h4 id="MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchMethods_OnString_MoreStructures_Tests_Lists_Searching_SearchTests_TestCaseId_" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchMethods_OnString(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)">BinarySearchMethods_OnString(SearchTests.TestCaseId)</h4>
+  <a id="MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_OnString_" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnString*"></a>
+  <h4 id="MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_OnString_MoreStructures_Tests_Lists_Searching_SearchTests_TestCaseId_" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnString(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)">SearchMethods_OnString(SearchTests.TestCaseId)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void BinarySearchMethods_OnString(SearchTests.TestCaseId testCaseId)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SearchMethods_OnString(SearchTests.TestCaseId testCaseId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -280,21 +378,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchNth_RaisesExceptionOnInvalidOccurrenceRank.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchNth_RaisesExceptionOnInvalidOccurrenceRank%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/Lists/Searching/SearchTests.cs/#L92">View Source</a>
-  </span>
-  <a id="MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchNth_RaisesExceptionOnInvalidOccurrenceRank_" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchNth_RaisesExceptionOnInvalidOccurrenceRank*"></a>
-  <h4 id="MoreStructures_Tests_Lists_Searching_SearchTests_BinarySearchNth_RaisesExceptionOnInvalidOccurrenceRank" data-uid="MoreStructures.Tests.Lists.Searching.SearchTests.BinarySearchNth_RaisesExceptionOnInvalidOccurrenceRank">BinarySearchNth_RaisesExceptionOnInvalidOccurrenceRank()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void BinarySearchNth_RaisesExceptionOnInvalidOccurrenceRank()</code></pre>
-  </div>
 </article>
           </div>
           

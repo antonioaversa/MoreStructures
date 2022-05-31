@@ -182,13 +182,19 @@ public sealed record CountTreeEdge&lt;TEdge, TNode&gt;(TEdge WrappedEdge)
 <li>sometimes the two approaches are combined.</li>
 </ul>
 <h3 id="100-statement-and-condition-coverage">100% statement and condition coverage</h3>
-<p>The code is currently covered by tests in its entirety. There is mostly a 1-to-1 mapping between every public class and method, and their corresponding test class and method in the <code>MoreStructures.Test</code> project.</p>
+<p>The code is currently covered by tests in its entirety.</p>
+<p>There is mostly a 1-to-1 mapping between every public class and method, and their corresponding test class and method in the <code>MoreStructures.Test</code> project.</p>
 <ul>
-<li>Tests are a great source of documentation, showing working and reproducible examples of how to use this library. When looking for directions about how to use a data structure or invoke an algorithm, it's highly recommended to also have a look at unit tests covering that functionality.</li>
+<li>Every folder under the <code>MoreStructure</code> project, containing source code, has its counterpart under <code>MoreStructure.Tests</code>;</li>
+<li>Most public method <code>MethodX</code> of public class <code>MoreStructures.Package.ClassA</code> have a <code>MethodX_Aspect</code> unit test, defined under the class <code>MoreStructures.Tests.Package.ClassATests</code>.</li>
 </ul>
+<p>Tests are a great source of documentation, showing working and reproducible examples of how to use this library. When looking for directions about how to use a data structure or invoke an algorithm, it's highly recommended to also have a look at unit tests covering that functionality.</p>
 <h3 id="extensive-auto-generated-documentation">Extensive auto-generated documentation</h3>
 <p>All public members and their parameters and generic types are documented.</p>
-<h2 id="warnings-as-errors">Warnings as errors</h2>
+<h3 id="warnings-as-errors">Warnings as errors</h3>
+<p>All warnings according to the <code>Latest</code> .NET analyzer are treated as errors.</p>
+<h2 id="coding-style">Coding style</h2>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-10.0/file-scoped-namespaces">File Scoped Namespaces</a> are encouraged, as they reduce the levels of nesting, making the code more readable. They also promote the use of a single namespace per file, which is strongly encouraged.</p>
 </article>
           </div>
           
