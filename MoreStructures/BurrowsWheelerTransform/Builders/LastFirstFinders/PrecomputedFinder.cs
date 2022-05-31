@@ -9,7 +9,7 @@ namespace MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders;
 public class PrecomputedFinder : BinarySearchFinder
 {
     /// <summary>
-    /// The <see cref="Lists.Searching.ISearch"/> implementation to be used when searching for elements in lists not 
+    /// The <see cref="Lists.Searching.ISearch"/> implementation to be used when searching for items in lists not 
     /// sorted in any order.
     /// </summary>
     protected static Lists.Searching.ISearch UnorderedListSearch { get; } = new Lists.Searching.LinearSearch();

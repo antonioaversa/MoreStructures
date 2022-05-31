@@ -12,7 +12,7 @@ namespace MoreStructures;
 /// </param>
 /// <remarks>
 /// A virtually rotated terminator-terminated text is required by Burrows-Wheeler Transform construction, when the 
-/// length of the text is too high to build the Burrows-Wheeler Matrix, which would have n^2 elements.
+/// length of the text is too high to build the Burrows-Wheeler Matrix, which would have n^2 items.
 /// </remarks>
 public record VirtuallyRotatedTextWithTerminator(RotatedTextWithTerminator Underlying, int Rotation) 
     : IValueEnumerable<char>, IComparable<VirtuallyRotatedTextWithTerminator>

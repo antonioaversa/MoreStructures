@@ -58,7 +58,7 @@ public class NaiveBuilder : IBuilder
                 from columnIndex in Enumerable.Range(0, allBWMColumnsExceptLast.Count)
                 select allBWMColumnsExceptLast[columnIndex][rowIndex])
             select rowExceptLastChar + lastBWMColumn.Content[rowIndex])
-            .ToList(); // The Burrows-Wheeler Matrix requires direct random access to any of its elements
+            .ToList(); // The Burrows-Wheeler Matrix requires direct random access to any of its items
         return new(lastBWMColumn.Text, allBWMRows);
     }
 

@@ -10,7 +10,7 @@ namespace MoreStructures.Tests.Utilities;
 public class ValueEnumerableTests
 {
     [TestMethod]
-    public void Equals_ByValueOnElementsOfUnderlyingEnumerable()
+    public void Equals_ByValueOnItemsOfUnderlyingEnumerable()
     {
         var ve1 = new ValueEnumerable<char>("abc".ToList());
         var ve2 = new ValueEnumerable<char>("abc".ToList());
@@ -23,7 +23,7 @@ public class ValueEnumerableTests
     }
 
     [TestMethod]
-    public void GetHashCode_ByValueOnElementsOfUnderlyingEnumerable()
+    public void GetHashCode_ByValueOnItemsOfUnderlyingEnumerable()
     {
         var ve1 = new ValueEnumerable<char>("abc".ToList());
         var ve2 = new ValueEnumerable<char>("abc".ToList());
@@ -39,7 +39,7 @@ public class ValueEnumerableTests
     }
 
     [TestMethod]
-    public void GetEnumerator_WithGeneric_GivesElementsOfUnderlyingEnumerable()
+    public void GetEnumerator_WithGeneric_GivesItemsOfUnderlyingEnumerable()
     {
         var e1 = new List<(int, bool)>() { (0, true), (1, false), (2, false) };
         var ve1 = new ValueEnumerable<(int, bool)>(e1);
@@ -47,7 +47,7 @@ public class ValueEnumerableTests
     }
 
     [TestMethod]
-    public void GetEnumerator_WithoutGeneric_GivesElementsOfUnderlyingEnumerable()
+    public void GetEnumerator_WithoutGeneric_GivesItemsOfUnderlyingEnumerable()
     {
         var e1 = new List<(int, bool)>() { (0, true), (1, false), (2, false) };
         var ve1 = new ValueEnumerable<(int, bool)>(e1);

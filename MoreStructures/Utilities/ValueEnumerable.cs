@@ -39,7 +39,7 @@ public class ValueEnumerable<T> : IValueEnumerable<T>
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
-    /// In the specific case, the hash is calculated as an aggregation of the hash codes of the elements of the wrapped
+    /// In the specific case, the hash is calculated as an aggregation of the hash codes of the items of the wrapped
     /// <see cref="Enumerable"/> object.
     /// </remarks>
     public override int GetHashCode() =>
