@@ -11,7 +11,7 @@ namespace MoreStructures.BurrowsWheelerTransform.Matching;
 public class NarrowingIntervalMatcher : IMatcher
 {
     /// <summary>
-    /// The <see cref="Lists.Searching.ISearch"/> implementation to be used when searching for elements in lists sorted 
+    /// The <see cref="Lists.Searching.ISearch"/> implementation to be used when searching for items in lists sorted 
     /// in ascending order.
     /// </summary>
     protected static Lists.Searching.ISearch OrderedAscListSearch { get; } = new Lists.Searching.BinarySearch();

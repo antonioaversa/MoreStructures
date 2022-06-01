@@ -64,7 +64,7 @@ public abstract class SearchTests
     [DataRow(4)]
     [DataRow(5)]
     [DataTestMethod]
-    public void SearchMethods_ElementNotFound(int length)
+    public void SearchMethods_ItemtNotFound(int length)
     {
         var enumerable1 = Enumerable.Range(0, length);
         Assert.IsTrue(Search.First(enumerable1, length) < 0);
@@ -75,7 +75,7 @@ public abstract class SearchTests
     }
 
     [TestMethod]
-    public void SearchMethods_ElementNotFound_OnStrings()
+    public void SearchMethods_ItemNotFound_OnStrings()
     {
         var enumerable1 = "abcde";
         Assert.IsTrue(Search.First(enumerable1, 'f') < 0);
@@ -118,28 +118,28 @@ public abstract class SearchTests
         where T : notnull
     {
         var occurrences = new Dictionary<T, int> { };
-        foreach (var element in enumerable)
+        foreach (var item in enumerable)
         {
-            var first = Search.First(enumerable, element, Comparer<T>.Default, 0, enumerable.Count() - 1);
-            var expectedFirst = enumerable.Index().First(e => Equals(e.Value, element)).Key;
-            var last = Search.Last(enumerable, element, Comparer<T>.Default, 0, enumerable.Count() - 1);
-            var expectedLast = enumerable.Index().Reverse().First(e => Equals(e.Value, element)).Key;
+            var first = Search.First(enumerable, item, Comparer<T>.Default, 0, enumerable.Count() - 1);
+            var expectedFirst = enumerable.Index().First(e => Equals(e.Value, item)).Key;
+            var last = Search.Last(enumerable, item, Comparer<T>.Default, 0, enumerable.Count() - 1);
+            var expectedLast = enumerable.Index().Reverse().First(e => Equals(e.Value, item)).Key;
             Assert.AreEqual(expectedFirst, first);
             Assert.AreEqual(expectedLast, last);
 
             var (first1, last1) = Search.Interval(
-                enumerable, element, Comparer<T>.Default, 0, enumerable.Count() - 1);
+                enumerable, item, Comparer<T>.Default, 0, enumerable.Count() - 1);
             Assert.AreEqual(expectedFirst, first1);
             Assert.AreEqual(expectedLast, last1);
 
-            if (!occurrences.TryGetValue(element, out var currentOccurrence))
+            if (!occurrences.TryGetValue(item, out var currentOccurrence))
                 currentOccurrence = -1;
             ++currentOccurrence;
-            occurrences[element] = currentOccurrence;
+            occurrences[item] = currentOccurrence;
 
-            var expectedNth = enumerable.Index().Where(e => Equals(e.Value, element)).Skip(currentOccurrence).First().Key;
+            var expectedNth = enumerable.Index().Where(e => Equals(e.Value, item)).Skip(currentOccurrence).First().Key;
             var nth = Search.Nth(
-                    enumerable, element, currentOccurrence, Comparer<T>.Default, 0, enumerable.Count() - 1);
+                    enumerable, item, currentOccurrence, Comparer<T>.Default, 0, enumerable.Count() - 1);
             Assert.AreEqual(expectedNth, nth);
         }
     }

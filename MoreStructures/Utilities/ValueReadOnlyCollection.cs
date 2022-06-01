@@ -5,7 +5,7 @@ namespace MoreStructures.Utilities;
 /// <summary>
 /// A readonly immutable generic collection of non-null items which performs equality by value.
 /// </summary>
-/// <typeparam name="T">The type of elements in the collection.</typeparam>
+/// <typeparam name="T">The type of items in the collection.</typeparam>
 /// <remarks>
 /// Immutability can be guaranteed by cloning the provided enumerable and exposing a readonly view of it, but only 
 /// if immutability of underlying <typeparamref name="T"/> is provided, for example, by using immutable records.
