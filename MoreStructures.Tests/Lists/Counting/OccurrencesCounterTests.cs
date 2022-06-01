@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MoreStructures.Lists.Counting;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -32,7 +33,7 @@ public abstract class OccurrencesCounterTests
     private static readonly Dictionary<TestCaseId, TestCase> TestCases = new()
     {
         [EmptyEnumerable] = new(Enumerable.Empty<int>(), Enumerable.Empty<int>()),
-        [EmptyArray] = new(new int[] { }, new List<int> { }),
+        [EmptyArray] = new(Array.Empty<int>(), new List<int> { }),
         [SingletonList] = new(new List<int> { 3 }, new List<int> { 0 }),
         [SingletonArray] = new(new int[] { 4 }, new List<int> { 0 }),
         [ThreeElementsWithoutRepetitions] = new(new List<int> { 1, 2, 3 }, new List<int> { 0, 0, 0 }),
