@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class BinarySearchTests
+    <title>Class DictionaryBasedOccurrencesCounter
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class BinarySearchTests
+    <meta name="title" content="Class DictionaryBasedOccurrencesCounter
    ">
     <meta name="generator" content="docfx 2.59.2.0">
     
@@ -78,48 +78,26 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MoreStructures.Tests.Lists.Searching.BinarySearchTests">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.Lists.Counting.DictionaryBasedOccurrencesCounter">
   
   
-  <h1 id="MoreStructures_Tests_Lists_Searching_BinarySearchTests" data-uid="MoreStructures.Tests.Lists.Searching.BinarySearchTests" class="text-break">Class BinarySearchTests
+  <h1 id="MoreStructures_Lists_Counting_DictionaryBasedOccurrencesCounter" data-uid="MoreStructures.Lists.Counting.DictionaryBasedOccurrencesCounter" class="text-break">Class DictionaryBasedOccurrencesCounter
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>An implementation of <a class="xref" href="MoreStructures.Lists.Counting.IOccurrencesCounter.html">IOccurrencesCounter</a> which uses a <see cref="!:Dictionary&lt;TKey, TValue>"></see> to build
+the <see cref="!:IEnumerable&lt;T>"></see> of occurrences in linear time.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="MoreStructures.Tests.Lists.Searching.SearchTests.html">SearchTests</a></div>
-    <div class="level2"><span class="xref">BinarySearchTests</span></div>
+    <div class="level1"><span class="xref">DictionaryBasedOccurrencesCounter</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.Lists.Counting.IOccurrencesCounter.html">IOccurrencesCounter</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_Search">SearchTests.Search</a>
-    </div>
-    <div>
-      <a class="xref" href="MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_OnListOfIntegers_MoreStructures_Tests_Lists_Searching_SearchTests_TestCaseId_">SearchTests.SearchMethods_OnListOfIntegers(SearchTests.TestCaseId)</a>
-    </div>
-    <div>
-      <a class="xref" href="MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_OnCharArray_MoreStructures_Tests_Lists_Searching_SearchTests_TestCaseId_">SearchTests.SearchMethods_OnCharArray(SearchTests.TestCaseId)</a>
-    </div>
-    <div>
-      <a class="xref" href="MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_OnString_MoreStructures_Tests_Lists_Searching_SearchTests_TestCaseId_">SearchTests.SearchMethods_OnString(SearchTests.TestCaseId)</a>
-    </div>
-    <div>
-      <a class="xref" href="MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_ItemtNotFound_System_Int32_">SearchTests.SearchMethods_ItemtNotFound(Int32)</a>
-    </div>
-    <div>
-      <a class="xref" href="MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_ItemNotFound_OnStrings">SearchTests.SearchMethods_ItemNotFound_OnStrings()</a>
-    </div>
-    <div>
-      <a class="xref" href="MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_OnEmptyEnumerable">SearchTests.SearchMethods_OnEmptyEnumerable()</a>
-    </div>
-    <div>
-      <a class="xref" href="MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_FromIndexAndToIndexNull">SearchTests.SearchMethods_FromIndexAndToIndexNull()</a>
-    </div>
-    <div>
-      <a class="xref" href="MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_Nth_RaisesExceptionOnInvalidOccurrenceRank">SearchTests.Nth_RaisesExceptionOnInvalidOccurrenceRank()</a>
-    </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
@@ -142,28 +120,84 @@
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.Tests.Lists.Searching.html">MoreStructures.Tests.Lists.Searching</a></h6>
-  <h6><strong>Assembly</strong>: MoreStructures.Tests.dll</h6>
-  <h5 id="MoreStructures_Tests_Lists_Searching_BinarySearchTests_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.Lists.Counting.html">MoreStructures.Lists.Counting</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_Lists_Counting_DictionaryBasedOccurrencesCounter_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class BinarySearchTests : SearchTests</code></pre>
+    <pre><code class="lang-csharp hljs">public class DictionaryBasedOccurrencesCounter : IOccurrencesCounter</code></pre>
   </div>
-  <h3 id="constructors">Constructors
+  <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_Lists_Searching_BinarySearchTests__ctor.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.Lists.Searching.BinarySearchTests.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Lists_Counting_DictionaryBasedOccurrencesCounter_Count__1_IEnumerable___0__.md&amp;value=---%0Auid%3A%20MoreStructures.Lists.Counting.DictionaryBasedOccurrencesCounter.Count%60%601(IEnumerable%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/Lists/Searching/BinarySearchTests.cs/#L9">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Counting/DictionaryBasedOccurrencesCounter.cs/#L17">View Source</a>
   </span>
-  <a id="MoreStructures_Tests_Lists_Searching_BinarySearchTests__ctor_" data-uid="MoreStructures.Tests.Lists.Searching.BinarySearchTests.#ctor*"></a>
-  <h4 id="MoreStructures_Tests_Lists_Searching_BinarySearchTests__ctor" data-uid="MoreStructures.Tests.Lists.Searching.BinarySearchTests.#ctor">BinarySearchTests()</h4>
+  <a id="MoreStructures_Lists_Counting_DictionaryBasedOccurrencesCounter_Count_" data-uid="MoreStructures.Lists.Counting.DictionaryBasedOccurrencesCounter.Count*"></a>
+  <h4 id="MoreStructures_Lists_Counting_DictionaryBasedOccurrencesCounter_Count__1_IEnumerable___0__" data-uid="MoreStructures.Lists.Counting.DictionaryBasedOccurrencesCounter.Count``1(IEnumerable{``0})">Count&lt;T&gt;(IEnumerable&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BinarySearchTests()</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;int&gt; Count&lt;T&gt;(IEnumerable&lt;T&gt; enumerable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="parametername">enumerable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of items of <code data-dev-comment-type="paramref" class="paramref">enumerable</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Lists_Counting_DictionaryBasedOccurrencesCounter_Count__1_IEnumerable___0___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Perform counting by keeping a <see cref="!:IDictionary&lt;TKey, TValue>"></see> of the current number of occurrences per
+item encountered while enumerating <code data-dev-comment-type="paramref" class="paramref">enumerable</code>.</p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.Lists.Counting.IOccurrencesCounter.html">IOccurrencesCounter</a>
   </div>
 </article>
           </div>
@@ -173,10 +207,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_Lists_Searching_BinarySearchTests.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.Lists.Searching.BinarySearchTests%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Lists_Counting_DictionaryBasedOccurrencesCounter.md&amp;value=---%0Auid%3A%20MoreStructures.Lists.Counting.DictionaryBasedOccurrencesCounter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/Lists/Searching/BinarySearchTests.cs/#L6" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Counting/DictionaryBasedOccurrencesCounter.cs/#L7" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

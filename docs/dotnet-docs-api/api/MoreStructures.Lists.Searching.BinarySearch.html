@@ -83,7 +83,7 @@
   
   <h1 id="MoreStructures_Lists_Searching_BinarySearch" data-uid="MoreStructures.Lists.Searching.BinarySearch" class="text-break">Class BinarySearch
   </h1>
-  <div class="markdown level0 summary"><p>An object able to search in logarithmic time for elements in direct random access structures, such as lists and
+  <div class="markdown level0 summary"><p>An object able to search in logarithmic time for items in direct random access structures, such as lists and
 arrays, which are monodimensional, implement the <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span> interface and are sorted in ascending
 order according to the provided comparer (which is the property enabling the search to be carried out in O(log(n))
 time.</p>
@@ -144,14 +144,14 @@ The sorting order assumed by this search can be reversed by simply inverting the
   </span>
   <a id="MoreStructures_Lists_Searching_BinarySearch_First_" data-uid="MoreStructures.Lists.Searching.BinarySearch.First*"></a>
   <h4 id="MoreStructures_Lists_Searching_BinarySearch_First__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__" data-uid="MoreStructures.Lists.Searching.BinarySearch.First``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})">First&lt;T&gt;(IEnumerable&lt;T&gt;, T, IComparer&lt;T&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)</h4>
-  <div class="markdown level1 summary"><p>Find the index of the first element in the sub-sequence of elements of <code data-dev-comment-type="paramref" class="paramref">source</code> from
+  <div class="markdown level1 summary"><p>Find the index of the first item in the sub-sequence of items of <code data-dev-comment-type="paramref" class="paramref">source</code> from
 <code data-dev-comment-type="paramref" class="paramref">fromIndex</code> to <code data-dev-comment-type="paramref" class="paramref">toIndex</code> included, which is equal to
-<code data-dev-comment-type="paramref" class="paramref">element</code>, assuming that <code data-dev-comment-type="paramref" class="paramref">source</code> is sorted in ascending order.</p>
+<code data-dev-comment-type="paramref" class="paramref">item</code>, assuming that <code data-dev-comment-type="paramref" class="paramref">source</code> is sorted in ascending order.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int First&lt;T&gt;(IEnumerable&lt;T&gt; source, T element, IComparer&lt;T&gt; comparer = null, int? fromIndex = null, int? toIndex = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public int First&lt;T&gt;(IEnumerable&lt;T&gt; source, T item, IComparer&lt;T&gt; comparer = null, int? fromIndex = null, int? toIndex = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -166,13 +166,13 @@ The sorting order assumed by this search can be reversed by simply inverting the
       <tr>
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
         <td><span class="parametername">source</span></td>
-        <td><p>The enumerable where to search for <code data-dev-comment-type="paramref" class="paramref">element</code>.</p>
+        <td><p>The enumerable where to search for <code data-dev-comment-type="paramref" class="paramref">item</code>.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">T</span></td>
-        <td><span class="parametername">element</span></td>
-        <td><p>The element to search for.</p>
+        <td><span class="parametername">item</span></td>
+        <td><p>The item to search for.</p>
 </td>
       </tr>
       <tr>
@@ -194,7 +194,7 @@ If not specified, 0 is used.</p>
         <td><span class="parametername">toIndex</span></td>
         <td><p>The last index, marking the end of the sub-sequence of <code data-dev-comment-type="paramref" class="paramref">source</code> where to search.
 If not specified, <span class="xref">System.Linq.Enumerable.Count``1(System.Collections.Generic.IEnumerable{``0})</span> is called on
-<code data-dev-comment-type="paramref" class="paramref">source</code> to calculate the count of elements, and count - 1 is used.
+<code data-dev-comment-type="paramref" class="paramref">source</code> to calculate the count of items, and count - 1 is used.
 If <code data-dev-comment-type="paramref" class="paramref">source</code> is a <span class="xref">System.String</span>, however, <span class="xref">System.String.Length</span> is used
 instead.</p>
 </td>
@@ -212,7 +212,7 @@ instead.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>The first index of <code data-dev-comment-type="paramref" class="paramref">element</code> in <code data-dev-comment-type="paramref" class="paramref">source</code>.</p>
+        <td><p>The first index of <code data-dev-comment-type="paramref" class="paramref">item</code> in <code data-dev-comment-type="paramref" class="paramref">source</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -228,7 +228,7 @@ instead.</p>
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td><p>The type of elements of <code data-dev-comment-type="paramref" class="paramref">source</code>. Must be comparable.
+        <td><p>The type of items of <code data-dev-comment-type="paramref" class="paramref">source</code>. Must be comparable.
 If it is <span class="xref">System.String</span>, random access is done in O(1) via <span class="xref">System.String.Chars(System.Int32)</span>.
 Otherwise, random access is done via the generic LINQ method
 <span class="xref">System.Linq.Enumerable.ElementAt``1(System.Collections.Generic.IEnumerable{``0},System.Index)</span>, which is O(n) or O(1) dependending
@@ -238,10 +238,10 @@ on the <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
     </tbody>
   </table>
   <h5 id="MoreStructures_Lists_Searching_BinarySearch_First__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32___remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algorithm split in half the search space at every iteration, reducing it exponentially to a single element
+  <div class="markdown level1 remarks"><p>The algorithm split in half the search space at every iteration, reducing it exponentially to a single item
 or to an empty set.
 <br>
-Time Complexity = O(log(n)), Space Complexity = O(1), where n = number of elements between
+Time Complexity = O(log(n)), Space Complexity = O(1), where n = number of items between
 <code data-dev-comment-type="paramref" class="paramref">fromIndex</code> and <code data-dev-comment-type="paramref" class="paramref">toIndex</code>.</p>
 </div>
   <span class="small pull-right mobile-hide">
@@ -253,15 +253,14 @@ Time Complexity = O(log(n)), Space Complexity = O(1), where n = number of elemen
   </span>
   <a id="MoreStructures_Lists_Searching_BinarySearch_Interval_" data-uid="MoreStructures.Lists.Searching.BinarySearch.Interval*"></a>
   <h4 id="MoreStructures_Lists_Searching_BinarySearch_Interval__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__" data-uid="MoreStructures.Lists.Searching.BinarySearch.Interval``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})">Interval&lt;T&gt;(IEnumerable&lt;T&gt;, T, IComparer&lt;T&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)</h4>
-  <div class="markdown level1 summary"><p>Find the indexes of the first and last elements in the sub-sequence of elements of
-<code data-dev-comment-type="paramref" class="paramref">source</code> from <code data-dev-comment-type="paramref" class="paramref">fromIndex</code> to <code data-dev-comment-type="paramref" class="paramref">toIndex</code> included, which
-is equal to <code data-dev-comment-type="paramref" class="paramref">element</code>, assuming that <code data-dev-comment-type="paramref" class="paramref">source</code> is sorted in ascending
-order.</p>
+  <div class="markdown level1 summary"><p>Find the indexes of the first and last items in the sub-sequence of items of <code data-dev-comment-type="paramref" class="paramref">source</code> from
+<code data-dev-comment-type="paramref" class="paramref">fromIndex</code> to <code data-dev-comment-type="paramref" class="paramref">toIndex</code> included, which is equal to
+<code data-dev-comment-type="paramref" class="paramref">item</code>, assuming that <code data-dev-comment-type="paramref" class="paramref">source</code> is sorted in ascending order.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public (int first, int last) Interval&lt;T&gt;(IEnumerable&lt;T&gt; source, T element, IComparer&lt;T&gt; comparer = null, int? fromIndex = null, int? toIndex = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public (int first, int last) Interval&lt;T&gt;(IEnumerable&lt;T&gt; source, T item, IComparer&lt;T&gt; comparer = null, int? fromIndex = null, int? toIndex = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -276,13 +275,13 @@ order.</p>
       <tr>
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
         <td><span class="parametername">source</span></td>
-        <td><p>The enumerable where to search for <code data-dev-comment-type="paramref" class="paramref">element</code>.</p>
+        <td><p>The enumerable where to search for <code data-dev-comment-type="paramref" class="paramref">item</code>.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">T</span></td>
-        <td><span class="parametername">element</span></td>
-        <td><p>The element to search for.</p>
+        <td><span class="parametername">item</span></td>
+        <td><p>The item to search for.</p>
 </td>
       </tr>
       <tr>
@@ -304,7 +303,7 @@ If not specified, 0 is used.</p>
         <td><span class="parametername">toIndex</span></td>
         <td><p>The last index, marking the end of the sub-sequence of <code data-dev-comment-type="paramref" class="paramref">source</code> where to search.
 If not specified, <span class="xref">System.Linq.Enumerable.Count``1(System.Collections.Generic.IEnumerable{``0})</span> is called on
-<code data-dev-comment-type="paramref" class="paramref">source</code> to calculate the count of elements, and count - 1 is used.
+<code data-dev-comment-type="paramref" class="paramref">source</code> to calculate the count of items, and count - 1 is used.
 If <code data-dev-comment-type="paramref" class="paramref">source</code> is a <span class="xref">System.String</span>, however, <span class="xref">System.String.Length</span> is used
 instead.</p>
 </td>
@@ -338,7 +337,7 @@ instead.</p>
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td><p>The type of elements of <code data-dev-comment-type="paramref" class="paramref">source</code>. Must be comparable.
+        <td><p>The type of items of <code data-dev-comment-type="paramref" class="paramref">source</code>. Must be comparable.
 If it is <span class="xref">System.String</span>, random access is done in O(1) via <span class="xref">System.String.Chars(System.Int32)</span>.
 Otherwise, random access is done via the generic LINQ method
 <span class="xref">System.Linq.Enumerable.ElementAt``1(System.Collections.Generic.IEnumerable{``0},System.Index)</span>, which is O(n) or O(1) dependending
@@ -352,7 +351,7 @@ on the <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
 interval and the second to find the higher extreme of the interval. Each binary search runs in logarithmic
 time.
 <br>
-Time Complexity = O(log(n)), Space Complexity = O(1), where n = number of elements between
+Time Complexity = O(log(n)), Space Complexity = O(1), where n = number of items between
 <code data-dev-comment-type="paramref" class="paramref">fromIndex</code> and <code data-dev-comment-type="paramref" class="paramref">toIndex</code>.</p>
 </div>
   <span class="small pull-right mobile-hide">
@@ -364,14 +363,14 @@ Time Complexity = O(log(n)), Space Complexity = O(1), where n = number of elemen
   </span>
   <a id="MoreStructures_Lists_Searching_BinarySearch_Last_" data-uid="MoreStructures.Lists.Searching.BinarySearch.Last*"></a>
   <h4 id="MoreStructures_Lists_Searching_BinarySearch_Last__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__" data-uid="MoreStructures.Lists.Searching.BinarySearch.Last``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})">Last&lt;T&gt;(IEnumerable&lt;T&gt;, T, IComparer&lt;T&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)</h4>
-  <div class="markdown level1 summary"><p>Find the index of the last element in the sub-sequence of elements of <code data-dev-comment-type="paramref" class="paramref">source</code> from
+  <div class="markdown level1 summary"><p>Find the index of the last item in the sub-sequence of items of <code data-dev-comment-type="paramref" class="paramref">source</code> from
 <code data-dev-comment-type="paramref" class="paramref">fromIndex</code> to <code data-dev-comment-type="paramref" class="paramref">toIndex</code> included, which is equal to
-<code data-dev-comment-type="paramref" class="paramref">element</code>, assuming that <code data-dev-comment-type="paramref" class="paramref">source</code> is sorted in ascending order.</p>
+<code data-dev-comment-type="paramref" class="paramref">item</code>, assuming that <code data-dev-comment-type="paramref" class="paramref">source</code> is sorted in ascending order.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Last&lt;T&gt;(IEnumerable&lt;T&gt; source, T element, IComparer&lt;T&gt; comparer = null, int? fromIndex = null, int? toIndex = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public int Last&lt;T&gt;(IEnumerable&lt;T&gt; source, T item, IComparer&lt;T&gt; comparer = null, int? fromIndex = null, int? toIndex = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -386,13 +385,13 @@ Time Complexity = O(log(n)), Space Complexity = O(1), where n = number of elemen
       <tr>
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
         <td><span class="parametername">source</span></td>
-        <td><p>The enumerable where to search for <code data-dev-comment-type="paramref" class="paramref">element</code>.</p>
+        <td><p>The enumerable where to search for <code data-dev-comment-type="paramref" class="paramref">item</code>.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">T</span></td>
-        <td><span class="parametername">element</span></td>
-        <td><p>The element to search for.</p>
+        <td><span class="parametername">item</span></td>
+        <td><p>The item to search for.</p>
 </td>
       </tr>
       <tr>
@@ -414,7 +413,7 @@ If not specified, 0 is used.</p>
         <td><span class="parametername">toIndex</span></td>
         <td><p>The last index, marking the end of the sub-sequence of <code data-dev-comment-type="paramref" class="paramref">source</code> where to search.
 If not specified, <span class="xref">System.Linq.Enumerable.Count``1(System.Collections.Generic.IEnumerable{``0})</span> is called on
-<code data-dev-comment-type="paramref" class="paramref">source</code> to calculate the count of elements, and count - 1 is used.
+<code data-dev-comment-type="paramref" class="paramref">source</code> to calculate the count of items, and count - 1 is used.
 If <code data-dev-comment-type="paramref" class="paramref">source</code> is a <span class="xref">System.String</span>, however, <span class="xref">System.String.Length</span> is used
 instead.</p>
 </td>
@@ -448,7 +447,7 @@ instead.</p>
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td><p>The type of elements of <code data-dev-comment-type="paramref" class="paramref">source</code>. Must be comparable.
+        <td><p>The type of items of <code data-dev-comment-type="paramref" class="paramref">source</code>. Must be comparable.
 If it is <span class="xref">System.String</span>, random access is done in O(1) via <span class="xref">System.String.Chars(System.Int32)</span>.
 Otherwise, random access is done via the generic LINQ method
 <span class="xref">System.Linq.Enumerable.ElementAt``1(System.Collections.Generic.IEnumerable{``0},System.Index)</span>, which is O(n) or O(1) dependending
@@ -458,10 +457,10 @@ on the <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
     </tbody>
   </table>
   <h5 id="MoreStructures_Lists_Searching_BinarySearch_Last__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32___remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algorithm split in half the search space at every iteration, reducing it exponentially to a single element
+  <div class="markdown level1 remarks"><p>The algorithm split in half the search space at every iteration, reducing it exponentially to a single item
 or to an empty set.
 <br>
-Time Complexity = O(log(n)), Space Complexity = O(1), where n = number of elements between
+Time Complexity = O(log(n)), Space Complexity = O(1), where n = number of items between
 <code data-dev-comment-type="paramref" class="paramref">fromIndex</code> and <code data-dev-comment-type="paramref" class="paramref">toIndex</code>.</p>
 </div>
   <span class="small pull-right mobile-hide">
@@ -473,14 +472,14 @@ Time Complexity = O(log(n)), Space Complexity = O(1), where n = number of elemen
   </span>
   <a id="MoreStructures_Lists_Searching_BinarySearch_Nth_" data-uid="MoreStructures.Lists.Searching.BinarySearch.Nth*"></a>
   <h4 id="MoreStructures_Lists_Searching_BinarySearch_Nth__1_System_Collections_Generic_IEnumerable___0____0_System_Int32_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__" data-uid="MoreStructures.Lists.Searching.BinarySearch.Nth``1(System.Collections.Generic.IEnumerable{``0},``0,System.Int32,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})">Nth&lt;T&gt;(IEnumerable&lt;T&gt;, T, Int32, IComparer&lt;T&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)</h4>
-  <div class="markdown level1 summary"><p>Find the index of the n-th occurence (0-based) of the element in the sub-sequence of elements of
+  <div class="markdown level1 summary"><p>Find the index of the n-th occurence (0-based) of the item in the sub-sequence of items of
 <code data-dev-comment-type="paramref" class="paramref">source</code> from <code data-dev-comment-type="paramref" class="paramref">fromIndex</code> to <code data-dev-comment-type="paramref" class="paramref">toIndex</code> included, which is
-equal to <code data-dev-comment-type="paramref" class="paramref">element</code>, assuming that <code data-dev-comment-type="paramref" class="paramref">source</code> is sorted in ascending order.</p>
+equal to <code data-dev-comment-type="paramref" class="paramref">item</code>, assuming that <code data-dev-comment-type="paramref" class="paramref">source</code> is sorted in ascending order.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Nth&lt;T&gt;(IEnumerable&lt;T&gt; source, T element, int occurrenceRank, IComparer&lt;T&gt; comparer = null, int? fromIndex = null, int? toIndex = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public int Nth&lt;T&gt;(IEnumerable&lt;T&gt; source, T item, int occurrenceRank, IComparer&lt;T&gt; comparer = null, int? fromIndex = null, int? toIndex = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -499,7 +498,7 @@ equal to <code data-dev-comment-type="paramref" class="paramref">element</code>,
       </tr>
       <tr>
         <td><span class="xref">T</span></td>
-        <td><span class="parametername">element</span></td>
+        <td><span class="parametername">item</span></td>
         <td></td>
       </tr>
       <tr>
@@ -551,7 +550,7 @@ equal to <code data-dev-comment-type="paramref" class="paramref">element</code>,
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td><p>The type of elements of <code data-dev-comment-type="paramref" class="paramref">source</code>. Must be comparable.
+        <td><p>The type of items of <code data-dev-comment-type="paramref" class="paramref">source</code>. Must be comparable.
 If it is <span class="xref">System.String</span>, random access is done in O(1) via <span class="xref">System.String.Chars(System.Int32)</span>.
 Otherwise, random access is done via the generic LINQ method
 <span class="xref">System.Linq.Enumerable.ElementAt``1(System.Collections.Generic.IEnumerable{``0},System.Index)</span>, which is O(n) or O(1) dependending
@@ -561,12 +560,12 @@ on the <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
     </tbody>
   </table>
   <h5 id="MoreStructures_Lists_Searching_BinarySearch_Nth__1_System_Collections_Generic_IEnumerable___0____0_System_Int32_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32___remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algorithm first performs a binary search to find the index i of the 1st element. Then it checks whether
-the n-th occurrence of the element exists at index i + n, taking advantage of the fact that
+  <div class="markdown level1 remarks"><p>The algorithm first performs a binary search to find the index i of the 1st item. Then it checks whether
+the n-th occurrence of the item exists at index i + n, taking advantage of the fact that
 <code data-dev-comment-type="paramref" class="paramref">source</code> is sorted. The first step takes logarithmic time, whereas the second step takes
 constant time and space to execute.
 <br>
-Time Complexity = O(log(n)), Space Complexity = O(1), where n = number of elements between
+Time Complexity = O(log(n)), Space Complexity = O(1), where n = number of items between
 <code data-dev-comment-type="paramref" class="paramref">fromIndex</code> and <code data-dev-comment-type="paramref" class="paramref">toIndex</code>.</p>
 </div>
   <h3 id="implements">Implements</h3>

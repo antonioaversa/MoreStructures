@@ -1010,6 +1010,56 @@ references:
   fullName.vb: MoreStructures.CountTrees.CountTreeNode(Of TEdge, TNode).WrappedNode
   nameWithType: CountTreeNode<TEdge, TNode>.WrappedNode
   nameWithType.vb: CountTreeNode(Of TEdge, TNode).WrappedNode
+- uid: MoreStructures.Lists.Counting
+  name: MoreStructures.Lists.Counting
+  href: api/MoreStructures.Lists.Counting.html
+  commentId: N:MoreStructures.Lists.Counting
+  fullName: MoreStructures.Lists.Counting
+  nameWithType: MoreStructures.Lists.Counting
+- uid: MoreStructures.Lists.Counting.DictionaryBasedOccurrencesCounter
+  name: DictionaryBasedOccurrencesCounter
+  href: api/MoreStructures.Lists.Counting.DictionaryBasedOccurrencesCounter.html
+  commentId: T:MoreStructures.Lists.Counting.DictionaryBasedOccurrencesCounter
+  fullName: MoreStructures.Lists.Counting.DictionaryBasedOccurrencesCounter
+  nameWithType: DictionaryBasedOccurrencesCounter
+- uid: MoreStructures.Lists.Counting.DictionaryBasedOccurrencesCounter.Count*
+  name: Count
+  href: api/MoreStructures.Lists.Counting.DictionaryBasedOccurrencesCounter.html#MoreStructures_Lists_Counting_DictionaryBasedOccurrencesCounter_Count_
+  commentId: Overload:MoreStructures.Lists.Counting.DictionaryBasedOccurrencesCounter.Count
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Counting.DictionaryBasedOccurrencesCounter.Count
+  nameWithType: DictionaryBasedOccurrencesCounter.Count
+- uid: MoreStructures.Lists.Counting.DictionaryBasedOccurrencesCounter.Count``1(IEnumerable{``0})
+  name: Count<T>(IEnumerable<T>)
+  href: api/MoreStructures.Lists.Counting.DictionaryBasedOccurrencesCounter.html#MoreStructures_Lists_Counting_DictionaryBasedOccurrencesCounter_Count__1_IEnumerable___0__
+  commentId: M:MoreStructures.Lists.Counting.DictionaryBasedOccurrencesCounter.Count``1(IEnumerable{``0})
+  name.vb: Count(Of T)(IEnumerable(Of T))
+  fullName: MoreStructures.Lists.Counting.DictionaryBasedOccurrencesCounter.Count<T>(IEnumerable<T>)
+  fullName.vb: MoreStructures.Lists.Counting.DictionaryBasedOccurrencesCounter.Count(Of T)(IEnumerable(Of T))
+  nameWithType: DictionaryBasedOccurrencesCounter.Count<T>(IEnumerable<T>)
+  nameWithType.vb: DictionaryBasedOccurrencesCounter.Count(Of T)(IEnumerable(Of T))
+- uid: MoreStructures.Lists.Counting.IOccurrencesCounter
+  name: IOccurrencesCounter
+  href: api/MoreStructures.Lists.Counting.IOccurrencesCounter.html
+  commentId: T:MoreStructures.Lists.Counting.IOccurrencesCounter
+  fullName: MoreStructures.Lists.Counting.IOccurrencesCounter
+  nameWithType: IOccurrencesCounter
+- uid: MoreStructures.Lists.Counting.IOccurrencesCounter.Count*
+  name: Count
+  href: api/MoreStructures.Lists.Counting.IOccurrencesCounter.html#MoreStructures_Lists_Counting_IOccurrencesCounter_Count_
+  commentId: Overload:MoreStructures.Lists.Counting.IOccurrencesCounter.Count
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Counting.IOccurrencesCounter.Count
+  nameWithType: IOccurrencesCounter.Count
+- uid: MoreStructures.Lists.Counting.IOccurrencesCounter.Count``1(System.Collections.Generic.IEnumerable{``0})
+  name: Count<T>(IEnumerable<T>)
+  href: api/MoreStructures.Lists.Counting.IOccurrencesCounter.html#MoreStructures_Lists_Counting_IOccurrencesCounter_Count__1_System_Collections_Generic_IEnumerable___0__
+  commentId: M:MoreStructures.Lists.Counting.IOccurrencesCounter.Count``1(System.Collections.Generic.IEnumerable{``0})
+  name.vb: Count(Of T)(IEnumerable(Of T))
+  fullName: MoreStructures.Lists.Counting.IOccurrencesCounter.Count<T>(System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: MoreStructures.Lists.Counting.IOccurrencesCounter.Count(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: IOccurrencesCounter.Count<T>(IEnumerable<T>)
+  nameWithType.vb: IOccurrencesCounter.Count(Of T)(IEnumerable(Of T))
 - uid: MoreStructures.Lists.Searching
   name: MoreStructures.Lists.Searching
   href: api/MoreStructures.Lists.Searching.html
@@ -3759,6 +3809,130 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.CountTrees.CountTreeNodeTests.WrappedNode_IsPreserved
   nameWithType: CountTreeNodeTests.WrappedNode_IsPreserved
+- uid: MoreStructures.Tests.Lists.Counting
+  name: MoreStructures.Tests.Lists.Counting
+  href: api/MoreStructures.Tests.Lists.Counting.html
+  commentId: N:MoreStructures.Tests.Lists.Counting
+  fullName: MoreStructures.Tests.Lists.Counting
+  nameWithType: MoreStructures.Tests.Lists.Counting
+- uid: MoreStructures.Tests.Lists.Counting.DictionaryBasedOccurrencesCounterTests
+  name: DictionaryBasedOccurrencesCounterTests
+  href: api/MoreStructures.Tests.Lists.Counting.DictionaryBasedOccurrencesCounterTests.html
+  commentId: T:MoreStructures.Tests.Lists.Counting.DictionaryBasedOccurrencesCounterTests
+  fullName: MoreStructures.Tests.Lists.Counting.DictionaryBasedOccurrencesCounterTests
+  nameWithType: DictionaryBasedOccurrencesCounterTests
+- uid: MoreStructures.Tests.Lists.Counting.DictionaryBasedOccurrencesCounterTests.#ctor
+  name: DictionaryBasedOccurrencesCounterTests()
+  href: api/MoreStructures.Tests.Lists.Counting.DictionaryBasedOccurrencesCounterTests.html#MoreStructures_Tests_Lists_Counting_DictionaryBasedOccurrencesCounterTests__ctor
+  commentId: M:MoreStructures.Tests.Lists.Counting.DictionaryBasedOccurrencesCounterTests.#ctor
+  fullName: MoreStructures.Tests.Lists.Counting.DictionaryBasedOccurrencesCounterTests.DictionaryBasedOccurrencesCounterTests()
+  nameWithType: DictionaryBasedOccurrencesCounterTests.DictionaryBasedOccurrencesCounterTests()
+- uid: MoreStructures.Tests.Lists.Counting.DictionaryBasedOccurrencesCounterTests.#ctor*
+  name: DictionaryBasedOccurrencesCounterTests
+  href: api/MoreStructures.Tests.Lists.Counting.DictionaryBasedOccurrencesCounterTests.html#MoreStructures_Tests_Lists_Counting_DictionaryBasedOccurrencesCounterTests__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Counting.DictionaryBasedOccurrencesCounterTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Counting.DictionaryBasedOccurrencesCounterTests.DictionaryBasedOccurrencesCounterTests
+  nameWithType: DictionaryBasedOccurrencesCounterTests.DictionaryBasedOccurrencesCounterTests
+- uid: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests
+  name: OccurrencesCounterTests
+  href: api/MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.html
+  commentId: T:MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests
+  fullName: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests
+  nameWithType: OccurrencesCounterTests
+- uid: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.#ctor(MoreStructures.Lists.Counting.IOccurrencesCounter)
+  name: OccurrencesCounterTests(IOccurrencesCounter)
+  href: api/MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.html#MoreStructures_Tests_Lists_Counting_OccurrencesCounterTests__ctor_MoreStructures_Lists_Counting_IOccurrencesCounter_
+  commentId: M:MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.#ctor(MoreStructures.Lists.Counting.IOccurrencesCounter)
+  fullName: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.OccurrencesCounterTests(MoreStructures.Lists.Counting.IOccurrencesCounter)
+  nameWithType: OccurrencesCounterTests.OccurrencesCounterTests(IOccurrencesCounter)
+- uid: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.#ctor*
+  name: OccurrencesCounterTests
+  href: api/MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.html#MoreStructures_Tests_Lists_Counting_OccurrencesCounterTests__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.OccurrencesCounterTests
+  nameWithType: OccurrencesCounterTests.OccurrencesCounterTests
+- uid: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.Count_IsCorrect(MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId)
+  name: Count_IsCorrect(OccurrencesCounterTests.TestCaseId)
+  href: api/MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.html#MoreStructures_Tests_Lists_Counting_OccurrencesCounterTests_Count_IsCorrect_MoreStructures_Tests_Lists_Counting_OccurrencesCounterTests_TestCaseId_
+  commentId: M:MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.Count_IsCorrect(MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId)
+  fullName: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.Count_IsCorrect(MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId)
+  nameWithType: OccurrencesCounterTests.Count_IsCorrect(OccurrencesCounterTests.TestCaseId)
+- uid: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.Count_IsCorrect*
+  name: Count_IsCorrect
+  href: api/MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.html#MoreStructures_Tests_Lists_Counting_OccurrencesCounterTests_Count_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.Count_IsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.Count_IsCorrect
+  nameWithType: OccurrencesCounterTests.Count_IsCorrect
+- uid: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.Counter
+  name: Counter
+  href: api/MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.html#MoreStructures_Tests_Lists_Counting_OccurrencesCounterTests_Counter
+  commentId: P:MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.Counter
+  fullName: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.Counter
+  nameWithType: OccurrencesCounterTests.Counter
+- uid: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.Counter*
+  name: Counter
+  href: api/MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.html#MoreStructures_Tests_Lists_Counting_OccurrencesCounterTests_Counter_
+  commentId: Overload:MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.Counter
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.Counter
+  nameWithType: OccurrencesCounterTests.Counter
+- uid: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId
+  name: OccurrencesCounterTests.TestCaseId
+  href: api/MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.html
+  commentId: T:MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId
+  fullName: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId
+  nameWithType: OccurrencesCounterTests.TestCaseId
+- uid: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.EmptyArray
+  name: EmptyArray
+  href: api/MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.html#MoreStructures_Tests_Lists_Counting_OccurrencesCounterTests_TestCaseId_EmptyArray
+  commentId: F:MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.EmptyArray
+  fullName: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.EmptyArray
+  nameWithType: OccurrencesCounterTests.TestCaseId.EmptyArray
+- uid: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.EmptyEnumerable
+  name: EmptyEnumerable
+  href: api/MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.html#MoreStructures_Tests_Lists_Counting_OccurrencesCounterTests_TestCaseId_EmptyEnumerable
+  commentId: F:MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.EmptyEnumerable
+  fullName: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.EmptyEnumerable
+  nameWithType: OccurrencesCounterTests.TestCaseId.EmptyEnumerable
+- uid: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.MultipleRepetedElements
+  name: MultipleRepetedElements
+  href: api/MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.html#MoreStructures_Tests_Lists_Counting_OccurrencesCounterTests_TestCaseId_MultipleRepetedElements
+  commentId: F:MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.MultipleRepetedElements
+  fullName: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.MultipleRepetedElements
+  nameWithType: OccurrencesCounterTests.TestCaseId.MultipleRepetedElements
+- uid: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.SingletonArray
+  name: SingletonArray
+  href: api/MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.html#MoreStructures_Tests_Lists_Counting_OccurrencesCounterTests_TestCaseId_SingletonArray
+  commentId: F:MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.SingletonArray
+  fullName: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.SingletonArray
+  nameWithType: OccurrencesCounterTests.TestCaseId.SingletonArray
+- uid: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.SingletonList
+  name: SingletonList
+  href: api/MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.html#MoreStructures_Tests_Lists_Counting_OccurrencesCounterTests_TestCaseId_SingletonList
+  commentId: F:MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.SingletonList
+  fullName: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.SingletonList
+  nameWithType: OccurrencesCounterTests.TestCaseId.SingletonList
+- uid: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.ThreeElementsWithOneRepetitions
+  name: ThreeElementsWithOneRepetitions
+  href: api/MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.html#MoreStructures_Tests_Lists_Counting_OccurrencesCounterTests_TestCaseId_ThreeElementsWithOneRepetitions
+  commentId: F:MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.ThreeElementsWithOneRepetitions
+  fullName: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.ThreeElementsWithOneRepetitions
+  nameWithType: OccurrencesCounterTests.TestCaseId.ThreeElementsWithOneRepetitions
+- uid: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.ThreeElementsWithoutRepetitions
+  name: ThreeElementsWithoutRepetitions
+  href: api/MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.html#MoreStructures_Tests_Lists_Counting_OccurrencesCounterTests_TestCaseId_ThreeElementsWithoutRepetitions
+  commentId: F:MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.ThreeElementsWithoutRepetitions
+  fullName: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.ThreeElementsWithoutRepetitions
+  nameWithType: OccurrencesCounterTests.TestCaseId.ThreeElementsWithoutRepetitions
+- uid: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.ThreeElementsWithTwoRepetitions
+  name: ThreeElementsWithTwoRepetitions
+  href: api/MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.html#MoreStructures_Tests_Lists_Counting_OccurrencesCounterTests_TestCaseId_ThreeElementsWithTwoRepetitions
+  commentId: F:MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.ThreeElementsWithTwoRepetitions
+  fullName: MoreStructures.Tests.Lists.Counting.OccurrencesCounterTests.TestCaseId.ThreeElementsWithTwoRepetitions
+  nameWithType: OccurrencesCounterTests.TestCaseId.ThreeElementsWithTwoRepetitions
 - uid: MoreStructures.Tests.Lists.Searching
   name: MoreStructures.Tests.Lists.Searching
   href: api/MoreStructures.Tests.Lists.Searching.html
@@ -3848,32 +4022,6 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Lists.Searching.SearchTests.Search
   nameWithType: SearchTests.Search
-- uid: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound(System.Int32)
-  name: SearchMethods_ElementNotFound(Int32)
-  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_ElementNotFound_System_Int32_
-  commentId: M:MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound(System.Int32)
-  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound(System.Int32)
-  nameWithType: SearchTests.SearchMethods_ElementNotFound(Int32)
-- uid: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound*
-  name: SearchMethods_ElementNotFound
-  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_ElementNotFound_
-  commentId: Overload:MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound
-  isSpec: "True"
-  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound
-  nameWithType: SearchTests.SearchMethods_ElementNotFound
-- uid: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound_OnStrings
-  name: SearchMethods_ElementNotFound_OnStrings()
-  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_ElementNotFound_OnStrings
-  commentId: M:MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound_OnStrings
-  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound_OnStrings()
-  nameWithType: SearchTests.SearchMethods_ElementNotFound_OnStrings()
-- uid: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound_OnStrings*
-  name: SearchMethods_ElementNotFound_OnStrings
-  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_ElementNotFound_OnStrings_
-  commentId: Overload:MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound_OnStrings
-  isSpec: "True"
-  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ElementNotFound_OnStrings
-  nameWithType: SearchTests.SearchMethods_ElementNotFound_OnStrings
 - uid: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_FromIndexAndToIndexNull
   name: SearchMethods_FromIndexAndToIndexNull()
   href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_FromIndexAndToIndexNull
@@ -3887,6 +4035,32 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_FromIndexAndToIndexNull
   nameWithType: SearchTests.SearchMethods_FromIndexAndToIndexNull
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ItemNotFound_OnStrings
+  name: SearchMethods_ItemNotFound_OnStrings()
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_ItemNotFound_OnStrings
+  commentId: M:MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ItemNotFound_OnStrings
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ItemNotFound_OnStrings()
+  nameWithType: SearchTests.SearchMethods_ItemNotFound_OnStrings()
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ItemNotFound_OnStrings*
+  name: SearchMethods_ItemNotFound_OnStrings
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_ItemNotFound_OnStrings_
+  commentId: Overload:MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ItemNotFound_OnStrings
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ItemNotFound_OnStrings
+  nameWithType: SearchTests.SearchMethods_ItemNotFound_OnStrings
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ItemtNotFound(System.Int32)
+  name: SearchMethods_ItemtNotFound(Int32)
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_ItemtNotFound_System_Int32_
+  commentId: M:MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ItemtNotFound(System.Int32)
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ItemtNotFound(System.Int32)
+  nameWithType: SearchTests.SearchMethods_ItemtNotFound(Int32)
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ItemtNotFound*
+  name: SearchMethods_ItemtNotFound
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_ItemtNotFound_
+  commentId: Overload:MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ItemtNotFound
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_ItemtNotFound
+  nameWithType: SearchTests.SearchMethods_ItemtNotFound
 - uid: MoreStructures.Tests.Lists.Searching.SearchTests.SearchMethods_OnCharArray(MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId)
   name: SearchMethods_OnCharArray(SearchTests.TestCaseId)
   href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_SearchMethods_OnCharArray_MoreStructures_Tests_Lists_Searching_SearchTests_TestCaseId_
@@ -6673,58 +6847,58 @@ references:
   commentId: T:MoreStructures.Tests.Utilities.ValueEnumerableTests
   fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests
   nameWithType: ValueEnumerableTests
-- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.Equals_ByValueOnElementsOfUnderlyingEnumerable
-  name: Equals_ByValueOnElementsOfUnderlyingEnumerable()
-  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_Equals_ByValueOnElementsOfUnderlyingEnumerable
-  commentId: M:MoreStructures.Tests.Utilities.ValueEnumerableTests.Equals_ByValueOnElementsOfUnderlyingEnumerable
-  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.Equals_ByValueOnElementsOfUnderlyingEnumerable()
-  nameWithType: ValueEnumerableTests.Equals_ByValueOnElementsOfUnderlyingEnumerable()
-- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.Equals_ByValueOnElementsOfUnderlyingEnumerable*
-  name: Equals_ByValueOnElementsOfUnderlyingEnumerable
-  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_Equals_ByValueOnElementsOfUnderlyingEnumerable_
-  commentId: Overload:MoreStructures.Tests.Utilities.ValueEnumerableTests.Equals_ByValueOnElementsOfUnderlyingEnumerable
+- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.Equals_ByValueOnItemsOfUnderlyingEnumerable
+  name: Equals_ByValueOnItemsOfUnderlyingEnumerable()
+  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_Equals_ByValueOnItemsOfUnderlyingEnumerable
+  commentId: M:MoreStructures.Tests.Utilities.ValueEnumerableTests.Equals_ByValueOnItemsOfUnderlyingEnumerable
+  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.Equals_ByValueOnItemsOfUnderlyingEnumerable()
+  nameWithType: ValueEnumerableTests.Equals_ByValueOnItemsOfUnderlyingEnumerable()
+- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.Equals_ByValueOnItemsOfUnderlyingEnumerable*
+  name: Equals_ByValueOnItemsOfUnderlyingEnumerable
+  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_Equals_ByValueOnItemsOfUnderlyingEnumerable_
+  commentId: Overload:MoreStructures.Tests.Utilities.ValueEnumerableTests.Equals_ByValueOnItemsOfUnderlyingEnumerable
   isSpec: "True"
-  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.Equals_ByValueOnElementsOfUnderlyingEnumerable
-  nameWithType: ValueEnumerableTests.Equals_ByValueOnElementsOfUnderlyingEnumerable
-- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithGeneric_GivesElementsOfUnderlyingEnumerable
-  name: GetEnumerator_WithGeneric_GivesElementsOfUnderlyingEnumerable()
-  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_GetEnumerator_WithGeneric_GivesElementsOfUnderlyingEnumerable
-  commentId: M:MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithGeneric_GivesElementsOfUnderlyingEnumerable
-  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithGeneric_GivesElementsOfUnderlyingEnumerable()
-  nameWithType: ValueEnumerableTests.GetEnumerator_WithGeneric_GivesElementsOfUnderlyingEnumerable()
-- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithGeneric_GivesElementsOfUnderlyingEnumerable*
-  name: GetEnumerator_WithGeneric_GivesElementsOfUnderlyingEnumerable
-  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_GetEnumerator_WithGeneric_GivesElementsOfUnderlyingEnumerable_
-  commentId: Overload:MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithGeneric_GivesElementsOfUnderlyingEnumerable
+  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.Equals_ByValueOnItemsOfUnderlyingEnumerable
+  nameWithType: ValueEnumerableTests.Equals_ByValueOnItemsOfUnderlyingEnumerable
+- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithGeneric_GivesItemsOfUnderlyingEnumerable
+  name: GetEnumerator_WithGeneric_GivesItemsOfUnderlyingEnumerable()
+  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_GetEnumerator_WithGeneric_GivesItemsOfUnderlyingEnumerable
+  commentId: M:MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithGeneric_GivesItemsOfUnderlyingEnumerable
+  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithGeneric_GivesItemsOfUnderlyingEnumerable()
+  nameWithType: ValueEnumerableTests.GetEnumerator_WithGeneric_GivesItemsOfUnderlyingEnumerable()
+- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithGeneric_GivesItemsOfUnderlyingEnumerable*
+  name: GetEnumerator_WithGeneric_GivesItemsOfUnderlyingEnumerable
+  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_GetEnumerator_WithGeneric_GivesItemsOfUnderlyingEnumerable_
+  commentId: Overload:MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithGeneric_GivesItemsOfUnderlyingEnumerable
   isSpec: "True"
-  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithGeneric_GivesElementsOfUnderlyingEnumerable
-  nameWithType: ValueEnumerableTests.GetEnumerator_WithGeneric_GivesElementsOfUnderlyingEnumerable
-- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithoutGeneric_GivesElementsOfUnderlyingEnumerable
-  name: GetEnumerator_WithoutGeneric_GivesElementsOfUnderlyingEnumerable()
-  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_GetEnumerator_WithoutGeneric_GivesElementsOfUnderlyingEnumerable
-  commentId: M:MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithoutGeneric_GivesElementsOfUnderlyingEnumerable
-  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithoutGeneric_GivesElementsOfUnderlyingEnumerable()
-  nameWithType: ValueEnumerableTests.GetEnumerator_WithoutGeneric_GivesElementsOfUnderlyingEnumerable()
-- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithoutGeneric_GivesElementsOfUnderlyingEnumerable*
-  name: GetEnumerator_WithoutGeneric_GivesElementsOfUnderlyingEnumerable
-  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_GetEnumerator_WithoutGeneric_GivesElementsOfUnderlyingEnumerable_
-  commentId: Overload:MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithoutGeneric_GivesElementsOfUnderlyingEnumerable
+  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithGeneric_GivesItemsOfUnderlyingEnumerable
+  nameWithType: ValueEnumerableTests.GetEnumerator_WithGeneric_GivesItemsOfUnderlyingEnumerable
+- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithoutGeneric_GivesItemsOfUnderlyingEnumerable
+  name: GetEnumerator_WithoutGeneric_GivesItemsOfUnderlyingEnumerable()
+  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_GetEnumerator_WithoutGeneric_GivesItemsOfUnderlyingEnumerable
+  commentId: M:MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithoutGeneric_GivesItemsOfUnderlyingEnumerable
+  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithoutGeneric_GivesItemsOfUnderlyingEnumerable()
+  nameWithType: ValueEnumerableTests.GetEnumerator_WithoutGeneric_GivesItemsOfUnderlyingEnumerable()
+- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithoutGeneric_GivesItemsOfUnderlyingEnumerable*
+  name: GetEnumerator_WithoutGeneric_GivesItemsOfUnderlyingEnumerable
+  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_GetEnumerator_WithoutGeneric_GivesItemsOfUnderlyingEnumerable_
+  commentId: Overload:MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithoutGeneric_GivesItemsOfUnderlyingEnumerable
   isSpec: "True"
-  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithoutGeneric_GivesElementsOfUnderlyingEnumerable
-  nameWithType: ValueEnumerableTests.GetEnumerator_WithoutGeneric_GivesElementsOfUnderlyingEnumerable
-- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetHashCode_ByValueOnElementsOfUnderlyingEnumerable
-  name: GetHashCode_ByValueOnElementsOfUnderlyingEnumerable()
-  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_GetHashCode_ByValueOnElementsOfUnderlyingEnumerable
-  commentId: M:MoreStructures.Tests.Utilities.ValueEnumerableTests.GetHashCode_ByValueOnElementsOfUnderlyingEnumerable
-  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetHashCode_ByValueOnElementsOfUnderlyingEnumerable()
-  nameWithType: ValueEnumerableTests.GetHashCode_ByValueOnElementsOfUnderlyingEnumerable()
-- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetHashCode_ByValueOnElementsOfUnderlyingEnumerable*
-  name: GetHashCode_ByValueOnElementsOfUnderlyingEnumerable
-  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_GetHashCode_ByValueOnElementsOfUnderlyingEnumerable_
-  commentId: Overload:MoreStructures.Tests.Utilities.ValueEnumerableTests.GetHashCode_ByValueOnElementsOfUnderlyingEnumerable
+  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetEnumerator_WithoutGeneric_GivesItemsOfUnderlyingEnumerable
+  nameWithType: ValueEnumerableTests.GetEnumerator_WithoutGeneric_GivesItemsOfUnderlyingEnumerable
+- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetHashCode_ByValueOnItemsOfUnderlyingEnumerable
+  name: GetHashCode_ByValueOnItemsOfUnderlyingEnumerable()
+  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_GetHashCode_ByValueOnItemsOfUnderlyingEnumerable
+  commentId: M:MoreStructures.Tests.Utilities.ValueEnumerableTests.GetHashCode_ByValueOnItemsOfUnderlyingEnumerable
+  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetHashCode_ByValueOnItemsOfUnderlyingEnumerable()
+  nameWithType: ValueEnumerableTests.GetHashCode_ByValueOnItemsOfUnderlyingEnumerable()
+- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetHashCode_ByValueOnItemsOfUnderlyingEnumerable*
+  name: GetHashCode_ByValueOnItemsOfUnderlyingEnumerable
+  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_GetHashCode_ByValueOnItemsOfUnderlyingEnumerable_
+  commentId: Overload:MoreStructures.Tests.Utilities.ValueEnumerableTests.GetHashCode_ByValueOnItemsOfUnderlyingEnumerable
   isSpec: "True"
-  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetHashCode_ByValueOnElementsOfUnderlyingEnumerable
-  nameWithType: ValueEnumerableTests.GetHashCode_ByValueOnElementsOfUnderlyingEnumerable
+  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.GetHashCode_ByValueOnItemsOfUnderlyingEnumerable
+  nameWithType: ValueEnumerableTests.GetHashCode_ByValueOnItemsOfUnderlyingEnumerable
 - uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.ToString_IncludesUnderlyingEnumerableToString
   name: ToString_IncludesUnderlyingEnumerableToString()
   href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_ToString_IncludesUnderlyingEnumerableToString

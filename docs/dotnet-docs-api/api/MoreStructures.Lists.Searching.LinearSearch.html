@@ -83,7 +83,7 @@
   
   <h1 id="MoreStructures_Lists_Searching_LinearSearch" data-uid="MoreStructures.Lists.Searching.LinearSearch" class="text-break">Class LinearSearch
   </h1>
-  <div class="markdown level0 summary"><p>An object able to search in linear time for elements in direct random access structures, such as lists and
+  <div class="markdown level0 summary"><p>An object able to search in linear time for items in direct random access structures, such as lists and
 arrays, which are monodimensional and implement the <see cref="!:IEnumerable&lt;T>"></see> interface.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -129,7 +129,7 @@ arrays, which are monodimensional and implement the <see cref="!:IEnumerable&lt;
   <h5 id="MoreStructures_Lists_Searching_LinearSearch_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p><inheritdoc cref="T:MoreStructures.Lists.Searching.ISearch"></inheritdoc>
 <br>
-Unlike <a class="xref" href="MoreStructures.Lists.Searching.BinarySearch.html">BinarySearch</a>, this implementation doesn't make any assumption on the order of elements in
+Unlike <a class="xref" href="MoreStructures.Lists.Searching.BinarySearch.html">BinarySearch</a>, this implementation doesn't make any assumption on the order of items in
 in the data structure.</p>
 </div>
   <h3 id="methods">Methods
@@ -147,7 +147,7 @@ in the data structure.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int First&lt;T&gt;(IEnumerable&lt;T&gt; source, T element, IComparer&lt;T&gt;? comparer = null, int? fromIndex = null, int? toIndex = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public int First&lt;T&gt;(IEnumerable&lt;T&gt; source, T item, IComparer&lt;T&gt;? comparer = null, int? fromIndex = null, int? toIndex = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -166,7 +166,7 @@ in the data structure.</p>
       </tr>
       <tr>
         <td><span class="xref">T</span></td>
-        <td><span class="parametername">element</span></td>
+        <td><span class="parametername">item</span></td>
         <td></td>
       </tr>
       <tr>
@@ -218,9 +218,9 @@ in the data structure.</p>
   </table>
   <h5 id="MoreStructures_Lists_Searching_LinearSearch_First__1_IEnumerable___0____0_System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32___remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>The algorithm linearly scans the search space from <code data-dev-comment-type="paramref" class="paramref">fromIndex</code> to <code data-dev-comment-type="paramref" class="paramref">toIndex</code>,
-one index at every iteration, reducing it linearly to a single element or to an empty set.
+one index at every iteration, reducing it linearly to a single item or to an empty set.
 <br>
-Time Complexity = O(n), Space Complexity = O(1), where n = number of elements between
+Time Complexity = O(n), Space Complexity = O(1), where n = number of items between
 <code data-dev-comment-type="paramref" class="paramref">fromIndex</code> and <code data-dev-comment-type="paramref" class="paramref">toIndex</code>.</p>
 </div>
   <span class="small pull-right mobile-hide">
@@ -236,7 +236,7 @@ Time Complexity = O(n), Space Complexity = O(1), where n = number of elements be
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public (int first, int last) Interval&lt;T&gt;(IEnumerable&lt;T&gt; source, T element, IComparer&lt;T&gt;? comparer = null, int? fromIndex = null, int? toIndex = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public (int first, int last) Interval&lt;T&gt;(IEnumerable&lt;T&gt; source, T item, IComparer&lt;T&gt;? comparer = null, int? fromIndex = null, int? toIndex = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -255,7 +255,7 @@ Time Complexity = O(n), Space Complexity = O(1), where n = number of elements be
       </tr>
       <tr>
         <td><span class="xref">T</span></td>
-        <td><span class="parametername">element</span></td>
+        <td><span class="parametername">item</span></td>
         <td></td>
       </tr>
       <tr>
@@ -309,11 +309,11 @@ Time Complexity = O(n), Space Complexity = O(1), where n = number of elements be
   <div class="markdown level1 remarks"><p>The algorithm linearly scans the search space from <code data-dev-comment-type="paramref" class="paramref">fromIndex</code> to <code data-dev-comment-type="paramref" class="paramref">toIndex</code>,
 one index at every iteration.
 <br>
-It just stores the smallest and the biggest index among the ones which correspond to elements equal to
-<code data-dev-comment-type="paramref" class="paramref">element</code>. So it has constant, and not linear, space requirements.
+It just stores the smallest and the biggest index among the ones which correspond to items equal to
+<code data-dev-comment-type="paramref" class="paramref">item</code>. So it has constant, and not linear, space requirements.
 <br>
-Time Complexity = O(n), Space Complexity = O(1), where n = number of elements between
-<code data-dev-comment-type="paramref" class="paramref">fromIndex</code> and <code data-dev-comment-type="paramref" class="paramref">toIndex</code>.</p>
+Time Complexity = O(n), Space Complexity = O(1), where n = number of items between <code data-dev-comment-type="paramref" class="paramref">fromIndex</code>
+and <code data-dev-comment-type="paramref" class="paramref">toIndex</code>.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
@@ -328,7 +328,7 @@ Time Complexity = O(n), Space Complexity = O(1), where n = number of elements be
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Last&lt;T&gt;(IEnumerable&lt;T&gt; source, T element, IComparer&lt;T&gt;? comparer = null, int? fromIndex = null, int? toIndex = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public int Last&lt;T&gt;(IEnumerable&lt;T&gt; source, T item, IComparer&lt;T&gt;? comparer = null, int? fromIndex = null, int? toIndex = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -347,7 +347,7 @@ Time Complexity = O(n), Space Complexity = O(1), where n = number of elements be
       </tr>
       <tr>
         <td><span class="xref">T</span></td>
-        <td><span class="parametername">element</span></td>
+        <td><span class="parametername">item</span></td>
         <td></td>
       </tr>
       <tr>
@@ -399,10 +399,10 @@ Time Complexity = O(n), Space Complexity = O(1), where n = number of elements be
   </table>
   <h5 id="MoreStructures_Lists_Searching_LinearSearch_Last__1_IEnumerable___0____0_System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32___remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>The algorithm linearly scans the search space from <code data-dev-comment-type="paramref" class="paramref">toIndex</code> to <code data-dev-comment-type="paramref" class="paramref">fromIndex</code>,
-one index at every iteration, reducing it linearly to a single element or to an empty set.
+one index at every iteration, reducing it linearly to a single item or to an empty set.
 <br>
-Time Complexity = O(n), Space Complexity = O(1), where n = number of elements between
-<code data-dev-comment-type="paramref" class="paramref">fromIndex</code> and <code data-dev-comment-type="paramref" class="paramref">toIndex</code>.</p>
+Time Complexity = O(n), Space Complexity = O(1), where n = number of items between <code data-dev-comment-type="paramref" class="paramref">fromIndex</code>
+and <code data-dev-comment-type="paramref" class="paramref">toIndex</code>.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
@@ -417,7 +417,7 @@ Time Complexity = O(n), Space Complexity = O(1), where n = number of elements be
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Nth&lt;T&gt;(IEnumerable&lt;T&gt; source, T element, int occurrenceRank, IComparer&lt;T&gt;? comparer = null, int? fromIndex = null, int? toIndex = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public int Nth&lt;T&gt;(IEnumerable&lt;T&gt; source, T item, int occurrenceRank, IComparer&lt;T&gt;? comparer = null, int? fromIndex = null, int? toIndex = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -436,7 +436,7 @@ Time Complexity = O(n), Space Complexity = O(1), where n = number of elements be
       </tr>
       <tr>
         <td><span class="xref">T</span></td>
-        <td><span class="parametername">element</span></td>
+        <td><span class="parametername">item</span></td>
         <td></td>
       </tr>
       <tr>
@@ -493,12 +493,12 @@ Time Complexity = O(n), Space Complexity = O(1), where n = number of elements be
   </table>
   <h5 id="MoreStructures_Lists_Searching_LinearSearch_Nth__1_IEnumerable___0____0_System_Int32_System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32___remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>The algorithm linearly scans the search space from <code data-dev-comment-type="paramref" class="paramref">toIndex</code> to <code data-dev-comment-type="paramref" class="paramref">fromIndex</code>,
-one index at every iteration, reducing it linearly to a single element or to an empty set.
+one index at every iteration, reducing it linearly to a single item or to an empty set.
 <br>
-It just stores the current counter of occurrences of <code data-dev-comment-type="paramref" class="paramref">element</code> in <code data-dev-comment-type="paramref" class="paramref">source</code>,
+It just stores the current counter of occurrences of <code data-dev-comment-type="paramref" class="paramref">item</code> in <code data-dev-comment-type="paramref" class="paramref">source</code>,
 not all of them. So it has constant, and not linear, space requirements.
 <br>
-Time Complexity = O(n), Space Complexity = O(1), where n = number of elements between
+Time Complexity = O(n), Space Complexity = O(1), where n = number of items between
 <code data-dev-comment-type="paramref" class="paramref">fromIndex</code> and <code data-dev-comment-type="paramref" class="paramref">toIndex</code>.</p>
 </div>
   <h3 id="implements">Implements</h3>
