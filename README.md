@@ -1,5 +1,4 @@
-# Project
-Data structures and algorithms for .NET6.
+# Data structures and algorithms for .NET6
 
 ![License](https://img.shields.io/github/license/antonioaversa/MoreStructures)
 
