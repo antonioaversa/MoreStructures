@@ -79,7 +79,7 @@ public record TextWithTerminator(
     public char Terminator { get; init; } =
         !ValidateInput || !Text.Contains(Terminator) 
         ? Terminator 
-        : throw new ArgumentException($"{nameof(Terminator)} shouldn't be included in {nameof(Text)}");
+        : throw new ArgumentException($"{nameof(Terminator)} shouldn't be included in {nameof(Text)}.");
 
     /// <summary>
     /// Select a part of this text by the provided selector.

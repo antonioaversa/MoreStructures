@@ -5,9 +5,9 @@ using MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders;
 namespace MoreStructures.Tests.BurrowsWheelerTransform.Builder;
 
 [TestClass]
-public class LastFirstPropertyBasedBuilderWithBinarySearchFinderTests : BuilderTests
+public class LastFirstPropertyBasedBuilderTests_WithBinarySearchFinder : BuilderTests
 {
-    public LastFirstPropertyBasedBuilderWithBinarySearchFinderTests() : base(
+    public LastFirstPropertyBasedBuilderTests_WithBinarySearchFinder() : base(
         new LastFirstPropertyBasedBuilder() 
         { 
             FirstLastFinderBuilder = lastBWMColumn => 

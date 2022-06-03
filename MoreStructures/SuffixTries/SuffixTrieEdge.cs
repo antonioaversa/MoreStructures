@@ -26,5 +26,5 @@ public record SuffixTrieEdge(int Index)
     public int CompareTo(SuffixTrieEdge? other) => 
         other != null
         ? Index - other.Index 
-        : throw new ArgumentException($"Invalid comparison: cannot compare to null");
+        : throw new ArgumentException($"Invalid comparison: cannot compare to null.");
 }
