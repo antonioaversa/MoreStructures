@@ -4,6 +4,16 @@ using MoreStructures.Utilities;
 
 namespace MoreStructures.BurrowsWheelerTransform.Matching;
 
+/// <summary>
+/// A <see cref="NarrowingIntervalMatcher"/> refinement which precalculate the count of occurrences of each item at 
+/// index i in the sub-sequence of items from 0 to i - 1, for both the BWT and its sorted version, and later uses it 
+/// to perform operations in constant time.
+/// </summary>
+public class CountBasedNarrowingIntervalMatcher : NarrowingIntervalMatcher
+{
+    
+}
+
 /// <inheritdoc path="//*[not(self::remarks)]"/>
 /// <remarks>
 /// This is a basic implementation, using a narrowing interval.
@@ -11,10 +21,10 @@ namespace MoreStructures.BurrowsWheelerTransform.Matching;
 public class NarrowingIntervalMatcher : IMatcher
 {
     /// <summary>
-    /// The <see cref="Lists.Searching.ISearch"/> implementation to be used when searching for items in lists sorted 
+    /// The <see cref="ISearch"/> implementation to be used when searching for items in lists sorted 
     /// in ascending order.
     /// </summary>
-    protected static Lists.Searching.ISearch OrderedAscListSearch { get; } = new Lists.Searching.BinarySearch();
+    protected static ISearch OrderedAscListSearch { get; } = new Lists.Searching.BinarySearch();
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
@@ -23,7 +33,8 @@ public class NarrowingIntervalMatcher : IMatcher
     ///    <br/>
     /// 2. The algorithmn proceeds in reverse: from the last char of the pattern P, P[^1] to the first, P[0].
     ///    <br/>
-    /// 3. Binary search in Sorted BWT for the range of indexes (first1, last1) having value P[^1].
+    /// 3. Search in Sorted BWT for the range of indexes (first1, last1) having value P[^1] via a <see cref="ISearch"/>
+    ///    implementation (because the input is sorted, binary search is possible).
     ///    <br/>
     /// 4. The char in BWT at indexes first1 and last1 represent the predecessor of all instances of P[^1] in P. The 
     ///    interval (first1, last1) can then be narrowed down to (first2, last2), taking into account only the chars
@@ -49,27 +60,50 @@ public class NarrowingIntervalMatcher : IMatcher
         if (startIndex < 0)
             return new Match(false, 0, -1, -1);
 
-        var (occurrenceRankStart, occurrenceRankEnd) = (0, endIndex - startIndex); // Occurrence ranks are 0-based
-
         var charsMatched = 1;
-        foreach (var c in patternReversed.Skip(1))
+        foreach (var currentChar in patternReversed.Skip(1))
         {
-            var startIndexNarrowed = Enumerable
-                .Range(startIndex, endIndex - startIndex + 1)
-                .FirstOrDefault(i => bwt[i] == c, -1);
-            if (startIndexNarrowed == -1)
+            (var success, startIndex, endIndex) = NarrowInterval(bwt, finder, startIndex, endIndex, currentChar);
+
+            if (!success)
                 return new Match(false, charsMatched, startIndex, endIndex);
 
-            var endIndexNarrowed = Enumerable
-                .Range(startIndex, endIndex - startIndex + 1)
-                .Reverse()
-                .First(i => bwt[i] == c);
-
-            (startIndex, occurrenceRankStart) = finder.LastToFirst(startIndexNarrowed);
-            (endIndex, occurrenceRankEnd) = finder.LastToFirst(endIndexNarrowed);        
             charsMatched++;
         }
 
         return new Match(true, charsMatched, startIndex, endIndex);
+    }
+
+    /// <summary>
+    /// Narrows the provided (<paramref name="startIndex"/>, <paramref name="endIndex"/>) interval, using the provided
+    /// <see cref="ILastFirstFinder"/>.
+    /// </summary>
+    /// <param name="bwt">The Burrows-Wheeler Transform of the text.</param>
+    /// <param name="finder">The finder used to perform last-first matching.</param>
+    /// <param name="startIndex">The lower extreme of the interval to be narrowed.</param>
+    /// <param name="endIndex">The higher extreme of the interval to be narrowed.</param>
+    /// <param name="currentChar">The char currently being processed.</param>
+    /// <returns>
+    /// An interval narrower than the one provided as input, or (-1, -1), if narrowing resulted into an empty set.
+    /// </returns>
+    protected virtual (bool success, int narrowedStartIndex, int narrowedEndIndex) NarrowInterval(
+        RotatedTextWithTerminator bwt, ILastFirstFinder finder, int startIndex, int endIndex, char currentChar)
+    {
+        var startIndexNarrowed = Enumerable
+            .Range(startIndex, endIndex - startIndex + 1)
+            .FirstOrDefault(i => bwt[i] == currentChar, -1);
+
+        if (startIndexNarrowed == -1)
+            return (false, startIndex, endIndex);
+
+        var endIndexNarrowed = Enumerable
+            .Range(startIndex, endIndex - startIndex + 1)
+            .Reverse()
+            .First(i => bwt[i] == currentChar);
+
+        (startIndex, _) = finder.LastToFirst(startIndexNarrowed);
+        (endIndex, _) = finder.LastToFirst(endIndexNarrowed);
+
+        return (true, startIndex, endIndex);
     }
 }

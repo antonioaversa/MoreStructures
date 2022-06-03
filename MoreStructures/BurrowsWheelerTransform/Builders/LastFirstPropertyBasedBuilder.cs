@@ -1,4 +1,5 @@
 ﻿using MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders;
+using MoreStructures.Lists.Counting;
 using MoreStructures.Utilities;
 using System.Text;
 
@@ -48,7 +49,7 @@ public class LastFirstPropertyBasedBuilder : NaiveBuilder
     ///           linear with n.
     ///           <br/>
     ///         - From terminator to terminator, there are n top-level iterations. Each iteration takes m1 + m2, 
-    ///           where m1 is the cost of <see cref="ILastFirstFinder.FindIndexOfNthOccurrenceInBWT(char, int)"/> 
+    ///           where m1 is the cost of <see cref="ILastFirstFinder.FindIndexOfNthOccurrenceInBWT(int, int)"/> 
     ///           and m2 is the cost of <see cref="ILastFirstFinder.FindOccurrenceRankOfCharInSortedBWT(int)"/>.
     ///           <br/>
     ///         - Finally, the <see cref="StringBuilder"/> used as accumulator generates the text string. At most O(n).
@@ -74,18 +75,17 @@ public class LastFirstPropertyBasedBuilder : NaiveBuilder
 
         var text = new StringBuilder();
 
-        var index = 0;
-        var occurrenceRank = 0; // Remark: occurrence ranks are 0-based (0 is 1st occurrence)
-
+        var indexOfCharInSortedBWT = 0; // Start with '$', which is the 1st char in sbwt
+        char charToAppend;
         do
         {
-            index = firstLastFinder.FindIndexOfNthOccurrenceInBWT(sbwt[index], occurrenceRank);
-            occurrenceRank = firstLastFinder.FindOccurrenceRankOfCharInSortedBWT(index);
-            if (sbwt[index] != terminator) 
-                text.Append(sbwt[index]);
+            (indexOfCharInSortedBWT, _) = firstLastFinder.LastToFirst(indexOfCharInSortedBWT);
+            charToAppend = sbwt[indexOfCharInSortedBWT];
+            if (charToAppend != terminator) 
+                text.Append(charToAppend);
         }
-        while (sbwt[index] != terminator);
+        while (charToAppend != terminator);
 
-        return new(text.ToString().AsValue(), terminator);
+        return new(text.ToString().Reverse(), terminator);
     }
 }

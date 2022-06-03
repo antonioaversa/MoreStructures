@@ -39,7 +39,7 @@ public record SuffixTreeEdge(int Start, int Length)
     public int CompareTo(SuffixTreeEdge? other)
     {
         if (other == null)
-            throw new ArgumentException($"Invalid comparison: cannot compare to null");
+            throw new ArgumentException($"Invalid comparison: cannot compare to null.");
 
         var startComparison = Start - other.Start;
         if (startComparison != 0)

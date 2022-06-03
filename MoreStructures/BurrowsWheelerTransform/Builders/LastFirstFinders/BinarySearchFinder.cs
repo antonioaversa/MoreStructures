@@ -2,19 +2,15 @@
 
 /// <summary>
 /// A <see cref="NaiveFinder"/> refinement which iterates over <see cref="ILastFirstFinder.BWT"/> and uses 
-/// binary search on <see cref="ILastFirstFinder.SortedBWT"/>.
+/// binary search on <see cref="ILastFirstFinder.SortedBWT"/>, taking advantage of the fact that it is sorted.
 /// </summary>
 /// <remarks>
 ///     <para id="complexity">
-///         <para>
-///         Search over <see cref="ILastFirstFinder.BWT"/> has Time Complexity = O(n).
-///         </para>
-///         <para>
-///         Search over <see cref="ILastFirstFinder.SortedBWT"/> has Time Complexity O(log(n)).
-///         </para>
-///         <para>
-///         Space Complexity = O(1) for both search operations.
-///         </para>
+///     Search over <see cref="ILastFirstFinder.BWT"/> has Time Complexity = O(n).
+///     <br/>
+///     Search over <see cref="ILastFirstFinder.SortedBWT"/> has Time Complexity O(log(n)).
+///     <br/>
+///     Space Complexity = O(1) for both search operations.
 ///     </para>
 /// </remarks>
 public class BinarySearchFinder : NaiveFinder
@@ -29,9 +25,7 @@ public class BinarySearchFinder : NaiveFinder
     /// <remarks>
     /// <inheritdoc cref="BinarySearchFinder" path="/summary"/>
     /// </remarks>
-    public BinarySearchFinder(
-        RotatedTextWithTerminator lastBWMColumn,
-        Func<RotatedTextWithTerminator, IComparer<char>, RotatedTextWithTerminator> bwtSorter) 
+    public BinarySearchFinder(RotatedTextWithTerminator lastBWMColumn, ILastFirstFinder.SortStrategy bwtSorter) 
         : base(lastBWMColumn, bwtSorter)
     {
     }
@@ -52,15 +46,15 @@ public class BinarySearchFinder : NaiveFinder
     /// This implementation takes advantage of the fact that <see cref="ILastFirstFinder.SortedBWT"/> is sorted.
     /// Time Complexity = O(log(n)). Space Complexity = O(1).
     /// </remarks>
-    public override int FindIndexOfNthOccurrenceInSortedBWT(char charToFind, int occurrenceRank)
+    public override int FindIndexOfNthOccurrenceInSortedBWT(int indexOfCharInBWT, int occurrenceRank)
     {
         if (occurrenceRank < 0)
-            throw new ArgumentException("Must be non-negative.", nameof(occurrenceRank));
+            throw new ArgumentOutOfRangeException(nameof(occurrenceRank), $"Must be non-negative: {occurrenceRank}.");
 
-        var index = OrderedAscListSearch.Nth(SortedBWT, charToFind, occurrenceRank, CharComparer);
+        var index = OrderedAscListSearch.Nth(SortedBWT, BWT[indexOfCharInBWT], occurrenceRank, CharComparer);
 
         if (index < 0)
-            throw new ArgumentException($"Invalid {nameof(occurrenceRank)}: {occurrenceRank}");
+            throw new ArgumentOutOfRangeException(nameof(occurrenceRank), $"Invalid value: {occurrenceRank}.");
         return index;
     }
 
@@ -69,11 +63,13 @@ public class BinarySearchFinder : NaiveFinder
     /// This implementation takes advantage of the fact that <see cref="ILastFirstFinder.SortedBWT"/> is sorted.
     /// Time Complexity = O(log(n)). Space Complexity = O(1).
     /// </remarks>
-    public override int FindOccurrenceRankOfCharInSortedBWT(int indexOfChar)
+    public override int FindOccurrenceRankOfCharInSortedBWT(int indexOfCharInSortedBWT)
     { 
-        if (indexOfChar < 0 || indexOfChar >= SortedBWT.Length)
-            throw new ArgumentException($"Invalid {nameof(indexOfChar)}: {indexOfChar}");
+        if (indexOfCharInSortedBWT < 0 || indexOfCharInSortedBWT >= SortedBWT.Length)
+            throw new ArgumentOutOfRangeException(
+                nameof(indexOfCharInSortedBWT), $"Invalid value: {indexOfCharInSortedBWT}");
 
-        return indexOfChar - OrderedAscListSearch.First(SortedBWT, SortedBWT[indexOfChar], CharComparer, 0, indexOfChar);
+        return indexOfCharInSortedBWT - OrderedAscListSearch.First(
+            SortedBWT, SortedBWT[indexOfCharInSortedBWT], CharComparer, 0, indexOfCharInSortedBWT);
     }
 }
