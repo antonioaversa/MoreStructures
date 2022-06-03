@@ -19,7 +19,7 @@ public class LastFirstPropertyBasedBuilder : NaiveBuilder
     /// The strategy by which this builder finds chars in the BWT and its sorted version.
     /// </summary>
     public Func<RotatedTextWithTerminator, ILastFirstFinder> FirstLastFinderBuilder { get; init; } =
-        (lastBWMColumn) => new PrecomputedFinder(lastBWMColumn, ILastFirstFinder.QuickSort);
+        (lastBWMColumn) => new PrecomputedFinder(lastBWMColumn, BWTransform.QuickSort);
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>

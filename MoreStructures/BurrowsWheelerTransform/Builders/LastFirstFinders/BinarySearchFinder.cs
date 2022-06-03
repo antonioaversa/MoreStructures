@@ -25,7 +25,7 @@ public class BinarySearchFinder : NaiveFinder
     /// <remarks>
     /// <inheritdoc cref="BinarySearchFinder" path="/summary"/>
     /// </remarks>
-    public BinarySearchFinder(RotatedTextWithTerminator lastBWMColumn, ILastFirstFinder.SortStrategy bwtSorter) 
+    public BinarySearchFinder(RotatedTextWithTerminator lastBWMColumn, BWTransform.SortStrategy bwtSorter) 
         : base(lastBWMColumn, bwtSorter)
     {
     }

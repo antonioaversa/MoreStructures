@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MoreStructures.BurrowsWheelerTransform;
 using MoreStructures.BurrowsWheelerTransform.Builders;
 using MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders;
 
@@ -10,7 +11,7 @@ public class LastFirstPropertyBasedBuilderTests_WithNaiveFinder : BuilderTests
     public LastFirstPropertyBasedBuilderTests_WithNaiveFinder() : base(
         new LastFirstPropertyBasedBuilder() 
         { 
-            FirstLastFinderBuilder = lastBWMColumn => new NaiveFinder(lastBWMColumn, ILastFirstFinder.QuickSort),
+            FirstLastFinderBuilder = lastBWMColumn => new NaiveFinder(lastBWMColumn, BWTransform.QuickSort),
         })
     {
     }

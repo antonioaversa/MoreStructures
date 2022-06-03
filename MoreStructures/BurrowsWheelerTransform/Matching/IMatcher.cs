@@ -9,12 +9,20 @@ namespace MoreStructures.BurrowsWheelerTransform.Matching;
 public interface IMatcher
 {
     /// <summary>
-    /// Tries to match the provided <paramref name="pattern"/> using the provided <paramref name="bwt"/> and its sorted
-    /// version <paramref name="sbwt"/>.
+    /// The Burrows-Wheeler Transform. Also, the last column of the Burrows-Wheeler Matrix.
     /// </summary>
-    /// <param name="bwt">The Burrows-Wheeler Transform of the text.</param>
-    /// <param name="sbwt">The Sorted Burrows-Wheeler Transform of the text</param>
+    public RotatedTextWithTerminator BWT { get; }
+
+    /// <summary>
+    /// The sorted version of the Burrows-Wheeler Transform. Also, the first column of the Burrows-Wheeler Matrix.
+    /// </summary>
+    public RotatedTextWithTerminator SortedBWT { get; }
+
+    /// <summary>
+    /// Tries to match the provided <paramref name="pattern"/> against the <see cref="BWT"/> and its sorted
+    /// version <see cref="SortedBWT"/>.
+    /// </summary>
     /// <param name="pattern">The patter to be matched against the text.</param>
     /// <returns>The result of the pattern matching, successful or not.</returns>
-    Match Match(RotatedTextWithTerminator bwt, RotatedTextWithTerminator sbwt, IEnumerable<char> pattern);
+    Match Match(IEnumerable<char> pattern);
 }

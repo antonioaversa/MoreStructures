@@ -7,28 +7,6 @@
 public interface ILastFirstFinder
 {
     /// <summary>
-    /// Any strategy to sort the <see cref="char"/> of a <see cref="RotatedTextWithTerminator"/>, for example to turn
-    /// a BWT into its sorted version.
-    /// </summary>
-    /// <param name="text">The text to be sorted.</param>
-    /// <param name="comparer">The <see cref="IComparer{T}"/> of <see cref="char"/> to be used for comparison.</param>
-    /// <returns>
-    /// A new <see cref="RotatedTextWithTerminator"/>, sorted according to the provided <paramref name="comparer"/>.
-    /// </returns>
-    public delegate RotatedTextWithTerminator SortStrategy(RotatedTextWithTerminator text, IComparer<char> comparer);
-
-    /// <summary>
-    /// A strategy to sort a <see cref="RotatedTextWithTerminator"/> using
-    /// <see cref="Enumerable.OrderBy{TSource, TKey}(IEnumerable{TSource}, Func{TSource, TKey}, IComparer{TKey}?)"/>,
-    /// which in turn uses a QuickSort with Time Complexity = O(n * log(n)) in average and O(n^2) in the worst case.
-    /// </summary>
-    /// <remarks>
-    /// Tipically used to sort the <see cref="BWT"/>.
-    /// </remarks>
-    public static readonly SortStrategy QuickSort = 
-        (text, charComparer) => new(text.OrderBy(c => c, charComparer), text.Terminator);
-
-    /// <summary>
     /// The <see cref="IComparer{T}"/> used to compare chars of <see cref="BWT"/> or <see cref="SortedBWT"/>.
     /// </summary>
     /// <remarks>
