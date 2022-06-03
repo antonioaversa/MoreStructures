@@ -100,17 +100,17 @@
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_QuickSort.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.QuickSort%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L14">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L28">View Source</a>
   </span>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_QuickSort" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.QuickSort">QuickSort</h4>
-  <div class="markdown level1 summary"><p>A strategy to sort a <a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a> (tipically containing the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT">BWT</a>) using
+  <div class="markdown level1 summary"><p>A strategy to sort a <a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a> using
 <see cref="!:Enumerable.OrderBy&lt;TSource, TKey>(IEnumerable&lt;TSource>, Func&lt;TSource, TKey>, IComparer&lt;TKey>?)"></see>,
-which uses a QuickSort with Time Complexity = O(n * log(n)) in average and O(n^2) in the worst case.</p>
+which in turn uses a QuickSort with Time Complexity = O(n * log(n)) in average and O(n^2) in the worst case.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly Func&lt;RotatedTextWithTerminator, IComparer&lt;char&gt;, RotatedTextWithTerminator&gt; QuickSort</code></pre>
+    <pre><code class="lang-csharp hljs">public static readonly ILastFirstFinder.SortStrategy QuickSort</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,11 +122,14 @@ which uses a QuickSort with Time Complexity = O(n * log(n)) in average and O(n^2
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Func</span>&lt;<a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a>, <span class="xref">IComparer</span>&lt;<span class="xref">System.Char</span>&gt;, <a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a>&gt;</td>
+        <td><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy.html">ILastFirstFinder.SortStrategy</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_QuickSort_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Tipically used to sort the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT">BWT</a>.</p>
+</div>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
@@ -134,11 +137,11 @@ which uses a QuickSort with Time Complexity = O(n * log(n)) in average and O(n^2
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.BWT%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L30">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L44">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.BWT*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.BWT">BWT</h4>
-  <div class="markdown level1 summary"><p>The Burrows-Wheeler Transform.</p>
+  <div class="markdown level1 summary"><p>The Burrows-Wheeler Transform. Also, the last column of the Burrows-Wheeler Matrix.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -165,7 +168,7 @@ which uses a QuickSort with Time Complexity = O(n * log(n)) in average and O(n^2
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_CharComparer.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.CharComparer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L25">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L39">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_CharComparer_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.CharComparer*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_CharComparer" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.CharComparer">CharComparer</h4>
@@ -201,11 +204,11 @@ which uses a QuickSort with Time Complexity = O(n * log(n)) in average and O(n^2
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortedBWT.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortedBWT%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L35">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L49">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortedBWT_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortedBWT*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortedBWT" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortedBWT">SortedBWT</h4>
-  <div class="markdown level1 summary"><p>The sorted version of the Burrows-Wheeler Transform.</p>
+  <div class="markdown level1 summary"><p>The sorted version of the Burrows-Wheeler Transform. Also, the first column of the Burrows-Wheeler Matrix.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -231,20 +234,20 @@ which uses a QuickSort with Time Complexity = O(n * log(n)) in average and O(n^2
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindIndexOfNthOccurrenceInBWT_System_Char_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInBWT(System.Char%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindIndexOfNthOccurrenceInBWT_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInBWT(System.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L47">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L62">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindIndexOfNthOccurrenceInBWT_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInBWT*"></a>
-  <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindIndexOfNthOccurrenceInBWT_System_Char_System_Int32_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInBWT(System.Char,System.Int32)">FindIndexOfNthOccurrenceInBWT(Char, Int32)</h4>
-  <div class="markdown level1 summary"><p>Find the index of the n-th occurrence (0-based) of the provided <code data-dev-comment-type="paramref" class="paramref">charToFind</code> in
-<a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT">BWT</a>.</p>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindIndexOfNthOccurrenceInBWT_System_Int32_System_Int32_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInBWT(System.Int32,System.Int32)">FindIndexOfNthOccurrenceInBWT(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Find the index of the n-th occurrence (0-based) in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT">BWT</a>, of the char in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT">BWT</a> at the
+provided index <code data-dev-comment-type="paramref" class="paramref">indexOfCharInBWT</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int FindIndexOfNthOccurrenceInBWT(char charToFind, int occurrenceRank)</code></pre>
+    <pre><code class="lang-csharp hljs">int FindIndexOfNthOccurrenceInBWT(int indexOfCharInBWT, int occurrenceRank)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -257,9 +260,9 @@ which uses a QuickSort with Time Complexity = O(n * log(n)) in average and O(n^2
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Char</span></td>
-        <td><span class="parametername">charToFind</span></td>
-        <td><p>The char to find in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT">BWT</a>.</p>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">indexOfCharInBWT</span></td>
+        <td><p>The index of the char in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT">BWT</a>, to find the n-th occurrence of, again in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT">BWT</a>.</p>
 </td>
       </tr>
       <tr>
@@ -281,28 +284,27 @@ which uses a QuickSort with Time Complexity = O(n * log(n)) in average and O(n^2
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>The index of the n-th occurrence of <code data-dev-comment-type="paramref" class="paramref">charToFind</code>, if it exists.
-If it doesn't exist, returns -1.</p>
+        <td><p>The index of the n-th occurrence of the char in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT">BWT</a> at <code data-dev-comment-type="paramref" class="paramref">indexOfCharInBWT</code>.</p>
 </td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindIndexOfNthOccurrenceInSortedBWT_System_Char_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Char%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindIndexOfNthOccurrenceInSortedBWT_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L59">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L76">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindIndexOfNthOccurrenceInSortedBWT_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInSortedBWT*"></a>
-  <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindIndexOfNthOccurrenceInSortedBWT_System_Char_System_Int32_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Char,System.Int32)">FindIndexOfNthOccurrenceInSortedBWT(Char, Int32)</h4>
-  <div class="markdown level1 summary"><p>Find the index of the n-th occurrence (0-based) of the provided <code data-dev-comment-type="paramref" class="paramref">charToFind</code> in
-<a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortedBWT">SortedBWT</a>.</p>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindIndexOfNthOccurrenceInSortedBWT_System_Int32_System_Int32_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Int32,System.Int32)">FindIndexOfNthOccurrenceInSortedBWT(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Find the index of the n-th occurrence (0-based) in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortedBWT">SortedBWT</a>, of the char in
+<a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT">BWT</a> at the provided index <code data-dev-comment-type="paramref" class="paramref">indexOfCharInBWT</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int FindIndexOfNthOccurrenceInSortedBWT(char charToFind, int occurrenceRank)</code></pre>
+    <pre><code class="lang-csharp hljs">int FindIndexOfNthOccurrenceInSortedBWT(int indexOfCharInBWT, int occurrenceRank)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -315,9 +317,9 @@ If it doesn't exist, returns -1.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Char</span></td>
-        <td><span class="parametername">charToFind</span></td>
-        <td><p>The char to find in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortedBWT">SortedBWT</a>.</p>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">indexOfCharInBWT</span></td>
+        <td><p>The index of the char in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT">BWT</a>, to find the n-th occurrence of, in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortedBWT">SortedBWT</a>.</p>
 </td>
       </tr>
       <tr>
@@ -339,8 +341,8 @@ If it doesn't exist, returns -1.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>The index of the n-th occurrence of <code data-dev-comment-type="paramref" class="paramref">charToFind</code>.
-If it doesn't exist, returns -1.</p>
+        <td><p>The index in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortedBWT">SortedBWT</a> of the n-th occurrence of the char in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT">BWT</a> at index
+<code data-dev-comment-type="paramref" class="paramref">indexOfCharInBWT</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -350,16 +352,17 @@ If it doesn't exist, returns -1.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindOccurrenceRankOfCharInBWT_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindOccurrenceRankOfCharInBWT(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L66">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L84">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindOccurrenceRankOfCharInBWT_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindOccurrenceRankOfCharInBWT*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindOccurrenceRankOfCharInBWT_System_Int32_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindOccurrenceRankOfCharInBWT(System.Int32)">FindOccurrenceRankOfCharInBWT(Int32)</h4>
-  <div class="markdown level1 summary"><p>Find the rank of occurrence rank (0-based) of the char at the provided index in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT">BWT</a>.</p>
+  <div class="markdown level1 summary"><p>Find the occurrence rank in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT">BWT</a> of the char in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT">BWT</a> at the provided index
+<code data-dev-comment-type="paramref" class="paramref">indexOfCharInBWT</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int FindOccurrenceRankOfCharInBWT(int indexOfChar)</code></pre>
+    <pre><code class="lang-csharp hljs">int FindOccurrenceRankOfCharInBWT(int indexOfCharInBWT)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -373,8 +376,8 @@ If it doesn't exist, returns -1.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">indexOfChar</span></td>
-        <td><p>The index of the char, whose occurrence has to be found.</p>
+        <td><span class="parametername">indexOfCharInBWT</span></td>
+        <td><p>The index of the char in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT">BWT</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -390,7 +393,7 @@ If it doesn't exist, returns -1.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>The 0-based occurrence rank of the char at index <code data-dev-comment-type="paramref" class="paramref">indexOfChar</code>.</p>
+        <td><p>The 0-based occurrence rank of the char at index <code data-dev-comment-type="paramref" class="paramref">indexOfCharInBWT</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -400,16 +403,17 @@ If it doesn't exist, returns -1.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindOccurrenceRankOfCharInSortedBWT_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindOccurrenceRankOfCharInSortedBWT(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L73">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L92">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindOccurrenceRankOfCharInSortedBWT_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindOccurrenceRankOfCharInSortedBWT*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindOccurrenceRankOfCharInSortedBWT_System_Int32_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindOccurrenceRankOfCharInSortedBWT(System.Int32)">FindOccurrenceRankOfCharInSortedBWT(Int32)</h4>
-  <div class="markdown level1 summary"><p>Find the rank of occurrence rank (0-based) of the char at the provided index in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortedBWT">SortedBWT</a>.</p>
+  <div class="markdown level1 summary"><p>Find the occurrence rank in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortedBWT">SortedBWT</a> of the char in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortedBWT">SortedBWT</a> at the
+provided index <code data-dev-comment-type="paramref" class="paramref">indexOfCharInSortedBWT</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int FindOccurrenceRankOfCharInSortedBWT(int indexOfChar)</code></pre>
+    <pre><code class="lang-csharp hljs">int FindOccurrenceRankOfCharInSortedBWT(int indexOfCharInSortedBWT)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -423,8 +427,8 @@ If it doesn't exist, returns -1.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">indexOfChar</span></td>
-        <td><p>The index of the char, whose occurrence has to be found.</p>
+        <td><span class="parametername">indexOfCharInSortedBWT</span></td>
+        <td><p>The index of the char in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortedBWT">SortedBWT</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -440,7 +444,7 @@ If it doesn't exist, returns -1.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>The 0-based occurrence rank of the char at index <code data-dev-comment-type="paramref" class="paramref">indexOfChar</code>.</p>
+        <td><p>The 0-based occurrence rank of the char at index <code data-dev-comment-type="paramref" class="paramref">indexOfCharInSortedBWT</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -450,17 +454,17 @@ If it doesn't exist, returns -1.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_LastToFirst_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.LastToFirst(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L81">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L100">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_LastToFirst_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.LastToFirst*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_LastToFirst_System_Int32_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.LastToFirst(System.Int32)">LastToFirst(Int32)</h4>
-  <div class="markdown level1 summary"><p>Given the index (0-based) of a char in the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT">BWT</a>, it finds the index of the corresponding char in
-the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortedBWT">SortedBWT</a> and its occurrence rank (0-based).</p>
+  <div class="markdown level1 summary"><p>Given the index of a char in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT">BWT</a>, it finds the index of the corresponding char in
+the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortedBWT">SortedBWT</a> and its occurrence rank.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">(int indexInSortedBWT, int occurrenceRank) LastToFirst(int indexOfChar)</code></pre>
+    <pre><code class="lang-csharp hljs">(int indexInSortedBWT, int occurrenceRank) LastToFirst(int indexOfCharInBWT)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -474,8 +478,8 @@ the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFi
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">indexOfChar</span></td>
-        <td><p>The index of the char, to locate in the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortedBWT">SortedBWT</a>.</p>
+        <td><span class="parametername">indexOfCharInBWT</span></td>
+        <td><p>The index (0-based) of the char in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT">BWT</a>.</p>
 </td>
       </tr>
     </tbody>

@@ -83,7 +83,8 @@
   
   <h1 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder" class="text-break">Class NaiveFinder
   </h1>
-  <div class="markdown level0 summary"><p>A <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html">ILastFirstFinder</a> implementation which just iterate over BWT and its sorted version every time.
+  <div class="markdown level0 summary"><p>A <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html">ILastFirstFinder</a> implementation which just iterates over <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_BWT">BWT</a> and its sorted version
+<a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_SortedBWT">SortedBWT</a> every time.
 Each operation has Time Complexity = O(n) and Space Complexity = O(1).</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -131,20 +132,20 @@ Each operation has Time Complexity = O(n) and Space Complexity = O(1).</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder__ctor_MoreStructures_RotatedTextWithTerminator_Func_MoreStructures_RotatedTextWithTerminator_IComparer_System_Char__MoreStructures_RotatedTextWithTerminator__.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.%23ctor(MoreStructures.RotatedTextWithTerminator%2CFunc%7BMoreStructures.RotatedTextWithTerminator%2CIComparer%7BSystem.Char%7D%2CMoreStructures.RotatedTextWithTerminator%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortStrategy_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.%23ctor(MoreStructures.RotatedTextWithTerminator%2CMoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/NaiveFinder.cs/#L31">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/NaiveFinder.cs/#L30">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder__ctor_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.#ctor*"></a>
-  <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder__ctor_MoreStructures_RotatedTextWithTerminator_Func_MoreStructures_RotatedTextWithTerminator_IComparer_System_Char__MoreStructures_RotatedTextWithTerminator__" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.#ctor(MoreStructures.RotatedTextWithTerminator,Func{MoreStructures.RotatedTextWithTerminator,IComparer{System.Char},MoreStructures.RotatedTextWithTerminator})">NaiveFinder(RotatedTextWithTerminator, Func&lt;RotatedTextWithTerminator, IComparer&lt;Char&gt;, RotatedTextWithTerminator&gt;)</h4>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortStrategy_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy)">NaiveFinder(RotatedTextWithTerminator, ILastFirstFinder.SortStrategy)</h4>
   <div class="markdown level1 summary"><p>Builds an instance of this finder, for the provided <code data-dev-comment-type="paramref" class="paramref">lastBWMColumn</code>, using
 <code data-dev-comment-type="paramref" class="paramref">bwtSorter</code> to calculate <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_SortedBWT">SortedBWT</a> from it.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NaiveFinder(RotatedTextWithTerminator lastBWMColumn, Func&lt;RotatedTextWithTerminator, IComparer&lt;char&gt;, RotatedTextWithTerminator&gt; bwtSorter)</code></pre>
+    <pre><code class="lang-csharp hljs">public NaiveFinder(RotatedTextWithTerminator lastBWMColumn, ILastFirstFinder.SortStrategy bwtSorter)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -163,7 +164,7 @@ Each operation has Time Complexity = O(n) and Space Complexity = O(1).</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Func</span>&lt;<a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a>, <span class="xref">IComparer</span>&lt;<span class="xref">System.Char</span>&gt;, <a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a>&gt;</td>
+        <td><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy.html">ILastFirstFinder.SortStrategy</a></td>
         <td><span class="parametername">bwtSorter</span></td>
         <td><p>A function sorting the provided<a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a> into a sorted
 <a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a>, according to the provided <see cref="!:IComparer&lt;T>"></see> of chars.</p>
@@ -176,7 +177,7 @@ Each operation has Time Complexity = O(n) and Space Complexity = O(1).</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.%23ctor(MoreStructures.RotatedTextWithTerminator%2CMoreStructures.RotatedTextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/NaiveFinder.cs/#L50">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/NaiveFinder.cs/#L47">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder__ctor_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.#ctor*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator)">NaiveFinder(RotatedTextWithTerminator, RotatedTextWithTerminator)</h4>
@@ -201,13 +202,13 @@ Each operation has Time Complexity = O(n) and Space Complexity = O(1).</p>
       <tr>
         <td><a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a></td>
         <td><span class="parametername">lastBWMColumn</span></td>
-        <td><p>The last column of the Burrows-Wheeler Matrix. Corresponds to the BWT.</p>
+        <td><p>The last column of the Burrows-Wheeler Matrix. Corresponds to <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_BWT">BWT</a>.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a></td>
         <td><span class="parametername">firstBWMColumn</span></td>
-        <td><p>The first column of the Burrows-Wheeler Matrix. Corresponds to the Sorted BWT.</p>
+        <td><p>The first column of the Burrows-Wheeler Matrix. Corresponds to <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_SortedBWT">SortedBWT</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -219,11 +220,11 @@ Each operation has Time Complexity = O(n) and Space Complexity = O(1).</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_BWT.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.BWT%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/NaiveFinder.cs/#L17">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/NaiveFinder.cs/#L16">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_BWT_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.BWT*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_BWT" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.BWT">BWT</h4>
-  <div class="markdown level1 summary"><p>The Burrows-Wheeler Transform.</p>
+  <div class="markdown level1 summary"><p>The Burrows-Wheeler Transform. Also, the last column of the Burrows-Wheeler Matrix.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -250,7 +251,7 @@ Each operation has Time Complexity = O(n) and Space Complexity = O(1).</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_CharComparer.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.CharComparer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/NaiveFinder.cs/#L14">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/NaiveFinder.cs/#L13">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_CharComparer_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.CharComparer*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_CharComparer" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.CharComparer">CharComparer</h4>
@@ -286,11 +287,11 @@ Each operation has Time Complexity = O(n) and Space Complexity = O(1).</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_SortedBWT.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.SortedBWT%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/NaiveFinder.cs/#L20">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/NaiveFinder.cs/#L19">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_SortedBWT_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.SortedBWT*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_SortedBWT" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.SortedBWT">SortedBWT</h4>
-  <div class="markdown level1 summary"><p>The sorted version of the Burrows-Wheeler Transform.</p>
+  <div class="markdown level1 summary"><p>The sorted version of the Burrows-Wheeler Transform. Also, the first column of the Burrows-Wheeler Matrix.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -316,18 +317,18 @@ Each operation has Time Complexity = O(n) and Space Complexity = O(1).</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindIndexOfNthOccurrenceInBWT_System_Char_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindIndexOfNthOccurrenceInBWT(System.Char%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindIndexOfNthOccurrenceInBWT_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindIndexOfNthOccurrenceInBWT(System.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/NaiveFinder.cs/#L77">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/NaiveFinder.cs/#L74">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindIndexOfNthOccurrenceInBWT_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindIndexOfNthOccurrenceInBWT*"></a>
-  <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindIndexOfNthOccurrenceInBWT_System_Char_System_Int32_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindIndexOfNthOccurrenceInBWT(System.Char,System.Int32)">FindIndexOfNthOccurrenceInBWT(Char, Int32)</h4>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindIndexOfNthOccurrenceInBWT_System_Int32_System_Int32_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindIndexOfNthOccurrenceInBWT(System.Int32,System.Int32)">FindIndexOfNthOccurrenceInBWT(Int32, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual int FindIndexOfNthOccurrenceInBWT(char charToFind, int occurrenceRank)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual int FindIndexOfNthOccurrenceInBWT(int indexOfCharInBWT, int occurrenceRank)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -340,8 +341,8 @@ Each operation has Time Complexity = O(n) and Space Complexity = O(1).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Char</span></td>
-        <td><span class="parametername">charToFind</span></td>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">indexOfCharInBWT</span></td>
         <td></td>
       </tr>
       <tr>
@@ -366,24 +367,24 @@ Each operation has Time Complexity = O(n) and Space Complexity = O(1).</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindIndexOfNthOccurrenceInBWT_System_Char_System_Int32__remarks">Remarks</h5>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindIndexOfNthOccurrenceInBWT_System_Int32_System_Int32__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>This implementation just iterates over <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_BWT">BWT</a> every time.
 Time Complexity = O(n). Space Complexity = O(1).</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindIndexOfNthOccurrenceInSortedBWT_System_Char_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Char%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindIndexOfNthOccurrenceInSortedBWT_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/NaiveFinder.cs/#L85">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/NaiveFinder.cs/#L82">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindIndexOfNthOccurrenceInSortedBWT_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindIndexOfNthOccurrenceInSortedBWT*"></a>
-  <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindIndexOfNthOccurrenceInSortedBWT_System_Char_System_Int32_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Char,System.Int32)">FindIndexOfNthOccurrenceInSortedBWT(Char, Int32)</h4>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindIndexOfNthOccurrenceInSortedBWT_System_Int32_System_Int32_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Int32,System.Int32)">FindIndexOfNthOccurrenceInSortedBWT(Int32, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual int FindIndexOfNthOccurrenceInSortedBWT(char charToFind, int occurrenceRank)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual int FindIndexOfNthOccurrenceInSortedBWT(int indexOfCharInBWT, int occurrenceRank)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -396,8 +397,8 @@ Time Complexity = O(n). Space Complexity = O(1).</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Char</span></td>
-        <td><span class="parametername">charToFind</span></td>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">indexOfCharInBWT</span></td>
         <td></td>
       </tr>
       <tr>
@@ -422,7 +423,7 @@ Time Complexity = O(n). Space Complexity = O(1).</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindIndexOfNthOccurrenceInSortedBWT_System_Char_System_Int32__remarks">Remarks</h5>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindIndexOfNthOccurrenceInSortedBWT_System_Int32_System_Int32__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>This implementation just iterates over <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_SortedBWT">SortedBWT</a> every time.
 Time Complexity = O(n). Space Complexity = O(1).</p>
 </div>
@@ -431,7 +432,7 @@ Time Complexity = O(n). Space Complexity = O(1).</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindOccurrenceRankOfCharInBWT_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindOccurrenceRankOfCharInBWT(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/NaiveFinder.cs/#L104">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/NaiveFinder.cs/#L101">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindOccurrenceRankOfCharInBWT_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindOccurrenceRankOfCharInBWT*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindOccurrenceRankOfCharInBWT_System_Int32_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindOccurrenceRankOfCharInBWT(System.Int32)">FindOccurrenceRankOfCharInBWT(Int32)</h4>
@@ -439,7 +440,7 @@ Time Complexity = O(n). Space Complexity = O(1).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual int FindOccurrenceRankOfCharInBWT(int indexOfChar)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual int FindOccurrenceRankOfCharInBWT(int indexOfCharInBWT)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -453,7 +454,7 @@ Time Complexity = O(n). Space Complexity = O(1).</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">indexOfChar</span></td>
+        <td><span class="parametername">indexOfCharInBWT</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -482,7 +483,7 @@ Time Complexity = O(n). Space Complexity = O(1).</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindOccurrenceRankOfCharInSortedBWT_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindOccurrenceRankOfCharInSortedBWT(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/NaiveFinder.cs/#L112">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/NaiveFinder.cs/#L109">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindOccurrenceRankOfCharInSortedBWT_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindOccurrenceRankOfCharInSortedBWT*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindOccurrenceRankOfCharInSortedBWT_System_Int32_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindOccurrenceRankOfCharInSortedBWT(System.Int32)">FindOccurrenceRankOfCharInSortedBWT(Int32)</h4>
@@ -490,7 +491,7 @@ Time Complexity = O(n). Space Complexity = O(1).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual int FindOccurrenceRankOfCharInSortedBWT(int indexOfChar)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual int FindOccurrenceRankOfCharInSortedBWT(int indexOfCharInSortedBWT)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -504,7 +505,7 @@ Time Complexity = O(n). Space Complexity = O(1).</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">indexOfChar</span></td>
+        <td><span class="parametername">indexOfCharInSortedBWT</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -533,7 +534,7 @@ Time Complexity = O(n). Space Complexity = O(1).</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_LastToFirst_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.LastToFirst(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/NaiveFinder.cs/#L124">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/NaiveFinder.cs/#L121">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_LastToFirst_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.LastToFirst*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_LastToFirst_System_Int32_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.LastToFirst(System.Int32)">LastToFirst(Int32)</h4>
@@ -541,7 +542,7 @@ Time Complexity = O(n). Space Complexity = O(1).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public (int indexInSortedBWT, int occurrenceRank) LastToFirst(int indexOfChar)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual (int indexInSortedBWT, int occurrenceRank) LastToFirst(int indexOfCharInBWT)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -555,7 +556,7 @@ Time Complexity = O(n). Space Complexity = O(1).</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">indexOfChar</span></td>
+        <td><span class="parametername">indexOfCharInBWT</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -577,11 +578,11 @@ Time Complexity = O(n). Space Complexity = O(1).</p>
   </table>
   <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_LastToFirst_System_Int32__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>First executes <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindOccurrenceRankOfCharInBWT_System_Int32_">FindOccurrenceRankOfCharInBWT(Int32)</a>, to find the occurrence rank of the char at
-index <code data-dev-comment-type="paramref" class="paramref">indexOfChar</code> and then uses the last-to-first property to find the corresponding char
-in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_SortedBWT">SortedBWT</a> by using <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindIndexOfNthOccurrenceInSortedBWT_System_Char_System_Int32_">FindIndexOfNthOccurrenceInSortedBWT(Char, Int32)</a>.
+index <code data-dev-comment-type="paramref" class="paramref">indexOfCharInBWT</code> and then uses the last-to-first property to find the corresponding
+char in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_SortedBWT">SortedBWT</a> by using <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindIndexOfNthOccurrenceInSortedBWT_System_Int32_System_Int32_">FindIndexOfNthOccurrenceInSortedBWT(Int32, Int32)</a>.
 <br>
 Time and Space Complexity depends on the implementation of <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindOccurrenceRankOfCharInBWT_System_Int32_">FindOccurrenceRankOfCharInBWT(Int32)</a> and
-<a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindIndexOfNthOccurrenceInSortedBWT_System_Char_System_Int32_">FindIndexOfNthOccurrenceInSortedBWT(Char, Int32)</a>.</p>
+<a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindIndexOfNthOccurrenceInSortedBWT_System_Int32_System_Int32_">FindIndexOfNthOccurrenceInSortedBWT(Int32, Int32)</a>.</p>
 </div>
   <h3 id="implements">Implements</h3>
   <div>
@@ -598,7 +599,7 @@ Time and Space Complexity depends on the implementation of <a class="xref" href=
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/NaiveFinder.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/NaiveFinder.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

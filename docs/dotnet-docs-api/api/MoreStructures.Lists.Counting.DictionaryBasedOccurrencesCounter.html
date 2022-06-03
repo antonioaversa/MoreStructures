@@ -84,7 +84,7 @@
   <h1 id="MoreStructures_Lists_Counting_DictionaryBasedOccurrencesCounter" data-uid="MoreStructures.Lists.Counting.DictionaryBasedOccurrencesCounter" class="text-break">Class DictionaryBasedOccurrencesCounter
   </h1>
   <div class="markdown level0 summary"><p>An implementation of <a class="xref" href="MoreStructures.Lists.Counting.IOccurrencesCounter.html">IOccurrencesCounter</a> which uses a <see cref="!:Dictionary&lt;TKey, TValue>"></see> to build
-the <see cref="!:IEnumerable&lt;T>"></see> of occurrences in linear time.</p>
+the two-level <see cref="!:IDictionary&lt;TKey, TValue>"></see> of occurrences, indexed by distinct item values and index.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -133,7 +133,7 @@ the <see cref="!:IEnumerable&lt;T>"></see> of occurrences in linear time.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Lists_Counting_DictionaryBasedOccurrencesCounter_Count__1_IEnumerable___0__.md&amp;value=---%0Auid%3A%20MoreStructures.Lists.Counting.DictionaryBasedOccurrencesCounter.Count%60%601(IEnumerable%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Counting/DictionaryBasedOccurrencesCounter.cs/#L17">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Counting/DictionaryBasedOccurrencesCounter.cs/#L22">View Source</a>
   </span>
   <a id="MoreStructures_Lists_Counting_DictionaryBasedOccurrencesCounter_Count_" data-uid="MoreStructures.Lists.Counting.DictionaryBasedOccurrencesCounter.Count*"></a>
   <h4 id="MoreStructures_Lists_Counting_DictionaryBasedOccurrencesCounter_Count__1_IEnumerable___0__" data-uid="MoreStructures.Lists.Counting.DictionaryBasedOccurrencesCounter.Count``1(IEnumerable{``0})">Count&lt;T&gt;(IEnumerable&lt;T&gt;)</h4>
@@ -141,7 +141,7 @@ the <see cref="!:IEnumerable&lt;T>"></see> of occurrences in linear time.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;int&gt; Count&lt;T&gt;(IEnumerable&lt;T&gt; enumerable)</code></pre>
+    <pre><code class="lang-csharp hljs">public IDictionary&lt;T, IDictionary&lt;int, int&gt;&gt; Count&lt;T&gt;(IEnumerable&lt;T&gt; enumerable)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -170,7 +170,7 @@ the <see cref="!:IEnumerable&lt;T>"></see> of occurrences in linear time.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">IDictionary</span>&lt;T, <span class="xref">IDictionary</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">System.Int32</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -193,7 +193,12 @@ the <see cref="!:IEnumerable&lt;T>"></see> of occurrences in linear time.</p>
   </table>
   <h5 id="MoreStructures_Lists_Counting_DictionaryBasedOccurrencesCounter_Count__1_IEnumerable___0___remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Perform counting by keeping a <see cref="!:IDictionary&lt;TKey, TValue>"></see> of the current number of occurrences per
-item encountered while enumerating <code data-dev-comment-type="paramref" class="paramref">enumerable</code>.</p>
+item encountered, by distinct value of <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> and index, while enumerating
+<code data-dev-comment-type="paramref" class="paramref">enumerable</code>.
+<br>
+Time Complexity = O(n) and Space Complexity = O(n * sigma), where n = number of items in
+<code data-dev-comment-type="paramref" class="paramref">enumerable</code> and sigma = number of the alphabet of <code data-dev-comment-type="paramref" class="paramref">enumerable</code>, i.e. the
+number of distinct items of type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> in <code data-dev-comment-type="paramref" class="paramref">enumerable</code>.</p>
 </div>
   <h3 id="implements">Implements</h3>
   <div>

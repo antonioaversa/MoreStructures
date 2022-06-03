@@ -101,15 +101,12 @@ references:
   commentId: T:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder
   fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder
   nameWithType: BinarySearchFinder
-- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.#ctor(MoreStructures.RotatedTextWithTerminator,Func{MoreStructures.RotatedTextWithTerminator,IComparer{System.Char},MoreStructures.RotatedTextWithTerminator})
-  name: BinarySearchFinder(RotatedTextWithTerminator, Func<RotatedTextWithTerminator, IComparer<Char>, RotatedTextWithTerminator>)
-  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_BinarySearchFinder__ctor_MoreStructures_RotatedTextWithTerminator_Func_MoreStructures_RotatedTextWithTerminator_IComparer_System_Char__MoreStructures_RotatedTextWithTerminator__
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.#ctor(MoreStructures.RotatedTextWithTerminator,Func{MoreStructures.RotatedTextWithTerminator,IComparer{System.Char},MoreStructures.RotatedTextWithTerminator})
-  name.vb: BinarySearchFinder(RotatedTextWithTerminator, Func(Of RotatedTextWithTerminator, IComparer(Of Char), RotatedTextWithTerminator))
-  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.BinarySearchFinder(MoreStructures.RotatedTextWithTerminator, Func<MoreStructures.RotatedTextWithTerminator, IComparer<System.Char>, MoreStructures.RotatedTextWithTerminator>)
-  fullName.vb: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.BinarySearchFinder(MoreStructures.RotatedTextWithTerminator, Func(Of MoreStructures.RotatedTextWithTerminator, IComparer(Of System.Char), MoreStructures.RotatedTextWithTerminator))
-  nameWithType: BinarySearchFinder.BinarySearchFinder(RotatedTextWithTerminator, Func<RotatedTextWithTerminator, IComparer<Char>, RotatedTextWithTerminator>)
-  nameWithType.vb: BinarySearchFinder.BinarySearchFinder(RotatedTextWithTerminator, Func(Of RotatedTextWithTerminator, IComparer(Of Char), RotatedTextWithTerminator))
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy)
+  name: BinarySearchFinder(RotatedTextWithTerminator, ILastFirstFinder.SortStrategy)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_BinarySearchFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortStrategy_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.BinarySearchFinder(MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy)
+  nameWithType: BinarySearchFinder.BinarySearchFinder(RotatedTextWithTerminator, ILastFirstFinder.SortStrategy)
 - uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator)
   name: BinarySearchFinder(RotatedTextWithTerminator, RotatedTextWithTerminator)
   href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_BinarySearchFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_
@@ -123,12 +120,12 @@ references:
   isSpec: "True"
   fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.BinarySearchFinder
   nameWithType: BinarySearchFinder.BinarySearchFinder
-- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Char,System.Int32)
-  name: FindIndexOfNthOccurrenceInSortedBWT(Char, Int32)
-  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_BinarySearchFinder_FindIndexOfNthOccurrenceInSortedBWT_System_Char_System_Int32_
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Char,System.Int32)
-  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Char, System.Int32)
-  nameWithType: BinarySearchFinder.FindIndexOfNthOccurrenceInSortedBWT(Char, Int32)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Int32,System.Int32)
+  name: FindIndexOfNthOccurrenceInSortedBWT(Int32, Int32)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_BinarySearchFinder_FindIndexOfNthOccurrenceInSortedBWT_System_Int32_System_Int32_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Int32,System.Int32)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Int32, System.Int32)
+  nameWithType: BinarySearchFinder.FindIndexOfNthOccurrenceInSortedBWT(Int32, Int32)
 - uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.FindIndexOfNthOccurrenceInSortedBWT*
   name: FindIndexOfNthOccurrenceInSortedBWT
   href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_BinarySearchFinder_FindIndexOfNthOccurrenceInSortedBWT_
@@ -194,12 +191,12 @@ references:
   isSpec: "True"
   fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.CharComparer
   nameWithType: ILastFirstFinder.CharComparer
-- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInBWT(System.Char,System.Int32)
-  name: FindIndexOfNthOccurrenceInBWT(Char, Int32)
-  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindIndexOfNthOccurrenceInBWT_System_Char_System_Int32_
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInBWT(System.Char,System.Int32)
-  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInBWT(System.Char, System.Int32)
-  nameWithType: ILastFirstFinder.FindIndexOfNthOccurrenceInBWT(Char, Int32)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInBWT(System.Int32,System.Int32)
+  name: FindIndexOfNthOccurrenceInBWT(Int32, Int32)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindIndexOfNthOccurrenceInBWT_System_Int32_System_Int32_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInBWT(System.Int32,System.Int32)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInBWT(System.Int32, System.Int32)
+  nameWithType: ILastFirstFinder.FindIndexOfNthOccurrenceInBWT(Int32, Int32)
 - uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInBWT*
   name: FindIndexOfNthOccurrenceInBWT
   href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindIndexOfNthOccurrenceInBWT_
@@ -207,12 +204,12 @@ references:
   isSpec: "True"
   fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInBWT
   nameWithType: ILastFirstFinder.FindIndexOfNthOccurrenceInBWT
-- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Char,System.Int32)
-  name: FindIndexOfNthOccurrenceInSortedBWT(Char, Int32)
-  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindIndexOfNthOccurrenceInSortedBWT_System_Char_System_Int32_
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Char,System.Int32)
-  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Char, System.Int32)
-  nameWithType: ILastFirstFinder.FindIndexOfNthOccurrenceInSortedBWT(Char, Int32)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Int32,System.Int32)
+  name: FindIndexOfNthOccurrenceInSortedBWT(Int32, Int32)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindIndexOfNthOccurrenceInSortedBWT_System_Int32_System_Int32_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Int32,System.Int32)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Int32, System.Int32)
+  nameWithType: ILastFirstFinder.FindIndexOfNthOccurrenceInSortedBWT(Int32, Int32)
 - uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.FindIndexOfNthOccurrenceInSortedBWT*
   name: FindIndexOfNthOccurrenceInSortedBWT
   href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindIndexOfNthOccurrenceInSortedBWT_
@@ -278,21 +275,24 @@ references:
   isSpec: "True"
   fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortedBWT
   nameWithType: ILastFirstFinder.SortedBWT
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy
+  name: ILastFirstFinder.SortStrategy
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy.html
+  commentId: T:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy
+  nameWithType: ILastFirstFinder.SortStrategy
 - uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder
   name: NaiveFinder
   href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html
   commentId: T:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder
   fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder
   nameWithType: NaiveFinder
-- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.#ctor(MoreStructures.RotatedTextWithTerminator,Func{MoreStructures.RotatedTextWithTerminator,IComparer{System.Char},MoreStructures.RotatedTextWithTerminator})
-  name: NaiveFinder(RotatedTextWithTerminator, Func<RotatedTextWithTerminator, IComparer<Char>, RotatedTextWithTerminator>)
-  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder__ctor_MoreStructures_RotatedTextWithTerminator_Func_MoreStructures_RotatedTextWithTerminator_IComparer_System_Char__MoreStructures_RotatedTextWithTerminator__
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.#ctor(MoreStructures.RotatedTextWithTerminator,Func{MoreStructures.RotatedTextWithTerminator,IComparer{System.Char},MoreStructures.RotatedTextWithTerminator})
-  name.vb: NaiveFinder(RotatedTextWithTerminator, Func(Of RotatedTextWithTerminator, IComparer(Of Char), RotatedTextWithTerminator))
-  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.NaiveFinder(MoreStructures.RotatedTextWithTerminator, Func<MoreStructures.RotatedTextWithTerminator, IComparer<System.Char>, MoreStructures.RotatedTextWithTerminator>)
-  fullName.vb: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.NaiveFinder(MoreStructures.RotatedTextWithTerminator, Func(Of MoreStructures.RotatedTextWithTerminator, IComparer(Of System.Char), MoreStructures.RotatedTextWithTerminator))
-  nameWithType: NaiveFinder.NaiveFinder(RotatedTextWithTerminator, Func<RotatedTextWithTerminator, IComparer<Char>, RotatedTextWithTerminator>)
-  nameWithType.vb: NaiveFinder.NaiveFinder(RotatedTextWithTerminator, Func(Of RotatedTextWithTerminator, IComparer(Of Char), RotatedTextWithTerminator))
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy)
+  name: NaiveFinder(RotatedTextWithTerminator, ILastFirstFinder.SortStrategy)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortStrategy_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.NaiveFinder(MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy)
+  nameWithType: NaiveFinder.NaiveFinder(RotatedTextWithTerminator, ILastFirstFinder.SortStrategy)
 - uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator)
   name: NaiveFinder(RotatedTextWithTerminator, RotatedTextWithTerminator)
   href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_
@@ -332,12 +332,12 @@ references:
   isSpec: "True"
   fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.CharComparer
   nameWithType: NaiveFinder.CharComparer
-- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindIndexOfNthOccurrenceInBWT(System.Char,System.Int32)
-  name: FindIndexOfNthOccurrenceInBWT(Char, Int32)
-  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindIndexOfNthOccurrenceInBWT_System_Char_System_Int32_
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindIndexOfNthOccurrenceInBWT(System.Char,System.Int32)
-  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindIndexOfNthOccurrenceInBWT(System.Char, System.Int32)
-  nameWithType: NaiveFinder.FindIndexOfNthOccurrenceInBWT(Char, Int32)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindIndexOfNthOccurrenceInBWT(System.Int32,System.Int32)
+  name: FindIndexOfNthOccurrenceInBWT(Int32, Int32)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindIndexOfNthOccurrenceInBWT_System_Int32_System_Int32_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindIndexOfNthOccurrenceInBWT(System.Int32,System.Int32)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindIndexOfNthOccurrenceInBWT(System.Int32, System.Int32)
+  nameWithType: NaiveFinder.FindIndexOfNthOccurrenceInBWT(Int32, Int32)
 - uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindIndexOfNthOccurrenceInBWT*
   name: FindIndexOfNthOccurrenceInBWT
   href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindIndexOfNthOccurrenceInBWT_
@@ -345,12 +345,12 @@ references:
   isSpec: "True"
   fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindIndexOfNthOccurrenceInBWT
   nameWithType: NaiveFinder.FindIndexOfNthOccurrenceInBWT
-- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Char,System.Int32)
-  name: FindIndexOfNthOccurrenceInSortedBWT(Char, Int32)
-  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindIndexOfNthOccurrenceInSortedBWT_System_Char_System_Int32_
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Char,System.Int32)
-  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Char, System.Int32)
-  nameWithType: NaiveFinder.FindIndexOfNthOccurrenceInSortedBWT(Char, Int32)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Int32,System.Int32)
+  name: FindIndexOfNthOccurrenceInSortedBWT(Int32, Int32)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindIndexOfNthOccurrenceInSortedBWT_System_Int32_System_Int32_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Int32,System.Int32)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Int32, System.Int32)
+  nameWithType: NaiveFinder.FindIndexOfNthOccurrenceInSortedBWT(Int32, Int32)
 - uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.FindIndexOfNthOccurrenceInSortedBWT*
   name: FindIndexOfNthOccurrenceInSortedBWT
   href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindIndexOfNthOccurrenceInSortedBWT_
@@ -416,15 +416,12 @@ references:
   commentId: T:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder
   fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder
   nameWithType: PrecomputedFinder
-- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.#ctor(MoreStructures.RotatedTextWithTerminator,Func{MoreStructures.RotatedTextWithTerminator,IComparer{System.Char},MoreStructures.RotatedTextWithTerminator})
-  name: PrecomputedFinder(RotatedTextWithTerminator, Func<RotatedTextWithTerminator, IComparer<Char>, RotatedTextWithTerminator>)
-  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder__ctor_MoreStructures_RotatedTextWithTerminator_Func_MoreStructures_RotatedTextWithTerminator_IComparer_System_Char__MoreStructures_RotatedTextWithTerminator__
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.#ctor(MoreStructures.RotatedTextWithTerminator,Func{MoreStructures.RotatedTextWithTerminator,IComparer{System.Char},MoreStructures.RotatedTextWithTerminator})
-  name.vb: PrecomputedFinder(RotatedTextWithTerminator, Func(Of RotatedTextWithTerminator, IComparer(Of Char), RotatedTextWithTerminator))
-  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.PrecomputedFinder(MoreStructures.RotatedTextWithTerminator, Func<MoreStructures.RotatedTextWithTerminator, IComparer<System.Char>, MoreStructures.RotatedTextWithTerminator>)
-  fullName.vb: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.PrecomputedFinder(MoreStructures.RotatedTextWithTerminator, Func(Of MoreStructures.RotatedTextWithTerminator, IComparer(Of System.Char), MoreStructures.RotatedTextWithTerminator))
-  nameWithType: PrecomputedFinder.PrecomputedFinder(RotatedTextWithTerminator, Func<RotatedTextWithTerminator, IComparer<Char>, RotatedTextWithTerminator>)
-  nameWithType.vb: PrecomputedFinder.PrecomputedFinder(RotatedTextWithTerminator, Func(Of RotatedTextWithTerminator, IComparer(Of Char), RotatedTextWithTerminator))
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy)
+  name: PrecomputedFinder(RotatedTextWithTerminator, ILastFirstFinder.SortStrategy)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortStrategy_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.PrecomputedFinder(MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy)
+  nameWithType: PrecomputedFinder.PrecomputedFinder(RotatedTextWithTerminator, ILastFirstFinder.SortStrategy)
 - uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator)
   name: PrecomputedFinder(RotatedTextWithTerminator, RotatedTextWithTerminator)
   href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_
@@ -438,12 +435,12 @@ references:
   isSpec: "True"
   fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.PrecomputedFinder
   nameWithType: PrecomputedFinder.PrecomputedFinder
-- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.FindIndexOfNthOccurrenceInBWT(System.Char,System.Int32)
-  name: FindIndexOfNthOccurrenceInBWT(Char, Int32)
-  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder_FindIndexOfNthOccurrenceInBWT_System_Char_System_Int32_
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.FindIndexOfNthOccurrenceInBWT(System.Char,System.Int32)
-  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.FindIndexOfNthOccurrenceInBWT(System.Char, System.Int32)
-  nameWithType: PrecomputedFinder.FindIndexOfNthOccurrenceInBWT(Char, Int32)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.FindIndexOfNthOccurrenceInBWT(System.Int32,System.Int32)
+  name: FindIndexOfNthOccurrenceInBWT(Int32, Int32)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder_FindIndexOfNthOccurrenceInBWT_System_Int32_System_Int32_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.FindIndexOfNthOccurrenceInBWT(System.Int32,System.Int32)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.FindIndexOfNthOccurrenceInBWT(System.Int32, System.Int32)
+  nameWithType: PrecomputedFinder.FindIndexOfNthOccurrenceInBWT(Int32, Int32)
 - uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.FindIndexOfNthOccurrenceInBWT*
   name: FindIndexOfNthOccurrenceInBWT
   href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder_FindIndexOfNthOccurrenceInBWT_
@@ -451,12 +448,12 @@ references:
   isSpec: "True"
   fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.FindIndexOfNthOccurrenceInBWT
   nameWithType: PrecomputedFinder.FindIndexOfNthOccurrenceInBWT
-- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Char,System.Int32)
-  name: FindIndexOfNthOccurrenceInSortedBWT(Char, Int32)
-  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder_FindIndexOfNthOccurrenceInSortedBWT_System_Char_System_Int32_
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Char,System.Int32)
-  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Char, System.Int32)
-  nameWithType: PrecomputedFinder.FindIndexOfNthOccurrenceInSortedBWT(Char, Int32)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Int32,System.Int32)
+  name: FindIndexOfNthOccurrenceInSortedBWT(Int32, Int32)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder_FindIndexOfNthOccurrenceInSortedBWT_System_Int32_System_Int32_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Int32,System.Int32)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.FindIndexOfNthOccurrenceInSortedBWT(System.Int32, System.Int32)
+  nameWithType: PrecomputedFinder.FindIndexOfNthOccurrenceInSortedBWT(Int32, Int32)
 - uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.FindIndexOfNthOccurrenceInSortedBWT*
   name: FindIndexOfNthOccurrenceInSortedBWT
   href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder_FindIndexOfNthOccurrenceInSortedBWT_
@@ -756,6 +753,12 @@ references:
   commentId: N:MoreStructures.BurrowsWheelerTransform.Matching
   fullName: MoreStructures.BurrowsWheelerTransform.Matching
   nameWithType: MoreStructures.BurrowsWheelerTransform.Matching
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher
+  name: CountBasedNarrowingIntervalMatcher
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.html
+  commentId: T:MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher
+  nameWithType: CountBasedNarrowingIntervalMatcher
 - uid: MoreStructures.BurrowsWheelerTransform.Matching.IMatcher
   name: IMatcher
   href: api/MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html
@@ -871,6 +874,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.Match
   nameWithType: NarrowingIntervalMatcher.Match
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.NarrowInterval(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder,System.Int32,System.Int32,System.Char)
+  name: NarrowInterval(RotatedTextWithTerminator, ILastFirstFinder, Int32, Int32, Char)
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_NarrowInterval_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_System_Int32_System_Int32_System_Char_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.NarrowInterval(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder,System.Int32,System.Int32,System.Char)
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.NarrowInterval(MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder, System.Int32, System.Int32, System.Char)
+  nameWithType: NarrowingIntervalMatcher.NarrowInterval(RotatedTextWithTerminator, ILastFirstFinder, Int32, Int32, Char)
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.NarrowInterval*
+  name: NarrowInterval
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_NarrowInterval_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.NarrowInterval
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.NarrowInterval
+  nameWithType: NarrowingIntervalMatcher.NarrowInterval
 - uid: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.OrderedAscListSearch
   name: OrderedAscListSearch
   href: api/MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_OrderedAscListSearch
@@ -3244,12 +3260,12 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FinderBuilder
   nameWithType: LastFirstFinderTests.FinderBuilder
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindIndexOfNthOccurrenceInBWTAndSortedBWT_IsCorrect(System.String,System.Char,System.Char,System.Int32,System.Int32,System.Int32)
-  name: FindIndexOfNthOccurrenceInBWTAndSortedBWT_IsCorrect(String, Char, Char, Int32, Int32, Int32)
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstFinders_LastFirstFinderTests_FindIndexOfNthOccurrenceInBWTAndSortedBWT_IsCorrect_System_String_System_Char_System_Char_System_Int32_System_Int32_System_Int32_
-  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindIndexOfNthOccurrenceInBWTAndSortedBWT_IsCorrect(System.String,System.Char,System.Char,System.Int32,System.Int32,System.Int32)
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindIndexOfNthOccurrenceInBWTAndSortedBWT_IsCorrect(System.String, System.Char, System.Char, System.Int32, System.Int32, System.Int32)
-  nameWithType: LastFirstFinderTests.FindIndexOfNthOccurrenceInBWTAndSortedBWT_IsCorrect(String, Char, Char, Int32, Int32, Int32)
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindIndexOfNthOccurrenceInBWTAndSortedBWT_IsCorrect(System.String,System.Char,System.Int32,System.Int32,System.Int32,System.Int32)
+  name: FindIndexOfNthOccurrenceInBWTAndSortedBWT_IsCorrect(String, Char, Int32, Int32, Int32, Int32)
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstFinders_LastFirstFinderTests_FindIndexOfNthOccurrenceInBWTAndSortedBWT_IsCorrect_System_String_System_Char_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindIndexOfNthOccurrenceInBWTAndSortedBWT_IsCorrect(System.String,System.Char,System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindIndexOfNthOccurrenceInBWTAndSortedBWT_IsCorrect(System.String, System.Char, System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: LastFirstFinderTests.FindIndexOfNthOccurrenceInBWTAndSortedBWT_IsCorrect(String, Char, Int32, Int32, Int32, Int32)
 - uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindIndexOfNthOccurrenceInBWTAndSortedBWT_IsCorrect*
   name: FindIndexOfNthOccurrenceInBWTAndSortedBWT_IsCorrect
   href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstFinders_LastFirstFinderTests_FindIndexOfNthOccurrenceInBWTAndSortedBWT_IsCorrect_
@@ -3257,12 +3273,12 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindIndexOfNthOccurrenceInBWTAndSortedBWT_IsCorrect
   nameWithType: LastFirstFinderTests.FindIndexOfNthOccurrenceInBWTAndSortedBWT_IsCorrect
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindIndexOfNthOccurrenceInBWTAndSortedBWT_ThrowsExceptionOnInvalidInput(System.String,System.Char,System.Char,System.Int32)
-  name: FindIndexOfNthOccurrenceInBWTAndSortedBWT_ThrowsExceptionOnInvalidInput(String, Char, Char, Int32)
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstFinders_LastFirstFinderTests_FindIndexOfNthOccurrenceInBWTAndSortedBWT_ThrowsExceptionOnInvalidInput_System_String_System_Char_System_Char_System_Int32_
-  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindIndexOfNthOccurrenceInBWTAndSortedBWT_ThrowsExceptionOnInvalidInput(System.String,System.Char,System.Char,System.Int32)
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindIndexOfNthOccurrenceInBWTAndSortedBWT_ThrowsExceptionOnInvalidInput(System.String, System.Char, System.Char, System.Int32)
-  nameWithType: LastFirstFinderTests.FindIndexOfNthOccurrenceInBWTAndSortedBWT_ThrowsExceptionOnInvalidInput(String, Char, Char, Int32)
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindIndexOfNthOccurrenceInBWTAndSortedBWT_ThrowsExceptionOnInvalidInput(System.String,System.Char,System.Int32,System.Int32)
+  name: FindIndexOfNthOccurrenceInBWTAndSortedBWT_ThrowsExceptionOnInvalidInput(String, Char, Int32, Int32)
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstFinders_LastFirstFinderTests_FindIndexOfNthOccurrenceInBWTAndSortedBWT_ThrowsExceptionOnInvalidInput_System_String_System_Char_System_Int32_System_Int32_
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindIndexOfNthOccurrenceInBWTAndSortedBWT_ThrowsExceptionOnInvalidInput(System.String,System.Char,System.Int32,System.Int32)
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindIndexOfNthOccurrenceInBWTAndSortedBWT_ThrowsExceptionOnInvalidInput(System.String, System.Char, System.Int32, System.Int32)
+  nameWithType: LastFirstFinderTests.FindIndexOfNthOccurrenceInBWTAndSortedBWT_ThrowsExceptionOnInvalidInput(String, Char, Int32, Int32)
 - uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindIndexOfNthOccurrenceInBWTAndSortedBWT_ThrowsExceptionOnInvalidInput*
   name: FindIndexOfNthOccurrenceInBWTAndSortedBWT_ThrowsExceptionOnInvalidInput
   href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstFinders_LastFirstFinderTests_FindIndexOfNthOccurrenceInBWTAndSortedBWT_ThrowsExceptionOnInvalidInput_
@@ -3270,19 +3286,32 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindIndexOfNthOccurrenceInBWTAndSortedBWT_ThrowsExceptionOnInvalidInput
   nameWithType: LastFirstFinderTests.FindIndexOfNthOccurrenceInBWTAndSortedBWT_ThrowsExceptionOnInvalidInput
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindOccurrenceOfCharInBWTAndSortedBWT_IsCorrect(System.String,System.Char,System.Int32,System.Int32,System.Int32)
-  name: FindOccurrenceOfCharInBWTAndSortedBWT_IsCorrect(String, Char, Int32, Int32, Int32)
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstFinders_LastFirstFinderTests_FindOccurrenceOfCharInBWTAndSortedBWT_IsCorrect_System_String_System_Char_System_Int32_System_Int32_System_Int32_
-  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindOccurrenceOfCharInBWTAndSortedBWT_IsCorrect(System.String,System.Char,System.Int32,System.Int32,System.Int32)
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindOccurrenceOfCharInBWTAndSortedBWT_IsCorrect(System.String, System.Char, System.Int32, System.Int32, System.Int32)
-  nameWithType: LastFirstFinderTests.FindOccurrenceOfCharInBWTAndSortedBWT_IsCorrect(String, Char, Int32, Int32, Int32)
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindOccurrenceOfCharInBWTAndSortedBWT_IsCorrect*
-  name: FindOccurrenceOfCharInBWTAndSortedBWT_IsCorrect
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstFinders_LastFirstFinderTests_FindOccurrenceOfCharInBWTAndSortedBWT_IsCorrect_
-  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindOccurrenceOfCharInBWTAndSortedBWT_IsCorrect
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindOccurrenceOfCharInBWT_IsCorrect(System.String,System.Char,System.Int32,System.Int32)
+  name: FindOccurrenceOfCharInBWT_IsCorrect(String, Char, Int32, Int32)
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstFinders_LastFirstFinderTests_FindOccurrenceOfCharInBWT_IsCorrect_System_String_System_Char_System_Int32_System_Int32_
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindOccurrenceOfCharInBWT_IsCorrect(System.String,System.Char,System.Int32,System.Int32)
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindOccurrenceOfCharInBWT_IsCorrect(System.String, System.Char, System.Int32, System.Int32)
+  nameWithType: LastFirstFinderTests.FindOccurrenceOfCharInBWT_IsCorrect(String, Char, Int32, Int32)
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindOccurrenceOfCharInBWT_IsCorrect*
+  name: FindOccurrenceOfCharInBWT_IsCorrect
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstFinders_LastFirstFinderTests_FindOccurrenceOfCharInBWT_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindOccurrenceOfCharInBWT_IsCorrect
   isSpec: "True"
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindOccurrenceOfCharInBWTAndSortedBWT_IsCorrect
-  nameWithType: LastFirstFinderTests.FindOccurrenceOfCharInBWTAndSortedBWT_IsCorrect
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindOccurrenceOfCharInBWT_IsCorrect
+  nameWithType: LastFirstFinderTests.FindOccurrenceOfCharInBWT_IsCorrect
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindOccurrenceOfCharInSortedBWT_IsCorrect(System.String,System.Char,System.Int32,System.Int32)
+  name: FindOccurrenceOfCharInSortedBWT_IsCorrect(String, Char, Int32, Int32)
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstFinders_LastFirstFinderTests_FindOccurrenceOfCharInSortedBWT_IsCorrect_System_String_System_Char_System_Int32_System_Int32_
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindOccurrenceOfCharInSortedBWT_IsCorrect(System.String,System.Char,System.Int32,System.Int32)
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindOccurrenceOfCharInSortedBWT_IsCorrect(System.String, System.Char, System.Int32, System.Int32)
+  nameWithType: LastFirstFinderTests.FindOccurrenceOfCharInSortedBWT_IsCorrect(String, Char, Int32, Int32)
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindOccurrenceOfCharInSortedBWT_IsCorrect*
+  name: FindOccurrenceOfCharInSortedBWT_IsCorrect
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstFinders_LastFirstFinderTests_FindOccurrenceOfCharInSortedBWT_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindOccurrenceOfCharInSortedBWT_IsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindOccurrenceOfCharInSortedBWT_IsCorrect
+  nameWithType: LastFirstFinderTests.FindOccurrenceOfCharInSortedBWT_IsCorrect
 - uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.FindOccurrenceOfCharInSortedBWTAndSortedBWT_ThrowsExceptionOnInvalidInput(System.String,System.Char,System.Int32)
   name: FindOccurrenceOfCharInSortedBWTAndSortedBWT_ThrowsExceptionOnInvalidInput(String, Char, Int32)
   href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstFinders_LastFirstFinderTests_FindOccurrenceOfCharInSortedBWTAndSortedBWT_ThrowsExceptionOnInvalidInput_System_String_System_Char_System_Int32_
@@ -3360,63 +3389,63 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.PrecomputedFinderTests.PrecomputedFinderTests
   nameWithType: PrecomputedFinderTests.PrecomputedFinderTests
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithBinarySearchFinderTests
-  name: LastFirstPropertyBasedBuilderWithBinarySearchFinderTests
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithBinarySearchFinderTests.html
-  commentId: T:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithBinarySearchFinderTests
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithBinarySearchFinderTests
-  nameWithType: LastFirstPropertyBasedBuilderWithBinarySearchFinderTests
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithBinarySearchFinderTests.#ctor
-  name: LastFirstPropertyBasedBuilderWithBinarySearchFinderTests()
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithBinarySearchFinderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstPropertyBasedBuilderWithBinarySearchFinderTests__ctor
-  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithBinarySearchFinderTests.#ctor
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithBinarySearchFinderTests.LastFirstPropertyBasedBuilderWithBinarySearchFinderTests()
-  nameWithType: LastFirstPropertyBasedBuilderWithBinarySearchFinderTests.LastFirstPropertyBasedBuilderWithBinarySearchFinderTests()
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithBinarySearchFinderTests.#ctor*
-  name: LastFirstPropertyBasedBuilderWithBinarySearchFinderTests
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithBinarySearchFinderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstPropertyBasedBuilderWithBinarySearchFinderTests__ctor_
-  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithBinarySearchFinderTests.#ctor
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithBinarySearchFinder
+  name: LastFirstPropertyBasedBuilderTests_WithBinarySearchFinder
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithBinarySearchFinder.html
+  commentId: T:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithBinarySearchFinder
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithBinarySearchFinder
+  nameWithType: LastFirstPropertyBasedBuilderTests_WithBinarySearchFinder
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithBinarySearchFinder.#ctor
+  name: LastFirstPropertyBasedBuilderTests_WithBinarySearchFinder()
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithBinarySearchFinder.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstPropertyBasedBuilderTests_WithBinarySearchFinder__ctor
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithBinarySearchFinder.#ctor
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithBinarySearchFinder.LastFirstPropertyBasedBuilderTests_WithBinarySearchFinder()
+  nameWithType: LastFirstPropertyBasedBuilderTests_WithBinarySearchFinder.LastFirstPropertyBasedBuilderTests_WithBinarySearchFinder()
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithBinarySearchFinder.#ctor*
+  name: LastFirstPropertyBasedBuilderTests_WithBinarySearchFinder
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithBinarySearchFinder.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstPropertyBasedBuilderTests_WithBinarySearchFinder__ctor_
+  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithBinarySearchFinder.#ctor
   isSpec: "True"
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithBinarySearchFinderTests.LastFirstPropertyBasedBuilderWithBinarySearchFinderTests
-  nameWithType: LastFirstPropertyBasedBuilderWithBinarySearchFinderTests.LastFirstPropertyBasedBuilderWithBinarySearchFinderTests
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithNaiveFinderTests
-  name: LastFirstPropertyBasedBuilderWithNaiveFinderTests
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithNaiveFinderTests.html
-  commentId: T:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithNaiveFinderTests
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithNaiveFinderTests
-  nameWithType: LastFirstPropertyBasedBuilderWithNaiveFinderTests
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithNaiveFinderTests.#ctor
-  name: LastFirstPropertyBasedBuilderWithNaiveFinderTests()
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithNaiveFinderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstPropertyBasedBuilderWithNaiveFinderTests__ctor
-  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithNaiveFinderTests.#ctor
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithNaiveFinderTests.LastFirstPropertyBasedBuilderWithNaiveFinderTests()
-  nameWithType: LastFirstPropertyBasedBuilderWithNaiveFinderTests.LastFirstPropertyBasedBuilderWithNaiveFinderTests()
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithNaiveFinderTests.#ctor*
-  name: LastFirstPropertyBasedBuilderWithNaiveFinderTests
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithNaiveFinderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstPropertyBasedBuilderWithNaiveFinderTests__ctor_
-  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithNaiveFinderTests.#ctor
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithBinarySearchFinder.LastFirstPropertyBasedBuilderTests_WithBinarySearchFinder
+  nameWithType: LastFirstPropertyBasedBuilderTests_WithBinarySearchFinder.LastFirstPropertyBasedBuilderTests_WithBinarySearchFinder
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithNaiveFinder
+  name: LastFirstPropertyBasedBuilderTests_WithNaiveFinder
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithNaiveFinder.html
+  commentId: T:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithNaiveFinder
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithNaiveFinder
+  nameWithType: LastFirstPropertyBasedBuilderTests_WithNaiveFinder
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithNaiveFinder.#ctor
+  name: LastFirstPropertyBasedBuilderTests_WithNaiveFinder()
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithNaiveFinder.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstPropertyBasedBuilderTests_WithNaiveFinder__ctor
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithNaiveFinder.#ctor
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithNaiveFinder.LastFirstPropertyBasedBuilderTests_WithNaiveFinder()
+  nameWithType: LastFirstPropertyBasedBuilderTests_WithNaiveFinder.LastFirstPropertyBasedBuilderTests_WithNaiveFinder()
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithNaiveFinder.#ctor*
+  name: LastFirstPropertyBasedBuilderTests_WithNaiveFinder
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithNaiveFinder.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstPropertyBasedBuilderTests_WithNaiveFinder__ctor_
+  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithNaiveFinder.#ctor
   isSpec: "True"
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithNaiveFinderTests.LastFirstPropertyBasedBuilderWithNaiveFinderTests
-  nameWithType: LastFirstPropertyBasedBuilderWithNaiveFinderTests.LastFirstPropertyBasedBuilderWithNaiveFinderTests
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests
-  name: LastFirstPropertyBasedBuilderWithPrecomputedFinderTests
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests.html
-  commentId: T:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests
-  nameWithType: LastFirstPropertyBasedBuilderWithPrecomputedFinderTests
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests.#ctor
-  name: LastFirstPropertyBasedBuilderWithPrecomputedFinderTests()
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstPropertyBasedBuilderWithPrecomputedFinderTests__ctor
-  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests.#ctor
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests()
-  nameWithType: LastFirstPropertyBasedBuilderWithPrecomputedFinderTests.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests()
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests.#ctor*
-  name: LastFirstPropertyBasedBuilderWithPrecomputedFinderTests
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstPropertyBasedBuilderWithPrecomputedFinderTests__ctor_
-  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests.#ctor
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithNaiveFinder.LastFirstPropertyBasedBuilderTests_WithNaiveFinder
+  nameWithType: LastFirstPropertyBasedBuilderTests_WithNaiveFinder.LastFirstPropertyBasedBuilderTests_WithNaiveFinder
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithPrecomputedFinder
+  name: LastFirstPropertyBasedBuilderTests_WithPrecomputedFinder
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithPrecomputedFinder.html
+  commentId: T:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithPrecomputedFinder
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithPrecomputedFinder
+  nameWithType: LastFirstPropertyBasedBuilderTests_WithPrecomputedFinder
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithPrecomputedFinder.#ctor
+  name: LastFirstPropertyBasedBuilderTests_WithPrecomputedFinder()
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithPrecomputedFinder.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstPropertyBasedBuilderTests_WithPrecomputedFinder__ctor
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithPrecomputedFinder.#ctor
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithPrecomputedFinder.LastFirstPropertyBasedBuilderTests_WithPrecomputedFinder()
+  nameWithType: LastFirstPropertyBasedBuilderTests_WithPrecomputedFinder.LastFirstPropertyBasedBuilderTests_WithPrecomputedFinder()
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithPrecomputedFinder.#ctor*
+  name: LastFirstPropertyBasedBuilderTests_WithPrecomputedFinder
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithPrecomputedFinder.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstPropertyBasedBuilderTests_WithPrecomputedFinder__ctor_
+  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithPrecomputedFinder.#ctor
   isSpec: "True"
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests
-  nameWithType: LastFirstPropertyBasedBuilderWithPrecomputedFinderTests.LastFirstPropertyBasedBuilderWithPrecomputedFinderTests
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstPropertyBasedBuilderTests_WithPrecomputedFinder.LastFirstPropertyBasedBuilderTests_WithPrecomputedFinder
+  nameWithType: LastFirstPropertyBasedBuilderTests_WithPrecomputedFinder.LastFirstPropertyBasedBuilderTests_WithPrecomputedFinder
 - uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.NaiveBuilderTests
   name: NaiveBuilderTests
   href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.NaiveBuilderTests.html
