@@ -3,7 +3,7 @@
 
 /// <summary>
 /// A <see cref="BinarySearchFinder"/> refinement which precalculate an hash-map of all the positions by each
-/// char, for both BWT and its sorted version, which takes ~ 2 * n space.
+/// char, for both BWT and its sorted version, which takes ~ 2 * n space and makes searches in .
 /// </summary>
 public class PrecomputedFinder : BinarySearchFinder
 {
@@ -20,7 +20,7 @@ public class PrecomputedFinder : BinarySearchFinder
     /// <remarks>
     /// <inheritdoc cref="PrecomputedFinder" path="/summary"/>
     /// </remarks>
-    public PrecomputedFinder(RotatedTextWithTerminator lastBWMColumn, ILastFirstFinder.SortStrategy bwtSorter)
+    public PrecomputedFinder(RotatedTextWithTerminator lastBWMColumn, BWTransform.SortStrategy bwtSorter)
         : base(lastBWMColumn, bwtSorter)
     {
         _bwtOccurrenceIndexesOfChar = GetOccurrenceIndexesOfAllCharsIn(BWT);
@@ -87,6 +87,23 @@ public class PrecomputedFinder : BinarySearchFinder
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
+    /// <remarks>
+    ///     <para>
+    ///     This implementation uses a precomputed hash-map of all the positions by each char.
+    ///     </para>
+    ///     <para>
+    ///     However, unlike <see cref="ILastFirstFinder.SortedBWT"/>, <see cref="ILastFirstFinder.BWT"/> is not sorted,
+    ///     so the precomputed list storing all the indexes where the char of <see cref="ILastFirstFinder.BWT"/> at 
+    ///     index <paramref name="indexOfCharInBWT"/> appears can be accessed in O(1) but has to be iterated over 
+    ///     linearly. 
+    ///     <br/>
+    ///     Such a list has in average n / sigma elements, where sigma is the number of distinct chars in the text. 
+    ///     If sigma is constant, the Time Complexity is O(n). 
+    ///     <br/>
+    ///     Space Complexity is always O(1), since O(n * sigma) space has already been allocated to host the result of
+    ///     counts and first occurrences precomputation.
+    ///     </para>
+    /// </remarks>
     public override int FindOccurrenceRankOfCharInBWT(int indexOfCharInBWT)
     {
         if (indexOfCharInBWT < 0 || indexOfCharInBWT >= BWT.Length)

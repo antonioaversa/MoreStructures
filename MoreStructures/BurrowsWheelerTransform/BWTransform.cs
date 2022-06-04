@@ -1,4 +1,6 @@
-﻿namespace MoreStructures.BurrowsWheelerTransform;
+﻿using MoreStructures.Utilities;
+
+namespace MoreStructures.BurrowsWheelerTransform;
 
 /// <summary>
 /// The Burrows-Wheeler Transform (BWT) of a <see cref="TextWithTerminator"/> <paramref name="Text"/> is a permutation
@@ -14,6 +16,34 @@
 /// </remarks>
 public record BWTransform(TextWithTerminator Text, RotatedTextWithTerminator Content)
 {
+    /// <summary>
+    /// Any strategy to sort the <see cref="char"/> of a <see cref="RotatedTextWithTerminator"/>, for example to turn
+    /// a BWT into its sorted version.
+    /// </summary>
+    /// <param name="text">The text to be sorted.</param>
+    /// <param name="comparer">
+    /// The <see cref="IComparer{T}"/> of <see cref="char"/> to be used for comparison.
+    /// If not specified, a <see cref="CharOrTerminatorComparer"/> using the 
+    /// <see cref="RotatedTextWithTerminator.Terminator"/> of <paramref name="text" /> is used instead.
+    /// </param>
+    /// <returns>
+    /// A new <see cref="RotatedTextWithTerminator"/>, sorted according to the provided <paramref name="comparer"/>.
+    /// </returns>
+    public delegate RotatedTextWithTerminator SortStrategy(
+        RotatedTextWithTerminator text, IComparer<char>? comparer = null);
+
+    /// <summary>
+    /// A strategy to sort a <see cref="RotatedTextWithTerminator"/> using
+    /// <see cref="Enumerable.OrderBy{TSource, TKey}(IEnumerable{TSource}, Func{TSource, TKey}, IComparer{TKey}?)"/>,
+    /// which in turn uses a QuickSort with Time Complexity = O(n * log(n)) in average and O(n^2) in the worst case.
+    /// </summary>
+    /// <remarks>
+    /// Tipically used to sort the Burrows-Wheeler Transform.
+    /// </remarks>
+    public static readonly SortStrategy QuickSort =
+        (text, charComparer) => new(text.OrderBy(
+            c => c, charComparer ?? CharOrTerminatorComparer.Build(text.Terminator)), text.Terminator);
+
     /// <summary>
     /// The length of this transform, which corresponds to the length of <see cref="Content"/>.
     /// </summary>

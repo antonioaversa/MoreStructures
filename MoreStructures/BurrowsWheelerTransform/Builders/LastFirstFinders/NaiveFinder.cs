@@ -27,7 +27,7 @@ public class NaiveFinder : ILastFirstFinder
     /// A function sorting the provided<see cref="RotatedTextWithTerminator"/> into a sorted
     /// <see cref="RotatedTextWithTerminator"/>, according to the provided <see cref="IComparer{T}"/> of chars.
     /// </param>
-    public NaiveFinder(RotatedTextWithTerminator lastBWMColumn, ILastFirstFinder.SortStrategy bwtSorter)
+    public NaiveFinder(RotatedTextWithTerminator lastBWMColumn, BWTransform.SortStrategy bwtSorter)
     {
         CharComparer = CharOrTerminatorComparer.Build(lastBWMColumn.Terminator);
         BWT = lastBWMColumn;
@@ -39,10 +39,10 @@ public class NaiveFinder : ILastFirstFinder
     /// <paramref name="firstBWMColumn"/>. Because both columns of the BWM are provided, no sorting happens.
     /// </summary>
     /// <param name="lastBWMColumn">
-    /// The last column of the Burrows-Wheeler Matrix. Corresponds to <see cref="BWT"/>.
+    /// The last column of the Burrows-Wheeler Matrix. Corresponds to the <see cref="BWT"/>.
     /// </param>
     /// <param name="firstBWMColumn">
-    /// The first column of the Burrows-Wheeler Matrix. Corresponds to <see cref="SortedBWT"/>.
+    /// The first column of the Burrows-Wheeler Matrix. Corresponds to the <see cref="SortedBWT"/>.
     /// </param>
     public NaiveFinder(RotatedTextWithTerminator lastBWMColumn, RotatedTextWithTerminator firstBWMColumn)
     {

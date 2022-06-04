@@ -15,7 +15,7 @@ public class DictionaryBasedOccurrencesCounter : IOccurrencesCounter
     /// item encountered, by distinct value of <typeparamref name="T"/> and index, while enumerating 
     /// <paramref name="enumerable"/>.
     /// <br/>
-    /// Time Complexity = O(n) and Space Complexity = O(n * sigma), where n = number of items in 
+    /// Both Time Complexity and Space Complexity are O(n * sigma), where n = number of items in 
     /// <paramref name="enumerable"/> and sigma = number of the alphabet of <paramref name="enumerable"/>, i.e. the 
     /// number of distinct items of type <typeparamref name="T"/> in <paramref name="enumerable"/>.
     /// </remarks>

@@ -1,8 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MoreStructures.BurrowsWheelerTransform.Builders;
-using MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders;
 using MoreStructures.BurrowsWheelerTransform.Matching;
-using MoreStructures.Utilities;
 using System;
 
 namespace MoreStructures.Tests.BurrowsWheelerTransform.Matching;
@@ -10,11 +8,24 @@ namespace MoreStructures.Tests.BurrowsWheelerTransform.Matching;
 public abstract class MatcherTests
 {
     private IBuilder Builder { get; } = new LastFirstPropertyBasedBuilder();
-    private IMatcher Matcher { get; } = new NarrowingIntervalMatcher();
+    private Func<RotatedTextWithTerminator, IMatcher> MatcherBuilderWithBWTOnly { get; }
+    private Func<RotatedTextWithTerminator, RotatedTextWithTerminator, IMatcher> MatcherBuilderWithSortedBWT { get; }
 
-    protected MatcherTests(IMatcher matcher)
+    protected MatcherTests(
+        Func<RotatedTextWithTerminator, IMatcher> matcherBuilderWithBWTOnly, 
+        Func<RotatedTextWithTerminator, RotatedTextWithTerminator, IMatcher> matcherBuilderWithSortedBWT)
     {
-        Matcher = matcher;
+        MatcherBuilderWithBWTOnly = matcherBuilderWithBWTOnly;
+        MatcherBuilderWithSortedBWT = matcherBuilderWithSortedBWT;
+    }
+
+    [TestMethod]
+    public void Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT()
+    {
+        Assert.ThrowsException<ArgumentException>(
+            () => MatcherBuilderWithSortedBWT(new("a#", '#'), new("$a", '$')));
+        Assert.ThrowsException<ArgumentException>(
+            () => MatcherBuilderWithSortedBWT(new("a#$", '#'), new("$#a", '$')));
     }
 
     [DataRow("mississippi", "issi", true, 4, 3, 4)]
@@ -35,23 +46,19 @@ public abstract class MatcherTests
     {
         var text = new TextWithTerminator(textContent);
         var bwt = Builder.BuildTransform(text).Content;
-        var sbwt = ILastFirstFinder.QuickSort(bwt, CharOrTerminatorComparer.Build(text.Terminator));
-        var (success, matchedChars, startIndex, endIndex) = Matcher.Match(bwt, sbwt, patternContent);
+        var matcher = MatcherBuilderWithBWTOnly(bwt);
+        var (success, matchedChars, startIndex, endIndex) = matcher.Match(patternContent);
         Assert.AreEqual(expectedSuccess, success);
         Assert.AreEqual(expectedMatchedChars, matchedChars);
         Assert.AreEqual(expectedStart, startIndex);
         Assert.AreEqual(expectedEnd, endIndex);
     }
 
-    [TestMethod]
-    public void Match_RaisesExceptionWithIncosistentBWTAndSortedBWT()
-    {
-        Assert.ThrowsException<ArgumentException>(() => Matcher.Match(new("a#", '#'), new("$a", '$'), "a"));
-    }
 
     [TestMethod]
     public void Match_RaisesExceptionWithEmptyPattern()
     {
-        Assert.ThrowsException<ArgumentException>(() => Matcher.Match(new("a$"), new("$a"), ""));
+        Assert.ThrowsException<ArgumentException>(
+            () => MatcherBuilderWithSortedBWT(new("a$"), new("$a")).Match(""));
     }
 }

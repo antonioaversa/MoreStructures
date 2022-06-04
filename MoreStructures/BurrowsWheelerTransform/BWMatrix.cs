@@ -21,7 +21,7 @@ public record BWMatrix(TextWithTerminator Text, IList<string> Content)
     private readonly IComparer<char> _charComparer = CharOrTerminatorComparer.Build(Text.Terminator);
 
     /// <summary>
-    /// <inheritdoc cref="BWMatrix.BWMatrix(TextWithTerminator, IList{string})" path="/param[@name='Content']"/>
+    /// <inheritdoc cref="BWMatrix(TextWithTerminator, IList{string})" path="/param[@name='Content']"/>
     /// </summary>
     /// <returns>
     /// A readonly immutable list of strings, each one containing a row of the matrix, i.e. a string containing a 

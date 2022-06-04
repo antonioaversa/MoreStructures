@@ -1,8 +1,7 @@
 ﻿namespace MoreStructures.BurrowsWheelerTransform.Matching;
 
 /// <summary>
-/// The result of a pattern matching done by a 
-/// <see cref="IMatcher.Match(RotatedTextWithTerminator, RotatedTextWithTerminator, IEnumerable{char})"/>.
+/// The result of a pattern matching done by a <see cref="IMatcher.Match(IEnumerable{char})"/>.
 /// </summary>
 /// <param name="Success">Whether the pattern matching was successful or not.</param>
 /// <param name="MatchedChars">
