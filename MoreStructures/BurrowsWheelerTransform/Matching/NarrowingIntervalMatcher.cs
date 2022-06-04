@@ -79,8 +79,6 @@ public class NarrowingIntervalMatcher : IMatcher
     /// </remarks>
     public Match Match(IEnumerable<char> pattern)
     {
-        if (BWT.Terminator != SortedBWT.Terminator || BWT.Length != SortedBWT.Length)
-            throw new ArgumentException($"{nameof(BWT)} and {nameof(SortedBWT)} are not consistent with each other.");
         if (!pattern.Any())
             throw new ArgumentException("The pattern should be non-empty.", nameof(pattern));
         
