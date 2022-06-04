@@ -132,20 +132,20 @@ Each operation has Time Complexity = O(n) and Space Complexity = O(1).</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortStrategy_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.%23ctor(MoreStructures.RotatedTextWithTerminator%2CMoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_BWTransform_SortStrategy_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.%23ctor(MoreStructures.RotatedTextWithTerminator%2CMoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/NaiveFinder.cs/#L30">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder__ctor_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.#ctor*"></a>
-  <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortStrategy_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy)">NaiveFinder(RotatedTextWithTerminator, ILastFirstFinder.SortStrategy)</h4>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_BWTransform_SortStrategy_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy)">NaiveFinder(RotatedTextWithTerminator, BWTransform.SortStrategy)</h4>
   <div class="markdown level1 summary"><p>Builds an instance of this finder, for the provided <code data-dev-comment-type="paramref" class="paramref">lastBWMColumn</code>, using
 <code data-dev-comment-type="paramref" class="paramref">bwtSorter</code> to calculate <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_SortedBWT">SortedBWT</a> from it.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NaiveFinder(RotatedTextWithTerminator lastBWMColumn, ILastFirstFinder.SortStrategy bwtSorter)</code></pre>
+    <pre><code class="lang-csharp hljs">public NaiveFinder(RotatedTextWithTerminator lastBWMColumn, BWTransform.SortStrategy bwtSorter)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -164,7 +164,7 @@ Each operation has Time Complexity = O(n) and Space Complexity = O(1).</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy.html">ILastFirstFinder.SortStrategy</a></td>
+        <td><a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy.html">BWTransform.SortStrategy</a></td>
         <td><span class="parametername">bwtSorter</span></td>
         <td><p>A function sorting the provided<a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a> into a sorted
 <a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a>, according to the provided <see cref="!:IComparer&lt;T>"></see> of chars.</p>
@@ -202,13 +202,13 @@ Each operation has Time Complexity = O(n) and Space Complexity = O(1).</p>
       <tr>
         <td><a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a></td>
         <td><span class="parametername">lastBWMColumn</span></td>
-        <td><p>The last column of the Burrows-Wheeler Matrix. Corresponds to <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_BWT">BWT</a>.</p>
+        <td><p>The last column of the Burrows-Wheeler Matrix. Corresponds to the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_BWT">BWT</a>.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a></td>
         <td><span class="parametername">firstBWMColumn</span></td>
-        <td><p>The first column of the Burrows-Wheeler Matrix. Corresponds to <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_SortedBWT">SortedBWT</a>.</p>
+        <td><p>The first column of the Burrows-Wheeler Matrix. Corresponds to the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_SortedBWT">SortedBWT</a>.</p>
 </td>
       </tr>
     </tbody>

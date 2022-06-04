@@ -93,24 +93,88 @@ Burrows-Wheeler Transform of a text.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface IMatcher</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_Match_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_System_Collections_Generic_IEnumerable_System_Char__.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match(MoreStructures.RotatedTextWithTerminator%2CMoreStructures.RotatedTextWithTerminator%2CSystem.Collections.Generic.IEnumerable%7BSystem.Char%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_BWT.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.BWT%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/IMatcher.cs/#L19">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/IMatcher.cs/#L14">View Source</a>
   </span>
-  <a id="MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_Match_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match*"></a>
-  <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_Match_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_System_Collections_Generic_IEnumerable_System_Char__" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match(MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator,System.Collections.Generic.IEnumerable{System.Char})">Match(RotatedTextWithTerminator, RotatedTextWithTerminator, IEnumerable&lt;Char&gt;)</h4>
-  <div class="markdown level1 summary"><p>Tries to match the provided <code data-dev-comment-type="paramref" class="paramref">pattern</code> using the provided <code data-dev-comment-type="paramref" class="paramref">bwt</code> and its sorted
-version <code data-dev-comment-type="paramref" class="paramref">sbwt</code>.</p>
+  <a id="MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_BWT_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.BWT*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_BWT" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.BWT">BWT</h4>
+  <div class="markdown level1 summary"><p>The Burrows-Wheeler Transform. Also, the last column of the Burrows-Wheeler Matrix.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Match Match(RotatedTextWithTerminator bwt, RotatedTextWithTerminator sbwt, IEnumerable&lt;char&gt; pattern)</code></pre>
+    <pre><code class="lang-csharp hljs">RotatedTextWithTerminator BWT { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_SortedBWT.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.SortedBWT%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/IMatcher.cs/#L19">View Source</a>
+  </span>
+  <a id="MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_SortedBWT_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.SortedBWT*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_SortedBWT" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.SortedBWT">SortedBWT</h4>
+  <div class="markdown level1 summary"><p>The sorted version of the Burrows-Wheeler Transform. Also, the first column of the Burrows-Wheeler Matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">RotatedTextWithTerminator SortedBWT { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_Match_System_Collections_Generic_IEnumerable_System_Char__.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match(System.Collections.Generic.IEnumerable%7BSystem.Char%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/IMatcher.cs/#L27">View Source</a>
+  </span>
+  <a id="MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_Match_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_Match_System_Collections_Generic_IEnumerable_System_Char__" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match(System.Collections.Generic.IEnumerable{System.Char})">Match(IEnumerable&lt;Char&gt;)</h4>
+  <div class="markdown level1 summary"><p>Tries to match the provided <code data-dev-comment-type="paramref" class="paramref">pattern</code> against the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_BWT">BWT</a> and its sorted
+version <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_SortedBWT">SortedBWT</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Match Match(IEnumerable&lt;char&gt; pattern)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,18 +186,6 @@ version <code data-dev-comment-type="paramref" class="paramref">sbwt</code>.</p>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a></td>
-        <td><span class="parametername">bwt</span></td>
-        <td><p>The Burrows-Wheeler Transform of the text.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a></td>
-        <td><span class="parametername">sbwt</span></td>
-        <td><p>The Sorted Burrows-Wheeler Transform of the text</p>
-</td>
-      </tr>
       <tr>
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Char</span>&gt;</td>
         <td><span class="parametername">pattern</span></td>

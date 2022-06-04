@@ -101,12 +101,12 @@ references:
   commentId: T:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder
   fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder
   nameWithType: BinarySearchFinder
-- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy)
-  name: BinarySearchFinder(RotatedTextWithTerminator, ILastFirstFinder.SortStrategy)
-  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_BinarySearchFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortStrategy_
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy)
-  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.BinarySearchFinder(MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy)
-  nameWithType: BinarySearchFinder.BinarySearchFinder(RotatedTextWithTerminator, ILastFirstFinder.SortStrategy)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy)
+  name: BinarySearchFinder(RotatedTextWithTerminator, BWTransform.SortStrategy)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_BinarySearchFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_BWTransform_SortStrategy_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.BinarySearchFinder(MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy)
+  nameWithType: BinarySearchFinder.BinarySearchFinder(RotatedTextWithTerminator, BWTransform.SortStrategy)
 - uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator)
   name: BinarySearchFinder(RotatedTextWithTerminator, RotatedTextWithTerminator)
   href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_BinarySearchFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_
@@ -256,12 +256,6 @@ references:
   isSpec: "True"
   fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.LastToFirst
   nameWithType: ILastFirstFinder.LastToFirst
-- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.QuickSort
-  name: QuickSort
-  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_QuickSort
-  commentId: F:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.QuickSort
-  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.QuickSort
-  nameWithType: ILastFirstFinder.QuickSort
 - uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortedBWT
   name: SortedBWT
   href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortedBWT
@@ -275,24 +269,18 @@ references:
   isSpec: "True"
   fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortedBWT
   nameWithType: ILastFirstFinder.SortedBWT
-- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy
-  name: ILastFirstFinder.SortStrategy
-  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy.html
-  commentId: T:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy
-  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy
-  nameWithType: ILastFirstFinder.SortStrategy
 - uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder
   name: NaiveFinder
   href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html
   commentId: T:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder
   fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder
   nameWithType: NaiveFinder
-- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy)
-  name: NaiveFinder(RotatedTextWithTerminator, ILastFirstFinder.SortStrategy)
-  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortStrategy_
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy)
-  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.NaiveFinder(MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy)
-  nameWithType: NaiveFinder.NaiveFinder(RotatedTextWithTerminator, ILastFirstFinder.SortStrategy)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy)
+  name: NaiveFinder(RotatedTextWithTerminator, BWTransform.SortStrategy)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_BWTransform_SortStrategy_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.NaiveFinder(MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy)
+  nameWithType: NaiveFinder.NaiveFinder(RotatedTextWithTerminator, BWTransform.SortStrategy)
 - uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator)
   name: NaiveFinder(RotatedTextWithTerminator, RotatedTextWithTerminator)
   href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_
@@ -416,12 +404,12 @@ references:
   commentId: T:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder
   fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder
   nameWithType: PrecomputedFinder
-- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy)
-  name: PrecomputedFinder(RotatedTextWithTerminator, ILastFirstFinder.SortStrategy)
-  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortStrategy_
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy)
-  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.PrecomputedFinder(MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy)
-  nameWithType: PrecomputedFinder.PrecomputedFinder(RotatedTextWithTerminator, ILastFirstFinder.SortStrategy)
+- uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy)
+  name: PrecomputedFinder(RotatedTextWithTerminator, BWTransform.SortStrategy)
+  href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_BWTransform_SortStrategy_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy)
+  fullName: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.PrecomputedFinder(MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy)
+  nameWithType: PrecomputedFinder.PrecomputedFinder(RotatedTextWithTerminator, BWTransform.SortStrategy)
 - uid: MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator)
   name: PrecomputedFinder(RotatedTextWithTerminator, RotatedTextWithTerminator)
   href: api/MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_
@@ -734,6 +722,18 @@ references:
   isSpec: "True"
   fullName: MoreStructures.BurrowsWheelerTransform.BWTransform.Length
   nameWithType: BWTransform.Length
+- uid: MoreStructures.BurrowsWheelerTransform.BWTransform.QuickSort
+  name: QuickSort
+  href: api/MoreStructures.BurrowsWheelerTransform.BWTransform.html#MoreStructures_BurrowsWheelerTransform_BWTransform_QuickSort
+  commentId: F:MoreStructures.BurrowsWheelerTransform.BWTransform.QuickSort
+  fullName: MoreStructures.BurrowsWheelerTransform.BWTransform.QuickSort
+  nameWithType: BWTransform.QuickSort
+- uid: MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy
+  name: BWTransform.SortStrategy
+  href: api/MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy.html
+  commentId: T:MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy
+  fullName: MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy
+  nameWithType: BWTransform.SortStrategy
 - uid: MoreStructures.BurrowsWheelerTransform.BWTransform.Text
   name: Text
   href: api/MoreStructures.BurrowsWheelerTransform.BWTransform.html#MoreStructures_BurrowsWheelerTransform_BWTransform_Text
@@ -759,21 +759,92 @@ references:
   commentId: T:MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher
   fullName: MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher
   nameWithType: CountBasedNarrowingIntervalMatcher
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy)
+  name: CountBasedNarrowingIntervalMatcher(RotatedTextWithTerminator, BWTransform.SortStrategy)
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_BWTransform_SortStrategy_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy)
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.CountBasedNarrowingIntervalMatcher(MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy)
+  nameWithType: CountBasedNarrowingIntervalMatcher.CountBasedNarrowingIntervalMatcher(RotatedTextWithTerminator, BWTransform.SortStrategy)
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator)
+  name: CountBasedNarrowingIntervalMatcher(RotatedTextWithTerminator, RotatedTextWithTerminator)
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator)
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.CountBasedNarrowingIntervalMatcher(MoreStructures.RotatedTextWithTerminator, MoreStructures.RotatedTextWithTerminator)
+  nameWithType: CountBasedNarrowingIntervalMatcher.CountBasedNarrowingIntervalMatcher(RotatedTextWithTerminator, RotatedTextWithTerminator)
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.#ctor*
+  name: CountBasedNarrowingIntervalMatcher
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher__ctor_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.CountBasedNarrowingIntervalMatcher
+  nameWithType: CountBasedNarrowingIntervalMatcher.CountBasedNarrowingIntervalMatcher
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.BuildLastFirstFinder
+  name: BuildLastFirstFinder()
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher_BuildLastFirstFinder
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.BuildLastFirstFinder
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.BuildLastFirstFinder()
+  nameWithType: CountBasedNarrowingIntervalMatcher.BuildLastFirstFinder()
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.BuildLastFirstFinder*
+  name: BuildLastFirstFinder
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher_BuildLastFirstFinder_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.BuildLastFirstFinder
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.BuildLastFirstFinder
+  nameWithType: CountBasedNarrowingIntervalMatcher.BuildLastFirstFinder
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.NarrowInterval(System.Char,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder,System.Int32,System.Int32)
+  name: NarrowInterval(Char, ILastFirstFinder, Int32, Int32)
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher_NarrowInterval_System_Char_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_System_Int32_System_Int32_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.NarrowInterval(System.Char,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder,System.Int32,System.Int32)
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.NarrowInterval(System.Char, MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder, System.Int32, System.Int32)
+  nameWithType: CountBasedNarrowingIntervalMatcher.NarrowInterval(Char, ILastFirstFinder, Int32, Int32)
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.NarrowInterval*
+  name: NarrowInterval
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher_NarrowInterval_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.NarrowInterval
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.NarrowInterval
+  nameWithType: CountBasedNarrowingIntervalMatcher.NarrowInterval
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.OccurrencesCounter
+  name: OccurrencesCounter
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher_OccurrencesCounter
+  commentId: P:MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.OccurrencesCounter
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.OccurrencesCounter
+  nameWithType: CountBasedNarrowingIntervalMatcher.OccurrencesCounter
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.OccurrencesCounter*
+  name: OccurrencesCounter
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher_OccurrencesCounter_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.OccurrencesCounter
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.OccurrencesCounter
+  nameWithType: CountBasedNarrowingIntervalMatcher.OccurrencesCounter
 - uid: MoreStructures.BurrowsWheelerTransform.Matching.IMatcher
   name: IMatcher
   href: api/MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html
   commentId: T:MoreStructures.BurrowsWheelerTransform.Matching.IMatcher
   fullName: MoreStructures.BurrowsWheelerTransform.Matching.IMatcher
   nameWithType: IMatcher
-- uid: MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match(MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator,System.Collections.Generic.IEnumerable{System.Char})
-  name: Match(RotatedTextWithTerminator, RotatedTextWithTerminator, IEnumerable<Char>)
-  href: api/MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_Match_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_System_Collections_Generic_IEnumerable_System_Char__
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match(MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator,System.Collections.Generic.IEnumerable{System.Char})
-  name.vb: Match(RotatedTextWithTerminator, RotatedTextWithTerminator, IEnumerable(Of Char))
-  fullName: MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match(MoreStructures.RotatedTextWithTerminator, MoreStructures.RotatedTextWithTerminator, System.Collections.Generic.IEnumerable<System.Char>)
-  fullName.vb: MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match(MoreStructures.RotatedTextWithTerminator, MoreStructures.RotatedTextWithTerminator, System.Collections.Generic.IEnumerable(Of System.Char))
-  nameWithType: IMatcher.Match(RotatedTextWithTerminator, RotatedTextWithTerminator, IEnumerable<Char>)
-  nameWithType.vb: IMatcher.Match(RotatedTextWithTerminator, RotatedTextWithTerminator, IEnumerable(Of Char))
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.BWT
+  name: BWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_BWT
+  commentId: P:MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.BWT
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.BWT
+  nameWithType: IMatcher.BWT
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.BWT*
+  name: BWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_BWT_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.BWT
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.BWT
+  nameWithType: IMatcher.BWT
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match(System.Collections.Generic.IEnumerable{System.Char})
+  name: Match(IEnumerable<Char>)
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_Match_System_Collections_Generic_IEnumerable_System_Char__
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match(System.Collections.Generic.IEnumerable{System.Char})
+  name.vb: Match(IEnumerable(Of Char))
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match(System.Collections.Generic.IEnumerable<System.Char>)
+  fullName.vb: MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match(System.Collections.Generic.IEnumerable(Of System.Char))
+  nameWithType: IMatcher.Match(IEnumerable<Char>)
+  nameWithType.vb: IMatcher.Match(IEnumerable(Of Char))
 - uid: MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match*
   name: Match
   href: api/MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_Match_
@@ -781,6 +852,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match
   nameWithType: IMatcher.Match
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.SortedBWT
+  name: SortedBWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_SortedBWT
+  commentId: P:MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.SortedBWT
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.SortedBWT
+  nameWithType: IMatcher.SortedBWT
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.SortedBWT*
+  name: SortedBWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_SortedBWT_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.SortedBWT
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.SortedBWT
+  nameWithType: IMatcher.SortedBWT
 - uid: MoreStructures.BurrowsWheelerTransform.Matching.Match
   name: Match
   href: api/MoreStructures.BurrowsWheelerTransform.Matching.Match.html
@@ -858,15 +942,60 @@ references:
   commentId: T:MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher
   fullName: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher
   nameWithType: NarrowingIntervalMatcher
-- uid: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.Match(MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator,IEnumerable{System.Char})
-  name: Match(RotatedTextWithTerminator, RotatedTextWithTerminator, IEnumerable<Char>)
-  href: api/MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_Match_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_IEnumerable_System_Char__
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.Match(MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator,IEnumerable{System.Char})
-  name.vb: Match(RotatedTextWithTerminator, RotatedTextWithTerminator, IEnumerable(Of Char))
-  fullName: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.Match(MoreStructures.RotatedTextWithTerminator, MoreStructures.RotatedTextWithTerminator, IEnumerable<System.Char>)
-  fullName.vb: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.Match(MoreStructures.RotatedTextWithTerminator, MoreStructures.RotatedTextWithTerminator, IEnumerable(Of System.Char))
-  nameWithType: NarrowingIntervalMatcher.Match(RotatedTextWithTerminator, RotatedTextWithTerminator, IEnumerable<Char>)
-  nameWithType.vb: NarrowingIntervalMatcher.Match(RotatedTextWithTerminator, RotatedTextWithTerminator, IEnumerable(Of Char))
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy)
+  name: NarrowingIntervalMatcher(RotatedTextWithTerminator, BWTransform.SortStrategy)
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_BWTransform_SortStrategy_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy)
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.NarrowingIntervalMatcher(MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy)
+  nameWithType: NarrowingIntervalMatcher.NarrowingIntervalMatcher(RotatedTextWithTerminator, BWTransform.SortStrategy)
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator)
+  name: NarrowingIntervalMatcher(RotatedTextWithTerminator, RotatedTextWithTerminator)
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator)
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.NarrowingIntervalMatcher(MoreStructures.RotatedTextWithTerminator, MoreStructures.RotatedTextWithTerminator)
+  nameWithType: NarrowingIntervalMatcher.NarrowingIntervalMatcher(RotatedTextWithTerminator, RotatedTextWithTerminator)
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.#ctor*
+  name: NarrowingIntervalMatcher
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher__ctor_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.NarrowingIntervalMatcher
+  nameWithType: NarrowingIntervalMatcher.NarrowingIntervalMatcher
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.BuildLastFirstFinder
+  name: BuildLastFirstFinder()
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_BuildLastFirstFinder
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.BuildLastFirstFinder
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.BuildLastFirstFinder()
+  nameWithType: NarrowingIntervalMatcher.BuildLastFirstFinder()
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.BuildLastFirstFinder*
+  name: BuildLastFirstFinder
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_BuildLastFirstFinder_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.BuildLastFirstFinder
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.BuildLastFirstFinder
+  nameWithType: NarrowingIntervalMatcher.BuildLastFirstFinder
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.BWT
+  name: BWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_BWT
+  commentId: P:MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.BWT
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.BWT
+  nameWithType: NarrowingIntervalMatcher.BWT
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.BWT*
+  name: BWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_BWT_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.BWT
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.BWT
+  nameWithType: NarrowingIntervalMatcher.BWT
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.Match(IEnumerable{System.Char})
+  name: Match(IEnumerable<Char>)
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_Match_IEnumerable_System_Char__
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.Match(IEnumerable{System.Char})
+  name.vb: Match(IEnumerable(Of Char))
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.Match(IEnumerable<System.Char>)
+  fullName.vb: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.Match(IEnumerable(Of System.Char))
+  nameWithType: NarrowingIntervalMatcher.Match(IEnumerable<Char>)
+  nameWithType.vb: NarrowingIntervalMatcher.Match(IEnumerable(Of Char))
 - uid: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.Match*
   name: Match
   href: api/MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_Match_
@@ -874,12 +1003,12 @@ references:
   isSpec: "True"
   fullName: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.Match
   nameWithType: NarrowingIntervalMatcher.Match
-- uid: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.NarrowInterval(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder,System.Int32,System.Int32,System.Char)
-  name: NarrowInterval(RotatedTextWithTerminator, ILastFirstFinder, Int32, Int32, Char)
-  href: api/MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_NarrowInterval_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_System_Int32_System_Int32_System_Char_
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.NarrowInterval(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder,System.Int32,System.Int32,System.Char)
-  fullName: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.NarrowInterval(MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder, System.Int32, System.Int32, System.Char)
-  nameWithType: NarrowingIntervalMatcher.NarrowInterval(RotatedTextWithTerminator, ILastFirstFinder, Int32, Int32, Char)
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.NarrowInterval(System.Char,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder,System.Int32,System.Int32)
+  name: NarrowInterval(Char, ILastFirstFinder, Int32, Int32)
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_NarrowInterval_System_Char_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_System_Int32_System_Int32_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.NarrowInterval(System.Char,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder,System.Int32,System.Int32)
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.NarrowInterval(System.Char, MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder, System.Int32, System.Int32)
+  nameWithType: NarrowingIntervalMatcher.NarrowInterval(Char, ILastFirstFinder, Int32, Int32)
 - uid: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.NarrowInterval*
   name: NarrowInterval
   href: api/MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_NarrowInterval_
@@ -900,6 +1029,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.OrderedAscListSearch
   nameWithType: NarrowingIntervalMatcher.OrderedAscListSearch
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.SortedBWT
+  name: SortedBWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_SortedBWT
+  commentId: P:MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.SortedBWT
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.SortedBWT
+  nameWithType: NarrowingIntervalMatcher.SortedBWT
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.SortedBWT*
+  name: SortedBWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_SortedBWT_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.SortedBWT
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.SortedBWT
+  nameWithType: NarrowingIntervalMatcher.SortedBWT
 - uid: MoreStructures.CountTrees
   name: MoreStructures.CountTrees
   href: api/MoreStructures.CountTrees.html
@@ -3613,18 +3755,40 @@ references:
   commentId: N:MoreStructures.Tests.BurrowsWheelerTransform.Matching
   fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching
   nameWithType: MoreStructures.Tests.BurrowsWheelerTransform.Matching
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests
+  name: CountBasedNarrowingIntervalMatcherTests
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests.html
+  commentId: T:MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests
+  nameWithType: CountBasedNarrowingIntervalMatcherTests
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests.#ctor
+  name: CountBasedNarrowingIntervalMatcherTests()
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcherTests__ctor
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests.#ctor
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests.CountBasedNarrowingIntervalMatcherTests()
+  nameWithType: CountBasedNarrowingIntervalMatcherTests.CountBasedNarrowingIntervalMatcherTests()
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests.#ctor*
+  name: CountBasedNarrowingIntervalMatcherTests
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcherTests__ctor_
+  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests.CountBasedNarrowingIntervalMatcherTests
+  nameWithType: CountBasedNarrowingIntervalMatcherTests.CountBasedNarrowingIntervalMatcherTests
 - uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests
   name: MatcherTests
   href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.html
   commentId: T:MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests
   fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests
   nameWithType: MatcherTests
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.#ctor(MoreStructures.BurrowsWheelerTransform.Matching.IMatcher)
-  name: MatcherTests(IMatcher)
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests__ctor_MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_
-  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.#ctor(MoreStructures.BurrowsWheelerTransform.Matching.IMatcher)
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.MatcherTests(MoreStructures.BurrowsWheelerTransform.Matching.IMatcher)
-  nameWithType: MatcherTests.MatcherTests(IMatcher)
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.#ctor(System.Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher},System.Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher})
+  name: MatcherTests(Func<RotatedTextWithTerminator, IMatcher>, Func<RotatedTextWithTerminator, RotatedTextWithTerminator, IMatcher>)
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests__ctor_System_Func_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Matching_IMatcher__System_Func_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Matching_IMatcher__
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.#ctor(System.Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher},System.Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher})
+  name.vb: MatcherTests(Func(Of RotatedTextWithTerminator, IMatcher), Func(Of RotatedTextWithTerminator, RotatedTextWithTerminator, IMatcher))
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.MatcherTests(System.Func<MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher>, System.Func<MoreStructures.RotatedTextWithTerminator, MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher>)
+  fullName.vb: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.MatcherTests(System.Func(Of MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher), System.Func(Of MoreStructures.RotatedTextWithTerminator, MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher))
+  nameWithType: MatcherTests.MatcherTests(Func<RotatedTextWithTerminator, IMatcher>, Func<RotatedTextWithTerminator, RotatedTextWithTerminator, IMatcher>)
+  nameWithType.vb: MatcherTests.MatcherTests(Func(Of RotatedTextWithTerminator, IMatcher), Func(Of RotatedTextWithTerminator, RotatedTextWithTerminator, IMatcher))
 - uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.#ctor*
   name: MatcherTests
   href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests__ctor_
@@ -3632,6 +3796,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.MatcherTests
   nameWithType: MatcherTests.MatcherTests
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
+  name: Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT()
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests_Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT()
+  nameWithType: MatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT()
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT*
+  name: Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests_Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT_
+  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
+  isSpec: "True"
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
+  nameWithType: MatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
 - uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_IsCorrect(System.String,System.String,System.Boolean,System.Int32,System.Int32,System.Int32)
   name: Match_IsCorrect(String, String, Boolean, Int32, Int32, Int32)
   href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests_Match_IsCorrect_System_String_System_String_System_Boolean_System_Int32_System_Int32_System_Int32_
@@ -3658,19 +3835,6 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_RaisesExceptionWithEmptyPattern
   nameWithType: MatcherTests.Match_RaisesExceptionWithEmptyPattern
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_RaisesExceptionWithIncosistentBWTAndSortedBWT
-  name: Match_RaisesExceptionWithIncosistentBWTAndSortedBWT()
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests_Match_RaisesExceptionWithIncosistentBWTAndSortedBWT
-  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_RaisesExceptionWithIncosistentBWTAndSortedBWT
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_RaisesExceptionWithIncosistentBWTAndSortedBWT()
-  nameWithType: MatcherTests.Match_RaisesExceptionWithIncosistentBWTAndSortedBWT()
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_RaisesExceptionWithIncosistentBWTAndSortedBWT*
-  name: Match_RaisesExceptionWithIncosistentBWTAndSortedBWT
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests_Match_RaisesExceptionWithIncosistentBWTAndSortedBWT_
-  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_RaisesExceptionWithIncosistentBWTAndSortedBWT
-  isSpec: "True"
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_RaisesExceptionWithIncosistentBWTAndSortedBWT
-  nameWithType: MatcherTests.Match_RaisesExceptionWithIncosistentBWTAndSortedBWT
 - uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests
   name: NarrowingIntervalMatcherTests
   href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.html

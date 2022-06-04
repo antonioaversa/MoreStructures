@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Delegate ILastFirstFinder.SortStrategy
+    <title>Delegate BWTransform.SortStrategy
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Delegate ILastFirstFinder.SortStrategy
+    <meta name="title" content="Delegate BWTransform.SortStrategy
    ">
     <meta name="generator" content="docfx 2.59.2.0">
     
@@ -78,20 +78,20 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy">
   
   
-  <h1 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortStrategy" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy" class="text-break">Delegate ILastFirstFinder.SortStrategy
+  <h1 id="MoreStructures_BurrowsWheelerTransform_BWTransform_SortStrategy" data-uid="MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy" class="text-break">Delegate BWTransform.SortStrategy
   </h1>
   <div class="markdown level0 summary"><p>Any strategy to sort the <span class="xref">System.Char</span> of a <a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a>, for example to turn
 a BWT into its sorted version.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.html">MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.BurrowsWheelerTransform.html">MoreStructures.BurrowsWheelerTransform</a></h6>
   <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
-  <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortStrategy_syntax">Syntax</h5>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_BWTransform_SortStrategy_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public delegate RotatedTextWithTerminator SortStrategy(RotatedTextWithTerminator text, IComparer&lt;char&gt; comparer);</code></pre>
+    <pre><code class="lang-csharp hljs">public delegate RotatedTextWithTerminator SortStrategy(RotatedTextWithTerminator text, IComparer&lt;char&gt;? comparer = null);</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -110,9 +110,11 @@ a BWT into its sorted version.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">IComparer</span>&lt;<span class="xref">System.Char</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">IComparer</span>&lt;<span class="xref">System.Char</span>&gt;&gt;</td>
         <td><span class="parametername">comparer</span></td>
-        <td><p>The <see cref="!:IComparer&lt;T>"></see> of <span class="xref">System.Char</span> to be used for comparison.</p>
+        <td><p>The <see cref="!:IComparer&lt;T>"></see> of <span class="xref">System.Char</span> to be used for comparison.
+If not specified, a <a class="xref" href="MoreStructures.Utilities.CharOrTerminatorComparer.html">CharOrTerminatorComparer</a> using the
+<a class="xref" href="MoreStructures.RotatedTextWithTerminator.html#MoreStructures_RotatedTextWithTerminator_Terminator">Terminator</a> of <code data-dev-comment-type="paramref" class="paramref">text</code> is used instead.</p>
 </td>
       </tr>
     </tbody>
@@ -141,10 +143,10 @@ a BWT into its sorted version.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortStrategy.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_BWTransform_SortStrategy.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/ILastFirstFinder.cs/#L18" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/BWTransform.cs/#L32" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

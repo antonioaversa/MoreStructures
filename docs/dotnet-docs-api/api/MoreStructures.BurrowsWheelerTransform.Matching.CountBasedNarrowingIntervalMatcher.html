@@ -84,8 +84,8 @@
   <h1 id="MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher" class="text-break">Class CountBasedNarrowingIntervalMatcher
   </h1>
   <div class="markdown level0 summary"><p>A <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html">NarrowingIntervalMatcher</a> refinement which precalculate the count of occurrences of each item at
-index i in the sub-sequence of items from 0 to i - 1, for both the BWT and its sorted version, and later uses it
-to perform operations in constant time.</p>
+index i in BWT[0..(i - 1)], and the index of first occurrence of each char in SortedBWT, and later uses them
+to perform in constant time interval narrowing operations within the top-level loop of chars to match.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -104,10 +104,13 @@ to perform operations in constant time.</p>
       <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_OrderedAscListSearch">NarrowingIntervalMatcher.OrderedAscListSearch</a>
     </div>
     <div>
-      <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_Match_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_IEnumerable_System_Char__">NarrowingIntervalMatcher.Match(RotatedTextWithTerminator, RotatedTextWithTerminator, IEnumerable&lt;Char&gt;)</a>
+      <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_BWT">NarrowingIntervalMatcher.BWT</a>
     </div>
     <div>
-      <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_NarrowInterval_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_System_Int32_System_Int32_System_Char_">NarrowingIntervalMatcher.NarrowInterval(RotatedTextWithTerminator, ILastFirstFinder, Int32, Int32, Char)</a>
+      <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_SortedBWT">NarrowingIntervalMatcher.SortedBWT</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_Match_IEnumerable_System_Char__">NarrowingIntervalMatcher.Match(IEnumerable&lt;Char&gt;)</a>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
@@ -137,6 +140,248 @@ to perform operations in constant time.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class CountBasedNarrowingIntervalMatcher : NarrowingIntervalMatcher, IMatcher</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_BWTransform_SortStrategy_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.%23ctor(MoreStructures.RotatedTextWithTerminator%2CMoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/CountBasedNarrowingIntervalMatcher.cs/#L31">View Source</a>
+  </span>
+  <a id="MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher__ctor_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.#ctor*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_BWTransform_SortStrategy_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy)">CountBasedNarrowingIntervalMatcher(RotatedTextWithTerminator, BWTransform.SortStrategy)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CountBasedNarrowingIntervalMatcher(RotatedTextWithTerminator bwt, BWTransform.SortStrategy bwtSorter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a></td>
+        <td><span class="parametername">bwt</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy.html">BWTransform.SortStrategy</a></td>
+        <td><span class="parametername">bwtSorter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_BWTransform_SortStrategy__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This specific implementation also precalculates two dictionaries: the counts of <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_BWT">BWT</a>
+and the first occurrence of each of the chars of <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_SortedBWT">SortedBWT</a>. These two data structures
+makes single char matching a linear operation.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.%23ctor(MoreStructures.RotatedTextWithTerminator%2CMoreStructures.RotatedTextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/CountBasedNarrowingIntervalMatcher.cs/#L42">View Source</a>
+  </span>
+  <a id="MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher__ctor_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.#ctor*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator)">CountBasedNarrowingIntervalMatcher(RotatedTextWithTerminator, RotatedTextWithTerminator)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CountBasedNarrowingIntervalMatcher(RotatedTextWithTerminator bwt, RotatedTextWithTerminator sbwt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a></td>
+        <td><span class="parametername">bwt</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a></td>
+        <td><span class="parametername">sbwt</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="M:MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy)"></inheritdoc></p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher_OccurrencesCounter.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.OccurrencesCounter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/CountBasedNarrowingIntervalMatcher.cs/#L20">View Source</a>
+  </span>
+  <a id="MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher_OccurrencesCounter_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.OccurrencesCounter*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher_OccurrencesCounter" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.OccurrencesCounter">OccurrencesCounter</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="MoreStructures.Lists.Counting.IOccurrencesCounter.html">IOccurrencesCounter</a> implementation to be used when counting the number of occurrences of
+each of the items of an enumerable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static IOccurrencesCounter OccurrencesCounter { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Lists.Counting.IOccurrencesCounter.html">IOccurrencesCounter</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher_BuildLastFirstFinder.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.BuildLastFirstFinder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/CountBasedNarrowingIntervalMatcher.cs/#L60">View Source</a>
+  </span>
+  <a id="MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher_BuildLastFirstFinder_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.BuildLastFirstFinder*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher_BuildLastFirstFinder" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.BuildLastFirstFinder">BuildLastFirstFinder()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override ILastFirstFinder BuildLastFirstFinder()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html">ILastFirstFinder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_BuildLastFirstFinder">NarrowingIntervalMatcher.BuildLastFirstFinder()</a></div>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher_BuildLastFirstFinder_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Unlike <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html">NarrowingIntervalMatcher</a>, this implementation of <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html">IMatcher</a> doesn't make
+explicit calls to <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_LastToFirst_System_Int32_">LastToFirst(Int32)</a>. Instead it solely uses its precomputed
+structures and uses the last-first property implicitely when narrowing the current interval via such strucutes
+in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher_NarrowInterval_System_Char_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_System_Int32_System_Int32_">NarrowInterval(Char, ILastFirstFinder, Int32, Int32)</a>.
+<br>
+Because of that, it doesn't need an optimized <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html">ILastFirstFinder</a>, and in particular one which does
+precomputation (such as the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.html">PrecomputedFinder</a> used by <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html">NarrowingIntervalMatcher</a>),
+and can just instantiate a <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html">NaiveFinder</a> instead.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher_NarrowInterval_System_Char_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.NarrowInterval(System.Char%2CMoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/CountBasedNarrowingIntervalMatcher.cs/#L92">View Source</a>
+  </span>
+  <a id="MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher_NarrowInterval_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.NarrowInterval*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher_NarrowInterval_System_Char_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_System_Int32_System_Int32_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.NarrowInterval(System.Char,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder,System.Int32,System.Int32)">NarrowInterval(Char, ILastFirstFinder, Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override (bool success, int narrowedStartIndex, int narrowedEndIndex) NarrowInterval(char currentChar, ILastFirstFinder finder, int startIndex, int endIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Char</span></td>
+        <td><span class="parametername">currentChar</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html">ILastFirstFinder</a></td>
+        <td><span class="parametername">finder</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">startIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">endIndex</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.Boolean</span>, <span class="xref">System.Int32</span>, <span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_NarrowInterval_System_Char_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_System_Int32_System_Int32_">NarrowingIntervalMatcher.NarrowInterval(Char, ILastFirstFinder, Int32, Int32)</a></div>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher_NarrowInterval_System_Char_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_System_Int32_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Narrowing is performed in three sub-steps (compared to the five in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html">NarrowingIntervalMatcher</a>):
+<br></p>
+<ol>
+<li>The new start index is calculated as the 1st occurrence in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_SortedBWT">SortedBWT</a> of the current
+char + the count of such char in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_BWT">BWT</a> up to the current start index excluded (i.e. the
+number of occurrences of the char up to the index before the current start index);
+<br></li>
+<li>The new end index is calculated as the 1st occurrence in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_SortedBWT">SortedBWT</a> of the current
+char + the count of such char in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_BWT">BWT</a> up to the current end index included, short of one
+(i.e. the number of occurrences of the char up to the current end index - 1);
+<br></li>
+<li>the narrowed interval in Sorted BWT is returned.
+<br></li>
+</ol>
+</div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html">IMatcher</a>
@@ -152,7 +397,7 @@ to perform operations in constant time.</p>
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/CountBasedNarrowingIntervalMatcher.cs/#L14" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

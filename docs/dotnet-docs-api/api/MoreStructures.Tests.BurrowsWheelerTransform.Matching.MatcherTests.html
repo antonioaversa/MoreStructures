@@ -89,6 +89,7 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">MatcherTests</span></div>
+      <div class="level2"><a class="xref" href="MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests.html">CountBasedNarrowingIntervalMatcherTests</a></div>
       <div class="level2"><a class="xref" href="MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.html">NarrowingIntervalMatcherTests</a></div>
   </div>
   <div class="inheritedMembers">
@@ -125,18 +126,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests__ctor_MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.%23ctor(MoreStructures.BurrowsWheelerTransform.Matching.IMatcher)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests__ctor_System_Func_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Matching_IMatcher__System_Func_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Matching_IMatcher__.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.%23ctor(System.Func%7BMoreStructures.RotatedTextWithTerminator%2CMoreStructures.BurrowsWheelerTransform.Matching.IMatcher%7D%2CSystem.Func%7BMoreStructures.RotatedTextWithTerminator%2CMoreStructures.RotatedTextWithTerminator%2CMoreStructures.BurrowsWheelerTransform.Matching.IMatcher%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/BurrowsWheelerTransform/Matching/MatcherTests.cs/#L15">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/BurrowsWheelerTransform/Matching/MatcherTests.cs/#L14">View Source</a>
   </span>
   <a id="MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests__ctor_" data-uid="MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.#ctor*"></a>
-  <h4 id="MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests__ctor_MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_" data-uid="MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.#ctor(MoreStructures.BurrowsWheelerTransform.Matching.IMatcher)">MatcherTests(IMatcher)</h4>
+  <h4 id="MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests__ctor_System_Func_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Matching_IMatcher__System_Func_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Matching_IMatcher__" data-uid="MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.#ctor(System.Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher},System.Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher})">MatcherTests(Func&lt;RotatedTextWithTerminator, IMatcher&gt;, Func&lt;RotatedTextWithTerminator, RotatedTextWithTerminator, IMatcher&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected MatcherTests(IMatcher matcher)</code></pre>
+    <pre><code class="lang-csharp hljs">protected MatcherTests(Func&lt;RotatedTextWithTerminator, IMatcher&gt; matcherBuilderWithBWTOnly, Func&lt;RotatedTextWithTerminator, RotatedTextWithTerminator, IMatcher&gt; matcherBuilderWithSortedBWT)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,8 +150,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html">IMatcher</a></td>
-        <td><span class="parametername">matcher</span></td>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a>, <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html">IMatcher</a>&gt;</td>
+        <td><span class="parametername">matcherBuilderWithBWTOnly</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a>, <a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a>, <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html">IMatcher</a>&gt;</td>
+        <td><span class="parametername">matcherBuilderWithSortedBWT</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -159,10 +165,25 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests_Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/BurrowsWheelerTransform/Matching/MatcherTests.cs/#L22">View Source</a>
+  </span>
+  <a id="MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests_Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT_" data-uid="MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT*"></a>
+  <h4 id="MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests_Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT" data-uid="MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT">Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests_Match_IsCorrect_System_String_System_String_System_Boolean_System_Int32_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_IsCorrect(System.String%2CSystem.String%2CSystem.Boolean%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/BurrowsWheelerTransform/Matching/MatcherTests.cs/#L20">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/BurrowsWheelerTransform/Matching/MatcherTests.cs/#L31">View Source</a>
   </span>
   <a id="MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests_Match_IsCorrect_" data-uid="MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_IsCorrect*"></a>
   <h4 id="MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests_Match_IsCorrect_System_String_System_String_System_Boolean_System_Int32_System_Int32_System_Int32_" data-uid="MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_IsCorrect(System.String,System.String,System.Boolean,System.Int32,System.Int32,System.Int32)">Match_IsCorrect(String, String, Boolean, Int32, Int32, Int32)</h4>
@@ -219,7 +240,7 @@
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests_Match_RaisesExceptionWithEmptyPattern.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_RaisesExceptionWithEmptyPattern%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/BurrowsWheelerTransform/Matching/MatcherTests.cs/#L52">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/BurrowsWheelerTransform/Matching/MatcherTests.cs/#L58">View Source</a>
   </span>
   <a id="MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests_Match_RaisesExceptionWithEmptyPattern_" data-uid="MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_RaisesExceptionWithEmptyPattern*"></a>
   <h4 id="MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests_Match_RaisesExceptionWithEmptyPattern" data-uid="MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_RaisesExceptionWithEmptyPattern">Match_RaisesExceptionWithEmptyPattern()</h4>
@@ -228,21 +249,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Match_RaisesExceptionWithEmptyPattern()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests_Match_RaisesExceptionWithIncosistentBWTAndSortedBWT.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_RaisesExceptionWithIncosistentBWTAndSortedBWT%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/BurrowsWheelerTransform/Matching/MatcherTests.cs/#L46">View Source</a>
-  </span>
-  <a id="MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests_Match_RaisesExceptionWithIncosistentBWTAndSortedBWT_" data-uid="MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_RaisesExceptionWithIncosistentBWTAndSortedBWT*"></a>
-  <h4 id="MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests_Match_RaisesExceptionWithIncosistentBWTAndSortedBWT" data-uid="MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_RaisesExceptionWithIncosistentBWTAndSortedBWT">Match_RaisesExceptionWithIncosistentBWTAndSortedBWT()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Match_RaisesExceptionWithIncosistentBWTAndSortedBWT()</code></pre>
   </div>
 </article>
           </div>
@@ -255,7 +261,7 @@
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests.md&amp;value=---%0Auid%3A%20MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/BurrowsWheelerTransform/Matching/MatcherTests.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures.Tests/BurrowsWheelerTransform/Matching/MatcherTests.cs/#L8" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

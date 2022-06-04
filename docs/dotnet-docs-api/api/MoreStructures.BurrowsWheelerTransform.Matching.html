@@ -89,12 +89,11 @@
   </h3>
       <h4><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.html">CountBasedNarrowingIntervalMatcher</a></h4>
       <section><p>A <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html">NarrowingIntervalMatcher</a> refinement which precalculate the count of occurrences of each item at
-index i in the sub-sequence of items from 0 to i - 1, for both the BWT and its sorted version, and later uses it
-to perform operations in constant time.</p>
+index i in BWT[0..(i - 1)], and the index of first occurrence of each char in SortedBWT, and later uses them
+to perform in constant time interval narrowing operations within the top-level loop of chars to match.</p>
 </section>
       <h4><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.Match.html">Match</a></h4>
-      <section><p>The result of a pattern matching done by a
-<see cref="!:IMatcher.Match(RotatedTextWithTerminator, RotatedTextWithTerminator, IEnumerable&lt;char>)"></see>.</p>
+      <section><p>The result of a pattern matching done by a <see cref="!:IMatcher.Match(IEnumerable&lt;char>)"></see>.</p>
 </section>
       <h4><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html">NarrowingIntervalMatcher</a></h4>
       <section></section>

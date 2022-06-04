@@ -84,7 +84,7 @@
   <h1 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder" class="text-break">Class PrecomputedFinder
   </h1>
   <div class="markdown level0 summary"><p>A <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.html">BinarySearchFinder</a> refinement which precalculate an hash-map of all the positions by each
-char, for both BWT and its sorted version, which takes ~ 2 * n space.</p>
+char, for both BWT and its sorted version, which takes ~ 2 * n space and makes searches in .</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -147,18 +147,18 @@ char, for both BWT and its sorted version, which takes ~ 2 * n space.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortStrategy_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.%23ctor(MoreStructures.RotatedTextWithTerminator%2CMoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_BWTransform_SortStrategy_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.%23ctor(MoreStructures.RotatedTextWithTerminator%2CMoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/PrecomputedFinder.cs/#L23">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder__ctor_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.#ctor*"></a>
-  <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortStrategy_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy)">PrecomputedFinder(RotatedTextWithTerminator, ILastFirstFinder.SortStrategy)</h4>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_BWTransform_SortStrategy_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy)">PrecomputedFinder(RotatedTextWithTerminator, BWTransform.SortStrategy)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PrecomputedFinder(RotatedTextWithTerminator lastBWMColumn, ILastFirstFinder.SortStrategy bwtSorter)</code></pre>
+    <pre><code class="lang-csharp hljs">public PrecomputedFinder(RotatedTextWithTerminator lastBWMColumn, BWTransform.SortStrategy bwtSorter)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -176,13 +176,13 @@ char, for both BWT and its sorted version, which takes ~ 2 * n space.</p>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.SortStrategy.html">ILastFirstFinder.SortStrategy</a></td>
+        <td><a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy.html">BWTransform.SortStrategy</a></td>
         <td><span class="parametername">bwtSorter</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortStrategy__remarks">Remarks</h5>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_BWTransform_SortStrategy__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder" path="/summary"></inheritdoc></p>
 </div>
   <span class="small pull-right mobile-hide">
@@ -381,7 +381,7 @@ Time Complexity = O(1). Space Complexity = O(1).</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder_FindOccurrenceRankOfCharInBWT_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.FindOccurrenceRankOfCharInBWT(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/PrecomputedFinder.cs/#L90">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/PrecomputedFinder.cs/#L107">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder_FindOccurrenceRankOfCharInBWT_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.FindOccurrenceRankOfCharInBWT*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder_FindOccurrenceRankOfCharInBWT_System_Int32_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.FindOccurrenceRankOfCharInBWT(System.Int32)">FindOccurrenceRankOfCharInBWT(Int32)</h4>
@@ -425,12 +425,29 @@ Time Complexity = O(1). Space Complexity = O(1).</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_FindOccurrenceRankOfCharInBWT_System_Int32_">NaiveFinder.FindOccurrenceRankOfCharInBWT(Int32)</a></div>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder_FindOccurrenceRankOfCharInBWT_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+This implementation uses a precomputed hash-map of all the positions by each char.
+</p>
+<p>
+However, unlike <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_SortedBWT">SortedBWT</a>, <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT">BWT</a> is not sorted,
+so the precomputed list storing all the indexes where the char of <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_BWT">BWT</a> at 
+index <code data-dev-comment-type="paramref" class="paramref">indexOfCharInBWT</code> appears can be accessed in O(1) but has to be iterated over 
+linearly. 
+<br>
+Such a list has in average n / sigma elements, where sigma is the number of distinct chars in the text. 
+If sigma is constant, the Time Complexity is O(n). 
+<br>
+Space Complexity is always O(1), since O(n * sigma) space has already been allocated to host the result of
+counts and first occurrences precomputation.
+</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder_FindOccurrenceRankOfCharInSortedBWT_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.FindOccurrenceRankOfCharInSortedBWT(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/PrecomputedFinder.cs/#L119">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstFinders/PrecomputedFinder.cs/#L136">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder_FindOccurrenceRankOfCharInSortedBWT_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.FindOccurrenceRankOfCharInSortedBWT*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder_FindOccurrenceRankOfCharInSortedBWT_System_Int32_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.FindOccurrenceRankOfCharInSortedBWT(System.Int32)">FindOccurrenceRankOfCharInSortedBWT(Int32)</h4>
