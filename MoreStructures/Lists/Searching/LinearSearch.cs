@@ -1,4 +1,5 @@
 ﻿using MoreLinq;
+using MoreStructures.Utilities;
 
 namespace MoreStructures.Lists.Searching;
 
@@ -30,7 +31,12 @@ public class LinearSearch : ISearch
             .Where(e => (fromIndex == null || e.Key >= fromIndex) && (toIndex == null || e.Key <= toIndex));
     }
 
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
+    /// <summary>
+    ///     <inheritdoc/>
+    ///     <br/>
+    ///     This specific implementation does not make any assunption on <paramref name="source"/> being sorted.
+    /// </summary>
     /// <remarks>
     /// The algorithm linearly scans the search space from <paramref name="fromIndex"/> to <paramref name="toIndex"/>,
     /// one index at every iteration, reducing it linearly to a single item or to an empty set.
@@ -45,7 +51,51 @@ public class LinearSearch : ISearch
             .FirstOrDefault(-1)!
             .Value;
 
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
+    /// <summary>
+    ///     <inheritdoc/>
+    ///     <br/>
+    ///     This specific implementation does not make any assunption on <paramref name="source"/> being sorted.
+    /// </summary>
+    /// <remarks>
+    /// The algorithm linearly scans the search space from <paramref name="fromIndex"/> to <paramref name="toIndex"/>,
+    /// one index at every iteration, collecting first occurrences into a <see cref="IDictionary{TKey, TValue}"/>.
+    /// <br/>
+    /// Time Complexity = O(n), Space Complexity = O(sigma), where:
+    /// <para id = "params">
+    /// - n is the <b>number of items</b> between <paramref name="fromIndex"/> and <paramref name="toIndex"/>.
+    /// <br/>
+    /// - sigma is the <b>number of distinct elements </b> of <paramref name="source"/>, for "large alphabets" 
+    /// scenarios (such as when the alphabet is int - 2^32 possible values, but <paramref name="source"/> is way 
+    /// smaller than that), or the size of the alphabet for "small alphabets" scenarios (such as when the alphabet is 
+    /// comprised of few symbols only). In either scenario the worst case of a O(sigma) is O(n).
+    /// </para>
+    /// </remarks>
+    public IDictionary<T, int> FirstAll<T>(
+        IEnumerable<T> source, IComparer<T>? comparer = null, int? fromIndex = null, int? toIndex = null)
+        where T : notnull
+    {
+        var start = fromIndex ?? 0;
+        var end = toIndex ?? source.CountO1();
+
+        var result = new Dictionary<T, int> { };
+        var index = start;
+        foreach (var item in source.Where((el, i) => i >= start && i <= end))
+        {
+            if (!result.TryGetValue(item, out var value))
+                result[item] = index;
+            index++;
+        }
+
+        return result;
+    }
+
+    /// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
+    /// <summary>
+    ///     <inheritdoc/>
+    ///     <br/>
+    ///     This specific implementation does not make any assunption on <paramref name="source"/> being sorted.
+    /// </summary>
     /// <remarks>
     /// The algorithm linearly scans the search space from <paramref name="toIndex"/> to <paramref name="fromIndex"/>,
     /// one index at every iteration, reducing it linearly to a single item or to an empty set.
@@ -60,7 +110,12 @@ public class LinearSearch : ISearch
             .FirstOrDefault(-1)!
             .Value;
 
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
+    /// <summary>
+    ///     <inheritdoc/>
+    ///     <br/>
+    ///     This specific implementation does not make any assunption on <paramref name="source"/> being sorted.
+    /// </summary>
     /// <remarks>
     /// The algorithm linearly scans the search space from <paramref name="fromIndex"/> to <paramref name="toIndex"/>,
     /// one index at every iteration.
@@ -79,7 +134,12 @@ public class LinearSearch : ISearch
                 acc.Item1 < 0 ? i : Math.Min(acc.Item1, i),
                 acc.Item2 < 0 ? i : Math.Max(acc.Item2, i)));
 
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
+    /// <summary>
+    ///     <inheritdoc/>
+    ///     <br/>
+    ///     This specific implementation does not make any assunption on <paramref name="source"/> being sorted.
+    /// </summary>
     /// <remarks>
     /// The algorithm linearly scans the search space from <paramref name="toIndex"/> to <paramref name="fromIndex"/>,
     /// one index at every iteration, reducing it linearly to a single item or to an empty set.

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using MoreStructures.Utilities;
+using System.Collections.Generic;
 
 namespace MoreStructures.Lists.Searching;
 
@@ -22,20 +23,14 @@ public class BinarySearch : ISearch
     {
         comparer ??= Comparer<T>.Default;
 
-        // Optimization for strings, due to LINQ ElementAt(index) being O(n) for strings.
-        Func<int, int> compareWith =
-            (source is string str) && item is char charToFind && comparer is IComparer<char> charComparer
-            ? i => charComparer.Compare(str[i], charToFind)
-            : i => comparer.Compare(source.ElementAt(i), item);
-
-        var length = source is string str1 ? str1.Length : source.Count();
+        var length = source.CountO1();
         var start = fromIndex ?? 0;
         var end = toIndex ?? length - 1;
         var result = -1;
         while (start <= end)
         {
             var middle = (start + end) / 2;
-            var comparison = compareWith(middle);
+            var comparison = comparer.Compare(source.ElementAtO1(middle), item);
             if (comparison < 0)
             {
                 start = middle + 1;
@@ -58,7 +53,12 @@ public class BinarySearch : ISearch
         return result;
     }
 
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
+    /// <summary>
+    ///     <inheritdoc/>
+    ///     <br/>
+    ///     This specific implementation assumes that <paramref name="source"/> is sorted in ascending order.
+    /// </summary>
     /// <remarks>
     /// The algorithm split in half the search space at every iteration, reducing it exponentially to a single item
     /// or to an empty set.
@@ -70,7 +70,52 @@ public class BinarySearch : ISearch
         IEnumerable<T> source, T item, IComparer<T>? comparer = null, int? fromIndex = null, int? toIndex = null) =>
         Search(source, item, comparer, fromIndex, toIndex, true);
 
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
+    /// <summary>
+    ///     <inheritdoc/>
+    ///     <br/>
+    ///     This specific implementation assumes that <paramref name="source"/> is sorted in ascending order.
+    /// </summary>
+    /// <remarks>
+    ///     <inheritdoc/>
+    ///     <br/>
+    ///     The size of the output and the Space Complexity is O(sigma), where:
+    ///     <inheritdoc cref="LinearSearch.FirstAll{T}(IEnumerable{T}, IComparer{T}?, int?, int?)" 
+    ///         path="/remarks/para[@id='params']"/>
+    ///     <br/>
+    ///     A binary search for the next different element gives an overall O(sigma * log(sigma)) Time Complexity.
+    /// </remarks>
+    public IDictionary<T, int> FirstAll<T>(
+        IEnumerable<T> source, IComparer<T>? comparer = null, int? fromIndex = null, int? toIndex = null)
+        where T : notnull
+    {
+        comparer ??= Comparer<T>.Default;
+
+        var length = source.CountO1();
+        var start = fromIndex ?? 0;
+        var end = toIndex ?? length;
+
+        var result = new Dictionary<T, int> { };
+
+        int currentIndex = start;
+        while (currentIndex >= 0 && currentIndex < end && currentIndex < length)
+        {
+            var currentItem = source.ElementAtO1(currentIndex);
+            if (!result.TryGetValue(currentItem, out var _))
+                result.Add(currentItem, currentIndex);
+
+            currentIndex = Last(source, currentItem, comparer, currentIndex, toIndex) + 1;
+        }
+
+        return result;
+    }
+
+    /// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
+    /// <summary>
+    ///     <inheritdoc/>
+    ///     <br/>
+    ///     This specific implementation assumes that <paramref name="source"/> is sorted in ascending order.
+    /// </summary>
     /// <remarks>
     /// The algorithm split in half the search space at every iteration, reducing it exponentially to a single item
     /// or to an empty set.
@@ -82,7 +127,12 @@ public class BinarySearch : ISearch
         IEnumerable<T> source, T item, IComparer<T>? comparer = null, int? fromIndex = null, int? toIndex = null) =>
         Search(source, item, comparer, fromIndex, toIndex, false);
 
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
+    /// <summary>
+    ///     <inheritdoc/>
+    ///     <br/>
+    ///     This specific implementation assumes that <paramref name="source"/> is sorted in ascending order.
+    /// </summary>
     /// <remarks>
     /// The algorithm peforms two successive binary search operations: the first to find the lower extreme of the 
     /// interval and the second to find the higher extreme of the interval. Each binary search runs in logarithmic 
@@ -102,7 +152,12 @@ public class BinarySearch : ISearch
         return (first, last);
     }
 
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
+    /// <summary>
+    ///     <inheritdoc/>
+    ///     <br/>
+    ///     This specific implementation assumes that <paramref name="source"/> is sorted in ascending order.
+    /// </summary>
     /// <remarks>
     /// The algorithm first performs a binary search to find the index i of the 1st item. Then it checks whether 
     /// the n-th occurrence of the item exists at index i + n, taking advantage of the fact that 
@@ -127,15 +182,7 @@ public class BinarySearch : ISearch
 
         var index = first + occurrenceRank;
 
-        // Optimization for strings, due to LINQ ElementAt(index) being O(n) for strings.
-        if (source is string str)
-        {
-            if (index < str.Length && Equals(str[index], item))
-                return index;
-            return -1;
-        }
-
-        if (comparer.Compare(source.ElementAtOrDefault(index), item) == 0)
+        if (comparer.Compare(source.ElementAtO1OrDefault(index), item) == 0)
             return index;
         return -1;
     }
