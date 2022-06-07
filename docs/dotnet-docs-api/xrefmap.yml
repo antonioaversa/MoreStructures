@@ -791,6 +791,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.BuildLastFirstFinder
   nameWithType: CountBasedNarrowingIntervalMatcher.BuildLastFirstFinder
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.LinearSearch
+  name: LinearSearch
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher_LinearSearch
+  commentId: P:MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.LinearSearch
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.LinearSearch
+  nameWithType: CountBasedNarrowingIntervalMatcher.LinearSearch
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.LinearSearch*
+  name: LinearSearch
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher_LinearSearch_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.LinearSearch
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.LinearSearch
+  nameWithType: CountBasedNarrowingIntervalMatcher.LinearSearch
 - uid: MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.NarrowInterval(System.Char,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder,System.Int32,System.Int32)
   name: NarrowInterval(Char, ILastFirstFinder, Int32, Int32)
   href: api/MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher_NarrowInterval_System_Char_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_System_Int32_System_Int32_
@@ -1246,6 +1259,22 @@ references:
   fullName.vb: MoreStructures.Lists.Searching.BinarySearch.First(Of T)(System.Collections.Generic.IEnumerable(Of T), T, System.Collections.Generic.IComparer(Of T), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
   nameWithType: BinarySearch.First<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
   nameWithType.vb: BinarySearch.First(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+- uid: MoreStructures.Lists.Searching.BinarySearch.FirstAll*
+  name: FirstAll
+  href: api/MoreStructures.Lists.Searching.BinarySearch.html#MoreStructures_Lists_Searching_BinarySearch_FirstAll_
+  commentId: Overload:MoreStructures.Lists.Searching.BinarySearch.FirstAll
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Searching.BinarySearch.FirstAll
+  nameWithType: BinarySearch.FirstAll
+- uid: MoreStructures.Lists.Searching.BinarySearch.FirstAll``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: FirstAll<T>(IEnumerable<T>, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
+  href: api/MoreStructures.Lists.Searching.BinarySearch.html#MoreStructures_Lists_Searching_BinarySearch_FirstAll__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:MoreStructures.Lists.Searching.BinarySearch.FirstAll``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: FirstAll(Of T)(IEnumerable(Of T), IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+  fullName: MoreStructures.Lists.Searching.BinarySearch.FirstAll<T>(System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.IComparer<T>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
+  fullName.vb: MoreStructures.Lists.Searching.BinarySearch.FirstAll(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Collections.Generic.IComparer(Of T), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
+  nameWithType: BinarySearch.FirstAll<T>(IEnumerable<T>, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
+  nameWithType.vb: BinarySearch.FirstAll(Of T)(IEnumerable(Of T), IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
 - uid: MoreStructures.Lists.Searching.BinarySearch.Interval*
   name: Interval
   href: api/MoreStructures.Lists.Searching.BinarySearch.html#MoreStructures_Lists_Searching_BinarySearch_Interval_
@@ -1316,6 +1345,22 @@ references:
   fullName.vb: MoreStructures.Lists.Searching.ISearch.First(Of T)(System.Collections.Generic.IEnumerable(Of T), T, System.Collections.Generic.IComparer(Of T), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
   nameWithType: ISearch.First<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
   nameWithType.vb: ISearch.First(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+- uid: MoreStructures.Lists.Searching.ISearch.FirstAll*
+  name: FirstAll
+  href: api/MoreStructures.Lists.Searching.ISearch.html#MoreStructures_Lists_Searching_ISearch_FirstAll_
+  commentId: Overload:MoreStructures.Lists.Searching.ISearch.FirstAll
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Searching.ISearch.FirstAll
+  nameWithType: ISearch.FirstAll
+- uid: MoreStructures.Lists.Searching.ISearch.FirstAll``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: FirstAll<T>(IEnumerable<T>, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
+  href: api/MoreStructures.Lists.Searching.ISearch.html#MoreStructures_Lists_Searching_ISearch_FirstAll__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:MoreStructures.Lists.Searching.ISearch.FirstAll``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: FirstAll(Of T)(IEnumerable(Of T), IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+  fullName: MoreStructures.Lists.Searching.ISearch.FirstAll<T>(System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.IComparer<T>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
+  fullName.vb: MoreStructures.Lists.Searching.ISearch.FirstAll(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Collections.Generic.IComparer(Of T), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
+  nameWithType: ISearch.FirstAll<T>(IEnumerable<T>, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
+  nameWithType.vb: ISearch.FirstAll(Of T)(IEnumerable(Of T), IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
 - uid: MoreStructures.Lists.Searching.ISearch.Interval*
   name: Interval
   href: api/MoreStructures.Lists.Searching.ISearch.html#MoreStructures_Lists_Searching_ISearch_Interval_
@@ -1386,6 +1431,22 @@ references:
   fullName.vb: MoreStructures.Lists.Searching.LinearSearch.First(Of T)(IEnumerable(Of T), T, System.Nullable(Of IComparer(Of T)), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
   nameWithType: LinearSearch.First<T>(IEnumerable<T>, T, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
   nameWithType.vb: LinearSearch.First(Of T)(IEnumerable(Of T), T, Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
+- uid: MoreStructures.Lists.Searching.LinearSearch.FirstAll*
+  name: FirstAll
+  href: api/MoreStructures.Lists.Searching.LinearSearch.html#MoreStructures_Lists_Searching_LinearSearch_FirstAll_
+  commentId: Overload:MoreStructures.Lists.Searching.LinearSearch.FirstAll
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Searching.LinearSearch.FirstAll
+  nameWithType: LinearSearch.FirstAll
+- uid: MoreStructures.Lists.Searching.LinearSearch.FirstAll``1(IEnumerable{``0},System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: FirstAll<T>(IEnumerable<T>, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  href: api/MoreStructures.Lists.Searching.LinearSearch.html#MoreStructures_Lists_Searching_LinearSearch_FirstAll__1_IEnumerable___0__System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:MoreStructures.Lists.Searching.LinearSearch.FirstAll``1(IEnumerable{``0},System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: FirstAll(Of T)(IEnumerable(Of T), Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
+  fullName: MoreStructures.Lists.Searching.LinearSearch.FirstAll<T>(IEnumerable<T>, System.Nullable<IComparer<T>>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
+  fullName.vb: MoreStructures.Lists.Searching.LinearSearch.FirstAll(Of T)(IEnumerable(Of T), System.Nullable(Of IComparer(Of T)), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
+  nameWithType: LinearSearch.FirstAll<T>(IEnumerable<T>, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  nameWithType.vb: LinearSearch.FirstAll(Of T)(IEnumerable(Of T), Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
 - uid: MoreStructures.Lists.Searching.LinearSearch.Interval*
   name: Interval
   href: api/MoreStructures.Lists.Searching.LinearSearch.html#MoreStructures_Lists_Searching_LinearSearch_Interval_
@@ -4215,6 +4276,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Lists.Searching.SearchTests.SearchTests
   nameWithType: SearchTests.SearchTests
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.FirstAll_OnCustomIntervals
+  name: FirstAll_OnCustomIntervals()
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_FirstAll_OnCustomIntervals
+  commentId: M:MoreStructures.Tests.Lists.Searching.SearchTests.FirstAll_OnCustomIntervals
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.FirstAll_OnCustomIntervals()
+  nameWithType: SearchTests.FirstAll_OnCustomIntervals()
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.FirstAll_OnCustomIntervals*
+  name: FirstAll_OnCustomIntervals
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_FirstAll_OnCustomIntervals_
+  commentId: Overload:MoreStructures.Tests.Lists.Searching.SearchTests.FirstAll_OnCustomIntervals
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.FirstAll_OnCustomIntervals
+  nameWithType: SearchTests.FirstAll_OnCustomIntervals
 - uid: MoreStructures.Tests.Lists.Searching.SearchTests.Nth_RaisesExceptionOnInvalidOccurrenceRank
   name: Nth_RaisesExceptionOnInvalidOccurrenceRank()
   href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_Nth_RaisesExceptionOnInvalidOccurrenceRank
@@ -7022,6 +7096,265 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Utilities.CharOrTerminatorComparerTests.Terminator_IsSet
   nameWithType: CharOrTerminatorComparerTests.Terminator_IsSet
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests
+  name: EnumerableExtensionsTests
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html
+  commentId: T:MoreStructures.Tests.Utilities.EnumerableExtensionsTests
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests
+  nameWithType: EnumerableExtensionsTests
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_DoesntEnumerateGenericIListImplementers
+  name: CountO1_DoesntEnumerateGenericIListImplementers()
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_CountO1_DoesntEnumerateGenericIListImplementers
+  commentId: M:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_DoesntEnumerateGenericIListImplementers
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_DoesntEnumerateGenericIListImplementers()
+  nameWithType: EnumerableExtensionsTests.CountO1_DoesntEnumerateGenericIListImplementers()
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_DoesntEnumerateGenericIListImplementers*
+  name: CountO1_DoesntEnumerateGenericIListImplementers
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_CountO1_DoesntEnumerateGenericIListImplementers_
+  commentId: Overload:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_DoesntEnumerateGenericIListImplementers
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_DoesntEnumerateGenericIListImplementers
+  nameWithType: EnumerableExtensionsTests.CountO1_DoesntEnumerateGenericIListImplementers
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_DoesntEnumerateNonGenericIListImplementers
+  name: CountO1_DoesntEnumerateNonGenericIListImplementers()
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_CountO1_DoesntEnumerateNonGenericIListImplementers
+  commentId: M:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_DoesntEnumerateNonGenericIListImplementers
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_DoesntEnumerateNonGenericIListImplementers()
+  nameWithType: EnumerableExtensionsTests.CountO1_DoesntEnumerateNonGenericIListImplementers()
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_DoesntEnumerateNonGenericIListImplementers*
+  name: CountO1_DoesntEnumerateNonGenericIListImplementers
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_CountO1_DoesntEnumerateNonGenericIListImplementers_
+  commentId: Overload:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_DoesntEnumerateNonGenericIListImplementers
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_DoesntEnumerateNonGenericIListImplementers
+  nameWithType: EnumerableExtensionsTests.CountO1_DoesntEnumerateNonGenericIListImplementers
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_EnumeratesGenericEnumerables
+  name: CountO1_EnumeratesGenericEnumerables()
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_CountO1_EnumeratesGenericEnumerables
+  commentId: M:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_EnumeratesGenericEnumerables
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_EnumeratesGenericEnumerables()
+  nameWithType: EnumerableExtensionsTests.CountO1_EnumeratesGenericEnumerables()
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_EnumeratesGenericEnumerables*
+  name: CountO1_EnumeratesGenericEnumerables
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_CountO1_EnumeratesGenericEnumerables_
+  commentId: Overload:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_EnumeratesGenericEnumerables
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_EnumeratesGenericEnumerables
+  nameWithType: EnumerableExtensionsTests.CountO1_EnumeratesGenericEnumerables
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_IsCorrectWithEmptyEnumerables
+  name: CountO1_IsCorrectWithEmptyEnumerables()
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_CountO1_IsCorrectWithEmptyEnumerables
+  commentId: M:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_IsCorrectWithEmptyEnumerables
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_IsCorrectWithEmptyEnumerables()
+  nameWithType: EnumerableExtensionsTests.CountO1_IsCorrectWithEmptyEnumerables()
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_IsCorrectWithEmptyEnumerables*
+  name: CountO1_IsCorrectWithEmptyEnumerables
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_CountO1_IsCorrectWithEmptyEnumerables_
+  commentId: Overload:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_IsCorrectWithEmptyEnumerables
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_IsCorrectWithEmptyEnumerables
+  nameWithType: EnumerableExtensionsTests.CountO1_IsCorrectWithEmptyEnumerables
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_IsCorrectWithMultipleValues
+  name: CountO1_IsCorrectWithMultipleValues()
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_CountO1_IsCorrectWithMultipleValues
+  commentId: M:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_IsCorrectWithMultipleValues
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_IsCorrectWithMultipleValues()
+  nameWithType: EnumerableExtensionsTests.CountO1_IsCorrectWithMultipleValues()
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_IsCorrectWithMultipleValues*
+  name: CountO1_IsCorrectWithMultipleValues
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_CountO1_IsCorrectWithMultipleValues_
+  commentId: Overload:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_IsCorrectWithMultipleValues
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_IsCorrectWithMultipleValues
+  nameWithType: EnumerableExtensionsTests.CountO1_IsCorrectWithMultipleValues
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_IsCorrectWithSingletons
+  name: CountO1_IsCorrectWithSingletons()
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_CountO1_IsCorrectWithSingletons
+  commentId: M:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_IsCorrectWithSingletons
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_IsCorrectWithSingletons()
+  nameWithType: EnumerableExtensionsTests.CountO1_IsCorrectWithSingletons()
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_IsCorrectWithSingletons*
+  name: CountO1_IsCorrectWithSingletons
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_CountO1_IsCorrectWithSingletons_
+  commentId: Overload:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_IsCorrectWithSingletons
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.CountO1_IsCorrectWithSingletons
+  nameWithType: EnumerableExtensionsTests.CountO1_IsCorrectWithSingletons
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_DoesntEnumerateGenericIListImplementers
+  name: ElementAtO1_DoesntEnumerateGenericIListImplementers()
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_ElementAtO1_DoesntEnumerateGenericIListImplementers
+  commentId: M:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_DoesntEnumerateGenericIListImplementers
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_DoesntEnumerateGenericIListImplementers()
+  nameWithType: EnumerableExtensionsTests.ElementAtO1_DoesntEnumerateGenericIListImplementers()
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_DoesntEnumerateGenericIListImplementers*
+  name: ElementAtO1_DoesntEnumerateGenericIListImplementers
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_ElementAtO1_DoesntEnumerateGenericIListImplementers_
+  commentId: Overload:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_DoesntEnumerateGenericIListImplementers
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_DoesntEnumerateGenericIListImplementers
+  nameWithType: EnumerableExtensionsTests.ElementAtO1_DoesntEnumerateGenericIListImplementers
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_DoesntEnumerateNonGenericIListImplementers
+  name: ElementAtO1_DoesntEnumerateNonGenericIListImplementers()
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_ElementAtO1_DoesntEnumerateNonGenericIListImplementers
+  commentId: M:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_DoesntEnumerateNonGenericIListImplementers
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_DoesntEnumerateNonGenericIListImplementers()
+  nameWithType: EnumerableExtensionsTests.ElementAtO1_DoesntEnumerateNonGenericIListImplementers()
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_DoesntEnumerateNonGenericIListImplementers*
+  name: ElementAtO1_DoesntEnumerateNonGenericIListImplementers
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_ElementAtO1_DoesntEnumerateNonGenericIListImplementers_
+  commentId: Overload:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_DoesntEnumerateNonGenericIListImplementers
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_DoesntEnumerateNonGenericIListImplementers
+  nameWithType: EnumerableExtensionsTests.ElementAtO1_DoesntEnumerateNonGenericIListImplementers
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_EnumeratesGenericEnumerables
+  name: ElementAtO1_EnumeratesGenericEnumerables()
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_ElementAtO1_EnumeratesGenericEnumerables
+  commentId: M:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_EnumeratesGenericEnumerables
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_EnumeratesGenericEnumerables()
+  nameWithType: EnumerableExtensionsTests.ElementAtO1_EnumeratesGenericEnumerables()
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_EnumeratesGenericEnumerables*
+  name: ElementAtO1_EnumeratesGenericEnumerables
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_ElementAtO1_EnumeratesGenericEnumerables_
+  commentId: Overload:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_EnumeratesGenericEnumerables
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_EnumeratesGenericEnumerables
+  nameWithType: EnumerableExtensionsTests.ElementAtO1_EnumeratesGenericEnumerables
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_IsCorrect
+  name: ElementAtO1_IsCorrect()
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_ElementAtO1_IsCorrect
+  commentId: M:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_IsCorrect
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_IsCorrect()
+  nameWithType: EnumerableExtensionsTests.ElementAtO1_IsCorrect()
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_IsCorrect*
+  name: ElementAtO1_IsCorrect
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_ElementAtO1_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_IsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_IsCorrect
+  nameWithType: EnumerableExtensionsTests.ElementAtO1_IsCorrect
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_ThrowsExceptionForInvalidIndexes
+  name: ElementAtO1_ThrowsExceptionForInvalidIndexes()
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_ElementAtO1_ThrowsExceptionForInvalidIndexes
+  commentId: M:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_ThrowsExceptionForInvalidIndexes
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_ThrowsExceptionForInvalidIndexes()
+  nameWithType: EnumerableExtensionsTests.ElementAtO1_ThrowsExceptionForInvalidIndexes()
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_ThrowsExceptionForInvalidIndexes*
+  name: ElementAtO1_ThrowsExceptionForInvalidIndexes
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_ElementAtO1_ThrowsExceptionForInvalidIndexes_
+  commentId: Overload:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_ThrowsExceptionForInvalidIndexes
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1_ThrowsExceptionForInvalidIndexes
+  nameWithType: EnumerableExtensionsTests.ElementAtO1_ThrowsExceptionForInvalidIndexes
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_DoesntEnumerateGenericIListImplementers
+  name: ElementAtO1OrDefault_DoesntEnumerateGenericIListImplementers()
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_ElementAtO1OrDefault_DoesntEnumerateGenericIListImplementers
+  commentId: M:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_DoesntEnumerateGenericIListImplementers
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_DoesntEnumerateGenericIListImplementers()
+  nameWithType: EnumerableExtensionsTests.ElementAtO1OrDefault_DoesntEnumerateGenericIListImplementers()
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_DoesntEnumerateGenericIListImplementers*
+  name: ElementAtO1OrDefault_DoesntEnumerateGenericIListImplementers
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_ElementAtO1OrDefault_DoesntEnumerateGenericIListImplementers_
+  commentId: Overload:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_DoesntEnumerateGenericIListImplementers
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_DoesntEnumerateGenericIListImplementers
+  nameWithType: EnumerableExtensionsTests.ElementAtO1OrDefault_DoesntEnumerateGenericIListImplementers
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_DoesntEnumerateNonGenericIListImplementers
+  name: ElementAtO1OrDefault_DoesntEnumerateNonGenericIListImplementers()
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_ElementAtO1OrDefault_DoesntEnumerateNonGenericIListImplementers
+  commentId: M:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_DoesntEnumerateNonGenericIListImplementers
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_DoesntEnumerateNonGenericIListImplementers()
+  nameWithType: EnumerableExtensionsTests.ElementAtO1OrDefault_DoesntEnumerateNonGenericIListImplementers()
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_DoesntEnumerateNonGenericIListImplementers*
+  name: ElementAtO1OrDefault_DoesntEnumerateNonGenericIListImplementers
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_ElementAtO1OrDefault_DoesntEnumerateNonGenericIListImplementers_
+  commentId: Overload:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_DoesntEnumerateNonGenericIListImplementers
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_DoesntEnumerateNonGenericIListImplementers
+  nameWithType: EnumerableExtensionsTests.ElementAtO1OrDefault_DoesntEnumerateNonGenericIListImplementers
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_EnumeratesGenericEnumerables
+  name: ElementAtO1OrDefault_EnumeratesGenericEnumerables()
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_ElementAtO1OrDefault_EnumeratesGenericEnumerables
+  commentId: M:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_EnumeratesGenericEnumerables
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_EnumeratesGenericEnumerables()
+  nameWithType: EnumerableExtensionsTests.ElementAtO1OrDefault_EnumeratesGenericEnumerables()
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_EnumeratesGenericEnumerables*
+  name: ElementAtO1OrDefault_EnumeratesGenericEnumerables
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_ElementAtO1OrDefault_EnumeratesGenericEnumerables_
+  commentId: Overload:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_EnumeratesGenericEnumerables
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_EnumeratesGenericEnumerables
+  nameWithType: EnumerableExtensionsTests.ElementAtO1OrDefault_EnumeratesGenericEnumerables
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_IsCorrect
+  name: ElementAtO1OrDefault_IsCorrect()
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_ElementAtO1OrDefault_IsCorrect
+  commentId: M:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_IsCorrect
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_IsCorrect()
+  nameWithType: EnumerableExtensionsTests.ElementAtO1OrDefault_IsCorrect()
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_IsCorrect*
+  name: ElementAtO1OrDefault_IsCorrect
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_ElementAtO1OrDefault_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_IsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_IsCorrect
+  nameWithType: EnumerableExtensionsTests.ElementAtO1OrDefault_IsCorrect
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_ReturnsDefaultForBigIndexes
+  name: ElementAtO1OrDefault_ReturnsDefaultForBigIndexes()
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_ElementAtO1OrDefault_ReturnsDefaultForBigIndexes
+  commentId: M:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_ReturnsDefaultForBigIndexes
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_ReturnsDefaultForBigIndexes()
+  nameWithType: EnumerableExtensionsTests.ElementAtO1OrDefault_ReturnsDefaultForBigIndexes()
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_ReturnsDefaultForBigIndexes*
+  name: ElementAtO1OrDefault_ReturnsDefaultForBigIndexes
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_ElementAtO1OrDefault_ReturnsDefaultForBigIndexes_
+  commentId: Overload:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_ReturnsDefaultForBigIndexes
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_ReturnsDefaultForBigIndexes
+  nameWithType: EnumerableExtensionsTests.ElementAtO1OrDefault_ReturnsDefaultForBigIndexes
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_ThrowsExceptionForNegativeIndexes
+  name: ElementAtO1OrDefault_ThrowsExceptionForNegativeIndexes()
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_ElementAtO1OrDefault_ThrowsExceptionForNegativeIndexes
+  commentId: M:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_ThrowsExceptionForNegativeIndexes
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_ThrowsExceptionForNegativeIndexes()
+  nameWithType: EnumerableExtensionsTests.ElementAtO1OrDefault_ThrowsExceptionForNegativeIndexes()
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_ThrowsExceptionForNegativeIndexes*
+  name: ElementAtO1OrDefault_ThrowsExceptionForNegativeIndexes
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_ElementAtO1OrDefault_ThrowsExceptionForNegativeIndexes_
+  commentId: Overload:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_ThrowsExceptionForNegativeIndexes
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_ThrowsExceptionForNegativeIndexes
+  nameWithType: EnumerableExtensionsTests.ElementAtO1OrDefault_ThrowsExceptionForNegativeIndexes
+- uid: MoreStructures.Tests.Utilities.LockValueObjectTests
+  name: LockValueObjectTests
+  href: api/MoreStructures.Tests.Utilities.LockValueObjectTests.html
+  commentId: T:MoreStructures.Tests.Utilities.LockValueObjectTests
+  fullName: MoreStructures.Tests.Utilities.LockValueObjectTests
+  nameWithType: LockValueObjectTests
+- uid: MoreStructures.Tests.Utilities.LockValueObjectTests.Equals_IsByValue
+  name: Equals_IsByValue()
+  href: api/MoreStructures.Tests.Utilities.LockValueObjectTests.html#MoreStructures_Tests_Utilities_LockValueObjectTests_Equals_IsByValue
+  commentId: M:MoreStructures.Tests.Utilities.LockValueObjectTests.Equals_IsByValue
+  fullName: MoreStructures.Tests.Utilities.LockValueObjectTests.Equals_IsByValue()
+  nameWithType: LockValueObjectTests.Equals_IsByValue()
+- uid: MoreStructures.Tests.Utilities.LockValueObjectTests.Equals_IsByValue*
+  name: Equals_IsByValue
+  href: api/MoreStructures.Tests.Utilities.LockValueObjectTests.html#MoreStructures_Tests_Utilities_LockValueObjectTests_Equals_IsByValue_
+  commentId: Overload:MoreStructures.Tests.Utilities.LockValueObjectTests.Equals_IsByValue
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.LockValueObjectTests.Equals_IsByValue
+  nameWithType: LockValueObjectTests.Equals_IsByValue
+- uid: MoreStructures.Tests.Utilities.LockValueObjectTests.GetHashCode_IsByValue
+  name: GetHashCode_IsByValue()
+  href: api/MoreStructures.Tests.Utilities.LockValueObjectTests.html#MoreStructures_Tests_Utilities_LockValueObjectTests_GetHashCode_IsByValue
+  commentId: M:MoreStructures.Tests.Utilities.LockValueObjectTests.GetHashCode_IsByValue
+  fullName: MoreStructures.Tests.Utilities.LockValueObjectTests.GetHashCode_IsByValue()
+  nameWithType: LockValueObjectTests.GetHashCode_IsByValue()
+- uid: MoreStructures.Tests.Utilities.LockValueObjectTests.GetHashCode_IsByValue*
+  name: GetHashCode_IsByValue
+  href: api/MoreStructures.Tests.Utilities.LockValueObjectTests.html#MoreStructures_Tests_Utilities_LockValueObjectTests_GetHashCode_IsByValue_
+  commentId: Overload:MoreStructures.Tests.Utilities.LockValueObjectTests.GetHashCode_IsByValue
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.LockValueObjectTests.GetHashCode_IsByValue
+  nameWithType: LockValueObjectTests.GetHashCode_IsByValue
 - uid: MoreStructures.Tests.Utilities.StringUtilitiesTests
   name: StringUtilitiesTests
   href: api/MoreStructures.Tests.Utilities.StringUtilitiesTests.html
@@ -7862,6 +8195,60 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Utilities.CharOrTerminatorComparer.Terminator
   nameWithType: CharOrTerminatorComparer.Terminator
+- uid: MoreStructures.Utilities.EnumerableExtensions
+  name: EnumerableExtensions
+  href: api/MoreStructures.Utilities.EnumerableExtensions.html
+  commentId: T:MoreStructures.Utilities.EnumerableExtensions
+  fullName: MoreStructures.Utilities.EnumerableExtensions
+  nameWithType: EnumerableExtensions
+- uid: MoreStructures.Utilities.EnumerableExtensions.CountO1*
+  name: CountO1
+  href: api/MoreStructures.Utilities.EnumerableExtensions.html#MoreStructures_Utilities_EnumerableExtensions_CountO1_
+  commentId: Overload:MoreStructures.Utilities.EnumerableExtensions.CountO1
+  isSpec: "True"
+  fullName: MoreStructures.Utilities.EnumerableExtensions.CountO1
+  nameWithType: EnumerableExtensions.CountO1
+- uid: MoreStructures.Utilities.EnumerableExtensions.CountO1``1(System.Collections.IEnumerable{``0})
+  name: CountO1<TSource>(IEnumerable<TSource>)
+  href: api/MoreStructures.Utilities.EnumerableExtensions.html#MoreStructures_Utilities_EnumerableExtensions_CountO1__1_System_Collections_IEnumerable___0__
+  commentId: M:MoreStructures.Utilities.EnumerableExtensions.CountO1``1(System.Collections.IEnumerable{``0})
+  name.vb: CountO1(Of TSource)(IEnumerable(Of TSource))
+  fullName: MoreStructures.Utilities.EnumerableExtensions.CountO1<TSource>(System.Collections.IEnumerable<TSource>)
+  fullName.vb: MoreStructures.Utilities.EnumerableExtensions.CountO1(Of TSource)(System.Collections.IEnumerable(Of TSource))
+  nameWithType: EnumerableExtensions.CountO1<TSource>(IEnumerable<TSource>)
+  nameWithType.vb: EnumerableExtensions.CountO1(Of TSource)(IEnumerable(Of TSource))
+- uid: MoreStructures.Utilities.EnumerableExtensions.ElementAtO1*
+  name: ElementAtO1
+  href: api/MoreStructures.Utilities.EnumerableExtensions.html#MoreStructures_Utilities_EnumerableExtensions_ElementAtO1_
+  commentId: Overload:MoreStructures.Utilities.EnumerableExtensions.ElementAtO1
+  isSpec: "True"
+  fullName: MoreStructures.Utilities.EnumerableExtensions.ElementAtO1
+  nameWithType: EnumerableExtensions.ElementAtO1
+- uid: MoreStructures.Utilities.EnumerableExtensions.ElementAtO1``1(System.Collections.IEnumerable{``0},System.Int32)
+  name: ElementAtO1<TSource>(IEnumerable<TSource>, Int32)
+  href: api/MoreStructures.Utilities.EnumerableExtensions.html#MoreStructures_Utilities_EnumerableExtensions_ElementAtO1__1_System_Collections_IEnumerable___0__System_Int32_
+  commentId: M:MoreStructures.Utilities.EnumerableExtensions.ElementAtO1``1(System.Collections.IEnumerable{``0},System.Int32)
+  name.vb: ElementAtO1(Of TSource)(IEnumerable(Of TSource), Int32)
+  fullName: MoreStructures.Utilities.EnumerableExtensions.ElementAtO1<TSource>(System.Collections.IEnumerable<TSource>, System.Int32)
+  fullName.vb: MoreStructures.Utilities.EnumerableExtensions.ElementAtO1(Of TSource)(System.Collections.IEnumerable(Of TSource), System.Int32)
+  nameWithType: EnumerableExtensions.ElementAtO1<TSource>(IEnumerable<TSource>, Int32)
+  nameWithType.vb: EnumerableExtensions.ElementAtO1(Of TSource)(IEnumerable(Of TSource), Int32)
+- uid: MoreStructures.Utilities.EnumerableExtensions.ElementAtO1OrDefault*
+  name: ElementAtO1OrDefault
+  href: api/MoreStructures.Utilities.EnumerableExtensions.html#MoreStructures_Utilities_EnumerableExtensions_ElementAtO1OrDefault_
+  commentId: Overload:MoreStructures.Utilities.EnumerableExtensions.ElementAtO1OrDefault
+  isSpec: "True"
+  fullName: MoreStructures.Utilities.EnumerableExtensions.ElementAtO1OrDefault
+  nameWithType: EnumerableExtensions.ElementAtO1OrDefault
+- uid: MoreStructures.Utilities.EnumerableExtensions.ElementAtO1OrDefault``1(System.Collections.IEnumerable{``0},System.Int32)
+  name: ElementAtO1OrDefault<TSource>(IEnumerable<TSource>, Int32)
+  href: api/MoreStructures.Utilities.EnumerableExtensions.html#MoreStructures_Utilities_EnumerableExtensions_ElementAtO1OrDefault__1_System_Collections_IEnumerable___0__System_Int32_
+  commentId: M:MoreStructures.Utilities.EnumerableExtensions.ElementAtO1OrDefault``1(System.Collections.IEnumerable{``0},System.Int32)
+  name.vb: ElementAtO1OrDefault(Of TSource)(IEnumerable(Of TSource), Int32)
+  fullName: MoreStructures.Utilities.EnumerableExtensions.ElementAtO1OrDefault<TSource>(System.Collections.IEnumerable<TSource>, System.Int32)
+  fullName.vb: MoreStructures.Utilities.EnumerableExtensions.ElementAtO1OrDefault(Of TSource)(System.Collections.IEnumerable(Of TSource), System.Int32)
+  nameWithType: EnumerableExtensions.ElementAtO1OrDefault<TSource>(IEnumerable<TSource>, Int32)
+  nameWithType.vb: EnumerableExtensions.ElementAtO1OrDefault(Of TSource)(IEnumerable(Of TSource), Int32)
 - uid: MoreStructures.Utilities.IValueEnumerable`1
   name: IValueEnumerable<T>
   href: api/MoreStructures.Utilities.IValueEnumerable-1.html

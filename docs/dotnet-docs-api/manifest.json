@@ -162,7 +162,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.html",
-          "hash": "ZAKQDPhxwAQllf2k6uJzCsWHaybLeKHAKQig6f7uQsc="
+          "hash": "rnPNa2VNZlmd2rxkGtwraScvMl+fA0wY1RIWbaYlmV8="
         }
       },
       "is_incremental": false,
@@ -198,7 +198,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html",
-          "hash": "Fgrr77+hT/cnMDjnAFjKTe0Ve1B7pbb1gsM3u8o231o="
+          "hash": "t0FXvWUlCqjcgq4VdtgIfIwR3rhu54lADdDDqurNklU="
         }
       },
       "is_incremental": false,
@@ -306,7 +306,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Lists.Searching.BinarySearch.html",
-          "hash": "kPJux/BCc2T2ieVXZdd0O0wJTg1pVYxeY0vy6b+/Xaw="
+          "hash": "DbZccLkOaYOnxYppDV97si4YvutqySQy2NVfG0tp/j8="
         }
       },
       "is_incremental": false,
@@ -318,7 +318,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Lists.Searching.ISearch.html",
-          "hash": "1XgjZK+Y/NOVz8UMFTbuV0KhtV+RYRwoxUGR4krPSGQ="
+          "hash": "+6isv82Dpr2emEPMSjiX5qqlnAqT8ecP9rzvhShSRYU="
         }
       },
       "is_incremental": false,
@@ -330,7 +330,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Lists.Searching.LinearSearch.html",
-          "hash": "W+tVAxtFWLT7aVJlGCosTaz+jxhxQ73ryKpbGaASsB0="
+          "hash": "UCFpfF7A9BNpnH1rEIpNapao9cxGhBIa2yTbNNKG020="
         }
       },
       "is_incremental": false,
@@ -1206,7 +1206,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Lists.Searching.BinarySearchTests.html",
-          "hash": "VCxXZAk/xqHtItr8wWRmWiNi2Nxexy6O0qno3PbacVk="
+          "hash": "51eMYeFNkqaN0NL56yU4PAWLr9lMQZa0ZgVM2xriryE="
         }
       },
       "is_incremental": false,
@@ -1218,7 +1218,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Lists.Searching.LinearSearchTests.html",
-          "hash": "Y/7rN50Vt4mQ2O2t/TTLio5auIXch6S65A+4OPHl8wE="
+          "hash": "/h8IWk+OqTAFI6+cY7N3T57VLgD8sMKIyhNLp91Dvc0="
         }
       },
       "is_incremental": false,
@@ -1242,7 +1242,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Lists.Searching.SearchTests.html",
-          "hash": "w0XUrd3uOoEi2LnYiVv6Xt8QfBTIuN63BV8KM2mPpfc="
+          "hash": "RjL9IIxV8gr668LSdI+CfSKzxac8b9Pp9rWKoNLHBv4="
         }
       },
       "is_incremental": false,
@@ -1850,6 +1850,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html",
+          "hash": "RcBxuzYzeh1ZZ7kNk/IInBNfAK8v2atJRoekdgpMeZU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Utilities.LockValueObjectTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Utilities.LockValueObjectTests.html",
+          "hash": "qEqGuWYI9LbVJcL+1XE0RSptzWmT7d+NNgqvV6P+BVA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Tests.Utilities.StringUtilitiesTests.yml",
       "output": {
         ".html": {
@@ -1926,7 +1950,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Utilities.html",
-          "hash": "ML231yppfA+RabGv3P9EEr7EijNmkn3ecNhQC38caUo="
+          "hash": "Iz3Wz1Fl/TtQmZw71m9yD5qCFaq40yn1ODMOgUidl0Y="
         }
       },
       "is_incremental": false,
@@ -1999,6 +2023,18 @@
         ".html": {
           "relative_path": "api/MoreStructures.Utilities.CharOrTerminatorComparer.html",
           "hash": "Kgi98JIfmU0ctcATuyza9uvkmBT6XHUqE/v1aKdRjzg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Utilities.EnumerableExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Utilities.EnumerableExtensions.html",
+          "hash": "6jG1heEGXpVdLTddFBESngYscV9K+ar+zju1EkV/Xt8="
         }
       },
       "is_incremental": false,
@@ -2118,7 +2154,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Utilities.html",
-          "hash": "eu0yD94TseUBThmjR23gW3/f+RxMYnX4bqfeMUhQX48="
+          "hash": "AsfEHo47UIBLW36Zvvq6M49dlJsZBx+ilpdUpp1PpGI="
         }
       },
       "is_incremental": false,
@@ -2166,7 +2202,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "0D+nDTg40ZJJ3F5+8IXMaK//mBNw0/Zlf36G6rxvxps="
+          "hash": "2rDdsF4yg3DQg1kAXamrsO8Q1g9dnoLtxdujbZ+uYuk="
         }
       },
       "is_incremental": false,
@@ -2241,7 +2277,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 178,
+          "total_file_count": 181,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
