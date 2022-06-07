@@ -25,7 +25,7 @@ public interface ISearch
     /// <summary>
     /// Find the index of the first item in the sub-sequence of items of <paramref name="source"/> from 
     /// <paramref name="fromIndex"/> to <paramref name="toIndex"/> included, which is equal to 
-    /// <paramref name="item"/>, assuming that <paramref name="source"/> is sorted in ascending order.
+    /// <paramref name="item"/>.
     /// </summary>
     /// <typeparam name="T">
     /// The type of items of <paramref name="source"/>. Must be comparable.
@@ -55,13 +55,50 @@ public interface ISearch
     int First<T>(
         IEnumerable<T> source, T item, IComparer<T>? comparer = null, int? fromIndex = null, int? toIndex = null);
 
+    /// <summary>
+    /// Find the indexes of the first occurrence of each item in the sub-sequence of items of <paramref name="source"/>
+    /// from <paramref name="fromIndex"/> to <paramref name="toIndex"/> included.
+    /// </summary>
+    /// <typeparam name="T">
+    /// The type of items of <paramref name="source"/>. Must be comparable and non-null, since it is used as key to 
+    /// index first occurrence indexes in the output <see cref="IDictionary{TKey, TValue}"/>.
+    /// <br/>
+    /// If it is <see cref="string"/>, random access is done in O(1) via <see cref="string.this[int]"/>.
+    /// Otherwise, random access is done via the generic LINQ method 
+    /// <see cref="Enumerable.ElementAt{TSource}(IEnumerable{TSource}, Index)"/>, which is O(n) or O(1) dependending
+    /// on the <see cref="IEnumerable{T}"/> concretion.
+    /// </typeparam>
+    /// <param name="source">The enumerable.</param>
+    /// <param name="comparer">
+    /// The comparer to be used when performing the search, to tell apart different items.
+    /// If not specified, <see cref="Comparer{T}.Default"/> is used.
+    /// </param>
+    /// <param name="fromIndex">
+    /// The first index, marking the begin of the sub-sequence of <paramref name="source"/> where to search.
+    /// If not specified, 0 is used.
+    /// </param>
+    /// <param name="toIndex">
+    /// The last index, marking the end of the sub-sequence of <paramref name="source"/> where to search.
+    /// If not specified, <see cref="Enumerable.Count{TSource}(IEnumerable{TSource})"/> is called on 
+    /// <paramref name="source"/> to calculate the count of items, and count - 1 is used.
+    /// If <paramref name="source"/> is a <see cref="string"/>, however, <see cref="string.Length"/> is used 
+    /// instead.
+    /// </param>
+    /// <returns>
+    /// A <see cref="IDictionary{TKey, TValue}"/> containing the 0-based index first occurrence of each item, indexed 
+    /// by the item itself.
+    /// </returns>
+    IDictionary<T, int> FirstAll<T>(
+        IEnumerable<T> source, IComparer<T>? comparer = null, int? fromIndex = null, int? toIndex = null)
+        where T : notnull;
+
     /// <inheritdoc cref="First{T}(IEnumerable{T}, T, IComparer{T}?, int?, int?)" 
     ///     path="//*[not(self::summary or self::returns)]"/>
     ///     
     /// <summary>
     /// Find the index of the last item in the sub-sequence of items of <paramref name="source"/> from 
     /// <paramref name="fromIndex"/> to <paramref name="toIndex"/> included, which is equal to 
-    /// <paramref name="item"/>, assuming that <paramref name="source"/> is sorted in ascending order.
+    /// <paramref name="item"/>.
     /// </summary>
     /// <returns>
     /// The first and last index, marking the end of the sub-sequence of <paramref name="source"/> where to search.
@@ -75,7 +112,7 @@ public interface ISearch
     /// <summary>
     /// Find the indexes of the first and last items in the sub-sequence of items of <paramref name="source"/> from 
     /// <paramref name="fromIndex"/> to <paramref name="toIndex"/> included, which is equal to 
-    /// <paramref name="item"/>, assuming that <paramref name="source"/> is sorted in ascending order.
+    /// <paramref name="item"/>.
     /// </summary>
     /// <returns>
     /// The first and last index, marking the end of the sub-sequence of <paramref name="source"/> where to search.
@@ -89,7 +126,7 @@ public interface ISearch
     /// <summary>
     /// Find the index of the n-th occurence (0-based) of the item in the sub-sequence of items of 
     /// <paramref name="source"/> from <paramref name="fromIndex"/> to <paramref name="toIndex"/> included, which is 
-    /// equal to <paramref name="item"/>, assuming that <paramref name="source"/> is sorted in ascending order.
+    /// equal to <paramref name="item"/>.
     /// </summary>
     /// <returns>
     /// The n-th index, marking the end of the sub-sequence of <paramref name="source"/> where to search.

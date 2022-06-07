@@ -1,5 +1,6 @@
 ﻿using MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders;
 using MoreStructures.Lists.Counting;
+using MoreStructures.Lists.Searching;
 
 namespace MoreStructures.BurrowsWheelerTransform.Matching;
 
@@ -9,10 +10,21 @@ namespace MoreStructures.BurrowsWheelerTransform.Matching;
 /// to perform in constant time interval narrowing operations within the top-level loop of chars to match.
 /// </summary>
 /// <remarks>
-/// 
+/// Precalculating counts requires iterating over all the chars of the BWT and populating a table of n rows and sigma
+/// columns.
+/// <br/>
+/// Precalculating first occurrences also requires iterating over the BWT, and storing a dictionary of n items.
+/// <br/>
+/// Therefore the cost paid upfront is O(n) in time and O(n * sigma) in space.
 /// </remarks>
 public class CountBasedNarrowingIntervalMatcher : NarrowingIntervalMatcher
 {
+    /// <summary>
+    /// The <see cref="ISearch"/> implementation to be used when looking for the 1st occurrence of each of the items 
+    /// of an enumerable.
+    /// </summary>
+    protected static ISearch LinearSearch { get; } = new LinearSearch();
+
     /// <summary>
     /// The <see cref="IOccurrencesCounter"/> implementation to be used when counting the number of occurrences of 
     /// each of the items of an enumerable.
@@ -32,7 +44,7 @@ public class CountBasedNarrowingIntervalMatcher : NarrowingIntervalMatcher
         : base(bwt, bwtSorter)
     {
         _bwtCounts = OccurrencesCounter.Count(BWT);
-        _sbwtFirstOccurrences = Calculate1stOccurrences(SortedBWT);
+        _sbwtFirstOccurrences = LinearSearch.FirstAll(SortedBWT);
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
@@ -43,7 +55,7 @@ public class CountBasedNarrowingIntervalMatcher : NarrowingIntervalMatcher
         : base(bwt, sbwt)
     {
         _bwtCounts = OccurrencesCounter.Count(BWT);
-        _sbwtFirstOccurrences = Calculate1stOccurrences(SortedBWT);
+        _sbwtFirstOccurrences = LinearSearch.FirstAll(SortedBWT);
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
@@ -59,35 +71,25 @@ public class CountBasedNarrowingIntervalMatcher : NarrowingIntervalMatcher
     /// </remarks>
     protected override ILastFirstFinder BuildLastFirstFinder() => new NaiveFinder(BWT, SortedBWT);
 
-    private static IDictionary<T, int> Calculate1stOccurrences<T>(IEnumerable<T> enumerable)
-        where T: notnull
-    {
-        var result = new Dictionary<T, int> { };
-        var index = 0;
-        foreach (var item in enumerable)
-        {
-            if (!result.TryGetValue(item, out var value))
-                result[item] = index;
-            index++;
-        }
-
-        return result;
-    }
-
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
-    /// Narrowing is performed in three sub-steps (compared to the five in <see cref="NarrowingIntervalMatcher"/>):
-    /// <br/>
-    /// 1. The new start index is calculated as the 1st occurrence in <see cref="IMatcher.SortedBWT"/> of the current 
-    /// char + the count of such char in <see cref="IMatcher.BWT"/> up to the current start index excluded (i.e. the 
-    /// number of occurrences of the char up to the index before the current start index);
-    /// <br/>
-    /// 2. The new end index is calculated as the 1st occurrence in <see cref="IMatcher.SortedBWT"/> of the current
-    /// char + the count of such char in <see cref="IMatcher.BWT"/> up to the current end index included, short of one 
-    /// (i.e. the number of occurrences of the char up to the current end index - 1);
-    /// <br/>
-    /// 3. the narrowed interval in Sorted BWT is returned.
-    /// <br/>
+    /// <para id="algo">
+    ///     Narrowing is performed in three sub-steps (compared to the five in <see cref="NarrowingIntervalMatcher"/>):
+    ///     <br/>
+    ///     1. The new start index is calculated as the 1st occurrence in <see cref="IMatcher.SortedBWT"/> of the 
+    ///     current char + the count of such char in <see cref="IMatcher.BWT"/> up to the current start index excluded 
+    ///     (i.e. the number of occurrences of the char up to the index before the current start index).
+    ///     <br/>
+    ///     2. The new end index is calculated as the 1st occurrence in <see cref="IMatcher.SortedBWT"/> of the current
+    ///     char + the count of such char in <see cref="IMatcher.BWT"/> up to the current end index included, short of 
+    ///     one (i.e. the number of occurrences of the char up to the current end index - 1).
+    ///     <br/>
+    ///     3. The narrowed interval in Sorted BWT is returned.
+    ///     <br/>
+    /// </para>
+    /// <para id="complexity">
+    ///     Total amortized cost is O(1), both in time and space.
+    /// </para>
     /// </remarks>
     protected override (bool success, int narrowedStartIndex, int narrowedEndIndex) NarrowInterval(
         char currentChar, ILastFirstFinder finder, int startIndex, int endIndex)

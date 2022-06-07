@@ -6,9 +6,21 @@ namespace MoreStructures.BurrowsWheelerTransform.Matching;
 
 /// <inheritdoc path="//*[not(self::remarks)]"/>
 /// <remarks>
-/// This is a basic implementation, narrowing the matching interval at every iteration with two linear scans of BWT.
-/// <br/>
-/// Time Complexity = O(n^2). Space Complexity = O().
+/// <para id="algo">
+///     This is a basic implementation, narrowing the matching interval at every iteration with two linear scans of the
+///     BWT.
+///     <br/>
+///     No precomputation cost is paid on instantiation, except for sorting of the <see cref="BWT"/> to build the 
+///     <see cref="SortedBWT"/>, which takes O(n * log(n)) time using <see cref="BWTransform.QuickSort"/>, but can also 
+///     run in linear time for a constant size alphabet using the Counting Sort. 
+///     <br/>
+///     Either way, the predominant cost is the main narrowing interval algorithm, which runs for each char in the BWT
+///     (i.e. n times) two linear scans of the BWT itself (on the order of n), resulting in quadratic time execution.
+///     <br/>
+/// </para>
+/// <para id="complexity">
+///     Time Complexity = O(n^2). Space Complexity = O(n).
+/// </para>
 /// </remarks>
 public class NarrowingIntervalMatcher : IMatcher
 {
