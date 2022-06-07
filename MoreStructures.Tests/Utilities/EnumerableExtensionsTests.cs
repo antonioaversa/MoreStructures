@@ -73,16 +73,16 @@ public class EnumerableExtensionsTests
     [TestMethod]
     public void ElementAtO1_ThrowsExceptionForInvalidIndexes()
     {
-        Assert.ThrowsException<IndexOutOfRangeException>(() => "abc".ElementAtO1(-1));
-        Assert.ThrowsException<IndexOutOfRangeException>(() => "abc".ElementAtO1(3));
-        Assert.ThrowsException<IndexOutOfRangeException>(() => new int[] { 1, 2, 3 }.ElementAtO1(-1));
-        Assert.ThrowsException<IndexOutOfRangeException>(() => new int[] { 1, 2, 3 }.ElementAtO1(3));
-        Assert.ThrowsException<IndexOutOfRangeException>(() => new List<int> { 1, 2, 3 }.ElementAtO1(-1));
-        Assert.ThrowsException<IndexOutOfRangeException>(() => new List<int> { 1, 2, 3 }.ElementAtO1(3));
-        Assert.ThrowsException<IndexOutOfRangeException>(() => new GenericListMock(3).ElementAtO1(-1));
-        Assert.ThrowsException<IndexOutOfRangeException>(() => new GenericListMock(3).ElementAtO1(3));
-        Assert.ThrowsException<IndexOutOfRangeException>(() => new NonGenericListMock(3).ElementAtO1(-1));
-        Assert.ThrowsException<IndexOutOfRangeException>(() => new NonGenericListMock(3).ElementAtO1(3));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => "abc".ElementAtO1(-1));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => "abc".ElementAtO1(3));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new int[] { 1, 2, 3 }.ElementAtO1(-1));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new int[] { 1, 2, 3 }.ElementAtO1(3));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new List<int> { 1, 2, 3 }.ElementAtO1(-1));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new List<int> { 1, 2, 3 }.ElementAtO1(3));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new GenericListMock(3).ElementAtO1(-1));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new GenericListMock(3).ElementAtO1(3));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new NonGenericListMock(3).ElementAtO1(-1));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new NonGenericListMock(3).ElementAtO1(3));
     }
 
     [TestMethod]
@@ -128,11 +128,11 @@ public class EnumerableExtensionsTests
     [TestMethod]
     public void ElementAtO1OrDefault_ThrowsExceptionForNegativeIndexes()
     {
-        Assert.ThrowsException<IndexOutOfRangeException>(() => "abc".ElementAtO1OrDefault(-1));
-        Assert.ThrowsException<IndexOutOfRangeException>(() => new int[] { 1, 2, 3 }.ElementAtO1OrDefault(-1));
-        Assert.ThrowsException<IndexOutOfRangeException>(() => new List<int> { 1, 2, 3 }.ElementAtO1OrDefault(-1));
-        Assert.ThrowsException<IndexOutOfRangeException>(() => new GenericListMock(3).ElementAtO1OrDefault(-1));
-        Assert.ThrowsException<IndexOutOfRangeException>(() => new NonGenericListMock(3).ElementAtO1OrDefault(-1));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => "abc".ElementAtO1OrDefault(-1));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new int[] { 1, 2, 3 }.ElementAtO1OrDefault(-1));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new List<int> { 1, 2, 3 }.ElementAtO1OrDefault(-1));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new GenericListMock(3).ElementAtO1OrDefault(-1));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new NonGenericListMock(3).ElementAtO1OrDefault(-1));
     }
 
     [TestMethod]

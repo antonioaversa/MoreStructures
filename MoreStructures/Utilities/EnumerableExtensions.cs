@@ -62,21 +62,21 @@ public static class EnumerableExtensions
         if (source is string str)
         {
             if (index < 0 || index >= str.Length)
-                throw new IndexOutOfRangeException($"Invalid {nameof(index)}: {index}");
+                throw new ArgumentOutOfRangeException($"Invalid {nameof(index)}: {index}");
             return (TSource)(str[index] as object);
         }
 
         if (source is IList<TSource> genericList)
         {
             if (index < 0 || index >= genericList.Count)
-                throw new IndexOutOfRangeException($"Invalid {nameof(index)}: {index}");
+                throw new ArgumentOutOfRangeException($"Invalid {nameof(index)}: {index}");
             return genericList[index];
         }
 
         if (source is IList nonGenericList)
         {
             if (index < 0 || index >= nonGenericList.Count)
-                throw new IndexOutOfRangeException($"Invalid {nameof(index)}: {index}");
+                throw new ArgumentOutOfRangeException($"Invalid {nameof(index)}: {index}");
             return (TSource)nonGenericList[index]!;
         }
 
@@ -109,7 +109,7 @@ public static class EnumerableExtensions
     public static TSource? ElementAtO1OrDefault<TSource>(this IEnumerable<TSource> source, int index)
     {
         if (index < 0)
-            throw new IndexOutOfRangeException($"Invalid {nameof(index)}: {index}");
+            throw new ArgumentOutOfRangeException($"Invalid {nameof(index)}: {index}");
 
         if (source is string str)
             return index >= 0 && index < str.Length ? (TSource)(str[index] as object) : default;
