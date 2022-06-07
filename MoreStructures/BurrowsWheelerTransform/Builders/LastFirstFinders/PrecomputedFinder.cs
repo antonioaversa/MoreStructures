@@ -3,8 +3,18 @@
 
 /// <summary>
 /// A <see cref="BinarySearchFinder"/> refinement which precalculate an hash-map of all the positions by each
-/// char, for both BWT and its sorted version, which takes ~ 2 * n space and makes searches in .
+/// char, for both BWT and its sorted version, which takes ~ 2 * n space and makes calls to
+/// <see cref="FindIndexOfNthOccurrenceInBWT(int, int)"/> and <see cref="FindIndexOfNthOccurrenceInSortedBWT"/> 
+/// executed in constant time.
 /// </summary>
+/// <remarks>
+/// Calls to <see cref="FindOccurrenceRankOfCharInBWT(int)"/> are still executed in O(n / sigma) time, where sigma is 
+/// the size of the alphabet, or the number of distinct values in the BWT. If sigma is constant w.r.t. n, complexity
+/// is still linear.
+/// <br/>
+/// Calls to <see cref="FindOccurrenceRankOfCharInSortedBWT(int)"/> are still executed in O(log(n / sigma)), which is
+/// O(log(n)) when sigma is constant w.r.t. n.
+/// </remarks>
 public class PrecomputedFinder : BinarySearchFinder
 {
     /// <summary>
@@ -31,9 +41,7 @@ public class PrecomputedFinder : BinarySearchFinder
     /// <remarks>
     /// <inheritdoc cref="PrecomputedFinder" path="/summary"/>
     /// </remarks>
-    public PrecomputedFinder(
-        RotatedTextWithTerminator lastBWMColumn,
-        RotatedTextWithTerminator firstBWMColumn)
+    public PrecomputedFinder(RotatedTextWithTerminator lastBWMColumn, RotatedTextWithTerminator firstBWMColumn)
         : base(lastBWMColumn, firstBWMColumn)
     {
         _bwtOccurrenceIndexesOfChar = GetOccurrenceIndexesOfAllCharsIn(BWT);

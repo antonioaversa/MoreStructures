@@ -2,6 +2,7 @@
 using MoreStructures.BurrowsWheelerTransform;
 using MoreStructures.Utilities;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace MoreStructures.Tests.BurrowsWheelerTransform;
 
@@ -49,8 +50,19 @@ public class BWTransformTests
     public void Quicksort_WithCustomComparer()
     {
         Assert.AreEqual("stt$e", 
-            string.Concat(BWTransform.QuickSort(new("test$"), new MockCharComparer1()).RotatedText));
+            string.Concat(BWTransform.QuickSort(new("test$"), new MockCharComparer1()).sortedText.RotatedText));
         Assert.AreEqual("ett$s",
-            string.Concat(BWTransform.QuickSort(new("test$"), new MockCharComparer2()).RotatedText));
+            string.Concat(BWTransform.QuickSort(new("test$"), new MockCharComparer2()).sortedText.RotatedText));
+    }
+
+    [TestMethod]
+    public void Quicksort_IndexesMappingIsCorrect()
+    {
+        var indexesMapping = BWTransform.QuickSort(new("test$")).indexesMapping;
+        Assert.IsTrue(indexesMapping.SequenceEqual(new List<int> { 4, 1, 2, 0, 3 }));
+        indexesMapping = BWTransform.QuickSort(new("test$"), new MockCharComparer1()).indexesMapping;
+        Assert.IsTrue(indexesMapping.SequenceEqual(new List<int> { 2, 0, 3, 4, 1 }));
+        indexesMapping = BWTransform.QuickSort(new("test$"), new MockCharComparer2()).indexesMapping;
+        Assert.IsTrue(indexesMapping.SequenceEqual(new List<int> { 1, 0, 3, 4, 2 }));
     }
 }
