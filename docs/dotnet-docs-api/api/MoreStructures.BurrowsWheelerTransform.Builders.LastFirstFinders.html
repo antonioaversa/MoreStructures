@@ -94,11 +94,14 @@ binary search on <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Bu
       <h4><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html">NaiveFinder</a></h4>
       <section><p>A <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html">ILastFirstFinder</a> implementation which just iterates over <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_BWT">BWT</a> and its sorted version
 <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_NaiveFinder_SortedBWT">SortedBWT</a> every time.
-Each operation has Time Complexity = O(n) and Space Complexity = O(1).</p>
+Each operation has Time Complexity = O(n) and Space Complexity = O(1), since no additional structure is precomputed
+and/or stored.</p>
 </section>
       <h4><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.html">PrecomputedFinder</a></h4>
       <section><p>A <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.html">BinarySearchFinder</a> refinement which precalculate an hash-map of all the positions by each
-char, for both BWT and its sorted version, which takes ~ 2 * n space and makes searches in .</p>
+char, for both BWT and its sorted version, which takes ~ 2 * n space and makes calls to
+<a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder_FindIndexOfNthOccurrenceInBWT_System_Int32_System_Int32_">FindIndexOfNthOccurrenceInBWT(Int32, Int32)</a> and <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_PrecomputedFinder_FindIndexOfNthOccurrenceInSortedBWT_System_Int32_System_Int32_">FindIndexOfNthOccurrenceInSortedBWT(Int32, Int32)</a>
+executed in constant time.</p>
 </section>
     <h3 id="interfaces">Interfaces
   </h3>

@@ -91,7 +91,7 @@ a BWT into its sorted version.</p>
   <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
   <h5 id="MoreStructures_BurrowsWheelerTransform_BWTransform_SortStrategy_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public delegate RotatedTextWithTerminator SortStrategy(RotatedTextWithTerminator text, IComparer&lt;char&gt;? comparer = null);</code></pre>
+    <pre><code class="lang-csharp hljs">public delegate (RotatedTextWithTerminator sortedText, IEnumerable&lt;int&gt; indexesMapping) SortStrategy(RotatedTextWithTerminator text, IComparer&lt;char&gt;? comparer = null);</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -129,8 +129,10 @@ If not specified, a <a class="xref" href="MoreStructures.Utilities.CharOrTermina
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a></td>
-        <td><p>A new <a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a>, sorted according to the provided <code data-dev-comment-type="paramref" class="paramref">comparer</code>.</p>
+        <td><span class="xref">System.ValueTuple</span>&lt;<a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a>, <span class="xref">IEnumerable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><p>A new <a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a>, sorted according to the provided <code data-dev-comment-type="paramref" class="paramref">comparer</code>,
+together with a <see cref="!:IEnumerable&lt;T>"></see> of <span class="xref">System.Int32</span>, defining the mapping of the index of each
+char of the input text into the index of that char in the sorted version of the text.</p>
 </td>
       </tr>
     </tbody>
@@ -146,7 +148,7 @@ If not specified, a <a class="xref" href="MoreStructures.Utilities.CharOrTermina
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_BWTransform_SortStrategy.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/BWTransform.cs/#L32" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/BWTransform.cs/#L34" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
