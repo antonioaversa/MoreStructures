@@ -48,7 +48,7 @@ public class NarrowingIntervalMatcher : IMatcher
     public NarrowingIntervalMatcher(RotatedTextWithTerminator bwt, BWTransform.SortStrategy bwtSorter)
     {
         BWT = bwt;
-        SortedBWT = bwtSorter(BWT, CharOrTerminatorComparer.Build(bwt.Terminator));
+        SortedBWT = bwtSorter(BWT, CharOrTerminatorComparer.Build(bwt.Terminator)).sortedText;
     }
 
     /// <summary>

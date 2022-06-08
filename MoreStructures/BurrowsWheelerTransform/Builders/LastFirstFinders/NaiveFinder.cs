@@ -5,7 +5,8 @@ namespace MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders;
 /// <summary>
 /// A <see cref="ILastFirstFinder"/> implementation which just iterates over <see cref="BWT"/> and its sorted version 
 /// <see cref="SortedBWT"/> every time.
-/// Each operation has Time Complexity = O(n) and Space Complexity = O(1).
+/// Each operation has Time Complexity = O(n) and Space Complexity = O(1), since no additional structure is precomputed
+/// and/or stored.
 /// </summary>
 public class NaiveFinder : ILastFirstFinder
 {
@@ -31,7 +32,7 @@ public class NaiveFinder : ILastFirstFinder
     {
         CharComparer = CharOrTerminatorComparer.Build(lastBWMColumn.Terminator);
         BWT = lastBWMColumn;
-        SortedBWT = bwtSorter(BWT, CharComparer);
+        SortedBWT = bwtSorter(BWT, CharComparer).sortedText;
     }
 
     /// <summary>

@@ -27,9 +27,11 @@ public record BWTransform(TextWithTerminator Text, RotatedTextWithTerminator Con
     /// <see cref="RotatedTextWithTerminator.Terminator"/> of <paramref name="text" /> is used instead.
     /// </param>
     /// <returns>
-    /// A new <see cref="RotatedTextWithTerminator"/>, sorted according to the provided <paramref name="comparer"/>.
+    /// A new <see cref="RotatedTextWithTerminator"/>, sorted according to the provided <paramref name="comparer"/>, 
+    /// together with a <see cref="IEnumerable{T}"/> of <see cref="int"/>, defining the mapping of the index of each 
+    /// char of the input text into the index of that char in the sorted version of the text.
     /// </returns>
-    public delegate RotatedTextWithTerminator SortStrategy(
+    public delegate (RotatedTextWithTerminator sortedText, IEnumerable<int> indexesMapping) SortStrategy(
         RotatedTextWithTerminator text, IComparer<char>? comparer = null);
 
     /// <summary>
@@ -41,8 +43,18 @@ public record BWTransform(TextWithTerminator Text, RotatedTextWithTerminator Con
     /// Tipically used to sort the Burrows-Wheeler Transform.
     /// </remarks>
     public static readonly SortStrategy QuickSort =
-        (text, charComparer) => new(text.OrderBy(
-            c => c, charComparer ?? CharOrTerminatorComparer.Build(text.Terminator)), text.Terminator);
+        (text, charComparer) =>
+        {
+            charComparer ??= CharOrTerminatorComparer.Build(text.Terminator);
+
+            var textWithIndexes = text.Select((c, i) => (c, i));
+            var sortedTextWithIndexes = textWithIndexes.OrderBy(charAndIndex => charAndIndex.c, charComparer);
+            var sortedText = new RotatedTextWithTerminator(
+                sortedTextWithIndexes.Select(charAndIndex => charAndIndex.c), 
+                text.Terminator);
+            var indexesMapping = sortedTextWithIndexes.Select(charAndIndex => charAndIndex.i);
+            return (sortedText, indexesMapping);
+        };
 
     /// <summary>
     /// The length of this transform, which corresponds to the length of <see cref="Content"/>.
