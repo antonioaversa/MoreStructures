@@ -13,7 +13,7 @@ public class DepthFirstTraversalTests
     public void Visit_TraversalOrderParentFirst()
     {
         var visits = new List<(int? edgeId, int nodeId)> { };
-        Visitor<TreeMock.Edge, TreeMock.Node, TreeTraversalContext<TreeMock.Edge, TreeMock.Node>> visitsAppenderVisitor
+        Visitor<TreeMock.Node, TreeTraversalContext<TreeMock.Edge, TreeMock.Node>> visitsAppenderVisitor
             = (node, visitContext) => visits.Add((visitContext.IncomingEdge?.Id, node.Id));
 
         var root = TreeMock.BuildExampleTree();
@@ -33,7 +33,7 @@ public class DepthFirstTraversalTests
     public void Visit_TraversalOrderChildrenFirst()
     {
         var visits = new List<(int? edgeId, int nodeId)> { };
-        Visitor<TreeMock.Edge, TreeMock.Node, TreeTraversalContext<TreeMock.Edge, TreeMock.Node>> visitsAppenderVisitor
+        Visitor<TreeMock.Node, TreeTraversalContext<TreeMock.Edge, TreeMock.Node>> visitsAppenderVisitor
             = (node, visitContext) => visits.Add((visitContext.IncomingEdge?.Id, node.Id));
 
         var root = TreeMock.BuildExampleTree();
@@ -52,7 +52,7 @@ public class DepthFirstTraversalTests
     [TestMethod]
     public void Visit_TraversalOrderNotSupported()
     {
-        Visitor<TreeMock.Edge, TreeMock.Node, TreeTraversalContext<TreeMock.Edge, TreeMock.Node>> nopVisitor
+        Visitor<TreeMock.Node, TreeTraversalContext<TreeMock.Edge, TreeMock.Node>> nopVisitor
             = (node, visitContext) => { };
         var visitStrategy = new FullyRecursiveDepthFirstTraversal<TreeMock.Edge, TreeMock.Node>()
         {

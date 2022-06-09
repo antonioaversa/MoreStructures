@@ -13,14 +13,11 @@
 /// Depending on the actual <see cref="IVisitStrategy{TEdge, TNode, TVisitContext}"/> used, and how such visit traverse 
 /// the data structure, the context may contain different data.
 /// </param>
-/// <typeparam name="TEdge">The type of edges of the specific structure.</typeparam>
 /// <typeparam name="TNode">The type of nodes of the specific structure.</typeparam>
 /// <typeparam name="TVisitContext">
 /// The type of visit context. Depends on the <see cref="IVisitStrategy{TEdge, TNode, TVisitContext}"/> used.
 /// </typeparam>
-public delegate void Visitor<TEdge, TNode, TVisitContext>(TNode node, TVisitContext context)
-    where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>
-    where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode>;
+public delegate void Visitor<TNode, in TVisitContext>(TNode node, TVisitContext context);
 
 /// <summary>
 /// A visit strategy of <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode}"/> structures.
@@ -41,5 +38,5 @@ public interface IVisitStrategy<TEdge, TNode, TVisitContext>
     /// </summary>
     /// <param name="node">The node on where to start visit the structure.</param>
     /// <param name="visitor">The visit logic, invoked on each of the visit nodes.</param>
-    void Visit(TNode node, Visitor<TEdge, TNode, TVisitContext> visitor);
+    void Visit(TNode node, Visitor<TNode, TVisitContext> visitor);
 }

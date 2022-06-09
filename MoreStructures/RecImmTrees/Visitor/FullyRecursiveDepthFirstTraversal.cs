@@ -32,22 +32,25 @@ public class FullyRecursiveDepthFirstTraversal<TEdge, TNode>
     /// Specifying a well-defined, deterministic order ensures that children are visited in a consistent and 
     /// reproducible way across executions of the visit.
     /// </remarks>
-    public Func<IEnumerable<KeyValuePair<TEdge, TNode>>, IEnumerable<KeyValuePair<TEdge, TNode>>> ChildrenSorter = 
-        children => children;
+    public Func<IEnumerable<KeyValuePair<TEdge, TNode>>, IEnumerable<KeyValuePair<TEdge, TNode>>> ChildrenSorter 
+    { 
+        get; 
+        set; 
+    } = children => children;
 
     /// <inheritdoc 
-    ///     cref="IVisitStrategy{TEdge, TNode, TVisitContext}.Visit(TNode, Visitor{TEdge, TNode, TVisitContext})" 
+    ///     cref="IVisitStrategy{TEdge, TNode, TVisitContext}.Visit(TNode, Visitor{TNode, TVisitContext})" 
     ///     path="//*[not(self::summary)]"/>
     /// <summary>
     /// Visits the structure of the provided<paramref name= "node" />, calling the provided<paramref name="visitor"/>
     /// on each <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode}"/> of the structure, in depth-first order.
     /// </summary>
-    public void Visit(TNode node, Visitor<TEdge, TNode, TreeTraversalContext<TEdge, TNode>> visitor) => 
+    public void Visit(TNode node, Visitor<TNode, TreeTraversalContext<TEdge, TNode>> visitor) => 
         Visit(node, visitor, default, default);
 
     private void Visit(
         TNode node,
-        Visitor<TEdge, TNode, TreeTraversalContext<TEdge, TNode>> visitor, 
+        Visitor<TNode, TreeTraversalContext<TEdge, TNode>> visitor, 
         TNode? parentNode,
         TEdge? parentEdge)
     {
