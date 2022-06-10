@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace MoreStructures.Tests.RecImmTrees.Conversions
+    <title>Delegate Visitor&lt;TNode, TVisitContext&gt;
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace MoreStructures.Tests.RecImmTrees.Conversions
+    <meta name="title" content="Delegate Visitor&lt;TNode, TVisitContext&gt;
    ">
     <meta name="generator" content="docfx 2.59.2.0">
     
@@ -78,23 +78,70 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MoreStructures.Tests.RecImmTrees.Conversions">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.RecImmTrees.Visitor.Visitor`2">
   
-  <h1 id="MoreStructures_Tests_RecImmTrees_Conversions" data-uid="MoreStructures.Tests.RecImmTrees.Conversions" class="text-break">Namespace MoreStructures.Tests.RecImmTrees.Conversions
+  
+  <h1 id="MoreStructures_RecImmTrees_Visitor_Visitor_2" data-uid="MoreStructures.RecImmTrees.Visitor.Visitor`2" class="text-break">Delegate Visitor&lt;TNode, TVisitContext&gt;
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The visit logic of a <a class="xref" href="MoreStructures.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</a>. It's not correlated to the
+strategy with which nodes are visited, which is defined by this <a class="xref" href="MoreStructures.RecImmTrees.Visitor.IVisitStrategy-2.html">IVisitStrategy&lt;TNode, TVisitContext&gt;</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
-    <h3 id="classes">Classes
-  </h3>
-      <h4><a class="xref" href="MoreStructures.Tests.RecImmTrees.Conversions.FullyIterativeStringifierTests.html">FullyIterativeStringifierTests</a></h4>
-      <section></section>
-      <h4><a class="xref" href="MoreStructures.Tests.RecImmTrees.Conversions.FullyRecursiveStringifierTests.html">FullyRecursiveStringifierTests</a></h4>
-      <section></section>
-      <h4><a class="xref" href="MoreStructures.Tests.RecImmTrees.Conversions.StringifierBaseTests.html">StringifierBaseTests</a></h4>
-      <section></section>
-      <h4><a class="xref" href="MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.html">StringifierTests</a></h4>
-      <section></section>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.RecImmTrees.Visitor.html">MoreStructures.RecImmTrees.Visitor</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_RecImmTrees_Visitor_Visitor_2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public delegate void Visitor&lt;in TNode, in TVisitContext&gt;(TNode node, TVisitContext context);</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TNode</span></td>
+        <td><span class="parametername">node</span></td>
+        <td><p>The node being visited.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TVisitContext</span></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context in which the visit is performed, such as the incoming edge traversed to reach the node or the parent
+node, traversed at the previous iteration or recursive step.
+<br>
+Depending on the actual <a class="xref" href="MoreStructures.RecImmTrees.Visitor.IVisitStrategy-2.html">IVisitStrategy&lt;TNode, TVisitContext&gt;</a> used, and how such visit traverse
+the data structure, the context may contain different data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TNode</span></td>
+        <td><p>The type of nodes of the specific structure.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TVisitContext</span></td>
+        <td><p>The type of visit context. Depends on the <a class="xref" href="MoreStructures.RecImmTrees.Visitor.IVisitStrategy-2.html">IVisitStrategy&lt;TNode, TVisitContext&gt;</a> used.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -102,6 +149,12 @@
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Visitor_Visitor_2.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Visitor.Visitor%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/IVisitor.cs/#L19" class="contribution-link">View Source</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

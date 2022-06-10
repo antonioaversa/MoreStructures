@@ -470,6 +470,78 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal-2.html",
+          "hash": "9LYefcIjVkET8myI2/v1U+scczuVHRNjXjgt2mJSYtc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.RecImmTrees.Visitor.IVisitStrategy-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.RecImmTrees.Visitor.IVisitStrategy-2.html",
+          "hash": "NUjplu/wfYF0dgpancfVHfuj7RQAhxjudDb8IdzVaew="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.RecImmTrees.Visitor.TreeTraversalContext-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.RecImmTrees.Visitor.TreeTraversalContext-2.html",
+          "hash": "cZ3Yy0HCrOtn0HcdqLTQ+oA0jXePrA6W9vUPSmyEXnM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.RecImmTrees.Visitor.TreeTraversalOrder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.RecImmTrees.Visitor.TreeTraversalOrder.html",
+          "hash": "E2JWhKlMoiD9YpTPq9lQ5KTQrNaT+UD+g2yZN0tAyZU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.RecImmTrees.Visitor.Visitor-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.RecImmTrees.Visitor.Visitor-2.html",
+          "hash": "o59B2dn69Pcxo4s3eQNrBE3VhoqLEp01YWYw1icp26Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.RecImmTrees.Visitor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.RecImmTrees.Visitor.html",
+          "hash": "QWqYPpve+1+Hc91yAgxOMm7IrIlLrGNkDIXJbo/4CHc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.RecImmTrees.yml",
       "output": {
         ".html": {
@@ -1290,7 +1362,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.RecImmTrees.Conversions.StringifierBaseTests.html",
-          "hash": "5af6OiIHWh3r0ed2EqLgmTke8UWunjVtd6iOCy/6q5o="
+          "hash": "2nR8m1zkz2pzdQvRU7/hOTqpzubTS/n9/vRJAgkRukY="
         }
       },
       "is_incremental": false,
@@ -1302,43 +1374,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.html",
-          "hash": "DliDBDAhKjSynfXVyODUXahBllnfOeWUxTcOI0fa1rw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Edge.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Edge.html",
-          "hash": "SEqAGwkcPL0XREJWOLKOrZQqUxca3VZl/wZb2QG/Ezg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Node.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.Node.html",
-          "hash": "hebeaMbINmtd2mK3TpR/gJXhRlMQu9rGb52SwZqWrl0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MoreStructures.Tests.RecImmTrees.Conversions.TreeMock.html",
-          "hash": "4pvLACm8bNf2XUmfQY5NoGBzZ1iOVMmlgKc8BEwO2CI="
+          "hash": "yBe/NoSwQ2O9/uzlG7iulfV3lRpCoH6z4rY2snh4tf4="
         }
       },
       "is_incremental": false,
@@ -1350,7 +1386,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.RecImmTrees.Conversions.html",
-          "hash": "/j77RWPQHdQ896xt7c2HYjvc0rNVvw8D7uqseB4b0Aw="
+          "hash": "3P6CvE7eiEusfbE5JOJzhH3J6dCzVVyWGKt/SpwRmuk="
         }
       },
       "is_incremental": false,
@@ -1363,6 +1399,42 @@
         ".html": {
           "relative_path": "api/MoreStructures.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.html",
           "hash": "pe4O+yp1g7Zs+DeMu+L5MWtt/FVgKx4gKNqiWzJzUUM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.RecImmTrees.TreeMock.Edge.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.RecImmTrees.TreeMock.Edge.html",
+          "hash": "c0ykykggSbDN9Gzk5Tcwr6q4LddC0d6BumbuZRuiyfc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.RecImmTrees.TreeMock.Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.RecImmTrees.TreeMock.Node.html",
+          "hash": "88RlwOaSH87znoWeH6Q5RhETIaA9BYTemkaeY54+5QQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.RecImmTrees.TreeMock.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.RecImmTrees.TreeMock.html",
+          "hash": "EkEL6SHtu3yPjqg1/L23WmbknMXNWnyBAH+lAYCKGHE="
         }
       },
       "is_incremental": false,
@@ -1394,11 +1466,35 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests.html",
+          "hash": "rjS0JO2alJGCLTi7WiVaz0JxJXjCA5lot9aayiIm/x0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.RecImmTrees.Visitor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.RecImmTrees.Visitor.html",
+          "hash": "wI1tlSAHjC1/7Htx0i6Ha9Gd5TuTTCQQLN6PGucKy78="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Tests.RecImmTrees.yml",
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.RecImmTrees.html",
-          "hash": "KJnoLivGwnx2m4aegxN2Rap3f3Q9SE3VDrac+ZiK/iE="
+          "hash": "vL0T5RKkdxlvJwO2BQluocQqr74hvCBwj7O102csKos="
         }
       },
       "is_incremental": false,
@@ -2202,7 +2298,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "2rDdsF4yg3DQg1kAXamrsO8Q1g9dnoLtxdujbZ+uYuk="
+          "hash": "Z27CCeoeiE4iZmd4M9Y3iF/T05fAV4Z3J62qpDgL8wo="
         }
       },
       "is_incremental": false,
@@ -2277,7 +2373,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 181,
+          "total_file_count": 189,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
