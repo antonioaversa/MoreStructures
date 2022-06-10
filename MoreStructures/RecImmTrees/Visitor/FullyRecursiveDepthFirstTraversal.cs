@@ -1,19 +1,19 @@
 ﻿namespace MoreStructures.RecImmTrees.Visitor;
 
-/// <inheritdoc cref="IVisitStrategy{TEdge, TNode, TVisitContext}" path="//*[not(self::summary or self::remarks)]"/>
+/// <inheritdoc cref="IVisitStrategy{TNode, TVisitContext}" path="//*[not(self::summary or self::remarks)]"/>
 /// <summary>
-/// A fully-recursive, depth-first <see cref="IVisitStrategy{TEdge, TNode, TVisitContext}"/> implementation, i.e. a 
+/// A fully-recursive, depth-first <see cref="IVisitStrategy{TNode, TVisitContext}"/> implementation, i.e. a 
 /// traversing strategy which goes in depth as far as possible along each path of the tree, only backtracking when a 
 /// leaf is reached.
 /// </summary>
 /// <remarks>
-///     <inheritdoc cref="IVisitStrategy{TEdge, TNode, TVisitContext}" path="/remarks"/>
+///     <inheritdoc cref="IVisitStrategy{TNode, TVisitContext}" path="/remarks"/>
 ///     <para>
 ///     Implemented fully recursively, so limited by stack depth and usable with tree of a "reasonable" height.
 ///     </para>
 /// </remarks>
 public class FullyRecursiveDepthFirstTraversal<TEdge, TNode> 
-    : IVisitStrategy<TEdge, TNode, TreeTraversalContext<TEdge, TNode>>
+    : IVisitStrategy<TNode, TreeTraversalContext<TEdge, TNode>>
     where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>
     where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode>
 {
@@ -39,7 +39,7 @@ public class FullyRecursiveDepthFirstTraversal<TEdge, TNode>
     } = children => children;
 
     /// <inheritdoc 
-    ///     cref="IVisitStrategy{TEdge, TNode, TVisitContext}.Visit(TNode, Visitor{TNode, TVisitContext})" 
+    ///     cref="IVisitStrategy{TNode, TVisitContext}.Visit(TNode, Visitor{TNode, TVisitContext})" 
     ///     path="//*[not(self::summary)]"/>
     /// <summary>
     /// Visits the structure of the provided<paramref name= "node" />, calling the provided<paramref name="visitor"/>
