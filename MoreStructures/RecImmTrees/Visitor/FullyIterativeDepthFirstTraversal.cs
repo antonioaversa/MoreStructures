@@ -18,10 +18,10 @@ public class FullyIterativeDepthFirstTraversal<TEdge, TNode>
     where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>
     where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode>
 {
-    private record StackFrame(TNode? ParentNode, TEdge? IncomingEdge, TNode Node, bool ChildrenStacked);
+    private record struct StackFrame(TNode? ParentNode, TEdge? IncomingEdge, TNode Node, bool ChildrenStacked);
 
     /// <inheritdoc 
-    ///     cref="DepthFirstTraversal{TEdge, TNode}.Visit(TNode, Visitor{TNode, TreeTraversalContext{TEdge, TNode}})" 
+    ///     cref="TreeTraversal{TEdge, TNode}.Visit(TNode, Visitor{TNode, TreeTraversalContext{TEdge, TNode}})" 
     ///     path="//*[not(self::summary)]"/>
     /// <summary>
     /// Iteratively visits the structure of the provided <paramref name= "node" />, calling the provided 

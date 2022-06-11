@@ -18,7 +18,7 @@ public class FullyRecursiveBreadthFirstTraversal<TEdge, TNode>
     where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode>
 {
     /// <inheritdoc 
-    ///     cref="BreadthFirstTraversal{TEdge, TNode}.Visit(TNode, Visitor{TNode, TreeTraversalContext{TEdge, TNode}})"
+    ///     cref="TreeTraversal{TEdge, TNode}.Visit(TNode, Visitor{TNode, TreeTraversalContext{TEdge, TNode}})"
     ///     path="//*[not(self::summary)]" />
     /// <summary>
     /// Recursively visits the structure of the provided <paramref name= "node" />, calling the provided 

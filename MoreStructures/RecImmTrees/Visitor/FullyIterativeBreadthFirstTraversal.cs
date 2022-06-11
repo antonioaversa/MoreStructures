@@ -21,7 +21,7 @@ public class FullyIterativeBreadthFirstTraversal<TEdge, TNode>
     private record struct Item(TNode? ParentNode, TEdge? IncomingEdge, TNode Node);
 
     /// <inheritdoc 
-    ///     cref="BreadthFirstTraversal{TEdge, TNode}.Visit(TNode, Visitor{TNode, TreeTraversalContext{TEdge, TNode}})" 
+    ///     cref="TreeTraversal{TEdge, TNode}.Visit(TNode, Visitor{TNode, TreeTraversalContext{TEdge, TNode}})" 
     ///     path="//*[not(self::summary)]"/>
     /// <summary>
     /// Iteratively visits the structure of the provided <paramref name= "node" />, calling the provided 
@@ -80,7 +80,7 @@ public class FullyIterativeBreadthFirstTraversal<TEdge, TNode>
             traversalQueue.Enqueue(new(node, child.Key, child.Value));
     }
 
-    private void ProcessParentFirstVisitQueue(
+    private static void ProcessParentFirstVisitQueue(
         Queue<Item> visitQueue,
         Visitor<TNode, TreeTraversalContext<TEdge, TNode>> visitor)
     {
@@ -98,7 +98,7 @@ public class FullyIterativeBreadthFirstTraversal<TEdge, TNode>
             traversalQueue.Enqueue(new(node, child.Key, child.Value));
     }
 
-    private void ProcessChildrenFirstVisitStack(
+    private static void ProcessChildrenFirstVisitStack(
         Stack<Item> visitStack,
         Visitor<TNode, TreeTraversalContext<TEdge, TNode>> visitor)
     {
