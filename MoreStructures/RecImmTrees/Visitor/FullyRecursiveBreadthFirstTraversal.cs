@@ -27,16 +27,6 @@ public class FullyRecursiveBreadthFirstTraversal<TEdge, TNode>
     /// </summary>
     public override void Visit(TNode node, Visitor<TNode, TreeTraversalContext<TEdge, TNode>> visitor)
     {
-        visitor(node, new(default, default));
-        VisitR(node, visitor);
-    }
-
-    private void VisitR(TNode node, Visitor<TNode, TreeTraversalContext<TEdge, TNode>> visitor)
-    {
-        foreach (var child in node.Children)
-            visitor(child.Value, new(node, child.Key));
-
-        foreach (var child in node.Children)
-            Visit(child.Value, visitor);
+        // TODO: to be implemented
     }
 }
