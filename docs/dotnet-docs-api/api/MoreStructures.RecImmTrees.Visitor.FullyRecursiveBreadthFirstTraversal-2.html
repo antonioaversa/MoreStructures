@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class FullyRecursiveDepthFirstTraversal&lt;TEdge, TNode&gt;
+    <title>Class FullyRecursiveBreadthFirstTraversal&lt;TEdge, TNode&gt;
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class FullyRecursiveDepthFirstTraversal&lt;TEdge, TNode&gt;
+    <meta name="title" content="Class FullyRecursiveBreadthFirstTraversal&lt;TEdge, TNode&gt;
    ">
     <meta name="generator" content="docfx 2.59.2.0">
     
@@ -78,22 +78,22 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal`2">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversal`2">
   
   
-  <h1 id="MoreStructures_RecImmTrees_Visitor_FullyRecursiveDepthFirstTraversal_2" data-uid="MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal`2" class="text-break">Class FullyRecursiveDepthFirstTraversal&lt;TEdge, TNode&gt;
+  <h1 id="MoreStructures_RecImmTrees_Visitor_FullyRecursiveBreadthFirstTraversal_2" data-uid="MoreStructures.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversal`2" class="text-break">Class FullyRecursiveBreadthFirstTraversal&lt;TEdge, TNode&gt;
   </h1>
-  <div class="markdown level0 summary"><p>A fully-recursive, depth-first <a class="xref" href="MoreStructures.RecImmTrees.Visitor.IVisitStrategy-2.html">IVisitStrategy&lt;TNode, TVisitContext&gt;</a> implementation, i.e. a
-traversing strategy which goes in depth as far as possible along each path of the tree, only backtracking when a
-leaf is reached.</p>
+  <div class="markdown level0 summary"><p>A fully-recursive, breadth-first <a class="xref" href="MoreStructures.RecImmTrees.Visitor.IVisitStrategy-2.html">IVisitStrategy&lt;TNode, TVisitContext&gt;</a> implementation, i.e. a
+traversing strategy which visits all the nodes at the current depth, along any path of the tree, before going
+deeper or shallower, exploring nodes with higher or lower depth.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="MoreStructures.RecImmTrees.Visitor.TreeTraversal-2.html">TreeTraversal</a>&lt;TEdge, TNode&gt;</div>
-    <div class="level2"><a class="xref" href="MoreStructures.RecImmTrees.Visitor.DepthFirstTraversal-2.html">DepthFirstTraversal</a>&lt;TEdge, TNode&gt;</div>
-    <div class="level3"><span class="xref">FullyRecursiveDepthFirstTraversal&lt;TEdge, TNode&gt;</span></div>
+    <div class="level2"><a class="xref" href="MoreStructures.RecImmTrees.Visitor.BreadthFirstTraversal-2.html">BreadthFirstTraversal</a>&lt;TEdge, TNode&gt;</div>
+    <div class="level3"><span class="xref">FullyRecursiveBreadthFirstTraversal&lt;TEdge, TNode&gt;</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -134,9 +134,9 @@ leaf is reached.</p>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.RecImmTrees.Visitor.html">MoreStructures.RecImmTrees.Visitor</a></h6>
   <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
-  <h5 id="MoreStructures_RecImmTrees_Visitor_FullyRecursiveDepthFirstTraversal_2_syntax">Syntax</h5>
+  <h5 id="MoreStructures_RecImmTrees_Visitor_FullyRecursiveBreadthFirstTraversal_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class FullyRecursiveDepthFirstTraversal&lt;TEdge, TNode&gt; : DepthFirstTraversal&lt;TEdge, TNode&gt;, IVisitStrategy&lt;TNode, TreeTraversalContext&lt;TEdge, TNode&gt;&gt; where TEdge : IRecImmDictIndexedTreeEdge&lt;TEdge, TNode&gt; where TNode : IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class FullyRecursiveBreadthFirstTraversal&lt;TEdge, TNode&gt; : BreadthFirstTraversal&lt;TEdge, TNode&gt;, IVisitStrategy&lt;TNode, TreeTraversalContext&lt;TEdge, TNode&gt;&gt; where TEdge : IRecImmDictIndexedTreeEdge&lt;TEdge, TNode&gt; where TNode : IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -157,8 +157,8 @@ leaf is reached.</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="MoreStructures_RecImmTrees_Visitor_FullyRecursiveDepthFirstTraversal_2_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p><inheritdoc cref="T:MoreStructures.RecImmTrees.Visitor.DepthFirstTraversal`2" path="/remarks"></inheritdoc></p>
+  <h5 id="MoreStructures_RecImmTrees_Visitor_FullyRecursiveBreadthFirstTraversal_2_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p><inheritdoc cref="T:MoreStructures.RecImmTrees.Visitor.BreadthFirstTraversal`2" path="/remarks"></inheritdoc></p>
 <p>
 Implemented fully recursively, so limited by stack depth and usable with tree of a &quot;reasonable&quot; height.
 </p>
@@ -167,16 +167,16 @@ Implemented fully recursively, so limited by stack depth and usable with tree of
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Visitor_FullyRecursiveDepthFirstTraversal_2_Visit__1_MoreStructures_RecImmTrees_Visitor_Visitor__1_MoreStructures_RecImmTrees_Visitor_TreeTraversalContext__0__1___.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal%602.Visit(%601%2CMoreStructures.RecImmTrees.Visitor.Visitor%7B%601%2CMoreStructures.RecImmTrees.Visitor.TreeTraversalContext%7B%600%2C%601%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Visitor_FullyRecursiveBreadthFirstTraversal_2_Visit__1_MoreStructures_RecImmTrees_Visitor_Visitor__1_MoreStructures_RecImmTrees_Visitor_TreeTraversalContext__0__1___.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversal%602.Visit(%601%2CMoreStructures.RecImmTrees.Visitor.Visitor%7B%601%2CMoreStructures.RecImmTrees.Visitor.TreeTraversalContext%7B%600%2C%601%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/FullyRecursiveDepthFirstTraversal.cs/#L28">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/FullyRecursiveBreadthFirstTraversal.cs/#L28">View Source</a>
   </span>
-  <a id="MoreStructures_RecImmTrees_Visitor_FullyRecursiveDepthFirstTraversal_2_Visit_" data-uid="MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal`2.Visit*"></a>
-  <h4 id="MoreStructures_RecImmTrees_Visitor_FullyRecursiveDepthFirstTraversal_2_Visit__1_MoreStructures_RecImmTrees_Visitor_Visitor__1_MoreStructures_RecImmTrees_Visitor_TreeTraversalContext__0__1___" data-uid="MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal`2.Visit(`1,MoreStructures.RecImmTrees.Visitor.Visitor{`1,MoreStructures.RecImmTrees.Visitor.TreeTraversalContext{`0,`1}})">Visit(TNode, Visitor&lt;TNode, TreeTraversalContext&lt;TEdge, TNode&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p>Recursively visits the structure of the provided<code data-dev-comment-type="paramref" class="paramref">node</code>, calling the provided
+  <a id="MoreStructures_RecImmTrees_Visitor_FullyRecursiveBreadthFirstTraversal_2_Visit_" data-uid="MoreStructures.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversal`2.Visit*"></a>
+  <h4 id="MoreStructures_RecImmTrees_Visitor_FullyRecursiveBreadthFirstTraversal_2_Visit__1_MoreStructures_RecImmTrees_Visitor_Visitor__1_MoreStructures_RecImmTrees_Visitor_TreeTraversalContext__0__1___" data-uid="MoreStructures.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversal`2.Visit(`1,MoreStructures.RecImmTrees.Visitor.Visitor{`1,MoreStructures.RecImmTrees.Visitor.TreeTraversalContext{`0,`1}})">Visit(TNode, Visitor&lt;TNode, TreeTraversalContext&lt;TEdge, TNode&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Recursively visits the structure of the provided <code data-dev-comment-type="paramref" class="paramref">node</code>, calling the provided
 <code data-dev-comment-type="paramref" class="paramref">visitor</code> on each <a class="xref" href="MoreStructures.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</a> of the structure,
-in depth-first order.</p>
+in breadth-first order.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -220,10 +220,10 @@ in depth-first order.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Visitor_FullyRecursiveDepthFirstTraversal_2.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Visitor_FullyRecursiveBreadthFirstTraversal_2.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversal%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/FullyRecursiveDepthFirstTraversal.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/FullyRecursiveBreadthFirstTraversal.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

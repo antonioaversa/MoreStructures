@@ -2021,6 +2021,105 @@ references:
   commentId: N:MoreStructures.RecImmTrees.Visitor
   fullName: MoreStructures.RecImmTrees.Visitor
   nameWithType: MoreStructures.RecImmTrees.Visitor
+- uid: MoreStructures.RecImmTrees.Visitor.BreadthFirstTraversal`2
+  name: BreadthFirstTraversal<TEdge, TNode>
+  href: api/MoreStructures.RecImmTrees.Visitor.BreadthFirstTraversal-2.html
+  commentId: T:MoreStructures.RecImmTrees.Visitor.BreadthFirstTraversal`2
+  name.vb: BreadthFirstTraversal(Of TEdge, TNode)
+  fullName: MoreStructures.RecImmTrees.Visitor.BreadthFirstTraversal<TEdge, TNode>
+  fullName.vb: MoreStructures.RecImmTrees.Visitor.BreadthFirstTraversal(Of TEdge, TNode)
+  nameWithType: BreadthFirstTraversal<TEdge, TNode>
+  nameWithType.vb: BreadthFirstTraversal(Of TEdge, TNode)
+- uid: MoreStructures.RecImmTrees.Visitor.DepthFirstTraversal`2
+  name: DepthFirstTraversal<TEdge, TNode>
+  href: api/MoreStructures.RecImmTrees.Visitor.DepthFirstTraversal-2.html
+  commentId: T:MoreStructures.RecImmTrees.Visitor.DepthFirstTraversal`2
+  name.vb: DepthFirstTraversal(Of TEdge, TNode)
+  fullName: MoreStructures.RecImmTrees.Visitor.DepthFirstTraversal<TEdge, TNode>
+  fullName.vb: MoreStructures.RecImmTrees.Visitor.DepthFirstTraversal(Of TEdge, TNode)
+  nameWithType: DepthFirstTraversal<TEdge, TNode>
+  nameWithType.vb: DepthFirstTraversal(Of TEdge, TNode)
+- uid: MoreStructures.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversal`2
+  name: FullyIterativeBreadthFirstTraversal<TEdge, TNode>
+  href: api/MoreStructures.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversal-2.html
+  commentId: T:MoreStructures.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversal`2
+  name.vb: FullyIterativeBreadthFirstTraversal(Of TEdge, TNode)
+  fullName: MoreStructures.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversal<TEdge, TNode>
+  fullName.vb: MoreStructures.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversal(Of TEdge, TNode)
+  nameWithType: FullyIterativeBreadthFirstTraversal<TEdge, TNode>
+  nameWithType.vb: FullyIterativeBreadthFirstTraversal(Of TEdge, TNode)
+- uid: MoreStructures.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversal`2.Visit(`1,MoreStructures.RecImmTrees.Visitor.Visitor{`1,MoreStructures.RecImmTrees.Visitor.TreeTraversalContext{`0,`1}})
+  name: Visit(TNode, Visitor<TNode, TreeTraversalContext<TEdge, TNode>>)
+  href: api/MoreStructures.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversal-2.html#MoreStructures_RecImmTrees_Visitor_FullyIterativeBreadthFirstTraversal_2_Visit__1_MoreStructures_RecImmTrees_Visitor_Visitor__1_MoreStructures_RecImmTrees_Visitor_TreeTraversalContext__0__1___
+  commentId: M:MoreStructures.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversal`2.Visit(`1,MoreStructures.RecImmTrees.Visitor.Visitor{`1,MoreStructures.RecImmTrees.Visitor.TreeTraversalContext{`0,`1}})
+  name.vb: Visit(TNode, Visitor(Of TNode, TreeTraversalContext(Of TEdge, TNode)))
+  fullName: MoreStructures.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversal<TEdge, TNode>.Visit(TNode, MoreStructures.RecImmTrees.Visitor.Visitor<TNode, MoreStructures.RecImmTrees.Visitor.TreeTraversalContext<TEdge, TNode>>)
+  fullName.vb: MoreStructures.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversal(Of TEdge, TNode).Visit(TNode, MoreStructures.RecImmTrees.Visitor.Visitor(Of TNode, MoreStructures.RecImmTrees.Visitor.TreeTraversalContext(Of TEdge, TNode)))
+  nameWithType: FullyIterativeBreadthFirstTraversal<TEdge, TNode>.Visit(TNode, Visitor<TNode, TreeTraversalContext<TEdge, TNode>>)
+  nameWithType.vb: FullyIterativeBreadthFirstTraversal(Of TEdge, TNode).Visit(TNode, Visitor(Of TNode, TreeTraversalContext(Of TEdge, TNode)))
+- uid: MoreStructures.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversal`2.Visit*
+  name: Visit
+  href: api/MoreStructures.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversal-2.html#MoreStructures_RecImmTrees_Visitor_FullyIterativeBreadthFirstTraversal_2_Visit_
+  commentId: Overload:MoreStructures.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversal`2.Visit
+  isSpec: "True"
+  fullName: MoreStructures.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversal<TEdge, TNode>.Visit
+  fullName.vb: MoreStructures.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversal(Of TEdge, TNode).Visit
+  nameWithType: FullyIterativeBreadthFirstTraversal<TEdge, TNode>.Visit
+  nameWithType.vb: FullyIterativeBreadthFirstTraversal(Of TEdge, TNode).Visit
+- uid: MoreStructures.RecImmTrees.Visitor.FullyIterativeDepthFirstTraversal`2
+  name: FullyIterativeDepthFirstTraversal<TEdge, TNode>
+  href: api/MoreStructures.RecImmTrees.Visitor.FullyIterativeDepthFirstTraversal-2.html
+  commentId: T:MoreStructures.RecImmTrees.Visitor.FullyIterativeDepthFirstTraversal`2
+  name.vb: FullyIterativeDepthFirstTraversal(Of TEdge, TNode)
+  fullName: MoreStructures.RecImmTrees.Visitor.FullyIterativeDepthFirstTraversal<TEdge, TNode>
+  fullName.vb: MoreStructures.RecImmTrees.Visitor.FullyIterativeDepthFirstTraversal(Of TEdge, TNode)
+  nameWithType: FullyIterativeDepthFirstTraversal<TEdge, TNode>
+  nameWithType.vb: FullyIterativeDepthFirstTraversal(Of TEdge, TNode)
+- uid: MoreStructures.RecImmTrees.Visitor.FullyIterativeDepthFirstTraversal`2.Visit(`1,MoreStructures.RecImmTrees.Visitor.Visitor{`1,MoreStructures.RecImmTrees.Visitor.TreeTraversalContext{`0,`1}})
+  name: Visit(TNode, Visitor<TNode, TreeTraversalContext<TEdge, TNode>>)
+  href: api/MoreStructures.RecImmTrees.Visitor.FullyIterativeDepthFirstTraversal-2.html#MoreStructures_RecImmTrees_Visitor_FullyIterativeDepthFirstTraversal_2_Visit__1_MoreStructures_RecImmTrees_Visitor_Visitor__1_MoreStructures_RecImmTrees_Visitor_TreeTraversalContext__0__1___
+  commentId: M:MoreStructures.RecImmTrees.Visitor.FullyIterativeDepthFirstTraversal`2.Visit(`1,MoreStructures.RecImmTrees.Visitor.Visitor{`1,MoreStructures.RecImmTrees.Visitor.TreeTraversalContext{`0,`1}})
+  name.vb: Visit(TNode, Visitor(Of TNode, TreeTraversalContext(Of TEdge, TNode)))
+  fullName: MoreStructures.RecImmTrees.Visitor.FullyIterativeDepthFirstTraversal<TEdge, TNode>.Visit(TNode, MoreStructures.RecImmTrees.Visitor.Visitor<TNode, MoreStructures.RecImmTrees.Visitor.TreeTraversalContext<TEdge, TNode>>)
+  fullName.vb: MoreStructures.RecImmTrees.Visitor.FullyIterativeDepthFirstTraversal(Of TEdge, TNode).Visit(TNode, MoreStructures.RecImmTrees.Visitor.Visitor(Of TNode, MoreStructures.RecImmTrees.Visitor.TreeTraversalContext(Of TEdge, TNode)))
+  nameWithType: FullyIterativeDepthFirstTraversal<TEdge, TNode>.Visit(TNode, Visitor<TNode, TreeTraversalContext<TEdge, TNode>>)
+  nameWithType.vb: FullyIterativeDepthFirstTraversal(Of TEdge, TNode).Visit(TNode, Visitor(Of TNode, TreeTraversalContext(Of TEdge, TNode)))
+- uid: MoreStructures.RecImmTrees.Visitor.FullyIterativeDepthFirstTraversal`2.Visit*
+  name: Visit
+  href: api/MoreStructures.RecImmTrees.Visitor.FullyIterativeDepthFirstTraversal-2.html#MoreStructures_RecImmTrees_Visitor_FullyIterativeDepthFirstTraversal_2_Visit_
+  commentId: Overload:MoreStructures.RecImmTrees.Visitor.FullyIterativeDepthFirstTraversal`2.Visit
+  isSpec: "True"
+  fullName: MoreStructures.RecImmTrees.Visitor.FullyIterativeDepthFirstTraversal<TEdge, TNode>.Visit
+  fullName.vb: MoreStructures.RecImmTrees.Visitor.FullyIterativeDepthFirstTraversal(Of TEdge, TNode).Visit
+  nameWithType: FullyIterativeDepthFirstTraversal<TEdge, TNode>.Visit
+  nameWithType.vb: FullyIterativeDepthFirstTraversal(Of TEdge, TNode).Visit
+- uid: MoreStructures.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversal`2
+  name: FullyRecursiveBreadthFirstTraversal<TEdge, TNode>
+  href: api/MoreStructures.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversal-2.html
+  commentId: T:MoreStructures.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversal`2
+  name.vb: FullyRecursiveBreadthFirstTraversal(Of TEdge, TNode)
+  fullName: MoreStructures.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversal<TEdge, TNode>
+  fullName.vb: MoreStructures.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversal(Of TEdge, TNode)
+  nameWithType: FullyRecursiveBreadthFirstTraversal<TEdge, TNode>
+  nameWithType.vb: FullyRecursiveBreadthFirstTraversal(Of TEdge, TNode)
+- uid: MoreStructures.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversal`2.Visit(`1,MoreStructures.RecImmTrees.Visitor.Visitor{`1,MoreStructures.RecImmTrees.Visitor.TreeTraversalContext{`0,`1}})
+  name: Visit(TNode, Visitor<TNode, TreeTraversalContext<TEdge, TNode>>)
+  href: api/MoreStructures.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversal-2.html#MoreStructures_RecImmTrees_Visitor_FullyRecursiveBreadthFirstTraversal_2_Visit__1_MoreStructures_RecImmTrees_Visitor_Visitor__1_MoreStructures_RecImmTrees_Visitor_TreeTraversalContext__0__1___
+  commentId: M:MoreStructures.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversal`2.Visit(`1,MoreStructures.RecImmTrees.Visitor.Visitor{`1,MoreStructures.RecImmTrees.Visitor.TreeTraversalContext{`0,`1}})
+  name.vb: Visit(TNode, Visitor(Of TNode, TreeTraversalContext(Of TEdge, TNode)))
+  fullName: MoreStructures.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversal<TEdge, TNode>.Visit(TNode, MoreStructures.RecImmTrees.Visitor.Visitor<TNode, MoreStructures.RecImmTrees.Visitor.TreeTraversalContext<TEdge, TNode>>)
+  fullName.vb: MoreStructures.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversal(Of TEdge, TNode).Visit(TNode, MoreStructures.RecImmTrees.Visitor.Visitor(Of TNode, MoreStructures.RecImmTrees.Visitor.TreeTraversalContext(Of TEdge, TNode)))
+  nameWithType: FullyRecursiveBreadthFirstTraversal<TEdge, TNode>.Visit(TNode, Visitor<TNode, TreeTraversalContext<TEdge, TNode>>)
+  nameWithType.vb: FullyRecursiveBreadthFirstTraversal(Of TEdge, TNode).Visit(TNode, Visitor(Of TNode, TreeTraversalContext(Of TEdge, TNode)))
+- uid: MoreStructures.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversal`2.Visit*
+  name: Visit
+  href: api/MoreStructures.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversal-2.html#MoreStructures_RecImmTrees_Visitor_FullyRecursiveBreadthFirstTraversal_2_Visit_
+  commentId: Overload:MoreStructures.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversal`2.Visit
+  isSpec: "True"
+  fullName: MoreStructures.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversal<TEdge, TNode>.Visit
+  fullName.vb: MoreStructures.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversal(Of TEdge, TNode).Visit
+  nameWithType: FullyRecursiveBreadthFirstTraversal<TEdge, TNode>.Visit
+  nameWithType.vb: FullyRecursiveBreadthFirstTraversal(Of TEdge, TNode).Visit
 - uid: MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal`2
   name: FullyRecursiveDepthFirstTraversal<TEdge, TNode>
   href: api/MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal-2.html
@@ -2030,40 +2129,6 @@ references:
   fullName.vb: MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal(Of TEdge, TNode)
   nameWithType: FullyRecursiveDepthFirstTraversal<TEdge, TNode>
   nameWithType.vb: FullyRecursiveDepthFirstTraversal(Of TEdge, TNode)
-- uid: MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal`2.ChildrenSorter
-  name: ChildrenSorter
-  href: api/MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal-2.html#MoreStructures_RecImmTrees_Visitor_FullyRecursiveDepthFirstTraversal_2_ChildrenSorter
-  commentId: P:MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal`2.ChildrenSorter
-  fullName: MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal<TEdge, TNode>.ChildrenSorter
-  fullName.vb: MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal(Of TEdge, TNode).ChildrenSorter
-  nameWithType: FullyRecursiveDepthFirstTraversal<TEdge, TNode>.ChildrenSorter
-  nameWithType.vb: FullyRecursiveDepthFirstTraversal(Of TEdge, TNode).ChildrenSorter
-- uid: MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal`2.ChildrenSorter*
-  name: ChildrenSorter
-  href: api/MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal-2.html#MoreStructures_RecImmTrees_Visitor_FullyRecursiveDepthFirstTraversal_2_ChildrenSorter_
-  commentId: Overload:MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal`2.ChildrenSorter
-  isSpec: "True"
-  fullName: MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal<TEdge, TNode>.ChildrenSorter
-  fullName.vb: MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal(Of TEdge, TNode).ChildrenSorter
-  nameWithType: FullyRecursiveDepthFirstTraversal<TEdge, TNode>.ChildrenSorter
-  nameWithType.vb: FullyRecursiveDepthFirstTraversal(Of TEdge, TNode).ChildrenSorter
-- uid: MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal`2.TraversalOrder
-  name: TraversalOrder
-  href: api/MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal-2.html#MoreStructures_RecImmTrees_Visitor_FullyRecursiveDepthFirstTraversal_2_TraversalOrder
-  commentId: P:MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal`2.TraversalOrder
-  fullName: MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal<TEdge, TNode>.TraversalOrder
-  fullName.vb: MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal(Of TEdge, TNode).TraversalOrder
-  nameWithType: FullyRecursiveDepthFirstTraversal<TEdge, TNode>.TraversalOrder
-  nameWithType.vb: FullyRecursiveDepthFirstTraversal(Of TEdge, TNode).TraversalOrder
-- uid: MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal`2.TraversalOrder*
-  name: TraversalOrder
-  href: api/MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal-2.html#MoreStructures_RecImmTrees_Visitor_FullyRecursiveDepthFirstTraversal_2_TraversalOrder_
-  commentId: Overload:MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal`2.TraversalOrder
-  isSpec: "True"
-  fullName: MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal<TEdge, TNode>.TraversalOrder
-  fullName.vb: MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal(Of TEdge, TNode).TraversalOrder
-  nameWithType: FullyRecursiveDepthFirstTraversal<TEdge, TNode>.TraversalOrder
-  nameWithType.vb: FullyRecursiveDepthFirstTraversal(Of TEdge, TNode).TraversalOrder
 - uid: MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal`2.Visit(`1,MoreStructures.RecImmTrees.Visitor.Visitor{`1,MoreStructures.RecImmTrees.Visitor.TreeTraversalContext{`0,`1}})
   name: Visit(TNode, Visitor<TNode, TreeTraversalContext<TEdge, TNode>>)
   href: api/MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal-2.html#MoreStructures_RecImmTrees_Visitor_FullyRecursiveDepthFirstTraversal_2_Visit__1_MoreStructures_RecImmTrees_Visitor_Visitor__1_MoreStructures_RecImmTrees_Visitor_TreeTraversalContext__0__1___
@@ -2109,6 +2174,67 @@ references:
   fullName.vb: MoreStructures.RecImmTrees.Visitor.IVisitStrategy(Of TNode, TVisitContext).Visit
   nameWithType: IVisitStrategy<TNode, TVisitContext>.Visit
   nameWithType.vb: IVisitStrategy(Of TNode, TVisitContext).Visit
+- uid: MoreStructures.RecImmTrees.Visitor.TreeTraversal`2
+  name: TreeTraversal<TEdge, TNode>
+  href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversal-2.html
+  commentId: T:MoreStructures.RecImmTrees.Visitor.TreeTraversal`2
+  name.vb: TreeTraversal(Of TEdge, TNode)
+  fullName: MoreStructures.RecImmTrees.Visitor.TreeTraversal<TEdge, TNode>
+  fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversal(Of TEdge, TNode)
+  nameWithType: TreeTraversal<TEdge, TNode>
+  nameWithType.vb: TreeTraversal(Of TEdge, TNode)
+- uid: MoreStructures.RecImmTrees.Visitor.TreeTraversal`2.ChildrenSorter
+  name: ChildrenSorter
+  href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversal-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_ChildrenSorter
+  commentId: P:MoreStructures.RecImmTrees.Visitor.TreeTraversal`2.ChildrenSorter
+  fullName: MoreStructures.RecImmTrees.Visitor.TreeTraversal<TEdge, TNode>.ChildrenSorter
+  fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversal(Of TEdge, TNode).ChildrenSorter
+  nameWithType: TreeTraversal<TEdge, TNode>.ChildrenSorter
+  nameWithType.vb: TreeTraversal(Of TEdge, TNode).ChildrenSorter
+- uid: MoreStructures.RecImmTrees.Visitor.TreeTraversal`2.ChildrenSorter*
+  name: ChildrenSorter
+  href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversal-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_ChildrenSorter_
+  commentId: Overload:MoreStructures.RecImmTrees.Visitor.TreeTraversal`2.ChildrenSorter
+  isSpec: "True"
+  fullName: MoreStructures.RecImmTrees.Visitor.TreeTraversal<TEdge, TNode>.ChildrenSorter
+  fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversal(Of TEdge, TNode).ChildrenSorter
+  nameWithType: TreeTraversal<TEdge, TNode>.ChildrenSorter
+  nameWithType.vb: TreeTraversal(Of TEdge, TNode).ChildrenSorter
+- uid: MoreStructures.RecImmTrees.Visitor.TreeTraversal`2.TraversalOrder
+  name: TraversalOrder
+  href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversal-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_TraversalOrder
+  commentId: P:MoreStructures.RecImmTrees.Visitor.TreeTraversal`2.TraversalOrder
+  fullName: MoreStructures.RecImmTrees.Visitor.TreeTraversal<TEdge, TNode>.TraversalOrder
+  fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversal(Of TEdge, TNode).TraversalOrder
+  nameWithType: TreeTraversal<TEdge, TNode>.TraversalOrder
+  nameWithType.vb: TreeTraversal(Of TEdge, TNode).TraversalOrder
+- uid: MoreStructures.RecImmTrees.Visitor.TreeTraversal`2.TraversalOrder*
+  name: TraversalOrder
+  href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversal-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_TraversalOrder_
+  commentId: Overload:MoreStructures.RecImmTrees.Visitor.TreeTraversal`2.TraversalOrder
+  isSpec: "True"
+  fullName: MoreStructures.RecImmTrees.Visitor.TreeTraversal<TEdge, TNode>.TraversalOrder
+  fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversal(Of TEdge, TNode).TraversalOrder
+  nameWithType: TreeTraversal<TEdge, TNode>.TraversalOrder
+  nameWithType.vb: TreeTraversal(Of TEdge, TNode).TraversalOrder
+- uid: MoreStructures.RecImmTrees.Visitor.TreeTraversal`2.Visit(`1,MoreStructures.RecImmTrees.Visitor.Visitor{`1,MoreStructures.RecImmTrees.Visitor.TreeTraversalContext{`0,`1}})
+  name: Visit(TNode, Visitor<TNode, TreeTraversalContext<TEdge, TNode>>)
+  href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversal-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_Visit__1_MoreStructures_RecImmTrees_Visitor_Visitor__1_MoreStructures_RecImmTrees_Visitor_TreeTraversalContext__0__1___
+  commentId: M:MoreStructures.RecImmTrees.Visitor.TreeTraversal`2.Visit(`1,MoreStructures.RecImmTrees.Visitor.Visitor{`1,MoreStructures.RecImmTrees.Visitor.TreeTraversalContext{`0,`1}})
+  name.vb: Visit(TNode, Visitor(Of TNode, TreeTraversalContext(Of TEdge, TNode)))
+  fullName: MoreStructures.RecImmTrees.Visitor.TreeTraversal<TEdge, TNode>.Visit(TNode, MoreStructures.RecImmTrees.Visitor.Visitor<TNode, MoreStructures.RecImmTrees.Visitor.TreeTraversalContext<TEdge, TNode>>)
+  fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversal(Of TEdge, TNode).Visit(TNode, MoreStructures.RecImmTrees.Visitor.Visitor(Of TNode, MoreStructures.RecImmTrees.Visitor.TreeTraversalContext(Of TEdge, TNode)))
+  nameWithType: TreeTraversal<TEdge, TNode>.Visit(TNode, Visitor<TNode, TreeTraversalContext<TEdge, TNode>>)
+  nameWithType.vb: TreeTraversal(Of TEdge, TNode).Visit(TNode, Visitor(Of TNode, TreeTraversalContext(Of TEdge, TNode)))
+- uid: MoreStructures.RecImmTrees.Visitor.TreeTraversal`2.Visit*
+  name: Visit
+  href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversal-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_Visit_
+  commentId: Overload:MoreStructures.RecImmTrees.Visitor.TreeTraversal`2.Visit
+  isSpec: "True"
+  fullName: MoreStructures.RecImmTrees.Visitor.TreeTraversal<TEdge, TNode>.Visit
+  fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversal(Of TEdge, TNode).Visit
+  nameWithType: TreeTraversal<TEdge, TNode>.Visit
+  nameWithType.vb: TreeTraversal(Of TEdge, TNode).Visit
 - uid: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2
   name: TreeTraversalContext<TEdge, TNode>
   href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversalContext-2.html
@@ -5013,6 +5139,19 @@ references:
   commentId: T:MoreStructures.Tests.RecImmTrees.TreeMock
   fullName: MoreStructures.Tests.RecImmTrees.TreeMock
   nameWithType: TreeMock
+- uid: MoreStructures.Tests.RecImmTrees.TreeMock.BuildDocExample
+  name: BuildDocExample()
+  href: api/MoreStructures.Tests.RecImmTrees.TreeMock.html#MoreStructures_Tests_RecImmTrees_TreeMock_BuildDocExample
+  commentId: M:MoreStructures.Tests.RecImmTrees.TreeMock.BuildDocExample
+  fullName: MoreStructures.Tests.RecImmTrees.TreeMock.BuildDocExample()
+  nameWithType: TreeMock.BuildDocExample()
+- uid: MoreStructures.Tests.RecImmTrees.TreeMock.BuildDocExample*
+  name: BuildDocExample
+  href: api/MoreStructures.Tests.RecImmTrees.TreeMock.html#MoreStructures_Tests_RecImmTrees_TreeMock_BuildDocExample_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.TreeMock.BuildDocExample
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.TreeMock.BuildDocExample
+  nameWithType: TreeMock.BuildDocExample
 - uid: MoreStructures.Tests.RecImmTrees.TreeMock.BuildExampleTree
   name: BuildExampleTree()
   href: api/MoreStructures.Tests.RecImmTrees.TreeMock.html#MoreStructures_Tests_RecImmTrees_TreeMock_BuildExampleTree
@@ -5039,6 +5178,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.RecImmTrees.TreeMock.BuildMostUnbalancedTree
   nameWithType: TreeMock.BuildMostUnbalancedTree
+- uid: MoreStructures.Tests.RecImmTrees.TreeMock.BuildMultiLevelsBacktrackTree
+  name: BuildMultiLevelsBacktrackTree()
+  href: api/MoreStructures.Tests.RecImmTrees.TreeMock.html#MoreStructures_Tests_RecImmTrees_TreeMock_BuildMultiLevelsBacktrackTree
+  commentId: M:MoreStructures.Tests.RecImmTrees.TreeMock.BuildMultiLevelsBacktrackTree
+  fullName: MoreStructures.Tests.RecImmTrees.TreeMock.BuildMultiLevelsBacktrackTree()
+  nameWithType: TreeMock.BuildMultiLevelsBacktrackTree()
+- uid: MoreStructures.Tests.RecImmTrees.TreeMock.BuildMultiLevelsBacktrackTree*
+  name: BuildMultiLevelsBacktrackTree
+  href: api/MoreStructures.Tests.RecImmTrees.TreeMock.html#MoreStructures_Tests_RecImmTrees_TreeMock_BuildMultiLevelsBacktrackTree_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.TreeMock.BuildMultiLevelsBacktrackTree
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.TreeMock.BuildMultiLevelsBacktrackTree
+  nameWithType: TreeMock.BuildMultiLevelsBacktrackTree
 - uid: MoreStructures.Tests.RecImmTrees.TreeMock.Edge
   name: TreeMock.Edge
   href: api/MoreStructures.Tests.RecImmTrees.TreeMock.Edge.html
@@ -5084,6 +5236,67 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.RecImmTrees.TreeMock.Edge.Id
   nameWithType: TreeMock.Edge.Id
+- uid: MoreStructures.Tests.RecImmTrees.TreeMock.Edge.ToString
+  name: ToString()
+  href: api/MoreStructures.Tests.RecImmTrees.TreeMock.Edge.html#MoreStructures_Tests_RecImmTrees_TreeMock_Edge_ToString
+  commentId: M:MoreStructures.Tests.RecImmTrees.TreeMock.Edge.ToString
+  fullName: MoreStructures.Tests.RecImmTrees.TreeMock.Edge.ToString()
+  nameWithType: TreeMock.Edge.ToString()
+- uid: MoreStructures.Tests.RecImmTrees.TreeMock.Edge.ToString*
+  name: ToString
+  href: api/MoreStructures.Tests.RecImmTrees.TreeMock.Edge.html#MoreStructures_Tests_RecImmTrees_TreeMock_Edge_ToString_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.TreeMock.Edge.ToString
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.TreeMock.Edge.ToString
+  nameWithType: TreeMock.Edge.ToString
+- uid: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdBasedChildrenSorter(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{MoreStructures.Tests.RecImmTrees.TreeMock.Edge,MoreStructures.Tests.RecImmTrees.TreeMock.Node}})
+  name: EdgeIdBasedChildrenSorter(IEnumerable<KeyValuePair<TreeMock.Edge, TreeMock.Node>>)
+  href: api/MoreStructures.Tests.RecImmTrees.TreeMock.html#MoreStructures_Tests_RecImmTrees_TreeMock_EdgeIdBasedChildrenSorter_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_MoreStructures_Tests_RecImmTrees_TreeMock_Edge_MoreStructures_Tests_RecImmTrees_TreeMock_Node___
+  commentId: M:MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdBasedChildrenSorter(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{MoreStructures.Tests.RecImmTrees.TreeMock.Edge,MoreStructures.Tests.RecImmTrees.TreeMock.Node}})
+  name.vb: EdgeIdBasedChildrenSorter(IEnumerable(Of KeyValuePair(Of TreeMock.Edge, TreeMock.Node)))
+  fullName: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdBasedChildrenSorter(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<MoreStructures.Tests.RecImmTrees.TreeMock.Edge, MoreStructures.Tests.RecImmTrees.TreeMock.Node>>)
+  fullName.vb: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdBasedChildrenSorter(System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of MoreStructures.Tests.RecImmTrees.TreeMock.Edge, MoreStructures.Tests.RecImmTrees.TreeMock.Node)))
+  nameWithType: TreeMock.EdgeIdBasedChildrenSorter(IEnumerable<KeyValuePair<TreeMock.Edge, TreeMock.Node>>)
+  nameWithType.vb: TreeMock.EdgeIdBasedChildrenSorter(IEnumerable(Of KeyValuePair(Of TreeMock.Edge, TreeMock.Node)))
+- uid: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdBasedChildrenSorter*
+  name: EdgeIdBasedChildrenSorter
+  href: api/MoreStructures.Tests.RecImmTrees.TreeMock.html#MoreStructures_Tests_RecImmTrees_TreeMock_EdgeIdBasedChildrenSorter_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdBasedChildrenSorter
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdBasedChildrenSorter
+  nameWithType: TreeMock.EdgeIdBasedChildrenSorter
+- uid: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdDescBasedChildrenSorter(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{MoreStructures.Tests.RecImmTrees.TreeMock.Edge,MoreStructures.Tests.RecImmTrees.TreeMock.Node}})
+  name: EdgeIdDescBasedChildrenSorter(IEnumerable<KeyValuePair<TreeMock.Edge, TreeMock.Node>>)
+  href: api/MoreStructures.Tests.RecImmTrees.TreeMock.html#MoreStructures_Tests_RecImmTrees_TreeMock_EdgeIdDescBasedChildrenSorter_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_MoreStructures_Tests_RecImmTrees_TreeMock_Edge_MoreStructures_Tests_RecImmTrees_TreeMock_Node___
+  commentId: M:MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdDescBasedChildrenSorter(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{MoreStructures.Tests.RecImmTrees.TreeMock.Edge,MoreStructures.Tests.RecImmTrees.TreeMock.Node}})
+  name.vb: EdgeIdDescBasedChildrenSorter(IEnumerable(Of KeyValuePair(Of TreeMock.Edge, TreeMock.Node)))
+  fullName: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdDescBasedChildrenSorter(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<MoreStructures.Tests.RecImmTrees.TreeMock.Edge, MoreStructures.Tests.RecImmTrees.TreeMock.Node>>)
+  fullName.vb: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdDescBasedChildrenSorter(System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of MoreStructures.Tests.RecImmTrees.TreeMock.Edge, MoreStructures.Tests.RecImmTrees.TreeMock.Node)))
+  nameWithType: TreeMock.EdgeIdDescBasedChildrenSorter(IEnumerable<KeyValuePair<TreeMock.Edge, TreeMock.Node>>)
+  nameWithType.vb: TreeMock.EdgeIdDescBasedChildrenSorter(IEnumerable(Of KeyValuePair(Of TreeMock.Edge, TreeMock.Node)))
+- uid: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdDescBasedChildrenSorter*
+  name: EdgeIdDescBasedChildrenSorter
+  href: api/MoreStructures.Tests.RecImmTrees.TreeMock.html#MoreStructures_Tests_RecImmTrees_TreeMock_EdgeIdDescBasedChildrenSorter_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdDescBasedChildrenSorter
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdDescBasedChildrenSorter
+  nameWithType: TreeMock.EdgeIdDescBasedChildrenSorter
+- uid: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdMedianBasedChildrenSorter(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{MoreStructures.Tests.RecImmTrees.TreeMock.Edge,MoreStructures.Tests.RecImmTrees.TreeMock.Node}})
+  name: EdgeIdMedianBasedChildrenSorter(IEnumerable<KeyValuePair<TreeMock.Edge, TreeMock.Node>>)
+  href: api/MoreStructures.Tests.RecImmTrees.TreeMock.html#MoreStructures_Tests_RecImmTrees_TreeMock_EdgeIdMedianBasedChildrenSorter_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_MoreStructures_Tests_RecImmTrees_TreeMock_Edge_MoreStructures_Tests_RecImmTrees_TreeMock_Node___
+  commentId: M:MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdMedianBasedChildrenSorter(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{MoreStructures.Tests.RecImmTrees.TreeMock.Edge,MoreStructures.Tests.RecImmTrees.TreeMock.Node}})
+  name.vb: EdgeIdMedianBasedChildrenSorter(IEnumerable(Of KeyValuePair(Of TreeMock.Edge, TreeMock.Node)))
+  fullName: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdMedianBasedChildrenSorter(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<MoreStructures.Tests.RecImmTrees.TreeMock.Edge, MoreStructures.Tests.RecImmTrees.TreeMock.Node>>)
+  fullName.vb: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdMedianBasedChildrenSorter(System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of MoreStructures.Tests.RecImmTrees.TreeMock.Edge, MoreStructures.Tests.RecImmTrees.TreeMock.Node)))
+  nameWithType: TreeMock.EdgeIdMedianBasedChildrenSorter(IEnumerable<KeyValuePair<TreeMock.Edge, TreeMock.Node>>)
+  nameWithType.vb: TreeMock.EdgeIdMedianBasedChildrenSorter(IEnumerable(Of KeyValuePair(Of TreeMock.Edge, TreeMock.Node)))
+- uid: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdMedianBasedChildrenSorter*
+  name: EdgeIdMedianBasedChildrenSorter
+  href: api/MoreStructures.Tests.RecImmTrees.TreeMock.html#MoreStructures_Tests_RecImmTrees_TreeMock_EdgeIdMedianBasedChildrenSorter_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdMedianBasedChildrenSorter
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdMedianBasedChildrenSorter
+  nameWithType: TreeMock.EdgeIdMedianBasedChildrenSorter
 - uid: MoreStructures.Tests.RecImmTrees.TreeMock.Node
   name: TreeMock.Node
   href: api/MoreStructures.Tests.RecImmTrees.TreeMock.Node.html
@@ -5138,6 +5351,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.RecImmTrees.TreeMock.Node.Id
   nameWithType: TreeMock.Node.Id
+- uid: MoreStructures.Tests.RecImmTrees.TreeMock.Node.ToString
+  name: ToString()
+  href: api/MoreStructures.Tests.RecImmTrees.TreeMock.Node.html#MoreStructures_Tests_RecImmTrees_TreeMock_Node_ToString
+  commentId: M:MoreStructures.Tests.RecImmTrees.TreeMock.Node.ToString
+  fullName: MoreStructures.Tests.RecImmTrees.TreeMock.Node.ToString()
+  nameWithType: TreeMock.Node.ToString()
+- uid: MoreStructures.Tests.RecImmTrees.TreeMock.Node.ToString*
+  name: ToString
+  href: api/MoreStructures.Tests.RecImmTrees.TreeMock.Node.html#MoreStructures_Tests_RecImmTrees_TreeMock_Node_ToString_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.TreeMock.Node.ToString
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.TreeMock.Node.ToString
+  nameWithType: TreeMock.Node.ToString
 - uid: MoreStructures.Tests.RecImmTrees.TreePathExtensionsTests
   name: TreePathExtensionsTests
   href: api/MoreStructures.Tests.RecImmTrees.TreePathExtensionsTests.html
@@ -5364,51 +5590,389 @@ references:
   commentId: N:MoreStructures.Tests.RecImmTrees.Visitor
   fullName: MoreStructures.Tests.RecImmTrees.Visitor
   nameWithType: MoreStructures.Tests.RecImmTrees.Visitor
-- uid: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests
-  name: DepthFirstTraversalTests
-  href: api/MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests.html
-  commentId: T:MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests
-  fullName: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests
-  nameWithType: DepthFirstTraversalTests
-- uid: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests.Visit_TraversalOrderChildrenFirst
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1
+  name: BreadthFirstTraversalTests<TBreadthFirstTraversal>
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests-1.html
+  commentId: T:MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1
+  name.vb: BreadthFirstTraversalTests(Of TBreadthFirstTraversal)
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests<TBreadthFirstTraversal>
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests(Of TBreadthFirstTraversal)
+  nameWithType: BreadthFirstTraversalTests<TBreadthFirstTraversal>
+  nameWithType.vb: BreadthFirstTraversalTests(Of TBreadthFirstTraversal)
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_ChildrenSorter_IsApplied
+  name: Visit_ChildrenSorter_IsApplied()
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_BreadthFirstTraversalTests_1_Visit_ChildrenSorter_IsApplied
+  commentId: M:MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_ChildrenSorter_IsApplied
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_ChildrenSorter_IsApplied()
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_ChildrenSorter_IsApplied()
+  nameWithType: BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_ChildrenSorter_IsApplied()
+  nameWithType.vb: BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_ChildrenSorter_IsApplied()
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_ChildrenSorter_IsApplied*
+  name: Visit_ChildrenSorter_IsApplied
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_BreadthFirstTraversalTests_1_Visit_ChildrenSorter_IsApplied_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_ChildrenSorter_IsApplied
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_ChildrenSorter_IsApplied
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_ChildrenSorter_IsApplied
+  nameWithType: BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_ChildrenSorter_IsApplied
+  nameWithType.vb: BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_ChildrenSorter_IsApplied
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_DocExamples_ChildrenFirst
+  name: Visit_DocExamples_ChildrenFirst()
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_BreadthFirstTraversalTests_1_Visit_DocExamples_ChildrenFirst
+  commentId: M:MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_DocExamples_ChildrenFirst
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_DocExamples_ChildrenFirst()
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_DocExamples_ChildrenFirst()
+  nameWithType: BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_DocExamples_ChildrenFirst()
+  nameWithType.vb: BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_DocExamples_ChildrenFirst()
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_DocExamples_ChildrenFirst*
+  name: Visit_DocExamples_ChildrenFirst
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_BreadthFirstTraversalTests_1_Visit_DocExamples_ChildrenFirst_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_DocExamples_ChildrenFirst
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_DocExamples_ChildrenFirst
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_DocExamples_ChildrenFirst
+  nameWithType: BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_DocExamples_ChildrenFirst
+  nameWithType.vb: BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_DocExamples_ChildrenFirst
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_DocExamples_ParentFirst
+  name: Visit_DocExamples_ParentFirst()
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_BreadthFirstTraversalTests_1_Visit_DocExamples_ParentFirst
+  commentId: M:MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_DocExamples_ParentFirst
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_DocExamples_ParentFirst()
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_DocExamples_ParentFirst()
+  nameWithType: BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_DocExamples_ParentFirst()
+  nameWithType.vb: BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_DocExamples_ParentFirst()
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_DocExamples_ParentFirst*
+  name: Visit_DocExamples_ParentFirst
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_BreadthFirstTraversalTests_1_Visit_DocExamples_ParentFirst_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_DocExamples_ParentFirst
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_DocExamples_ParentFirst
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_DocExamples_ParentFirst
+  nameWithType: BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_DocExamples_ParentFirst
+  nameWithType.vb: BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_DocExamples_ParentFirst
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_TraversalOrderChildrenFirst
   name: Visit_TraversalOrderChildrenFirst()
-  href: api/MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests.html#MoreStructures_Tests_RecImmTrees_Visitor_DepthFirstTraversalTests_Visit_TraversalOrderChildrenFirst
-  commentId: M:MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests.Visit_TraversalOrderChildrenFirst
-  fullName: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests.Visit_TraversalOrderChildrenFirst()
-  nameWithType: DepthFirstTraversalTests.Visit_TraversalOrderChildrenFirst()
-- uid: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests.Visit_TraversalOrderChildrenFirst*
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_BreadthFirstTraversalTests_1_Visit_TraversalOrderChildrenFirst
+  commentId: M:MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_TraversalOrderChildrenFirst
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_TraversalOrderChildrenFirst()
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_TraversalOrderChildrenFirst()
+  nameWithType: BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_TraversalOrderChildrenFirst()
+  nameWithType.vb: BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_TraversalOrderChildrenFirst()
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_TraversalOrderChildrenFirst*
   name: Visit_TraversalOrderChildrenFirst
-  href: api/MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests.html#MoreStructures_Tests_RecImmTrees_Visitor_DepthFirstTraversalTests_Visit_TraversalOrderChildrenFirst_
-  commentId: Overload:MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests.Visit_TraversalOrderChildrenFirst
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_BreadthFirstTraversalTests_1_Visit_TraversalOrderChildrenFirst_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_TraversalOrderChildrenFirst
   isSpec: "True"
-  fullName: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests.Visit_TraversalOrderChildrenFirst
-  nameWithType: DepthFirstTraversalTests.Visit_TraversalOrderChildrenFirst
-- uid: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests.Visit_TraversalOrderNotSupported
-  name: Visit_TraversalOrderNotSupported()
-  href: api/MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests.html#MoreStructures_Tests_RecImmTrees_Visitor_DepthFirstTraversalTests_Visit_TraversalOrderNotSupported
-  commentId: M:MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests.Visit_TraversalOrderNotSupported
-  fullName: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests.Visit_TraversalOrderNotSupported()
-  nameWithType: DepthFirstTraversalTests.Visit_TraversalOrderNotSupported()
-- uid: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests.Visit_TraversalOrderNotSupported*
-  name: Visit_TraversalOrderNotSupported
-  href: api/MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests.html#MoreStructures_Tests_RecImmTrees_Visitor_DepthFirstTraversalTests_Visit_TraversalOrderNotSupported_
-  commentId: Overload:MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests.Visit_TraversalOrderNotSupported
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_TraversalOrderChildrenFirst
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_TraversalOrderChildrenFirst
+  nameWithType: BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_TraversalOrderChildrenFirst
+  nameWithType.vb: BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_TraversalOrderChildrenFirst
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_TraversalOrderChildrenFirst_MultiLevelsBacktrackTree
+  name: Visit_TraversalOrderChildrenFirst_MultiLevelsBacktrackTree()
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_BreadthFirstTraversalTests_1_Visit_TraversalOrderChildrenFirst_MultiLevelsBacktrackTree
+  commentId: M:MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_TraversalOrderChildrenFirst_MultiLevelsBacktrackTree
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_TraversalOrderChildrenFirst_MultiLevelsBacktrackTree()
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_TraversalOrderChildrenFirst_MultiLevelsBacktrackTree()
+  nameWithType: BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_TraversalOrderChildrenFirst_MultiLevelsBacktrackTree()
+  nameWithType.vb: BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_TraversalOrderChildrenFirst_MultiLevelsBacktrackTree()
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_TraversalOrderChildrenFirst_MultiLevelsBacktrackTree*
+  name: Visit_TraversalOrderChildrenFirst_MultiLevelsBacktrackTree
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_BreadthFirstTraversalTests_1_Visit_TraversalOrderChildrenFirst_MultiLevelsBacktrackTree_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_TraversalOrderChildrenFirst_MultiLevelsBacktrackTree
   isSpec: "True"
-  fullName: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests.Visit_TraversalOrderNotSupported
-  nameWithType: DepthFirstTraversalTests.Visit_TraversalOrderNotSupported
-- uid: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests.Visit_TraversalOrderParentFirst
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_TraversalOrderChildrenFirst_MultiLevelsBacktrackTree
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_TraversalOrderChildrenFirst_MultiLevelsBacktrackTree
+  nameWithType: BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_TraversalOrderChildrenFirst_MultiLevelsBacktrackTree
+  nameWithType.vb: BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_TraversalOrderChildrenFirst_MultiLevelsBacktrackTree
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_TraversalOrderNotSupported_OnSingleton
+  name: Visit_TraversalOrderNotSupported_OnSingleton()
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_BreadthFirstTraversalTests_1_Visit_TraversalOrderNotSupported_OnSingleton
+  commentId: M:MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_TraversalOrderNotSupported_OnSingleton
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_TraversalOrderNotSupported_OnSingleton()
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_TraversalOrderNotSupported_OnSingleton()
+  nameWithType: BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_TraversalOrderNotSupported_OnSingleton()
+  nameWithType.vb: BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_TraversalOrderNotSupported_OnSingleton()
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_TraversalOrderNotSupported_OnSingleton*
+  name: Visit_TraversalOrderNotSupported_OnSingleton
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_BreadthFirstTraversalTests_1_Visit_TraversalOrderNotSupported_OnSingleton_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_TraversalOrderNotSupported_OnSingleton
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_TraversalOrderNotSupported_OnSingleton
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_TraversalOrderNotSupported_OnSingleton
+  nameWithType: BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_TraversalOrderNotSupported_OnSingleton
+  nameWithType.vb: BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_TraversalOrderNotSupported_OnSingleton
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes
+  name: Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes()
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_BreadthFirstTraversalTests_1_Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes
+  commentId: M:MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes()
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes()
+  nameWithType: BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes()
+  nameWithType.vb: BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes()
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes*
+  name: Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_BreadthFirstTraversalTests_1_Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes
+  nameWithType: BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes
+  nameWithType.vb: BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_TraversalOrderParentFirst
   name: Visit_TraversalOrderParentFirst()
-  href: api/MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests.html#MoreStructures_Tests_RecImmTrees_Visitor_DepthFirstTraversalTests_Visit_TraversalOrderParentFirst
-  commentId: M:MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests.Visit_TraversalOrderParentFirst
-  fullName: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests.Visit_TraversalOrderParentFirst()
-  nameWithType: DepthFirstTraversalTests.Visit_TraversalOrderParentFirst()
-- uid: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests.Visit_TraversalOrderParentFirst*
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_BreadthFirstTraversalTests_1_Visit_TraversalOrderParentFirst
+  commentId: M:MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_TraversalOrderParentFirst
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_TraversalOrderParentFirst()
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_TraversalOrderParentFirst()
+  nameWithType: BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_TraversalOrderParentFirst()
+  nameWithType.vb: BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_TraversalOrderParentFirst()
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_TraversalOrderParentFirst*
   name: Visit_TraversalOrderParentFirst
-  href: api/MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests.html#MoreStructures_Tests_RecImmTrees_Visitor_DepthFirstTraversalTests_Visit_TraversalOrderParentFirst_
-  commentId: Overload:MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests.Visit_TraversalOrderParentFirst
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_BreadthFirstTraversalTests_1_Visit_TraversalOrderParentFirst_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_TraversalOrderParentFirst
   isSpec: "True"
-  fullName: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests.Visit_TraversalOrderParentFirst
-  nameWithType: DepthFirstTraversalTests.Visit_TraversalOrderParentFirst
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_TraversalOrderParentFirst
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_TraversalOrderParentFirst
+  nameWithType: BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_TraversalOrderParentFirst
+  nameWithType.vb: BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_TraversalOrderParentFirst
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_TraversalOrderParentFirst_MultiLevelsBacktrackTree
+  name: Visit_TraversalOrderParentFirst_MultiLevelsBacktrackTree()
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_BreadthFirstTraversalTests_1_Visit_TraversalOrderParentFirst_MultiLevelsBacktrackTree
+  commentId: M:MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_TraversalOrderParentFirst_MultiLevelsBacktrackTree
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_TraversalOrderParentFirst_MultiLevelsBacktrackTree()
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_TraversalOrderParentFirst_MultiLevelsBacktrackTree()
+  nameWithType: BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_TraversalOrderParentFirst_MultiLevelsBacktrackTree()
+  nameWithType.vb: BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_TraversalOrderParentFirst_MultiLevelsBacktrackTree()
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_TraversalOrderParentFirst_MultiLevelsBacktrackTree*
+  name: Visit_TraversalOrderParentFirst_MultiLevelsBacktrackTree
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_BreadthFirstTraversalTests_1_Visit_TraversalOrderParentFirst_MultiLevelsBacktrackTree_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests`1.Visit_TraversalOrderParentFirst_MultiLevelsBacktrackTree
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_TraversalOrderParentFirst_MultiLevelsBacktrackTree
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_TraversalOrderParentFirst_MultiLevelsBacktrackTree
+  nameWithType: BreadthFirstTraversalTests<TBreadthFirstTraversal>.Visit_TraversalOrderParentFirst_MultiLevelsBacktrackTree
+  nameWithType.vb: BreadthFirstTraversalTests(Of TBreadthFirstTraversal).Visit_TraversalOrderParentFirst_MultiLevelsBacktrackTree
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1
+  name: DepthFirstTraversalTests<TDepthFirstTraversal>
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests-1.html
+  commentId: T:MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1
+  name.vb: DepthFirstTraversalTests(Of TDepthFirstTraversal)
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests<TDepthFirstTraversal>
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests(Of TDepthFirstTraversal)
+  nameWithType: DepthFirstTraversalTests<TDepthFirstTraversal>
+  nameWithType.vb: DepthFirstTraversalTests(Of TDepthFirstTraversal)
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_ChildrenSorter_IsApplied
+  name: Visit_ChildrenSorter_IsApplied()
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_DepthFirstTraversalTests_1_Visit_ChildrenSorter_IsApplied
+  commentId: M:MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_ChildrenSorter_IsApplied
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_ChildrenSorter_IsApplied()
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_ChildrenSorter_IsApplied()
+  nameWithType: DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_ChildrenSorter_IsApplied()
+  nameWithType.vb: DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_ChildrenSorter_IsApplied()
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_ChildrenSorter_IsApplied*
+  name: Visit_ChildrenSorter_IsApplied
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_DepthFirstTraversalTests_1_Visit_ChildrenSorter_IsApplied_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_ChildrenSorter_IsApplied
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_ChildrenSorter_IsApplied
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_ChildrenSorter_IsApplied
+  nameWithType: DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_ChildrenSorter_IsApplied
+  nameWithType.vb: DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_ChildrenSorter_IsApplied
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_DocExamples_ChildrenFirst
+  name: Visit_DocExamples_ChildrenFirst()
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_DepthFirstTraversalTests_1_Visit_DocExamples_ChildrenFirst
+  commentId: M:MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_DocExamples_ChildrenFirst
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_DocExamples_ChildrenFirst()
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_DocExamples_ChildrenFirst()
+  nameWithType: DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_DocExamples_ChildrenFirst()
+  nameWithType.vb: DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_DocExamples_ChildrenFirst()
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_DocExamples_ChildrenFirst*
+  name: Visit_DocExamples_ChildrenFirst
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_DepthFirstTraversalTests_1_Visit_DocExamples_ChildrenFirst_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_DocExamples_ChildrenFirst
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_DocExamples_ChildrenFirst
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_DocExamples_ChildrenFirst
+  nameWithType: DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_DocExamples_ChildrenFirst
+  nameWithType.vb: DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_DocExamples_ChildrenFirst
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_DocExamples_ParentFirst
+  name: Visit_DocExamples_ParentFirst()
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_DepthFirstTraversalTests_1_Visit_DocExamples_ParentFirst
+  commentId: M:MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_DocExamples_ParentFirst
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_DocExamples_ParentFirst()
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_DocExamples_ParentFirst()
+  nameWithType: DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_DocExamples_ParentFirst()
+  nameWithType.vb: DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_DocExamples_ParentFirst()
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_DocExamples_ParentFirst*
+  name: Visit_DocExamples_ParentFirst
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_DepthFirstTraversalTests_1_Visit_DocExamples_ParentFirst_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_DocExamples_ParentFirst
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_DocExamples_ParentFirst
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_DocExamples_ParentFirst
+  nameWithType: DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_DocExamples_ParentFirst
+  nameWithType.vb: DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_DocExamples_ParentFirst
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_MultiLevelsBacktrackTree
+  name: Visit_MultiLevelsBacktrackTree()
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_DepthFirstTraversalTests_1_Visit_MultiLevelsBacktrackTree
+  commentId: M:MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_MultiLevelsBacktrackTree
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_MultiLevelsBacktrackTree()
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_MultiLevelsBacktrackTree()
+  nameWithType: DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_MultiLevelsBacktrackTree()
+  nameWithType.vb: DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_MultiLevelsBacktrackTree()
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_MultiLevelsBacktrackTree*
+  name: Visit_MultiLevelsBacktrackTree
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_DepthFirstTraversalTests_1_Visit_MultiLevelsBacktrackTree_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_MultiLevelsBacktrackTree
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_MultiLevelsBacktrackTree
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_MultiLevelsBacktrackTree
+  nameWithType: DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_MultiLevelsBacktrackTree
+  nameWithType.vb: DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_MultiLevelsBacktrackTree
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_TraversalOrderChildrenFirst
+  name: Visit_TraversalOrderChildrenFirst()
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_DepthFirstTraversalTests_1_Visit_TraversalOrderChildrenFirst
+  commentId: M:MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_TraversalOrderChildrenFirst
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_TraversalOrderChildrenFirst()
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_TraversalOrderChildrenFirst()
+  nameWithType: DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_TraversalOrderChildrenFirst()
+  nameWithType.vb: DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_TraversalOrderChildrenFirst()
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_TraversalOrderChildrenFirst*
+  name: Visit_TraversalOrderChildrenFirst
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_DepthFirstTraversalTests_1_Visit_TraversalOrderChildrenFirst_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_TraversalOrderChildrenFirst
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_TraversalOrderChildrenFirst
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_TraversalOrderChildrenFirst
+  nameWithType: DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_TraversalOrderChildrenFirst
+  nameWithType.vb: DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_TraversalOrderChildrenFirst
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_TraversalOrderNotSupported_OnSingleton
+  name: Visit_TraversalOrderNotSupported_OnSingleton()
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_DepthFirstTraversalTests_1_Visit_TraversalOrderNotSupported_OnSingleton
+  commentId: M:MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_TraversalOrderNotSupported_OnSingleton
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_TraversalOrderNotSupported_OnSingleton()
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_TraversalOrderNotSupported_OnSingleton()
+  nameWithType: DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_TraversalOrderNotSupported_OnSingleton()
+  nameWithType.vb: DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_TraversalOrderNotSupported_OnSingleton()
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_TraversalOrderNotSupported_OnSingleton*
+  name: Visit_TraversalOrderNotSupported_OnSingleton
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_DepthFirstTraversalTests_1_Visit_TraversalOrderNotSupported_OnSingleton_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_TraversalOrderNotSupported_OnSingleton
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_TraversalOrderNotSupported_OnSingleton
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_TraversalOrderNotSupported_OnSingleton
+  nameWithType: DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_TraversalOrderNotSupported_OnSingleton
+  nameWithType.vb: DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_TraversalOrderNotSupported_OnSingleton
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes
+  name: Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes()
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_DepthFirstTraversalTests_1_Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes
+  commentId: M:MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes()
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes()
+  nameWithType: DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes()
+  nameWithType.vb: DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes()
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes*
+  name: Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_DepthFirstTraversalTests_1_Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes
+  nameWithType: DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes
+  nameWithType.vb: DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_TraversalOrderParentFirst
+  name: Visit_TraversalOrderParentFirst()
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_DepthFirstTraversalTests_1_Visit_TraversalOrderParentFirst
+  commentId: M:MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_TraversalOrderParentFirst
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_TraversalOrderParentFirst()
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_TraversalOrderParentFirst()
+  nameWithType: DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_TraversalOrderParentFirst()
+  nameWithType.vb: DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_TraversalOrderParentFirst()
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_TraversalOrderParentFirst*
+  name: Visit_TraversalOrderParentFirst
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests-1.html#MoreStructures_Tests_RecImmTrees_Visitor_DepthFirstTraversalTests_1_Visit_TraversalOrderParentFirst_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests`1.Visit_TraversalOrderParentFirst
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_TraversalOrderParentFirst
+  fullName.vb: MoreStructures.Tests.RecImmTrees.Visitor.DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_TraversalOrderParentFirst
+  nameWithType: DepthFirstTraversalTests<TDepthFirstTraversal>.Visit_TraversalOrderParentFirst
+  nameWithType.vb: DepthFirstTraversalTests(Of TDepthFirstTraversal).Visit_TraversalOrderParentFirst
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversalTests
+  name: FullyIterativeBreadthFirstTraversalTests
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversalTests.html
+  commentId: T:MoreStructures.Tests.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversalTests
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversalTests
+  nameWithType: FullyIterativeBreadthFirstTraversalTests
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversalTests.Visit_DoesntOverflowWithDeepStructures
+  name: Visit_DoesntOverflowWithDeepStructures()
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversalTests.html#MoreStructures_Tests_RecImmTrees_Visitor_FullyIterativeBreadthFirstTraversalTests_Visit_DoesntOverflowWithDeepStructures
+  commentId: M:MoreStructures.Tests.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversalTests.Visit_DoesntOverflowWithDeepStructures
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversalTests.Visit_DoesntOverflowWithDeepStructures()
+  nameWithType: FullyIterativeBreadthFirstTraversalTests.Visit_DoesntOverflowWithDeepStructures()
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversalTests.Visit_DoesntOverflowWithDeepStructures*
+  name: Visit_DoesntOverflowWithDeepStructures
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversalTests.html#MoreStructures_Tests_RecImmTrees_Visitor_FullyIterativeBreadthFirstTraversalTests_Visit_DoesntOverflowWithDeepStructures_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversalTests.Visit_DoesntOverflowWithDeepStructures
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversalTests.Visit_DoesntOverflowWithDeepStructures
+  nameWithType: FullyIterativeBreadthFirstTraversalTests.Visit_DoesntOverflowWithDeepStructures
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.FullyIterativeDepthFirstTraversalTests
+  name: FullyIterativeDepthFirstTraversalTests
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.FullyIterativeDepthFirstTraversalTests.html
+  commentId: T:MoreStructures.Tests.RecImmTrees.Visitor.FullyIterativeDepthFirstTraversalTests
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.FullyIterativeDepthFirstTraversalTests
+  nameWithType: FullyIterativeDepthFirstTraversalTests
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.FullyIterativeDepthFirstTraversalTests.Visit_DoesntOverflowWithDeepStructures
+  name: Visit_DoesntOverflowWithDeepStructures()
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.FullyIterativeDepthFirstTraversalTests.html#MoreStructures_Tests_RecImmTrees_Visitor_FullyIterativeDepthFirstTraversalTests_Visit_DoesntOverflowWithDeepStructures
+  commentId: M:MoreStructures.Tests.RecImmTrees.Visitor.FullyIterativeDepthFirstTraversalTests.Visit_DoesntOverflowWithDeepStructures
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.FullyIterativeDepthFirstTraversalTests.Visit_DoesntOverflowWithDeepStructures()
+  nameWithType: FullyIterativeDepthFirstTraversalTests.Visit_DoesntOverflowWithDeepStructures()
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.FullyIterativeDepthFirstTraversalTests.Visit_DoesntOverflowWithDeepStructures*
+  name: Visit_DoesntOverflowWithDeepStructures
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.FullyIterativeDepthFirstTraversalTests.html#MoreStructures_Tests_RecImmTrees_Visitor_FullyIterativeDepthFirstTraversalTests_Visit_DoesntOverflowWithDeepStructures_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Visitor.FullyIterativeDepthFirstTraversalTests.Visit_DoesntOverflowWithDeepStructures
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.FullyIterativeDepthFirstTraversalTests.Visit_DoesntOverflowWithDeepStructures
+  nameWithType: FullyIterativeDepthFirstTraversalTests.Visit_DoesntOverflowWithDeepStructures
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversalTests
+  name: FullyRecursiveBreadthFirstTraversalTests
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversalTests.html
+  commentId: T:MoreStructures.Tests.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversalTests
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversalTests
+  nameWithType: FullyRecursiveBreadthFirstTraversalTests
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversalTests.Visit_DoesntStackOverflowWithNotSoDeepStructures
+  name: Visit_DoesntStackOverflowWithNotSoDeepStructures()
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversalTests.html#MoreStructures_Tests_RecImmTrees_Visitor_FullyRecursiveBreadthFirstTraversalTests_Visit_DoesntStackOverflowWithNotSoDeepStructures
+  commentId: M:MoreStructures.Tests.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversalTests.Visit_DoesntStackOverflowWithNotSoDeepStructures
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversalTests.Visit_DoesntStackOverflowWithNotSoDeepStructures()
+  nameWithType: FullyRecursiveBreadthFirstTraversalTests.Visit_DoesntStackOverflowWithNotSoDeepStructures()
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversalTests.Visit_DoesntStackOverflowWithNotSoDeepStructures*
+  name: Visit_DoesntStackOverflowWithNotSoDeepStructures
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversalTests.html#MoreStructures_Tests_RecImmTrees_Visitor_FullyRecursiveBreadthFirstTraversalTests_Visit_DoesntStackOverflowWithNotSoDeepStructures_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversalTests.Visit_DoesntStackOverflowWithNotSoDeepStructures
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.FullyRecursiveBreadthFirstTraversalTests.Visit_DoesntStackOverflowWithNotSoDeepStructures
+  nameWithType: FullyRecursiveBreadthFirstTraversalTests.Visit_DoesntStackOverflowWithNotSoDeepStructures
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversalTests
+  name: FullyRecursiveDepthFirstTraversalTests
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversalTests.html
+  commentId: T:MoreStructures.Tests.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversalTests
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversalTests
+  nameWithType: FullyRecursiveDepthFirstTraversalTests
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversalTests.Visit_DoesntStackOverflowWithNotSoDeepStructures
+  name: Visit_DoesntStackOverflowWithNotSoDeepStructures()
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversalTests.html#MoreStructures_Tests_RecImmTrees_Visitor_FullyRecursiveDepthFirstTraversalTests_Visit_DoesntStackOverflowWithNotSoDeepStructures
+  commentId: M:MoreStructures.Tests.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversalTests.Visit_DoesntStackOverflowWithNotSoDeepStructures
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversalTests.Visit_DoesntStackOverflowWithNotSoDeepStructures()
+  nameWithType: FullyRecursiveDepthFirstTraversalTests.Visit_DoesntStackOverflowWithNotSoDeepStructures()
+- uid: MoreStructures.Tests.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversalTests.Visit_DoesntStackOverflowWithNotSoDeepStructures*
+  name: Visit_DoesntStackOverflowWithNotSoDeepStructures
+  href: api/MoreStructures.Tests.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversalTests.html#MoreStructures_Tests_RecImmTrees_Visitor_FullyRecursiveDepthFirstTraversalTests_Visit_DoesntStackOverflowWithNotSoDeepStructures_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversalTests.Visit_DoesntStackOverflowWithNotSoDeepStructures
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversalTests.Visit_DoesntStackOverflowWithNotSoDeepStructures
+  nameWithType: FullyRecursiveDepthFirstTraversalTests.Visit_DoesntStackOverflowWithNotSoDeepStructures
 - uid: MoreStructures.Tests.RotatedTextWithTerminatorTests
   name: RotatedTextWithTerminatorTests
   href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html
