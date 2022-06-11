@@ -12,7 +12,7 @@ namespace MoreStructures.RecImmTrees.Conversions;
 ///     <inheritdoc cref="IStringifier{TEdge, TNode}" path="/remarks"/>
 ///     <para>
 ///     Implemented fully iteratively via a <see cref="Stack{T}"/>, so not limited by call stack depth but rather by 
-///     the maximum size of the stack stored in the heap. Convenient with deep trees (i.e. trees having a height > 
+///     the maximum size of the stack stored in the heap. Convenient with deep trees (i.e. trees having a height &gt; 
 ///     ~1K nodes).
 ///     </para>
 /// </remarks>
