@@ -28,6 +28,7 @@ public static class TextWithTerminatorExtensions
     ///     <para>
     ///     Instead, a new object storing the rotation and keeping the reference to <paramref name="text"/> is created
     ///     in O(1) time and space.
+    ///     <br/>
     ///     Such an object is able to appear as if the underlying string was recomputed, taking into account the 
     ///     rotation in all its exposed functionalities.
     ///     </para>

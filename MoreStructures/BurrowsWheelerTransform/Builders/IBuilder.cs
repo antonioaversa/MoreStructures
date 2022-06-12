@@ -19,29 +19,30 @@ public interface IBuilder
     /// <inheritdoc cref="BWMatrix" path="/summary"/>
     /// </remarks>
     /// <example>
-    /// Code: 
-    /// <code>
-    /// var builder = ...
-    /// builder.BuildMatrix(new("mississippi")).Content
-    /// </code>
-    /// 
-    /// Result:
-    /// <code>
-    /// {
-    ///     "$mississippi",
-    ///     "i$mississipp",
-    ///     "ippi$mississ",
-    ///     "issippi$miss",
-    ///     "ississippi$m",
-    ///     "mississippi$",
-    ///     "pi$mississip",
-    ///     "ppi$mississi",
-    ///     "sippi$missis",
-    ///     "sissippi$mis",
-    ///     "ssippi$missi",
-    ///     "ssissippi$mi",
-    /// }
-    /// </code>
+    ///     Code: 
+    ///     <code>
+    ///     var builder = ...
+    ///     builder.BuildMatrix(new("mississippi")).Content
+    ///     </code>
+    ///     <br/>
+    ///     
+    ///     Result:
+    ///     <code>
+    ///     {
+    ///         "$mississippi",
+    ///         "i$mississipp",
+    ///         "ippi$mississ",
+    ///         "issippi$miss",
+    ///         "ississippi$m",
+    ///         "mississippi$",
+    ///         "pi$mississip",
+    ///         "ppi$mississi",
+    ///         "sippi$missis",
+    ///         "sissippi$mis",
+    ///         "ssippi$missi",
+    ///         "ssissippi$mi",
+    ///     }
+    ///     </code>
     /// </example>
     BWMatrix BuildMatrix(TextWithTerminator text);
 

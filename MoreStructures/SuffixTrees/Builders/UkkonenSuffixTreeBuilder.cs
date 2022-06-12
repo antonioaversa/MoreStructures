@@ -14,29 +14,26 @@ namespace MoreStructures.SuffixTrees.Builders;
 ///     <see href="https://www.cs.helsinki.fi/u/ukkonen/SuffixT1withFigs.pdf"/> for the original paper.
 ///     </para>
 ///     <para id="optimizations">
-///     The algorithm implies some optimizations to achieve linear complexity:
-///         <list type="bullet">
-///             <item>
-///             Edge Labels compression: strings on edges are stored as (start, end) indexes. This makes the space
-///             used by a single edge constant, i.e. O(1), because it always consists of two integers, regardless of 
-///             how many chars of the text it represents.
-///             </item>
-///             <item>
-///             Global End: all leafs have a dynamic end index, autoincremented every new phase. This makes the time 
-///             used to apply Rule 1 Extension constant, i.e. O(1), because incrementing the global end also increments
-///             all leaf implicitely.
-///             </item>
-///             <item>
-///             Suffix Links: all internal nodes point to another internal node sharing the suffix. This makes more
-///             efficient traversal, because storing and jumping the suffix link when needed means traversal doesn't 
-///             have to be done again.
-///             </item>
-///         </list>
+///     The algorithm applies some optimizations to achieve linear complexity:
+///     <br/>
+///     - <b>Edge Labels compression</b>: strings on edges are stored as (start, end) indexes. This makes the space
+///       used by a single edge constant, i.e. O(1), because it always consists of two integers, regardless of 
+///       how many chars of the text it represents.
+///       <br/>
+///     - <b>Global End</b>: all leafs have a dynamic end index, autoincremented every new phase. This makes the time 
+///       used to apply Rule 1 Extension constant, i.e. O(1), because incrementing the global end also increments
+///       all leaf implicitely.
+///       <br/>
+///     - <b>Suffix Links</b>: all internal nodes point to another internal node sharing the suffix. This makes more
+///       efficient traversal, because storing and jumping the suffix link when needed means traversal doesn't 
+///       have to be done again.
 ///     </para>
 ///     <para id="structure">
 ///     The algorithm is structured in phases, as many as the number of chars in the text.
+///     <br/>
 ///     At the beginning of a new phase, both the number of remaining suffixes to take care of, and the global end
 ///     pointer are both increased by 1.
+///     <br/>
 ///     Each phase is composed of at least 1 iteration, each one taking care of remaining suffixes.
 ///     At the beginning 
 ///     </para>
@@ -47,6 +44,7 @@ namespace MoreStructures.SuffixTrees.Builders;
 ///     Time Complexity = O(t * as) and Space Complexity = O(2 * t) where t = length of the text to match and
 ///     as = size of the alphabet of the text. If the alphabet is of constant size, Time Complexity is linear.
 ///     Otherwise it is O(t * log(t)).
+///     <br/>
 ///     While there are as many phases as number of chars in text (t), and there can be multiple iterations per
 ///     phase (as many as the number of remaining suffixes to process), the complexity is still linear, ~ 2t.
 ///     </para>

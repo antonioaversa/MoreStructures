@@ -39,15 +39,11 @@ public class CharOrTerminatorComparer : IComparer<char>
     /// <param name="y"><inheritdoc path="/param[@name='y']"/></param>
     /// <remarks>
     /// Special rules applied by <see cref="CharOrTerminatorComparer"/>:
-    /// <list type="bullet">
-    ///     <item>
-    ///     If one char is the terminator, and the other isn't, the one which is the terminator is smaller.
-    ///     </item>
-    ///     <item>
-    ///     If none of the cases above applies, <see cref="char.CompareTo(char)"/> is used on <paramref name="x"/> and 
-    ///     <paramref name="y"/>.
-    ///     </item>
-    /// </list>
+    /// <br/>
+    /// - If one char is the terminator, and the other isn't, the one which is the terminator is smaller.
+    ///   <br/>
+    /// - If none of the cases above applies, <see cref="char.CompareTo(char)"/> is used on <paramref name="x"/> and 
+    ///   <paramref name="y"/>.
     /// </remarks>
     /// <returns><inheritdoc/></returns>
     public int Compare(char x, char y)

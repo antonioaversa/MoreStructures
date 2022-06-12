@@ -65,6 +65,7 @@ public class PrecomputedFinder : BinarySearchFinder
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     /// This implementation uses a precomputed hash-map of all the positions by each char.
+    /// <br/>
     /// Time Complexity = O(1). Space Complexity = O(1).
     /// </remarks>
     public override int FindIndexOfNthOccurrenceInBWT(int indexOfCharInBWT, int occurrenceRank)

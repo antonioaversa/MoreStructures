@@ -8,7 +8,7 @@ namespace MoreStructures;
 /// (0 included).
 /// </summary>
 /// <param name="RotatedText">
-/// The text, defined ad an <see cref="IEnumerable{T}"/> of chars and containing the terminator character once, in any 
+/// The text, defined as an <see cref="IEnumerable{T}"/> of chars and containing the terminator character once, in any 
 /// position of the text.
 /// </param>
 /// <param name="Terminator">
@@ -49,11 +49,17 @@ public record RotatedTextWithTerminator(
     /// <remarks>
     /// Wrapped into a <see cref="IValueEnumerable{T}"/> to preserve value equality.
     /// </remarks>
+    /// <value>
+    /// A sequence of chars.
+    /// </value>
     public IEnumerable<char> RotatedText { get; init; } = RotatedText.AsValue();
 
     /// <summary>
     /// <inheritdoc cref="RotatedTextWithTerminator" path="/param[@name='Terminator']"/>
     /// </summary>
+    /// <value>
+    /// A single char.
+    /// </value>
     public char Terminator { get; init; } =
         !ValidateInput || RotatedText.Count(c => c == Terminator) == 1 
         ? Terminator 
@@ -70,7 +76,7 @@ public record RotatedTextWithTerminator(
     /// Select a part of <see cref="RotatedText"/> by the provided range (start index included, end index excluded).
     /// </summary>
     /// <param name="range">The range applied to the underlying string.</param>
-    /// <returns>An <see cref="IEnumerable{T}"/> of chars containing the selected part.</returns>
+    /// <returns>A sequence of chars containing the selected part.</returns>
     public IEnumerable<char> this[Range range] => RotatedText.Take(range);
 
     /// <summary>
@@ -87,6 +93,9 @@ public record RotatedTextWithTerminator(
     /// <remarks>
     /// After the first call, the value is cached for all subsequent calls.
     /// </remarks>
+    /// <value>
+    /// A positive integer (at least 1).
+    /// </value>
     public int Length
     {
         get

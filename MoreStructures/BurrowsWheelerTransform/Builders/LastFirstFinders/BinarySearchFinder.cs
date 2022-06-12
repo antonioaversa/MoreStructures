@@ -44,6 +44,7 @@ public class BinarySearchFinder : NaiveFinder
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     /// This implementation takes advantage of the fact that <see cref="ILastFirstFinder.SortedBWT"/> is sorted.
+    /// <br/>
     /// Time Complexity = O(log(n)). Space Complexity = O(1).
     /// </remarks>
     public override int FindIndexOfNthOccurrenceInSortedBWT(int indexOfCharInBWT, int occurrenceRank)
@@ -61,6 +62,7 @@ public class BinarySearchFinder : NaiveFinder
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     /// This implementation takes advantage of the fact that <see cref="ILastFirstFinder.SortedBWT"/> is sorted.
+    /// <br/>
     /// Time Complexity = O(log(n)). Space Complexity = O(1).
     /// </remarks>
     public override int FindOccurrenceRankOfCharInSortedBWT(int indexOfCharInSortedBWT)

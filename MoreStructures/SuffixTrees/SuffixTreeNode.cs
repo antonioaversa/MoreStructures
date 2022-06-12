@@ -14,13 +14,16 @@ namespace MoreStructures.SuffixTrees;
 /// <inheritdoc cref="ISuffixStructureNode{TEdge, TNode}.Start" path="/summary"/>
 /// </param>
 /// <remarks>
-///     <para>
+///     <para id="advantages">
 ///     Suffix Trees are more space-efficient than Suffix Tries due to the reduced number of 
 ///     <see cref="SuffixTreeEdge"/> and their <see cref="SuffixTreeNode"/>, compare to the corresponding
 ///     <see cref="SuffixTries.SuffixTrieEdge"/> and their <see cref="SuffixTries.SuffixTrieNode"/>, due to entire 
 ///     paths of single chains of chars in Suffix Tries being coalesced into a single selector string, which is stored
 ///     on the edge with path label compression, i.e. using two fixed sized numbers (<see cref="SuffixTreeEdge.Start"/> 
 ///     and <see cref="SuffixTreeEdge.Length"/>) instead of a variable-length string of characters.
+///     <br/>
+///     Furthermore, suffix trees, unlike suffix tries, can be constructed in linear time, for example via the 
+///     <see cref="Builders.UkkonenSuffixTreeBuilder"/>.
 ///     </para>
 ///     <para>
 ///     Immutability is guaranteed by using <see cref="ValueReadOnlyCollection{T}"/>.

@@ -69,7 +69,8 @@ public class NaiveFinder : ILastFirstFinder
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
-    /// This implementation just iterates over <see cref="BWT"/> every time. 
+    /// This implementation just iterates over <see cref="BWT"/> every time.
+    /// <br/>
     /// Time Complexity = O(n). Space Complexity = O(1).
     /// </remarks>
     public virtual int FindIndexOfNthOccurrenceInBWT(int indexOfCharInBWT, int occurrenceRank) =>
@@ -77,7 +78,8 @@ public class NaiveFinder : ILastFirstFinder
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
-    /// This implementation just iterates over <see cref="SortedBWT"/> every time. 
+    /// This implementation just iterates over <see cref="SortedBWT"/> every time.
+    /// <br/>
     /// Time Complexity = O(n). Space Complexity = O(1).
     /// </remarks>
     public virtual int FindIndexOfNthOccurrenceInSortedBWT(int indexOfCharInBWT, int occurrenceRank) =>
@@ -97,6 +99,7 @@ public class NaiveFinder : ILastFirstFinder
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     /// This implementation just iterates over <see cref="BWT"/> every time.
+    /// <br/>
     /// Time Complexity = O(n). Space Complexity = O(1).
     /// </remarks>
     public virtual int FindOccurrenceRankOfCharInBWT(int indexOfCharInBWT) =>
@@ -105,6 +108,7 @@ public class NaiveFinder : ILastFirstFinder
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     /// This implementation just iterates over <see cref="SortedBWT"/> every time.
+    /// <br/>
     /// Time Complexity = O(n). Space Complexity = O(1).
     /// </remarks>
     public virtual int FindOccurrenceRankOfCharInSortedBWT(int indexOfCharInSortedBWT) => 
