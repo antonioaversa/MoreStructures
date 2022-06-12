@@ -1,8 +1,9 @@
 ﻿namespace MoreStructures.RecImmTrees.Visitor;
 
 /// <summary>
-/// The visit logic of a <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode}"/>. It's not correlated to the 
-/// strategy with which nodes are visited, which is defined by this <see cref="IVisitStrategy{TNode, TVisitContext}"/>.
+/// The visit logic of a single <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode}"/> of the structure being visited. 
+/// It's not correlated to the strategy with which nodes are visited, which is defined by a 
+/// <see cref="IVisitStrategy{TNode, TVisitContext}"/>.
 /// </summary>
 /// <param name="node">The node being visited.</param>
 /// <param name="context">
@@ -19,7 +20,8 @@
 public delegate void Visitor<in TNode, in TVisitContext>(TNode node, TVisitContext context);
 
 /// <summary>
-/// A visit strategy of <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode}"/> structures.
+/// A visit strategy of <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode}"/> structures. Can be any way of moving 
+/// through the structure and touching nodes: partial or exaustive, hierarchical or random, upwards or downwards, etc.
 /// </summary>
 /// <typeparam name="TNode">The type of nodes of the specific structure.</typeparam>
 /// <typeparam name="TVisitContext">
@@ -28,9 +30,9 @@ public delegate void Visitor<in TNode, in TVisitContext>(TNode node, TVisitConte
 public interface IVisitStrategy<TNode, TVisitContext>
 {
     /// <summary>
-    /// Visits the structure of the provided <paramref name="node"/>, calling the provided <paramref name="visitor"/>
-    /// on each <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode}"/> of the structure, in the order defined by this
-    /// <see cref="IVisitStrategy{TNode, TVisitContext}"/>.
+    /// <b>Eagerly</b> visits the structure of the provided <paramref name="node"/>, calling the provided 
+    /// <paramref name="visitor"/> on each <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode}"/> of the structure, 
+    /// in the order defined by this <see cref="IVisitStrategy{TNode, TVisitContext}"/>.
     /// </summary>
     /// <param name="node">The node on where to start visit the structure.</param>
     /// <param name="visitor">The visit logic, invoked on each of the visit nodes.</param>

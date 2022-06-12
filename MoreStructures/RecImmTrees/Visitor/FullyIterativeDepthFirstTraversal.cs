@@ -22,12 +22,52 @@ public class FullyIterativeDepthFirstTraversal<TEdge, TNode>
 
     /// <inheritdoc 
     ///     cref="TreeTraversal{TEdge, TNode}.Visit(TNode, Visitor{TNode, TreeTraversalContext{TEdge, TNode}})" 
-    ///     path="//*[not(self::summary)]"/>
+    ///     path="//*[not(self::summary or self::remarks)]"/>
     /// <summary>
-    /// Iteratively visits the structure of the provided <paramref name= "node" />, calling the provided 
-    /// <paramref name="visitor"/> on each <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode}"/> of the structure, 
-    /// in depth-first order.
+    /// <b>Eagerly and iteratively</b> visits the structure of the provided <paramref name= "node" />, calling the 
+    /// provided <paramref name="visitor"/> on each <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode}"/> of the 
+    /// structure, in depth-first order.
     /// </summary>
+    /// <remarks>
+    ///     <inheritdoc cref="FullyIterativeDepthFirstTraversal{TEdge, TNode}" path="/remarks"/>
+    ///     <para id = "algo" >
+    ///     The algorithm uses a <see cref="Stack{T}"/>:
+    ///     <br/>    
+    ///     - At the beginning the stack contains only a frame with the root node, no parent node nor incoming edge and
+    ///       with a <see cref="bool"/> indicating the children for this node haven't been added to the stack yet;
+    ///       <br/> 
+    ///     - Then each frame at the top of the stack is popped out and processed, until the stack is empty.
+    ///       <br/> 
+    ///     - If the node being processed has the "children stacked" flag not set, all children are stacked up. The 
+    ///       node itself is also stacked up, again, this time with the "children stacked" flag set.
+    ///     - If the node being processed has the "children stacked" flag set, or is a leaf, it's visited.
+    ///     </para>
+    ///     <para id="complexity">
+    ///     Each of the n nodes and n - 1 edges of the tree is visited at most twice: the first time with the "children
+    ///     stacked" flag unset and a second time with the flag set. Leafs are only visited once, since they have no
+    ///     children and don't have to wait for their children to be visited.
+    ///     <br/>
+    ///     <see cref="TreeTraversal{TEdge, TNode}.ChildrenSorter"/> can also increase time and space complexity, 
+    ///     especially if it perform an actual sorting of nodes. For example, if the sorter takes n * log(n) time
+    ///     <br/>
+    ///     The <see cref="IEnumerable{T}"/> emitted by <see cref="TreeTraversal{TEdge, TNode}.ChildrenSorter"/> is 
+    ///     reversed to be pushed onto the stack in the right order, and that takes additional O(n - 1) total space, 
+    ///     since there are n - 1 edges, which are 1-to-1 with nodes in the tree.
+    ///     <br/>
+    ///     Each frame processing of a nodde with the "children stacked" flag set takes constant time (e.g.to check 
+    ///     traversal order) and space (e.g. to extract parent node, incoming edge and node itself from the frame and
+    ///     to build a <see cref="TreeTraversalContext{TEdge, TNode}"/> object for the visit), plus the time and space 
+    ///     of the visit.
+    ///     <br/>
+    ///     Time Complexity is O(n * Ts * Tv) in total, where Ts is the amortized Time Complexity of 
+    ///     <see cref="TreeTraversal{TEdge, TNode}.ChildrenSorter"/> per edge/node and Tv is the Time Complexity of the
+    ///     visitor per node.
+    ///     <br/>
+    ///     Space Complexity is O(n * Ss * Sv) in total, where Ss is the amortized Space Complexity of 
+    ///     <see cref="TreeTraversal{TEdge, TNode}.ChildrenSorter"/> per edge/node and Sv is the Space Complexity of 
+    ///     the visitor per node.
+    ///     </para>
+    /// </remarks>
     public override void Visit(TNode node, Visitor<TNode, TreeTraversalContext<TEdge, TNode>> visitor)
     {
         var stack = new Stack<StackFrame> { };
