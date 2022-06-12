@@ -6,6 +6,18 @@
 /// <see cref="BreadthFirstTraversal{TEdge, TNode}"/> strategies, which are different strategies of traversing a
 /// <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode}"/> structure top-down.
 /// </summary>
+/// <remarks>
+///     <para id="traversal-vs-visit">
+///     The word "traversal" in <see cref="TreeTraversal{TEdge, TNode}"/> and its derivations, is here used with 
+///     narrower scope than the word "visit" in <see cref="IVisitStrategy{TNode, TVisitContext}"/>.
+///     <br/>
+///     - "Traversal" is used here as common class between DFS and BFS, as a visit strategy that starts from the root 
+///       of the tree and proceeds downwards, following edges and terminating when leafs are reached.
+///       <br/>
+///     - "Visit" is used in a more general sense, as any algorithm which "touches" 0 or more nodes of the tree, 
+///       walking the tree in any possible way (up, down, sideways, ...).
+///     </para>
+/// </remarks>
 public abstract class TreeTraversal<TEdge, TNode>
     : IVisitStrategy<TNode, TreeTraversalContext<TEdge, TNode>>
     where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>

@@ -2,7 +2,7 @@
 
 /// <inheritdoc cref="TreeTraversal{TEdge, TNode}" path="//*[not(self::summary or self::remarks)]"/>
 /// <summary>
-/// Base class for all DFT strategies, i.e. all traversing strategies which goes in depth as far as possible 
+/// Base class for all DFS strategies, i.e. all traversing strategies which goes in depth as far as possible 
 /// along each path of the tree, only backtracking when a leaf is reached.
 /// </summary>
 /// <example>
@@ -20,7 +20,8 @@
 ///                     |- 8 -> 9
 ///                     |- 9 -> 10
 ///     </code>
-///     A DFT visit strategy "parent first" would visit nodes and edges in either of the following ways, depending on
+///     <para>
+///     A DFS visit strategy "parent first" would visit nodes and edges in either of the following ways, depending on
 ///     how children are sorted (lower-id edge first, lower-id edge last, median-id edge first, ...):
 ///     <br/>
 ///     - { (null, 0), (0, 1), (1, 2), (2, 3), (3, 4), (4, 5), (5, 6), (6, 7), (7, 8), (8, 9), (9, 10) }
@@ -30,9 +31,9 @@
 ///     - { (null, 0), (5, 6), (6, 7), (7, 8), (9, 10), (8, 9), (0, 1), (2, 3), (3, 4), (4, 5), (1, 2) }
 ///     <br/>
 ///     - ...
-///     <br/>
-///     <br/>
-///     A DFT visit strategy "children first" would visit nodes and edges in either of the following ways, depending on
+///     </para>
+///     <para>
+///     A DFS visit strategy "children first" would visit nodes and edges in either of the following ways, depending on
 ///     how children are sorted:
 ///     <br/>
 ///     - { (1, 2), (3, 4), (2, 3), (4, 5), (0, 1), (5, 6), (8, 9), (9, 10), (7, 8), (6, 7), (null, 0) }
@@ -40,6 +41,7 @@
 ///     - { (9, 10), (8, 9), (7, 8), (6, 7), (5, 6), (4, 5), (3, 4), (2, 3), (1, 2), (0, 1), (null, 0) }
 ///     <br/>
 ///     - ...
+///     </para>
 /// </example>
 public abstract class DepthFirstTraversal<TEdge, TNode>
     : TreeTraversal<TEdge, TNode>

@@ -20,6 +20,7 @@
 ///                     |- 8 -> 9
 ///                     |- 9 -> 10
 ///     </code>
+///     <para>
 ///     A BFT visit strategy "parent first" would visit nodes and edges in either of the following ways, depending on
 ///     how children are sorted (lower-id edge first, lower-id edge last, median-id edge first, ...):
 ///     <br/>
@@ -30,8 +31,8 @@
 ///     - { (null, 0), (5, 6), (6, 7), (0, 1), (7, 8), (2, 3), (4, 5), (1, 2), (9, 10), (8, 9), (3, 4) }
 ///     <br/>
 ///     - ...
-///     <br/>
-///     <br/>
+///     </para>
+///     <para>
 ///     A BFT visit strategy "children first" would visit nodes and edges in either of the following ways, depending on
 ///     how children are sorted:
 ///     <br/>
@@ -40,6 +41,7 @@
 ///     - { (9, 10), (8, 9), (3, 4), (7, 8), (4, 5), (2, 3), (1, 2), (6, 7), (5, 6), (0, 1), (null, 0) }
 ///     <br/>
 ///     - ...
+///     </para>
 /// </example>
 public abstract class BreadthFirstTraversal<TEdge, TNode>
     : TreeTraversal<TEdge, TNode>

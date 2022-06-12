@@ -19,12 +19,36 @@ public class FullyRecursiveDepthFirstTraversal<TEdge, TNode>
 {
     /// <inheritdoc 
     ///     cref="TreeTraversal{TEdge, TNode}.Visit(TNode, Visitor{TNode, TreeTraversalContext{TEdge, TNode}})" 
-    ///     path="//*[not(self::summary)]"/>
+    ///     path="//*[not(self::summary or self::remarks)]"/>
     /// <summary>
-    /// Recursively visits the structure of the provided<paramref name= "node" />, calling the provided 
-    /// <paramref name="visitor"/> on each <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode}"/> of the structure, 
-    /// in depth-first order.
+    /// <b>Eagerly and recursively</b> visits the structure of the provided<paramref name= "node" />, calling the 
+    /// provided <paramref name="visitor"/> on each <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode}"/> of the 
+    /// structure, in depth-first order.
     /// </summary>
+    /// <remarks>
+    ///     <inheritdoc cref="FullyRecursiveDepthFirstTraversal{TEdge, TNode}" path="/remarks"/>
+    ///     <para id = "algo" >
+    ///     - The algorithm visits all nodes in structure in natural recursion/depth-first order, calling the visitor.
+    ///     </para>
+    ///     <para id="complexity1">
+    ///     - Excluding visitor, constant time work is done for each of the n nodes of the tree (such as construction 
+    ///       of the input record for the visitor). 
+    ///       <br/>
+    ///     - Iteration-cost is constant w.r.t. n. <see cref="TreeTraversal{TEdge, TNode}.ChildrenSorter"/> cost 
+    ///       depends on the actual algorithm used.
+    ///       <br/>
+    ///     - So Time Complexity is dominated by <see cref="TreeTraversal{TEdge, TNode}.ChildrenSorter"/> and visitor.
+    ///     </para>
+    ///     <para id="complexity2">
+    ///     In conclusion:
+    ///     <br/>.
+    ///     - Time Complexity is O(n * (Ts + Tv)), where Ts is the amortized time cost of
+    ///       <see cref="TreeTraversal{TEdge, TNode}.ChildrenSorter"/> per node and Tv is the time cost of the 
+    ///       visitor per node.
+    ///       <br/>
+    ///     - Space Complexity is O(n * Sv), where Sv is the space cost of visitor per node.
+    ///     </para>
+    /// </remarks>
     public override void Visit(TNode node, Visitor<TNode, TreeTraversalContext<TEdge, TNode>> visitor) => 
         Visit(node, visitor, default, default);
 
