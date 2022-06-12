@@ -2785,6 +2785,28 @@ references:
   commentId: N:MoreStructures.SuffixStructures.Matching
   fullName: MoreStructures.SuffixStructures.Matching
   nameWithType: MoreStructures.SuffixStructures.Matching
+- uid: MoreStructures.SuffixStructures.Matching.ISNSSFinder
+  name: ISNSSFinder
+  href: api/MoreStructures.SuffixStructures.Matching.ISNSSFinder.html
+  commentId: T:MoreStructures.SuffixStructures.Matching.ISNSSFinder
+  fullName: MoreStructures.SuffixStructures.Matching.ISNSSFinder
+  nameWithType: ISNSSFinder
+- uid: MoreStructures.SuffixStructures.Matching.ISNSSFinder.Find(IEnumerable{System.Char},IEnumerable{System.Char})
+  name: Find(IEnumerable<Char>, IEnumerable<Char>)
+  href: api/MoreStructures.SuffixStructures.Matching.ISNSSFinder.html#MoreStructures_SuffixStructures_Matching_ISNSSFinder_Find_IEnumerable_System_Char__IEnumerable_System_Char__
+  commentId: M:MoreStructures.SuffixStructures.Matching.ISNSSFinder.Find(IEnumerable{System.Char},IEnumerable{System.Char})
+  name.vb: Find(IEnumerable(Of Char), IEnumerable(Of Char))
+  fullName: MoreStructures.SuffixStructures.Matching.ISNSSFinder.Find(IEnumerable<System.Char>, IEnumerable<System.Char>)
+  fullName.vb: MoreStructures.SuffixStructures.Matching.ISNSSFinder.Find(IEnumerable(Of System.Char), IEnumerable(Of System.Char))
+  nameWithType: ISNSSFinder.Find(IEnumerable<Char>, IEnumerable<Char>)
+  nameWithType.vb: ISNSSFinder.Find(IEnumerable(Of Char), IEnumerable(Of Char))
+- uid: MoreStructures.SuffixStructures.Matching.ISNSSFinder.Find*
+  name: Find
+  href: api/MoreStructures.SuffixStructures.Matching.ISNSSFinder.html#MoreStructures_SuffixStructures_Matching_ISNSSFinder_Find_
+  commentId: Overload:MoreStructures.SuffixStructures.Matching.ISNSSFinder.Find
+  isSpec: "True"
+  fullName: MoreStructures.SuffixStructures.Matching.ISNSSFinder.Find
+  nameWithType: ISNSSFinder.Find
 - uid: MoreStructures.SuffixStructures.Matching.Match`1
   name: Match<TPath>
   href: api/MoreStructures.SuffixStructures.Matching.Match-1.html
@@ -2901,6 +2923,28 @@ references:
   fullName.vb: MoreStructures.SuffixStructures.Matching.Matcher.Match(Of TEdge, TNode)(MoreStructures.SuffixStructures.ISuffixStructureNode(Of TEdge, TNode), MoreStructures.TextWithTerminator, System.String)
   nameWithType: Matcher.Match<TEdge, TNode>(ISuffixStructureNode<TEdge, TNode>, TextWithTerminator, String)
   nameWithType.vb: Matcher.Match(Of TEdge, TNode)(ISuffixStructureNode(Of TEdge, TNode), TextWithTerminator, String)
+- uid: MoreStructures.SuffixStructures.Matching.NaiveSNSSFinder
+  name: NaiveSNSSFinder
+  href: api/MoreStructures.SuffixStructures.Matching.NaiveSNSSFinder.html
+  commentId: T:MoreStructures.SuffixStructures.Matching.NaiveSNSSFinder
+  fullName: MoreStructures.SuffixStructures.Matching.NaiveSNSSFinder
+  nameWithType: NaiveSNSSFinder
+- uid: MoreStructures.SuffixStructures.Matching.NaiveSNSSFinder.Find(IEnumerable{System.Char},IEnumerable{System.Char})
+  name: Find(IEnumerable<Char>, IEnumerable<Char>)
+  href: api/MoreStructures.SuffixStructures.Matching.NaiveSNSSFinder.html#MoreStructures_SuffixStructures_Matching_NaiveSNSSFinder_Find_IEnumerable_System_Char__IEnumerable_System_Char__
+  commentId: M:MoreStructures.SuffixStructures.Matching.NaiveSNSSFinder.Find(IEnumerable{System.Char},IEnumerable{System.Char})
+  name.vb: Find(IEnumerable(Of Char), IEnumerable(Of Char))
+  fullName: MoreStructures.SuffixStructures.Matching.NaiveSNSSFinder.Find(IEnumerable<System.Char>, IEnumerable<System.Char>)
+  fullName.vb: MoreStructures.SuffixStructures.Matching.NaiveSNSSFinder.Find(IEnumerable(Of System.Char), IEnumerable(Of System.Char))
+  nameWithType: NaiveSNSSFinder.Find(IEnumerable<Char>, IEnumerable<Char>)
+  nameWithType.vb: NaiveSNSSFinder.Find(IEnumerable(Of Char), IEnumerable(Of Char))
+- uid: MoreStructures.SuffixStructures.Matching.NaiveSNSSFinder.Find*
+  name: Find
+  href: api/MoreStructures.SuffixStructures.Matching.NaiveSNSSFinder.html#MoreStructures_SuffixStructures_Matching_NaiveSNSSFinder_Find_
+  commentId: Overload:MoreStructures.SuffixStructures.Matching.NaiveSNSSFinder.Find
+  isSpec: "True"
+  fullName: MoreStructures.SuffixStructures.Matching.NaiveSNSSFinder.Find
+  nameWithType: NaiveSNSSFinder.Find
 - uid: MoreStructures.SuffixStructures.SuffixStructureEdgeExtensions
   name: SuffixStructureEdgeExtensions
   href: api/MoreStructures.SuffixStructures.SuffixStructureEdgeExtensions.html
@@ -7089,6 +7133,73 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.SuffixTrees.Matching.MatcherTests.Match_UnsuccessAndMatchedCharsIsCorrect
   nameWithType: MatcherTests.Match_UnsuccessAndMatchedCharsIsCorrect
+- uid: MoreStructures.Tests.SuffixTrees.Matching.NaiveSNSSFinderTests
+  name: NaiveSNSSFinderTests
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.NaiveSNSSFinderTests.html
+  commentId: T:MoreStructures.Tests.SuffixTrees.Matching.NaiveSNSSFinderTests
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.NaiveSNSSFinderTests
+  nameWithType: NaiveSNSSFinderTests
+- uid: MoreStructures.Tests.SuffixTrees.Matching.NaiveSNSSFinderTests.#ctor
+  name: NaiveSNSSFinderTests()
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.NaiveSNSSFinderTests.html#MoreStructures_Tests_SuffixTrees_Matching_NaiveSNSSFinderTests__ctor
+  commentId: M:MoreStructures.Tests.SuffixTrees.Matching.NaiveSNSSFinderTests.#ctor
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.NaiveSNSSFinderTests.NaiveSNSSFinderTests()
+  nameWithType: NaiveSNSSFinderTests.NaiveSNSSFinderTests()
+- uid: MoreStructures.Tests.SuffixTrees.Matching.NaiveSNSSFinderTests.#ctor*
+  name: NaiveSNSSFinderTests
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.NaiveSNSSFinderTests.html#MoreStructures_Tests_SuffixTrees_Matching_NaiveSNSSFinderTests__ctor_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Matching.NaiveSNSSFinderTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.NaiveSNSSFinderTests.NaiveSNSSFinderTests
+  nameWithType: NaiveSNSSFinderTests.NaiveSNSSFinderTests
+- uid: MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests
+  name: SNSSFinderTests
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.html
+  commentId: T:MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests
+  nameWithType: SNSSFinderTests
+- uid: MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.#ctor(MoreStructures.SuffixStructures.Matching.ISNSSFinder)
+  name: SNSSFinderTests(ISNSSFinder)
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.html#MoreStructures_Tests_SuffixTrees_Matching_SNSSFinderTests__ctor_MoreStructures_SuffixStructures_Matching_ISNSSFinder_
+  commentId: M:MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.#ctor(MoreStructures.SuffixStructures.Matching.ISNSSFinder)
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.SNSSFinderTests(MoreStructures.SuffixStructures.Matching.ISNSSFinder)
+  nameWithType: SNSSFinderTests.SNSSFinderTests(ISNSSFinder)
+- uid: MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.#ctor*
+  name: SNSSFinderTests
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.html#MoreStructures_Tests_SuffixTrees_Matching_SNSSFinderTests__ctor_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.SNSSFinderTests
+  nameWithType: SNSSFinderTests.SNSSFinderTests
+- uid: MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.Find_IsCorrect(System.String,System.String,System.String[])
+  name: Find_IsCorrect(String, String, String[])
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.html#MoreStructures_Tests_SuffixTrees_Matching_SNSSFinderTests_Find_IsCorrect_System_String_System_String_System_String___
+  commentId: M:MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.Find_IsCorrect(System.String,System.String,System.String[])
+  name.vb: Find_IsCorrect(String, String, String())
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.Find_IsCorrect(System.String, System.String, System.String[])
+  fullName.vb: MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.Find_IsCorrect(System.String, System.String, System.String())
+  nameWithType: SNSSFinderTests.Find_IsCorrect(String, String, String[])
+  nameWithType.vb: SNSSFinderTests.Find_IsCorrect(String, String, String())
+- uid: MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.Find_IsCorrect*
+  name: Find_IsCorrect
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.html#MoreStructures_Tests_SuffixTrees_Matching_SNSSFinderTests_Find_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.Find_IsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.Find_IsCorrect
+  nameWithType: SNSSFinderTests.Find_IsCorrect
+- uid: MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.Finder
+  name: Finder
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.html#MoreStructures_Tests_SuffixTrees_Matching_SNSSFinderTests_Finder
+  commentId: P:MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.Finder
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.Finder
+  nameWithType: SNSSFinderTests.Finder
+- uid: MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.Finder*
+  name: Finder
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.html#MoreStructures_Tests_SuffixTrees_Matching_SNSSFinderTests_Finder_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.Finder
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.Finder
+  nameWithType: SNSSFinderTests.Finder
 - uid: MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests
   name: SuffixTreeEdgeTests
   href: api/MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.html

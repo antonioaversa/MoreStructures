@@ -332,7 +332,12 @@
   "api/MoreStructures.SuffixStructures.Matching.html": {
     "href": "api/MoreStructures.SuffixStructures.Matching.html",
     "title": "Namespace MoreStructures.SuffixStructures.Matching",
-    "keywords": "Namespace MoreStructures.SuffixStructures.Matching Classes Match<TPath> The result of matching a against a concretion. Matcher Exposes utility methods to match a TextWithTerminator against a ISuffixStructureNode<TEdge, TNode> concretion."
+    "keywords": "Namespace MoreStructures.SuffixStructures.Matching Classes Match<TPath> The result of matching a against a concretion. Matcher Exposes utility methods to match a TextWithTerminator against a ISuffixStructureNode<TEdge, TNode> concretion. NaiveSNSSFinder A ISNSSFinder implementation which checks for the presence of each substring of the first text in the second text, from the longest to the shortest. Interfaces ISNSSFinder Any algorithm finding the Shortest Non-shared Substring (SNSS) between two strings."
+  },
+  "api/MoreStructures.SuffixStructures.Matching.ISNSSFinder.html": {
+    "href": "api/MoreStructures.SuffixStructures.Matching.ISNSSFinder.html",
+    "title": "Interface ISNSSFinder",
+    "keywords": "Interface ISNSSFinder Any algorithm finding the Shortest Non-shared Substring (SNSS) between two strings. Namespace : MoreStructures.SuffixStructures.Matching Assembly : MoreStructures.dll Syntax public interface ISNSSFinder Methods | Improve this Doc View Source Find(IEnumerable<Char>, IEnumerable<Char>) Returns any substring of text1 which is not present in text2 and has minimal length. Returns null if there is no substring of text1 which is not a substring of text2 , i.e. if the two string coincide. Declaration string Find(IEnumerable<char> text1, IEnumerable<char> text2) Parameters Type Name Description IEnumerable < System.Char > text1 The sequence of chars of the first text. IEnumerable < System.Char > text2 The sequence of chars of the second text. Returns Type Description System.String A string, containing the substring of text1 ."
   },
   "api/MoreStructures.SuffixStructures.Matching.Match-1.html": {
     "href": "api/MoreStructures.SuffixStructures.Matching.Match-1.html",
@@ -343,6 +348,11 @@
     "href": "api/MoreStructures.SuffixStructures.Matching.Matcher.html",
     "title": "Class Matcher",
     "keywords": "Class Matcher Exposes utility methods to match a TextWithTerminator against a ISuffixStructureNode<TEdge, TNode> concretion. Inheritance System.Object Matcher Inherited Members System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : MoreStructures.SuffixStructures.Matching Assembly : MoreStructures.dll Syntax public static class Matcher Methods | Improve this Doc View Source Match<TEdge, TNode>(ISuffixStructureNode<TEdge, TNode>, TextWithTerminator, String) Tries to match a pattern against a ISuffixStructureNode<TEdge, TNode> built on a text. Declaration public static Match<TreePath<TEdge, TNode>> Match<TEdge, TNode>(this ISuffixStructureNode<TEdge, TNode> node, TextWithTerminator text, string pattern) where TEdge : ISuffixStructureEdge<TEdge, TNode> where TNode : ISuffixStructureNode<TEdge, TNode> Parameters Type Name Description ISuffixStructureNode <TEdge, TNode> node The root of the Suffix Tree, to match the suffix of text against. TextWithTerminator text The text whose Suffix Tree has to be matched against the pattern. System.String pattern The pattern to match. Unlike text, is a string without terminator. Returns Type Description Match < TreePath <TEdge, TNode>> A successful or non-successful match. Type Parameters Name Description TEdge TNode Remarks Time Complexity = O(t * as) and Space Complexity = O(t * as) where t = length of the text to match and as = size of the alphabet of the text. If the alphabet is of constant size, complexity is linear."
+  },
+  "api/MoreStructures.SuffixStructures.Matching.NaiveSNSSFinder.html": {
+    "href": "api/MoreStructures.SuffixStructures.Matching.NaiveSNSSFinder.html",
+    "title": "Class NaiveSNSSFinder",
+    "keywords": "Class NaiveSNSSFinder A ISNSSFinder implementation which checks for the presence of each substring of the first text in the second text, from the longest to the shortest. Inheritance System.Object NaiveSNSSFinder Implements ISNSSFinder Inherited Members System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : MoreStructures.SuffixStructures.Matching Assembly : MoreStructures.dll Syntax public class NaiveSNSSFinder : ISNSSFinder Methods | Improve this Doc View Source Find(IEnumerable<Char>, IEnumerable<Char>) Declaration public string Find(IEnumerable<char> text1, IEnumerable<char> text2) Parameters Type Name Description IEnumerable < System.Char > text1 IEnumerable < System.Char > text2 Returns Type Description System.String Remarks This specific implementation checks for the presence of each substring of the first text in the second text, from the shortest to the longest. Implements ISNSSFinder"
   },
   "api/MoreStructures.SuffixStructures.SuffixStructureEdgeExtensions.html": {
     "href": "api/MoreStructures.SuffixStructures.SuffixStructureEdgeExtensions.html",
@@ -812,12 +822,22 @@
   "api/MoreStructures.Tests.SuffixTrees.Matching.html": {
     "href": "api/MoreStructures.Tests.SuffixTrees.Matching.html",
     "title": "Namespace MoreStructures.Tests.SuffixTrees.Matching",
-    "keywords": "Namespace MoreStructures.Tests.SuffixTrees.Matching Classes MatcherTests"
+    "keywords": "Namespace MoreStructures.Tests.SuffixTrees.Matching Classes MatcherTests NaiveSNSSFinderTests SNSSFinderTests"
   },
   "api/MoreStructures.Tests.SuffixTrees.Matching.MatcherTests.html": {
     "href": "api/MoreStructures.Tests.SuffixTrees.Matching.MatcherTests.html",
     "title": "Class MatcherTests",
     "keywords": "Class MatcherTests Inheritance System.Object MatcherTests Inherited Members System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : MoreStructures.Tests.SuffixTrees.Matching Assembly : MoreStructures.Tests.dll Syntax public class MatcherTests Methods | Improve this Doc View Source BuildTree_UsesTerminatorForMatchToDistinguishSuffixesFromAnySubstring() Declaration public void BuildTree_UsesTerminatorForMatchToDistinguishSuffixesFromAnySubstring() | Improve this Doc View Source Match_Preconditions() Declaration public void Match_Preconditions() | Improve this Doc View Source Match_SuccessAndMatchedCharsIsCorrect() Declaration public void Match_SuccessAndMatchedCharsIsCorrect() | Improve this Doc View Source Match_SuccessBeginAndPathIsCorrect() Declaration public void Match_SuccessBeginAndPathIsCorrect() | Improve this Doc View Source Match_UnsuccessAndMatchedCharsIsCorrect() Declaration public void Match_UnsuccessAndMatchedCharsIsCorrect()"
+  },
+  "api/MoreStructures.Tests.SuffixTrees.Matching.NaiveSNSSFinderTests.html": {
+    "href": "api/MoreStructures.Tests.SuffixTrees.Matching.NaiveSNSSFinderTests.html",
+    "title": "Class NaiveSNSSFinderTests",
+    "keywords": "Class NaiveSNSSFinderTests Inheritance System.Object SNSSFinderTests NaiveSNSSFinderTests Inherited Members SNSSFinderTests.Finder SNSSFinderTests.Find_IsCorrect(String, String, String[]) System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : MoreStructures.Tests.SuffixTrees.Matching Assembly : MoreStructures.Tests.dll Syntax public class NaiveSNSSFinderTests : SNSSFinderTests Constructors | Improve this Doc View Source NaiveSNSSFinderTests() Declaration public NaiveSNSSFinderTests()"
+  },
+  "api/MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.html": {
+    "href": "api/MoreStructures.Tests.SuffixTrees.Matching.SNSSFinderTests.html",
+    "title": "Class SNSSFinderTests",
+    "keywords": "Class SNSSFinderTests Inheritance System.Object SNSSFinderTests NaiveSNSSFinderTests Inherited Members System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : MoreStructures.Tests.SuffixTrees.Matching Assembly : MoreStructures.Tests.dll Syntax public abstract class SNSSFinderTests Constructors | Improve this Doc View Source SNSSFinderTests(ISNSSFinder) Declaration protected SNSSFinderTests(ISNSSFinder finder) Parameters Type Name Description ISNSSFinder finder Properties | Improve this Doc View Source Finder Declaration protected ISNSSFinder Finder { get; } Property Value Type Description ISNSSFinder Methods | Improve this Doc View Source Find_IsCorrect(String, String, String[]) Declaration public void Find_IsCorrect(string text1, string text2, string[] expectedResults) Parameters Type Name Description System.String text1 System.String text2 System.String [] expectedResults"
   },
   "api/MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.html": {
     "href": "api/MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.html",
