@@ -171,13 +171,13 @@ stored in the heap. Convenient with deep trees (i.e. trees having a height > ~1K
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Visitor_FullyIterativeBreadthFirstTraversal_2_Visit__1_MoreStructures_RecImmTrees_Visitor_Visitor__1_MoreStructures_RecImmTrees_Visitor_TreeTraversalContext__0__1___.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversal%602.Visit(%601%2CMoreStructures.RecImmTrees.Visitor.Visitor%7B%601%2CMoreStructures.RecImmTrees.Visitor.TreeTraversalContext%7B%600%2C%601%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/FullyIterativeBreadthFirstTraversal.cs/#L31">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/FullyIterativeBreadthFirstTraversal.cs/#L61">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Visitor_FullyIterativeBreadthFirstTraversal_2_Visit_" data-uid="MoreStructures.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversal`2.Visit*"></a>
   <h4 id="MoreStructures_RecImmTrees_Visitor_FullyIterativeBreadthFirstTraversal_2_Visit__1_MoreStructures_RecImmTrees_Visitor_Visitor__1_MoreStructures_RecImmTrees_Visitor_TreeTraversalContext__0__1___" data-uid="MoreStructures.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversal`2.Visit(`1,MoreStructures.RecImmTrees.Visitor.Visitor{`1,MoreStructures.RecImmTrees.Visitor.TreeTraversalContext{`0,`1}})">Visit(TNode, Visitor&lt;TNode, TreeTraversalContext&lt;TEdge, TNode&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p>Iteratively visits the structure of the provided <code data-dev-comment-type="paramref" class="paramref">node</code>, calling the provided
-<code data-dev-comment-type="paramref" class="paramref">visitor</code> on each <a class="xref" href="MoreStructures.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</a> of the structure,
-in breadth-first order.</p>
+  <div class="markdown level1 summary"><p><strong>Eagerly and iteratively</strong> visits the structure of the provided <code data-dev-comment-type="paramref" class="paramref">node</code>, calling the
+provided <code data-dev-comment-type="paramref" class="paramref">visitor</code> on each <a class="xref" href="MoreStructures.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</a> of the
+structure, in breadth-first order.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -209,6 +209,36 @@ in breadth-first order.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">MoreStructures.RecImmTrees.Visitor.TreeTraversal&lt;TEdge, TNode&gt;.Visit(TNode, MoreStructures.RecImmTrees.Visitor.Visitor&lt;TNode, MoreStructures.RecImmTrees.Visitor.TreeTraversalContext&lt;TEdge, TNode&gt;&gt;)</span></div>
+  <h5 id="MoreStructures_RecImmTrees_Visitor_FullyIterativeBreadthFirstTraversal_2_Visit__1_MoreStructures_RecImmTrees_Visitor_Visitor__1_MoreStructures_RecImmTrees_Visitor_TreeTraversalContext__0__1____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversal`2" path="/remarks"></inheritdoc></p>
+<p>
+The algorithm perform a double walk:
+<br>    
+- The first walk is of the nodes of the tree structure and always proceeds top-down, enqueuing each 
+  encountered child for each node into a &quot;traversal&quot; <see cref="!:Queue&lt;T>"></see>, which is used to reproduce the 
+  breadth-first order.
+<br> 
+- The first walk also enqueues each encountered node into a &quot;visit&quot; <see cref="!:Queue&lt;T>"></see>, if the 
+<a class="xref" href="MoreStructures.RecImmTrees.Visitor.TreeTraversal-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_TraversalOrder">TraversalOrder</a> is <a class="xref" href="MoreStructures.RecImmTrees.Visitor.TreeTraversalOrder.html#MoreStructures_RecImmTrees_Visitor_TreeTraversalOrder_ParentFirst">ParentFirst</a>, 
+or it pushes it onto a &quot;visit&quot; <see cref="!:Stack&lt;T>"></see>, if it is 
+<a class="xref" href="MoreStructures.RecImmTrees.Visitor.TreeTraversalOrder.html#MoreStructures_RecImmTrees_Visitor_TreeTraversalOrder_ChildrenFirst">ChildrenFirst</a>.
+<br> 
+- The second walk goes through the &quot;visit&quot; queue/stack, calling the visitor on each of the nodes.
+</p>
+<p>
+Each of the walk goes through all the n nodes and n - 1 edges of the tree. Each walk uses a O(1) insertion
+and extraction data structure, which contains at most n elements of constant size (reference to the node,
+reference to its parent, reference to its incoming edge).
+<br>
+Time Complexity is O(n) for the first walk, when the visit queue/stack is populated and no actual node 
+visit is performed, and O(n * Tv) for the second walk, when the actual visit of all nodes is performed,
+where Tv is the Time Complexity of the visitor. So O(n * Tv) in total.
+<br>
+Space Complexity is O(2n) for the first walk, due to the traversal and visit queue/stack being allocated 
+and populated, and O(n * Sv) for the second walk, when the actual visit of all nodes is performed, where
+Sv is the Space Complexity of the visitor. So O(n * Sv) in total.
+</p>
+</div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="MoreStructures.RecImmTrees.Visitor.IVisitStrategy-2.html">IVisitStrategy&lt;TNode, TVisitContext&gt;</a>

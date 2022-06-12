@@ -92,7 +92,7 @@
 along any path of the tree, before going deeper or shallower, exploring nodes with higher or lower depth.</p>
 </section>
       <h4><a class="xref" href="MoreStructures.RecImmTrees.Visitor.DepthFirstTraversal-2.html">DepthFirstTraversal&lt;TEdge, TNode&gt;</a></h4>
-      <section><p>Base class for all DFT strategies, i.e. all traversing strategies which goes in depth as far as possible
+      <section><p>Base class for all DFS strategies, i.e. all traversing strategies which goes in depth as far as possible
 along each path of the tree, only backtracking when a leaf is reached.</p>
 </section>
       <h4><a class="xref" href="MoreStructures.RecImmTrees.Visitor.FullyIterativeBreadthFirstTraversal-2.html">FullyIterativeBreadthFirstTraversal&lt;TEdge, TNode&gt;</a></h4>
@@ -128,7 +128,8 @@ leaf is reached.</p>
     <h3 id="interfaces">Interfaces
   </h3>
       <h4><a class="xref" href="MoreStructures.RecImmTrees.Visitor.IVisitStrategy-2.html">IVisitStrategy&lt;TNode, TVisitContext&gt;</a></h4>
-      <section><p>A visit strategy of <a class="xref" href="MoreStructures.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</a> structures.</p>
+      <section><p>A visit strategy of <a class="xref" href="MoreStructures.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</a> structures. Can be any way of moving
+through the structure and touching nodes: partial or exaustive, hierarchical or random, upwards or downwards, etc.</p>
 </section>
     <h3 id="enums">Enums
   </h3>
@@ -138,8 +139,9 @@ leaf is reached.</p>
     <h3 id="delegates">Delegates
   </h3>
       <h4><a class="xref" href="MoreStructures.RecImmTrees.Visitor.Visitor-2.html">Visitor&lt;TNode, TVisitContext&gt;</a></h4>
-      <section><p>The visit logic of a <a class="xref" href="MoreStructures.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</a>. It's not correlated to the
-strategy with which nodes are visited, which is defined by this <a class="xref" href="MoreStructures.RecImmTrees.Visitor.IVisitStrategy-2.html">IVisitStrategy&lt;TNode, TVisitContext&gt;</a>.</p>
+      <section><p>The visit logic of a single <a class="xref" href="MoreStructures.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</a> of the structure being visited.
+It's not correlated to the strategy with which nodes are visited, which is defined by a
+<a class="xref" href="MoreStructures.RecImmTrees.Visitor.IVisitStrategy-2.html">IVisitStrategy&lt;TNode, TVisitContext&gt;</a>.</p>
 </section>
 </article>
           </div>

@@ -157,6 +157,18 @@ along any path of the tree, before going deeper or shallower, exploring nodes wi
       </tr>
     </tbody>
   </table>
+  <h5 id="MoreStructures_RecImmTrees_Visitor_BreadthFirstTraversal_2_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+The word &quot;traversal&quot; in <a class="xref" href="MoreStructures.RecImmTrees.Visitor.TreeTraversal-2.html">TreeTraversal&lt;TEdge, TNode&gt;</a> and its derivations, is here used with 
+narrower scope than the word &quot;visit&quot; in <a class="xref" href="MoreStructures.RecImmTrees.Visitor.IVisitStrategy-2.html">IVisitStrategy&lt;TNode, TVisitContext&gt;</a>.
+<br>
+- &quot;Traversal&quot; is used here as common class between DFS and BFS, as a visit strategy that starts from the root 
+  of the tree and proceeds downwards, following edges and terminating when leafs are reached.
+<br>
+- &quot;Visit&quot; is used in a more general sense, as any algorithm which &quot;touches&quot; 0 or more nodes of the tree, 
+walking the tree in any possible way (up, down, sideways, ...).
+</p>
+</div>
   <h5 id="MoreStructures_RecImmTrees_Visitor_BreadthFirstTraversal_2_examples"><strong>Examples</strong></h5>
   <p>Given the following tree structure:</p>
 <pre><code>0
@@ -170,28 +182,28 @@ along any path of the tree, before going deeper or shallower, exploring nodes wi
         |- 7 -> 8
                 |- 8 -> 9
                 |- 9 -> 10</code></pre>
-<p>A BFT visit strategy &quot;parent first&quot; would visit nodes and edges in either of the following ways, depending on
+<p>
+A BFT visit strategy &quot;parent first&quot; would visit nodes and edges in either of the following ways, depending on
 how children are sorted (lower-id edge first, lower-id edge last, median-id edge first, ...):
-<br></p>
-<ul>
-<li>{ (null, 0), (0, 1), (5, 6), (6, 7), (1, 2), (2, 3), (4, 5), (7, 8), (3, 4), (8, 9), (9, 10) }
-<br></li>
-<li>{ (null, 0), (6, 7), (5, 6), (0, 1), (7, 8), (4, 5), (2, 3), (1, 2), (9, 10), (8, 9), (3, 4) }
-<br></li>
-<li>{ (null, 0), (5, 6), (6, 7), (0, 1), (7, 8), (2, 3), (4, 5), (1, 2), (9, 10), (8, 9), (3, 4) }
-<br></li>
-<li>...
 <br>
+- { (null, 0), (0, 1), (5, 6), (6, 7), (1, 2), (2, 3), (4, 5), (7, 8), (3, 4), (8, 9), (9, 10) }
 <br>
+- { (null, 0), (6, 7), (5, 6), (0, 1), (7, 8), (4, 5), (2, 3), (1, 2), (9, 10), (8, 9), (3, 4) }
+<br>
+- { (null, 0), (5, 6), (6, 7), (0, 1), (7, 8), (2, 3), (4, 5), (1, 2), (9, 10), (8, 9), (3, 4) }
+<br>
+- ...
+</p>
+<p>
 A BFT visit strategy &quot;children first&quot; would visit nodes and edges in either of the following ways, depending on
 how children are sorted:
-<br></li>
-<li>{ (3, 4), (8, 9), (9, 10), (1, 2), (2, 3), (4, 5), (7, 8), (0, 1), (5, 6), (6, 7), (null, 0) }
-<br></li>
-<li>{ (9, 10), (8, 9), (3, 4), (7, 8), (4, 5), (2, 3), (1, 2), (6, 7), (5, 6), (0, 1), (null, 0) }
-<br></li>
-<li>...</li>
-</ul>
+<br>
+- { (3, 4), (8, 9), (9, 10), (1, 2), (2, 3), (4, 5), (7, 8), (0, 1), (5, 6), (6, 7), (null, 0) }
+<br>
+- { (9, 10), (8, 9), (3, 4), (7, 8), (4, 5), (2, 3), (1, 2), (6, 7), (5, 6), (0, 1), (null, 0) }
+<br>
+- ...
+</p>
 
   <h3 id="implements">Implements</h3>
   <div>
@@ -208,7 +220,7 @@ how children are sorted:
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Visitor_BreadthFirstTraversal_2.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Visitor.BreadthFirstTraversal%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/BreadthFirstTraversal.cs/#L44" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/BreadthFirstTraversal.cs/#L46" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
