@@ -14,7 +14,13 @@ namespace MoreStructures.SuffixTries;
 ///     <inheritdoc cref="ISuffixStructureNode{TEdge, TNode}.Start" path="/summary"/>
 /// </param>
 /// <remarks>
-/// Immutability is guaranteed by using <see cref="ValueReadOnlyCollection{T}"/>.
+///     <para id="advantages">
+///     Compare to suffix trees, suffix tries, although less performant and optimized on many operations, are simpler 
+///     to build, navigate and understand.
+///     </para>
+///     <para>
+///     Immutability is guaranteed by using <see cref="ValueReadOnlyCollection{T}"/>.
+///     </para>
 /// </remarks>
 public abstract record SuffixTrieNode(IDictionary<SuffixTrieEdge, SuffixTrieNode> Children, int? Start)
     : ISuffixStructureNode<SuffixTrieEdge, SuffixTrieNode>

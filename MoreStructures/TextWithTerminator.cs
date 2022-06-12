@@ -63,6 +63,9 @@ public record TextWithTerminator(
     /// The special character used as a default terminator for the text to build the Suffix Tree of, when no custom 
     /// terminator is specified. Should not be present in the text.
     /// </summary>
+    /// <value>
+    /// A single char.
+    /// </value>
     public const char DefaultTerminator = '$';
 
     /// <summary>
@@ -71,11 +74,17 @@ public record TextWithTerminator(
     /// <remarks>
     /// Wrapped into a <see cref="IValueEnumerable{T}"/> to preserve value equality.
     /// </remarks>
+    /// <value>
+    /// A sequence of chars.
+    /// </value>
     public IEnumerable<char> Text { get; init; } = Text.AsValue();
 
     /// <summary>
     /// <inheritdoc cref="TextWithTerminator" path="/param[@name='Terminator']"/>
     /// </summary>
+    /// <value>
+    /// A single char.
+    /// </value>
     public char Terminator { get; init; } =
         !ValidateInput || !Text.Contains(Terminator) 
         ? Terminator 
@@ -105,6 +114,9 @@ public record TextWithTerminator(
     /// <summary>
     /// The total length of this text, including the terminator.
     /// </summary>
+    /// <value>
+    /// A positive integer (at least 1).
+    /// </value>
     public int Length => TextAndTerminator.Count();
 
     /// <summary>
