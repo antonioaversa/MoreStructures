@@ -19,7 +19,7 @@
 ///     </para>
 /// </remarks>
 public abstract class TreeTraversal<TEdge, TNode>
-    : IVisitStrategy<TNode, TreeTraversalContext<TEdge, TNode>>
+    : IVisitStrategy<TNode, TreeTraversalVisit<TEdge, TNode>>
     where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>
     where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode>
 {
@@ -48,5 +48,5 @@ public abstract class TreeTraversal<TEdge, TNode>
     /// <example>
     ///     <inheritdoc cref="BreadthFirstTraversal{TEdge, TNode}" path="/example"/>
     /// </example>
-    public abstract void Visit(TNode node, Visitor<TNode, TreeTraversalContext<TEdge, TNode>> visitor);
+    public abstract IEnumerable<TreeTraversalVisit<TEdge, TNode>> Visit(TNode node);
 }

@@ -2,14 +2,14 @@
 
 /// <inheritdoc cref="DepthFirstTraversal{TEdge, TNode}" path="//*[not(self::summary or self::remarks)]"/>
 /// <summary>
-/// A fully-iterative, depth-first <see cref="IVisitStrategy{TNode, TVisitContext}"/> implementation, i.e. a 
+/// A lazy, fully-iterative, depth-first <see cref="IVisitStrategy{TNode, TVisitContext}"/> implementation, i.e. a 
 /// traversing strategy which goes in depth as far as possible along each path of the tree, only backtracking when a 
 /// leaf is reached.
 /// </summary>
 /// <remarks>
 ///     <inheritdoc cref="DepthFirstTraversal{TEdge, TNode}" path="/remarks"/>
 ///     <para>
-///     Implemented fully recursively, so not limited by call stack depth but rather by the maximum size of the stack 
+///     Implemented fully iteratively, so not limited by call stack depth but rather by the maximum size of the stack 
 ///     stored in the heap. Convenient with deep trees (i.e. trees having a height &gt; ~1K nodes).
 ///     </para>
 /// </remarks>
@@ -21,12 +21,11 @@ public class FullyIterativeDepthFirstTraversal<TEdge, TNode>
     private record struct StackFrame(TNode? ParentNode, TEdge? IncomingEdge, TNode Node, bool ChildrenStacked);
 
     /// <inheritdoc 
-    ///     cref="TreeTraversal{TEdge, TNode}.Visit(TNode, Visitor{TNode, TreeTraversalContext{TEdge, TNode}})" 
+    ///     cref="TreeTraversal{TEdge, TNode}.Visit(TNode)" 
     ///     path="//*[not(self::summary or self::remarks)]"/>
     /// <summary>
-    /// <b>Eagerly and iteratively</b> visits the structure of the provided <paramref name= "node" />, calling the 
-    /// provided <paramref name="visitor"/> on each <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode}"/> of the 
-    /// structure, in depth-first order.
+    /// <b>Lazily and iteratively</b> visits the structure of the provided <paramref name= "node" />, returning the
+    /// sequence of <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode}"/> of the structure, in depth-first order.
     /// </summary>
     /// <remarks>
     ///     <inheritdoc cref="FullyIterativeDepthFirstTraversal{TEdge, TNode}" path="/remarks"/>
@@ -40,7 +39,8 @@ public class FullyIterativeDepthFirstTraversal<TEdge, TNode>
     ///       <br/> 
     ///     - If the node being processed has the "children stacked" flag not set, all children are stacked up. The 
     ///       node itself is also stacked up, again, this time with the "children stacked" flag set.
-    ///     - If the node being processed has the "children stacked" flag set, or is a leaf, it's visited.
+    ///     - If the node being processed has the "children stacked" flag set, or is a leaf, it's yielded to the
+    ///       output sequence, so that the client code implementing the visitor can lazily process the nodes.
     ///     </para>
     ///     <para id="complexity">
     ///     Each of the n nodes and n - 1 edges of the tree is visited at most twice: the first time with the "children
@@ -54,48 +54,45 @@ public class FullyIterativeDepthFirstTraversal<TEdge, TNode>
     ///     reversed to be pushed onto the stack in the right order, and that takes additional O(n - 1) total space, 
     ///     since there are n - 1 edges, which are 1-to-1 with nodes in the tree.
     ///     <br/>
-    ///     Each frame processing of a nodde with the "children stacked" flag set takes constant time (e.g.to check 
+    ///     Each frame processing of a node with the "children stacked" flag set takes constant time (e.g.to check 
     ///     traversal order) and space (e.g. to extract parent node, incoming edge and node itself from the frame and
-    ///     to build a <see cref="TreeTraversalContext{TEdge, TNode}"/> object for the visit), plus the time and space 
-    ///     of the visit.
+    ///     to build a <see cref="TreeTraversalContext{TEdge, TNode}"/> object for the visit).
     ///     <br/>
-    ///     Time Complexity is O(n * Ts * Tv) in total, where Ts is the amortized Time Complexity of 
-    ///     <see cref="TreeTraversal{TEdge, TNode}.ChildrenSorter"/> per edge/node and Tv is the Time Complexity of the
-    ///     visitor per node.
+    ///     Time Complexity is O(n * Ts) in total, where Ts is the amortized Time Complexity of 
+    ///     <see cref="TreeTraversal{TEdge, TNode}.ChildrenSorter"/> per edge/node. Taking into account the visit of
+    ///     each emitted node, Time Complexity is O(n * Ts * Tv), where Tv is the Time Complexity of the visitor per 
+    ///     node.
     ///     <br/>
-    ///     Space Complexity is O(n * Ss * Sv) in total, where Ss is the amortized Space Complexity of 
-    ///     <see cref="TreeTraversal{TEdge, TNode}.ChildrenSorter"/> per edge/node and Sv is the Space Complexity of 
-    ///     the visitor per node.
+    ///     Space Complexity is O(n * Ss) in total, where Ss is the amortized Space Complexity of 
+    ///     <see cref="TreeTraversal{TEdge, TNode}.ChildrenSorter"/> per edge/node. Taking into account the visit of
+    ///     each emitted node, Space Complexity is O(n * (Ss + Sv)), where Sv is the Space Complexity of the visitor 
+    ///     per node.
     ///     </para>
     /// </remarks>
-    public override void Visit(TNode node, Visitor<TNode, TreeTraversalContext<TEdge, TNode>> visitor)
+    public override IEnumerable<TreeTraversalVisit<TEdge, TNode>> Visit(TNode node)
     {
         var stack = new Stack<StackFrame> { };
         stack.Push(new (default, default, node, false));
         while (stack.Count > 0)
         {
-            ProcessStack(stack, visitor);
+            if (ProcessStack(stack) is TreeTraversalVisit<TEdge, TNode> visit)
+                yield return visit;
         }
     }
 
-    private void ProcessStack(Stack<StackFrame> stack, Visitor<TNode, TreeTraversalContext<TEdge, TNode>> visitor)
+    private TreeTraversalVisit<TEdge, TNode>? ProcessStack(Stack<StackFrame> stack)
     {
         var (parentNode, incomingEdge, node, childrenStacked) = stack.Pop();
 
         if (node.IsLeaf())
         {
-            switch (TraversalOrder)
+            return TraversalOrder switch
             {
-                case TreeTraversalOrder.ParentFirst:
-                case TreeTraversalOrder.ChildrenFirst:
-                    visitor(node, new(parentNode, incomingEdge));
-                    break;
-
-                default:
-                    throw new NotSupportedException($"{nameof(TreeTraversalOrder)} {TraversalOrder} is not supported");
-            }
-
-            return;
+                TreeTraversalOrder.ParentFirst or TreeTraversalOrder.ChildrenFirst => 
+                    new(node, new(parentNode, incomingEdge)),
+                _ => 
+                    throw new NotSupportedException($"{nameof(TreeTraversalOrder)} {TraversalOrder} is not supported"),
+            };
         }
 
         if (!childrenStacked)
@@ -120,9 +117,9 @@ public class FullyIterativeDepthFirstTraversal<TEdge, TNode>
                     throw new NotSupportedException($"{nameof(TreeTraversalOrder)} {TraversalOrder} is not supported");
             }
 
-            return;
+            return null;
         }
 
-        visitor(node, new(parentNode, incomingEdge));
+        return new(node, new(parentNode, incomingEdge));
     }
 }

@@ -2,14 +2,14 @@
 
 /// <inheritdoc cref="BreadthFirstTraversal{TEdge, TNode}" path="//*[not(self::summary or self::remarks)]"/>
 /// <summary>
-/// A fully-iterative, breadth-first <see cref="IVisitStrategy{TNode, TVisitContext}"/> implementation, i.e. a 
+/// A lazy, fully-iterative, breadth-first <see cref="IVisitStrategy{TNode, TVisitContext}"/> implementation, i.e. a 
 /// traversing strategy which visits all the nodes at the current depth, along any path of the tree, before going 
 /// deeper or shallower, exploring nodes with higher or lower depth.
 /// </summary>
 /// <remarks>
 ///     <inheritdoc cref="BreadthFirstTraversal{TEdge, TNode}" path="/remarks"/>
 ///     <para>
-///     Implemented fully recursively, so not limited by call stack depth but rather by the maximum size of the stack 
+///     Implemented fully iteratively, so not limited by call stack depth but rather by the maximum size of the stack 
 ///     stored in the heap. Convenient with deep trees (i.e. trees having a height &gt; ~1K nodes).
 ///     </para>
 /// </remarks>
@@ -21,12 +21,11 @@ public class FullyIterativeBreadthFirstTraversal<TEdge, TNode>
     private record struct Item(TNode? ParentNode, TEdge? IncomingEdge, TNode Node);
 
     /// <inheritdoc 
-    ///     cref="TreeTraversal{TEdge, TNode}.Visit(TNode, Visitor{TNode, TreeTraversalContext{TEdge, TNode}})" 
+    ///     cref="TreeTraversal{TEdge, TNode}.Visit(TNode)" 
     ///     path="//*[not(self::summary or self::remarks)]"/>
     /// <summary>
-    /// <b>Eagerly and iteratively</b> visits the structure of the provided <paramref name= "node" />, calling the 
-    /// provided <paramref name="visitor"/> on each <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode}"/> of the 
-    /// structure, in breadth-first order.
+    /// <b>Lazily and iteratively</b> visits the structure of the provided <paramref name= "node" />, returning the
+    /// sequence of <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode}"/> of the structure, in breadth-first order.
     /// </summary>
     /// <remarks>
     ///     <inheritdoc cref="FullyIterativeBreadthFirstTraversal{TEdge, TNode}" path="/remarks"/>
@@ -42,7 +41,8 @@ public class FullyIterativeBreadthFirstTraversal<TEdge, TNode>
     ///       or it pushes it onto a "visit" <see cref="Stack{T}"/>, if it is 
     ///       <see cref="TreeTraversalOrder.ChildrenFirst"/>.
     ///       <br/> 
-    ///     - The second walk goes through the "visit" queue/stack, calling the visitor on each of the nodes.
+    ///     - The second walk goes through the "visit" queue/stack, yielding to the output sequence, so that the 
+    ///       client code implementing the visitor can lazily process the nodes.
     ///     </para>
     ///     <para id="complexity">
     ///     Each of the walk goes through all the n nodes and n - 1 edges of the tree. Each walk uses a O(1) insertion
@@ -50,15 +50,15 @@ public class FullyIterativeBreadthFirstTraversal<TEdge, TNode>
     ///     reference to its parent, reference to its incoming edge).
     ///     <br/>
     ///     Time Complexity is O(n) for the first walk, when the visit queue/stack is populated and no actual node 
-    ///     visit is performed, and O(n * Tv) for the second walk, when the actual visit of all nodes is performed,
-    ///     where Tv is the Time Complexity of the visitor. So O(n * Tv) in total.
+    ///     visit is performed, and O(n) for the second walk, when the actual visit of all nodes is performed. 
+    ///     So O(n) in total.
     ///     <br/>
     ///     Space Complexity is O(2n) for the first walk, due to the traversal and visit queue/stack being allocated 
-    ///     and populated, and O(n * Sv) for the second walk, when the actual visit of all nodes is performed, where
-    ///     Sv is the Space Complexity of the visitor. So O(n * Sv) in total.
+    ///     and populated, and O(n) for the second walk, when the actual visit of all nodes is performed. 
+    ///     So O(n) in total.
     ///     </para>
     /// </remarks>
-    public override void Visit(TNode node, Visitor<TNode, TreeTraversalContext<TEdge, TNode>> visitor)
+    public override IEnumerable<TreeTraversalVisit<TEdge, TNode>> Visit(TNode node)
     {
         switch (TraversalOrder)
         {
@@ -73,7 +73,10 @@ public class FullyIterativeBreadthFirstTraversal<TEdge, TNode>
                         ProcessParentFirstTraversalQueue(traversalQueue, visitQueue);
 
                     while (visitQueue.Count > 0)
-                        ProcessParentFirstVisitQueue(visitQueue, visitor);
+                    {
+                        var (parentNode, incomingEdge, visitedNode) = visitQueue.Dequeue();
+                        yield return new(visitedNode, new(parentNode, incomingEdge));
+                    }
                 }
 
                 break;
@@ -89,7 +92,10 @@ public class FullyIterativeBreadthFirstTraversal<TEdge, TNode>
                         ProcessChildrenFirstTraversalQueue(traversalQueue, visitStack);
 
                     while (visitStack.Count > 0)
-                        ProcessChildrenFirstVisitStack(visitStack, visitor);
+                    {
+                        var (parentNode, incomingEdge, visitedNode) = visitStack.Pop();
+                        yield return new(visitedNode, new(parentNode, incomingEdge));
+                    }
                 }
 
                 break;
@@ -108,15 +114,6 @@ public class FullyIterativeBreadthFirstTraversal<TEdge, TNode>
             traversalQueue.Enqueue(new(node, child.Key, child.Value));
     }
 
-    private static void ProcessParentFirstVisitQueue(
-        Queue<Item> visitQueue,
-        Visitor<TNode, TreeTraversalContext<TEdge, TNode>> visitor)
-    {
-        var (parentNode, incomingEdge, node) = visitQueue.Dequeue();
-
-        visitor(node, new(parentNode, incomingEdge));
-    }
-
     private void ProcessChildrenFirstTraversalQueue(Queue<Item> traversalQueue, Stack<Item> visitStack)
     {
         var (parentNode, incomingEdge, node) = traversalQueue.Dequeue();
@@ -124,14 +121,5 @@ public class FullyIterativeBreadthFirstTraversal<TEdge, TNode>
         visitStack.Push(new(parentNode, incomingEdge, node));
         foreach (var child in ChildrenSorter(node.Children).Reverse())
             traversalQueue.Enqueue(new(node, child.Key, child.Value));
-    }
-
-    private static void ProcessChildrenFirstVisitStack(
-        Stack<Item> visitStack,
-        Visitor<TNode, TreeTraversalContext<TEdge, TNode>> visitor)
-    {
-        var (parentNode, incomingEdge, node) = visitStack.Pop();
-
-        visitor(node, new(parentNode, incomingEdge));
     }
 }

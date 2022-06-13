@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MoreStructures.RecImmTrees.Visitor;
+using System.Linq;
 
 namespace MoreStructures.Tests.RecImmTrees.Visitor;
 
@@ -16,7 +17,7 @@ public class FullyRecursiveBreadthFirstTraversalTests
         var root = TreeMock.BuildMostUnbalancedTree(numberOfIntermediateNodes);
         var visitStrategy = new FullyRecursiveDepthFirstTraversal<TreeMock.Edge, TreeMock.Node>();
 
-        visitStrategy.Visit(root, visitCounter.Visitor);
+        _ = visitStrategy.Visit(root).Select(visitCounter.Visitor).ToList();
         Assert.AreEqual(numberOfIntermediateNodes + 1, visitCounter.CountOfVisitedNodes); // Intermediates + 1 leaf
     }
 }

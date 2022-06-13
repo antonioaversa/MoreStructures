@@ -2,7 +2,7 @@
 
 /// <inheritdoc cref="BreadthFirstTraversal{TEdge, TNode}" path="//*[not(self::summary or self::remarks)]"/>
 /// <summary>
-/// A fully-recursive, breadth-first <see cref="IVisitStrategy{TNode, TVisitContext}"/> implementation, i.e. a 
+/// A lazy, fully-recursive, breadth-first <see cref="IVisitStrategy{TNode, TVisitContext}"/> implementation, i.e. a 
 /// traversing strategy which visits all the nodes at the current depth, along any path of the tree, before going 
 /// deeper or shallower, exploring nodes with higher or lower depth.
 /// </summary>
@@ -20,12 +20,11 @@ public class FullyRecursiveBreadthFirstTraversal<TEdge, TNode>
     private record struct NodeWithLevel(TNode? ParentNode, TEdge? IncomingEdge, TNode Node, int Level);
 
     /// <inheritdoc 
-    ///     cref="TreeTraversal{TEdge, TNode}.Visit(TNode, Visitor{TNode, TreeTraversalContext{TEdge, TNode}})"
+    ///     cref="TreeTraversal{TEdge, TNode}.Visit(TNode)"
     ///     path="//*[not(self::summary or self::remarks)]" />
     /// <summary>
-    /// <b>Eagerly and recursively</b> visits the structure of the provided <paramref name= "node" />, calling the 
-    /// provided <paramref name="visitor"/> on each <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode}"/> of the 
-    /// structure, in breadth-first order.
+    /// <b>Lazily and recursively</b> visits the structure of the provided <paramref name= "node" />, returning the
+    /// sequence of <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode}"/> of the structure, in breadth-first order.
     /// </summary>
     /// <remarks>
     ///     <inheritdoc cref="FullyRecursiveBreadthFirstTraversal{TEdge, TNode}" path="/remarks"/>
@@ -34,7 +33,8 @@ public class FullyRecursiveBreadthFirstTraversal<TEdge, TNode>
     ///       returning an <see cref="IEnumerable{T}"/> instance of all nodes with their level in the structure.
     ///       <br/>
     ///     - Then, it lazily sort and visit them level by level, according to 
-    ///       <see cref="TreeTraversal{TEdge, TNode}.TraversalOrder"/>, calling the visitor.
+    ///       <see cref="TreeTraversal{TEdge, TNode}.TraversalOrder"/>, yielding to the output sequence, so that the 
+    ///       client code implementing the visitor can lazily process the nodes.
     ///     </para>
     ///     <para id="complexity1">
     ///     - Excluding visitor, constant time work is done for each of the n nodes of the tree (such as destructuring
@@ -53,7 +53,8 @@ public class FullyRecursiveBreadthFirstTraversal<TEdge, TNode>
     ///       <see cref="Enumerable.OrderBy{TSource, TKey}(IEnumerable{TSource}, Func{TSource, TKey})"/> and 
     ///       <see cref="Enumerable.OrderByDescending{TSource, TKey}(IEnumerable{TSource}, Func{TSource, TKey})"/>.
     ///       <br/>
-    ///     - Visitor is invoked during visit on each of the n nodes of the sorted <see cref="IEnumerable{T}"/>.
+    ///     - Visitor is client code invoked during iteration of the output sequence, containing each of the n nodes of 
+    ///       the sorted <see cref="IEnumerable{T}"/>.
     ///       <br/>
     ///     - If the size of alphabet of elements of the tree is a small constant c, sorting could be done in linear 
     ///       time via Counting Sort. Otherwise, a comparison-based sorting takes at best a time proportional to 
@@ -66,14 +67,16 @@ public class FullyRecursiveBreadthFirstTraversal<TEdge, TNode>
     ///     <para id="complexity2">
     ///     In conclusion:
     ///     <br/>.
-    ///     - Time Complexity is O(n * (log(n) + Ts + Tv)), where Ts is the amortized time cost of
-    ///       <see cref="TreeTraversal{TEdge, TNode}.ChildrenSorter"/> per node and Tv is the time cost of the 
+    ///     - Time Complexity is O(n * (log(n) + Ts)), where Ts is the amortized time cost of
+    ///       <see cref="TreeTraversal{TEdge, TNode}.ChildrenSorter"/> per node. Taking into account the visit of
+    ///       each emitted node, Time Complexity is O(n * (log(n) + Ts + Tv)), where Tv is the time cost of the 
     ///       visitor per node.
     ///       <br/>
-    ///     - Space Complexity is O(n * Sv), where Sv is the space cost of visitor per node.
+    ///     - Space Complexity is O(n). Taking into account the visit of each emitted node, Space Complexity is 
+    ///       O(n * Sv), where Sv is the space cost of visitor per node.
     ///     </para>
     /// </remarks>
-    public override void Visit(TNode node, Visitor<TNode, TreeTraversalContext<TEdge, TNode>> visitor)
+    public override IEnumerable<TreeTraversalVisit<TEdge, TNode>> Visit(TNode node)
     {
         var nodesWithLevel = GetAllNodesWithLevel(new(default, default, node, 0));
         var sortedNodesWithLevel = TraversalOrder switch
@@ -84,7 +87,7 @@ public class FullyRecursiveBreadthFirstTraversal<TEdge, TNode>
         };
 
         foreach (var (parentNode, incomingEdge, node1, level) in sortedNodesWithLevel)
-            visitor(node1, new(parentNode, incomingEdge));
+            yield return new(node1, new(parentNode, incomingEdge));
     }
 
     private IEnumerable<NodeWithLevel> GetAllNodesWithLevel(NodeWithLevel nodeWithLevel)

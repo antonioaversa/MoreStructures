@@ -1,7 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MoreStructures.RecImmTrees.Visitor;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace MoreStructures.Tests.RecImmTrees.Visitor;
@@ -15,11 +14,11 @@ public abstract class DepthFirstTraversalTests<TDepthFirstTraversal>
         var visitAppender = new VisitAppender();
         var root = TreeMock.BuildDocExample();
 
-        new TDepthFirstTraversal()
+        _ = new TDepthFirstTraversal()
         {
             TraversalOrder = TreeTraversalOrder.ParentFirst,
             ChildrenSorter = TreeMock.EdgeIdBasedChildrenSorter,
-        }.Visit(root, visitAppender.Visitor);
+        }.Visit(root).Select(visitAppender.Visitor).ToList();
 
         Assert.IsTrue(visitAppender.Visits.SequenceEqual(new (int?, int)[]
         {
@@ -28,11 +27,11 @@ public abstract class DepthFirstTraversalTests<TDepthFirstTraversal>
 
         visitAppender.Clear();
 
-        new TDepthFirstTraversal()
+        _ = new TDepthFirstTraversal()
         {
             TraversalOrder = TreeTraversalOrder.ParentFirst,
             ChildrenSorter = TreeMock.EdgeIdDescBasedChildrenSorter,
-        }.Visit(root, visitAppender.Visitor);
+        }.Visit(root).Select(visitAppender.Visitor).ToList();
 
         Assert.IsTrue(visitAppender.Visits.SequenceEqual(new (int?, int)[]
         {
@@ -41,11 +40,11 @@ public abstract class DepthFirstTraversalTests<TDepthFirstTraversal>
 
         visitAppender.Clear();
 
-        new TDepthFirstTraversal()
+        _ = new TDepthFirstTraversal()
         {
             TraversalOrder = TreeTraversalOrder.ParentFirst,
             ChildrenSorter = TreeMock.EdgeIdMedianBasedChildrenSorter,
-        }.Visit(root, visitAppender.Visitor);
+        }.Visit(root).Select(visitAppender.Visitor).ToList();
 
         Assert.IsTrue(visitAppender.Visits.SequenceEqual(new (int?, int)[]
         {
@@ -59,11 +58,11 @@ public abstract class DepthFirstTraversalTests<TDepthFirstTraversal>
         var visitAppender = new VisitAppender();
         var root = TreeMock.BuildDocExample();
 
-        new TDepthFirstTraversal()
+        _ = new TDepthFirstTraversal()
         {
             TraversalOrder = TreeTraversalOrder.ChildrenFirst,
             ChildrenSorter = TreeMock.EdgeIdBasedChildrenSorter,
-        }.Visit(root, visitAppender.Visitor);
+        }.Visit(root).Select(visitAppender.Visitor).ToList();
 
         Assert.IsTrue(visitAppender.Visits.SequenceEqual(new (int?, int)[]
         {
@@ -72,11 +71,11 @@ public abstract class DepthFirstTraversalTests<TDepthFirstTraversal>
 
         visitAppender.Visits.Clear();
 
-        new TDepthFirstTraversal()
+        _ = new TDepthFirstTraversal()
         {
             TraversalOrder = TreeTraversalOrder.ChildrenFirst,
             ChildrenSorter = TreeMock.EdgeIdDescBasedChildrenSorter,
-        }.Visit(root, visitAppender.Visitor);
+        }.Visit(root).Select(visitAppender.Visitor).ToList();
 
         Assert.IsTrue(visitAppender.Visits.SequenceEqual(new (int?, int)[]
         {
@@ -95,7 +94,7 @@ public abstract class DepthFirstTraversalTests<TDepthFirstTraversal>
             ChildrenSorter = TreeMock.EdgeIdBasedChildrenSorter,
         };
 
-        visitStrategy.Visit(root, visitAppender.Visitor);
+        _ = visitStrategy.Visit(root).Select(visitAppender.Visitor).ToList();
         Assert.IsTrue(visitAppender.Visits.SequenceEqual(new (int?, int)[]
         {
             (null, 0), (0, 1), (1, 2), (2, 3), (3, 4), (4, 5), (5, 6), (6, 7), (7, 8),
@@ -113,7 +112,7 @@ public abstract class DepthFirstTraversalTests<TDepthFirstTraversal>
             ChildrenSorter = TreeMock.EdgeIdBasedChildrenSorter,
         };
 
-        visitStrategy.Visit(root, visitAppender.Visitor);
+        _ = visitStrategy.Visit(root).Select(visitAppender.Visitor).ToList();
         Assert.IsTrue(visitAppender.Visits.SequenceEqual(new (int?, int)[] 
         { 
             (0, 1), (3, 4), (4, 5), (2, 3), (5, 6), (6, 7), (1, 2), (7, 8), (null, 0),
@@ -123,9 +122,7 @@ public abstract class DepthFirstTraversalTests<TDepthFirstTraversal>
     [TestMethod]
     public void Visit_TraversalOrderNotSupported_OnSingleton()
     {
-        static void nopVisitor(TreeMock.Node node, TreeTraversalContext<TreeMock.Edge, TreeMock.Node> visitContext)
-        { 
-        }
+        static int nopVisitor(TreeTraversalVisit<TreeMock.Edge, TreeMock.Node> visit) => 0;
 
         var visitStrategy = new TDepthFirstTraversal()
         {
@@ -133,15 +130,14 @@ public abstract class DepthFirstTraversalTests<TDepthFirstTraversal>
             ChildrenSorter = TreeMock.EdgeIdBasedChildrenSorter,
         };
 
-        Assert.ThrowsException<NotSupportedException>(() => visitStrategy.Visit(new TreeMock.Node(0), nopVisitor));
+        Assert.ThrowsException<NotSupportedException>(
+            () => visitStrategy.Visit(new TreeMock.Node(0)).Select(nopVisitor).ToList());
     }
 
     [TestMethod]
     public void Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes()
     {
-        static void nopVisitor(TreeMock.Node node, TreeTraversalContext<TreeMock.Edge, TreeMock.Node> visitContext)
-        {
-        }
+        static int nopVisitor(TreeTraversalVisit<TreeMock.Edge, TreeMock.Node> visit) => 0;
 
         var root = TreeMock.BuildExampleTree();
         var visitStrategy = new TDepthFirstTraversal()
@@ -150,7 +146,8 @@ public abstract class DepthFirstTraversalTests<TDepthFirstTraversal>
             ChildrenSorter = TreeMock.EdgeIdBasedChildrenSorter,
         };
 
-        Assert.ThrowsException<NotSupportedException>(() => visitStrategy.Visit(root, nopVisitor));
+        Assert.ThrowsException<NotSupportedException>(
+            () => visitStrategy.Visit(root).Select(nopVisitor).ToList());
     }
 
     [TestMethod]
@@ -164,7 +161,7 @@ public abstract class DepthFirstTraversalTests<TDepthFirstTraversal>
             ChildrenSorter = TreeMock.EdgeIdDescBasedChildrenSorter,
         };
 
-        visitStrategy.Visit(root, visitAppender.Visitor);
+        _ = visitStrategy.Visit(root).Select(visitAppender.Visitor).ToList();
         Assert.IsTrue(visitAppender.Visits.SequenceEqual(new (int?, int)[]
         {
             (null, 0), (7, 8), (1, 2), (6, 7), (5, 6), (2, 3), (4, 5), (3, 4), (0, 1),
@@ -182,7 +179,7 @@ public abstract class DepthFirstTraversalTests<TDepthFirstTraversal>
             ChildrenSorter = TreeMock.EdgeIdBasedChildrenSorter,
         };
 
-        visitStrategy.Visit(root, visitAppender.Visitor);
+        _ = visitStrategy.Visit(root).Select(visitAppender.Visitor).ToList();
         Assert.IsTrue(visitAppender.Visits.SequenceEqual(new (int?, int)[]
         {
             (null, 0), (0, 1), (1, 2), (2, 3), (3, 4), (4, 5), (5, 6), (6, 7), (7, 8), (8, 9)
