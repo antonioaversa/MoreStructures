@@ -12,7 +12,9 @@ namespace MoreStructures.SuffixTrees;
 /// <param name="Length">
 ///     <inheritdoc cref="ISuffixStructureEdge{TEdge, TNode}.Length" path="/summary"/>
 /// </param>
+/// <remarks>
 /// Supports <see cref="IComparable{T}"/>, by <see cref="Start"/> and <see cref="Length"/>, in this order.
+/// </remarks>
 public record SuffixTreeEdge(int Start, int Length)
     : ISuffixStructureEdge<SuffixTreeEdge, SuffixTreeNode>, IComparable<SuffixTreeEdge>
 {

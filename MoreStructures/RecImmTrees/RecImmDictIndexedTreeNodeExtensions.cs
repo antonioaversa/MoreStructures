@@ -13,6 +13,7 @@ public static class RecImmDictIndexedTreeNodeExtensions
         this IRecImmDictIndexedTreeNode<TEdge, TNode> node)
         where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>
         where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode> => 
+
         node.Children.Count == 0;
 
     /// <summary>

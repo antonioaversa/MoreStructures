@@ -45,7 +45,8 @@ public class LinearSearch : ISearch
     /// <paramref name="fromIndex"/> and <paramref name="toIndex"/>.
     /// </remarks>
     public int First<T>(
-        IEnumerable<T> source, T item, IComparer<T>? comparer = null, int? fromIndex = null, int? toIndex = null) => 
+        IEnumerable<T> source, T item, IComparer<T>? comparer = null, int? fromIndex = null, int? toIndex = null) =>
+        
         GetIndexedItemsInRangeEqualTo(source, item, comparer, fromIndex, toIndex, false)
             .Select(e => e.Key as int?)
             .FirstOrDefault(-1)!
@@ -105,6 +106,7 @@ public class LinearSearch : ISearch
     /// </remarks>
     public int Last<T>(
         IEnumerable<T> source, T item, IComparer<T>? comparer = null, int? fromIndex = null, int? toIndex = null) => 
+
         GetIndexedItemsInRangeEqualTo(source, item, comparer, fromIndex, toIndex, true)
             .Select(e => e.Key as int?)
             .FirstOrDefault(-1)!
@@ -128,6 +130,7 @@ public class LinearSearch : ISearch
     /// </remarks>
     public (int first, int last) Interval<T>(
         IEnumerable<T> source, T item, IComparer<T>? comparer = null, int? fromIndex = null, int? toIndex = null) => 
+
         GetIndexedItemsInRangeEqualTo(source, item, comparer, fromIndex, toIndex, false)
             .Select(e => e.Key)
             .Aggregate((-1, -1), (acc, i) => (
