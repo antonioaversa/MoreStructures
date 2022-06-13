@@ -83,6 +83,22 @@ public class SuffixStructuresTreePathExtensionsTests
     }
 
     [TestMethod]
+    public void ContainsIndexesNonBiggerThan_ThrowsExceptionOnInvalidIndex()
+    {
+        var path = new TreePath<SuffixTreeEdge, SuffixTreeNode>();
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => path.ContainsIndexesNonBiggerThan(-1));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => path.ContainsIndexesNonBiggerThan(-2));
+    }
+
+    [TestMethod]
+    public void ContainsIndexesNonBiggerThan_IsAlwaysFalseOnAEmptyPath()
+    {
+        var path = new TreePath<SuffixTreeEdge, SuffixTreeNode>();
+        Assert.IsFalse(path.ContainsIndexesNonBiggerThan(0));
+        Assert.IsFalse(path.ContainsIndexesNonBiggerThan(2));
+    }
+
+    [TestMethod]
     public void ContainsIndexesNonBiggerThan_IsCorrect()
     {
         var path = BuildExamplePath();
