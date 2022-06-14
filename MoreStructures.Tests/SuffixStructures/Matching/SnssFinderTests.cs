@@ -5,11 +5,11 @@ using System.Linq;
 
 namespace MoreStructures.Tests.SuffixTrees.Matching;
 
-public abstract class SNSSFinderTests
+public abstract class SnssFinderTests
 {
-    protected ISNSSFinder Finder { get; }
+    protected ISnssFinder Finder { get; }
 
-    protected SNSSFinderTests(ISNSSFinder finder)
+    protected SnssFinderTests(ISnssFinder finder)
     {
         Finder = finder;
     }
@@ -25,6 +25,9 @@ public abstract class SNSSFinderTests
     [DataRow("AAAAAAAAAAAAAAAAAAAA", "BBBBBBBBBBBBBBB", new string?[] { "A" })]
     [DataRow("AAAAAAAAAAAAAAAAAAAA", "BBBBBBBBBBBBBBBAA", new string?[] { "AAA" })]
     [DataRow("AAAAAAAAAAAAAAAAAAAA", "BBBBBBBBBBBBBBBAAAA", new string?[] { "AAAAA" })]
+    [DataRow("AAAAAAAAAAAAAAAAAAAA", "AAAABBBBBBBBBBBBBBB", new string?[] { "AAAAA" })]
+    [DataRow("AAAAAAAAAAAAAAAAAAAA", "BBBBBBBAAAABBBBBBBB", new string?[] { "AAAAA" })]
+    [DataRow("AAAAAAAAAAAAAAAAAAAA", "ABBBBBBBBBBBBBBBAAA", new string?[] { "AAAA" })]
     [DataTestMethod]
     public void Find_IsCorrect(string text1, string text2, string?[] expectedResults)
     {

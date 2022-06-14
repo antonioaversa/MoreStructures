@@ -4,10 +4,10 @@ using MoreStructures.SuffixStructures.Matching;
 namespace MoreStructures.Tests.SuffixTrees.Matching;
 
 [TestClass]
-public class NaiveSNSSFinderTests : SNSSFinderTests
+public class NaiveSnssFinderTests : SnssFinderTests
 {
-    public NaiveSNSSFinderTests()
-        : base(new NaiveSNSSFinder())
+    public NaiveSnssFinderTests()
+        : base(new NaiveSnssFinder())
     {
     }
 }
