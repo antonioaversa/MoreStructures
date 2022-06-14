@@ -152,13 +152,13 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Visitor_TreeTraversalContext_2__ctor__1__0_.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Visitor.TreeTraversalContext%602.%23ctor(%601%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Visitor_TreeTraversalContext_2__ctor__1__0_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Visitor.TreeTraversalContext%602.%23ctor(%601%2C%600%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/TreeTraversalContext.cs/#L14">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/TreeTraversalContext.cs/#L17">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Visitor_TreeTraversalContext_2__ctor_" data-uid="MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2.#ctor*"></a>
-  <h4 id="MoreStructures_RecImmTrees_Visitor_TreeTraversalContext_2__ctor__1__0_" data-uid="MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2.#ctor(`1,`0)">TreeTraversalContext(TNode, TEdge)</h4>
+  <h4 id="MoreStructures_RecImmTrees_Visitor_TreeTraversalContext_2__ctor__1__0_System_Int32_" data-uid="MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2.#ctor(`1,`0,System.Int32)">TreeTraversalContext(TNode, TEdge, Int32)</h4>
   <div class="markdown level1 summary"><p>The contextual information in a root-to-leaf traversal of a tree composed of
 <see cref="!:IRecImmDictIndexedTreeNode&lt;TEdge, TNode>"></see> nodes and
 <see cref="!:IRecImmDictIndexedTreeEdge&lt;TEdge, TNode>"></see> edges.</p>
@@ -166,7 +166,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TreeTraversalContext(TNode ParentNode, TEdge IncomingEdge)</code></pre>
+    <pre><code class="lang-csharp hljs">public TreeTraversalContext(TNode ParentNode, TEdge IncomingEdge, int Level)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -190,6 +190,12 @@
         <td><p>The edge outgoing from the parent, traversed to reach this node. Null when visiting the root node.</p>
 </td>
       </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">Level</span></td>
+        <td><p>The level of visit: 0 is assigned to the top-level node, 1 to its children, 2 to its grandchildren, etc.</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
@@ -199,7 +205,7 @@
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Visitor_TreeTraversalContext_2_IncomingEdge.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Visitor.TreeTraversalContext%602.IncomingEdge%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/TreeTraversalContext.cs/#L14">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/TreeTraversalContext.cs/#L17">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Visitor_TreeTraversalContext_2_IncomingEdge_" data-uid="MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2.IncomingEdge*"></a>
   <h4 id="MoreStructures_RecImmTrees_Visitor_TreeTraversalContext_2_IncomingEdge" data-uid="MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2.IncomingEdge">IncomingEdge</h4>
@@ -226,10 +232,40 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Visitor_TreeTraversalContext_2_Level.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Visitor.TreeTraversalContext%602.Level%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/TreeTraversalContext.cs/#L17">View Source</a>
+  </span>
+  <a id="MoreStructures_RecImmTrees_Visitor_TreeTraversalContext_2_Level_" data-uid="MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2.Level*"></a>
+  <h4 id="MoreStructures_RecImmTrees_Visitor_TreeTraversalContext_2_Level" data-uid="MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2.Level">Level</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Level { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Visitor_TreeTraversalContext_2_ParentNode.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Visitor.TreeTraversalContext%602.ParentNode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/TreeTraversalContext.cs/#L14">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/TreeTraversalContext.cs/#L17">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Visitor_TreeTraversalContext_2_ParentNode_" data-uid="MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2.ParentNode*"></a>
   <h4 id="MoreStructures_RecImmTrees_Visitor_TreeTraversalContext_2_ParentNode" data-uid="MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2.ParentNode">ParentNode</h4>
@@ -269,7 +305,7 @@
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Visitor_TreeTraversalContext_2.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Visitor.TreeTraversalContext%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/TreeTraversalContext.cs/#L14" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/TreeTraversalContext.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
