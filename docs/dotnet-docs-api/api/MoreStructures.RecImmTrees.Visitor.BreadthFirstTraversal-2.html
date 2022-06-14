@@ -97,7 +97,7 @@ along any path of the tree, before going deeper or shallower, exploring nodes wi
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="MoreStructures.RecImmTrees.Visitor.IVisitStrategy-2.html">IVisitStrategy</a>&lt;TNode, <a class="xref" href="MoreStructures.RecImmTrees.Visitor.TreeTraversalContext-2.html">TreeTraversalContext</a>&lt;TEdge, TNode&gt;&gt;</div>
+    <div><a class="xref" href="MoreStructures.RecImmTrees.Visitor.IVisitStrategy-2.html">IVisitStrategy</a>&lt;TNode, <a class="xref" href="MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit-2.html">TreeTraversalVisit</a>&lt;TEdge, TNode&gt;&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -108,7 +108,7 @@ along any path of the tree, before going deeper or shallower, exploring nodes wi
       <a class="xref" href="MoreStructures.RecImmTrees.Visitor.TreeTraversal-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_ChildrenSorter">TreeTraversal&lt;TEdge, TNode&gt;.ChildrenSorter</a>
     </div>
     <div>
-      <a class="xref" href="MoreStructures.RecImmTrees.Visitor.TreeTraversal-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_Visit__1_MoreStructures_RecImmTrees_Visitor_Visitor__1_MoreStructures_RecImmTrees_Visitor_TreeTraversalContext__0__1___">TreeTraversal&lt;TEdge, TNode&gt;.Visit(TNode, Visitor&lt;TNode, TreeTraversalContext&lt;TEdge, TNode&gt;&gt;)</a>
+      <a class="xref" href="MoreStructures.RecImmTrees.Visitor.TreeTraversal-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_Visit__1_">TreeTraversal&lt;TEdge, TNode&gt;.Visit(TNode)</a>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
@@ -136,7 +136,7 @@ along any path of the tree, before going deeper or shallower, exploring nodes wi
   <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
   <h5 id="MoreStructures_RecImmTrees_Visitor_BreadthFirstTraversal_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class BreadthFirstTraversal&lt;TEdge, TNode&gt; : TreeTraversal&lt;TEdge, TNode&gt;, IVisitStrategy&lt;TNode, TreeTraversalContext&lt;TEdge, TNode&gt;&gt; where TEdge : IRecImmDictIndexedTreeEdge&lt;TEdge, TNode&gt; where TNode : IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class BreadthFirstTraversal&lt;TEdge, TNode&gt; : TreeTraversal&lt;TEdge, TNode&gt;, IVisitStrategy&lt;TNode, TreeTraversalVisit&lt;TEdge, TNode&gt;&gt; where TEdge : IRecImmDictIndexedTreeEdge&lt;TEdge, TNode&gt; where TNode : IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

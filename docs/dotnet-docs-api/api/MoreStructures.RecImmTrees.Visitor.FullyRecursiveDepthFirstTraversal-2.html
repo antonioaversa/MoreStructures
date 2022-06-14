@@ -83,7 +83,7 @@
   
   <h1 id="MoreStructures_RecImmTrees_Visitor_FullyRecursiveDepthFirstTraversal_2" data-uid="MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal`2" class="text-break">Class FullyRecursiveDepthFirstTraversal&lt;TEdge, TNode&gt;
   </h1>
-  <div class="markdown level0 summary"><p>A fully-recursive, depth-first <a class="xref" href="MoreStructures.RecImmTrees.Visitor.IVisitStrategy-2.html">IVisitStrategy&lt;TNode, TVisitContext&gt;</a> implementation, i.e. a
+  <div class="markdown level0 summary"><p>A lazy, fully-recursive, depth-first <a class="xref" href="MoreStructures.RecImmTrees.Visitor.IVisitStrategy-2.html">IVisitStrategy&lt;TNode, TVisitContext&gt;</a> implementation, i.e. a
 traversing strategy which goes in depth as far as possible along each path of the tree, only backtracking when a
 leaf is reached.</p>
 </div>
@@ -97,7 +97,7 @@ leaf is reached.</p>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="MoreStructures.RecImmTrees.Visitor.IVisitStrategy-2.html">IVisitStrategy</a>&lt;TNode, <a class="xref" href="MoreStructures.RecImmTrees.Visitor.TreeTraversalContext-2.html">TreeTraversalContext</a>&lt;TEdge, TNode&gt;&gt;</div>
+    <div><a class="xref" href="MoreStructures.RecImmTrees.Visitor.IVisitStrategy-2.html">IVisitStrategy</a>&lt;TNode, <a class="xref" href="MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit-2.html">TreeTraversalVisit</a>&lt;TEdge, TNode&gt;&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -108,7 +108,7 @@ leaf is reached.</p>
       <a class="xref" href="MoreStructures.RecImmTrees.Visitor.TreeTraversal-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_ChildrenSorter">TreeTraversal&lt;TEdge, TNode&gt;.ChildrenSorter</a>
     </div>
     <div>
-      <a class="xref" href="MoreStructures.RecImmTrees.Visitor.TreeTraversal-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_Visit__1_MoreStructures_RecImmTrees_Visitor_Visitor__1_MoreStructures_RecImmTrees_Visitor_TreeTraversalContext__0__1___">TreeTraversal&lt;TEdge, TNode&gt;.Visit(TNode, Visitor&lt;TNode, TreeTraversalContext&lt;TEdge, TNode&gt;&gt;)</a>
+      <a class="xref" href="MoreStructures.RecImmTrees.Visitor.TreeTraversal-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_Visit__1_">TreeTraversal&lt;TEdge, TNode&gt;.Visit(TNode)</a>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
@@ -136,7 +136,7 @@ leaf is reached.</p>
   <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
   <h5 id="MoreStructures_RecImmTrees_Visitor_FullyRecursiveDepthFirstTraversal_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class FullyRecursiveDepthFirstTraversal&lt;TEdge, TNode&gt; : DepthFirstTraversal&lt;TEdge, TNode&gt;, IVisitStrategy&lt;TNode, TreeTraversalContext&lt;TEdge, TNode&gt;&gt; where TEdge : IRecImmDictIndexedTreeEdge&lt;TEdge, TNode&gt; where TNode : IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class FullyRecursiveDepthFirstTraversal&lt;TEdge, TNode&gt; : DepthFirstTraversal&lt;TEdge, TNode&gt;, IVisitStrategy&lt;TNode, TreeTraversalVisit&lt;TEdge, TNode&gt;&gt; where TEdge : IRecImmDictIndexedTreeEdge&lt;TEdge, TNode&gt; where TNode : IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -167,21 +167,20 @@ Implemented fully recursively, so limited by stack depth and usable with tree of
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Visitor_FullyRecursiveDepthFirstTraversal_2_Visit__1_MoreStructures_RecImmTrees_Visitor_Visitor__1_MoreStructures_RecImmTrees_Visitor_TreeTraversalContext__0__1___.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal%602.Visit(%601%2CMoreStructures.RecImmTrees.Visitor.Visitor%7B%601%2CMoreStructures.RecImmTrees.Visitor.TreeTraversalContext%7B%600%2C%601%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Visitor_FullyRecursiveDepthFirstTraversal_2_Visit__1_.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal%602.Visit(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/FullyRecursiveDepthFirstTraversal.cs/#L52">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/FullyRecursiveDepthFirstTraversal.cs/#L54">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Visitor_FullyRecursiveDepthFirstTraversal_2_Visit_" data-uid="MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal`2.Visit*"></a>
-  <h4 id="MoreStructures_RecImmTrees_Visitor_FullyRecursiveDepthFirstTraversal_2_Visit__1_MoreStructures_RecImmTrees_Visitor_Visitor__1_MoreStructures_RecImmTrees_Visitor_TreeTraversalContext__0__1___" data-uid="MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal`2.Visit(`1,MoreStructures.RecImmTrees.Visitor.Visitor{`1,MoreStructures.RecImmTrees.Visitor.TreeTraversalContext{`0,`1}})">Visit(TNode, Visitor&lt;TNode, TreeTraversalContext&lt;TEdge, TNode&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p><strong>Eagerly and recursively</strong> visits the structure of the provided<code data-dev-comment-type="paramref" class="paramref">node</code>, calling the
-provided <code data-dev-comment-type="paramref" class="paramref">visitor</code> on each <a class="xref" href="MoreStructures.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</a> of the
-structure, in depth-first order.</p>
+  <h4 id="MoreStructures_RecImmTrees_Visitor_FullyRecursiveDepthFirstTraversal_2_Visit__1_" data-uid="MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal`2.Visit(`1)">Visit(TNode)</h4>
+  <div class="markdown level1 summary"><p><strong>Lazily and recursively</strong> visits the structure of the provided<code data-dev-comment-type="paramref" class="paramref">node</code>, returning the
+sequence of <a class="xref" href="MoreStructures.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</a> of the structure, in depth-first order.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void Visit(TNode node, Visitor&lt;TNode, TreeTraversalContext&lt;TEdge, TNode&gt;&gt; visitor)</code></pre>
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;TreeTraversalVisit&lt;TEdge, TNode&gt;&gt; Visit(TNode node)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -199,19 +198,31 @@ structure, in depth-first order.</p>
         <td><p>The node on where to start visit the structure.</p>
 </td>
       </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td><a class="xref" href="MoreStructures.RecImmTrees.Visitor.Visitor-2.html">Visitor</a>&lt;TNode, <a class="xref" href="MoreStructures.RecImmTrees.Visitor.TreeTraversalContext-2.html">TreeTraversalContext</a>&lt;TEdge, TNode&gt;&gt;</td>
-        <td><span class="parametername">visitor</span></td>
-        <td></td>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit-2.html">TreeTraversalVisit</a>&lt;TEdge, TNode&gt;&gt;</td>
+        <td><p>A sequence emitting (node, visit context) couples, in the visit order defined by the visit strategy.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">MoreStructures.RecImmTrees.Visitor.TreeTraversal&lt;TEdge, TNode&gt;.Visit(TNode, MoreStructures.RecImmTrees.Visitor.Visitor&lt;TNode, MoreStructures.RecImmTrees.Visitor.TreeTraversalContext&lt;TEdge, TNode&gt;&gt;)</span></div>
-  <h5 id="MoreStructures_RecImmTrees_Visitor_FullyRecursiveDepthFirstTraversal_2_Visit__1_MoreStructures_RecImmTrees_Visitor_Visitor__1_MoreStructures_RecImmTrees_Visitor_TreeTraversalContext__0__1____remarks">Remarks</h5>
+  <div><span class="xref">MoreStructures.RecImmTrees.Visitor.TreeTraversal&lt;TEdge, TNode&gt;.Visit(TNode)</span></div>
+  <h5 id="MoreStructures_RecImmTrees_Visitor_FullyRecursiveDepthFirstTraversal_2_Visit__1__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.RecImmTrees.Visitor.FullyRecursiveDepthFirstTraversal`2" path="/remarks"></inheritdoc></p>
 <p>
-- The algorithm visits all nodes in structure in natural recursion/depth-first order, calling the visitor.
+- The algorithm visits all nodes in structure in natural recursion/depth-first order, yielding to the 
+  output sequence, so that the client code implementing the visitor can lazily process the nodes.
 </p>
 <p>
 - Excluding visitor, constant time work is done for each of the n nodes of the tree (such as construction 
@@ -225,11 +236,13 @@ depends on the actual algorithm used.
 <p>
 In conclusion:
 <br>.
-- Time Complexity is O(n * (Ts + Tv)), where Ts is the amortized time cost of
-<a class="xref" href="MoreStructures.RecImmTrees.Visitor.TreeTraversal-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_ChildrenSorter">ChildrenSorter</a> per node and Tv is the time cost of the 
-visitor per node.
+- Time Complexity is O(n * Ts), where Ts is the amortized time cost of
+<a class="xref" href="MoreStructures.RecImmTrees.Visitor.TreeTraversal-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_ChildrenSorter">ChildrenSorter</a> per node. Taking into account the visit of
+each emitted node, Time Complexity is O(n * (Ts + Tv)), where Tv is the time cost of the visitor per 
+node. 
 <br>
-- Space Complexity is O(n * Sv), where Sv is the space cost of visitor per node.
+- Space Complexity is O(n). Taking into account the visit of each emitted node, Space Complexity is 
+O(n * Sv), where Sv is the space cost of visitor per node.
 </p>
 </div>
   <h3 id="implements">Implements</h3>

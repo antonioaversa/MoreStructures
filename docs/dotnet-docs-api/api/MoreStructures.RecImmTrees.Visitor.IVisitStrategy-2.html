@@ -91,7 +91,7 @@ through the structure and touching nodes: partial or exaustive, hierarchical or 
   <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
   <h5 id="MoreStructures_RecImmTrees_Visitor_IVisitStrategy_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IVisitStrategy&lt;TNode, TVisitContext&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IVisitStrategy&lt;in TNode, out TVisitContext&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -118,21 +118,21 @@ through the structure and touching nodes: partial or exaustive, hierarchical or 
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Visitor_IVisitStrategy_2_Visit__0_MoreStructures_RecImmTrees_Visitor_Visitor__0__1__.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Visitor.IVisitStrategy%602.Visit(%600%2CMoreStructures.RecImmTrees.Visitor.Visitor%7B%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Visitor_IVisitStrategy_2_Visit__0_.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Visitor.IVisitStrategy%602.Visit(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/IVisitor.cs/#L39">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/IVisitor.cs/#L22">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Visitor_IVisitStrategy_2_Visit_" data-uid="MoreStructures.RecImmTrees.Visitor.IVisitStrategy`2.Visit*"></a>
-  <h4 id="MoreStructures_RecImmTrees_Visitor_IVisitStrategy_2_Visit__0_MoreStructures_RecImmTrees_Visitor_Visitor__0__1__" data-uid="MoreStructures.RecImmTrees.Visitor.IVisitStrategy`2.Visit(`0,MoreStructures.RecImmTrees.Visitor.Visitor{`0,`1})">Visit(TNode, Visitor&lt;TNode, TVisitContext&gt;)</h4>
-  <div class="markdown level1 summary"><p><strong>Eagerly</strong> visits the structure of the provided <code data-dev-comment-type="paramref" class="paramref">node</code>, calling the provided
-<code data-dev-comment-type="paramref" class="paramref">visitor</code> on each <a class="xref" href="MoreStructures.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</a> of the structure,
+  <h4 id="MoreStructures_RecImmTrees_Visitor_IVisitStrategy_2_Visit__0_" data-uid="MoreStructures.RecImmTrees.Visitor.IVisitStrategy`2.Visit(`0)">Visit(TNode)</h4>
+  <div class="markdown level1 summary"><p><strong>Lazily</strong> visits the structure of the provided <code data-dev-comment-type="paramref" class="paramref">node</code>, returning an enumerable of the
+sequence of <a class="xref" href="MoreStructures.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</a> of the structure,
 in the order defined by this <a class="xref" href="MoreStructures.RecImmTrees.Visitor.IVisitStrategy-2.html">IVisitStrategy&lt;TNode, TVisitContext&gt;</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Visit(TNode node, Visitor&lt;TNode, TVisitContext&gt; visitor)</code></pre>
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;TVisitContext&gt; Visit(TNode node)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,10 +150,20 @@ in the order defined by this <a class="xref" href="MoreStructures.RecImmTrees.Vi
         <td><p>The node on where to start visit the structure.</p>
 </td>
       </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td><a class="xref" href="MoreStructures.RecImmTrees.Visitor.Visitor-2.html">Visitor</a>&lt;TNode, TVisitContext&gt;</td>
-        <td><span class="parametername">visitor</span></td>
-        <td><p>The visit logic, invoked on each of the visit nodes.</p>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;TVisitContext&gt;</td>
+        <td><p>A sequence emitting (node, visit context) couples, in the visit order defined by the visit strategy.</p>
 </td>
       </tr>
     </tbody>
@@ -169,7 +179,7 @@ in the order defined by this <a class="xref" href="MoreStructures.RecImmTrees.Vi
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Visitor_IVisitStrategy_2.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Visitor.IVisitStrategy%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/IVisitor.cs/#L30" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/IVisitor.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
