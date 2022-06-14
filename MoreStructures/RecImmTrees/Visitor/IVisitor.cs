@@ -8,7 +8,7 @@
 /// <typeparam name="TVisitContext">
 /// The type of visit context. Depends on the <see cref="IVisitStrategy{TNode, TVisitContext}"/> used.
 /// </typeparam>
-public interface IVisitStrategy<TNode, TVisitContext>
+public interface IVisitStrategy<in TNode, out TVisitContext>
 {
     /// <summary>
     /// <b>Lazily</b> visits the structure of the provided <paramref name="node"/>, returning an enumerable of the 
