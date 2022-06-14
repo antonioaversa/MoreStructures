@@ -124,6 +124,16 @@ namespace MoreStructures.Tests.Utilities
         }
 
         [TestMethod]
+        public void GetHashCode_WorksWithEmptyDictionary()
+        {
+            var dictionary1 = new Dictionary<string, int> { };
+            var valueDictionary1 = new ValueReadOnlyDictionary<string, int>(dictionary1);
+            var dictionary2 = new Dictionary<string, int> { };
+            var valueDictionary2 = new ValueReadOnlyDictionary<string, int>(dictionary2);
+            Assert.IsTrue(valueDictionary1.GetHashCode() == valueDictionary2.GetHashCode());
+        }
+
+        [TestMethod]
         public void GetHashCode_IsByValue_WithPrimitiveType()
         {
             var dictionary1 = new Dictionary<string, int> { ["a"] = 1, ["b"] = 1 };

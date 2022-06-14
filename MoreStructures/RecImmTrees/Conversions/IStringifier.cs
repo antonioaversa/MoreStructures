@@ -33,7 +33,7 @@
 /// </code>
 /// </example>
 public interface IStringifier<TEdge, TNode>
-    where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>, IComparable<TEdge>
+    where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>
     where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode>
 {
     /// <summary>
@@ -97,5 +97,5 @@ public interface IStringifier<TEdge, TNode>
     /// e1 -> e4 -> e5
     /// </code>
     /// </example>
-    string Stringify(TreePath<TNode, TEdge> path);
+    string Stringify(TreePath<TEdge, TNode> path);
 }

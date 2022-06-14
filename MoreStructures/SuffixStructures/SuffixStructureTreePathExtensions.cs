@@ -25,7 +25,8 @@ public static class SuffixStructureTreePathExtensions
     public static IValueEnumerable<char> SuffixFor<TEdge, TNode>(
         this TreePath<TEdge, TNode> path,
         TextWithTerminator text)
-        where TEdge : TextWithTerminator.ISelector => 
+        where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>, TextWithTerminator.ISelector
+        where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode> => 
 
         path.PathNodes
             .SelectMany(node => text[node.Key])
@@ -46,7 +47,8 @@ public static class SuffixStructureTreePathExtensions
     public static bool IsSuffixOf<TEdge, TNode>
         (this TreePath<TEdge, TNode> path, 
         TextWithTerminator text)
-        where TEdge : TextWithTerminator.ISelector =>
+        where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>, TextWithTerminator.ISelector
+        where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode> =>
 
         text.EndsWith(path.SuffixFor(text));
 

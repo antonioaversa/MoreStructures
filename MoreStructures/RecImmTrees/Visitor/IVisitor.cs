@@ -12,8 +12,8 @@ public interface IVisitStrategy<in TNode, out TVisitContext>
 {
     /// <summary>
     /// <b>Lazily</b> visits the structure of the provided <paramref name="node"/>, returning an enumerable of the 
-    /// sequence of <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode}"/> of the structure,
-    /// in the order defined by this <see cref="IVisitStrategy{TNode, TVisitContext}"/>.
+    /// sequence of <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode}"/> of the structure, in the order defined by 
+    /// this <see cref="IVisitStrategy{TNode, TVisitContext}"/>.
     /// </summary>
     /// <param name="node">The node on where to start visit the structure.</param>
     /// <returns>

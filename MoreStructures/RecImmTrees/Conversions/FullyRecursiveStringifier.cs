@@ -54,16 +54,16 @@ public class FullyRecursiveStringifier<TEdge, TNode>
 
     /// <inheritdoc/>
     /// <inheritdoc cref="FullyRecursiveStringifier{TEdge, TNode}" path="/remarks"/>
-    public override string Stringify(TreePath<TNode, TEdge> path) => 
+    public override string Stringify(TreePath<TEdge, TNode> path) => 
         string.Join(PathSeparator, Stringify(path.PathNodes));
 
-    private IEnumerable<string> Stringify(IEnumerable<KeyValuePair<TNode, TEdge>> pathNodes)
+    private IEnumerable<string> Stringify(IEnumerable<KeyValuePair<TEdge, TNode>> pathNodes)
     {
         if (!pathNodes.Any())
             yield break;
 
         var nextPathNode = pathNodes.First();
-        yield return EdgeAndNodeStringifier(nextPathNode.Value, nextPathNode.Key);
+        yield return EdgeAndNodeStringifier(nextPathNode.Key, nextPathNode.Value);
 
         foreach (var fragment in Stringify(pathNodes.Skip(1)))
             yield return fragment;

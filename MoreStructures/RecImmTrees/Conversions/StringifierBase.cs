@@ -8,7 +8,7 @@
 /// <typeparam name="TNode">The type of nodes of the specific structure.</typeparam>
 public abstract class StringifierBase<TEdge, TNode> 
     : IStringifier<TEdge, TNode>
-    where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>, IComparable<TEdge>
+    where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>
     where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode>
 {
     /// <summary>
@@ -51,6 +51,6 @@ public abstract class StringifierBase<TEdge, TNode>
     /// <inheritdoc cref="IStringifier{TEdge, TNode}.Stringify(TNode)"/>
     public abstract string Stringify(TNode node);
 
-    /// <inheritdoc cref="IStringifier{TEdge, TNode}.Stringify(TreePath{TNode, TEdge})"/>
-    public abstract string Stringify(TreePath<TNode, TEdge> path);
+    /// <inheritdoc cref="IStringifier{TEdge, TNode}.Stringify(TreePath{TEdge, TNode})"/>
+    public abstract string Stringify(TreePath<TEdge, TNode> path);
 }

@@ -116,7 +116,7 @@ public abstract class StringifierTests
     [TestMethod]
     public void Stringify_OfEmptyPath()
     {
-        var path = new TreePath<Node, Edge>();
+        var path = new TreePath<Edge, Node>();
         var pathStr = Stringifier.Stringify(path);
         Assert.AreEqual(string.Empty, pathStr);
     }
@@ -124,7 +124,7 @@ public abstract class StringifierTests
     [TestMethod]
     public void Stringify_OfSingletonPath()
     {
-        var path = new TreePath<Node, Edge>((new(0), new(10)));
+        var path = new TreePath<Edge, Node>((new(0), new(10)));
         var pathStr = Stringifier.Stringify(path);
         foreach (var pathNode in path.PathNodes)
         {
@@ -138,7 +138,7 @@ public abstract class StringifierTests
     [TestMethod]
     public void Stringify_OfMultistepPath()
     {
-        var path = new TreePath<Node, Edge>(
+        var path = new TreePath<Edge, Node>(
             (new(0), new(10)), (new(1), new(11)), (new(2), new(12)));
         var pathStr = Stringifier.Stringify(path);
         foreach (var pathNode in path.PathNodes)

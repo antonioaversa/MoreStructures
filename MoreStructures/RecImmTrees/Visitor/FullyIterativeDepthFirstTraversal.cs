@@ -107,7 +107,7 @@ public class FullyIterativeDepthFirstTraversal<TEdge, TNode>
             switch (TraversalOrder)
             {
                 case TreeTraversalOrder.ParentFirst:
-                    foreach (var child in ChildrenSorter(node.Children).Reverse())
+                    foreach (var child in ChildrenSorter(new(node, new(parentNode, incomingEdge, level))).Reverse())
                         stack.Push(new(node, child.Key, child.Value, false, level + 1));
                     stack.Push(new(parentNode, incomingEdge, node, true, level));
 
@@ -115,7 +115,7 @@ public class FullyIterativeDepthFirstTraversal<TEdge, TNode>
 
                 case TreeTraversalOrder.ChildrenFirst:
                     stack.Push(new(parentNode, incomingEdge, node, true, level));
-                    foreach (var child in ChildrenSorter(node.Children).Reverse())
+                    foreach (var child in ChildrenSorter(new(node, new(parentNode, incomingEdge, level))).Reverse())
                         stack.Push(new(node, child.Key, child.Value, false, level + 1));
 
                     break;

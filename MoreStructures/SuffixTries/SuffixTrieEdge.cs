@@ -27,4 +27,13 @@ public record SuffixTrieEdge(int Index)
         other != null
         ? Index - other.Index 
         : throw new ArgumentException($"Invalid comparison: cannot compare to null.");
+
+    /// <summary>
+    /// <inheritdoc/>
+    /// <br/>
+    /// Generates a string in the form "(<see cref="SuffixTreeEdge.Start"/>)". <see cref="SuffixTreeEdge.Length"/> is 
+    /// not included as in this context it is always 1.
+    /// </summary>
+    /// <returns><inheritdoc/></returns>
+    public override string ToString() => $"({Start})";
 }

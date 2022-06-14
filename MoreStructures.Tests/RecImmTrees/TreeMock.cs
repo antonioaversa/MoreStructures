@@ -1,4 +1,5 @@
 ﻿using MoreStructures.RecImmTrees;
+using MoreStructures.RecImmTrees.Visitor;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
@@ -154,16 +155,16 @@ public static class TreeMock
     }
 
     public static IEnumerable<KeyValuePair<Edge, Node>> EdgeIdBasedChildrenSorter(
-        IEnumerable<KeyValuePair<Edge, Node>> edgesAndNodes) =>
-        edgesAndNodes.OrderBy(edgeAndNode => edgeAndNode.Key.Id);
+        TreeTraversalVisit<Edge, Node> visit) =>
+        visit.Node.Children.OrderBy(edgeAndNode => edgeAndNode.Key.Id);
 
     public static IEnumerable<KeyValuePair<Edge, Node>> EdgeIdDescBasedChildrenSorter(
-        IEnumerable<KeyValuePair<Edge, Node>> edgesAndNodes) =>
-        edgesAndNodes.OrderByDescending(edgeAndNode => edgeAndNode.Key.Id);
+        TreeTraversalVisit<Edge, Node> visit) =>
+        visit.Node.Children.OrderByDescending(edgeAndNode => edgeAndNode.Key.Id);
 
     public static IEnumerable<KeyValuePair<Edge, Node>> EdgeIdMedianBasedChildrenSorter(
-        IEnumerable<KeyValuePair<Edge, Node>> edgesAndNodes) =>
-        from i in TestUtilities.MedianGenerator(0, edgesAndNodes.Count() - 1)
-        let edgesAndNodesSortedById = edgesAndNodes.OrderBy(edgeAndNode => edgeAndNode.Key.Id)
+        TreeTraversalVisit<Edge, Node> visit) =>
+        from i in TestUtilities.MedianGenerator(0, visit.Node.Children.Count - 1)
+        let edgesAndNodesSortedById = visit.Node.Children.OrderBy(edgeAndNode => edgeAndNode.Key.Id)
         select edgesAndNodesSortedById.ElementAt(i);
 }

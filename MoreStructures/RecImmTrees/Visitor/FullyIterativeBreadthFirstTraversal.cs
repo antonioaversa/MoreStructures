@@ -119,7 +119,7 @@ public class FullyIterativeBreadthFirstTraversal<TEdge, TNode>
         var (parentNode, incomingEdge, node, level) = traversalQueue.Dequeue();
 
         visitQueue.Enqueue(new(parentNode, incomingEdge, node, level));
-        foreach (var child in ChildrenSorter(node.Children))
+        foreach (var child in ChildrenSorter(new(node, new(parentNode, incomingEdge, level))))
             traversalQueue.Enqueue(new(node, child.Key, child.Value, level + 1));
     }
 
@@ -128,7 +128,7 @@ public class FullyIterativeBreadthFirstTraversal<TEdge, TNode>
         var (parentNode, incomingEdge, node, level) = traversalQueue.Dequeue();
 
         visitStack.Push(new(parentNode, incomingEdge, node, level));
-        foreach (var child in ChildrenSorter(node.Children).Reverse())
+        foreach (var child in ChildrenSorter(new(node, new(parentNode, incomingEdge, level))).Reverse())
             traversalQueue.Enqueue(new(node, child.Key, child.Value, level + 1));
     }
 }

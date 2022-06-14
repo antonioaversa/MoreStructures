@@ -8,7 +8,10 @@
 ///     <para id="advantages">
 ///     ADVANTAGES AND DISADVANTAGES
 ///     <br/>
-///     - It doesn't require additional space, except for iterations and index variables. So, it's a good 
+///     - Unlike <see cref="SuffixStructureBasedSnssFinder"/> derivations, this implementation doesn't require 
+///       terminators, since it does not build any auxialiary structure.
+///       <br/>
+///     - It also doesn't require additional space, except for iterations and index variables. So, it's a good 
 ///       solution for small input, when space is a hard constraint, much more than time.
 ///     </para>
 ///     <para id="algo">
@@ -46,9 +49,9 @@ public class NaiveSnssFinder : ISnssFinder
             return null;
 
         return (
-            from i in Enumerable.Range(1, string1.Length - 1)
-            from j in Enumerable.Range(0, string1.Length - i + 1)
-            let substringOfString1 = string1[j..(j + i)]
+            from length in Enumerable.Range(1, string1.Length) // All substrings of non-zero length
+            from start in Enumerable.Range(0, string1.Length - length + 1)
+            let substringOfString1 = string1[start..(start + length)]
             where !string2.Contains(substringOfString1)
             select substringOfString1)
             .FirstOrDefault();
