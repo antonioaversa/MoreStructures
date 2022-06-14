@@ -96,4 +96,25 @@ public class FullyIterativeStringifier<TEdge, TNode>
         foreach (var (childEdge, childNode) in node.Children.OrderByDescending(c => c.Key))
             stack.Push((childEdge, childNode, level + 1));
     }
+
+    /// <inheritdoc/>
+    /// <inheritdoc cref="FullyIterativeStringifier{TEdge, TNode}" path="/remarks"/>
+    public override string Stringify(TreePath<TNode, TEdge> path)
+    {
+        if (!path.PathNodes.Any())
+            return string.Empty;
+
+        var stringBuilder = new StringBuilder();
+
+        var (firstNode, firstEdge) = path.PathNodes.First();
+        stringBuilder.Append(EdgeAndNodeStringifier(firstEdge, firstNode));
+
+        foreach (var (node, edge) in path.PathNodes.Skip(1))
+        {
+            stringBuilder.Append(PathSeparator);
+            stringBuilder.Append(EdgeAndNodeStringifier(edge, node));
+        }
+
+        return stringBuilder.ToString();
+    }
 }

@@ -16,6 +16,7 @@ public class FullyRecursiveStringifierTests : StringifierBaseTests
         {
             NewLine = DefaultNewLine,
             Indent = DefaultIndent,
+            PathSeparator = DefaultPathSeparator,
         })
     {
     }

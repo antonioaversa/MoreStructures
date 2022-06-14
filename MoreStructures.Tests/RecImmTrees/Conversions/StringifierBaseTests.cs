@@ -21,6 +21,7 @@ public abstract class StringifierBaseTests : StringifierTests
         { 
             NewLine = "a",
             Indent = DefaultIndent,
+            PathSeparator = DefaultPathSeparator,
         };
         var root = new Node(0, new Dictionary<Edge, Node>
         {
@@ -37,6 +38,7 @@ public abstract class StringifierBaseTests : StringifierTests
         {
             NewLine = DefaultNewLine,
             Indent = "t",
+            PathSeparator = DefaultPathSeparator,
         };
         var root = new Node(0, new Dictionary<Edge, Node>
         {

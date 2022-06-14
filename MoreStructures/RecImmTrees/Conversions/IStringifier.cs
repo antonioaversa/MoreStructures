@@ -1,7 +1,7 @@
 ﻿namespace MoreStructures.RecImmTrees.Conversions;
 
 /// <summary>
-/// A converter from <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode}"/> structures to string.
+/// A converter from <see cref="IRecImmDictIndexedTreeNode{TEdge, TNode}"/> structures and paths to string.
 /// </summary>
 /// <typeparam name="TEdge">The type of edges of the specific structure.</typeparam>
 /// <typeparam name="TNode">The type of nodes of the specific structure.</typeparam>
@@ -16,7 +16,7 @@
 ///     COMPLEXITY
 ///     <br/>
 ///     Time Complexity = O(n) and Space Complexity = O(n) where n = number of nodes in the 
-///     <typeparamref name="TNode"/> structure. Each node and its incoming edge is visited once.
+///     <typeparamref name="TNode"/> structure/path. Each node and its incoming edge is visited once.
 ///     </para>
 /// </remarks>
 /// <example>
@@ -50,6 +50,14 @@ public interface IStringifier<TEdge, TNode>
     string Indent { get; init; }
 
     /// <summary>
+    /// The character or string used to join stringified path nodes, when building the output string.
+    /// </summary>
+    /// <example>
+    /// " -> ", ", ", ...
+    /// </example>
+    string PathSeparator { get; init; }
+
+    /// <summary>
     /// A function mapping the top-level node to a string. Used for the first line of the output.
     /// </summary>
     Func<TNode, string> RootStringifier { get; init; }
@@ -65,7 +73,8 @@ public interface IStringifier<TEdge, TNode>
     /// <param name="node">The root of the tree to stringify.</param>
     /// <returns>A string version of the provided structure.</returns>
     /// <example>
-    /// Using 4 spaces as indent, RootStringifier = n => "R", an EdgeAndNodeStringifier = (e, n) => $"{e} -> N":
+    /// Using 4 spaces as indent, RootStringifier = n => "R", and EdgeAndNodeStringifier = (e, n) => $"{e} -> N":
+    /// <code>
     /// R
     ///     e1 -> N
     ///         e3 -> N
@@ -73,6 +82,20 @@ public interface IStringifier<TEdge, TNode>
     ///             e5 -> N
     ///     e2 -> N
     ///         e6 -> N
+    /// </code>
     /// </example>
     string Stringify(TNode node);
+
+    /// <summary>
+    /// Converts the provided <see cref="TreePath{TEdge, TNode}"/> into a string.
+    /// </summary>
+    /// <param name="path">The tree path to stringify.</param>
+    /// <returns>A string version of the provided path.</returns>
+    /// <example>
+    /// Using PathSeparator = " -> " and EdgeAndNodeStringifier = (e, n) => $"{e}":
+    /// <code>
+    /// e1 -> e4 -> e5
+    /// </code>
+    /// </example>
+    string Stringify(TreePath<TNode, TEdge> path);
 }
