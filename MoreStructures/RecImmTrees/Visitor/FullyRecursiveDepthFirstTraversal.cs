@@ -8,7 +8,9 @@
 /// </summary>
 /// <remarks>
 ///     <inheritdoc cref="DepthFirstTraversal{TEdge, TNode}" path="/remarks"/>
-///     <para>
+///     <para id="advantages">
+///     ADVANTAGES AND DISADVANTAGES
+///     <br/>
 ///     Implemented fully recursively, so limited by stack depth and usable with tree of a "reasonable" height.
 ///     </para>
 /// </remarks>
@@ -27,10 +29,14 @@ public class FullyRecursiveDepthFirstTraversal<TEdge, TNode>
     /// <remarks>
     ///     <inheritdoc cref="FullyRecursiveDepthFirstTraversal{TEdge, TNode}" path="/remarks"/>
     ///     <para id = "algo" >
+    ///     ALGORITHM
+    ///     <br/>
     ///     - The algorithm visits all nodes in structure in natural recursion/depth-first order, yielding to the 
     ///       output sequence, so that the client code implementing the visitor can lazily process the nodes.
     ///     </para>
-    ///     <para id="complexity1">
+    ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
     ///     - Excluding visitor, constant time work is done for each of the n nodes of the tree (such as construction 
     ///       of the input record for the visitor). 
     ///       <br/>
@@ -38,10 +44,9 @@ public class FullyRecursiveDepthFirstTraversal<TEdge, TNode>
     ///       depends on the actual algorithm used.
     ///       <br/>
     ///     - So Time Complexity is dominated by <see cref="TreeTraversal{TEdge, TNode}.ChildrenSorter"/> and visitor.
-    ///     </para>
-    ///     <para id="complexity2">
+    ///     <br/>
     ///     In conclusion:
-    ///     <br/>.
+    ///     <br/>
     ///     - Time Complexity is O(n * Ts), where Ts is the amortized time cost of
     ///       <see cref="TreeTraversal{TEdge, TNode}.ChildrenSorter"/> per node. Taking into account the visit of
     ///       each emitted node, Time Complexity is O(n * (Ts + Tv)), where Tv is the time cost of the visitor per 

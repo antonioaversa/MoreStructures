@@ -15,10 +15,14 @@ namespace MoreStructures.SuffixTries;
 /// </param>
 /// <remarks>
 ///     <para id="advantages">
+///     ADVANTAGES AND DISADVANTAGES
+///     <br/>
 ///     Compare to suffix trees, suffix tries, although less performant and optimized on many operations, are simpler 
 ///     to build, navigate and understand.
 ///     </para>
-///     <para>
+///     <para id="immutability">
+///     IMMUTABILITY
+///     <br/>
 ///     Immutability is guaranteed by using <see cref="ValueReadOnlyCollection{T}"/>.
 ///     </para>
 /// </remarks>

@@ -10,10 +10,13 @@ namespace MoreStructures.RecImmTrees.Conversions;
 /// <typeparam name="TNode">The type of nodes of the specific structure.</typeparam>
 /// <remarks>
 ///     <inheritdoc cref="IStringifier{TEdge, TNode}" path="/remarks"/>
-///     <para>
+///     <para id="advantages">
+///     ADVANTAGES AND DISADVANTAGES
+///     <br/>
 ///     Implemented fully iteratively via a <see cref="Stack{T}"/>, so not limited by call stack depth but rather by 
-///     the maximum size of the stack stored in the heap. Convenient with deep trees (i.e. trees having a height &gt; 
-///     ~1K nodes).
+///     the maximum size of the stack stored in the heap.
+///     <br/>
+///     Convenient with deep trees (i.e. trees having a height &gt; ~1K nodes).
 ///     </para>
 /// </remarks>
 public class FullyIterativeStringifier<TEdge, TNode> 
@@ -25,17 +28,24 @@ public class FullyIterativeStringifier<TEdge, TNode>
     /// The maximum level at which indentation should not be done anymore. Default is <see cref="int.MaxValue"/>.
     /// </summary>
     /// <remarks>
-    ///     <para>
-    ///     When trying to render a very deep structure to string, the resulting string can become extremely big due to 
-    ///     indentation. This can easily happen with structures like <see cref="SuffixTries.SuffixTrieNode"/>. Less 
-    ///     with <see cref="SuffixTrees.SuffixTreeNode"/>, due to their coalescing of paths of nodes with single child.
-    ///     </para>
-    ///     <para>
-    ///     For example if the structure is a linear chain of n in depth, 4 chars of indentation per line would yield a 
-    ///     string of 2n(n-1) chars = O(n^2). For n = 10000 nodes the produced string would be ~ 200M.
-    ///     To avoid that <see cref="StopIndentingLevel"/> can be set to a constant c, limiting the size of the 
-    ///     resulting string by an upper bound of cn = O(n). For n = 10000 nodes and c = 10 levels the produced string 
-    ///     would be 100K.
+    ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
+    ///     - When trying to render a very deep structure to string, the resulting string can become extremely big due 
+    ///       to indentation. 
+    ///       <br/>
+    ///     - This can easily happen with structures like <see cref="SuffixTries.SuffixTrieNode"/>. Less with 
+    ///       <see cref="SuffixTrees.SuffixTreeNode"/>, due to their coalescing of paths of nodes with single child.
+    ///       <br/>
+    ///     - For example if the structure is a linear chain of n in depth, 4 chars of indentation per line would yield 
+    ///       a string of 2n(n-1) chars = O(n^2). 
+    ///       <br/>
+    ///     - For n = 10000 nodes the produced string would be ~ 200M.
+    ///       <br/>
+    ///     - To avoid that <see cref="StopIndentingLevel"/> can be set to a constant c, limiting the size of the 
+    ///       resulting string by an upper bound of cn = O(n). 
+    ///       <br/>
+    ///     - For n = 10000 nodes and c = 10 levels the produced string would be 100K.
     ///     </para>
     /// </remarks>
     public int StopIndentingLevel { get; set; } = int.MaxValue;

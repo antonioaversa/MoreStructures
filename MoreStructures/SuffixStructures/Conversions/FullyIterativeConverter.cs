@@ -9,11 +9,16 @@ using static ConverterHelpers;
 /// <inheritdoc cref="IConverter"/>
 /// </summary>
 /// <remarks>
-///     <para>
-///     Conversion is iteratively both for branching and no-branching paths (i.e. on nodes having a single child) of 
-///     the input <see cref="SuffixTrieNode"/>, with occasional mutation of internal state of the conversion and the 
+///     <para id="advantages">
+///     ADVANTAGES AND DISADVANTAGES
+///     <br/>
+///     Conversion is done iteratively both for branching and no-branching paths (i.e. on nodes having a single child) 
+///     of the input <see cref="SuffixTrieNode"/>, with occasional mutation of internal state of the conversion and the 
 ///     use of a stack to store nodes to process.
-///     Not limited by call stack depth. Convenient with deep trees (i.e. trees having a height &gt; ~1K nodes).
+///     <br/>
+///     Not limited by call stack depth. 
+///     <br/>
+///     Convenient with deep trees (i.e. trees having a height &gt; ~1K nodes).
 ///     </para>
 /// </remarks>
 public class FullyIterativeConverter : IConverter

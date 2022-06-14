@@ -8,9 +8,13 @@
 /// </summary>
 /// <remarks>
 ///     <inheritdoc cref="BreadthFirstTraversal{TEdge, TNode}" path="/remarks"/>
-///     <para>
+///     <para id="advantages">
+///     ADVANTAGES AND DISADVANTAGES
+///     <br/>
 ///     Implemented fully iteratively, so not limited by call stack depth but rather by the maximum size of the stack 
-///     stored in the heap. Convenient with deep trees (i.e. trees having a height &gt; ~1K nodes).
+///     stored in the heap.
+///     <br/>
+///     Convenient with deep trees (i.e. trees having a height &gt; ~1K nodes).
 ///     </para>
 /// </remarks>
 public class FullyIterativeBreadthFirstTraversal<TEdge, TNode> 
@@ -30,7 +34,9 @@ public class FullyIterativeBreadthFirstTraversal<TEdge, TNode>
     /// <remarks>
     ///     <inheritdoc cref="FullyIterativeBreadthFirstTraversal{TEdge, TNode}" path="/remarks"/>
     ///     <para id="algo">
-    ///     The algorithm perform a double walk:
+    ///     ALGORITHM
+    ///     <br/>
+    ///     The algorithm performs a double walk:
     ///     <br/>    
     ///     - The first walk is of the nodes of the tree structure and always proceeds top-down, enqueuing each 
     ///       encountered child for each node into a "traversal" <see cref="Queue{T}"/>, which is used to reproduce the 
@@ -45,9 +51,12 @@ public class FullyIterativeBreadthFirstTraversal<TEdge, TNode>
     ///       client code implementing the visitor can lazily process the nodes.
     ///     </para>
     ///     <para id="complexity">
-    ///     Each of the walk goes through all the n nodes and n - 1 edges of the tree. Each walk uses a O(1) insertion
-    ///     and extraction data structure, which contains at most n elements of constant size (reference to the node,
-    ///     reference to its parent, reference to its incoming edge).
+    ///     COMPLEXITY
+    ///     <br/>
+    ///     Each of the walk goes through all the n nodes and n - 1 edges of the tree. 
+    ///     <br/>
+    ///     Each walk uses a O(1) insertion and extraction data structure, which contains at most n elements of 
+    ///     constant size (reference to the node, reference to its parent, reference to its incoming edge).
     ///     <br/>
     ///     Time Complexity is O(n) for the first walk, when the visit queue/stack is populated and no actual node 
     ///     visit is performed, and O(n) for the second walk, when the actual visit of all nodes is performed. 

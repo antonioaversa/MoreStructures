@@ -97,10 +97,11 @@ public class PrecomputedFinder : BinarySearchFinder
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
-    ///     <para>
+    ///     <para id="algo">
+    ///     ALGORITHM
+    ///     <br/>
     ///     This implementation uses a precomputed hash-map of all the positions by each char.
-    ///     </para>
-    ///     <para>
+    ///     <br/>
     ///     However, unlike <see cref="ILastFirstFinder.SortedBWT"/>, <see cref="ILastFirstFinder.BWT"/> is not sorted,
     ///     so the precomputed list storing all the indexes where the char of <see cref="ILastFirstFinder.BWT"/> at 
     ///     index <paramref name="indexOfCharInBWT"/> appears can be accessed in O(1) but has to be iterated over 
@@ -124,10 +125,11 @@ public class PrecomputedFinder : BinarySearchFinder
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
-    ///     <para>
+    ///     <para id="algo">
+    ///     ALGORITHM    
+    ///     <br/>
     ///     This implementation uses a precomputed hash-map of all the positions by each char.
-    ///     </para>
-    ///     <para>
+    ///     <br/>
     ///     It also takes advantage of the fact that <see cref="ILastFirstFinder.SortedBWT"/> is sorted, by running a 
     ///     Binary Search on it, which takes logarithmic time over the list of indexes for the char at position 
     ///     <paramref name="indexOfCharInSortedBWT"/> in <see cref="ILastFirstFinder.BWT"/>. 
@@ -138,7 +140,9 @@ public class PrecomputedFinder : BinarySearchFinder
     ///     <br/>
     ///     If sigma is constant, the list has a size O(n).
     ///     </para>
-    ///     <para>
+    ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
     ///     Therefore, Time Complexity = O(log(n)) and Space Complexity = O(1).
     ///     </para>
     /// </remarks>

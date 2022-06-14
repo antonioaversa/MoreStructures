@@ -8,6 +8,8 @@
 /// </summary>
 /// <remarks>
 ///     <para id="traversal-vs-visit">
+///     TRAVERSAL VS VISIT
+///     <br/>
 ///     The word "traversal" in <see cref="TreeTraversal{TEdge, TNode}"/> and its derivations, is here used with 
 ///     narrower scope than the word "visit" in <see cref="IVisitStrategy{TNode, TVisitContext}"/>.
 ///     <br/>

@@ -6,6 +6,8 @@
 /// </summary>
 /// <remarks>
 ///     <para id="complexity">
+///     COMPLEXITY
+///     <br/>
 ///     Search over <see cref="ILastFirstFinder.BWT"/> has Time Complexity = O(n), as it is not sorted and there's
 ///     nothing better than a linear scan without precomputing additional structures helping the search.
 ///     <br/>

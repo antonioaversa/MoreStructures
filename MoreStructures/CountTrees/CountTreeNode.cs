@@ -16,26 +16,33 @@ namespace MoreStructures.CountTrees;
 /// </typeparam>
 /// <param name="WrappedNode">The node being wrapped, and whose descendants are going to be counted.</param>
 /// <remarks>
-/// <para>
-/// Due to records semantics, and the use of value readonly dictionaries, two <see cref="CountTreeNode{TEdge, TNode}"/> 
-/// instances wrapping the same underlying node, or two equivalent nodes, will be equal. 
-/// </para>
-/// <para id="info">
+///     <para id="records-semantics">
+///     RECORDS SEMANTICS
+///     <br/>
+///     Due to records semantics, and the use of value readonly dictionaries, two 
+///     <see cref="CountTreeNode{TEdge, TNode}"/> instances wrapping the same underlying node, or two equivalent nodes, 
+///     will be equal. 
+///     </para>
 ///     <para id="iterativity">
+///     ITERATIVITY
+///     <br/>
 ///     <see cref="CountTreeNode{TEdge, TNode}"/> structure construction and properties calculation are done lazily and 
 ///     fully iteratively, so the use of this structure is not limited by call stack depth but rather by the maximum 
 ///     size of the stack stored in the heap. Convenient with deep trees (i.e. trees having a height > ~1K nodes).
 ///     </para>
 ///     <para id="caching">
+///     CACHING
+///     <br/>
 ///     Once <see cref="Children"/> and <see cref="DescendantsCount"/> properties are calculated, they are cached to 
 ///     avoid multiple calculation. This is also one of the reasons why immutability of the wrapped tree is a 
 ///     requirement to use <see cref="CountTreeNode{TEdge, TNode}"/>.
 ///     </para>
 ///     <para id="complexity">
+///     COMPLEXITY
+///     <br/>
 ///     Time Complexity = O(n) and Space Complexity = O(n) where n = number of nodes in <see cref="WrappedNode"/> 
 ///     structure. Leafs are visited only once, intermediate nodes are visited (at most) twice.
 ///     </para>
-/// </para>
 /// </remarks>
 /// <example>
 /// <code>

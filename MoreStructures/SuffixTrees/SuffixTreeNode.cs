@@ -15,6 +15,8 @@ namespace MoreStructures.SuffixTrees;
 /// </param>
 /// <remarks>
 ///     <para id="advantages">
+///     ADVANTAGES AND DISADVANTAGES
+///     <br/>
 ///     Suffix Trees are more space-efficient than Suffix Tries due to the reduced number of 
 ///     <see cref="SuffixTreeEdge"/> and their <see cref="SuffixTreeNode"/>, compare to the corresponding
 ///     <see cref="SuffixTries.SuffixTrieEdge"/> and their <see cref="SuffixTries.SuffixTrieNode"/>, due to entire 
@@ -25,7 +27,9 @@ namespace MoreStructures.SuffixTrees;
 ///     Furthermore, suffix trees, unlike suffix tries, can be constructed in linear time, for example via the 
 ///     <see cref="Builders.UkkonenSuffixTreeBuilder"/>.
 ///     </para>
-///     <para>
+///     <para id="immutability">
+///     IMMUTABILITY
+///     <br/>
 ///     Immutability is guaranteed by using <see cref="ValueReadOnlyCollection{T}"/>.
 ///     </para>
 /// </remarks>

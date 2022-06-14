@@ -18,22 +18,30 @@ public class NaiveBuilder : IBuilder
     /// <inheritdoc cref="IBuilder" path="//*[not(self::remarks)]"/>
     /// <remarks>
     ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
     ///     Since this operation requires computing a n * n matrix, where n is the 
     ///     <see cref="TextWithTerminator.Length"/> of <paramref name="text"/>, it can be intensive operation, both in 
-    ///     time: 
-    ///     <para>
-    ///     Sorting a large number of strings on a large non-constant alphabet takes n * log(n) * m, where m is
-    ///     the cost of a comparison of two n-sized strings, which is O(n). 
-    ///     Therefore Time Complexity is O(n^2 * log(n)). 
-    ///     If the alphabet can be considered of constant size and comparison between two strings happens in
-    ///     constant time, the complexity is O(n * log(n)).
-    ///     </para>
-    ///     <para>
-    ///     The output is a n * n matrix of chars (all cyclic rotations of a n-sized string). 
-    ///     Therefore Space Complexity is O(n^2 * m), when no assumption is made on the size of a char being 
-    ///     constant, where m = log(w, M), with w = size of a word in memory and M = size of the alphabet. 
-    ///     If the alphabet can be considered of constant size, the complexity is O(n^2).
-    ///     </para>
+    ///     time.
+    ///     <br/>
+    ///     Time Complexity:
+    ///     <br/>
+    ///     - Sorting a large number of strings on a large non-constant alphabet takes n * log(n) * m, where m is
+    ///       the cost of a comparison of two n-sized strings, which is O(n). 
+    ///       <br/>
+    ///     - Therefore Time Complexity is O(n^2 * log(n)). 
+    ///       <br/>
+    ///     - If the alphabet can be considered of constant size and comparison between two strings happens in
+    ///       constant time, the complexity is O(n * log(n)).
+    ///     <br/>
+    ///     Space Complexity:
+    ///     <br/>
+    ///     - The output is a n * n matrix of chars (all cyclic rotations of a n-sized string). 
+    ///       <br/>
+    ///     - Therefore Space Complexity is O(n^2 * m), when no assumption is made on the size of a char being 
+    ///       constant, where m = log(w, M), with w = size of a word in memory and M = size of the alphabet. 
+    ///       <br/>
+    ///     - If the alphabet can be considered of constant size, the complexity is O(n^2).
     ///     </para>
     /// </remarks>
     public virtual BWMatrix BuildMatrix(TextWithTerminator text)
@@ -68,16 +76,17 @@ public class NaiveBuilder : IBuilder
     /// <inheritdoc cref="IBuilder" path="//*[not(self::remarks)]"/>
     /// <remarks>
     /// <inheritdoc/>
-    ///     <para>
-    ///     Done without constructing the <see cref="BWMatrix"/> of <paramref name="text"/>, which would requires 
-    ///     O(n^2) space.
-    ///     </para>
-    ///     <para>
-    ///     Instead, n <see cref="VirtuallyRotatedTextWithTerminator"/> objects are created (one per char of 
-    ///     <paramref name="text"/>), mapping a specific rotation of the original <paramref name="text"/> and taking 
-    ///     into account the rotation in its all its char-position dependent functionalities, such as
-    ///     <see cref="VirtuallyRotatedTextWithTerminator.CompareTo(VirtuallyRotatedTextWithTerminator?)"/>, 
-    ///     <see cref="VirtuallyRotatedTextWithTerminator.GetEnumerator"/> etc.
+    ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
+    ///     - Done without constructing the <see cref="BWMatrix"/> of <paramref name="text"/>, which would requires 
+    ///       O(n^2) space.
+    ///       <br/>
+    ///     - Instead, n <see cref="VirtuallyRotatedTextWithTerminator"/> objects are created (one per char of 
+    ///       <paramref name="text"/>), mapping a specific rotation of the original <paramref name="text"/> and taking 
+    ///       into account the rotation in its all its char-position dependent functionalities, such as
+    ///       <see cref="VirtuallyRotatedTextWithTerminator.CompareTo(VirtuallyRotatedTextWithTerminator?)"/>, 
+    ///       <see cref="VirtuallyRotatedTextWithTerminator.GetEnumerator"/> etc.
     ///     </para>
     /// </remarks>
     public virtual BWTransform BuildTransform(TextWithTerminator text)
@@ -92,8 +101,11 @@ public class NaiveBuilder : IBuilder
 
     /// <inheritdoc/>
     /// <remarks>
-    /// No computation to be done, except for building the string of the <see cref="TextWithTerminator"/>.
-    /// Time Complexity = O(n), Space Complexity = O(n), where n = edge of <paramref name="matrix"/>.
+    ///     <para id="complexity">
+    ///     - No computation to be done, except for building the string of the <see cref="TextWithTerminator"/>.
+    ///       <br/>
+    ///     - Time Complexity = O(n), Space Complexity = O(n), where n = edge of <paramref name="matrix"/>.
+    ///     </para>
     /// </remarks>
     public virtual TextWithTerminator InvertMatrix(BWMatrix matrix)
     {
@@ -106,36 +118,33 @@ public class NaiveBuilder : IBuilder
     ///     <inheritdoc cref="IBuilder.InvertTransform(RotatedTextWithTerminator)" 
     ///         path="/remarks/para[@id='terminator-required']"/>
     ///     <para id="algo">
+    ///         ALGORITHM
+    ///         <br/>
     ///         This implementation inverts the BWT by iteratively building n+1-mers from n-mers.
-    ///         <para>
+    ///         <br/>
     ///         - 1-mers (first column of the matrix) is just the last column (BWT), sorted.
     ///           That gives a matrix M0 of 1 columns and n rows (where n = length of 
     ///           <paramref name="lastBWMColumn"/>).
+    ///           <br/>
     ///         - 2-mers are derived from 1-mers, by juxtaposing side-by-side last column (BWT) and M0, sorted.
     ///           That gives a matrix M1 of 2 columns and n rows.
-    ///         </para>
-    ///         <para>
+    ///           <br/>
     ///         - 3-mers are derived from 2-mers, by juxtaposing side-by-side last column (BWT) and M1, sorted.
     ///           That gives a matrix M2 of 3 columns and n rows.
-    ///         </para>
-    ///         <para>
+    ///           <br/>
     ///         - And so on, up to (n - 1)-mers and matrix M(n - 2) of n - 1 columns and n rows.
-    ///         </para>
-    ///         <para>
+    ///           <br/>
     ///         - The last column is already known (BWT), so the text can be extracted from the first line: the first
     ///           char is the separator, the rest is the text without separator.
-    ///         </para>
     ///     </para>
     ///     <para id="complexity">
-    ///         <para>
-    ///         There are n top-level iterations, where n is the length of <paramref name="lastBWMColumn"/>.
-    ///         </para>
-    ///         <para>
-    ///         Each iteration takes n * log(n) * m time to sort, where m is the length of strings to compare = n.
-    ///         </para>
-    ///         <para>
-    ///         So total Time Complexity is O(n^3 * log(n)) and Space Complexity is O(n^2).
-    ///         </para>
+    ///         COMPLEXITY
+    ///         <br/>
+    ///         - There are n top-level iterations, where n is the length of <paramref name="lastBWMColumn"/>.
+    ///           <br/>
+    ///         - Each iteration takes n * log(n) * m time to sort, where m is the length of strings to compare = n.
+    ///           <br/>
+    ///         - So total Time Complexity is O(n^3 * log(n)) and Space Complexity is O(n^2).
     ///     </para>
     /// </remarks>
     public virtual TextWithTerminator InvertTransform(RotatedTextWithTerminator lastBWMColumn)

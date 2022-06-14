@@ -10,7 +10,9 @@ namespace MoreStructures.RecImmTrees.Conversions;
 /// </summary>
 /// <remarks>
 ///     <inheritdoc cref="IStringifier{TEdge, TNode}" path="/remarks"/>
-///     <para>
+///     <para id="advantages">
+///     ADVANTAGES AND DISADVANTAGES
+///     <br/>
 ///     Implemented fully recursively, so limited by stack depth and usable with tree of a "reasonable" height.
 ///     </para>
 /// </remarks>

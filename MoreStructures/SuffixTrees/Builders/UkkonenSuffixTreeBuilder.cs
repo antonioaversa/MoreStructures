@@ -13,7 +13,9 @@ namespace MoreStructures.SuffixTrees.Builders;
 ///     <see href = "https://en.wikipedia.org/wiki/Ukkonen%27s_algorithm" /> for an introduction and
 ///     <see href="https://www.cs.helsinki.fi/u/ukkonen/SuffixT1withFigs.pdf"/> for the original paper.
 ///     </para>
-///     <para id="optimizations">
+///     <para id="algo-optimizations">
+///     ALGORITHM OPTIMIZATIONS
+///     <br/>
 ///     The algorithm applies some optimizations to achieve linear complexity:
 ///     <br/>
 ///     - <b>Edge Labels compression</b>: strings on edges are stored as (start, end) indexes. This makes the space
@@ -28,7 +30,9 @@ namespace MoreStructures.SuffixTrees.Builders;
 ///       efficient traversal, because storing and jumping the suffix link when needed means traversal doesn't 
 ///       have to be done again.
 ///     </para>
-///     <para id="structure">
+///     <para id="algo">
+///     ALGORITHM
+///     <br/>
 ///     The algorithm is structured in phases, as many as the number of chars in the text.
 ///     <br/>
 ///     At the beginning of a new phase, both the number of remaining suffixes to take care of, and the global end
@@ -38,9 +42,13 @@ namespace MoreStructures.SuffixTrees.Builders;
 ///     At the beginning 
 ///     </para>
 ///     <para id="usecases">
+///     USECASES
+///     <br/>
 ///     Not limited by call stack depth. Convenient with long input text (i.e. string having a length &lt; ~1K chars).
 ///     </para>
 ///     <para id="complexity">
+///     COMPLEXITY
+///     <br/>
 ///     Time Complexity = O(t * as) and Space Complexity = O(2 * t) where t = length of the text to match and
 ///     as = size of the alphabet of the text. If the alphabet is of constant size, Time Complexity is linear.
 ///     Otherwise it is O(t * log(t)).

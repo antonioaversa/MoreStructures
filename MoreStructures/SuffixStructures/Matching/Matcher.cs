@@ -24,6 +24,8 @@ public static class Matcher
     /// <returns>A successful or non-successful match.</returns>
     /// <remarks>
     ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
     ///     Time Complexity = O(t * as) and Space Complexity = O(t * as) where t = length of the text to match and
     ///     as = size of the alphabet of the text. If the alphabet is of constant size, complexity is linear.
     ///     </para>

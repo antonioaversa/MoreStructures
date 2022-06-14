@@ -17,6 +17,8 @@ public interface IConverter
     /// <returns>A tree, equivalent to the provided trie.</returns>
     /// <remarks>
     ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
     ///     Time Complexity = O(n) and Space Complexity = O(n) where n = number of nodes in the input structure.
     ///     Each node of the input trie is visited at most twice and coalescing reduces the number of nodes.
     ///     </para>
@@ -31,9 +33,14 @@ public interface IConverter
     /// <returns>A trie, equivalent to the provided tree.</returns>
     /// <remarks>
     ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
     ///     Time Complexity = O(n^2) and Space Complexity = O(n^2) where n = number of nodes in the input structure.
-    ///     Each node of the input tree is visited at most twice, but expansion increase the number of nodes, in the
-    ///     worst case to the number of characters in all suffixes of the text which has generated the tree.
+    ///     <br/>
+    ///     Each node of the input tree is visited at most twice.
+    ///     <br/>
+    ///     However, expansion increase the number of nodes, in the worst case to the number of characters in all 
+    ///     suffixes of the text which has generated the tree.
     ///     </para>
     /// </remarks>
     SuffixTrieNode TreeToTrie(SuffixTreeNode treeNode);
