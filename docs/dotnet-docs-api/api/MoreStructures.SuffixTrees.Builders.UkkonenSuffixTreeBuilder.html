@@ -132,6 +132,8 @@ Iterative implementation of the Ukkonen algorithm: see
 <a href="https://www.cs.helsinki.fi/u/ukkonen/SuffixT1withFigs.pdf">https://www.cs.helsinki.fi/u/ukkonen/SuffixT1withFigs.pdf</a> for the original paper.
 </p>
 <p>
+ALGORITHM OPTIMIZATIONS
+<br>
 The algorithm applies some optimizations to achieve linear complexity:
 <br>
 - <strong>Edge Labels compression</strong>: strings on edges are stored as (start, end) indexes. This makes the space
@@ -147,6 +149,8 @@ efficient traversal, because storing and jumping the suffix link when needed mea
 have to be done again.
 </p>
 <p>
+ALGORITHM
+<br>
 The algorithm is structured in phases, as many as the number of chars in the text.
 <br>
 At the beginning of a new phase, both the number of remaining suffixes to take care of, and the global end
@@ -156,9 +160,13 @@ Each phase is composed of at least 1 iteration, each one taking care of remainin
 At the beginning 
 </p>
 <p>
+USECASES
+<br>
 Not limited by call stack depth. Convenient with long input text (i.e. string having a length &lt; ~1K chars).
 </p>
 <p>
+COMPLEXITY
+<br>
 Time Complexity = O(t * as) and Space Complexity = O(2 * t) where t = length of the text to match and
 as = size of the alphabet of the text. If the alphabet is of constant size, Time Complexity is linear.
 Otherwise it is O(t * log(t)).
@@ -174,7 +182,7 @@ phase (as many as the number of remaining suffixes to process), the complexity i
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTrees_Builders_UkkonenSuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/UkkonenSuffixTreeBuilder.cs/#L61">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/UkkonenSuffixTreeBuilder.cs/#L69">View Source</a>
   </span>
   <a id="MoreStructures_SuffixTrees_Builders_UkkonenSuffixTreeBuilder_BuildTree_" data-uid="MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.BuildTree*"></a>
   <h4 id="MoreStructures_SuffixTrees_Builders_UkkonenSuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator_" data-uid="MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator)">BuildTree(TextWithTerminator)</h4>
@@ -239,7 +247,7 @@ phase (as many as the number of remaining suffixes to process), the complexity i
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTrees_Builders_UkkonenSuffixTreeBuilder.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/UkkonenSuffixTreeBuilder.cs/#L52" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/UkkonenSuffixTreeBuilder.cs/#L60" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

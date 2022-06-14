@@ -127,22 +127,24 @@
   </div>
   <h5 id="MoreStructures_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilder_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>
+ALGORITHM
+<br>
 Implemented as an iteration of recursive visit of the tree being built, with as many iterations as the number 
 of suffix of the input (where the longest suffix is the text itself) and one level of recursion per char of 
 each suffix. 
-</p>
-<p>
+<br>
 Limited by call stack depth and usable with input text of a &quot;reasonable&quot; length (i.e. string having a length 
 &lt; ~1K chars).
 </p>
 <p>
-Time Complexity = O(t^2 * as) and Space Complexity = O(t) where t = length of the text to match and
-as = size of the alphabet of the text. If the alphabet is of constant size, Time Complexity is quadratic.
-<p>
-Compared to tries, trees are more compact due to edge coalescing and edge label compression (i.e. edge 
+COMPLEXITY
+<br>
+- Time Complexity = O(t^2 * as) and Space Complexity = O(t) where t = length of the text to match and
+  as = size of the alphabet of the text. If the alphabet is of constant size, Time Complexity is quadratic.
+<br>
+- Compared to tries, trees are more compact due to edge coalescing and edge label compression (i.e. edge 
 strings stored as pair (start, length), rather than as a substring of length chars). Each recursion add a 
-leaf and at most one intermediate node, so Space Complexity ~ 2 * t = O(t). 
-</p>
+leaf and at most one intermediate node, so Space Complexity ~ 2 * t = O(t).
 </p>
 </div>
   <h3 id="methods">Methods
@@ -152,7 +154,7 @@ leaf and at most one intermediate node, so Space Complexity ~ 2 * t = O(t).
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/NaivePartiallyRecursiveSuffixTreeBuilder.cs/#L38">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/NaivePartiallyRecursiveSuffixTreeBuilder.cs/#L40">View Source</a>
   </span>
   <a id="MoreStructures_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilder_BuildTree_" data-uid="MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree*"></a>
   <h4 id="MoreStructures_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator_" data-uid="MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator)">BuildTree(TextWithTerminator)</h4>
@@ -217,7 +219,7 @@ leaf and at most one intermediate node, so Space Complexity ~ 2 * t = O(t).
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilder.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/NaivePartiallyRecursiveSuffixTreeBuilder.cs/#L29" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/NaivePartiallyRecursiveSuffixTreeBuilder.cs/#L31" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

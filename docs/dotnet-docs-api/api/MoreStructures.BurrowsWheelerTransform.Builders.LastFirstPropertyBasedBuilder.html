@@ -186,7 +186,7 @@ and its sorted version.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstPropertyBasedBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstPropertyBasedBuilder.cs/#L70">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstPropertyBasedBuilder.cs/#L73">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstPropertyBasedBuilder_InvertTransform_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.InvertTransform*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstPropertyBasedBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)">InvertTransform(RotatedTextWithTerminator)</h4>
@@ -233,8 +233,11 @@ and its sorted version.</p>
   <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstPropertyBasedBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p><inheritdoc path="/remarks/para[@id=&apos;terminator-required&apos;]"></inheritdoc></p>
 <p>
-    This implementation inverts the BWT by using the last-first property.
-    - First column of the matrix (sBWT) is just the last column (BWT), sorted.
+ALGORITHM
+<br>
+This implementation inverts the BWT by using the last-first property.
+<br>
+- First column of the matrix (sBWT) is just the last column (BWT), sorted.
 <br>
 - By last-first property, the 1-st (and only) occurrence of terminator in sBWT at sBWT[0] corresponds 
 to the 1st occurrence of terminator in BWT at BWT[i0]. BWTs[i0] is the 1-st char of the text.
@@ -245,7 +248,7 @@ occurrence of c in BWT at BWT[i1]. BWTs[i1] is the 2-st char of the text.
 - And so on, until BWTs[i(n-1)], the terminator, is reached.
 </p>
 <p>
-    Complexity:
+COMPLEXITY
 <br>
 - Before any iteration, Sorted BWT is computed, taking O(n * log(n)) time, where n is the length of 
 <code data-dev-comment-type="paramref" class="paramref">lastBWMColumn</code>. If the alphabet is of constant size sigma, Counting Sort reduces 

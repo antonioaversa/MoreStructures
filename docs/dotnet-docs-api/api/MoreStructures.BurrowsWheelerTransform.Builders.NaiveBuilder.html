@@ -140,7 +140,7 @@ information about the complexity of each operation.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildMatrix_MoreStructures_BurrowsWheelerTransform_BWTransform_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildMatrix(MoreStructures.BurrowsWheelerTransform.BWTransform)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/NaiveBuilder.cs/#L52">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/NaiveBuilder.cs/#L60">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildMatrix_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildMatrix*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildMatrix_MoreStructures_BurrowsWheelerTransform_BWTransform_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildMatrix(MoreStructures.BurrowsWheelerTransform.BWTransform)">BuildMatrix(BWTransform)</h4>
@@ -196,7 +196,7 @@ last column.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildMatrix_MoreStructures_TextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildMatrix(MoreStructures.TextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/NaiveBuilder.cs/#L39">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/NaiveBuilder.cs/#L47">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildMatrix_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildMatrix*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildMatrix_MoreStructures_TextWithTerminator_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildMatrix(MoreStructures.TextWithTerminator)">BuildMatrix(TextWithTerminator)</h4>
@@ -244,22 +244,30 @@ last column.</p>
   </table>
   <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildMatrix_MoreStructures_TextWithTerminator__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
+COMPLEXITY
+<br>
 Since this operation requires computing a n * n matrix, where n is the 
 <a class="xref" href="MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_Length">Length</a> of <code data-dev-comment-type="paramref" class="paramref">text</code>, it can be intensive operation, both in 
-time: 
-<p>
-Sorting a large number of strings on a large non-constant alphabet takes n * log(n) * m, where m is
-the cost of a comparison of two n-sized strings, which is O(n). 
-Therefore Time Complexity is O(n^2 * log(n)). 
-If the alphabet can be considered of constant size and comparison between two strings happens in
+time.
+<br>
+Time Complexity:
+<br>
+- Sorting a large number of strings on a large non-constant alphabet takes n * log(n) * m, where m is
+  the cost of a comparison of two n-sized strings, which is O(n). 
+<br>
+- Therefore Time Complexity is O(n^2 * log(n)). 
+<br>
+- If the alphabet can be considered of constant size and comparison between two strings happens in
 constant time, the complexity is O(n * log(n)).
-</p>
-<p>
-The output is a n * n matrix of chars (all cyclic rotations of a n-sized string). 
-Therefore Space Complexity is O(n^2 * m), when no assumption is made on the size of a char being 
+<br>
+Space Complexity:
+<br>
+- The output is a n * n matrix of chars (all cyclic rotations of a n-sized string). 
+<br>
+- Therefore Space Complexity is O(n^2 * m), when no assumption is made on the size of a char being 
 constant, where m = log(w, M), with w = size of a word in memory and M = size of the alphabet. 
-If the alphabet can be considered of constant size, the complexity is O(n^2).
-</p>
+<br>
+- If the alphabet can be considered of constant size, the complexity is O(n^2).
 </p>
 </div>
   <span class="small pull-right mobile-hide">
@@ -267,7 +275,7 @@ If the alphabet can be considered of constant size, the complexity is O(n^2).
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildTransform_MoreStructures_BurrowsWheelerTransform_BWMatrix_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildTransform(MoreStructures.BurrowsWheelerTransform.BWMatrix)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/NaiveBuilder.cs/#L66">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/NaiveBuilder.cs/#L74">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildTransform_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildTransform*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildTransform_MoreStructures_BurrowsWheelerTransform_BWMatrix_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildTransform(MoreStructures.BurrowsWheelerTransform.BWMatrix)">BuildTransform(BWMatrix)</h4>
@@ -320,7 +328,7 @@ If the alphabet can be considered of constant size, the complexity is O(n^2).
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildTransform_MoreStructures_TextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildTransform(MoreStructures.TextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/NaiveBuilder.cs/#L83">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/NaiveBuilder.cs/#L92">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildTransform_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildTransform*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildTransform_MoreStructures_TextWithTerminator_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildTransform(MoreStructures.TextWithTerminator)">BuildTransform(TextWithTerminator)</h4>
@@ -369,11 +377,12 @@ If the alphabet can be considered of constant size, the complexity is O(n^2).
   <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildTransform_MoreStructures_TextWithTerminator__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p><inheritdoc></inheritdoc></p>
 <p>
-Done without constructing the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a> of <code data-dev-comment-type="paramref" class="paramref">text</code>, which would requires 
-O(n^2) space.
-</p>
-<p>
-Instead, n <a class="xref" href="MoreStructures.VirtuallyRotatedTextWithTerminator.html">VirtuallyRotatedTextWithTerminator</a> objects are created (one per char of 
+COMPLEXITY
+<br>
+- Done without constructing the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a> of <code data-dev-comment-type="paramref" class="paramref">text</code>, which would requires 
+  O(n^2) space.
+<br>
+- Instead, n <a class="xref" href="MoreStructures.VirtuallyRotatedTextWithTerminator.html">VirtuallyRotatedTextWithTerminator</a> objects are created (one per char of 
 <code data-dev-comment-type="paramref" class="paramref">text</code>), mapping a specific rotation of the original <code data-dev-comment-type="paramref" class="paramref">text</code> and taking 
 into account the rotation in its all its char-position dependent functionalities, such as
 <a class="xref" href="MoreStructures.VirtuallyRotatedTextWithTerminator.html#MoreStructures_VirtuallyRotatedTextWithTerminator_CompareTo_MoreStructures_VirtuallyRotatedTextWithTerminator_">CompareTo(VirtuallyRotatedTextWithTerminator)</a>, 
@@ -385,7 +394,7 @@ into account the rotation in its all its char-position dependent functionalities
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertMatrix_MoreStructures_BurrowsWheelerTransform_BWMatrix_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertMatrix(MoreStructures.BurrowsWheelerTransform.BWMatrix)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/NaiveBuilder.cs/#L98">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/NaiveBuilder.cs/#L110">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertMatrix_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertMatrix*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertMatrix_MoreStructures_BurrowsWheelerTransform_BWMatrix_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertMatrix(MoreStructures.BurrowsWheelerTransform.BWMatrix)">InvertMatrix(BWMatrix)</h4>
@@ -431,15 +440,18 @@ into account the rotation in its all its char-position dependent functionalities
     </tbody>
   </table>
   <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertMatrix_MoreStructures_BurrowsWheelerTransform_BWMatrix__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>No computation to be done, except for building the string of the <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>.
-Time Complexity = O(n), Space Complexity = O(n), where n = edge of <code data-dev-comment-type="paramref" class="paramref">matrix</code>.</p>
+  <div class="markdown level1 remarks"><p>
+- No computation to be done, except for building the string of the <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>.
+<br>
+- Time Complexity = O(n), Space Complexity = O(n), where n = edge of <code data-dev-comment-type="paramref" class="paramref">matrix</code>.
+</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/NaiveBuilder.cs/#L141">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/NaiveBuilder.cs/#L150">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertTransform_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertTransform*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)">InvertTransform(RotatedTextWithTerminator)</h4>
@@ -484,36 +496,33 @@ Time Complexity = O(n), Space Complexity = O(n), where n = edge of <code data-de
   <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p><inheritdoc cref="M:MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)" path="/remarks/para[@id=&apos;terminator-required&apos;]"></inheritdoc></p>
 <p>
-    This implementation inverts the BWT by iteratively building n+1-mers from n-mers.
-<p>
+    ALGORITHM
+<br>
+This implementation inverts the BWT by iteratively building n+1-mers from n-mers.
+<br>
 - 1-mers (first column of the matrix) is just the last column (BWT), sorted.
   That gives a matrix M0 of 1 columns and n rows (where n = length of 
 <code data-dev-comment-type="paramref" class="paramref">lastBWMColumn</code>).
+<br>
 - 2-mers are derived from 1-mers, by juxtaposing side-by-side last column (BWT) and M0, sorted.
 That gives a matrix M1 of 2 columns and n rows.
-</p>
-<p>
+<br>
 - 3-mers are derived from 2-mers, by juxtaposing side-by-side last column (BWT) and M1, sorted.
-  That gives a matrix M2 of 3 columns and n rows.
-</p>
-<p>
+That gives a matrix M2 of 3 columns and n rows.
+<br>
 - And so on, up to (n - 1)-mers and matrix M(n - 2) of n - 1 columns and n rows.
-</p>
-<p>
+<br>
 - The last column is already known (BWT), so the text can be extracted from the first line: the first
-  char is the separator, the rest is the text without separator.
-</p>
-</p>
-<p>
-<p>
-There are n top-level iterations, where n is the length of <code data-dev-comment-type="paramref" class="paramref">lastBWMColumn</code>.
+char is the separator, the rest is the text without separator.
 </p>
 <p>
-Each iteration takes n * log(n) * m time to sort, where m is the length of strings to compare = n.
-</p>
-<p>
-So total Time Complexity is O(n^3 * log(n)) and Space Complexity is O(n^2).
-</p>
+    COMPLEXITY
+<br>
+- There are n top-level iterations, where n is the length of <code data-dev-comment-type="paramref" class="paramref">lastBWMColumn</code>.
+<br>
+- Each iteration takes n * log(n) * m time to sort, where m is the length of strings to compare = n.
+<br>
+- So total Time Complexity is O(n^3 * log(n)) and Space Complexity is O(n^2).
 </p>
 </div>
   <h3 id="implements">Implements</h3>

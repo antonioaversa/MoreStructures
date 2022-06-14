@@ -347,7 +347,7 @@ and can just instantiate a <a class="xref" href="MoreStructures.BurrowsWheelerTr
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher_NarrowInterval_System_Char_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.NarrowInterval(System.Char%2CMoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/CountBasedNarrowingIntervalMatcher.cs/#L94">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/CountBasedNarrowingIntervalMatcher.cs/#L97">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher_NarrowInterval_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.NarrowInterval*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher_NarrowInterval_System_Char_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_System_Int32_System_Int32_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.NarrowInterval(System.Char,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder,System.Int32,System.Int32)">NarrowInterval(Char, ILastFirstFinder, Int32, Int32)</h4>
@@ -408,7 +408,9 @@ and can just instantiate a <a class="xref" href="MoreStructures.BurrowsWheelerTr
   <div><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_NarrowInterval_System_Char_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_System_Int32_System_Int32_">NarrowingIntervalMatcher.NarrowInterval(Char, ILastFirstFinder, Int32, Int32)</a></div>
   <h5 id="MoreStructures_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcher_NarrowInterval_System_Char_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_System_Int32_System_Int32__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
-    Narrowing is performed in three sub-steps (compared to the five in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html">NarrowingIntervalMatcher</a>):
+    ALGORITHM
+<br>
+Narrowing is performed in three sub-steps (compared to the five in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html">NarrowingIntervalMatcher</a>):
 <br>
 1. The new start index is calculated as the 1st occurrence in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_SortedBWT">SortedBWT</a> of the 
 current char + the count of such char in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_BWT">BWT</a> up to the current start index excluded 
@@ -419,10 +421,11 @@ char + the count of such char in <a class="xref" href="MoreStructures.BurrowsWhe
 one (i.e. the number of occurrences of the char up to the current end index - 1).
 <br>
 3. The narrowed interval in Sorted BWT is returned.
-<br>
 </p>
 <p>
-    Total amortized cost is O(1), both in time and space.
+    COMPLEXITY
+<br>
+Total amortized cost is O(1), both in time and space.
 </p>
 </div>
   <h3 id="implements">Implements</h3>
