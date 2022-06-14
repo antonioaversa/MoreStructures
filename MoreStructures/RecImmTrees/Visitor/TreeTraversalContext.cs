@@ -11,6 +11,9 @@
 /// <param name="IncomingEdge">
 /// The edge outgoing from the parent, traversed to reach this node. Null when visiting the root node.
 /// </param>
-public record TreeTraversalContext<TEdge, TNode>(TNode? ParentNode, TEdge? IncomingEdge)
+/// <param name="Level">
+/// The level of visit: 0 is assigned to the top-level node, 1 to its children, 2 to its grandchildren, etc.
+/// </param>
+public record TreeTraversalContext<TEdge, TNode>(TNode? ParentNode, TEdge? IncomingEdge, int Level)
     where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>
     where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode>;

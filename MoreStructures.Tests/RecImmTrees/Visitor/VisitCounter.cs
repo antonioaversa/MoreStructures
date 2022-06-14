@@ -14,6 +14,4 @@ internal class VisitCounter
         CountOfVisitedNodes = 0;
         Visitor = visit => CountOfVisitedNodes++;
     }
-
-    public void Reset() => CountOfVisitedNodes = 0;
 }

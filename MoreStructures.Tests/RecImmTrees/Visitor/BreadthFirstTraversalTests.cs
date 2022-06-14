@@ -5,7 +5,63 @@ using System.Linq;
 
 namespace MoreStructures.Tests.RecImmTrees.Visitor;
 
-public abstract class BreadthFirstTraversalTests<TBreadthFirstTraversal>
+public abstract class TreeTraversalTests<TTreeTraversal>
+     where TTreeTraversal : TreeTraversal<TreeMock.Edge, TreeMock.Node>, new()
+{
+
+
+    [TestMethod]
+    public void Visit_ParentIsCorrect()
+    {
+        Assert.IsTrue(
+            new TTreeTraversal()
+            {
+                TraversalOrder = TreeTraversalOrder.ParentFirst,
+                ChildrenSorter = TreeMock.EdgeIdBasedChildrenSorter,
+            }
+            .Visit(TreeMock.BuildDocExample())
+            .All(visit => visit.Context.ParentNode?.Children.Values.Contains(visit.Node) ?? true));
+    }
+
+    [TestMethod]
+    public void Visit_IncomingEdgeIsCorrect()
+    {
+        Assert.IsTrue(
+            new TTreeTraversal()
+            {
+                TraversalOrder = TreeTraversalOrder.ParentFirst,
+                ChildrenSorter = TreeMock.EdgeIdBasedChildrenSorter,
+            }
+            .Visit(TreeMock.BuildDocExample())
+            .All(visit => 
+                visit.Context.ParentNode == null || 
+                visit.Context.ParentNode.Children[visit.Context.IncomingEdge!] == visit.Node));
+    }
+
+    [TestMethod]
+    public void Visit_LevelIsCorrect()
+    {
+        var visits =
+            new TTreeTraversal()
+            {
+                TraversalOrder = TreeTraversalOrder.ParentFirst,
+                ChildrenSorter = TreeMock.EdgeIdBasedChildrenSorter,
+            }
+            .Visit(TreeMock.BuildDocExample())
+            .ToList();
+
+        Assert.IsTrue((
+            from visit in visits
+            let parentNode = visit.Context.ParentNode
+            where parentNode != null
+            let parentLevel = visits.Single(v => v.Node.Id == parentNode.Id).Context.Level
+            select visit.Context.Level == parentLevel + 1)
+            .All(b => b));
+    }
+}
+
+public abstract class BreadthFirstTraversalTests<TBreadthFirstTraversal> 
+    : TreeTraversalTests<TBreadthFirstTraversal>
     where TBreadthFirstTraversal : BreadthFirstTraversal<TreeMock.Edge, TreeMock.Node>, new()
 {
     [TestMethod]
@@ -117,8 +173,6 @@ public abstract class BreadthFirstTraversalTests<TBreadthFirstTraversal>
     [TestMethod]
     public void Visit_TraversalOrderNotSupported_OnSingleton()
     {
-        static int nopVisitor(TreeTraversalVisit<TreeMock.Edge, TreeMock.Node> visit) => 0;
-
         var visitStrategy = new TBreadthFirstTraversal()
         {
             TraversalOrder = (TreeTraversalOrder)(-1),
@@ -126,14 +180,12 @@ public abstract class BreadthFirstTraversalTests<TBreadthFirstTraversal>
         };
 
         Assert.ThrowsException<NotSupportedException>(
-            () => visitStrategy.Visit(new TreeMock.Node(0)).Select(nopVisitor).ToList());
+            () => visitStrategy.Visit(new TreeMock.Node(0)).ToList());
     }
 
     [TestMethod]
     public void Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes()
     {
-        static int nopVisitor(TreeTraversalVisit<TreeMock.Edge, TreeMock.Node> visit) => 0;
-
         var root = TreeMock.BuildExampleTree();
         var visitStrategy = new TBreadthFirstTraversal()
         {
@@ -142,7 +194,7 @@ public abstract class BreadthFirstTraversalTests<TBreadthFirstTraversal>
         };
 
         Assert.ThrowsException<NotSupportedException>(
-            () => visitStrategy.Visit(root).Select(nopVisitor).ToList());
+            () => visitStrategy.Visit(root).ToList());
     }
 
     [TestMethod]

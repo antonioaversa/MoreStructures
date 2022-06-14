@@ -56,25 +56,27 @@ public class FullyRecursiveDepthFirstTraversal<TEdge, TNode>
     ///       O(n * Sv), where Sv is the space cost of visitor per node.
     ///     </para>
     /// </remarks>
-    public override IEnumerable<TreeTraversalVisit<TEdge, TNode>> Visit(TNode node) => Visit(node, default, default);
+    public override IEnumerable<TreeTraversalVisit<TEdge, TNode>> Visit(TNode node) => 
+        Visit(node, default, default, 0);
 
-    private IEnumerable<TreeTraversalVisit<TEdge, TNode>> Visit(TNode node, TNode? parentNode, TEdge? parentEdge)
+    private IEnumerable<TreeTraversalVisit<TEdge, TNode>> Visit(
+        TNode node, TNode? parentNode, TEdge? parentEdge, int level)
     {
         switch (TraversalOrder)
         {
             case TreeTraversalOrder.ParentFirst:
-                yield return new(node, new(parentNode, parentEdge));
+                yield return new(node, new(parentNode, parentEdge, level));
                 foreach (var child in ChildrenSorter(node.Children))
-                    foreach (var visit in Visit(child.Value, node, child.Key))
+                    foreach (var visit in Visit(child.Value, node, child.Key, level + 1))
                         yield return visit;
 
                 break;
 
             case TreeTraversalOrder.ChildrenFirst:
                 foreach (var child in ChildrenSorter(node.Children))
-                    foreach (var visit in Visit(child.Value, node, child.Key))
+                    foreach (var visit in Visit(child.Value, node, child.Key, level + 1))
                         yield return visit;
-                yield return new(node, new(parentNode, parentEdge));
+                yield return new(node, new(parentNode, parentEdge, level));
 
                 break;
 

@@ -22,7 +22,7 @@ public class FullyIterativeBreadthFirstTraversal<TEdge, TNode>
     where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>
     where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode>
 {
-    private record struct Item(TNode? ParentNode, TEdge? IncomingEdge, TNode Node);
+    private record struct Item(TNode? ParentNode, TEdge? IncomingEdge, TNode Node, int Level);
 
     /// <inheritdoc 
     ///     cref="TreeTraversal{TEdge, TNode}.Visit(TNode)" 
@@ -74,7 +74,7 @@ public class FullyIterativeBreadthFirstTraversal<TEdge, TNode>
             case TreeTraversalOrder.ParentFirst:
                 {
                     var traversalQueue = new Queue<Item>();
-                    traversalQueue.Enqueue(new(default, default, node));
+                    traversalQueue.Enqueue(new(default, default, node, 0));
 
                     var visitQueue = new Queue<Item>();
 
@@ -83,8 +83,8 @@ public class FullyIterativeBreadthFirstTraversal<TEdge, TNode>
 
                     while (visitQueue.Count > 0)
                     {
-                        var (parentNode, incomingEdge, visitedNode) = visitQueue.Dequeue();
-                        yield return new(visitedNode, new(parentNode, incomingEdge));
+                        var (parentNode, incomingEdge, visitedNode, level) = visitQueue.Dequeue();
+                        yield return new(visitedNode, new(parentNode, incomingEdge, level));
                     }
                 }
 
@@ -93,7 +93,7 @@ public class FullyIterativeBreadthFirstTraversal<TEdge, TNode>
             case TreeTraversalOrder.ChildrenFirst:
                 {
                     var traversalQueue = new Queue<Item>();
-                    traversalQueue.Enqueue(new(default, default, node));
+                    traversalQueue.Enqueue(new(default, default, node, 0));
 
                     var visitStack = new Stack<Item>();
 
@@ -102,8 +102,8 @@ public class FullyIterativeBreadthFirstTraversal<TEdge, TNode>
 
                     while (visitStack.Count > 0)
                     {
-                        var (parentNode, incomingEdge, visitedNode) = visitStack.Pop();
-                        yield return new(visitedNode, new(parentNode, incomingEdge));
+                        var (parentNode, incomingEdge, visitedNode, level) = visitStack.Pop();
+                        yield return new(visitedNode, new(parentNode, incomingEdge, level));
                     }
                 }
 
@@ -116,19 +116,19 @@ public class FullyIterativeBreadthFirstTraversal<TEdge, TNode>
 
     private void ProcessParentFirstTraversalQueue(Queue<Item> traversalQueue, Queue<Item> visitQueue)
     {
-        var (parentNode, incomingEdge, node) = traversalQueue.Dequeue();
+        var (parentNode, incomingEdge, node, level) = traversalQueue.Dequeue();
 
-        visitQueue.Enqueue(new(parentNode, incomingEdge, node));
+        visitQueue.Enqueue(new(parentNode, incomingEdge, node, level));
         foreach (var child in ChildrenSorter(node.Children))
-            traversalQueue.Enqueue(new(node, child.Key, child.Value));
+            traversalQueue.Enqueue(new(node, child.Key, child.Value, level + 1));
     }
 
     private void ProcessChildrenFirstTraversalQueue(Queue<Item> traversalQueue, Stack<Item> visitStack)
     {
-        var (parentNode, incomingEdge, node) = traversalQueue.Dequeue();
+        var (parentNode, incomingEdge, node, level) = traversalQueue.Dequeue();
 
-        visitStack.Push(new(parentNode, incomingEdge, node));
+        visitStack.Push(new(parentNode, incomingEdge, node, level));
         foreach (var child in ChildrenSorter(node.Children).Reverse())
-            traversalQueue.Enqueue(new(node, child.Key, child.Value));
+            traversalQueue.Enqueue(new(node, child.Key, child.Value, level + 1));
     }
 }

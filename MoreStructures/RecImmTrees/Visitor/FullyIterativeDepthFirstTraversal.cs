@@ -20,7 +20,8 @@ public class FullyIterativeDepthFirstTraversal<TEdge, TNode>
     where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>
     where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode>
 {
-    private record struct StackFrame(TNode? ParentNode, TEdge? IncomingEdge, TNode Node, bool ChildrenStacked);
+    private record struct StackFrame(
+        TNode? ParentNode, TEdge? IncomingEdge, TNode Node, bool ChildrenStacked, int Level);
 
     /// <inheritdoc 
     ///     cref="TreeTraversal{TEdge, TNode}.Visit(TNode)" 
@@ -78,7 +79,7 @@ public class FullyIterativeDepthFirstTraversal<TEdge, TNode>
     public override IEnumerable<TreeTraversalVisit<TEdge, TNode>> Visit(TNode node)
     {
         var stack = new Stack<StackFrame> { };
-        stack.Push(new (default, default, node, false));
+        stack.Push(new (default, default, node, false, 0));
         while (stack.Count > 0)
         {
             if (ProcessStack(stack) is TreeTraversalVisit<TEdge, TNode> visit)
@@ -88,14 +89,14 @@ public class FullyIterativeDepthFirstTraversal<TEdge, TNode>
 
     private TreeTraversalVisit<TEdge, TNode>? ProcessStack(Stack<StackFrame> stack)
     {
-        var (parentNode, incomingEdge, node, childrenStacked) = stack.Pop();
+        var (parentNode, incomingEdge, node, childrenStacked, level) = stack.Pop();
 
         if (node.IsLeaf())
         {
             return TraversalOrder switch
             {
                 TreeTraversalOrder.ParentFirst or TreeTraversalOrder.ChildrenFirst => 
-                    new(node, new(parentNode, incomingEdge)),
+                    new(node, new(parentNode, incomingEdge, level)),
                 _ => 
                     throw new NotSupportedException($"{nameof(TreeTraversalOrder)} {TraversalOrder} is not supported"),
             };
@@ -107,15 +108,15 @@ public class FullyIterativeDepthFirstTraversal<TEdge, TNode>
             {
                 case TreeTraversalOrder.ParentFirst:
                     foreach (var child in ChildrenSorter(node.Children).Reverse())
-                        stack.Push(new(node, child.Key, child.Value, false));
-                    stack.Push(new(parentNode, incomingEdge, node, true));
+                        stack.Push(new(node, child.Key, child.Value, false, level + 1));
+                    stack.Push(new(parentNode, incomingEdge, node, true, level));
 
                     break;
 
                 case TreeTraversalOrder.ChildrenFirst:
-                    stack.Push(new(parentNode, incomingEdge, node, true));
+                    stack.Push(new(parentNode, incomingEdge, node, true, level));
                     foreach (var child in ChildrenSorter(node.Children).Reverse())
-                        stack.Push(new(node, child.Key, child.Value, false));
+                        stack.Push(new(node, child.Key, child.Value, false, level + 1));
 
                     break;
 
@@ -126,6 +127,6 @@ public class FullyIterativeDepthFirstTraversal<TEdge, TNode>
             return null;
         }
 
-        return new(node, new(parentNode, incomingEdge));
+        return new(node, new(parentNode, incomingEdge, level));
     }
 }
