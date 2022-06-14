@@ -8,7 +8,9 @@
 /// </summary>
 /// <remarks>
 ///     <inheritdoc cref="BreadthFirstTraversal{TEdge, TNode}" path="/remarks"/>
-///     <para>
+///     <para id="advantages">
+///     ADVANTAGES AND DISADVANTAGES
+///     <br/>
 ///     Implemented fully recursively, so limited by stack depth and usable with tree of a "reasonable" height.
 ///     </para>
 /// </remarks>
@@ -29,6 +31,8 @@ public class FullyRecursiveBreadthFirstTraversal<TEdge, TNode>
     /// <remarks>
     ///     <inheritdoc cref="FullyRecursiveBreadthFirstTraversal{TEdge, TNode}" path="/remarks"/>
     ///     <para id = "algo" >
+    ///     ALGORITHM
+    ///     <br/>
     ///     - The algorithm first lazily visits all nodes in structure in natural recursion/depth-first order, 
     ///       returning an <see cref="IEnumerable{T}"/> instance of all nodes with their level in the structure.
     ///       <br/>
@@ -36,7 +40,9 @@ public class FullyRecursiveBreadthFirstTraversal<TEdge, TNode>
     ///       <see cref="TreeTraversal{TEdge, TNode}.TraversalOrder"/>, yielding to the output sequence, so that the 
     ///       client code implementing the visitor can lazily process the nodes.
     ///     </para>
-    ///     <para id="complexity1">
+    ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
     ///     - Excluding visitor, constant time work is done for each of the n nodes of the tree (such as destructuring
     ///       of <see cref="IEnumerable{T}"/> items and construction of the input record for the recursive call). 
     ///       <br/>
@@ -63,10 +69,8 @@ public class FullyRecursiveBreadthFirstTraversal<TEdge, TNode>
     ///       <see cref="Enumerable.OrderByDescending{TSource, TKey}(IEnumerable{TSource}, Func{TSource, TKey})"/>
     ///       is QuickSort based, and has a O(n * log(n)) average runtime, with O(n^2) worst case.
     ///       <br/>
-    ///     </para>
-    ///     <para id="complexity2">
     ///     In conclusion:
-    ///     <br/>.
+    ///     <br/>
     ///     - Time Complexity is O(n * (log(n) + Ts)), where Ts is the amortized time cost of
     ///       <see cref="TreeTraversal{TEdge, TNode}.ChildrenSorter"/> per node. Taking into account the visit of
     ///       each emitted node, Time Complexity is O(n * (log(n) + Ts + Tv)), where Tv is the time cost of the 

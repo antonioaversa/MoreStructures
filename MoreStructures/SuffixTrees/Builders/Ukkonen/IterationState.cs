@@ -11,15 +11,18 @@ internal class IterationState
     /// </summary>
     /// <param name="text">The text, to build the Suffix Tree of.</param>
     /// <remarks>
-    ///     <para>
-    ///     Creates a <see cref="Root"/> object, which will be used as root for the entire execution of the 
-    ///     algorithm. The <see cref="Root"/> node is also set as current <see cref="ActiveNode"/>, while 
-    ///     <see cref="ActiveEdgeStart"/> is set to a negative value and <see cref="ActiveLength"/> to 0 (as there 
-    ///     is no a valid <see cref="ActiveEdge"/> yet - it is going to be set when Rule 3 is triggered).
-    ///     </para>
-    ///     <para>
-    ///     <see cref="Phase"/> is initially set to a negative value: the first phase has to be explicitely 
-    ///     started with <see cref="StartPhaseIncreasingRemainingAndGlobalEnd"/>.
+    ///     <para id="algorithm">
+    ///     ALGORITHM
+    ///     <br/>
+    ///     - Creates a <see cref="Root"/> object, which will be used as root for the entire execution of the 
+    ///       algorithm.
+    ///       <br/>
+    ///     - The <see cref="Root"/> node is also set as current <see cref="ActiveNode"/>, while 
+    ///       <see cref="ActiveEdgeStart"/> is set to a negative value and <see cref="ActiveLength"/> to 0 (as there 
+    ///       is no a valid <see cref="ActiveEdge"/> yet - it is going to be set when Rule 3 is triggered).
+    ///       <br/>
+    ///     - <see cref="Phase"/> is initially set to a negative value: the first phase has to be explicitely 
+    ///       started with <see cref="StartPhaseIncreasingRemainingAndGlobalEnd"/>.
     ///     </para>
     /// </remarks>
     public IterationState(TextWithTerminator text)

@@ -15,18 +15,19 @@ namespace MoreStructures;
 /// Validation takes O(n) time, where n = number of chars in <see cref="Text"/> and can be an heavy operation.
 /// </param>
 /// <remarks>
-///     <para>
-///     A terminator-terminated text is required by data structures like Suffix Tries, Trees or Arrays. 
-///     </para>
-///     <para>
-///     This object provides type safety, as it allows to tell apart terminator-terminated strings from generic ones.
-///     Consistently using <see cref="TextWithTerminator"/>, rather than <see cref="string"/>, in all library 
-///     functionalities ensures that the invariant of a terminator-terminated string is always respected.
-///     </para>
-///     <para>
-///     Most string-related functionalities provided by <see cref="TextWithTerminator"/>, such as <see cref="Length"/> 
-///     and <see cref="this[Index]"/>, as well as <see cref="IEnumerable{T}"/> and <see cref="IEnumerable"/> support, 
-///     are delegated to the underlying string.
+///     <para id="usecases">
+///     USECASES
+///     <br/>
+///     - A terminator-terminated text is required by data structures like Suffix Tries, Trees or Arrays. 
+///       <br/>
+///     - This object provides type safety, as it allows to tell apart terminator-terminated strings from generic ones.
+///       <br/>
+///     - Consistently using <see cref="TextWithTerminator"/>, rather than <see cref="string"/>, in all library 
+///       functionalities ensures that the invariant of a terminator-terminated string is always respected.
+///       <br/>
+///     - Most string-related functionalities provided by <see cref="TextWithTerminator"/>, such as 
+///       <see cref="Length"/> and <see cref="this[Index]"/>, as well as <see cref="IEnumerable{T}"/> and 
+///       <see cref="IEnumerable"/> support, are delegated to the underlying string.
 ///     </para>
 /// </remarks>
 public record TextWithTerminator(

@@ -6,11 +6,15 @@
 /// <typeparam name="TEdge">The type of edges of the specific structure.</typeparam>
 /// <typeparam name="TNode">The type of nodes of the specific structure.</typeparam>
 /// <remarks>
-///     <para>
+///     <para id="requirements">
+///     REQUIREMENTS
+///     <br/>
 ///     Requires <typeparamref name="TEdge"/> to implement <see cref="IComparable{T}"/>, so that output lines are 
 ///     sorted.
 ///     </para>
 ///     <para id="complexity">
+///     COMPLEXITY
+///     <br/>
 ///     Time Complexity = O(n) and Space Complexity = O(n) where n = number of nodes in the 
 ///     <typeparamref name="TNode"/> structure. Each node and its incoming edge is visited once.
 ///     </para>

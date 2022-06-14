@@ -95,11 +95,15 @@ public interface IBuilder
     /// The text which corresponds to the provided text which produced a BWM whose last column is the one provided.
     /// </returns>
     /// <remarks>
-    ///     <para id="terminator-required">
+    ///     <para id="requirements">
+    ///     REQUIREMENT
+    ///     <br/>
     ///     <paramref name="lastBWMColumn"/> requires a terminator to be specified in order to correctly compare 
     ///     strings, since the terminator should always be considered smaller than any other char.
     ///     </para>
-    ///     <para id="possible-strategies">
+    ///     <para id="algo">
+    ///     ALGORITHM
+    ///     <br/>
     ///     Multiple strategies for inversion are possible: via n-mers construction, via last-first property, ...
     ///     </para>
     /// </remarks>

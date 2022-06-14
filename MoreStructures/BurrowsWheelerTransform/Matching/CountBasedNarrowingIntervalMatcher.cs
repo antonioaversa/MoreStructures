@@ -74,6 +74,8 @@ public class CountBasedNarrowingIntervalMatcher : NarrowingIntervalMatcher
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     /// <para id="algo">
+    ///     ALGORITHM
+    ///     <br/>
     ///     Narrowing is performed in three sub-steps (compared to the five in <see cref="NarrowingIntervalMatcher"/>):
     ///     <br/>
     ///     1. The new start index is calculated as the 1st occurrence in <see cref="IMatcher.SortedBWT"/> of the 
@@ -85,9 +87,10 @@ public class CountBasedNarrowingIntervalMatcher : NarrowingIntervalMatcher
     ///     one (i.e. the number of occurrences of the char up to the current end index - 1).
     ///     <br/>
     ///     3. The narrowed interval in Sorted BWT is returned.
-    ///     <br/>
     /// </para>
     /// <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
     ///     Total amortized cost is O(1), both in time and space.
     /// </para>
     /// </remarks>

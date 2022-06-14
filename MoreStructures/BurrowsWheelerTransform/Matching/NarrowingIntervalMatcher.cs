@@ -7,6 +7,8 @@ namespace MoreStructures.BurrowsWheelerTransform.Matching;
 /// <inheritdoc path="//*[not(self::remarks)]"/>
 /// <remarks>
 /// <para id="algo">
+///     ALGORITHM
+///     <br/>
 ///     This is a basic implementation, narrowing the matching interval at every iteration with two linear scans of the
 ///     BWT.
 ///     <br/>
@@ -19,6 +21,8 @@ namespace MoreStructures.BurrowsWheelerTransform.Matching;
 ///     <br/>
 /// </para>
 /// <para id="complexity">
+///     COMPLEXITY
+///     <br/>
 ///     Time Complexity = O(n^2). Space Complexity = O(n).
 /// </para>
 /// </remarks>

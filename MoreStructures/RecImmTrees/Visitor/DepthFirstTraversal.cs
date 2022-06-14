@@ -20,7 +20,7 @@
 ///                     |- 8 -> 9
 ///                     |- 9 -> 10
 ///     </code>
-///     <para>
+///     <para id="examples1">
 ///     A DFS visit strategy "parent first" would visit nodes and edges in either of the following ways, depending on
 ///     how children are sorted (lower-id edge first, lower-id edge last, median-id edge first, ...):
 ///     <br/>
@@ -32,7 +32,7 @@
 ///     <br/>
 ///     - ...
 ///     </para>
-///     <para>
+///     <para id="examples2">
 ///     A DFS visit strategy "children first" would visit nodes and edges in either of the following ways, depending on
 ///     how children are sorted:
 ///     <br/>

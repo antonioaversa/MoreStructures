@@ -59,18 +59,30 @@ public class LinearSearch : ISearch
     ///     This specific implementation does not make any assunption on <paramref name="source"/> being sorted.
     /// </summary>
     /// <remarks>
-    /// The algorithm linearly scans the search space from <paramref name="fromIndex"/> to <paramref name="toIndex"/>,
-    /// one index at every iteration, collecting first occurrences into a <see cref="IDictionary{TKey, TValue}"/>.
-    /// <br/>
-    /// Time Complexity = O(n), Space Complexity = O(sigma), where:
-    /// <para id = "params">
-    /// - n is the <b>number of items</b> between <paramref name="fromIndex"/> and <paramref name="toIndex"/>.
-    /// <br/>
-    /// - sigma is the <b>number of distinct elements </b> of <paramref name="source"/>, for "large alphabets" 
-    /// scenarios (such as when the alphabet is int - 2^32 possible values, but <paramref name="source"/> is way 
-    /// smaller than that), or the size of the alphabet for "small alphabets" scenarios (such as when the alphabet is 
-    /// comprised of few symbols only). In either scenario the worst case of a O(sigma) is O(n).
-    /// </para>
+    ///     <para id="algo">
+    ///     ALGORITHM
+    ///     <br/>
+    ///     The algorithm linearly scans the search space from <paramref name="fromIndex"/> to 
+    ///     <paramref name="toIndex"/>, one index at every iteration, collecting first occurrences into a 
+    ///     <see cref="IDictionary{TKey, TValue}"/>.
+    ///     </para>
+    ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
+    ///     Time Complexity = O(n), Space Complexity = O(sigma), where:
+    ///     <br/>
+    ///     - n is the <b>number of items</b> between <paramref name="fromIndex"/> and <paramref name="toIndex"/>.
+    ///       <br/>
+    ///     - For "large alphabets" scenarios (such as when the alphabet is int - 2^32 possible values, but 
+    ///       <paramref name="source"/> is way smaller than that), sigma is the <b>number of distinct elements </b> of 
+    ///       <paramref name="source"/>.
+    ///       <br/>
+    ///     - For "small alphabets" scenarios (such as when the alphabet is comprised of few symbols only), sigma is
+    ///       the size of the alphabet.
+    ///       <br/>
+    ///     - In either scenario the worst case of the O(sigma) Space Complexity is O(n), which is when all the symbols
+    ///       in <paramref name="source"/> are different from each other).
+    ///     </para>
     /// </remarks>
     public IDictionary<T, int> FirstAll<T>(
         IEnumerable<T> source, IComparer<T>? comparer = null, int? fromIndex = null, int? toIndex = null)
