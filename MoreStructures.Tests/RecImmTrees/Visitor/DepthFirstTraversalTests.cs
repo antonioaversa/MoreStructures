@@ -6,6 +6,7 @@ using System.Linq;
 namespace MoreStructures.Tests.RecImmTrees.Visitor;
 
 public abstract class DepthFirstTraversalTests<TDepthFirstTraversal>
+     : TreeTraversalTests<TDepthFirstTraversal>
     where TDepthFirstTraversal : DepthFirstTraversal<TreeMock.Edge, TreeMock.Node>, new()
 {
     [TestMethod]
@@ -122,8 +123,6 @@ public abstract class DepthFirstTraversalTests<TDepthFirstTraversal>
     [TestMethod]
     public void Visit_TraversalOrderNotSupported_OnSingleton()
     {
-        static int nopVisitor(TreeTraversalVisit<TreeMock.Edge, TreeMock.Node> visit) => 0;
-
         var visitStrategy = new TDepthFirstTraversal()
         {
             TraversalOrder = (TreeTraversalOrder)(-1),
@@ -131,14 +130,12 @@ public abstract class DepthFirstTraversalTests<TDepthFirstTraversal>
         };
 
         Assert.ThrowsException<NotSupportedException>(
-            () => visitStrategy.Visit(new TreeMock.Node(0)).Select(nopVisitor).ToList());
+            () => visitStrategy.Visit(new TreeMock.Node(0)).ToList());
     }
 
     [TestMethod]
     public void Visit_TraversalOrderNotSupported_OnTreeWithMultipleNodes()
     {
-        static int nopVisitor(TreeTraversalVisit<TreeMock.Edge, TreeMock.Node> visit) => 0;
-
         var root = TreeMock.BuildExampleTree();
         var visitStrategy = new TDepthFirstTraversal()
         {
@@ -147,7 +144,7 @@ public abstract class DepthFirstTraversalTests<TDepthFirstTraversal>
         };
 
         Assert.ThrowsException<NotSupportedException>(
-            () => visitStrategy.Visit(root).Select(nopVisitor).ToList());
+            () => visitStrategy.Visit(root).ToList());
     }
 
     [TestMethod]

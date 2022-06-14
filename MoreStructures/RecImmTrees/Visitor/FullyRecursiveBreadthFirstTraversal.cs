@@ -91,7 +91,7 @@ public class FullyRecursiveBreadthFirstTraversal<TEdge, TNode>
         };
 
         foreach (var (parentNode, incomingEdge, node1, level) in sortedNodesWithLevel)
-            yield return new(node1, new(parentNode, incomingEdge));
+            yield return new(node1, new(parentNode, incomingEdge, level));
     }
 
     private IEnumerable<NodeWithLevel> GetAllNodesWithLevel(NodeWithLevel nodeWithLevel)
