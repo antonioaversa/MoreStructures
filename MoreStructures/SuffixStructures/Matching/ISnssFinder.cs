@@ -1,9 +1,9 @@
 ﻿namespace MoreStructures.SuffixStructures.Matching;
 
 /// <summary>
-/// Any algorithm finding the Shortest Non-shared Substring (SNSS) between two strings.
+/// Any algorithm finding the Shortest Non-shared Substring (Snss) between two strings.
 /// </summary>
-public interface ISNSSFinder
+public interface ISnssFinder
 {
     /// <summary>
     /// Returns any substring of <paramref name="text1"/> which is not present in <paramref name="text2"/> and has 
