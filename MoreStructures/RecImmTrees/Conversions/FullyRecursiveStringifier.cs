@@ -50,4 +50,22 @@ public class FullyRecursiveStringifier<TEdge, TNode>
             Stringify(stringBuilder, childNode, level + 1);
         }
     }
+
+
+    /// <inheritdoc/>
+    /// <inheritdoc cref="FullyRecursiveStringifier{TEdge, TNode}" path="/remarks"/>
+    public override string Stringify(TreePath<TNode, TEdge> path) => 
+        string.Join(PathSeparator, Stringify(path.PathNodes));
+
+    private IEnumerable<string> Stringify(IEnumerable<KeyValuePair<TNode, TEdge>> pathNodes)
+    {
+        if (!pathNodes.Any())
+            yield break;
+
+        var nextPathNode = pathNodes.First();
+        yield return EdgeAndNodeStringifier(nextPathNode.Value, nextPathNode.Key);
+
+        foreach (var fragment in Stringify(pathNodes.Skip(1)))
+            yield return fragment;
+    }
 }

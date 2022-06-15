@@ -16,6 +16,7 @@ public class FullyIterativeStringifierTests : StringifierTests
         {
             NewLine = DefaultNewLine,
             Indent = DefaultIndent,
+            PathSeparator = DefaultPathSeparator,
         })
     {
     }
@@ -38,6 +39,7 @@ public class FullyIterativeStringifierTests : StringifierTests
         {
             NewLine = DefaultNewLine,
             Indent = DefaultIndent,
+            PathSeparator = DefaultPathSeparator,
             StopIndentingLevel = 0,
             PrependLevelAfterStopIndenting = false,
         };
@@ -53,6 +55,7 @@ public class FullyIterativeStringifierTests : StringifierTests
         {
             NewLine = DefaultNewLine,
             Indent = DefaultIndent,
+            PathSeparator = DefaultPathSeparator,
             StopIndentingLevel = 1,
             PrependLevelAfterStopIndenting = false,
         };
@@ -70,6 +73,7 @@ public class FullyIterativeStringifierTests : StringifierTests
         {
             NewLine = DefaultNewLine,
             Indent = DefaultIndent,
+            PathSeparator = DefaultPathSeparator,
             StopIndentingLevel = 2,
             PrependLevelAfterStopIndenting = false,
         };
@@ -87,6 +91,7 @@ public class FullyIterativeStringifierTests : StringifierTests
         {
             NewLine = DefaultNewLine,
             Indent = DefaultIndent,
+            PathSeparator = DefaultPathSeparator,
             StopIndentingLevel = 2,
             PrependLevelAfterStopIndenting = true,
         };

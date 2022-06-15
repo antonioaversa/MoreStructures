@@ -6,7 +6,10 @@
 /// </summary>
 /// <typeparam name="TEdge">The type of edges of the specific structure.</typeparam>
 /// <typeparam name="TNode">The type of nodes of the specific structure.</typeparam>
-public abstract class StringifierBase<TEdge, TNode>
+public abstract class StringifierBase<TEdge, TNode> 
+    : IStringifier<TEdge, TNode>
+    where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>, IComparable<TEdge>
+    where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode>
 {
     /// <summary>
     /// <inheritdoc cref="IStringifier{TEdge, TNode}.NewLine"/>
@@ -19,6 +22,12 @@ public abstract class StringifierBase<TEdge, TNode>
     /// By default is 4 spaces.
     /// </summary>
     public string Indent { get; init; } = new string(' ', 4);
+
+    /// <summary>
+    /// <inheritdoc cref="IStringifier{TEdge, TNode}.PathSeparator"/>
+    /// By default is a single space.
+    /// </summary>
+    public string PathSeparator { get; init; } = " ";
 
     /// <inheritdoc cref="IStringifier{TEdge, TNode}.RootStringifier"/>
     public Func<TNode, string> RootStringifier { get; init; }
@@ -41,4 +50,7 @@ public abstract class StringifierBase<TEdge, TNode>
 
     /// <inheritdoc cref="IStringifier{TEdge, TNode}.Stringify(TNode)"/>
     public abstract string Stringify(TNode node);
+
+    /// <inheritdoc cref="IStringifier{TEdge, TNode}.Stringify(TreePath{TNode, TEdge})"/>
+    public abstract string Stringify(TreePath<TNode, TEdge> path);
 }

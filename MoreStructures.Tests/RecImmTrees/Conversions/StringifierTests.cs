@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MoreStructures.RecImmTrees;
 using MoreStructures.RecImmTrees.Conversions;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,8 @@ public abstract class StringifierTests
         Environment.NewLine;
     protected static readonly string DefaultIndent = 
         new(' ', 1);
+    protected static readonly string DefaultPathSeparator = 
+        " -> ";
     protected static readonly Func<Node, string> DefaultRootStringifier =
         n => $"R({n.Id})";
     protected static readonly Func<Edge, Node, string> DefaultEdgeAndNodeStringifier =
@@ -108,5 +111,46 @@ public abstract class StringifierTests
             $"{I}e(8):N(9)",
             $"{I}{I}e(9):N(10)"
         );
+    }
+
+    [TestMethod]
+    public void Stringify_OfEmptyPath()
+    {
+        var path = new TreePath<Node, Edge>();
+        var pathStr = Stringifier.Stringify(path);
+        Assert.AreEqual(string.Empty, pathStr);
+    }
+
+    [TestMethod]
+    public void Stringify_OfSingletonPath()
+    {
+        var path = new TreePath<Node, Edge>((new(0), new(10)));
+        var pathStr = Stringifier.Stringify(path);
+        foreach (var pathNode in path.PathNodes)
+        {
+            Assert.IsTrue(pathStr.Contains(pathNode.Key.Id.ToString()));
+            Assert.IsTrue(pathStr.Contains(pathNode.Value.Id.ToString()));
+        }
+
+        Assert.IsFalse(pathStr.Contains(DefaultPathSeparator));
+    }
+
+    [TestMethod]
+    public void Stringify_OfMultistepPath()
+    {
+        var path = new TreePath<Node, Edge>(
+            (new(0), new(10)), (new(1), new(11)), (new(2), new(12)));
+        var pathStr = Stringifier.Stringify(path);
+        foreach (var pathNode in path.PathNodes)
+        {
+            Assert.IsTrue(pathStr.Contains(pathNode.Key.Id.ToString()));
+            Assert.IsTrue(pathStr.Contains(pathNode.Value.Id.ToString()));
+        }
+
+        var pathSeparatorOccurrences = Enumerable
+            .Range(0, pathStr.Length - DefaultPathSeparator.Length)
+            .Count(i => pathStr[i..(i + DefaultPathSeparator.Length)] == DefaultPathSeparator);
+
+        Assert.AreEqual(path.PathNodes.Count() - 1, pathSeparatorOccurrences);
     }
 }
