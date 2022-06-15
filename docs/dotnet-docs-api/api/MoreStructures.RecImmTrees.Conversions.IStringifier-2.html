@@ -83,7 +83,7 @@
   
   <h1 id="MoreStructures_RecImmTrees_Conversions_IStringifier_2" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2" class="text-break">Interface IStringifier&lt;TEdge, TNode&gt;
   </h1>
-  <div class="markdown level0 summary"><p>A converter from <a class="xref" href="MoreStructures.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</a> structures to string.</p>
+  <div class="markdown level0 summary"><p>A converter from <a class="xref" href="MoreStructures.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</a> structures and paths to string.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.RecImmTrees.Conversions.html">MoreStructures.RecImmTrees.Conversions</a></h6>
@@ -125,7 +125,7 @@ sorted.
 COMPLEXITY
 <br>
 Time Complexity = O(n) and Space Complexity = O(n) where n = number of nodes in the 
-<code data-dev-comment-type="typeparamref" class="typeparamref">TNode</code> structure. Each node and its incoming edge is visited once.
+<code data-dev-comment-type="typeparamref" class="typeparamref">TNode</code> structure/path. Each node and its incoming edge is visited once.
 </p>
 </div>
   <h5 id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_examples"><strong>Examples</strong></h5>
@@ -146,7 +146,7 @@ Console.WriteLine(stringifier.Stringify(node));</code></pre>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Conversions_IStringifier_2_EdgeAndNodeStringifier.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Conversions.IStringifier%602.EdgeAndNodeStringifier%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L60">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L68">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_EdgeAndNodeStringifier_" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.EdgeAndNodeStringifier*"></a>
   <h4 id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_EdgeAndNodeStringifier" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.EdgeAndNodeStringifier">EdgeAndNodeStringifier</h4>
@@ -239,10 +239,44 @@ Console.WriteLine(stringifier.Stringify(node));</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Conversions_IStringifier_2_PathSeparator.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Conversions.IStringifier%602.PathSeparator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L58">View Source</a>
+  </span>
+  <a id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_PathSeparator_" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.PathSeparator*"></a>
+  <h4 id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_PathSeparator" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.PathSeparator">PathSeparator</h4>
+  <div class="markdown level1 summary"><p>The character or string used to join stringified path nodes, when building the output string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string PathSeparator { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_PathSeparator_examples">Examples</h5>
+  <p>&quot; -&gt; &quot;, &quot;, &quot;, ...</p>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Conversions_IStringifier_2_RootStringifier.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Conversions.IStringifier%602.RootStringifier%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L55">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L63">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_RootStringifier_" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.RootStringifier*"></a>
   <h4 id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_RootStringifier" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.RootStringifier">RootStringifier</h4>
@@ -275,7 +309,7 @@ Console.WriteLine(stringifier.Stringify(node));</code></pre>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Conversions_IStringifier_2_Stringify__1_.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Conversions.IStringifier%602.Stringify(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L77">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L87">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_Stringify_" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.Stringify*"></a>
   <h4 id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_Stringify__1_" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.Stringify(`1)">Stringify(TNode)</h4>
@@ -321,14 +355,68 @@ Console.WriteLine(stringifier.Stringify(node));</code></pre>
     </tbody>
   </table>
   <h5 id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_Stringify__1__examples">Examples</h5>
-  <p>Using 4 spaces as indent, RootStringifier = n =&gt; &quot;R&quot;, an EdgeAndNodeStringifier = (e, n) =&gt; $&quot;{e} -&gt; N&quot;:
-R
-e1 -&gt; N
-e3 -&gt; N
-e4 -&gt; N
-e5 -&gt; N
-e2 -&gt; N
-e6 -&gt; N</p>
+  <p>Using 4 spaces as indent, RootStringifier = n =&gt; &quot;R&quot;, and EdgeAndNodeStringifier = (e, n) =&gt; $&quot;{e} -&gt; N&quot;:</p>
+<pre><code>R
+    e1 -> N
+        e3 -> N
+        e4 -> N
+            e5 -> N
+    e2 -> N
+        e6 -> N</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Conversions_IStringifier_2_Stringify_MoreStructures_RecImmTrees_TreePath__1__0__.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Conversions.IStringifier%602.Stringify(MoreStructures.RecImmTrees.TreePath%7B%601%2C%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Conversions/IStringifier.cs/#L100">View Source</a>
+  </span>
+  <a id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_Stringify_" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.Stringify*"></a>
+  <h4 id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_Stringify_MoreStructures_RecImmTrees_TreePath__1__0__" data-uid="MoreStructures.RecImmTrees.Conversions.IStringifier`2.Stringify(MoreStructures.RecImmTrees.TreePath{`1,`0})">Stringify(TreePath&lt;TNode, TEdge&gt;)</h4>
+  <div class="markdown level1 summary"><p>Converts the provided <a class="xref" href="MoreStructures.RecImmTrees.TreePath-2.html">TreePath&lt;TEdge, TNode&gt;</a> into a string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Stringify(TreePath&lt;TNode, TEdge&gt; path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.RecImmTrees.TreePath-2.html">TreePath</a>&lt;TNode, TEdge&gt;</td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The tree path to stringify.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>A string version of the provided path.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_RecImmTrees_Conversions_IStringifier_2_Stringify_MoreStructures_RecImmTrees_TreePath__1__0___examples">Examples</h5>
+  <p>Using PathSeparator = &quot; -&gt; &quot; and EdgeAndNodeStringifier = (e, n) =&gt; $&quot;{e}&quot;:</p>
+<pre><code>e1 -> e4 -> e5</code></pre>
 
 </article>
           </div>

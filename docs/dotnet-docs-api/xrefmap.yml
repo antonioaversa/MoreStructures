@@ -1576,6 +1576,15 @@ references:
   fullName.vb: MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier(Of TEdge, TNode).Stringify(TNode)
   nameWithType: FullyIterativeStringifier<TEdge, TNode>.Stringify(TNode)
   nameWithType.vb: FullyIterativeStringifier(Of TEdge, TNode).Stringify(TNode)
+- uid: MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier`2.Stringify(MoreStructures.RecImmTrees.TreePath{`1,`0})
+  name: Stringify(TreePath<TNode, TEdge>)
+  href: api/MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier-2.html#MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_Stringify_MoreStructures_RecImmTrees_TreePath__1__0__
+  commentId: M:MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier`2.Stringify(MoreStructures.RecImmTrees.TreePath{`1,`0})
+  name.vb: Stringify(TreePath(Of TNode, TEdge))
+  fullName: MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier<TEdge, TNode>.Stringify(MoreStructures.RecImmTrees.TreePath<TNode, TEdge>)
+  fullName.vb: MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier(Of TEdge, TNode).Stringify(MoreStructures.RecImmTrees.TreePath(Of TNode, TEdge))
+  nameWithType: FullyIterativeStringifier<TEdge, TNode>.Stringify(TreePath<TNode, TEdge>)
+  nameWithType.vb: FullyIterativeStringifier(Of TEdge, TNode).Stringify(TreePath(Of TNode, TEdge))
 - uid: MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier`2.Stringify*
   name: Stringify
   href: api/MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier-2.html#MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_Stringify_
@@ -1620,6 +1629,15 @@ references:
   fullName.vb: MoreStructures.RecImmTrees.Conversions.FullyRecursiveStringifier(Of TEdge, TNode).Stringify(TNode)
   nameWithType: FullyRecursiveStringifier<TEdge, TNode>.Stringify(TNode)
   nameWithType.vb: FullyRecursiveStringifier(Of TEdge, TNode).Stringify(TNode)
+- uid: MoreStructures.RecImmTrees.Conversions.FullyRecursiveStringifier`2.Stringify(MoreStructures.RecImmTrees.TreePath{`1,`0})
+  name: Stringify(TreePath<TNode, TEdge>)
+  href: api/MoreStructures.RecImmTrees.Conversions.FullyRecursiveStringifier-2.html#MoreStructures_RecImmTrees_Conversions_FullyRecursiveStringifier_2_Stringify_MoreStructures_RecImmTrees_TreePath__1__0__
+  commentId: M:MoreStructures.RecImmTrees.Conversions.FullyRecursiveStringifier`2.Stringify(MoreStructures.RecImmTrees.TreePath{`1,`0})
+  name.vb: Stringify(TreePath(Of TNode, TEdge))
+  fullName: MoreStructures.RecImmTrees.Conversions.FullyRecursiveStringifier<TEdge, TNode>.Stringify(MoreStructures.RecImmTrees.TreePath<TNode, TEdge>)
+  fullName.vb: MoreStructures.RecImmTrees.Conversions.FullyRecursiveStringifier(Of TEdge, TNode).Stringify(MoreStructures.RecImmTrees.TreePath(Of TNode, TEdge))
+  nameWithType: FullyRecursiveStringifier<TEdge, TNode>.Stringify(TreePath<TNode, TEdge>)
+  nameWithType.vb: FullyRecursiveStringifier(Of TEdge, TNode).Stringify(TreePath(Of TNode, TEdge))
 - uid: MoreStructures.RecImmTrees.Conversions.FullyRecursiveStringifier`2.Stringify*
   name: Stringify
   href: api/MoreStructures.RecImmTrees.Conversions.FullyRecursiveStringifier-2.html#MoreStructures_RecImmTrees_Conversions_FullyRecursiveStringifier_2_Stringify_
@@ -1689,6 +1707,23 @@ references:
   fullName.vb: MoreStructures.RecImmTrees.Conversions.IStringifier(Of TEdge, TNode).NewLine
   nameWithType: IStringifier<TEdge, TNode>.NewLine
   nameWithType.vb: IStringifier(Of TEdge, TNode).NewLine
+- uid: MoreStructures.RecImmTrees.Conversions.IStringifier`2.PathSeparator
+  name: PathSeparator
+  href: api/MoreStructures.RecImmTrees.Conversions.IStringifier-2.html#MoreStructures_RecImmTrees_Conversions_IStringifier_2_PathSeparator
+  commentId: P:MoreStructures.RecImmTrees.Conversions.IStringifier`2.PathSeparator
+  fullName: MoreStructures.RecImmTrees.Conversions.IStringifier<TEdge, TNode>.PathSeparator
+  fullName.vb: MoreStructures.RecImmTrees.Conversions.IStringifier(Of TEdge, TNode).PathSeparator
+  nameWithType: IStringifier<TEdge, TNode>.PathSeparator
+  nameWithType.vb: IStringifier(Of TEdge, TNode).PathSeparator
+- uid: MoreStructures.RecImmTrees.Conversions.IStringifier`2.PathSeparator*
+  name: PathSeparator
+  href: api/MoreStructures.RecImmTrees.Conversions.IStringifier-2.html#MoreStructures_RecImmTrees_Conversions_IStringifier_2_PathSeparator_
+  commentId: Overload:MoreStructures.RecImmTrees.Conversions.IStringifier`2.PathSeparator
+  isSpec: "True"
+  fullName: MoreStructures.RecImmTrees.Conversions.IStringifier<TEdge, TNode>.PathSeparator
+  fullName.vb: MoreStructures.RecImmTrees.Conversions.IStringifier(Of TEdge, TNode).PathSeparator
+  nameWithType: IStringifier<TEdge, TNode>.PathSeparator
+  nameWithType.vb: IStringifier(Of TEdge, TNode).PathSeparator
 - uid: MoreStructures.RecImmTrees.Conversions.IStringifier`2.RootStringifier
   name: RootStringifier
   href: api/MoreStructures.RecImmTrees.Conversions.IStringifier-2.html#MoreStructures_RecImmTrees_Conversions_IStringifier_2_RootStringifier
@@ -1714,6 +1749,15 @@ references:
   fullName.vb: MoreStructures.RecImmTrees.Conversions.IStringifier(Of TEdge, TNode).Stringify(TNode)
   nameWithType: IStringifier<TEdge, TNode>.Stringify(TNode)
   nameWithType.vb: IStringifier(Of TEdge, TNode).Stringify(TNode)
+- uid: MoreStructures.RecImmTrees.Conversions.IStringifier`2.Stringify(MoreStructures.RecImmTrees.TreePath{`1,`0})
+  name: Stringify(TreePath<TNode, TEdge>)
+  href: api/MoreStructures.RecImmTrees.Conversions.IStringifier-2.html#MoreStructures_RecImmTrees_Conversions_IStringifier_2_Stringify_MoreStructures_RecImmTrees_TreePath__1__0__
+  commentId: M:MoreStructures.RecImmTrees.Conversions.IStringifier`2.Stringify(MoreStructures.RecImmTrees.TreePath{`1,`0})
+  name.vb: Stringify(TreePath(Of TNode, TEdge))
+  fullName: MoreStructures.RecImmTrees.Conversions.IStringifier<TEdge, TNode>.Stringify(MoreStructures.RecImmTrees.TreePath<TNode, TEdge>)
+  fullName.vb: MoreStructures.RecImmTrees.Conversions.IStringifier(Of TEdge, TNode).Stringify(MoreStructures.RecImmTrees.TreePath(Of TNode, TEdge))
+  nameWithType: IStringifier<TEdge, TNode>.Stringify(TreePath<TNode, TEdge>)
+  nameWithType.vb: IStringifier(Of TEdge, TNode).Stringify(TreePath(Of TNode, TEdge))
 - uid: MoreStructures.RecImmTrees.Conversions.IStringifier`2.Stringify*
   name: Stringify
   href: api/MoreStructures.RecImmTrees.Conversions.IStringifier-2.html#MoreStructures_RecImmTrees_Conversions_IStringifier_2_Stringify_
@@ -1801,6 +1845,23 @@ references:
   fullName.vb: MoreStructures.RecImmTrees.Conversions.StringifierBase(Of TEdge, TNode).NewLine
   nameWithType: StringifierBase<TEdge, TNode>.NewLine
   nameWithType.vb: StringifierBase(Of TEdge, TNode).NewLine
+- uid: MoreStructures.RecImmTrees.Conversions.StringifierBase`2.PathSeparator
+  name: PathSeparator
+  href: api/MoreStructures.RecImmTrees.Conversions.StringifierBase-2.html#MoreStructures_RecImmTrees_Conversions_StringifierBase_2_PathSeparator
+  commentId: P:MoreStructures.RecImmTrees.Conversions.StringifierBase`2.PathSeparator
+  fullName: MoreStructures.RecImmTrees.Conversions.StringifierBase<TEdge, TNode>.PathSeparator
+  fullName.vb: MoreStructures.RecImmTrees.Conversions.StringifierBase(Of TEdge, TNode).PathSeparator
+  nameWithType: StringifierBase<TEdge, TNode>.PathSeparator
+  nameWithType.vb: StringifierBase(Of TEdge, TNode).PathSeparator
+- uid: MoreStructures.RecImmTrees.Conversions.StringifierBase`2.PathSeparator*
+  name: PathSeparator
+  href: api/MoreStructures.RecImmTrees.Conversions.StringifierBase-2.html#MoreStructures_RecImmTrees_Conversions_StringifierBase_2_PathSeparator_
+  commentId: Overload:MoreStructures.RecImmTrees.Conversions.StringifierBase`2.PathSeparator
+  isSpec: "True"
+  fullName: MoreStructures.RecImmTrees.Conversions.StringifierBase<TEdge, TNode>.PathSeparator
+  fullName.vb: MoreStructures.RecImmTrees.Conversions.StringifierBase(Of TEdge, TNode).PathSeparator
+  nameWithType: StringifierBase<TEdge, TNode>.PathSeparator
+  nameWithType.vb: StringifierBase(Of TEdge, TNode).PathSeparator
 - uid: MoreStructures.RecImmTrees.Conversions.StringifierBase`2.RootStringifier
   name: RootStringifier
   href: api/MoreStructures.RecImmTrees.Conversions.StringifierBase-2.html#MoreStructures_RecImmTrees_Conversions_StringifierBase_2_RootStringifier
@@ -1826,6 +1887,15 @@ references:
   fullName.vb: MoreStructures.RecImmTrees.Conversions.StringifierBase(Of TEdge, TNode).Stringify(TNode)
   nameWithType: StringifierBase<TEdge, TNode>.Stringify(TNode)
   nameWithType.vb: StringifierBase(Of TEdge, TNode).Stringify(TNode)
+- uid: MoreStructures.RecImmTrees.Conversions.StringifierBase`2.Stringify(MoreStructures.RecImmTrees.TreePath{`1,`0})
+  name: Stringify(TreePath<TNode, TEdge>)
+  href: api/MoreStructures.RecImmTrees.Conversions.StringifierBase-2.html#MoreStructures_RecImmTrees_Conversions_StringifierBase_2_Stringify_MoreStructures_RecImmTrees_TreePath__1__0__
+  commentId: M:MoreStructures.RecImmTrees.Conversions.StringifierBase`2.Stringify(MoreStructures.RecImmTrees.TreePath{`1,`0})
+  name.vb: Stringify(TreePath(Of TNode, TEdge))
+  fullName: MoreStructures.RecImmTrees.Conversions.StringifierBase<TEdge, TNode>.Stringify(MoreStructures.RecImmTrees.TreePath<TNode, TEdge>)
+  fullName.vb: MoreStructures.RecImmTrees.Conversions.StringifierBase(Of TEdge, TNode).Stringify(MoreStructures.RecImmTrees.TreePath(Of TNode, TEdge))
+  nameWithType: StringifierBase<TEdge, TNode>.Stringify(TreePath<TNode, TEdge>)
+  nameWithType.vb: StringifierBase(Of TEdge, TNode).Stringify(TreePath(Of TNode, TEdge))
 - uid: MoreStructures.RecImmTrees.Conversions.StringifierBase`2.Stringify*
   name: Stringify
   href: api/MoreStructures.RecImmTrees.Conversions.StringifierBase-2.html#MoreStructures_RecImmTrees_Conversions_StringifierBase_2_Stringify_
@@ -5149,6 +5219,12 @@ references:
   commentId: F:MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.DefaultNewLine
   fullName: MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.DefaultNewLine
   nameWithType: StringifierTests.DefaultNewLine
+- uid: MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.DefaultPathSeparator
+  name: DefaultPathSeparator
+  href: api/MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.html#MoreStructures_Tests_RecImmTrees_Conversions_StringifierTests_DefaultPathSeparator
+  commentId: F:MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.DefaultPathSeparator
+  fullName: MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.DefaultPathSeparator
+  nameWithType: StringifierTests.DefaultPathSeparator
 - uid: MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.DefaultRootStringifier
   name: DefaultRootStringifier
   href: api/MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.html#MoreStructures_Tests_RecImmTrees_Conversions_StringifierTests_DefaultRootStringifier
@@ -5194,6 +5270,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.Stringifier
   nameWithType: StringifierTests.Stringifier
+- uid: MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfEmptyPath
+  name: Stringify_OfEmptyPath()
+  href: api/MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.html#MoreStructures_Tests_RecImmTrees_Conversions_StringifierTests_Stringify_OfEmptyPath
+  commentId: M:MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfEmptyPath
+  fullName: MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfEmptyPath()
+  nameWithType: StringifierTests.Stringify_OfEmptyPath()
+- uid: MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfEmptyPath*
+  name: Stringify_OfEmptyPath
+  href: api/MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.html#MoreStructures_Tests_RecImmTrees_Conversions_StringifierTests_Stringify_OfEmptyPath_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfEmptyPath
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfEmptyPath
+  nameWithType: StringifierTests.Stringify_OfEmptyPath
 - uid: MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfFourLevelsTree
   name: Stringify_OfFourLevelsTree()
   href: api/MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.html#MoreStructures_Tests_RecImmTrees_Conversions_StringifierTests_Stringify_OfFourLevelsTree
@@ -5220,6 +5309,32 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfLeaf
   nameWithType: StringifierTests.Stringify_OfLeaf
+- uid: MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfMultistepPath
+  name: Stringify_OfMultistepPath()
+  href: api/MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.html#MoreStructures_Tests_RecImmTrees_Conversions_StringifierTests_Stringify_OfMultistepPath
+  commentId: M:MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfMultistepPath
+  fullName: MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfMultistepPath()
+  nameWithType: StringifierTests.Stringify_OfMultistepPath()
+- uid: MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfMultistepPath*
+  name: Stringify_OfMultistepPath
+  href: api/MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.html#MoreStructures_Tests_RecImmTrees_Conversions_StringifierTests_Stringify_OfMultistepPath_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfMultistepPath
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfMultistepPath
+  nameWithType: StringifierTests.Stringify_OfMultistepPath
+- uid: MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfSingletonPath
+  name: Stringify_OfSingletonPath()
+  href: api/MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.html#MoreStructures_Tests_RecImmTrees_Conversions_StringifierTests_Stringify_OfSingletonPath
+  commentId: M:MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfSingletonPath
+  fullName: MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfSingletonPath()
+  nameWithType: StringifierTests.Stringify_OfSingletonPath()
+- uid: MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfSingletonPath*
+  name: Stringify_OfSingletonPath
+  href: api/MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.html#MoreStructures_Tests_RecImmTrees_Conversions_StringifierTests_Stringify_OfSingletonPath_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfSingletonPath
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfSingletonPath
+  nameWithType: StringifierTests.Stringify_OfSingletonPath
 - uid: MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfThreeLevelsTree
   name: Stringify_OfThreeLevelsTree()
   href: api/MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.html#MoreStructures_Tests_RecImmTrees_Conversions_StringifierTests_Stringify_OfThreeLevelsTree
