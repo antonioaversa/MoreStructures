@@ -5,6 +5,7 @@ using MoreStructures.SuffixTries;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using static MoreStructures.Tests.CountTrees.TreeMock;
 
 namespace MoreStructures.Tests.RecImmTrees;
 
@@ -92,6 +93,52 @@ public class TreePathTests
         var path = new TreePath<SuffixTrieEdge, SuffixTrieNode>(
             new List<KeyValuePair<SuffixTrieEdge, SuffixTrieNode>> { new(new(0), node1), new(new(1), node2) });
         AssertPath_OfSuffixTrie(node2, node1, path);
+    }
+
+    [TestMethod]
+    public void Equals_ByValue()
+    {
+        var path1 = new TreePath<Edge, Node>(
+            new List<KeyValuePair<Edge, Node>> { new(new(6), new(7)), new(new(7), new(8)), new(new(8), new(9)) });
+
+        var path2 = new TreePath<Edge, Node>(
+            new List<KeyValuePair<Edge, Node>> { new(new(6), new(7)), new(new(7), new(8)), new(new(8), new(9)) });
+
+        Assert.AreEqual(path1, path2);
+
+        var path3 = new TreePath<Edge, Node>(
+            new List<KeyValuePair<Edge, Node>> { new(new(6), new(7)), new(new(7), new(8)), new(new(8), new(90)) });
+
+        Assert.AreNotEqual(path1, path3);
+
+        var path4 = new TreePath<Edge, Node>(
+            new List<KeyValuePair<Edge, Node>> { new(new(6), new(7)), new(new(7), new(8)), new(new(80), new(9)) });
+
+        Assert.AreNotEqual(path1, path4);
+    }
+
+    [TestMethod]
+    public void Equals_TakesIntoAccountPathNodesOrder()
+    {
+        var path1 = new TreePath<Edge, Node>(
+            new List<KeyValuePair<Edge, Node>> { new(new(0), new(1)), new(new(4), new(5)) });
+
+        var path2 = new TreePath<Edge, Node>(
+            new List<KeyValuePair<Edge, Node>> { new(new(4), new(5)), new(new(0), new(1)) });
+
+        Assert.AreNotEqual(path1, path2);
+    }
+
+    [TestMethod]
+    public void GetHashCode_ByValue()
+    {
+        var path1 = new TreePath<Edge, Node>(
+            new List<KeyValuePair<Edge, Node>> { new(new(6), new(7)), new(new(7), new(8)), new(new(8), new(9)) });
+
+        var path2 = new TreePath<Edge, Node>(
+            new List<KeyValuePair<Edge, Node>> { new(new(6), new(7)), new(new(7), new(8)), new(new(8), new(9)) });
+
+        Assert.AreEqual(path1.GetHashCode(), path2.GetHashCode());
     }
 
     private static void AssertPath_OfSuffixTrie(SuffixTrieNode.Leaf node2, SuffixTrieNode.Intermediate node1,

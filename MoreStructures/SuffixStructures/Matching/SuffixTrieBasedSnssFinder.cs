@@ -1,4 +1,5 @@
 ﻿using MoreStructures.RecImmTrees;
+using MoreStructures.RecImmTrees.Paths;
 using MoreStructures.RecImmTrees.Visitor;
 using MoreStructures.SuffixTries;
 using MoreStructures.SuffixTries.Builders;
@@ -48,6 +49,9 @@ namespace MoreStructures.SuffixStructures.Matching;
 /// </remarks>
 public class SuffixTrieBasedSnssFinder : SuffixStructureBasedSnssFinder
 {
+    private static readonly INodeToLeafPathsBuilder NodeToLeafPathsBuilder = 
+        new FullyIterativeNodeToLeafPathsBuilder();
+
     /// <inheritdoc/>
     public SuffixTrieBasedSnssFinder(char terminator1, char terminator2) : base(terminator1, terminator2)
     {
@@ -95,7 +99,7 @@ public class SuffixTrieBasedSnssFinder : SuffixStructureBasedSnssFinder
 
         var shortestSubstrNode = (
             from visit in visits
-            let pathsToLeaf = visit.Node.GetAllNodeToLeafPaths()
+            let pathsToLeaf = NodeToLeafPathsBuilder.GetAllNodeToLeafPaths<SuffixTrieEdge, SuffixTrieNode>(visit.Node)
             // All path-to-leaf contain Terminator1 => root-to-node prefix is not substring of text2
             let notSubstringOfText2 = pathsToLeaf.All(path => path.ContainsIndex(terminator1Index))
             where notSubstringOfText2
