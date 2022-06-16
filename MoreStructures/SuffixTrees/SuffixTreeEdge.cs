@@ -56,4 +56,12 @@ public record SuffixTreeEdge(int Start, int Length)
     /// <inheritdoc/>
     public virtual string OfRotated(RotatedTextWithTerminator text) => 
         string.Concat(text[Start..(Start + Length)])[0..Length];
+
+    /// <summary>
+    /// <inheritdoc/>
+    /// <br/>
+    /// Generates a string in the form "(<see cref="Start"/>, <see cref="Length"/>)".
+    /// </summary>
+    /// <returns><inheritdoc/></returns>
+    public override string ToString() => $"({Start},{Length})";
 }

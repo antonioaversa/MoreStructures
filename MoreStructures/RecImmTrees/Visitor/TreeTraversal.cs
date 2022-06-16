@@ -40,11 +40,11 @@ public abstract class TreeTraversal<TEdge, TNode>
     /// Specifying a well-defined, deterministic order ensures that children are visited in a consistent and 
     /// reproducible way across executions of the visit.
     /// </remarks>
-    public Func<IEnumerable<KeyValuePair<TEdge, TNode>>, IEnumerable<KeyValuePair<TEdge, TNode>>> ChildrenSorter
+    public Func<TreeTraversalVisit<TEdge, TNode>, IEnumerable<KeyValuePair<TEdge, TNode>>> ChildrenSorter
     {
         get;
         set;
-    } = children => children;
+    } = visit => visit.Node.Children;
 
     /// <inheritdoc/>
     /// <example>

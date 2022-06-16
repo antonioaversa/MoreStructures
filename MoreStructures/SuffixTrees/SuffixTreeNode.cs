@@ -75,14 +75,16 @@ public abstract record SuffixTreeNode(IDictionary<SuffixTreeEdge, SuffixTreeNode
     private static readonly IStringifier<SuffixTreeEdge, SuffixTreeNode> Stringifier =
         new FullyIterativeStringifier<SuffixTreeEdge, SuffixTreeNode>(
             r => r.IsLeaf() ? $"R from {r.Start}" : "R",
-            (e, n) => $"({e.Start},{e.Length}) -> {(n.IsLeaf() ? $"L from {n.Start}" : "I")}")
+            (e, n) => $"{e} -> {(n.IsLeaf() ? $"L from {n.Start}" : "I")}")
             {
                 StopIndentingLevel = 10,
             };
 
     /// <summary>
     /// <inheritdoc/>
-    /// Uses a <see cref="IStringifier{TEdge, TNode}"/> to generate the string.
+    /// <br/>
+    /// Uses a <see cref="IStringifier{TEdge, TNode}"/> to generate the string which show the node and its underlying
+    /// structure.
     /// </summary>
     /// <returns><inheritdoc/></returns>
     public override string ToString() => Stringifier.Stringify(this);

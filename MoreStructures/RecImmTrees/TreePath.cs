@@ -1,4 +1,5 @@
-﻿using MoreStructures.Utilities;
+﻿using MoreStructures.RecImmTrees.Conversions;
+using MoreStructures.Utilities;
 
 namespace MoreStructures.RecImmTrees;
 
@@ -13,6 +14,8 @@ namespace MoreStructures.RecImmTrees;
 /// Immutability is guaranteed by using <see cref="ValueReadOnlyDictionary{TKey, TValue}"/>.
 /// </remarks>
 public record TreePath<TEdge, TNode>(IEnumerable<KeyValuePair<TEdge, TNode>> PathNodes)
+    where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>
+    where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode>
 {
     /// <summary>
     /// Builds an empty path, i.e. an empty sequence of nodes.
@@ -44,4 +47,17 @@ public record TreePath<TEdge, TNode>(IEnumerable<KeyValuePair<TEdge, TNode>> Pat
     /// </summary>
     public IEnumerable<KeyValuePair<TEdge, TNode>> PathNodes { get; } = 
         PathNodes.ToValueReadOnlyCollection();
+
+    private static readonly IStringifier<TEdge, TNode> Stringifier =
+        new FullyIterativeStringifier<TEdge, TNode>(r => string.Empty, (e, n) => $"{e}")
+        {
+            PathSeparator = " => ",
+        };
+
+    /// <summary>
+    /// <inheritdoc/>
+    /// Uses a <see cref="IStringifier{TEdge, TNode}"/> to generate the string.
+    /// </summary>
+    /// <returns><inheritdoc/></returns>
+    public override string ToString() => Stringifier.Stringify(this);
 }

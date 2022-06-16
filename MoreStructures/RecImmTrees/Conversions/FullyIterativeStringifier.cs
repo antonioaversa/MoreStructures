@@ -21,7 +21,7 @@ namespace MoreStructures.RecImmTrees.Conversions;
 /// </remarks>
 public class FullyIterativeStringifier<TEdge, TNode> 
     : StringifierBase<TEdge, TNode>, IStringifier<TEdge, TNode>
-    where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>, IComparable<TEdge>
+    where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>
     where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode>
 {
     /// <summary>
@@ -99,17 +99,17 @@ public class FullyIterativeStringifier<TEdge, TNode>
 
     /// <inheritdoc/>
     /// <inheritdoc cref="FullyIterativeStringifier{TEdge, TNode}" path="/remarks"/>
-    public override string Stringify(TreePath<TNode, TEdge> path)
+    public override string Stringify(TreePath<TEdge, TNode> path)
     {
         if (!path.PathNodes.Any())
             return string.Empty;
 
         var stringBuilder = new StringBuilder();
 
-        var (firstNode, firstEdge) = path.PathNodes.First();
+        var (firstEdge, firstNode) = path.PathNodes.First();
         stringBuilder.Append(EdgeAndNodeStringifier(firstEdge, firstNode));
 
-        foreach (var (node, edge) in path.PathNodes.Skip(1))
+        foreach (var (edge, node) in path.PathNodes.Skip(1))
         {
             stringBuilder.Append(PathSeparator);
             stringBuilder.Append(EdgeAndNodeStringifier(edge, node));

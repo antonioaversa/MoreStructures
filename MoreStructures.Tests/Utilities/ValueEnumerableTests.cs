@@ -10,6 +10,16 @@ namespace MoreStructures.Tests.Utilities;
 public class ValueEnumerableTests
 {
     [TestMethod]
+    public void Ctor_DoesntEnumerateUnderlyingEnumerable()
+    {
+        var callsToEEnumerator = 0;
+        var e = Enumerable.Range(0, int.MaxValue).Select(x => callsToEEnumerator++);
+        var ve = new ValueEnumerable<int>(e);
+
+        Assert.AreEqual(0, callsToEEnumerator);
+    }
+
+    [TestMethod]
     public void Equals_ByValueOnItemsOfUnderlyingEnumerable()
     {
         var ve1 = new ValueEnumerable<char>("abc".ToList());

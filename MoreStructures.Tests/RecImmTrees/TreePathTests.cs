@@ -230,4 +230,37 @@ public class TreePathTests
             new(leafEdge, leaf),
         });
     }
+
+    [TestMethod]
+    public void ToString_IsTheSameOnEquivalentPaths()
+    {
+        var path1Str = BuildSuffixTriePathExample().ToString();
+        var path2Str = BuildSuffixTriePathExample().ToString();
+        Assert.AreEqual(path1Str, path2Str);
+    }
+
+    [TestMethod]
+    public void ToString_OfPathContainsToStringOfSubPath()
+    {
+        var path1 = BuildSuffixTriePathExample();
+        var path2 = BuildSuffixTriePathExample().Concat(BuildSuffixTriePathExample());
+        var path1Str = path1.ToString();
+        var path2Str = path2.ToString();
+        Assert.IsTrue(path2Str.Contains(path1Str));
+        Assert.IsTrue(path2Str.Length > path1Str.Length);
+    }
+
+    [TestMethod]
+    public void ToString_OfEmptyPathIsEmptyString()
+    {
+        var emptyPathStr = new TreePath<SuffixTreeEdge, SuffixTreeNode>().ToString();
+        Assert.AreEqual(string.Empty, emptyPathStr);
+    }
+
+    [TestMethod]
+    public void ToString_OfNonEmptyPathIsNonEmptyString()
+    {
+        var nonEmptyPathStr = BuildSuffixTriePathExample().ToString();
+        Assert.IsFalse(string.IsNullOrEmpty(nonEmptyPathStr));
+    }
 }

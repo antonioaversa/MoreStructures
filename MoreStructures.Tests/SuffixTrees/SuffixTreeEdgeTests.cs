@@ -66,4 +66,23 @@ public class SuffixTreeEdgeTests
         Assert.ThrowsException<ArgumentOutOfRangeException>(() => new SuffixTreeEdge(2, 1).OfRotated(new("$a", '$')));
         Assert.ThrowsException<ArgumentOutOfRangeException>(() => new SuffixTreeEdge(2, 2).OfRotated(new("$ab", '$')));
     }
+
+    [TestMethod]
+    public void ToString_OfEquivalentInstancesAreTheSame()
+    {
+        var edgeStr1 = new SuffixTreeEdge(1, 2).ToString();
+        var edgeStr2 = new SuffixTreeEdge(1, 2).ToString();
+        Assert.AreEqual(edgeStr2, edgeStr1);
+    }
+
+    [TestMethod]
+    public void ToString_WithDifferentStartOrLengthAreDifferent()
+    {
+        var edgeStr1 = new SuffixTreeEdge(1, 2).ToString();
+        var edgeStr2 = new SuffixTreeEdge(1, 3).ToString();
+        Assert.AreNotEqual(edgeStr2, edgeStr1);
+
+        var edgeStr3 = new SuffixTreeEdge(2, 2).ToString();
+        Assert.AreNotEqual(edgeStr3, edgeStr1);
+    }
 }

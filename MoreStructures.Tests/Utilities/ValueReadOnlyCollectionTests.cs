@@ -77,6 +77,16 @@ namespace MoreStructures.Tests.Utilities
         }
 
         [TestMethod]
+        public void GetHashCode_WorksWithEmptyCollection()
+        {
+            var list1 = new List<string> { };
+            var valueList1 = new ValueReadOnlyCollection<string>(list1);
+            var list2 = new List<string> { };
+            var valueList2 = new ValueReadOnlyCollection<string>(list2);
+            Assert.IsTrue(valueList1.GetHashCode() == valueList2.GetHashCode());
+        }
+
+        [TestMethod]
         public void GetHashCode_IsByValue_WithPrimitiveType()
         {
             var list1 = new List<string> { "a", "a" };

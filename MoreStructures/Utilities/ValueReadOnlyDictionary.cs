@@ -57,7 +57,7 @@ public class ValueReadOnlyDictionary<TKey, TValue> : ReadOnlyDictionary<TKey, TV
     /// </summary>
     /// <returns>A 32-bit signed integer hash code.</returns>
     public override int GetHashCode() =>
-        this.Select(kvp => kvp.GetHashCode()).Aggregate((acc, v) => acc ^ v);
+        this.Select(kvp => kvp.GetHashCode()).Aggregate(0.GetHashCode(), (acc, v) => acc ^ v);
 
     /// <summary>
     /// <inheritdoc/> Format: "{[k1] = v1, [k2] = v2, ...}".
