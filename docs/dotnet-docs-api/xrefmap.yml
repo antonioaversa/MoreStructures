@@ -1940,28 +1940,84 @@ references:
   fullName.vb: MoreStructures.RecImmTrees.IRecImmDictIndexedTreeNode(Of TEdge, TNode).Children
   nameWithType: IRecImmDictIndexedTreeNode<TEdge, TNode>.Children
   nameWithType.vb: IRecImmDictIndexedTreeNode(Of TEdge, TNode).Children
+- uid: MoreStructures.RecImmTrees.Paths
+  name: MoreStructures.RecImmTrees.Paths
+  href: api/MoreStructures.RecImmTrees.Paths.html
+  commentId: N:MoreStructures.RecImmTrees.Paths
+  fullName: MoreStructures.RecImmTrees.Paths
+  nameWithType: MoreStructures.RecImmTrees.Paths
+- uid: MoreStructures.RecImmTrees.Paths.FullyIterativeNodeToLeafPathsBuilder
+  name: FullyIterativeNodeToLeafPathsBuilder
+  href: api/MoreStructures.RecImmTrees.Paths.FullyIterativeNodeToLeafPathsBuilder.html
+  commentId: T:MoreStructures.RecImmTrees.Paths.FullyIterativeNodeToLeafPathsBuilder
+  fullName: MoreStructures.RecImmTrees.Paths.FullyIterativeNodeToLeafPathsBuilder
+  nameWithType: FullyIterativeNodeToLeafPathsBuilder
+- uid: MoreStructures.RecImmTrees.Paths.FullyIterativeNodeToLeafPathsBuilder.GetAllNodeToLeafPaths*
+  name: GetAllNodeToLeafPaths
+  href: api/MoreStructures.RecImmTrees.Paths.FullyIterativeNodeToLeafPathsBuilder.html#MoreStructures_RecImmTrees_Paths_FullyIterativeNodeToLeafPathsBuilder_GetAllNodeToLeafPaths_
+  commentId: Overload:MoreStructures.RecImmTrees.Paths.FullyIterativeNodeToLeafPathsBuilder.GetAllNodeToLeafPaths
+  isSpec: "True"
+  fullName: MoreStructures.RecImmTrees.Paths.FullyIterativeNodeToLeafPathsBuilder.GetAllNodeToLeafPaths
+  nameWithType: FullyIterativeNodeToLeafPathsBuilder.GetAllNodeToLeafPaths
+- uid: MoreStructures.RecImmTrees.Paths.FullyIterativeNodeToLeafPathsBuilder.GetAllNodeToLeafPaths``2(``1)
+  name: GetAllNodeToLeafPaths<TEdge, TNode>(TNode)
+  href: api/MoreStructures.RecImmTrees.Paths.FullyIterativeNodeToLeafPathsBuilder.html#MoreStructures_RecImmTrees_Paths_FullyIterativeNodeToLeafPathsBuilder_GetAllNodeToLeafPaths__2___1_
+  commentId: M:MoreStructures.RecImmTrees.Paths.FullyIterativeNodeToLeafPathsBuilder.GetAllNodeToLeafPaths``2(``1)
+  name.vb: GetAllNodeToLeafPaths(Of TEdge, TNode)(TNode)
+  fullName: MoreStructures.RecImmTrees.Paths.FullyIterativeNodeToLeafPathsBuilder.GetAllNodeToLeafPaths<TEdge, TNode>(TNode)
+  fullName.vb: MoreStructures.RecImmTrees.Paths.FullyIterativeNodeToLeafPathsBuilder.GetAllNodeToLeafPaths(Of TEdge, TNode)(TNode)
+  nameWithType: FullyIterativeNodeToLeafPathsBuilder.GetAllNodeToLeafPaths<TEdge, TNode>(TNode)
+  nameWithType.vb: FullyIterativeNodeToLeafPathsBuilder.GetAllNodeToLeafPaths(Of TEdge, TNode)(TNode)
+- uid: MoreStructures.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilder
+  name: FullyRecursiveNodeToLeafPathsBuilder
+  href: api/MoreStructures.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilder.html
+  commentId: T:MoreStructures.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilder
+  fullName: MoreStructures.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilder
+  nameWithType: FullyRecursiveNodeToLeafPathsBuilder
+- uid: MoreStructures.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilder.GetAllNodeToLeafPaths*
+  name: GetAllNodeToLeafPaths
+  href: api/MoreStructures.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilder.html#MoreStructures_RecImmTrees_Paths_FullyRecursiveNodeToLeafPathsBuilder_GetAllNodeToLeafPaths_
+  commentId: Overload:MoreStructures.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilder.GetAllNodeToLeafPaths
+  isSpec: "True"
+  fullName: MoreStructures.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilder.GetAllNodeToLeafPaths
+  nameWithType: FullyRecursiveNodeToLeafPathsBuilder.GetAllNodeToLeafPaths
+- uid: MoreStructures.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilder.GetAllNodeToLeafPaths``2(``1)
+  name: GetAllNodeToLeafPaths<TEdge, TNode>(TNode)
+  href: api/MoreStructures.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilder.html#MoreStructures_RecImmTrees_Paths_FullyRecursiveNodeToLeafPathsBuilder_GetAllNodeToLeafPaths__2___1_
+  commentId: M:MoreStructures.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilder.GetAllNodeToLeafPaths``2(``1)
+  name.vb: GetAllNodeToLeafPaths(Of TEdge, TNode)(TNode)
+  fullName: MoreStructures.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilder.GetAllNodeToLeafPaths<TEdge, TNode>(TNode)
+  fullName.vb: MoreStructures.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilder.GetAllNodeToLeafPaths(Of TEdge, TNode)(TNode)
+  nameWithType: FullyRecursiveNodeToLeafPathsBuilder.GetAllNodeToLeafPaths<TEdge, TNode>(TNode)
+  nameWithType.vb: FullyRecursiveNodeToLeafPathsBuilder.GetAllNodeToLeafPaths(Of TEdge, TNode)(TNode)
+- uid: MoreStructures.RecImmTrees.Paths.INodeToLeafPathsBuilder
+  name: INodeToLeafPathsBuilder
+  href: api/MoreStructures.RecImmTrees.Paths.INodeToLeafPathsBuilder.html
+  commentId: T:MoreStructures.RecImmTrees.Paths.INodeToLeafPathsBuilder
+  fullName: MoreStructures.RecImmTrees.Paths.INodeToLeafPathsBuilder
+  nameWithType: INodeToLeafPathsBuilder
+- uid: MoreStructures.RecImmTrees.Paths.INodeToLeafPathsBuilder.GetAllNodeToLeafPaths*
+  name: GetAllNodeToLeafPaths
+  href: api/MoreStructures.RecImmTrees.Paths.INodeToLeafPathsBuilder.html#MoreStructures_RecImmTrees_Paths_INodeToLeafPathsBuilder_GetAllNodeToLeafPaths_
+  commentId: Overload:MoreStructures.RecImmTrees.Paths.INodeToLeafPathsBuilder.GetAllNodeToLeafPaths
+  isSpec: "True"
+  fullName: MoreStructures.RecImmTrees.Paths.INodeToLeafPathsBuilder.GetAllNodeToLeafPaths
+  nameWithType: INodeToLeafPathsBuilder.GetAllNodeToLeafPaths
+- uid: MoreStructures.RecImmTrees.Paths.INodeToLeafPathsBuilder.GetAllNodeToLeafPaths``2(``1)
+  name: GetAllNodeToLeafPaths<TEdge, TNode>(TNode)
+  href: api/MoreStructures.RecImmTrees.Paths.INodeToLeafPathsBuilder.html#MoreStructures_RecImmTrees_Paths_INodeToLeafPathsBuilder_GetAllNodeToLeafPaths__2___1_
+  commentId: M:MoreStructures.RecImmTrees.Paths.INodeToLeafPathsBuilder.GetAllNodeToLeafPaths``2(``1)
+  name.vb: GetAllNodeToLeafPaths(Of TEdge, TNode)(TNode)
+  fullName: MoreStructures.RecImmTrees.Paths.INodeToLeafPathsBuilder.GetAllNodeToLeafPaths<TEdge, TNode>(TNode)
+  fullName.vb: MoreStructures.RecImmTrees.Paths.INodeToLeafPathsBuilder.GetAllNodeToLeafPaths(Of TEdge, TNode)(TNode)
+  nameWithType: INodeToLeafPathsBuilder.GetAllNodeToLeafPaths<TEdge, TNode>(TNode)
+  nameWithType.vb: INodeToLeafPathsBuilder.GetAllNodeToLeafPaths(Of TEdge, TNode)(TNode)
 - uid: MoreStructures.RecImmTrees.RecImmDictIndexedTreeNodeExtensions
   name: RecImmDictIndexedTreeNodeExtensions
   href: api/MoreStructures.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.html
   commentId: T:MoreStructures.RecImmTrees.RecImmDictIndexedTreeNodeExtensions
   fullName: MoreStructures.RecImmTrees.RecImmDictIndexedTreeNodeExtensions
   nameWithType: RecImmDictIndexedTreeNodeExtensions
-- uid: MoreStructures.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.GetAllNodeToLeafPaths*
-  name: GetAllNodeToLeafPaths
-  href: api/MoreStructures.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.html#MoreStructures_RecImmTrees_RecImmDictIndexedTreeNodeExtensions_GetAllNodeToLeafPaths_
-  commentId: Overload:MoreStructures.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.GetAllNodeToLeafPaths
-  isSpec: "True"
-  fullName: MoreStructures.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.GetAllNodeToLeafPaths
-  nameWithType: RecImmDictIndexedTreeNodeExtensions.GetAllNodeToLeafPaths
-- uid: MoreStructures.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.GetAllNodeToLeafPaths``2(MoreStructures.RecImmTrees.IRecImmDictIndexedTreeNode{``0,``1})
-  name: GetAllNodeToLeafPaths<TEdge, TNode>(IRecImmDictIndexedTreeNode<TEdge, TNode>)
-  href: api/MoreStructures.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.html#MoreStructures_RecImmTrees_RecImmDictIndexedTreeNodeExtensions_GetAllNodeToLeafPaths__2_MoreStructures_RecImmTrees_IRecImmDictIndexedTreeNode___0___1__
-  commentId: M:MoreStructures.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.GetAllNodeToLeafPaths``2(MoreStructures.RecImmTrees.IRecImmDictIndexedTreeNode{``0,``1})
-  name.vb: GetAllNodeToLeafPaths(Of TEdge, TNode)(IRecImmDictIndexedTreeNode(Of TEdge, TNode))
-  fullName: MoreStructures.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.GetAllNodeToLeafPaths<TEdge, TNode>(MoreStructures.RecImmTrees.IRecImmDictIndexedTreeNode<TEdge, TNode>)
-  fullName.vb: MoreStructures.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.GetAllNodeToLeafPaths(Of TEdge, TNode)(MoreStructures.RecImmTrees.IRecImmDictIndexedTreeNode(Of TEdge, TNode))
-  nameWithType: RecImmDictIndexedTreeNodeExtensions.GetAllNodeToLeafPaths<TEdge, TNode>(IRecImmDictIndexedTreeNode<TEdge, TNode>)
-  nameWithType.vb: RecImmDictIndexedTreeNodeExtensions.GetAllNodeToLeafPaths(Of TEdge, TNode)(IRecImmDictIndexedTreeNode(Of TEdge, TNode))
 - uid: MoreStructures.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.IsLeaf*
   name: IsLeaf
   href: api/MoreStructures.RecImmTrees.RecImmDictIndexedTreeNodeExtensions.html#MoreStructures_RecImmTrees_RecImmDictIndexedTreeNodeExtensions_IsLeaf_
@@ -3227,15 +3283,15 @@ references:
   isSpec: "True"
   fullName: MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.GetAllSuffixesFor
   nameWithType: SuffixStructureNodeExtensions.GetAllSuffixesFor
-- uid: MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.GetAllSuffixesFor``2(MoreStructures.SuffixStructures.ISuffixStructureNode{``0,``1},MoreStructures.TextWithTerminator)
-  name: GetAllSuffixesFor<TEdge, TNode>(ISuffixStructureNode<TEdge, TNode>, TextWithTerminator)
-  href: api/MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2_MoreStructures_SuffixStructures_ISuffixStructureNode___0___1__MoreStructures_TextWithTerminator_
-  commentId: M:MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.GetAllSuffixesFor``2(MoreStructures.SuffixStructures.ISuffixStructureNode{``0,``1},MoreStructures.TextWithTerminator)
-  name.vb: GetAllSuffixesFor(Of TEdge, TNode)(ISuffixStructureNode(Of TEdge, TNode), TextWithTerminator)
-  fullName: MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.GetAllSuffixesFor<TEdge, TNode>(MoreStructures.SuffixStructures.ISuffixStructureNode<TEdge, TNode>, MoreStructures.TextWithTerminator)
-  fullName.vb: MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.GetAllSuffixesFor(Of TEdge, TNode)(MoreStructures.SuffixStructures.ISuffixStructureNode(Of TEdge, TNode), MoreStructures.TextWithTerminator)
-  nameWithType: SuffixStructureNodeExtensions.GetAllSuffixesFor<TEdge, TNode>(ISuffixStructureNode<TEdge, TNode>, TextWithTerminator)
-  nameWithType.vb: SuffixStructureNodeExtensions.GetAllSuffixesFor(Of TEdge, TNode)(ISuffixStructureNode(Of TEdge, TNode), TextWithTerminator)
+- uid: MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.GetAllSuffixesFor``2(``1,MoreStructures.TextWithTerminator)
+  name: GetAllSuffixesFor<TEdge, TNode>(TNode, TextWithTerminator)
+  href: api/MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_
+  commentId: M:MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.GetAllSuffixesFor``2(``1,MoreStructures.TextWithTerminator)
+  name.vb: GetAllSuffixesFor(Of TEdge, TNode)(TNode, TextWithTerminator)
+  fullName: MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.GetAllSuffixesFor<TEdge, TNode>(TNode, MoreStructures.TextWithTerminator)
+  fullName.vb: MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.GetAllSuffixesFor(Of TEdge, TNode)(TNode, MoreStructures.TextWithTerminator)
+  nameWithType: SuffixStructureNodeExtensions.GetAllSuffixesFor<TEdge, TNode>(TNode, TextWithTerminator)
+  nameWithType.vb: SuffixStructureNodeExtensions.GetAllSuffixesFor(Of TEdge, TNode)(TNode, TextWithTerminator)
 - uid: MoreStructures.SuffixStructures.SuffixStructureTreePathExtensions
   name: SuffixStructureTreePathExtensions
   href: api/MoreStructures.SuffixStructures.SuffixStructureTreePathExtensions.html
@@ -5469,38 +5525,127 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.RecImmTrees.Conversions.StringifierTests.Stringify_OfTwoLevelsTree
   nameWithType: StringifierTests.Stringify_OfTwoLevelsTree
+- uid: MoreStructures.Tests.RecImmTrees.Paths
+  name: MoreStructures.Tests.RecImmTrees.Paths
+  href: api/MoreStructures.Tests.RecImmTrees.Paths.html
+  commentId: N:MoreStructures.Tests.RecImmTrees.Paths
+  fullName: MoreStructures.Tests.RecImmTrees.Paths
+  nameWithType: MoreStructures.Tests.RecImmTrees.Paths
+- uid: MoreStructures.Tests.RecImmTrees.Paths.FullyIterativeNodeToLeafPathsBuilderTests
+  name: FullyIterativeNodeToLeafPathsBuilderTests
+  href: api/MoreStructures.Tests.RecImmTrees.Paths.FullyIterativeNodeToLeafPathsBuilderTests.html
+  commentId: T:MoreStructures.Tests.RecImmTrees.Paths.FullyIterativeNodeToLeafPathsBuilderTests
+  fullName: MoreStructures.Tests.RecImmTrees.Paths.FullyIterativeNodeToLeafPathsBuilderTests
+  nameWithType: FullyIterativeNodeToLeafPathsBuilderTests
+- uid: MoreStructures.Tests.RecImmTrees.Paths.FullyIterativeNodeToLeafPathsBuilderTests.#ctor
+  name: FullyIterativeNodeToLeafPathsBuilderTests()
+  href: api/MoreStructures.Tests.RecImmTrees.Paths.FullyIterativeNodeToLeafPathsBuilderTests.html#MoreStructures_Tests_RecImmTrees_Paths_FullyIterativeNodeToLeafPathsBuilderTests__ctor
+  commentId: M:MoreStructures.Tests.RecImmTrees.Paths.FullyIterativeNodeToLeafPathsBuilderTests.#ctor
+  fullName: MoreStructures.Tests.RecImmTrees.Paths.FullyIterativeNodeToLeafPathsBuilderTests.FullyIterativeNodeToLeafPathsBuilderTests()
+  nameWithType: FullyIterativeNodeToLeafPathsBuilderTests.FullyIterativeNodeToLeafPathsBuilderTests()
+- uid: MoreStructures.Tests.RecImmTrees.Paths.FullyIterativeNodeToLeafPathsBuilderTests.#ctor*
+  name: FullyIterativeNodeToLeafPathsBuilderTests
+  href: api/MoreStructures.Tests.RecImmTrees.Paths.FullyIterativeNodeToLeafPathsBuilderTests.html#MoreStructures_Tests_RecImmTrees_Paths_FullyIterativeNodeToLeafPathsBuilderTests__ctor_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Paths.FullyIterativeNodeToLeafPathsBuilderTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Paths.FullyIterativeNodeToLeafPathsBuilderTests.FullyIterativeNodeToLeafPathsBuilderTests
+  nameWithType: FullyIterativeNodeToLeafPathsBuilderTests.FullyIterativeNodeToLeafPathsBuilderTests
+- uid: MoreStructures.Tests.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilderTests
+  name: FullyRecursiveNodeToLeafPathsBuilderTests
+  href: api/MoreStructures.Tests.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilderTests.html
+  commentId: T:MoreStructures.Tests.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilderTests
+  fullName: MoreStructures.Tests.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilderTests
+  nameWithType: FullyRecursiveNodeToLeafPathsBuilderTests
+- uid: MoreStructures.Tests.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilderTests.#ctor
+  name: FullyRecursiveNodeToLeafPathsBuilderTests()
+  href: api/MoreStructures.Tests.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilderTests.html#MoreStructures_Tests_RecImmTrees_Paths_FullyRecursiveNodeToLeafPathsBuilderTests__ctor
+  commentId: M:MoreStructures.Tests.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilderTests.#ctor
+  fullName: MoreStructures.Tests.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilderTests.FullyRecursiveNodeToLeafPathsBuilderTests()
+  nameWithType: FullyRecursiveNodeToLeafPathsBuilderTests.FullyRecursiveNodeToLeafPathsBuilderTests()
+- uid: MoreStructures.Tests.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilderTests.#ctor*
+  name: FullyRecursiveNodeToLeafPathsBuilderTests
+  href: api/MoreStructures.Tests.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilderTests.html#MoreStructures_Tests_RecImmTrees_Paths_FullyRecursiveNodeToLeafPathsBuilderTests__ctor_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilderTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilderTests.FullyRecursiveNodeToLeafPathsBuilderTests
+  nameWithType: FullyRecursiveNodeToLeafPathsBuilderTests.FullyRecursiveNodeToLeafPathsBuilderTests
+- uid: MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests
+  name: NodeToLeafPathsBuilderTests
+  href: api/MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.html
+  commentId: T:MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests
+  fullName: MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests
+  nameWithType: NodeToLeafPathsBuilderTests
+- uid: MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.#ctor(MoreStructures.RecImmTrees.Paths.INodeToLeafPathsBuilder)
+  name: NodeToLeafPathsBuilderTests(INodeToLeafPathsBuilder)
+  href: api/MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.html#MoreStructures_Tests_RecImmTrees_Paths_NodeToLeafPathsBuilderTests__ctor_MoreStructures_RecImmTrees_Paths_INodeToLeafPathsBuilder_
+  commentId: M:MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.#ctor(MoreStructures.RecImmTrees.Paths.INodeToLeafPathsBuilder)
+  fullName: MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.NodeToLeafPathsBuilderTests(MoreStructures.RecImmTrees.Paths.INodeToLeafPathsBuilder)
+  nameWithType: NodeToLeafPathsBuilderTests.NodeToLeafPathsBuilderTests(INodeToLeafPathsBuilder)
+- uid: MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.#ctor*
+  name: NodeToLeafPathsBuilderTests
+  href: api/MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.html#MoreStructures_Tests_RecImmTrees_Paths_NodeToLeafPathsBuilderTests__ctor_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.NodeToLeafPathsBuilderTests
+  nameWithType: NodeToLeafPathsBuilderTests.NodeToLeafPathsBuilderTests
+- uid: MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.Builder
+  name: Builder
+  href: api/MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.html#MoreStructures_Tests_RecImmTrees_Paths_NodeToLeafPathsBuilderTests_Builder
+  commentId: P:MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.Builder
+  fullName: MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.Builder
+  nameWithType: NodeToLeafPathsBuilderTests.Builder
+- uid: MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.Builder*
+  name: Builder
+  href: api/MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.html#MoreStructures_Tests_RecImmTrees_Paths_NodeToLeafPathsBuilderTests_Builder_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.Builder
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.Builder
+  nameWithType: NodeToLeafPathsBuilderTests.Builder
+- uid: MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.GetAllNodeToLeafPaths__DocExample
+  name: GetAllNodeToLeafPaths__DocExample()
+  href: api/MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.html#MoreStructures_Tests_RecImmTrees_Paths_NodeToLeafPathsBuilderTests_GetAllNodeToLeafPaths__DocExample
+  commentId: M:MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.GetAllNodeToLeafPaths__DocExample
+  fullName: MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.GetAllNodeToLeafPaths__DocExample()
+  nameWithType: NodeToLeafPathsBuilderTests.GetAllNodeToLeafPaths__DocExample()
+- uid: MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.GetAllNodeToLeafPaths__DocExample*
+  name: GetAllNodeToLeafPaths__DocExample
+  href: api/MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.html#MoreStructures_Tests_RecImmTrees_Paths_NodeToLeafPathsBuilderTests_GetAllNodeToLeafPaths__DocExample_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.GetAllNodeToLeafPaths__DocExample
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.GetAllNodeToLeafPaths__DocExample
+  nameWithType: NodeToLeafPathsBuilderTests.GetAllNodeToLeafPaths__DocExample
+- uid: MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.GetAllNodeToLeafPaths_IsCorrectWithTrees
+  name: GetAllNodeToLeafPaths_IsCorrectWithTrees()
+  href: api/MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.html#MoreStructures_Tests_RecImmTrees_Paths_NodeToLeafPathsBuilderTests_GetAllNodeToLeafPaths_IsCorrectWithTrees
+  commentId: M:MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.GetAllNodeToLeafPaths_IsCorrectWithTrees
+  fullName: MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.GetAllNodeToLeafPaths_IsCorrectWithTrees()
+  nameWithType: NodeToLeafPathsBuilderTests.GetAllNodeToLeafPaths_IsCorrectWithTrees()
+- uid: MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.GetAllNodeToLeafPaths_IsCorrectWithTrees*
+  name: GetAllNodeToLeafPaths_IsCorrectWithTrees
+  href: api/MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.html#MoreStructures_Tests_RecImmTrees_Paths_NodeToLeafPathsBuilderTests_GetAllNodeToLeafPaths_IsCorrectWithTrees_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.GetAllNodeToLeafPaths_IsCorrectWithTrees
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.GetAllNodeToLeafPaths_IsCorrectWithTrees
+  nameWithType: NodeToLeafPathsBuilderTests.GetAllNodeToLeafPaths_IsCorrectWithTrees
+- uid: MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.GetAllNodeToLeafPaths_IsCorrectWithTries
+  name: GetAllNodeToLeafPaths_IsCorrectWithTries()
+  href: api/MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.html#MoreStructures_Tests_RecImmTrees_Paths_NodeToLeafPathsBuilderTests_GetAllNodeToLeafPaths_IsCorrectWithTries
+  commentId: M:MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.GetAllNodeToLeafPaths_IsCorrectWithTries
+  fullName: MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.GetAllNodeToLeafPaths_IsCorrectWithTries()
+  nameWithType: NodeToLeafPathsBuilderTests.GetAllNodeToLeafPaths_IsCorrectWithTries()
+- uid: MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.GetAllNodeToLeafPaths_IsCorrectWithTries*
+  name: GetAllNodeToLeafPaths_IsCorrectWithTries
+  href: api/MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.html#MoreStructures_Tests_RecImmTrees_Paths_NodeToLeafPathsBuilderTests_GetAllNodeToLeafPaths_IsCorrectWithTries_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.GetAllNodeToLeafPaths_IsCorrectWithTries
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.Paths.NodeToLeafPathsBuilderTests.GetAllNodeToLeafPaths_IsCorrectWithTries
+  nameWithType: NodeToLeafPathsBuilderTests.GetAllNodeToLeafPaths_IsCorrectWithTries
 - uid: MoreStructures.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests
   name: RecImmDictIndexedTreeNodeExtensionsTests
   href: api/MoreStructures.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.html
   commentId: T:MoreStructures.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests
   fullName: MoreStructures.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests
   nameWithType: RecImmDictIndexedTreeNodeExtensionsTests
-- uid: MoreStructures.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect
-  name: GetAllNodeToLeafPaths_IsCorrect()
-  href: api/MoreStructures.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.html#MoreStructures_Tests_RecImmTrees_RecImmDictIndexedTreeNodeExtensionsTests_GetAllNodeToLeafPaths_IsCorrect
-  commentId: M:MoreStructures.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect
-  fullName: MoreStructures.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect()
-  nameWithType: RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect()
-- uid: MoreStructures.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect*
-  name: GetAllNodeToLeafPaths_IsCorrect
-  href: api/MoreStructures.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.html#MoreStructures_Tests_RecImmTrees_RecImmDictIndexedTreeNodeExtensionsTests_GetAllNodeToLeafPaths_IsCorrect_
-  commentId: Overload:MoreStructures.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect
-  isSpec: "True"
-  fullName: MoreStructures.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect
-  nameWithType: RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect
-- uid: MoreStructures.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect2
-  name: GetAllNodeToLeafPaths_IsCorrect2()
-  href: api/MoreStructures.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.html#MoreStructures_Tests_RecImmTrees_RecImmDictIndexedTreeNodeExtensionsTests_GetAllNodeToLeafPaths_IsCorrect2
-  commentId: M:MoreStructures.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect2
-  fullName: MoreStructures.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect2()
-  nameWithType: RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect2()
-- uid: MoreStructures.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect2*
-  name: GetAllNodeToLeafPaths_IsCorrect2
-  href: api/MoreStructures.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.html#MoreStructures_Tests_RecImmTrees_RecImmDictIndexedTreeNodeExtensionsTests_GetAllNodeToLeafPaths_IsCorrect2_
-  commentId: Overload:MoreStructures.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect2
-  isSpec: "True"
-  fullName: MoreStructures.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect2
-  nameWithType: RecImmDictIndexedTreeNodeExtensionsTests.GetAllNodeToLeafPaths_IsCorrect2
 - uid: MoreStructures.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.IsLeaf_IsCorrectForSuffixTree
   name: IsLeaf_IsCorrectForSuffixTree()
   href: api/MoreStructures.Tests.RecImmTrees.RecImmDictIndexedTreeNodeExtensionsTests.html#MoreStructures_Tests_RecImmTrees_RecImmDictIndexedTreeNodeExtensionsTests_IsLeaf_IsCorrectForSuffixTree
@@ -5926,6 +6071,45 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.RecImmTrees.TreePathTests.Ctor_OfSuffixTrie_SingletonPath_IsCorrect
   nameWithType: TreePathTests.Ctor_OfSuffixTrie_SingletonPath_IsCorrect
+- uid: MoreStructures.Tests.RecImmTrees.TreePathTests.Equals_ByValue
+  name: Equals_ByValue()
+  href: api/MoreStructures.Tests.RecImmTrees.TreePathTests.html#MoreStructures_Tests_RecImmTrees_TreePathTests_Equals_ByValue
+  commentId: M:MoreStructures.Tests.RecImmTrees.TreePathTests.Equals_ByValue
+  fullName: MoreStructures.Tests.RecImmTrees.TreePathTests.Equals_ByValue()
+  nameWithType: TreePathTests.Equals_ByValue()
+- uid: MoreStructures.Tests.RecImmTrees.TreePathTests.Equals_ByValue*
+  name: Equals_ByValue
+  href: api/MoreStructures.Tests.RecImmTrees.TreePathTests.html#MoreStructures_Tests_RecImmTrees_TreePathTests_Equals_ByValue_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.TreePathTests.Equals_ByValue
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.TreePathTests.Equals_ByValue
+  nameWithType: TreePathTests.Equals_ByValue
+- uid: MoreStructures.Tests.RecImmTrees.TreePathTests.Equals_TakesIntoAccountPathNodesOrder
+  name: Equals_TakesIntoAccountPathNodesOrder()
+  href: api/MoreStructures.Tests.RecImmTrees.TreePathTests.html#MoreStructures_Tests_RecImmTrees_TreePathTests_Equals_TakesIntoAccountPathNodesOrder
+  commentId: M:MoreStructures.Tests.RecImmTrees.TreePathTests.Equals_TakesIntoAccountPathNodesOrder
+  fullName: MoreStructures.Tests.RecImmTrees.TreePathTests.Equals_TakesIntoAccountPathNodesOrder()
+  nameWithType: TreePathTests.Equals_TakesIntoAccountPathNodesOrder()
+- uid: MoreStructures.Tests.RecImmTrees.TreePathTests.Equals_TakesIntoAccountPathNodesOrder*
+  name: Equals_TakesIntoAccountPathNodesOrder
+  href: api/MoreStructures.Tests.RecImmTrees.TreePathTests.html#MoreStructures_Tests_RecImmTrees_TreePathTests_Equals_TakesIntoAccountPathNodesOrder_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.TreePathTests.Equals_TakesIntoAccountPathNodesOrder
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.TreePathTests.Equals_TakesIntoAccountPathNodesOrder
+  nameWithType: TreePathTests.Equals_TakesIntoAccountPathNodesOrder
+- uid: MoreStructures.Tests.RecImmTrees.TreePathTests.GetHashCode_ByValue
+  name: GetHashCode_ByValue()
+  href: api/MoreStructures.Tests.RecImmTrees.TreePathTests.html#MoreStructures_Tests_RecImmTrees_TreePathTests_GetHashCode_ByValue
+  commentId: M:MoreStructures.Tests.RecImmTrees.TreePathTests.GetHashCode_ByValue
+  fullName: MoreStructures.Tests.RecImmTrees.TreePathTests.GetHashCode_ByValue()
+  nameWithType: TreePathTests.GetHashCode_ByValue()
+- uid: MoreStructures.Tests.RecImmTrees.TreePathTests.GetHashCode_ByValue*
+  name: GetHashCode_ByValue
+  href: api/MoreStructures.Tests.RecImmTrees.TreePathTests.html#MoreStructures_Tests_RecImmTrees_TreePathTests_GetHashCode_ByValue_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.TreePathTests.GetHashCode_ByValue
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.TreePathTests.GetHashCode_ByValue
+  nameWithType: TreePathTests.GetHashCode_ByValue
 - uid: MoreStructures.Tests.RecImmTrees.TreePathTests.PathNodes_OfSuffixTree_ImmutabilityOnCtorParam
   name: PathNodes_OfSuffixTree_ImmutabilityOnCtorParam()
   href: api/MoreStructures.Tests.RecImmTrees.TreePathTests.html#MoreStructures_Tests_RecImmTrees_TreePathTests_PathNodes_OfSuffixTree_ImmutabilityOnCtorParam
@@ -7090,32 +7274,32 @@ references:
   commentId: T:MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests
   fullName: MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests
   nameWithType: SuffixStructuresNodeExtensionsTests
-- uid: MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrect
-  name: GetAllSuffixesFor_IsCorrect()
-  href: api/MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.html#MoreStructures_Tests_SuffixStructures_SuffixStructuresNodeExtensionsTests_GetAllSuffixesFor_IsCorrect
-  commentId: M:MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrect
-  fullName: MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrect()
-  nameWithType: SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrect()
-- uid: MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrect*
-  name: GetAllSuffixesFor_IsCorrect
-  href: api/MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.html#MoreStructures_Tests_SuffixStructures_SuffixStructuresNodeExtensionsTests_GetAllSuffixesFor_IsCorrect_
-  commentId: Overload:MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrect
+- uid: MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrectWithTrees
+  name: GetAllSuffixesFor_IsCorrectWithTrees()
+  href: api/MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.html#MoreStructures_Tests_SuffixStructures_SuffixStructuresNodeExtensionsTests_GetAllSuffixesFor_IsCorrectWithTrees
+  commentId: M:MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrectWithTrees
+  fullName: MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrectWithTrees()
+  nameWithType: SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrectWithTrees()
+- uid: MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrectWithTrees*
+  name: GetAllSuffixesFor_IsCorrectWithTrees
+  href: api/MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.html#MoreStructures_Tests_SuffixStructures_SuffixStructuresNodeExtensionsTests_GetAllSuffixesFor_IsCorrectWithTrees_
+  commentId: Overload:MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrectWithTrees
   isSpec: "True"
-  fullName: MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrect
-  nameWithType: SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrect
-- uid: MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrect2
-  name: GetAllSuffixesFor_IsCorrect2()
-  href: api/MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.html#MoreStructures_Tests_SuffixStructures_SuffixStructuresNodeExtensionsTests_GetAllSuffixesFor_IsCorrect2
-  commentId: M:MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrect2
-  fullName: MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrect2()
-  nameWithType: SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrect2()
-- uid: MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrect2*
-  name: GetAllSuffixesFor_IsCorrect2
-  href: api/MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.html#MoreStructures_Tests_SuffixStructures_SuffixStructuresNodeExtensionsTests_GetAllSuffixesFor_IsCorrect2_
-  commentId: Overload:MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrect2
+  fullName: MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrectWithTrees
+  nameWithType: SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrectWithTrees
+- uid: MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrectWithTries
+  name: GetAllSuffixesFor_IsCorrectWithTries()
+  href: api/MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.html#MoreStructures_Tests_SuffixStructures_SuffixStructuresNodeExtensionsTests_GetAllSuffixesFor_IsCorrectWithTries
+  commentId: M:MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrectWithTries
+  fullName: MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrectWithTries()
+  nameWithType: SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrectWithTries()
+- uid: MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrectWithTries*
+  name: GetAllSuffixesFor_IsCorrectWithTries
+  href: api/MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.html#MoreStructures_Tests_SuffixStructures_SuffixStructuresNodeExtensionsTests_GetAllSuffixesFor_IsCorrectWithTries_
+  commentId: Overload:MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrectWithTries
   isSpec: "True"
-  fullName: MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrect2
-  nameWithType: SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrect2
+  fullName: MoreStructures.Tests.SuffixStructures.SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrectWithTries
+  nameWithType: SuffixStructuresNodeExtensionsTests.GetAllSuffixesFor_IsCorrectWithTries
 - uid: MoreStructures.Tests.SuffixStructures.SuffixStructuresTreePathExtensionsTests
   name: SuffixStructuresTreePathExtensionsTests
   href: api/MoreStructures.Tests.SuffixStructures.SuffixStructuresTreePathExtensionsTests.html
@@ -7500,6 +7684,12 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_UsesTerminatorForMatchToDistinguishSuffixesFromAnySubstring
   nameWithType: SuffixTreeBuilderTests.BuildTree_UsesTerminatorForMatchToDistinguishSuffixesFromAnySubstring
+- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.NodeToLeafPathsBuilder
+  name: NodeToLeafPathsBuilder
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_NodeToLeafPathsBuilder
+  commentId: F:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.NodeToLeafPathsBuilder
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.NodeToLeafPathsBuilder
+  nameWithType: SuffixTreeBuilderTests.NodeToLeafPathsBuilder
 - uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen
   name: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen
   href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.html
@@ -8323,6 +8513,12 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.BuildTree_WithTextWithTerminatorInput
   nameWithType: SuffixTrieBuilderTests.BuildTree_WithTextWithTerminatorInput
+- uid: MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.NodeToLeafPathsBuilder
+  name: NodeToLeafPathsBuilder
+  href: api/MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.html#MoreStructures_Tests_SuffixTries_Builders_SuffixTrieBuilderTests_NodeToLeafPathsBuilder
+  commentId: F:MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.NodeToLeafPathsBuilder
+  fullName: MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.NodeToLeafPathsBuilder
+  nameWithType: SuffixTrieBuilderTests.NodeToLeafPathsBuilder
 - uid: MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests
   name: SuffixTrieEdgeTests
   href: api/MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.html
