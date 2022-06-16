@@ -2316,83 +2316,6 @@ references:
   fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversal(Of TEdge, TNode).Visit
   nameWithType: TreeTraversal<TEdge, TNode>.Visit
   nameWithType.vb: TreeTraversal(Of TEdge, TNode).Visit
-- uid: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2
-  name: TreeTraversalContext<TEdge, TNode>
-  href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversalContext-2.html
-  commentId: T:MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2
-  name.vb: TreeTraversalContext(Of TEdge, TNode)
-  fullName: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext<TEdge, TNode>
-  fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext(Of TEdge, TNode)
-  nameWithType: TreeTraversalContext<TEdge, TNode>
-  nameWithType.vb: TreeTraversalContext(Of TEdge, TNode)
-- uid: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2.#ctor(`1,`0,System.Int32)
-  name: TreeTraversalContext(TNode, TEdge, Int32)
-  href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversalContext-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversalContext_2__ctor__1__0_System_Int32_
-  commentId: M:MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2.#ctor(`1,`0,System.Int32)
-  fullName: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext<TEdge, TNode>.TreeTraversalContext(TNode, TEdge, System.Int32)
-  fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext(Of TEdge, TNode).TreeTraversalContext(TNode, TEdge, System.Int32)
-  nameWithType: TreeTraversalContext<TEdge, TNode>.TreeTraversalContext(TNode, TEdge, Int32)
-  nameWithType.vb: TreeTraversalContext(Of TEdge, TNode).TreeTraversalContext(TNode, TEdge, Int32)
-- uid: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2.#ctor*
-  name: TreeTraversalContext
-  href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversalContext-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversalContext_2__ctor_
-  commentId: Overload:MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2.#ctor
-  isSpec: "True"
-  fullName: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext<TEdge, TNode>.TreeTraversalContext
-  fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext(Of TEdge, TNode).TreeTraversalContext
-  nameWithType: TreeTraversalContext<TEdge, TNode>.TreeTraversalContext
-  nameWithType.vb: TreeTraversalContext(Of TEdge, TNode).TreeTraversalContext
-- uid: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2.IncomingEdge
-  name: IncomingEdge
-  href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversalContext-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversalContext_2_IncomingEdge
-  commentId: P:MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2.IncomingEdge
-  fullName: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext<TEdge, TNode>.IncomingEdge
-  fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext(Of TEdge, TNode).IncomingEdge
-  nameWithType: TreeTraversalContext<TEdge, TNode>.IncomingEdge
-  nameWithType.vb: TreeTraversalContext(Of TEdge, TNode).IncomingEdge
-- uid: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2.IncomingEdge*
-  name: IncomingEdge
-  href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversalContext-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversalContext_2_IncomingEdge_
-  commentId: Overload:MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2.IncomingEdge
-  isSpec: "True"
-  fullName: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext<TEdge, TNode>.IncomingEdge
-  fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext(Of TEdge, TNode).IncomingEdge
-  nameWithType: TreeTraversalContext<TEdge, TNode>.IncomingEdge
-  nameWithType.vb: TreeTraversalContext(Of TEdge, TNode).IncomingEdge
-- uid: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2.Level
-  name: Level
-  href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversalContext-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversalContext_2_Level
-  commentId: P:MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2.Level
-  fullName: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext<TEdge, TNode>.Level
-  fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext(Of TEdge, TNode).Level
-  nameWithType: TreeTraversalContext<TEdge, TNode>.Level
-  nameWithType.vb: TreeTraversalContext(Of TEdge, TNode).Level
-- uid: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2.Level*
-  name: Level
-  href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversalContext-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversalContext_2_Level_
-  commentId: Overload:MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2.Level
-  isSpec: "True"
-  fullName: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext<TEdge, TNode>.Level
-  fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext(Of TEdge, TNode).Level
-  nameWithType: TreeTraversalContext<TEdge, TNode>.Level
-  nameWithType.vb: TreeTraversalContext(Of TEdge, TNode).Level
-- uid: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2.ParentNode
-  name: ParentNode
-  href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversalContext-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversalContext_2_ParentNode
-  commentId: P:MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2.ParentNode
-  fullName: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext<TEdge, TNode>.ParentNode
-  fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext(Of TEdge, TNode).ParentNode
-  nameWithType: TreeTraversalContext<TEdge, TNode>.ParentNode
-  nameWithType.vb: TreeTraversalContext(Of TEdge, TNode).ParentNode
-- uid: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2.ParentNode*
-  name: ParentNode
-  href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversalContext-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversalContext_2_ParentNode_
-  commentId: Overload:MoreStructures.RecImmTrees.Visitor.TreeTraversalContext`2.ParentNode
-  isSpec: "True"
-  fullName: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext<TEdge, TNode>.ParentNode
-  fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversalContext(Of TEdge, TNode).ParentNode
-  nameWithType: TreeTraversalContext<TEdge, TNode>.ParentNode
-  nameWithType.vb: TreeTraversalContext(Of TEdge, TNode).ParentNode
 - uid: MoreStructures.RecImmTrees.Visitor.TreeTraversalOrder
   name: TreeTraversalOrder
   href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversalOrder.html
@@ -2420,15 +2343,14 @@ references:
   fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit(Of TEdge, TNode)
   nameWithType: TreeTraversalVisit<TEdge, TNode>
   nameWithType.vb: TreeTraversalVisit(Of TEdge, TNode)
-- uid: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit`2.#ctor(`1,MoreStructures.RecImmTrees.Visitor.TreeTraversalContext{`0,`1})
-  name: TreeTraversalVisit(TNode, TreeTraversalContext<TEdge, TNode>)
-  href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversalVisit_2__ctor__1_MoreStructures_RecImmTrees_Visitor_TreeTraversalContext__0__1__
-  commentId: M:MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit`2.#ctor(`1,MoreStructures.RecImmTrees.Visitor.TreeTraversalContext{`0,`1})
-  name.vb: TreeTraversalVisit(TNode, TreeTraversalContext(Of TEdge, TNode))
-  fullName: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit<TEdge, TNode>.TreeTraversalVisit(TNode, MoreStructures.RecImmTrees.Visitor.TreeTraversalContext<TEdge, TNode>)
-  fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit(Of TEdge, TNode).TreeTraversalVisit(TNode, MoreStructures.RecImmTrees.Visitor.TreeTraversalContext(Of TEdge, TNode))
-  nameWithType: TreeTraversalVisit<TEdge, TNode>.TreeTraversalVisit(TNode, TreeTraversalContext<TEdge, TNode>)
-  nameWithType.vb: TreeTraversalVisit(Of TEdge, TNode).TreeTraversalVisit(TNode, TreeTraversalContext(Of TEdge, TNode))
+- uid: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit`2.#ctor(`1,`1,`0,System.Int32)
+  name: TreeTraversalVisit(TNode, TNode, TEdge, Int32)
+  href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversalVisit_2__ctor__1__1__0_System_Int32_
+  commentId: M:MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit`2.#ctor(`1,`1,`0,System.Int32)
+  fullName: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit<TEdge, TNode>.TreeTraversalVisit(TNode, TNode, TEdge, System.Int32)
+  fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit(Of TEdge, TNode).TreeTraversalVisit(TNode, TNode, TEdge, System.Int32)
+  nameWithType: TreeTraversalVisit<TEdge, TNode>.TreeTraversalVisit(TNode, TNode, TEdge, Int32)
+  nameWithType.vb: TreeTraversalVisit(Of TEdge, TNode).TreeTraversalVisit(TNode, TNode, TEdge, Int32)
 - uid: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit`2.#ctor*
   name: TreeTraversalVisit
   href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversalVisit_2__ctor_
@@ -2438,23 +2360,40 @@ references:
   fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit(Of TEdge, TNode).TreeTraversalVisit
   nameWithType: TreeTraversalVisit<TEdge, TNode>.TreeTraversalVisit
   nameWithType.vb: TreeTraversalVisit(Of TEdge, TNode).TreeTraversalVisit
-- uid: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit`2.Context
-  name: Context
-  href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversalVisit_2_Context
-  commentId: P:MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit`2.Context
-  fullName: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit<TEdge, TNode>.Context
-  fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit(Of TEdge, TNode).Context
-  nameWithType: TreeTraversalVisit<TEdge, TNode>.Context
-  nameWithType.vb: TreeTraversalVisit(Of TEdge, TNode).Context
-- uid: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit`2.Context*
-  name: Context
-  href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversalVisit_2_Context_
-  commentId: Overload:MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit`2.Context
+- uid: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit`2.IncomingEdge
+  name: IncomingEdge
+  href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversalVisit_2_IncomingEdge
+  commentId: P:MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit`2.IncomingEdge
+  fullName: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit<TEdge, TNode>.IncomingEdge
+  fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit(Of TEdge, TNode).IncomingEdge
+  nameWithType: TreeTraversalVisit<TEdge, TNode>.IncomingEdge
+  nameWithType.vb: TreeTraversalVisit(Of TEdge, TNode).IncomingEdge
+- uid: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit`2.IncomingEdge*
+  name: IncomingEdge
+  href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversalVisit_2_IncomingEdge_
+  commentId: Overload:MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit`2.IncomingEdge
   isSpec: "True"
-  fullName: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit<TEdge, TNode>.Context
-  fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit(Of TEdge, TNode).Context
-  nameWithType: TreeTraversalVisit<TEdge, TNode>.Context
-  nameWithType.vb: TreeTraversalVisit(Of TEdge, TNode).Context
+  fullName: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit<TEdge, TNode>.IncomingEdge
+  fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit(Of TEdge, TNode).IncomingEdge
+  nameWithType: TreeTraversalVisit<TEdge, TNode>.IncomingEdge
+  nameWithType.vb: TreeTraversalVisit(Of TEdge, TNode).IncomingEdge
+- uid: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit`2.Level
+  name: Level
+  href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversalVisit_2_Level
+  commentId: P:MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit`2.Level
+  fullName: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit<TEdge, TNode>.Level
+  fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit(Of TEdge, TNode).Level
+  nameWithType: TreeTraversalVisit<TEdge, TNode>.Level
+  nameWithType.vb: TreeTraversalVisit(Of TEdge, TNode).Level
+- uid: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit`2.Level*
+  name: Level
+  href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversalVisit_2_Level_
+  commentId: Overload:MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit`2.Level
+  isSpec: "True"
+  fullName: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit<TEdge, TNode>.Level
+  fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit(Of TEdge, TNode).Level
+  nameWithType: TreeTraversalVisit<TEdge, TNode>.Level
+  nameWithType.vb: TreeTraversalVisit(Of TEdge, TNode).Level
 - uid: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit`2.Node
   name: Node
   href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversalVisit_2_Node
@@ -2472,6 +2411,23 @@ references:
   fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit(Of TEdge, TNode).Node
   nameWithType: TreeTraversalVisit<TEdge, TNode>.Node
   nameWithType.vb: TreeTraversalVisit(Of TEdge, TNode).Node
+- uid: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit`2.ParentNode
+  name: ParentNode
+  href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversalVisit_2_ParentNode
+  commentId: P:MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit`2.ParentNode
+  fullName: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit<TEdge, TNode>.ParentNode
+  fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit(Of TEdge, TNode).ParentNode
+  nameWithType: TreeTraversalVisit<TEdge, TNode>.ParentNode
+  nameWithType.vb: TreeTraversalVisit(Of TEdge, TNode).ParentNode
+- uid: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit`2.ParentNode*
+  name: ParentNode
+  href: api/MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit-2.html#MoreStructures_RecImmTrees_Visitor_TreeTraversalVisit_2_ParentNode_
+  commentId: Overload:MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit`2.ParentNode
+  isSpec: "True"
+  fullName: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit<TEdge, TNode>.ParentNode
+  fullName.vb: MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit(Of TEdge, TNode).ParentNode
+  nameWithType: TreeTraversalVisit<TEdge, TNode>.ParentNode
+  nameWithType.vb: TreeTraversalVisit(Of TEdge, TNode).ParentNode
 - uid: MoreStructures.RotatedTextWithTerminator
   name: RotatedTextWithTerminator
   href: api/MoreStructures.RotatedTextWithTerminator.html
