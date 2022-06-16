@@ -179,7 +179,7 @@ is returned as is, and no specific order is imposed to the sequence of (edge, no
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Func&lt;IEnumerable&lt;KeyValuePair&lt;TEdge, TNode&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;TEdge, TNode&gt;&gt;&gt; ChildrenSorter { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Func&lt;TreeTraversalVisit&lt;TEdge, TNode&gt;, IEnumerable&lt;KeyValuePair&lt;TEdge, TNode&gt;&gt;&gt; ChildrenSorter { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -191,7 +191,7 @@ is returned as is, and no specific order is imposed to the sequence of (edge, no
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Func</span>&lt;<span class="xref">IEnumerable</span>&lt;<span class="xref">KeyValuePair</span>&lt;TEdge, TNode&gt;&gt;, <span class="xref">IEnumerable</span>&lt;<span class="xref">KeyValuePair</span>&lt;TEdge, TNode&gt;&gt;&gt;</td>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit-2.html">TreeTraversalVisit</a>&lt;TEdge, TNode&gt;, <span class="xref">IEnumerable</span>&lt;<span class="xref">KeyValuePair</span>&lt;TEdge, TNode&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -245,8 +245,8 @@ its children.</p>
   <a id="MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_Visit_" data-uid="MoreStructures.RecImmTrees.Visitor.TreeTraversal`2.Visit*"></a>
   <h4 id="MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_Visit__1_" data-uid="MoreStructures.RecImmTrees.Visitor.TreeTraversal`2.Visit(`1)">Visit(TNode)</h4>
   <div class="markdown level1 summary"><p><strong>Lazily</strong> visits the structure of the provided <code data-dev-comment-type="paramref" class="paramref">node</code>, returning an enumerable of the
-sequence of <a class="xref" href="MoreStructures.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</a> of the structure,
-in the order defined by this <a class="xref" href="MoreStructures.RecImmTrees.Visitor.IVisitStrategy-2.html">IVisitStrategy&lt;TNode, TVisitContext&gt;</a>.</p>
+sequence of <a class="xref" href="MoreStructures.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</a> of the structure, in the order defined by
+this <a class="xref" href="MoreStructures.RecImmTrees.Visitor.IVisitStrategy-2.html">IVisitStrategy&lt;TNode, TVisitContext&gt;</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

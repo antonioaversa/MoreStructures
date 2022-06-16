@@ -1576,15 +1576,15 @@ references:
   fullName.vb: MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier(Of TEdge, TNode).Stringify(TNode)
   nameWithType: FullyIterativeStringifier<TEdge, TNode>.Stringify(TNode)
   nameWithType.vb: FullyIterativeStringifier(Of TEdge, TNode).Stringify(TNode)
-- uid: MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier`2.Stringify(MoreStructures.RecImmTrees.TreePath{`1,`0})
-  name: Stringify(TreePath<TNode, TEdge>)
-  href: api/MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier-2.html#MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_Stringify_MoreStructures_RecImmTrees_TreePath__1__0__
-  commentId: M:MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier`2.Stringify(MoreStructures.RecImmTrees.TreePath{`1,`0})
-  name.vb: Stringify(TreePath(Of TNode, TEdge))
-  fullName: MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier<TEdge, TNode>.Stringify(MoreStructures.RecImmTrees.TreePath<TNode, TEdge>)
-  fullName.vb: MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier(Of TEdge, TNode).Stringify(MoreStructures.RecImmTrees.TreePath(Of TNode, TEdge))
-  nameWithType: FullyIterativeStringifier<TEdge, TNode>.Stringify(TreePath<TNode, TEdge>)
-  nameWithType.vb: FullyIterativeStringifier(Of TEdge, TNode).Stringify(TreePath(Of TNode, TEdge))
+- uid: MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier`2.Stringify(MoreStructures.RecImmTrees.TreePath{`0,`1})
+  name: Stringify(TreePath<TEdge, TNode>)
+  href: api/MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier-2.html#MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_Stringify_MoreStructures_RecImmTrees_TreePath__0__1__
+  commentId: M:MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier`2.Stringify(MoreStructures.RecImmTrees.TreePath{`0,`1})
+  name.vb: Stringify(TreePath(Of TEdge, TNode))
+  fullName: MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier<TEdge, TNode>.Stringify(MoreStructures.RecImmTrees.TreePath<TEdge, TNode>)
+  fullName.vb: MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier(Of TEdge, TNode).Stringify(MoreStructures.RecImmTrees.TreePath(Of TEdge, TNode))
+  nameWithType: FullyIterativeStringifier<TEdge, TNode>.Stringify(TreePath<TEdge, TNode>)
+  nameWithType.vb: FullyIterativeStringifier(Of TEdge, TNode).Stringify(TreePath(Of TEdge, TNode))
 - uid: MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier`2.Stringify*
   name: Stringify
   href: api/MoreStructures.RecImmTrees.Conversions.FullyIterativeStringifier-2.html#MoreStructures_RecImmTrees_Conversions_FullyIterativeStringifier_2_Stringify_
@@ -1629,15 +1629,15 @@ references:
   fullName.vb: MoreStructures.RecImmTrees.Conversions.FullyRecursiveStringifier(Of TEdge, TNode).Stringify(TNode)
   nameWithType: FullyRecursiveStringifier<TEdge, TNode>.Stringify(TNode)
   nameWithType.vb: FullyRecursiveStringifier(Of TEdge, TNode).Stringify(TNode)
-- uid: MoreStructures.RecImmTrees.Conversions.FullyRecursiveStringifier`2.Stringify(MoreStructures.RecImmTrees.TreePath{`1,`0})
-  name: Stringify(TreePath<TNode, TEdge>)
-  href: api/MoreStructures.RecImmTrees.Conversions.FullyRecursiveStringifier-2.html#MoreStructures_RecImmTrees_Conversions_FullyRecursiveStringifier_2_Stringify_MoreStructures_RecImmTrees_TreePath__1__0__
-  commentId: M:MoreStructures.RecImmTrees.Conversions.FullyRecursiveStringifier`2.Stringify(MoreStructures.RecImmTrees.TreePath{`1,`0})
-  name.vb: Stringify(TreePath(Of TNode, TEdge))
-  fullName: MoreStructures.RecImmTrees.Conversions.FullyRecursiveStringifier<TEdge, TNode>.Stringify(MoreStructures.RecImmTrees.TreePath<TNode, TEdge>)
-  fullName.vb: MoreStructures.RecImmTrees.Conversions.FullyRecursiveStringifier(Of TEdge, TNode).Stringify(MoreStructures.RecImmTrees.TreePath(Of TNode, TEdge))
-  nameWithType: FullyRecursiveStringifier<TEdge, TNode>.Stringify(TreePath<TNode, TEdge>)
-  nameWithType.vb: FullyRecursiveStringifier(Of TEdge, TNode).Stringify(TreePath(Of TNode, TEdge))
+- uid: MoreStructures.RecImmTrees.Conversions.FullyRecursiveStringifier`2.Stringify(MoreStructures.RecImmTrees.TreePath{`0,`1})
+  name: Stringify(TreePath<TEdge, TNode>)
+  href: api/MoreStructures.RecImmTrees.Conversions.FullyRecursiveStringifier-2.html#MoreStructures_RecImmTrees_Conversions_FullyRecursiveStringifier_2_Stringify_MoreStructures_RecImmTrees_TreePath__0__1__
+  commentId: M:MoreStructures.RecImmTrees.Conversions.FullyRecursiveStringifier`2.Stringify(MoreStructures.RecImmTrees.TreePath{`0,`1})
+  name.vb: Stringify(TreePath(Of TEdge, TNode))
+  fullName: MoreStructures.RecImmTrees.Conversions.FullyRecursiveStringifier<TEdge, TNode>.Stringify(MoreStructures.RecImmTrees.TreePath<TEdge, TNode>)
+  fullName.vb: MoreStructures.RecImmTrees.Conversions.FullyRecursiveStringifier(Of TEdge, TNode).Stringify(MoreStructures.RecImmTrees.TreePath(Of TEdge, TNode))
+  nameWithType: FullyRecursiveStringifier<TEdge, TNode>.Stringify(TreePath<TEdge, TNode>)
+  nameWithType.vb: FullyRecursiveStringifier(Of TEdge, TNode).Stringify(TreePath(Of TEdge, TNode))
 - uid: MoreStructures.RecImmTrees.Conversions.FullyRecursiveStringifier`2.Stringify*
   name: Stringify
   href: api/MoreStructures.RecImmTrees.Conversions.FullyRecursiveStringifier-2.html#MoreStructures_RecImmTrees_Conversions_FullyRecursiveStringifier_2_Stringify_
@@ -1749,15 +1749,15 @@ references:
   fullName.vb: MoreStructures.RecImmTrees.Conversions.IStringifier(Of TEdge, TNode).Stringify(TNode)
   nameWithType: IStringifier<TEdge, TNode>.Stringify(TNode)
   nameWithType.vb: IStringifier(Of TEdge, TNode).Stringify(TNode)
-- uid: MoreStructures.RecImmTrees.Conversions.IStringifier`2.Stringify(MoreStructures.RecImmTrees.TreePath{`1,`0})
-  name: Stringify(TreePath<TNode, TEdge>)
-  href: api/MoreStructures.RecImmTrees.Conversions.IStringifier-2.html#MoreStructures_RecImmTrees_Conversions_IStringifier_2_Stringify_MoreStructures_RecImmTrees_TreePath__1__0__
-  commentId: M:MoreStructures.RecImmTrees.Conversions.IStringifier`2.Stringify(MoreStructures.RecImmTrees.TreePath{`1,`0})
-  name.vb: Stringify(TreePath(Of TNode, TEdge))
-  fullName: MoreStructures.RecImmTrees.Conversions.IStringifier<TEdge, TNode>.Stringify(MoreStructures.RecImmTrees.TreePath<TNode, TEdge>)
-  fullName.vb: MoreStructures.RecImmTrees.Conversions.IStringifier(Of TEdge, TNode).Stringify(MoreStructures.RecImmTrees.TreePath(Of TNode, TEdge))
-  nameWithType: IStringifier<TEdge, TNode>.Stringify(TreePath<TNode, TEdge>)
-  nameWithType.vb: IStringifier(Of TEdge, TNode).Stringify(TreePath(Of TNode, TEdge))
+- uid: MoreStructures.RecImmTrees.Conversions.IStringifier`2.Stringify(MoreStructures.RecImmTrees.TreePath{`0,`1})
+  name: Stringify(TreePath<TEdge, TNode>)
+  href: api/MoreStructures.RecImmTrees.Conversions.IStringifier-2.html#MoreStructures_RecImmTrees_Conversions_IStringifier_2_Stringify_MoreStructures_RecImmTrees_TreePath__0__1__
+  commentId: M:MoreStructures.RecImmTrees.Conversions.IStringifier`2.Stringify(MoreStructures.RecImmTrees.TreePath{`0,`1})
+  name.vb: Stringify(TreePath(Of TEdge, TNode))
+  fullName: MoreStructures.RecImmTrees.Conversions.IStringifier<TEdge, TNode>.Stringify(MoreStructures.RecImmTrees.TreePath<TEdge, TNode>)
+  fullName.vb: MoreStructures.RecImmTrees.Conversions.IStringifier(Of TEdge, TNode).Stringify(MoreStructures.RecImmTrees.TreePath(Of TEdge, TNode))
+  nameWithType: IStringifier<TEdge, TNode>.Stringify(TreePath<TEdge, TNode>)
+  nameWithType.vb: IStringifier(Of TEdge, TNode).Stringify(TreePath(Of TEdge, TNode))
 - uid: MoreStructures.RecImmTrees.Conversions.IStringifier`2.Stringify*
   name: Stringify
   href: api/MoreStructures.RecImmTrees.Conversions.IStringifier-2.html#MoreStructures_RecImmTrees_Conversions_IStringifier_2_Stringify_
@@ -1887,15 +1887,15 @@ references:
   fullName.vb: MoreStructures.RecImmTrees.Conversions.StringifierBase(Of TEdge, TNode).Stringify(TNode)
   nameWithType: StringifierBase<TEdge, TNode>.Stringify(TNode)
   nameWithType.vb: StringifierBase(Of TEdge, TNode).Stringify(TNode)
-- uid: MoreStructures.RecImmTrees.Conversions.StringifierBase`2.Stringify(MoreStructures.RecImmTrees.TreePath{`1,`0})
-  name: Stringify(TreePath<TNode, TEdge>)
-  href: api/MoreStructures.RecImmTrees.Conversions.StringifierBase-2.html#MoreStructures_RecImmTrees_Conversions_StringifierBase_2_Stringify_MoreStructures_RecImmTrees_TreePath__1__0__
-  commentId: M:MoreStructures.RecImmTrees.Conversions.StringifierBase`2.Stringify(MoreStructures.RecImmTrees.TreePath{`1,`0})
-  name.vb: Stringify(TreePath(Of TNode, TEdge))
-  fullName: MoreStructures.RecImmTrees.Conversions.StringifierBase<TEdge, TNode>.Stringify(MoreStructures.RecImmTrees.TreePath<TNode, TEdge>)
-  fullName.vb: MoreStructures.RecImmTrees.Conversions.StringifierBase(Of TEdge, TNode).Stringify(MoreStructures.RecImmTrees.TreePath(Of TNode, TEdge))
-  nameWithType: StringifierBase<TEdge, TNode>.Stringify(TreePath<TNode, TEdge>)
-  nameWithType.vb: StringifierBase(Of TEdge, TNode).Stringify(TreePath(Of TNode, TEdge))
+- uid: MoreStructures.RecImmTrees.Conversions.StringifierBase`2.Stringify(MoreStructures.RecImmTrees.TreePath{`0,`1})
+  name: Stringify(TreePath<TEdge, TNode>)
+  href: api/MoreStructures.RecImmTrees.Conversions.StringifierBase-2.html#MoreStructures_RecImmTrees_Conversions_StringifierBase_2_Stringify_MoreStructures_RecImmTrees_TreePath__0__1__
+  commentId: M:MoreStructures.RecImmTrees.Conversions.StringifierBase`2.Stringify(MoreStructures.RecImmTrees.TreePath{`0,`1})
+  name.vb: Stringify(TreePath(Of TEdge, TNode))
+  fullName: MoreStructures.RecImmTrees.Conversions.StringifierBase<TEdge, TNode>.Stringify(MoreStructures.RecImmTrees.TreePath<TEdge, TNode>)
+  fullName.vb: MoreStructures.RecImmTrees.Conversions.StringifierBase(Of TEdge, TNode).Stringify(MoreStructures.RecImmTrees.TreePath(Of TEdge, TNode))
+  nameWithType: StringifierBase<TEdge, TNode>.Stringify(TreePath<TEdge, TNode>)
+  nameWithType.vb: StringifierBase(Of TEdge, TNode).Stringify(TreePath(Of TEdge, TNode))
 - uid: MoreStructures.RecImmTrees.Conversions.StringifierBase`2.Stringify*
   name: Stringify
   href: api/MoreStructures.RecImmTrees.Conversions.StringifierBase-2.html#MoreStructures_RecImmTrees_Conversions_StringifierBase_2_Stringify_
@@ -2047,6 +2047,23 @@ references:
   fullName.vb: MoreStructures.RecImmTrees.TreePath(Of TEdge, TNode).PathNodes
   nameWithType: TreePath<TEdge, TNode>.PathNodes
   nameWithType.vb: TreePath(Of TEdge, TNode).PathNodes
+- uid: MoreStructures.RecImmTrees.TreePath`2.ToString
+  name: ToString()
+  href: api/MoreStructures.RecImmTrees.TreePath-2.html#MoreStructures_RecImmTrees_TreePath_2_ToString
+  commentId: M:MoreStructures.RecImmTrees.TreePath`2.ToString
+  fullName: MoreStructures.RecImmTrees.TreePath<TEdge, TNode>.ToString()
+  fullName.vb: MoreStructures.RecImmTrees.TreePath(Of TEdge, TNode).ToString()
+  nameWithType: TreePath<TEdge, TNode>.ToString()
+  nameWithType.vb: TreePath(Of TEdge, TNode).ToString()
+- uid: MoreStructures.RecImmTrees.TreePath`2.ToString*
+  name: ToString
+  href: api/MoreStructures.RecImmTrees.TreePath-2.html#MoreStructures_RecImmTrees_TreePath_2_ToString_
+  commentId: Overload:MoreStructures.RecImmTrees.TreePath`2.ToString
+  isSpec: "True"
+  fullName: MoreStructures.RecImmTrees.TreePath<TEdge, TNode>.ToString
+  fullName.vb: MoreStructures.RecImmTrees.TreePath(Of TEdge, TNode).ToString
+  nameWithType: TreePath<TEdge, TNode>.ToString
+  nameWithType.vb: TreePath(Of TEdge, TNode).ToString
 - uid: MoreStructures.RecImmTrees.TreePathExtensions
   name: TreePathExtensions
   href: api/MoreStructures.RecImmTrees.TreePathExtensions.html
@@ -3078,6 +3095,115 @@ references:
   isSpec: "True"
   fullName: MoreStructures.SuffixStructures.Matching.NaiveSnssFinder.Find
   nameWithType: NaiveSnssFinder.Find
+- uid: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder
+  name: SuffixStructureBasedSnssFinder
+  href: api/MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.html
+  commentId: T:MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder
+  fullName: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder
+  nameWithType: SuffixStructureBasedSnssFinder
+- uid: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.#ctor(System.Char,System.Char)
+  name: SuffixStructureBasedSnssFinder(Char, Char)
+  href: api/MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixStructureBasedSnssFinder__ctor_System_Char_System_Char_
+  commentId: M:MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.#ctor(System.Char,System.Char)
+  fullName: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.SuffixStructureBasedSnssFinder(System.Char, System.Char)
+  nameWithType: SuffixStructureBasedSnssFinder.SuffixStructureBasedSnssFinder(Char, Char)
+- uid: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.#ctor*
+  name: SuffixStructureBasedSnssFinder
+  href: api/MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixStructureBasedSnssFinder__ctor_
+  commentId: Overload:MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.SuffixStructureBasedSnssFinder
+  nameWithType: SuffixStructureBasedSnssFinder.SuffixStructureBasedSnssFinder
+- uid: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.Find(IEnumerable{System.Char},IEnumerable{System.Char})
+  name: Find(IEnumerable<Char>, IEnumerable<Char>)
+  href: api/MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixStructureBasedSnssFinder_Find_IEnumerable_System_Char__IEnumerable_System_Char__
+  commentId: M:MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.Find(IEnumerable{System.Char},IEnumerable{System.Char})
+  name.vb: Find(IEnumerable(Of Char), IEnumerable(Of Char))
+  fullName: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.Find(IEnumerable<System.Char>, IEnumerable<System.Char>)
+  fullName.vb: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.Find(IEnumerable(Of System.Char), IEnumerable(Of System.Char))
+  nameWithType: SuffixStructureBasedSnssFinder.Find(IEnumerable<Char>, IEnumerable<Char>)
+  nameWithType.vb: SuffixStructureBasedSnssFinder.Find(IEnumerable(Of Char), IEnumerable(Of Char))
+- uid: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.Find*
+  name: Find
+  href: api/MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixStructureBasedSnssFinder_Find_
+  commentId: Overload:MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.Find
+  isSpec: "True"
+  fullName: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.Find
+  nameWithType: SuffixStructureBasedSnssFinder.Find
+- uid: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.Terminator1
+  name: Terminator1
+  href: api/MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixStructureBasedSnssFinder_Terminator1
+  commentId: P:MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.Terminator1
+  fullName: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.Terminator1
+  nameWithType: SuffixStructureBasedSnssFinder.Terminator1
+- uid: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.Terminator1*
+  name: Terminator1
+  href: api/MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixStructureBasedSnssFinder_Terminator1_
+  commentId: Overload:MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.Terminator1
+  isSpec: "True"
+  fullName: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.Terminator1
+  nameWithType: SuffixStructureBasedSnssFinder.Terminator1
+- uid: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.Terminator2
+  name: Terminator2
+  href: api/MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixStructureBasedSnssFinder_Terminator2
+  commentId: P:MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.Terminator2
+  fullName: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.Terminator2
+  nameWithType: SuffixStructureBasedSnssFinder.Terminator2
+- uid: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.Terminator2*
+  name: Terminator2
+  href: api/MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixStructureBasedSnssFinder_Terminator2_
+  commentId: Overload:MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.Terminator2
+  isSpec: "True"
+  fullName: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.Terminator2
+  nameWithType: SuffixStructureBasedSnssFinder.Terminator2
+- uid: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.ValidateInput
+  name: ValidateInput
+  href: api/MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixStructureBasedSnssFinder_ValidateInput
+  commentId: P:MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.ValidateInput
+  fullName: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.ValidateInput
+  nameWithType: SuffixStructureBasedSnssFinder.ValidateInput
+- uid: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.ValidateInput*
+  name: ValidateInput
+  href: api/MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixStructureBasedSnssFinder_ValidateInput_
+  commentId: Overload:MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.ValidateInput
+  isSpec: "True"
+  fullName: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.ValidateInput
+  nameWithType: SuffixStructureBasedSnssFinder.ValidateInput
+- uid: MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder
+  name: SuffixTrieBasedSnssFinder
+  href: api/MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.html
+  commentId: T:MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder
+  fullName: MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder
+  nameWithType: SuffixTrieBasedSnssFinder
+- uid: MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.#ctor(System.Char,System.Char)
+  name: SuffixTrieBasedSnssFinder(Char, Char)
+  href: api/MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixTrieBasedSnssFinder__ctor_System_Char_System_Char_
+  commentId: M:MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.#ctor(System.Char,System.Char)
+  fullName: MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.SuffixTrieBasedSnssFinder(System.Char, System.Char)
+  nameWithType: SuffixTrieBasedSnssFinder.SuffixTrieBasedSnssFinder(Char, Char)
+- uid: MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.#ctor*
+  name: SuffixTrieBasedSnssFinder
+  href: api/MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixTrieBasedSnssFinder__ctor_
+  commentId: Overload:MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.SuffixTrieBasedSnssFinder
+  nameWithType: SuffixTrieBasedSnssFinder.SuffixTrieBasedSnssFinder
+- uid: MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.Find(IEnumerable{System.Char},IEnumerable{System.Char})
+  name: Find(IEnumerable<Char>, IEnumerable<Char>)
+  href: api/MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixTrieBasedSnssFinder_Find_IEnumerable_System_Char__IEnumerable_System_Char__
+  commentId: M:MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.Find(IEnumerable{System.Char},IEnumerable{System.Char})
+  name.vb: Find(IEnumerable(Of Char), IEnumerable(Of Char))
+  fullName: MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.Find(IEnumerable<System.Char>, IEnumerable<System.Char>)
+  fullName.vb: MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.Find(IEnumerable(Of System.Char), IEnumerable(Of System.Char))
+  nameWithType: SuffixTrieBasedSnssFinder.Find(IEnumerable<Char>, IEnumerable<Char>)
+  nameWithType.vb: SuffixTrieBasedSnssFinder.Find(IEnumerable(Of Char), IEnumerable(Of Char))
+- uid: MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.Find*
+  name: Find
+  href: api/MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixTrieBasedSnssFinder_Find_
+  commentId: Overload:MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.Find
+  isSpec: "True"
+  fullName: MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.Find
+  nameWithType: SuffixTrieBasedSnssFinder.Find
 - uid: MoreStructures.SuffixStructures.SuffixStructureEdgeExtensions
   name: SuffixStructureEdgeExtensions
   href: api/MoreStructures.SuffixStructures.SuffixStructureEdgeExtensions.html
@@ -3358,6 +3484,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.SuffixTrees.SuffixTreeEdge.Start
   nameWithType: SuffixTreeEdge.Start
+- uid: MoreStructures.SuffixTrees.SuffixTreeEdge.ToString
+  name: ToString()
+  href: api/MoreStructures.SuffixTrees.SuffixTreeEdge.html#MoreStructures_SuffixTrees_SuffixTreeEdge_ToString
+  commentId: M:MoreStructures.SuffixTrees.SuffixTreeEdge.ToString
+  fullName: MoreStructures.SuffixTrees.SuffixTreeEdge.ToString()
+  nameWithType: SuffixTreeEdge.ToString()
+- uid: MoreStructures.SuffixTrees.SuffixTreeEdge.ToString*
+  name: ToString
+  href: api/MoreStructures.SuffixTrees.SuffixTreeEdge.html#MoreStructures_SuffixTrees_SuffixTreeEdge_ToString_
+  commentId: Overload:MoreStructures.SuffixTrees.SuffixTreeEdge.ToString
+  isSpec: "True"
+  fullName: MoreStructures.SuffixTrees.SuffixTreeEdge.ToString
+  nameWithType: SuffixTreeEdge.ToString
 - uid: MoreStructures.SuffixTrees.SuffixTreeNode
   name: SuffixTreeNode
   href: api/MoreStructures.SuffixTrees.SuffixTreeNode.html
@@ -3591,6 +3730,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.SuffixTries.SuffixTrieEdge.Index
   nameWithType: SuffixTrieEdge.Index
+- uid: MoreStructures.SuffixTries.SuffixTrieEdge.ToString
+  name: ToString()
+  href: api/MoreStructures.SuffixTries.SuffixTrieEdge.html#MoreStructures_SuffixTries_SuffixTrieEdge_ToString
+  commentId: M:MoreStructures.SuffixTries.SuffixTrieEdge.ToString
+  fullName: MoreStructures.SuffixTries.SuffixTrieEdge.ToString()
+  nameWithType: SuffixTrieEdge.ToString()
+- uid: MoreStructures.SuffixTries.SuffixTrieEdge.ToString*
+  name: ToString
+  href: api/MoreStructures.SuffixTries.SuffixTrieEdge.html#MoreStructures_SuffixTries_SuffixTrieEdge_ToString_
+  commentId: Overload:MoreStructures.SuffixTries.SuffixTrieEdge.ToString
+  isSpec: "True"
+  fullName: MoreStructures.SuffixTries.SuffixTrieEdge.ToString
+  nameWithType: SuffixTrieEdge.ToString
 - uid: MoreStructures.SuffixTries.SuffixTrieNode
   name: SuffixTrieNode
   href: api/MoreStructures.SuffixTries.SuffixTrieNode.html
@@ -5535,15 +5687,15 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.RecImmTrees.TreeMock.Edge.ToString
   nameWithType: TreeMock.Edge.ToString
-- uid: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdBasedChildrenSorter(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{MoreStructures.Tests.RecImmTrees.TreeMock.Edge,MoreStructures.Tests.RecImmTrees.TreeMock.Node}})
-  name: EdgeIdBasedChildrenSorter(IEnumerable<KeyValuePair<TreeMock.Edge, TreeMock.Node>>)
-  href: api/MoreStructures.Tests.RecImmTrees.TreeMock.html#MoreStructures_Tests_RecImmTrees_TreeMock_EdgeIdBasedChildrenSorter_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_MoreStructures_Tests_RecImmTrees_TreeMock_Edge_MoreStructures_Tests_RecImmTrees_TreeMock_Node___
-  commentId: M:MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdBasedChildrenSorter(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{MoreStructures.Tests.RecImmTrees.TreeMock.Edge,MoreStructures.Tests.RecImmTrees.TreeMock.Node}})
-  name.vb: EdgeIdBasedChildrenSorter(IEnumerable(Of KeyValuePair(Of TreeMock.Edge, TreeMock.Node)))
-  fullName: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdBasedChildrenSorter(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<MoreStructures.Tests.RecImmTrees.TreeMock.Edge, MoreStructures.Tests.RecImmTrees.TreeMock.Node>>)
-  fullName.vb: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdBasedChildrenSorter(System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of MoreStructures.Tests.RecImmTrees.TreeMock.Edge, MoreStructures.Tests.RecImmTrees.TreeMock.Node)))
-  nameWithType: TreeMock.EdgeIdBasedChildrenSorter(IEnumerable<KeyValuePair<TreeMock.Edge, TreeMock.Node>>)
-  nameWithType.vb: TreeMock.EdgeIdBasedChildrenSorter(IEnumerable(Of KeyValuePair(Of TreeMock.Edge, TreeMock.Node)))
+- uid: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdBasedChildrenSorter(MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit{MoreStructures.Tests.RecImmTrees.TreeMock.Edge,MoreStructures.Tests.RecImmTrees.TreeMock.Node})
+  name: EdgeIdBasedChildrenSorter(TreeTraversalVisit<TreeMock.Edge, TreeMock.Node>)
+  href: api/MoreStructures.Tests.RecImmTrees.TreeMock.html#MoreStructures_Tests_RecImmTrees_TreeMock_EdgeIdBasedChildrenSorter_MoreStructures_RecImmTrees_Visitor_TreeTraversalVisit_MoreStructures_Tests_RecImmTrees_TreeMock_Edge_MoreStructures_Tests_RecImmTrees_TreeMock_Node__
+  commentId: M:MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdBasedChildrenSorter(MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit{MoreStructures.Tests.RecImmTrees.TreeMock.Edge,MoreStructures.Tests.RecImmTrees.TreeMock.Node})
+  name.vb: EdgeIdBasedChildrenSorter(TreeTraversalVisit(Of TreeMock.Edge, TreeMock.Node))
+  fullName: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdBasedChildrenSorter(MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit<MoreStructures.Tests.RecImmTrees.TreeMock.Edge, MoreStructures.Tests.RecImmTrees.TreeMock.Node>)
+  fullName.vb: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdBasedChildrenSorter(MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit(Of MoreStructures.Tests.RecImmTrees.TreeMock.Edge, MoreStructures.Tests.RecImmTrees.TreeMock.Node))
+  nameWithType: TreeMock.EdgeIdBasedChildrenSorter(TreeTraversalVisit<TreeMock.Edge, TreeMock.Node>)
+  nameWithType.vb: TreeMock.EdgeIdBasedChildrenSorter(TreeTraversalVisit(Of TreeMock.Edge, TreeMock.Node))
 - uid: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdBasedChildrenSorter*
   name: EdgeIdBasedChildrenSorter
   href: api/MoreStructures.Tests.RecImmTrees.TreeMock.html#MoreStructures_Tests_RecImmTrees_TreeMock_EdgeIdBasedChildrenSorter_
@@ -5551,15 +5703,15 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdBasedChildrenSorter
   nameWithType: TreeMock.EdgeIdBasedChildrenSorter
-- uid: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdDescBasedChildrenSorter(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{MoreStructures.Tests.RecImmTrees.TreeMock.Edge,MoreStructures.Tests.RecImmTrees.TreeMock.Node}})
-  name: EdgeIdDescBasedChildrenSorter(IEnumerable<KeyValuePair<TreeMock.Edge, TreeMock.Node>>)
-  href: api/MoreStructures.Tests.RecImmTrees.TreeMock.html#MoreStructures_Tests_RecImmTrees_TreeMock_EdgeIdDescBasedChildrenSorter_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_MoreStructures_Tests_RecImmTrees_TreeMock_Edge_MoreStructures_Tests_RecImmTrees_TreeMock_Node___
-  commentId: M:MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdDescBasedChildrenSorter(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{MoreStructures.Tests.RecImmTrees.TreeMock.Edge,MoreStructures.Tests.RecImmTrees.TreeMock.Node}})
-  name.vb: EdgeIdDescBasedChildrenSorter(IEnumerable(Of KeyValuePair(Of TreeMock.Edge, TreeMock.Node)))
-  fullName: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdDescBasedChildrenSorter(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<MoreStructures.Tests.RecImmTrees.TreeMock.Edge, MoreStructures.Tests.RecImmTrees.TreeMock.Node>>)
-  fullName.vb: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdDescBasedChildrenSorter(System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of MoreStructures.Tests.RecImmTrees.TreeMock.Edge, MoreStructures.Tests.RecImmTrees.TreeMock.Node)))
-  nameWithType: TreeMock.EdgeIdDescBasedChildrenSorter(IEnumerable<KeyValuePair<TreeMock.Edge, TreeMock.Node>>)
-  nameWithType.vb: TreeMock.EdgeIdDescBasedChildrenSorter(IEnumerable(Of KeyValuePair(Of TreeMock.Edge, TreeMock.Node)))
+- uid: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdDescBasedChildrenSorter(MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit{MoreStructures.Tests.RecImmTrees.TreeMock.Edge,MoreStructures.Tests.RecImmTrees.TreeMock.Node})
+  name: EdgeIdDescBasedChildrenSorter(TreeTraversalVisit<TreeMock.Edge, TreeMock.Node>)
+  href: api/MoreStructures.Tests.RecImmTrees.TreeMock.html#MoreStructures_Tests_RecImmTrees_TreeMock_EdgeIdDescBasedChildrenSorter_MoreStructures_RecImmTrees_Visitor_TreeTraversalVisit_MoreStructures_Tests_RecImmTrees_TreeMock_Edge_MoreStructures_Tests_RecImmTrees_TreeMock_Node__
+  commentId: M:MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdDescBasedChildrenSorter(MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit{MoreStructures.Tests.RecImmTrees.TreeMock.Edge,MoreStructures.Tests.RecImmTrees.TreeMock.Node})
+  name.vb: EdgeIdDescBasedChildrenSorter(TreeTraversalVisit(Of TreeMock.Edge, TreeMock.Node))
+  fullName: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdDescBasedChildrenSorter(MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit<MoreStructures.Tests.RecImmTrees.TreeMock.Edge, MoreStructures.Tests.RecImmTrees.TreeMock.Node>)
+  fullName.vb: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdDescBasedChildrenSorter(MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit(Of MoreStructures.Tests.RecImmTrees.TreeMock.Edge, MoreStructures.Tests.RecImmTrees.TreeMock.Node))
+  nameWithType: TreeMock.EdgeIdDescBasedChildrenSorter(TreeTraversalVisit<TreeMock.Edge, TreeMock.Node>)
+  nameWithType.vb: TreeMock.EdgeIdDescBasedChildrenSorter(TreeTraversalVisit(Of TreeMock.Edge, TreeMock.Node))
 - uid: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdDescBasedChildrenSorter*
   name: EdgeIdDescBasedChildrenSorter
   href: api/MoreStructures.Tests.RecImmTrees.TreeMock.html#MoreStructures_Tests_RecImmTrees_TreeMock_EdgeIdDescBasedChildrenSorter_
@@ -5567,15 +5719,15 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdDescBasedChildrenSorter
   nameWithType: TreeMock.EdgeIdDescBasedChildrenSorter
-- uid: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdMedianBasedChildrenSorter(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{MoreStructures.Tests.RecImmTrees.TreeMock.Edge,MoreStructures.Tests.RecImmTrees.TreeMock.Node}})
-  name: EdgeIdMedianBasedChildrenSorter(IEnumerable<KeyValuePair<TreeMock.Edge, TreeMock.Node>>)
-  href: api/MoreStructures.Tests.RecImmTrees.TreeMock.html#MoreStructures_Tests_RecImmTrees_TreeMock_EdgeIdMedianBasedChildrenSorter_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_MoreStructures_Tests_RecImmTrees_TreeMock_Edge_MoreStructures_Tests_RecImmTrees_TreeMock_Node___
-  commentId: M:MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdMedianBasedChildrenSorter(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{MoreStructures.Tests.RecImmTrees.TreeMock.Edge,MoreStructures.Tests.RecImmTrees.TreeMock.Node}})
-  name.vb: EdgeIdMedianBasedChildrenSorter(IEnumerable(Of KeyValuePair(Of TreeMock.Edge, TreeMock.Node)))
-  fullName: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdMedianBasedChildrenSorter(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<MoreStructures.Tests.RecImmTrees.TreeMock.Edge, MoreStructures.Tests.RecImmTrees.TreeMock.Node>>)
-  fullName.vb: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdMedianBasedChildrenSorter(System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of MoreStructures.Tests.RecImmTrees.TreeMock.Edge, MoreStructures.Tests.RecImmTrees.TreeMock.Node)))
-  nameWithType: TreeMock.EdgeIdMedianBasedChildrenSorter(IEnumerable<KeyValuePair<TreeMock.Edge, TreeMock.Node>>)
-  nameWithType.vb: TreeMock.EdgeIdMedianBasedChildrenSorter(IEnumerable(Of KeyValuePair(Of TreeMock.Edge, TreeMock.Node)))
+- uid: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdMedianBasedChildrenSorter(MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit{MoreStructures.Tests.RecImmTrees.TreeMock.Edge,MoreStructures.Tests.RecImmTrees.TreeMock.Node})
+  name: EdgeIdMedianBasedChildrenSorter(TreeTraversalVisit<TreeMock.Edge, TreeMock.Node>)
+  href: api/MoreStructures.Tests.RecImmTrees.TreeMock.html#MoreStructures_Tests_RecImmTrees_TreeMock_EdgeIdMedianBasedChildrenSorter_MoreStructures_RecImmTrees_Visitor_TreeTraversalVisit_MoreStructures_Tests_RecImmTrees_TreeMock_Edge_MoreStructures_Tests_RecImmTrees_TreeMock_Node__
+  commentId: M:MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdMedianBasedChildrenSorter(MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit{MoreStructures.Tests.RecImmTrees.TreeMock.Edge,MoreStructures.Tests.RecImmTrees.TreeMock.Node})
+  name.vb: EdgeIdMedianBasedChildrenSorter(TreeTraversalVisit(Of TreeMock.Edge, TreeMock.Node))
+  fullName: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdMedianBasedChildrenSorter(MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit<MoreStructures.Tests.RecImmTrees.TreeMock.Edge, MoreStructures.Tests.RecImmTrees.TreeMock.Node>)
+  fullName.vb: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdMedianBasedChildrenSorter(MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit(Of MoreStructures.Tests.RecImmTrees.TreeMock.Edge, MoreStructures.Tests.RecImmTrees.TreeMock.Node))
+  nameWithType: TreeMock.EdgeIdMedianBasedChildrenSorter(TreeTraversalVisit<TreeMock.Edge, TreeMock.Node>)
+  nameWithType.vb: TreeMock.EdgeIdMedianBasedChildrenSorter(TreeTraversalVisit(Of TreeMock.Edge, TreeMock.Node))
 - uid: MoreStructures.Tests.RecImmTrees.TreeMock.EdgeIdMedianBasedChildrenSorter*
   name: EdgeIdMedianBasedChildrenSorter
   href: api/MoreStructures.Tests.RecImmTrees.TreeMock.html#MoreStructures_Tests_RecImmTrees_TreeMock_EdgeIdMedianBasedChildrenSorter_
@@ -5870,6 +6022,58 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.RecImmTrees.TreePathTests.PathNodes_OfSuffixTrie_ImmutabilityOnGet
   nameWithType: TreePathTests.PathNodes_OfSuffixTrie_ImmutabilityOnGet
+- uid: MoreStructures.Tests.RecImmTrees.TreePathTests.ToString_IsTheSameOnEquivalentPaths
+  name: ToString_IsTheSameOnEquivalentPaths()
+  href: api/MoreStructures.Tests.RecImmTrees.TreePathTests.html#MoreStructures_Tests_RecImmTrees_TreePathTests_ToString_IsTheSameOnEquivalentPaths
+  commentId: M:MoreStructures.Tests.RecImmTrees.TreePathTests.ToString_IsTheSameOnEquivalentPaths
+  fullName: MoreStructures.Tests.RecImmTrees.TreePathTests.ToString_IsTheSameOnEquivalentPaths()
+  nameWithType: TreePathTests.ToString_IsTheSameOnEquivalentPaths()
+- uid: MoreStructures.Tests.RecImmTrees.TreePathTests.ToString_IsTheSameOnEquivalentPaths*
+  name: ToString_IsTheSameOnEquivalentPaths
+  href: api/MoreStructures.Tests.RecImmTrees.TreePathTests.html#MoreStructures_Tests_RecImmTrees_TreePathTests_ToString_IsTheSameOnEquivalentPaths_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.TreePathTests.ToString_IsTheSameOnEquivalentPaths
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.TreePathTests.ToString_IsTheSameOnEquivalentPaths
+  nameWithType: TreePathTests.ToString_IsTheSameOnEquivalentPaths
+- uid: MoreStructures.Tests.RecImmTrees.TreePathTests.ToString_OfEmptyPathIsEmptyString
+  name: ToString_OfEmptyPathIsEmptyString()
+  href: api/MoreStructures.Tests.RecImmTrees.TreePathTests.html#MoreStructures_Tests_RecImmTrees_TreePathTests_ToString_OfEmptyPathIsEmptyString
+  commentId: M:MoreStructures.Tests.RecImmTrees.TreePathTests.ToString_OfEmptyPathIsEmptyString
+  fullName: MoreStructures.Tests.RecImmTrees.TreePathTests.ToString_OfEmptyPathIsEmptyString()
+  nameWithType: TreePathTests.ToString_OfEmptyPathIsEmptyString()
+- uid: MoreStructures.Tests.RecImmTrees.TreePathTests.ToString_OfEmptyPathIsEmptyString*
+  name: ToString_OfEmptyPathIsEmptyString
+  href: api/MoreStructures.Tests.RecImmTrees.TreePathTests.html#MoreStructures_Tests_RecImmTrees_TreePathTests_ToString_OfEmptyPathIsEmptyString_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.TreePathTests.ToString_OfEmptyPathIsEmptyString
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.TreePathTests.ToString_OfEmptyPathIsEmptyString
+  nameWithType: TreePathTests.ToString_OfEmptyPathIsEmptyString
+- uid: MoreStructures.Tests.RecImmTrees.TreePathTests.ToString_OfNonEmptyPathIsNonEmptyString
+  name: ToString_OfNonEmptyPathIsNonEmptyString()
+  href: api/MoreStructures.Tests.RecImmTrees.TreePathTests.html#MoreStructures_Tests_RecImmTrees_TreePathTests_ToString_OfNonEmptyPathIsNonEmptyString
+  commentId: M:MoreStructures.Tests.RecImmTrees.TreePathTests.ToString_OfNonEmptyPathIsNonEmptyString
+  fullName: MoreStructures.Tests.RecImmTrees.TreePathTests.ToString_OfNonEmptyPathIsNonEmptyString()
+  nameWithType: TreePathTests.ToString_OfNonEmptyPathIsNonEmptyString()
+- uid: MoreStructures.Tests.RecImmTrees.TreePathTests.ToString_OfNonEmptyPathIsNonEmptyString*
+  name: ToString_OfNonEmptyPathIsNonEmptyString
+  href: api/MoreStructures.Tests.RecImmTrees.TreePathTests.html#MoreStructures_Tests_RecImmTrees_TreePathTests_ToString_OfNonEmptyPathIsNonEmptyString_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.TreePathTests.ToString_OfNonEmptyPathIsNonEmptyString
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.TreePathTests.ToString_OfNonEmptyPathIsNonEmptyString
+  nameWithType: TreePathTests.ToString_OfNonEmptyPathIsNonEmptyString
+- uid: MoreStructures.Tests.RecImmTrees.TreePathTests.ToString_OfPathContainsToStringOfSubPath
+  name: ToString_OfPathContainsToStringOfSubPath()
+  href: api/MoreStructures.Tests.RecImmTrees.TreePathTests.html#MoreStructures_Tests_RecImmTrees_TreePathTests_ToString_OfPathContainsToStringOfSubPath
+  commentId: M:MoreStructures.Tests.RecImmTrees.TreePathTests.ToString_OfPathContainsToStringOfSubPath
+  fullName: MoreStructures.Tests.RecImmTrees.TreePathTests.ToString_OfPathContainsToStringOfSubPath()
+  nameWithType: TreePathTests.ToString_OfPathContainsToStringOfSubPath()
+- uid: MoreStructures.Tests.RecImmTrees.TreePathTests.ToString_OfPathContainsToStringOfSubPath*
+  name: ToString_OfPathContainsToStringOfSubPath
+  href: api/MoreStructures.Tests.RecImmTrees.TreePathTests.html#MoreStructures_Tests_RecImmTrees_TreePathTests_ToString_OfPathContainsToStringOfSubPath_
+  commentId: Overload:MoreStructures.Tests.RecImmTrees.TreePathTests.ToString_OfPathContainsToStringOfSubPath
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RecImmTrees.TreePathTests.ToString_OfPathContainsToStringOfSubPath
+  nameWithType: TreePathTests.ToString_OfPathContainsToStringOfSubPath
 - uid: MoreStructures.Tests.RecImmTrees.Visitor
   name: MoreStructures.Tests.RecImmTrees.Visitor
   href: api/MoreStructures.Tests.RecImmTrees.Visitor.html
@@ -7632,6 +7836,82 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.SuffixTrees.Matching.SnssFinderTests.Finder
   nameWithType: SnssFinderTests.Finder
+- uid: MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests
+  name: SuffixStructureBasedSnssFinderTests
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests.html
+  commentId: T:MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests
+  nameWithType: SuffixStructureBasedSnssFinderTests
+- uid: MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests.#ctor(MoreStructures.SuffixStructures.Matching.ISnssFinder)
+  name: SuffixStructureBasedSnssFinderTests(ISnssFinder)
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests.html#MoreStructures_Tests_SuffixTrees_Matching_SuffixStructureBasedSnssFinderTests__ctor_MoreStructures_SuffixStructures_Matching_ISnssFinder_
+  commentId: M:MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests.#ctor(MoreStructures.SuffixStructures.Matching.ISnssFinder)
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests.SuffixStructureBasedSnssFinderTests(MoreStructures.SuffixStructures.Matching.ISnssFinder)
+  nameWithType: SuffixStructureBasedSnssFinderTests.SuffixStructureBasedSnssFinderTests(ISnssFinder)
+- uid: MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests.#ctor*
+  name: SuffixStructureBasedSnssFinderTests
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests.html#MoreStructures_Tests_SuffixTrees_Matching_SuffixStructureBasedSnssFinderTests__ctor_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests.SuffixStructureBasedSnssFinderTests
+  nameWithType: SuffixStructureBasedSnssFinderTests.SuffixStructureBasedSnssFinderTests
+- uid: MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests.DefaultTerminator1
+  name: DefaultTerminator1
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests.html#MoreStructures_Tests_SuffixTrees_Matching_SuffixStructureBasedSnssFinderTests_DefaultTerminator1
+  commentId: F:MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests.DefaultTerminator1
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests.DefaultTerminator1
+  nameWithType: SuffixStructureBasedSnssFinderTests.DefaultTerminator1
+- uid: MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests.DefaultTerminator2
+  name: DefaultTerminator2
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests.html#MoreStructures_Tests_SuffixTrees_Matching_SuffixStructureBasedSnssFinderTests_DefaultTerminator2
+  commentId: F:MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests.DefaultTerminator2
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests.DefaultTerminator2
+  nameWithType: SuffixStructureBasedSnssFinderTests.DefaultTerminator2
+- uid: MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests.Find_RaiseExceptionWhenAnyTerminatorIsInAnyText
+  name: Find_RaiseExceptionWhenAnyTerminatorIsInAnyText()
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests.html#MoreStructures_Tests_SuffixTrees_Matching_SuffixStructureBasedSnssFinderTests_Find_RaiseExceptionWhenAnyTerminatorIsInAnyText
+  commentId: M:MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests.Find_RaiseExceptionWhenAnyTerminatorIsInAnyText
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests.Find_RaiseExceptionWhenAnyTerminatorIsInAnyText()
+  nameWithType: SuffixStructureBasedSnssFinderTests.Find_RaiseExceptionWhenAnyTerminatorIsInAnyText()
+- uid: MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests.Find_RaiseExceptionWhenAnyTerminatorIsInAnyText*
+  name: Find_RaiseExceptionWhenAnyTerminatorIsInAnyText
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests.html#MoreStructures_Tests_SuffixTrees_Matching_SuffixStructureBasedSnssFinderTests_Find_RaiseExceptionWhenAnyTerminatorIsInAnyText_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests.Find_RaiseExceptionWhenAnyTerminatorIsInAnyText
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests.Find_RaiseExceptionWhenAnyTerminatorIsInAnyText
+  nameWithType: SuffixStructureBasedSnssFinderTests.Find_RaiseExceptionWhenAnyTerminatorIsInAnyText
+- uid: MoreStructures.Tests.SuffixTrees.Matching.SuffixTrieBasedSnssFinderTests
+  name: SuffixTrieBasedSnssFinderTests
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.SuffixTrieBasedSnssFinderTests.html
+  commentId: T:MoreStructures.Tests.SuffixTrees.Matching.SuffixTrieBasedSnssFinderTests
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.SuffixTrieBasedSnssFinderTests
+  nameWithType: SuffixTrieBasedSnssFinderTests
+- uid: MoreStructures.Tests.SuffixTrees.Matching.SuffixTrieBasedSnssFinderTests.#ctor
+  name: SuffixTrieBasedSnssFinderTests()
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.SuffixTrieBasedSnssFinderTests.html#MoreStructures_Tests_SuffixTrees_Matching_SuffixTrieBasedSnssFinderTests__ctor
+  commentId: M:MoreStructures.Tests.SuffixTrees.Matching.SuffixTrieBasedSnssFinderTests.#ctor
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.SuffixTrieBasedSnssFinderTests.SuffixTrieBasedSnssFinderTests()
+  nameWithType: SuffixTrieBasedSnssFinderTests.SuffixTrieBasedSnssFinderTests()
+- uid: MoreStructures.Tests.SuffixTrees.Matching.SuffixTrieBasedSnssFinderTests.#ctor*
+  name: SuffixTrieBasedSnssFinderTests
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.SuffixTrieBasedSnssFinderTests.html#MoreStructures_Tests_SuffixTrees_Matching_SuffixTrieBasedSnssFinderTests__ctor_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Matching.SuffixTrieBasedSnssFinderTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.SuffixTrieBasedSnssFinderTests.SuffixTrieBasedSnssFinderTests
+  nameWithType: SuffixTrieBasedSnssFinderTests.SuffixTrieBasedSnssFinderTests
+- uid: MoreStructures.Tests.SuffixTrees.Matching.SuffixTrieBasedSnssFinderTests.Ctor_RaiseExceptionWhenTerminatorsAreEqual
+  name: Ctor_RaiseExceptionWhenTerminatorsAreEqual()
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.SuffixTrieBasedSnssFinderTests.html#MoreStructures_Tests_SuffixTrees_Matching_SuffixTrieBasedSnssFinderTests_Ctor_RaiseExceptionWhenTerminatorsAreEqual
+  commentId: M:MoreStructures.Tests.SuffixTrees.Matching.SuffixTrieBasedSnssFinderTests.Ctor_RaiseExceptionWhenTerminatorsAreEqual
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.SuffixTrieBasedSnssFinderTests.Ctor_RaiseExceptionWhenTerminatorsAreEqual()
+  nameWithType: SuffixTrieBasedSnssFinderTests.Ctor_RaiseExceptionWhenTerminatorsAreEqual()
+- uid: MoreStructures.Tests.SuffixTrees.Matching.SuffixTrieBasedSnssFinderTests.Ctor_RaiseExceptionWhenTerminatorsAreEqual*
+  name: Ctor_RaiseExceptionWhenTerminatorsAreEqual
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.SuffixTrieBasedSnssFinderTests.html#MoreStructures_Tests_SuffixTrees_Matching_SuffixTrieBasedSnssFinderTests_Ctor_RaiseExceptionWhenTerminatorsAreEqual_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Matching.SuffixTrieBasedSnssFinderTests.Ctor_RaiseExceptionWhenTerminatorsAreEqual
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.SuffixTrieBasedSnssFinderTests.Ctor_RaiseExceptionWhenTerminatorsAreEqual
+  nameWithType: SuffixTrieBasedSnssFinderTests.Ctor_RaiseExceptionWhenTerminatorsAreEqual
 - uid: MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests
   name: SuffixTreeEdgeTests
   href: api/MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.html
@@ -7729,6 +8009,32 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.OfRotated_OutOfBoundsIndexes
   nameWithType: SuffixTreeEdgeTests.OfRotated_OutOfBoundsIndexes
+- uid: MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.ToString_OfEquivalentInstancesAreTheSame
+  name: ToString_OfEquivalentInstancesAreTheSame()
+  href: api/MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.html#MoreStructures_Tests_SuffixTrees_SuffixTreeEdgeTests_ToString_OfEquivalentInstancesAreTheSame
+  commentId: M:MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.ToString_OfEquivalentInstancesAreTheSame
+  fullName: MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.ToString_OfEquivalentInstancesAreTheSame()
+  nameWithType: SuffixTreeEdgeTests.ToString_OfEquivalentInstancesAreTheSame()
+- uid: MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.ToString_OfEquivalentInstancesAreTheSame*
+  name: ToString_OfEquivalentInstancesAreTheSame
+  href: api/MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.html#MoreStructures_Tests_SuffixTrees_SuffixTreeEdgeTests_ToString_OfEquivalentInstancesAreTheSame_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.ToString_OfEquivalentInstancesAreTheSame
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.ToString_OfEquivalentInstancesAreTheSame
+  nameWithType: SuffixTreeEdgeTests.ToString_OfEquivalentInstancesAreTheSame
+- uid: MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.ToString_WithDifferentStartOrLengthAreDifferent
+  name: ToString_WithDifferentStartOrLengthAreDifferent()
+  href: api/MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.html#MoreStructures_Tests_SuffixTrees_SuffixTreeEdgeTests_ToString_WithDifferentStartOrLengthAreDifferent
+  commentId: M:MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.ToString_WithDifferentStartOrLengthAreDifferent
+  fullName: MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.ToString_WithDifferentStartOrLengthAreDifferent()
+  nameWithType: SuffixTreeEdgeTests.ToString_WithDifferentStartOrLengthAreDifferent()
+- uid: MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.ToString_WithDifferentStartOrLengthAreDifferent*
+  name: ToString_WithDifferentStartOrLengthAreDifferent
+  href: api/MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.html#MoreStructures_Tests_SuffixTrees_SuffixTreeEdgeTests_ToString_WithDifferentStartOrLengthAreDifferent_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.ToString_WithDifferentStartOrLengthAreDifferent
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.SuffixTreeEdgeTests.ToString_WithDifferentStartOrLengthAreDifferent
+  nameWithType: SuffixTreeEdgeTests.ToString_WithDifferentStartOrLengthAreDifferent
 - uid: MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests
   name: SuffixTreeNodeTests
   href: api/MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.html
@@ -8119,6 +8425,32 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.Of_OutOfBoundsIndexes
   nameWithType: SuffixTrieEdgeTests.Of_OutOfBoundsIndexes
+- uid: MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.ToString_OfEquivalentInstancesAreTheSame
+  name: ToString_OfEquivalentInstancesAreTheSame()
+  href: api/MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.html#MoreStructures_Tests_SuffixTries_SuffixTrieEdgeTests_ToString_OfEquivalentInstancesAreTheSame
+  commentId: M:MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.ToString_OfEquivalentInstancesAreTheSame
+  fullName: MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.ToString_OfEquivalentInstancesAreTheSame()
+  nameWithType: SuffixTrieEdgeTests.ToString_OfEquivalentInstancesAreTheSame()
+- uid: MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.ToString_OfEquivalentInstancesAreTheSame*
+  name: ToString_OfEquivalentInstancesAreTheSame
+  href: api/MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.html#MoreStructures_Tests_SuffixTries_SuffixTrieEdgeTests_ToString_OfEquivalentInstancesAreTheSame_
+  commentId: Overload:MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.ToString_OfEquivalentInstancesAreTheSame
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.ToString_OfEquivalentInstancesAreTheSame
+  nameWithType: SuffixTrieEdgeTests.ToString_OfEquivalentInstancesAreTheSame
+- uid: MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.ToString_WithDifferentStart
+  name: ToString_WithDifferentStart()
+  href: api/MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.html#MoreStructures_Tests_SuffixTries_SuffixTrieEdgeTests_ToString_WithDifferentStart
+  commentId: M:MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.ToString_WithDifferentStart
+  fullName: MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.ToString_WithDifferentStart()
+  nameWithType: SuffixTrieEdgeTests.ToString_WithDifferentStart()
+- uid: MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.ToString_WithDifferentStart*
+  name: ToString_WithDifferentStart
+  href: api/MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.html#MoreStructures_Tests_SuffixTries_SuffixTrieEdgeTests_ToString_WithDifferentStart_
+  commentId: Overload:MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.ToString_WithDifferentStart
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTries.SuffixTrieEdgeTests.ToString_WithDifferentStart
+  nameWithType: SuffixTrieEdgeTests.ToString_WithDifferentStart
 - uid: MoreStructures.Tests.SuffixTries.SuffixTrieNodeTests
   name: SuffixTrieNodeTests
   href: api/MoreStructures.Tests.SuffixTries.SuffixTrieNodeTests.html
@@ -8764,6 +9096,19 @@ references:
   commentId: T:MoreStructures.Tests.Utilities.ValueEnumerableTests
   fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests
   nameWithType: ValueEnumerableTests
+- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.Ctor_DoesntEnumerateUnderlyingEnumerable
+  name: Ctor_DoesntEnumerateUnderlyingEnumerable()
+  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_Ctor_DoesntEnumerateUnderlyingEnumerable
+  commentId: M:MoreStructures.Tests.Utilities.ValueEnumerableTests.Ctor_DoesntEnumerateUnderlyingEnumerable
+  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.Ctor_DoesntEnumerateUnderlyingEnumerable()
+  nameWithType: ValueEnumerableTests.Ctor_DoesntEnumerateUnderlyingEnumerable()
+- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.Ctor_DoesntEnumerateUnderlyingEnumerable*
+  name: Ctor_DoesntEnumerateUnderlyingEnumerable
+  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_Ctor_DoesntEnumerateUnderlyingEnumerable_
+  commentId: Overload:MoreStructures.Tests.Utilities.ValueEnumerableTests.Ctor_DoesntEnumerateUnderlyingEnumerable
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.Ctor_DoesntEnumerateUnderlyingEnumerable
+  nameWithType: ValueEnumerableTests.Ctor_DoesntEnumerateUnderlyingEnumerable
 - uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.Equals_ByValueOnItemsOfUnderlyingEnumerable
   name: Equals_ByValueOnItemsOfUnderlyingEnumerable()
   href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_Equals_ByValueOnItemsOfUnderlyingEnumerable
@@ -8997,6 +9342,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Utilities.ValueReadOnlyCollectionTests.GetHashCode_IsByValue_WithRecordType
   nameWithType: ValueReadOnlyCollectionTests.GetHashCode_IsByValue_WithRecordType
+- uid: MoreStructures.Tests.Utilities.ValueReadOnlyCollectionTests.GetHashCode_WorksWithEmptyCollection
+  name: GetHashCode_WorksWithEmptyCollection()
+  href: api/MoreStructures.Tests.Utilities.ValueReadOnlyCollectionTests.html#MoreStructures_Tests_Utilities_ValueReadOnlyCollectionTests_GetHashCode_WorksWithEmptyCollection
+  commentId: M:MoreStructures.Tests.Utilities.ValueReadOnlyCollectionTests.GetHashCode_WorksWithEmptyCollection
+  fullName: MoreStructures.Tests.Utilities.ValueReadOnlyCollectionTests.GetHashCode_WorksWithEmptyCollection()
+  nameWithType: ValueReadOnlyCollectionTests.GetHashCode_WorksWithEmptyCollection()
+- uid: MoreStructures.Tests.Utilities.ValueReadOnlyCollectionTests.GetHashCode_WorksWithEmptyCollection*
+  name: GetHashCode_WorksWithEmptyCollection
+  href: api/MoreStructures.Tests.Utilities.ValueReadOnlyCollectionTests.html#MoreStructures_Tests_Utilities_ValueReadOnlyCollectionTests_GetHashCode_WorksWithEmptyCollection_
+  commentId: Overload:MoreStructures.Tests.Utilities.ValueReadOnlyCollectionTests.GetHashCode_WorksWithEmptyCollection
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.ValueReadOnlyCollectionTests.GetHashCode_WorksWithEmptyCollection
+  nameWithType: ValueReadOnlyCollectionTests.GetHashCode_WorksWithEmptyCollection
 - uid: MoreStructures.Tests.Utilities.ValueReadOnlyCollectionTests.ToString_IncludesToStringOfItems
   name: ToString_IncludesToStringOfItems()
   href: api/MoreStructures.Tests.Utilities.ValueReadOnlyCollectionTests.html#MoreStructures_Tests_Utilities_ValueReadOnlyCollectionTests_ToString_IncludesToStringOfItems
@@ -9146,6 +9504,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Utilities.ValueReadOnlyDictionaryTests.GetHashCode_IsByValue_WithRecordType
   nameWithType: ValueReadOnlyDictionaryTests.GetHashCode_IsByValue_WithRecordType
+- uid: MoreStructures.Tests.Utilities.ValueReadOnlyDictionaryTests.GetHashCode_WorksWithEmptyDictionary
+  name: GetHashCode_WorksWithEmptyDictionary()
+  href: api/MoreStructures.Tests.Utilities.ValueReadOnlyDictionaryTests.html#MoreStructures_Tests_Utilities_ValueReadOnlyDictionaryTests_GetHashCode_WorksWithEmptyDictionary
+  commentId: M:MoreStructures.Tests.Utilities.ValueReadOnlyDictionaryTests.GetHashCode_WorksWithEmptyDictionary
+  fullName: MoreStructures.Tests.Utilities.ValueReadOnlyDictionaryTests.GetHashCode_WorksWithEmptyDictionary()
+  nameWithType: ValueReadOnlyDictionaryTests.GetHashCode_WorksWithEmptyDictionary()
+- uid: MoreStructures.Tests.Utilities.ValueReadOnlyDictionaryTests.GetHashCode_WorksWithEmptyDictionary*
+  name: GetHashCode_WorksWithEmptyDictionary
+  href: api/MoreStructures.Tests.Utilities.ValueReadOnlyDictionaryTests.html#MoreStructures_Tests_Utilities_ValueReadOnlyDictionaryTests_GetHashCode_WorksWithEmptyDictionary_
+  commentId: Overload:MoreStructures.Tests.Utilities.ValueReadOnlyDictionaryTests.GetHashCode_WorksWithEmptyDictionary
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.ValueReadOnlyDictionaryTests.GetHashCode_WorksWithEmptyDictionary
+  nameWithType: ValueReadOnlyDictionaryTests.GetHashCode_WorksWithEmptyDictionary
 - uid: MoreStructures.Tests.Utilities.ValueReadOnlyDictionaryTests.ToString_IncludesToStringOfKeysAndValues
   name: ToString_IncludesToStringOfKeysAndValues()
   href: api/MoreStructures.Tests.Utilities.ValueReadOnlyDictionaryTests.html#MoreStructures_Tests_Utilities_ValueReadOnlyDictionaryTests_ToString_IncludesToStringOfKeysAndValues

@@ -99,6 +99,18 @@
       <section><p>A <a class="xref" href="MoreStructures.SuffixStructures.Matching.ISnssFinder.html">ISnssFinder</a> implementation which checks for the presence of each substring of the first text in the
 second text, from the longest to the shortest.</p>
 </section>
+      <h4><a class="xref" href="MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.html">SuffixStructureBasedSnssFinder</a></h4>
+      <section><p>Base class for all <a class="xref" href="MoreStructures.SuffixStructures.Matching.ISnssFinder.html">ISnssFinder</a> concretions which implement
+<a class="xref" href="MoreStructures.SuffixStructures.Matching.ISnssFinder.html#MoreStructures_SuffixStructures_Matching_ISnssFinder_Find_IEnumerable_System_Char__IEnumerable_System_Char__">Find(IEnumerable&lt;Char&gt;, IEnumerable&lt;Char&gt;)</a> using a suffix structure
+(a concretions of <a class="xref" href="MoreStructures.SuffixStructures.ISuffixStructureNode-2.html">ISuffixStructureNode&lt;TEdge, TNode&gt;</a>, implementing
+<a class="xref" href="MoreStructures.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</a>), such as <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a> or
+<a class="xref" href="MoreStructures.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a>).</p>
+</section>
+      <h4><a class="xref" href="MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.html">SuffixTrieBasedSnssFinder</a></h4>
+      <section><p>A <a class="xref" href="MoreStructures.SuffixStructures.Matching.ISnssFinder.html">ISnssFinder</a> implementation and <a class="xref" href="MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.html">SuffixStructureBasedSnssFinder</a> concretion which uses
+a <a class="xref" href="MoreStructures.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a> structure to implement
+<a class="xref" href="MoreStructures.SuffixStructures.Matching.ISnssFinder.html#MoreStructures_SuffixStructures_Matching_ISnssFinder_Find_IEnumerable_System_Char__IEnumerable_System_Char__">Find(IEnumerable&lt;Char&gt;, IEnumerable&lt;Char&gt;)</a>.</p>
+</section>
     <h3 id="interfaces">Interfaces
   </h3>
       <h4><a class="xref" href="MoreStructures.SuffixStructures.Matching.ISnssFinder.html">ISnssFinder</a></h4>

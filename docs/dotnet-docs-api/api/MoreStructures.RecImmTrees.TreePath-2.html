@@ -116,15 +116,12 @@ its successor and where node relationships are stored in <code data-dev-comment-
     <div>
       <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
     </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.RecImmTrees.html">MoreStructures.RecImmTrees</a></h6>
   <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
   <h5 id="MoreStructures_RecImmTrees_TreePath_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TreePath&lt;TEdge, TNode&gt; : IEquatable&lt;TreePath&lt;TEdge, TNode&gt;&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class TreePath&lt;TEdge, TNode&gt; : IEquatable&lt;TreePath&lt;TEdge, TNode&gt;&gt; where TEdge : IRecImmDictIndexedTreeEdge&lt;TEdge, TNode&gt; where TNode : IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -157,7 +154,7 @@ its successor and where node relationships are stored in <code data-dev-comment-
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_TreePath_2__ctor.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.TreePath%602.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/TreePath.cs/#L20">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/TreePath.cs/#L23">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_TreePath_2__ctor_" data-uid="MoreStructures.RecImmTrees.TreePath`2.#ctor*"></a>
   <h4 id="MoreStructures_RecImmTrees_TreePath_2__ctor" data-uid="MoreStructures.RecImmTrees.TreePath`2.#ctor">TreePath()</h4>
@@ -173,7 +170,7 @@ its successor and where node relationships are stored in <code data-dev-comment-
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_TreePath_2__ctor__0__1_.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.TreePath%602.%23ctor(%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/TreePath.cs/#L29">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/TreePath.cs/#L32">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_TreePath_2__ctor_" data-uid="MoreStructures.RecImmTrees.TreePath`2.#ctor*"></a>
   <h4 id="MoreStructures_RecImmTrees_TreePath_2__ctor__0__1_" data-uid="MoreStructures.RecImmTrees.TreePath`2.#ctor(`0,`1)">TreePath(TEdge, TNode)</h4>
@@ -213,7 +210,7 @@ its successor and where node relationships are stored in <code data-dev-comment-
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_TreePath_2__ctor_IEnumerable_KeyValuePair__0__1___.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.TreePath%602.%23ctor(IEnumerable%7BKeyValuePair%7B%600%2C%601%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/TreePath.cs/#L15">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/TreePath.cs/#L16">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_TreePath_2__ctor_" data-uid="MoreStructures.RecImmTrees.TreePath`2.#ctor*"></a>
   <h4 id="MoreStructures_RecImmTrees_TreePath_2__ctor_IEnumerable_KeyValuePair__0__1___" data-uid="MoreStructures.RecImmTrees.TreePath`2.#ctor(IEnumerable{KeyValuePair{`0,`1}})">TreePath(IEnumerable&lt;KeyValuePair&lt;TEdge, TNode&gt;&gt;)</h4>
@@ -251,7 +248,7 @@ its successor and where node relationships are stored in <code data-dev-comment-
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_TreePath_2__ctor_System_ValueTuple__0__1____.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.TreePath%602.%23ctor(System.ValueTuple%7B%600%2C%601%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/TreePath.cs/#L37">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/TreePath.cs/#L40">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_TreePath_2__ctor_" data-uid="MoreStructures.RecImmTrees.TreePath`2.#ctor*"></a>
   <h4 id="MoreStructures_RecImmTrees_TreePath_2__ctor_System_ValueTuple__0__1____" data-uid="MoreStructures.RecImmTrees.TreePath`2.#ctor(System.ValueTuple{`0,`1}[])">TreePath((TEdge edge, TNode node)[])</h4>
@@ -287,7 +284,7 @@ its successor and where node relationships are stored in <code data-dev-comment-
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_TreePath_2_PathNodes.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.TreePath%602.PathNodes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/TreePath.cs/#L45">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/TreePath.cs/#L48">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_TreePath_2_PathNodes_" data-uid="MoreStructures.RecImmTrees.TreePath`2.PathNodes*"></a>
   <h4 id="MoreStructures_RecImmTrees_TreePath_2_PathNodes" data-uid="MoreStructures.RecImmTrees.TreePath`2.PathNodes">PathNodes</h4>
@@ -313,9 +310,53 @@ its successor and where node relationships are stored in <code data-dev-comment-
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_TreePath_2_ToString.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.TreePath%602.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/TreePath.cs/#L62">View Source</a>
+  </span>
+  <a id="MoreStructures_RecImmTrees_TreePath_2_ToString_" data-uid="MoreStructures.RecImmTrees.TreePath`2.ToString*"></a>
+  <h4 id="MoreStructures_RecImmTrees_TreePath_2_ToString" data-uid="MoreStructures.RecImmTrees.TreePath`2.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p><inheritdoc></inheritdoc>
+Uses a <a class="xref" href="MoreStructures.RecImmTrees.Conversions.IStringifier-2.html">IStringifier&lt;TEdge, TNode&gt;</a> to generate the string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p><inheritdoc></inheritdoc></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.RecImmTrees.TreePathExtensions.html#MoreStructures_RecImmTrees_TreePathExtensions_Concat__2_MoreStructures_RecImmTrees_TreePath___0___1__MoreStructures_RecImmTrees_TreePath___0___1__">TreePathExtensions.Concat&lt;TEdge, TNode&gt;(TreePath&lt;TEdge, TNode&gt;, TreePath&lt;TEdge, TNode&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MoreStructures.RecImmTrees.TreePathExtensions.html#MoreStructures_RecImmTrees_TreePathExtensions_Append__2_MoreStructures_RecImmTrees_TreePath___0___1____0___1_">TreePathExtensions.Append&lt;TEdge, TNode&gt;(TreePath&lt;TEdge, TNode&gt;, TEdge, TNode)</a>
   </div>
 </article>
           </div>
@@ -328,7 +369,7 @@ its successor and where node relationships are stored in <code data-dev-comment-
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_TreePath_2.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.TreePath%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/TreePath.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/TreePath.cs/#L16" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
