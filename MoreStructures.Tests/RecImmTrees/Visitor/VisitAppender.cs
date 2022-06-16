@@ -15,7 +15,7 @@ internal class VisitAppender
         Visits = new List<(int? edgeId, int nodeId)> { };
         Visitor = visit => 
         {
-            Visits.Add((visit.Context.IncomingEdge?.Id, visit.Node.Id)); 
+            Visits.Add((visit.IncomingEdge?.Id, visit.Node.Id)); 
             return 0; 
         };
     }

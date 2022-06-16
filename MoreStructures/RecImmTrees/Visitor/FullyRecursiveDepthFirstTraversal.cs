@@ -57,26 +57,27 @@ public class FullyRecursiveDepthFirstTraversal<TEdge, TNode>
     ///     </para>
     /// </remarks>
     public override IEnumerable<TreeTraversalVisit<TEdge, TNode>> Visit(TNode node) => 
-        Visit(node, default, default, 0);
+        Visit(new(node, default, default, 0));
 
-    private IEnumerable<TreeTraversalVisit<TEdge, TNode>> Visit(
-        TNode node, TNode? parentNode, TEdge? incomingEdge, int level)
+    private IEnumerable<TreeTraversalVisit<TEdge, TNode>> Visit(TreeTraversalVisit<TEdge, TNode> visit)
     {
+        var (node, parentNode, incomingEdge, level) = visit;
+
         switch (TraversalOrder)
         {
             case TreeTraversalOrder.ParentFirst:
-                yield return new(node, new(parentNode, incomingEdge, level));
-                foreach (var child in ChildrenSorter(new(node, new(parentNode, incomingEdge, level))))
-                    foreach (var visit in Visit(child.Value, node, child.Key, level + 1))
-                        yield return visit;
+                yield return visit;
+                foreach (var child in ChildrenSorter(visit))
+                    foreach (var childVisit in Visit(new(child.Value, node, child.Key, level + 1)))
+                        yield return childVisit;
 
                 break;
 
             case TreeTraversalOrder.ChildrenFirst:
-                foreach (var child in ChildrenSorter(new(node, new(parentNode, incomingEdge, level))))
-                    foreach (var visit in Visit(child.Value, node, child.Key, level + 1))
-                        yield return visit;
-                yield return new(node, new(parentNode, incomingEdge, level));
+                foreach (var child in ChildrenSorter(visit))
+                    foreach (var childVisit in Visit(new(child.Value, node, child.Key, level + 1)))
+                        yield return childVisit;
+                yield return visit;
 
                 break;
 

@@ -63,7 +63,7 @@ public class FullyIterativeDepthFirstTraversal<TEdge, TNode>
     ///       <br/>
     ///     - Each frame processing of a node with the "children stacked" flag set takes constant time (e.g.to check 
     ///       traversal order) and space (e.g. to extract parent node, incoming edge and node itself from the frame and
-    ///       to build a <see cref="TreeTraversalContext{TEdge, TNode}"/> object for the visit).
+    ///       to build a <see cref="TreeTraversalVisit{TEdge, TNode}"/> object for the visit).
     ///       <br/>
     ///     - Time Complexity is O(n * Ts) in total, where Ts is the amortized Time Complexity of 
     ///       <see cref="TreeTraversal{TEdge, TNode}.ChildrenSorter"/> per edge/node. Taking into account the visit of
@@ -96,7 +96,7 @@ public class FullyIterativeDepthFirstTraversal<TEdge, TNode>
             return TraversalOrder switch
             {
                 TreeTraversalOrder.ParentFirst or TreeTraversalOrder.ChildrenFirst => 
-                    new(node, new(parentNode, incomingEdge, level)),
+                    new(node, parentNode, incomingEdge, level),
                 _ => 
                     throw new NotSupportedException($"{nameof(TreeTraversalOrder)} {TraversalOrder} is not supported"),
             };
@@ -107,7 +107,7 @@ public class FullyIterativeDepthFirstTraversal<TEdge, TNode>
             switch (TraversalOrder)
             {
                 case TreeTraversalOrder.ParentFirst:
-                    foreach (var child in ChildrenSorter(new(node, new(parentNode, incomingEdge, level))).Reverse())
+                    foreach (var child in ChildrenSorter(new(node, parentNode, incomingEdge, level)).Reverse())
                         stack.Push(new(node, child.Key, child.Value, false, level + 1));
                     stack.Push(new(parentNode, incomingEdge, node, true, level));
 
@@ -115,7 +115,7 @@ public class FullyIterativeDepthFirstTraversal<TEdge, TNode>
 
                 case TreeTraversalOrder.ChildrenFirst:
                     stack.Push(new(parentNode, incomingEdge, node, true, level));
-                    foreach (var child in ChildrenSorter(new(node, new(parentNode, incomingEdge, level))).Reverse())
+                    foreach (var child in ChildrenSorter(new(node, parentNode, incomingEdge, level)).Reverse())
                         stack.Push(new(node, child.Key, child.Value, false, level + 1));
 
                     break;
@@ -127,6 +127,6 @@ public class FullyIterativeDepthFirstTraversal<TEdge, TNode>
             return null;
         }
 
-        return new(node, new(parentNode, incomingEdge, level));
+        return new(node, parentNode, incomingEdge, level);
     }
 }
