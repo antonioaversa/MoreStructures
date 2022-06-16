@@ -72,23 +72,27 @@ public class LastFirstPropertyBasedBuilder : NaiveBuilder
     /// </remarks>
     public override TextWithTerminator InvertTransform(RotatedTextWithTerminator lastBWMColumn)
     {
-        var terminator = lastBWMColumn.Terminator;
         var firstLastFinder = FirstLastFinderBuilder(lastBWMColumn);
         var sbwt = firstLastFinder.SortedBWT;
 
-        var text = new StringBuilder();
+        var reversedChars = GetReversedChars(sbwt, firstLastFinder);
+        return new(reversedChars.Reverse(), lastBWMColumn.Terminator);
+    }
 
+    private static IEnumerable<char> GetReversedChars(
+        RotatedTextWithTerminator sbwt, ILastFirstFinder firstLastFinder)
+    {
+        var terminator = sbwt.Terminator;
         var indexOfCharInSortedBWT = 0; // Start with '$', which is the 1st char in sbwt
+
         char charToAppend;
         do
         {
             (indexOfCharInSortedBWT, _) = firstLastFinder.LastToFirst(indexOfCharInSortedBWT);
             charToAppend = sbwt[indexOfCharInSortedBWT];
-            if (charToAppend != terminator) 
-                text.Append(charToAppend);
+            if (charToAppend != terminator)
+                yield return charToAppend;
         }
         while (charToAppend != terminator);
-
-        return new(text.ToString().Reverse(), terminator);
     }
 }
