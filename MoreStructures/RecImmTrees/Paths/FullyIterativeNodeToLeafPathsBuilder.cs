@@ -46,7 +46,7 @@ public class FullyIterativeNodeToLeafPathsBuilder : INodeToLeafPathsBuilder
             yield return new TreePath<TEdge, TNode>(rootSubpath);
     }
 
-    private void ProcessStack<TEdge, TNode>(Stack<StackFrame<TEdge, TNode>> stack)
+    private static void ProcessStack<TEdge, TNode>(Stack<StackFrame<TEdge, TNode>> stack)
         where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>
         where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode>
     {
