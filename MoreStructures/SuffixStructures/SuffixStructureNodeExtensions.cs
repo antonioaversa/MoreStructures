@@ -1,4 +1,4 @@
-﻿using MoreStructures.RecImmTrees;
+﻿using MoreStructures.RecImmTrees.Paths;
 using MoreStructures.Utilities;
 
 namespace MoreStructures.SuffixStructures;
@@ -8,6 +8,9 @@ namespace MoreStructures.SuffixStructures;
 /// </summary>
 public static class SuffixStructureNodeExtensions
 {
+    private static readonly INodeToLeafPathsBuilder NodeToLeafPathsBuilder = 
+        new FullyIterativeNodeToLeafPathsBuilder();
+
     /// <summary>
     /// Returns all suffixes for the provided text from the node down the 
     /// <see cref="ISuffixStructureNode{TEdge, TNode}"/>, up to leaves.
@@ -21,13 +24,13 @@ public static class SuffixStructureNodeExtensions
     ///     <inheritdoc cref="ISuffixStructureNode{TEdge, TNode}" path="/typeparam[@name='TNode']"/>
     /// </typeparam>
     /// <returns>A sequence of <see cref="IValueEnumerable{T}"/>, each one being a suffix.</returns>
-    public static IValueEnumerable<IValueEnumerable<char>> GetAllSuffixesFor<TEdge, TNode>(
-        this ISuffixStructureNode<TEdge, TNode> node,
-        TextWithTerminator text)
+    public static IEnumerable<IEnumerable<char>> GetAllSuffixesFor<TEdge, TNode>(
+        this TNode node, TextWithTerminator text)
         where TEdge : ISuffixStructureEdge<TEdge, TNode>
         where TNode : ISuffixStructureNode<TEdge, TNode> =>
-        node
-            .GetAllNodeToLeafPaths()
+
+        NodeToLeafPathsBuilder
+            .GetAllNodeToLeafPaths<TEdge, TNode>(node)
             .Select(rootToLeafPath => rootToLeafPath.SuffixFor(text))
             .AsValue();
 }

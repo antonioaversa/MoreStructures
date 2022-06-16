@@ -1,5 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MoreStructures.SuffixStructures;
+using MoreStructures.SuffixTrees;
+using MoreStructures.SuffixTries;
 using MoreStructures.Tests.SuffixTrees;
 using MoreStructures.Tests.SuffixTries;
 using System;
@@ -12,11 +14,13 @@ namespace MoreStructures.Tests.SuffixStructures;
 public class SuffixStructuresNodeExtensionsTests
 {
     [TestMethod]
-    public void GetAllSuffixesFor_IsCorrect()
+    public void GetAllSuffixesFor_IsCorrectWithTries()
     {
         var text = new TextWithTerminator("abc");
         var root = SuffixTrieNodeTests.BuildSuffixTrieExample();
-        var suffixes = root.GetAllSuffixesFor(text).Select(s => string.Concat(s));
+        var suffixes = root
+            .GetAllSuffixesFor<SuffixTrieEdge, SuffixTrieNode>(text)
+            .Select(s => string.Concat(s));
 
         var t = text.Terminator;
         Assert.IsTrue(suffixes.OrderBy(s => s).SequenceEqual(
@@ -24,11 +28,13 @@ public class SuffixStructuresNodeExtensionsTests
     }
 
     [TestMethod]
-    public void GetAllSuffixesFor_IsCorrect2()
+    public void GetAllSuffixesFor_IsCorrectWithTrees()
     {
         var text = new TextWithTerminator("abc");
         var root = SuffixTreeNodeTests.BuildSuffixTreeExample();
-        var suffixes = root.GetAllSuffixesFor(text).Select(s => string.Concat(s)); ;
+        var suffixes = root
+            .GetAllSuffixesFor<SuffixTreeEdge, SuffixTreeNode>(text)
+            .Select(s => string.Concat(s)); ;
 
         var t = text.Terminator;
         Assert.IsTrue(suffixes.OrderBy(s => s).SequenceEqual(

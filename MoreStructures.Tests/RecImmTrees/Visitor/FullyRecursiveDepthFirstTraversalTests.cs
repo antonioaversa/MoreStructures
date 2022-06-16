@@ -20,5 +20,4 @@ public class FullyRecursiveDepthFirstTraversalTests
         _ = visitStrategy.Visit(root).Select(visitCounter.Visitor).ToList();
         Assert.AreEqual(numberOfIntermediateNodes + 1, visitCounter.CountOfVisitedNodes); // Intermediates + 1 leaf
     }
-
 }

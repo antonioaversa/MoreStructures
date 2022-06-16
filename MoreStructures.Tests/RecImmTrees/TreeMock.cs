@@ -1,5 +1,6 @@
 ﻿using MoreStructures.RecImmTrees;
 using MoreStructures.RecImmTrees.Visitor;
+using MoreStructures.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
@@ -21,6 +22,14 @@ public static class TreeMock
     public record Node(int Id, IDictionary<Edge, Node> Children)
         : IRecImmDictIndexedTreeNode<Edge, Node>
     {
+        private IDictionary<Edge, Node> _children = Children.ToValueReadOnlyDictionary();
+
+        public IDictionary<Edge, Node> Children
+        {
+            get { return _children; }
+            set { _children = value.ToValueReadOnlyDictionary(); }
+        }
+
         public Node(int id) : this(id, new Dictionary<Edge, Node> { }) { }
 
         public override string ToString() => $"{Id}";

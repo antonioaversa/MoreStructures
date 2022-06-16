@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MoreStructures.RecImmTrees;
+using MoreStructures.RecImmTrees.Paths;
 using MoreStructures.SuffixStructures;
 using MoreStructures.SuffixStructures.Builders;
 using MoreStructures.SuffixStructures.Matching;
@@ -14,6 +15,9 @@ using static BuilderEquivalences.EquivalenceId;
 
 public abstract class SuffixTreeBuilderTests
 {
+    protected static readonly INodeToLeafPathsBuilder NodeToLeafPathsBuilder = 
+        new FullyIterativeNodeToLeafPathsBuilder();
+
     protected readonly IBuilder<SuffixTreeEdge, SuffixTreeNode> Builder;
 
     public SuffixTreeBuilderTests(IBuilder<SuffixTreeEdge, SuffixTreeNode> builder)
@@ -53,7 +57,8 @@ public abstract class SuffixTreeBuilderTests
         var text = new TextWithTerminator("aababcabcd");
         SuffixTreeNode root = Builder.BuildTree(text);
 
-        foreach (var rootToLeafPath in root.GetAllNodeToLeafPaths())
+        foreach (var rootToLeafPath in 
+            NodeToLeafPathsBuilder.GetAllNodeToLeafPaths<SuffixTreeEdge, SuffixTreeNode>(root))
         {
             Assert.IsTrue(rootToLeafPath.IsSuffixOf(text));
         }
@@ -70,7 +75,7 @@ public abstract class SuffixTreeBuilderTests
 
         var root = Builder.BuildTree(text);
         var suffixes = root
-            .GetAllSuffixesFor(text)
+            .GetAllSuffixesFor<SuffixTreeEdge, SuffixTreeNode>(text)
             .ToHashSet();
 
         Assert.IsTrue(allSuffixes.SetEquals(suffixes));
@@ -91,7 +96,7 @@ public abstract class SuffixTreeBuilderTests
         var text1 = new TextWithTerminator("abababab");
         var root1 = Builder.BuildTree(text1);
         Assert.IsTrue((
-            from rootToLeafPath in root1.GetAllNodeToLeafPaths()
+            from rootToLeafPath in NodeToLeafPathsBuilder.GetAllNodeToLeafPaths<SuffixTreeEdge, SuffixTreeNode>(root1)
             from nonLeafNode in rootToLeafPath.PathNodes.SkipLast(1)
             select nonLeafNode.Value.Start == null)
             .All(e => e));
@@ -103,7 +108,7 @@ public abstract class SuffixTreeBuilderTests
         var text1 = new TextWithTerminator("abababab");
         var root1 = Builder.BuildTree(text1);
         Assert.IsTrue((
-            from rootToLeafPath in root1.GetAllNodeToLeafPaths()
+            from rootToLeafPath in NodeToLeafPathsBuilder.GetAllNodeToLeafPaths<SuffixTreeEdge, SuffixTreeNode>(root1)
             let suffixStart = rootToLeafPath.PathNodes.Last().Value.Start ?? throw new Exception("Invalid leaf Start")
             let suffix = rootToLeafPath.SuffixFor(text1)
             select text1[suffixStart..].SequenceEqual(suffix))
