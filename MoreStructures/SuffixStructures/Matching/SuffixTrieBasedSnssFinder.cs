@@ -84,12 +84,12 @@ public class SuffixTrieBasedSnssFinder : SuffixStructureBasedSnssFinder
                 child => child.Key.Index != terminator1Index && child.Key.Index != terminator2Index),
             TraversalOrder = TreeTraversalOrder.ParentFirst,
         };
-        var cachedVisits = new Dictionary<SuffixTrieNode, TreeTraversalContext<SuffixTrieEdge, SuffixTrieNode>> { };
+        var cachedVisits = new Dictionary<SuffixTrieNode, TreeTraversalVisit<SuffixTrieEdge, SuffixTrieNode>> { };
         var visits = breadthFirstTraversal
             .Visit(suffixTrieRoot)
             .Select(visit =>
             {
-                cachedVisits[visit.Node] = visit.Context;
+                cachedVisits[visit.Node] = visit;
                 return visit;
             });
 
@@ -112,12 +112,12 @@ public class SuffixTrieBasedSnssFinder : SuffixStructureBasedSnssFinder
     private static IEnumerable<string> CollectPrefixChars(
         TextWithTerminator text,
         SuffixTrieNode initialNode, 
-        IDictionary<SuffixTrieNode, TreeTraversalContext<SuffixTrieEdge, SuffixTrieNode>> cachedVisits)
+        IDictionary<SuffixTrieNode, TreeTraversalVisit<SuffixTrieEdge, SuffixTrieNode>> cachedVisits)
     {
         var node = initialNode;
         while (true)
         {
-            var (parentNode, incomingEdge, _) = cachedVisits[node];
+            var (_, parentNode, incomingEdge, _) = cachedVisits[node];
 
             if (parentNode == null)
                 yield break;

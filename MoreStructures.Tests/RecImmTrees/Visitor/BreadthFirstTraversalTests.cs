@@ -20,7 +20,7 @@ public abstract class TreeTraversalTests<TTreeTraversal>
                 ChildrenSorter = TreeMock.EdgeIdBasedChildrenSorter,
             }
             .Visit(TreeMock.BuildDocExample())
-            .All(visit => visit.Context.ParentNode?.Children.Values.Contains(visit.Node) ?? true));
+            .All(visit => visit.ParentNode?.Children.Values.Contains(visit.Node) ?? true));
     }
 
     [TestMethod]
@@ -34,8 +34,8 @@ public abstract class TreeTraversalTests<TTreeTraversal>
             }
             .Visit(TreeMock.BuildDocExample())
             .All(visit => 
-                visit.Context.ParentNode == null || 
-                visit.Context.ParentNode.Children[visit.Context.IncomingEdge!] == visit.Node));
+                visit.ParentNode == null || 
+                visit.ParentNode.Children[visit.IncomingEdge!] == visit.Node));
     }
 
     [TestMethod]
@@ -52,10 +52,10 @@ public abstract class TreeTraversalTests<TTreeTraversal>
 
         Assert.IsTrue((
             from visit in visits
-            let parentNode = visit.Context.ParentNode
+            let parentNode = visit.ParentNode
             where parentNode != null
-            let parentLevel = visits.Single(v => v.Node.Id == parentNode.Id).Context.Level
-            select visit.Context.Level == parentLevel + 1)
+            let parentLevel = visits.Single(v => v.Node.Id == parentNode.Id).Level
+            select visit.Level == parentLevel + 1)
             .All(b => b));
     }
 }
