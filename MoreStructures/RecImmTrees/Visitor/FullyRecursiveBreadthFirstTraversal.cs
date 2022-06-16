@@ -19,7 +19,6 @@ public class FullyRecursiveBreadthFirstTraversal<TEdge, TNode>
     where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>
     where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode>
 {
-    private record struct NodeWithLevel(TNode? ParentNode, TEdge? IncomingEdge, TNode Node, int Level);
 
     /// <inheritdoc 
     ///     cref="TreeTraversal{TEdge, TNode}.Visit(TNode)"
@@ -82,26 +81,23 @@ public class FullyRecursiveBreadthFirstTraversal<TEdge, TNode>
     /// </remarks>
     public override IEnumerable<TreeTraversalVisit<TEdge, TNode>> Visit(TNode node)
     {
-        var nodesWithLevel = GetAllNodesWithLevel(new(default, default, node, 0));
-        var sortedNodesWithLevel = TraversalOrder switch
+        var visits = GetAllVisits(new(node, default, default, 0));
+        return TraversalOrder switch
         {
-            TreeTraversalOrder.ParentFirst => nodesWithLevel.OrderBy(nodeWitLevel => nodeWitLevel.Level),
-            TreeTraversalOrder.ChildrenFirst => nodesWithLevel.OrderByDescending(nodeWitLevel => nodeWitLevel.Level),
+            TreeTraversalOrder.ParentFirst => visits.OrderBy(nodeWitLevel => nodeWitLevel.Level),
+            TreeTraversalOrder.ChildrenFirst => visits.OrderByDescending(nodeWitLevel => nodeWitLevel.Level),
             _ => throw new NotSupportedException($"{nameof(TreeTraversalOrder)} {TraversalOrder} is not supported"),
         };
-
-        foreach (var (parentNode, incomingEdge, node1, level) in sortedNodesWithLevel)
-            yield return new(node1, parentNode, incomingEdge, level);
     }
 
-    private IEnumerable<NodeWithLevel> GetAllNodesWithLevel(NodeWithLevel nodeWithLevel)
+    private IEnumerable<TreeTraversalVisit<TEdge, TNode>> GetAllVisits(TreeTraversalVisit<TEdge, TNode> visit)
     {
-        yield return nodeWithLevel;
+        yield return visit;
 
-        var (parentNode, incomingEdge, node, level) = nodeWithLevel;
+        var (node, parentNode, incomingEdge, level) = visit;
 
-        foreach (var child in ChildrenSorter(new(node, parentNode, incomingEdge, level)))
-            foreach (var childSubNode in GetAllNodesWithLevel(new(node, child.Key, child.Value, level + 1)))
-                yield return childSubNode;
+        foreach (var child in ChildrenSorter(visit))
+            foreach (var childVisit in GetAllVisits(new(child.Value, node, child.Key, level + 1)))
+                yield return childVisit;
     }
 }
