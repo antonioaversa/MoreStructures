@@ -133,6 +133,24 @@ ADVANTAGES AND DISADVANTAGES
 <br>
 Implemented fully recursively, so limited by stack depth and usable with tree of a &quot;reasonable&quot; height.
 </p>
+<p>
+ALGORITHM
+<br>
+- The implementation iterates over the children, getting its node-to-leaf subpaths by calling 
+<a class="xref" href="MoreStructures.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilder.html#MoreStructures_RecImmTrees_Paths_FullyRecursiveNodeToLeafPathsBuilder_GetAllNodeToLeafPaths__2___1_">GetAllNodeToLeafPaths&lt;TEdge, TNode&gt;(TNode)</a> recursively.
+<br>
+- Then, it prepends the child and its incoming edge to each subpath of each child.
+<br>
+- If the node has no child, a singleton path is returned, containing only the child and its incoming edge.
+</p>
+<p>
+COMPLEXITY
+<br>
+- Each node is processed once and the number of node-to-leaf paths returned has an upper bound on n = number of 
+  nodes in the tree. The length of each node-to-leaf path is also limited by n.
+<br>
+- So, both Time and Space Complexity are O(n).
+</p>
 </div>
   <h3 id="methods">Methods
   </h3>
@@ -141,7 +159,7 @@ Implemented fully recursively, so limited by stack depth and usable with tree of
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Paths_FullyRecursiveNodeToLeafPathsBuilder_GetAllNodeToLeafPaths__2___1_.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilder.GetAllNodeToLeafPaths%60%602(%60%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Paths/FullyRecursiveNodeToLeafPathsBuilder.cs/#L19">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Paths/FullyRecursiveNodeToLeafPathsBuilder.cs/#L37">View Source</a>
   </span>
   <a id="MoreStructures_RecImmTrees_Paths_FullyRecursiveNodeToLeafPathsBuilder_GetAllNodeToLeafPaths_" data-uid="MoreStructures.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilder.GetAllNodeToLeafPaths*"></a>
   <h4 id="MoreStructures_RecImmTrees_Paths_FullyRecursiveNodeToLeafPathsBuilder_GetAllNodeToLeafPaths__2___1_" data-uid="MoreStructures.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilder.GetAllNodeToLeafPaths``2(``1)">GetAllNodeToLeafPaths&lt;TEdge, TNode&gt;(TNode)</h4>
@@ -227,7 +245,7 @@ Implemented fully recursively, so limited by stack depth and usable with tree of
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Paths_FullyRecursiveNodeToLeafPathsBuilder.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Paths.FullyRecursiveNodeToLeafPathsBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Paths/FullyRecursiveNodeToLeafPathsBuilder.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Paths/FullyRecursiveNodeToLeafPathsBuilder.cs/#L33" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
