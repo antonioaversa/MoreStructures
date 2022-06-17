@@ -67,6 +67,7 @@
 ///       Such queue can have O(n) items in it (for a flattish tree), each being a subpath of length O(n). This would
 ///       suggest a cubic complexity. However, there is at most a total of n root-to-leaf paths, each being at most of
 ///       length n, so overall Space Complexity is quadratic.
+///       <br/>
 ///     - So Time Complexity is O(n) and Space Complexity is O(n^2).
 ///     </para>
 /// </remarks>
