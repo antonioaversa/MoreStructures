@@ -28,6 +28,8 @@ public abstract class MatcherTests
             () => MatcherBuilderWithSortedBWT(new("a#$", '#'), new("$#a", '$')));
     }
 
+    [DataRow("mississippi", "$", true, 1, 0, 0)] // Terminator can be specified in the pattern
+    [DataRow("mississippi", "i$", true, 2, 1, 1)]
     [DataRow("mississippi", "issi", true, 4, 3, 4)]
     [DataRow("mississippi", "issip", true, 5, 3, 3)]
     [DataRow("mississippi", "xissi", false, 4, 3, 4)] // Matching goes backwards => matches 4 chars then fails
