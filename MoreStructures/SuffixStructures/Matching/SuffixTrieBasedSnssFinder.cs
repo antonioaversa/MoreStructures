@@ -44,7 +44,29 @@ namespace MoreStructures.SuffixStructures.Matching;
 ///     <para id="complexity">
 ///     COMPLEXITY
 ///     <br/>
-///     
+///     - Validating the input requires going through text1 and text2, and takes linear time in the the number of chars 
+///       n of the concatenated text "text1 ## separator1 ## text2 ## separator2", and constant space.
+///       <br/>
+///     - Building the Generalized Suffix Trie takes time and space at least proportional to the number of nodes of the
+///       trie, which is quadratic with n.
+///       <br/>
+///     - For each level of the breadth-first traversal of the trie, all node-to-leaf paths are checked (in the worst 
+///       case).
+///       <br/>
+///     - There are at most n levels in the trie, since there can't be a path longer than a suffix of the concatenated
+///       text. The higher is the level, the shorter are node-to-leaf paths. However, their number is always the same
+///       or lower.
+///       <br/>
+///     - There are as many node-to-leaf paths as leaves, and there are at most n leaves in the trie (since each
+///       suffix can add potentially multiple intermediate nodes, but always a single leaf, having terminator2 as 
+///       incoming edge).
+///       <br/>
+///     - Checking whether a path contains terminator1 takes constant space and a time proportional to the number of
+///       nodes in the path, which is O(n).
+///       <br/>
+///     - Rebuilding the string from the identified path takes O(n) time and space.
+///       <br/>
+///     - So in conclusion, Time Complexity is O(n^3) and Space Complexity is O(n^2).
 ///     </para>
 /// </remarks>
 public class SuffixTrieBasedSnssFinder : SuffixStructureBasedSnssFinder
