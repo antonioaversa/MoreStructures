@@ -6,9 +6,10 @@ namespace MoreStructures;
 /// <summary>
 /// A text string with a terminator character, not present in the text.
 /// </summary>
-/// <param name="Text">A text string, of any length (including the empty string).</param>
+/// <param name="Text">A sequence of chars, of any length (including the empty sequence).</param>
 /// <param name="Terminator">
-/// A terminator character, not present in the text. If not specified <see cref="DefaultTerminator"/> is used.
+/// A terminator character, not present in <paramref name="Text"/>. If not specified <see cref="DefaultTerminator"/> is 
+/// used.
 /// </param>
 /// <param name="ValidateInput">
 /// Whether the input, and in particular <see cref="Text"/> should be validated, while this object is created.
@@ -37,7 +38,13 @@ public record TextWithTerminator(
     : IValueEnumerable<char>
 {
     // Wrapped into a value enumerable to preserve value equality.
-    private readonly IEnumerable<char> TextAndTerminator = Text.Append(Terminator).AsValue();
+    private readonly IEnumerable<char> TextAndTerminator = 
+        (Text is string textStr
+        ? textStr + Terminator
+        : Text.Append(Terminator)).AsValue();
+
+    // Lazy initialized
+    private int? _length = null;
 
     /// <summary>
     /// A selector of a part of a <see cref="TextWithTerminator"/> or <see cref="RotatedTextWithTerminator"/>.
@@ -103,14 +110,20 @@ public record TextWithTerminator(
     /// </summary>
     /// <param name="range">The range applied to the underlying string.</param>
     /// <returns>An <see cref="IEnumerable{T}"/> of chars containing the selected part.</returns>
-    public IEnumerable<char> this[Range range] => TextAndTerminator.Take(range).AsValue();
+    public IEnumerable<char> this[Range range] => 
+        TextAndTerminator is StringValueEnumerable { StringValue: var str }
+        ? str[range]
+        : TextAndTerminator.Take(range).AsValue();
 
     /// <summary>
     /// Select a part of this text by the provided index (either w.r.t. the start or to the end of the text).
     /// </summary>
     /// <param name="index">The index applied to the underlying string.</param>
     /// <returns>A char containing the selected part.</returns>
-    public char this[Index index] => TextAndTerminator.ElementAt(index);
+    public char this[Index index] => 
+        TextAndTerminator is StringValueEnumerable { StringValue: var str }
+        ? str[index]
+        : TextAndTerminator.ElementAtO1(index);
 
     /// <summary>
     /// The total length of this text, including the terminator.
@@ -118,33 +131,49 @@ public record TextWithTerminator(
     /// <value>
     /// A positive integer (at least 1).
     /// </value>
-    public int Length => TextAndTerminator.Count();
+    public int Length
+    {
+        get
+        {
+            if (_length == null)
+                _length = TextAndTerminator.CountO1();
+            return _length.Value;
+        }
+    }
 
     /// <summary>
     /// Whether this text starts with the provided suffix.
     /// </summary>
     /// <param name="prefix">A terminator-included <see cref="IEnumerable{T}"/> of <see cref="char"/>.</param>
     /// <returns>True if this text starts by the prefix.</returns>
-    public bool StartsWith(IEnumerable<char> prefix) => TextAndTerminator.Take(prefix.Count()).SequenceEqual(prefix);
+    public bool StartsWith(IEnumerable<char> prefix) => 
+        TextAndTerminator is StringValueEnumerable { StringValue: var str } && prefix is string prefixStr
+        ? str.StartsWith(prefixStr)
+        : TextAndTerminator.Take(prefix.CountO1()).SequenceEqual(prefix);
 
     /// <summary>
     /// Whether this text ends with the provided suffix.
     /// </summary>
     /// <param name="suffix">A terminator-included <see cref="IEnumerable{T}"/> of <see cref="char"/>.</param>
     /// <returns>True if this text ends by the suffix.</returns>
-    public bool EndsWith(IEnumerable<char> suffix) => TextAndTerminator.TakeLast(suffix.Count()).SequenceEqual(suffix);
+    public bool EndsWith(IEnumerable<char> suffix) =>
+        TextAndTerminator is StringValueEnumerable { StringValue: var str } && suffix is string suffixStr
+        ? str.EndsWith(suffixStr)
+        : TextAndTerminator.TakeLast(suffix.CountO1()).SequenceEqual(suffix);
 
     /// <summary>
     /// Returns an enumerator that iterates through the collection of chars of the underlying <see cref="Text"/> 
     /// string, including the <see cref="Terminator"/> char.
     /// </summary>
     /// <returns><inheritdoc/></returns>
-    public IEnumerator<char> GetEnumerator() => TextAndTerminator.GetEnumerator();
+    public IEnumerator<char> GetEnumerator() => 
+        TextAndTerminator.GetEnumerator();
 
     /// <summary>
     /// Returns an enumerator that iterates through the collection of chars of the underlying <see cref="Text"/> 
     /// string, including the <see cref="Terminator"/> char.
     /// </summary>
     /// <returns><inheritdoc/></returns>
-    IEnumerator IEnumerable.GetEnumerator() => ((IEnumerable)TextAndTerminator).GetEnumerator();
+    IEnumerator IEnumerable.GetEnumerator() => 
+        ((IEnumerable)TextAndTerminator).GetEnumerator();
 }

@@ -2,6 +2,7 @@
 using MoreStructures.Utilities;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace MoreStructures.Tests.Utilities;
 
@@ -59,56 +60,90 @@ public class EnumerableExtensionsTests
         Assert.AreEqual(3, enumerable.CountO1());
     }
 
+    private static void AssertElementAtO1<T>(T expected, IEnumerable<T> enumerable, int index, bool reverse = true)
+    {
+        Assert.AreEqual(expected, enumerable.ElementAtO1(index));
+        Assert.AreEqual(expected, enumerable.ElementAtO1(new Index(index)));
+        if (reverse)
+            Assert.AreEqual(expected, enumerable.Reverse().ElementAtO1(new Index(index + 1, true)));
+    }
+
     [TestMethod]
     public void ElementAtO1_IsCorrect()
     {
-        Assert.AreEqual('b', "abcd".ElementAtO1(1));
-        Assert.AreEqual('d', "abcd".ElementAtO1(3));
-        Assert.AreEqual(1, new int[] { 1, 2, 3 }.ElementAtO1(0));
-        Assert.AreEqual(3, new int[] { 1, 2, 3 }.ElementAtO1(2));
-        Assert.AreEqual(1, new List<int> { 1, 2, 3 }.ElementAtO1(0));
-        Assert.AreEqual(3, new List<int> { 1, 2, 3 }.ElementAtO1(2));
+        AssertElementAtO1('b', "abcd", 1);
+        AssertElementAtO1('d', "abcd", 3);
+        AssertElementAtO1(1, new int[] { 1, 2, 3 }, 0);
+        AssertElementAtO1(3, new int[] { 1, 2, 3 }, 2);
+        AssertElementAtO1(1, new List<int> { 1, 2, 3 }, 0);
+        AssertElementAtO1(3, new List<int> { 1, 2, 3 }, 2);
     }
 
     [TestMethod]
     public void ElementAtO1_ThrowsExceptionForInvalidIndexes()
     {
-        Assert.ThrowsException<ArgumentOutOfRangeException>(() => "abc".ElementAtO1(-1));
-        Assert.ThrowsException<ArgumentOutOfRangeException>(() => "abc".ElementAtO1(3));
-        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new int[] { 1, 2, 3 }.ElementAtO1(-1));
-        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new int[] { 1, 2, 3 }.ElementAtO1(3));
-        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new List<int> { 1, 2, 3 }.ElementAtO1(-1));
-        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new List<int> { 1, 2, 3 }.ElementAtO1(3));
-        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new GenericListMock(3).ElementAtO1(-1));
-        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new GenericListMock(3).ElementAtO1(3));
-        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new NonGenericListMock(3).ElementAtO1(-1));
-        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new NonGenericListMock(3).ElementAtO1(3));
+        static void AssertException<T>(IEnumerable<T> enumerable, int index)
+        {
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => enumerable.ElementAtO1(index));
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => enumerable.ElementAtO1(new Index(index)));
+        }
+
+        AssertException("abc", -1);
+        AssertException("abc", 3);
+        AssertException(new int[] { 1, 2, 3 }, -1);
+        AssertException(new int[] { 1, 2, 3 }, 3);
+        AssertException(new List<int> { 1, 2, 3 }, -1);
+        AssertException(new List<int> { 1, 2, 3 }, 3);
+        AssertException(new GenericListMock(3), -1);
+        AssertException(new GenericListMock(3), 3);
+        AssertException(new NonGenericListMock(3), -1);
+        AssertException(new NonGenericListMock(3), 3);
+
+        static void AssertExceptionWithRanges<T>(IEnumerable<T> enumerable)
+        {
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => enumerable.ElementAtO1(^0));
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => enumerable.ElementAtO1(^-1));
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => enumerable.ElementAtO1(^4));
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => enumerable.ElementAtO1(^10));
+        }
+
+        AssertExceptionWithRanges("abc");
+        AssertExceptionWithRanges("abc");
+        AssertExceptionWithRanges("abc");
+        AssertExceptionWithRanges(new int[] { 1, 2, 3 });
+        AssertExceptionWithRanges(new int[] { 1, 2, 3 });
+        AssertExceptionWithRanges(new int[] { 1, 2, 3 });
+        AssertExceptionWithRanges(new List<int> { 1, 2, 3 });
+        AssertExceptionWithRanges(new List<int> { 1, 2, 3 });
+        AssertExceptionWithRanges(new GenericListMock(3));
+        AssertExceptionWithRanges(new GenericListMock(3));
+        AssertExceptionWithRanges(new NonGenericListMock(3));
     }
 
     [TestMethod]
     public void ElementAtO1_DoesntEnumerateNonGenericIListImplementers()
     {
         var nonGenericList = new NonGenericListMock(57) { ElementReturned = 123 };
-        Assert.AreEqual(123, nonGenericList.ElementAtO1(45));
+        AssertElementAtO1(123, nonGenericList, 45, false);
         nonGenericList.ElementReturned = 456;
-        Assert.AreEqual(456, nonGenericList.ElementAtO1(56));
+        AssertElementAtO1(456, nonGenericList, 56, false);
     }
 
     [TestMethod]
     public void ElementAtO1_DoesntEnumerateGenericIListImplementers()
     {
         var genericList = new GenericListMock(57) { ElementReturned = 123 };
-        Assert.AreEqual(123, genericList.ElementAtO1(45));
+        AssertElementAtO1(123, genericList, 45, false);
         genericList.ElementReturned = 456;
-        Assert.AreEqual(456, genericList.ElementAtO1(56));
+        AssertElementAtO1(456, genericList, 56, false);
     }
 
     [TestMethod]
     public void ElementAtO1_EnumeratesGenericEnumerables()
     {
-        Assert.AreEqual(true, GetBools().ElementAtO1(0));
-        Assert.AreEqual(false, GetBools().ElementAtO1(1));
-        Assert.AreEqual(true, GetBools().ElementAtO1(2));
+        AssertElementAtO1(true, GetBools(), 0);
+        AssertElementAtO1(false, GetBools(), 1);
+        AssertElementAtO1(true, GetBools(), 2);
     }
 
     [TestMethod]

@@ -37,11 +37,12 @@ namespace MoreStructures;
 ///     </para>
 /// </remarks>
 public record RotatedTextWithTerminator(
-    IEnumerable<char> RotatedText, 
+    IEnumerable<char> RotatedText,
     char Terminator = TextWithTerminator.DefaultTerminator,
     bool ValidateInput = true)
     : IValueEnumerable<char>
 {
+    // Lazy initialized
     private int? _length = null;
 
     /// <summary>
@@ -62,8 +63,8 @@ public record RotatedTextWithTerminator(
     /// A single char.
     /// </value>
     public char Terminator { get; init; } =
-        !ValidateInput || RotatedText.Count(c => c == Terminator) == 1 
-        ? Terminator 
+        !ValidateInput || RotatedText.Count(c => c == Terminator) == 1
+        ? Terminator
         : throw new ArgumentException($"{nameof(Terminator)} should occur in {nameof(RotatedText)} exactly once");
 
     /// <summary>
@@ -71,14 +72,18 @@ public record RotatedTextWithTerminator(
     /// </summary>
     /// <param name="selector">Any selector acting on a <see cref="RotatedTextWithTerminator"/>.</param>
     /// <returns>A string containing the selected part.</returns>
-    public string this[TextWithTerminator.ISelector selector] => selector.OfRotated(this);
+    public string this[TextWithTerminator.ISelector selector] =>
+        selector.OfRotated(this);
 
     /// <summary>
     /// Select a part of <see cref="RotatedText"/> by the provided range (start index included, end index excluded).
     /// </summary>
     /// <param name="range">The range applied to the underlying string.</param>
     /// <returns>A sequence of chars containing the selected part.</returns>
-    public IEnumerable<char> this[Range range] => RotatedText.Take(range);
+    public IEnumerable<char> this[Range range] =>
+        RotatedText is StringValueEnumerable { StringValue: var str }
+        ? str[range]
+        : RotatedText.Take(range);
 
     /// <summary>
     /// Select a part of <see cref="RotatedText"/> by the provided index (either w.r.t. the start or to the end of the 
@@ -86,7 +91,10 @@ public record RotatedTextWithTerminator(
     /// </summary>
     /// <param name="index">The index applied to the underlying string.</param>
     /// <returns>A char containing the selected part.</returns>
-    public char this[Index index] => RotatedText.ElementAt(index);
+    public char this[Index index] =>
+        RotatedText is StringValueEnumerable { StringValue: var str }
+        ? str[index]
+        : RotatedText.ElementAtO1(index);
 
     /// <summary>
     /// The total length of <see cref="RotatedText"/>, including the terminator.
@@ -102,7 +110,7 @@ public record RotatedTextWithTerminator(
         get
         {
             if (_length == null)
-                _length = RotatedText.Count();
+                _length = RotatedText.CountO1();
             return _length.Value;
         }
     }
@@ -112,26 +120,34 @@ public record RotatedTextWithTerminator(
     /// </summary>
     /// <param name="prefix">A terminator-included string.</param>
     /// <returns>True if <see cref="RotatedText"/> starts by <paramref name="prefix"/>.</returns>
-    public bool StartsWith(string prefix) => RotatedText.Take(prefix.Length).SequenceEqual(prefix);
+    public bool StartsWith(string prefix) => 
+        RotatedText is StringValueEnumerable { StringValue: var str }
+        ? str.StartsWith(prefix)
+        : RotatedText.Take(prefix.Length).SequenceEqual(prefix);
 
     /// <summary>
     /// Whether this text ends with <paramref name="suffix"/>.
     /// </summary>
     /// <param name="suffix">A terminator-included string.</param>
     /// <returns>True if <see cref="RotatedText"/> ends by <paramref name="suffix"/>.</returns>
-    public bool EndsWith(string suffix) => RotatedText.TakeLast(suffix.Length).SequenceEqual(suffix);
+    public bool EndsWith(string suffix) => 
+        RotatedText is StringValueEnumerable { StringValue: var str }
+        ? str.EndsWith(suffix)
+        : RotatedText.TakeLast(suffix.Length).SequenceEqual(suffix);
 
     /// <summary>
     /// Returns an enumerator that iterates through the collection of chars of the underlying <see cref="RotatedText"/> 
     /// string, including the <see cref="Terminator"/> char.
     /// </summary>
     /// <returns><inheritdoc/></returns>
-    public IEnumerator<char> GetEnumerator() => RotatedText.GetEnumerator();
+    public IEnumerator<char> GetEnumerator() => 
+        RotatedText.GetEnumerator();
 
     /// <summary>
     /// Returns an enumerator that iterates through the collection of chars of the underlying <see cref="RotatedText"/> 
     /// string, including the <see cref="Terminator"/> char.
     /// </summary>
     /// <returns><inheritdoc/></returns>
-    IEnumerator IEnumerable.GetEnumerator() => ((IEnumerable)RotatedText).GetEnumerator();
+    IEnumerator IEnumerable.GetEnumerator() => 
+        ((IEnumerable)RotatedText).GetEnumerator();
 }

@@ -3,6 +3,7 @@ using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using MoreStructures.Utilities;
+using System.Collections.Generic;
 
 namespace MoreStructures.Tests;
 
@@ -48,7 +49,7 @@ public class TextWithTerminatorTests
     }
 
     [TestMethod]
-    public void Indexer_WithRange()
+    public void Indexer_WithRangeOfString()
     {
         Assert.AreEqual("a".AsValue(), new TextWithTerminator("abc", '$')[0..1].AsValue());
         Assert.AreEqual(string.Empty.AsValue(), new TextWithTerminator("abc", '$')[0..0].AsValue());
@@ -57,10 +58,33 @@ public class TextWithTerminatorTests
     }
 
     [TestMethod]
-    public void Indexer_WithIndex()
+    public void Indexer_WithRangeOfEnumerable()
+    {
+        static IEnumerable<char> CharsABC()
+        {
+            yield return 'a';
+            yield return 'b';
+            yield return 'c';
+        }
+
+        Assert.AreEqual("a".AsValue(), new TextWithTerminator("abc".ToArray(), '$')[0..1].AsValue());
+        Assert.AreEqual(string.Empty.AsValue(), new TextWithTerminator("abc".ToList(), '$')[0..0].AsValue());
+        Assert.AreEqual("abc$".AsValue(), new TextWithTerminator(CharsABC(), '$')[0..].AsValue());
+        Assert.AreEqual("ab".AsValue(), new TextWithTerminator("abc".AsValue(), '$')[..^2].AsValue());
+    }
+
+    [TestMethod]
+    public void Indexer_WithIndexOfString()
     {
         Assert.AreEqual('a', new TextWithTerminator("abc", '$')[0]);
         Assert.AreEqual('$', new TextWithTerminator("abc", '$')[3]);
+    }
+
+    [TestMethod]
+    public void Indexer_WithIndexOfEnumerable()
+    {
+        Assert.AreEqual('a', new TextWithTerminator("abc".ToArray(), '$')[0]);
+        Assert.AreEqual('$', new TextWithTerminator("abc".ToList(), '$')[3]);
     }
 
     [TestMethod]
@@ -74,6 +98,14 @@ public class TextWithTerminatorTests
     public void StartsWith_IsCorrect()
     {
         Assert.IsTrue(new TextWithTerminator("a", '$').StartsWith("a"));
+        Assert.IsTrue(new TextWithTerminator("a", '$').StartsWith("a".ToList()));
+
+        static IEnumerable<char> JustCharA()
+        {
+            yield return 'a';
+        }
+
+        Assert.IsTrue(new TextWithTerminator("a".ToArray(), '$').StartsWith(JustCharA()));
     }
 
     [TestMethod]
@@ -118,5 +150,4 @@ public class TextWithTerminatorTests
         Assert.IsTrue(enumerator.MoveNext());
         Assert.AreEqual(text.Terminator, enumerator.Current);
     }
-
 }

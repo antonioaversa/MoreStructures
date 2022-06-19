@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MoreStructures.Utilities;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 
@@ -32,6 +33,36 @@ public class RotatedTextWithTerminatorTests
     }
 
     [TestMethod]
+    public void Equals_IsByValueWithStrings()
+    {
+        var text1 = new RotatedTextWithTerminator("a$");
+        var text2 = new RotatedTextWithTerminator("a$");
+        Assert.AreEqual(text1, text2);
+    }
+
+    [TestMethod]
+    public void Equals_IsByValueWithListOfChar()
+    {
+        var text1 = new RotatedTextWithTerminator("a$".ToList());
+        var text2 = new RotatedTextWithTerminator("a$".ToList());
+        Assert.AreEqual(text1, text2);
+    }
+
+    private static IEnumerable<char> SomeChars()
+    {
+        yield return 'a';
+        yield return '$';
+    }
+
+    [TestMethod]
+    public void Equals_IsByValueWithEnumerableOfChar()
+    {
+        var text1 = new RotatedTextWithTerminator(SomeChars());
+        var text2 = new RotatedTextWithTerminator(SomeChars());
+        Assert.AreEqual(text1, text2);
+    }
+
+    [TestMethod]
     public void Indexer_WithSelector()
     {
         Assert.AreEqual("b", new RotatedTextWithTerminator("c$ab", '$')[new HardcodedSelector("b")]);
@@ -39,19 +70,31 @@ public class RotatedTextWithTerminatorTests
     }
 
     [TestMethod]
-    public void Indexer_WithRange()
+    public void Indexer_WithRangeOfString()
     {
         Assert.AreEqual("c".AsValue(), new RotatedTextWithTerminator("c$ab", '$')[0..1].AsValue());
         Assert.AreEqual(string.Empty.AsValue(), new RotatedTextWithTerminator("c$ab", '$')[0..0].AsValue());
-        Assert.AreEqual("c$ab".AsValue(), new RotatedTextWithTerminator("c$ab", '$')[0..].AsValue());
-        Assert.AreEqual("c$".AsValue(), new RotatedTextWithTerminator("c$ab", '$')[..^2].AsValue());
     }
 
     [TestMethod]
-    public void Indexer_WithIndex()
+    public void Indexer_WithRangeOfEnumerable()
+    {
+        Assert.AreEqual("c$ab".AsValue(), new RotatedTextWithTerminator("c$ab".ToArray(), '$')[0..].AsValue());
+        Assert.AreEqual("c$".AsValue(), new RotatedTextWithTerminator("c$ab".ToArray(), '$')[..^2].AsValue());
+    }
+
+    [TestMethod]
+    public void Indexer_WithIndexOfString()
     {
         Assert.AreEqual('c', new RotatedTextWithTerminator("c$ab", '$')[0]);
         Assert.AreEqual('b', new RotatedTextWithTerminator("c$ab", '$')[3]);
+    }
+
+    [TestMethod]
+    public void Indexer_WithIndexOfEnumerable()
+    {
+        Assert.AreEqual('c', new RotatedTextWithTerminator("c$ab".ToArray(), '$')[0]);
+        Assert.AreEqual('b', new RotatedTextWithTerminator("c$ab".ToArray(), '$')[3]);
     }
 
     [TestMethod]
@@ -62,15 +105,27 @@ public class RotatedTextWithTerminatorTests
     }
 
     [TestMethod]
-    public void StartsWith_IsCorrect()
+    public void StartsWith_IsCorrectWithString()
     {
         Assert.IsTrue(new RotatedTextWithTerminator("a$", '$').StartsWith("a"));
     }
 
     [TestMethod]
-    public void EndsWith_IsCorrect()
+    public void StartsWith_IsCorrectWithEnumerable()
+    {
+        Assert.IsTrue(new RotatedTextWithTerminator("a$".ToArray(), '$').StartsWith("a"));
+    }
+
+    [TestMethod]
+    public void EndsWith_IsCorrectWithString()
     {
         Assert.IsTrue(new RotatedTextWithTerminator("a$", '$').EndsWith("$"));
+    }
+
+    [TestMethod]
+    public void EndsWith_IsCorrectWithEnumerable()
+    {
+        Assert.IsTrue(new RotatedTextWithTerminator("a$".ToArray(), '$').EndsWith("$"));
     }
 
     [TestMethod]

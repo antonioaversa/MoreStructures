@@ -74,10 +74,12 @@ public record VirtuallyRotatedTextWithTerminator(RotatedTextWithTerminator Under
     }
 
     /// <inheritdoc/>
-    public IEnumerator<char> GetEnumerator() => new Enumerator(Underlying, Rotation);
+    public IEnumerator<char> GetEnumerator() => 
+        new Enumerator(Underlying, Rotation);
 
     /// <inheritdoc/>
-    System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() => GetEnumerator();
+    System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() => 
+        GetEnumerator();
 
     /// <inheritdoc/>
     public int CompareTo(VirtuallyRotatedTextWithTerminator? other)
