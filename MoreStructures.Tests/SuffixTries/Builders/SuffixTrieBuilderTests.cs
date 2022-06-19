@@ -5,7 +5,9 @@ using MoreStructures.SuffixStructures;
 using MoreStructures.SuffixStructures.Builders;
 using MoreStructures.SuffixTries;
 using MoreStructures.SuffixTries.Builders;
+using MoreStructures.Utilities;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using static MoreStructures.TextWithTerminator;
 
@@ -157,7 +159,7 @@ public abstract class SuffixTrieBuilderTests
         var text = new TextWithTerminator("aababcabcd");
         var allSuffixes = Enumerable
             .Range(0, text.Length)
-            .Select(i => text[i..])
+            .Select(i => text[i..].AsValue() as IEnumerable<char>)
             .ToHashSet();
 
         var root = Builder.BuildTree(text);
