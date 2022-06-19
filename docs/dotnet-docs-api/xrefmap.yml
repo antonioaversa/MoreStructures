@@ -6682,19 +6682,71 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.Ctor_Preconditions
   nameWithType: RotatedTextWithTerminatorTests.Ctor_Preconditions
-- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.EndsWith_IsCorrect
-  name: EndsWith_IsCorrect()
-  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_EndsWith_IsCorrect
-  commentId: M:MoreStructures.Tests.RotatedTextWithTerminatorTests.EndsWith_IsCorrect
-  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.EndsWith_IsCorrect()
-  nameWithType: RotatedTextWithTerminatorTests.EndsWith_IsCorrect()
-- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.EndsWith_IsCorrect*
-  name: EndsWith_IsCorrect
-  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_EndsWith_IsCorrect_
-  commentId: Overload:MoreStructures.Tests.RotatedTextWithTerminatorTests.EndsWith_IsCorrect
+- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.EndsWith_IsCorrectWithEnumerable
+  name: EndsWith_IsCorrectWithEnumerable()
+  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_EndsWith_IsCorrectWithEnumerable
+  commentId: M:MoreStructures.Tests.RotatedTextWithTerminatorTests.EndsWith_IsCorrectWithEnumerable
+  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.EndsWith_IsCorrectWithEnumerable()
+  nameWithType: RotatedTextWithTerminatorTests.EndsWith_IsCorrectWithEnumerable()
+- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.EndsWith_IsCorrectWithEnumerable*
+  name: EndsWith_IsCorrectWithEnumerable
+  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_EndsWith_IsCorrectWithEnumerable_
+  commentId: Overload:MoreStructures.Tests.RotatedTextWithTerminatorTests.EndsWith_IsCorrectWithEnumerable
   isSpec: "True"
-  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.EndsWith_IsCorrect
-  nameWithType: RotatedTextWithTerminatorTests.EndsWith_IsCorrect
+  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.EndsWith_IsCorrectWithEnumerable
+  nameWithType: RotatedTextWithTerminatorTests.EndsWith_IsCorrectWithEnumerable
+- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.EndsWith_IsCorrectWithString
+  name: EndsWith_IsCorrectWithString()
+  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_EndsWith_IsCorrectWithString
+  commentId: M:MoreStructures.Tests.RotatedTextWithTerminatorTests.EndsWith_IsCorrectWithString
+  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.EndsWith_IsCorrectWithString()
+  nameWithType: RotatedTextWithTerminatorTests.EndsWith_IsCorrectWithString()
+- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.EndsWith_IsCorrectWithString*
+  name: EndsWith_IsCorrectWithString
+  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_EndsWith_IsCorrectWithString_
+  commentId: Overload:MoreStructures.Tests.RotatedTextWithTerminatorTests.EndsWith_IsCorrectWithString
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.EndsWith_IsCorrectWithString
+  nameWithType: RotatedTextWithTerminatorTests.EndsWith_IsCorrectWithString
+- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.Equals_IsByValueWithEnumerableOfChar
+  name: Equals_IsByValueWithEnumerableOfChar()
+  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_Equals_IsByValueWithEnumerableOfChar
+  commentId: M:MoreStructures.Tests.RotatedTextWithTerminatorTests.Equals_IsByValueWithEnumerableOfChar
+  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.Equals_IsByValueWithEnumerableOfChar()
+  nameWithType: RotatedTextWithTerminatorTests.Equals_IsByValueWithEnumerableOfChar()
+- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.Equals_IsByValueWithEnumerableOfChar*
+  name: Equals_IsByValueWithEnumerableOfChar
+  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_Equals_IsByValueWithEnumerableOfChar_
+  commentId: Overload:MoreStructures.Tests.RotatedTextWithTerminatorTests.Equals_IsByValueWithEnumerableOfChar
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.Equals_IsByValueWithEnumerableOfChar
+  nameWithType: RotatedTextWithTerminatorTests.Equals_IsByValueWithEnumerableOfChar
+- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.Equals_IsByValueWithListOfChar
+  name: Equals_IsByValueWithListOfChar()
+  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_Equals_IsByValueWithListOfChar
+  commentId: M:MoreStructures.Tests.RotatedTextWithTerminatorTests.Equals_IsByValueWithListOfChar
+  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.Equals_IsByValueWithListOfChar()
+  nameWithType: RotatedTextWithTerminatorTests.Equals_IsByValueWithListOfChar()
+- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.Equals_IsByValueWithListOfChar*
+  name: Equals_IsByValueWithListOfChar
+  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_Equals_IsByValueWithListOfChar_
+  commentId: Overload:MoreStructures.Tests.RotatedTextWithTerminatorTests.Equals_IsByValueWithListOfChar
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.Equals_IsByValueWithListOfChar
+  nameWithType: RotatedTextWithTerminatorTests.Equals_IsByValueWithListOfChar
+- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.Equals_IsByValueWithStrings
+  name: Equals_IsByValueWithStrings()
+  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_Equals_IsByValueWithStrings
+  commentId: M:MoreStructures.Tests.RotatedTextWithTerminatorTests.Equals_IsByValueWithStrings
+  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.Equals_IsByValueWithStrings()
+  nameWithType: RotatedTextWithTerminatorTests.Equals_IsByValueWithStrings()
+- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.Equals_IsByValueWithStrings*
+  name: Equals_IsByValueWithStrings
+  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_Equals_IsByValueWithStrings_
+  commentId: Overload:MoreStructures.Tests.RotatedTextWithTerminatorTests.Equals_IsByValueWithStrings
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.Equals_IsByValueWithStrings
+  nameWithType: RotatedTextWithTerminatorTests.Equals_IsByValueWithStrings
 - uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.GetEnumerator_Generic_IsCorrect
   name: GetEnumerator_Generic_IsCorrect()
   href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_GetEnumerator_Generic_IsCorrect
@@ -6734,32 +6786,58 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.GetEnumerator_NonGeneric_IsCorrect
   nameWithType: RotatedTextWithTerminatorTests.GetEnumerator_NonGeneric_IsCorrect
-- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithIndex
-  name: Indexer_WithIndex()
-  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_Indexer_WithIndex
-  commentId: M:MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithIndex
-  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithIndex()
-  nameWithType: RotatedTextWithTerminatorTests.Indexer_WithIndex()
-- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithIndex*
-  name: Indexer_WithIndex
-  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_Indexer_WithIndex_
-  commentId: Overload:MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithIndex
+- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithIndexOfEnumerable
+  name: Indexer_WithIndexOfEnumerable()
+  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_Indexer_WithIndexOfEnumerable
+  commentId: M:MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithIndexOfEnumerable
+  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithIndexOfEnumerable()
+  nameWithType: RotatedTextWithTerminatorTests.Indexer_WithIndexOfEnumerable()
+- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithIndexOfEnumerable*
+  name: Indexer_WithIndexOfEnumerable
+  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_Indexer_WithIndexOfEnumerable_
+  commentId: Overload:MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithIndexOfEnumerable
   isSpec: "True"
-  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithIndex
-  nameWithType: RotatedTextWithTerminatorTests.Indexer_WithIndex
-- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithRange
-  name: Indexer_WithRange()
-  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_Indexer_WithRange
-  commentId: M:MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithRange
-  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithRange()
-  nameWithType: RotatedTextWithTerminatorTests.Indexer_WithRange()
-- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithRange*
-  name: Indexer_WithRange
-  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_Indexer_WithRange_
-  commentId: Overload:MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithRange
+  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithIndexOfEnumerable
+  nameWithType: RotatedTextWithTerminatorTests.Indexer_WithIndexOfEnumerable
+- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithIndexOfString
+  name: Indexer_WithIndexOfString()
+  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_Indexer_WithIndexOfString
+  commentId: M:MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithIndexOfString
+  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithIndexOfString()
+  nameWithType: RotatedTextWithTerminatorTests.Indexer_WithIndexOfString()
+- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithIndexOfString*
+  name: Indexer_WithIndexOfString
+  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_Indexer_WithIndexOfString_
+  commentId: Overload:MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithIndexOfString
   isSpec: "True"
-  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithRange
-  nameWithType: RotatedTextWithTerminatorTests.Indexer_WithRange
+  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithIndexOfString
+  nameWithType: RotatedTextWithTerminatorTests.Indexer_WithIndexOfString
+- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithRangeOfEnumerable
+  name: Indexer_WithRangeOfEnumerable()
+  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_Indexer_WithRangeOfEnumerable
+  commentId: M:MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithRangeOfEnumerable
+  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithRangeOfEnumerable()
+  nameWithType: RotatedTextWithTerminatorTests.Indexer_WithRangeOfEnumerable()
+- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithRangeOfEnumerable*
+  name: Indexer_WithRangeOfEnumerable
+  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_Indexer_WithRangeOfEnumerable_
+  commentId: Overload:MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithRangeOfEnumerable
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithRangeOfEnumerable
+  nameWithType: RotatedTextWithTerminatorTests.Indexer_WithRangeOfEnumerable
+- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithRangeOfString
+  name: Indexer_WithRangeOfString()
+  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_Indexer_WithRangeOfString
+  commentId: M:MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithRangeOfString
+  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithRangeOfString()
+  nameWithType: RotatedTextWithTerminatorTests.Indexer_WithRangeOfString()
+- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithRangeOfString*
+  name: Indexer_WithRangeOfString
+  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_Indexer_WithRangeOfString_
+  commentId: Overload:MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithRangeOfString
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithRangeOfString
+  nameWithType: RotatedTextWithTerminatorTests.Indexer_WithRangeOfString
 - uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.Indexer_WithSelector
   name: Indexer_WithSelector()
   href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_Indexer_WithSelector
@@ -6786,19 +6864,32 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.Length_IsCorrect
   nameWithType: RotatedTextWithTerminatorTests.Length_IsCorrect
-- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.StartsWith_IsCorrect
-  name: StartsWith_IsCorrect()
-  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_StartsWith_IsCorrect
-  commentId: M:MoreStructures.Tests.RotatedTextWithTerminatorTests.StartsWith_IsCorrect
-  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.StartsWith_IsCorrect()
-  nameWithType: RotatedTextWithTerminatorTests.StartsWith_IsCorrect()
-- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.StartsWith_IsCorrect*
-  name: StartsWith_IsCorrect
-  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_StartsWith_IsCorrect_
-  commentId: Overload:MoreStructures.Tests.RotatedTextWithTerminatorTests.StartsWith_IsCorrect
+- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.StartsWith_IsCorrectWithEnumerable
+  name: StartsWith_IsCorrectWithEnumerable()
+  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_StartsWith_IsCorrectWithEnumerable
+  commentId: M:MoreStructures.Tests.RotatedTextWithTerminatorTests.StartsWith_IsCorrectWithEnumerable
+  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.StartsWith_IsCorrectWithEnumerable()
+  nameWithType: RotatedTextWithTerminatorTests.StartsWith_IsCorrectWithEnumerable()
+- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.StartsWith_IsCorrectWithEnumerable*
+  name: StartsWith_IsCorrectWithEnumerable
+  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_StartsWith_IsCorrectWithEnumerable_
+  commentId: Overload:MoreStructures.Tests.RotatedTextWithTerminatorTests.StartsWith_IsCorrectWithEnumerable
   isSpec: "True"
-  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.StartsWith_IsCorrect
-  nameWithType: RotatedTextWithTerminatorTests.StartsWith_IsCorrect
+  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.StartsWith_IsCorrectWithEnumerable
+  nameWithType: RotatedTextWithTerminatorTests.StartsWith_IsCorrectWithEnumerable
+- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.StartsWith_IsCorrectWithString
+  name: StartsWith_IsCorrectWithString()
+  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_StartsWith_IsCorrectWithString
+  commentId: M:MoreStructures.Tests.RotatedTextWithTerminatorTests.StartsWith_IsCorrectWithString
+  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.StartsWith_IsCorrectWithString()
+  nameWithType: RotatedTextWithTerminatorTests.StartsWith_IsCorrectWithString()
+- uid: MoreStructures.Tests.RotatedTextWithTerminatorTests.StartsWith_IsCorrectWithString*
+  name: StartsWith_IsCorrectWithString
+  href: api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html#MoreStructures_Tests_RotatedTextWithTerminatorTests_StartsWith_IsCorrectWithString_
+  commentId: Overload:MoreStructures.Tests.RotatedTextWithTerminatorTests.StartsWith_IsCorrectWithString
+  isSpec: "True"
+  fullName: MoreStructures.Tests.RotatedTextWithTerminatorTests.StartsWith_IsCorrectWithString
+  nameWithType: RotatedTextWithTerminatorTests.StartsWith_IsCorrectWithString
 - uid: MoreStructures.Tests.StringIncludingTerminatorComparerTests
   name: StringIncludingTerminatorComparerTests
   href: api/MoreStructures.Tests.StringIncludingTerminatorComparerTests.html
@@ -8803,32 +8894,58 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.TextWithTerminatorTests.GetEnumerator_NonGeneric_IsCorrect
   nameWithType: TextWithTerminatorTests.GetEnumerator_NonGeneric_IsCorrect
-- uid: MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithIndex
-  name: Indexer_WithIndex()
-  href: api/MoreStructures.Tests.TextWithTerminatorTests.html#MoreStructures_Tests_TextWithTerminatorTests_Indexer_WithIndex
-  commentId: M:MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithIndex
-  fullName: MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithIndex()
-  nameWithType: TextWithTerminatorTests.Indexer_WithIndex()
-- uid: MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithIndex*
-  name: Indexer_WithIndex
-  href: api/MoreStructures.Tests.TextWithTerminatorTests.html#MoreStructures_Tests_TextWithTerminatorTests_Indexer_WithIndex_
-  commentId: Overload:MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithIndex
+- uid: MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithIndexOfEnumerable
+  name: Indexer_WithIndexOfEnumerable()
+  href: api/MoreStructures.Tests.TextWithTerminatorTests.html#MoreStructures_Tests_TextWithTerminatorTests_Indexer_WithIndexOfEnumerable
+  commentId: M:MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithIndexOfEnumerable
+  fullName: MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithIndexOfEnumerable()
+  nameWithType: TextWithTerminatorTests.Indexer_WithIndexOfEnumerable()
+- uid: MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithIndexOfEnumerable*
+  name: Indexer_WithIndexOfEnumerable
+  href: api/MoreStructures.Tests.TextWithTerminatorTests.html#MoreStructures_Tests_TextWithTerminatorTests_Indexer_WithIndexOfEnumerable_
+  commentId: Overload:MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithIndexOfEnumerable
   isSpec: "True"
-  fullName: MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithIndex
-  nameWithType: TextWithTerminatorTests.Indexer_WithIndex
-- uid: MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithRange
-  name: Indexer_WithRange()
-  href: api/MoreStructures.Tests.TextWithTerminatorTests.html#MoreStructures_Tests_TextWithTerminatorTests_Indexer_WithRange
-  commentId: M:MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithRange
-  fullName: MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithRange()
-  nameWithType: TextWithTerminatorTests.Indexer_WithRange()
-- uid: MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithRange*
-  name: Indexer_WithRange
-  href: api/MoreStructures.Tests.TextWithTerminatorTests.html#MoreStructures_Tests_TextWithTerminatorTests_Indexer_WithRange_
-  commentId: Overload:MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithRange
+  fullName: MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithIndexOfEnumerable
+  nameWithType: TextWithTerminatorTests.Indexer_WithIndexOfEnumerable
+- uid: MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithIndexOfString
+  name: Indexer_WithIndexOfString()
+  href: api/MoreStructures.Tests.TextWithTerminatorTests.html#MoreStructures_Tests_TextWithTerminatorTests_Indexer_WithIndexOfString
+  commentId: M:MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithIndexOfString
+  fullName: MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithIndexOfString()
+  nameWithType: TextWithTerminatorTests.Indexer_WithIndexOfString()
+- uid: MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithIndexOfString*
+  name: Indexer_WithIndexOfString
+  href: api/MoreStructures.Tests.TextWithTerminatorTests.html#MoreStructures_Tests_TextWithTerminatorTests_Indexer_WithIndexOfString_
+  commentId: Overload:MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithIndexOfString
   isSpec: "True"
-  fullName: MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithRange
-  nameWithType: TextWithTerminatorTests.Indexer_WithRange
+  fullName: MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithIndexOfString
+  nameWithType: TextWithTerminatorTests.Indexer_WithIndexOfString
+- uid: MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithRangeOfEnumerable
+  name: Indexer_WithRangeOfEnumerable()
+  href: api/MoreStructures.Tests.TextWithTerminatorTests.html#MoreStructures_Tests_TextWithTerminatorTests_Indexer_WithRangeOfEnumerable
+  commentId: M:MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithRangeOfEnumerable
+  fullName: MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithRangeOfEnumerable()
+  nameWithType: TextWithTerminatorTests.Indexer_WithRangeOfEnumerable()
+- uid: MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithRangeOfEnumerable*
+  name: Indexer_WithRangeOfEnumerable
+  href: api/MoreStructures.Tests.TextWithTerminatorTests.html#MoreStructures_Tests_TextWithTerminatorTests_Indexer_WithRangeOfEnumerable_
+  commentId: Overload:MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithRangeOfEnumerable
+  isSpec: "True"
+  fullName: MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithRangeOfEnumerable
+  nameWithType: TextWithTerminatorTests.Indexer_WithRangeOfEnumerable
+- uid: MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithRangeOfString
+  name: Indexer_WithRangeOfString()
+  href: api/MoreStructures.Tests.TextWithTerminatorTests.html#MoreStructures_Tests_TextWithTerminatorTests_Indexer_WithRangeOfString
+  commentId: M:MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithRangeOfString
+  fullName: MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithRangeOfString()
+  nameWithType: TextWithTerminatorTests.Indexer_WithRangeOfString()
+- uid: MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithRangeOfString*
+  name: Indexer_WithRangeOfString
+  href: api/MoreStructures.Tests.TextWithTerminatorTests.html#MoreStructures_Tests_TextWithTerminatorTests_Indexer_WithRangeOfString_
+  commentId: Overload:MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithRangeOfString
+  isSpec: "True"
+  fullName: MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithRangeOfString
+  nameWithType: TextWithTerminatorTests.Indexer_WithRangeOfString
 - uid: MoreStructures.Tests.TextWithTerminatorTests.Indexer_WithSelector
   name: Indexer_WithSelector()
   href: api/MoreStructures.Tests.TextWithTerminatorTests.html#MoreStructures_Tests_TextWithTerminatorTests_Indexer_WithSelector
@@ -9223,6 +9340,25 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Utilities.StringUtilitiesTests.LongestPrefixInCommon_IsCorrect
   nameWithType: StringUtilitiesTests.LongestPrefixInCommon_IsCorrect
+- uid: MoreStructures.Tests.Utilities.StringValueEnumerableTests
+  name: StringValueEnumerableTests
+  href: api/MoreStructures.Tests.Utilities.StringValueEnumerableTests.html
+  commentId: T:MoreStructures.Tests.Utilities.StringValueEnumerableTests
+  fullName: MoreStructures.Tests.Utilities.StringValueEnumerableTests
+  nameWithType: StringValueEnumerableTests
+- uid: MoreStructures.Tests.Utilities.StringValueEnumerableTests.Equals_ByValueOnItemsOfUnderlyingEnumerable
+  name: Equals_ByValueOnItemsOfUnderlyingEnumerable()
+  href: api/MoreStructures.Tests.Utilities.StringValueEnumerableTests.html#MoreStructures_Tests_Utilities_StringValueEnumerableTests_Equals_ByValueOnItemsOfUnderlyingEnumerable
+  commentId: M:MoreStructures.Tests.Utilities.StringValueEnumerableTests.Equals_ByValueOnItemsOfUnderlyingEnumerable
+  fullName: MoreStructures.Tests.Utilities.StringValueEnumerableTests.Equals_ByValueOnItemsOfUnderlyingEnumerable()
+  nameWithType: StringValueEnumerableTests.Equals_ByValueOnItemsOfUnderlyingEnumerable()
+- uid: MoreStructures.Tests.Utilities.StringValueEnumerableTests.Equals_ByValueOnItemsOfUnderlyingEnumerable*
+  name: Equals_ByValueOnItemsOfUnderlyingEnumerable
+  href: api/MoreStructures.Tests.Utilities.StringValueEnumerableTests.html#MoreStructures_Tests_Utilities_StringValueEnumerableTests_Equals_ByValueOnItemsOfUnderlyingEnumerable_
+  commentId: Overload:MoreStructures.Tests.Utilities.StringValueEnumerableTests.Equals_ByValueOnItemsOfUnderlyingEnumerable
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.StringValueEnumerableTests.Equals_ByValueOnItemsOfUnderlyingEnumerable
+  nameWithType: StringValueEnumerableTests.Equals_ByValueOnItemsOfUnderlyingEnumerable
 - uid: MoreStructures.Tests.Utilities.ValueEnumerableExtensionsTests
   name: ValueEnumerableExtensionsTests
   href: api/MoreStructures.Tests.Utilities.ValueEnumerableExtensionsTests.html
@@ -10112,6 +10248,15 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Utilities.EnumerableExtensions.ElementAtO1
   nameWithType: EnumerableExtensions.ElementAtO1
+- uid: MoreStructures.Utilities.EnumerableExtensions.ElementAtO1``1(System.Collections.IEnumerable{``0},Index)
+  name: ElementAtO1<TSource>(IEnumerable<TSource>, Index)
+  href: api/MoreStructures.Utilities.EnumerableExtensions.html#MoreStructures_Utilities_EnumerableExtensions_ElementAtO1__1_System_Collections_IEnumerable___0__Index_
+  commentId: M:MoreStructures.Utilities.EnumerableExtensions.ElementAtO1``1(System.Collections.IEnumerable{``0},Index)
+  name.vb: ElementAtO1(Of TSource)(IEnumerable(Of TSource), Index)
+  fullName: MoreStructures.Utilities.EnumerableExtensions.ElementAtO1<TSource>(System.Collections.IEnumerable<TSource>, Index)
+  fullName.vb: MoreStructures.Utilities.EnumerableExtensions.ElementAtO1(Of TSource)(System.Collections.IEnumerable(Of TSource), Index)
+  nameWithType: EnumerableExtensions.ElementAtO1<TSource>(IEnumerable<TSource>, Index)
+  nameWithType.vb: EnumerableExtensions.ElementAtO1(Of TSource)(IEnumerable(Of TSource), Index)
 - uid: MoreStructures.Utilities.EnumerableExtensions.ElementAtO1``1(System.Collections.IEnumerable{``0},System.Int32)
   name: ElementAtO1<TSource>(IEnumerable<TSource>, Int32)
   href: api/MoreStructures.Utilities.EnumerableExtensions.html#MoreStructures_Utilities_EnumerableExtensions_ElementAtO1__1_System_Collections_IEnumerable___0__System_Int32_
@@ -10219,6 +10364,38 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Utilities.StringUtilities.LongestPrefixInCommon
   nameWithType: StringUtilities.LongestPrefixInCommon
+- uid: MoreStructures.Utilities.StringValueEnumerable
+  name: StringValueEnumerable
+  href: api/MoreStructures.Utilities.StringValueEnumerable.html
+  commentId: T:MoreStructures.Utilities.StringValueEnumerable
+  fullName: MoreStructures.Utilities.StringValueEnumerable
+  nameWithType: StringValueEnumerable
+- uid: MoreStructures.Utilities.StringValueEnumerable.#ctor(System.String)
+  name: StringValueEnumerable(String)
+  href: api/MoreStructures.Utilities.StringValueEnumerable.html#MoreStructures_Utilities_StringValueEnumerable__ctor_System_String_
+  commentId: M:MoreStructures.Utilities.StringValueEnumerable.#ctor(System.String)
+  fullName: MoreStructures.Utilities.StringValueEnumerable.StringValueEnumerable(System.String)
+  nameWithType: StringValueEnumerable.StringValueEnumerable(String)
+- uid: MoreStructures.Utilities.StringValueEnumerable.#ctor*
+  name: StringValueEnumerable
+  href: api/MoreStructures.Utilities.StringValueEnumerable.html#MoreStructures_Utilities_StringValueEnumerable__ctor_
+  commentId: Overload:MoreStructures.Utilities.StringValueEnumerable.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Utilities.StringValueEnumerable.StringValueEnumerable
+  nameWithType: StringValueEnumerable.StringValueEnumerable
+- uid: MoreStructures.Utilities.StringValueEnumerable.StringValue
+  name: StringValue
+  href: api/MoreStructures.Utilities.StringValueEnumerable.html#MoreStructures_Utilities_StringValueEnumerable_StringValue
+  commentId: P:MoreStructures.Utilities.StringValueEnumerable.StringValue
+  fullName: MoreStructures.Utilities.StringValueEnumerable.StringValue
+  nameWithType: StringValueEnumerable.StringValue
+- uid: MoreStructures.Utilities.StringValueEnumerable.StringValue*
+  name: StringValue
+  href: api/MoreStructures.Utilities.StringValueEnumerable.html#MoreStructures_Utilities_StringValueEnumerable_StringValue_
+  commentId: Overload:MoreStructures.Utilities.StringValueEnumerable.StringValue
+  isSpec: "True"
+  fullName: MoreStructures.Utilities.StringValueEnumerable.StringValue
+  nameWithType: StringValueEnumerable.StringValue
 - uid: MoreStructures.Utilities.ValueEnumerable`1
   name: ValueEnumerable<T>
   href: api/MoreStructures.Utilities.ValueEnumerable-1.html

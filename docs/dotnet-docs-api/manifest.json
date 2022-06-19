@@ -666,7 +666,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.RotatedTextWithTerminator.html",
-          "hash": "WYHrtJmM8NqGDAdUSZb7lmpzq/TsCm5dAVmetWUUJ20="
+          "hash": "9Hn2ti5nSwKgWhLCQNB4WFemnDq4ftAZieTV2XeZOQc="
         }
       },
       "is_incremental": false,
@@ -1782,7 +1782,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.RotatedTextWithTerminatorTests.html",
-          "hash": "+CrLvgxcSyS15xK8PC24hb/dJ1Ttiz8w8dmGkB8vHaY="
+          "hash": "m3JabMVjEid3NiAmb2YA3rov/czVs5Q223w03dngBhQ="
         }
       },
       "is_incremental": false,
@@ -1998,7 +1998,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html",
-          "hash": "HmOZVFqwuiUN4GXvXVKtulndzXXQTw6D+04iSV6/43A="
+          "hash": "1vJ2xd6fXwW76Y8pVoXpu0ugGV/DPgDg5LCLhnR37Xo="
         }
       },
       "is_incremental": false,
@@ -2178,7 +2178,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.html",
-          "hash": "YgsF2KNtCsoK0JoqLw6VBDlnVSaxw5QtXZ9HVUweCxk="
+          "hash": "Vto3LVyil1YmC5n9OMptfHO81Q+yBtgsiPxpnpn44gA="
         }
       },
       "is_incremental": false,
@@ -2250,7 +2250,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.TextWithTerminatorTests.html",
-          "hash": "8nuA0dB80Cz5WfQE6+UZxXWRGlw6GsKszwBB+XbN134="
+          "hash": "JE3+CzI53gYm7yvvyNQ9J7WmNHTk3mBgbGGDLw2CEf8="
         }
       },
       "is_incremental": false,
@@ -2274,7 +2274,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html",
-          "hash": "KppmkCmmIr2vf2xqg0M/Kfww/czzkfoufhLKg+NZZPI="
+          "hash": "wWqwndOfpy7taw+P6QQqMvNC5H/Vc3zB8creg7MA32U="
         }
       },
       "is_incremental": false,
@@ -2299,6 +2299,18 @@
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Utilities.StringUtilitiesTests.html",
           "hash": "wfG0G74M+tbA/C7fy1Ws74cOQcyh8z2T7Ehc2x371FA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Utilities.StringValueEnumerableTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Utilities.StringValueEnumerableTests.html",
+          "hash": "HjD4ck2KjKEjVKJzAANQwsyU9pjCue9+0zI8AZ2CrrM="
         }
       },
       "is_incremental": false,
@@ -2370,7 +2382,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Utilities.html",
-          "hash": "Iz3Wz1Fl/TtQmZw71m9yD5qCFaq40yn1ODMOgUidl0Y="
+          "hash": "6KG1K+2TUINyGC+k+aM3vFusRSp4ppXmQFPhibwtg40="
         }
       },
       "is_incremental": false,
@@ -2406,7 +2418,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.TextWithTerminator.ISelector.html",
-          "hash": "6QtzzXrTRClYcMrchpkG1TmVapkMa0sTObk298QNaNQ="
+          "hash": "QkuHJezIUzJziR+56+UWM5f4/8np9UbGyYOFJn1N25M="
         }
       },
       "is_incremental": false,
@@ -2418,7 +2430,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.TextWithTerminator.html",
-          "hash": "wAV+zHqiVXIq2vKGgfHGmukIdXTlKMo5z27JLHSYDz8="
+          "hash": "7B6nt0KdcqIMJhE4SUbpe0rS5H3wqB7EVNx1IJuNWoo="
         }
       },
       "is_incremental": false,
@@ -2454,7 +2466,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Utilities.EnumerableExtensions.html",
-          "hash": "6jG1heEGXpVdLTddFBESngYscV9K+ar+zju1EkV/Xt8="
+          "hash": "q0CoHFlXn48YvzZp8G/n2VUZYB83qKuvhkmlN4vu6KA="
         }
       },
       "is_incremental": false,
@@ -2510,11 +2522,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Utilities.StringValueEnumerable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Utilities.StringValueEnumerable.html",
+          "hash": "1wTTIaa23Y23YoZLHbnOS7EutpeNygFJ9z1F5gijIGo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Utilities.ValueEnumerable-1.yml",
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Utilities.ValueEnumerable-1.html",
-          "hash": "YBQeN7VZbqTBULh79VwWZfssMBzRvn1G4AYwdGoGqYQ="
+          "hash": "xIQopsEXr7HBmE3PFu//ZeE5cm9neby7wdY0D5tZqF4="
         }
       },
       "is_incremental": false,
@@ -2526,7 +2550,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Utilities.ValueEnumerableExtensions.html",
-          "hash": "ZA0k99AGxlWxEGiQhUFVbTZM8Dq2b94dxlDDaLR/ifM="
+          "hash": "SMrhG11ViaGdrv95i5T+v9zNxOEXITlW0UoxXnbPo+I="
         }
       },
       "is_incremental": false,
@@ -2574,7 +2598,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Utilities.html",
-          "hash": "AsfEHo47UIBLW36Zvvq6M49dlJsZBx+ilpdUpp1PpGI="
+          "hash": "Q5EHpbiMU8S+f8CZ6DFfJcPCPEk1M23kSWzAGmsM7cQ="
         }
       },
       "is_incremental": false,
@@ -2586,7 +2610,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.VirtuallyRotatedTextWithTerminator.html",
-          "hash": "KtAS22mrGEJ/xRna2iYp5Cf0tJAKiSb82HydMMZDTBo="
+          "hash": "acCIWF3geZUu5Evf0de7nEt4ZU2LWmpmL0V6aIayJy4="
         }
       },
       "is_incremental": false,
@@ -2622,7 +2646,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "eothLjZdhGiLj6rKoUjMe3HWwABql+SqTOz0LLpilxk="
+          "hash": "pIUXpMO5A4CYu71cRx+fVbgtesG/2jV1tWtS8TKBrDY="
         }
       },
       "is_incremental": false,
@@ -2697,7 +2721,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 216,
+          "total_file_count": 218,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

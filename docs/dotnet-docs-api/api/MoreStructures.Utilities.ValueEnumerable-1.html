@@ -90,6 +90,7 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ValueEnumerable&lt;T&gt;</span></div>
+      <div class="level2"><a class="xref" href="MoreStructures.Utilities.StringValueEnumerable.html">StringValueEnumerable</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -134,7 +135,10 @@
     </tbody>
   </table>
   <h5 id="MoreStructures_Utilities_ValueEnumerable_1_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>Useful to preserve equality by value in records and other value structures which contain enumerable objects.</p>
+  <div class="markdown level0 remarks"><p>Useful to preserve equality by value in records and other value structures which contain enumerable objects.
+<br>
+It doesn't cache nor enumerate the underlying <span class="xref">MoreStructures.Utilities.ValueEnumerable`1.Enumerable</span> unless <a class="xref" href="MoreStructures.Utilities.ValueEnumerable-1.html#MoreStructures_Utilities_ValueEnumerable_1_GetEnumerator">GetEnumerator()</a> or a
+method requiring <span class="xref">MoreStructures.Utilities.ValueEnumerable`1.Enumerable</span> items is called.</p>
 </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -143,7 +147,7 @@
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Utilities_ValueEnumerable_1__ctor_System_Collections_IEnumerable__0__.md&amp;value=---%0Auid%3A%20MoreStructures.Utilities.ValueEnumerable%601.%23ctor(System.Collections.IEnumerable%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/ValueEnumerable.cs/#L20">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/ValueEnumerable.cs/#L26">View Source</a>
   </span>
   <a id="MoreStructures_Utilities_ValueEnumerable_1__ctor_" data-uid="MoreStructures.Utilities.ValueEnumerable`1.#ctor*"></a>
   <h4 id="MoreStructures_Utilities_ValueEnumerable_1__ctor_System_Collections_IEnumerable__0__" data-uid="MoreStructures.Utilities.ValueEnumerable`1.#ctor(System.Collections.IEnumerable{`0})">ValueEnumerable(IEnumerable&lt;T&gt;)</h4>
@@ -172,6 +176,9 @@
       </tr>
     </tbody>
   </table>
+  <h5 id="MoreStructures_Utilities_ValueEnumerable_1__ctor_System_Collections_IEnumerable__0___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Time and Space Complexity is O(1), as this constructor doesn't enumerate <code data-dev-comment-type="paramref" class="paramref">enumerable</code>.</p>
+</div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -179,7 +186,7 @@
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Utilities_ValueEnumerable_1_Equals_System_Object_.md&amp;value=---%0Auid%3A%20MoreStructures.Utilities.ValueEnumerable%601.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/ValueEnumerable.cs/#L37">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/ValueEnumerable.cs/#L49">View Source</a>
   </span>
   <a id="MoreStructures_Utilities_ValueEnumerable_1_Equals_" data-uid="MoreStructures.Utilities.ValueEnumerable`1.Equals*"></a>
   <h4 id="MoreStructures_Utilities_ValueEnumerable_1_Equals_System_Object_" data-uid="MoreStructures.Utilities.ValueEnumerable`1.Equals(System.Object)">Equals(Object)</h4>
@@ -226,14 +233,18 @@
   <h5 id="MoreStructures_Utilities_ValueEnumerable_1_Equals_System_Object__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>In the specific case, equality is based on the
 <see cref="!:Enumerable.SequenceEqual&lt;TSource>(IEnumerable&lt;TSource>, IEnumerable&lt;TSource>)"></see> of the wrapped
-<see cref="!:IEnumerable&lt;T>"></see> objects.</p>
+<see cref="!:IEnumerable&lt;T>"></see> objects.
+<br>
+Therefore, Time Complexity is O(n * Te) and Space Complexity is O(Se), where n is the number of elements of
+the longest <span class="xref">MoreStructures.Utilities.ValueEnumerable`1.Enumerable</span> and Te/Se are the time and space costs of
+<span class="xref">System.Object.Equals(System.Object)</span> of two <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> instances.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Utilities_ValueEnumerable_1_GetEnumerator.md&amp;value=---%0Auid%3A%20MoreStructures.Utilities.ValueEnumerable%601.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/ValueEnumerable.cs/#L26">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/ValueEnumerable.cs/#L32">View Source</a>
   </span>
   <a id="MoreStructures_Utilities_ValueEnumerable_1_GetEnumerator_" data-uid="MoreStructures.Utilities.ValueEnumerable`1.GetEnumerator*"></a>
   <h4 id="MoreStructures_Utilities_ValueEnumerable_1_GetEnumerator" data-uid="MoreStructures.Utilities.ValueEnumerable`1.GetEnumerator">GetEnumerator()</h4>
@@ -263,7 +274,7 @@
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Utilities_ValueEnumerable_1_GetHashCode.md&amp;value=---%0Auid%3A%20MoreStructures.Utilities.ValueEnumerable%601.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/ValueEnumerable.cs/#L45">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/ValueEnumerable.cs/#L61">View Source</a>
   </span>
   <a id="MoreStructures_Utilities_ValueEnumerable_1_GetHashCode_" data-uid="MoreStructures.Utilities.ValueEnumerable`1.GetHashCode*"></a>
   <h4 id="MoreStructures_Utilities_ValueEnumerable_1_GetHashCode" data-uid="MoreStructures.Utilities.ValueEnumerable`1.GetHashCode">GetHashCode()</h4>
@@ -291,15 +302,19 @@
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.Object.GetHashCode()</span></div>
   <h5 id="MoreStructures_Utilities_ValueEnumerable_1_GetHashCode_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>In the specific case, the hash is calculated as an aggregation of the hash codes of the items of the wrapped
-<span class="xref">MoreStructures.Utilities.ValueEnumerable`1.Enumerable</span> object.</p>
+  <div class="markdown level1 remarks"><p>In the specific case, the hash is calculated as an aggregation of the hash codes of the items of the
+wrapped <span class="xref">MoreStructures.Utilities.ValueEnumerable`1.Enumerable</span> object.
+<br>
+Therefore, Time Complexity is O(n * Te) and Space Complexity is O(Se), where n is the number of elements of
+the longest <span class="xref">MoreStructures.Utilities.ValueEnumerable`1.Enumerable</span> and Te/Se are the time and space costs of
+<span class="xref">System.Object.GetHashCode()</span> of a <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> instance.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Utilities_ValueEnumerable_1_ToString.md&amp;value=---%0Auid%3A%20MoreStructures.Utilities.ValueEnumerable%601.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/ValueEnumerable.cs/#L52">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/ValueEnumerable.cs/#L72">View Source</a>
   </span>
   <a id="MoreStructures_Utilities_ValueEnumerable_1_ToString_" data-uid="MoreStructures.Utilities.ValueEnumerable`1.ToString*"></a>
   <h4 id="MoreStructures_Utilities_ValueEnumerable_1_ToString" data-uid="MoreStructures.Utilities.ValueEnumerable`1.ToString">ToString()</h4>
@@ -327,7 +342,11 @@
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.Object.ToString()</span></div>
   <h5 id="MoreStructures_Utilities_ValueEnumerable_1_ToString_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>In the specific case, the string calculation is delegated to the wrapped <see cref="!:IEnumerable&lt;T>"></see> object.</p>
+  <div class="markdown level1 remarks"><p>In the specific case, the string calculation is delegated to the wrapped <see cref="!:IEnumerable&lt;T>"></see>
+object.
+<br>
+Therefore, Time and Space Complexity are the ones of the specific implementation of
+<span class="xref">System.Object.ToString()</span> of the underlying <span class="xref">MoreStructures.Utilities.ValueEnumerable`1.Enumerable</span>.</p>
 </div>
   <h3 id="eii">Explicit Interface Implementations
   </h3>
@@ -336,7 +355,7 @@
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Utilities_ValueEnumerable_1_System_Collections_IEnumerable_GetEnumerator.md&amp;value=---%0Auid%3A%20MoreStructures.Utilities.ValueEnumerable%601.System%23Collections%23IEnumerable%23GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/ValueEnumerable.cs/#L29">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/ValueEnumerable.cs/#L36">View Source</a>
   </span>
   <a id="MoreStructures_Utilities_ValueEnumerable_1_System_Collections_IEnumerable_GetEnumerator_" data-uid="MoreStructures.Utilities.ValueEnumerable`1.System#Collections#IEnumerable#GetEnumerator*"></a>
   <h4 id="MoreStructures_Utilities_ValueEnumerable_1_System_Collections_IEnumerable_GetEnumerator" data-uid="MoreStructures.Utilities.ValueEnumerable`1.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
@@ -383,7 +402,7 @@
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Utilities_ValueEnumerable_1.md&amp;value=---%0Auid%3A%20MoreStructures.Utilities.ValueEnumerable%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/ValueEnumerable.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/ValueEnumerable.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
