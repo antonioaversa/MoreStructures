@@ -1,6 +1,7 @@
 ﻿using MoreStructures.RecImmTrees;
 using MoreStructures.RecImmTrees.Paths;
 using MoreStructures.RecImmTrees.Visitor;
+using MoreStructures.SuffixStructures.Builders;
 using MoreStructures.SuffixTries;
 using MoreStructures.SuffixTries.Builders;
 using MoreStructures.Utilities;
@@ -16,8 +17,8 @@ namespace MoreStructures.SuffixStructures.Matching;
 ///     <para id="advantages">
 ///     ADVANTAGES AND DISADVANTAGES
 ///     <br/>
-///     - Compared to the naive implementation of <see cref="NaiveSnssFinder"/>, has better runtime, at the cost of 
-///       space used (which is O(1) for the naive implementation).
+///     - Compared to the naive implementation of <see cref="NaiveSnssFinder"/>, has better aberage runtime, at the 
+///       cost of space used (which is O(1) for the naive implementation and at least quadratic here).
 ///       <br/>
 ///     - Compared to the SuffixTree-based implementation, it has way worse Time and Space Complexity, but it's easier
 ///       to implement, visualize and debug step-by-step.
@@ -48,14 +49,14 @@ namespace MoreStructures.SuffixStructures.Matching;
 ///       n of the concatenated text "text1 ## separator1 ## text2 ## separator2", and constant space.
 ///       <br/>
 ///     - Building the Generalized Suffix Trie takes time and space at least proportional to the number of nodes of the
-///       trie, which is quadratic with n.
+///       trie, which is quadratic with n (unlike for Suffix Trees).
 ///       <br/>
 ///     - For each level of the breadth-first traversal of the trie, all node-to-leaf paths are checked (in the worst 
 ///       case).
 ///       <br/>
 ///     - There are at most n levels in the trie, since there can't be a path longer than a suffix of the concatenated
-///       text. The higher is the level, the shorter are node-to-leaf paths. However, their number is always the same
-///       or lower.
+///       text, and all suffixes should be covered by the trie. The higher is the level, the shorter are node-to-leaf 
+///       paths. However, their number is always the same or lower.
 ///       <br/>
 ///     - There are as many node-to-leaf paths as leaves, and there are at most n leaves in the trie (since each
 ///       suffix can add potentially multiple intermediate nodes, but always a single leaf, having terminator2 as 
@@ -71,6 +72,9 @@ namespace MoreStructures.SuffixStructures.Matching;
 /// </remarks>
 public class SuffixTrieBasedSnssFinder : SuffixStructureBasedSnssFinder
 {
+    private static readonly IBuilder<SuffixTrieEdge, SuffixTrieNode> SuffixTrieBuilder = 
+        new NaivePartiallyRecursiveSuffixTrieBuilder();
+
     private static readonly INodeToLeafPathsBuilder NodeToLeafPathsBuilder = 
         new FullyIterativeNodeToLeafPathsBuilder();
 
@@ -81,29 +85,26 @@ public class SuffixTrieBasedSnssFinder : SuffixStructureBasedSnssFinder
 
     /// <inheritdoc cref="SuffixStructureBasedSnssFinder" path="//*[not(self::summary or self::remarks)]"/>
     /// <summary>
+    ///     <inheritdoc cref="SuffixStructureBasedSnssFinder.Find(IEnumerable{char}, IEnumerable{char})"/>
+    ///     <br/>
+    ///     This implementation builds and uses a <see cref="SuffixTrieNode"/> structure to perform the search.
     /// </summary>
+    /// <remarks>
+    ///     <inheritdoc cref="SuffixTrieBasedSnssFinder" path="/remarks"/>
+    /// </remarks>
     public override string? Find(IEnumerable<char> text1, IEnumerable<char> text2)
     {
         if (ValidateInput)
-        {
-            if (text1.Contains(Terminator1) || text1.Contains(Terminator2))
-                throw new ArgumentException(
-                    $"Should not contain {nameof(Terminator1)} nor {nameof(Terminator2)}: {Terminator1} {Terminator2}",
-                    nameof(text1));
-            if (text2.Contains(Terminator1) || text2.Contains(Terminator2))
-                throw new ArgumentException(
-                    $"Should not contain {nameof(Terminator1)} nor {nameof(Terminator2)}: {Terminator1} {Terminator2}",
-                    nameof(text2));
-        }
+            ValidateTexts(text1, text2);
 
         // Build Generalized Suffix Trie
+        var text1WithTerminator = new TextWithTerminator(text1, Terminator1);
+        var text2WithTerminator = new TextWithTerminator(text2, Terminator2);
         var text1And2 = new TextWithTerminator(text1.Append(Terminator1).Concat(text2), Terminator2);
-
-        var suffixTrieBuilder = new NaivePartiallyRecursiveSuffixTrieBuilder();
-        var suffixTrieRoot = suffixTrieBuilder.BuildTree(text1And2);
+        var suffixTrieRoot = SuffixTrieBuilder.BuildTree(text1WithTerminator, text2WithTerminator);
 
         // Breadth First Visit of the Trie
-        var terminator1Index = new TextWithTerminator(text1, Terminator1).TerminatorIndex;
+        var terminator1Index = text1WithTerminator.TerminatorIndex;
         var terminator2Index = text1And2.TerminatorIndex;
         var breadthFirstTraversal = new FullyIterativeBreadthFirstTraversal<SuffixTrieEdge, SuffixTrieNode>()
         {
@@ -124,8 +125,7 @@ public class SuffixTrieBasedSnssFinder : SuffixStructureBasedSnssFinder
             from visit in visits
             let pathsToLeaf = NodeToLeafPathsBuilder.GetAllNodeToLeafPaths<SuffixTrieEdge, SuffixTrieNode>(visit.Node)
             // All path-to-leaf contain Terminator1 => root-to-node prefix is not substring of text2
-            let notSubstringOfText2 = pathsToLeaf.All(path => path.ContainsIndex(terminator1Index))
-            where notSubstringOfText2
+            where pathsToLeaf.All(path => path.ContainsIndex(terminator1Index))
             select visit.Node)
             .FirstOrDefault();
 
@@ -134,23 +134,5 @@ public class SuffixTrieBasedSnssFinder : SuffixStructureBasedSnssFinder
 
         // Collect result, iterating up to the root
         return string.Concat(CollectPrefixChars(text1And2, shortestSubstrNode, cachedVisits).Reverse());
-    }
-
-    private static IEnumerable<string> CollectPrefixChars(
-        TextWithTerminator text,
-        SuffixTrieNode initialNode, 
-        IDictionary<SuffixTrieNode, TreeTraversalVisit<SuffixTrieEdge, SuffixTrieNode>> cachedVisits)
-    {
-        var node = initialNode;
-        while (true)
-        {
-            var (_, parentNode, incomingEdge, _) = cachedVisits[node];
-
-            if (parentNode == null)
-                yield break;
-
-            yield return text[incomingEdge!]; // if parentNode != null, then incomingEdge is also != null
-            node = parentNode;
-        }
     }
 }

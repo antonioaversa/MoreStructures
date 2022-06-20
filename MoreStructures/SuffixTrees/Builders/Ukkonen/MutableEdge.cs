@@ -10,6 +10,19 @@
 /// </remarks>
 internal record MutableEdge(int Start, MovingEnd End)
 {
+    public MovingEnd End { get; } = 
+        End.Value >= Start 
+        ? End
+        : throw new ArgumentException($"{nameof(End)} has to be non-smaller than {nameof(Start)}");
+
+    /// <summary>
+    /// The length of this edge.
+    /// </summary>
+    /// <value>
+    /// A positive value (at least 1).
+    /// </value>
+    public int Length => End.Value - Start + 1;
+
     /// <summary>
     /// In the form (<see cref="Start"/>, <see cref="End"/>).
     /// </summary>
