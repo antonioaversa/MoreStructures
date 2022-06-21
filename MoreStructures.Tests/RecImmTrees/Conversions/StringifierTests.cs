@@ -1,9 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.RecImmTrees;
+﻿using MoreStructures.RecImmTrees;
 using MoreStructures.RecImmTrees.Conversions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace MoreStructures.Tests.RecImmTrees.Conversions;
 

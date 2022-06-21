@@ -1,17 +1,14 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.RecImmTrees;
+﻿using MoreStructures.RecImmTrees;
 using MoreStructures.RecImmTrees.Paths;
 using MoreStructures.SuffixStructures;
 using MoreStructures.SuffixStructures.Builders;
 using MoreStructures.SuffixTries;
-using MoreStructures.SuffixTries.Builders;
 using MoreStructures.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using static MoreStructures.TextWithTerminator;
 
 namespace MoreStructures.Tests.SuffixTries.Builders;
+
+using static BuilderEquivalences.EquivalenceId;
 
 public abstract class SuffixTrieBuilderTests
 {
@@ -199,5 +196,24 @@ public abstract class SuffixTrieBuilderTests
     public void BuildTree_BuildsExampleTrieFromExampleText()
     {
         Assert.AreEqual(SuffixTrieNodeTests.BuildSuffixTrieExample(), Builder.BuildTree(TestUtilities.ExampleText1));
+    }
+
+    [DataRow(EmptyStrings)]
+    [DataRow(OneNonEmptyOneEmpty)]
+    [DataRow(OneEmptyOneNonEmpty)]
+    [DataRow(TwoEmptyOneNonEmpty)]
+    [DataRow(TwoEmptyOneNonEmptyDifferentOrder)]
+    [DataRow(TwoNonSharingChars)]
+    [DataRow(TwoSharingChars)]
+    [DataRow(TwoSame)]
+    [DataRow(ThreeDifferent)]
+    [DataRow(TwoSameOneDifferent)]
+    [DataRow(ThreeSame)]
+    [DataTestMethod]
+    public void BuildTree_IsCorrectWithMultipleTexts(BuilderEquivalences.EquivalenceId equivalenceId)
+    {
+        var (text, expectedTrieNode) = BuilderEquivalences.Equivalences[equivalenceId];
+        var trieNode = Builder.BuildTree(text);
+        Assert.AreEqual(expectedTrieNode, trieNode);
     }
 }

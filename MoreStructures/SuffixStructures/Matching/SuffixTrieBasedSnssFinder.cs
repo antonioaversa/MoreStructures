@@ -97,13 +97,14 @@ public class SuffixTrieBasedSnssFinder : SuffixStructureBasedSnssFinder
         }
 
         // Build Generalized Suffix Trie
-        var terminator1Index = text1.CountO1();
         var text1And2 = new TextWithTerminator(text1.Append(Terminator1).Concat(text2), Terminator2);
-        var terminator2Index = text1And2.Length - 1;
+
         var suffixTrieBuilder = new NaivePartiallyRecursiveSuffixTrieBuilder();
         var suffixTrieRoot = suffixTrieBuilder.BuildTree(text1And2);
 
         // Breadth First Visit of the Trie
+        var terminator1Index = new TextWithTerminator(text1, Terminator1).TerminatorIndex;
+        var terminator2Index = text1And2.TerminatorIndex;
         var breadthFirstTraversal = new FullyIterativeBreadthFirstTraversal<SuffixTrieEdge, SuffixTrieNode>()
         {
             ChildrenSorter = visit => visit.Node.Children.Where(

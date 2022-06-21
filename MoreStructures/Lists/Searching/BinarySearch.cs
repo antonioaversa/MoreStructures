@@ -1,5 +1,4 @@
 ﻿using MoreStructures.Utilities;
-using System.Collections.Generic;
 
 namespace MoreStructures.Lists.Searching;
 

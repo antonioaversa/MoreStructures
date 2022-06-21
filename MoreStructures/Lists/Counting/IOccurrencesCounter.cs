@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MoreStructures.Lists.Counting;
+﻿namespace MoreStructures.Lists.Counting;
 
 /// <summary>
 /// An object able to count the number of occurrences of each item of a <see cref="IEnumerable{T}"/>, also known as 

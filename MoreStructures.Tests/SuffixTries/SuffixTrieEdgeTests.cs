@@ -1,6 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.SuffixTries;
-using System;
+﻿using MoreStructures.SuffixTries;
 
 namespace MoreStructures.Tests.SuffixTries;
 

@@ -1,7 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.RecImmTrees.Conversions;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
+﻿using MoreStructures.RecImmTrees.Conversions;
 
 namespace MoreStructures.Tests.RecImmTrees.Conversions;
 

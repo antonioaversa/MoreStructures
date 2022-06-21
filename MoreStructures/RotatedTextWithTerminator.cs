@@ -100,7 +100,7 @@ public record RotatedTextWithTerminator(
     /// The total length of <see cref="RotatedText"/>, including the terminator.
     /// </summary>
     /// <remarks>
-    /// After the first call, the value is cached for all subsequent calls.
+    ///     <inheritdoc cref="TextWithTerminator.Length" path="/remarks"/>
     /// </remarks>
     /// <value>
     /// A positive integer (at least 1).
@@ -110,7 +110,12 @@ public record RotatedTextWithTerminator(
         get
         {
             if (_length == null)
-                _length = RotatedText.CountO1();
+            {
+                _length =
+                    RotatedText is StringValueEnumerable { StringValue: var str }
+                    ? str.Length
+                    : RotatedText.CountO1();
+            }
             return _length.Value;
         }
     }

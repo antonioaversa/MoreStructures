@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace MoreStructures.Tests;
+﻿namespace MoreStructures.Tests;
 
 internal static class TestUtilities
 {

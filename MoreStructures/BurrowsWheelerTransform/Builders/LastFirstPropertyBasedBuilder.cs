@@ -1,7 +1,4 @@
 ﻿using MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders;
-using MoreStructures.Lists.Counting;
-using MoreStructures.Utilities;
-using System.Text;
 
 namespace MoreStructures.BurrowsWheelerTransform.Builders;
 

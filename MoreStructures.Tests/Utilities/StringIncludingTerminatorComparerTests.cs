@@ -1,6 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.Utilities;
-using System;
+﻿using MoreStructures.Utilities;
 
 namespace MoreStructures.Tests;
 

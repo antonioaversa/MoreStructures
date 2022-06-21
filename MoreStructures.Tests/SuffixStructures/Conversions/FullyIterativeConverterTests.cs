@@ -1,9 +1,7 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.CountTrees;
+﻿using MoreStructures.CountTrees;
 using MoreStructures.SuffixStructures.Conversions;
 using MoreStructures.SuffixTrees;
 using MoreStructures.SuffixTries;
-using System.Collections.Generic;
 
 namespace MoreStructures.Tests.SuffixStructures.Conversions;
 

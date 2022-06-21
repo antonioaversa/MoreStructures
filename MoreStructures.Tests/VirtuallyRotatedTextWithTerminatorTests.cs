@@ -1,9 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures;
-using System;
-using System.Collections.Generic;
-
-namespace MoreStructures.Tests;
+﻿namespace MoreStructures.Tests;
 
 [TestClass]
 public class VirtuallyRotatedTextWithTerminatorTests

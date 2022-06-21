@@ -253,8 +253,11 @@ internal class IterationState
     /// </remarks>
     public void JumpActiveNodeIfNecessary()
     {
-        if (ActiveLength == 0)
+        if (ActiveLength <= 0)
+        {
             ActiveEdgeStart = -1;
+            ActiveLength = 0;
+        }
 
         if (ActiveEdgeStart < 0)
             return;
@@ -274,7 +277,7 @@ internal class IterationState
     public void CreateLeafAndPossiblyIntermediateAndDecrementRemainingSuffixes()
     {
         var leafEdge = new MutableEdge(Phase, GlobalEnd);
-        var leafNode = new MutableNode(NextNodeId++, NextLeafStart++, null); // Leafs don't have a Suffix Link
+        var leafNode = new MutableNode(NextNodeId++, NextLeafStart++, null); // Leaves don't have a Suffix Link
 
         if (ActiveLength == 0)
         {
@@ -301,27 +304,27 @@ internal class IterationState
             if (PreviousInternalNodeInTheSamePhase is MutableNode previousInternalNode)
                 previousInternalNode.SuffixLink = internalNode;
             PreviousInternalNodeInTheSamePhase = internalNode;
+        }
 
-            // Now that the leaf x has been created, the internal node abc..z (length = RemainingSuffixes) has been
-            // created, and the previous internal node updated (if any), there are still RemainingSuffixes suffixes
-            // to be processed: bc..zx, c..zx, ... x. Those can be easily found in the tree by using Suffix Links.
-            if (ActiveNode == Root)
-            {
-                // To move from abc..zx to bc..zx when the active node is the root, increment ActiveEdgeStart
-                // (which means that the start of the new ActiveEdge is now b) and decrement ActiveLength (because
-                // now the ActiveEdge is one char shorter.
-                // The edge bc..z is guaranteed to exist already because bc..z it's a suffix already processed in
-                // previous iterations and Rule 1 Extension implicitely extend bc..z to bc..zx.
-                ActiveEdgeStart++;
-                ActiveLength--;
-            }
-            else
-            {
-                // To move from abc..zx to bc..zx when the active node is an internal node N, move the active node
-                // to the Suffix Link of N, which is by definition the node having path bc..zx. Active edge and
-                // length don't change, because the new active node has the suffix bc..zx.
-                ActiveNode = ActiveNode.SuffixLink!;
-            }
+        // Now that the leaf x has been created, the internal node abc..z (length = RemainingSuffixes) has been
+        // created, and the previous internal node updated (if any), there are still RemainingSuffixes suffixes
+        // to be processed: bc..zx, c..zx, ... x. Those can be easily found in the tree by using Suffix Links.
+        if (ActiveNode == Root)
+        {
+            // To move from abc..zx to bc..zx when the active node is the root, increment ActiveEdgeStart
+            // (which means that the start of the new ActiveEdge is now b) and decrement ActiveLength (because
+            // now the ActiveEdge is one char shorter.
+            // The edge bc..z is guaranteed to exist already because bc..z it's a suffix already processed in
+            // previous iterations and Rule 1 Extension implicitely extend bc..z to bc..zx.
+            ActiveEdgeStart++;
+            ActiveLength--;
+        }
+        else
+        {
+            // To move from abc..zx to bc..zx when the active node is an internal node N, move the active node
+            // to the Suffix Link of N, which is by definition the node having path bc..zx. Active edge and
+            // length don't change, because the new active node has the suffix bc..zx.
+            ActiveNode = ActiveNode.SuffixLink!;
         }
 
         // Because a leaf has been created, a suffix has been processed, and the number of remaining suffixes

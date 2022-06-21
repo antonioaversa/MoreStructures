@@ -99,6 +99,14 @@ public record TextWithTerminator(
         : throw new ArgumentException($"{nameof(Terminator)} shouldn't be included in {nameof(Text)}.");
 
     /// <summary>
+    /// Returns the index of <see cref="Terminator"/> in this <see cref="TextAndTerminator"/>.
+    /// </summary>
+    /// <value>
+    /// A 0-based index. 0 when <see cref="Text"/> is empty, positive otherwise.
+    /// </value>
+    public int TerminatorIndex => Length - 1;
+
+    /// <summary>
     /// Select a part of this text by the provided selector.
     /// </summary>
     /// <param name="selector">Any selector acting on a <see cref="TextWithTerminator"/>.</param>
@@ -131,12 +139,37 @@ public record TextWithTerminator(
     /// <value>
     /// A positive integer (at least 1).
     /// </value>
+    /// <remarks>
+    ///     <para id="caching">
+    ///     CACHING
+    ///     <br/>
+    ///     Calculated just once, and cached for later use.
+    ///     <br/> 
+    ///     Immutability guarantees correctness.
+    ///     </para>
+    ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
+    ///     - If the text was built with a <see cref="string"/> as input, the operation is O(1) in time.
+    ///       <br/>
+    ///     - If the text was built with a type optimized by 
+    ///       <see cref="EnumerableExtensions.CountO1{TSource}(IEnumerable{TSource})"/>, such as an <see cref="IList"/>
+    ///       or <see cref="IList{T}"/> the operation is O(1) as well.
+    ///       <br/>
+    ///     - Otherwise, the operation is O(n), where n is the length of <see cref="Text"/>.
+    ///     </para>
+    /// </remarks>
     public int Length
     {
         get
         {
             if (_length == null)
-                _length = TextAndTerminator.CountO1();
+            {
+                _length = 
+                    TextAndTerminator is StringValueEnumerable { StringValue: var str } 
+                    ? str.Length
+                    : TextAndTerminator.CountO1();
+            }
             return _length.Value;
         }
     }
