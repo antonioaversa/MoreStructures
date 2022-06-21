@@ -1,8 +1,5 @@
 ﻿using MoreStructures.SuffixStructures;
 using MoreStructures.SuffixStructures.Builders;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 
 namespace MoreStructures.Tests.SuffixStructures;
 
@@ -26,12 +23,12 @@ internal static class SuffixStructureMock
     public class Builder : IBuilder<Edge, Node>
     {
         public bool BuildTreeCalled { get; private set; } = false;
-        public TextWithTerminator? BuildTreeArgument { get; private set; } = null;
+        public TextWithTerminator[]? BuildTreeArgument { get; private set; } = null;
 
-        public Node BuildTree(TextWithTerminator text)
+        public Node BuildTree(params TextWithTerminator[] texts)
         {
             BuildTreeCalled = true;
-            BuildTreeArgument = text;
+            BuildTreeArgument = texts;
             return new Node();
         }
     }

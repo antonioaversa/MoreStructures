@@ -1,10 +1,6 @@
 ﻿using MoreStructures.RecImmTrees;
 using MoreStructures.RecImmTrees.Visitor;
 using MoreStructures.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
 
 namespace MoreStructures.Tests.RecImmTrees;
 

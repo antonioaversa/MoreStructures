@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.CountTrees;
+﻿using MoreStructures.CountTrees;
 
 namespace MoreStructures.Tests.CountTrees;
 

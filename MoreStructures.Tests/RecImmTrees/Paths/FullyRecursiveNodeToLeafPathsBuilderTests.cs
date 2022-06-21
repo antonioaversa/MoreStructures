@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.RecImmTrees.Paths;
+﻿using MoreStructures.RecImmTrees.Paths;
 
 namespace MoreStructures.Tests.RecImmTrees.Paths;
 

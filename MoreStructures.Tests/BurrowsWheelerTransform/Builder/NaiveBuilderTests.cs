@@ -1,10 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.BurrowsWheelerTransform.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MoreStructures.BurrowsWheelerTransform.Builders;
 
 namespace MoreStructures.Tests.BurrowsWheelerTransform.Builder;
 

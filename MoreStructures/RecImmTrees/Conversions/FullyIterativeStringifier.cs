@@ -1,6 +1,4 @@
-﻿using System.Text;
-
-namespace MoreStructures.RecImmTrees.Conversions;
+﻿namespace MoreStructures.RecImmTrees.Conversions;
 
 /// <summary>
 /// <inheritdoc/>

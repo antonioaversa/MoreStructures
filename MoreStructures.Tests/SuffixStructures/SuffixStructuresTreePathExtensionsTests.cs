@@ -1,11 +1,8 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.RecImmTrees;
+﻿using MoreStructures.RecImmTrees;
 using MoreStructures.SuffixStructures;
 using MoreStructures.SuffixTrees;
 using MoreStructures.Tests.RecImmTrees;
 using MoreStructures.Utilities;
-using System;
-using System.Collections.Generic;
 
 namespace MoreStructures.Tests.SuffixStructures;
 

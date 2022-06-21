@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MoreStructures.Lists.Searching;
+﻿namespace MoreStructures.Lists.Searching;
 
 /// <summary>
 /// An object able to search for items in direct random access structures, such as lists and arrays, which are 

@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.Lists.Counting;
+﻿using MoreStructures.Lists.Counting;
 
 namespace MoreStructures.Tests.Lists.Counting;
 

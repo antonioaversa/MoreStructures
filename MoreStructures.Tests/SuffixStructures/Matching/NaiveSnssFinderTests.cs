@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.SuffixStructures.Matching;
+﻿using MoreStructures.SuffixStructures.Matching;
 
 namespace MoreStructures.Tests.SuffixTrees.Matching;
 

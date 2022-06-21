@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.BurrowsWheelerTransform;
+﻿using MoreStructures.BurrowsWheelerTransform;
 using MoreStructures.BurrowsWheelerTransform.Builders;
 using MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders;
 

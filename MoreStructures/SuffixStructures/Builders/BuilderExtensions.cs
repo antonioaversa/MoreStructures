@@ -6,7 +6,7 @@
 public static class BuilderExtensions
 {
     /// <summary>
-    /// <inheritdoc cref="IBuilder{TEdge, TNode}.BuildTree(TextWithTerminator)"/>
+    /// <inheritdoc cref="IBuilder{TEdge, TNode}.BuildTree(TextWithTerminator[])"/>
     /// Text is provided as a plain string.
     /// </summary>
     /// <param name="builder">
@@ -16,7 +16,7 @@ public static class BuilderExtensions
     /// The text to build the structure of, without any terminator (automatically added).
     /// </param>
     /// <returns>
-    /// <inheritdoc cref="IBuilder{TEdge, TNode}.BuildTree(TextWithTerminator)"/>
+    /// <inheritdoc cref="IBuilder{TEdge, TNode}.BuildTree(TextWithTerminator[])"/>
     /// </returns>
     public static TNode BuildTree<TEdge, TNode>(
         this IBuilder<TEdge, TNode> builder,

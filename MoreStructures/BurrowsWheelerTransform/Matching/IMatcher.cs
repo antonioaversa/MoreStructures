@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace MoreStructures.BurrowsWheelerTransform.Matching;
+﻿namespace MoreStructures.BurrowsWheelerTransform.Matching;
 
 /// <summary>
 /// A implementation of matching of a pattern against a <see cref="RotatedTextWithTerminator"/> containing a

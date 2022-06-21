@@ -1,6 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.RecImmTrees.Visitor;
-using System.Linq;
+﻿using MoreStructures.RecImmTrees.Visitor;
 
 namespace MoreStructures.Tests.RecImmTrees.Visitor;
 

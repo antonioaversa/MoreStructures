@@ -25,7 +25,9 @@ public class ValueEnumerable<T> : IValueEnumerable<T>
     /// </remarks>
     public ValueEnumerable(IEnumerable<T> enumerable)
     {
-        Enumerable = enumerable;
+        Enumerable = enumerable is ValueEnumerable<T> { Enumerable: var underlyingEnumerable}
+            ? underlyingEnumerable
+            : enumerable;
     }
 
     /// <inheritdoc/>

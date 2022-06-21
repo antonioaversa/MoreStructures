@@ -1,12 +1,8 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.SuffixStructures;
+﻿using MoreStructures.SuffixStructures;
 using MoreStructures.SuffixTrees;
 using MoreStructures.SuffixTries;
 using MoreStructures.Tests.SuffixTrees;
 using MoreStructures.Tests.SuffixTries;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace MoreStructures.Tests.SuffixStructures;
 

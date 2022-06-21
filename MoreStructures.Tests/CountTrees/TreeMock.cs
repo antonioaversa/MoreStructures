@@ -1,7 +1,5 @@
 ﻿using MoreStructures.RecImmTrees;
 using MoreStructures.Utilities;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 
 namespace MoreStructures.Tests.CountTrees;
 

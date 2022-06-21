@@ -1,8 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.Utilities;
+﻿using MoreStructures.Utilities;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace MoreStructures.Tests.Utilities;
 
@@ -17,6 +14,15 @@ public class ValueEnumerableTests
         var ve = new ValueEnumerable<int>(e);
 
         Assert.AreEqual(0, callsToEEnumerator);
+    }
+
+    [TestMethod]
+    public void Ctor_IsIdempotent()
+    {
+        var e = Enumerable.Range(0, 2);
+        var ve1 = new ValueEnumerable<int>(e);
+        var ve2 = new ValueEnumerable<int>(ve1);
+        Assert.AreEqual(ve1, ve2);
     }
 
     [TestMethod]

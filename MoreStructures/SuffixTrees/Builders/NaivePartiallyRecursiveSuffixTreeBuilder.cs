@@ -31,32 +31,40 @@ namespace MoreStructures.SuffixTrees.Builders;
 public class NaivePartiallyRecursiveSuffixTreeBuilder
     : IBuilder<SuffixTreeEdge, SuffixTreeNode>
 {
+    /// <inheritdoc path="//*[not self::summary or self::remarks]"/>
     /// <summary>
     ///     <inheritdoc/>
     /// </summary>
     /// <remarks>
     ///     <inheritdoc cref="NaivePartiallyRecursiveSuffixTreeBuilder" path="/remarks"/>
     /// </remarks>
-    public SuffixTreeNode BuildTree(TextWithTerminator text)
+    public SuffixTreeNode BuildTree(params TextWithTerminator[] texts)
     {
+        var (fullText, terminators) = texts.GenerateFullText();
+
         SuffixTreeNode root = new SuffixTreeNode.Leaf(0);
 
-        for (var suffixIndex = 0; suffixIndex < text.Length; suffixIndex++)
-            root = IncludeSuffixIntoTree(text, suffixIndex, suffixIndex, root);
+        for (var suffixIndex = 0; suffixIndex < fullText.Length; suffixIndex++)
+            root = IncludeSuffixIntoTree(fullText, terminators, suffixIndex, suffixIndex, root);
 
         return root;
     }
 
     private static SuffixTreeNode.Intermediate IncludeSuffixIntoTree(
-        TextWithTerminator text, int suffixCurrentIndex, int suffixIndex, SuffixTreeNode node)
+        TextWithTerminator text, ISet<char> terminators, int suffixCurrentIndex, int suffixIndex, SuffixTreeNode node)
     {
         var nodeChildren = new Dictionary<SuffixTreeEdge, SuffixTreeNode>(node.Children);
-        var edgeSame1stChar = nodeChildren.Keys.SingleOrDefault(
-            edge => text[edge.Start] == text[suffixCurrentIndex]);
+        var currentChar = text[suffixCurrentIndex];
+        var edgeSame1stChar = nodeChildren.Keys.SingleOrDefault(edge => text[edge.Start] == currentChar);
 
         if (edgeSame1stChar == null)
         {
-            var edge = new SuffixTreeEdge(suffixCurrentIndex, text.Length - suffixCurrentIndex);
+            // Find first index which corresponds to a terminator
+            var index1stTerminator = Enumerable
+                .Range(suffixCurrentIndex, text.Length - suffixCurrentIndex)
+                .First(i => terminators.Contains(text[i]));
+
+            var edge = new SuffixTreeEdge(suffixCurrentIndex, index1stTerminator - suffixCurrentIndex + 1);
             nodeChildren[edge] = new SuffixTreeNode.Leaf(suffixIndex);
         }
         else
@@ -64,7 +72,7 @@ public class NaivePartiallyRecursiveSuffixTreeBuilder
             // Compare text[suffixCurrentIndex, ...] and text[edgeSame1stChar.Start, ...] for longest edge in common.
             // If the prefix in common is shorter than the edge with the same first char, create an intermediate node,
             // push down the child pointed by the edge in the current node and add a new node for the reminder of
-            // text[suffixCurrentIndex, ...] as second child of the intermediate.
+            // text[suffixCurrentIndex, ...] (up to next terminator) as second child of the intermediate.
             // Otherwise, eat prefixLength chars from the edge, move to the child pointed by the edge entirely matching
             // the beginning of the current suffix and repeat the same operation.
 
@@ -74,6 +82,8 @@ public class NaivePartiallyRecursiveSuffixTreeBuilder
             var oldChild = nodeChildren[edgeSame1stChar];
             if (prefixLength < edgeSame1stChar.Length)
             {
+                var charsToNextSeparator = Enumerable.Range(0, text.Length - suffixCurrentIndex - prefixLength)
+                    .First(i => terminators.Contains(text[suffixCurrentIndex + prefixLength + i]));
                 var newLeaf = new SuffixTreeNode.Leaf(suffixIndex);
                 var newIntermediate = new SuffixTreeNode.Intermediate(new Dictionary<SuffixTreeEdge, SuffixTreeNode>()
                 {
@@ -82,14 +92,15 @@ public class NaivePartiallyRecursiveSuffixTreeBuilder
                         edgeSame1stChar.Length - prefixLength)] = oldChild,
                     [new(
                         suffixCurrentIndex + prefixLength,
-                        text.Length - suffixCurrentIndex - prefixLength)] = newLeaf,
+                        charsToNextSeparator + 1)] = newLeaf,
                 });
                 nodeChildren.Remove(edgeSame1stChar);
                 nodeChildren[new(edgeSame1stChar.Start, prefixLength)] = newIntermediate;
             }
             else
             {
-                var newChild = IncludeSuffixIntoTree(text, suffixCurrentIndex + prefixLength, suffixIndex, oldChild);
+                var newChild = IncludeSuffixIntoTree(
+                    text, terminators, suffixCurrentIndex + prefixLength, suffixIndex, oldChild);
                 nodeChildren.Remove(edgeSame1stChar);
                 nodeChildren[edgeSame1stChar] = newChild;
             }

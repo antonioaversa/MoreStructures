@@ -40,23 +40,13 @@ public abstract record SuffixTreeNode(IDictionary<SuffixTreeEdge, SuffixTreeNode
     /// Builds an intermediate node, i.e. a node with children and their corresponding incoming edges.
     /// </summary>
     public record Intermediate(IDictionary<SuffixTreeEdge, SuffixTreeNode> Children) 
-        : SuffixTreeNode(Children, null)
-    {
-        /// <inheritdoc/>
-        public override string ToString() => 
-            base.ToString(); // To prevent compiler from superceding ToString from base record.
-    }
+        : SuffixTreeNode(Children, null);
 
     /// <summary>
     /// Builds a leaf, i.e. a node with no children and the start index of the suffix in the text.
     /// </summary>
     public record Leaf(int LeafStart) 
-        : SuffixTreeNode(new Dictionary<SuffixTreeEdge, SuffixTreeNode> { }, LeafStart) 
-    {
-        /// <inheritdoc/>
-        public override string ToString() => 
-            base.ToString(); // To prevent compiler from superceding ToString from base record.
-    }
+        : SuffixTreeNode(new Dictionary<SuffixTreeEdge, SuffixTreeNode> { }, LeafStart);
 
     /// <inheritdoc/>
     public IDictionary<SuffixTreeEdge, SuffixTreeNode> Children { get; } 
@@ -87,5 +77,8 @@ public abstract record SuffixTreeNode(IDictionary<SuffixTreeEdge, SuffixTreeNode
     /// structure.
     /// </summary>
     /// <returns><inheritdoc/></returns>
-    public override string ToString() => Stringifier.Stringify(this);
+    /// <remarks>
+    /// Sealed to prevent compiler from superceding <see cref="ToString()"/> in derived record.
+    /// </remarks>
+    public override sealed string ToString() => Stringifier.Stringify(this);
 }

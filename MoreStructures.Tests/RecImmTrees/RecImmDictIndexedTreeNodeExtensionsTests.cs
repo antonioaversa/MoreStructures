@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.RecImmTrees;
+﻿using MoreStructures.RecImmTrees;
 using MoreStructures.Tests.SuffixTrees;
 using MoreStructures.Tests.SuffixTries;
 

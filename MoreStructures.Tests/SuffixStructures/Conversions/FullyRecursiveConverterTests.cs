@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.SuffixStructures.Conversions;
+﻿using MoreStructures.SuffixStructures.Conversions;
 
 namespace MoreStructures.Tests.SuffixStructures.Conversions;
 

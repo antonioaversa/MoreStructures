@@ -1,10 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreLinq;
+﻿using MoreLinq;
 using MoreStructures.Lists.Searching;
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace MoreStructures.Tests.Lists.Searching;
 

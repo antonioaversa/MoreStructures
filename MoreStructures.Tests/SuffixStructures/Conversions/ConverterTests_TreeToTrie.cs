@@ -1,7 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.SuffixTrees;
-using System;
-using System.Collections.Generic;
+﻿using MoreStructures.SuffixTrees;
 
 namespace MoreStructures.Tests.SuffixStructures.Conversions;
 

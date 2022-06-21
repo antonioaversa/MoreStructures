@@ -1,6 +1,8 @@
-﻿using MoreStructures.SuffixStructures.Builders;
+﻿using MoreLinq;
+using MoreStructures.SuffixStructures.Builders;
 using MoreStructures.SuffixTrees.Builders.Ukkonen;
 using System.Diagnostics;
+using System.Linq;
 
 namespace MoreStructures.SuffixTrees.Builders;
 
@@ -66,47 +68,55 @@ public class UkkonenSuffixTreeBuilder
     /// <remarks>
     ///     <inheritdoc cref="UkkonenSuffixTreeBuilder" path="/remarks"/>
     /// </remarks>
-    public SuffixTreeNode BuildTree(TextWithTerminator text)
+    public SuffixTreeNode BuildTree(params TextWithTerminator[] texts)
     {
-        var state = new IterationState(text);
+        var (fullText, terminators) = texts.GenerateFullText();
+
+        var state = new IterationState(fullText);
 
         while (state.IsThereANextPhase())
         {
             state.StartPhaseIncreasingRemainingAndGlobalEnd();
 
-            while (state.StillRemainingSuffixesInCurrentPhase())
-            {
-                state.JumpActiveNodeIfNecessary();
-
-                bool showStopper;
-                if (state.NoActivePointAndEdgeStartingFromActiveNodeWithCurrentChar() is MutableEdge edge)
-                {
-                    state.InitializeActiveEdgeAndLength(edge);
-                    showStopper = true;
-                }
-                else if (state.ActivePointFollowedByCurrentChar())
-                {
-                    state.IncrementActiveLength();
-                    showStopper = true;
-                }
-                else // No active point nor edge, or active point not followed by current char => Rule 2
-                {
-                    state.CreateLeafAndPossiblyIntermediateAndDecrementRemainingSuffixes();
-                    showStopper = false;
-                }
-
-                Trace.WriteLine($"State at end of iteration: {state}");
-                Trace.WriteLine("");
-
-                if (showStopper)
-                    break;
-            }
+            ProcessPhase(state);
 
             Trace.WriteLine("End of phase " + state.Phase);
             Trace.WriteLine("");
         }
 
-        return BuildResult(state.Root);
+        return BuildResult(state.Root, fullText, terminators);
+    }
+
+    private static void ProcessPhase(IterationState state)
+    {
+        while (state.StillRemainingSuffixesInCurrentPhase())
+        {
+            state.JumpActiveNodeIfNecessary();
+
+            bool showStopper;
+            if (state.NoActivePointAndEdgeStartingFromActiveNodeWithCurrentChar() is MutableEdge edge)
+            {
+                state.InitializeActiveEdgeAndLength(edge);
+                showStopper = true;
+            }
+
+            else if (state.ActivePointFollowedByCurrentChar())
+            {
+                state.IncrementActiveLength();
+                showStopper = true;
+            }
+            else // No active point nor edge, or active point not followed by current char => Rule 2
+            {
+                state.CreateLeafAndPossiblyIntermediateAndDecrementRemainingSuffixes();
+                showStopper = false;
+            }
+
+            Trace.WriteLine($"State at end of iteration: {state}");
+            Trace.WriteLine("");
+
+            if (showStopper)
+                break;
+        }
     }
 
     private record struct BuildResultStackFrame(
@@ -115,7 +125,8 @@ public class UkkonenSuffixTreeBuilder
         IDictionary<SuffixTreeEdge, SuffixTreeNode> ParentChildren,
         IDictionary<SuffixTreeEdge, SuffixTreeNode>? NodeChildrenMaybe);
 
-    private static SuffixTreeNode BuildResult(MutableNode root)
+    private static SuffixTreeNode BuildResult(
+        MutableNode root, TextWithTerminator fullText, ISet<char> terminators)
     {
         var stack = new Stack<BuildResultStackFrame>();
         var rootParentChildren = new Dictionary<SuffixTreeEdge, SuffixTreeNode>() { };
@@ -123,11 +134,12 @@ public class UkkonenSuffixTreeBuilder
 
         stack.Push(new(suffixTreeEdge, root, rootParentChildren, null));
         while (stack.Count > 0)
-            ProcessStack(stack);
+            ProcessStack(stack, fullText, terminators);
         return rootParentChildren[suffixTreeEdge];
     }
 
-    private static void ProcessStack(Stack<BuildResultStackFrame> stack)
+    private static void ProcessStack(
+        Stack<BuildResultStackFrame> stack, TextWithTerminator fullText, ISet<char> terminators)
     {
         var (suffixTreeEdge, mutableNode, parentChildren, nodeChildrenMaybe) = stack.Pop();
 
@@ -146,7 +158,29 @@ public class UkkonenSuffixTreeBuilder
             {
                 var childSuffixTreeEdge = new SuffixTreeEdge(
                     childMutableEdge.Start, childMutableEdge.End.Value - childMutableEdge.Start + 1);
-                stack.Push(new(childSuffixTreeEdge, childMutableNode, nodeChildren, null));
+
+                var firstTerminatorIndexInChildEdge = fullText[childSuffixTreeEdge]
+                    .Index()
+                    .FirstOrDefault(
+                        charAndIndex => terminators.Contains(charAndIndex.Value), 
+                        KeyValuePair.Create(-1, ' '));
+
+                if (firstTerminatorIndexInChildEdge.Key >= 0)
+                {
+                    var childSuffixTreeEdge1 = new SuffixTreeEdge(
+                        childMutableEdge.Start, firstTerminatorIndexInChildEdge.Key + 1);
+
+                    // In principle we should reach the leaf and replace childMutableNode with it.
+                    // However, such leaf must be unique, since each terminator appears a single time in fullText).
+                    // Therefore, if the Suffix Tree is correctly built, childMutableNode has to be a leaf already
+                    // (because, unlike in Suffix Tries, there can't be a non coalesced branch in a Suffix Tree).
+
+                    stack.Push(new(childSuffixTreeEdge1, childMutableNode, nodeChildren, null));
+                }
+                else
+                {
+                    stack.Push(new(childSuffixTreeEdge, childMutableNode, nodeChildren, null));
+                }
             }
         }
     }

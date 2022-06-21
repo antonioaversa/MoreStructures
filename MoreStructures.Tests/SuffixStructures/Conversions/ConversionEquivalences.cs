@@ -2,7 +2,6 @@
 using MoreStructures.SuffixTries;
 using MoreStructures.Tests.SuffixTrees;
 using MoreStructures.Tests.SuffixTries;
-using System.Collections.Generic;
 
 namespace MoreStructures.Tests.SuffixStructures.Conversions;
 

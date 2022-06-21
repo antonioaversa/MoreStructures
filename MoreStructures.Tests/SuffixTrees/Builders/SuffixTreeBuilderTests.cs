@@ -1,14 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.RecImmTrees;
-using MoreStructures.RecImmTrees.Paths;
+﻿using MoreStructures.RecImmTrees.Paths;
 using MoreStructures.SuffixStructures;
 using MoreStructures.SuffixStructures.Builders;
 using MoreStructures.SuffixStructures.Matching;
 using MoreStructures.SuffixTrees;
 using MoreStructures.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using static MoreStructures.TextWithTerminator;
 
 namespace MoreStructures.Tests.SuffixTrees.Builders;
@@ -37,7 +32,26 @@ public abstract class SuffixTreeBuilderTests
     [DataRow(TwoChars_ExtendingPrefixes)]
     [DataRow(ThreeChars_ExtendingPrefixes)]
     [DataTestMethod]
-    public void BuildTree_IsCorrect(BuilderEquivalences.EquivalenceId equivalenceId)
+    public void BuildTree_IsCorrectWithSingleText(BuilderEquivalences.EquivalenceId equivalenceId)
+    {
+        var (text, expectedTreeNode) = BuilderEquivalences.Equivalences[equivalenceId];
+        var treeNode = Builder.BuildTree(text);
+        Assert.AreEqual(expectedTreeNode, treeNode);
+    }
+
+    [DataRow(EmptyStrings)]
+    [DataRow(OneNonEmptyOneEmpty)]
+    [DataRow(OneEmptyOneNonEmpty)]
+    [DataRow(TwoEmptyOneNonEmpty)]
+    [DataRow(TwoEmptyOneNonEmptyDifferentOrder)]
+    [DataRow(TwoNonSharingChars)]
+    [DataRow(TwoSharingChars)]
+    [DataRow(TwoSame)]
+    [DataRow(ThreeDifferent)]
+    [DataRow(TwoSameOneDifferent)]
+    [DataRow(ThreeSame)]
+    [DataTestMethod]
+    public void BuildTree_IsCorrectWithMultipleTexts(BuilderEquivalences.EquivalenceId equivalenceId)
     {
         var (text, expectedTreeNode) = BuilderEquivalences.Equivalences[equivalenceId];
         var treeNode = Builder.BuildTree(text);

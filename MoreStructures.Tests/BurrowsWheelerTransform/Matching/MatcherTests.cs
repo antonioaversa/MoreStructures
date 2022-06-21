@@ -1,7 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.BurrowsWheelerTransform.Builders;
+﻿using MoreStructures.BurrowsWheelerTransform.Builders;
 using MoreStructures.BurrowsWheelerTransform.Matching;
-using System;
 
 namespace MoreStructures.Tests.BurrowsWheelerTransform.Matching;
 

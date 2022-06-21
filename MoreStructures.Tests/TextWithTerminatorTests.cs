@@ -1,9 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
 using MoreStructures.Utilities;
-using System.Collections.Generic;
 
 namespace MoreStructures.Tests;
 
@@ -39,6 +35,14 @@ public class TextWithTerminatorTests
         Assert.IsTrue(text1.Text.Contains(text1.Terminator));
         var text2 = new TextWithTerminator("a$a", '$', false);
         Assert.IsTrue(text2.Text.Contains(text2.Terminator));
+    }
+
+    [TestMethod]
+    public void TerminatorIndex_IsCorrect()
+    {
+        Assert.AreEqual(0, new TextWithTerminator("").TerminatorIndex);
+        Assert.AreEqual(1, new TextWithTerminator("a").TerminatorIndex);
+        Assert.AreEqual(4, new TextWithTerminator("abab").TerminatorIndex);
     }
 
     [TestMethod]

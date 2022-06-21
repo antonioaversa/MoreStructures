@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.SuffixTrees.Builders;
+﻿using MoreStructures.SuffixTrees.Builders;
 
 namespace MoreStructures.Tests.SuffixTrees.Builders;
 

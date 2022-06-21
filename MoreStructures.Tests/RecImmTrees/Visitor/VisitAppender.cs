@@ -1,6 +1,4 @@
 ﻿using MoreStructures.RecImmTrees.Visitor;
-using System;
-using System.Collections.Generic;
 
 namespace MoreStructures.Tests.RecImmTrees.Visitor;
 
