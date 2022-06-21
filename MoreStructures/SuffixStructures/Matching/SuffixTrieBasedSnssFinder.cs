@@ -82,30 +82,28 @@ public class SuffixTrieBasedSnssFinder : SuffixStructureBasedSnssFinder
     /// <inheritdoc cref="SuffixStructureBasedSnssFinder" path="//*[not(self::summary or self::remarks)]"/>
     /// <summary>
     /// </summary>
-    public override string? Find(IEnumerable<char> text1Content, IEnumerable<char> text2Content)
+    public override string? Find(IEnumerable<char> text1, IEnumerable<char> text2)
     {
         if (ValidateInput)
         {
-            if (text1Content.Contains(Terminator1) || text1Content.Contains(Terminator2))
+            if (text1.Contains(Terminator1) || text1.Contains(Terminator2))
                 throw new ArgumentException(
                     $"Should not contain {nameof(Terminator1)} nor {nameof(Terminator2)}: {Terminator1} {Terminator2}",
-                    nameof(text1Content));
-            if (text2Content.Contains(Terminator1) || text2Content.Contains(Terminator2))
+                    nameof(text1));
+            if (text2.Contains(Terminator1) || text2.Contains(Terminator2))
                 throw new ArgumentException(
                     $"Should not contain {nameof(Terminator1)} nor {nameof(Terminator2)}: {Terminator1} {Terminator2}",
-                    nameof(text2Content));
+                    nameof(text2));
         }
 
         // Build Generalized Suffix Trie
-        var text1 = new TextWithTerminator(text1Content, Terminator1);
-        var text2 = new TextWithTerminator(text2Content, Terminator2);
-        var text1And2 = new TextWithTerminator(text1Content.Append(Terminator1).Concat(text2Content), Terminator2);
+        var text1And2 = new TextWithTerminator(text1.Append(Terminator1).Concat(text2), Terminator2);
 
         var suffixTrieBuilder = new NaivePartiallyRecursiveSuffixTrieBuilder();
         var suffixTrieRoot = suffixTrieBuilder.BuildTree(text1And2);
 
         // Breadth First Visit of the Trie
-        var terminator1Index = text1.TerminatorIndex;
+        var terminator1Index = new TextWithTerminator(text1, Terminator1).TerminatorIndex;
         var terminator2Index = text1And2.TerminatorIndex;
         var breadthFirstTraversal = new FullyIterativeBreadthFirstTraversal<SuffixTrieEdge, SuffixTrieNode>()
         {
