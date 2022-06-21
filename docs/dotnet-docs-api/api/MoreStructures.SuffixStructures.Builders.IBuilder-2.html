@@ -117,28 +117,29 @@ concretion it is the builder of.</p>
   </table>
   <h5 id="MoreStructures_SuffixStructures_Builders_IBuilder_2_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>This interface allows to have a shared construction interface for objects among all structures.
-It is a workaround to the limitation of not having constructor signatures in interfaces.
+Object construction is externalized into a Builder object as a workaround to the limitation of not having
+constructor signatures directly in interfaces.
 See <a href="https://codeblog.jonskeet.uk/2008/08/29/lessons-learned-from-protocol-buffers-part-4-static-interfaces/">https://codeblog.jonskeet.uk/2008/08/29/lessons-learned-from-protocol-buffers-part-4-static-interfaces/</a></p>
 </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixStructures_Builders_IBuilder_2_BuildTree_MoreStructures_TextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixStructures.Builders.IBuilder%602.BuildTree(MoreStructures.TextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixStructures_Builders_IBuilder_2_BuildTree_MoreStructures_TextWithTerminator___.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixStructures.Builders.IBuilder%602.BuildTree(MoreStructures.TextWithTerminator%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixStructures/Builders/IBuilder.cs/#L36">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixStructures/Builders/IBuilder.cs/#L78">View Source</a>
   </span>
   <a id="MoreStructures_SuffixStructures_Builders_IBuilder_2_BuildTree_" data-uid="MoreStructures.SuffixStructures.Builders.IBuilder`2.BuildTree*"></a>
-  <h4 id="MoreStructures_SuffixStructures_Builders_IBuilder_2_BuildTree_MoreStructures_TextWithTerminator_" data-uid="MoreStructures.SuffixStructures.Builders.IBuilder`2.BuildTree(MoreStructures.TextWithTerminator)">BuildTree(TextWithTerminator)</h4>
-  <div class="markdown level1 summary"><p>Build a <a class="xref" href="MoreStructures.SuffixStructures.ISuffixStructureEdge-2.html">ISuffixStructureEdge&lt;TEdge, TNode&gt;</a> of the provided text, which is a
-n-ary search tree in which edges coming out of a node are substrings of text which identify edges shared by all
-paths to leaves, starting from the node.</p>
+  <h4 id="MoreStructures_SuffixStructures_Builders_IBuilder_2_BuildTree_MoreStructures_TextWithTerminator___" data-uid="MoreStructures.SuffixStructures.Builders.IBuilder`2.BuildTree(MoreStructures.TextWithTerminator[])">BuildTree(TextWithTerminator[])</h4>
+  <div class="markdown level1 summary"><p>Build a <a class="xref" href="MoreStructures.SuffixStructures.ISuffixStructureEdge-2.html">ISuffixStructureEdge&lt;TEdge, TNode&gt;</a> of the provided text(s), which is a
+n-ary search tree in which edges coming out of a node are substrings of at least one of the texts and nodes are
+not directly labeled instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">TNode BuildTree(TextWithTerminator text)</code></pre>
+    <pre><code class="lang-csharp hljs">TNode BuildTree(params TextWithTerminator[] texts)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,9 +152,9 @@ paths to leaves, starting from the node.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a></td>
-        <td><span class="parametername">text</span></td>
-        <td><p>The text to build the Suffix Structure of, with its terminator (required for traversal).</p>
+        <td><a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>[]</td>
+        <td><span class="parametername">texts</span></td>
+        <td><p>The text(s) to build the Suffix Structure of, each one with its own unique terminator (required for traversal).</p>
 </td>
       </tr>
     </tbody>
@@ -174,8 +175,49 @@ paths to leaves, starting from the node.</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="MoreStructures_SuffixStructures_Builders_IBuilder_2_BuildTree_MoreStructures_TextWithTerminator__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Substrings of text are identified by their start position in text and their length.</p>
+  <h5 id="MoreStructures_SuffixStructures_Builders_IBuilder_2_BuildTree_MoreStructures_TextWithTerminator____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    TERMINATORS
+<br>
+Terminators have to be unique characters, not just on the single <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a> they are 
+appended to, but to all <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a> items in <code data-dev-comment-type="paramref" class="paramref">texts</code>.
+<br>
+That means that if <code data-dev-comment-type="paramref" class="paramref">texts</code> is (T1, ..., Tn), where each <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>
+Ti has ti as <a class="xref" href="MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_Terminator">Terminator</a>, ti should not be in any of the
+<a class="xref" href="MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_Text">Text</a> of Tj, for any j.
+</p>
+<p>
+    GENERALIZED SUFFIX STRUCTURES
+<br>
+When multiple <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a> instances are passed into <code data-dev-comment-type="paramref" class="paramref">texts</code>, the 
+Suffix Structure built is known as Generalized Suffix Structure (e.g. Generalized Suffix Tree or Trie). 
+<br>
+It differs from a normal Suffix Structure built for the concatenation of items in <code data-dev-comment-type="paramref" class="paramref">texts</code>
+by the fact that it doesn&apos;t contain any root-to-leaf path identifying a suffix which spans multiple texts.
+<br>
+When a Suffix Structure is built for a single <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a> which a concatenation of
+multiple texts, each with its own terminator <code>T1 || t1 || ... || Tn || tn</code>, the resulting structure 
+has branches which span over multiple texts, such as <code>suffixOf[Ti] || ti || prefixOf[T(i+1)]</code> or 
+<code>suffixOf[Ti] || ti || T(i+1) || t(i+1) || prefixOf[T(i+2)]</code>.
+<br>
+A Generalized Suffix Structure trims those branches in construction, so that each node-to-leaf branch ends
+with any of the terminator t1, ..., tn (not always tn) and doesn&apos;t contain any other terminator except the 
+ending one.
+</p>
+<br>
+<p>
+    EDGES
+<br>
+Substrings of a text are identified by their start position in text and their length, rather than by a copy 
+of the substring itself. 
+<br>
+The technique, known as <strong>Edge Compression</strong> allows to store edges information in constant space, and 
+the entire tree in linear space w.r.t. the number of nodes in the tree (which can be linear or not in the 
+input, depending on the type of suffix structure).
+<br>
+The sequence of edges in root-to-node paths in the tree identify prefixes in common to multiple suffixes of 
+the text(s).
+</p>
 </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
@@ -195,7 +237,7 @@ paths to leaves, starting from the node.</p>
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixStructures_Builders_IBuilder_2.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixStructures.Builders.IBuilder%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixStructures/Builders/IBuilder.cs/#L20" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixStructures/Builders/IBuilder.cs/#L21" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -250,7 +250,7 @@ terminator is specified. Should not be present in the text.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminator_Item_Index_.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminator.Item(Index)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L123">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L131">View Source</a>
   </span>
   <a id="MoreStructures_TextWithTerminator_Item_" data-uid="MoreStructures.TextWithTerminator.Item*"></a>
   <h4 id="MoreStructures_TextWithTerminator_Item_Index_" data-uid="MoreStructures.TextWithTerminator.Item(Index)">Item[Index]</h4>
@@ -300,7 +300,7 @@ terminator is specified. Should not be present in the text.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminator_Item_MoreStructures_TextWithTerminator_ISelector_.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminator.Item(MoreStructures.TextWithTerminator.ISelector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L106">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L114">View Source</a>
   </span>
   <a id="MoreStructures_TextWithTerminator_Item_" data-uid="MoreStructures.TextWithTerminator.Item*"></a>
   <h4 id="MoreStructures_TextWithTerminator_Item_MoreStructures_TextWithTerminator_ISelector_" data-uid="MoreStructures.TextWithTerminator.Item(MoreStructures.TextWithTerminator.ISelector)">Item[TextWithTerminator.ISelector]</h4>
@@ -350,7 +350,7 @@ terminator is specified. Should not be present in the text.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminator_Item_Range_.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminator.Item(Range)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L113">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L121">View Source</a>
   </span>
   <a id="MoreStructures_TextWithTerminator_Item_" data-uid="MoreStructures.TextWithTerminator.Item*"></a>
   <h4 id="MoreStructures_TextWithTerminator_Item_Range_" data-uid="MoreStructures.TextWithTerminator.Item(Range)">Item[Range]</h4>
@@ -400,7 +400,7 @@ terminator is specified. Should not be present in the text.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminator_Length.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminator.Length%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L134">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L162">View Source</a>
   </span>
   <a id="MoreStructures_TextWithTerminator_Length_" data-uid="MoreStructures.TextWithTerminator.Length*"></a>
   <h4 id="MoreStructures_TextWithTerminator_Length" data-uid="MoreStructures.TextWithTerminator.Length">Length</h4>
@@ -427,6 +427,26 @@ terminator is specified. Should not be present in the text.</p>
       </tr>
     </tbody>
   </table>
+  <h5 id="MoreStructures_TextWithTerminator_Length_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+CACHING
+<br>
+Calculated just once, and cached for later use.
+<br> 
+Immutability guarantees correctness.
+</p>
+<p>
+COMPLEXITY
+<br>
+- If the text was built with a <span class="xref">System.String</span> as input, the operation is O(1) in time.
+<br>
+- If the text was built with a type optimized by 
+<a class="xref" href="MoreStructures.Utilities.EnumerableExtensions.html#MoreStructures_Utilities_EnumerableExtensions_CountO1__1_System_Collections_IEnumerable___0__">CountO1&lt;TSource&gt;(IEnumerable&lt;TSource&gt;)</a>, such as an <span class="xref">System.Collections.IList</span>
+or <see cref="!:IList&lt;T>"></see> the operation is O(1) as well.
+<br>
+- Otherwise, the operation is O(n), where n is the length of <a class="xref" href="MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_Text">Text</a>.
+</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminator_Terminator.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminator.Terminator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -455,6 +475,38 @@ terminator is specified. Should not be present in the text.</p>
       <tr>
         <td><span class="xref">System.Char</span></td>
         <td><p>A single char.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminator_TerminatorIndex.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminator.TerminatorIndex%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L107">View Source</a>
+  </span>
+  <a id="MoreStructures_TextWithTerminator_TerminatorIndex_" data-uid="MoreStructures.TextWithTerminator.TerminatorIndex*"></a>
+  <h4 id="MoreStructures_TextWithTerminator_TerminatorIndex" data-uid="MoreStructures.TextWithTerminator.TerminatorIndex">TerminatorIndex</h4>
+  <div class="markdown level1 summary"><p>Returns the index of <a class="xref" href="MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_Terminator">Terminator</a> in this <span class="xref">MoreStructures.TextWithTerminator.TextAndTerminator</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int TerminatorIndex { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>A 0-based index. 0 when <a class="xref" href="MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_Text">Text</a> is empty, positive otherwise.</p>
 </td>
       </tr>
     </tbody>
@@ -531,7 +583,7 @@ terminator is specified. Should not be present in the text.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminator_EndsWith_System_Collections_IEnumerable_System_Char__.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminator.EndsWith(System.Collections.IEnumerable%7BSystem.Char%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L159">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L192">View Source</a>
   </span>
   <a id="MoreStructures_TextWithTerminator_EndsWith_" data-uid="MoreStructures.TextWithTerminator.EndsWith*"></a>
   <h4 id="MoreStructures_TextWithTerminator_EndsWith_System_Collections_IEnumerable_System_Char__" data-uid="MoreStructures.TextWithTerminator.EndsWith(System.Collections.IEnumerable{System.Char})">EndsWith(IEnumerable&lt;Char&gt;)</h4>
@@ -581,7 +633,7 @@ terminator is specified. Should not be present in the text.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminator_GetEnumerator.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminator.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L169">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L202">View Source</a>
   </span>
   <a id="MoreStructures_TextWithTerminator_GetEnumerator_" data-uid="MoreStructures.TextWithTerminator.GetEnumerator*"></a>
   <h4 id="MoreStructures_TextWithTerminator_GetEnumerator" data-uid="MoreStructures.TextWithTerminator.GetEnumerator">GetEnumerator()</h4>
@@ -614,7 +666,7 @@ string, including the <a class="xref" href="MoreStructures.TextWithTerminator.ht
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminator_StartsWith_System_Collections_IEnumerable_System_Char__.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminator.StartsWith(System.Collections.IEnumerable%7BSystem.Char%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L149">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L182">View Source</a>
   </span>
   <a id="MoreStructures_TextWithTerminator_StartsWith_" data-uid="MoreStructures.TextWithTerminator.StartsWith*"></a>
   <h4 id="MoreStructures_TextWithTerminator_StartsWith_System_Collections_IEnumerable_System_Char__" data-uid="MoreStructures.TextWithTerminator.StartsWith(System.Collections.IEnumerable{System.Char})">StartsWith(IEnumerable&lt;Char&gt;)</h4>
@@ -666,7 +718,7 @@ string, including the <a class="xref" href="MoreStructures.TextWithTerminator.ht
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminator_System_Collections_IEnumerable_GetEnumerator.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminator.System%23Collections%23IEnumerable%23GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L177">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminator.cs/#L210">View Source</a>
   </span>
   <a id="MoreStructures_TextWithTerminator_System_Collections_IEnumerable_GetEnumerator_" data-uid="MoreStructures.TextWithTerminator.System#Collections#IEnumerable#GetEnumerator*"></a>
   <h4 id="MoreStructures_TextWithTerminator_System_Collections_IEnumerable_GetEnumerator" data-uid="MoreStructures.TextWithTerminator.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>

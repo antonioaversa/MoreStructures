@@ -849,13 +849,13 @@ references:
   isSpec: "True"
   fullName: MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.BWT
   nameWithType: IMatcher.BWT
-- uid: MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match(System.Collections.Generic.IEnumerable{System.Char})
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match(IEnumerable{System.Char})
   name: Match(IEnumerable<Char>)
-  href: api/MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_Match_System_Collections_Generic_IEnumerable_System_Char__
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match(System.Collections.Generic.IEnumerable{System.Char})
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_Match_IEnumerable_System_Char__
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match(IEnumerable{System.Char})
   name.vb: Match(IEnumerable(Of Char))
-  fullName: MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match(System.Collections.Generic.IEnumerable<System.Char>)
-  fullName.vb: MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match(System.Collections.Generic.IEnumerable(Of System.Char))
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match(IEnumerable<System.Char>)
+  fullName.vb: MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match(IEnumerable(Of System.Char))
   nameWithType: IMatcher.Match(IEnumerable<Char>)
   nameWithType.vb: IMatcher.Match(IEnumerable(Of Char))
 - uid: MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match*
@@ -1222,13 +1222,13 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Lists.Counting.IOccurrencesCounter.Count
   nameWithType: IOccurrencesCounter.Count
-- uid: MoreStructures.Lists.Counting.IOccurrencesCounter.Count``1(System.Collections.Generic.IEnumerable{``0})
+- uid: MoreStructures.Lists.Counting.IOccurrencesCounter.Count``1(IEnumerable{``0})
   name: Count<T>(IEnumerable<T>)
-  href: api/MoreStructures.Lists.Counting.IOccurrencesCounter.html#MoreStructures_Lists_Counting_IOccurrencesCounter_Count__1_System_Collections_Generic_IEnumerable___0__
-  commentId: M:MoreStructures.Lists.Counting.IOccurrencesCounter.Count``1(System.Collections.Generic.IEnumerable{``0})
+  href: api/MoreStructures.Lists.Counting.IOccurrencesCounter.html#MoreStructures_Lists_Counting_IOccurrencesCounter_Count__1_IEnumerable___0__
+  commentId: M:MoreStructures.Lists.Counting.IOccurrencesCounter.Count``1(IEnumerable{``0})
   name.vb: Count(Of T)(IEnumerable(Of T))
-  fullName: MoreStructures.Lists.Counting.IOccurrencesCounter.Count<T>(System.Collections.Generic.IEnumerable<T>)
-  fullName.vb: MoreStructures.Lists.Counting.IOccurrencesCounter.Count(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  fullName: MoreStructures.Lists.Counting.IOccurrencesCounter.Count<T>(IEnumerable<T>)
+  fullName.vb: MoreStructures.Lists.Counting.IOccurrencesCounter.Count(Of T)(IEnumerable(Of T))
   nameWithType: IOccurrencesCounter.Count<T>(IEnumerable<T>)
   nameWithType.vb: IOccurrencesCounter.Count(Of T)(IEnumerable(Of T))
 - uid: MoreStructures.Lists.Searching
@@ -1250,15 +1250,15 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Lists.Searching.BinarySearch.First
   nameWithType: BinarySearch.First
-- uid: MoreStructures.Lists.Searching.BinarySearch.First``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name: First<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  href: api/MoreStructures.Lists.Searching.BinarySearch.html#MoreStructures_Lists_Searching_BinarySearch_First__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__
-  commentId: M:MoreStructures.Lists.Searching.BinarySearch.First``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name.vb: First(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
-  fullName: MoreStructures.Lists.Searching.BinarySearch.First<T>(System.Collections.Generic.IEnumerable<T>, T, System.Collections.Generic.IComparer<T>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
-  fullName.vb: MoreStructures.Lists.Searching.BinarySearch.First(Of T)(System.Collections.Generic.IEnumerable(Of T), T, System.Collections.Generic.IComparer(Of T), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
-  nameWithType: BinarySearch.First<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  nameWithType.vb: BinarySearch.First(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+- uid: MoreStructures.Lists.Searching.BinarySearch.First``1(IEnumerable{``0},``0,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: First<T>(IEnumerable<T>, T, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  href: api/MoreStructures.Lists.Searching.BinarySearch.html#MoreStructures_Lists_Searching_BinarySearch_First__1_IEnumerable___0____0_System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:MoreStructures.Lists.Searching.BinarySearch.First``1(IEnumerable{``0},``0,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: First(Of T)(IEnumerable(Of T), T, Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
+  fullName: MoreStructures.Lists.Searching.BinarySearch.First<T>(IEnumerable<T>, T, System.Nullable<IComparer<T>>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
+  fullName.vb: MoreStructures.Lists.Searching.BinarySearch.First(Of T)(IEnumerable(Of T), T, System.Nullable(Of IComparer(Of T)), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
+  nameWithType: BinarySearch.First<T>(IEnumerable<T>, T, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  nameWithType.vb: BinarySearch.First(Of T)(IEnumerable(Of T), T, Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
 - uid: MoreStructures.Lists.Searching.BinarySearch.FirstAll*
   name: FirstAll
   href: api/MoreStructures.Lists.Searching.BinarySearch.html#MoreStructures_Lists_Searching_BinarySearch_FirstAll_
@@ -1266,15 +1266,15 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Lists.Searching.BinarySearch.FirstAll
   nameWithType: BinarySearch.FirstAll
-- uid: MoreStructures.Lists.Searching.BinarySearch.FirstAll``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name: FirstAll<T>(IEnumerable<T>, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  href: api/MoreStructures.Lists.Searching.BinarySearch.html#MoreStructures_Lists_Searching_BinarySearch_FirstAll__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__
-  commentId: M:MoreStructures.Lists.Searching.BinarySearch.FirstAll``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name.vb: FirstAll(Of T)(IEnumerable(Of T), IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
-  fullName: MoreStructures.Lists.Searching.BinarySearch.FirstAll<T>(System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.IComparer<T>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
-  fullName.vb: MoreStructures.Lists.Searching.BinarySearch.FirstAll(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Collections.Generic.IComparer(Of T), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
-  nameWithType: BinarySearch.FirstAll<T>(IEnumerable<T>, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  nameWithType.vb: BinarySearch.FirstAll(Of T)(IEnumerable(Of T), IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+- uid: MoreStructures.Lists.Searching.BinarySearch.FirstAll``1(IEnumerable{``0},System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: FirstAll<T>(IEnumerable<T>, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  href: api/MoreStructures.Lists.Searching.BinarySearch.html#MoreStructures_Lists_Searching_BinarySearch_FirstAll__1_IEnumerable___0__System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:MoreStructures.Lists.Searching.BinarySearch.FirstAll``1(IEnumerable{``0},System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: FirstAll(Of T)(IEnumerable(Of T), Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
+  fullName: MoreStructures.Lists.Searching.BinarySearch.FirstAll<T>(IEnumerable<T>, System.Nullable<IComparer<T>>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
+  fullName.vb: MoreStructures.Lists.Searching.BinarySearch.FirstAll(Of T)(IEnumerable(Of T), System.Nullable(Of IComparer(Of T)), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
+  nameWithType: BinarySearch.FirstAll<T>(IEnumerable<T>, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  nameWithType.vb: BinarySearch.FirstAll(Of T)(IEnumerable(Of T), Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
 - uid: MoreStructures.Lists.Searching.BinarySearch.Interval*
   name: Interval
   href: api/MoreStructures.Lists.Searching.BinarySearch.html#MoreStructures_Lists_Searching_BinarySearch_Interval_
@@ -1282,15 +1282,15 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Lists.Searching.BinarySearch.Interval
   nameWithType: BinarySearch.Interval
-- uid: MoreStructures.Lists.Searching.BinarySearch.Interval``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name: Interval<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  href: api/MoreStructures.Lists.Searching.BinarySearch.html#MoreStructures_Lists_Searching_BinarySearch_Interval__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__
-  commentId: M:MoreStructures.Lists.Searching.BinarySearch.Interval``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name.vb: Interval(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
-  fullName: MoreStructures.Lists.Searching.BinarySearch.Interval<T>(System.Collections.Generic.IEnumerable<T>, T, System.Collections.Generic.IComparer<T>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
-  fullName.vb: MoreStructures.Lists.Searching.BinarySearch.Interval(Of T)(System.Collections.Generic.IEnumerable(Of T), T, System.Collections.Generic.IComparer(Of T), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
-  nameWithType: BinarySearch.Interval<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  nameWithType.vb: BinarySearch.Interval(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+- uid: MoreStructures.Lists.Searching.BinarySearch.Interval``1(IEnumerable{``0},``0,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: Interval<T>(IEnumerable<T>, T, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  href: api/MoreStructures.Lists.Searching.BinarySearch.html#MoreStructures_Lists_Searching_BinarySearch_Interval__1_IEnumerable___0____0_System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:MoreStructures.Lists.Searching.BinarySearch.Interval``1(IEnumerable{``0},``0,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: Interval(Of T)(IEnumerable(Of T), T, Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
+  fullName: MoreStructures.Lists.Searching.BinarySearch.Interval<T>(IEnumerable<T>, T, System.Nullable<IComparer<T>>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
+  fullName.vb: MoreStructures.Lists.Searching.BinarySearch.Interval(Of T)(IEnumerable(Of T), T, System.Nullable(Of IComparer(Of T)), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
+  nameWithType: BinarySearch.Interval<T>(IEnumerable<T>, T, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  nameWithType.vb: BinarySearch.Interval(Of T)(IEnumerable(Of T), T, Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
 - uid: MoreStructures.Lists.Searching.BinarySearch.Last*
   name: Last
   href: api/MoreStructures.Lists.Searching.BinarySearch.html#MoreStructures_Lists_Searching_BinarySearch_Last_
@@ -1298,15 +1298,15 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Lists.Searching.BinarySearch.Last
   nameWithType: BinarySearch.Last
-- uid: MoreStructures.Lists.Searching.BinarySearch.Last``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name: Last<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  href: api/MoreStructures.Lists.Searching.BinarySearch.html#MoreStructures_Lists_Searching_BinarySearch_Last__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__
-  commentId: M:MoreStructures.Lists.Searching.BinarySearch.Last``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name.vb: Last(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
-  fullName: MoreStructures.Lists.Searching.BinarySearch.Last<T>(System.Collections.Generic.IEnumerable<T>, T, System.Collections.Generic.IComparer<T>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
-  fullName.vb: MoreStructures.Lists.Searching.BinarySearch.Last(Of T)(System.Collections.Generic.IEnumerable(Of T), T, System.Collections.Generic.IComparer(Of T), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
-  nameWithType: BinarySearch.Last<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  nameWithType.vb: BinarySearch.Last(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+- uid: MoreStructures.Lists.Searching.BinarySearch.Last``1(IEnumerable{``0},``0,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: Last<T>(IEnumerable<T>, T, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  href: api/MoreStructures.Lists.Searching.BinarySearch.html#MoreStructures_Lists_Searching_BinarySearch_Last__1_IEnumerable___0____0_System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:MoreStructures.Lists.Searching.BinarySearch.Last``1(IEnumerable{``0},``0,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: Last(Of T)(IEnumerable(Of T), T, Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
+  fullName: MoreStructures.Lists.Searching.BinarySearch.Last<T>(IEnumerable<T>, T, System.Nullable<IComparer<T>>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
+  fullName.vb: MoreStructures.Lists.Searching.BinarySearch.Last(Of T)(IEnumerable(Of T), T, System.Nullable(Of IComparer(Of T)), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
+  nameWithType: BinarySearch.Last<T>(IEnumerable<T>, T, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  nameWithType.vb: BinarySearch.Last(Of T)(IEnumerable(Of T), T, Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
 - uid: MoreStructures.Lists.Searching.BinarySearch.Nth*
   name: Nth
   href: api/MoreStructures.Lists.Searching.BinarySearch.html#MoreStructures_Lists_Searching_BinarySearch_Nth_
@@ -1314,15 +1314,15 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Lists.Searching.BinarySearch.Nth
   nameWithType: BinarySearch.Nth
-- uid: MoreStructures.Lists.Searching.BinarySearch.Nth``1(System.Collections.Generic.IEnumerable{``0},``0,System.Int32,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name: Nth<T>(IEnumerable<T>, T, Int32, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  href: api/MoreStructures.Lists.Searching.BinarySearch.html#MoreStructures_Lists_Searching_BinarySearch_Nth__1_System_Collections_Generic_IEnumerable___0____0_System_Int32_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__
-  commentId: M:MoreStructures.Lists.Searching.BinarySearch.Nth``1(System.Collections.Generic.IEnumerable{``0},``0,System.Int32,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name.vb: Nth(Of T)(IEnumerable(Of T), T, Int32, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
-  fullName: MoreStructures.Lists.Searching.BinarySearch.Nth<T>(System.Collections.Generic.IEnumerable<T>, T, System.Int32, System.Collections.Generic.IComparer<T>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
-  fullName.vb: MoreStructures.Lists.Searching.BinarySearch.Nth(Of T)(System.Collections.Generic.IEnumerable(Of T), T, System.Int32, System.Collections.Generic.IComparer(Of T), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
-  nameWithType: BinarySearch.Nth<T>(IEnumerable<T>, T, Int32, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  nameWithType.vb: BinarySearch.Nth(Of T)(IEnumerable(Of T), T, Int32, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+- uid: MoreStructures.Lists.Searching.BinarySearch.Nth``1(IEnumerable{``0},``0,System.Int32,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: Nth<T>(IEnumerable<T>, T, Int32, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  href: api/MoreStructures.Lists.Searching.BinarySearch.html#MoreStructures_Lists_Searching_BinarySearch_Nth__1_IEnumerable___0____0_System_Int32_System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:MoreStructures.Lists.Searching.BinarySearch.Nth``1(IEnumerable{``0},``0,System.Int32,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: Nth(Of T)(IEnumerable(Of T), T, Int32, Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
+  fullName: MoreStructures.Lists.Searching.BinarySearch.Nth<T>(IEnumerable<T>, T, System.Int32, System.Nullable<IComparer<T>>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
+  fullName.vb: MoreStructures.Lists.Searching.BinarySearch.Nth(Of T)(IEnumerable(Of T), T, System.Int32, System.Nullable(Of IComparer(Of T)), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
+  nameWithType: BinarySearch.Nth<T>(IEnumerable<T>, T, Int32, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  nameWithType.vb: BinarySearch.Nth(Of T)(IEnumerable(Of T), T, Int32, Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
 - uid: MoreStructures.Lists.Searching.ISearch
   name: ISearch
   href: api/MoreStructures.Lists.Searching.ISearch.html
@@ -1336,15 +1336,15 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Lists.Searching.ISearch.First
   nameWithType: ISearch.First
-- uid: MoreStructures.Lists.Searching.ISearch.First``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name: First<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  href: api/MoreStructures.Lists.Searching.ISearch.html#MoreStructures_Lists_Searching_ISearch_First__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__
-  commentId: M:MoreStructures.Lists.Searching.ISearch.First``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name.vb: First(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
-  fullName: MoreStructures.Lists.Searching.ISearch.First<T>(System.Collections.Generic.IEnumerable<T>, T, System.Collections.Generic.IComparer<T>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
-  fullName.vb: MoreStructures.Lists.Searching.ISearch.First(Of T)(System.Collections.Generic.IEnumerable(Of T), T, System.Collections.Generic.IComparer(Of T), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
-  nameWithType: ISearch.First<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  nameWithType.vb: ISearch.First(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+- uid: MoreStructures.Lists.Searching.ISearch.First``1(IEnumerable{``0},``0,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: First<T>(IEnumerable<T>, T, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  href: api/MoreStructures.Lists.Searching.ISearch.html#MoreStructures_Lists_Searching_ISearch_First__1_IEnumerable___0____0_System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:MoreStructures.Lists.Searching.ISearch.First``1(IEnumerable{``0},``0,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: First(Of T)(IEnumerable(Of T), T, Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
+  fullName: MoreStructures.Lists.Searching.ISearch.First<T>(IEnumerable<T>, T, System.Nullable<IComparer<T>>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
+  fullName.vb: MoreStructures.Lists.Searching.ISearch.First(Of T)(IEnumerable(Of T), T, System.Nullable(Of IComparer(Of T)), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
+  nameWithType: ISearch.First<T>(IEnumerable<T>, T, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  nameWithType.vb: ISearch.First(Of T)(IEnumerable(Of T), T, Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
 - uid: MoreStructures.Lists.Searching.ISearch.FirstAll*
   name: FirstAll
   href: api/MoreStructures.Lists.Searching.ISearch.html#MoreStructures_Lists_Searching_ISearch_FirstAll_
@@ -1352,15 +1352,15 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Lists.Searching.ISearch.FirstAll
   nameWithType: ISearch.FirstAll
-- uid: MoreStructures.Lists.Searching.ISearch.FirstAll``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name: FirstAll<T>(IEnumerable<T>, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  href: api/MoreStructures.Lists.Searching.ISearch.html#MoreStructures_Lists_Searching_ISearch_FirstAll__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__
-  commentId: M:MoreStructures.Lists.Searching.ISearch.FirstAll``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name.vb: FirstAll(Of T)(IEnumerable(Of T), IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
-  fullName: MoreStructures.Lists.Searching.ISearch.FirstAll<T>(System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.IComparer<T>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
-  fullName.vb: MoreStructures.Lists.Searching.ISearch.FirstAll(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Collections.Generic.IComparer(Of T), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
-  nameWithType: ISearch.FirstAll<T>(IEnumerable<T>, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  nameWithType.vb: ISearch.FirstAll(Of T)(IEnumerable(Of T), IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+- uid: MoreStructures.Lists.Searching.ISearch.FirstAll``1(IEnumerable{``0},System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: FirstAll<T>(IEnumerable<T>, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  href: api/MoreStructures.Lists.Searching.ISearch.html#MoreStructures_Lists_Searching_ISearch_FirstAll__1_IEnumerable___0__System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:MoreStructures.Lists.Searching.ISearch.FirstAll``1(IEnumerable{``0},System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: FirstAll(Of T)(IEnumerable(Of T), Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
+  fullName: MoreStructures.Lists.Searching.ISearch.FirstAll<T>(IEnumerable<T>, System.Nullable<IComparer<T>>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
+  fullName.vb: MoreStructures.Lists.Searching.ISearch.FirstAll(Of T)(IEnumerable(Of T), System.Nullable(Of IComparer(Of T)), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
+  nameWithType: ISearch.FirstAll<T>(IEnumerable<T>, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  nameWithType.vb: ISearch.FirstAll(Of T)(IEnumerable(Of T), Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
 - uid: MoreStructures.Lists.Searching.ISearch.Interval*
   name: Interval
   href: api/MoreStructures.Lists.Searching.ISearch.html#MoreStructures_Lists_Searching_ISearch_Interval_
@@ -1368,15 +1368,15 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Lists.Searching.ISearch.Interval
   nameWithType: ISearch.Interval
-- uid: MoreStructures.Lists.Searching.ISearch.Interval``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name: Interval<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  href: api/MoreStructures.Lists.Searching.ISearch.html#MoreStructures_Lists_Searching_ISearch_Interval__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__
-  commentId: M:MoreStructures.Lists.Searching.ISearch.Interval``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name.vb: Interval(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
-  fullName: MoreStructures.Lists.Searching.ISearch.Interval<T>(System.Collections.Generic.IEnumerable<T>, T, System.Collections.Generic.IComparer<T>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
-  fullName.vb: MoreStructures.Lists.Searching.ISearch.Interval(Of T)(System.Collections.Generic.IEnumerable(Of T), T, System.Collections.Generic.IComparer(Of T), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
-  nameWithType: ISearch.Interval<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  nameWithType.vb: ISearch.Interval(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+- uid: MoreStructures.Lists.Searching.ISearch.Interval``1(IEnumerable{``0},``0,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: Interval<T>(IEnumerable<T>, T, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  href: api/MoreStructures.Lists.Searching.ISearch.html#MoreStructures_Lists_Searching_ISearch_Interval__1_IEnumerable___0____0_System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:MoreStructures.Lists.Searching.ISearch.Interval``1(IEnumerable{``0},``0,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: Interval(Of T)(IEnumerable(Of T), T, Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
+  fullName: MoreStructures.Lists.Searching.ISearch.Interval<T>(IEnumerable<T>, T, System.Nullable<IComparer<T>>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
+  fullName.vb: MoreStructures.Lists.Searching.ISearch.Interval(Of T)(IEnumerable(Of T), T, System.Nullable(Of IComparer(Of T)), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
+  nameWithType: ISearch.Interval<T>(IEnumerable<T>, T, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  nameWithType.vb: ISearch.Interval(Of T)(IEnumerable(Of T), T, Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
 - uid: MoreStructures.Lists.Searching.ISearch.Last*
   name: Last
   href: api/MoreStructures.Lists.Searching.ISearch.html#MoreStructures_Lists_Searching_ISearch_Last_
@@ -1384,15 +1384,15 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Lists.Searching.ISearch.Last
   nameWithType: ISearch.Last
-- uid: MoreStructures.Lists.Searching.ISearch.Last``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name: Last<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  href: api/MoreStructures.Lists.Searching.ISearch.html#MoreStructures_Lists_Searching_ISearch_Last__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__
-  commentId: M:MoreStructures.Lists.Searching.ISearch.Last``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name.vb: Last(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
-  fullName: MoreStructures.Lists.Searching.ISearch.Last<T>(System.Collections.Generic.IEnumerable<T>, T, System.Collections.Generic.IComparer<T>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
-  fullName.vb: MoreStructures.Lists.Searching.ISearch.Last(Of T)(System.Collections.Generic.IEnumerable(Of T), T, System.Collections.Generic.IComparer(Of T), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
-  nameWithType: ISearch.Last<T>(IEnumerable<T>, T, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  nameWithType.vb: ISearch.Last(Of T)(IEnumerable(Of T), T, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+- uid: MoreStructures.Lists.Searching.ISearch.Last``1(IEnumerable{``0},``0,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: Last<T>(IEnumerable<T>, T, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  href: api/MoreStructures.Lists.Searching.ISearch.html#MoreStructures_Lists_Searching_ISearch_Last__1_IEnumerable___0____0_System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:MoreStructures.Lists.Searching.ISearch.Last``1(IEnumerable{``0},``0,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: Last(Of T)(IEnumerable(Of T), T, Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
+  fullName: MoreStructures.Lists.Searching.ISearch.Last<T>(IEnumerable<T>, T, System.Nullable<IComparer<T>>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
+  fullName.vb: MoreStructures.Lists.Searching.ISearch.Last(Of T)(IEnumerable(Of T), T, System.Nullable(Of IComparer(Of T)), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
+  nameWithType: ISearch.Last<T>(IEnumerable<T>, T, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  nameWithType.vb: ISearch.Last(Of T)(IEnumerable(Of T), T, Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
 - uid: MoreStructures.Lists.Searching.ISearch.Nth*
   name: Nth
   href: api/MoreStructures.Lists.Searching.ISearch.html#MoreStructures_Lists_Searching_ISearch_Nth_
@@ -1400,15 +1400,15 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Lists.Searching.ISearch.Nth
   nameWithType: ISearch.Nth
-- uid: MoreStructures.Lists.Searching.ISearch.Nth``1(System.Collections.Generic.IEnumerable{``0},``0,System.Int32,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name: Nth<T>(IEnumerable<T>, T, Int32, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  href: api/MoreStructures.Lists.Searching.ISearch.html#MoreStructures_Lists_Searching_ISearch_Nth__1_System_Collections_Generic_IEnumerable___0____0_System_Int32_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__
-  commentId: M:MoreStructures.Lists.Searching.ISearch.Nth``1(System.Collections.Generic.IEnumerable{``0},``0,System.Int32,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})
-  name.vb: Nth(Of T)(IEnumerable(Of T), T, Int32, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
-  fullName: MoreStructures.Lists.Searching.ISearch.Nth<T>(System.Collections.Generic.IEnumerable<T>, T, System.Int32, System.Collections.Generic.IComparer<T>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
-  fullName.vb: MoreStructures.Lists.Searching.ISearch.Nth(Of T)(System.Collections.Generic.IEnumerable(Of T), T, System.Int32, System.Collections.Generic.IComparer(Of T), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
-  nameWithType: ISearch.Nth<T>(IEnumerable<T>, T, Int32, IComparer<T>, Nullable<Int32>, Nullable<Int32>)
-  nameWithType.vb: ISearch.Nth(Of T)(IEnumerable(Of T), T, Int32, IComparer(Of T), Nullable(Of Int32), Nullable(Of Int32))
+- uid: MoreStructures.Lists.Searching.ISearch.Nth``1(IEnumerable{``0},``0,System.Int32,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: Nth<T>(IEnumerable<T>, T, Int32, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  href: api/MoreStructures.Lists.Searching.ISearch.html#MoreStructures_Lists_Searching_ISearch_Nth__1_IEnumerable___0____0_System_Int32_System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32__
+  commentId: M:MoreStructures.Lists.Searching.ISearch.Nth``1(IEnumerable{``0},``0,System.Int32,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name.vb: Nth(Of T)(IEnumerable(Of T), T, Int32, Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
+  fullName: MoreStructures.Lists.Searching.ISearch.Nth<T>(IEnumerable<T>, T, System.Int32, System.Nullable<IComparer<T>>, System.Nullable<System.Int32>, System.Nullable<System.Int32>)
+  fullName.vb: MoreStructures.Lists.Searching.ISearch.Nth(Of T)(IEnumerable(Of T), T, System.Int32, System.Nullable(Of IComparer(Of T)), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
+  nameWithType: ISearch.Nth<T>(IEnumerable<T>, T, Int32, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
+  nameWithType.vb: ISearch.Nth(Of T)(IEnumerable(Of T), T, Int32, Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
 - uid: MoreStructures.Lists.Searching.LinearSearch
   name: LinearSearch
   href: api/MoreStructures.Lists.Searching.LinearSearch.html
@@ -2721,14 +2721,15 @@ references:
   fullName.vb: MoreStructures.SuffixStructures.Builders.IBuilder(Of TEdge, TNode)
   nameWithType: IBuilder<TEdge, TNode>
   nameWithType.vb: IBuilder(Of TEdge, TNode)
-- uid: MoreStructures.SuffixStructures.Builders.IBuilder`2.BuildTree(MoreStructures.TextWithTerminator)
-  name: BuildTree(TextWithTerminator)
-  href: api/MoreStructures.SuffixStructures.Builders.IBuilder-2.html#MoreStructures_SuffixStructures_Builders_IBuilder_2_BuildTree_MoreStructures_TextWithTerminator_
-  commentId: M:MoreStructures.SuffixStructures.Builders.IBuilder`2.BuildTree(MoreStructures.TextWithTerminator)
-  fullName: MoreStructures.SuffixStructures.Builders.IBuilder<TEdge, TNode>.BuildTree(MoreStructures.TextWithTerminator)
-  fullName.vb: MoreStructures.SuffixStructures.Builders.IBuilder(Of TEdge, TNode).BuildTree(MoreStructures.TextWithTerminator)
-  nameWithType: IBuilder<TEdge, TNode>.BuildTree(TextWithTerminator)
-  nameWithType.vb: IBuilder(Of TEdge, TNode).BuildTree(TextWithTerminator)
+- uid: MoreStructures.SuffixStructures.Builders.IBuilder`2.BuildTree(MoreStructures.TextWithTerminator[])
+  name: BuildTree(TextWithTerminator[])
+  href: api/MoreStructures.SuffixStructures.Builders.IBuilder-2.html#MoreStructures_SuffixStructures_Builders_IBuilder_2_BuildTree_MoreStructures_TextWithTerminator___
+  commentId: M:MoreStructures.SuffixStructures.Builders.IBuilder`2.BuildTree(MoreStructures.TextWithTerminator[])
+  name.vb: BuildTree(TextWithTerminator())
+  fullName: MoreStructures.SuffixStructures.Builders.IBuilder<TEdge, TNode>.BuildTree(MoreStructures.TextWithTerminator[])
+  fullName.vb: MoreStructures.SuffixStructures.Builders.IBuilder(Of TEdge, TNode).BuildTree(MoreStructures.TextWithTerminator())
+  nameWithType: IBuilder<TEdge, TNode>.BuildTree(TextWithTerminator[])
+  nameWithType.vb: IBuilder(Of TEdge, TNode).BuildTree(TextWithTerminator())
 - uid: MoreStructures.SuffixStructures.Builders.IBuilder`2.BuildTree*
   name: BuildTree
   href: api/MoreStructures.SuffixStructures.Builders.IBuilder-2.html#MoreStructures_SuffixStructures_Builders_IBuilder_2_BuildTree_
@@ -3380,12 +3381,15 @@ references:
   commentId: T:MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder
   fullName: MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder
   nameWithType: NaivePartiallyRecursiveSuffixTreeBuilder
-- uid: MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator)
-  name: BuildTree(TextWithTerminator)
-  href: api/MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.html#MoreStructures_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator_
-  commentId: M:MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator)
-  fullName: MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator)
-  nameWithType: NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree(TextWithTerminator)
+- uid: MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator[])
+  name: BuildTree(TextWithTerminator[])
+  href: api/MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.html#MoreStructures_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator___
+  commentId: M:MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator[])
+  name.vb: BuildTree(TextWithTerminator())
+  fullName: MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator[])
+  fullName.vb: MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator())
+  nameWithType: NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree(TextWithTerminator[])
+  nameWithType.vb: NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree(TextWithTerminator())
 - uid: MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree*
   name: BuildTree
   href: api/MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.html#MoreStructures_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilder_BuildTree_
@@ -3399,12 +3403,15 @@ references:
   commentId: T:MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder
   fullName: MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder
   nameWithType: UkkonenSuffixTreeBuilder
-- uid: MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator)
-  name: BuildTree(TextWithTerminator)
-  href: api/MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.html#MoreStructures_SuffixTrees_Builders_UkkonenSuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator_
-  commentId: M:MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator)
-  fullName: MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator)
-  nameWithType: UkkonenSuffixTreeBuilder.BuildTree(TextWithTerminator)
+- uid: MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator[])
+  name: BuildTree(TextWithTerminator[])
+  href: api/MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.html#MoreStructures_SuffixTrees_Builders_UkkonenSuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator___
+  commentId: M:MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator[])
+  name.vb: BuildTree(TextWithTerminator())
+  fullName: MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator[])
+  fullName.vb: MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator())
+  nameWithType: UkkonenSuffixTreeBuilder.BuildTree(TextWithTerminator[])
+  nameWithType.vb: UkkonenSuffixTreeBuilder.BuildTree(TextWithTerminator())
 - uid: MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.BuildTree*
   name: BuildTree
   href: api/MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.html#MoreStructures_SuffixTrees_Builders_UkkonenSuffixTreeBuilder_BuildTree_
@@ -3566,19 +3573,6 @@ references:
   isSpec: "True"
   fullName: MoreStructures.SuffixTrees.SuffixTreeNode.Intermediate.Intermediate
   nameWithType: SuffixTreeNode.Intermediate.Intermediate
-- uid: MoreStructures.SuffixTrees.SuffixTreeNode.Intermediate.ToString
-  name: ToString()
-  href: api/MoreStructures.SuffixTrees.SuffixTreeNode.Intermediate.html#MoreStructures_SuffixTrees_SuffixTreeNode_Intermediate_ToString
-  commentId: M:MoreStructures.SuffixTrees.SuffixTreeNode.Intermediate.ToString
-  fullName: MoreStructures.SuffixTrees.SuffixTreeNode.Intermediate.ToString()
-  nameWithType: SuffixTreeNode.Intermediate.ToString()
-- uid: MoreStructures.SuffixTrees.SuffixTreeNode.Intermediate.ToString*
-  name: ToString
-  href: api/MoreStructures.SuffixTrees.SuffixTreeNode.Intermediate.html#MoreStructures_SuffixTrees_SuffixTreeNode_Intermediate_ToString_
-  commentId: Overload:MoreStructures.SuffixTrees.SuffixTreeNode.Intermediate.ToString
-  isSpec: "True"
-  fullName: MoreStructures.SuffixTrees.SuffixTreeNode.Intermediate.ToString
-  nameWithType: SuffixTreeNode.Intermediate.ToString
 - uid: MoreStructures.SuffixTrees.SuffixTreeNode.Item(MoreStructures.SuffixTrees.SuffixTreeEdge)
   name: Item[SuffixTreeEdge]
   href: api/MoreStructures.SuffixTrees.SuffixTreeNode.html#MoreStructures_SuffixTrees_SuffixTreeNode_Item_MoreStructures_SuffixTrees_SuffixTreeEdge_
@@ -3627,19 +3621,6 @@ references:
   isSpec: "True"
   fullName: MoreStructures.SuffixTrees.SuffixTreeNode.Leaf.LeafStart
   nameWithType: SuffixTreeNode.Leaf.LeafStart
-- uid: MoreStructures.SuffixTrees.SuffixTreeNode.Leaf.ToString
-  name: ToString()
-  href: api/MoreStructures.SuffixTrees.SuffixTreeNode.Leaf.html#MoreStructures_SuffixTrees_SuffixTreeNode_Leaf_ToString
-  commentId: M:MoreStructures.SuffixTrees.SuffixTreeNode.Leaf.ToString
-  fullName: MoreStructures.SuffixTrees.SuffixTreeNode.Leaf.ToString()
-  nameWithType: SuffixTreeNode.Leaf.ToString()
-- uid: MoreStructures.SuffixTrees.SuffixTreeNode.Leaf.ToString*
-  name: ToString
-  href: api/MoreStructures.SuffixTrees.SuffixTreeNode.Leaf.html#MoreStructures_SuffixTrees_SuffixTreeNode_Leaf_ToString_
-  commentId: Overload:MoreStructures.SuffixTrees.SuffixTreeNode.Leaf.ToString
-  isSpec: "True"
-  fullName: MoreStructures.SuffixTrees.SuffixTreeNode.Leaf.ToString
-  nameWithType: SuffixTreeNode.Leaf.ToString
 - uid: MoreStructures.SuffixTrees.SuffixTreeNode.Start
   name: Start
   href: api/MoreStructures.SuffixTrees.SuffixTreeNode.html#MoreStructures_SuffixTrees_SuffixTreeNode_Start
@@ -3684,12 +3665,15 @@ references:
   commentId: T:MoreStructures.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilder
   fullName: MoreStructures.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilder
   nameWithType: NaivePartiallyRecursiveSuffixTrieBuilder
-- uid: MoreStructures.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilder.BuildTree(MoreStructures.TextWithTerminator)
-  name: BuildTree(TextWithTerminator)
-  href: api/MoreStructures.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilder.html#MoreStructures_SuffixTries_Builders_NaivePartiallyRecursiveSuffixTrieBuilder_BuildTree_MoreStructures_TextWithTerminator_
-  commentId: M:MoreStructures.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilder.BuildTree(MoreStructures.TextWithTerminator)
-  fullName: MoreStructures.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilder.BuildTree(MoreStructures.TextWithTerminator)
-  nameWithType: NaivePartiallyRecursiveSuffixTrieBuilder.BuildTree(TextWithTerminator)
+- uid: MoreStructures.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilder.BuildTree(MoreStructures.TextWithTerminator[])
+  name: BuildTree(TextWithTerminator[])
+  href: api/MoreStructures.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilder.html#MoreStructures_SuffixTries_Builders_NaivePartiallyRecursiveSuffixTrieBuilder_BuildTree_MoreStructures_TextWithTerminator___
+  commentId: M:MoreStructures.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilder.BuildTree(MoreStructures.TextWithTerminator[])
+  name.vb: BuildTree(TextWithTerminator())
+  fullName: MoreStructures.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilder.BuildTree(MoreStructures.TextWithTerminator[])
+  fullName.vb: MoreStructures.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilder.BuildTree(MoreStructures.TextWithTerminator())
+  nameWithType: NaivePartiallyRecursiveSuffixTrieBuilder.BuildTree(TextWithTerminator[])
+  nameWithType.vb: NaivePartiallyRecursiveSuffixTrieBuilder.BuildTree(TextWithTerminator())
 - uid: MoreStructures.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilder.BuildTree*
   name: BuildTree
   href: api/MoreStructures.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilder.html#MoreStructures_SuffixTries_Builders_NaivePartiallyRecursiveSuffixTrieBuilder_BuildTree_
@@ -3812,19 +3796,6 @@ references:
   isSpec: "True"
   fullName: MoreStructures.SuffixTries.SuffixTrieNode.Intermediate.Intermediate
   nameWithType: SuffixTrieNode.Intermediate.Intermediate
-- uid: MoreStructures.SuffixTries.SuffixTrieNode.Intermediate.ToString
-  name: ToString()
-  href: api/MoreStructures.SuffixTries.SuffixTrieNode.Intermediate.html#MoreStructures_SuffixTries_SuffixTrieNode_Intermediate_ToString
-  commentId: M:MoreStructures.SuffixTries.SuffixTrieNode.Intermediate.ToString
-  fullName: MoreStructures.SuffixTries.SuffixTrieNode.Intermediate.ToString()
-  nameWithType: SuffixTrieNode.Intermediate.ToString()
-- uid: MoreStructures.SuffixTries.SuffixTrieNode.Intermediate.ToString*
-  name: ToString
-  href: api/MoreStructures.SuffixTries.SuffixTrieNode.Intermediate.html#MoreStructures_SuffixTries_SuffixTrieNode_Intermediate_ToString_
-  commentId: Overload:MoreStructures.SuffixTries.SuffixTrieNode.Intermediate.ToString
-  isSpec: "True"
-  fullName: MoreStructures.SuffixTries.SuffixTrieNode.Intermediate.ToString
-  nameWithType: SuffixTrieNode.Intermediate.ToString
 - uid: MoreStructures.SuffixTries.SuffixTrieNode.Item(MoreStructures.SuffixTries.SuffixTrieEdge)
   name: Item[SuffixTrieEdge]
   href: api/MoreStructures.SuffixTries.SuffixTrieNode.html#MoreStructures_SuffixTries_SuffixTrieNode_Item_MoreStructures_SuffixTries_SuffixTrieEdge_
@@ -3873,19 +3844,6 @@ references:
   isSpec: "True"
   fullName: MoreStructures.SuffixTries.SuffixTrieNode.Leaf.LeafStart
   nameWithType: SuffixTrieNode.Leaf.LeafStart
-- uid: MoreStructures.SuffixTries.SuffixTrieNode.Leaf.ToString
-  name: ToString()
-  href: api/MoreStructures.SuffixTries.SuffixTrieNode.Leaf.html#MoreStructures_SuffixTries_SuffixTrieNode_Leaf_ToString
-  commentId: M:MoreStructures.SuffixTries.SuffixTrieNode.Leaf.ToString
-  fullName: MoreStructures.SuffixTries.SuffixTrieNode.Leaf.ToString()
-  nameWithType: SuffixTrieNode.Leaf.ToString()
-- uid: MoreStructures.SuffixTries.SuffixTrieNode.Leaf.ToString*
-  name: ToString
-  href: api/MoreStructures.SuffixTries.SuffixTrieNode.Leaf.html#MoreStructures_SuffixTries_SuffixTrieNode_Leaf_ToString_
-  commentId: Overload:MoreStructures.SuffixTries.SuffixTrieNode.Leaf.ToString
-  isSpec: "True"
-  fullName: MoreStructures.SuffixTries.SuffixTrieNode.Leaf.ToString
-  nameWithType: SuffixTrieNode.Leaf.ToString
 - uid: MoreStructures.SuffixTries.SuffixTrieNode.Start
   name: Start
   href: api/MoreStructures.SuffixTries.SuffixTrieNode.html#MoreStructures_SuffixTries_SuffixTrieNode_Start
@@ -4146,13 +4104,13 @@ references:
   commentId: T:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests
   fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests
   nameWithType: LastFirstFinderTests
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.#ctor(System.Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder})
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.#ctor(Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder})
   name: LastFirstFinderTests(Func<RotatedTextWithTerminator, ILastFirstFinder>)
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstFinders_LastFirstFinderTests__ctor_System_Func_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder__
-  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.#ctor(System.Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder})
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Builder_LastFirstFinders_LastFirstFinderTests__ctor_Func_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder__
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.#ctor(Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder})
   name.vb: LastFirstFinderTests(Func(Of RotatedTextWithTerminator, ILastFirstFinder))
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.LastFirstFinderTests(System.Func<MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder>)
-  fullName.vb: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.LastFirstFinderTests(System.Func(Of MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder))
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.LastFirstFinderTests(Func<MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder>)
+  fullName.vb: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.LastFirstFinderTests(Func(Of MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder))
   nameWithType: LastFirstFinderTests.LastFirstFinderTests(Func<RotatedTextWithTerminator, ILastFirstFinder>)
   nameWithType.vb: LastFirstFinderTests.LastFirstFinderTests(Func(Of RotatedTextWithTerminator, ILastFirstFinder))
 - uid: MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders.LastFirstFinderTests.#ctor*
@@ -4592,13 +4550,13 @@ references:
   commentId: T:MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests
   fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests
   nameWithType: MatcherTests
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.#ctor(System.Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher},System.Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher})
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.#ctor(Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher},Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher})
   name: MatcherTests(Func<RotatedTextWithTerminator, IMatcher>, Func<RotatedTextWithTerminator, RotatedTextWithTerminator, IMatcher>)
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests__ctor_System_Func_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Matching_IMatcher__System_Func_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Matching_IMatcher__
-  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.#ctor(System.Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher},System.Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher})
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests__ctor_Func_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Matching_IMatcher__Func_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Matching_IMatcher__
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.#ctor(Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher},Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher})
   name.vb: MatcherTests(Func(Of RotatedTextWithTerminator, IMatcher), Func(Of RotatedTextWithTerminator, RotatedTextWithTerminator, IMatcher))
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.MatcherTests(System.Func<MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher>, System.Func<MoreStructures.RotatedTextWithTerminator, MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher>)
-  fullName.vb: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.MatcherTests(System.Func(Of MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher), System.Func(Of MoreStructures.RotatedTextWithTerminator, MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher))
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.MatcherTests(Func<MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher>, Func<MoreStructures.RotatedTextWithTerminator, MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher>)
+  fullName.vb: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.MatcherTests(Func(Of MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher), Func(Of MoreStructures.RotatedTextWithTerminator, MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher))
   nameWithType: MatcherTests.MatcherTests(Func<RotatedTextWithTerminator, IMatcher>, Func<RotatedTextWithTerminator, RotatedTextWithTerminator, IMatcher>)
   nameWithType.vb: MatcherTests.MatcherTests(Func(Of RotatedTextWithTerminator, IMatcher), Func(Of RotatedTextWithTerminator, RotatedTextWithTerminator, IMatcher))
 - uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.#ctor*
@@ -5848,13 +5806,13 @@ references:
   commentId: M:MoreStructures.Tests.RecImmTrees.TreeMock.Node.#ctor(System.Int32)
   fullName: MoreStructures.Tests.RecImmTrees.TreeMock.Node.Node(System.Int32)
   nameWithType: TreeMock.Node.Node(Int32)
-- uid: MoreStructures.Tests.RecImmTrees.TreeMock.Node.#ctor(System.Int32,System.Collections.Generic.IDictionary{MoreStructures.Tests.RecImmTrees.TreeMock.Edge,MoreStructures.Tests.RecImmTrees.TreeMock.Node})
+- uid: MoreStructures.Tests.RecImmTrees.TreeMock.Node.#ctor(System.Int32,IDictionary{MoreStructures.Tests.RecImmTrees.TreeMock.Edge,MoreStructures.Tests.RecImmTrees.TreeMock.Node})
   name: Node(Int32, IDictionary<TreeMock.Edge, TreeMock.Node>)
-  href: api/MoreStructures.Tests.RecImmTrees.TreeMock.Node.html#MoreStructures_Tests_RecImmTrees_TreeMock_Node__ctor_System_Int32_System_Collections_Generic_IDictionary_MoreStructures_Tests_RecImmTrees_TreeMock_Edge_MoreStructures_Tests_RecImmTrees_TreeMock_Node__
-  commentId: M:MoreStructures.Tests.RecImmTrees.TreeMock.Node.#ctor(System.Int32,System.Collections.Generic.IDictionary{MoreStructures.Tests.RecImmTrees.TreeMock.Edge,MoreStructures.Tests.RecImmTrees.TreeMock.Node})
+  href: api/MoreStructures.Tests.RecImmTrees.TreeMock.Node.html#MoreStructures_Tests_RecImmTrees_TreeMock_Node__ctor_System_Int32_IDictionary_MoreStructures_Tests_RecImmTrees_TreeMock_Edge_MoreStructures_Tests_RecImmTrees_TreeMock_Node__
+  commentId: M:MoreStructures.Tests.RecImmTrees.TreeMock.Node.#ctor(System.Int32,IDictionary{MoreStructures.Tests.RecImmTrees.TreeMock.Edge,MoreStructures.Tests.RecImmTrees.TreeMock.Node})
   name.vb: Node(Int32, IDictionary(Of TreeMock.Edge, TreeMock.Node))
-  fullName: MoreStructures.Tests.RecImmTrees.TreeMock.Node.Node(System.Int32, System.Collections.Generic.IDictionary<MoreStructures.Tests.RecImmTrees.TreeMock.Edge, MoreStructures.Tests.RecImmTrees.TreeMock.Node>)
-  fullName.vb: MoreStructures.Tests.RecImmTrees.TreeMock.Node.Node(System.Int32, System.Collections.Generic.IDictionary(Of MoreStructures.Tests.RecImmTrees.TreeMock.Edge, MoreStructures.Tests.RecImmTrees.TreeMock.Node))
+  fullName: MoreStructures.Tests.RecImmTrees.TreeMock.Node.Node(System.Int32, IDictionary<MoreStructures.Tests.RecImmTrees.TreeMock.Edge, MoreStructures.Tests.RecImmTrees.TreeMock.Node>)
+  fullName.vb: MoreStructures.Tests.RecImmTrees.TreeMock.Node.Node(System.Int32, IDictionary(Of MoreStructures.Tests.RecImmTrees.TreeMock.Edge, MoreStructures.Tests.RecImmTrees.TreeMock.Node))
   nameWithType: TreeMock.Node.Node(Int32, IDictionary<TreeMock.Edge, TreeMock.Node>)
   nameWithType.vb: TreeMock.Node.Node(Int32, IDictionary(Of TreeMock.Edge, TreeMock.Node))
 - uid: MoreStructures.Tests.RecImmTrees.TreeMock.Node.#ctor*
@@ -7570,6 +7528,24 @@ references:
   commentId: F:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.EmptyString
   fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.EmptyString
   nameWithType: BuilderEquivalences.EquivalenceId.EmptyString
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.EmptyStrings
+  name: EmptyStrings
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_EmptyStrings
+  commentId: F:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.EmptyStrings
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.EmptyStrings
+  nameWithType: BuilderEquivalences.EquivalenceId.EmptyStrings
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.OneEmptyOneNonEmpty
+  name: OneEmptyOneNonEmpty
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_OneEmptyOneNonEmpty
+  commentId: F:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.OneEmptyOneNonEmpty
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.OneEmptyOneNonEmpty
+  nameWithType: BuilderEquivalences.EquivalenceId.OneEmptyOneNonEmpty
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.OneNonEmptyOneEmpty
+  name: OneNonEmptyOneEmpty
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_OneNonEmptyOneEmpty
+  commentId: F:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.OneNonEmptyOneEmpty
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.OneNonEmptyOneEmpty
+  nameWithType: BuilderEquivalences.EquivalenceId.OneNonEmptyOneEmpty
 - uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.SingleChar
   name: SingleChar
   href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_SingleChar
@@ -7600,6 +7576,18 @@ references:
   commentId: F:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.ThreeCharsString_SamePrefixes
   fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.ThreeCharsString_SamePrefixes
   nameWithType: BuilderEquivalences.EquivalenceId.ThreeCharsString_SamePrefixes
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.ThreeDifferent
+  name: ThreeDifferent
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_ThreeDifferent
+  commentId: F:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.ThreeDifferent
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.ThreeDifferent
+  nameWithType: BuilderEquivalences.EquivalenceId.ThreeDifferent
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.ThreeSame
+  name: ThreeSame
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_ThreeSame
+  commentId: F:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.ThreeSame
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.ThreeSame
+  nameWithType: BuilderEquivalences.EquivalenceId.ThreeSame
 - uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoChars_ExtendingPrefixes
   name: TwoChars_ExtendingPrefixes
   href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_TwoChars_ExtendingPrefixes
@@ -7618,12 +7606,96 @@ references:
   commentId: F:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoCharsString_SamePrefixes
   fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoCharsString_SamePrefixes
   nameWithType: BuilderEquivalences.EquivalenceId.TwoCharsString_SamePrefixes
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoEmptyOneNonEmpty
+  name: TwoEmptyOneNonEmpty
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_TwoEmptyOneNonEmpty
+  commentId: F:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoEmptyOneNonEmpty
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoEmptyOneNonEmpty
+  nameWithType: BuilderEquivalences.EquivalenceId.TwoEmptyOneNonEmpty
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoEmptyOneNonEmptyDifferentOrder
+  name: TwoEmptyOneNonEmptyDifferentOrder
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_TwoEmptyOneNonEmptyDifferentOrder
+  commentId: F:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoEmptyOneNonEmptyDifferentOrder
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoEmptyOneNonEmptyDifferentOrder
+  nameWithType: BuilderEquivalences.EquivalenceId.TwoEmptyOneNonEmptyDifferentOrder
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoNonSharingChars
+  name: TwoNonSharingChars
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_TwoNonSharingChars
+  commentId: F:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoNonSharingChars
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoNonSharingChars
+  nameWithType: BuilderEquivalences.EquivalenceId.TwoNonSharingChars
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoSame
+  name: TwoSame
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_TwoSame
+  commentId: F:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoSame
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoSame
+  nameWithType: BuilderEquivalences.EquivalenceId.TwoSame
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoSameOneDifferent
+  name: TwoSameOneDifferent
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_TwoSameOneDifferent
+  commentId: F:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoSameOneDifferent
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoSameOneDifferent
+  nameWithType: BuilderEquivalences.EquivalenceId.TwoSameOneDifferent
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoSharingChars
+  name: TwoSharingChars
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_TwoSharingChars
+  commentId: F:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoSharingChars
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.TwoSharingChars
+  nameWithType: BuilderEquivalences.EquivalenceId.TwoSharingChars
 - uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.Equivalences
   name: Equivalences
   href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_Equivalences
   commentId: F:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.Equivalences
   fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.Equivalences
   nameWithType: BuilderEquivalences.Equivalences
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue
+  name: BuilderEquivalences.EquivalenceValue
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue.html
+  commentId: T:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue
+  nameWithType: BuilderEquivalences.EquivalenceValue
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue.#ctor(MoreStructures.TextWithTerminator[],MoreStructures.SuffixTrees.SuffixTreeNode)
+  name: EquivalenceValue(TextWithTerminator[], SuffixTreeNode)
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceValue__ctor_MoreStructures_TextWithTerminator___MoreStructures_SuffixTrees_SuffixTreeNode_
+  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue.#ctor(MoreStructures.TextWithTerminator[],MoreStructures.SuffixTrees.SuffixTreeNode)
+  name.vb: EquivalenceValue(TextWithTerminator(), SuffixTreeNode)
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue.EquivalenceValue(MoreStructures.TextWithTerminator[], MoreStructures.SuffixTrees.SuffixTreeNode)
+  fullName.vb: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue.EquivalenceValue(MoreStructures.TextWithTerminator(), MoreStructures.SuffixTrees.SuffixTreeNode)
+  nameWithType: BuilderEquivalences.EquivalenceValue.EquivalenceValue(TextWithTerminator[], SuffixTreeNode)
+  nameWithType.vb: BuilderEquivalences.EquivalenceValue.EquivalenceValue(TextWithTerminator(), SuffixTreeNode)
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue.#ctor*
+  name: EquivalenceValue
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceValue__ctor_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue.EquivalenceValue
+  nameWithType: BuilderEquivalences.EquivalenceValue.EquivalenceValue
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue.Texts
+  name: Texts
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceValue_Texts
+  commentId: P:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue.Texts
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue.Texts
+  nameWithType: BuilderEquivalences.EquivalenceValue.Texts
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue.Texts*
+  name: Texts
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceValue_Texts_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue.Texts
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue.Texts
+  nameWithType: BuilderEquivalences.EquivalenceValue.Texts
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue.TreeNode
+  name: TreeNode
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceValue_TreeNode
+  commentId: P:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue.TreeNode
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue.TreeNode
+  nameWithType: BuilderEquivalences.EquivalenceValue.TreeNode
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue.TreeNode*
+  name: TreeNode
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceValue_TreeNode_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue.TreeNode
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceValue.TreeNode
+  nameWithType: BuilderEquivalences.EquivalenceValue.TreeNode
 - uid: MoreStructures.Tests.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilderTests
   name: NaivePartiallyRecursiveSuffixTreeBuilderTests
   href: api/MoreStructures.Tests.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilderTests.html
@@ -7684,19 +7756,32 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_BuildsExampleTreeFromExampleText
   nameWithType: SuffixTreeBuilderTests.BuildTree_BuildsExampleTreeFromExampleText
-- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_IsCorrect(MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId)
-  name: BuildTree_IsCorrect(BuilderEquivalences.EquivalenceId)
-  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_IsCorrect_MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_
-  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_IsCorrect(MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId)
-  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_IsCorrect(MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId)
-  nameWithType: SuffixTreeBuilderTests.BuildTree_IsCorrect(BuilderEquivalences.EquivalenceId)
-- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_IsCorrect*
-  name: BuildTree_IsCorrect
-  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_IsCorrect_
-  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_IsCorrect
+- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_IsCorrectWithMultipleTexts(MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId)
+  name: BuildTree_IsCorrectWithMultipleTexts(BuilderEquivalences.EquivalenceId)
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_IsCorrectWithMultipleTexts_MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_
+  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_IsCorrectWithMultipleTexts(MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId)
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_IsCorrectWithMultipleTexts(MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId)
+  nameWithType: SuffixTreeBuilderTests.BuildTree_IsCorrectWithMultipleTexts(BuilderEquivalences.EquivalenceId)
+- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_IsCorrectWithMultipleTexts*
+  name: BuildTree_IsCorrectWithMultipleTexts
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_IsCorrectWithMultipleTexts_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_IsCorrectWithMultipleTexts
   isSpec: "True"
-  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_IsCorrect
-  nameWithType: SuffixTreeBuilderTests.BuildTree_IsCorrect
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_IsCorrectWithMultipleTexts
+  nameWithType: SuffixTreeBuilderTests.BuildTree_IsCorrectWithMultipleTexts
+- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_IsCorrectWithSingleText(MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId)
+  name: BuildTree_IsCorrectWithSingleText(BuilderEquivalences.EquivalenceId)
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_IsCorrectWithSingleText_MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_
+  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_IsCorrectWithSingleText(MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId)
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_IsCorrectWithSingleText(MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId)
+  nameWithType: SuffixTreeBuilderTests.BuildTree_IsCorrectWithSingleText(BuilderEquivalences.EquivalenceId)
+- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_IsCorrectWithSingleText*
+  name: BuildTree_IsCorrectWithSingleText
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_IsCorrectWithSingleText_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_IsCorrectWithSingleText
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_IsCorrectWithSingleText
+  nameWithType: SuffixTreeBuilderTests.BuildTree_IsCorrectWithSingleText
 - uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.BuildTree_ReturnsAllSuffixes
   name: BuildTree_ReturnsAllSuffixes()
   href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixTreeBuilderTests_BuildTree_ReturnsAllSuffixes
@@ -8381,6 +8466,138 @@ references:
   commentId: N:MoreStructures.Tests.SuffixTries.Builders
   fullName: MoreStructures.Tests.SuffixTries.Builders
   nameWithType: MoreStructures.Tests.SuffixTries.Builders
+- uid: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences
+  name: BuilderEquivalences
+  href: api/MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.html
+  commentId: T:MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences
+  fullName: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences
+  nameWithType: BuilderEquivalences
+- uid: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId
+  name: BuilderEquivalences.EquivalenceId
+  href: api/MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.html
+  commentId: T:MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId
+  fullName: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId
+  nameWithType: BuilderEquivalences.EquivalenceId
+- uid: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.EmptyStrings
+  name: EmptyStrings
+  href: api/MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTries_Builders_BuilderEquivalences_EquivalenceId_EmptyStrings
+  commentId: F:MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.EmptyStrings
+  fullName: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.EmptyStrings
+  nameWithType: BuilderEquivalences.EquivalenceId.EmptyStrings
+- uid: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.OneEmptyOneNonEmpty
+  name: OneEmptyOneNonEmpty
+  href: api/MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTries_Builders_BuilderEquivalences_EquivalenceId_OneEmptyOneNonEmpty
+  commentId: F:MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.OneEmptyOneNonEmpty
+  fullName: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.OneEmptyOneNonEmpty
+  nameWithType: BuilderEquivalences.EquivalenceId.OneEmptyOneNonEmpty
+- uid: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.OneNonEmptyOneEmpty
+  name: OneNonEmptyOneEmpty
+  href: api/MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTries_Builders_BuilderEquivalences_EquivalenceId_OneNonEmptyOneEmpty
+  commentId: F:MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.OneNonEmptyOneEmpty
+  fullName: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.OneNonEmptyOneEmpty
+  nameWithType: BuilderEquivalences.EquivalenceId.OneNonEmptyOneEmpty
+- uid: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.ThreeDifferent
+  name: ThreeDifferent
+  href: api/MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTries_Builders_BuilderEquivalences_EquivalenceId_ThreeDifferent
+  commentId: F:MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.ThreeDifferent
+  fullName: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.ThreeDifferent
+  nameWithType: BuilderEquivalences.EquivalenceId.ThreeDifferent
+- uid: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.ThreeSame
+  name: ThreeSame
+  href: api/MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTries_Builders_BuilderEquivalences_EquivalenceId_ThreeSame
+  commentId: F:MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.ThreeSame
+  fullName: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.ThreeSame
+  nameWithType: BuilderEquivalences.EquivalenceId.ThreeSame
+- uid: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.TwoEmptyOneNonEmpty
+  name: TwoEmptyOneNonEmpty
+  href: api/MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTries_Builders_BuilderEquivalences_EquivalenceId_TwoEmptyOneNonEmpty
+  commentId: F:MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.TwoEmptyOneNonEmpty
+  fullName: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.TwoEmptyOneNonEmpty
+  nameWithType: BuilderEquivalences.EquivalenceId.TwoEmptyOneNonEmpty
+- uid: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.TwoEmptyOneNonEmptyDifferentOrder
+  name: TwoEmptyOneNonEmptyDifferentOrder
+  href: api/MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTries_Builders_BuilderEquivalences_EquivalenceId_TwoEmptyOneNonEmptyDifferentOrder
+  commentId: F:MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.TwoEmptyOneNonEmptyDifferentOrder
+  fullName: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.TwoEmptyOneNonEmptyDifferentOrder
+  nameWithType: BuilderEquivalences.EquivalenceId.TwoEmptyOneNonEmptyDifferentOrder
+- uid: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.TwoNonSharingChars
+  name: TwoNonSharingChars
+  href: api/MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTries_Builders_BuilderEquivalences_EquivalenceId_TwoNonSharingChars
+  commentId: F:MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.TwoNonSharingChars
+  fullName: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.TwoNonSharingChars
+  nameWithType: BuilderEquivalences.EquivalenceId.TwoNonSharingChars
+- uid: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.TwoSame
+  name: TwoSame
+  href: api/MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTries_Builders_BuilderEquivalences_EquivalenceId_TwoSame
+  commentId: F:MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.TwoSame
+  fullName: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.TwoSame
+  nameWithType: BuilderEquivalences.EquivalenceId.TwoSame
+- uid: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.TwoSameOneDifferent
+  name: TwoSameOneDifferent
+  href: api/MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTries_Builders_BuilderEquivalences_EquivalenceId_TwoSameOneDifferent
+  commentId: F:MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.TwoSameOneDifferent
+  fullName: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.TwoSameOneDifferent
+  nameWithType: BuilderEquivalences.EquivalenceId.TwoSameOneDifferent
+- uid: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.TwoSharingChars
+  name: TwoSharingChars
+  href: api/MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTries_Builders_BuilderEquivalences_EquivalenceId_TwoSharingChars
+  commentId: F:MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.TwoSharingChars
+  fullName: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId.TwoSharingChars
+  nameWithType: BuilderEquivalences.EquivalenceId.TwoSharingChars
+- uid: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.Equivalences
+  name: Equivalences
+  href: api/MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.html#MoreStructures_Tests_SuffixTries_Builders_BuilderEquivalences_Equivalences
+  commentId: F:MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.Equivalences
+  fullName: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.Equivalences
+  nameWithType: BuilderEquivalences.Equivalences
+- uid: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue
+  name: BuilderEquivalences.EquivalenceValue
+  href: api/MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue.html
+  commentId: T:MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue
+  fullName: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue
+  nameWithType: BuilderEquivalences.EquivalenceValue
+- uid: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue.#ctor(MoreStructures.TextWithTerminator[],MoreStructures.SuffixTries.SuffixTrieNode)
+  name: EquivalenceValue(TextWithTerminator[], SuffixTrieNode)
+  href: api/MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue.html#MoreStructures_Tests_SuffixTries_Builders_BuilderEquivalences_EquivalenceValue__ctor_MoreStructures_TextWithTerminator___MoreStructures_SuffixTries_SuffixTrieNode_
+  commentId: M:MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue.#ctor(MoreStructures.TextWithTerminator[],MoreStructures.SuffixTries.SuffixTrieNode)
+  name.vb: EquivalenceValue(TextWithTerminator(), SuffixTrieNode)
+  fullName: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue.EquivalenceValue(MoreStructures.TextWithTerminator[], MoreStructures.SuffixTries.SuffixTrieNode)
+  fullName.vb: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue.EquivalenceValue(MoreStructures.TextWithTerminator(), MoreStructures.SuffixTries.SuffixTrieNode)
+  nameWithType: BuilderEquivalences.EquivalenceValue.EquivalenceValue(TextWithTerminator[], SuffixTrieNode)
+  nameWithType.vb: BuilderEquivalences.EquivalenceValue.EquivalenceValue(TextWithTerminator(), SuffixTrieNode)
+- uid: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue.#ctor*
+  name: EquivalenceValue
+  href: api/MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue.html#MoreStructures_Tests_SuffixTries_Builders_BuilderEquivalences_EquivalenceValue__ctor_
+  commentId: Overload:MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue.EquivalenceValue
+  nameWithType: BuilderEquivalences.EquivalenceValue.EquivalenceValue
+- uid: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue.Texts
+  name: Texts
+  href: api/MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue.html#MoreStructures_Tests_SuffixTries_Builders_BuilderEquivalences_EquivalenceValue_Texts
+  commentId: P:MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue.Texts
+  fullName: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue.Texts
+  nameWithType: BuilderEquivalences.EquivalenceValue.Texts
+- uid: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue.Texts*
+  name: Texts
+  href: api/MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue.html#MoreStructures_Tests_SuffixTries_Builders_BuilderEquivalences_EquivalenceValue_Texts_
+  commentId: Overload:MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue.Texts
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue.Texts
+  nameWithType: BuilderEquivalences.EquivalenceValue.Texts
+- uid: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue.TreeNode
+  name: TreeNode
+  href: api/MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue.html#MoreStructures_Tests_SuffixTries_Builders_BuilderEquivalences_EquivalenceValue_TreeNode
+  commentId: P:MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue.TreeNode
+  fullName: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue.TreeNode
+  nameWithType: BuilderEquivalences.EquivalenceValue.TreeNode
+- uid: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue.TreeNode*
+  name: TreeNode
+  href: api/MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue.html#MoreStructures_Tests_SuffixTries_Builders_BuilderEquivalences_EquivalenceValue_TreeNode_
+  commentId: Overload:MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue.TreeNode
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceValue.TreeNode
+  nameWithType: BuilderEquivalences.EquivalenceValue.TreeNode
 - uid: MoreStructures.Tests.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilderTests
   name: NaivePartiallyRecursiveSuffixTrieBuilderTests
   href: api/MoreStructures.Tests.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilderTests.html
@@ -8448,6 +8665,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.BuildTree_EmptyString
   nameWithType: SuffixTrieBuilderTests.BuildTree_EmptyString
+- uid: MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.BuildTree_IsCorrectWithMultipleTexts(MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId)
+  name: BuildTree_IsCorrectWithMultipleTexts(BuilderEquivalences.EquivalenceId)
+  href: api/MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.html#MoreStructures_Tests_SuffixTries_Builders_SuffixTrieBuilderTests_BuildTree_IsCorrectWithMultipleTexts_MoreStructures_Tests_SuffixTries_Builders_BuilderEquivalences_EquivalenceId_
+  commentId: M:MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.BuildTree_IsCorrectWithMultipleTexts(MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId)
+  fullName: MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.BuildTree_IsCorrectWithMultipleTexts(MoreStructures.Tests.SuffixTries.Builders.BuilderEquivalences.EquivalenceId)
+  nameWithType: SuffixTrieBuilderTests.BuildTree_IsCorrectWithMultipleTexts(BuilderEquivalences.EquivalenceId)
+- uid: MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.BuildTree_IsCorrectWithMultipleTexts*
+  name: BuildTree_IsCorrectWithMultipleTexts
+  href: api/MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.html#MoreStructures_Tests_SuffixTries_Builders_SuffixTrieBuilderTests_BuildTree_IsCorrectWithMultipleTexts_
+  commentId: Overload:MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.BuildTree_IsCorrectWithMultipleTexts
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.BuildTree_IsCorrectWithMultipleTexts
+  nameWithType: SuffixTrieBuilderTests.BuildTree_IsCorrectWithMultipleTexts
 - uid: MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.BuildTree_ReturnsAllSuffixes
   name: BuildTree_ReturnsAllSuffixes()
   href: api/MoreStructures.Tests.SuffixTries.Builders.SuffixTrieBuilderTests.html#MoreStructures_Tests_SuffixTries_Builders_SuffixTrieBuilderTests_BuildTree_ReturnsAllSuffixes
@@ -8797,6 +9027,35 @@ references:
   commentId: T:MoreStructures.Tests.TextWithTerminatorExtensionsTests
   fullName: MoreStructures.Tests.TextWithTerminatorExtensionsTests
   nameWithType: TextWithTerminatorExtensionsTests
+- uid: MoreStructures.Tests.TextWithTerminatorExtensionsTests.GenerateFullText_IsCorrect(System.String,System.Char,System.String[],System.Char[])
+  name: GenerateFullText_IsCorrect(String, Char, String[], Char[])
+  href: api/MoreStructures.Tests.TextWithTerminatorExtensionsTests.html#MoreStructures_Tests_TextWithTerminatorExtensionsTests_GenerateFullText_IsCorrect_System_String_System_Char_System_String___System_Char___
+  commentId: M:MoreStructures.Tests.TextWithTerminatorExtensionsTests.GenerateFullText_IsCorrect(System.String,System.Char,System.String[],System.Char[])
+  name.vb: GenerateFullText_IsCorrect(String, Char, String(), Char())
+  fullName: MoreStructures.Tests.TextWithTerminatorExtensionsTests.GenerateFullText_IsCorrect(System.String, System.Char, System.String[], System.Char[])
+  fullName.vb: MoreStructures.Tests.TextWithTerminatorExtensionsTests.GenerateFullText_IsCorrect(System.String, System.Char, System.String(), System.Char())
+  nameWithType: TextWithTerminatorExtensionsTests.GenerateFullText_IsCorrect(String, Char, String[], Char[])
+  nameWithType.vb: TextWithTerminatorExtensionsTests.GenerateFullText_IsCorrect(String, Char, String(), Char())
+- uid: MoreStructures.Tests.TextWithTerminatorExtensionsTests.GenerateFullText_IsCorrect*
+  name: GenerateFullText_IsCorrect
+  href: api/MoreStructures.Tests.TextWithTerminatorExtensionsTests.html#MoreStructures_Tests_TextWithTerminatorExtensionsTests_GenerateFullText_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.TextWithTerminatorExtensionsTests.GenerateFullText_IsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.TextWithTerminatorExtensionsTests.GenerateFullText_IsCorrect
+  nameWithType: TextWithTerminatorExtensionsTests.GenerateFullText_IsCorrect
+- uid: MoreStructures.Tests.TextWithTerminatorExtensionsTests.GenerateFullText_RaiseExceptionOnRepeatedTerminators
+  name: GenerateFullText_RaiseExceptionOnRepeatedTerminators()
+  href: api/MoreStructures.Tests.TextWithTerminatorExtensionsTests.html#MoreStructures_Tests_TextWithTerminatorExtensionsTests_GenerateFullText_RaiseExceptionOnRepeatedTerminators
+  commentId: M:MoreStructures.Tests.TextWithTerminatorExtensionsTests.GenerateFullText_RaiseExceptionOnRepeatedTerminators
+  fullName: MoreStructures.Tests.TextWithTerminatorExtensionsTests.GenerateFullText_RaiseExceptionOnRepeatedTerminators()
+  nameWithType: TextWithTerminatorExtensionsTests.GenerateFullText_RaiseExceptionOnRepeatedTerminators()
+- uid: MoreStructures.Tests.TextWithTerminatorExtensionsTests.GenerateFullText_RaiseExceptionOnRepeatedTerminators*
+  name: GenerateFullText_RaiseExceptionOnRepeatedTerminators
+  href: api/MoreStructures.Tests.TextWithTerminatorExtensionsTests.html#MoreStructures_Tests_TextWithTerminatorExtensionsTests_GenerateFullText_RaiseExceptionOnRepeatedTerminators_
+  commentId: Overload:MoreStructures.Tests.TextWithTerminatorExtensionsTests.GenerateFullText_RaiseExceptionOnRepeatedTerminators
+  isSpec: "True"
+  fullName: MoreStructures.Tests.TextWithTerminatorExtensionsTests.GenerateFullText_RaiseExceptionOnRepeatedTerminators
+  nameWithType: TextWithTerminatorExtensionsTests.GenerateFullText_RaiseExceptionOnRepeatedTerminators
 - uid: MoreStructures.Tests.TextWithTerminatorExtensionsTests.ToVirtuallyRotated
   name: ToVirtuallyRotated()
   href: api/MoreStructures.Tests.TextWithTerminatorExtensionsTests.html#MoreStructures_Tests_TextWithTerminatorExtensionsTests_ToVirtuallyRotated
@@ -8985,6 +9244,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.TextWithTerminatorTests.StartsWith_IsCorrect
   nameWithType: TextWithTerminatorTests.StartsWith_IsCorrect
+- uid: MoreStructures.Tests.TextWithTerminatorTests.TerminatorIndex_IsCorrect
+  name: TerminatorIndex_IsCorrect()
+  href: api/MoreStructures.Tests.TextWithTerminatorTests.html#MoreStructures_Tests_TextWithTerminatorTests_TerminatorIndex_IsCorrect
+  commentId: M:MoreStructures.Tests.TextWithTerminatorTests.TerminatorIndex_IsCorrect
+  fullName: MoreStructures.Tests.TextWithTerminatorTests.TerminatorIndex_IsCorrect()
+  nameWithType: TextWithTerminatorTests.TerminatorIndex_IsCorrect()
+- uid: MoreStructures.Tests.TextWithTerminatorTests.TerminatorIndex_IsCorrect*
+  name: TerminatorIndex_IsCorrect
+  href: api/MoreStructures.Tests.TextWithTerminatorTests.html#MoreStructures_Tests_TextWithTerminatorTests_TerminatorIndex_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.TextWithTerminatorTests.TerminatorIndex_IsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.TextWithTerminatorTests.TerminatorIndex_IsCorrect
+  nameWithType: TextWithTerminatorTests.TerminatorIndex_IsCorrect
 - uid: MoreStructures.Tests.Utilities
   name: MoreStructures.Tests.Utilities
   href: api/MoreStructures.Tests.Utilities.html
@@ -9397,6 +9669,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.Ctor_DoesntEnumerateUnderlyingEnumerable
   nameWithType: ValueEnumerableTests.Ctor_DoesntEnumerateUnderlyingEnumerable
+- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.Ctor_IsIdempotent
+  name: Ctor_IsIdempotent()
+  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_Ctor_IsIdempotent
+  commentId: M:MoreStructures.Tests.Utilities.ValueEnumerableTests.Ctor_IsIdempotent
+  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.Ctor_IsIdempotent()
+  nameWithType: ValueEnumerableTests.Ctor_IsIdempotent()
+- uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.Ctor_IsIdempotent*
+  name: Ctor_IsIdempotent
+  href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_Ctor_IsIdempotent_
+  commentId: Overload:MoreStructures.Tests.Utilities.ValueEnumerableTests.Ctor_IsIdempotent
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.ValueEnumerableTests.Ctor_IsIdempotent
+  nameWithType: ValueEnumerableTests.Ctor_IsIdempotent
 - uid: MoreStructures.Tests.Utilities.ValueEnumerableTests.Equals_ByValueOnItemsOfUnderlyingEnumerable
   name: Equals_ByValueOnItemsOfUnderlyingEnumerable()
   href: api/MoreStructures.Tests.Utilities.ValueEnumerableTests.html#MoreStructures_Tests_Utilities_ValueEnumerableTests_Equals_ByValueOnItemsOfUnderlyingEnumerable
@@ -10097,6 +10382,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.TextWithTerminator.Terminator
   nameWithType: TextWithTerminator.Terminator
+- uid: MoreStructures.TextWithTerminator.TerminatorIndex
+  name: TerminatorIndex
+  href: api/MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_TerminatorIndex
+  commentId: P:MoreStructures.TextWithTerminator.TerminatorIndex
+  fullName: MoreStructures.TextWithTerminator.TerminatorIndex
+  nameWithType: TextWithTerminator.TerminatorIndex
+- uid: MoreStructures.TextWithTerminator.TerminatorIndex*
+  name: TerminatorIndex
+  href: api/MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_TerminatorIndex_
+  commentId: Overload:MoreStructures.TextWithTerminator.TerminatorIndex
+  isSpec: "True"
+  fullName: MoreStructures.TextWithTerminator.TerminatorIndex
+  nameWithType: TextWithTerminator.TerminatorIndex
 - uid: MoreStructures.TextWithTerminator.Text
   name: Text
   href: api/MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_Text
@@ -10129,6 +10427,22 @@ references:
   commentId: T:MoreStructures.TextWithTerminatorExtensions
   fullName: MoreStructures.TextWithTerminatorExtensions
   nameWithType: TextWithTerminatorExtensions
+- uid: MoreStructures.TextWithTerminatorExtensions.GenerateFullText(MoreStructures.TextWithTerminator[])
+  name: GenerateFullText(TextWithTerminator[])
+  href: api/MoreStructures.TextWithTerminatorExtensions.html#MoreStructures_TextWithTerminatorExtensions_GenerateFullText_MoreStructures_TextWithTerminator___
+  commentId: M:MoreStructures.TextWithTerminatorExtensions.GenerateFullText(MoreStructures.TextWithTerminator[])
+  name.vb: GenerateFullText(TextWithTerminator())
+  fullName: MoreStructures.TextWithTerminatorExtensions.GenerateFullText(MoreStructures.TextWithTerminator[])
+  fullName.vb: MoreStructures.TextWithTerminatorExtensions.GenerateFullText(MoreStructures.TextWithTerminator())
+  nameWithType: TextWithTerminatorExtensions.GenerateFullText(TextWithTerminator[])
+  nameWithType.vb: TextWithTerminatorExtensions.GenerateFullText(TextWithTerminator())
+- uid: MoreStructures.TextWithTerminatorExtensions.GenerateFullText*
+  name: GenerateFullText
+  href: api/MoreStructures.TextWithTerminatorExtensions.html#MoreStructures_TextWithTerminatorExtensions_GenerateFullText_
+  commentId: Overload:MoreStructures.TextWithTerminatorExtensions.GenerateFullText
+  isSpec: "True"
+  fullName: MoreStructures.TextWithTerminatorExtensions.GenerateFullText
+  nameWithType: TextWithTerminatorExtensions.GenerateFullText
 - uid: MoreStructures.TextWithTerminatorExtensions.ToVirtuallyRotated(MoreStructures.TextWithTerminator,System.Int32)
   name: ToVirtuallyRotated(TextWithTerminator, Int32)
   href: api/MoreStructures.TextWithTerminatorExtensions.html#MoreStructures_TextWithTerminatorExtensions_ToVirtuallyRotated_MoreStructures_TextWithTerminator_System_Int32_

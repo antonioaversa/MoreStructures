@@ -125,10 +125,78 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminatorExtensions_GenerateFullText_MoreStructures_TextWithTerminator___.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminatorExtensions.GenerateFullText(MoreStructures.TextWithTerminator%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminatorExtensions.cs/#L61">View Source</a>
+  </span>
+  <a id="MoreStructures_TextWithTerminatorExtensions_GenerateFullText_" data-uid="MoreStructures.TextWithTerminatorExtensions.GenerateFullText*"></a>
+  <h4 id="MoreStructures_TextWithTerminatorExtensions_GenerateFullText_MoreStructures_TextWithTerminator___" data-uid="MoreStructures.TextWithTerminatorExtensions.GenerateFullText(MoreStructures.TextWithTerminator[])">GenerateFullText(TextWithTerminator[])</h4>
+  <div class="markdown level1 summary"><p>Builds a single <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>, concatenating the <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a> instances
+in <code data-dev-comment-type="paramref" class="paramref">texts</code>. Returns as well the <see cref="!:ISet&lt;T>"></see> of all the terminators and their indexes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static (TextWithTerminator fullText, ISet&lt;char&gt; terminators) GenerateFullText(this TextWithTerminator[] texts)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>[]</td>
+        <td><span class="parametername">texts</span></td>
+        <td><p>The text instances to join into a single text.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ValueTuple</span>&lt;<a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>, <span class="xref">ISet</span>&lt;<span class="xref">System.Char</span>&gt;&gt;</td>
+        <td><p>A text with the <a class="xref" href="MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_Text">Text</a> of all items of <code data-dev-comment-type="paramref" class="paramref">texts</code> concatenated,
+each followed by its own <a class="xref" href="MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_Terminator">Terminator</a> except the last, and the
+<a class="xref" href="MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_Terminator">Terminator</a> of the last item.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_TextWithTerminatorExtensions_GenerateFullText_MoreStructures_TextWithTerminator____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+    COMPLEXITY
+<br>
+Requires iterating over the <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a> items of <code data-dev-comment-type="paramref" class="paramref">texts</code>, but not on
+their content.
+<br>
+Therefore, Time Complexity is O(n), where n is the number of items of <code data-dev-comment-type="paramref" class="paramref">texts</code>, and not 
+O(t), where t is the length of the concatenated text.
+<br>
+Space Complexity is also O(n), since the <see cref="!:ISet&lt;T>"></see> of terminators contains n items and the 
+generated full text receives a lazy evaluated <see cref="!:IEnumerable&lt;T>"></see> of the <span class="xref">System.Char</span> in
+each <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a> of <code data-dev-comment-type="paramref" class="paramref">texts</code>.
+</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminatorExtensions_ToVirtuallyRotated_MoreStructures_TextWithTerminator_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminatorExtensions.ToVirtuallyRotated(MoreStructures.TextWithTerminator%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminatorExtensions.cs/#L37">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminatorExtensions.cs/#L31">View Source</a>
   </span>
   <a id="MoreStructures_TextWithTerminatorExtensions_ToVirtuallyRotated_" data-uid="MoreStructures.TextWithTerminatorExtensions.ToVirtuallyRotated*"></a>
   <h4 id="MoreStructures_TextWithTerminatorExtensions_ToVirtuallyRotated_MoreStructures_TextWithTerminator_System_Int32_" data-uid="MoreStructures.TextWithTerminatorExtensions.ToVirtuallyRotated(MoreStructures.TextWithTerminator,System.Int32)">ToVirtuallyRotated(TextWithTerminator, Int32)</h4>
@@ -205,7 +273,7 @@ rotation in all its exposed functionalities.
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminatorExtensions.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminatorExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminatorExtensions.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminatorExtensions.cs/#L6" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

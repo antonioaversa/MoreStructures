@@ -84,7 +84,7 @@
   <h1 id="MoreStructures_Lists_Searching_BinarySearch" data-uid="MoreStructures.Lists.Searching.BinarySearch" class="text-break">Class BinarySearch
   </h1>
   <div class="markdown level0 summary"><p>An object able to search in logarithmic time for items in direct random access structures, such as lists and
-arrays, which are monodimensional, implement the <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span> interface and are sorted in ascending
+arrays, which are monodimensional, implement the <see cref="!:IEnumerable&lt;T>"></see> interface and are sorted in ascending
 order according to the provided comparer (which is the property enabling the search to be carried out in O(log(n))
 time.</p>
 </div>
@@ -137,13 +137,13 @@ The sorting order assumed by this search can be reversed by simply inverting the
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Lists_Searching_BinarySearch_First__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20MoreStructures.Lists.Searching.BinarySearch.First%60%601(System.Collections.Generic.IEnumerable%7B%60%600%7D%2C%60%600%2CSystem.Collections.Generic.IComparer%7B%60%600%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Lists_Searching_BinarySearch_First__1_IEnumerable___0____0_System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20MoreStructures.Lists.Searching.BinarySearch.First%60%601(IEnumerable%7B%60%600%7D%2C%60%600%2CSystem.Nullable%7BIComparer%7B%60%600%7D%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Searching/BinarySearch.cs/#L69">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Searching/BinarySearch.cs/#L68">View Source</a>
   </span>
   <a id="MoreStructures_Lists_Searching_BinarySearch_First_" data-uid="MoreStructures.Lists.Searching.BinarySearch.First*"></a>
-  <h4 id="MoreStructures_Lists_Searching_BinarySearch_First__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__" data-uid="MoreStructures.Lists.Searching.BinarySearch.First``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})">First&lt;T&gt;(IEnumerable&lt;T&gt;, T, IComparer&lt;T&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)</h4>
+  <h4 id="MoreStructures_Lists_Searching_BinarySearch_First__1_IEnumerable___0____0_System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32__" data-uid="MoreStructures.Lists.Searching.BinarySearch.First``1(IEnumerable{``0},``0,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})">First&lt;T&gt;(IEnumerable&lt;T&gt;, T, Nullable&lt;IComparer&lt;T&gt;&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)</h4>
   <div class="markdown level1 summary"><p><inheritdoc></inheritdoc>
 <br>
 This specific implementation assumes that <code data-dev-comment-type="paramref" class="paramref">source</code> is sorted in ascending order.</p>
@@ -151,7 +151,7 @@ This specific implementation assumes that <code data-dev-comment-type="paramref"
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int First&lt;T&gt;(IEnumerable&lt;T&gt; source, T item, IComparer&lt;T&gt; comparer = null, int? fromIndex = null, int? toIndex = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public int First&lt;T&gt;(IEnumerable&lt;T&gt; source, T item, IComparer&lt;T&gt;? comparer = null, int? fromIndex = null, int? toIndex = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -164,7 +164,7 @@ This specific implementation assumes that <code data-dev-comment-type="paramref"
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="xref">IEnumerable</span>&lt;T&gt;</td>
         <td><span class="parametername">source</span></td>
         <td></td>
       </tr>
@@ -174,7 +174,7 @@ This specific implementation assumes that <code data-dev-comment-type="paramref"
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IComparer</span>&lt;T&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">IComparer</span>&lt;T&gt;&gt;</td>
         <td><span class="parametername">comparer</span></td>
         <td></td>
       </tr>
@@ -220,7 +220,7 @@ This specific implementation assumes that <code data-dev-comment-type="paramref"
       </tr>
     </tbody>
   </table>
-  <h5 id="MoreStructures_Lists_Searching_BinarySearch_First__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32___remarks">Remarks</h5>
+  <h5 id="MoreStructures_Lists_Searching_BinarySearch_First__1_IEnumerable___0____0_System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32___remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>The algorithm split in half the search space at every iteration, reducing it exponentially to a single item
 or to an empty set.
 <br>
@@ -229,13 +229,13 @@ Time Complexity = O(log(n)), Space Complexity = O(1), where n = number of items 
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Lists_Searching_BinarySearch_FirstAll__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20MoreStructures.Lists.Searching.BinarySearch.FirstAll%60%601(System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Collections.Generic.IComparer%7B%60%600%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Lists_Searching_BinarySearch_FirstAll__1_IEnumerable___0__System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20MoreStructures.Lists.Searching.BinarySearch.FirstAll%60%601(IEnumerable%7B%60%600%7D%2CSystem.Nullable%7BIComparer%7B%60%600%7D%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Searching/BinarySearch.cs/#L88">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Searching/BinarySearch.cs/#L87">View Source</a>
   </span>
   <a id="MoreStructures_Lists_Searching_BinarySearch_FirstAll_" data-uid="MoreStructures.Lists.Searching.BinarySearch.FirstAll*"></a>
-  <h4 id="MoreStructures_Lists_Searching_BinarySearch_FirstAll__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__" data-uid="MoreStructures.Lists.Searching.BinarySearch.FirstAll``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})">FirstAll&lt;T&gt;(IEnumerable&lt;T&gt;, IComparer&lt;T&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)</h4>
+  <h4 id="MoreStructures_Lists_Searching_BinarySearch_FirstAll__1_IEnumerable___0__System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32__" data-uid="MoreStructures.Lists.Searching.BinarySearch.FirstAll``1(IEnumerable{``0},System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})">FirstAll&lt;T&gt;(IEnumerable&lt;T&gt;, Nullable&lt;IComparer&lt;T&gt;&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)</h4>
   <div class="markdown level1 summary"><p><inheritdoc></inheritdoc>
 <br>
 This specific implementation assumes that <code data-dev-comment-type="paramref" class="paramref">source</code> is sorted in ascending order.</p>
@@ -243,7 +243,7 @@ This specific implementation assumes that <code data-dev-comment-type="paramref"
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IDictionary&lt;T, int&gt; FirstAll&lt;T&gt;(IEnumerable&lt;T&gt; source, IComparer&lt;T&gt; comparer = null, int? fromIndex = null, int? toIndex = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IDictionary&lt;T, int&gt; FirstAll&lt;T&gt;(IEnumerable&lt;T&gt; source, IComparer&lt;T&gt;? comparer = null, int? fromIndex = null, int? toIndex = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -256,12 +256,12 @@ This specific implementation assumes that <code data-dev-comment-type="paramref"
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="xref">IEnumerable</span>&lt;T&gt;</td>
         <td><span class="parametername">source</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IComparer</span>&lt;T&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">IComparer</span>&lt;T&gt;&gt;</td>
         <td><span class="parametername">comparer</span></td>
         <td></td>
       </tr>
@@ -287,7 +287,7 @@ This specific implementation assumes that <code data-dev-comment-type="paramref"
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;T, <span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">IDictionary</span>&lt;T, <span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -307,23 +307,23 @@ This specific implementation assumes that <code data-dev-comment-type="paramref"
       </tr>
     </tbody>
   </table>
-  <h5 id="MoreStructures_Lists_Searching_BinarySearch_FirstAll__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32___remarks">Remarks</h5>
+  <h5 id="MoreStructures_Lists_Searching_BinarySearch_FirstAll__1_IEnumerable___0__System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32___remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p><inheritdoc></inheritdoc>
 <br>
 The size of the output and the Space Complexity is O(sigma), where:
-<inheritdoc cref="!:LinearSearch.FirstAll&lt;T>(IEnumerable&lt;T>, IComparer&lt;T>?, int?, int?)" path="/remarks/para[@id=&apos;params&apos;]"></inheritdoc>
+<inheritdoc cref="M:MoreStructures.Lists.Searching.LinearSearch.FirstAll``1(IEnumerable{``0},System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})" path="/remarks/para[@id=&apos;params&apos;]"></inheritdoc>
 <br>
 A binary search for the next different element gives an overall O(sigma * log(sigma)) Time Complexity.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Lists_Searching_BinarySearch_Interval__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20MoreStructures.Lists.Searching.BinarySearch.Interval%60%601(System.Collections.Generic.IEnumerable%7B%60%600%7D%2C%60%600%2CSystem.Collections.Generic.IComparer%7B%60%600%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Lists_Searching_BinarySearch_Interval__1_IEnumerable___0____0_System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20MoreStructures.Lists.Searching.BinarySearch.Interval%60%601(IEnumerable%7B%60%600%7D%2C%60%600%2CSystem.Nullable%7BIComparer%7B%60%600%7D%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Searching/BinarySearch.cs/#L144">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Searching/BinarySearch.cs/#L143">View Source</a>
   </span>
   <a id="MoreStructures_Lists_Searching_BinarySearch_Interval_" data-uid="MoreStructures.Lists.Searching.BinarySearch.Interval*"></a>
-  <h4 id="MoreStructures_Lists_Searching_BinarySearch_Interval__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__" data-uid="MoreStructures.Lists.Searching.BinarySearch.Interval``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})">Interval&lt;T&gt;(IEnumerable&lt;T&gt;, T, IComparer&lt;T&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)</h4>
+  <h4 id="MoreStructures_Lists_Searching_BinarySearch_Interval__1_IEnumerable___0____0_System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32__" data-uid="MoreStructures.Lists.Searching.BinarySearch.Interval``1(IEnumerable{``0},``0,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})">Interval&lt;T&gt;(IEnumerable&lt;T&gt;, T, Nullable&lt;IComparer&lt;T&gt;&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)</h4>
   <div class="markdown level1 summary"><p><inheritdoc></inheritdoc>
 <br>
 This specific implementation assumes that <code data-dev-comment-type="paramref" class="paramref">source</code> is sorted in ascending order.</p>
@@ -331,7 +331,7 @@ This specific implementation assumes that <code data-dev-comment-type="paramref"
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public (int first, int last) Interval&lt;T&gt;(IEnumerable&lt;T&gt; source, T item, IComparer&lt;T&gt; comparer = null, int? fromIndex = null, int? toIndex = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public (int first, int last) Interval&lt;T&gt;(IEnumerable&lt;T&gt; source, T item, IComparer&lt;T&gt;? comparer = null, int? fromIndex = null, int? toIndex = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -344,7 +344,7 @@ This specific implementation assumes that <code data-dev-comment-type="paramref"
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="xref">IEnumerable</span>&lt;T&gt;</td>
         <td><span class="parametername">source</span></td>
         <td></td>
       </tr>
@@ -354,7 +354,7 @@ This specific implementation assumes that <code data-dev-comment-type="paramref"
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IComparer</span>&lt;T&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">IComparer</span>&lt;T&gt;&gt;</td>
         <td><span class="parametername">comparer</span></td>
         <td></td>
       </tr>
@@ -400,7 +400,7 @@ This specific implementation assumes that <code data-dev-comment-type="paramref"
       </tr>
     </tbody>
   </table>
-  <h5 id="MoreStructures_Lists_Searching_BinarySearch_Interval__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32___remarks">Remarks</h5>
+  <h5 id="MoreStructures_Lists_Searching_BinarySearch_Interval__1_IEnumerable___0____0_System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32___remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>The algorithm peforms two successive binary search operations: the first to find the lower extreme of the
 interval and the second to find the higher extreme of the interval. Each binary search runs in logarithmic
 time.
@@ -410,13 +410,13 @@ Time Complexity = O(log(n)), Space Complexity = O(1), where n = number of items 
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Lists_Searching_BinarySearch_Last__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20MoreStructures.Lists.Searching.BinarySearch.Last%60%601(System.Collections.Generic.IEnumerable%7B%60%600%7D%2C%60%600%2CSystem.Collections.Generic.IComparer%7B%60%600%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Lists_Searching_BinarySearch_Last__1_IEnumerable___0____0_System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20MoreStructures.Lists.Searching.BinarySearch.Last%60%601(IEnumerable%7B%60%600%7D%2C%60%600%2CSystem.Nullable%7BIComparer%7B%60%600%7D%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Searching/BinarySearch.cs/#L126">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Searching/BinarySearch.cs/#L125">View Source</a>
   </span>
   <a id="MoreStructures_Lists_Searching_BinarySearch_Last_" data-uid="MoreStructures.Lists.Searching.BinarySearch.Last*"></a>
-  <h4 id="MoreStructures_Lists_Searching_BinarySearch_Last__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__" data-uid="MoreStructures.Lists.Searching.BinarySearch.Last``1(System.Collections.Generic.IEnumerable{``0},``0,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})">Last&lt;T&gt;(IEnumerable&lt;T&gt;, T, IComparer&lt;T&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)</h4>
+  <h4 id="MoreStructures_Lists_Searching_BinarySearch_Last__1_IEnumerable___0____0_System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32__" data-uid="MoreStructures.Lists.Searching.BinarySearch.Last``1(IEnumerable{``0},``0,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})">Last&lt;T&gt;(IEnumerable&lt;T&gt;, T, Nullable&lt;IComparer&lt;T&gt;&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)</h4>
   <div class="markdown level1 summary"><p><inheritdoc></inheritdoc>
 <br>
 This specific implementation assumes that <code data-dev-comment-type="paramref" class="paramref">source</code> is sorted in ascending order.</p>
@@ -424,7 +424,7 @@ This specific implementation assumes that <code data-dev-comment-type="paramref"
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Last&lt;T&gt;(IEnumerable&lt;T&gt; source, T item, IComparer&lt;T&gt; comparer = null, int? fromIndex = null, int? toIndex = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public int Last&lt;T&gt;(IEnumerable&lt;T&gt; source, T item, IComparer&lt;T&gt;? comparer = null, int? fromIndex = null, int? toIndex = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -437,7 +437,7 @@ This specific implementation assumes that <code data-dev-comment-type="paramref"
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="xref">IEnumerable</span>&lt;T&gt;</td>
         <td><span class="parametername">source</span></td>
         <td></td>
       </tr>
@@ -447,7 +447,7 @@ This specific implementation assumes that <code data-dev-comment-type="paramref"
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IComparer</span>&lt;T&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">IComparer</span>&lt;T&gt;&gt;</td>
         <td><span class="parametername">comparer</span></td>
         <td></td>
       </tr>
@@ -493,7 +493,7 @@ This specific implementation assumes that <code data-dev-comment-type="paramref"
       </tr>
     </tbody>
   </table>
-  <h5 id="MoreStructures_Lists_Searching_BinarySearch_Last__1_System_Collections_Generic_IEnumerable___0____0_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32___remarks">Remarks</h5>
+  <h5 id="MoreStructures_Lists_Searching_BinarySearch_Last__1_IEnumerable___0____0_System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32___remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>The algorithm split in half the search space at every iteration, reducing it exponentially to a single item
 or to an empty set.
 <br>
@@ -502,13 +502,13 @@ Time Complexity = O(log(n)), Space Complexity = O(1), where n = number of items 
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Lists_Searching_BinarySearch_Nth__1_System_Collections_Generic_IEnumerable___0____0_System_Int32_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20MoreStructures.Lists.Searching.BinarySearch.Nth%60%601(System.Collections.Generic.IEnumerable%7B%60%600%7D%2C%60%600%2CSystem.Int32%2CSystem.Collections.Generic.IComparer%7B%60%600%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Lists_Searching_BinarySearch_Nth__1_IEnumerable___0____0_System_Int32_System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20MoreStructures.Lists.Searching.BinarySearch.Nth%60%601(IEnumerable%7B%60%600%7D%2C%60%600%2CSystem.Int32%2CSystem.Nullable%7BIComparer%7B%60%600%7D%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Searching/BinarySearch.cs/#L170">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Searching/BinarySearch.cs/#L169">View Source</a>
   </span>
   <a id="MoreStructures_Lists_Searching_BinarySearch_Nth_" data-uid="MoreStructures.Lists.Searching.BinarySearch.Nth*"></a>
-  <h4 id="MoreStructures_Lists_Searching_BinarySearch_Nth__1_System_Collections_Generic_IEnumerable___0____0_System_Int32_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32__" data-uid="MoreStructures.Lists.Searching.BinarySearch.Nth``1(System.Collections.Generic.IEnumerable{``0},``0,System.Int32,System.Collections.Generic.IComparer{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})">Nth&lt;T&gt;(IEnumerable&lt;T&gt;, T, Int32, IComparer&lt;T&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)</h4>
+  <h4 id="MoreStructures_Lists_Searching_BinarySearch_Nth__1_IEnumerable___0____0_System_Int32_System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32__" data-uid="MoreStructures.Lists.Searching.BinarySearch.Nth``1(IEnumerable{``0},``0,System.Int32,System.Nullable{IComparer{``0}},System.Nullable{System.Int32},System.Nullable{System.Int32})">Nth&lt;T&gt;(IEnumerable&lt;T&gt;, T, Int32, Nullable&lt;IComparer&lt;T&gt;&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)</h4>
   <div class="markdown level1 summary"><p><inheritdoc></inheritdoc>
 <br>
 This specific implementation assumes that <code data-dev-comment-type="paramref" class="paramref">source</code> is sorted in ascending order.</p>
@@ -516,7 +516,7 @@ This specific implementation assumes that <code data-dev-comment-type="paramref"
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Nth&lt;T&gt;(IEnumerable&lt;T&gt; source, T item, int occurrenceRank, IComparer&lt;T&gt; comparer = null, int? fromIndex = null, int? toIndex = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public int Nth&lt;T&gt;(IEnumerable&lt;T&gt; source, T item, int occurrenceRank, IComparer&lt;T&gt;? comparer = null, int? fromIndex = null, int? toIndex = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -529,7 +529,7 @@ This specific implementation assumes that <code data-dev-comment-type="paramref"
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="xref">IEnumerable</span>&lt;T&gt;</td>
         <td><span class="parametername">source</span></td>
         <td></td>
       </tr>
@@ -544,7 +544,7 @@ This specific implementation assumes that <code data-dev-comment-type="paramref"
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IComparer</span>&lt;T&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">IComparer</span>&lt;T&gt;&gt;</td>
         <td><span class="parametername">comparer</span></td>
         <td></td>
       </tr>
@@ -590,7 +590,7 @@ This specific implementation assumes that <code data-dev-comment-type="paramref"
       </tr>
     </tbody>
   </table>
-  <h5 id="MoreStructures_Lists_Searching_BinarySearch_Nth__1_System_Collections_Generic_IEnumerable___0____0_System_Int32_System_Collections_Generic_IComparer___0__System_Nullable_System_Int32__System_Nullable_System_Int32___remarks">Remarks</h5>
+  <h5 id="MoreStructures_Lists_Searching_BinarySearch_Nth__1_IEnumerable___0____0_System_Int32_System_Nullable_IComparer___0___System_Nullable_System_Int32__System_Nullable_System_Int32___remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>The algorithm first performs a binary search to find the index i of the 1st item. Then it checks whether
 the n-th occurrence of the item exists at index i + n, taking advantage of the fact that
 <code data-dev-comment-type="paramref" class="paramref">source</code> is sorted. The first step takes logarithmic time, whereas the second step takes
@@ -618,7 +618,7 @@ Time Complexity = O(log(n)), Space Complexity = O(1), where n = number of items 
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Lists_Searching_BinarySearch.md&amp;value=---%0Auid%3A%20MoreStructures.Lists.Searching.BinarySearch%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Searching/BinarySearch.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Searching/BinarySearch.cs/#L18" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
