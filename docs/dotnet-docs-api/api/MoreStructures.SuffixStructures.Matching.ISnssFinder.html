@@ -99,7 +99,7 @@
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixStructures_Matching_ISnssFinder_Find_IEnumerable_System_Char__IEnumerable_System_Char__.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixStructures.Matching.ISnssFinder.Find(IEnumerable%7BSystem.Char%7D%2CIEnumerable%7BSystem.Char%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixStructures/Matching/ISnssFinder.cs/#L16">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixStructures/Matching/ISnssFinder.cs/#L19">View Source</a>
   </span>
   <a id="MoreStructures_SuffixStructures_Matching_ISnssFinder_Find_" data-uid="MoreStructures.SuffixStructures.Matching.ISnssFinder.Find*"></a>
   <h4 id="MoreStructures_SuffixStructures_Matching_ISnssFinder_Find_IEnumerable_System_Char__IEnumerable_System_Char__" data-uid="MoreStructures.SuffixStructures.Matching.ISnssFinder.Find(IEnumerable{System.Char},IEnumerable{System.Char})">Find(IEnumerable&lt;Char&gt;, IEnumerable&lt;Char&gt;)</h4>
@@ -110,7 +110,7 @@ not a substring of <code data-dev-comment-type="paramref" class="paramref">text2
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string Find(IEnumerable&lt;char&gt; text1, IEnumerable&lt;char&gt; text2)</code></pre>
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;string&gt; Find(IEnumerable&lt;char&gt; text1, IEnumerable&lt;char&gt; text2)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -146,8 +146,9 @@ not a substring of <code data-dev-comment-type="paramref" class="paramref">text2
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><p>A string, containing the substring of <code data-dev-comment-type="paramref" class="paramref">text1</code>.</p>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>A sequence of strings, each being a substring of <code data-dev-comment-type="paramref" class="paramref">text1</code> not in <code data-dev-comment-type="paramref" class="paramref">text2</code>,
+of minimal length.</p>
 </td>
       </tr>
     </tbody>

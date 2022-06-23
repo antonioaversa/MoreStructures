@@ -9660,6 +9660,84 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.ElementAtO1OrDefault_ThrowsExceptionForNegativeIndexes
   nameWithType: EnumerableExtensionsTests.ElementAtO1OrDefault_ThrowsExceptionForNegativeIndexes
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateAtMostFirst_DoesntRaiseExceptionOnShorterEnumerables
+  name: EnumerateAtMostFirst_DoesntRaiseExceptionOnShorterEnumerables()
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_EnumerateAtMostFirst_DoesntRaiseExceptionOnShorterEnumerables
+  commentId: M:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateAtMostFirst_DoesntRaiseExceptionOnShorterEnumerables
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateAtMostFirst_DoesntRaiseExceptionOnShorterEnumerables()
+  nameWithType: EnumerableExtensionsTests.EnumerateAtMostFirst_DoesntRaiseExceptionOnShorterEnumerables()
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateAtMostFirst_DoesntRaiseExceptionOnShorterEnumerables*
+  name: EnumerateAtMostFirst_DoesntRaiseExceptionOnShorterEnumerables
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_EnumerateAtMostFirst_DoesntRaiseExceptionOnShorterEnumerables_
+  commentId: Overload:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateAtMostFirst_DoesntRaiseExceptionOnShorterEnumerables
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateAtMostFirst_DoesntRaiseExceptionOnShorterEnumerables
+  nameWithType: EnumerableExtensionsTests.EnumerateAtMostFirst_DoesntRaiseExceptionOnShorterEnumerables
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_DoesntEnumerateReminder
+  name: EnumerateExactlyFirst_DoesntEnumerateReminder()
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_EnumerateExactlyFirst_DoesntEnumerateReminder
+  commentId: M:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_DoesntEnumerateReminder
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_DoesntEnumerateReminder()
+  nameWithType: EnumerableExtensionsTests.EnumerateExactlyFirst_DoesntEnumerateReminder()
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_DoesntEnumerateReminder*
+  name: EnumerateExactlyFirst_DoesntEnumerateReminder
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_EnumerateExactlyFirst_DoesntEnumerateReminder_
+  commentId: Overload:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_DoesntEnumerateReminder
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_DoesntEnumerateReminder
+  nameWithType: EnumerableExtensionsTests.EnumerateExactlyFirst_DoesntEnumerateReminder
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_EnumeratesFirstNItemsCorrectly
+  name: EnumerateExactlyFirst_EnumeratesFirstNItemsCorrectly()
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_EnumerateExactlyFirst_EnumeratesFirstNItemsCorrectly
+  commentId: M:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_EnumeratesFirstNItemsCorrectly
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_EnumeratesFirstNItemsCorrectly()
+  nameWithType: EnumerableExtensionsTests.EnumerateExactlyFirst_EnumeratesFirstNItemsCorrectly()
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_EnumeratesFirstNItemsCorrectly*
+  name: EnumerateExactlyFirst_EnumeratesFirstNItemsCorrectly
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_EnumerateExactlyFirst_EnumeratesFirstNItemsCorrectly_
+  commentId: Overload:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_EnumeratesFirstNItemsCorrectly
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_EnumeratesFirstNItemsCorrectly
+  nameWithType: EnumerableExtensionsTests.EnumerateExactlyFirst_EnumeratesFirstNItemsCorrectly
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_RaisesExceptionOnInvalidCount
+  name: EnumerateExactlyFirst_RaisesExceptionOnInvalidCount()
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_EnumerateExactlyFirst_RaisesExceptionOnInvalidCount
+  commentId: M:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_RaisesExceptionOnInvalidCount
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_RaisesExceptionOnInvalidCount()
+  nameWithType: EnumerableExtensionsTests.EnumerateExactlyFirst_RaisesExceptionOnInvalidCount()
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_RaisesExceptionOnInvalidCount*
+  name: EnumerateExactlyFirst_RaisesExceptionOnInvalidCount
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_EnumerateExactlyFirst_RaisesExceptionOnInvalidCount_
+  commentId: Overload:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_RaisesExceptionOnInvalidCount
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_RaisesExceptionOnInvalidCount
+  nameWithType: EnumerableExtensionsTests.EnumerateExactlyFirst_RaisesExceptionOnInvalidCount
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_RaisesExceptionOnShorterEnumerables
+  name: EnumerateExactlyFirst_RaisesExceptionOnShorterEnumerables()
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_EnumerateExactlyFirst_RaisesExceptionOnShorterEnumerables
+  commentId: M:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_RaisesExceptionOnShorterEnumerables
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_RaisesExceptionOnShorterEnumerables()
+  nameWithType: EnumerableExtensionsTests.EnumerateExactlyFirst_RaisesExceptionOnShorterEnumerables()
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_RaisesExceptionOnShorterEnumerables*
+  name: EnumerateExactlyFirst_RaisesExceptionOnShorterEnumerables
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_EnumerateExactlyFirst_RaisesExceptionOnShorterEnumerables_
+  commentId: Overload:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_RaisesExceptionOnShorterEnumerables
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_RaisesExceptionOnShorterEnumerables
+  nameWithType: EnumerableExtensionsTests.EnumerateExactlyFirst_RaisesExceptionOnShorterEnumerables
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_ReminderIsCorrect
+  name: EnumerateExactlyFirst_ReminderIsCorrect()
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_EnumerateExactlyFirst_ReminderIsCorrect
+  commentId: M:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_ReminderIsCorrect
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_ReminderIsCorrect()
+  nameWithType: EnumerableExtensionsTests.EnumerateExactlyFirst_ReminderIsCorrect()
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_ReminderIsCorrect*
+  name: EnumerateExactlyFirst_ReminderIsCorrect
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_EnumerateExactlyFirst_ReminderIsCorrect_
+  commentId: Overload:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_ReminderIsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_ReminderIsCorrect
+  nameWithType: EnumerableExtensionsTests.EnumerateExactlyFirst_ReminderIsCorrect
 - uid: MoreStructures.Tests.Utilities.LockValueObjectTests
   name: LockValueObjectTests
   href: api/MoreStructures.Tests.Utilities.LockValueObjectTests.html
@@ -10695,6 +10773,38 @@ references:
   fullName.vb: MoreStructures.Utilities.EnumerableExtensions.ElementAtO1OrDefault(Of TSource)(System.Collections.IEnumerable(Of TSource), System.Int32)
   nameWithType: EnumerableExtensions.ElementAtO1OrDefault<TSource>(IEnumerable<TSource>, Int32)
   nameWithType.vb: EnumerableExtensions.ElementAtO1OrDefault(Of TSource)(IEnumerable(Of TSource), Int32)
+- uid: MoreStructures.Utilities.EnumerableExtensions.EnumerateAtMostFirst*
+  name: EnumerateAtMostFirst
+  href: api/MoreStructures.Utilities.EnumerableExtensions.html#MoreStructures_Utilities_EnumerableExtensions_EnumerateAtMostFirst_
+  commentId: Overload:MoreStructures.Utilities.EnumerableExtensions.EnumerateAtMostFirst
+  isSpec: "True"
+  fullName: MoreStructures.Utilities.EnumerableExtensions.EnumerateAtMostFirst
+  nameWithType: EnumerableExtensions.EnumerateAtMostFirst
+- uid: MoreStructures.Utilities.EnumerableExtensions.EnumerateAtMostFirst``1(System.Collections.IEnumerable{``0},System.Int32)
+  name: EnumerateAtMostFirst<TSource>(IEnumerable<TSource>, Int32)
+  href: api/MoreStructures.Utilities.EnumerableExtensions.html#MoreStructures_Utilities_EnumerableExtensions_EnumerateAtMostFirst__1_System_Collections_IEnumerable___0__System_Int32_
+  commentId: M:MoreStructures.Utilities.EnumerableExtensions.EnumerateAtMostFirst``1(System.Collections.IEnumerable{``0},System.Int32)
+  name.vb: EnumerateAtMostFirst(Of TSource)(IEnumerable(Of TSource), Int32)
+  fullName: MoreStructures.Utilities.EnumerableExtensions.EnumerateAtMostFirst<TSource>(System.Collections.IEnumerable<TSource>, System.Int32)
+  fullName.vb: MoreStructures.Utilities.EnumerableExtensions.EnumerateAtMostFirst(Of TSource)(System.Collections.IEnumerable(Of TSource), System.Int32)
+  nameWithType: EnumerableExtensions.EnumerateAtMostFirst<TSource>(IEnumerable<TSource>, Int32)
+  nameWithType.vb: EnumerableExtensions.EnumerateAtMostFirst(Of TSource)(IEnumerable(Of TSource), Int32)
+- uid: MoreStructures.Utilities.EnumerableExtensions.EnumerateExactlyFirst*
+  name: EnumerateExactlyFirst
+  href: api/MoreStructures.Utilities.EnumerableExtensions.html#MoreStructures_Utilities_EnumerableExtensions_EnumerateExactlyFirst_
+  commentId: Overload:MoreStructures.Utilities.EnumerableExtensions.EnumerateExactlyFirst
+  isSpec: "True"
+  fullName: MoreStructures.Utilities.EnumerableExtensions.EnumerateExactlyFirst
+  nameWithType: EnumerableExtensions.EnumerateExactlyFirst
+- uid: MoreStructures.Utilities.EnumerableExtensions.EnumerateExactlyFirst``1(System.Collections.IEnumerable{``0},System.Int32)
+  name: EnumerateExactlyFirst<TSource>(IEnumerable<TSource>, Int32)
+  href: api/MoreStructures.Utilities.EnumerableExtensions.html#MoreStructures_Utilities_EnumerableExtensions_EnumerateExactlyFirst__1_System_Collections_IEnumerable___0__System_Int32_
+  commentId: M:MoreStructures.Utilities.EnumerableExtensions.EnumerateExactlyFirst``1(System.Collections.IEnumerable{``0},System.Int32)
+  name.vb: EnumerateExactlyFirst(Of TSource)(IEnumerable(Of TSource), Int32)
+  fullName: MoreStructures.Utilities.EnumerableExtensions.EnumerateExactlyFirst<TSource>(System.Collections.IEnumerable<TSource>, System.Int32)
+  fullName.vb: MoreStructures.Utilities.EnumerableExtensions.EnumerateExactlyFirst(Of TSource)(System.Collections.IEnumerable(Of TSource), System.Int32)
+  nameWithType: EnumerableExtensions.EnumerateExactlyFirst<TSource>(IEnumerable<TSource>, Int32)
+  nameWithType.vb: EnumerableExtensions.EnumerateExactlyFirst(Of TSource)(IEnumerable(Of TSource), Int32)
 - uid: MoreStructures.Utilities.IValueEnumerable`1
   name: IValueEnumerable<T>
   href: api/MoreStructures.Utilities.IValueEnumerable-1.html
