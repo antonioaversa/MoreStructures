@@ -52,7 +52,7 @@ public abstract class SuffixStructureBasedSnssFinder : ISnssFinder
     }
 
     /// <inheritdoc/>
-    public abstract string? Find(IEnumerable<char> text1, IEnumerable<char> text2);
+    public abstract IEnumerable<string> Find(IEnumerable<char> text1, IEnumerable<char> text2);
 
     /// <summary>
     /// Validates the provided texts against this finder, checking that they are compatible with 

@@ -12,6 +12,9 @@ public interface ISnssFinder
     /// </summary>
     /// <param name="text1">The sequence of chars of the first text.</param>
     /// <param name="text2">The sequence of chars of the second text.</param>
-    /// <returns>A string, containing the substring of <paramref name="text1"/>.</returns>
-    string? Find(IEnumerable<char> text1, IEnumerable<char> text2);
+    /// <returns>
+    /// A sequence of strings, each being a substring of <paramref name="text1"/> not in <paramref name="text2"/>,
+    /// of minimal length.
+    /// </returns>
+    IEnumerable<string> Find(IEnumerable<char> text1, IEnumerable<char> text2);
 }

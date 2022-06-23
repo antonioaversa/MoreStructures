@@ -1,4 +1,6 @@
-﻿namespace MoreStructures.SuffixStructures.Matching;
+﻿using MoreStructures.Utilities;
+
+namespace MoreStructures.SuffixStructures.Matching;
 
 /// <summary>
 /// A <see cref="ISnssFinder"/> implementation which checks for the presence of each substring of the first text in the 
@@ -19,7 +21,7 @@
 ///     <br/>
 ///     - Lazily iterates over all substrings of text1, from the shortest (length 1) to the longest (length - 1).
 ///       <br/>
-///     - As soon as it finds one which is not contained in text2, it returns it.
+///     - As soon as it finds one which is not contained in text2, it yield returns it.
 ///     </para>
 ///     <para id="complexity">
 ///     COMPLEXITY
@@ -40,20 +42,26 @@ public class NaiveSnssFinder : ISnssFinder
     /// <remarks>
     ///     <inheritdoc cref="NaiveSnssFinder" path="/remarks"/>
     /// </remarks>
-    public string? Find(IEnumerable<char> text1, IEnumerable<char> text2)
+    public IEnumerable<string> Find(IEnumerable<char> text1, IEnumerable<char> text2)
     {
         var string1 = string.Concat(text1);
         var string2 = string.Concat(text2);
 
         if (string2.Contains(string1))
-            return null;
+            return Enumerable.Empty<string>();
 
-        return (
+        var results =
             from length in Enumerable.Range(1, string1.Length) // All substrings of non-zero length
             from start in Enumerable.Range(0, string1.Length - length + 1)
             let substringOfString1 = string1[start..(start + length)]
             where !string2.Contains(substringOfString1)
-            select substringOfString1)
-            .FirstOrDefault();
+            select substringOfString1;
+
+        var (firstOrEmpty, reminder) = results.EnumerateAtMostFirst(1);
+        if (!firstOrEmpty.Any())
+            return firstOrEmpty;
+
+        var first = firstOrEmpty.Single();
+        return results.TakeWhile(s => s.Length == first.Length).Prepend(first);
     }
 }
