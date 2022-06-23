@@ -40,7 +40,10 @@ namespace MoreStructures.SuffixStructures.Matching;
 ///       <see cref="SuffixStructureBasedSnssFinder.Terminator1"/>.
 ///       <br/>
 ///     - Such substring of text1 is guaranteed to be the shortest by the visit order imposed by the breadth-first 
-///       search.
+///       search. This is true because trie edges are labelled by a single chars, so root-to-node paths which are 
+///       longer by the number of edges correspond to longer prefixes. This is not true in general for Suffix Trees,
+///       where edge labels can vary in length, and a path which is composed of less edges may be longer in chars than
+///       a path with more edges but shorter labels in average.
 ///     </para>
 ///     <para id="complexity">
 ///     COMPLEXITY
@@ -58,9 +61,9 @@ namespace MoreStructures.SuffixStructures.Matching;
 ///       text, and all suffixes should be covered by the trie. The higher is the level, the shorter are node-to-leaf 
 ///       paths. However, their number is always the same or lower.
 ///       <br/>
-///     - There are as many node-to-leaf paths as leaves, and there are at most n leaves in the trie (since each
-///       suffix can add potentially multiple intermediate nodes, but always a single leaf, having terminator2 as 
-///       incoming edge).
+///     - For each node there are as many node-to-leaf paths as leaves, and there are at most n leaves in the trie 
+///       (since each suffix can add potentially multiple intermediate nodes, but always a single leaf, having 
+///       terminator2 as incoming edge).
 ///       <br/>
 ///     - Checking whether a path contains terminator1 takes constant space and a time proportional to the number of
 ///       nodes in the path, which is O(n).

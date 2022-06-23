@@ -19,7 +19,7 @@ namespace MoreStructures.SuffixStructures.Matching;
 ///     - Compared to the naive implementation of <see cref="NaiveSnssFinder"/>, has both average and worst case better 
 ///       runtime, at the cost of space used (which is O(1) for the naive implementation).
 ///       <br/>
-///     - Compared to the SuffixTrie-based implementation, it has better Time and Space Complexity, due to Branches 
+///     - Compared to <see cref="SuffixTrieBasedSnssFinder"/>, it has better Time and Space Complexity, due to Branches 
 ///       Coaleascing combined with Path Compression. It's, however, more complex to implement, visualize and debug 
 ///       step-by-step.
 ///     </para>
@@ -29,7 +29,7 @@ namespace MoreStructures.SuffixStructures.Matching;
 ///     - First uses the <see cref="UkkonenSuffixTreeBuilder"/> to build a suffix tree of the 
 ///       concatenation of first text, <see cref="SuffixStructureBasedSnssFinder.Terminator1"/>, second text and 
 ///       <see cref="SuffixStructureBasedSnssFinder.Terminator2"/>, stopping branches at the first terminator 
-///       encountered. This structure is also known as generalized suffix tree.
+///       encountered. This structure is also known as Generalized Suffix Tree.
 ///       <br/>
 ///     - Visit the suffix tree breadth-first, stopping at the first node such that the root-to-node prefix is 
 ///       substring of text1 but not of text2.
@@ -40,8 +40,10 @@ namespace MoreStructures.SuffixStructures.Matching;
 ///     - The root-to-node prefix is NOT a substring of text2 when there is no path-to-leaf which doesn't contain 
 ///       <see cref="SuffixStructureBasedSnssFinder.Terminator1"/>.
 ///       <br/>
-///     - Such substring of text1 is guaranteed to be the shortest by the visit order imposed by the breadth-first 
-///       search.
+///     - Such substring of text1 is guaranteed to be the shortest in number of edges by the visit order imposed by the 
+///       breadth-first search. However, unlike for Suffix Tries, in Suffix Trees the number of chars per edges varies.
+///       <br/>
+///     - Therefore, all pontential results have to be collected, then sorted by actual prefix length.
 ///     </para>
 ///     <para id="complexity">
 ///     COMPLEXITY
@@ -49,26 +51,31 @@ namespace MoreStructures.SuffixStructures.Matching;
 ///     - Validating the input requires going through text1 and text2, and takes linear time in the the number of chars 
 ///       n of the concatenated text "text1 ## separator1 ## text2 ## separator2", and constant space.
 ///       <br/>
-///     - Building the Generalized Suffix Trie takes time and space at least proportional to the number of nodes of the
-///       trie, which is quadratic with n.
+///     - Building the Generalized Suffix Tree via the Ukkonen algorithm takes time and space at least proportional to 
+///       the number of nodes of the tree, which is linear with n.
 ///       <br/>
 ///     - For each level of the breadth-first traversal of the trie, all node-to-leaf paths are checked (in the worst 
 ///       case).
 ///       <br/>
-///     - There are at most n levels in the trie, since there can't be a path longer than a suffix of the concatenated
+///     - There are at most n levels in the tree, since there can't be a path longer than a suffix of the concatenated
 ///       text. The higher is the level, the shorter are node-to-leaf paths. However, their number is always the same
 ///       or lower.
 ///       <br/>
-///     - There are as many node-to-leaf paths as leaves, and there are at most n leaves in the trie (since each
-///       suffix can add potentially multiple intermediate nodes, but always a single leaf, having terminator2 as 
-///       incoming edge).
+///     - For each node there are as many node-to-leaf paths as leaves, and there are at most n leaves in the tree 
+///       (since each suffix can add at most a single intermediate node and a single leaf, having terminator 1 or 
+///       terminator2 as incoming edge).
 ///       <br/>
 ///     - Checking whether a path contains terminator1 takes constant space and a time proportional to the number of
 ///       nodes in the path, which is O(n).
 ///       <br/>
-///     - Rebuilding the string from the identified path takes O(n) time and space.
+///     - The following optimization is implemented: if a path P1 starting from a node N1 identifies a prefix p1 which
+///       is a potential SNSS, all paths starting from nodes Pi which are descendants of N1 would identify prefixes pi
+///       which would be longer than p1, so they can be excluded.
 ///       <br/>
-///     - So in conclusion, Time Complexity is O(n^3) and Space Complexity is O(n^2).
+///     - Rebuilding the string from each identified path takes O(n) time and space. Sorting would take time 
+///       O(m * log(m) * n) where m is the number of potential SNSS (which is in average much smaller than n).
+///       <br/>
+///     - So in conclusion, Time Complexity is O(n^2) and Space Complexity is O(n).
 ///     </para>
 /// </remarks>
 public class SuffixTreeBasedSnssFinder : SuffixStructureBasedSnssFinder

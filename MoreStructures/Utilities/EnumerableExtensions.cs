@@ -192,12 +192,12 @@ public static class EnumerableExtensions
             first.Add(enumerator.Current);
         }
 
-        IEnumerable<TSource> ToEnumerable()
-        {
-            while (enumerator.MoveNext())
-                yield return enumerator.Current;
-        }
+        return (first, ToEnumerable(enumerator));
+    }
 
-        return (first, ToEnumerable());
+    private static IEnumerable<TSource> ToEnumerable<TSource>(IEnumerator<TSource> enumerator)
+    {
+        while (enumerator.MoveNext())
+            yield return enumerator.Current;
     }
 }
