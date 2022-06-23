@@ -1,4 +1,5 @@
-﻿using MoreStructures.Utilities;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MoreStructures.Utilities;
 
 namespace MoreStructures.Tests.Utilities;
 
@@ -207,5 +208,71 @@ public class EnumerableExtensionsTests
         yield return true;
         yield return false;
         yield return true;
+    }
+
+    [TestMethod]
+    public void EnumerateExactlyFirst_RaisesExceptionOnInvalidCount()
+    {
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => Array.Empty<int>().EnumerateExactlyFirst(-1));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => Array.Empty<int>().EnumerateExactlyFirst(-6));
+    }
+
+    [TestMethod]
+    public void EnumerateExactlyFirst_RaisesExceptionOnShorterEnumerables()
+    {
+        Assert.ThrowsException<ArgumentException>(() => Array.Empty<int>().EnumerateExactlyFirst(1));
+        Assert.ThrowsException<ArgumentException>(() => new List<int> { 1 }.EnumerateExactlyFirst(2));
+        Assert.ThrowsException<ArgumentException>(() => new HashSet<int> { 1, 2 }.EnumerateExactlyFirst(3));
+        Assert.ThrowsException<ArgumentException>(() => GetBools().EnumerateExactlyFirst(4));
+    }
+
+    [TestMethod]
+    public void EnumerateExactlyFirst_EnumeratesFirstNItemsCorrectly()
+    {
+        Assert.IsTrue(
+            Array.Empty<int>().SequenceEqual(Array.Empty<int>().EnumerateExactlyFirst(0).firstNItems));
+        Assert.IsTrue(
+            Array.Empty<int>().SequenceEqual(Enumerable.Range(2, 10).EnumerateExactlyFirst(0).firstNItems));
+        Assert.IsTrue(
+            Enumerable.Range(2, 1).SequenceEqual(Enumerable.Range(2, 10).EnumerateExactlyFirst(1).firstNItems));
+        Assert.IsTrue(
+            Enumerable.Range(2, 2).SequenceEqual(Enumerable.Range(2, 10).EnumerateExactlyFirst(2).firstNItems));
+    }
+
+    [TestMethod]
+    public void EnumerateExactlyFirst_DoesntEnumerateReminder()
+    {
+        Assert.IsTrue(
+            Array.Empty<int>().SequenceEqual(
+                Enumerable.Range(0, int.MaxValue).EnumerateExactlyFirst(0).firstNItems));
+        Assert.IsTrue(
+            Enumerable.Range(0, 4).SequenceEqual(
+                Enumerable.Range(0, int.MaxValue).EnumerateExactlyFirst(4).firstNItems));
+    }
+
+    [TestMethod]
+    public void EnumerateExactlyFirst_ReminderIsCorrect()
+    {
+        Assert.IsTrue(
+            Enumerable.Range(2, 10).SequenceEqual(Enumerable.Range(2, 10).EnumerateExactlyFirst(0).reminder));
+        Assert.IsTrue(
+            Enumerable.Range(3, 9).SequenceEqual(Enumerable.Range(2, 10).EnumerateExactlyFirst(1).reminder));
+        Assert.IsTrue(
+            Enumerable.Range(5, 7).SequenceEqual(Enumerable.Range(2, 10).EnumerateExactlyFirst(3).reminder));
+        Assert.IsTrue(
+            Enumerable.Empty<int>().SequenceEqual(Enumerable.Range(2, 10).EnumerateExactlyFirst(10).reminder));
+    }
+
+    [TestMethod]
+    public void EnumerateAtMostFirst_DoesntRaiseExceptionOnShorterEnumerables()
+    {
+        Assert.IsTrue(
+            new List<int> { }.SequenceEqual(Array.Empty<int>().EnumerateAtMostFirst(1).firstNItems));
+        Assert.IsTrue(
+            new List<int> { 1 }.SequenceEqual(new List<int> { 1 }.EnumerateAtMostFirst(2).firstNItems));
+        Assert.IsTrue(
+            new List<int> { 1, 2 }.SequenceEqual(new HashSet<int> { 1, 2 }.EnumerateAtMostFirst(3).firstNItems));
+        Assert.IsTrue(
+            GetBools().SequenceEqual(GetBools().EnumerateAtMostFirst(4).firstNItems));
     }
 }

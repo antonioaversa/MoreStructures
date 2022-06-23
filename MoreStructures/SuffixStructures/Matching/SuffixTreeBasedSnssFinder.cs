@@ -3,6 +3,7 @@ using MoreStructures.RecImmTrees.Visitor;
 using MoreStructures.SuffixStructures.Builders;
 using MoreStructures.SuffixTrees;
 using MoreStructures.SuffixTrees.Builders;
+using MoreStructures.Utilities;
 
 namespace MoreStructures.SuffixStructures.Matching;
 
@@ -92,7 +93,7 @@ public class SuffixTreeBasedSnssFinder : SuffixStructureBasedSnssFinder
     /// <remarks>
     ///     <inheritdoc cref="SuffixTreeBasedSnssFinder" path="/remarks"/>
     /// </remarks>
-    public override string? Find(IEnumerable<char> text1, IEnumerable<char> text2)
+    public override IEnumerable<string> Find(IEnumerable<char> text1, IEnumerable<char> text2)
     {
         if (ValidateInput)
             ValidateTexts(text1, text2);
@@ -143,16 +144,19 @@ public class SuffixTreeBasedSnssFinder : SuffixStructureBasedSnssFinder
             shortestSubstrNodes.Add(visit.Node);
         }
 
-        if (shortestSubstrNodes.Count == 0)
-            return null;
-
         // Collect result, iterating up to the root (take only 1st char of last edge) and find the shortest.
-        return (
+        var results =
             from shortestSubstrNode in shortestSubstrNodes
             let prefix = GetPrefix(shortestSubstrNode, text1And2, cachedVisits)
             orderby prefix.Length ascending
-            select prefix)
-            .FirstOrDefault();
+            select prefix;
+
+        var (firstOrEmpty, reminder) = results.EnumerateAtMostFirst(1);
+        if (!firstOrEmpty.Any())
+            return firstOrEmpty;
+
+        var first = firstOrEmpty.Single();
+        return results.TakeWhile(s => s.Length == first.Length).Prepend(first);
     }
 
     private static string GetPrefix(
@@ -162,7 +166,6 @@ public class SuffixTreeBasedSnssFinder : SuffixStructureBasedSnssFinder
     {
         var edges = CollectPrefixChars(text1And2, node, cachedVisits);
         var firstCharOfLastEdge = edges.First()[0];
-        var result = string.Concat(edges.Skip(1).Reverse()) + firstCharOfLastEdge;
-        return result;
+        return string.Concat(edges.Skip(1).Reverse()) + firstCharOfLastEdge;
     }
 }

@@ -140,4 +140,64 @@ public static class EnumerableExtensions
             return index >= 0 && index < nonGenericList.Count ? (TSource)nonGenericList[index]! : default;
         return source.ElementAtOrDefault(index);
     }
+
+    /// <summary>
+    /// Eagerly enumerates the first <paramref name="count"/> items of <paramref name="source"/>, returning an
+    /// <see cref="IList{T}"/> of them and the reminder, as a lazily evaluated <see cref="IEnumerable{T}"/>.
+    /// </summary>
+    /// <typeparam name="TSource">The type of elements of <paramref name="source"/>.</typeparam>
+    /// <param name="source">The <see cref="IEnumerable{T}"/> to split into two pieces.</param>
+    /// <param name="count">The number of items of <paramref name="source"/> to eagerly evaluate and return.</param>
+    /// <returns>
+    /// A couple of an <see cref="IList{T}"/> instance and an <see cref="IEnumerable{T}"/> instance.
+    /// </returns>
+    public static (IList<TSource> firstNItems, IEnumerable<TSource> reminder) EnumerateExactlyFirst<TSource>(
+        this IEnumerable<TSource> source, int count)
+    {
+        var (first, reminder) = source.EnumerateAtMostFirst(count);
+
+        if (first.Count < count)
+            throw new ArgumentException($"Sequence doesn't contain {count} elements.", nameof(source));
+
+        return (first, reminder);
+    }
+
+    /// <summary>
+    /// Eagerly enumerates the first <paramref name="count"/> items of <paramref name="source"/>, or less if there 
+    /// aren't enough, returning an <see cref="IList{T}"/> of them and the reminder, as a lazily evaluated 
+    /// <see cref="IEnumerable{T}"/>.
+    /// </summary>
+    /// <typeparam name="TSource">The type of elements of <paramref name="source"/>.</typeparam>
+    /// <param name="source">The <see cref="IEnumerable{T}"/> to split into two pieces.</param>
+    /// <param name="count">
+    /// The number of items of <paramref name="source"/> to eagerly evaluate and return (at most).
+    /// </param>
+    /// <returns>
+    /// A couple of an <see cref="IList{T}"/> instance and an <see cref="IEnumerable{T}"/> instance.
+    /// </returns>
+    public static (IList<TSource> firstNItems, IEnumerable<TSource> reminder) EnumerateAtMostFirst<TSource>(
+        this IEnumerable<TSource> source, int count)
+    {
+        if (count < 0)
+            throw new ArgumentOutOfRangeException($"Invalid {nameof(count)}: {count}");
+
+        var enumerator = source.GetEnumerator();
+
+        var first = new List<TSource> { };
+        for (var i = 0; i < count; i++)
+        {
+            if (!enumerator.MoveNext())
+                break;
+
+            first.Add(enumerator.Current);
+        }
+
+        IEnumerable<TSource> ToEnumerable()
+        {
+            while (enumerator.MoveNext())
+                yield return enumerator.Current;
+        }
+
+        return (first, ToEnumerable());
+    }
 }

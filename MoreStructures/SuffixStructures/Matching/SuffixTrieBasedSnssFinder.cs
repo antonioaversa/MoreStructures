@@ -92,7 +92,7 @@ public class SuffixTrieBasedSnssFinder : SuffixStructureBasedSnssFinder
     /// <remarks>
     ///     <inheritdoc cref="SuffixTrieBasedSnssFinder" path="/remarks"/>
     /// </remarks>
-    public override string? Find(IEnumerable<char> text1, IEnumerable<char> text2)
+    public override IEnumerable<string> Find(IEnumerable<char> text1, IEnumerable<char> text2)
     {
         if (ValidateInput)
             ValidateTexts(text1, text2);
@@ -121,18 +121,19 @@ public class SuffixTrieBasedSnssFinder : SuffixStructureBasedSnssFinder
                 return visit;
             });
 
-        var shortestSubstrNode = (
+        var results =
             from visit in visits
             let pathsToLeaf = NodeToLeafPathsBuilder.GetAllNodeToLeafPaths<SuffixTrieEdge, SuffixTrieNode>(visit.Node)
             // All path-to-leaf contain Terminator1 => root-to-node prefix is not substring of text2
             where pathsToLeaf.All(path => path.ContainsIndex(terminator1Index))
-            select visit.Node)
-            .FirstOrDefault();
+            let prefix = string.Concat(CollectPrefixChars(text1And2, visit.Node, cachedVisits).Reverse())
+            select prefix;
 
-        if (shortestSubstrNode == null)
-            return null;
+        var (firstOrEmpty, reminder) = results.EnumerateAtMostFirst(1);
+        if (!firstOrEmpty.Any())
+            return firstOrEmpty;
 
-        // Collect result, iterating up to the root
-        return string.Concat(CollectPrefixChars(text1And2, shortestSubstrNode, cachedVisits).Reverse());
+        var first = firstOrEmpty.Single();
+        return results.TakeWhile(s => s.Length == first.Length).Prepend(first);
     }
 }
