@@ -170,7 +170,10 @@ substring of text1 but not of text2.
 <a class="xref" href="MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixStructureBasedSnssFinder_Terminator1">Terminator1</a>.
 <br>
 - Such substring of text1 is guaranteed to be the shortest by the visit order imposed by the breadth-first 
-search.
+search. This is true because trie edges are labelled by a single chars, so root-to-node paths which are 
+longer by the number of edges correspond to longer prefixes. This is not true in general for Suffix Trees,
+where edge labels can vary in length, and a path which is composed of less edges may be longer in chars than
+a path with more edges but shorter labels in average.
 </p>
 <p>
 COMPLEXITY
@@ -188,9 +191,9 @@ case).
 text, and all suffixes should be covered by the trie. The higher is the level, the shorter are node-to-leaf 
 paths. However, their number is always the same or lower.
 <br>
-- There are as many node-to-leaf paths as leaves, and there are at most n leaves in the trie (since each
-suffix can add potentially multiple intermediate nodes, but always a single leaf, having terminator2 as 
-incoming edge).
+- For each node there are as many node-to-leaf paths as leaves, and there are at most n leaves in the trie 
+(since each suffix can add potentially multiple intermediate nodes, but always a single leaf, having 
+terminator2 as incoming edge).
 <br>
 - Checking whether a path contains terminator1 takes constant space and a time proportional to the number of
 nodes in the path, which is O(n).
@@ -207,7 +210,7 @@ nodes in the path, which is O(n).
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixStructures_Matching_SuffixTrieBasedSnssFinder__ctor_System_Char_System_Char_.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.%23ctor(System.Char%2CSystem.Char)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixStructures/Matching/SuffixTrieBasedSnssFinder.cs/#L82">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixStructures/Matching/SuffixTrieBasedSnssFinder.cs/#L85">View Source</a>
   </span>
   <a id="MoreStructures_SuffixStructures_Matching_SuffixTrieBasedSnssFinder__ctor_" data-uid="MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.#ctor*"></a>
   <h4 id="MoreStructures_SuffixStructures_Matching_SuffixTrieBasedSnssFinder__ctor_System_Char_System_Char_" data-uid="MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.#ctor(System.Char,System.Char)">SuffixTrieBasedSnssFinder(Char, Char)</h4>
@@ -250,7 +253,7 @@ to <a class="xref" href="MoreStructures.SuffixStructures.Matching.SuffixStructur
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixStructures_Matching_SuffixTrieBasedSnssFinder_Find_IEnumerable_System_Char__IEnumerable_System_Char__.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.Find(IEnumerable%7BSystem.Char%7D%2CIEnumerable%7BSystem.Char%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixStructures/Matching/SuffixTrieBasedSnssFinder.cs/#L95">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixStructures/Matching/SuffixTrieBasedSnssFinder.cs/#L98">View Source</a>
   </span>
   <a id="MoreStructures_SuffixStructures_Matching_SuffixTrieBasedSnssFinder_Find_" data-uid="MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.Find*"></a>
   <h4 id="MoreStructures_SuffixStructures_Matching_SuffixTrieBasedSnssFinder_Find_IEnumerable_System_Char__IEnumerable_System_Char__" data-uid="MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.Find(IEnumerable{System.Char},IEnumerable{System.Char})">Find(IEnumerable&lt;Char&gt;, IEnumerable&lt;Char&gt;)</h4>
@@ -324,7 +327,7 @@ This implementation builds and uses a <a class="xref" href="MoreStructures.Suffi
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixStructures_Matching_SuffixTrieBasedSnssFinder.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixStructures/Matching/SuffixTrieBasedSnssFinder.cs/#L73" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixStructures/Matching/SuffixTrieBasedSnssFinder.cs/#L76" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
