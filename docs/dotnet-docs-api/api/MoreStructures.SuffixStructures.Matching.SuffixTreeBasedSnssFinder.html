@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class SuffixTrieBasedSnssFinder
+    <title>Class SuffixTreeBasedSnssFinder
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class SuffixTrieBasedSnssFinder
+    <meta name="title" content="Class SuffixTreeBasedSnssFinder
    ">
     <meta name="generator" content="docfx 2.59.2.0">
     
@@ -78,13 +78,13 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder">
   
   
-  <h1 id="MoreStructures_SuffixStructures_Matching_SuffixTrieBasedSnssFinder" data-uid="MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder" class="text-break">Class SuffixTrieBasedSnssFinder
+  <h1 id="MoreStructures_SuffixStructures_Matching_SuffixTreeBasedSnssFinder" data-uid="MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder" class="text-break">Class SuffixTreeBasedSnssFinder
   </h1>
   <div class="markdown level0 summary"><p>A <a class="xref" href="MoreStructures.SuffixStructures.Matching.ISnssFinder.html">ISnssFinder</a> implementation and <a class="xref" href="MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.html">SuffixStructureBasedSnssFinder</a> concretion which uses
-a <a class="xref" href="MoreStructures.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a> structure to implement
+a <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a> structure to implement
 <a class="xref" href="MoreStructures.SuffixStructures.Matching.ISnssFinder.html#MoreStructures_SuffixStructures_Matching_ISnssFinder_Find_IEnumerable_System_Char__IEnumerable_System_Char__">Find(IEnumerable&lt;Char&gt;, IEnumerable&lt;Char&gt;)</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -92,7 +92,7 @@ a <a class="xref" href="MoreStructures.SuffixTries.SuffixTrieNode.html">SuffixTr
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.html">SuffixStructureBasedSnssFinder</a></div>
-    <div class="level2"><span class="xref">SuffixTrieBasedSnssFinder</span></div>
+    <div class="level2"><span class="xref">SuffixTreeBasedSnssFinder</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -139,28 +139,30 @@ a <a class="xref" href="MoreStructures.SuffixTries.SuffixTrieNode.html">SuffixTr
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.SuffixStructures.Matching.html">MoreStructures.SuffixStructures.Matching</a></h6>
   <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
-  <h5 id="MoreStructures_SuffixStructures_Matching_SuffixTrieBasedSnssFinder_syntax">Syntax</h5>
+  <h5 id="MoreStructures_SuffixStructures_Matching_SuffixTreeBasedSnssFinder_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SuffixTrieBasedSnssFinder : SuffixStructureBasedSnssFinder, ISnssFinder</code></pre>
+    <pre><code class="lang-csharp hljs">public class SuffixTreeBasedSnssFinder : SuffixStructureBasedSnssFinder, ISnssFinder</code></pre>
   </div>
-  <h5 id="MoreStructures_SuffixStructures_Matching_SuffixTrieBasedSnssFinder_remarks"><strong>Remarks</strong></h5>
+  <h5 id="MoreStructures_SuffixStructures_Matching_SuffixTreeBasedSnssFinder_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>
 ADVANTAGES AND DISADVANTAGES
 <br>
-- Compared to the naive implementation of <a class="xref" href="MoreStructures.SuffixStructures.Matching.NaiveSnssFinder.html">NaiveSnssFinder</a>, has better aberage runtime, at the 
-  cost of space used (which is O(1) for the naive implementation and at least quadratic here).
+- Compared to the naive implementation of <a class="xref" href="MoreStructures.SuffixStructures.Matching.NaiveSnssFinder.html">NaiveSnssFinder</a>, has both average and worst case better 
+  runtime, at the cost of space used (which is O(1) for the naive implementation).
 <br>
-- Compared to the SuffixTree-based implementation, it has way worse Time and Space Complexity, but it&apos;s easier
-to implement, visualize and debug step-by-step.
+- Compared to the SuffixTrie-based implementation, it has better Time and Space Complexity, due to Branches 
+Coaleascing combined with Path Compression. It&apos;s, however, more complex to implement, visualize and debug 
+step-by-step.
 </p>
 <p>
 ALGORITHM
 <br>
-- First uses the <a class="xref" href="MoreStructures.SuffixTries.Builders.NaivePartiallyRecursiveSuffixTrieBuilder.html">NaivePartiallyRecursiveSuffixTrieBuilder</a> to build a suffix trie of the 
+- First uses the <a class="xref" href="MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.html">UkkonenSuffixTreeBuilder</a> to build a suffix tree of the 
   concatenation of first text, <a class="xref" href="MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixStructureBasedSnssFinder_Terminator1">Terminator1</a>, second text and 
-<a class="xref" href="MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixStructureBasedSnssFinder_Terminator2">Terminator2</a>, a.k.a. generalized suffix trie.
+<a class="xref" href="MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixStructureBasedSnssFinder_Terminator2">Terminator2</a>, stopping branches at the first terminator 
+encountered. This structure is also known as generalized suffix tree.
 <br>
-- Visit the suffix trie breadth-first, stopping at the first node such that the root-to-node prefix is 
+- Visit the suffix tree breadth-first, stopping at the first node such that the root-to-node prefix is 
 substring of text1 but not of text2.
 <br>
 - The root-to-node prefix is a substring of text1 when there is a path-to-leaf which contains an edge including
@@ -179,14 +181,14 @@ COMPLEXITY
   n of the concatenated text &quot;text1 ## separator1 ## text2 ## separator2&quot;, and constant space.
 <br>
 - Building the Generalized Suffix Trie takes time and space at least proportional to the number of nodes of the
-trie, which is quadratic with n (unlike for Suffix Trees).
+trie, which is quadratic with n.
 <br>
 - For each level of the breadth-first traversal of the trie, all node-to-leaf paths are checked (in the worst 
 case).
 <br>
 - There are at most n levels in the trie, since there can&apos;t be a path longer than a suffix of the concatenated
-text, and all suffixes should be covered by the trie. The higher is the level, the shorter are node-to-leaf 
-paths. However, their number is always the same or lower.
+text. The higher is the level, the shorter are node-to-leaf paths. However, their number is always the same
+or lower.
 <br>
 - There are as many node-to-leaf paths as leaves, and there are at most n leaves in the trie (since each
 suffix can add potentially multiple intermediate nodes, but always a single leaf, having terminator2 as 
@@ -204,20 +206,20 @@ nodes in the path, which is O(n).
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixStructures_Matching_SuffixTrieBasedSnssFinder__ctor_System_Char_System_Char_.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.%23ctor(System.Char%2CSystem.Char)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixStructures_Matching_SuffixTreeBasedSnssFinder__ctor_System_Char_System_Char_.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder.%23ctor(System.Char%2CSystem.Char)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixStructures/Matching/SuffixTrieBasedSnssFinder.cs/#L82">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixStructures/Matching/SuffixTreeBasedSnssFinder.cs/#L82">View Source</a>
   </span>
-  <a id="MoreStructures_SuffixStructures_Matching_SuffixTrieBasedSnssFinder__ctor_" data-uid="MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.#ctor*"></a>
-  <h4 id="MoreStructures_SuffixStructures_Matching_SuffixTrieBasedSnssFinder__ctor_System_Char_System_Char_" data-uid="MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.#ctor(System.Char,System.Char)">SuffixTrieBasedSnssFinder(Char, Char)</h4>
+  <a id="MoreStructures_SuffixStructures_Matching_SuffixTreeBasedSnssFinder__ctor_" data-uid="MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder.#ctor*"></a>
+  <h4 id="MoreStructures_SuffixStructures_Matching_SuffixTreeBasedSnssFinder__ctor_System_Char_System_Char_" data-uid="MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder.#ctor(System.Char,System.Char)">SuffixTreeBasedSnssFinder(Char, Char)</h4>
   <div class="markdown level1 summary"><p>Builds an instance with the provided terminators, validating the input by default. All text passed
 to <a class="xref" href="MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixStructureBasedSnssFinder_Find_IEnumerable_System_Char__IEnumerable_System_Char__">Find(IEnumerable&lt;Char&gt;, IEnumerable&lt;Char&gt;)</a> must conform with these two terminators.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SuffixTrieBasedSnssFinder(char terminator1, char terminator2)</code></pre>
+    <pre><code class="lang-csharp hljs">public SuffixTreeBasedSnssFinder(char terminator1, char terminator2)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -247,16 +249,16 @@ to <a class="xref" href="MoreStructures.SuffixStructures.Matching.SuffixStructur
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixStructures_Matching_SuffixTrieBasedSnssFinder_Find_IEnumerable_System_Char__IEnumerable_System_Char__.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.Find(IEnumerable%7BSystem.Char%7D%2CIEnumerable%7BSystem.Char%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixStructures_Matching_SuffixTreeBasedSnssFinder_Find_IEnumerable_System_Char__IEnumerable_System_Char__.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder.Find(IEnumerable%7BSystem.Char%7D%2CIEnumerable%7BSystem.Char%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixStructures/Matching/SuffixTrieBasedSnssFinder.cs/#L95">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixStructures/Matching/SuffixTreeBasedSnssFinder.cs/#L95">View Source</a>
   </span>
-  <a id="MoreStructures_SuffixStructures_Matching_SuffixTrieBasedSnssFinder_Find_" data-uid="MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.Find*"></a>
-  <h4 id="MoreStructures_SuffixStructures_Matching_SuffixTrieBasedSnssFinder_Find_IEnumerable_System_Char__IEnumerable_System_Char__" data-uid="MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.Find(IEnumerable{System.Char},IEnumerable{System.Char})">Find(IEnumerable&lt;Char&gt;, IEnumerable&lt;Char&gt;)</h4>
+  <a id="MoreStructures_SuffixStructures_Matching_SuffixTreeBasedSnssFinder_Find_" data-uid="MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder.Find*"></a>
+  <h4 id="MoreStructures_SuffixStructures_Matching_SuffixTreeBasedSnssFinder_Find_IEnumerable_System_Char__IEnumerable_System_Char__" data-uid="MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder.Find(IEnumerable{System.Char},IEnumerable{System.Char})">Find(IEnumerable&lt;Char&gt;, IEnumerable&lt;Char&gt;)</h4>
   <div class="markdown level1 summary"><p><inheritdoc cref="M:MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.Find(IEnumerable{System.Char},IEnumerable{System.Char})"></inheritdoc>
 <br>
-This implementation builds and uses a <a class="xref" href="MoreStructures.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a> structure to perform the search.</p>
+This implementation builds and uses a <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a> structure to perform the search.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -302,8 +304,8 @@ This implementation builds and uses a <a class="xref" href="MoreStructures.Suffi
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixStructureBasedSnssFinder_Find_IEnumerable_System_Char__IEnumerable_System_Char__">SuffixStructureBasedSnssFinder.Find(IEnumerable&lt;Char&gt;, IEnumerable&lt;Char&gt;)</a></div>
-  <h5 id="MoreStructures_SuffixStructures_Matching_SuffixTrieBasedSnssFinder_Find_IEnumerable_System_Char__IEnumerable_System_Char___remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder" path="/remarks"></inheritdoc></p>
+  <h5 id="MoreStructures_SuffixStructures_Matching_SuffixTreeBasedSnssFinder_Find_IEnumerable_System_Char__IEnumerable_System_Char___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder" path="/remarks"></inheritdoc></p>
 </div>
   <h3 id="implements">Implements</h3>
   <div>
@@ -321,10 +323,10 @@ This implementation builds and uses a <a class="xref" href="MoreStructures.Suffi
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixStructures_Matching_SuffixTrieBasedSnssFinder.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixStructures_Matching_SuffixTreeBasedSnssFinder.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixStructures/Matching/SuffixTrieBasedSnssFinder.cs/#L73" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixStructures/Matching/SuffixTreeBasedSnssFinder.cs/#L73" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

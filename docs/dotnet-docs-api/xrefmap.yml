@@ -3127,6 +3127,22 @@ references:
   isSpec: "True"
   fullName: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.SuffixStructureBasedSnssFinder
   nameWithType: SuffixStructureBasedSnssFinder.SuffixStructureBasedSnssFinder
+- uid: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.CollectPrefixChars*
+  name: CollectPrefixChars
+  href: api/MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixStructureBasedSnssFinder_CollectPrefixChars_
+  commentId: Overload:MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.CollectPrefixChars
+  isSpec: "True"
+  fullName: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.CollectPrefixChars
+  nameWithType: SuffixStructureBasedSnssFinder.CollectPrefixChars
+- uid: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.CollectPrefixChars``2(MoreStructures.TextWithTerminator,``1,IDictionary{``1,MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit{``0,``1}})
+  name: CollectPrefixChars<TEdge, TNode>(TextWithTerminator, TNode, IDictionary<TNode, TreeTraversalVisit<TEdge, TNode>>)
+  href: api/MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixStructureBasedSnssFinder_CollectPrefixChars__2_MoreStructures_TextWithTerminator___1_IDictionary___1_MoreStructures_RecImmTrees_Visitor_TreeTraversalVisit___0___1___
+  commentId: M:MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.CollectPrefixChars``2(MoreStructures.TextWithTerminator,``1,IDictionary{``1,MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit{``0,``1}})
+  name.vb: CollectPrefixChars(Of TEdge, TNode)(TextWithTerminator, TNode, IDictionary(Of TNode, TreeTraversalVisit(Of TEdge, TNode)))
+  fullName: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.CollectPrefixChars<TEdge, TNode>(MoreStructures.TextWithTerminator, TNode, IDictionary<TNode, MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit<TEdge, TNode>>)
+  fullName.vb: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.CollectPrefixChars(Of TEdge, TNode)(MoreStructures.TextWithTerminator, TNode, IDictionary(Of TNode, MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit(Of TEdge, TNode)))
+  nameWithType: SuffixStructureBasedSnssFinder.CollectPrefixChars<TEdge, TNode>(TextWithTerminator, TNode, IDictionary<TNode, TreeTraversalVisit<TEdge, TNode>>)
+  nameWithType.vb: SuffixStructureBasedSnssFinder.CollectPrefixChars(Of TEdge, TNode)(TextWithTerminator, TNode, IDictionary(Of TNode, TreeTraversalVisit(Of TEdge, TNode)))
 - uid: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.Find(IEnumerable{System.Char},IEnumerable{System.Char})
   name: Find(IEnumerable<Char>, IEnumerable<Char>)
   href: api/MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixStructureBasedSnssFinder_Find_IEnumerable_System_Char__IEnumerable_System_Char__
@@ -3182,6 +3198,57 @@ references:
   isSpec: "True"
   fullName: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.ValidateInput
   nameWithType: SuffixStructureBasedSnssFinder.ValidateInput
+- uid: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.ValidateTexts(IEnumerable{System.Char},IEnumerable{System.Char})
+  name: ValidateTexts(IEnumerable<Char>, IEnumerable<Char>)
+  href: api/MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixStructureBasedSnssFinder_ValidateTexts_IEnumerable_System_Char__IEnumerable_System_Char__
+  commentId: M:MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.ValidateTexts(IEnumerable{System.Char},IEnumerable{System.Char})
+  name.vb: ValidateTexts(IEnumerable(Of Char), IEnumerable(Of Char))
+  fullName: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.ValidateTexts(IEnumerable<System.Char>, IEnumerable<System.Char>)
+  fullName.vb: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.ValidateTexts(IEnumerable(Of System.Char), IEnumerable(Of System.Char))
+  nameWithType: SuffixStructureBasedSnssFinder.ValidateTexts(IEnumerable<Char>, IEnumerable<Char>)
+  nameWithType.vb: SuffixStructureBasedSnssFinder.ValidateTexts(IEnumerable(Of Char), IEnumerable(Of Char))
+- uid: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.ValidateTexts*
+  name: ValidateTexts
+  href: api/MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixStructureBasedSnssFinder_ValidateTexts_
+  commentId: Overload:MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.ValidateTexts
+  isSpec: "True"
+  fullName: MoreStructures.SuffixStructures.Matching.SuffixStructureBasedSnssFinder.ValidateTexts
+  nameWithType: SuffixStructureBasedSnssFinder.ValidateTexts
+- uid: MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder
+  name: SuffixTreeBasedSnssFinder
+  href: api/MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder.html
+  commentId: T:MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder
+  fullName: MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder
+  nameWithType: SuffixTreeBasedSnssFinder
+- uid: MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder.#ctor(System.Char,System.Char)
+  name: SuffixTreeBasedSnssFinder(Char, Char)
+  href: api/MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixTreeBasedSnssFinder__ctor_System_Char_System_Char_
+  commentId: M:MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder.#ctor(System.Char,System.Char)
+  fullName: MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder.SuffixTreeBasedSnssFinder(System.Char, System.Char)
+  nameWithType: SuffixTreeBasedSnssFinder.SuffixTreeBasedSnssFinder(Char, Char)
+- uid: MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder.#ctor*
+  name: SuffixTreeBasedSnssFinder
+  href: api/MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixTreeBasedSnssFinder__ctor_
+  commentId: Overload:MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder.SuffixTreeBasedSnssFinder
+  nameWithType: SuffixTreeBasedSnssFinder.SuffixTreeBasedSnssFinder
+- uid: MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder.Find(IEnumerable{System.Char},IEnumerable{System.Char})
+  name: Find(IEnumerable<Char>, IEnumerable<Char>)
+  href: api/MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixTreeBasedSnssFinder_Find_IEnumerable_System_Char__IEnumerable_System_Char__
+  commentId: M:MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder.Find(IEnumerable{System.Char},IEnumerable{System.Char})
+  name.vb: Find(IEnumerable(Of Char), IEnumerable(Of Char))
+  fullName: MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder.Find(IEnumerable<System.Char>, IEnumerable<System.Char>)
+  fullName.vb: MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder.Find(IEnumerable(Of System.Char), IEnumerable(Of System.Char))
+  nameWithType: SuffixTreeBasedSnssFinder.Find(IEnumerable<Char>, IEnumerable<Char>)
+  nameWithType.vb: SuffixTreeBasedSnssFinder.Find(IEnumerable(Of Char), IEnumerable(Of Char))
+- uid: MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder.Find*
+  name: Find
+  href: api/MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder.html#MoreStructures_SuffixStructures_Matching_SuffixTreeBasedSnssFinder_Find_
+  commentId: Overload:MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder.Find
+  isSpec: "True"
+  fullName: MoreStructures.SuffixStructures.Matching.SuffixTreeBasedSnssFinder.Find
+  nameWithType: SuffixTreeBasedSnssFinder.Find
 - uid: MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder
   name: SuffixTrieBasedSnssFinder
   href: api/MoreStructures.SuffixStructures.Matching.SuffixTrieBasedSnssFinder.html
@@ -7904,19 +7971,6 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_ThrowsExceptionBeforeStartingAPhase
   nameWithType: IterationStateTests.ActivePointFollowedByCurrentChar_ThrowsExceptionBeforeStartingAPhase
-- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_ThrowsExceptionWhenInvalidActivePoint
-  name: ActivePointFollowedByCurrentChar_ThrowsExceptionWhenInvalidActivePoint()
-  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_IterationStateTests_ActivePointFollowedByCurrentChar_ThrowsExceptionWhenInvalidActivePoint
-  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_ThrowsExceptionWhenInvalidActivePoint
-  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_ThrowsExceptionWhenInvalidActivePoint()
-  nameWithType: IterationStateTests.ActivePointFollowedByCurrentChar_ThrowsExceptionWhenInvalidActivePoint()
-- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_ThrowsExceptionWhenInvalidActivePoint*
-  name: ActivePointFollowedByCurrentChar_ThrowsExceptionWhenInvalidActivePoint
-  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_IterationStateTests_ActivePointFollowedByCurrentChar_ThrowsExceptionWhenInvalidActivePoint_
-  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_ThrowsExceptionWhenInvalidActivePoint
-  isSpec: "True"
-  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_ThrowsExceptionWhenInvalidActivePoint
-  nameWithType: IterationStateTests.ActivePointFollowedByCurrentChar_ThrowsExceptionWhenInvalidActivePoint
 - uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_FalseCases
   name: ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_FalseCases()
   href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_IterationStateTests_ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_FalseCases
@@ -7943,6 +7997,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_TrueCases
   nameWithType: IterationStateTests.ActivePointFollowedByCurrentChar_WhenActivePointIsDefined_TrueCases
+- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.InitializeActiveEdgeAndLength_ThrowsExceptionWhenInvalidActivePoint
+  name: InitializeActiveEdgeAndLength_ThrowsExceptionWhenInvalidActivePoint()
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_IterationStateTests_InitializeActiveEdgeAndLength_ThrowsExceptionWhenInvalidActivePoint
+  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.InitializeActiveEdgeAndLength_ThrowsExceptionWhenInvalidActivePoint
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.InitializeActiveEdgeAndLength_ThrowsExceptionWhenInvalidActivePoint()
+  nameWithType: IterationStateTests.InitializeActiveEdgeAndLength_ThrowsExceptionWhenInvalidActivePoint()
+- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.InitializeActiveEdgeAndLength_ThrowsExceptionWhenInvalidActivePoint*
+  name: InitializeActiveEdgeAndLength_ThrowsExceptionWhenInvalidActivePoint
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_IterationStateTests_InitializeActiveEdgeAndLength_ThrowsExceptionWhenInvalidActivePoint_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.InitializeActiveEdgeAndLength_ThrowsExceptionWhenInvalidActivePoint
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.InitializeActiveEdgeAndLength_ThrowsExceptionWhenInvalidActivePoint
+  nameWithType: IterationStateTests.InitializeActiveEdgeAndLength_ThrowsExceptionWhenInvalidActivePoint
 - uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.IsThereANextPhase_IsCorrect
   name: IsThereANextPhase_IsCorrect()
   href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_IterationStateTests_IsThereANextPhase_IsCorrect
@@ -8202,6 +8269,38 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.SuffixTrees.Matching.SuffixStructureBasedSnssFinderTests.Find_RaiseExceptionWhenAnyTerminatorIsInAnyText
   nameWithType: SuffixStructureBasedSnssFinderTests.Find_RaiseExceptionWhenAnyTerminatorIsInAnyText
+- uid: MoreStructures.Tests.SuffixTrees.Matching.SuffixTreeBasedSnssFinderTests
+  name: SuffixTreeBasedSnssFinderTests
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.SuffixTreeBasedSnssFinderTests.html
+  commentId: T:MoreStructures.Tests.SuffixTrees.Matching.SuffixTreeBasedSnssFinderTests
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.SuffixTreeBasedSnssFinderTests
+  nameWithType: SuffixTreeBasedSnssFinderTests
+- uid: MoreStructures.Tests.SuffixTrees.Matching.SuffixTreeBasedSnssFinderTests.#ctor
+  name: SuffixTreeBasedSnssFinderTests()
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.SuffixTreeBasedSnssFinderTests.html#MoreStructures_Tests_SuffixTrees_Matching_SuffixTreeBasedSnssFinderTests__ctor
+  commentId: M:MoreStructures.Tests.SuffixTrees.Matching.SuffixTreeBasedSnssFinderTests.#ctor
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.SuffixTreeBasedSnssFinderTests.SuffixTreeBasedSnssFinderTests()
+  nameWithType: SuffixTreeBasedSnssFinderTests.SuffixTreeBasedSnssFinderTests()
+- uid: MoreStructures.Tests.SuffixTrees.Matching.SuffixTreeBasedSnssFinderTests.#ctor*
+  name: SuffixTreeBasedSnssFinderTests
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.SuffixTreeBasedSnssFinderTests.html#MoreStructures_Tests_SuffixTrees_Matching_SuffixTreeBasedSnssFinderTests__ctor_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Matching.SuffixTreeBasedSnssFinderTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.SuffixTreeBasedSnssFinderTests.SuffixTreeBasedSnssFinderTests
+  nameWithType: SuffixTreeBasedSnssFinderTests.SuffixTreeBasedSnssFinderTests
+- uid: MoreStructures.Tests.SuffixTrees.Matching.SuffixTreeBasedSnssFinderTests.Ctor_RaiseExceptionWhenTerminatorsAreEqual
+  name: Ctor_RaiseExceptionWhenTerminatorsAreEqual()
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.SuffixTreeBasedSnssFinderTests.html#MoreStructures_Tests_SuffixTrees_Matching_SuffixTreeBasedSnssFinderTests_Ctor_RaiseExceptionWhenTerminatorsAreEqual
+  commentId: M:MoreStructures.Tests.SuffixTrees.Matching.SuffixTreeBasedSnssFinderTests.Ctor_RaiseExceptionWhenTerminatorsAreEqual
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.SuffixTreeBasedSnssFinderTests.Ctor_RaiseExceptionWhenTerminatorsAreEqual()
+  nameWithType: SuffixTreeBasedSnssFinderTests.Ctor_RaiseExceptionWhenTerminatorsAreEqual()
+- uid: MoreStructures.Tests.SuffixTrees.Matching.SuffixTreeBasedSnssFinderTests.Ctor_RaiseExceptionWhenTerminatorsAreEqual*
+  name: Ctor_RaiseExceptionWhenTerminatorsAreEqual
+  href: api/MoreStructures.Tests.SuffixTrees.Matching.SuffixTreeBasedSnssFinderTests.html#MoreStructures_Tests_SuffixTrees_Matching_SuffixTreeBasedSnssFinderTests_Ctor_RaiseExceptionWhenTerminatorsAreEqual_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Matching.SuffixTreeBasedSnssFinderTests.Ctor_RaiseExceptionWhenTerminatorsAreEqual
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Matching.SuffixTreeBasedSnssFinderTests.Ctor_RaiseExceptionWhenTerminatorsAreEqual
+  nameWithType: SuffixTreeBasedSnssFinderTests.Ctor_RaiseExceptionWhenTerminatorsAreEqual
 - uid: MoreStructures.Tests.SuffixTrees.Matching.SuffixTrieBasedSnssFinderTests
   name: SuffixTrieBasedSnssFinderTests
   href: api/MoreStructures.Tests.SuffixTrees.Matching.SuffixTrieBasedSnssFinderTests.html
