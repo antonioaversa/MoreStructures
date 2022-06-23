@@ -11,6 +11,14 @@
 internal record MutableEdge(int Start, MovingEnd End)
 {
     /// <summary>
+    /// The length of this edge.
+    /// </summary>
+    /// <value>
+    /// A positive value (at least 1).
+    /// </value>
+    public int Length => End.Value - Start + 1;
+
+    /// <summary>
     /// In the form (<see cref="Start"/>, <see cref="End"/>).
     /// </summary>
     /// <remarks>

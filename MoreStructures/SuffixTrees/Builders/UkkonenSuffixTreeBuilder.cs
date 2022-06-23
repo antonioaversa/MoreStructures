@@ -1,8 +1,6 @@
 ﻿using MoreLinq;
 using MoreStructures.SuffixStructures.Builders;
 using MoreStructures.SuffixTrees.Builders.Ukkonen;
-using System.Diagnostics;
-using System.Linq;
 
 namespace MoreStructures.SuffixTrees.Builders;
 
@@ -78,44 +76,41 @@ public class UkkonenSuffixTreeBuilder
         {
             state.StartPhaseIncreasingRemainingAndGlobalEnd();
 
-            ProcessPhase(state);
+            ProcessCurrentPhase(state);
 
-            Trace.WriteLine("End of phase " + state.Phase);
-            Trace.WriteLine("");
+            Trace.WriteLine("End of phase\n");
         }
 
         return BuildResult(state.Root, fullText, terminators);
     }
 
-    private static void ProcessPhase(IterationState state)
+    private static void ProcessCurrentPhase(IterationState state)
     {
         while (state.StillRemainingSuffixesInCurrentPhase())
         {
-            state.JumpActiveNodeIfNecessary();
-
-            bool showStopper;
+            bool endCurrentPhase;
             if (state.NoActivePointAndEdgeStartingFromActiveNodeWithCurrentChar() is MutableEdge edge)
             {
                 state.InitializeActiveEdgeAndLength(edge);
-                showStopper = true;
+                endCurrentPhase = true;
             }
 
             else if (state.ActivePointFollowedByCurrentChar())
             {
                 state.IncrementActiveLength();
-                showStopper = true;
+                endCurrentPhase = true;
             }
             else // No active point nor edge, or active point not followed by current char => Rule 2
             {
                 state.CreateLeafAndPossiblyIntermediateAndDecrementRemainingSuffixes();
-                showStopper = false;
+                endCurrentPhase = false;
             }
 
             Trace.WriteLine($"State at end of iteration: {state}");
             Trace.WriteLine("");
 
-            if (showStopper)
-                break;
+            if (endCurrentPhase)
+                return;
         }
     }
 

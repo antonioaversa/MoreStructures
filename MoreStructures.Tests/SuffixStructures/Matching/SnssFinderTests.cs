@@ -29,7 +29,9 @@ public abstract class SnssFinderTests
     public void Find_IsCorrect(string text1, string text2, string?[] expectedResults)
     {
         var result = Finder.Find(text1, text2);
-        Assert.IsTrue(expectedResults.Contains(result));
+        Assert.IsTrue(
+            expectedResults.Contains(result), 
+            $"Expected = [{string.Join(", ", expectedResults)}], Actual = {result}");
     }
 
 }

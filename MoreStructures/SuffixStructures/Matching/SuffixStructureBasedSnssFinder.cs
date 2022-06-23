@@ -1,4 +1,5 @@
 ﻿using MoreStructures.RecImmTrees;
+using MoreStructures.RecImmTrees.Visitor;
 using MoreStructures.SuffixTrees;
 using MoreStructures.SuffixTries;
 
@@ -52,4 +53,54 @@ public abstract class SuffixStructureBasedSnssFinder : ISnssFinder
 
     /// <inheritdoc/>
     public abstract string? Find(IEnumerable<char> text1, IEnumerable<char> text2);
+
+    /// <summary>
+    /// Validates the provided texts against this finder, checking that they are compatible with 
+    /// <see cref="Terminator1"/> and <see cref="Terminator2"/>.
+    /// </summary>
+    /// <param name="text1">The first text to validate.</param>
+    /// <param name="text2">The second text to validate.</param>
+    protected void ValidateTexts(IEnumerable<char> text1, IEnumerable<char> text2)
+    {
+        if (text1.Contains(Terminator1) || text1.Contains(Terminator2))
+            throw new ArgumentException(
+                $"Should not contain {nameof(Terminator1)} nor {nameof(Terminator2)}: {Terminator1} {Terminator2}",
+                nameof(text1));
+        if (text2.Contains(Terminator1) || text2.Contains(Terminator2))
+            throw new ArgumentException(
+                $"Should not contain {nameof(Terminator1)} nor {nameof(Terminator2)}: {Terminator1} {Terminator2}",
+                nameof(text2));
+    }
+
+    /// <summary>
+    /// Rebuilds the root-to-node prefix, from <paramref name="initialNode"/> up to the root of the Suffix Tree (node 
+    /// with no parent), using the provided cache of visited nodes, <paramref name="cachedVisits"/>, to navigate the 
+    /// Suffix Tree upwards.
+    /// </summary>
+    /// <param name="text">The text used to generate the Suffix Tree, and to be used to rebuild the prefix.</param>
+    /// <param name="initialNode">The node, to start navigating from.</param>
+    /// <param name="cachedVisits">A dictionary of visits by node, to jump from a node to its parent.</param>
+    /// <returns>
+    /// A lazily generated sequence of strings, corresponding to the edges from <paramref name="initialNode"/> up to 
+    /// the root of the Suffix Tree. Empty if <paramref name="initialNode"/> is the root of the tree.
+    /// </returns>
+    protected static IEnumerable<string> CollectPrefixChars<TEdge, TNode>(
+        TextWithTerminator text,
+        TNode initialNode,
+        IDictionary<TNode, TreeTraversalVisit<TEdge, TNode>> cachedVisits)
+        where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>, TextWithTerminator.ISelector
+        where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode>
+    {
+        var node = initialNode;
+        while (true)
+        {
+            var (_, parentNode, incomingEdge, _) = cachedVisits[node];
+
+            if (parentNode == null)
+                yield break;
+
+            yield return text[incomingEdge!]; // if parentNode != null, then incomingEdge is also != null
+            node = parentNode;
+        }
+    }
 }

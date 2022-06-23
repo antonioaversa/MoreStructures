@@ -62,7 +62,7 @@ internal class IterationState
     /// <summary>
     /// The top-level iteration. There are as many phases as chars in <see cref="Text"/>.
     /// </summary>
-    public int Phase { get; private set; }
+    private int Phase;
 
     /// <summary>
     /// How many suffixes still need to be created within the current phase.
@@ -118,7 +118,7 @@ internal class IterationState
     /// <remarks>
     /// At the beginning it is set to the root of the about-to-be-built tree. The root doesn't have a Suffix Link.
     /// Unlike <see cref="ActiveEdge"/> and <see cref="ActiveLength"/>, <see cref="ActiveNode"/> is always defined.
-    /// It's changed by <see cref="JumpActiveNodeIfNecessary"/>, when the current <see cref="ActiveEdge"/> has been
+    /// It's changed by <see cref="JumpActivePointIfNecessary"/>, when the current <see cref="ActiveEdge"/> has been
     /// fully traversed. 
     /// It is also changed by <see cref="CreateLeafAndPossiblyIntermediateAndDecrementRemainingSuffixes"/> in Rule 
     /// 2 Extension, and set to its <see cref="MutableNode.SuffixLink"/>, when an internal node has been created
@@ -219,6 +219,8 @@ internal class IterationState
     {
         ActiveEdgeStart = edge.Start;
         ActiveLength = 1;
+
+        JumpActivePointIfNecessary(edge);
     }
 
     /// <summary>
@@ -236,12 +238,14 @@ internal class IterationState
     }
 
     /// <summary>
-    /// Increment <see cref="ActiveLength"/>. Used when <see cref="ActivePointFollowedByCurrentChar"/> is satified,
-    /// to trigger Rule 3 Extension, which is a showstopper for the current phase.
+    /// Increment <see cref="ActiveLength"/>, updating the Active Point if necessary. 
+    /// Used when <see cref="ActivePointFollowedByCurrentChar"/> is satified, to trigger Rule 3 Extension, which is 
+    /// a showstopper for the current phase.
     /// </summary>
     public void IncrementActiveLength()
     {
         ActiveLength++;
+        JumpActivePointIfNecessary(ActiveEdge);
     }
 
     /// <summary>
@@ -249,26 +253,81 @@ internal class IterationState
     /// and resetting <see cref="ActiveEdgeStart"/> and <see cref="ActiveLength"/> when appropriate. 
     /// </summary>
     /// <remarks>
-    /// Performed at every new iteration, after <see cref="StillRemainingSuffixesInCurrentPhase"/>.
+    ///     <para id="algo">
+    ///     ALGORITHM
+    ///     <br/>
+    ///     Performed at the end of every iteration.
+    ///     <br/>
+    ///     - If there is no Active Point, i.e. negative <see cref="ActiveEdgeStart"/> or zero 
+    ///       <see cref="ActiveLength"/>, there's nothing to update. Therefore, exit.
+    ///       <br/>
+    ///     - Scenario 1: If there are still chars not traversed on the current <see cref="ActiveEdge"/>, the Active 
+    ///       Point is still valid. Therefore, exit. Otherwise, perform the update. 
+    ///       <br/>
+    ///    <br/>
+    ///    There are two scenarios when all chars have been consumed on the current Active Edge, and an update of the 
+    ///    Active Point is required.
+    ///    <br/>
+    ///     - Scenario 2: the Active Point points to the last char of the <see cref="ActiveEdge"/>. This can happen 
+    ///       when Rule 3 Extension is applied and <see cref="ActiveLength"/> is increased by 1, reaching the end of
+    ///       the current <see cref="ActiveEdge"/>. In this scenario, change <see cref="ActiveNode"/>, jumping to the 
+    ///       node pointed by the current <see cref="ActiveEdge"/>, and reset the Active Point.
+    ///       <br/>
+    ///     - Scenario 3: the Active Point overflows, with the ActiveLength going beyond the <see cref="ActiveEdge"/>.
+    ///       This can happen when Rule 2 Extension is applied and <see cref="ActiveEdgeStart"/> is increased by 1,
+    ///       changing active edge, and <see cref="ActiveLength"/> is decreased by 1, but the edge which was unique on 
+    ///       the previous branch is split into a sequence of edges on the new branch. In this scenario, change 
+    ///       <see cref="ActiveNode"/>, jumping to the node pointed by the current <see cref="ActiveEdge"/>, and set 
+    ///       the Active Point accordingly.
+    ///     </para>
     /// </remarks>
-    public void JumpActiveNodeIfNecessary()
+    public void JumpActivePointIfNecessary(MutableEdge? previousActiveEdge)
     {
-        if (ActiveLength <= 0)
+        try
         {
-            ActiveEdgeStart = -1;
-            ActiveLength = 0;
+            while (true)
+            {
+                if (ActiveEdgeStart < 0 || ActiveLength <= 0)
+                {
+                    ActiveEdgeStart = -1;
+                    ActiveLength = 0;
+                    return;
+                }
+
+                var currentActiveEdge = ActiveEdge;
+                var remainingCharsOnActiveEdgeAfterActivePoint =
+                    currentActiveEdge.End.Value - (currentActiveEdge.Start + ActiveLength - 1);
+
+                // Scenario 1
+                if (remainingCharsOnActiveEdgeAfterActivePoint > 0)
+                {
+                    return;
+                }
+
+                // Scenario 2
+                if (remainingCharsOnActiveEdgeAfterActivePoint == 0)
+                {
+                    ActiveNode = ActiveNode.Children[currentActiveEdge];
+                    ActiveEdgeStart = -1;
+                    ActiveLength = 0;
+                    return;
+                }
+
+                // Scenario 3
+                var firstCharOverflowingCurrentActiveEdge = previousActiveEdge!.Start + currentActiveEdge.Length;
+                ActiveNode = ActiveNode.Children[currentActiveEdge];
+                ActiveEdgeStart = ActiveNode.Children.Keys.Single(
+                    edge => Text[edge.Start] == Text[firstCharOverflowingCurrentActiveEdge]).Start;
+                ActiveLength = -remainingCharsOnActiveEdgeAfterActivePoint;
+
+                previousActiveEdge = currentActiveEdge;
+            }
+        }
+        finally
+        {
+            Trace.WriteLine($"Active Point: Node {ActiveNode} Edge {ActiveEdgeStart} Length {ActiveLength}");
         }
 
-        if (ActiveEdgeStart < 0)
-            return;
-
-        var currentActiveEdge = ActiveEdge;
-        if (currentActiveEdge.Start + ActiveLength - 1 == currentActiveEdge.End.Value)
-        {
-            ActiveNode = ActiveNode.Children[currentActiveEdge];
-            ActiveEdgeStart = -1;
-            ActiveLength = 0;
-        }
     }
 
     /// <summary>
@@ -306,10 +365,12 @@ internal class IterationState
             PreviousInternalNodeInTheSamePhase = internalNode;
         }
 
-        // Now that the leaf x has been created, the internal node abc..z (length = RemainingSuffixes) has been
-        // created, and the previous internal node updated (if any), there are still RemainingSuffixes suffixes
-        // to be processed: bc..zx, c..zx, ... x. Those can be easily found in the tree by using Suffix Links.
-        if (ActiveNode == Root)
+        var previousActiveEdge = ActiveEdgeStart >= 0 ? ActiveEdge : null;
+
+        // Now that the leaf x has been created, and possibly the internal node abc..z (length = RemainingSuffixes)
+        // has also been created, and the previous internal node updated (if any), there are still RemainingSuffixes
+        // suffixes to be processed: bc..zx, c..zx, ... x. Those can be easily found in the tree by using Suffix Links.
+        if (ActiveNode == Root && ActiveEdgeStart >= 0)
         {
             // To move from abc..zx to bc..zx when the active node is the root, increment ActiveEdgeStart
             // (which means that the start of the new ActiveEdge is now b) and decrement ActiveLength (because
@@ -324,8 +385,10 @@ internal class IterationState
             // To move from abc..zx to bc..zx when the active node is an internal node N, move the active node
             // to the Suffix Link of N, which is by definition the node having path bc..zx. Active edge and
             // length don't change, because the new active node has the suffix bc..zx.
-            ActiveNode = ActiveNode.SuffixLink!;
+            ActiveNode = ActiveNode.SuffixLink ?? Root;
         }
+
+        JumpActivePointIfNecessary(previousActiveEdge);
 
         // Because a leaf has been created, a suffix has been processed, and the number of remaining suffixes
         // (which is > 1 in case previous phases have terminated with a showstopper due to Rule 3 Extension)
