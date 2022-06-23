@@ -58,9 +58,6 @@ public class NaiveSnssFinder : ISnssFinder
             select substringOfString1;
 
         var (firstOrEmpty, reminder) = results.EnumerateAtMostFirst(1);
-        if (!firstOrEmpty.Any())
-            return firstOrEmpty;
-
         var first = firstOrEmpty.Single();
         return results.TakeWhile(s => s.Length == first.Length).Prepend(first);
     }
