@@ -2648,6 +2648,98 @@ references:
   isSpec: "True"
   fullName: MoreStructures.RotatedTextWithTerminator.ValidateInput
   nameWithType: RotatedTextWithTerminator.ValidateInput
+- uid: MoreStructures.SuffixArrays.Builders
+  name: MoreStructures.SuffixArrays.Builders
+  href: api/MoreStructures.SuffixArrays.Builders.html
+  commentId: N:MoreStructures.SuffixArrays.Builders
+  fullName: MoreStructures.SuffixArrays.Builders
+  nameWithType: MoreStructures.SuffixArrays.Builders
+- uid: MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder`2
+  name: ISuffixArrayBuilder<TEdge, TNode>
+  href: api/MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder-2.html
+  commentId: T:MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder`2
+  name.vb: ISuffixArrayBuilder(Of TEdge, TNode)
+  fullName: MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder<TEdge, TNode>
+  fullName.vb: MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder(Of TEdge, TNode)
+  nameWithType: ISuffixArrayBuilder<TEdge, TNode>
+  nameWithType.vb: ISuffixArrayBuilder(Of TEdge, TNode)
+- uid: MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder`2.Build
+  name: Build()
+  href: api/MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder-2.html#MoreStructures_SuffixArrays_Builders_ISuffixArrayBuilder_2_Build
+  commentId: M:MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder`2.Build
+  fullName: MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder<TEdge, TNode>.Build()
+  fullName.vb: MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder(Of TEdge, TNode).Build()
+  nameWithType: ISuffixArrayBuilder<TEdge, TNode>.Build()
+  nameWithType.vb: ISuffixArrayBuilder(Of TEdge, TNode).Build()
+- uid: MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder`2.Build*
+  name: Build
+  href: api/MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder-2.html#MoreStructures_SuffixArrays_Builders_ISuffixArrayBuilder_2_Build_
+  commentId: Overload:MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder`2.Build
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder<TEdge, TNode>.Build
+  fullName.vb: MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder(Of TEdge, TNode).Build
+  nameWithType: ISuffixArrayBuilder<TEdge, TNode>.Build
+  nameWithType.vb: ISuffixArrayBuilder(Of TEdge, TNode).Build
+- uid: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2
+  name: NaiveSuffixArrayBuilder<TEdge, TNode>
+  href: api/MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder-2.html
+  commentId: T:MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2
+  name.vb: NaiveSuffixArrayBuilder(Of TEdge, TNode)
+  fullName: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder<TEdge, TNode>
+  fullName.vb: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder(Of TEdge, TNode)
+  nameWithType: NaiveSuffixArrayBuilder<TEdge, TNode>
+  nameWithType.vb: NaiveSuffixArrayBuilder(Of TEdge, TNode)
+- uid: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2.#ctor(MoreStructures.TextWithTerminator)
+  name: NaiveSuffixArrayBuilder(TextWithTerminator)
+  href: api/MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder-2.html#MoreStructures_SuffixArrays_Builders_NaiveSuffixArrayBuilder_2__ctor_MoreStructures_TextWithTerminator_
+  commentId: M:MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2.#ctor(MoreStructures.TextWithTerminator)
+  fullName: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder<TEdge, TNode>.NaiveSuffixArrayBuilder(MoreStructures.TextWithTerminator)
+  fullName.vb: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder(Of TEdge, TNode).NaiveSuffixArrayBuilder(MoreStructures.TextWithTerminator)
+  nameWithType: NaiveSuffixArrayBuilder<TEdge, TNode>.NaiveSuffixArrayBuilder(TextWithTerminator)
+  nameWithType.vb: NaiveSuffixArrayBuilder(Of TEdge, TNode).NaiveSuffixArrayBuilder(TextWithTerminator)
+- uid: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2.#ctor*
+  name: NaiveSuffixArrayBuilder
+  href: api/MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder-2.html#MoreStructures_SuffixArrays_Builders_NaiveSuffixArrayBuilder_2__ctor_
+  commentId: Overload:MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder<TEdge, TNode>.NaiveSuffixArrayBuilder
+  fullName.vb: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder(Of TEdge, TNode).NaiveSuffixArrayBuilder
+  nameWithType: NaiveSuffixArrayBuilder<TEdge, TNode>.NaiveSuffixArrayBuilder
+  nameWithType.vb: NaiveSuffixArrayBuilder(Of TEdge, TNode).NaiveSuffixArrayBuilder
+- uid: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2.Build
+  name: Build()
+  href: api/MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder-2.html#MoreStructures_SuffixArrays_Builders_NaiveSuffixArrayBuilder_2_Build
+  commentId: M:MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2.Build
+  fullName: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder<TEdge, TNode>.Build()
+  fullName.vb: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder(Of TEdge, TNode).Build()
+  nameWithType: NaiveSuffixArrayBuilder<TEdge, TNode>.Build()
+  nameWithType.vb: NaiveSuffixArrayBuilder(Of TEdge, TNode).Build()
+- uid: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2.Build*
+  name: Build
+  href: api/MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder-2.html#MoreStructures_SuffixArrays_Builders_NaiveSuffixArrayBuilder_2_Build_
+  commentId: Overload:MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2.Build
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder<TEdge, TNode>.Build
+  fullName.vb: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder(Of TEdge, TNode).Build
+  nameWithType: NaiveSuffixArrayBuilder<TEdge, TNode>.Build
+  nameWithType.vb: NaiveSuffixArrayBuilder(Of TEdge, TNode).Build
+- uid: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2.Text
+  name: Text
+  href: api/MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder-2.html#MoreStructures_SuffixArrays_Builders_NaiveSuffixArrayBuilder_2_Text
+  commentId: P:MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2.Text
+  fullName: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder<TEdge, TNode>.Text
+  fullName.vb: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder(Of TEdge, TNode).Text
+  nameWithType: NaiveSuffixArrayBuilder<TEdge, TNode>.Text
+  nameWithType.vb: NaiveSuffixArrayBuilder(Of TEdge, TNode).Text
+- uid: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2.Text*
+  name: Text
+  href: api/MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder-2.html#MoreStructures_SuffixArrays_Builders_NaiveSuffixArrayBuilder_2_Text_
+  commentId: Overload:MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2.Text
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder<TEdge, TNode>.Text
+  fullName.vb: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder(Of TEdge, TNode).Text
+  nameWithType: NaiveSuffixArrayBuilder<TEdge, TNode>.Text
+  nameWithType.vb: NaiveSuffixArrayBuilder(Of TEdge, TNode).Text
 - uid: MoreStructures.SuffixStructures
   name: MoreStructures.SuffixStructures
   href: api/MoreStructures.SuffixStructures.html
@@ -6999,6 +7091,93 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.StringIncludingTerminatorComparerTests.Terminator_IsSet
   nameWithType: StringIncludingTerminatorComparerTests.Terminator_IsSet
+- uid: MoreStructures.Tests.SuffixArrays.Builders
+  name: MoreStructures.Tests.SuffixArrays.Builders
+  href: api/MoreStructures.Tests.SuffixArrays.Builders.html
+  commentId: N:MoreStructures.Tests.SuffixArrays.Builders
+  fullName: MoreStructures.Tests.SuffixArrays.Builders
+  nameWithType: MoreStructures.Tests.SuffixArrays.Builders
+- uid: MoreStructures.Tests.SuffixArrays.Builders.NaiveSuffixArrayBuilderTests
+  name: NaiveSuffixArrayBuilderTests
+  href: api/MoreStructures.Tests.SuffixArrays.Builders.NaiveSuffixArrayBuilderTests.html
+  commentId: T:MoreStructures.Tests.SuffixArrays.Builders.NaiveSuffixArrayBuilderTests
+  fullName: MoreStructures.Tests.SuffixArrays.Builders.NaiveSuffixArrayBuilderTests
+  nameWithType: NaiveSuffixArrayBuilderTests
+- uid: MoreStructures.Tests.SuffixArrays.Builders.NaiveSuffixArrayBuilderTests.#ctor
+  name: NaiveSuffixArrayBuilderTests()
+  href: api/MoreStructures.Tests.SuffixArrays.Builders.NaiveSuffixArrayBuilderTests.html#MoreStructures_Tests_SuffixArrays_Builders_NaiveSuffixArrayBuilderTests__ctor
+  commentId: M:MoreStructures.Tests.SuffixArrays.Builders.NaiveSuffixArrayBuilderTests.#ctor
+  fullName: MoreStructures.Tests.SuffixArrays.Builders.NaiveSuffixArrayBuilderTests.NaiveSuffixArrayBuilderTests()
+  nameWithType: NaiveSuffixArrayBuilderTests.NaiveSuffixArrayBuilderTests()
+- uid: MoreStructures.Tests.SuffixArrays.Builders.NaiveSuffixArrayBuilderTests.#ctor*
+  name: NaiveSuffixArrayBuilderTests
+  href: api/MoreStructures.Tests.SuffixArrays.Builders.NaiveSuffixArrayBuilderTests.html#MoreStructures_Tests_SuffixArrays_Builders_NaiveSuffixArrayBuilderTests__ctor_
+  commentId: Overload:MoreStructures.Tests.SuffixArrays.Builders.NaiveSuffixArrayBuilderTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixArrays.Builders.NaiveSuffixArrayBuilderTests.NaiveSuffixArrayBuilderTests
+  nameWithType: NaiveSuffixArrayBuilderTests.NaiveSuffixArrayBuilderTests
+- uid: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests`2
+  name: SuffixArrayBuilderTests<TEdge, TNode>
+  href: api/MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests-2.html
+  commentId: T:MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests`2
+  name.vb: SuffixArrayBuilderTests(Of TEdge, TNode)
+  fullName: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests<TEdge, TNode>
+  fullName.vb: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests(Of TEdge, TNode)
+  nameWithType: SuffixArrayBuilderTests<TEdge, TNode>
+  nameWithType.vb: SuffixArrayBuilderTests(Of TEdge, TNode)
+- uid: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests`2.#ctor(Func{System.String,MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder{`0,`1}})
+  name: SuffixArrayBuilderTests(Func<String, ISuffixArrayBuilder<TEdge, TNode>>)
+  href: api/MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests-2.html#MoreStructures_Tests_SuffixArrays_Builders_SuffixArrayBuilderTests_2__ctor_Func_System_String_MoreStructures_SuffixArrays_Builders_ISuffixArrayBuilder__0__1___
+  commentId: M:MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests`2.#ctor(Func{System.String,MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder{`0,`1}})
+  name.vb: SuffixArrayBuilderTests(Func(Of String, ISuffixArrayBuilder(Of TEdge, TNode)))
+  fullName: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests<TEdge, TNode>.SuffixArrayBuilderTests(Func<System.String, MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder<TEdge, TNode>>)
+  fullName.vb: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests(Of TEdge, TNode).SuffixArrayBuilderTests(Func(Of System.String, MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder(Of TEdge, TNode)))
+  nameWithType: SuffixArrayBuilderTests<TEdge, TNode>.SuffixArrayBuilderTests(Func<String, ISuffixArrayBuilder<TEdge, TNode>>)
+  nameWithType.vb: SuffixArrayBuilderTests(Of TEdge, TNode).SuffixArrayBuilderTests(Func(Of String, ISuffixArrayBuilder(Of TEdge, TNode)))
+- uid: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests`2.#ctor*
+  name: SuffixArrayBuilderTests
+  href: api/MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests-2.html#MoreStructures_Tests_SuffixArrays_Builders_SuffixArrayBuilderTests_2__ctor_
+  commentId: Overload:MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests`2.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests<TEdge, TNode>.SuffixArrayBuilderTests
+  fullName.vb: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests(Of TEdge, TNode).SuffixArrayBuilderTests
+  nameWithType: SuffixArrayBuilderTests<TEdge, TNode>.SuffixArrayBuilderTests
+  nameWithType.vb: SuffixArrayBuilderTests(Of TEdge, TNode).SuffixArrayBuilderTests
+- uid: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests`2.Build_IsCorrect(System.String,System.Int32[])
+  name: Build_IsCorrect(String, Int32[])
+  href: api/MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests-2.html#MoreStructures_Tests_SuffixArrays_Builders_SuffixArrayBuilderTests_2_Build_IsCorrect_System_String_System_Int32___
+  commentId: M:MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests`2.Build_IsCorrect(System.String,System.Int32[])
+  name.vb: Build_IsCorrect(String, Int32())
+  fullName: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests<TEdge, TNode>.Build_IsCorrect(System.String, System.Int32[])
+  fullName.vb: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests(Of TEdge, TNode).Build_IsCorrect(System.String, System.Int32())
+  nameWithType: SuffixArrayBuilderTests<TEdge, TNode>.Build_IsCorrect(String, Int32[])
+  nameWithType.vb: SuffixArrayBuilderTests(Of TEdge, TNode).Build_IsCorrect(String, Int32())
+- uid: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests`2.Build_IsCorrect*
+  name: Build_IsCorrect
+  href: api/MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests-2.html#MoreStructures_Tests_SuffixArrays_Builders_SuffixArrayBuilderTests_2_Build_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests`2.Build_IsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests<TEdge, TNode>.Build_IsCorrect
+  fullName.vb: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests(Of TEdge, TNode).Build_IsCorrect
+  nameWithType: SuffixArrayBuilderTests<TEdge, TNode>.Build_IsCorrect
+  nameWithType.vb: SuffixArrayBuilderTests(Of TEdge, TNode).Build_IsCorrect
+- uid: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests`2.BuilderBuilder
+  name: BuilderBuilder
+  href: api/MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests-2.html#MoreStructures_Tests_SuffixArrays_Builders_SuffixArrayBuilderTests_2_BuilderBuilder
+  commentId: P:MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests`2.BuilderBuilder
+  fullName: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests<TEdge, TNode>.BuilderBuilder
+  fullName.vb: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests(Of TEdge, TNode).BuilderBuilder
+  nameWithType: SuffixArrayBuilderTests<TEdge, TNode>.BuilderBuilder
+  nameWithType.vb: SuffixArrayBuilderTests(Of TEdge, TNode).BuilderBuilder
+- uid: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests`2.BuilderBuilder*
+  name: BuilderBuilder
+  href: api/MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests-2.html#MoreStructures_Tests_SuffixArrays_Builders_SuffixArrayBuilderTests_2_BuilderBuilder_
+  commentId: Overload:MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests`2.BuilderBuilder
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests<TEdge, TNode>.BuilderBuilder
+  fullName.vb: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests(Of TEdge, TNode).BuilderBuilder
+  nameWithType: SuffixArrayBuilderTests<TEdge, TNode>.BuilderBuilder
+  nameWithType.vb: SuffixArrayBuilderTests(Of TEdge, TNode).BuilderBuilder
 - uid: MoreStructures.Tests.SuffixStructures
   name: MoreStructures.Tests.SuffixStructures
   href: api/MoreStructures.Tests.SuffixStructures.html

@@ -594,7 +594,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.RecImmTrees.Visitor.IVisitStrategy-2.html",
-          "hash": "o3IZYJZJSUvYEKORArBO2jB1tzuQOfYzz0kg/33Lxg0="
+          "hash": "kO8DsQAbWoTRXlzDzDYANwWUtQND1171wJ7v2cr3vcM="
         }
       },
       "is_incremental": false,
@@ -667,6 +667,42 @@
         ".html": {
           "relative_path": "api/MoreStructures.RotatedTextWithTerminator.html",
           "hash": "bMU2DSCHgsf9HCb4RObNfaM9WB2rL2mswP1Yya7Tlfo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder-2.html",
+          "hash": "WuzG8PvK9/VCPuEq3spIdW+HSC/l5F+MQCxWG0ssPvU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder-2.html",
+          "hash": "Iu3zosTyMvtehOzZFEtM9MS7NQDK/cQBdF5a9tZosPs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.SuffixArrays.Builders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.SuffixArrays.Builders.html",
+          "hash": "JPejbCOPi/DGuSHGhLBRHc9Q2okr8FpgcrwzRDNyZPU="
         }
       },
       "is_incremental": false,
@@ -1814,6 +1850,42 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.SuffixArrays.Builders.NaiveSuffixArrayBuilderTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.SuffixArrays.Builders.NaiveSuffixArrayBuilderTests.html",
+          "hash": "puNNHmdubIuqInaat0B8EAFlv9WKKF/F8h1MoxELPVI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests-2.html",
+          "hash": "ranq6ZgKXadI7PXE9gg+Sl+f5RHytlfF9gLcB2s5bLQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.SuffixArrays.Builders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.SuffixArrays.Builders.html",
+          "hash": "9Qf2VMq9uyeUch0lr2ccZ3Gy2Xbmzy9TdyIjIwNHObM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Tests.SuffixStructures.AdjacencyOrdersTests.yml",
       "output": {
         ".html": {
@@ -2718,7 +2790,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "b3xbQR1ZoBPLdaCuuJWrbOQZz60I9qY8NcqjiwYwqNM="
+          "hash": "AK0M5zYc0/ofAXRJBYHbw2lcM3zQ90KlhPYQG8dOPDE="
         }
       },
       "is_incremental": false,
@@ -2793,7 +2865,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 224,
+          "total_file_count": 230,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
