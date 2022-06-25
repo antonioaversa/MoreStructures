@@ -698,11 +698,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder-2.html",
+          "hash": "4FeWxUJIQToP+pXg4U60gVOw+s8JuTduJ9d3LKS5m5g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.SuffixArrays.Builders.yml",
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.SuffixArrays.Builders.html",
-          "hash": "JPejbCOPi/DGuSHGhLBRHc9Q2okr8FpgcrwzRDNyZPU="
+          "hash": "95WMqu+8w0OYC02VOWW+3OQkLfnoIPxo0chRp2xemY0="
         }
       },
       "is_incremental": false,
@@ -1866,7 +1878,19 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests-2.html",
-          "hash": "ranq6ZgKXadI7PXE9gg+Sl+f5RHytlfF9gLcB2s5bLQ="
+          "hash": "r15up6AmKcGeKuU3I6HLaPJHWc+bt540kPsrCj8An+g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilderTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilderTests.html",
+          "hash": "tFjPDiQBBQFdonRjjENqui8gVTv2mBvxj2x3IsY0Qek="
         }
       },
       "is_incremental": false,
@@ -1878,7 +1902,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.SuffixArrays.Builders.html",
-          "hash": "9Qf2VMq9uyeUch0lr2ccZ3Gy2Xbmzy9TdyIjIwNHObM="
+          "hash": "ZaPDGAxFhCjEtKkGJB78AY0T4KgZ9MYxze+Z68BnPJI="
         }
       },
       "is_incremental": false,
@@ -2802,7 +2826,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "x/KNl+3JAiVvIW7EeiC/vL8LxROq7N8zOV7m2C1o8FM="
+          "hash": "LpED4yoBXSkBCDmSGTh3Sl6NpSy8+MkNWQS59GTi0rE="
         }
       },
       "is_incremental": false,
@@ -2877,7 +2901,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 231,
+          "total_file_count": 233,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

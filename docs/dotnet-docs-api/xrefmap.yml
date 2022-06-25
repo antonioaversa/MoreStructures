@@ -2740,6 +2740,83 @@ references:
   fullName.vb: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder(Of TEdge, TNode).Text
   nameWithType: NaiveSuffixArrayBuilder<TEdge, TNode>.Text
   nameWithType.vb: NaiveSuffixArrayBuilder(Of TEdge, TNode).Text
+- uid: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2
+  name: SuffixStructureBasedSuffixArrayBuilder<TEdge, TNode>
+  href: api/MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder-2.html
+  commentId: T:MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2
+  name.vb: SuffixStructureBasedSuffixArrayBuilder(Of TEdge, TNode)
+  fullName: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder<TEdge, TNode>
+  fullName.vb: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder(Of TEdge, TNode)
+  nameWithType: SuffixStructureBasedSuffixArrayBuilder<TEdge, TNode>
+  nameWithType.vb: SuffixStructureBasedSuffixArrayBuilder(Of TEdge, TNode)
+- uid: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.#ctor(MoreStructures.TextWithTerminator,`1)
+  name: SuffixStructureBasedSuffixArrayBuilder(TextWithTerminator, TNode)
+  href: api/MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder-2.html#MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2__ctor_MoreStructures_TextWithTerminator__1_
+  commentId: M:MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.#ctor(MoreStructures.TextWithTerminator,`1)
+  fullName: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder<TEdge, TNode>.SuffixStructureBasedSuffixArrayBuilder(MoreStructures.TextWithTerminator, TNode)
+  fullName.vb: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder(Of TEdge, TNode).SuffixStructureBasedSuffixArrayBuilder(MoreStructures.TextWithTerminator, TNode)
+  nameWithType: SuffixStructureBasedSuffixArrayBuilder<TEdge, TNode>.SuffixStructureBasedSuffixArrayBuilder(TextWithTerminator, TNode)
+  nameWithType.vb: SuffixStructureBasedSuffixArrayBuilder(Of TEdge, TNode).SuffixStructureBasedSuffixArrayBuilder(TextWithTerminator, TNode)
+- uid: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.#ctor*
+  name: SuffixStructureBasedSuffixArrayBuilder
+  href: api/MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder-2.html#MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2__ctor_
+  commentId: Overload:MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder<TEdge, TNode>.SuffixStructureBasedSuffixArrayBuilder
+  fullName.vb: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder(Of TEdge, TNode).SuffixStructureBasedSuffixArrayBuilder
+  nameWithType: SuffixStructureBasedSuffixArrayBuilder<TEdge, TNode>.SuffixStructureBasedSuffixArrayBuilder
+  nameWithType.vb: SuffixStructureBasedSuffixArrayBuilder(Of TEdge, TNode).SuffixStructureBasedSuffixArrayBuilder
+- uid: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.Build
+  name: Build()
+  href: api/MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder-2.html#MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2_Build
+  commentId: M:MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.Build
+  fullName: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder<TEdge, TNode>.Build()
+  fullName.vb: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder(Of TEdge, TNode).Build()
+  nameWithType: SuffixStructureBasedSuffixArrayBuilder<TEdge, TNode>.Build()
+  nameWithType.vb: SuffixStructureBasedSuffixArrayBuilder(Of TEdge, TNode).Build()
+- uid: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.Build*
+  name: Build
+  href: api/MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder-2.html#MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2_Build_
+  commentId: Overload:MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.Build
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder<TEdge, TNode>.Build
+  fullName.vb: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder(Of TEdge, TNode).Build
+  nameWithType: SuffixStructureBasedSuffixArrayBuilder<TEdge, TNode>.Build
+  nameWithType.vb: SuffixStructureBasedSuffixArrayBuilder(Of TEdge, TNode).Build
+- uid: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.Node
+  name: Node
+  href: api/MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder-2.html#MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2_Node
+  commentId: P:MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.Node
+  fullName: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder<TEdge, TNode>.Node
+  fullName.vb: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder(Of TEdge, TNode).Node
+  nameWithType: SuffixStructureBasedSuffixArrayBuilder<TEdge, TNode>.Node
+  nameWithType.vb: SuffixStructureBasedSuffixArrayBuilder(Of TEdge, TNode).Node
+- uid: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.Node*
+  name: Node
+  href: api/MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder-2.html#MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2_Node_
+  commentId: Overload:MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.Node
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder<TEdge, TNode>.Node
+  fullName.vb: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder(Of TEdge, TNode).Node
+  nameWithType: SuffixStructureBasedSuffixArrayBuilder<TEdge, TNode>.Node
+  nameWithType.vb: SuffixStructureBasedSuffixArrayBuilder(Of TEdge, TNode).Node
+- uid: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.Text
+  name: Text
+  href: api/MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder-2.html#MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2_Text
+  commentId: P:MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.Text
+  fullName: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder<TEdge, TNode>.Text
+  fullName.vb: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder(Of TEdge, TNode).Text
+  nameWithType: SuffixStructureBasedSuffixArrayBuilder<TEdge, TNode>.Text
+  nameWithType.vb: SuffixStructureBasedSuffixArrayBuilder(Of TEdge, TNode).Text
+- uid: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.Text*
+  name: Text
+  href: api/MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder-2.html#MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2_Text_
+  commentId: Overload:MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.Text
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder<TEdge, TNode>.Text
+  fullName.vb: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder(Of TEdge, TNode).Text
+  nameWithType: SuffixStructureBasedSuffixArrayBuilder<TEdge, TNode>.Text
+  nameWithType.vb: SuffixStructureBasedSuffixArrayBuilder(Of TEdge, TNode).Text
 - uid: MoreStructures.SuffixStructures
   name: MoreStructures.SuffixStructures
   href: api/MoreStructures.SuffixStructures.html
@@ -7178,6 +7255,25 @@ references:
   fullName.vb: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests(Of TEdge, TNode).BuilderBuilder
   nameWithType: SuffixArrayBuilderTests<TEdge, TNode>.BuilderBuilder
   nameWithType.vb: SuffixArrayBuilderTests(Of TEdge, TNode).BuilderBuilder
+- uid: MoreStructures.Tests.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilderTests
+  name: SuffixStructureBasedSuffixArrayBuilderTests
+  href: api/MoreStructures.Tests.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilderTests.html
+  commentId: T:MoreStructures.Tests.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilderTests
+  fullName: MoreStructures.Tests.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilderTests
+  nameWithType: SuffixStructureBasedSuffixArrayBuilderTests
+- uid: MoreStructures.Tests.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilderTests.#ctor
+  name: SuffixStructureBasedSuffixArrayBuilderTests()
+  href: api/MoreStructures.Tests.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilderTests.html#MoreStructures_Tests_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilderTests__ctor
+  commentId: M:MoreStructures.Tests.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilderTests.#ctor
+  fullName: MoreStructures.Tests.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilderTests.SuffixStructureBasedSuffixArrayBuilderTests()
+  nameWithType: SuffixStructureBasedSuffixArrayBuilderTests.SuffixStructureBasedSuffixArrayBuilderTests()
+- uid: MoreStructures.Tests.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilderTests.#ctor*
+  name: SuffixStructureBasedSuffixArrayBuilderTests
+  href: api/MoreStructures.Tests.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilderTests.html#MoreStructures_Tests_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilderTests__ctor_
+  commentId: Overload:MoreStructures.Tests.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilderTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilderTests.SuffixStructureBasedSuffixArrayBuilderTests
+  nameWithType: SuffixStructureBasedSuffixArrayBuilderTests.SuffixStructureBasedSuffixArrayBuilderTests
 - uid: MoreStructures.Tests.SuffixStructures
   name: MoreStructures.Tests.SuffixStructures
   href: api/MoreStructures.Tests.SuffixStructures.html
