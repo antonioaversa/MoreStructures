@@ -7780,6 +7780,12 @@ references:
   commentId: F:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.EmptyStrings
   fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.EmptyStrings
   nameWithType: BuilderEquivalences.EquivalenceId.EmptyStrings
+- uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.Issue75_BreakingUkkonen
+  name: Issue75_BreakingUkkonen
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_Issue75_BreakingUkkonen
+  commentId: F:MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.Issue75_BreakingUkkonen
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.Issue75_BreakingUkkonen
+  nameWithType: BuilderEquivalences.EquivalenceId.Issue75_BreakingUkkonen
 - uid: MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.OneEmptyOneNonEmpty
   name: OneEmptyOneNonEmpty
   href: api/MoreStructures.Tests.SuffixTrees.Builders.BuilderEquivalences.EquivalenceId.html#MoreStructures_Tests_SuffixTrees_Builders_BuilderEquivalences_EquivalenceId_OneEmptyOneNonEmpty
@@ -8241,6 +8247,38 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.IterationStateTests.Text_IsSetOnConstruction
   nameWithType: IterationStateTests.Text_IsSetOnConstruction
+- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.MutableEdgeTests
+  name: MutableEdgeTests
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.MutableEdgeTests.html
+  commentId: T:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.MutableEdgeTests
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.MutableEdgeTests
+  nameWithType: MutableEdgeTests
+- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.MutableEdgeTests.Equals_BasedOnStartAndEndValue
+  name: Equals_BasedOnStartAndEndValue()
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.MutableEdgeTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_MutableEdgeTests_Equals_BasedOnStartAndEndValue
+  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.MutableEdgeTests.Equals_BasedOnStartAndEndValue
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.MutableEdgeTests.Equals_BasedOnStartAndEndValue()
+  nameWithType: MutableEdgeTests.Equals_BasedOnStartAndEndValue()
+- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.MutableEdgeTests.Equals_BasedOnStartAndEndValue*
+  name: Equals_BasedOnStartAndEndValue
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.MutableEdgeTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_MutableEdgeTests_Equals_BasedOnStartAndEndValue_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.MutableEdgeTests.Equals_BasedOnStartAndEndValue
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.MutableEdgeTests.Equals_BasedOnStartAndEndValue
+  nameWithType: MutableEdgeTests.Equals_BasedOnStartAndEndValue
+- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.MutableEdgeTests.GetHashCode_DoesntChangeWhenMovingEnd
+  name: GetHashCode_DoesntChangeWhenMovingEnd()
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.MutableEdgeTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_MutableEdgeTests_GetHashCode_DoesntChangeWhenMovingEnd
+  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.MutableEdgeTests.GetHashCode_DoesntChangeWhenMovingEnd
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.MutableEdgeTests.GetHashCode_DoesntChangeWhenMovingEnd()
+  nameWithType: MutableEdgeTests.GetHashCode_DoesntChangeWhenMovingEnd()
+- uid: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.MutableEdgeTests.GetHashCode_DoesntChangeWhenMovingEnd*
+  name: GetHashCode_DoesntChangeWhenMovingEnd
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.MutableEdgeTests.html#MoreStructures_Tests_SuffixTrees_Builders_Ukkonen_MutableEdgeTests_GetHashCode_DoesntChangeWhenMovingEnd_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.MutableEdgeTests.GetHashCode_DoesntChangeWhenMovingEnd
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.Ukkonen.MutableEdgeTests.GetHashCode_DoesntChangeWhenMovingEnd
+  nameWithType: MutableEdgeTests.GetHashCode_DoesntChangeWhenMovingEnd
 - uid: MoreStructures.Tests.SuffixTrees.Builders.UkkonenSuffixTreeBuilderTests
   name: UkkonenSuffixTreeBuilderTests
   href: api/MoreStructures.Tests.SuffixTrees.Builders.UkkonenSuffixTreeBuilderTests.html
