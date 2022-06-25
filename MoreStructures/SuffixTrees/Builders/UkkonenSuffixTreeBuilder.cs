@@ -94,7 +94,6 @@ public class UkkonenSuffixTreeBuilder
                 state.InitializeActiveEdgeAndLength(edge);
                 endCurrentPhase = true;
             }
-
             else if (state.ActivePointFollowedByCurrentChar())
             {
                 state.IncrementActiveLength();
