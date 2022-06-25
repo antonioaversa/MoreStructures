@@ -1,4 +1,5 @@
-﻿using MoreStructures.SuffixTrees.Builders.Ukkonen;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MoreStructures.SuffixTrees.Builders.Ukkonen;
 
 namespace MoreStructures.Tests.SuffixTrees.Builders.Ukkonen;
 

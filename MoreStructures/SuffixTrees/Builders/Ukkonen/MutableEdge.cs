@@ -65,13 +65,4 @@ internal class MutableEdge
     /// </remarks>
     public string ToString(MovingEnd globalEnd) => 
         $"[{Start},{End}{(ReferenceEquals(End, globalEnd) ? "*" : string.Empty)}]";
-
-    /// <summary>
-    /// In the form [<see cref="Start"/>, <see cref="End"/>].
-    /// </summary>
-    /// <remarks>
-    /// <inheritdoc/>
-    /// </remarks>
-    public override string ToString() =>
-        $"[{Start},{End}]";
 }

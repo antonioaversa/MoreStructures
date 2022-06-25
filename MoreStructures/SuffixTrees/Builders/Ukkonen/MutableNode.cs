@@ -74,6 +74,6 @@ internal record MutableNode(int Id, int? LeafStart, MutableNode? SuffixLink, Mut
                     from c in Children
                     let indentation = new string(dumpParams.IndentationChar, level + 1)
                     let edgeText = $"'{dumpParams.Text[c.Key.Start..(c.Key.End.Value + 1)]}'"
-                    let edgeCompressed = $"{c.Key.ToString(dumpParams.GlobalEnd)}"
+                    let edgeCompressed = c.Key.ToString(dumpParams.GlobalEnd)
                     select c.Value.DumpR(dumpParams, $"{indentation}{edgeText}{edgeCompressed}", level + 1)));
 }
