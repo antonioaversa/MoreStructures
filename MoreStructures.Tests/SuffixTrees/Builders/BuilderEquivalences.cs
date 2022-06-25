@@ -18,6 +18,7 @@ public static class BuilderEquivalences
         ThreeCharsString_DifferentPrefixes,
         TwoChars_ExtendingPrefixes,
         ThreeChars_ExtendingPrefixes,
+        Issue75_BreakingUkkonen,
         // Generalized
         EmptyStrings,
         OneNonEmptyOneEmpty,
@@ -152,6 +153,34 @@ public static class BuilderEquivalences
                     }),
                     [new(5, 5)] = new SuffixTreeNode.Leaf(5),
                     [new(9, 1)] = new SuffixTreeNode.Leaf(9),
+                })),
+
+            [Issue75_BreakingUkkonen] = new(
+                new TextWithTerminator[] { new("aabaacaaadba") },
+                new SuffixTreeNode.Intermediate(new Dictionary<SuffixTreeEdge, SuffixTreeNode>
+                {
+                    [new(12, 1)] = new SuffixTreeNode.Leaf(12),
+                    [new(0, 1)] = new SuffixTreeNode.Intermediate(new Dictionary<SuffixTreeEdge, SuffixTreeNode>
+                    {
+                        [new(12, 1)] = new SuffixTreeNode.Leaf(11), // $
+                        [new(1, 1)] = new SuffixTreeNode.Intermediate(new Dictionary<SuffixTreeEdge, SuffixTreeNode>
+                        {
+                            [new(8, 5)] = new SuffixTreeNode.Leaf(6), // adba$
+                            [new(2, 11)] = new SuffixTreeNode.Leaf(0), // baacaaadba$
+                            [new(5, 8)] = new SuffixTreeNode.Leaf(3), // caaadba$
+                            [new(9, 4)] = new SuffixTreeNode.Leaf(7), // dba$
+                        }),
+                        [new(2, 11)] = new SuffixTreeNode.Leaf(1), // baacaaadba$
+                        [new(5, 8)] = new SuffixTreeNode.Leaf(4), // caaadba$
+                        [new(9, 4)] = new SuffixTreeNode.Leaf(8), // dba$
+                    }),
+                    [new(2, 2)] = new SuffixTreeNode.Intermediate(new Dictionary<SuffixTreeEdge, SuffixTreeNode> // ba
+                    {
+                        [new(12, 1)] = new SuffixTreeNode.Leaf(10), // $
+                        [new(4, 9)] = new SuffixTreeNode.Leaf(2), // acaaadba$
+                    }),
+                    [new(5, 8)] = new SuffixTreeNode.Leaf(5), // caaadba$
+                    [new(9, 4)] = new SuffixTreeNode.Leaf(9), // dba$
                 })),
 
             #endregion

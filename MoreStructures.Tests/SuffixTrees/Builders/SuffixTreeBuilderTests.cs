@@ -31,6 +31,7 @@ public abstract class SuffixTreeBuilderTests
     [DataRow(ThreeCharsString_DifferentPrefixes)]
     [DataRow(TwoChars_ExtendingPrefixes)]
     [DataRow(ThreeChars_ExtendingPrefixes)]
+    [DataRow(Issue75_BreakingUkkonen)]
     [DataTestMethod]
     public void BuildTree_IsCorrectWithSingleText(BuilderEquivalences.EquivalenceId equivalenceId)
     {

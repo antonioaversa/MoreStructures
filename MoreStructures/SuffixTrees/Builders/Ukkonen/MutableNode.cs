@@ -12,10 +12,18 @@
 /// <param name="SuffixLink">
 /// The Suffix Link associated to this node. Defined for internal nodes only.
 /// </param>
+/// <param name="IncomingEdge">
+///     The <see cref="MutableEdge"/> pointing to this <see cref="MutableNode"/>. Null for the root.
+///     Used in Rule 2 Extension, when the <see cref="IterationState.ActiveNode"/> has no <see cref="Children"/> (i.e. 
+///     it's a leaf) and no intermediate node has to be created.
+///     <br/>
+///     Ín such scenario, the leaf becomes parent of a new leaf, and stop having the <see cref="MutableEdge.End"/> of
+///     its incoming <see cref="MutableEdge"/> pointing to the <see cref="IterationState.GlobalEnd"/>.
+/// </param>
 /// <remarks>
 /// Mutable and having a <see cref="SuffixLink"/> to have Rule 2 Extension applied in constant time.
 /// </remarks>
-internal record MutableNode(int Id, int? LeafStart, MutableNode? SuffixLink)
+internal record MutableNode(int Id, int? LeafStart, MutableNode? SuffixLink, MutableEdge? IncomingEdge = null)
 {
     /// <summary>
     /// The children of this node. Empty for leaves, non-empty for root and internal nodes.
@@ -34,11 +42,13 @@ internal record MutableNode(int Id, int? LeafStart, MutableNode? SuffixLink)
     /// Settings for the <see cref="Dump(DumpParams)"/> method.
     /// </summary>
     /// <param name="Text">The text, on which the Ukkonen algorithm is being run.</param>
+    /// <param name="GlobalEnd">The global end instantiated by the <see cref="IterationState"/>.</param>
     /// <param name="EdgeNodeSeparator">The string separator between pointing edge and pointed node.</param>
     /// <param name="SuffixLinkSeparator">The string separator between node indicator and its suffix link.</param>
     /// <param name="IndentationChar">The char to be used for indentation.</param>
     public record DumpParams(
         TextWithTerminator Text,
+        MovingEnd GlobalEnd,
         string EdgeNodeSeparator = "->",
         string SuffixLinkSeparator = "~>",
         char IndentationChar = '\t');
@@ -64,6 +74,6 @@ internal record MutableNode(int Id, int? LeafStart, MutableNode? SuffixLink)
                     from c in Children
                     let indentation = new string(dumpParams.IndentationChar, level + 1)
                     let edgeText = $"'{dumpParams.Text[c.Key.Start..(c.Key.End.Value + 1)]}'"
-                    let edgeCompressed = $"{c.Key}"
+                    let edgeCompressed = $"{c.Key.ToString(dumpParams.GlobalEnd)}"
                     select c.Value.DumpR(dumpParams, $"{indentation}{edgeText}{edgeCompressed}", level + 1)));
 }

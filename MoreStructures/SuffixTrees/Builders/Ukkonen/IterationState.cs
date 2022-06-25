@@ -31,7 +31,7 @@ internal class IterationState
         NextNodeId = 0;
 
         Text = text;
-        Root = new(NextNodeId++, null, null); // The root is never a leaf
+        Root = new(NextNodeId++, null, null, null); // The root is never a leaf and has no incoming edge
 
         Phase = -1;
         RemainingSuffixes = 0;
@@ -88,7 +88,9 @@ internal class IterationState
     /// <remarks>
     /// Since it is kept by reference from edges, increasing ends at 
     /// <see cref="StartPhaseIncreasingRemainingAndGlobalEnd"/> performs the RULE 1 EXTENSION on all leafs at no 
-    /// additional cost. This is one of the mechanisms that make time Ukkonen algorithm complexity linear.
+    /// additional cost.
+    /// <br/> 
+    /// This is one of the mechanisms that make time Ukkonen algorithm complexity linear.
     /// </remarks>
     private readonly MovingEnd GlobalEnd;
 
@@ -118,8 +120,10 @@ internal class IterationState
     /// <remarks>
     /// At the beginning it is set to the root of the about-to-be-built tree. The root doesn't have a Suffix Link.
     /// Unlike <see cref="ActiveEdge"/> and <see cref="ActiveLength"/>, <see cref="ActiveNode"/> is always defined.
+    /// <br/>
     /// It's changed by <see cref="JumpActivePointIfNecessary"/>, when the current <see cref="ActiveEdge"/> has been
     /// fully traversed. 
+    /// <br/>
     /// It is also changed by <see cref="CreateLeafAndPossiblyIntermediateAndDecrementRemainingSuffixes"/> in Rule 
     /// 2 Extension, and set to its <see cref="MutableNode.SuffixLink"/>, when an internal node has been created
     /// and the <see cref="ActiveNode"/> is not the <see cref="Root"/> node.
@@ -283,51 +287,43 @@ internal class IterationState
     /// </remarks>
     public void JumpActivePointIfNecessary(MutableEdge? previousActiveEdge)
     {
-        try
+        while (true)
         {
-            while (true)
+            if (ActiveEdgeStart < 0 || ActiveLength <= 0)
             {
-                if (ActiveEdgeStart < 0 || ActiveLength <= 0)
-                {
-                    ActiveEdgeStart = -1;
-                    ActiveLength = 0;
-                    return;
-                }
-
-                var currentActiveEdge = ActiveEdge;
-                var remainingCharsOnActiveEdgeAfterActivePoint =
-                    currentActiveEdge.End.Value - (currentActiveEdge.Start + ActiveLength - 1);
-
-                // Scenario 1
-                if (remainingCharsOnActiveEdgeAfterActivePoint > 0)
-                {
-                    return;
-                }
-
-                // Scenario 2
-                if (remainingCharsOnActiveEdgeAfterActivePoint == 0)
-                {
-                    ActiveNode = ActiveNode.Children[currentActiveEdge];
-                    ActiveEdgeStart = -1;
-                    ActiveLength = 0;
-                    return;
-                }
-
-                // Scenario 3
-                var firstCharOverflowingCurrentActiveEdge = previousActiveEdge!.Start + currentActiveEdge.Length;
-                ActiveNode = ActiveNode.Children[currentActiveEdge];
-                ActiveEdgeStart = ActiveNode.Children.Keys.Single(
-                    edge => Text[edge.Start] == Text[firstCharOverflowingCurrentActiveEdge]).Start;
-                ActiveLength = -remainingCharsOnActiveEdgeAfterActivePoint;
-
-                previousActiveEdge = currentActiveEdge;
+                ActiveEdgeStart = -1;
+                ActiveLength = 0;
+                return;
             }
-        }
-        finally
-        {
-            Trace.WriteLine($"Active Point: Node {ActiveNode} Edge {ActiveEdgeStart} Length {ActiveLength}");
-        }
 
+            var currentActiveEdge = ActiveEdge;
+            var remainingCharsOnActiveEdgeAfterActivePoint =
+                currentActiveEdge.End.Value - (currentActiveEdge.Start + ActiveLength - 1);
+
+            // Scenario 1
+            if (remainingCharsOnActiveEdgeAfterActivePoint > 0)
+            {
+                return;
+            }
+
+            // Scenario 2
+            if (remainingCharsOnActiveEdgeAfterActivePoint == 0)
+            {
+                ActiveNode = ActiveNode.Children[currentActiveEdge];
+                ActiveEdgeStart = -1;
+                ActiveLength = 0;
+                return;
+            }
+
+            // Scenario 3
+            var firstCharOverflowingCurrentActiveEdge = previousActiveEdge!.Start + currentActiveEdge.Length;
+            ActiveNode = ActiveNode.Children[currentActiveEdge];
+            ActiveEdgeStart = ActiveNode.Children.Keys.Single(
+                edge => Text[edge.Start] == Text[firstCharOverflowingCurrentActiveEdge]).Start;
+            ActiveLength = -remainingCharsOnActiveEdgeAfterActivePoint;
+
+            previousActiveEdge = currentActiveEdge;
+        }
     }
 
     /// <summary>
@@ -336,34 +332,46 @@ internal class IterationState
     public void CreateLeafAndPossiblyIntermediateAndDecrementRemainingSuffixes()
     {
         var leafEdge = new MutableEdge(Phase, GlobalEnd);
-        var leafNode = new MutableNode(NextNodeId++, NextLeafStart++, null); // Leaves don't have a Suffix Link
+        var leafNode = new MutableNode(NextNodeId++, NextLeafStart++, null, leafEdge); // Leaves don't have Suffix Link
+
+        MutableNode internalNode;
 
         if (ActiveLength == 0)
         {
             // No current active edge => branch out from the active node directly
             ActiveNode.Children[leafEdge] = leafNode;
+
+            // Stop edge to ActiveNode from tracking the end of the text, as ActiveNode transitions from being a leaf
+            // to an intermediate node
+            if (ActiveNode.IncomingEdge != null) // False on the root
+            {
+                ActiveNode.IncomingEdge.End = new(ActiveNode.IncomingEdge.End.Value);
+            }
+
+            internalNode = ActiveNode;
         }
         else
         {
             // There is an active edge => split the active edge into two, with an intern node in the middle
-            MutableNode internalNode = new(NextNodeId++, null, Root);
+            var activeEdge = ActiveEdge;
+            MutableEdge sharedEdge = new(activeEdge.Start, new(activeEdge.Start + ActiveLength - 1));
+            MutableEdge reminderEdge = new(activeEdge.Start + ActiveLength, activeEdge.End);
+
+            internalNode = new(NextNodeId++, null, Root, sharedEdge);
+            internalNode.Children[reminderEdge] = ActiveNode.Children[activeEdge];
             internalNode.Children[leafEdge] = leafNode;
 
-            var activeEdge = ActiveEdge;
-            MutableEdge reminderEdge = new(activeEdge.Start + ActiveLength, activeEdge.End);
-            internalNode.Children[reminderEdge] = ActiveNode.Children[activeEdge];
-            MutableEdge sharedEdge = new(activeEdge.Start, new(activeEdge.Start + ActiveLength - 1));
             ActiveNode.Children[sharedEdge] = internalNode;
             ActiveNode.Children.Remove(activeEdge);
-
-            // If an internal node has been created in a previous Rule 2 Extension of the current phase, update
-            // the SuffixLink of the previous internal node to be the just created internal node, and store the
-            // just create internal store PreviousInternalNodeInTheSamePhase, to be able to set the Suffix Link
-            // on next internal node if a new Rule 2 Extension happens after this one, in the same phase
-            if (PreviousInternalNodeInTheSamePhase is MutableNode previousInternalNode)
-                previousInternalNode.SuffixLink = internalNode;
-            PreviousInternalNodeInTheSamePhase = internalNode;
         }
+
+        // If an internal node has been created in a previous Rule 2 Extension of the current phase, update
+        // the SuffixLink of the previous internal node to be the just created internal node, and store the
+        // just create internal store PreviousInternalNodeInTheSamePhase, to be able to set the Suffix Link
+        // on next internal node if a new Rule 2 Extension happens after this one, in the same phase
+        if (PreviousInternalNodeInTheSamePhase is MutableNode previousInternalNode)
+            previousInternalNode.SuffixLink = internalNode;
+        PreviousInternalNodeInTheSamePhase = internalNode;
 
         var previousActiveEdge = ActiveEdgeStart >= 0 ? ActiveEdge : null;
 
@@ -410,5 +418,5 @@ internal class IterationState
             $"{nameof(ActiveNode)} = {ActiveNode,-2}",
             $"{nameof(ActiveEdgeStart)} = {ActiveEdgeStart,-2}",
             $"{nameof(ActiveLength)} = {ActiveLength,-2}") + Environment.NewLine +
-        $"Tree = {Root.Dump(new(Text))}";
+        $"Tree = {Root.Dump(new(Text, GlobalEnd))}";
 }
