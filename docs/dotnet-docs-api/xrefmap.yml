@@ -7255,25 +7255,44 @@ references:
   fullName.vb: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests(Of TEdge, TNode).BuilderBuilder
   nameWithType: SuffixArrayBuilderTests<TEdge, TNode>.BuilderBuilder
   nameWithType.vb: SuffixArrayBuilderTests(Of TEdge, TNode).BuilderBuilder
-- uid: MoreStructures.Tests.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilderTests
-  name: SuffixStructureBasedSuffixArrayBuilderTests
-  href: api/MoreStructures.Tests.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilderTests.html
-  commentId: T:MoreStructures.Tests.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilderTests
-  fullName: MoreStructures.Tests.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilderTests
-  nameWithType: SuffixStructureBasedSuffixArrayBuilderTests
-- uid: MoreStructures.Tests.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilderTests.#ctor
-  name: SuffixStructureBasedSuffixArrayBuilderTests()
-  href: api/MoreStructures.Tests.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilderTests.html#MoreStructures_Tests_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilderTests__ctor
-  commentId: M:MoreStructures.Tests.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilderTests.#ctor
-  fullName: MoreStructures.Tests.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilderTests.SuffixStructureBasedSuffixArrayBuilderTests()
-  nameWithType: SuffixStructureBasedSuffixArrayBuilderTests.SuffixStructureBasedSuffixArrayBuilderTests()
-- uid: MoreStructures.Tests.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilderTests.#ctor*
-  name: SuffixStructureBasedSuffixArrayBuilderTests
-  href: api/MoreStructures.Tests.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilderTests.html#MoreStructures_Tests_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilderTests__ctor_
-  commentId: Overload:MoreStructures.Tests.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilderTests.#ctor
+- uid: MoreStructures.Tests.SuffixArrays.Builders.SuffixTreeBasedSuffixArrayBuilderTests
+  name: SuffixTreeBasedSuffixArrayBuilderTests
+  href: api/MoreStructures.Tests.SuffixArrays.Builders.SuffixTreeBasedSuffixArrayBuilderTests.html
+  commentId: T:MoreStructures.Tests.SuffixArrays.Builders.SuffixTreeBasedSuffixArrayBuilderTests
+  fullName: MoreStructures.Tests.SuffixArrays.Builders.SuffixTreeBasedSuffixArrayBuilderTests
+  nameWithType: SuffixTreeBasedSuffixArrayBuilderTests
+- uid: MoreStructures.Tests.SuffixArrays.Builders.SuffixTreeBasedSuffixArrayBuilderTests.#ctor
+  name: SuffixTreeBasedSuffixArrayBuilderTests()
+  href: api/MoreStructures.Tests.SuffixArrays.Builders.SuffixTreeBasedSuffixArrayBuilderTests.html#MoreStructures_Tests_SuffixArrays_Builders_SuffixTreeBasedSuffixArrayBuilderTests__ctor
+  commentId: M:MoreStructures.Tests.SuffixArrays.Builders.SuffixTreeBasedSuffixArrayBuilderTests.#ctor
+  fullName: MoreStructures.Tests.SuffixArrays.Builders.SuffixTreeBasedSuffixArrayBuilderTests.SuffixTreeBasedSuffixArrayBuilderTests()
+  nameWithType: SuffixTreeBasedSuffixArrayBuilderTests.SuffixTreeBasedSuffixArrayBuilderTests()
+- uid: MoreStructures.Tests.SuffixArrays.Builders.SuffixTreeBasedSuffixArrayBuilderTests.#ctor*
+  name: SuffixTreeBasedSuffixArrayBuilderTests
+  href: api/MoreStructures.Tests.SuffixArrays.Builders.SuffixTreeBasedSuffixArrayBuilderTests.html#MoreStructures_Tests_SuffixArrays_Builders_SuffixTreeBasedSuffixArrayBuilderTests__ctor_
+  commentId: Overload:MoreStructures.Tests.SuffixArrays.Builders.SuffixTreeBasedSuffixArrayBuilderTests.#ctor
   isSpec: "True"
-  fullName: MoreStructures.Tests.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilderTests.SuffixStructureBasedSuffixArrayBuilderTests
-  nameWithType: SuffixStructureBasedSuffixArrayBuilderTests.SuffixStructureBasedSuffixArrayBuilderTests
+  fullName: MoreStructures.Tests.SuffixArrays.Builders.SuffixTreeBasedSuffixArrayBuilderTests.SuffixTreeBasedSuffixArrayBuilderTests
+  nameWithType: SuffixTreeBasedSuffixArrayBuilderTests.SuffixTreeBasedSuffixArrayBuilderTests
+- uid: MoreStructures.Tests.SuffixArrays.Builders.SuffixTrieBasedSuffixArrayBuilderTests
+  name: SuffixTrieBasedSuffixArrayBuilderTests
+  href: api/MoreStructures.Tests.SuffixArrays.Builders.SuffixTrieBasedSuffixArrayBuilderTests.html
+  commentId: T:MoreStructures.Tests.SuffixArrays.Builders.SuffixTrieBasedSuffixArrayBuilderTests
+  fullName: MoreStructures.Tests.SuffixArrays.Builders.SuffixTrieBasedSuffixArrayBuilderTests
+  nameWithType: SuffixTrieBasedSuffixArrayBuilderTests
+- uid: MoreStructures.Tests.SuffixArrays.Builders.SuffixTrieBasedSuffixArrayBuilderTests.#ctor
+  name: SuffixTrieBasedSuffixArrayBuilderTests()
+  href: api/MoreStructures.Tests.SuffixArrays.Builders.SuffixTrieBasedSuffixArrayBuilderTests.html#MoreStructures_Tests_SuffixArrays_Builders_SuffixTrieBasedSuffixArrayBuilderTests__ctor
+  commentId: M:MoreStructures.Tests.SuffixArrays.Builders.SuffixTrieBasedSuffixArrayBuilderTests.#ctor
+  fullName: MoreStructures.Tests.SuffixArrays.Builders.SuffixTrieBasedSuffixArrayBuilderTests.SuffixTrieBasedSuffixArrayBuilderTests()
+  nameWithType: SuffixTrieBasedSuffixArrayBuilderTests.SuffixTrieBasedSuffixArrayBuilderTests()
+- uid: MoreStructures.Tests.SuffixArrays.Builders.SuffixTrieBasedSuffixArrayBuilderTests.#ctor*
+  name: SuffixTrieBasedSuffixArrayBuilderTests
+  href: api/MoreStructures.Tests.SuffixArrays.Builders.SuffixTrieBasedSuffixArrayBuilderTests.html#MoreStructures_Tests_SuffixArrays_Builders_SuffixTrieBasedSuffixArrayBuilderTests__ctor_
+  commentId: Overload:MoreStructures.Tests.SuffixArrays.Builders.SuffixTrieBasedSuffixArrayBuilderTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixArrays.Builders.SuffixTrieBasedSuffixArrayBuilderTests.SuffixTrieBasedSuffixArrayBuilderTests
+  nameWithType: SuffixTrieBasedSuffixArrayBuilderTests.SuffixTrieBasedSuffixArrayBuilderTests
 - uid: MoreStructures.Tests.SuffixStructures
   name: MoreStructures.Tests.SuffixStructures
   href: api/MoreStructures.Tests.SuffixStructures.html
