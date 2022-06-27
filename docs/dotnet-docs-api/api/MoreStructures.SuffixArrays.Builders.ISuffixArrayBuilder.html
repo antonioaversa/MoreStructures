@@ -93,33 +93,33 @@
     <pre><code class="lang-csharp hljs">public interface ISuffixArrayBuilder</code></pre>
   </div>
   <h5 id="MoreStructures_SuffixArrays_Builders_ISuffixArrayBuilder_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>The Suffix Array of a terminator-terminated text T is an array where the i-th element is the index in T of the
+  <div class="markdown level0 remarks"><p>
+The Suffix Array of a terminator-terminated text T is an array where the i-th element is the index in T of the 
 1st char of a suffix Si of T, and Si &lt; Sj for each i &lt; j.
 <br>
 Suffixes of the terminator-terminated text &quot;mississippi$&quot; are:
-<br></p>
-<ul>
-<li>&quot;mississippi$&quot;, at index 0;
-<br></li>
-<li>&quot;ississippi$&quot;, at index 1;
-<br></li>
-<li>&quot;ssissippi$&quot;, at index 2;
-<br></li>
-<li>etc.
 <br>
-Sorting suffixes in lexicographic order gives:</li>
-<li>&quot;$mississippi&quot;, at index 11;
-<br></li>
-<li>&quot;i$&quot;, at index 10;
-<br></li>
-<li>&quot;ippi$&quot;, at index 7;
-<br></li>
-<li>&quot;issippi$&quot;, at index 4;
-<br></li>
-<li>etc.
+- &quot;mississippi$&quot;, at index 0;
 <br>
-So the Suffix Array of &quot;mississippi$&quot; is { 11, 10, 7, 4, ... }.</li>
-</ul>
+- &quot;ississippi$&quot;, at index 1;
+<br>
+- &quot;ssissippi$&quot;, at index 2;
+<br>
+- etc.
+<br>
+Sorting suffixes in lexicographic order gives:    
+- &quot;$mississippi&quot;, at index 11;
+<br>
+- &quot;i$&quot;, at index 10;
+<br>
+- &quot;ippi$&quot;, at index 7;
+<br>
+- &quot;issippi$&quot;, at index 4;
+<br>
+- etc.
+<br>
+So the Suffix Array of &quot;mississippi$&quot; is { 11, 10, 7, 4, ... }.
+</p>
 </div>
   <h5 id="MoreStructures_SuffixArrays_Builders_ISuffixArrayBuilder_examples"><strong>Examples</strong></h5>
   <pre><code>TextWithTerminator text = new(&quot;mississippi&quot;);
@@ -134,7 +134,7 @@ var suffixArray = suffixArrayBuilder.Build().ToList(); // ToList necessary if Bu
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_Builders_ISuffixArrayBuilder_Build.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder.Build%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/Builders/ISuffixArrayBuilder.cs/#L49">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/Builders/ISuffixArrayBuilder.cs/#L51">View Source</a>
   </span>
   <a id="MoreStructures_SuffixArrays_Builders_ISuffixArrayBuilder_Build_" data-uid="MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder.Build*"></a>
   <h4 id="MoreStructures_SuffixArrays_Builders_ISuffixArrayBuilder_Build" data-uid="MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder.Build">Build()</h4>
@@ -176,7 +176,7 @@ var suffixArray = suffixArrayBuilder.Build().ToList(); // ToList necessary if Bu
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_Builders_ISuffixArrayBuilder.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/Builders/ISuffixArrayBuilder.cs/#L43" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/Builders/ISuffixArrayBuilder.cs/#L45" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

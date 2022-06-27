@@ -147,6 +147,46 @@ structure for the provided <a class="xref" href="MoreStructures.TextWithTerminat
       </tr>
     </tbody>
   </table>
+  <h5 id="MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p><inheritdoc cref="T:MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder" path="/remarks/para[@id=&apos;definition&apos;]"></inheritdoc></p>
+<p>
+The Suffix Tree for the text &quot;mississippi$&quot; is:
+<pre><code>R
+- $ (11)
+- i
+  - $ (10)
+  - ssi
+    - p..$ (7)
+    - s..$ (4)
+- m..$ 
+- ...</code></pre>
+A DFS visit of the leaves of the tree, navigating edges in lexicographic order, gives { 11, 10, 7, 4, ... },
+which is the Suffix Array of &quot;mississippi$&quot;.
+</p>
+<p>
+- The Suffix Tree of the text is provided as input, and the complexity of building or keeping it in memoery 
+  is not considered here.
+<br>
+- The DFS of the Tree is linear in m, where m is the number of nodes in the Suffix Tree. m is O(n) for Suffix 
+Trees and O(n^2) for Suffix Tries, where n is the length of the text.
+<br>
+- While DFS itself is linear in m, edges have to be sorted in lexicographic order, which is done via the LINQ 
+<see cref="!:Enumerable.OrderBy&lt;TSource, TKey>(IEnumerable&lt;TSource>, Func&lt;TSource, TKey>)"></see> method.
+<br>
+- There are O(m) edges in the tree, so sorting can be O(m * log(m)) if the alphabet of the text is O(n), using
+QuickSort or similar, and O(m) if the alphabet is constant w.r.t. to n, using Counting Sort or similar.
+<br>
+- For each visited node, constant work is done: checking whether the node is a leaf and potentially returning 
+it.
+<br>
+- Therefore Time Complexity is O(n^2 * log(n)) for a Suffix Trie with a non-constant alphabet, O(n^2) for a 
+Suffix Trie with a constant alphabet, O(n * log(n)) for a Suffix Tree with a non-constant alphabet and
+O(n) for a Suffix Tree with a constant alphabet.
+<br>
+- Space Complexity is dominated by the space required to sort edges in lexicographic order, before visiting 
+them in DFS: O(n^2) for a Suffix Trie and O(n) for a Suffix Tree.
+</p>
+</div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
@@ -154,7 +194,7 @@ structure for the provided <a class="xref" href="MoreStructures.TextWithTerminat
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2__ctor_MoreStructures_TextWithTerminator__1_.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder%602.%23ctor(MoreStructures.TextWithTerminator%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/Builders/SuffixStructureBasedSuffixArrayBuilder.cs/#L34">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/Builders/SuffixStructureBasedSuffixArrayBuilder.cs/#L76">View Source</a>
   </span>
   <a id="MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2__ctor_" data-uid="MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.#ctor*"></a>
   <h4 id="MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2__ctor_MoreStructures_TextWithTerminator__1_" data-uid="MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.#ctor(MoreStructures.TextWithTerminator,`1)">SuffixStructureBasedSuffixArrayBuilder(TextWithTerminator, TNode)</h4>
@@ -196,7 +236,7 @@ structure for the provided <a class="xref" href="MoreStructures.TextWithTerminat
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2_Node.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder%602.Node%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/Builders/SuffixStructureBasedSuffixArrayBuilder.cs/#L27">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/Builders/SuffixStructureBasedSuffixArrayBuilder.cs/#L69">View Source</a>
   </span>
   <a id="MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2_Node_" data-uid="MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.Node*"></a>
   <h4 id="MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2_Node" data-uid="MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.Node">Node</h4>
@@ -227,7 +267,7 @@ structure for the provided <a class="xref" href="MoreStructures.TextWithTerminat
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2_Text.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder%602.Text%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/Builders/SuffixStructureBasedSuffixArrayBuilder.cs/#L22">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/Builders/SuffixStructureBasedSuffixArrayBuilder.cs/#L64">View Source</a>
   </span>
   <a id="MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2_Text_" data-uid="MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.Text*"></a>
   <h4 id="MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2_Text" data-uid="MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.Text">Text</h4>
@@ -260,7 +300,7 @@ structure for the provided <a class="xref" href="MoreStructures.TextWithTerminat
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2_Build.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder%602.Build%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/Builders/SuffixStructureBasedSuffixArrayBuilder.cs/#L49">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/Builders/SuffixStructureBasedSuffixArrayBuilder.cs/#L91">View Source</a>
   </span>
   <a id="MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2_Build_" data-uid="MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.Build*"></a>
   <h4 id="MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2_Build" data-uid="MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.Build">Build()</h4>
@@ -305,7 +345,7 @@ structure for the provided <a class="xref" href="MoreStructures.TextWithTerminat
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/Builders/SuffixStructureBasedSuffixArrayBuilder.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/Builders/SuffixStructureBasedSuffixArrayBuilder.cs/#L55" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
