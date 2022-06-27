@@ -2654,92 +2654,70 @@ references:
   commentId: N:MoreStructures.SuffixArrays.Builders
   fullName: MoreStructures.SuffixArrays.Builders
   nameWithType: MoreStructures.SuffixArrays.Builders
-- uid: MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder`2
-  name: ISuffixArrayBuilder<TEdge, TNode>
-  href: api/MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder-2.html
-  commentId: T:MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder`2
-  name.vb: ISuffixArrayBuilder(Of TEdge, TNode)
-  fullName: MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder<TEdge, TNode>
-  fullName.vb: MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder(Of TEdge, TNode)
-  nameWithType: ISuffixArrayBuilder<TEdge, TNode>
-  nameWithType.vb: ISuffixArrayBuilder(Of TEdge, TNode)
-- uid: MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder`2.Build
+- uid: MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder
+  name: ISuffixArrayBuilder
+  href: api/MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder.html
+  commentId: T:MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder
+  fullName: MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder
+  nameWithType: ISuffixArrayBuilder
+- uid: MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder.Build
   name: Build()
-  href: api/MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder-2.html#MoreStructures_SuffixArrays_Builders_ISuffixArrayBuilder_2_Build
-  commentId: M:MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder`2.Build
-  fullName: MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder<TEdge, TNode>.Build()
-  fullName.vb: MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder(Of TEdge, TNode).Build()
-  nameWithType: ISuffixArrayBuilder<TEdge, TNode>.Build()
-  nameWithType.vb: ISuffixArrayBuilder(Of TEdge, TNode).Build()
-- uid: MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder`2.Build*
+  href: api/MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_ISuffixArrayBuilder_Build
+  commentId: M:MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder.Build
+  fullName: MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder.Build()
+  nameWithType: ISuffixArrayBuilder.Build()
+- uid: MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder.Build*
   name: Build
-  href: api/MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder-2.html#MoreStructures_SuffixArrays_Builders_ISuffixArrayBuilder_2_Build_
-  commentId: Overload:MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder`2.Build
+  href: api/MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_ISuffixArrayBuilder_Build_
+  commentId: Overload:MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder.Build
   isSpec: "True"
-  fullName: MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder<TEdge, TNode>.Build
-  fullName.vb: MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder(Of TEdge, TNode).Build
-  nameWithType: ISuffixArrayBuilder<TEdge, TNode>.Build
-  nameWithType.vb: ISuffixArrayBuilder(Of TEdge, TNode).Build
-- uid: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2
-  name: NaiveSuffixArrayBuilder<TEdge, TNode>
-  href: api/MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder-2.html
-  commentId: T:MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2
-  name.vb: NaiveSuffixArrayBuilder(Of TEdge, TNode)
-  fullName: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder<TEdge, TNode>
-  fullName.vb: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder(Of TEdge, TNode)
-  nameWithType: NaiveSuffixArrayBuilder<TEdge, TNode>
-  nameWithType.vb: NaiveSuffixArrayBuilder(Of TEdge, TNode)
-- uid: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2.#ctor(MoreStructures.TextWithTerminator)
-  name: NaiveSuffixArrayBuilder(TextWithTerminator)
-  href: api/MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder-2.html#MoreStructures_SuffixArrays_Builders_NaiveSuffixArrayBuilder_2__ctor_MoreStructures_TextWithTerminator_
-  commentId: M:MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2.#ctor(MoreStructures.TextWithTerminator)
-  fullName: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder<TEdge, TNode>.NaiveSuffixArrayBuilder(MoreStructures.TextWithTerminator)
-  fullName.vb: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder(Of TEdge, TNode).NaiveSuffixArrayBuilder(MoreStructures.TextWithTerminator)
-  nameWithType: NaiveSuffixArrayBuilder<TEdge, TNode>.NaiveSuffixArrayBuilder(TextWithTerminator)
-  nameWithType.vb: NaiveSuffixArrayBuilder(Of TEdge, TNode).NaiveSuffixArrayBuilder(TextWithTerminator)
-- uid: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2.#ctor*
+  fullName: MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder.Build
+  nameWithType: ISuffixArrayBuilder.Build
+- uid: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder
   name: NaiveSuffixArrayBuilder
-  href: api/MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder-2.html#MoreStructures_SuffixArrays_Builders_NaiveSuffixArrayBuilder_2__ctor_
-  commentId: Overload:MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2.#ctor
+  href: api/MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder.html
+  commentId: T:MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder
+  fullName: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder
+  nameWithType: NaiveSuffixArrayBuilder
+- uid: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder.#ctor(MoreStructures.TextWithTerminator)
+  name: NaiveSuffixArrayBuilder(TextWithTerminator)
+  href: api/MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_NaiveSuffixArrayBuilder__ctor_MoreStructures_TextWithTerminator_
+  commentId: M:MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder.#ctor(MoreStructures.TextWithTerminator)
+  fullName: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder.NaiveSuffixArrayBuilder(MoreStructures.TextWithTerminator)
+  nameWithType: NaiveSuffixArrayBuilder.NaiveSuffixArrayBuilder(TextWithTerminator)
+- uid: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder.#ctor*
+  name: NaiveSuffixArrayBuilder
+  href: api/MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_NaiveSuffixArrayBuilder__ctor_
+  commentId: Overload:MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder.#ctor
   isSpec: "True"
-  fullName: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder<TEdge, TNode>.NaiveSuffixArrayBuilder
-  fullName.vb: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder(Of TEdge, TNode).NaiveSuffixArrayBuilder
-  nameWithType: NaiveSuffixArrayBuilder<TEdge, TNode>.NaiveSuffixArrayBuilder
-  nameWithType.vb: NaiveSuffixArrayBuilder(Of TEdge, TNode).NaiveSuffixArrayBuilder
-- uid: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2.Build
+  fullName: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder.NaiveSuffixArrayBuilder
+  nameWithType: NaiveSuffixArrayBuilder.NaiveSuffixArrayBuilder
+- uid: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder.Build
   name: Build()
-  href: api/MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder-2.html#MoreStructures_SuffixArrays_Builders_NaiveSuffixArrayBuilder_2_Build
-  commentId: M:MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2.Build
-  fullName: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder<TEdge, TNode>.Build()
-  fullName.vb: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder(Of TEdge, TNode).Build()
-  nameWithType: NaiveSuffixArrayBuilder<TEdge, TNode>.Build()
-  nameWithType.vb: NaiveSuffixArrayBuilder(Of TEdge, TNode).Build()
-- uid: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2.Build*
+  href: api/MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_NaiveSuffixArrayBuilder_Build
+  commentId: M:MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder.Build
+  fullName: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder.Build()
+  nameWithType: NaiveSuffixArrayBuilder.Build()
+- uid: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder.Build*
   name: Build
-  href: api/MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder-2.html#MoreStructures_SuffixArrays_Builders_NaiveSuffixArrayBuilder_2_Build_
-  commentId: Overload:MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2.Build
+  href: api/MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_NaiveSuffixArrayBuilder_Build_
+  commentId: Overload:MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder.Build
   isSpec: "True"
-  fullName: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder<TEdge, TNode>.Build
-  fullName.vb: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder(Of TEdge, TNode).Build
-  nameWithType: NaiveSuffixArrayBuilder<TEdge, TNode>.Build
-  nameWithType.vb: NaiveSuffixArrayBuilder(Of TEdge, TNode).Build
-- uid: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2.Text
+  fullName: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder.Build
+  nameWithType: NaiveSuffixArrayBuilder.Build
+- uid: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder.Text
   name: Text
-  href: api/MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder-2.html#MoreStructures_SuffixArrays_Builders_NaiveSuffixArrayBuilder_2_Text
-  commentId: P:MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2.Text
-  fullName: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder<TEdge, TNode>.Text
-  fullName.vb: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder(Of TEdge, TNode).Text
-  nameWithType: NaiveSuffixArrayBuilder<TEdge, TNode>.Text
-  nameWithType.vb: NaiveSuffixArrayBuilder(Of TEdge, TNode).Text
-- uid: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2.Text*
+  href: api/MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_NaiveSuffixArrayBuilder_Text
+  commentId: P:MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder.Text
+  fullName: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder.Text
+  nameWithType: NaiveSuffixArrayBuilder.Text
+- uid: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder.Text*
   name: Text
-  href: api/MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder-2.html#MoreStructures_SuffixArrays_Builders_NaiveSuffixArrayBuilder_2_Text_
-  commentId: Overload:MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder`2.Text
+  href: api/MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_NaiveSuffixArrayBuilder_Text_
+  commentId: Overload:MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder.Text
   isSpec: "True"
-  fullName: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder<TEdge, TNode>.Text
-  fullName.vb: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder(Of TEdge, TNode).Text
-  nameWithType: NaiveSuffixArrayBuilder<TEdge, TNode>.Text
-  nameWithType.vb: NaiveSuffixArrayBuilder(Of TEdge, TNode).Text
+  fullName: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder.Text
+  nameWithType: NaiveSuffixArrayBuilder.Text
 - uid: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2
   name: SuffixStructureBasedSuffixArrayBuilder<TEdge, TNode>
   href: api/MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder-2.html
@@ -4786,61 +4764,6 @@ references:
   commentId: T:MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests
   fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests
   nameWithType: MatcherTests
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.#ctor(Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher},Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher})
-  name: MatcherTests(Func<RotatedTextWithTerminator, IMatcher>, Func<RotatedTextWithTerminator, RotatedTextWithTerminator, IMatcher>)
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests__ctor_Func_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Matching_IMatcher__Func_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Matching_IMatcher__
-  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.#ctor(Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher},Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher})
-  name.vb: MatcherTests(Func(Of RotatedTextWithTerminator, IMatcher), Func(Of RotatedTextWithTerminator, RotatedTextWithTerminator, IMatcher))
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.MatcherTests(Func<MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher>, Func<MoreStructures.RotatedTextWithTerminator, MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher>)
-  fullName.vb: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.MatcherTests(Func(Of MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher), Func(Of MoreStructures.RotatedTextWithTerminator, MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher))
-  nameWithType: MatcherTests.MatcherTests(Func<RotatedTextWithTerminator, IMatcher>, Func<RotatedTextWithTerminator, RotatedTextWithTerminator, IMatcher>)
-  nameWithType.vb: MatcherTests.MatcherTests(Func(Of RotatedTextWithTerminator, IMatcher), Func(Of RotatedTextWithTerminator, RotatedTextWithTerminator, IMatcher))
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.#ctor*
-  name: MatcherTests
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests__ctor_
-  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.#ctor
-  isSpec: "True"
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.MatcherTests
-  nameWithType: MatcherTests.MatcherTests
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
-  name: Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT()
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests_Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
-  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT()
-  nameWithType: MatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT()
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT*
-  name: Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests_Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT_
-  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
-  isSpec: "True"
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
-  nameWithType: MatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_IsCorrect(System.String,System.String,System.Boolean,System.Int32,System.Int32,System.Int32)
-  name: Match_IsCorrect(String, String, Boolean, Int32, Int32, Int32)
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests_Match_IsCorrect_System_String_System_String_System_Boolean_System_Int32_System_Int32_System_Int32_
-  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_IsCorrect(System.String,System.String,System.Boolean,System.Int32,System.Int32,System.Int32)
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_IsCorrect(System.String, System.String, System.Boolean, System.Int32, System.Int32, System.Int32)
-  nameWithType: MatcherTests.Match_IsCorrect(String, String, Boolean, Int32, Int32, Int32)
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_IsCorrect*
-  name: Match_IsCorrect
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests_Match_IsCorrect_
-  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_IsCorrect
-  isSpec: "True"
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_IsCorrect
-  nameWithType: MatcherTests.Match_IsCorrect
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_RaisesExceptionWithEmptyPattern
-  name: Match_RaisesExceptionWithEmptyPattern()
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests_Match_RaisesExceptionWithEmptyPattern
-  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_RaisesExceptionWithEmptyPattern
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_RaisesExceptionWithEmptyPattern()
-  nameWithType: MatcherTests.Match_RaisesExceptionWithEmptyPattern()
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_RaisesExceptionWithEmptyPattern*
-  name: Match_RaisesExceptionWithEmptyPattern
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests_Match_RaisesExceptionWithEmptyPattern_
-  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_RaisesExceptionWithEmptyPattern
-  isSpec: "True"
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_RaisesExceptionWithEmptyPattern
-  nameWithType: MatcherTests.Match_RaisesExceptionWithEmptyPattern
 - uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests
   name: NarrowingIntervalMatcherTests
   href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.html
@@ -4853,6 +4776,15 @@ references:
   commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.#ctor
   fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.NarrowingIntervalMatcherTests()
   nameWithType: NarrowingIntervalMatcherTests.NarrowingIntervalMatcherTests()
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.#ctor(Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher},Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher})
+  name: NarrowingIntervalMatcherTests(Func<RotatedTextWithTerminator, IMatcher>, Func<RotatedTextWithTerminator, RotatedTextWithTerminator, IMatcher>)
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcherTests__ctor_Func_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Matching_IMatcher__Func_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Matching_IMatcher__
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.#ctor(Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher},Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher})
+  name.vb: NarrowingIntervalMatcherTests(Func(Of RotatedTextWithTerminator, IMatcher), Func(Of RotatedTextWithTerminator, RotatedTextWithTerminator, IMatcher))
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.NarrowingIntervalMatcherTests(Func<MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher>, Func<MoreStructures.RotatedTextWithTerminator, MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher>)
+  fullName.vb: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.NarrowingIntervalMatcherTests(Func(Of MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher), Func(Of MoreStructures.RotatedTextWithTerminator, MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher))
+  nameWithType: NarrowingIntervalMatcherTests.NarrowingIntervalMatcherTests(Func<RotatedTextWithTerminator, IMatcher>, Func<RotatedTextWithTerminator, RotatedTextWithTerminator, IMatcher>)
+  nameWithType.vb: NarrowingIntervalMatcherTests.NarrowingIntervalMatcherTests(Func(Of RotatedTextWithTerminator, IMatcher), Func(Of RotatedTextWithTerminator, RotatedTextWithTerminator, IMatcher))
 - uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.#ctor*
   name: NarrowingIntervalMatcherTests
   href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcherTests__ctor_
@@ -4860,6 +4792,45 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.NarrowingIntervalMatcherTests
   nameWithType: NarrowingIntervalMatcherTests.NarrowingIntervalMatcherTests
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
+  name: Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT()
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcherTests_Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT()
+  nameWithType: NarrowingIntervalMatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT()
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT*
+  name: Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcherTests_Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT_
+  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
+  isSpec: "True"
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
+  nameWithType: NarrowingIntervalMatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Match_IsCorrect(System.String,System.String,System.Boolean,System.Int32,System.Int32,System.Int32)
+  name: Match_IsCorrect(String, String, Boolean, Int32, Int32, Int32)
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcherTests_Match_IsCorrect_System_String_System_String_System_Boolean_System_Int32_System_Int32_System_Int32_
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Match_IsCorrect(System.String,System.String,System.Boolean,System.Int32,System.Int32,System.Int32)
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Match_IsCorrect(System.String, System.String, System.Boolean, System.Int32, System.Int32, System.Int32)
+  nameWithType: NarrowingIntervalMatcherTests.Match_IsCorrect(String, String, Boolean, Int32, Int32, Int32)
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Match_IsCorrect*
+  name: Match_IsCorrect
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcherTests_Match_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Match_IsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Match_IsCorrect
+  nameWithType: NarrowingIntervalMatcherTests.Match_IsCorrect
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Match_RaisesExceptionWithEmptyPattern
+  name: Match_RaisesExceptionWithEmptyPattern()
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcherTests_Match_RaisesExceptionWithEmptyPattern
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Match_RaisesExceptionWithEmptyPattern
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Match_RaisesExceptionWithEmptyPattern()
+  nameWithType: NarrowingIntervalMatcherTests.Match_RaisesExceptionWithEmptyPattern()
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Match_RaisesExceptionWithEmptyPattern*
+  name: Match_RaisesExceptionWithEmptyPattern
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcherTests_Match_RaisesExceptionWithEmptyPattern_
+  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Match_RaisesExceptionWithEmptyPattern
+  isSpec: "True"
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Match_RaisesExceptionWithEmptyPattern
+  nameWithType: NarrowingIntervalMatcherTests.Match_RaisesExceptionWithEmptyPattern
 - uid: MoreStructures.Tests.CountTrees
   name: MoreStructures.Tests.CountTrees
   href: api/MoreStructures.Tests.CountTrees.html
@@ -7202,15 +7173,15 @@ references:
   fullName.vb: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests(Of TEdge, TNode)
   nameWithType: SuffixArrayBuilderTests<TEdge, TNode>
   nameWithType.vb: SuffixArrayBuilderTests(Of TEdge, TNode)
-- uid: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests`2.#ctor(Func{System.String,MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder{`0,`1}})
-  name: SuffixArrayBuilderTests(Func<String, ISuffixArrayBuilder<TEdge, TNode>>)
-  href: api/MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests-2.html#MoreStructures_Tests_SuffixArrays_Builders_SuffixArrayBuilderTests_2__ctor_Func_System_String_MoreStructures_SuffixArrays_Builders_ISuffixArrayBuilder__0__1___
-  commentId: M:MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests`2.#ctor(Func{System.String,MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder{`0,`1}})
-  name.vb: SuffixArrayBuilderTests(Func(Of String, ISuffixArrayBuilder(Of TEdge, TNode)))
-  fullName: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests<TEdge, TNode>.SuffixArrayBuilderTests(Func<System.String, MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder<TEdge, TNode>>)
-  fullName.vb: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests(Of TEdge, TNode).SuffixArrayBuilderTests(Func(Of System.String, MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder(Of TEdge, TNode)))
-  nameWithType: SuffixArrayBuilderTests<TEdge, TNode>.SuffixArrayBuilderTests(Func<String, ISuffixArrayBuilder<TEdge, TNode>>)
-  nameWithType.vb: SuffixArrayBuilderTests(Of TEdge, TNode).SuffixArrayBuilderTests(Func(Of String, ISuffixArrayBuilder(Of TEdge, TNode)))
+- uid: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests`2.#ctor(Func{System.String,MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder})
+  name: SuffixArrayBuilderTests(Func<String, ISuffixArrayBuilder>)
+  href: api/MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests-2.html#MoreStructures_Tests_SuffixArrays_Builders_SuffixArrayBuilderTests_2__ctor_Func_System_String_MoreStructures_SuffixArrays_Builders_ISuffixArrayBuilder__
+  commentId: M:MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests`2.#ctor(Func{System.String,MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder})
+  name.vb: SuffixArrayBuilderTests(Func(Of String, ISuffixArrayBuilder))
+  fullName: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests<TEdge, TNode>.SuffixArrayBuilderTests(Func<System.String, MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder>)
+  fullName.vb: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests(Of TEdge, TNode).SuffixArrayBuilderTests(Func(Of System.String, MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder))
+  nameWithType: SuffixArrayBuilderTests<TEdge, TNode>.SuffixArrayBuilderTests(Func<String, ISuffixArrayBuilder>)
+  nameWithType.vb: SuffixArrayBuilderTests(Of TEdge, TNode).SuffixArrayBuilderTests(Func(Of String, ISuffixArrayBuilder))
 - uid: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests`2.#ctor*
   name: SuffixArrayBuilderTests
   href: api/MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests-2.html#MoreStructures_Tests_SuffixArrays_Builders_SuffixArrayBuilderTests_2__ctor_
