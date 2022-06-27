@@ -8,13 +8,32 @@ namespace MoreStructures.BurrowsWheelerTransform.Matching;
 /// A <see cref="IMatcher"/> implementationwhich uses a Suffix Array to perform text pattern matching.
 /// </summary>
 /// <remarks>
-/// Suffix Array has to be provided as an additional input. 
-/// <br/>
-/// If not already available, It can be built via a <see cref="SuffixStructureBasedSuffixArrayBuilder{TEdge, TNode}"/>, 
-/// if a Suffix Structure of the provided text is already available (such as a Suffix Tree or Trie), and via 
-/// <see cref="NaiveSuffixArrayBuilder"/> otherwise.
-/// <br/>
-/// TODO: continue
+///     <para id="info">
+///     Suffix Array has to be provided as an additional input. 
+///     <br/>
+///     If not already available, it can be built via a 
+///     <see cref="SuffixStructureBasedSuffixArrayBuilder{TEdge, TNode}"/>, if a Suffix Structure of the provided text 
+///     is already available (such as a Suffix Tree or Trie), and via <see cref="NaiveSuffixArrayBuilder"/> otherwise.
+///     </para>
+///     <para id="algo">
+///     The algorithm performs two binary searches over the <see cref="SortedBWT"/> in sequence.
+///     <br/>
+///     - The first binary search looks for the first index i of the <see cref="SortedBWT"/> such that the provided 
+///       pattern matches the i-th element of the <see cref="SuffixArray"/> (meaning that the pattern is fully 
+///       contained in the i-th suffix of <see cref="Text"/> in <see cref="SuffixArray"/>).
+///       <br/>
+///     - If i is not found, a failing <see cref="Matching.Match"/> is returned. Otherwise, a second binary search is
+///       performed.
+///       <br/>
+///     - The second binary search looks for the last index j of the <see cref="SortedBWT"/> respecting the same 
+///       condition as the first binary search. This search starts from the index found in the first search (included).
+///       <br/>
+///     - The second search is guaranteed to succeed (as in the worst case the last occurrence corresponds to the first
+///       one, found in the first search.     
+///     </para>
+///     <para id="complexity">
+///     
+///     </para>
 /// </remarks>
 public class SuffixArrayBasedMatcher : IMatcher
 {
@@ -60,20 +79,24 @@ public class SuffixArrayBasedMatcher : IMatcher
     /// <exception cref="NotImplementedException"></exception>
     public Match Match(IEnumerable<char> pattern)
     {
-        var againstPatternComparerStart = new AgainstPatternComparer(Text, SuffixArray, pattern);
         var indexes = Enumerable.Range(0, SortedBWT.Length);
+
+        var againstPatternComparerStart = new AgainstPatternComparer(Text, SuffixArray, pattern);
         var startIndex = OrderedAscListSearch.First(indexes, -1, againstPatternComparerStart);
         var longestMatchIndex1 = againstPatternComparerStart.LongestMatchFirstValue;
 
-        var againstPatternComparerEnd = new AgainstPatternComparer(Text, SuffixArray, pattern);
-        var endIndex = OrderedAscListSearch.Last(indexes, -1, againstPatternComparerEnd, startIndex);
-        var longestMatchIndex2 = againstPatternComparerEnd.LongestMatchFirstValue;
         if (startIndex >= 0)
+        {
+            var againstPatternComparerEnd = new AgainstPatternComparer(Text, SuffixArray, pattern);
+            var endIndex = OrderedAscListSearch.Last(indexes, -1, againstPatternComparerEnd, startIndex);
+
             return new Match(true, againstPatternComparerStart.LongestMatch, startIndex, endIndex);
-        return new Match(false, againstPatternComparerStart.LongestMatch, longestMatchIndex1, longestMatchIndex2);
+        }
+        
+        return new Match(false, againstPatternComparerStart.LongestMatch, longestMatchIndex1, longestMatchIndex1);
     }
 
-    private class AgainstPatternComparer : IComparer<int>
+    private sealed class AgainstPatternComparer : IComparer<int>
     {
         private readonly TextWithTerminator Text;
         private readonly IList<int> SuffixArray;
@@ -117,7 +140,8 @@ public class SuffixArrayBasedMatcher : IMatcher
                 }
             }
 
-            if (secondHasValue) return -1;
+            if (secondHasValue) 
+                return -1; // The patter is longer than the suffix
             return 0;
         }
     }

@@ -24,12 +24,19 @@ public class NarrowingIntervalMatcherTests : MatcherTests
     }
 
     [TestMethod]
-    public void Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT()
+    public virtual void Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT()
     {
         Assert.ThrowsException<ArgumentException>(
             () => new NarrowingIntervalMatcher(new("a#", '#'), new RotatedTextWithTerminator("$a", '$')));
         Assert.ThrowsException<ArgumentException>(
             () => new NarrowingIntervalMatcher(new("a#$", '#'), new RotatedTextWithTerminator("$#a", '$')));
+    }
+
+    [TestMethod]
+    public virtual void Match_RaisesExceptionWithEmptyPattern()
+    {
+        Assert.ThrowsException<ArgumentException>(
+            () => new NarrowingIntervalMatcher(new("a$"), new RotatedTextWithTerminator("$a")).Match(""));
     }
 
     [DataRow("mississippi", "xissi", false, 4, 3, 4)] // Matching goes backwards => matches 4 chars then fails
@@ -47,13 +54,5 @@ public class NarrowingIntervalMatcherTests : MatcherTests
         Assert.AreEqual(expectedMatchedChars, matchedChars);
         Assert.AreEqual(expectedStart, startIndex);
         Assert.AreEqual(expectedEnd, endIndex);
-    }
-
-
-    [TestMethod]
-    public void Match_RaisesExceptionWithEmptyPattern()
-    {
-        Assert.ThrowsException<ArgumentException>(
-            () => new NarrowingIntervalMatcher(new("a$"), new RotatedTextWithTerminator("$a")).Match(""));
     }
 }

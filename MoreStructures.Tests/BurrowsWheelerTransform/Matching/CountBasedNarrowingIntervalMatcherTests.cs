@@ -16,4 +16,20 @@ public class CountBasedNarrowingIntervalMatcherTests : NarrowingIntervalMatcherT
         })
     {
     }
+
+    [TestMethod]
+    public override void Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT()
+    {
+        Assert.ThrowsException<ArgumentException>(
+            () => new CountBasedNarrowingIntervalMatcher(new("a#", '#'), new RotatedTextWithTerminator("$a", '$')));
+        Assert.ThrowsException<ArgumentException>(
+            () => new CountBasedNarrowingIntervalMatcher(new("a#$", '#'), new RotatedTextWithTerminator("$#a", '$')));
+    }
+
+    [TestMethod]
+    public override void Match_RaisesExceptionWithEmptyPattern()
+    {
+        Assert.ThrowsException<ArgumentException>(
+            () => new CountBasedNarrowingIntervalMatcher(new("a$"), new RotatedTextWithTerminator("$a")).Match(""));
+    }
 }

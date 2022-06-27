@@ -1,4 +1,5 @@
-﻿using MoreStructures.BurrowsWheelerTransform;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MoreStructures.BurrowsWheelerTransform;
 using MoreStructures.BurrowsWheelerTransform.Builders;
 using MoreStructures.BurrowsWheelerTransform.Matching;
 using MoreStructures.SuffixArrays.Builders;
@@ -25,6 +26,7 @@ public class SuffixArrayBasedMatcherTests : MatcherTests
     [DataRow("mississippi", "x", false, 0, -1, -1)] // Fail right away
     [DataRow("abaabaabbacba", "abaabc", false, 5, 4, 4)]
     [DataRow("abaabaabbacba", "abaabac", false, 6, 4, 4)]
+    [DataRow("abaa", "abaa$b", false, 5, 3, 3)]
     [DataTestMethod]
     public void Match_IsCorrect(
         string textContent, string patternContent, bool expectedSuccess, int expectedMatchedChars, int expectedStart,
@@ -37,5 +39,11 @@ public class SuffixArrayBasedMatcherTests : MatcherTests
         Assert.AreEqual(expectedMatchedChars, matchedChars);
         Assert.AreEqual(expectedStart, startIndex);
         Assert.AreEqual(expectedEnd, endIndex);
+    }
+
+    [TestMethod]
+    public void BWT_IsNotSupported()
+    {
+        Assert.ThrowsException<NotSupportedException>(() => MatcherBuilder(new("")).BWT);
     }
 }

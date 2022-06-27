@@ -28,6 +28,7 @@ public abstract class MatcherTests
     [DataRow("abaabaabbacba", "aa", true, 2, 2, 3)]
     [DataRow("abaabaabbacba", "ab", true, 2, 4, 6)]
     [DataRow("abaabaabbacba", "ac", true, 2, 7, 7)]
+    [DataRow("abaabaabbacba", "abaa", true, 4, 4, 5)]
     [DataRow("abaabaabbacba", "abaab", true, 5, 4, 5)]
     [DataTestMethod]
     public void Match_IsCorrectWhenSuccess(
