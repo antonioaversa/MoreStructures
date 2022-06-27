@@ -32,7 +32,14 @@ namespace MoreStructures.BurrowsWheelerTransform.Matching;
 ///       one, found in the first search.     
 ///     </para>
 ///     <para id="complexity">
-///     
+///     - The array of indexes is as long as the length n of <see cref="SortedBWT"/>, which is also the length of the 
+///       text and the Suffix Array.
+///       <br/>
+///     - Each binary search does a number of comparisons which is logarithmic over n.
+///       <br/>
+///     - Each comparison is of at most n chars.
+///       <br/>
+///     - So Time Complexity is O(n * log(n)) and Space Complexity is O(n).
 ///     </para>
 /// </remarks>
 public class SuffixArrayBasedMatcher : IMatcher
@@ -62,7 +69,7 @@ public class SuffixArrayBasedMatcher : IMatcher
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
-    /// TODO
+    ///     <inheritdoc cref="SuffixArrayBasedMatcher" path="/remarks"/>
     /// </remarks>
     public SuffixArrayBasedMatcher(RotatedTextWithTerminator sbwt, TextWithTerminator text, IList<int> suffixArray)
     {
@@ -79,7 +86,7 @@ public class SuffixArrayBasedMatcher : IMatcher
     /// <exception cref="NotImplementedException"></exception>
     public Match Match(IEnumerable<char> pattern)
     {
-        var indexes = Enumerable.Range(0, SortedBWT.Length);
+        var indexes = Enumerable.Range(0, SortedBWT.Length).ToList();
 
         var againstPatternComparerStart = new AgainstPatternComparer(Text, SuffixArray, pattern);
         var startIndex = OrderedAscListSearch.First(indexes, -1, againstPatternComparerStart);
