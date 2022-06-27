@@ -18,7 +18,7 @@ public class SuffixTreeBasedSuffixArrayBuilderTests : SuffixArrayBuilderTests<Su
     {
     }
 
-    private static ISuffixArrayBuilder<SuffixTreeEdge, SuffixTreeNode> BuildSuffixArrayBuilder(string textContent)
+    private static ISuffixArrayBuilder BuildSuffixArrayBuilder(string textContent)
     {
         var text = new TextWithTerminator(textContent);
         return new SuffixStructureBasedSuffixArrayBuilder<SuffixTreeEdge, SuffixTreeNode>(
@@ -37,7 +37,7 @@ public class SuffixTrieBasedSuffixArrayBuilderTests : SuffixArrayBuilderTests<Su
     {
     }
 
-    private static ISuffixArrayBuilder<SuffixTrieEdge, SuffixTrieNode> BuildSuffixArrayBuilder(string textContent)
+    private static ISuffixArrayBuilder BuildSuffixArrayBuilder(string textContent)
     {
         var text = new TextWithTerminator(textContent);
         return new SuffixStructureBasedSuffixArrayBuilder<SuffixTrieEdge, SuffixTrieNode>(

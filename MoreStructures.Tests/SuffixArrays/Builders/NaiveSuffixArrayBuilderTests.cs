@@ -7,7 +7,7 @@ namespace MoreStructures.Tests.SuffixArrays.Builders;
 public class NaiveSuffixArrayBuilderTests : SuffixArrayBuilderTests<SuffixTreeEdge, SuffixTreeNode>
 {
     public NaiveSuffixArrayBuilderTests() 
-        : base(s => new NaiveSuffixArrayBuilder<SuffixTreeEdge, SuffixTreeNode>(new(s)))
+        : base(s => new NaiveSuffixArrayBuilder(new(s)))
     {
     }
 }
