@@ -8,9 +8,9 @@ public abstract class SuffixArrayBuilderTests<TEdge, TNode>
     where TEdge : ISuffixStructureEdge<TEdge, TNode>
     where TNode : ISuffixStructureNode<TEdge, TNode>
 {
-    protected Func<string, ISuffixArrayBuilder<TEdge, TNode>> BuilderBuilder { get; }
+    protected Func<string, ISuffixArrayBuilder> BuilderBuilder { get; }
 
-    protected SuffixArrayBuilderTests(Func<string, ISuffixArrayBuilder<TEdge, TNode>> builderBuilder)
+    protected SuffixArrayBuilderTests(Func<string, ISuffixArrayBuilder> builderBuilder)
     {
         BuilderBuilder = builderBuilder;
     }

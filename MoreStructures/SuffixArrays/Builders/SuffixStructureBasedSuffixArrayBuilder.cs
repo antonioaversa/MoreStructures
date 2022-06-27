@@ -8,7 +8,9 @@ namespace MoreStructures.SuffixArrays.Builders;
 /// An algorithm for building Suffix Arrays from an already built <see cref="ISuffixStructureNode{TEdge, TNode}"/> 
 /// structure for the provided <see cref="TextWithTerminator"/>.
 /// </summary>
-public class SuffixStructureBasedSuffixArrayBuilder<TEdge, TNode> : ISuffixArrayBuilder<TEdge, TNode>
+/// <typeparam name="TEdge">The type of edges of the specific structure.</typeparam>
+/// <typeparam name="TNode">The type of nodes of the specific structure.</typeparam>
+public class SuffixStructureBasedSuffixArrayBuilder<TEdge, TNode> : ISuffixArrayBuilder
     where TEdge : ISuffixStructureEdge<TEdge, TNode>
     where TNode : ISuffixStructureNode<TEdge, TNode>
 {

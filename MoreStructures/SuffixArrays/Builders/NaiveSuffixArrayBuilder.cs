@@ -31,9 +31,7 @@ namespace MoreStructures.SuffixArrays.Builders;
 ///     - Therefore, Time Complexity is O(n^2 * log(n)) and Space Complexity is O(n).
 ///     </para>
 /// </remarks>
-public class NaiveSuffixArrayBuilder<TEdge, TNode> : ISuffixArrayBuilder<TEdge, TNode>
-    where TEdge : ISuffixStructureEdge<TEdge, TNode>
-    where TNode : ISuffixStructureNode<TEdge, TNode>
+public class NaiveSuffixArrayBuilder : ISuffixArrayBuilder
 {
     private readonly IComparer<string> Comparer;
 
@@ -43,7 +41,7 @@ public class NaiveSuffixArrayBuilder<TEdge, TNode> : ISuffixArrayBuilder<TEdge, 
     public TextWithTerminator Text { get; }
 
     /// <summary>
-    /// <inheritdoc cref="NaiveSuffixArrayBuilder{TEdge, TNode}" path="/summary"/>
+    /// <inheritdoc cref="NaiveSuffixArrayBuilder" path="/summary"/>
     /// </summary>
     /// <param name="text"><inheritdoc cref="Text" path="/summary"/></param>
     public NaiveSuffixArrayBuilder(TextWithTerminator text)
@@ -53,7 +51,7 @@ public class NaiveSuffixArrayBuilder<TEdge, TNode> : ISuffixArrayBuilder<TEdge, 
     }
 
     /// <summary>
-    /// <inheritdoc cref="NaiveSuffixArrayBuilder{TEdge, TNode}" path="/summary"/>
+    /// <inheritdoc cref="NaiveSuffixArrayBuilder" path="/summary"/>
     /// </summary>
     public IEnumerable<int> Build() => Enumerable
         .Range(0, Text.Length)

@@ -4,7 +4,7 @@ using MoreStructures.BurrowsWheelerTransform.Matching;
 namespace MoreStructures.Tests.BurrowsWheelerTransform.Matching;
 
 [TestClass]
-public class CountBasedNarrowingIntervalMatcherTests : MatcherTests
+public class CountBasedNarrowingIntervalMatcherTests : NarrowingIntervalMatcherTests
 {
     public CountBasedNarrowingIntervalMatcherTests() : base(
         bwt => new CountBasedNarrowingIntervalMatcher(bwt, BWTransform.QuickSort),
