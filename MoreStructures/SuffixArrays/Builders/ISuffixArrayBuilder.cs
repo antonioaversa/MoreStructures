@@ -6,6 +6,7 @@ namespace MoreStructures.SuffixArrays.Builders;
 /// An algorithm for building Suffix Arrays.
 /// </summary>
 /// <remarks>
+///     <para id="definition">
 ///     The Suffix Array of a terminator-terminated text T is an array where the i-th element is the index in T of the 
 ///     1st char of a suffix Si of T, and Si &lt; Sj for each i &lt; j.
 ///     <br/>
@@ -31,6 +32,7 @@ namespace MoreStructures.SuffixArrays.Builders;
 ///     - etc.
 ///     <br/>
 ///     So the Suffix Array of "mississippi$" is { 11, 10, 7, 4, ... }.
+///     </para>
 /// </remarks>
 /// <example>
 ///     <code>

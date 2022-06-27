@@ -8,6 +8,7 @@ namespace MoreStructures.SuffixArrays.Builders;
 /// suffixes of the text.
 /// </summary>
 /// <remarks>
+///     <inheritdoc cref="ISuffixArrayBuilder" path="/remarks/para[@id='definition']"/>
 ///     <para id="algo">
 ///     ALGORITHM
 ///     <br/>
