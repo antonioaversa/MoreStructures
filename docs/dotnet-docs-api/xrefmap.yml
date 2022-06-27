@@ -1055,6 +1055,109 @@ references:
   isSpec: "True"
   fullName: MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.SortedBWT
   nameWithType: NarrowingIntervalMatcher.SortedBWT
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher
+  name: SuffixArrayBasedMatcher
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.html
+  commentId: T:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher
+  nameWithType: SuffixArrayBasedMatcher
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.TextWithTerminator,IList{System.Int32})
+  name: SuffixArrayBasedMatcher(RotatedTextWithTerminator, TextWithTerminator, IList<Int32>)
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_TextWithTerminator_IList_System_Int32__
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.TextWithTerminator,IList{System.Int32})
+  name.vb: SuffixArrayBasedMatcher(RotatedTextWithTerminator, TextWithTerminator, IList(Of Int32))
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.SuffixArrayBasedMatcher(MoreStructures.RotatedTextWithTerminator, MoreStructures.TextWithTerminator, IList<System.Int32>)
+  fullName.vb: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.SuffixArrayBasedMatcher(MoreStructures.RotatedTextWithTerminator, MoreStructures.TextWithTerminator, IList(Of System.Int32))
+  nameWithType: SuffixArrayBasedMatcher.SuffixArrayBasedMatcher(RotatedTextWithTerminator, TextWithTerminator, IList<Int32>)
+  nameWithType.vb: SuffixArrayBasedMatcher.SuffixArrayBasedMatcher(RotatedTextWithTerminator, TextWithTerminator, IList(Of Int32))
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.#ctor*
+  name: SuffixArrayBasedMatcher
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher__ctor_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.SuffixArrayBasedMatcher
+  nameWithType: SuffixArrayBasedMatcher.SuffixArrayBasedMatcher
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.BWT
+  name: BWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_BWT
+  commentId: P:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.BWT
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.BWT
+  nameWithType: SuffixArrayBasedMatcher.BWT
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.BWT*
+  name: BWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_BWT_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.BWT
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.BWT
+  nameWithType: SuffixArrayBasedMatcher.BWT
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.Match(IEnumerable{System.Char})
+  name: Match(IEnumerable<Char>)
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_Match_IEnumerable_System_Char__
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.Match(IEnumerable{System.Char})
+  name.vb: Match(IEnumerable(Of Char))
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.Match(IEnumerable<System.Char>)
+  fullName.vb: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.Match(IEnumerable(Of System.Char))
+  nameWithType: SuffixArrayBasedMatcher.Match(IEnumerable<Char>)
+  nameWithType.vb: SuffixArrayBasedMatcher.Match(IEnumerable(Of Char))
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.Match*
+  name: Match
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_Match_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.Match
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.Match
+  nameWithType: SuffixArrayBasedMatcher.Match
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.OrderedAscListSearch
+  name: OrderedAscListSearch
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_OrderedAscListSearch
+  commentId: P:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.OrderedAscListSearch
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.OrderedAscListSearch
+  nameWithType: SuffixArrayBasedMatcher.OrderedAscListSearch
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.OrderedAscListSearch*
+  name: OrderedAscListSearch
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_OrderedAscListSearch_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.OrderedAscListSearch
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.OrderedAscListSearch
+  nameWithType: SuffixArrayBasedMatcher.OrderedAscListSearch
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.SortedBWT
+  name: SortedBWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_SortedBWT
+  commentId: P:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.SortedBWT
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.SortedBWT
+  nameWithType: SuffixArrayBasedMatcher.SortedBWT
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.SortedBWT*
+  name: SortedBWT
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_SortedBWT_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.SortedBWT
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.SortedBWT
+  nameWithType: SuffixArrayBasedMatcher.SortedBWT
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.SuffixArray
+  name: SuffixArray
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_SuffixArray
+  commentId: P:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.SuffixArray
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.SuffixArray
+  nameWithType: SuffixArrayBasedMatcher.SuffixArray
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.SuffixArray*
+  name: SuffixArray
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_SuffixArray_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.SuffixArray
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.SuffixArray
+  nameWithType: SuffixArrayBasedMatcher.SuffixArray
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.Text
+  name: Text
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_Text
+  commentId: P:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.Text
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.Text
+  nameWithType: SuffixArrayBasedMatcher.Text
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.Text*
+  name: Text
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_Text_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.Text
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.Text
+  nameWithType: SuffixArrayBasedMatcher.Text
 - uid: MoreStructures.CountTrees
   name: MoreStructures.CountTrees
   href: api/MoreStructures.CountTrees.html
@@ -4758,12 +4861,80 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests.CountBasedNarrowingIntervalMatcherTests
   nameWithType: CountBasedNarrowingIntervalMatcherTests.CountBasedNarrowingIntervalMatcherTests
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
+  name: Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT()
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcherTests_Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT()
+  nameWithType: CountBasedNarrowingIntervalMatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT()
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT*
+  name: Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcherTests_Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT_
+  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
+  isSpec: "True"
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
+  nameWithType: CountBasedNarrowingIntervalMatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests.Match_RaisesExceptionWithEmptyPattern
+  name: Match_RaisesExceptionWithEmptyPattern()
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcherTests_Match_RaisesExceptionWithEmptyPattern
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests.Match_RaisesExceptionWithEmptyPattern
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests.Match_RaisesExceptionWithEmptyPattern()
+  nameWithType: CountBasedNarrowingIntervalMatcherTests.Match_RaisesExceptionWithEmptyPattern()
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests.Match_RaisesExceptionWithEmptyPattern*
+  name: Match_RaisesExceptionWithEmptyPattern
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_CountBasedNarrowingIntervalMatcherTests_Match_RaisesExceptionWithEmptyPattern_
+  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests.Match_RaisesExceptionWithEmptyPattern
+  isSpec: "True"
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcherTests.Match_RaisesExceptionWithEmptyPattern
+  nameWithType: CountBasedNarrowingIntervalMatcherTests.Match_RaisesExceptionWithEmptyPattern
 - uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests
   name: MatcherTests
   href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.html
   commentId: T:MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests
   fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests
   nameWithType: MatcherTests
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.#ctor(Func{MoreStructures.TextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher})
+  name: MatcherTests(Func<TextWithTerminator, IMatcher>)
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests__ctor_Func_MoreStructures_TextWithTerminator_MoreStructures_BurrowsWheelerTransform_Matching_IMatcher__
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.#ctor(Func{MoreStructures.TextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher})
+  name.vb: MatcherTests(Func(Of TextWithTerminator, IMatcher))
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.MatcherTests(Func<MoreStructures.TextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher>)
+  fullName.vb: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.MatcherTests(Func(Of MoreStructures.TextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher))
+  nameWithType: MatcherTests.MatcherTests(Func<TextWithTerminator, IMatcher>)
+  nameWithType.vb: MatcherTests.MatcherTests(Func(Of TextWithTerminator, IMatcher))
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.#ctor*
+  name: MatcherTests
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests__ctor_
+  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.MatcherTests
+  nameWithType: MatcherTests.MatcherTests
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_IsCorrectWhenSuccess(System.String,System.String,System.Boolean,System.Int32,System.Int32,System.Int32)
+  name: Match_IsCorrectWhenSuccess(String, String, Boolean, Int32, Int32, Int32)
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests_Match_IsCorrectWhenSuccess_System_String_System_String_System_Boolean_System_Int32_System_Int32_System_Int32_
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_IsCorrectWhenSuccess(System.String,System.String,System.Boolean,System.Int32,System.Int32,System.Int32)
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_IsCorrectWhenSuccess(System.String, System.String, System.Boolean, System.Int32, System.Int32, System.Int32)
+  nameWithType: MatcherTests.Match_IsCorrectWhenSuccess(String, String, Boolean, Int32, Int32, Int32)
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_IsCorrectWhenSuccess*
+  name: Match_IsCorrectWhenSuccess
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests_Match_IsCorrectWhenSuccess_
+  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_IsCorrectWhenSuccess
+  isSpec: "True"
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.Match_IsCorrectWhenSuccess
+  nameWithType: MatcherTests.Match_IsCorrectWhenSuccess
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.MatcherBuilder
+  name: MatcherBuilder
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests_MatcherBuilder
+  commentId: P:MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.MatcherBuilder
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.MatcherBuilder
+  nameWithType: MatcherTests.MatcherBuilder
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.MatcherBuilder*
+  name: MatcherBuilder
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_MatcherTests_MatcherBuilder_
+  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.MatcherBuilder
+  isSpec: "True"
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.MatcherTests.MatcherBuilder
+  nameWithType: MatcherTests.MatcherBuilder
 - uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests
   name: NarrowingIntervalMatcherTests
   href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.html
@@ -4776,15 +4947,15 @@ references:
   commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.#ctor
   fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.NarrowingIntervalMatcherTests()
   nameWithType: NarrowingIntervalMatcherTests.NarrowingIntervalMatcherTests()
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.#ctor(Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher},Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher})
-  name: NarrowingIntervalMatcherTests(Func<RotatedTextWithTerminator, IMatcher>, Func<RotatedTextWithTerminator, RotatedTextWithTerminator, IMatcher>)
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcherTests__ctor_Func_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Matching_IMatcher__Func_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_Matching_IMatcher__
-  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.#ctor(Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher},Func{MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher})
-  name.vb: NarrowingIntervalMatcherTests(Func(Of RotatedTextWithTerminator, IMatcher), Func(Of RotatedTextWithTerminator, RotatedTextWithTerminator, IMatcher))
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.NarrowingIntervalMatcherTests(Func<MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher>, Func<MoreStructures.RotatedTextWithTerminator, MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher>)
-  fullName.vb: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.NarrowingIntervalMatcherTests(Func(Of MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher), Func(Of MoreStructures.RotatedTextWithTerminator, MoreStructures.RotatedTextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher))
-  nameWithType: NarrowingIntervalMatcherTests.NarrowingIntervalMatcherTests(Func<RotatedTextWithTerminator, IMatcher>, Func<RotatedTextWithTerminator, RotatedTextWithTerminator, IMatcher>)
-  nameWithType.vb: NarrowingIntervalMatcherTests.NarrowingIntervalMatcherTests(Func(Of RotatedTextWithTerminator, IMatcher), Func(Of RotatedTextWithTerminator, RotatedTextWithTerminator, IMatcher))
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.#ctor(Func{MoreStructures.TextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher})
+  name: NarrowingIntervalMatcherTests(Func<TextWithTerminator, IMatcher>)
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcherTests__ctor_Func_MoreStructures_TextWithTerminator_MoreStructures_BurrowsWheelerTransform_Matching_IMatcher__
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.#ctor(Func{MoreStructures.TextWithTerminator,MoreStructures.BurrowsWheelerTransform.Matching.IMatcher})
+  name.vb: NarrowingIntervalMatcherTests(Func(Of TextWithTerminator, IMatcher))
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.NarrowingIntervalMatcherTests(Func<MoreStructures.TextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher>)
+  fullName.vb: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.NarrowingIntervalMatcherTests(Func(Of MoreStructures.TextWithTerminator, MoreStructures.BurrowsWheelerTransform.Matching.IMatcher))
+  nameWithType: NarrowingIntervalMatcherTests.NarrowingIntervalMatcherTests(Func<TextWithTerminator, IMatcher>)
+  nameWithType.vb: NarrowingIntervalMatcherTests.NarrowingIntervalMatcherTests(Func(Of TextWithTerminator, IMatcher))
 - uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.#ctor*
   name: NarrowingIntervalMatcherTests
   href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcherTests__ctor_
@@ -4805,19 +4976,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
   nameWithType: NarrowingIntervalMatcherTests.Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Match_IsCorrect(System.String,System.String,System.Boolean,System.Int32,System.Int32,System.Int32)
-  name: Match_IsCorrect(String, String, Boolean, Int32, Int32, Int32)
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcherTests_Match_IsCorrect_System_String_System_String_System_Boolean_System_Int32_System_Int32_System_Int32_
-  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Match_IsCorrect(System.String,System.String,System.Boolean,System.Int32,System.Int32,System.Int32)
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Match_IsCorrect(System.String, System.String, System.Boolean, System.Int32, System.Int32, System.Int32)
-  nameWithType: NarrowingIntervalMatcherTests.Match_IsCorrect(String, String, Boolean, Int32, Int32, Int32)
-- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Match_IsCorrect*
-  name: Match_IsCorrect
-  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcherTests_Match_IsCorrect_
-  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Match_IsCorrect
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Match_IsCorrectWhenFailure(System.String,System.String,System.Boolean,System.Int32,System.Int32,System.Int32)
+  name: Match_IsCorrectWhenFailure(String, String, Boolean, Int32, Int32, Int32)
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcherTests_Match_IsCorrectWhenFailure_System_String_System_String_System_Boolean_System_Int32_System_Int32_System_Int32_
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Match_IsCorrectWhenFailure(System.String,System.String,System.Boolean,System.Int32,System.Int32,System.Int32)
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Match_IsCorrectWhenFailure(System.String, System.String, System.Boolean, System.Int32, System.Int32, System.Int32)
+  nameWithType: NarrowingIntervalMatcherTests.Match_IsCorrectWhenFailure(String, String, Boolean, Int32, Int32, Int32)
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Match_IsCorrectWhenFailure*
+  name: Match_IsCorrectWhenFailure
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcherTests_Match_IsCorrectWhenFailure_
+  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Match_IsCorrectWhenFailure
   isSpec: "True"
-  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Match_IsCorrect
-  nameWithType: NarrowingIntervalMatcherTests.Match_IsCorrect
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Match_IsCorrectWhenFailure
+  nameWithType: NarrowingIntervalMatcherTests.Match_IsCorrectWhenFailure
 - uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Match_RaisesExceptionWithEmptyPattern
   name: Match_RaisesExceptionWithEmptyPattern()
   href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcherTests_Match_RaisesExceptionWithEmptyPattern
@@ -4831,6 +5002,51 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcherTests.Match_RaisesExceptionWithEmptyPattern
   nameWithType: NarrowingIntervalMatcherTests.Match_RaisesExceptionWithEmptyPattern
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests
+  name: SuffixArrayBasedMatcherTests
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.html
+  commentId: T:MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests
+  nameWithType: SuffixArrayBasedMatcherTests
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.#ctor
+  name: SuffixArrayBasedMatcherTests()
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcherTests__ctor
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.#ctor
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.SuffixArrayBasedMatcherTests()
+  nameWithType: SuffixArrayBasedMatcherTests.SuffixArrayBasedMatcherTests()
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.#ctor*
+  name: SuffixArrayBasedMatcherTests
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcherTests__ctor_
+  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.SuffixArrayBasedMatcherTests
+  nameWithType: SuffixArrayBasedMatcherTests.SuffixArrayBasedMatcherTests
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.BWT_IsNotSupported
+  name: BWT_IsNotSupported()
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcherTests_BWT_IsNotSupported
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.BWT_IsNotSupported
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.BWT_IsNotSupported()
+  nameWithType: SuffixArrayBasedMatcherTests.BWT_IsNotSupported()
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.BWT_IsNotSupported*
+  name: BWT_IsNotSupported
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcherTests_BWT_IsNotSupported_
+  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.BWT_IsNotSupported
+  isSpec: "True"
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.BWT_IsNotSupported
+  nameWithType: SuffixArrayBasedMatcherTests.BWT_IsNotSupported
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.Match_IsCorrect(System.String,System.String,System.Boolean,System.Int32,System.Int32,System.Int32)
+  name: Match_IsCorrect(String, String, Boolean, Int32, Int32, Int32)
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcherTests_Match_IsCorrect_System_String_System_String_System_Boolean_System_Int32_System_Int32_System_Int32_
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.Match_IsCorrect(System.String,System.String,System.Boolean,System.Int32,System.Int32,System.Int32)
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.Match_IsCorrect(System.String, System.String, System.Boolean, System.Int32, System.Int32, System.Int32)
+  nameWithType: SuffixArrayBasedMatcherTests.Match_IsCorrect(String, String, Boolean, Int32, Int32, Int32)
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.Match_IsCorrect*
+  name: Match_IsCorrect
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcherTests_Match_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.Match_IsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.Match_IsCorrect
+  nameWithType: SuffixArrayBasedMatcherTests.Match_IsCorrect
 - uid: MoreStructures.Tests.CountTrees
   name: MoreStructures.Tests.CountTrees
   href: api/MoreStructures.Tests.CountTrees.html

@@ -130,20 +130,24 @@
     ALGORITHM
 <br>
 This is a basic implementation, narrowing the matching interval at every iteration with two linear scans of the
-BWT.
+<a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_BWT">BWT</a>:
 <br>
-No precomputation cost is paid on instantiation, except for sorting of the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_BWT">BWT</a> to build the 
-<a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_SortedBWT">SortedBWT</a>, which takes O(n * log(n)) time using <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.html#MoreStructures_BurrowsWheelerTransform_BWTransform_QuickSort">QuickSort</a>, but can also 
-run in linear time for a constant size alphabet using the Counting Sort. 
+- the first from the beginning of the current interval and up to the first char matching the current char;
 <br>
-Either way, the predominant cost is the main narrowing interval algorithm, which runs for each char in the BWT
-(i.e. n times) two linear scans of the BWT itself (on the order of n), resulting in quadratic time execution.
-<br>
+- and the second from the end of the current interval and up to the last char matching the current char.
 </p>
 <p>
     COMPLEXITY
 <br>
-Time Complexity = O(n^2). Space Complexity = O(n).
+- No precomputation cost is paid on instantiation, except for sorting of the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_BWT">BWT</a> to build the 
+<a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_SortedBWT">SortedBWT</a>, which takes O(n * log(n)) time using <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.html#MoreStructures_BurrowsWheelerTransform_BWTransform_QuickSort">QuickSort</a>, but can 
+also run in linear time for a constant size alphabet using the Counting Sort. 
+<br>
+- Either way, the predominant cost is the main narrowing interval algorithm, which runs for each char in the 
+BWT (i.e. n times) two linear scans of the BWT itself (on the order of n), resulting in quadratic time 
+execution.
+<br>
+- Therefore, Time Complexity is O(n^2) and Space Complexity is O(n).
 </p>
 </div>
   <h3 id="constructors">Constructors
@@ -153,7 +157,7 @@ Time Complexity = O(n^2). Space Complexity = O(n).
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_BWTransform_SortStrategy_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.%23ctor(MoreStructures.RotatedTextWithTerminator%2CMoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L52">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L56">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher__ctor_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.#ctor*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_BurrowsWheelerTransform_BWTransform_SortStrategy_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.BurrowsWheelerTransform.BWTransform.SortStrategy)">NarrowingIntervalMatcher(RotatedTextWithTerminator, BWTransform.SortStrategy)</h4>
@@ -195,7 +199,7 @@ to calculate <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matchi
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.%23ctor(MoreStructures.RotatedTextWithTerminator%2CMoreStructures.RotatedTextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L68">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L72">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher__ctor_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.#ctor*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator)">NarrowingIntervalMatcher(RotatedTextWithTerminator, RotatedTextWithTerminator)</h4>
@@ -238,7 +242,7 @@ to calculate <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matchi
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_BWT.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.BWT%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L38">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L42">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_BWT_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.BWT*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_BWT" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.BWT">BWT</h4>
@@ -269,7 +273,7 @@ to calculate <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matchi
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_OrderedAscListSearch.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.OrderedAscListSearch%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L35">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L39">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_OrderedAscListSearch_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.OrderedAscListSearch*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_OrderedAscListSearch" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.OrderedAscListSearch">OrderedAscListSearch</h4>
@@ -301,7 +305,7 @@ in ascending order.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_SortedBWT.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.SortedBWT%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L41">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L45">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_SortedBWT_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.SortedBWT*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_SortedBWT" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.SortedBWT">SortedBWT</h4>
@@ -334,7 +338,7 @@ in ascending order.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_BuildLastFirstFinder.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.BuildLastFirstFinder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L132">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L136">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_BuildLastFirstFinder_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.BuildLastFirstFinder*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_BuildLastFirstFinder" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.BuildLastFirstFinder">BuildLastFirstFinder()</h4>
@@ -371,7 +375,7 @@ matching algorithm over the pattern to match against <a class="xref" href="MoreS
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_Match_IEnumerable_System_Char__.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.Match(IEnumerable%7BSystem.Char%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L96">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L100">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_Match_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.Match*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_Match_IEnumerable_System_Char__" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.Match(IEnumerable{System.Char})">Match(IEnumerable&lt;Char&gt;)</h4>
@@ -438,7 +442,7 @@ Sorted BWT.</li>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_NarrowInterval_System_Char_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.NarrowInterval(System.Char%2CMoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L162">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L166">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_NarrowInterval_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.NarrowInterval*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_NarrowInterval_System_Char_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_System_Int32_System_Int32_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.NarrowInterval(System.Char,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder,System.Int32,System.Int32)">NarrowInterval(Char, ILastFirstFinder, Int32, Int32)</h4>
@@ -538,7 +542,7 @@ across all iterations over the pattern.</p>
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L29" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L33" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
