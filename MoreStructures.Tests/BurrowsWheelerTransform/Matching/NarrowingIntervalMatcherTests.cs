@@ -7,66 +7,52 @@ namespace MoreStructures.Tests.BurrowsWheelerTransform.Matching;
 [TestClass]
 public class NarrowingIntervalMatcherTests : MatcherTests
 {
-    private IBuilder Builder { get; } = new LastFirstPropertyBasedBuilder();
-    private Func<RotatedTextWithTerminator, IMatcher> MatcherBuilderWithBWTOnly { get; }
-    private Func<RotatedTextWithTerminator, RotatedTextWithTerminator, IMatcher> MatcherBuilderWithSortedBWT { get; }
-
-    protected NarrowingIntervalMatcherTests(
-        Func<RotatedTextWithTerminator, IMatcher> matcherBuilderWithBWTOnly,
-        Func<RotatedTextWithTerminator, RotatedTextWithTerminator, IMatcher> matcherBuilderWithSortedBWT)
+    public NarrowingIntervalMatcherTests() : base(
+        text =>
+        {
+            var bwtBuilder = new LastFirstPropertyBasedBuilder();
+            var bwt = bwtBuilder.BuildTransform(text).Content;
+            return new NarrowingIntervalMatcher(bwt, BWTransform.QuickSort);
+        })
     {
-        MatcherBuilderWithBWTOnly = matcherBuilderWithBWTOnly;
-        MatcherBuilderWithSortedBWT = matcherBuilderWithSortedBWT;
     }
 
-    public NarrowingIntervalMatcherTests() : this(
-        bwt => new NarrowingIntervalMatcher(bwt, BWTransform.QuickSort),
-        (bwt, sbwt) => new NarrowingIntervalMatcher(bwt, sbwt))
+    protected NarrowingIntervalMatcherTests(
+        Func<TextWithTerminator, IMatcher> matcherBuilder)
+        : base(matcherBuilder)
     {
     }
 
     [TestMethod]
-    public void Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT()
+    public virtual void Ctor_RaisesExceptionWithIncosistentBWTAndSortedBWT()
     {
         Assert.ThrowsException<ArgumentException>(
-            () => MatcherBuilderWithSortedBWT(new("a#", '#'), new("$a", '$')));
+            () => new NarrowingIntervalMatcher(new("a#", '#'), new RotatedTextWithTerminator("$a", '$')));
         Assert.ThrowsException<ArgumentException>(
-            () => MatcherBuilderWithSortedBWT(new("a#$", '#'), new("$#a", '$')));
+            () => new NarrowingIntervalMatcher(new("a#$", '#'), new RotatedTextWithTerminator("$#a", '$')));
     }
 
-    [DataRow("mississippi", "$", true, 1, 0, 0)] // Terminator can be specified in the pattern
-    [DataRow("mississippi", "i$", true, 2, 1, 1)]
-    [DataRow("mississippi", "issi", true, 4, 3, 4)]
-    [DataRow("mississippi", "issip", true, 5, 3, 3)]
+    [TestMethod]
+    public virtual void Match_RaisesExceptionWithEmptyPattern()
+    {
+        Assert.ThrowsException<ArgumentException>(
+            () => new NarrowingIntervalMatcher(new("a$"), new RotatedTextWithTerminator("$a")).Match(""));
+    }
+
     [DataRow("mississippi", "xissi", false, 4, 3, 4)] // Matching goes backwards => matches 4 chars then fails
     [DataRow("mississippi", "issix", false, 0, -1, -1)] // Matching goes backwards => matches no char
     [DataRow("mississippi", "x", false, 0, -1, -1)] // Fail right away
-    [DataRow("mississippi", "s", true, 1, 8, 11)]
-    [DataRow("mississippi", "mi", true, 2, 5, 5)]
-    [DataRow("mississippi", "mis", true, 3, 5, 5)]
-    [DataRow("baba", "ba", true, 2, 3, 4)]
-    [DataRow("baba", "bab", true, 3, 4, 4)]
-    [DataRow("aaaaaaaaaaa", "a", true, 1, 1, 11)]
     [DataTestMethod]
-    public void Match_IsCorrect(
+    public void Match_IsCorrectWhenFailure(
         string textContent, string patternContent, bool expectedSuccess, int expectedMatchedChars, int expectedStart,
         int expectedEnd)
     {
         var text = new TextWithTerminator(textContent);
-        var bwt = Builder.BuildTransform(text).Content;
-        var matcher = MatcherBuilderWithBWTOnly(bwt);
+        var matcher = MatcherBuilder(text);
         var (success, matchedChars, startIndex, endIndex) = matcher.Match(patternContent);
         Assert.AreEqual(expectedSuccess, success);
         Assert.AreEqual(expectedMatchedChars, matchedChars);
         Assert.AreEqual(expectedStart, startIndex);
         Assert.AreEqual(expectedEnd, endIndex);
-    }
-
-
-    [TestMethod]
-    public void Match_RaisesExceptionWithEmptyPattern()
-    {
-        Assert.ThrowsException<ArgumentException>(
-            () => MatcherBuilderWithSortedBWT(new("a$"), new("$a")).Match(""));
     }
 }
