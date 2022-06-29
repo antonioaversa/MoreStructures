@@ -5,13 +5,12 @@ using MoreStructures.SuffixStructures;
 namespace MoreStructures.SuffixArrays.Builders;
 
 /// <summary>
-/// An algorithm for building Suffix Arrays from an already built <see cref="ISuffixStructureNode{TEdge, TNode}"/> 
-/// structure for the provided <see cref="TextWithTerminator"/>.
+/// An algorithm for building the <see cref="SuffixArray"/> from an already built 
+/// <see cref="ISuffixStructureNode{TEdge, TNode}"/> structure for the provided <see cref="TextWithTerminator"/>.
 /// </summary>
 /// <typeparam name="TEdge">The type of edges of the specific structure.</typeparam>
 /// <typeparam name="TNode">The type of nodes of the specific structure.</typeparam>
 /// <remarks>
-///     <inheritdoc cref="ISuffixArrayBuilder" path="/remarks/para[@id='definition']"/>
 ///     <para id="algo">
 ///     The Suffix Tree for the text "mississippi$" is:
 ///     <code>
@@ -26,7 +25,7 @@ namespace MoreStructures.SuffixArrays.Builders;
 ///     - ...
 ///     </code>
 ///     A DFS visit of the leaves of the tree, navigating edges in lexicographic order, gives { 11, 10, 7, 4, ... },
-///     which is the Suffix Array of "mississippi$".
+///     which is the <see cref="SuffixArray"/> of "mississippi$".
 ///     </para>
 ///     <para id="complexity">
 ///     - The Suffix Tree of the text is provided as input, and the complexity of building or keeping it in memoery 
@@ -59,12 +58,13 @@ public class SuffixStructureBasedSuffixArrayBuilder<TEdge, TNode> : ISuffixArray
     private readonly IVisitStrategy<TNode, TreeTraversalVisit<TEdge, TNode>> DepthFirstTraversal;
 
     /// <summary>
-    /// The <see cref="TextWithTerminator"/>, to build the Suffix Array of.
+    /// The <see cref="TextWithTerminator"/>, to build the <see cref="SuffixArray"/> of.
     /// </summary>
     public TextWithTerminator Text { get; }
 
     /// <summary>
-    /// The root node of the <see cref="ISuffixStructureNode{TEdge, TNode}"/> structure, to build the Suffix Array of.
+    /// The root node of the <see cref="ISuffixStructureNode{TEdge, TNode}"/> structure, to build the 
+    /// <see cref="SuffixArray"/> of.
     /// </summary>
     public TNode Node { get; }
 
@@ -86,11 +86,11 @@ public class SuffixStructureBasedSuffixArrayBuilder<TEdge, TNode> : ISuffixArray
 
     /// <inheritdoc path="//*[self::summary or self::remarks]"/>
     /// <summary>
-    /// Builds the Suffix Array for <see name="Node"/>.
+    /// Builds the <see cref="SuffixArray"/> for <see name="Node"/>.
     /// </summary>
-    public IEnumerable<int> Build() =>
+    public SuffixArray Build() => new(
         from visit in DepthFirstTraversal.Visit(Node)
         let node = visit.Node
         where node.IsLeaf()
-        select node.Start!.Value;
+        select node.Start!.Value);
 }

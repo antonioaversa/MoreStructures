@@ -26,7 +26,7 @@ public abstract class SuffixArrayBuilderTests<TEdge, TNode>
     {
         var builder = BuilderBuilder(text);
         var result = builder.Build();
-        Assert.IsTrue(expectedResult.SequenceEqual(result), 
+        Assert.IsTrue(expectedResult.SequenceEqual(result.Indexes), 
             $"Expected: [{string.Join(", ", expectedResult)}], Actual: [{string.Join(", ", result)}]");
     }
 }
