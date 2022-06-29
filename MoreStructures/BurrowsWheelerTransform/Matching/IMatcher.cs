@@ -17,8 +17,8 @@ public interface IMatcher
     public RotatedTextWithTerminator SortedBWT { get; }
 
     /// <summary>
-    /// Tries to match the provided <paramref name="pattern"/> against the <see cref="BWT"/> and its sorted
-    /// version <see cref="SortedBWT"/>.
+    /// Tries to match the provided <paramref name="pattern"/> against the text, via the <see cref="BWT"/> and its 
+    /// sorted version <see cref="SortedBWT"/>.
     /// </summary>
     /// <param name="pattern">The patter to be matched against the text.</param>
     /// <returns>The result of the pattern matching, successful or not.</returns>
