@@ -13,7 +13,7 @@ public class SuffixArrayBasedMatcherTests : MatcherTests
         text => 
         {
             var suffixArrayBuilder = new NaiveSuffixArrayBuilder(text);
-            var suffixArray = suffixArrayBuilder.Build().ToList();
+            var suffixArray = suffixArrayBuilder.Build();
             var bwtBuilder = new LastFirstPropertyBasedBuilder();
             var sbwt = BWTransform.QuickSort(new(text)).sortedText;
             return new SuffixArrayBasedMatcher(sbwt, text, suffixArray);

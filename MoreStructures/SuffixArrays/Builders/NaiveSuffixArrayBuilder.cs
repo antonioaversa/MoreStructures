@@ -4,11 +4,10 @@ using MoreStructures.Utilities;
 namespace MoreStructures.SuffixArrays.Builders;
 
 /// <summary>
-/// An algorithm for building Suffix Arrays directly from a <see cref="TextWithTerminator"/>, listing and sorting all
-/// suffixes of the text.
+/// An algorithm for building the <see cref="SuffixArray"/> directly from a <see cref="TextWithTerminator"/>, listing 
+/// and sorting all suffixes of <see cref="Text"/>.
 /// </summary>
 /// <remarks>
-///     <inheritdoc cref="ISuffixArrayBuilder" path="/remarks/para[@id='definition']"/>
 ///     <para id="algo">
 ///     ALGORITHM
 ///     <br/>
@@ -37,7 +36,7 @@ public class NaiveSuffixArrayBuilder : ISuffixArrayBuilder
     private readonly IComparer<string> Comparer;
 
     /// <summary>
-    /// The <see cref="TextWithTerminator"/>, to build the Suffix Array of.
+    /// The <see cref="TextWithTerminator"/>, to build the <see cref="SuffixArray"/> of.
     /// </summary>
     public TextWithTerminator Text { get; }
 
@@ -54,9 +53,9 @@ public class NaiveSuffixArrayBuilder : ISuffixArrayBuilder
     /// <summary>
     /// <inheritdoc cref="NaiveSuffixArrayBuilder" path="/summary"/>
     /// </summary>
-    public IEnumerable<int> Build() => Enumerable
+    public SuffixArray Build() => new(Enumerable
         .Range(0, Text.Length)
         .Select(i => string.Concat(Text[i..]))
         .OrderBy(s => s, Comparer)
-        .Select(s => Text.Length - s.Length);
+        .Select(s => Text.Length - s.Length));
 }
