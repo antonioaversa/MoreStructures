@@ -1,8 +1,8 @@
 ﻿namespace MoreStructures.SuffixArrays;
 
 /// <summary>
-/// The Suffix Array of a terminator-terminated text T is an array where the i-th element is the index in T of the 
-/// 1st char of a suffix Si of T, and Si &lt; Sj for each i &lt; j.
+/// The Suffix Array of a terminator-terminated text T is an <see cref="int"/> sequence where the i-th element is the
+/// index in T of the 1st char of a suffix Si of T, and Si &lt; Sj for each i &lt; j.
 /// </summary>
 /// <remarks>
 ///     Suffixes of the terminator-terminated text "mississippi$" are:
@@ -28,5 +28,5 @@
 ///     <br/>
 ///     So the Suffix Array of "mississippi$" is { 11, 10, 7, 4, ... }.
 /// </remarks>
-/// <param name="Indexes"></param>
+/// <param name="Indexes">The sequence of indexes, each one marking the beginning of a suffix of the text.</param>
 public record struct SuffixArray(IEnumerable<int> Indexes);

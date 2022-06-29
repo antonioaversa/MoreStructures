@@ -46,4 +46,38 @@ public class SuffixArrayBasedMatcherTests : MatcherTests
     {
         Assert.ThrowsException<NotSupportedException>(() => MatcherBuilder(new("")).BWT);
     }
+
+    [TestMethod]
+    public void Ctor_WithSuffixArrayWithDynamicIndexes()
+    {
+        var suffixArrayList = new List<int> 
+        { 
+            9, // $ 
+            0, // aba...
+            6, // abc$
+            2, // ac...
+            1, // ba...
+            7, // bc$
+            4, // bca...
+            5, // ca...
+            3, // cb...
+        };
+
+        IEnumerable<int> GetInts()
+        {
+            foreach (var i in suffixArrayList)
+                yield return i;
+        }
+
+        var text = new TextWithTerminator("abacbcabc");
+        var bwtBuilder = new LastFirstPropertyBasedBuilder();
+        var sbwt = BWTransform.QuickSort(new(text)).sortedText;
+        var matcher1 = new SuffixArrayBasedMatcher(sbwt, text, new(suffixArrayList));
+        var matcher2 = new SuffixArrayBasedMatcher(sbwt, text, new(GetInts()));
+
+        Assert.AreEqual(matcher1.Match("a"), matcher2.Match("a"));
+        Assert.AreEqual(matcher1.Match("ab"), matcher2.Match("ab"));
+        Assert.AreEqual(matcher1.Match("aba"), matcher2.Match("aba"));
+        Assert.AreEqual(matcher1.Match("abb"), matcher2.Match("abb"));
+    }
 }
