@@ -9,7 +9,7 @@ namespace MoreStructures.BurrowsWheelerTransform.Matching;
 /// </summary>
 /// <remarks>
 ///     <para id="info">
-///     Suffix Array has to be provided as an additional input. 
+///     Suffix Array of <see cref="Text"/> has to be provided as an additional input. 
 ///     <br/>
 ///     If not already available, it can be built via a 
 ///     <see cref="SuffixStructureBasedSuffixArrayBuilder{TEdge, TNode}"/>, if a Suffix Structure of the provided text 
@@ -45,12 +45,16 @@ namespace MoreStructures.BurrowsWheelerTransform.Matching;
 public class SuffixArrayBasedMatcher : IMatcher
 {
     /// <summary>
-    /// The <see cref="ISearch"/> implementation to be used when searching for items in lists sorted 
-    /// in ascending order.
+    /// The <see cref="ISearch"/> implementation to be used when searching for items in lists sorted in ascending 
+    /// order.
     /// </summary>
     protected static ISearch OrderedAscListSearch { get; } = new BinarySearch();
 
     /// <inheritdoc/>
+    /// <remarks>
+    ///     Unlike <see cref="SortedBWT"/>, <see cref="BWT"/> is not required to perform Pattern Matching against
+    ///     <see cref="Text"/>, and is not supported.
+    /// </remarks>
     public RotatedTextWithTerminator BWT => 
         throw new NotSupportedException($"{nameof(BWT)} is not defined for {nameof(SuffixArrayBasedMatcher)}");
 
@@ -60,6 +64,10 @@ public class SuffixArrayBasedMatcher : IMatcher
     /// <summary>
     /// The <see cref="TextWithTerminator"/>, to do pattern matching against.
     /// </summary>
+    /// <remarks>
+    /// Requires to get the actual suffix from the i-th element of <see cref="SuffixArray"/>, to be compared against
+    /// the pattern.
+    /// </remarks>
     public TextWithTerminator Text { get; }
 
     /// <summary>
@@ -78,12 +86,14 @@ public class SuffixArrayBasedMatcher : IMatcher
         SuffixArray = suffixArray;
     }
 
+    /// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
     /// <summary>
-    /// 
+    /// Tries to match the provided <paramref name="pattern"/> against <see cref="Text"/>, via the 
+    /// <see cref="SortedBWT"/> and the <see cref="SuffixArray"/> of <see cref="Text"/>.
     /// </summary>
-    /// <param name="pattern"></param>
-    /// <returns></returns>
-    /// <exception cref="NotImplementedException"></exception>
+    /// <remarks>
+    ///     <inheritdoc cref="SuffixArrayBasedMatcher" path="/remarks"/>
+    /// </remarks>
     public Match Match(IEnumerable<char> pattern)
     {
         var indexes = Enumerable.Range(0, SortedBWT.Length).ToList();
@@ -148,8 +158,11 @@ public class SuffixArrayBasedMatcher : IMatcher
             }
 
             if (secondHasValue) 
-                return -1; // The patter is longer than the suffix
-            return 0;
+                return -1; // The pattern is longer than the suffix
+
+            // Either the pattern is shorter than the suffix, or pattern and suffix have equal length.
+            // In either case, the match is successful.
+            return 0; 
         }
     }
 }
