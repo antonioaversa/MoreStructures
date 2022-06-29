@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace MoreStructures.BurrowsWheelerTransform.Matching
+    <title>Namespace MoreStructures.SuffixArrays
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace MoreStructures.BurrowsWheelerTransform.Matching
+    <meta name="title" content="Namespace MoreStructures.SuffixArrays
    ">
     <meta name="generator" content="docfx 2.59.2.0">
     
@@ -78,39 +78,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MoreStructures.BurrowsWheelerTransform.Matching">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.SuffixArrays">
   
-  <h1 id="MoreStructures_BurrowsWheelerTransform_Matching" data-uid="MoreStructures.BurrowsWheelerTransform.Matching" class="text-break">Namespace MoreStructures.BurrowsWheelerTransform.Matching
+  <h1 id="MoreStructures_SuffixArrays" data-uid="MoreStructures.SuffixArrays" class="text-break">Namespace MoreStructures.SuffixArrays
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.html">CountBasedNarrowingIntervalMatcher</a></h4>
-      <section><p>A <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html">NarrowingIntervalMatcher</a> refinement which precalculate the count of occurrences of each item at
-index i in BWT[0..(i - 1)], and the index of first occurrence of each char in SortedBWT, and later uses them
-to perform in constant time interval narrowing operations within the top-level loop of chars to match.</p>
-</section>
-      <h4><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.Match.html">Match</a></h4>
-      <section><p>The result of a pattern matching done by a <see cref="!:IMatcher.Match(IEnumerable&lt;char>)"></see>.</p>
-</section>
-      <h4><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html">NarrowingIntervalMatcher</a></h4>
-      <section></section>
-      <h4><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.html">SuffixArrayBasedMatcher</a></h4>
-      <section><p>A <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html">IMatcher</a> implementationwhich uses a <span class="xref">MoreStructures.SuffixArrays.SuffixArray</span> to perform text pattern
-matching.</p>
-</section>
-      <h4><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.html">SuffixArrayBasedMatcher.AgainstPatternComparer</a></h4>
-      <section><p>An <see cref="!:IComparer&lt;T>"></see> of <span class="xref">System.Int32</span>, which compares the suffix <span class="xref">System.String</span>
-corresponding to the i-th element (first <span class="xref">System.Int32</span> value) of the provided Suffix Array, against the
-provided <span class="xref">System.String</span> pattern, and ignores the second <span class="xref">System.Int32</span> value.</p>
-</section>
-    <h3 id="interfaces">Interfaces
-  </h3>
-      <h4><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html">IMatcher</a></h4>
-      <section><p>A implementation of matching of a pattern against a <a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a> containing a
-Burrows-Wheeler Transform of a text.</p>
+      <h4><a class="xref" href="MoreStructures.SuffixArrays..html">MoreStructures.SuffixArrays.</a></h4>
+      <section><p>The Suffix Array of a terminator-terminated text T is an <span class="xref">System.Int32</span> sequence where the i-th element is the
+index in T of the 1st char of a suffix Si of T, and Si &lt; Sj for each i &lt; j.</p>
 </section>
 </article>
           </div>

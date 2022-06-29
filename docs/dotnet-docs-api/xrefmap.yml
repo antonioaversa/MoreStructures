@@ -1061,15 +1061,12 @@ references:
   commentId: T:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher
   fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher
   nameWithType: SuffixArrayBasedMatcher
-- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.TextWithTerminator,IList{System.Int32})
-  name: SuffixArrayBasedMatcher(RotatedTextWithTerminator, TextWithTerminator, IList<Int32>)
-  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_TextWithTerminator_IList_System_Int32__
-  commentId: M:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.TextWithTerminator,IList{System.Int32})
-  name.vb: SuffixArrayBasedMatcher(RotatedTextWithTerminator, TextWithTerminator, IList(Of Int32))
-  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.SuffixArrayBasedMatcher(MoreStructures.RotatedTextWithTerminator, MoreStructures.TextWithTerminator, IList<System.Int32>)
-  fullName.vb: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.SuffixArrayBasedMatcher(MoreStructures.RotatedTextWithTerminator, MoreStructures.TextWithTerminator, IList(Of System.Int32))
-  nameWithType: SuffixArrayBasedMatcher.SuffixArrayBasedMatcher(RotatedTextWithTerminator, TextWithTerminator, IList<Int32>)
-  nameWithType.vb: SuffixArrayBasedMatcher.SuffixArrayBasedMatcher(RotatedTextWithTerminator, TextWithTerminator, IList(Of Int32))
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.TextWithTerminator,MoreStructures.SuffixArrays.SuffixArray)
+  name: SuffixArrayBasedMatcher(RotatedTextWithTerminator, TextWithTerminator, SuffixArray)
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_TextWithTerminator_MoreStructures_SuffixArrays_SuffixArray_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.TextWithTerminator,MoreStructures.SuffixArrays.SuffixArray)
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.SuffixArrayBasedMatcher(MoreStructures.RotatedTextWithTerminator, MoreStructures.TextWithTerminator, MoreStructures.SuffixArrays.SuffixArray)
+  nameWithType: SuffixArrayBasedMatcher.SuffixArrayBasedMatcher(RotatedTextWithTerminator, TextWithTerminator, SuffixArray)
 - uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.#ctor*
   name: SuffixArrayBasedMatcher
   href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher__ctor_
@@ -1077,6 +1074,83 @@ references:
   isSpec: "True"
   fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.SuffixArrayBasedMatcher
   nameWithType: SuffixArrayBasedMatcher.SuffixArrayBasedMatcher
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer
+  name: SuffixArrayBasedMatcher.AgainstPatternComparer
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.html
+  commentId: T:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer
+  nameWithType: SuffixArrayBasedMatcher.AgainstPatternComparer
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.#ctor(MoreStructures.TextWithTerminator,MoreStructures.SuffixArrays.SuffixArray,IEnumerable{System.Char})
+  name: AgainstPatternComparer(TextWithTerminator, SuffixArray, IEnumerable<Char>)
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_AgainstPatternComparer__ctor_MoreStructures_TextWithTerminator_MoreStructures_SuffixArrays_SuffixArray_IEnumerable_System_Char__
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.#ctor(MoreStructures.TextWithTerminator,MoreStructures.SuffixArrays.SuffixArray,IEnumerable{System.Char})
+  name.vb: AgainstPatternComparer(TextWithTerminator, SuffixArray, IEnumerable(Of Char))
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.AgainstPatternComparer(MoreStructures.TextWithTerminator, MoreStructures.SuffixArrays.SuffixArray, IEnumerable<System.Char>)
+  fullName.vb: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.AgainstPatternComparer(MoreStructures.TextWithTerminator, MoreStructures.SuffixArrays.SuffixArray, IEnumerable(Of System.Char))
+  nameWithType: SuffixArrayBasedMatcher.AgainstPatternComparer.AgainstPatternComparer(TextWithTerminator, SuffixArray, IEnumerable<Char>)
+  nameWithType.vb: SuffixArrayBasedMatcher.AgainstPatternComparer.AgainstPatternComparer(TextWithTerminator, SuffixArray, IEnumerable(Of Char))
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.#ctor*
+  name: AgainstPatternComparer
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_AgainstPatternComparer__ctor_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.AgainstPatternComparer
+  nameWithType: SuffixArrayBasedMatcher.AgainstPatternComparer.AgainstPatternComparer
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.Compare(System.Int32,System.Int32)
+  name: Compare(Int32, Int32)
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_AgainstPatternComparer_Compare_System_Int32_System_Int32_
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.Compare(System.Int32,System.Int32)
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.Compare(System.Int32, System.Int32)
+  nameWithType: SuffixArrayBasedMatcher.AgainstPatternComparer.Compare(Int32, Int32)
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.Compare*
+  name: Compare
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_AgainstPatternComparer_Compare_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.Compare
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.Compare
+  nameWithType: SuffixArrayBasedMatcher.AgainstPatternComparer.Compare
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.LongestMatch
+  name: LongestMatch
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_AgainstPatternComparer_LongestMatch
+  commentId: P:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.LongestMatch
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.LongestMatch
+  nameWithType: SuffixArrayBasedMatcher.AgainstPatternComparer.LongestMatch
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.LongestMatch*
+  name: LongestMatch
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_AgainstPatternComparer_LongestMatch_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.LongestMatch
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.LongestMatch
+  nameWithType: SuffixArrayBasedMatcher.AgainstPatternComparer.LongestMatch
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.LongestMatchFirstValue
+  name: LongestMatchFirstValue
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_AgainstPatternComparer_LongestMatchFirstValue
+  commentId: P:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.LongestMatchFirstValue
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.LongestMatchFirstValue
+  nameWithType: SuffixArrayBasedMatcher.AgainstPatternComparer.LongestMatchFirstValue
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.LongestMatchFirstValue*
+  name: LongestMatchFirstValue
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_AgainstPatternComparer_LongestMatchFirstValue_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.LongestMatchFirstValue
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.LongestMatchFirstValue
+  nameWithType: SuffixArrayBasedMatcher.AgainstPatternComparer.LongestMatchFirstValue
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.BuildComparer(IEnumerable{System.Char})
+  name: BuildComparer(IEnumerable<Char>)
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_BuildComparer_IEnumerable_System_Char__
+  commentId: M:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.BuildComparer(IEnumerable{System.Char})
+  name.vb: BuildComparer(IEnumerable(Of Char))
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.BuildComparer(IEnumerable<System.Char>)
+  fullName.vb: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.BuildComparer(IEnumerable(Of System.Char))
+  nameWithType: SuffixArrayBasedMatcher.BuildComparer(IEnumerable<Char>)
+  nameWithType.vb: SuffixArrayBasedMatcher.BuildComparer(IEnumerable(Of Char))
+- uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.BuildComparer*
+  name: BuildComparer
+  href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_BuildComparer_
+  commentId: Overload:MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.BuildComparer
+  isSpec: "True"
+  fullName: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.BuildComparer
+  nameWithType: SuffixArrayBasedMatcher.BuildComparer
 - uid: MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.BWT
   name: BWT
   href: api/MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_BWT
@@ -2751,6 +2825,17 @@ references:
   isSpec: "True"
   fullName: MoreStructures.RotatedTextWithTerminator.ValidateInput
   nameWithType: RotatedTextWithTerminator.ValidateInput
+- uid: MoreStructures.SuffixArrays
+  name: MoreStructures.SuffixArrays
+  href: api/MoreStructures.SuffixArrays.html
+  commentId: N:MoreStructures.SuffixArrays
+  fullName: MoreStructures.SuffixArrays
+  nameWithType: MoreStructures.SuffixArrays
+- uid: MoreStructures.SuffixArrays.
+  name: ''
+  href: api/MoreStructures.SuffixArrays..html
+  commentId: T:MoreStructures.SuffixArrays.
+  fullName: MoreStructures.SuffixArrays.
 - uid: MoreStructures.SuffixArrays.Builders
   name: MoreStructures.SuffixArrays.Builders
   href: api/MoreStructures.SuffixArrays.Builders.html
@@ -5034,6 +5119,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.BWT_IsNotSupported
   nameWithType: SuffixArrayBasedMatcherTests.BWT_IsNotSupported
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.Ctor_WithSuffixArrayWithDynamicIndexes
+  name: Ctor_WithSuffixArrayWithDynamicIndexes()
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcherTests_Ctor_WithSuffixArrayWithDynamicIndexes
+  commentId: M:MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.Ctor_WithSuffixArrayWithDynamicIndexes
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.Ctor_WithSuffixArrayWithDynamicIndexes()
+  nameWithType: SuffixArrayBasedMatcherTests.Ctor_WithSuffixArrayWithDynamicIndexes()
+- uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.Ctor_WithSuffixArrayWithDynamicIndexes*
+  name: Ctor_WithSuffixArrayWithDynamicIndexes
+  href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcherTests_Ctor_WithSuffixArrayWithDynamicIndexes_
+  commentId: Overload:MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.Ctor_WithSuffixArrayWithDynamicIndexes
+  isSpec: "True"
+  fullName: MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.Ctor_WithSuffixArrayWithDynamicIndexes
+  nameWithType: SuffixArrayBasedMatcherTests.Ctor_WithSuffixArrayWithDynamicIndexes
 - uid: MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.Match_IsCorrect(System.String,System.String,System.Boolean,System.Int32,System.Int32,System.Int32)
   name: Match_IsCorrect(String, String, Boolean, Int32, Int32, Int32)
   href: api/MoreStructures.Tests.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcherTests.html#MoreStructures_Tests_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcherTests_Match_IsCorrect_System_String_System_String_System_Boolean_System_Int32_System_Int32_System_Int32_
