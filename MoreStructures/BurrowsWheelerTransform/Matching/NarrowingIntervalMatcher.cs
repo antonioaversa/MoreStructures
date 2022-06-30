@@ -50,7 +50,7 @@ public class NarrowingIntervalMatcher : IMatcher
     /// </summary>
     /// <param name="bwt">The last column of the Burrows-Wheeler Matrix. Corresponds to the BWT.</param>
     /// <param name="bwtSorter">
-    /// A function sorting the provided<see cref="RotatedTextWithTerminator"/> into a sorted
+    /// A function sorting the provided <see cref="RotatedTextWithTerminator"/> into a sorted
     /// <see cref="RotatedTextWithTerminator"/>, according to the provided <see cref="IComparer{T}"/> of chars.
     /// </param>
     public NarrowingIntervalMatcher(RotatedTextWithTerminator bwt, BWTransform.SortStrategy bwtSorter)

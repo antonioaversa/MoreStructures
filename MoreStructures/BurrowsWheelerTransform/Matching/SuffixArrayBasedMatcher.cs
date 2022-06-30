@@ -1,12 +1,12 @@
-﻿using MoreStructures.Lists.Searching;
+﻿using MoreStructures.BurrowsWheelerTransform.Matching.Comparers;
+using MoreStructures.Lists.Searching;
 using MoreStructures.SuffixArrays;
 using MoreStructures.SuffixArrays.Builders;
-using MoreStructures.Utilities;
 
 namespace MoreStructures.BurrowsWheelerTransform.Matching;
 
 /// <summary>
-/// A <see cref="IMatcher"/> implementationwhich uses a <see cref="SuffixArrays.SuffixArray"/> to perform text pattern
+/// A <see cref="IMatcher"/> implementation which uses a <see cref="SuffixArrays.SuffixArray"/> to perform text pattern
 /// matching.
 /// </summary>
 /// <remarks>
@@ -105,7 +105,7 @@ public class SuffixArrayBasedMatcher : IMatcher
 
         if (startIndex >= 0)
         {
-            var againstPatternComparerEnd = new AgainstPatternComparer(Text, SuffixArray, pattern);
+            var againstPatternComparerEnd = new SuffixArrayAgainstPatternComparer(Text, SuffixArray, pattern);
             var endIndex = OrderedAscListSearch.Last(indexes, -1, againstPatternComparerEnd, startIndex);
 
             return new Match(true, againstPatternComparerStart.LongestMatch, startIndex, endIndex);
@@ -115,114 +115,12 @@ public class SuffixArrayBasedMatcher : IMatcher
     }
 
     /// <summary>
-    /// Builds a <see cref="AgainstPatternComparer"/> instance, or a derivation of it, to be used in
+    /// Builds a <see cref="SuffixArrayAgainstPatternComparer"/> instance, or a derivation of it, to be used in
     /// <see cref="Match(IEnumerable{char})"/>, to find the start and end indexes in <see cref="SortedBWT"/>,
     /// corresponding to first and last matches of the pattern in <see cref="Text"/>.
     /// </summary>
     /// <param name="pattern"><inheritdoc cref="Match(IEnumerable{char})" path="/param[@name='pattern']"/></param>
-    /// <returns>An instance of <see cref="AgainstPatternComparer"/> instance, or a derivation of it.</returns>
-    protected virtual AgainstPatternComparer BuildComparer(IEnumerable<char> pattern)
-    {
-        return new AgainstPatternComparer(Text, SuffixArray, pattern);
-    }
-
-    /// <summary>
-    /// An <see cref="IComparer{T}"/> of <see cref="int"/>, which compares the suffix <see cref="string"/> 
-    /// corresponding to the i-th element (first <see cref="int"/> value) of the provided Suffix Array, against the 
-    /// provided <see cref="string"/> pattern, and ignores the second <see cref="int"/> value.
-    /// </summary>
-    protected sealed class AgainstPatternComparer : IComparer<int>
-    {
-        private readonly TextWithTerminator Text;
-        private readonly IList<int> SuffixArrayList;
-        private readonly IEnumerable<char> Pattern;
-        private readonly IComparer<char> CharComparer;
-
-        /// <summary>
-        /// The value of the first term of comparison, which resulted in <see cref="LongestMatch"/> chars matched,
-        /// when comparing the suffix starting at <see cref="LongestMatchFirstValue"/> against the pattern.
-        /// </summary>
-        /// <remarks>
-        /// If multiple values of the first term resulted in the same amount of chars matched, the first value
-        /// encountered is kept.
-        /// </remarks>
-        public int LongestMatchFirstValue { get; private set; } = -1;
-
-        /// <summary>
-        /// The maximum amount of chars of the pattern matched, since the instantiation of this comparer.
-        /// </summary>
-        /// <remarks>
-        /// It is never reset. To start over, a new instance of this comparer has to be created.
-        /// </remarks>
-        public int LongestMatch { get; private set; } = 0;
-
-        /// <summary>
-        ///     <inheritdoc cref="AgainstPatternComparer"/>
-        /// </summary>
-        /// <param name="text">The text, to extract suffixes from via <paramref name="suffixArray"/>.</param>
-        /// <param name="suffixArray">
-        /// The <see cref="SuffixArrays.SuffixArray"/> of <paramref name="text"/>, to map the first term of comparison 
-        /// to the starting index in <paramref name="text"/> of the corresponding suffix.
-        /// </param>
-        /// <param name="pattern">The pattern, to compare against each suffix of <paramref name="text"/>.</param>
-        public AgainstPatternComparer(TextWithTerminator text, SuffixArray suffixArray, IEnumerable<char> pattern)
-        {
-            Text = text;
-            SuffixArrayList = suffixArray.Indexes is IList<int> list ? list : suffixArray.Indexes.ToList();
-            Pattern = pattern;
-            CharComparer = CharOrTerminatorComparer.Build(text.Terminator);
-        }
-
-        /// <summary>
-        /// Compares the suffix of text identified by the <paramref name="x"/>-th element of the 
-        /// <see cref="SuffixArrays.SuffixArray"/> against the pattern.
-        /// </summary>
-        /// <param name="x">
-        /// The index in the <see cref="SuffixArrays.SuffixArray"/> of the suffix which is first term of comparison.
-        /// </param>
-        /// <param name="y">Ignored.</param>
-        /// <returns>
-        /// A positive value if there is mismatch and the suffix is bigger than the pattern lexicographically.
-        /// <br/>
-        /// A negative value if there is mismatch and the suffix is smaller than the pattern lexicographically.
-        /// <br/>
-        /// The value 0 if there is full match and pattern and text are of the same length or pattern is shorter.
-        /// <br/>
-        /// The value -1 if there is full match but the pattern is longer than the suffix.
-        /// </returns>
-        public int Compare(int x, int y)
-        {
-            using var firstEnumerator = Text[SuffixArrayList[x]..].GetEnumerator();
-            using var secondEnumerator = Pattern.GetEnumerator();
-
-            int numberOfItemsMatched = 0;
-            bool firstHasValue, secondHasValue;
-            while (true)
-            {
-                firstHasValue = firstEnumerator.MoveNext();
-                secondHasValue = secondEnumerator.MoveNext();
-
-                if (!firstHasValue || !secondHasValue)
-                    break;
-
-                var itemsComparison = CharComparer.Compare(firstEnumerator.Current, secondEnumerator.Current);
-                if (itemsComparison != 0)
-                    return itemsComparison;
-
-                if (++numberOfItemsMatched > LongestMatch)
-                {
-                    LongestMatch = numberOfItemsMatched;
-                    LongestMatchFirstValue = x;
-                }
-            }
-
-            if (secondHasValue) 
-                return -1; // The pattern is longer than the suffix
-
-            // Either the pattern is shorter than the suffix, or pattern and suffix have equal length.
-            // In either case, the match is successful.
-            return 0; 
-        }
-    }
+    /// <returns>An instance of <see cref="SuffixArrayAgainstPatternComparer"/> instance, or a derivation of it.</returns>
+    protected virtual SuffixArrayAgainstPatternComparer BuildComparer(IEnumerable<char> pattern) => 
+        new(Text, SuffixArray, pattern);
 }
-

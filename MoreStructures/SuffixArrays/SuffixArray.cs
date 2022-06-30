@@ -28,5 +28,8 @@
 ///     <br/>
 ///     So the Suffix Array of "mississippi$" is { 11, 10, 7, 4, ... }.
 /// </remarks>
-/// <param name="Indexes">The sequence of indexes, each one marking the beginning of a suffix of the text.</param>
+/// <param name="Indexes">
+/// The sequence of indexes, each one marking the beginning of a suffix of the text. Is a <see cref="IEnumerable{T}"/>,
+/// rather than an <see cref="IList{T}"/>, so that values can be generated lazily and dynamically.
+/// </param>
 public record struct SuffixArray(IEnumerable<int> Indexes);
