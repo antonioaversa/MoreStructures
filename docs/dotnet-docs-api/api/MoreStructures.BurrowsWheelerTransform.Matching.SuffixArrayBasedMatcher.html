@@ -83,7 +83,7 @@
   
   <h1 id="MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher" class="text-break">Class SuffixArrayBasedMatcher
   </h1>
-  <div class="markdown level0 summary"><p>A <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html">IMatcher</a> implementationwhich uses a <span class="xref">MoreStructures.SuffixArrays.SuffixArray</span> to perform text pattern
+  <div class="markdown level0 summary"><p>A <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html">IMatcher</a> implementation which uses a <span class="xref">MoreStructures.SuffixArrays.SuffixArray</span> to perform text pattern
 matching.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -385,14 +385,14 @@ the pattern.</p>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_BuildComparer_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.BuildComparer*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_BuildComparer_IEnumerable_System_Char__" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.BuildComparer(IEnumerable{System.Char})">BuildComparer(IEnumerable&lt;Char&gt;)</h4>
-  <div class="markdown level1 summary"><p>Builds a <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.html">SuffixArrayBasedMatcher.AgainstPatternComparer</a> instance, or a derivation of it, to be used in
+  <div class="markdown level1 summary"><p>Builds a <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.Comparers.SuffixArrayAgainstPatternComparer.html">SuffixArrayAgainstPatternComparer</a> instance, or a derivation of it, to be used in
 <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_Match_IEnumerable_System_Char__">Match(IEnumerable&lt;Char&gt;)</a>, to find the start and end indexes in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_SortedBWT">SortedBWT</a>,
 corresponding to first and last matches of the pattern in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_SuffixArrayBasedMatcher_Text">Text</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual SuffixArrayBasedMatcher.AgainstPatternComparer BuildComparer(IEnumerable&lt;char&gt; pattern)</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual SuffixArrayAgainstPatternComparer BuildComparer(IEnumerable&lt;char&gt; pattern)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -422,8 +422,8 @@ corresponding to first and last matches of the pattern in <a class="xref" href="
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.html">SuffixArrayBasedMatcher.AgainstPatternComparer</a></td>
-        <td><p>An instance of <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.SuffixArrayBasedMatcher.AgainstPatternComparer.html">SuffixArrayBasedMatcher.AgainstPatternComparer</a> instance, or a derivation of it.</p>
+        <td><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.Comparers.SuffixArrayAgainstPatternComparer.html">SuffixArrayAgainstPatternComparer</a></td>
+        <td><p>An instance of <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.Comparers.SuffixArrayAgainstPatternComparer.html">SuffixArrayAgainstPatternComparer</a> instance, or a derivation of it.</p>
 </td>
       </tr>
     </tbody>
