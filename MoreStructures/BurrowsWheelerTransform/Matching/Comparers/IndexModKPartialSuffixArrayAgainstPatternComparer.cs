@@ -20,17 +20,34 @@ namespace MoreStructures.BurrowsWheelerTransform.Matching.Comparers;
 ///     <para id="algo">
 ///     ALGORITHM
 ///     <br/>
-///     TODO
+///     - Start from the index I(0) = first term of comparison passed to <see cref="Compare(int, int)"/>.
+///       <br/>
+///     - Perform Last-First mapping from I(i) to I(i+1) from BWT to Sorted BWT, until the index I(i) is present in 
+///       the Partial Suffix Array. While mapping, accumulate all indexes I(0), I(1), ... into a list I.
+///       <br/>
+///     - Once such index I(n) is found, iterate over I in reverse order, updating the Partial Suffix Array, from I(n)
+///       all the way back to I(0).
+///       <br/>
+///     - Finally, invoke <see cref="SuffixAgainstPatternComparer.CompareSuffixAgainstPattern(int, int)"/> on the value
+///       of the Partial Suffix Array at index I(0).
 ///     </para>
 ///     <para id="complexity">
 ///     COMPLEXITY
 ///     <br/>
-///     TODO
+///     - There are at most K iterations, where K is the modulo of the Partial Suffix Array: at each iteration, the
+///       Last-First mapping finds the index I(i+1), in the Sorted BWT, of a suffix which augments the previous suffix
+///       by 1 (prepending a single char).
+///       <br/>
+///     - So there are at most K iterations to update the Partial Suffix Array with I(n), I(n-1), ... I(0). The Partial
+///       Suffix Array ends up having at most n elements (1 per suffix of the text of length n).
+///       <br/>
+///     - Finally, there is <see cref="SuffixAgainstPatternComparer.CompareSuffixAgainstPattern(int, int)"/>.
+///       <br/>
+///     - Therefore, Time Complexity is O(n * K) and Space Complexity is O(n).
 ///     </para>
 /// </remarks>
 public class IndexModKPartialSuffixArrayAgainstPatternComparer : SuffixAgainstPatternComparer
 {
-    private readonly int K;
     private readonly IDictionary<int, int> PartialSuffixArrayIndexes;
     private readonly ILastFirstFinder LastFirstFinder;
 
@@ -58,7 +75,6 @@ public class IndexModKPartialSuffixArrayAgainstPatternComparer : SuffixAgainstPa
         RotatedTextWithTerminator bwt, BWTransform.SortStrategy bwtSorter)
         : base(text, pattern)
     {
-        K = partialSuffixArray.K;
         PartialSuffixArrayIndexes = new Dictionary<int, int>(partialSuffixArray.Indexes);
         LastFirstFinder = new PrecomputedFinder(bwt, bwtSorter);
     }

@@ -48,7 +48,7 @@ public abstract class SuffixAgainstPatternComparer : IComparer<int>
     /// </summary>
     /// <param name="text"><inheritdoc cref="Text"/></param>
     /// <param name="pattern"><inheritdoc cref="Pattern"/></param>
-    public SuffixAgainstPatternComparer(TextWithTerminator text, IEnumerable<char> pattern)
+    protected SuffixAgainstPatternComparer(TextWithTerminator text, IEnumerable<char> pattern)
     {
         Text = text;
         Pattern = pattern;
