@@ -12,7 +12,8 @@ public interface ILastFirstFinder
     /// <remarks>
     /// The <see cref="Comparer{T}.Default"/> of <see cref="char"/> cannot be used because the terminator in
     /// <see cref="BWT"/> and <see cref="SortedBWT"/> has to be treated in a special way 
-    /// (<see cref="TextWithTerminator.Terminator"/> is always to be considered smaller than any other char).
+    /// (<see cref="TextWithTerminator.Terminator"/> is always to be considered smaller than any other char: as such
+    /// it always appears in first position in the <see cref="SortedBWT"/>).
     /// </remarks>
     IComparer<char> CharComparer { get; }
 

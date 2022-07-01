@@ -37,7 +37,8 @@ public record BWTransform(TextWithTerminator Text, RotatedTextWithTerminator Con
     /// <summary>
     /// A strategy to sort a <see cref="RotatedTextWithTerminator"/> using
     /// <see cref="Enumerable.OrderBy{TSource, TKey}(IEnumerable{TSource}, Func{TSource, TKey}, IComparer{TKey}?)"/>,
-    /// which in turn uses a QuickSort with Time Complexity = O(n * log(n)) in average and O(n^2) in the worst case.
+    /// which in turn uses a QuickSort with Time Complexity = O(n * log(n)) in average and O(n^2) in the worst 
+    /// (unlikely) case.
     /// </summary>
     /// <remarks>
     /// Tipically used to sort the Burrows-Wheeler Transform.

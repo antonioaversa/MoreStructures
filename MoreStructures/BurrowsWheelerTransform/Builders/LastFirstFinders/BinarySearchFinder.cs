@@ -8,13 +8,13 @@
 ///     <para id="complexity">
 ///     COMPLEXITY
 ///     <br/>
-///     Search over <see cref="ILastFirstFinder.BWT"/> has Time Complexity = O(n), as it is not sorted and there's
-///     nothing better than a linear scan without precomputing additional structures helping the search.
-///     <br/>
-///     Search over <see cref="ILastFirstFinder.SortedBWT"/> has Time Complexity O(log(n)), as it is sorted and binary
-///     search can be applied.
-///     <br/>
-///     Space Complexity = O(1) for both search operations, as no additional structure is precomputed and/or stored.
+///     - Search over <see cref="ILastFirstFinder.BWT"/> has Time Complexity = O(n), as it is not sorted and there's
+///       nothing better than a linear scan without precomputing additional structures helping the search.
+///       <br/>
+///     - Search over <see cref="ILastFirstFinder.SortedBWT"/> has Time Complexity O(log(n)), as it is sorted and 
+///       binary search can be applied.
+///       <br/>
+///     - Space Complexity = O(1) for both search operations, as no additional structure is precomputed and/or stored.
 ///     </para>
 /// </remarks>
 public class BinarySearchFinder : NaiveFinder
