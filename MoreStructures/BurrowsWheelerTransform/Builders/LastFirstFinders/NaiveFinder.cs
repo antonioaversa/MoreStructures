@@ -5,9 +5,11 @@ namespace MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders;
 /// <summary>
 /// A <see cref="ILastFirstFinder"/> implementation which just iterates over <see cref="BWT"/> and its sorted version 
 /// <see cref="SortedBWT"/> every time.
+/// </summary>
+/// <remarks>
 /// Each operation has Time Complexity = O(n) and Space Complexity = O(1), since no additional structure is precomputed
 /// and/or stored.
-/// </summary>
+/// </remarks>
 public class NaiveFinder : ILastFirstFinder
 {
     /// <inheritdoc/>
