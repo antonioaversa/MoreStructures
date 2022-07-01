@@ -40,17 +40,6 @@ public class CountBasedNarrowingIntervalMatcher : NarrowingIntervalMatcher
     /// and the first occurrence of each of the chars of <see cref="IMatcher.SortedBWT"/>. These two data structures
     /// makes single char matching a linear operation.
     /// </remarks>
-    public CountBasedNarrowingIntervalMatcher(RotatedTextWithTerminator bwt, BWTransform.SortStrategy bwtSorter)
-        : base(bwt, bwtSorter)
-    {
-        _bwtCounts = OccurrencesCounter.Count(BWT);
-        _sbwtFirstOccurrences = LinearSearch.FirstAll(SortedBWT);
-    }
-
-    /// <inheritdoc path="//*[not(self::remarks)]"/>
-    /// <remarks>
-    /// <inheritdoc cref="CountBasedNarrowingIntervalMatcher(RotatedTextWithTerminator, BWTransform.SortStrategy)"/>
-    /// </remarks>
     public CountBasedNarrowingIntervalMatcher(RotatedTextWithTerminator bwt, RotatedTextWithTerminator sbwt)
         : base(bwt, sbwt)
     {

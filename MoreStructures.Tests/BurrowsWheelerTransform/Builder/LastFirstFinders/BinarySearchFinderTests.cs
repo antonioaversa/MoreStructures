@@ -7,7 +7,7 @@ namespace MoreStructures.Tests.BurrowsWheelerTransform.Builder.LastFirstFinders;
 public class BinarySearchFinderTests : LastFirstFinderTests
 {
     public BinarySearchFinderTests() 
-        : base(lastBWTColumn => new BinarySearchFinder(lastBWTColumn, BWTransform.QuickSort))
+        : base(lastBWMColumn => new BinarySearchFinder(lastBWMColumn, BWTransform.QuickSort(lastBWMColumn).sortedText))
     {
     }
 }

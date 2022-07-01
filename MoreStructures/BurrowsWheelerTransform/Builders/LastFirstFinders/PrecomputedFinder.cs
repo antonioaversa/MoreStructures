@@ -30,17 +30,6 @@ public class PrecomputedFinder : BinarySearchFinder
     /// <remarks>
     /// <inheritdoc cref="PrecomputedFinder" path="/summary"/>
     /// </remarks>
-    public PrecomputedFinder(RotatedTextWithTerminator lastBWMColumn, BWTransform.SortStrategy bwtSorter)
-        : base(lastBWMColumn, bwtSorter)
-    {
-        _bwtOccurrenceIndexesOfChar = GetOccurrenceIndexesOfAllCharsIn(BWT);
-        _sbwtOccurrenceIndexesOfChar = GetOccurrenceIndexesOfAllCharsIn(SortedBWT);
-    }
-
-    /// <inheritdoc path="//*[not(self::remarks)]"/>
-    /// <remarks>
-    /// <inheritdoc cref="PrecomputedFinder" path="/summary"/>
-    /// </remarks>
     public PrecomputedFinder(RotatedTextWithTerminator lastBWMColumn, RotatedTextWithTerminator firstBWMColumn)
         : base(lastBWMColumn, firstBWMColumn)
     {

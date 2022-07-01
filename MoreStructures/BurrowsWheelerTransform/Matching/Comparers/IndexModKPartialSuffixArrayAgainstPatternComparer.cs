@@ -39,7 +39,7 @@ namespace MoreStructures.BurrowsWheelerTransform.Matching.Comparers;
 ///       by 1 (prepending a single char).
 ///       <br/>
 ///     - So there are at most K iterations to update the Partial Suffix Array with I(n), I(n-1), ... I(0). The Partial
-///       Suffix Array ends up having at most n elements (1 per suffix of the text of length n).
+///       Suffix Array ends up having at most n elements (1 per suffix of the text).
 ///       <br/>
 ///     - Finally, there is <see cref="SuffixAgainstPatternComparer.CompareSuffixAgainstPattern(int, int)"/>.
 ///       <br/>
@@ -64,19 +64,17 @@ public class IndexModKPartialSuffixArrayAgainstPatternComparer : SuffixAgainstPa
     /// The Burrows-Wheeler Transform of <paramref name="text"/>. Required to instantiate a 
     /// <see cref="ILastFirstFinder"/>, to fill-in the gaps of the <paramref name="partialSuffixArray"/>.
     /// </param>
-    /// <param name="bwtSorter">
-    /// A function sorting the provided <see cref="RotatedTextWithTerminator"/> into a sorted
-    /// <see cref="RotatedTextWithTerminator"/>, according to the provided <see cref="IComparer{T}"/> of chars. 
-    /// Required to instantiate a <see cref="ILastFirstFinder"/>, to fill-in the gaps of the 
-    /// <paramref name="partialSuffixArray"/>.
+    /// <param name="sbwt">
+    /// The sorted version of <paramref name="bwt"/>. Required to instantiate a <see cref="ILastFirstFinder"/>, to 
+    /// fill-in the gaps of the <paramref name="partialSuffixArray"/>.
     /// </param>
     public IndexModKPartialSuffixArrayAgainstPatternComparer(
         TextWithTerminator text, IndexModKPartialSuffixArray partialSuffixArray, IEnumerable<char> pattern,
-        RotatedTextWithTerminator bwt, BWTransform.SortStrategy bwtSorter)
+        RotatedTextWithTerminator bwt, RotatedTextWithTerminator sbwt)
         : base(text, pattern)
     {
         PartialSuffixArrayIndexes = new Dictionary<int, int>(partialSuffixArray.Indexes);
-        LastFirstFinder = new PrecomputedFinder(bwt, bwtSorter);
+        LastFirstFinder = new PrecomputedFinder(bwt, sbwt);
     }
 
     /// <inheritdoc path="//*[not(self::summary or self::remarks)]" />
