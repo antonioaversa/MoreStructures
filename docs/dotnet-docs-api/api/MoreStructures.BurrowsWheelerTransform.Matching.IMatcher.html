@@ -83,8 +83,8 @@
   
   <h1 id="MoreStructures_BurrowsWheelerTransform_Matching_IMatcher" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher" class="text-break">Interface IMatcher
   </h1>
-  <div class="markdown level0 summary"><p>A implementation of matching of a pattern against a <a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a> containing a
-Burrows-Wheeler Transform of a text.</p>
+  <div class="markdown level0 summary"><p>An implementation of matching of a pattern against <a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a> instances, containing
+the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_BWT">BWT</a> (Burrows-Wheeler Transform) of a text and its sorted version <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_SortedBWT">SortedBWT</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.html">MoreStructures.BurrowsWheelerTransform.Matching</a></h6>
@@ -100,7 +100,7 @@ Burrows-Wheeler Transform of a text.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_BWT.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.BWT%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/IMatcher.cs/#L12">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/IMatcher.cs/#L15">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_BWT_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.BWT*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_BWT" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.BWT">BWT</h4>
@@ -126,12 +126,15 @@ Burrows-Wheeler Transform of a text.</p>
       </tr>
     </tbody>
   </table>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_BWT_examples">Examples</h5>
+  <p>The Burrows-Wheeler Transform of &quot;mississippi$&quot; is &quot;ipssm$pissii&quot;.</p>
+
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_SortedBWT.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.SortedBWT%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/IMatcher.cs/#L17">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/IMatcher.cs/#L23">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_SortedBWT_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.SortedBWT*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_SortedBWT" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.SortedBWT">SortedBWT</h4>
@@ -157,6 +160,9 @@ Burrows-Wheeler Transform of a text.</p>
       </tr>
     </tbody>
   </table>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_SortedBWT_examples">Examples</h5>
+  <p>The Sorted Burrows-Wheeler Transform of &quot;mississippi$&quot; is &quot;$iiiimppssss&quot;.</p>
+
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -164,7 +170,7 @@ Burrows-Wheeler Transform of a text.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_Match_IEnumerable_System_Char__.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match(IEnumerable%7BSystem.Char%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/IMatcher.cs/#L25">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/IMatcher.cs/#L45">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_Match_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_Match_IEnumerable_System_Char__" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.Match(IEnumerable{System.Char})">Match(IEnumerable&lt;Char&gt;)</h4>
@@ -210,6 +216,18 @@ sorted version <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matc
       </tr>
     </tbody>
   </table>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_Match_IEnumerable_System_Char___examples">Examples</h5>
+  <pre><code>var matcher = ... { BWT = &quot;ipssm$pissii&quot;, SortedBWT = &quot;$iiiimppssss&quot; };
+var match = matcher.Match(&quot;issi&quot;);
+// match: Success == true, MatchedChars = 4, StartIndex = 3, EndIndex = 4
+// 0: $
+// 1: i$
+// 2: ippi$
+// 3: issippi$      &lt;- StartIndex 
+// 4: ississippi$   &lt;- EndIndex
+// 5: mississippi$
+// ...</code></pre>
+
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
