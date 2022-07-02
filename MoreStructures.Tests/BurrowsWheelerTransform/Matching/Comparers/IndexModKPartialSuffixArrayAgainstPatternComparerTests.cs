@@ -19,7 +19,7 @@ public class IndexModKPartialSuffixArrayAgainstPatternComparerTests
             new Dictionary<int, int> { [1] = 5, [11] = 10, [12] = 0 });
 
         var comparer1 = new IndexModKPartialSuffixArrayAgainstPatternComparer(
-            text, partialSuffixArray, "ana", bwt, bwtSorter);
+            text, partialSuffixArray, "ana", bwt, BWTransform.QuickSort(bwt).sortedText);
 
         Assert.IsTrue(comparer1.Compare(0, 0) < 0);
         Assert.IsTrue(comparer1.Compare(0, 3) < 0);

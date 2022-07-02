@@ -12,7 +12,7 @@ public class CountBasedNarrowingIntervalMatcherTests : NarrowingIntervalMatcherT
         {
             var bwtBuilder = new LastFirstPropertyBasedBuilder();
             var bwt = bwtBuilder.BuildTransform(text).Content;
-            return new CountBasedNarrowingIntervalMatcher(bwt, BWTransform.QuickSort);
+            return new CountBasedNarrowingIntervalMatcher(bwt, BWTransform.QuickSort(bwt).sortedText);
         })
     {
     }

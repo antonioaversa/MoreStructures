@@ -11,7 +11,7 @@ public class LastFirstPropertyBasedBuilderTests_WithBinarySearchFinder : Builder
         new LastFirstPropertyBasedBuilder() 
         { 
             FirstLastFinderBuilder = lastBWMColumn => 
-                new BinarySearchFinder(lastBWMColumn, BWTransform.QuickSort),
+                new BinarySearchFinder(lastBWMColumn, BWTransform.QuickSort(lastBWMColumn).sortedText),
         })
     {
     }

@@ -29,15 +29,6 @@ public class BinarySearchFinder : NaiveFinder
     /// <remarks>
     /// <inheritdoc cref="BinarySearchFinder" path="/summary"/>
     /// </remarks>
-    public BinarySearchFinder(RotatedTextWithTerminator lastBWMColumn, BWTransform.SortStrategy bwtSorter) 
-        : base(lastBWMColumn, bwtSorter)
-    {
-    }
-
-    /// <inheritdoc path="//*[not(self::remarks)]"/>
-    /// <remarks>
-    /// <inheritdoc cref="BinarySearchFinder" path="/summary"/>
-    /// </remarks>
     public BinarySearchFinder(RotatedTextWithTerminator lastBWMColumn, RotatedTextWithTerminator firstBWMColumn) 
         : base(lastBWMColumn, firstBWMColumn)
     {

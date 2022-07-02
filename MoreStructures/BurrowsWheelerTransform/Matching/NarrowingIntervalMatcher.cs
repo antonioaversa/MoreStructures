@@ -45,26 +45,11 @@ public class NarrowingIntervalMatcher : IMatcher
     public RotatedTextWithTerminator SortedBWT { get; }
 
     /// <summary>
-    /// Builds an instance of this matcher, for the provided <paramref name="bwt"/>, using <paramref name="bwtSorter"/>
-    /// to calculate <see cref="SortedBWT"/> from it.
-    /// </summary>
-    /// <param name="bwt">The last column of the Burrows-Wheeler Matrix. Corresponds to the BWT.</param>
-    /// <param name="bwtSorter">
-    /// A function sorting the provided <see cref="RotatedTextWithTerminator"/> into a sorted
-    /// <see cref="RotatedTextWithTerminator"/>, according to the provided <see cref="IComparer{T}"/> of chars.
-    /// </param>
-    public NarrowingIntervalMatcher(RotatedTextWithTerminator bwt, BWTransform.SortStrategy bwtSorter)
-    {
-        BWT = bwt;
-        SortedBWT = bwtSorter(BWT, CharOrTerminatorComparer.Build(bwt.Terminator)).sortedText;
-    }
-
-    /// <summary>
     /// Builds an instance of this finder, for the provided <paramref name="bwt"/> and 
     /// <paramref name="sbwt"/>. Because both BWT and SortedBWT are provided, no sorting happens.
     /// </summary>
     /// <param name="bwt">
-    /// The Burrows-Wheeler Transform.
+    /// The Burrows-Wheeler Transform. Corresponds to the last column of the Burrows-Wheeler Matrix.
     /// </param>
     /// <param name="sbwt">
     /// The sorted version of the Burrows-Wheeler Transform.
