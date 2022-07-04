@@ -45,6 +45,12 @@ public class NarrowingIntervalMatcher : IMatcher
     public RotatedTextWithTerminator SortedBWT { get; }
 
     /// <summary>
+    /// The implementation of <see cref="IComparer{T}"/> of <see cref="char"/> to be used to comparer chars of 
+    /// <see cref="BWT"/> or <see cref="SortedBWT"/>.
+    /// </summary>
+    protected IComparer<char> CharComparer { get; }
+
+    /// <summary>
     /// Builds an instance of this finder, for the provided <paramref name="bwt"/> and 
     /// <paramref name="sbwt"/>. Because both BWT and SortedBWT are provided, no sorting happens.
     /// </summary>
@@ -61,6 +67,7 @@ public class NarrowingIntervalMatcher : IMatcher
 
         BWT = bwt;
         SortedBWT = sbwt;
+        CharComparer = CharOrTerminatorComparer.Build(BWT.Terminator);
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
@@ -68,7 +75,7 @@ public class NarrowingIntervalMatcher : IMatcher
     /// The pattern matching is done via successive narrowing of a interval, defined by a start and an end index.<br/>
     /// 1. At the beginning the interval is as big as the provided <see cref="BWTransform"/> (and its text).
     ///    <br/>
-    /// 2. The algorithmn proceeds in reverse: from the last char of the pattern P, P[^1] to the first, P[0].
+    /// 2. The algorithm proceeds in reverse: from the last char of the pattern P, P[^1] to the first, P[0].
     ///    <br/>
     /// 3. Search in Sorted BWT for the range of indexes (first1, last1) having value P[^1] via a <see cref="ISearch"/>
     ///    implementation (because the input is sorted, binary search is possible).
@@ -79,19 +86,19 @@ public class NarrowingIntervalMatcher : IMatcher
     ///    <br/>
     /// 5. By last-first property, new indexes (first3, last3) of the chars in Sorted BWT corresponding to first2 and 
     ///    last2 in BWT, can be found. Those are the first and last of the new narrowed range, ready for step 4.
+    ///    <br/>
     /// 6. When all chars of P, up to P[0], have been consumed, all matches have been identified as an interval in
     ///    Sorted BWT.
     /// </remarks>
-    public Match Match(IEnumerable<char> pattern)
+    public virtual Match Match(IEnumerable<char> pattern)
     {
         if (!pattern.Any())
             throw new ArgumentException("The pattern should be non-empty.", nameof(pattern));
         
         var patternReversed = pattern.Reverse();
         var finder = BuildLastFirstFinder();
-        var charComparer = CharOrTerminatorComparer.Build(BWT.Terminator);
         
-        var (startIndex, endIndex) = OrderedAscListSearch.Interval(SortedBWT, patternReversed.First(), charComparer);
+        var (startIndex, endIndex) = OrderedAscListSearch.Interval(SortedBWT, patternReversed.First(), CharComparer);
         if (startIndex < 0)
             return new Match(false, 0, -1, -1);
 
