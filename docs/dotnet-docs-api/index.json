@@ -139,6 +139,21 @@
     "title": "Namespace MoreStructures",
     "keywords": "Namespace MoreStructures Classes RotatedTextWithTerminator A text string with a terminator character which has been rotated leftwards or rightwards, of a number of positions (0 included). TextWithTerminator A text string with a terminator character, not present in the text. TextWithTerminatorExtensions Extension methods for TextWithTerminator . VirtuallyRotatedTextWithTerminator A text string with a terminator character which has been rotated leftwards or rightwards, of a number of positions (0 included). Interfaces TextWithTerminator.ISelector A selector of a part of a TextWithTerminator or RotatedTextWithTerminator ."
   },
+  "api/MoreStructures.KnuthMorrisPratt.Borders.html": {
+    "href": "api/MoreStructures.KnuthMorrisPratt.Borders.html",
+    "title": "Namespace MoreStructures.KnuthMorrisPratt.Borders",
+    "keywords": "Namespace MoreStructures.KnuthMorrisPratt.Borders Classes NaiveBordersExtraction An implementation of IBordersExtraction which checks every prefix of the text. Interfaces IBordersExtraction An algorithm extracting borders from the given text."
+  },
+  "api/MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction.html": {
+    "href": "api/MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction.html",
+    "title": "Interface IBordersExtraction",
+    "keywords": "Interface IBordersExtraction An algorithm extracting borders from the given text. Namespace : MoreStructures.KnuthMorrisPratt.Borders Assembly : MoreStructures.dll Syntax public interface IBordersExtraction Remarks DEFINITION A border of a text T of a prefix of T which is also a suffix of T, T excluded. For example, the borders of T = \"abcabeabcab\" are \"a\" , \"ab\" and \"abcab\" . Methods | Improve this Doc View Source GetAllBordersByDescLength(String) Retrieves all borders from the provided text, by decreasing length. Declaration IEnumerable<string> GetAllBordersByDescLength(string text) Parameters Type Name Description System.String text The text, to extract borders from. Returns Type Description IEnumerable < System.String > An enumerable of strings. Extension Methods SuffixStructureNodeExtensions.GetAllSuffixesFor<TEdge, TNode>(TNode, TextWithTerminator)"
+  },
+  "api/MoreStructures.KnuthMorrisPratt.Borders.NaiveBordersExtraction.html": {
+    "href": "api/MoreStructures.KnuthMorrisPratt.Borders.NaiveBordersExtraction.html",
+    "title": "Class NaiveBordersExtraction",
+    "keywords": "Class NaiveBordersExtraction An implementation of IBordersExtraction which checks every prefix of the text. Inheritance System.Object NaiveBordersExtraction Implements IBordersExtraction Inherited Members System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : MoreStructures.KnuthMorrisPratt.Borders Assembly : MoreStructures.dll Syntax public class NaiveBordersExtraction : IBordersExtraction Remarks ALGORITHM - The algorithm checks all the prefixes of the text, which are not the text itself, by decreasing length. - For each prefix, it checks whether the prefix is also a suffix of the text. - If so, returns it. - An empty string has no prefixes shorter than the text, so an empty sequence is returned. COMPLEXITY - A text T of length n has n - 1 prefixes which are strictly shorter than T. - Each of the prefix has a length O(n). - Checking whether a prefix of T of length w is also a suffix of T requires comparing all w chars. - Therefore, Time Complexity is O(n^2) and Space Complexity is O(1). Methods | Improve this Doc View Source GetAllBordersByDescLength(String) Declaration public IEnumerable<string> GetAllBordersByDescLength(string text) Parameters Type Name Description System.String text Returns Type Description IEnumerable < System.String > Remarks Implements IBordersExtraction Extension Methods SuffixStructureNodeExtensions.GetAllSuffixesFor<TEdge, TNode>(TNode, TextWithTerminator)"
+  },
   "api/MoreStructures.Lists.Counting.DictionaryBasedOccurrencesCounter.html": {
     "href": "api/MoreStructures.Lists.Counting.DictionaryBasedOccurrencesCounter.html",
     "title": "Class DictionaryBasedOccurrencesCounter",
@@ -672,17 +687,7 @@
   "api/MoreStructures.Tests.KnuthMorrisPratt.Borders.html": {
     "href": "api/MoreStructures.Tests.KnuthMorrisPratt.Borders.html",
     "title": "Namespace MoreStructures.Tests.KnuthMorrisPratt.Borders",
-    "keywords": "Namespace MoreStructures.Tests.KnuthMorrisPratt.Borders Classes BordersExtractionTests NaiveBordersExtraction An implementation of IBordersExtraction which checks every prefix of the text. NaiveBordersExtractionTests Interfaces IBordersExtraction An algorithm extracting borders from the given text."
-  },
-  "api/MoreStructures.Tests.KnuthMorrisPratt.Borders.IBordersExtraction.html": {
-    "href": "api/MoreStructures.Tests.KnuthMorrisPratt.Borders.IBordersExtraction.html",
-    "title": "Interface IBordersExtraction",
-    "keywords": "Interface IBordersExtraction An algorithm extracting borders from the given text. Namespace : MoreStructures.Tests.KnuthMorrisPratt.Borders Assembly : MoreStructures.dll Syntax public interface IBordersExtraction Remarks DEFINITION A border of a text T of a prefix of T which is also a suffix of T, T excluded. For example, the borders of T = \"abcabeabcab\" are \"a\" , \"ab\" and \"abcab\" . Methods | Improve this Doc View Source GetAllBordersByDescLength(String) Retrieves all borders from the provided text, by decreasing length. Declaration IEnumerable<string> GetAllBordersByDescLength(string text) Parameters Type Name Description System.String text The text, to extract borders from. Returns Type Description System.Collections.Generic.IEnumerable < System.String > An enumerable of strings. Extension Methods SuffixStructureNodeExtensions.GetAllSuffixesFor<TEdge, TNode>(TNode, TextWithTerminator)"
-  },
-  "api/MoreStructures.Tests.KnuthMorrisPratt.Borders.NaiveBordersExtraction.html": {
-    "href": "api/MoreStructures.Tests.KnuthMorrisPratt.Borders.NaiveBordersExtraction.html",
-    "title": "Class NaiveBordersExtraction",
-    "keywords": "Class NaiveBordersExtraction An implementation of IBordersExtraction which checks every prefix of the text. Inheritance System.Object NaiveBordersExtraction Implements IBordersExtraction Inherited Members System.Object.Equals(System.Object) System.Object.Equals(System.Object, System.Object) System.Object.GetHashCode() System.Object.GetType() System.Object.MemberwiseClone() System.Object.ReferenceEquals(System.Object, System.Object) System.Object.ToString() Namespace : MoreStructures.Tests.KnuthMorrisPratt.Borders Assembly : MoreStructures.dll Syntax public class NaiveBordersExtraction : IBordersExtraction Remarks ALGORITHM - The algorithm checks all the prefixes of the text, which are not the text itself, by decreasing length. - For each prefix, it checks whether the prefix is also a suffix of the text. - If so, returns it. COMPLEXITY - A text T of length n has n - 1 prefixes which are strictly shorter than T. - Each of the prefix has a length O(n). - Checking whether a prefix of T of length w is also a suffix of T requires comparing all w chars. - Therefore, Time Complexity is O(n^2) and Space Complexity is O(1). Methods | Improve this Doc View Source GetAllBordersByDescLength(String) Declaration public IEnumerable<string> GetAllBordersByDescLength(string text) Parameters Type Name Description System.String text Returns Type Description IEnumerable < System.String > Remarks Implements IBordersExtraction Extension Methods SuffixStructureNodeExtensions.GetAllSuffixesFor<TEdge, TNode>(TNode, TextWithTerminator)"
+    "keywords": "Namespace MoreStructures.Tests.KnuthMorrisPratt.Borders Classes BordersExtractionTests NaiveBordersExtractionTests"
   },
   "api/MoreStructures.Tests.KnuthMorrisPratt.Borders.NaiveBordersExtractionTests.html": {
     "href": "api/MoreStructures.Tests.KnuthMorrisPratt.Borders.NaiveBordersExtractionTests.html",

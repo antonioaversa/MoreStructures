@@ -1469,6 +1469,50 @@ references:
   fullName.vb: MoreStructures.CountTrees.CountTreeNode(Of TEdge, TNode).WrappedNode
   nameWithType: CountTreeNode<TEdge, TNode>.WrappedNode
   nameWithType.vb: CountTreeNode(Of TEdge, TNode).WrappedNode
+- uid: MoreStructures.KnuthMorrisPratt.Borders
+  name: MoreStructures.KnuthMorrisPratt.Borders
+  href: api/MoreStructures.KnuthMorrisPratt.Borders.html
+  commentId: N:MoreStructures.KnuthMorrisPratt.Borders
+  fullName: MoreStructures.KnuthMorrisPratt.Borders
+  nameWithType: MoreStructures.KnuthMorrisPratt.Borders
+- uid: MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction
+  name: IBordersExtraction
+  href: api/MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction.html
+  commentId: T:MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction
+  fullName: MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction
+  nameWithType: IBordersExtraction
+- uid: MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction.GetAllBordersByDescLength(System.String)
+  name: GetAllBordersByDescLength(String)
+  href: api/MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction.html#MoreStructures_KnuthMorrisPratt_Borders_IBordersExtraction_GetAllBordersByDescLength_System_String_
+  commentId: M:MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction.GetAllBordersByDescLength(System.String)
+  fullName: MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction.GetAllBordersByDescLength(System.String)
+  nameWithType: IBordersExtraction.GetAllBordersByDescLength(String)
+- uid: MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction.GetAllBordersByDescLength*
+  name: GetAllBordersByDescLength
+  href: api/MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction.html#MoreStructures_KnuthMorrisPratt_Borders_IBordersExtraction_GetAllBordersByDescLength_
+  commentId: Overload:MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction.GetAllBordersByDescLength
+  isSpec: "True"
+  fullName: MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction.GetAllBordersByDescLength
+  nameWithType: IBordersExtraction.GetAllBordersByDescLength
+- uid: MoreStructures.KnuthMorrisPratt.Borders.NaiveBordersExtraction
+  name: NaiveBordersExtraction
+  href: api/MoreStructures.KnuthMorrisPratt.Borders.NaiveBordersExtraction.html
+  commentId: T:MoreStructures.KnuthMorrisPratt.Borders.NaiveBordersExtraction
+  fullName: MoreStructures.KnuthMorrisPratt.Borders.NaiveBordersExtraction
+  nameWithType: NaiveBordersExtraction
+- uid: MoreStructures.KnuthMorrisPratt.Borders.NaiveBordersExtraction.GetAllBordersByDescLength(System.String)
+  name: GetAllBordersByDescLength(String)
+  href: api/MoreStructures.KnuthMorrisPratt.Borders.NaiveBordersExtraction.html#MoreStructures_KnuthMorrisPratt_Borders_NaiveBordersExtraction_GetAllBordersByDescLength_System_String_
+  commentId: M:MoreStructures.KnuthMorrisPratt.Borders.NaiveBordersExtraction.GetAllBordersByDescLength(System.String)
+  fullName: MoreStructures.KnuthMorrisPratt.Borders.NaiveBordersExtraction.GetAllBordersByDescLength(System.String)
+  nameWithType: NaiveBordersExtraction.GetAllBordersByDescLength(String)
+- uid: MoreStructures.KnuthMorrisPratt.Borders.NaiveBordersExtraction.GetAllBordersByDescLength*
+  name: GetAllBordersByDescLength
+  href: api/MoreStructures.KnuthMorrisPratt.Borders.NaiveBordersExtraction.html#MoreStructures_KnuthMorrisPratt_Borders_NaiveBordersExtraction_GetAllBordersByDescLength_
+  commentId: Overload:MoreStructures.KnuthMorrisPratt.Borders.NaiveBordersExtraction.GetAllBordersByDescLength
+  isSpec: "True"
+  fullName: MoreStructures.KnuthMorrisPratt.Borders.NaiveBordersExtraction.GetAllBordersByDescLength
+  nameWithType: NaiveBordersExtraction.GetAllBordersByDescLength
 - uid: MoreStructures.Lists.Counting
   name: MoreStructures.Lists.Counting
   href: api/MoreStructures.Lists.Counting.html
@@ -5460,11 +5504,11 @@ references:
   commentId: T:MoreStructures.Tests.KnuthMorrisPratt.Borders.BordersExtractionTests
   fullName: MoreStructures.Tests.KnuthMorrisPratt.Borders.BordersExtractionTests
   nameWithType: BordersExtractionTests
-- uid: MoreStructures.Tests.KnuthMorrisPratt.Borders.BordersExtractionTests.#ctor(MoreStructures.Tests.KnuthMorrisPratt.Borders.IBordersExtraction)
+- uid: MoreStructures.Tests.KnuthMorrisPratt.Borders.BordersExtractionTests.#ctor(MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction)
   name: BordersExtractionTests(IBordersExtraction)
-  href: api/MoreStructures.Tests.KnuthMorrisPratt.Borders.BordersExtractionTests.html#MoreStructures_Tests_KnuthMorrisPratt_Borders_BordersExtractionTests__ctor_MoreStructures_Tests_KnuthMorrisPratt_Borders_IBordersExtraction_
-  commentId: M:MoreStructures.Tests.KnuthMorrisPratt.Borders.BordersExtractionTests.#ctor(MoreStructures.Tests.KnuthMorrisPratt.Borders.IBordersExtraction)
-  fullName: MoreStructures.Tests.KnuthMorrisPratt.Borders.BordersExtractionTests.BordersExtractionTests(MoreStructures.Tests.KnuthMorrisPratt.Borders.IBordersExtraction)
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.Borders.BordersExtractionTests.html#MoreStructures_Tests_KnuthMorrisPratt_Borders_BordersExtractionTests__ctor_MoreStructures_KnuthMorrisPratt_Borders_IBordersExtraction_
+  commentId: M:MoreStructures.Tests.KnuthMorrisPratt.Borders.BordersExtractionTests.#ctor(MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction)
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.Borders.BordersExtractionTests.BordersExtractionTests(MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction)
   nameWithType: BordersExtractionTests.BordersExtractionTests(IBordersExtraction)
 - uid: MoreStructures.Tests.KnuthMorrisPratt.Borders.BordersExtractionTests.#ctor*
   name: BordersExtractionTests
@@ -5502,44 +5546,6 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.KnuthMorrisPratt.Borders.BordersExtractionTests.GetAllBordersByDescLength_IsCorrect
   nameWithType: BordersExtractionTests.GetAllBordersByDescLength_IsCorrect
-- uid: MoreStructures.Tests.KnuthMorrisPratt.Borders.IBordersExtraction
-  name: IBordersExtraction
-  href: api/MoreStructures.Tests.KnuthMorrisPratt.Borders.IBordersExtraction.html
-  commentId: T:MoreStructures.Tests.KnuthMorrisPratt.Borders.IBordersExtraction
-  fullName: MoreStructures.Tests.KnuthMorrisPratt.Borders.IBordersExtraction
-  nameWithType: IBordersExtraction
-- uid: MoreStructures.Tests.KnuthMorrisPratt.Borders.IBordersExtraction.GetAllBordersByDescLength(System.String)
-  name: GetAllBordersByDescLength(String)
-  href: api/MoreStructures.Tests.KnuthMorrisPratt.Borders.IBordersExtraction.html#MoreStructures_Tests_KnuthMorrisPratt_Borders_IBordersExtraction_GetAllBordersByDescLength_System_String_
-  commentId: M:MoreStructures.Tests.KnuthMorrisPratt.Borders.IBordersExtraction.GetAllBordersByDescLength(System.String)
-  fullName: MoreStructures.Tests.KnuthMorrisPratt.Borders.IBordersExtraction.GetAllBordersByDescLength(System.String)
-  nameWithType: IBordersExtraction.GetAllBordersByDescLength(String)
-- uid: MoreStructures.Tests.KnuthMorrisPratt.Borders.IBordersExtraction.GetAllBordersByDescLength*
-  name: GetAllBordersByDescLength
-  href: api/MoreStructures.Tests.KnuthMorrisPratt.Borders.IBordersExtraction.html#MoreStructures_Tests_KnuthMorrisPratt_Borders_IBordersExtraction_GetAllBordersByDescLength_
-  commentId: Overload:MoreStructures.Tests.KnuthMorrisPratt.Borders.IBordersExtraction.GetAllBordersByDescLength
-  isSpec: "True"
-  fullName: MoreStructures.Tests.KnuthMorrisPratt.Borders.IBordersExtraction.GetAllBordersByDescLength
-  nameWithType: IBordersExtraction.GetAllBordersByDescLength
-- uid: MoreStructures.Tests.KnuthMorrisPratt.Borders.NaiveBordersExtraction
-  name: NaiveBordersExtraction
-  href: api/MoreStructures.Tests.KnuthMorrisPratt.Borders.NaiveBordersExtraction.html
-  commentId: T:MoreStructures.Tests.KnuthMorrisPratt.Borders.NaiveBordersExtraction
-  fullName: MoreStructures.Tests.KnuthMorrisPratt.Borders.NaiveBordersExtraction
-  nameWithType: NaiveBordersExtraction
-- uid: MoreStructures.Tests.KnuthMorrisPratt.Borders.NaiveBordersExtraction.GetAllBordersByDescLength(System.String)
-  name: GetAllBordersByDescLength(String)
-  href: api/MoreStructures.Tests.KnuthMorrisPratt.Borders.NaiveBordersExtraction.html#MoreStructures_Tests_KnuthMorrisPratt_Borders_NaiveBordersExtraction_GetAllBordersByDescLength_System_String_
-  commentId: M:MoreStructures.Tests.KnuthMorrisPratt.Borders.NaiveBordersExtraction.GetAllBordersByDescLength(System.String)
-  fullName: MoreStructures.Tests.KnuthMorrisPratt.Borders.NaiveBordersExtraction.GetAllBordersByDescLength(System.String)
-  nameWithType: NaiveBordersExtraction.GetAllBordersByDescLength(String)
-- uid: MoreStructures.Tests.KnuthMorrisPratt.Borders.NaiveBordersExtraction.GetAllBordersByDescLength*
-  name: GetAllBordersByDescLength
-  href: api/MoreStructures.Tests.KnuthMorrisPratt.Borders.NaiveBordersExtraction.html#MoreStructures_Tests_KnuthMorrisPratt_Borders_NaiveBordersExtraction_GetAllBordersByDescLength_
-  commentId: Overload:MoreStructures.Tests.KnuthMorrisPratt.Borders.NaiveBordersExtraction.GetAllBordersByDescLength
-  isSpec: "True"
-  fullName: MoreStructures.Tests.KnuthMorrisPratt.Borders.NaiveBordersExtraction.GetAllBordersByDescLength
-  nameWithType: NaiveBordersExtraction.GetAllBordersByDescLength
 - uid: MoreStructures.Tests.KnuthMorrisPratt.Borders.NaiveBordersExtractionTests
   name: NaiveBordersExtractionTests
   href: api/MoreStructures.Tests.KnuthMorrisPratt.Borders.NaiveBordersExtractionTests.html

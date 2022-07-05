@@ -326,6 +326,42 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction.html",
+          "hash": "UoLDF6EvedwU6HGuYTgA7HuN/ooYgZ6jxGtizomr5h4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.KnuthMorrisPratt.Borders.NaiveBordersExtraction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.KnuthMorrisPratt.Borders.NaiveBordersExtraction.html",
+          "hash": "uWLgAOfr0hSDO3I/sDAyh05Izm/lT1K3ur/0nGWQTGo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.KnuthMorrisPratt.Borders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.KnuthMorrisPratt.Borders.html",
+          "hash": "LoqDN4lUTl8ZopjnFz2mID5eC3bKTjPqVqOaJmqNJOg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Lists.Counting.DictionaryBasedOccurrencesCounter.yml",
       "output": {
         ".html": {
@@ -1578,31 +1614,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.KnuthMorrisPratt.Borders.BordersExtractionTests.html",
-          "hash": "d/6hPHohNNkRIbFrqVVTMdERQUBuwG3FsEqU3mk/080="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MoreStructures.Tests.KnuthMorrisPratt.Borders.IBordersExtraction.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MoreStructures.Tests.KnuthMorrisPratt.Borders.IBordersExtraction.html",
-          "hash": "EIjoBfpnXXpb0Z/vk7pmiuZVdQMw//qbGectKzn0wYg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MoreStructures.Tests.KnuthMorrisPratt.Borders.NaiveBordersExtraction.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MoreStructures.Tests.KnuthMorrisPratt.Borders.NaiveBordersExtraction.html",
-          "hash": "p4x/C1Mv+PuYORmr43R4KuHQD7VX9Z8Td+9JpjDdIp8="
+          "hash": "UsHiJ0RGW4ezUmBz5XMKTsRsEeDoaTcJISx1qrlqwAY="
         }
       },
       "is_incremental": false,
@@ -1614,7 +1626,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.KnuthMorrisPratt.Borders.NaiveBordersExtractionTests.html",
-          "hash": "ynlHKA15mU8qXTYn+zYfSldF/ITVedeDowuwCfRIC8U="
+          "hash": "5BMT/rqV7t8vTdGPi5j0U0sOjNrNHaCFVY+w3+EZkG8="
         }
       },
       "is_incremental": false,
@@ -1626,7 +1638,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.KnuthMorrisPratt.Borders.html",
-          "hash": "UEyC3/OmPs6YewjfNqgnSYSSej5S/TMlJ4gPmkiHqxc="
+          "hash": "2HO2YooYF5FJpg8SO6aEgXcBtpJtPQokhKd+9miU2v8="
         }
       },
       "is_incremental": false,
@@ -3030,7 +3042,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "HS1xxq7Gw1D0Krb48ckPevR5j25hxBDdS3yTou2PLKc="
+          "hash": "DiddkmdcVnfAhaCySB/itPkJ+EAA//pMpuv7iz9qCu4="
         }
       },
       "is_incremental": false,
@@ -3105,7 +3117,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 250,
+          "total_file_count": 251,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
