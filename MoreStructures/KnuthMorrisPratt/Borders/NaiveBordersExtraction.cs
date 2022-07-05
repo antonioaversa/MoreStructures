@@ -1,4 +1,4 @@
-﻿namespace MoreStructures.Tests.KnuthMorrisPratt.Borders;
+﻿namespace MoreStructures.KnuthMorrisPratt.Borders;
 
 /// <inheritdoc cref="IBordersExtraction" path="//*[not(self::summary or self::remarks)]"/>
 /// <summary>
@@ -13,6 +13,8 @@
 ///     - For each prefix, it checks whether the prefix is also a suffix of the text.
 ///       <br/>
 ///     - If so, returns it.
+///       <br/>
+///     - An empty string has no prefixes shorter than the text, so an empty sequence is returned.
 ///     </para>
 ///     <para id="complexity">
 ///     COMPLEXITY

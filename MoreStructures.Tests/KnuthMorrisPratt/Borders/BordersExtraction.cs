@@ -1,4 +1,6 @@
-﻿namespace MoreStructures.Tests.KnuthMorrisPratt.Borders;
+﻿using MoreStructures.KnuthMorrisPratt.Borders;
+
+namespace MoreStructures.Tests.KnuthMorrisPratt.Borders;
 
 public abstract class BordersExtractionTests
 {

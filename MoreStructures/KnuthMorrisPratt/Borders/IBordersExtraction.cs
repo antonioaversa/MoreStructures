@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MoreStructures.Tests.KnuthMorrisPratt.Borders;
+﻿namespace MoreStructures.KnuthMorrisPratt.Borders;
 
 /// <summary>
 /// An algorithm extracting <b>borders</b> from the given text.
