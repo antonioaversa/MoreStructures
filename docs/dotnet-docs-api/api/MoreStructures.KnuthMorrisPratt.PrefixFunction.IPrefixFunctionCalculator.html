@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IPrefixFunctionCalculator
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IPrefixFunctionCalculator
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator">
+  
+  
+  <h1 id="MoreStructures_KnuthMorrisPratt_PrefixFunction_IPrefixFunctionCalculator" data-uid="MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator" class="text-break">Interface IPrefixFunctionCalculator
+  </h1>
+  <div class="markdown level0 summary"><p>An algorithm which calculates the <strong>Prefix Function</strong> of the provided text.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.KnuthMorrisPratt.PrefixFunction.html">MoreStructures.KnuthMorrisPratt.PrefixFunction</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_KnuthMorrisPratt_PrefixFunction_IPrefixFunctionCalculator_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IPrefixFunctionCalculator</code></pre>
+  </div>
+  <h5 id="MoreStructures_KnuthMorrisPratt_PrefixFunction_IPrefixFunctionCalculator_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+The Prefix Function of a text T is a function s such that s(i) is the length of the longest border of the 
+prefix of T up to the character with index i, included, i.e. T[0..(i+1)].
+<br>
+For example, if <code>T = &quot;aabaabacaabaa&quot;</code>:
+<br>
+- <code>s(0) = 0</code>, since <code>T[0..1] = &quot;a&quot;</code> has no borders;
+<br>
+- <code>s(1) = 1</code>, since <code>T[0..2] = &quot;aa&quot;</code> has a single border <code>&quot;a&quot;</code>, which is of length 1;
+<br>
+- <code>s(2) = 0</code>, since <code>T[0..3] = &quot;aab&quot;</code> has no borders;
+<br>
+- <code>s(3) = 1</code>, since <code>T[0..4] = &quot;aaba&quot;</code> has a single border <code>&quot;a&quot;</code>, which is of length 1;
+<br>
+- <code>s(4) = 1</code>, since <code>T[0..5] = &quot;aabaa&quot;</code> has 2 borders <code>{ &quot;a&quot;, &quot;aa&quot; }</code>, and the longest one is of 
+length 2;
+<br>
+- <code>s(5) = 1</code>, since <code>T[0..6] = &quot;aabaab&quot;</code> has 3 borders <code>{ &quot;a&quot;, &quot;aa&quot;, &quot;aab&quot; }</code>, and the longest 
+one of length 3;
+<br>
+- etc.
+</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_KnuthMorrisPratt_PrefixFunction_IPrefixFunctionCalculator_GetValues_System_String_.md&amp;value=---%0Auid%3A%20MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator.GetValues(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/KnuthMorrisPratt/PrefixFunction/IPrefixFunctionCalculator.cs/#L37">View Source</a>
+  </span>
+  <a id="MoreStructures_KnuthMorrisPratt_PrefixFunction_IPrefixFunctionCalculator_GetValues_" data-uid="MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator.GetValues*"></a>
+  <h4 id="MoreStructures_KnuthMorrisPratt_PrefixFunction_IPrefixFunctionCalculator_GetValues_System_String_" data-uid="MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator.GetValues(System.String)">GetValues(String)</h4>
+  <div class="markdown level1 summary"><p>Calculate the values of the Prefix Function of the provided <code data-dev-comment-type="paramref" class="paramref">text</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;int&gt; GetValues(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>The text, to calculate the Prefix Function of.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><p>The sequence of <span class="xref">System.Int32</span> values of the Prefix Function.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_KnuthMorrisPratt_PrefixFunction_IPrefixFunctionCalculator.md&amp;value=---%0Auid%3A%20MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/KnuthMorrisPratt/PrefixFunction/IPrefixFunctionCalculator.cs/#L30" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

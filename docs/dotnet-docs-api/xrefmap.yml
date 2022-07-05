@@ -1513,6 +1513,76 @@ references:
   isSpec: "True"
   fullName: MoreStructures.KnuthMorrisPratt.Borders.NaiveBordersExtraction.GetAllBordersByDescLength
   nameWithType: NaiveBordersExtraction.GetAllBordersByDescLength
+- uid: MoreStructures.KnuthMorrisPratt.PrefixFunction
+  name: MoreStructures.KnuthMorrisPratt.PrefixFunction
+  href: api/MoreStructures.KnuthMorrisPratt.PrefixFunction.html
+  commentId: N:MoreStructures.KnuthMorrisPratt.PrefixFunction
+  fullName: MoreStructures.KnuthMorrisPratt.PrefixFunction
+  nameWithType: MoreStructures.KnuthMorrisPratt.PrefixFunction
+- uid: MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator
+  name: IPrefixFunctionCalculator
+  href: api/MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator.html
+  commentId: T:MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator
+  fullName: MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator
+  nameWithType: IPrefixFunctionCalculator
+- uid: MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator.GetValues(System.String)
+  name: GetValues(String)
+  href: api/MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator.html#MoreStructures_KnuthMorrisPratt_PrefixFunction_IPrefixFunctionCalculator_GetValues_System_String_
+  commentId: M:MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator.GetValues(System.String)
+  fullName: MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator.GetValues(System.String)
+  nameWithType: IPrefixFunctionCalculator.GetValues(String)
+- uid: MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator.GetValues*
+  name: GetValues
+  href: api/MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator.html#MoreStructures_KnuthMorrisPratt_PrefixFunction_IPrefixFunctionCalculator_GetValues_
+  commentId: Overload:MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator.GetValues
+  isSpec: "True"
+  fullName: MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator.GetValues
+  nameWithType: IPrefixFunctionCalculator.GetValues
+- uid: MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator
+  name: NaivePrefixFunctionCalculator
+  href: api/MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.html
+  commentId: T:MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator
+  fullName: MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator
+  nameWithType: NaivePrefixFunctionCalculator
+- uid: MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.#ctor(MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction)
+  name: NaivePrefixFunctionCalculator(IBordersExtraction)
+  href: api/MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.html#MoreStructures_KnuthMorrisPratt_PrefixFunction_NaivePrefixFunctionCalculator__ctor_MoreStructures_KnuthMorrisPratt_Borders_IBordersExtraction_
+  commentId: M:MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.#ctor(MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction)
+  fullName: MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.NaivePrefixFunctionCalculator(MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction)
+  nameWithType: NaivePrefixFunctionCalculator.NaivePrefixFunctionCalculator(IBordersExtraction)
+- uid: MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.#ctor*
+  name: NaivePrefixFunctionCalculator
+  href: api/MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.html#MoreStructures_KnuthMorrisPratt_PrefixFunction_NaivePrefixFunctionCalculator__ctor_
+  commentId: Overload:MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.NaivePrefixFunctionCalculator
+  nameWithType: NaivePrefixFunctionCalculator.NaivePrefixFunctionCalculator
+- uid: MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.BordersExtraction
+  name: BordersExtraction
+  href: api/MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.html#MoreStructures_KnuthMorrisPratt_PrefixFunction_NaivePrefixFunctionCalculator_BordersExtraction
+  commentId: P:MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.BordersExtraction
+  fullName: MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.BordersExtraction
+  nameWithType: NaivePrefixFunctionCalculator.BordersExtraction
+- uid: MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.BordersExtraction*
+  name: BordersExtraction
+  href: api/MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.html#MoreStructures_KnuthMorrisPratt_PrefixFunction_NaivePrefixFunctionCalculator_BordersExtraction_
+  commentId: Overload:MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.BordersExtraction
+  isSpec: "True"
+  fullName: MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.BordersExtraction
+  nameWithType: NaivePrefixFunctionCalculator.BordersExtraction
+- uid: MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.GetValues(System.String)
+  name: GetValues(String)
+  href: api/MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.html#MoreStructures_KnuthMorrisPratt_PrefixFunction_NaivePrefixFunctionCalculator_GetValues_System_String_
+  commentId: M:MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.GetValues(System.String)
+  fullName: MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.GetValues(System.String)
+  nameWithType: NaivePrefixFunctionCalculator.GetValues(String)
+- uid: MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.GetValues*
+  name: GetValues
+  href: api/MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.html#MoreStructures_KnuthMorrisPratt_PrefixFunction_NaivePrefixFunctionCalculator_GetValues_
+  commentId: Overload:MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.GetValues
+  isSpec: "True"
+  fullName: MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.GetValues
+  nameWithType: NaivePrefixFunctionCalculator.GetValues
 - uid: MoreStructures.Lists.Counting
   name: MoreStructures.Lists.Counting
   href: api/MoreStructures.Lists.Counting.html
@@ -5565,6 +5635,79 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.KnuthMorrisPratt.Borders.NaiveBordersExtractionTests.NaiveBordersExtractionTests
   nameWithType: NaiveBordersExtractionTests.NaiveBordersExtractionTests
+- uid: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction
+  name: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.html
+  commentId: N:MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction
+  nameWithType: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction
+- uid: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculatorTests
+  name: NaivePrefixFunctionCalculatorTests
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculatorTests.html
+  commentId: T:MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculatorTests
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculatorTests
+  nameWithType: NaivePrefixFunctionCalculatorTests
+- uid: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculatorTests.#ctor
+  name: NaivePrefixFunctionCalculatorTests()
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculatorTests.html#MoreStructures_Tests_KnuthMorrisPratt_PrefixFunction_NaivePrefixFunctionCalculatorTests__ctor
+  commentId: M:MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculatorTests.#ctor
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculatorTests.NaivePrefixFunctionCalculatorTests()
+  nameWithType: NaivePrefixFunctionCalculatorTests.NaivePrefixFunctionCalculatorTests()
+- uid: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculatorTests.#ctor*
+  name: NaivePrefixFunctionCalculatorTests
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculatorTests.html#MoreStructures_Tests_KnuthMorrisPratt_PrefixFunction_NaivePrefixFunctionCalculatorTests__ctor_
+  commentId: Overload:MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculatorTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculatorTests.NaivePrefixFunctionCalculatorTests
+  nameWithType: NaivePrefixFunctionCalculatorTests.NaivePrefixFunctionCalculatorTests
+- uid: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests
+  name: PrefixFunctionCalculatorTests
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.html
+  commentId: T:MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests
+  nameWithType: PrefixFunctionCalculatorTests
+- uid: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.#ctor(MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator)
+  name: PrefixFunctionCalculatorTests(IPrefixFunctionCalculator)
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.html#MoreStructures_Tests_KnuthMorrisPratt_PrefixFunction_PrefixFunctionCalculatorTests__ctor_MoreStructures_KnuthMorrisPratt_PrefixFunction_IPrefixFunctionCalculator_
+  commentId: M:MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.#ctor(MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator)
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.PrefixFunctionCalculatorTests(MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator)
+  nameWithType: PrefixFunctionCalculatorTests.PrefixFunctionCalculatorTests(IPrefixFunctionCalculator)
+- uid: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.#ctor*
+  name: PrefixFunctionCalculatorTests
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.html#MoreStructures_Tests_KnuthMorrisPratt_PrefixFunction_PrefixFunctionCalculatorTests__ctor_
+  commentId: Overload:MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.PrefixFunctionCalculatorTests
+  nameWithType: PrefixFunctionCalculatorTests.PrefixFunctionCalculatorTests
+- uid: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.GetAllBordersByDescLength_IsCorrect(System.Int32[],System.String)
+  name: GetAllBordersByDescLength_IsCorrect(Int32[], String)
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.html#MoreStructures_Tests_KnuthMorrisPratt_PrefixFunction_PrefixFunctionCalculatorTests_GetAllBordersByDescLength_IsCorrect_System_Int32___System_String_
+  commentId: M:MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.GetAllBordersByDescLength_IsCorrect(System.Int32[],System.String)
+  name.vb: GetAllBordersByDescLength_IsCorrect(Int32(), String)
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.GetAllBordersByDescLength_IsCorrect(System.Int32[], System.String)
+  fullName.vb: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.GetAllBordersByDescLength_IsCorrect(System.Int32(), System.String)
+  nameWithType: PrefixFunctionCalculatorTests.GetAllBordersByDescLength_IsCorrect(Int32[], String)
+  nameWithType.vb: PrefixFunctionCalculatorTests.GetAllBordersByDescLength_IsCorrect(Int32(), String)
+- uid: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.GetAllBordersByDescLength_IsCorrect*
+  name: GetAllBordersByDescLength_IsCorrect
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.html#MoreStructures_Tests_KnuthMorrisPratt_PrefixFunction_PrefixFunctionCalculatorTests_GetAllBordersByDescLength_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.GetAllBordersByDescLength_IsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.GetAllBordersByDescLength_IsCorrect
+  nameWithType: PrefixFunctionCalculatorTests.GetAllBordersByDescLength_IsCorrect
+- uid: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.PrefixFunctionCalculator
+  name: PrefixFunctionCalculator
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.html#MoreStructures_Tests_KnuthMorrisPratt_PrefixFunction_PrefixFunctionCalculatorTests_PrefixFunctionCalculator
+  commentId: P:MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.PrefixFunctionCalculator
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.PrefixFunctionCalculator
+  nameWithType: PrefixFunctionCalculatorTests.PrefixFunctionCalculator
+- uid: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.PrefixFunctionCalculator*
+  name: PrefixFunctionCalculator
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.html#MoreStructures_Tests_KnuthMorrisPratt_PrefixFunction_PrefixFunctionCalculatorTests_PrefixFunctionCalculator_
+  commentId: Overload:MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.PrefixFunctionCalculator
+  isSpec: "True"
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.PrefixFunctionCalculator
+  nameWithType: PrefixFunctionCalculatorTests.PrefixFunctionCalculator
 - uid: MoreStructures.Tests.Lists.Counting
   name: MoreStructures.Tests.Lists.Counting
   href: api/MoreStructures.Tests.Lists.Counting.html

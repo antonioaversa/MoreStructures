@@ -1,0 +1,330 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class NaivePrefixFunctionCalculator
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class NaivePrefixFunctionCalculator
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator">
+  
+  
+  <h1 id="MoreStructures_KnuthMorrisPratt_PrefixFunction_NaivePrefixFunctionCalculator" data-uid="MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator" class="text-break">Class NaivePrefixFunctionCalculator
+  </h1>
+  <div class="markdown level0 summary"><p>An implementation of <a class="xref" href="MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator.html">IPrefixFunctionCalculator</a> which retrieves the longest border, then checks its
+length.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">NaivePrefixFunctionCalculator</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator.html">IPrefixFunctionCalculator</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.KnuthMorrisPratt.PrefixFunction.html">MoreStructures.KnuthMorrisPratt.PrefixFunction</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_KnuthMorrisPratt_PrefixFunction_NaivePrefixFunctionCalculator_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class NaivePrefixFunctionCalculator : IPrefixFunctionCalculator</code></pre>
+  </div>
+  <h5 id="MoreStructures_KnuthMorrisPratt_PrefixFunction_NaivePrefixFunctionCalculator_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+ALGORITHM
+<br>
+- The algorithm iterates over all the chars of the text, from the first to the last.
+<br>
+- For each char at index i, it retrieves the longest border of the prefix, up to char at index i included, by 
+using the <a class="xref" href="MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction.html">IBordersExtraction</a> implementation provided at construction time.
+<br>
+- <a class="xref" href="MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction.html#MoreStructures_KnuthMorrisPratt_Borders_IBordersExtraction_GetAllBordersByDescLength_System_String_">GetAllBordersByDescLength(String)</a> retrieves the borders from the longest to
+the shortest, whatever the implementation. Therefore, only the first border needs to be enumerated.
+<br>
+- If no borders are found, the Prefix Function at index i is zero. Otherwise, it&apos;s the length of the longest.
+</p>
+<p>
+COMPLEXITY
+<br>
+- There are as many prefixes of the text as chars.
+<br>
+- The time and space cost of retrieving the longest border depends on the actual implementation of 
+<a class="xref" href="MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction.html">IBordersExtraction</a> used, to retrieve the longest border, which, when it exists, it is the first
+in the sequence.
+<br>
+- Checking whether a border has been found and, in case, its length are both constant time operations.
+<br>
+- Therefore, Time Complexity is O(n * Tlb) and Space Complexity is O(n * Slb), where Tlb and Slb are the Time 
+and Space Complexity of finding the longest border (1st item) via the provided 
+<a class="xref" href="MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.html#MoreStructures_KnuthMorrisPratt_PrefixFunction_NaivePrefixFunctionCalculator_BordersExtraction">BordersExtraction</a>.
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_KnuthMorrisPratt_PrefixFunction_NaivePrefixFunctionCalculator__ctor_MoreStructures_KnuthMorrisPratt_Borders_IBordersExtraction_.md&amp;value=---%0Auid%3A%20MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.%23ctor(MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/KnuthMorrisPratt/PrefixFunction/NaivePrefixFunctionCalculator.cs/#L51">View Source</a>
+  </span>
+  <a id="MoreStructures_KnuthMorrisPratt_PrefixFunction_NaivePrefixFunctionCalculator__ctor_" data-uid="MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.#ctor*"></a>
+  <h4 id="MoreStructures_KnuthMorrisPratt_PrefixFunction_NaivePrefixFunctionCalculator__ctor_MoreStructures_KnuthMorrisPratt_Borders_IBordersExtraction_" data-uid="MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.#ctor(MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction)">NaivePrefixFunctionCalculator(IBordersExtraction)</h4>
+  <div class="markdown level1 summary"><p><inheritdoc cref="T:MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator"></inheritdoc></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NaivePrefixFunctionCalculator(IBordersExtraction bordersExtraction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction.html">IBordersExtraction</a></td>
+        <td><span class="parametername">bordersExtraction</span></td>
+        <td><p><inheritdoc cref="P:MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.BordersExtraction" path="/summary"></inheritdoc></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_KnuthMorrisPratt_PrefixFunction_NaivePrefixFunctionCalculator_BordersExtraction.md&amp;value=---%0Auid%3A%20MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.BordersExtraction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/KnuthMorrisPratt/PrefixFunction/NaivePrefixFunctionCalculator.cs/#L45">View Source</a>
+  </span>
+  <a id="MoreStructures_KnuthMorrisPratt_PrefixFunction_NaivePrefixFunctionCalculator_BordersExtraction_" data-uid="MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.BordersExtraction*"></a>
+  <h4 id="MoreStructures_KnuthMorrisPratt_PrefixFunction_NaivePrefixFunctionCalculator_BordersExtraction" data-uid="MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.BordersExtraction">BordersExtraction</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction.html">IBordersExtraction</a> implementation to be used, to retrieve the longest border of the text.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IBordersExtraction BordersExtraction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.KnuthMorrisPratt.Borders.IBordersExtraction.html">IBordersExtraction</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_KnuthMorrisPratt_PrefixFunction_NaivePrefixFunctionCalculator_GetValues_System_String_.md&amp;value=---%0Auid%3A%20MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.GetValues(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/KnuthMorrisPratt/PrefixFunction/NaivePrefixFunctionCalculator.cs/#L60">View Source</a>
+  </span>
+  <a id="MoreStructures_KnuthMorrisPratt_PrefixFunction_NaivePrefixFunctionCalculator_GetValues_" data-uid="MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.GetValues*"></a>
+  <h4 id="MoreStructures_KnuthMorrisPratt_PrefixFunction_NaivePrefixFunctionCalculator_GetValues_System_String_" data-uid="MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.GetValues(System.String)">GetValues(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;int&gt; GetValues(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_KnuthMorrisPratt_PrefixFunction_NaivePrefixFunctionCalculator_GetValues_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator" path="/remarks"></inheritdoc></p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator.html">IPrefixFunctionCalculator</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_KnuthMorrisPratt_PrefixFunction_NaivePrefixFunctionCalculator.md&amp;value=---%0Auid%3A%20MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/KnuthMorrisPratt/PrefixFunction/NaivePrefixFunctionCalculator.cs/#L40" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

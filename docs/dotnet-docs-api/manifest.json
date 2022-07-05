@@ -362,6 +362,42 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator.html",
+          "hash": "+nbmjtj28mlalyRODAIIUhzQaX1VHlUoV8HKk8ayQBg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculator.html",
+          "hash": "NLxbewcdGKBCEv+NIum5d/FX3TRZo9gSomAtyMnGyqU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.KnuthMorrisPratt.PrefixFunction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.KnuthMorrisPratt.PrefixFunction.html",
+          "hash": "hO8zBROqX24/MkMTr1cavp2kdvYXy8+OAM2vtVFRX/M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Lists.Counting.DictionaryBasedOccurrencesCounter.yml",
       "output": {
         ".html": {
@@ -1639,6 +1675,42 @@
         ".html": {
           "relative_path": "api/MoreStructures.Tests.KnuthMorrisPratt.Borders.html",
           "hash": "2HO2YooYF5FJpg8SO6aEgXcBtpJtPQokhKd+9miU2v8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculatorTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculatorTests.html",
+          "hash": "+Po80RmHK/hcAY5L7/lokuvwX+4BlyEv2dN/NGauC98="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.PrefixFunctionCalculatorTests.html",
+          "hash": "tR7OJqndACFD7cJd5qcbsOSOD94Hrq/v3qsvsl6cP4M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.html",
+          "hash": "iyjXBL3sAY9ToqfZMbA7GueE4Fe0nPgFAZU+65Dtllc="
         }
       },
       "is_incremental": false,
@@ -3042,7 +3114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "DiddkmdcVnfAhaCySB/itPkJ+EAA//pMpuv7iz9qCu4="
+          "hash": "nJQ2jUxgdvJjxonv5UHt+zOOV+SyM0mDKt+ah8HV5+E="
         }
       },
       "is_incremental": false,
@@ -3117,7 +3189,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 251,
+          "total_file_count": 257,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
