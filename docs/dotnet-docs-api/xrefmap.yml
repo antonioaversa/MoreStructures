@@ -1513,6 +1513,51 @@ references:
   isSpec: "True"
   fullName: MoreStructures.KnuthMorrisPratt.Borders.NaiveBordersExtraction.GetAllBordersByDescLength
   nameWithType: NaiveBordersExtraction.GetAllBordersByDescLength
+- uid: MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction
+  name: PrefixFunctionBasedBorderExtraction
+  href: api/MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.html
+  commentId: T:MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction
+  fullName: MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction
+  nameWithType: PrefixFunctionBasedBorderExtraction
+- uid: MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.#ctor(MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator)
+  name: PrefixFunctionBasedBorderExtraction(IPrefixFunctionCalculator)
+  href: api/MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.html#MoreStructures_KnuthMorrisPratt_Borders_PrefixFunctionBasedBorderExtraction__ctor_MoreStructures_KnuthMorrisPratt_PrefixFunction_IPrefixFunctionCalculator_
+  commentId: M:MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.#ctor(MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator)
+  fullName: MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.PrefixFunctionBasedBorderExtraction(MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator)
+  nameWithType: PrefixFunctionBasedBorderExtraction.PrefixFunctionBasedBorderExtraction(IPrefixFunctionCalculator)
+- uid: MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.#ctor*
+  name: PrefixFunctionBasedBorderExtraction
+  href: api/MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.html#MoreStructures_KnuthMorrisPratt_Borders_PrefixFunctionBasedBorderExtraction__ctor_
+  commentId: Overload:MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.PrefixFunctionBasedBorderExtraction
+  nameWithType: PrefixFunctionBasedBorderExtraction.PrefixFunctionBasedBorderExtraction
+- uid: MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.GetAllBordersByDescLength(System.String)
+  name: GetAllBordersByDescLength(String)
+  href: api/MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.html#MoreStructures_KnuthMorrisPratt_Borders_PrefixFunctionBasedBorderExtraction_GetAllBordersByDescLength_System_String_
+  commentId: M:MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.GetAllBordersByDescLength(System.String)
+  fullName: MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.GetAllBordersByDescLength(System.String)
+  nameWithType: PrefixFunctionBasedBorderExtraction.GetAllBordersByDescLength(String)
+- uid: MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.GetAllBordersByDescLength*
+  name: GetAllBordersByDescLength
+  href: api/MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.html#MoreStructures_KnuthMorrisPratt_Borders_PrefixFunctionBasedBorderExtraction_GetAllBordersByDescLength_
+  commentId: Overload:MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.GetAllBordersByDescLength
+  isSpec: "True"
+  fullName: MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.GetAllBordersByDescLength
+  nameWithType: PrefixFunctionBasedBorderExtraction.GetAllBordersByDescLength
+- uid: MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.PrefixFunctionCalculator
+  name: PrefixFunctionCalculator
+  href: api/MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.html#MoreStructures_KnuthMorrisPratt_Borders_PrefixFunctionBasedBorderExtraction_PrefixFunctionCalculator
+  commentId: P:MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.PrefixFunctionCalculator
+  fullName: MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.PrefixFunctionCalculator
+  nameWithType: PrefixFunctionBasedBorderExtraction.PrefixFunctionCalculator
+- uid: MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.PrefixFunctionCalculator*
+  name: PrefixFunctionCalculator
+  href: api/MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.html#MoreStructures_KnuthMorrisPratt_Borders_PrefixFunctionBasedBorderExtraction_PrefixFunctionCalculator_
+  commentId: Overload:MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.PrefixFunctionCalculator
+  isSpec: "True"
+  fullName: MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.PrefixFunctionCalculator
+  nameWithType: PrefixFunctionBasedBorderExtraction.PrefixFunctionCalculator
 - uid: MoreStructures.KnuthMorrisPratt.PrefixFunction
   name: MoreStructures.KnuthMorrisPratt.PrefixFunction
   href: api/MoreStructures.KnuthMorrisPratt.PrefixFunction.html
@@ -5635,6 +5680,25 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.KnuthMorrisPratt.Borders.NaiveBordersExtractionTests.NaiveBordersExtractionTests
   nameWithType: NaiveBordersExtractionTests.NaiveBordersExtractionTests
+- uid: MoreStructures.Tests.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtractionTests
+  name: PrefixFunctionBasedBorderExtractionTests
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtractionTests.html
+  commentId: T:MoreStructures.Tests.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtractionTests
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtractionTests
+  nameWithType: PrefixFunctionBasedBorderExtractionTests
+- uid: MoreStructures.Tests.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtractionTests.#ctor
+  name: PrefixFunctionBasedBorderExtractionTests()
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtractionTests.html#MoreStructures_Tests_KnuthMorrisPratt_Borders_PrefixFunctionBasedBorderExtractionTests__ctor
+  commentId: M:MoreStructures.Tests.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtractionTests.#ctor
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtractionTests.PrefixFunctionBasedBorderExtractionTests()
+  nameWithType: PrefixFunctionBasedBorderExtractionTests.PrefixFunctionBasedBorderExtractionTests()
+- uid: MoreStructures.Tests.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtractionTests.#ctor*
+  name: PrefixFunctionBasedBorderExtractionTests
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtractionTests.html#MoreStructures_Tests_KnuthMorrisPratt_Borders_PrefixFunctionBasedBorderExtractionTests__ctor_
+  commentId: Overload:MoreStructures.Tests.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtractionTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtractionTests.PrefixFunctionBasedBorderExtractionTests
+  nameWithType: PrefixFunctionBasedBorderExtractionTests.PrefixFunctionBasedBorderExtractionTests
 - uid: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction
   name: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction
   href: api/MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.html
