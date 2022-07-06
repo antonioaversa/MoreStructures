@@ -1,4 +1,5 @@
-﻿using MoreStructures.KnuthMorrisPratt.Borders;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MoreStructures.KnuthMorrisPratt.Borders;
 
 namespace MoreStructures.Tests.KnuthMorrisPratt.Borders;
 
