@@ -134,14 +134,16 @@ ALGORITHM
   also a border of the longest border of the text.
 <br>
 - That is, if T[0..w] is a border of T of length w, and T has longest border T[0..lb] of length lb, where 
-0 &lt; w &lt; lb, then T[0..w] is also border of T[0..lb].
+0 &lt; w &lt; lb, then T[0..w] is also border of T[0..lb]. That is: any non-longest border of T is also 
+border of the longest border of T.
 <br>
 - Given the Prefix Function s of T, the length of the longest border of T can be calculated as s(n - 1), where
-n is the length of T.
+n is the length of T. The longest border of the longest border can be calculated as s(s(n - 1) - 1). And so
+on...
 <br>
-- Then borders are found iteratively: the next border (shorter than the longest) can be calculated as the 
+- Therefore, borders are found iteratively: the next border (shorter than the longest) can be calculated as the 
 longest border of the border found at the previous iteration, by using the Prefix Function on the predecessor
-of the previous result.
+of the previous result: w(i) = s(w(i - 1) - 1); w(i + 1) = s(w(i) - 1) = s(s(w(i - 1) - 1) - 1), etc.
 <br>
 - The iteration terminates when the Prefix Function returns 0, i.e. there is no border.
 </p>
@@ -153,7 +155,7 @@ of the previous result.
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_KnuthMorrisPratt_Borders_PrefixFunctionBasedBorderExtraction__ctor_MoreStructures_KnuthMorrisPratt_PrefixFunction_IPrefixFunctionCalculator_.md&amp;value=---%0Auid%3A%20MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.%23ctor(MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/KnuthMorrisPratt/Borders/PrefixFunctionBasedBorderExtraction.cs/#L42">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/KnuthMorrisPratt/Borders/PrefixFunctionBasedBorderExtraction.cs/#L44">View Source</a>
   </span>
   <a id="MoreStructures_KnuthMorrisPratt_Borders_PrefixFunctionBasedBorderExtraction__ctor_" data-uid="MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.#ctor*"></a>
   <h4 id="MoreStructures_KnuthMorrisPratt_Borders_PrefixFunctionBasedBorderExtraction__ctor_MoreStructures_KnuthMorrisPratt_PrefixFunction_IPrefixFunctionCalculator_" data-uid="MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.#ctor(MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator)">PrefixFunctionBasedBorderExtraction(IPrefixFunctionCalculator)</h4>
@@ -190,7 +192,7 @@ of the previous result.
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_KnuthMorrisPratt_Borders_PrefixFunctionBasedBorderExtraction_PrefixFunctionCalculator.md&amp;value=---%0Auid%3A%20MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.PrefixFunctionCalculator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/KnuthMorrisPratt/Borders/PrefixFunctionBasedBorderExtraction.cs/#L36">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/KnuthMorrisPratt/Borders/PrefixFunctionBasedBorderExtraction.cs/#L38">View Source</a>
   </span>
   <a id="MoreStructures_KnuthMorrisPratt_Borders_PrefixFunctionBasedBorderExtraction_PrefixFunctionCalculator_" data-uid="MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.PrefixFunctionCalculator*"></a>
   <h4 id="MoreStructures_KnuthMorrisPratt_Borders_PrefixFunctionBasedBorderExtraction_PrefixFunctionCalculator" data-uid="MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.PrefixFunctionCalculator">PrefixFunctionCalculator</h4>
@@ -224,7 +226,7 @@ the text.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_KnuthMorrisPratt_Borders_PrefixFunctionBasedBorderExtraction_GetAllBordersByDescLength_System_String_.md&amp;value=---%0Auid%3A%20MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.GetAllBordersByDescLength(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/KnuthMorrisPratt/Borders/PrefixFunctionBasedBorderExtraction.cs/#L51">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/KnuthMorrisPratt/Borders/PrefixFunctionBasedBorderExtraction.cs/#L53">View Source</a>
   </span>
   <a id="MoreStructures_KnuthMorrisPratt_Borders_PrefixFunctionBasedBorderExtraction_GetAllBordersByDescLength_" data-uid="MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.GetAllBordersByDescLength*"></a>
   <h4 id="MoreStructures_KnuthMorrisPratt_Borders_PrefixFunctionBasedBorderExtraction_GetAllBordersByDescLength_System_String_" data-uid="MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.GetAllBordersByDescLength(System.String)">GetAllBordersByDescLength(String)</h4>
@@ -288,7 +290,7 @@ the text.</p>
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_KnuthMorrisPratt_Borders_PrefixFunctionBasedBorderExtraction.md&amp;value=---%0Auid%3A%20MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/KnuthMorrisPratt/Borders/PrefixFunctionBasedBorderExtraction.cs/#L30" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/KnuthMorrisPratt/Borders/PrefixFunctionBasedBorderExtraction.cs/#L32" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

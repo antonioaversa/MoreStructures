@@ -1564,6 +1564,25 @@ references:
   commentId: N:MoreStructures.KnuthMorrisPratt.PrefixFunction
   fullName: MoreStructures.KnuthMorrisPratt.PrefixFunction
   nameWithType: MoreStructures.KnuthMorrisPratt.PrefixFunction
+- uid: MoreStructures.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculator
+  name: FastPrefixFunctionCalculator
+  href: api/MoreStructures.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculator.html
+  commentId: T:MoreStructures.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculator
+  fullName: MoreStructures.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculator
+  nameWithType: FastPrefixFunctionCalculator
+- uid: MoreStructures.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculator.GetValues(System.String)
+  name: GetValues(String)
+  href: api/MoreStructures.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculator.html#MoreStructures_KnuthMorrisPratt_PrefixFunction_FastPrefixFunctionCalculator_GetValues_System_String_
+  commentId: M:MoreStructures.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculator.GetValues(System.String)
+  fullName: MoreStructures.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculator.GetValues(System.String)
+  nameWithType: FastPrefixFunctionCalculator.GetValues(String)
+- uid: MoreStructures.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculator.GetValues*
+  name: GetValues
+  href: api/MoreStructures.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculator.html#MoreStructures_KnuthMorrisPratt_PrefixFunction_FastPrefixFunctionCalculator_GetValues_
+  commentId: Overload:MoreStructures.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculator.GetValues
+  isSpec: "True"
+  fullName: MoreStructures.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculator.GetValues
+  nameWithType: FastPrefixFunctionCalculator.GetValues
 - uid: MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator
   name: IPrefixFunctionCalculator
   href: api/MoreStructures.KnuthMorrisPratt.PrefixFunction.IPrefixFunctionCalculator.html
@@ -5705,6 +5724,25 @@ references:
   commentId: N:MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction
   fullName: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction
   nameWithType: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction
+- uid: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculatorTests
+  name: FastPrefixFunctionCalculatorTests
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculatorTests.html
+  commentId: T:MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculatorTests
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculatorTests
+  nameWithType: FastPrefixFunctionCalculatorTests
+- uid: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculatorTests.#ctor
+  name: FastPrefixFunctionCalculatorTests()
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculatorTests.html#MoreStructures_Tests_KnuthMorrisPratt_PrefixFunction_FastPrefixFunctionCalculatorTests__ctor
+  commentId: M:MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculatorTests.#ctor
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculatorTests.FastPrefixFunctionCalculatorTests()
+  nameWithType: FastPrefixFunctionCalculatorTests.FastPrefixFunctionCalculatorTests()
+- uid: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculatorTests.#ctor*
+  name: FastPrefixFunctionCalculatorTests
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculatorTests.html#MoreStructures_Tests_KnuthMorrisPratt_PrefixFunction_FastPrefixFunctionCalculatorTests__ctor_
+  commentId: Overload:MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculatorTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculatorTests.FastPrefixFunctionCalculatorTests
+  nameWithType: FastPrefixFunctionCalculatorTests.FastPrefixFunctionCalculatorTests
 - uid: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculatorTests
   name: NaivePrefixFunctionCalculatorTests
   href: api/MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.NaivePrefixFunctionCalculatorTests.html
