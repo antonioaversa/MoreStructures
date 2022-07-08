@@ -15,14 +15,16 @@ namespace MoreStructures.KnuthMorrisPratt.Borders;
 ///       also a border of the longest border of the text.
 ///       <br/>
 ///     - That is, if T[0..w] is a border of T of length w, and T has longest border T[0..lb] of length lb, where 
-///       0 &lt; w &lt; lb, then T[0..w] is also border of T[0..lb].
+///       0 &lt; w &lt; lb, then T[0..w] is also border of T[0..lb]. That is: any non-longest border of T is also 
+///       border of the longest border of T.
 ///       <br/>
 ///     - Given the Prefix Function s of T, the length of the longest border of T can be calculated as s(n - 1), where
-///       n is the length of T.
+///       n is the length of T. The longest border of the longest border can be calculated as s(s(n - 1) - 1). And so
+///       on...
 ///       <br/>
-///     - Then borders are found iteratively: the next border (shorter than the longest) can be calculated as the 
+///     - Therefore, borders are found iteratively: the next border (shorter than the longest) can be calculated as the 
 ///       longest border of the border found at the previous iteration, by using the Prefix Function on the predecessor
-///       of the previous result.
+///       of the previous result: w(i) = s(w(i - 1) - 1); w(i + 1) = s(w(i) - 1) = s(s(w(i - 1) - 1) - 1), etc.
 ///       <br/>
 ///     - The iteration terminates when the Prefix Function returns 0, i.e. there is no border.
 ///     </para>
@@ -61,6 +63,5 @@ public class PrefixFunctionBasedBorderExtraction : IBordersExtraction
             yield return text[0..i];
             i = prefixFunctionValues[i - 1];
         }
-        
     }
 }
