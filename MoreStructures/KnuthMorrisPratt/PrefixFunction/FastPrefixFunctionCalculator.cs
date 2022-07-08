@@ -49,7 +49,9 @@ namespace MoreStructures.KnuthMorrisPratt.PrefixFunction;
 ///     <br/>
 ///     - There are as many top-level iterations as indexes of the Prefix Function and chars of the text.
 ///       <br/>
-///     - For each top-level iteration, there are at most as many sub-iterations as borders of the prefix.
+///     - For each top-level iteration, there are at most as many sub-iterations as borders of the prefix, each one
+///       checking a single char of the text. In the worst case there are O(n) borders, meaning that each sub-iteration
+///       requires O(n) char comparisons.
 ///       <br/>
 ///     - All accesses to values calculated in previous steps and to chars of the text are done in constant time.
 ///       <br/>
@@ -58,7 +60,7 @@ namespace MoreStructures.KnuthMorrisPratt.PrefixFunction;
 ///       <br/>
 ///     - No other data structure is allocated by the algorithm.
 ///       <br/>
-///     - Therefore, Time Complexity is O() and Space Complexity is O(n).
+///     - Therefore, Time Complexity is O(n^2) and Space Complexity is O(n).
 ///     </para>
 /// </remarks>
 public class FastPrefixFunctionCalculator : IPrefixFunctionCalculator
