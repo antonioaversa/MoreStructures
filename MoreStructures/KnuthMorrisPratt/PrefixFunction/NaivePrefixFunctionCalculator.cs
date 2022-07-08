@@ -35,6 +35,9 @@ namespace MoreStructures.KnuthMorrisPratt.PrefixFunction;
 ///     - Therefore, Time Complexity is O(n * Tlb) and Space Complexity is O(n * Slb), where Tlb and Slb are the Time 
 ///       and Space Complexity of finding the longest border (1st item) via the provided 
 ///       <see cref="BordersExtraction"/>.
+///       <br/>
+///     - When <see cref="NaiveBordersExtraction"/> is used as <see cref="BordersExtraction"/>, Time Complexity is
+///       O(n^3) and Space Complexity is O(n).
 ///     </para>
 /// </remarks>
 public class NaivePrefixFunctionCalculator : IPrefixFunctionCalculator
