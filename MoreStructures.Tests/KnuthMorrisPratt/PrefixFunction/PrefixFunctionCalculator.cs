@@ -20,6 +20,7 @@ public abstract class PrefixFunctionCalculatorTests
     [DataRow(new int[] { 0, 0, 1, 2, 3 }, "ababa")]
     [DataRow(new int[] { 0, 1, 0, 1, 2, 3, 4, 5 }, "aabaabaa")]
     [DataRow(new int[] { 0, 0, 0, 1, 2, 3, 4, 5, 6 }, "abcabcabc")]
+    [DataRow(new int[] { 0, 0, 0, 1, 1, 2, 3, 4, 2 }, "abbaabbab")]
     [DataTestMethod]
     public void GetAllBordersByDescLength_IsCorrect(int[] expectedResult, string text)
     {
