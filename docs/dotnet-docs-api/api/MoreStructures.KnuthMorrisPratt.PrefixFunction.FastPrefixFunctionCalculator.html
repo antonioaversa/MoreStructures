@@ -168,7 +168,9 @@ COMPLEXITY
 <br>
 - There are as many top-level iterations as indexes of the Prefix Function and chars of the text.
 <br>
-- For each top-level iteration, there are at most as many sub-iterations as borders of the prefix.
+- For each top-level iteration, there are at most as many sub-iterations as borders of the prefix, each one
+checking a single char of the text. In the worst case there are O(n) borders, meaning that each sub-iteration
+requires O(n) char comparisons.
 <br>
 - All accesses to values calculated in previous steps and to chars of the text are done in constant time.
 <br>
@@ -177,7 +179,7 @@ the value calculated at each step, since that value may be used in following ite
 <br>
 - No other data structure is allocated by the algorithm.
 <br>
-- Therefore, Time Complexity is O() and Space Complexity is O(n).
+- Therefore, Time Complexity is O(n^2) and Space Complexity is O(n).
 </p>
 </div>
   <h3 id="methods">Methods
@@ -187,7 +189,7 @@ the value calculated at each step, since that value may be used in following ite
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_KnuthMorrisPratt_PrefixFunction_FastPrefixFunctionCalculator_GetValues_System_String_.md&amp;value=---%0Auid%3A%20MoreStructures.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculator.GetValues(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/KnuthMorrisPratt/PrefixFunction/FastPrefixFunctionCalculator.cs/#L70">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/KnuthMorrisPratt/PrefixFunction/FastPrefixFunctionCalculator.cs/#L72">View Source</a>
   </span>
   <a id="MoreStructures_KnuthMorrisPratt_PrefixFunction_FastPrefixFunctionCalculator_GetValues_" data-uid="MoreStructures.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculator.GetValues*"></a>
   <h4 id="MoreStructures_KnuthMorrisPratt_PrefixFunction_FastPrefixFunctionCalculator_GetValues_System_String_" data-uid="MoreStructures.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculator.GetValues(System.String)">GetValues(String)</h4>
@@ -251,7 +253,7 @@ the value calculated at each step, since that value may be used in following ite
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_KnuthMorrisPratt_PrefixFunction_FastPrefixFunctionCalculator.md&amp;value=---%0Auid%3A%20MoreStructures.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/KnuthMorrisPratt/PrefixFunction/FastPrefixFunctionCalculator.cs/#L64" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/KnuthMorrisPratt/PrefixFunction/FastPrefixFunctionCalculator.cs/#L66" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
