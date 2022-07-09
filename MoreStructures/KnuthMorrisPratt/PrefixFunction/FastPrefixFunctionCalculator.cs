@@ -53,6 +53,21 @@ namespace MoreStructures.KnuthMorrisPratt.PrefixFunction;
 ///       checking a single char of the text. In the worst case there are O(n) borders, meaning that each sub-iteration
 ///       requires O(n) char comparisons.
 ///       <br/>
+///     - That would seem to imply that the number of sub-iterations in total, throughout all top-level iterations,
+///       would be quadratic.
+///       <br/>
+///     - However, the length of the border calculated by the inner loop is always non-negative and is increased of at
+///       most n times (since it is increased of at most 1 per char of text).
+///       <br/>
+///     - Moreover, it is progressively shorten by the inner loop, decreased of at least 1 per sub-iteration. This is 
+///       because, when the char following the current border is different than the current char (which is the 
+///       condition of the inner loop), the next border is the longest border of the current border, which is strictly
+///       shorter than the current border.
+///       <br/>
+///     - Therefore the length of the border can reach at most n thoughout all top-level iterations, and is always
+///       non-negative and decreased by 1 at each sub-iteration, which means that the total number of inner loop
+///       iterations through all top-level iterations is O(n).
+///       <br/>
 ///     - All accesses to values calculated in previous steps and to chars of the text are done in constant time.
 ///       <br/>
 ///     - An array of integers, as big as the numbers of chars in the text, is allocated at the beginning, to memoize
@@ -60,7 +75,7 @@ namespace MoreStructures.KnuthMorrisPratt.PrefixFunction;
 ///       <br/>
 ///     - No other data structure is allocated by the algorithm.
 ///       <br/>
-///     - Therefore, Time Complexity is O(n^2) and Space Complexity is O(n).
+///     - Therefore, Time Complexity is O(n) and Space Complexity is O(n).
 ///     </para>
 /// </remarks>
 public class FastPrefixFunctionCalculator : IPrefixFunctionCalculator
