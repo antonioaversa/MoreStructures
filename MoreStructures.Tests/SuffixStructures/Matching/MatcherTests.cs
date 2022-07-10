@@ -1,5 +1,6 @@
 ﻿using MoreLinq;
 using MoreStructures.RecImmTrees;
+using MoreStructures.Strings;
 using MoreStructures.SuffixStructures;
 using MoreStructures.SuffixStructures.Matching;
 using MoreStructures.SuffixTrees;

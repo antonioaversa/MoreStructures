@@ -1,4 +1,5 @@
 ﻿using MoreStructures.RecImmTrees;
+using MoreStructures.Strings;
 using static MoreStructures.Utilities.StringUtilities;
 
 namespace MoreStructures.SuffixStructures.Matching;
