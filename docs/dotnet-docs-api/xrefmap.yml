@@ -1558,6 +1558,31 @@ references:
   isSpec: "True"
   fullName: MoreStructures.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtraction.PrefixFunctionCalculator
   nameWithType: PrefixFunctionBasedBorderExtraction.PrefixFunctionCalculator
+- uid: MoreStructures.KnuthMorrisPratt.Matching
+  name: MoreStructures.KnuthMorrisPratt.Matching
+  href: api/MoreStructures.KnuthMorrisPratt.Matching.html
+  commentId: N:MoreStructures.KnuthMorrisPratt.Matching
+  fullName: MoreStructures.KnuthMorrisPratt.Matching
+  nameWithType: MoreStructures.KnuthMorrisPratt.Matching
+- uid: MoreStructures.KnuthMorrisPratt.Matching.Matcher
+  name: Matcher
+  href: api/MoreStructures.KnuthMorrisPratt.Matching.Matcher.html
+  commentId: T:MoreStructures.KnuthMorrisPratt.Matching.Matcher
+  fullName: MoreStructures.KnuthMorrisPratt.Matching.Matcher
+  nameWithType: Matcher
+- uid: MoreStructures.KnuthMorrisPratt.Matching.Matcher.Match(System.String,System.String,System.Char)
+  name: Match(String, String, Char)
+  href: api/MoreStructures.KnuthMorrisPratt.Matching.Matcher.html#MoreStructures_KnuthMorrisPratt_Matching_Matcher_Match_System_String_System_String_System_Char_
+  commentId: M:MoreStructures.KnuthMorrisPratt.Matching.Matcher.Match(System.String,System.String,System.Char)
+  fullName: MoreStructures.KnuthMorrisPratt.Matching.Matcher.Match(System.String, System.String, System.Char)
+  nameWithType: Matcher.Match(String, String, Char)
+- uid: MoreStructures.KnuthMorrisPratt.Matching.Matcher.Match*
+  name: Match
+  href: api/MoreStructures.KnuthMorrisPratt.Matching.Matcher.html#MoreStructures_KnuthMorrisPratt_Matching_Matcher_Match_
+  commentId: Overload:MoreStructures.KnuthMorrisPratt.Matching.Matcher.Match
+  isSpec: "True"
+  fullName: MoreStructures.KnuthMorrisPratt.Matching.Matcher.Match
+  nameWithType: Matcher.Match
 - uid: MoreStructures.KnuthMorrisPratt.PrefixFunction
   name: MoreStructures.KnuthMorrisPratt.PrefixFunction
   href: api/MoreStructures.KnuthMorrisPratt.PrefixFunction.html
@@ -3114,6 +3139,106 @@ references:
   isSpec: "True"
   fullName: MoreStructures.RotatedTextWithTerminator.ValidateInput
   nameWithType: RotatedTextWithTerminator.ValidateInput
+- uid: MoreStructures.Strings
+  name: MoreStructures.Strings
+  href: api/MoreStructures.Strings.html
+  commentId: N:MoreStructures.Strings
+  fullName: MoreStructures.Strings
+  nameWithType: MoreStructures.Strings
+- uid: MoreStructures.Strings.Match`1
+  name: Match<TPath>
+  href: api/MoreStructures.Strings.Match-1.html
+  commentId: T:MoreStructures.Strings.Match`1
+  name.vb: Match(Of TPath)
+  fullName: MoreStructures.Strings.Match<TPath>
+  fullName.vb: MoreStructures.Strings.Match(Of TPath)
+  nameWithType: Match<TPath>
+  nameWithType.vb: Match(Of TPath)
+- uid: MoreStructures.Strings.Match`1.#ctor(System.Boolean,System.Int32,System.Int32,`0)
+  name: Match(Boolean, Int32, Int32, TPath)
+  href: api/MoreStructures.Strings.Match-1.html#MoreStructures_Strings_Match_1__ctor_System_Boolean_System_Int32_System_Int32__0_
+  commentId: M:MoreStructures.Strings.Match`1.#ctor(System.Boolean,System.Int32,System.Int32,`0)
+  fullName: MoreStructures.Strings.Match<TPath>.Match(System.Boolean, System.Int32, System.Int32, TPath)
+  fullName.vb: MoreStructures.Strings.Match(Of TPath).Match(System.Boolean, System.Int32, System.Int32, TPath)
+  nameWithType: Match<TPath>.Match(Boolean, Int32, Int32, TPath)
+  nameWithType.vb: Match(Of TPath).Match(Boolean, Int32, Int32, TPath)
+- uid: MoreStructures.Strings.Match`1.#ctor*
+  name: Match
+  href: api/MoreStructures.Strings.Match-1.html#MoreStructures_Strings_Match_1__ctor_
+  commentId: Overload:MoreStructures.Strings.Match`1.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Strings.Match<TPath>.Match
+  fullName.vb: MoreStructures.Strings.Match(Of TPath).Match
+  nameWithType: Match<TPath>.Match
+  nameWithType.vb: Match(Of TPath).Match
+- uid: MoreStructures.Strings.Match`1.Begin
+  name: Begin
+  href: api/MoreStructures.Strings.Match-1.html#MoreStructures_Strings_Match_1_Begin
+  commentId: P:MoreStructures.Strings.Match`1.Begin
+  fullName: MoreStructures.Strings.Match<TPath>.Begin
+  fullName.vb: MoreStructures.Strings.Match(Of TPath).Begin
+  nameWithType: Match<TPath>.Begin
+  nameWithType.vb: Match(Of TPath).Begin
+- uid: MoreStructures.Strings.Match`1.Begin*
+  name: Begin
+  href: api/MoreStructures.Strings.Match-1.html#MoreStructures_Strings_Match_1_Begin_
+  commentId: Overload:MoreStructures.Strings.Match`1.Begin
+  isSpec: "True"
+  fullName: MoreStructures.Strings.Match<TPath>.Begin
+  fullName.vb: MoreStructures.Strings.Match(Of TPath).Begin
+  nameWithType: Match<TPath>.Begin
+  nameWithType.vb: Match(Of TPath).Begin
+- uid: MoreStructures.Strings.Match`1.MatchedChars
+  name: MatchedChars
+  href: api/MoreStructures.Strings.Match-1.html#MoreStructures_Strings_Match_1_MatchedChars
+  commentId: P:MoreStructures.Strings.Match`1.MatchedChars
+  fullName: MoreStructures.Strings.Match<TPath>.MatchedChars
+  fullName.vb: MoreStructures.Strings.Match(Of TPath).MatchedChars
+  nameWithType: Match<TPath>.MatchedChars
+  nameWithType.vb: Match(Of TPath).MatchedChars
+- uid: MoreStructures.Strings.Match`1.MatchedChars*
+  name: MatchedChars
+  href: api/MoreStructures.Strings.Match-1.html#MoreStructures_Strings_Match_1_MatchedChars_
+  commentId: Overload:MoreStructures.Strings.Match`1.MatchedChars
+  isSpec: "True"
+  fullName: MoreStructures.Strings.Match<TPath>.MatchedChars
+  fullName.vb: MoreStructures.Strings.Match(Of TPath).MatchedChars
+  nameWithType: Match<TPath>.MatchedChars
+  nameWithType.vb: Match(Of TPath).MatchedChars
+- uid: MoreStructures.Strings.Match`1.Path
+  name: Path
+  href: api/MoreStructures.Strings.Match-1.html#MoreStructures_Strings_Match_1_Path
+  commentId: P:MoreStructures.Strings.Match`1.Path
+  fullName: MoreStructures.Strings.Match<TPath>.Path
+  fullName.vb: MoreStructures.Strings.Match(Of TPath).Path
+  nameWithType: Match<TPath>.Path
+  nameWithType.vb: Match(Of TPath).Path
+- uid: MoreStructures.Strings.Match`1.Path*
+  name: Path
+  href: api/MoreStructures.Strings.Match-1.html#MoreStructures_Strings_Match_1_Path_
+  commentId: Overload:MoreStructures.Strings.Match`1.Path
+  isSpec: "True"
+  fullName: MoreStructures.Strings.Match<TPath>.Path
+  fullName.vb: MoreStructures.Strings.Match(Of TPath).Path
+  nameWithType: Match<TPath>.Path
+  nameWithType.vb: Match(Of TPath).Path
+- uid: MoreStructures.Strings.Match`1.Success
+  name: Success
+  href: api/MoreStructures.Strings.Match-1.html#MoreStructures_Strings_Match_1_Success
+  commentId: P:MoreStructures.Strings.Match`1.Success
+  fullName: MoreStructures.Strings.Match<TPath>.Success
+  fullName.vb: MoreStructures.Strings.Match(Of TPath).Success
+  nameWithType: Match<TPath>.Success
+  nameWithType.vb: Match(Of TPath).Success
+- uid: MoreStructures.Strings.Match`1.Success*
+  name: Success
+  href: api/MoreStructures.Strings.Match-1.html#MoreStructures_Strings_Match_1_Success_
+  commentId: Overload:MoreStructures.Strings.Match`1.Success
+  isSpec: "True"
+  fullName: MoreStructures.Strings.Match<TPath>.Success
+  fullName.vb: MoreStructures.Strings.Match(Of TPath).Success
+  nameWithType: Match<TPath>.Success
+  nameWithType.vb: Match(Of TPath).Success
 - uid: MoreStructures.SuffixArrays
   name: MoreStructures.SuffixArrays
   href: api/MoreStructures.SuffixArrays.html
@@ -3594,100 +3719,6 @@ references:
   isSpec: "True"
   fullName: MoreStructures.SuffixStructures.Matching.ISnssFinder.Find
   nameWithType: ISnssFinder.Find
-- uid: MoreStructures.SuffixStructures.Matching.Match`1
-  name: Match<TPath>
-  href: api/MoreStructures.SuffixStructures.Matching.Match-1.html
-  commentId: T:MoreStructures.SuffixStructures.Matching.Match`1
-  name.vb: Match(Of TPath)
-  fullName: MoreStructures.SuffixStructures.Matching.Match<TPath>
-  fullName.vb: MoreStructures.SuffixStructures.Matching.Match(Of TPath)
-  nameWithType: Match<TPath>
-  nameWithType.vb: Match(Of TPath)
-- uid: MoreStructures.SuffixStructures.Matching.Match`1.#ctor(System.Boolean,System.Int32,System.Int32,`0)
-  name: Match(Boolean, Int32, Int32, TPath)
-  href: api/MoreStructures.SuffixStructures.Matching.Match-1.html#MoreStructures_SuffixStructures_Matching_Match_1__ctor_System_Boolean_System_Int32_System_Int32__0_
-  commentId: M:MoreStructures.SuffixStructures.Matching.Match`1.#ctor(System.Boolean,System.Int32,System.Int32,`0)
-  fullName: MoreStructures.SuffixStructures.Matching.Match<TPath>.Match(System.Boolean, System.Int32, System.Int32, TPath)
-  fullName.vb: MoreStructures.SuffixStructures.Matching.Match(Of TPath).Match(System.Boolean, System.Int32, System.Int32, TPath)
-  nameWithType: Match<TPath>.Match(Boolean, Int32, Int32, TPath)
-  nameWithType.vb: Match(Of TPath).Match(Boolean, Int32, Int32, TPath)
-- uid: MoreStructures.SuffixStructures.Matching.Match`1.#ctor*
-  name: Match
-  href: api/MoreStructures.SuffixStructures.Matching.Match-1.html#MoreStructures_SuffixStructures_Matching_Match_1__ctor_
-  commentId: Overload:MoreStructures.SuffixStructures.Matching.Match`1.#ctor
-  isSpec: "True"
-  fullName: MoreStructures.SuffixStructures.Matching.Match<TPath>.Match
-  fullName.vb: MoreStructures.SuffixStructures.Matching.Match(Of TPath).Match
-  nameWithType: Match<TPath>.Match
-  nameWithType.vb: Match(Of TPath).Match
-- uid: MoreStructures.SuffixStructures.Matching.Match`1.Begin
-  name: Begin
-  href: api/MoreStructures.SuffixStructures.Matching.Match-1.html#MoreStructures_SuffixStructures_Matching_Match_1_Begin
-  commentId: P:MoreStructures.SuffixStructures.Matching.Match`1.Begin
-  fullName: MoreStructures.SuffixStructures.Matching.Match<TPath>.Begin
-  fullName.vb: MoreStructures.SuffixStructures.Matching.Match(Of TPath).Begin
-  nameWithType: Match<TPath>.Begin
-  nameWithType.vb: Match(Of TPath).Begin
-- uid: MoreStructures.SuffixStructures.Matching.Match`1.Begin*
-  name: Begin
-  href: api/MoreStructures.SuffixStructures.Matching.Match-1.html#MoreStructures_SuffixStructures_Matching_Match_1_Begin_
-  commentId: Overload:MoreStructures.SuffixStructures.Matching.Match`1.Begin
-  isSpec: "True"
-  fullName: MoreStructures.SuffixStructures.Matching.Match<TPath>.Begin
-  fullName.vb: MoreStructures.SuffixStructures.Matching.Match(Of TPath).Begin
-  nameWithType: Match<TPath>.Begin
-  nameWithType.vb: Match(Of TPath).Begin
-- uid: MoreStructures.SuffixStructures.Matching.Match`1.MatchedChars
-  name: MatchedChars
-  href: api/MoreStructures.SuffixStructures.Matching.Match-1.html#MoreStructures_SuffixStructures_Matching_Match_1_MatchedChars
-  commentId: P:MoreStructures.SuffixStructures.Matching.Match`1.MatchedChars
-  fullName: MoreStructures.SuffixStructures.Matching.Match<TPath>.MatchedChars
-  fullName.vb: MoreStructures.SuffixStructures.Matching.Match(Of TPath).MatchedChars
-  nameWithType: Match<TPath>.MatchedChars
-  nameWithType.vb: Match(Of TPath).MatchedChars
-- uid: MoreStructures.SuffixStructures.Matching.Match`1.MatchedChars*
-  name: MatchedChars
-  href: api/MoreStructures.SuffixStructures.Matching.Match-1.html#MoreStructures_SuffixStructures_Matching_Match_1_MatchedChars_
-  commentId: Overload:MoreStructures.SuffixStructures.Matching.Match`1.MatchedChars
-  isSpec: "True"
-  fullName: MoreStructures.SuffixStructures.Matching.Match<TPath>.MatchedChars
-  fullName.vb: MoreStructures.SuffixStructures.Matching.Match(Of TPath).MatchedChars
-  nameWithType: Match<TPath>.MatchedChars
-  nameWithType.vb: Match(Of TPath).MatchedChars
-- uid: MoreStructures.SuffixStructures.Matching.Match`1.Path
-  name: Path
-  href: api/MoreStructures.SuffixStructures.Matching.Match-1.html#MoreStructures_SuffixStructures_Matching_Match_1_Path
-  commentId: P:MoreStructures.SuffixStructures.Matching.Match`1.Path
-  fullName: MoreStructures.SuffixStructures.Matching.Match<TPath>.Path
-  fullName.vb: MoreStructures.SuffixStructures.Matching.Match(Of TPath).Path
-  nameWithType: Match<TPath>.Path
-  nameWithType.vb: Match(Of TPath).Path
-- uid: MoreStructures.SuffixStructures.Matching.Match`1.Path*
-  name: Path
-  href: api/MoreStructures.SuffixStructures.Matching.Match-1.html#MoreStructures_SuffixStructures_Matching_Match_1_Path_
-  commentId: Overload:MoreStructures.SuffixStructures.Matching.Match`1.Path
-  isSpec: "True"
-  fullName: MoreStructures.SuffixStructures.Matching.Match<TPath>.Path
-  fullName.vb: MoreStructures.SuffixStructures.Matching.Match(Of TPath).Path
-  nameWithType: Match<TPath>.Path
-  nameWithType.vb: Match(Of TPath).Path
-- uid: MoreStructures.SuffixStructures.Matching.Match`1.Success
-  name: Success
-  href: api/MoreStructures.SuffixStructures.Matching.Match-1.html#MoreStructures_SuffixStructures_Matching_Match_1_Success
-  commentId: P:MoreStructures.SuffixStructures.Matching.Match`1.Success
-  fullName: MoreStructures.SuffixStructures.Matching.Match<TPath>.Success
-  fullName.vb: MoreStructures.SuffixStructures.Matching.Match(Of TPath).Success
-  nameWithType: Match<TPath>.Success
-  nameWithType.vb: Match(Of TPath).Success
-- uid: MoreStructures.SuffixStructures.Matching.Match`1.Success*
-  name: Success
-  href: api/MoreStructures.SuffixStructures.Matching.Match-1.html#MoreStructures_SuffixStructures_Matching_Match_1_Success_
-  commentId: Overload:MoreStructures.SuffixStructures.Matching.Match`1.Success
-  isSpec: "True"
-  fullName: MoreStructures.SuffixStructures.Matching.Match<TPath>.Success
-  fullName.vb: MoreStructures.SuffixStructures.Matching.Match(Of TPath).Success
-  nameWithType: Match<TPath>.Success
-  nameWithType.vb: Match(Of TPath).Success
 - uid: MoreStructures.SuffixStructures.Matching.Matcher
   name: Matcher
   href: api/MoreStructures.SuffixStructures.Matching.Matcher.html
@@ -5718,6 +5749,34 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.KnuthMorrisPratt.Borders.PrefixFunctionBasedBorderExtractionTests.PrefixFunctionBasedBorderExtractionTests
   nameWithType: PrefixFunctionBasedBorderExtractionTests.PrefixFunctionBasedBorderExtractionTests
+- uid: MoreStructures.Tests.KnuthMorrisPratt.Matching
+  name: MoreStructures.Tests.KnuthMorrisPratt.Matching
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.Matching.html
+  commentId: N:MoreStructures.Tests.KnuthMorrisPratt.Matching
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.Matching
+  nameWithType: MoreStructures.Tests.KnuthMorrisPratt.Matching
+- uid: MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests
+  name: MatcherTests
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.html
+  commentId: T:MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests
+  nameWithType: MatcherTests
+- uid: MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_IsCorrect(System.String,System.String,System.Int32[])
+  name: Match_IsCorrect(String, String, Int32[])
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.html#MoreStructures_Tests_KnuthMorrisPratt_Matching_MatcherTests_Match_IsCorrect_System_String_System_String_System_Int32___
+  commentId: M:MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_IsCorrect(System.String,System.String,System.Int32[])
+  name.vb: Match_IsCorrect(String, String, Int32())
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_IsCorrect(System.String, System.String, System.Int32[])
+  fullName.vb: MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_IsCorrect(System.String, System.String, System.Int32())
+  nameWithType: MatcherTests.Match_IsCorrect(String, String, Int32[])
+  nameWithType.vb: MatcherTests.Match_IsCorrect(String, String, Int32())
+- uid: MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_IsCorrect*
+  name: Match_IsCorrect
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.html#MoreStructures_Tests_KnuthMorrisPratt_Matching_MatcherTests_Match_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_IsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_IsCorrect
+  nameWithType: MatcherTests.Match_IsCorrect
 - uid: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction
   name: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction
   href: api/MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.html

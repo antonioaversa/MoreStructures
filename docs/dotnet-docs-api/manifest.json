@@ -374,6 +374,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.KnuthMorrisPratt.Matching.Matcher.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.KnuthMorrisPratt.Matching.Matcher.html",
+          "hash": "tvwFGNkIP8A3/mv00XUHeqGKcnN42cpESK6isUAANhc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.KnuthMorrisPratt.Matching.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.KnuthMorrisPratt.Matching.html",
+          "hash": "Bdnzsyh4MZ8myagVUviggfTdwG8PBC6nq+GeVwVVPuw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.KnuthMorrisPratt.PrefixFunction.FastPrefixFunctionCalculator.yml",
       "output": {
         ".html": {
@@ -830,6 +854,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Strings.Match-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Strings.Match-1.html",
+          "hash": "Gz7ooIOLuDt50ThtFu8rul+BjabRKp+X9e9jSdbxwts="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Strings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Strings.html",
+          "hash": "JbQkqjrzrVtIe2qy/Oh41IAyQIn15PMoZzHhKBsSWgE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.SuffixArrays..yml",
       "output": {
         ".html": {
@@ -1046,23 +1094,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MoreStructures.SuffixStructures.Matching.Match-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MoreStructures.SuffixStructures.Matching.Match-1.html",
-          "hash": "9nvr2bfDS+TCz+v/wLVdrFg/ECpXRZ3+MmkqGEsDS1M="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.SuffixStructures.Matching.Matcher.yml",
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.SuffixStructures.Matching.Matcher.html",
-          "hash": "/bw4Qsotk/eg6nfDcDyp2BsPBYZ9UjU4Vbqd++kgDVE="
+          "hash": "1ySTZTNSnOUcpYt6VRNzbUTSSx9+xj/XDPyq43Y5Qtc="
         }
       },
       "is_incremental": false,
@@ -1122,7 +1158,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.SuffixStructures.Matching.html",
-          "hash": "sk4Wk0YhaflgGc2++vpa3Httgg4Lsew9U587WMx627k="
+          "hash": "tt3D+xeKAYWHcbK6Nff0ZkEA6OE5CGuBWQli23F5Uz8="
         }
       },
       "is_incremental": false,
@@ -1711,6 +1747,30 @@
         ".html": {
           "relative_path": "api/MoreStructures.Tests.KnuthMorrisPratt.Borders.html",
           "hash": "vGsOrFEeB75RkveD5GsxQG/iKOfuvJ2c9dTNWqG8nt4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.html",
+          "hash": "/gWOVUJVRetaLMBh35x4PAcFEJ6HoWql4lghacgduSc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.KnuthMorrisPratt.Matching.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.KnuthMorrisPratt.Matching.html",
+          "hash": "KWvH5jlCIW19Wcripj280b2N2ykVPVrAZbU/d9GJkHc="
         }
       },
       "is_incremental": false,
@@ -2526,7 +2586,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.SuffixTrees.Matching.MatcherTests.html",
-          "hash": "OaEJJPKg7ztfCR7T+9v88BqUQvFFCHJtaZcKyoy3Wbw="
+          "hash": "llliG3z0p6N6vDTKh+vxREkjR6zQIWzhcif/20k9274="
         }
       },
       "is_incremental": false,
@@ -3162,7 +3222,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "Q/ps1/IokjWAsEPh4q67os1nel/FCwzxm7gkoaGEcHw="
+          "hash": "PkWag9PAhOQSuUoKcfZPzgIXk6k+LgWGl6iQM/LYZa4="
         }
       },
       "is_incremental": false,
@@ -3237,7 +3297,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 261,
+          "total_file_count": 266,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
