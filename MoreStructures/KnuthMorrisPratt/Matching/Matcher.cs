@@ -21,6 +21,12 @@ public static class Matcher
     /// <paramref name="text"/>. The special character is required by the algorithm and must be absent from both the 
     /// <paramref name="pattern"/> and the <paramref name="text"/>.
     /// </param>
+    /// <param name="validateSeparator">
+    /// Whether an additional validation check should be performed, before actually running the algorithm, on whether
+    /// <paramref name="text"/> and <paramref name="pattern"/> contain <paramref name="separator"/> or not. The check
+    /// requires going through all chars of text and pattern, and can be expensive. This is why it has to be
+    /// explicitely opted-in.
+    /// </param>
     /// <returns>
     /// A sequence of all matches, from the one starting at the lowest index in <paramref name="text"/> to the one
     /// starting at the highest index.
@@ -46,6 +52,11 @@ public static class Matcher
     ///     <para id="complexity">
     ///     COMPLEXITY
     ///     <br/>
+    ///     - The only validation check which is not done in constant time is whether text and pattern contain the
+    ///       separator. This validation check is by default not done, and has to be opted in via the flag 
+    ///       <paramref name="validateSeparator"/>. When executed it takes O(n + m) time, since it has to compare the
+    ///       separator against each char of the text and of the pattern.
+    ///       <br/>
     ///     - The concatenated string has length n + m + 1, where n is the length of the text and m is the length of
     ///       the pattern. Building it requires iterating both over the pattern and the text.
     ///       <br/>
@@ -59,8 +70,29 @@ public static class Matcher
     ///     - Therefore, both Time and Space Complexity are O(n + m).
     ///     </para>
     /// </remarks>
-    public static IEnumerable<Match<int>> Match(string text, string pattern, char separator)
+    public static IEnumerable<Match<int>> Match(
+        string text, string pattern, char separator, bool validateSeparator = false)
     {
+        if (string.IsNullOrEmpty(pattern))
+            throw new ArgumentException("Must be non-empty.", nameof(pattern));
+
+        if (validateSeparator)
+        {
+            if (text.Contains(separator))
+                throw new ArgumentException($"Should not contain {nameof(separator)}.", nameof(text));
+            if (pattern.Contains(separator))
+                throw new ArgumentException($"Should not contain {nameof(separator)}.", nameof(pattern));
+        }
+
+        return MatchEnumerable(text, pattern, separator);
+    }
+
+    private static IEnumerable<Match<int>> MatchEnumerable(
+       string text, string pattern, char separator)
+    {
+        if (string.IsNullOrEmpty(text))
+            yield break;
+
         var patternAndText = string.Concat(pattern, separator, text);
         var prefixFunction = PrefixFunctionCalculator.GetValues(patternAndText).ToList();
         var m = pattern.Length;
