@@ -73,8 +73,6 @@ public static class Matcher
     public static IEnumerable<Match<int>> Match(
         string text, string pattern, char separator, bool validateSeparator = false)
     {
-        if (string.IsNullOrEmpty(text))
-            yield break;
         if (string.IsNullOrEmpty(pattern))
             throw new ArgumentException("Must be non-empty.", nameof(pattern));
 
@@ -85,6 +83,15 @@ public static class Matcher
             if (pattern.Contains(separator))
                 throw new ArgumentException($"Should not contain {nameof(separator)}.", nameof(pattern));
         }
+
+        return MatchEnumerable(text, pattern, separator, validateSeparator);
+    }
+
+    private static IEnumerable<Match<int>> MatchEnumerable(
+       string text, string pattern, char separator, bool validateSeparator = false)
+    {
+        if (string.IsNullOrEmpty(text))
+            yield break;
 
         var patternAndText = string.Concat(pattern, separator, text);
         var prefixFunction = PrefixFunctionCalculator.GetValues(patternAndText).ToList();
