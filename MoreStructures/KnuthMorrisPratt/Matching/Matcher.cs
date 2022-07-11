@@ -84,11 +84,11 @@ public static class Matcher
                 throw new ArgumentException($"Should not contain {nameof(separator)}.", nameof(pattern));
         }
 
-        return MatchEnumerable(text, pattern, separator, validateSeparator);
+        return MatchEnumerable(text, pattern, separator);
     }
 
     private static IEnumerable<Match<int>> MatchEnumerable(
-       string text, string pattern, char separator, bool validateSeparator = false)
+       string text, string pattern, char separator)
     {
         if (string.IsNullOrEmpty(text))
             yield break;
