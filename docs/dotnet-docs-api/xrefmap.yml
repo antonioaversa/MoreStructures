@@ -1570,12 +1570,12 @@ references:
   commentId: T:MoreStructures.KnuthMorrisPratt.Matching.Matcher
   fullName: MoreStructures.KnuthMorrisPratt.Matching.Matcher
   nameWithType: Matcher
-- uid: MoreStructures.KnuthMorrisPratt.Matching.Matcher.Match(System.String,System.String,System.Char)
-  name: Match(String, String, Char)
-  href: api/MoreStructures.KnuthMorrisPratt.Matching.Matcher.html#MoreStructures_KnuthMorrisPratt_Matching_Matcher_Match_System_String_System_String_System_Char_
-  commentId: M:MoreStructures.KnuthMorrisPratt.Matching.Matcher.Match(System.String,System.String,System.Char)
-  fullName: MoreStructures.KnuthMorrisPratt.Matching.Matcher.Match(System.String, System.String, System.Char)
-  nameWithType: Matcher.Match(String, String, Char)
+- uid: MoreStructures.KnuthMorrisPratt.Matching.Matcher.Match(System.String,System.String,System.Char,System.Boolean)
+  name: Match(String, String, Char, Boolean)
+  href: api/MoreStructures.KnuthMorrisPratt.Matching.Matcher.html#MoreStructures_KnuthMorrisPratt_Matching_Matcher_Match_System_String_System_String_System_Char_System_Boolean_
+  commentId: M:MoreStructures.KnuthMorrisPratt.Matching.Matcher.Match(System.String,System.String,System.Char,System.Boolean)
+  fullName: MoreStructures.KnuthMorrisPratt.Matching.Matcher.Match(System.String, System.String, System.Char, System.Boolean)
+  nameWithType: Matcher.Match(String, String, Char, Boolean)
 - uid: MoreStructures.KnuthMorrisPratt.Matching.Matcher.Match*
   name: Match
   href: api/MoreStructures.KnuthMorrisPratt.Matching.Matcher.html#MoreStructures_KnuthMorrisPratt_Matching_Matcher_Match_
@@ -5761,6 +5761,19 @@ references:
   commentId: T:MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests
   fullName: MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests
   nameWithType: MatcherTests
+- uid: MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_DoesntValidateTextAndPatternAgainstSeparatorByDefault
+  name: Match_DoesntValidateTextAndPatternAgainstSeparatorByDefault()
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.html#MoreStructures_Tests_KnuthMorrisPratt_Matching_MatcherTests_Match_DoesntValidateTextAndPatternAgainstSeparatorByDefault
+  commentId: M:MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_DoesntValidateTextAndPatternAgainstSeparatorByDefault
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_DoesntValidateTextAndPatternAgainstSeparatorByDefault()
+  nameWithType: MatcherTests.Match_DoesntValidateTextAndPatternAgainstSeparatorByDefault()
+- uid: MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_DoesntValidateTextAndPatternAgainstSeparatorByDefault*
+  name: Match_DoesntValidateTextAndPatternAgainstSeparatorByDefault
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.html#MoreStructures_Tests_KnuthMorrisPratt_Matching_MatcherTests_Match_DoesntValidateTextAndPatternAgainstSeparatorByDefault_
+  commentId: Overload:MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_DoesntValidateTextAndPatternAgainstSeparatorByDefault
+  isSpec: "True"
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_DoesntValidateTextAndPatternAgainstSeparatorByDefault
+  nameWithType: MatcherTests.Match_DoesntValidateTextAndPatternAgainstSeparatorByDefault
 - uid: MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_IsCorrect(System.String,System.String,System.Int32[])
   name: Match_IsCorrect(String, String, Int32[])
   href: api/MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.html#MoreStructures_Tests_KnuthMorrisPratt_Matching_MatcherTests_Match_IsCorrect_System_String_System_String_System_Int32___
@@ -5777,6 +5790,45 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_IsCorrect
   nameWithType: MatcherTests.Match_IsCorrect
+- uid: MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_RaisesExceptionWhenTextAndPatternAreValidatedAgainstSeparator
+  name: Match_RaisesExceptionWhenTextAndPatternAreValidatedAgainstSeparator()
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.html#MoreStructures_Tests_KnuthMorrisPratt_Matching_MatcherTests_Match_RaisesExceptionWhenTextAndPatternAreValidatedAgainstSeparator
+  commentId: M:MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_RaisesExceptionWhenTextAndPatternAreValidatedAgainstSeparator
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_RaisesExceptionWhenTextAndPatternAreValidatedAgainstSeparator()
+  nameWithType: MatcherTests.Match_RaisesExceptionWhenTextAndPatternAreValidatedAgainstSeparator()
+- uid: MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_RaisesExceptionWhenTextAndPatternAreValidatedAgainstSeparator*
+  name: Match_RaisesExceptionWhenTextAndPatternAreValidatedAgainstSeparator
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.html#MoreStructures_Tests_KnuthMorrisPratt_Matching_MatcherTests_Match_RaisesExceptionWhenTextAndPatternAreValidatedAgainstSeparator_
+  commentId: Overload:MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_RaisesExceptionWhenTextAndPatternAreValidatedAgainstSeparator
+  isSpec: "True"
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_RaisesExceptionWhenTextAndPatternAreValidatedAgainstSeparator
+  nameWithType: MatcherTests.Match_RaisesExceptionWhenTextAndPatternAreValidatedAgainstSeparator
+- uid: MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_ReturnsNoMatchWithEmptyText
+  name: Match_ReturnsNoMatchWithEmptyText()
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.html#MoreStructures_Tests_KnuthMorrisPratt_Matching_MatcherTests_Match_ReturnsNoMatchWithEmptyText
+  commentId: M:MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_ReturnsNoMatchWithEmptyText
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_ReturnsNoMatchWithEmptyText()
+  nameWithType: MatcherTests.Match_ReturnsNoMatchWithEmptyText()
+- uid: MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_ReturnsNoMatchWithEmptyText*
+  name: Match_ReturnsNoMatchWithEmptyText
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.html#MoreStructures_Tests_KnuthMorrisPratt_Matching_MatcherTests_Match_ReturnsNoMatchWithEmptyText_
+  commentId: Overload:MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_ReturnsNoMatchWithEmptyText
+  isSpec: "True"
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_ReturnsNoMatchWithEmptyText
+  nameWithType: MatcherTests.Match_ReturnsNoMatchWithEmptyText
+- uid: MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_ThrowsExceptionWithEmptyPattern
+  name: Match_ThrowsExceptionWithEmptyPattern()
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.html#MoreStructures_Tests_KnuthMorrisPratt_Matching_MatcherTests_Match_ThrowsExceptionWithEmptyPattern
+  commentId: M:MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_ThrowsExceptionWithEmptyPattern
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_ThrowsExceptionWithEmptyPattern()
+  nameWithType: MatcherTests.Match_ThrowsExceptionWithEmptyPattern()
+- uid: MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_ThrowsExceptionWithEmptyPattern*
+  name: Match_ThrowsExceptionWithEmptyPattern
+  href: api/MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.html#MoreStructures_Tests_KnuthMorrisPratt_Matching_MatcherTests_Match_ThrowsExceptionWithEmptyPattern_
+  commentId: Overload:MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_ThrowsExceptionWithEmptyPattern
+  isSpec: "True"
+  fullName: MoreStructures.Tests.KnuthMorrisPratt.Matching.MatcherTests.Match_ThrowsExceptionWithEmptyPattern
+  nameWithType: MatcherTests.Match_ThrowsExceptionWithEmptyPattern
 - uid: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction
   name: MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction
   href: api/MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction.html
