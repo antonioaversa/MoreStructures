@@ -28,6 +28,29 @@ namespace MoreStructures.KnuthMorrisPratt.Borders;
 ///       <br/>
 ///     - The iteration terminates when the Prefix Function returns 0, i.e. there is no border.
 ///     </para>
+///     <para id="complexity">
+///     COMPLEXITY
+///     <br/>
+///     - Values of the Prefix Function have to be iterated up to the last, since the longest border of the provided
+///       text T has a length equal to the value of the Prefix Function in n - 1, where n is the length of T.
+///       <br/>
+///     - Then there are as many iterations as the number of borders of T. In the worst case, T can have a number of 
+///       borders comparable to the chars in it. For example, the string <c>new string('a', n)</c> has n - 1 borders:
+///       <c>new string('a', n - 1)</c>, <c>new string('a', n - 2)</c>, ..., "a".
+///       <br/>
+///     - For each iteration, the border is returned as new string, and that requires iterating over each char of the
+///       border. In the worst case, borders of T can have a length comparable to the length of T. For example the
+///       string <c>new string('a', n)</c> has a border of length <c>n - 1</c>.
+///       <br/>
+///     - Direct accessing of the list of values of the Prefix Function is done in constant time.
+///       <br/>
+///     - Storing the Prefix Function values requires storing n integers, each of constant size.
+///       <br/>
+///     - Every iteration the string of a single border is built and returned.
+///       <br/>
+///     - Therefore, Time Complexity is O(Tpf * n + n ^ 2) and Space Complexity is O(Spf * n + n), where Tpf and Spf
+///       are the amortized cost of the Prefix Function values over the n chars of T.
+///     </para>
 /// </remarks>
 public class PrefixFunctionBasedBorderExtraction : IBordersExtraction
 {
