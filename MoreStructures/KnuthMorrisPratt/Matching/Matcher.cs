@@ -1,5 +1,5 @@
 ﻿using MoreStructures.KnuthMorrisPratt.PrefixFunction;
-using MoreStructures.Strings;
+using MoreStructures.Strings.Matching;
 
 namespace MoreStructures.KnuthMorrisPratt.Matching;
 

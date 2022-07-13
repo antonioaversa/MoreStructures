@@ -1,4 +1,4 @@
-﻿namespace MoreStructures.Strings;
+﻿namespace MoreStructures.Strings.Matching;
 
 /// <summary>
 /// The result of matching a <see cref="string"/> text against a <see cref="string"/> pattern.
