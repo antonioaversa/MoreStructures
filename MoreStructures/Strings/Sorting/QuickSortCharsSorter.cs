@@ -27,13 +27,13 @@ namespace MoreStructures.Strings.Sorting;
 ///     - It uses the LINQ-provided QuickSort, to sort the <see cref="KeyValuePair"/> couples defined by (index, char),
 ///       for each char of the text, in ascending order.
 ///       <br/>
-///     - Then, it selects the indexes from the sorted sequence of <see cref="KeyValuePair"/> instances, and runs a
-///       second QuickSort, to get the position list.
+///     - Then, it selects the indexes from the sorted sequence of <see cref="KeyValuePair"/> instances, building and 
+///       returning the position list.
 ///     </para>
 ///     <para id="complexity">
 ///     COMPLEXITY
 ///     <br/>
-///     - Each execution of the QuickSort has a runtime of O(n * log(n)).
+///     - The execution of the QuickSort has a runtime of O(n * log(n)).
 ///       <br/>
 ///     - Output is not produced in-place, but a new list of n items is created.
 ///       <br/>
@@ -49,9 +49,6 @@ public class QuickSortCharsSorter : ICharsSorter
     public IList<int> Sort(string input)
     {
         return input
-            .Index()
-            .OrderBy(kvp => kvp.Value)
-            .Select(kvp => kvp.Key)
             .Index()
             .OrderBy(kvp => kvp.Value)
             .Select(kvp => kvp.Key)
