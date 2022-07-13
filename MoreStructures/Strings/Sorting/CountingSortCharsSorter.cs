@@ -1,6 +1,4 @@
-﻿using MoreLinq;
-
-namespace MoreStructures.Strings.Sorting;
+﻿namespace MoreStructures.Strings.Sorting;
 
 /// <summary>
 /// An implementation of <see cref="ICharsSorter"/> which uses Counting Sort to sort the input.
