@@ -3312,6 +3312,25 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Strings.Sorting.ICharsSorter.Sort
   nameWithType: ICharsSorter.Sort
+- uid: MoreStructures.Strings.Sorting.QuickSortCharsSorter
+  name: QuickSortCharsSorter
+  href: api/MoreStructures.Strings.Sorting.QuickSortCharsSorter.html
+  commentId: T:MoreStructures.Strings.Sorting.QuickSortCharsSorter
+  fullName: MoreStructures.Strings.Sorting.QuickSortCharsSorter
+  nameWithType: QuickSortCharsSorter
+- uid: MoreStructures.Strings.Sorting.QuickSortCharsSorter.Sort(System.String)
+  name: Sort(String)
+  href: api/MoreStructures.Strings.Sorting.QuickSortCharsSorter.html#MoreStructures_Strings_Sorting_QuickSortCharsSorter_Sort_System_String_
+  commentId: M:MoreStructures.Strings.Sorting.QuickSortCharsSorter.Sort(System.String)
+  fullName: MoreStructures.Strings.Sorting.QuickSortCharsSorter.Sort(System.String)
+  nameWithType: QuickSortCharsSorter.Sort(String)
+- uid: MoreStructures.Strings.Sorting.QuickSortCharsSorter.Sort*
+  name: Sort
+  href: api/MoreStructures.Strings.Sorting.QuickSortCharsSorter.html#MoreStructures_Strings_Sorting_QuickSortCharsSorter_Sort_
+  commentId: Overload:MoreStructures.Strings.Sorting.QuickSortCharsSorter.Sort
+  isSpec: "True"
+  fullName: MoreStructures.Strings.Sorting.QuickSortCharsSorter.Sort
+  nameWithType: QuickSortCharsSorter.Sort
 - uid: MoreStructures.SuffixArrays
   name: MoreStructures.SuffixArrays
   href: api/MoreStructures.SuffixArrays.html
@@ -8224,6 +8243,25 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Strings.Sorting.CountingSortCharsSorterTests.CountingSortCharsSorterTests
   nameWithType: CountingSortCharsSorterTests.CountingSortCharsSorterTests
+- uid: MoreStructures.Tests.Strings.Sorting.QuickSortCharsSorterTests
+  name: QuickSortCharsSorterTests
+  href: api/MoreStructures.Tests.Strings.Sorting.QuickSortCharsSorterTests.html
+  commentId: T:MoreStructures.Tests.Strings.Sorting.QuickSortCharsSorterTests
+  fullName: MoreStructures.Tests.Strings.Sorting.QuickSortCharsSorterTests
+  nameWithType: QuickSortCharsSorterTests
+- uid: MoreStructures.Tests.Strings.Sorting.QuickSortCharsSorterTests.#ctor
+  name: QuickSortCharsSorterTests()
+  href: api/MoreStructures.Tests.Strings.Sorting.QuickSortCharsSorterTests.html#MoreStructures_Tests_Strings_Sorting_QuickSortCharsSorterTests__ctor
+  commentId: M:MoreStructures.Tests.Strings.Sorting.QuickSortCharsSorterTests.#ctor
+  fullName: MoreStructures.Tests.Strings.Sorting.QuickSortCharsSorterTests.QuickSortCharsSorterTests()
+  nameWithType: QuickSortCharsSorterTests.QuickSortCharsSorterTests()
+- uid: MoreStructures.Tests.Strings.Sorting.QuickSortCharsSorterTests.#ctor*
+  name: QuickSortCharsSorterTests
+  href: api/MoreStructures.Tests.Strings.Sorting.QuickSortCharsSorterTests.html#MoreStructures_Tests_Strings_Sorting_QuickSortCharsSorterTests__ctor_
+  commentId: Overload:MoreStructures.Tests.Strings.Sorting.QuickSortCharsSorterTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Strings.Sorting.QuickSortCharsSorterTests.QuickSortCharsSorterTests
+  nameWithType: QuickSortCharsSorterTests.QuickSortCharsSorterTests
 - uid: MoreStructures.Tests.SuffixArrays.Builders
   name: MoreStructures.Tests.SuffixArrays.Builders
   href: api/MoreStructures.Tests.SuffixArrays.Builders.html

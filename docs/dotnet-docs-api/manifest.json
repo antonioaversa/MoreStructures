@@ -882,7 +882,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Strings.Sorting.CountingSortCharsSorter.html",
-          "hash": "3f2lRLNrd4T9hvztCqDk+n50comIzZSBglpxr4MJwUU="
+          "hash": "SSA7eZCM8FAjCDHQgGKvwFL2PGohhizBacMoF+60Ams="
         }
       },
       "is_incremental": false,
@@ -902,11 +902,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Strings.Sorting.QuickSortCharsSorter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Strings.Sorting.QuickSortCharsSorter.html",
+          "hash": "UFzCx9qiPNnhvkkr3+4IJxLxDZihCBcdRPQf1+SF1vg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Strings.Sorting.yml",
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Strings.Sorting.html",
-          "hash": "YMxt9ZHPp8hg5ScrIsqhJfYU8RX0zgD6zmCMsJP752I="
+          "hash": "msNqjjYKGAoEe10r6RgDHiUHlDFtNJG8Y8sn3b0hvxk="
         }
       },
       "is_incremental": false,
@@ -2286,7 +2298,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Strings.Sorting.CharsSorterTests.html",
-          "hash": "a13bceu0xZI7U1INZBn2OYiAn+VJS//bQBTxlfSrRq4="
+          "hash": "3bqpn4kyVGRgtEA0otWFuqIdTieqdUGJ2yo1mWVGokg="
         }
       },
       "is_incremental": false,
@@ -2306,11 +2318,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Strings.Sorting.QuickSortCharsSorterTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Strings.Sorting.QuickSortCharsSorterTests.html",
+          "hash": "eleQt3QESJswFuyIi8USVevhCWe6jKzoBGTpbOa7hyM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Tests.Strings.Sorting.yml",
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Strings.Sorting.html",
-          "hash": "yUH5Tc+Qn/VIW0NXhqi3bYrBPQiq8haXs0HNcO611Gg="
+          "hash": "ARc4/+r2Jo/0BejQlqVXca58Pb7WcD36+ZYbXVT2nK0="
         }
       },
       "is_incremental": false,
@@ -3294,7 +3318,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "uV6z5w/Y3LLKo7oPiaKOmj376tw48efTlxxZFAQz1rY="
+          "hash": "sg8MwdYS79yU5xTBsu+8n6DA7zIByGJqxE06IElB1xM="
         }
       },
       "is_incremental": false,
@@ -3369,7 +3393,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 272,
+          "total_file_count": 274,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
