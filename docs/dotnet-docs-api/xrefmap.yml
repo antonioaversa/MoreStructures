@@ -3139,106 +3139,179 @@ references:
   isSpec: "True"
   fullName: MoreStructures.RotatedTextWithTerminator.ValidateInput
   nameWithType: RotatedTextWithTerminator.ValidateInput
-- uid: MoreStructures.Strings
-  name: MoreStructures.Strings
-  href: api/MoreStructures.Strings.html
-  commentId: N:MoreStructures.Strings
-  fullName: MoreStructures.Strings
-  nameWithType: MoreStructures.Strings
-- uid: MoreStructures.Strings.Match`1
+- uid: MoreStructures.Strings.Matching
+  name: MoreStructures.Strings.Matching
+  href: api/MoreStructures.Strings.Matching.html
+  commentId: N:MoreStructures.Strings.Matching
+  fullName: MoreStructures.Strings.Matching
+  nameWithType: MoreStructures.Strings.Matching
+- uid: MoreStructures.Strings.Matching.Match`1
   name: Match<TPath>
-  href: api/MoreStructures.Strings.Match-1.html
-  commentId: T:MoreStructures.Strings.Match`1
+  href: api/MoreStructures.Strings.Matching.Match-1.html
+  commentId: T:MoreStructures.Strings.Matching.Match`1
   name.vb: Match(Of TPath)
-  fullName: MoreStructures.Strings.Match<TPath>
-  fullName.vb: MoreStructures.Strings.Match(Of TPath)
+  fullName: MoreStructures.Strings.Matching.Match<TPath>
+  fullName.vb: MoreStructures.Strings.Matching.Match(Of TPath)
   nameWithType: Match<TPath>
   nameWithType.vb: Match(Of TPath)
-- uid: MoreStructures.Strings.Match`1.#ctor(System.Boolean,System.Int32,System.Int32,`0)
+- uid: MoreStructures.Strings.Matching.Match`1.#ctor(System.Boolean,System.Int32,System.Int32,`0)
   name: Match(Boolean, Int32, Int32, TPath)
-  href: api/MoreStructures.Strings.Match-1.html#MoreStructures_Strings_Match_1__ctor_System_Boolean_System_Int32_System_Int32__0_
-  commentId: M:MoreStructures.Strings.Match`1.#ctor(System.Boolean,System.Int32,System.Int32,`0)
-  fullName: MoreStructures.Strings.Match<TPath>.Match(System.Boolean, System.Int32, System.Int32, TPath)
-  fullName.vb: MoreStructures.Strings.Match(Of TPath).Match(System.Boolean, System.Int32, System.Int32, TPath)
+  href: api/MoreStructures.Strings.Matching.Match-1.html#MoreStructures_Strings_Matching_Match_1__ctor_System_Boolean_System_Int32_System_Int32__0_
+  commentId: M:MoreStructures.Strings.Matching.Match`1.#ctor(System.Boolean,System.Int32,System.Int32,`0)
+  fullName: MoreStructures.Strings.Matching.Match<TPath>.Match(System.Boolean, System.Int32, System.Int32, TPath)
+  fullName.vb: MoreStructures.Strings.Matching.Match(Of TPath).Match(System.Boolean, System.Int32, System.Int32, TPath)
   nameWithType: Match<TPath>.Match(Boolean, Int32, Int32, TPath)
   nameWithType.vb: Match(Of TPath).Match(Boolean, Int32, Int32, TPath)
-- uid: MoreStructures.Strings.Match`1.#ctor*
+- uid: MoreStructures.Strings.Matching.Match`1.#ctor*
   name: Match
-  href: api/MoreStructures.Strings.Match-1.html#MoreStructures_Strings_Match_1__ctor_
-  commentId: Overload:MoreStructures.Strings.Match`1.#ctor
+  href: api/MoreStructures.Strings.Matching.Match-1.html#MoreStructures_Strings_Matching_Match_1__ctor_
+  commentId: Overload:MoreStructures.Strings.Matching.Match`1.#ctor
   isSpec: "True"
-  fullName: MoreStructures.Strings.Match<TPath>.Match
-  fullName.vb: MoreStructures.Strings.Match(Of TPath).Match
+  fullName: MoreStructures.Strings.Matching.Match<TPath>.Match
+  fullName.vb: MoreStructures.Strings.Matching.Match(Of TPath).Match
   nameWithType: Match<TPath>.Match
   nameWithType.vb: Match(Of TPath).Match
-- uid: MoreStructures.Strings.Match`1.Begin
+- uid: MoreStructures.Strings.Matching.Match`1.Begin
   name: Begin
-  href: api/MoreStructures.Strings.Match-1.html#MoreStructures_Strings_Match_1_Begin
-  commentId: P:MoreStructures.Strings.Match`1.Begin
-  fullName: MoreStructures.Strings.Match<TPath>.Begin
-  fullName.vb: MoreStructures.Strings.Match(Of TPath).Begin
+  href: api/MoreStructures.Strings.Matching.Match-1.html#MoreStructures_Strings_Matching_Match_1_Begin
+  commentId: P:MoreStructures.Strings.Matching.Match`1.Begin
+  fullName: MoreStructures.Strings.Matching.Match<TPath>.Begin
+  fullName.vb: MoreStructures.Strings.Matching.Match(Of TPath).Begin
   nameWithType: Match<TPath>.Begin
   nameWithType.vb: Match(Of TPath).Begin
-- uid: MoreStructures.Strings.Match`1.Begin*
+- uid: MoreStructures.Strings.Matching.Match`1.Begin*
   name: Begin
-  href: api/MoreStructures.Strings.Match-1.html#MoreStructures_Strings_Match_1_Begin_
-  commentId: Overload:MoreStructures.Strings.Match`1.Begin
+  href: api/MoreStructures.Strings.Matching.Match-1.html#MoreStructures_Strings_Matching_Match_1_Begin_
+  commentId: Overload:MoreStructures.Strings.Matching.Match`1.Begin
   isSpec: "True"
-  fullName: MoreStructures.Strings.Match<TPath>.Begin
-  fullName.vb: MoreStructures.Strings.Match(Of TPath).Begin
+  fullName: MoreStructures.Strings.Matching.Match<TPath>.Begin
+  fullName.vb: MoreStructures.Strings.Matching.Match(Of TPath).Begin
   nameWithType: Match<TPath>.Begin
   nameWithType.vb: Match(Of TPath).Begin
-- uid: MoreStructures.Strings.Match`1.MatchedChars
+- uid: MoreStructures.Strings.Matching.Match`1.MatchedChars
   name: MatchedChars
-  href: api/MoreStructures.Strings.Match-1.html#MoreStructures_Strings_Match_1_MatchedChars
-  commentId: P:MoreStructures.Strings.Match`1.MatchedChars
-  fullName: MoreStructures.Strings.Match<TPath>.MatchedChars
-  fullName.vb: MoreStructures.Strings.Match(Of TPath).MatchedChars
+  href: api/MoreStructures.Strings.Matching.Match-1.html#MoreStructures_Strings_Matching_Match_1_MatchedChars
+  commentId: P:MoreStructures.Strings.Matching.Match`1.MatchedChars
+  fullName: MoreStructures.Strings.Matching.Match<TPath>.MatchedChars
+  fullName.vb: MoreStructures.Strings.Matching.Match(Of TPath).MatchedChars
   nameWithType: Match<TPath>.MatchedChars
   nameWithType.vb: Match(Of TPath).MatchedChars
-- uid: MoreStructures.Strings.Match`1.MatchedChars*
+- uid: MoreStructures.Strings.Matching.Match`1.MatchedChars*
   name: MatchedChars
-  href: api/MoreStructures.Strings.Match-1.html#MoreStructures_Strings_Match_1_MatchedChars_
-  commentId: Overload:MoreStructures.Strings.Match`1.MatchedChars
+  href: api/MoreStructures.Strings.Matching.Match-1.html#MoreStructures_Strings_Matching_Match_1_MatchedChars_
+  commentId: Overload:MoreStructures.Strings.Matching.Match`1.MatchedChars
   isSpec: "True"
-  fullName: MoreStructures.Strings.Match<TPath>.MatchedChars
-  fullName.vb: MoreStructures.Strings.Match(Of TPath).MatchedChars
+  fullName: MoreStructures.Strings.Matching.Match<TPath>.MatchedChars
+  fullName.vb: MoreStructures.Strings.Matching.Match(Of TPath).MatchedChars
   nameWithType: Match<TPath>.MatchedChars
   nameWithType.vb: Match(Of TPath).MatchedChars
-- uid: MoreStructures.Strings.Match`1.Path
+- uid: MoreStructures.Strings.Matching.Match`1.Path
   name: Path
-  href: api/MoreStructures.Strings.Match-1.html#MoreStructures_Strings_Match_1_Path
-  commentId: P:MoreStructures.Strings.Match`1.Path
-  fullName: MoreStructures.Strings.Match<TPath>.Path
-  fullName.vb: MoreStructures.Strings.Match(Of TPath).Path
+  href: api/MoreStructures.Strings.Matching.Match-1.html#MoreStructures_Strings_Matching_Match_1_Path
+  commentId: P:MoreStructures.Strings.Matching.Match`1.Path
+  fullName: MoreStructures.Strings.Matching.Match<TPath>.Path
+  fullName.vb: MoreStructures.Strings.Matching.Match(Of TPath).Path
   nameWithType: Match<TPath>.Path
   nameWithType.vb: Match(Of TPath).Path
-- uid: MoreStructures.Strings.Match`1.Path*
+- uid: MoreStructures.Strings.Matching.Match`1.Path*
   name: Path
-  href: api/MoreStructures.Strings.Match-1.html#MoreStructures_Strings_Match_1_Path_
-  commentId: Overload:MoreStructures.Strings.Match`1.Path
+  href: api/MoreStructures.Strings.Matching.Match-1.html#MoreStructures_Strings_Matching_Match_1_Path_
+  commentId: Overload:MoreStructures.Strings.Matching.Match`1.Path
   isSpec: "True"
-  fullName: MoreStructures.Strings.Match<TPath>.Path
-  fullName.vb: MoreStructures.Strings.Match(Of TPath).Path
+  fullName: MoreStructures.Strings.Matching.Match<TPath>.Path
+  fullName.vb: MoreStructures.Strings.Matching.Match(Of TPath).Path
   nameWithType: Match<TPath>.Path
   nameWithType.vb: Match(Of TPath).Path
-- uid: MoreStructures.Strings.Match`1.Success
+- uid: MoreStructures.Strings.Matching.Match`1.Success
   name: Success
-  href: api/MoreStructures.Strings.Match-1.html#MoreStructures_Strings_Match_1_Success
-  commentId: P:MoreStructures.Strings.Match`1.Success
-  fullName: MoreStructures.Strings.Match<TPath>.Success
-  fullName.vb: MoreStructures.Strings.Match(Of TPath).Success
+  href: api/MoreStructures.Strings.Matching.Match-1.html#MoreStructures_Strings_Matching_Match_1_Success
+  commentId: P:MoreStructures.Strings.Matching.Match`1.Success
+  fullName: MoreStructures.Strings.Matching.Match<TPath>.Success
+  fullName.vb: MoreStructures.Strings.Matching.Match(Of TPath).Success
   nameWithType: Match<TPath>.Success
   nameWithType.vb: Match(Of TPath).Success
-- uid: MoreStructures.Strings.Match`1.Success*
+- uid: MoreStructures.Strings.Matching.Match`1.Success*
   name: Success
-  href: api/MoreStructures.Strings.Match-1.html#MoreStructures_Strings_Match_1_Success_
-  commentId: Overload:MoreStructures.Strings.Match`1.Success
+  href: api/MoreStructures.Strings.Matching.Match-1.html#MoreStructures_Strings_Matching_Match_1_Success_
+  commentId: Overload:MoreStructures.Strings.Matching.Match`1.Success
   isSpec: "True"
-  fullName: MoreStructures.Strings.Match<TPath>.Success
-  fullName.vb: MoreStructures.Strings.Match(Of TPath).Success
+  fullName: MoreStructures.Strings.Matching.Match<TPath>.Success
+  fullName.vb: MoreStructures.Strings.Matching.Match(Of TPath).Success
   nameWithType: Match<TPath>.Success
   nameWithType.vb: Match(Of TPath).Success
+- uid: MoreStructures.Strings.Sorting
+  name: MoreStructures.Strings.Sorting
+  href: api/MoreStructures.Strings.Sorting.html
+  commentId: N:MoreStructures.Strings.Sorting
+  fullName: MoreStructures.Strings.Sorting
+  nameWithType: MoreStructures.Strings.Sorting
+- uid: MoreStructures.Strings.Sorting.CountingSortCharsSorter
+  name: CountingSortCharsSorter
+  href: api/MoreStructures.Strings.Sorting.CountingSortCharsSorter.html
+  commentId: T:MoreStructures.Strings.Sorting.CountingSortCharsSorter
+  fullName: MoreStructures.Strings.Sorting.CountingSortCharsSorter
+  nameWithType: CountingSortCharsSorter
+- uid: MoreStructures.Strings.Sorting.CountingSortCharsSorter.#ctor(IDictionary{System.Char,System.Int32})
+  name: CountingSortCharsSorter(IDictionary<Char, Int32>)
+  href: api/MoreStructures.Strings.Sorting.CountingSortCharsSorter.html#MoreStructures_Strings_Sorting_CountingSortCharsSorter__ctor_IDictionary_System_Char_System_Int32__
+  commentId: M:MoreStructures.Strings.Sorting.CountingSortCharsSorter.#ctor(IDictionary{System.Char,System.Int32})
+  name.vb: CountingSortCharsSorter(IDictionary(Of Char, Int32))
+  fullName: MoreStructures.Strings.Sorting.CountingSortCharsSorter.CountingSortCharsSorter(IDictionary<System.Char, System.Int32>)
+  fullName.vb: MoreStructures.Strings.Sorting.CountingSortCharsSorter.CountingSortCharsSorter(IDictionary(Of System.Char, System.Int32))
+  nameWithType: CountingSortCharsSorter.CountingSortCharsSorter(IDictionary<Char, Int32>)
+  nameWithType.vb: CountingSortCharsSorter.CountingSortCharsSorter(IDictionary(Of Char, Int32))
+- uid: MoreStructures.Strings.Sorting.CountingSortCharsSorter.#ctor*
+  name: CountingSortCharsSorter
+  href: api/MoreStructures.Strings.Sorting.CountingSortCharsSorter.html#MoreStructures_Strings_Sorting_CountingSortCharsSorter__ctor_
+  commentId: Overload:MoreStructures.Strings.Sorting.CountingSortCharsSorter.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Strings.Sorting.CountingSortCharsSorter.CountingSortCharsSorter
+  nameWithType: CountingSortCharsSorter.CountingSortCharsSorter
+- uid: MoreStructures.Strings.Sorting.CountingSortCharsSorter.Alphabet
+  name: Alphabet
+  href: api/MoreStructures.Strings.Sorting.CountingSortCharsSorter.html#MoreStructures_Strings_Sorting_CountingSortCharsSorter_Alphabet
+  commentId: P:MoreStructures.Strings.Sorting.CountingSortCharsSorter.Alphabet
+  fullName: MoreStructures.Strings.Sorting.CountingSortCharsSorter.Alphabet
+  nameWithType: CountingSortCharsSorter.Alphabet
+- uid: MoreStructures.Strings.Sorting.CountingSortCharsSorter.Alphabet*
+  name: Alphabet
+  href: api/MoreStructures.Strings.Sorting.CountingSortCharsSorter.html#MoreStructures_Strings_Sorting_CountingSortCharsSorter_Alphabet_
+  commentId: Overload:MoreStructures.Strings.Sorting.CountingSortCharsSorter.Alphabet
+  isSpec: "True"
+  fullName: MoreStructures.Strings.Sorting.CountingSortCharsSorter.Alphabet
+  nameWithType: CountingSortCharsSorter.Alphabet
+- uid: MoreStructures.Strings.Sorting.CountingSortCharsSorter.Sort(System.String)
+  name: Sort(String)
+  href: api/MoreStructures.Strings.Sorting.CountingSortCharsSorter.html#MoreStructures_Strings_Sorting_CountingSortCharsSorter_Sort_System_String_
+  commentId: M:MoreStructures.Strings.Sorting.CountingSortCharsSorter.Sort(System.String)
+  fullName: MoreStructures.Strings.Sorting.CountingSortCharsSorter.Sort(System.String)
+  nameWithType: CountingSortCharsSorter.Sort(String)
+- uid: MoreStructures.Strings.Sorting.CountingSortCharsSorter.Sort*
+  name: Sort
+  href: api/MoreStructures.Strings.Sorting.CountingSortCharsSorter.html#MoreStructures_Strings_Sorting_CountingSortCharsSorter_Sort_
+  commentId: Overload:MoreStructures.Strings.Sorting.CountingSortCharsSorter.Sort
+  isSpec: "True"
+  fullName: MoreStructures.Strings.Sorting.CountingSortCharsSorter.Sort
+  nameWithType: CountingSortCharsSorter.Sort
+- uid: MoreStructures.Strings.Sorting.ICharsSorter
+  name: ICharsSorter
+  href: api/MoreStructures.Strings.Sorting.ICharsSorter.html
+  commentId: T:MoreStructures.Strings.Sorting.ICharsSorter
+  fullName: MoreStructures.Strings.Sorting.ICharsSorter
+  nameWithType: ICharsSorter
+- uid: MoreStructures.Strings.Sorting.ICharsSorter.Sort(System.String)
+  name: Sort(String)
+  href: api/MoreStructures.Strings.Sorting.ICharsSorter.html#MoreStructures_Strings_Sorting_ICharsSorter_Sort_System_String_
+  commentId: M:MoreStructures.Strings.Sorting.ICharsSorter.Sort(System.String)
+  fullName: MoreStructures.Strings.Sorting.ICharsSorter.Sort(System.String)
+  nameWithType: ICharsSorter.Sort(String)
+- uid: MoreStructures.Strings.Sorting.ICharsSorter.Sort*
+  name: Sort
+  href: api/MoreStructures.Strings.Sorting.ICharsSorter.html#MoreStructures_Strings_Sorting_ICharsSorter_Sort_
+  commentId: Overload:MoreStructures.Strings.Sorting.ICharsSorter.Sort
+  isSpec: "True"
+  fullName: MoreStructures.Strings.Sorting.ICharsSorter.Sort
+  nameWithType: ICharsSorter.Sort
 - uid: MoreStructures.SuffixArrays
   name: MoreStructures.SuffixArrays
   href: api/MoreStructures.SuffixArrays.html
@@ -8081,6 +8154,76 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.StringIncludingTerminatorComparerTests.Terminator_IsSet
   nameWithType: StringIncludingTerminatorComparerTests.Terminator_IsSet
+- uid: MoreStructures.Tests.Strings.Sorting
+  name: MoreStructures.Tests.Strings.Sorting
+  href: api/MoreStructures.Tests.Strings.Sorting.html
+  commentId: N:MoreStructures.Tests.Strings.Sorting
+  fullName: MoreStructures.Tests.Strings.Sorting
+  nameWithType: MoreStructures.Tests.Strings.Sorting
+- uid: MoreStructures.Tests.Strings.Sorting.CharsSorterTests
+  name: CharsSorterTests
+  href: api/MoreStructures.Tests.Strings.Sorting.CharsSorterTests.html
+  commentId: T:MoreStructures.Tests.Strings.Sorting.CharsSorterTests
+  fullName: MoreStructures.Tests.Strings.Sorting.CharsSorterTests
+  nameWithType: CharsSorterTests
+- uid: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.#ctor(MoreStructures.Strings.Sorting.ICharsSorter)
+  name: CharsSorterTests(ICharsSorter)
+  href: api/MoreStructures.Tests.Strings.Sorting.CharsSorterTests.html#MoreStructures_Tests_Strings_Sorting_CharsSorterTests__ctor_MoreStructures_Strings_Sorting_ICharsSorter_
+  commentId: M:MoreStructures.Tests.Strings.Sorting.CharsSorterTests.#ctor(MoreStructures.Strings.Sorting.ICharsSorter)
+  fullName: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.CharsSorterTests(MoreStructures.Strings.Sorting.ICharsSorter)
+  nameWithType: CharsSorterTests.CharsSorterTests(ICharsSorter)
+- uid: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.#ctor*
+  name: CharsSorterTests
+  href: api/MoreStructures.Tests.Strings.Sorting.CharsSorterTests.html#MoreStructures_Tests_Strings_Sorting_CharsSorterTests__ctor_
+  commentId: Overload:MoreStructures.Tests.Strings.Sorting.CharsSorterTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.CharsSorterTests
+  nameWithType: CharsSorterTests.CharsSorterTests
+- uid: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.CharsSorter
+  name: CharsSorter
+  href: api/MoreStructures.Tests.Strings.Sorting.CharsSorterTests.html#MoreStructures_Tests_Strings_Sorting_CharsSorterTests_CharsSorter
+  commentId: P:MoreStructures.Tests.Strings.Sorting.CharsSorterTests.CharsSorter
+  fullName: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.CharsSorter
+  nameWithType: CharsSorterTests.CharsSorter
+- uid: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.CharsSorter*
+  name: CharsSorter
+  href: api/MoreStructures.Tests.Strings.Sorting.CharsSorterTests.html#MoreStructures_Tests_Strings_Sorting_CharsSorterTests_CharsSorter_
+  commentId: Overload:MoreStructures.Tests.Strings.Sorting.CharsSorterTests.CharsSorter
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.CharsSorter
+  nameWithType: CharsSorterTests.CharsSorter
+- uid: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.Sort_IsCorrect(System.String)
+  name: Sort_IsCorrect(String)
+  href: api/MoreStructures.Tests.Strings.Sorting.CharsSorterTests.html#MoreStructures_Tests_Strings_Sorting_CharsSorterTests_Sort_IsCorrect_System_String_
+  commentId: M:MoreStructures.Tests.Strings.Sorting.CharsSorterTests.Sort_IsCorrect(System.String)
+  fullName: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.Sort_IsCorrect(System.String)
+  nameWithType: CharsSorterTests.Sort_IsCorrect(String)
+- uid: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.Sort_IsCorrect*
+  name: Sort_IsCorrect
+  href: api/MoreStructures.Tests.Strings.Sorting.CharsSorterTests.html#MoreStructures_Tests_Strings_Sorting_CharsSorterTests_Sort_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.Strings.Sorting.CharsSorterTests.Sort_IsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.Sort_IsCorrect
+  nameWithType: CharsSorterTests.Sort_IsCorrect
+- uid: MoreStructures.Tests.Strings.Sorting.CountingSortCharsSorterTests
+  name: CountingSortCharsSorterTests
+  href: api/MoreStructures.Tests.Strings.Sorting.CountingSortCharsSorterTests.html
+  commentId: T:MoreStructures.Tests.Strings.Sorting.CountingSortCharsSorterTests
+  fullName: MoreStructures.Tests.Strings.Sorting.CountingSortCharsSorterTests
+  nameWithType: CountingSortCharsSorterTests
+- uid: MoreStructures.Tests.Strings.Sorting.CountingSortCharsSorterTests.#ctor
+  name: CountingSortCharsSorterTests()
+  href: api/MoreStructures.Tests.Strings.Sorting.CountingSortCharsSorterTests.html#MoreStructures_Tests_Strings_Sorting_CountingSortCharsSorterTests__ctor
+  commentId: M:MoreStructures.Tests.Strings.Sorting.CountingSortCharsSorterTests.#ctor
+  fullName: MoreStructures.Tests.Strings.Sorting.CountingSortCharsSorterTests.CountingSortCharsSorterTests()
+  nameWithType: CountingSortCharsSorterTests.CountingSortCharsSorterTests()
+- uid: MoreStructures.Tests.Strings.Sorting.CountingSortCharsSorterTests.#ctor*
+  name: CountingSortCharsSorterTests
+  href: api/MoreStructures.Tests.Strings.Sorting.CountingSortCharsSorterTests.html#MoreStructures_Tests_Strings_Sorting_CountingSortCharsSorterTests__ctor_
+  commentId: Overload:MoreStructures.Tests.Strings.Sorting.CountingSortCharsSorterTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Strings.Sorting.CountingSortCharsSorterTests.CountingSortCharsSorterTests
+  nameWithType: CountingSortCharsSorterTests.CountingSortCharsSorterTests
 - uid: MoreStructures.Tests.SuffixArrays.Builders
   name: MoreStructures.Tests.SuffixArrays.Builders
   href: api/MoreStructures.Tests.SuffixArrays.Builders.html

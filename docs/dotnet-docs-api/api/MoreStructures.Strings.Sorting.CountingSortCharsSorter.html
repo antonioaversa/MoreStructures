@@ -1,0 +1,355 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CountingSortCharsSorter
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CountingSortCharsSorter
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.Strings.Sorting.CountingSortCharsSorter">
+  
+  
+  <h1 id="MoreStructures_Strings_Sorting_CountingSortCharsSorter" data-uid="MoreStructures.Strings.Sorting.CountingSortCharsSorter" class="text-break">Class CountingSortCharsSorter
+  </h1>
+  <div class="markdown level0 summary"><p>An implementation of <a class="xref" href="MoreStructures.Strings.Sorting.ICharsSorter.html">ICharsSorter</a> which uses Counting Sort to sort the input.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">CountingSortCharsSorter</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.Strings.Sorting.ICharsSorter.html">ICharsSorter</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.Strings.Sorting.html">MoreStructures.Strings.Sorting</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_Strings_Sorting_CountingSortCharsSorter_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class CountingSortCharsSorter : ICharsSorter</code></pre>
+  </div>
+  <h5 id="MoreStructures_Strings_Sorting_CountingSortCharsSorter_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+ADVANTAGES
+<br>
+The algorithm is a Counting Sort adaptation and specialization to strings, seen as lists of chars.
+<br>
+It leverages a runtime linear in the size of the input and its alphabet, which is better than any worst-case
+scenario of a comparison-based algorithm, such as QuickSort or MergeSort.
+<br>
+However, because its runtime depends not only on the size of the input, but also on the size of the alphabet,
+it is suitable for scenarios of small alphabets only, or at least when there is an upper bound on the number of
+distinct chars in the input (and they are somehow known in advance), which is small enough to fit the histogram
+of occurrences in memory.
+<br>
+For example: genome sequences can be mapped to 4-chars strings; English lower-case sentences are limited to 26
+chars plus space, punctuation, etc; digit sequences consist of an alphabet of 10 chars only etc.
+<br>
+It is not a good fit for scenarios where the number of distinct values can be very high, such as an 
+unconstrained Unicode string.
+</p>
+<p>
+ALGORITHM
+<br>
+- First, a histogram of the occurrences in the input of all the chars in the alphabet is created, going through
+  each char of the input and incrementing the counter of the char in the histogram.
+<br>
+- Then the histogram is made cumulative, by going through each item of the histogram array, starting from the
+second item, and cumulating the previous sum into the value at the current position.
+<br>
+- Finally, all chars of the input are iterated once again, in reverse order, to build the order list, i.e. the
+list of positions.
+</p>
+<p>
+COMPLEXITY
+<br>
+- Building the histogram requires iterating over all the n chars of the input.
+<br>
+- The histogram has a size equal to the size of the alphabet, sigma, of the input.
+<br>
+- Making the histogram cumulative requires going through each item of it, and there are sigma items.
+<br>
+- Finally, the second pass of the string means n more iterations, each one doing constant-time work.
+<br>
+- The second pass builds the order list, which is a new array of n items (one per index of the input).
+<br>
+- Therefore, Time Complexity is O(n + sigma) and Space Complexity is O(n + sigma).
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Strings_Sorting_CountingSortCharsSorter__ctor_IDictionary_System_Char_System_Int32__.md&amp;value=---%0Auid%3A%20MoreStructures.Strings.Sorting.CountingSortCharsSorter.%23ctor(IDictionary%7BSystem.Char%2CSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Strings/Sorting/CountingSortCharsSorter.cs/#L75">View Source</a>
+  </span>
+  <a id="MoreStructures_Strings_Sorting_CountingSortCharsSorter__ctor_" data-uid="MoreStructures.Strings.Sorting.CountingSortCharsSorter.#ctor*"></a>
+  <h4 id="MoreStructures_Strings_Sorting_CountingSortCharsSorter__ctor_IDictionary_System_Char_System_Int32__" data-uid="MoreStructures.Strings.Sorting.CountingSortCharsSorter.#ctor(IDictionary{System.Char,System.Int32})">CountingSortCharsSorter(IDictionary&lt;Char, Int32&gt;)</h4>
+  <div class="markdown level1 summary"><p><inheritdoc cref="T:MoreStructures.Strings.Sorting.CountingSortCharsSorter"></inheritdoc></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CountingSortCharsSorter(IDictionary&lt;char, int&gt; alphabet)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IDictionary</span>&lt;<span class="xref">System.Char</span>, <span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">alphabet</span></td>
+        <td><p><inheritdoc cref="P:MoreStructures.Strings.Sorting.CountingSortCharsSorter.Alphabet" path="/summary"></inheritdoc></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Strings_Sorting_CountingSortCharsSorter__ctor_IDictionary_System_Char_System_Int32___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.Strings.Sorting.CountingSortCharsSorter"></inheritdoc></p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Strings_Sorting_CountingSortCharsSorter_Alphabet.md&amp;value=---%0Auid%3A%20MoreStructures.Strings.Sorting.CountingSortCharsSorter.Alphabet%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Strings/Sorting/CountingSortCharsSorter.cs/#L66">View Source</a>
+  </span>
+  <a id="MoreStructures_Strings_Sorting_CountingSortCharsSorter_Alphabet_" data-uid="MoreStructures.Strings.Sorting.CountingSortCharsSorter.Alphabet*"></a>
+  <h4 id="MoreStructures_Strings_Sorting_CountingSortCharsSorter_Alphabet" data-uid="MoreStructures.Strings.Sorting.CountingSortCharsSorter.Alphabet">Alphabet</h4>
+  <div class="markdown level1 summary"><p>The alphabet of the input, i.e. the list of all <span class="xref">System.Char</span> potentially appearing in the input string,
+mapped to an alphabet index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDictionary&lt;char, int&gt; Alphabet { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IDictionary</span>&lt;<span class="xref">System.Char</span>, <span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Strings_Sorting_CountingSortCharsSorter_Alphabet_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required by the Counting Sort algorithm, which builds the histogram of occurrences in the input, of all chars
+of the alphabet of the input.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Strings_Sorting_CountingSortCharsSorter_Sort_System_String_.md&amp;value=---%0Auid%3A%20MoreStructures.Strings.Sorting.CountingSortCharsSorter.Sort(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Strings/Sorting/CountingSortCharsSorter.cs/#L84">View Source</a>
+  </span>
+  <a id="MoreStructures_Strings_Sorting_CountingSortCharsSorter_Sort_" data-uid="MoreStructures.Strings.Sorting.CountingSortCharsSorter.Sort*"></a>
+  <h4 id="MoreStructures_Strings_Sorting_CountingSortCharsSorter_Sort_System_String_" data-uid="MoreStructures.Strings.Sorting.CountingSortCharsSorter.Sort(System.String)">Sort(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;int&gt; Sort(string input)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">input</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IList</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Strings_Sorting_CountingSortCharsSorter_Sort_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.Strings.Sorting.CountingSortCharsSorter" path="/remarks"></inheritdoc></p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.Strings.Sorting.ICharsSorter.html">ICharsSorter</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Strings_Sorting_CountingSortCharsSorter.md&amp;value=---%0Auid%3A%20MoreStructures.Strings.Sorting.CountingSortCharsSorter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Strings/Sorting/CountingSortCharsSorter.cs/#L56" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
