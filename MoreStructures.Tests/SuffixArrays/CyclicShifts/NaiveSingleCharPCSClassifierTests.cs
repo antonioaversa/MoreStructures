@@ -6,7 +6,7 @@ namespace MoreStructures.Tests.SuffixArrays.CyclicShifts;
 public class NaiveSingleCharPcsClassifierTests : SingleCharPcsClassifierTests
 {
     public NaiveSingleCharPcsClassifierTests()
-    : base(input => new NaiveSingleCharPCSClassifier(input))
+    : base(input => new NaiveSingleCharPcsClassifier(input))
     {
     }
 }

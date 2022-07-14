@@ -9,7 +9,7 @@ public class OrderBasedSingleCharPcsClassifierTests : SingleCharPcsClassifierTes
     private static ICharsSorter CharsSorter { get; } = new QuickSortCharsSorter();
 
     public OrderBasedSingleCharPcsClassifierTests() 
-        : base(input => new OrderBasedSingleCharPCSClassifier(input, CharsSorter.Sort(input)))
+        : base(input => new OrderBasedSingleCharPcsClassifier(input, CharsSorter.Sort(input)))
     {
     }
 
@@ -17,10 +17,10 @@ public class OrderBasedSingleCharPcsClassifierTests : SingleCharPcsClassifierTes
     public void Ctor_RaisesExceptionWhenInputAndOrderHaveDifferentLength()
     {
         Assert.ThrowsException<ArgumentException>(
-            () => new OrderBasedSingleCharPCSClassifier("a", new List<int> { }));
+            () => new OrderBasedSingleCharPcsClassifier("a", new List<int> { }));
         Assert.ThrowsException<ArgumentException>(
-            () => new OrderBasedSingleCharPCSClassifier("ab", new List<int> { 1, 2, 3 }));
+            () => new OrderBasedSingleCharPcsClassifier("ab", new List<int> { 1, 2, 3 }));
         Assert.ThrowsException<ArgumentException>(
-            () => new OrderBasedSingleCharPCSClassifier("ab", new List<int> { 1 }));
+            () => new OrderBasedSingleCharPcsClassifier("ab", new List<int> { 1 }));
     }
 }

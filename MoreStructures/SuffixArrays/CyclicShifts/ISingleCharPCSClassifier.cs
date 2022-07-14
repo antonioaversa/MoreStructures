@@ -16,7 +16,7 @@
 ///     no other partial cyclic shift. The maximum value is the number of distinct chars in the string.
 ///     </para>
 /// </remarks>
-public interface ISingleCharPCSClassifier
+public interface ISingleCharPcsClassifier
 {
     /// <summary>
     /// The input text, whose 1-char PCS have to be classified.

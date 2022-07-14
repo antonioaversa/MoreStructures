@@ -1,14 +1,14 @@
 ﻿namespace MoreStructures.SuffixArrays.CyclicShifts;
 
 /// <summary>
-/// A <see cref="ISingleCharPCSClassifier"/> implementation which calculate equivalence classes using the definition.
+/// A <see cref="ISingleCharPcsClassifier"/> implementation which calculate equivalence classes using the definition.
 /// </summary>
 /// <remarks>
-///     <inheritdoc cref="ISingleCharPCSClassifier"/>
+///     <inheritdoc cref="ISingleCharPcsClassifier"/>
 ///     <para id="advantages">
 ///     ADVANTAGES AND DISADVANTAGES
 ///     <br/>
-///     - Compared to more advanced implementations, such as <see cref="OrderBasedSingleCharPCSClassifier"/>, it only
+///     - Compared to more advanced implementations, such as <see cref="OrderBasedSingleCharPcsClassifier"/>, it only
 ///       requires the <see cref="Input"/>, to calculate equivalence classes.
 ///       <br/>
 ///     - However, its runtime is worse, both in Time and Space Complexity, than a solution based on position list, 
@@ -38,16 +38,16 @@
 ///     - Therefore, Time Complexity is O(n^2) and Space Complexity is O(n).
 ///     </para>
 /// </remarks>
-public class NaiveSingleCharPCSClassifier : ISingleCharPCSClassifier
+public class NaiveSingleCharPcsClassifier : ISingleCharPcsClassifier
 {
     /// <inheritdoc/>
     public string Input { get; }
 
     /// <summary>
-    ///     <inheritdoc cref="OrderBasedSingleCharPCSClassifier"/>
+    ///     <inheritdoc cref="OrderBasedSingleCharPcsClassifier"/>
     /// </summary>
     /// <param name="input"><inheritdoc cref="Input" path="/summary"/></param>
-    public NaiveSingleCharPCSClassifier(string input)
+    public NaiveSingleCharPcsClassifier(string input)
     {
         Input = input;
     }

@@ -3,15 +3,15 @@
 namespace MoreStructures.SuffixArrays.CyclicShifts;
 
 /// <summary>
-/// A <see cref="ISingleCharPCSClassifier"/> implementation which uses an externally provided position list
+/// A <see cref="ISingleCharPcsClassifier"/> implementation which uses an externally provided position list
 /// <see cref="Order"/> of the 1-char PCS of the <see cref="Input"/>, to calculate equivalence classes.
 /// </summary>
 /// <remarks>
-///     <inheritdoc cref="ISingleCharPCSClassifier"/>
+///     <inheritdoc cref="ISingleCharPcsClassifier"/>
 ///     <para id="advantages">
 ///     ADVANTAGES
 ///     <br/>
-///     - Compared to the naive implementation of <see cref="NaiveSingleCharPCSClassifier"/>, it has better runtime and
+///     - Compared to the naive implementation of <see cref="NaiveSingleCharPcsClassifier"/>, it has better runtime and
 ///       only allocates an array of n elements, where n is the length of the <see cref="Input"/>.
 ///       <br/>
 ///     - However, it requires the position list of the <see cref="Input"/> to be provided to the classifier at
@@ -55,7 +55,7 @@ namespace MoreStructures.SuffixArrays.CyclicShifts;
 ///       calculating the position list of a string.
 ///     </para>
 /// </remarks>
-public class OrderBasedSingleCharPCSClassifier : ISingleCharPCSClassifier
+public class OrderBasedSingleCharPcsClassifier : ISingleCharPcsClassifier
 {
     /// <inheritdoc/>
     public string Input { get; }
@@ -73,11 +73,11 @@ public class OrderBasedSingleCharPCSClassifier : ISingleCharPCSClassifier
     public IList<int> Order { get; }
 
     /// <summary>
-    ///     <inheritdoc cref="OrderBasedSingleCharPCSClassifier"/>
+    ///     <inheritdoc cref="OrderBasedSingleCharPcsClassifier"/>
     /// </summary>
     /// <param name="input"><inheritdoc cref="Input" path="/summary"/></param>
     /// <param name="order"><inheritdoc cref="Order" path="/summary"/></param>
-    public OrderBasedSingleCharPCSClassifier(string input, IList<int> order)
+    public OrderBasedSingleCharPcsClassifier(string input, IList<int> order)
     {
         if (input.Length != order.Count)
             throw new ArgumentException($"Must have as many items as chars in {nameof(input)}.", nameof(order));
@@ -86,12 +86,12 @@ public class OrderBasedSingleCharPCSClassifier : ISingleCharPCSClassifier
         Order = order;
     }
 
-    /// <inheritdoc cref="ISingleCharPCSClassifier" path="//*[not(self::summary or self::remarks)]"/>
+    /// <inheritdoc cref="ISingleCharPcsClassifier" path="//*[not(self::summary or self::remarks)]"/>
     /// <summary>
     ///     <inheritdoc/>
     /// </summary>
     /// <remarks>
-    ///     <inheritdoc cref="OrderBasedSingleCharPCSClassifier"/>
+    ///     <inheritdoc cref="OrderBasedSingleCharPcsClassifier"/>
     /// </remarks>
     public IList<int> Classify()
     {
