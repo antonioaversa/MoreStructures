@@ -11,17 +11,48 @@ namespace MoreStructures.SuffixArrays.CyclicShifts;
 ///     <para id="advantages">
 ///     ADVANTAGES
 ///     <br/>
-///     TODO
+///     - Compared to the naive implementation of <see cref="NaiveSingleCharPCSClassifier"/>, it has better runtime and
+///       only allocates an array of n elements, where n is the length of the <see cref="Input"/>.
+///       <br/>
+///     - However, it requires the position list of the <see cref="Input"/> to be provided to the classifier at
+///       construction time.
+///       <br/>
+///     - Calculating the position list is a linear time operation only when some assumptions can be made on the input,
+///       such as an alphabet of limited size (which is the main scenario for <see cref="CountingSortCharsSorter"/>).
+///       In all other cases, the runtime has a worst case of O(n * log(n)).
 ///     </para>
 ///     <para id="algorithm">
 ///     ALGORITHM
 ///     <br/>
-///     TODO
+///     - An array of n elements EC, to accomodate the equivalence classes of the result, is allocated upfront.
+///       <br/>
+///     - The item of EC with index <c>P[0]</c>, where P is the list of positions, is set to 0. This is because 
+///       <c>P[0]</c> is the index in the <see cref="Input"/> T, of the smallest char in T. Therefore, there are no 
+///       smaller chars in T and the equivalence class of <c>T[P[0]]</c> is hence the smallest, i.e. 0.
+///       <br/>
+///     - <c>EC[O[i + 1]]</c> can be calculated from <c>EC[O[i]]</c>: two scenarios are possible.
+///       <br/>
+///     - If <c>T[O[i + 1]] == T[O[i]]</c>, it means that the two chars <c>T[O[i + 1]]</c> and <c>T[O[i]]</c>, which 
+///       come one after the other one in the position list, are the same and should have the same equivalence class.
+///       Therefore, the equivalence class of <c>T[O[i + 1]]</c>, <c>EC[O[i + 1]]</c> can be set to the equivalence 
+///       class of <c>T[O[i]]</c>, <c>EQ[O[i]]</c>.
+///       <br/>
+///     - If, on the other hand, <c>T[O[i + 1]] != T[O[i]]</c>, it means that the two chars <c>T[O[i + 1]]</c> and 
+///       <c>T[O[i]]</c>, which come one after the other one in the position list, are different and should have
+///       different equivalence classes. Therefore, the equivalence class of <c>T[O[i + 1]]</c>, <c>EC[O[i + 1]]</c> 
+///       can be set to the successor of the equivalence class of <c>T[O[i]]</c>, <c>EQ[O[i]]</c>.
 ///     </para>
 ///     <para id="complexity">
 ///     COMPLEXITY
 ///     <br/>
-///     TODO
+///     - There are as many iterations as items of the position list.
+///       <br/>
+///     - Within each iteration, direct accesses to items of <see cref="Input"/> and <see cref="Order"/> by index are 
+///       done in constant time.
+///       <br/>
+///     - Therefore, Time and Space Complexity are O(n), excluding the cost of calculating the position list, which is
+///       externally provided. Check <see cref="ICharsSorter"/> implementations for the complexity of the algorithms
+///       calculating the position list of a string.
 ///     </para>
 /// </remarks>
 public class OrderBasedSingleCharPCSClassifier : ISingleCharPCSClassifier

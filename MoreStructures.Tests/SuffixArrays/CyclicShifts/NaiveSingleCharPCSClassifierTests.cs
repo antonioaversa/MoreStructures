@@ -3,9 +3,9 @@
 namespace MoreStructures.Tests.SuffixArrays.CyclicShifts;
 
 [TestClass]
-public class NaiveSingleCharPCSClassifierTests : SingleCharPCSClassifierTests
+public class NaiveSingleCharPcsClassifierTests : SingleCharPcsClassifierTests
 {
-    public NaiveSingleCharPCSClassifierTests()
+    public NaiveSingleCharPcsClassifierTests()
     : base(input => new NaiveSingleCharPCSClassifier(input))
     {
     }

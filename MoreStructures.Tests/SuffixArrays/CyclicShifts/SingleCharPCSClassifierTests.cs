@@ -2,11 +2,11 @@
 
 namespace MoreStructures.Tests.SuffixArrays.CyclicShifts;
 
-public abstract class SingleCharPCSClassifierTests
+public abstract class SingleCharPcsClassifierTests
 {
     protected Func<string, ISingleCharPCSClassifier> ClassifierBuilder { get; }
 
-    protected SingleCharPCSClassifierTests(Func<string, ISingleCharPCSClassifier> classifierBuilder)
+    protected SingleCharPcsClassifierTests(Func<string, ISingleCharPCSClassifier> classifierBuilder)
     {
         ClassifierBuilder = classifierBuilder;
     }
