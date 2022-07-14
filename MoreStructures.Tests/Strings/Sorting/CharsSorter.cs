@@ -27,9 +27,6 @@ public abstract class CharsSorterTests
         var expectedResult = input
             .Index()
             .OrderBy(kvp => kvp.Value)
-            .Select(kvp => kvp.Key)
-            .Index()
-            .OrderBy(kvp => kvp.Value)
             .Select(kvp => kvp.Key);
         Assert.IsTrue(expectedResult.SequenceEqual(result));
     }

@@ -95,7 +95,8 @@ public class CountingSortCharsSorter : ICharsSorter
         for (int i = input.Length - 1; i >= 0; i--)
         {
             var alphabetIndex = Alphabet[input[i]];
-            order[i] = counts[alphabetIndex] = counts[alphabetIndex] - 1;
+            var position = counts[alphabetIndex] = counts[alphabetIndex] - 1;
+            order[position] = i;
         }
 
         return order;
