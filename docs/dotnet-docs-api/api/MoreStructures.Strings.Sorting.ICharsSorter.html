@@ -99,13 +99,13 @@
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Strings_Sorting_ICharsSorter_Sort_System_String_.md&amp;value=---%0Auid%3A%20MoreStructures.Strings.Sorting.ICharsSorter.Sort(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Strings/Sorting/ICharsSorter.cs/#L21">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Strings/Sorting/ICharsSorter.cs/#L31">View Source</a>
   </span>
   <a id="MoreStructures_Strings_Sorting_ICharsSorter_Sort_" data-uid="MoreStructures.Strings.Sorting.ICharsSorter.Sort*"></a>
   <h4 id="MoreStructures_Strings_Sorting_ICharsSorter_Sort_System_String_" data-uid="MoreStructures.Strings.Sorting.ICharsSorter.Sort(System.String)">Sort(String)</h4>
   <div class="markdown level1 summary"><p>Sorts the chars of <code data-dev-comment-type="paramref" class="paramref">input</code>, returning the list of positions of each of the chars in
-<code data-dev-comment-type="paramref" class="paramref">input</code> (i.e. the item of the order list O at index i, O[i], is the position in the sorted
-string, of the char in <code data-dev-comment-type="paramref" class="paramref">input</code> with index i).</p>
+<code data-dev-comment-type="paramref" class="paramref">input</code> (i.e. the <span class="xref">System.Int32</span> value item of the order list O at index i, O[i], is the
+position in the <code data-dev-comment-type="paramref" class="paramref">input</code> string, of the <span class="xref">System.Char</span> in the sorted string at index i).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -140,12 +140,30 @@ string, of the char in <code data-dev-comment-type="paramref" class="paramref">i
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">IList</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><p>A list of position in the sorted string: 0 being the first in the order, 1 the second, etc.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 id="MoreStructures_Strings_Sorting_ICharsSorter_Sort_System_String__examples">Examples</h5>
+  <p>Sorting the input string <code>&quot;cabcba&quot;</code> gives the position list <code>{ 1, 5, 2, 4, 0, 5 }</code>, because:
+<br></p>
+<ul>
+<li>the sorted string is <code>&quot;aabbcc&quot;</code>;
+<br></li>
+<li>the <span class="xref">System.Char</span> in the sorted string at index 0 is <code>'a'</code> and the position in the
+<code data-dev-comment-type="paramref" class="paramref">input</code> string of the first <code>'a'</code> is <code>1</code>;
+<br></li>
+<li>the <span class="xref">System.Char</span> in the sorted string at index 1 is <code>'a'</code> and the position in the
+<code data-dev-comment-type="paramref" class="paramref">input</code> string of the second <code>'a'</code> is <code>5</code>;
+<br></li>
+<li>the <span class="xref">System.Char</span> in the sorted string at index 2 is <code>'b'</code> and the position in the
+<code data-dev-comment-type="paramref" class="paramref">input</code> string of the first <code>'b'</code> is <code>2</code>;
+<br></li>
+<li>etc.</li>
+</ul>
+
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
@@ -161,7 +179,7 @@ string, of the char in <code data-dev-comment-type="paramref" class="paramref">i
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Strings_Sorting_ICharsSorter.md&amp;value=---%0Auid%3A%20MoreStructures.Strings.Sorting.ICharsSorter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Strings/Sorting/ICharsSorter.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Strings/Sorting/ICharsSorter.cs/#L6" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

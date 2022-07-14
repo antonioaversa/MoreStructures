@@ -147,13 +147,13 @@ ALGORITHM
 - It uses the LINQ-provided QuickSort, to sort the <see cref="!:KeyValuePair"></see> couples defined by (index, char),
   for each char of the text, in ascending order.
 <br>
-- Then, it selects the indexes from the sorted sequence of <see cref="!:KeyValuePair"></see> instances, and runs a
-second QuickSort, to get the position list.
+- Then, it selects the indexes from the sorted sequence of <see cref="!:KeyValuePair"></see> instances, building and 
+returning the position list.
 </p>
 <p>
 COMPLEXITY
 <br>
-- Each execution of the QuickSort has a runtime of O(n * log(n)).
+- The execution of the QuickSort has a runtime of O(n * log(n)).
 <br>
 - Output is not produced in-place, but a new list of n items is created.
 <br>
