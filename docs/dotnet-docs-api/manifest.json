@@ -986,6 +986,54 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.html",
+          "hash": "hSpwO1kO6hW1LW5BDDw+zATy/4+dJNWCY/cndgfffZQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.html",
+          "hash": "4MPVxKsfZilp6FshBJQYKPCGZ9X782fp49NWesLFsgE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.html",
+          "hash": "oaiLCfSLcYiBh8sQe52+g00q2fNivILZdYzwgR2kEiE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.SuffixArrays.CyclicShifts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.SuffixArrays.CyclicShifts.html",
+          "hash": "OXLMAxhl0TzI0yc9J2BhVSLIOOVMq2wk+ogCZ5KjpAk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.SuffixArrays.yml",
       "output": {
         ".html": {
@@ -2402,6 +2450,54 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifierTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifierTests.html",
+          "hash": "Yl0bCLbQ0JcI+mi/JUeyabuVYHDp9fC93084VA6PjlQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifierTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifierTests.html",
+          "hash": "05d50ENU7jY32CYPKeeeRRZfmL81mQHleZnu1dRu7Xg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.html",
+          "hash": "fvl0N2qXeipTPfyCV0qv3YnYUvk4n0d7uua8/qkMJ5o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.SuffixArrays.CyclicShifts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.SuffixArrays.CyclicShifts.html",
+          "hash": "QYxlzeXElQ34bOmM+GbdTcoVDB7wuuTRybu3QEHnysI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Tests.SuffixStructures.AdjacencyOrdersTests.yml",
       "output": {
         ".html": {
@@ -3318,7 +3414,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "sg8MwdYS79yU5xTBsu+8n6DA7zIByGJqxE06IElB1xM="
+          "hash": "jJNRCrfNC2XbfDxZ0qUnShDv6kZuUX7PMrG9vVAffVY="
         }
       },
       "is_incremental": false,
@@ -3393,7 +3489,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 274,
+          "total_file_count": 282,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

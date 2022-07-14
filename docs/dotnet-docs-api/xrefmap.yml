@@ -3489,6 +3489,150 @@ references:
   fullName.vb: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder(Of TEdge, TNode).Text
   nameWithType: SuffixStructureBasedSuffixArrayBuilder<TEdge, TNode>.Text
   nameWithType.vb: SuffixStructureBasedSuffixArrayBuilder(Of TEdge, TNode).Text
+- uid: MoreStructures.SuffixArrays.CyclicShifts
+  name: MoreStructures.SuffixArrays.CyclicShifts
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.html
+  commentId: N:MoreStructures.SuffixArrays.CyclicShifts
+  fullName: MoreStructures.SuffixArrays.CyclicShifts
+  nameWithType: MoreStructures.SuffixArrays.CyclicShifts
+- uid: MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier
+  name: ISingleCharPcsClassifier
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.html
+  commentId: T:MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier
+  nameWithType: ISingleCharPcsClassifier
+- uid: MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.Classify
+  name: Classify()
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_ISingleCharPcsClassifier_Classify
+  commentId: M:MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.Classify
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.Classify()
+  nameWithType: ISingleCharPcsClassifier.Classify()
+- uid: MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.Classify*
+  name: Classify
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_ISingleCharPcsClassifier_Classify_
+  commentId: Overload:MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.Classify
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.Classify
+  nameWithType: ISingleCharPcsClassifier.Classify
+- uid: MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.Input
+  name: Input
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_ISingleCharPcsClassifier_Input
+  commentId: P:MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.Input
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.Input
+  nameWithType: ISingleCharPcsClassifier.Input
+- uid: MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.Input*
+  name: Input
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_ISingleCharPcsClassifier_Input_
+  commentId: Overload:MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.Input
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.Input
+  nameWithType: ISingleCharPcsClassifier.Input
+- uid: MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier
+  name: NaiveSingleCharPcsClassifier
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.html
+  commentId: T:MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier
+  nameWithType: NaiveSingleCharPcsClassifier
+- uid: MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.#ctor(System.String)
+  name: NaiveSingleCharPcsClassifier(String)
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_NaiveSingleCharPcsClassifier__ctor_System_String_
+  commentId: M:MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.#ctor(System.String)
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.NaiveSingleCharPcsClassifier(System.String)
+  nameWithType: NaiveSingleCharPcsClassifier.NaiveSingleCharPcsClassifier(String)
+- uid: MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.#ctor*
+  name: NaiveSingleCharPcsClassifier
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_NaiveSingleCharPcsClassifier__ctor_
+  commentId: Overload:MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.NaiveSingleCharPcsClassifier
+  nameWithType: NaiveSingleCharPcsClassifier.NaiveSingleCharPcsClassifier
+- uid: MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.Classify
+  name: Classify()
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_NaiveSingleCharPcsClassifier_Classify
+  commentId: M:MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.Classify
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.Classify()
+  nameWithType: NaiveSingleCharPcsClassifier.Classify()
+- uid: MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.Classify*
+  name: Classify
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_NaiveSingleCharPcsClassifier_Classify_
+  commentId: Overload:MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.Classify
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.Classify
+  nameWithType: NaiveSingleCharPcsClassifier.Classify
+- uid: MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.Input
+  name: Input
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_NaiveSingleCharPcsClassifier_Input
+  commentId: P:MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.Input
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.Input
+  nameWithType: NaiveSingleCharPcsClassifier.Input
+- uid: MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.Input*
+  name: Input
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_NaiveSingleCharPcsClassifier_Input_
+  commentId: Overload:MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.Input
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.Input
+  nameWithType: NaiveSingleCharPcsClassifier.Input
+- uid: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier
+  name: OrderBasedSingleCharPcsClassifier
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.html
+  commentId: T:MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier
+  nameWithType: OrderBasedSingleCharPcsClassifier
+- uid: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.#ctor(System.String,IList{System.Int32})
+  name: OrderBasedSingleCharPcsClassifier(String, IList<Int32>)
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_OrderBasedSingleCharPcsClassifier__ctor_System_String_IList_System_Int32__
+  commentId: M:MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.#ctor(System.String,IList{System.Int32})
+  name.vb: OrderBasedSingleCharPcsClassifier(String, IList(Of Int32))
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.OrderBasedSingleCharPcsClassifier(System.String, IList<System.Int32>)
+  fullName.vb: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.OrderBasedSingleCharPcsClassifier(System.String, IList(Of System.Int32))
+  nameWithType: OrderBasedSingleCharPcsClassifier.OrderBasedSingleCharPcsClassifier(String, IList<Int32>)
+  nameWithType.vb: OrderBasedSingleCharPcsClassifier.OrderBasedSingleCharPcsClassifier(String, IList(Of Int32))
+- uid: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.#ctor*
+  name: OrderBasedSingleCharPcsClassifier
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_OrderBasedSingleCharPcsClassifier__ctor_
+  commentId: Overload:MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.OrderBasedSingleCharPcsClassifier
+  nameWithType: OrderBasedSingleCharPcsClassifier.OrderBasedSingleCharPcsClassifier
+- uid: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.Classify
+  name: Classify()
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_OrderBasedSingleCharPcsClassifier_Classify
+  commentId: M:MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.Classify
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.Classify()
+  nameWithType: OrderBasedSingleCharPcsClassifier.Classify()
+- uid: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.Classify*
+  name: Classify
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_OrderBasedSingleCharPcsClassifier_Classify_
+  commentId: Overload:MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.Classify
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.Classify
+  nameWithType: OrderBasedSingleCharPcsClassifier.Classify
+- uid: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.Input
+  name: Input
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_OrderBasedSingleCharPcsClassifier_Input
+  commentId: P:MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.Input
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.Input
+  nameWithType: OrderBasedSingleCharPcsClassifier.Input
+- uid: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.Input*
+  name: Input
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_OrderBasedSingleCharPcsClassifier_Input_
+  commentId: Overload:MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.Input
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.Input
+  nameWithType: OrderBasedSingleCharPcsClassifier.Input
+- uid: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.Order
+  name: Order
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_OrderBasedSingleCharPcsClassifier_Order
+  commentId: P:MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.Order
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.Order
+  nameWithType: OrderBasedSingleCharPcsClassifier.Order
+- uid: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.Order*
+  name: Order
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_OrderBasedSingleCharPcsClassifier_Order_
+  commentId: Overload:MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.Order
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.Order
+  nameWithType: OrderBasedSingleCharPcsClassifier.Order
 - uid: MoreStructures.SuffixStructures
   name: MoreStructures.SuffixStructures
   href: api/MoreStructures.SuffixStructures.html
@@ -8387,6 +8531,114 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.SuffixArrays.Builders.SuffixTrieBasedSuffixArrayBuilderTests.SuffixTrieBasedSuffixArrayBuilderTests
   nameWithType: SuffixTrieBasedSuffixArrayBuilderTests.SuffixTrieBasedSuffixArrayBuilderTests
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts
+  name: MoreStructures.Tests.SuffixArrays.CyclicShifts
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.html
+  commentId: N:MoreStructures.Tests.SuffixArrays.CyclicShifts
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts
+  nameWithType: MoreStructures.Tests.SuffixArrays.CyclicShifts
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifierTests
+  name: NaiveSingleCharPcsClassifierTests
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifierTests.html
+  commentId: T:MoreStructures.Tests.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifierTests
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifierTests
+  nameWithType: NaiveSingleCharPcsClassifierTests
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifierTests.#ctor
+  name: NaiveSingleCharPcsClassifierTests()
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifierTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_NaiveSingleCharPcsClassifierTests__ctor
+  commentId: M:MoreStructures.Tests.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifierTests.#ctor
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifierTests.NaiveSingleCharPcsClassifierTests()
+  nameWithType: NaiveSingleCharPcsClassifierTests.NaiveSingleCharPcsClassifierTests()
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifierTests.#ctor*
+  name: NaiveSingleCharPcsClassifierTests
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifierTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_NaiveSingleCharPcsClassifierTests__ctor_
+  commentId: Overload:MoreStructures.Tests.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifierTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifierTests.NaiveSingleCharPcsClassifierTests
+  nameWithType: NaiveSingleCharPcsClassifierTests.NaiveSingleCharPcsClassifierTests
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifierTests
+  name: OrderBasedSingleCharPcsClassifierTests
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifierTests.html
+  commentId: T:MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifierTests
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifierTests
+  nameWithType: OrderBasedSingleCharPcsClassifierTests
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifierTests.#ctor
+  name: OrderBasedSingleCharPcsClassifierTests()
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifierTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_OrderBasedSingleCharPcsClassifierTests__ctor
+  commentId: M:MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifierTests.#ctor
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifierTests.OrderBasedSingleCharPcsClassifierTests()
+  nameWithType: OrderBasedSingleCharPcsClassifierTests.OrderBasedSingleCharPcsClassifierTests()
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifierTests.#ctor*
+  name: OrderBasedSingleCharPcsClassifierTests
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifierTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_OrderBasedSingleCharPcsClassifierTests__ctor_
+  commentId: Overload:MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifierTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifierTests.OrderBasedSingleCharPcsClassifierTests
+  nameWithType: OrderBasedSingleCharPcsClassifierTests.OrderBasedSingleCharPcsClassifierTests
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifierTests.Ctor_RaisesExceptionWhenInputAndOrderHaveDifferentLength
+  name: Ctor_RaisesExceptionWhenInputAndOrderHaveDifferentLength()
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifierTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_OrderBasedSingleCharPcsClassifierTests_Ctor_RaisesExceptionWhenInputAndOrderHaveDifferentLength
+  commentId: M:MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifierTests.Ctor_RaisesExceptionWhenInputAndOrderHaveDifferentLength
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifierTests.Ctor_RaisesExceptionWhenInputAndOrderHaveDifferentLength()
+  nameWithType: OrderBasedSingleCharPcsClassifierTests.Ctor_RaisesExceptionWhenInputAndOrderHaveDifferentLength()
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifierTests.Ctor_RaisesExceptionWhenInputAndOrderHaveDifferentLength*
+  name: Ctor_RaisesExceptionWhenInputAndOrderHaveDifferentLength
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifierTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_OrderBasedSingleCharPcsClassifierTests_Ctor_RaisesExceptionWhenInputAndOrderHaveDifferentLength_
+  commentId: Overload:MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifierTests.Ctor_RaisesExceptionWhenInputAndOrderHaveDifferentLength
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifierTests.Ctor_RaisesExceptionWhenInputAndOrderHaveDifferentLength
+  nameWithType: OrderBasedSingleCharPcsClassifierTests.Ctor_RaisesExceptionWhenInputAndOrderHaveDifferentLength
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests
+  name: SingleCharPcsClassifierTests
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.html
+  commentId: T:MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests
+  nameWithType: SingleCharPcsClassifierTests
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.#ctor(Func{System.String,MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier})
+  name: SingleCharPcsClassifierTests(Func<String, ISingleCharPcsClassifier>)
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_SingleCharPcsClassifierTests__ctor_Func_System_String_MoreStructures_SuffixArrays_CyclicShifts_ISingleCharPcsClassifier__
+  commentId: M:MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.#ctor(Func{System.String,MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier})
+  name.vb: SingleCharPcsClassifierTests(Func(Of String, ISingleCharPcsClassifier))
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.SingleCharPcsClassifierTests(Func<System.String, MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier>)
+  fullName.vb: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.SingleCharPcsClassifierTests(Func(Of System.String, MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier))
+  nameWithType: SingleCharPcsClassifierTests.SingleCharPcsClassifierTests(Func<String, ISingleCharPcsClassifier>)
+  nameWithType.vb: SingleCharPcsClassifierTests.SingleCharPcsClassifierTests(Func(Of String, ISingleCharPcsClassifier))
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.#ctor*
+  name: SingleCharPcsClassifierTests
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_SingleCharPcsClassifierTests__ctor_
+  commentId: Overload:MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.SingleCharPcsClassifierTests
+  nameWithType: SingleCharPcsClassifierTests.SingleCharPcsClassifierTests
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilder
+  name: ClassifierBuilder
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_SingleCharPcsClassifierTests_ClassifierBuilder
+  commentId: P:MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilder
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilder
+  nameWithType: SingleCharPcsClassifierTests.ClassifierBuilder
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilder*
+  name: ClassifierBuilder
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_SingleCharPcsClassifierTests_ClassifierBuilder_
+  commentId: Overload:MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilder
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilder
+  nameWithType: SingleCharPcsClassifierTests.ClassifierBuilder
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.Classify_IsCorrect(System.String,System.Int32[])
+  name: Classify_IsCorrect(String, Int32[])
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_SingleCharPcsClassifierTests_Classify_IsCorrect_System_String_System_Int32___
+  commentId: M:MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.Classify_IsCorrect(System.String,System.Int32[])
+  name.vb: Classify_IsCorrect(String, Int32())
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.Classify_IsCorrect(System.String, System.Int32[])
+  fullName.vb: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.Classify_IsCorrect(System.String, System.Int32())
+  nameWithType: SingleCharPcsClassifierTests.Classify_IsCorrect(String, Int32[])
+  nameWithType.vb: SingleCharPcsClassifierTests.Classify_IsCorrect(String, Int32())
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.Classify_IsCorrect*
+  name: Classify_IsCorrect
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_SingleCharPcsClassifierTests_Classify_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.Classify_IsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.Classify_IsCorrect
+  nameWithType: SingleCharPcsClassifierTests.Classify_IsCorrect
 - uid: MoreStructures.Tests.SuffixStructures
   name: MoreStructures.Tests.SuffixStructures
   href: api/MoreStructures.Tests.SuffixStructures.html
