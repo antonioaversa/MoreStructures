@@ -88,7 +88,7 @@ public class CountingSortCharsSorter : ICharsSorter
 
         // Make histogram cumulative
         for (int i = 1; i < counts.Length; i++)
-            counts[i] = counts[i] + counts[i - 1];
+            counts[i] += counts[i - 1];
 
         // Calculate order list
         var order = new int[input.Length];
