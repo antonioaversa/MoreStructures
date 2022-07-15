@@ -6,14 +6,14 @@
 /// </summary>
 /// <remarks>
 ///     <para id="definition">
-///     The equivalence class of a n-char partial cyclic shift c of the string T is the number of <b>distinct</b> n-char
-///     partial cyclic shift of T which strictly precedes c in lexicographic order (i.e. all distinct chars strictly 
-///     smaller than c).
+///     The equivalence class of a n-char partial cyclic shift c of the string T is the number of <b>distinct</b> 
+///     n-char partial cyclic shift of T which strictly precedes c in lexicographic order (i.e. all distinct chars 
+///     strictly smaller than c).
 ///     <br/>
 ///     That means that two partial cyclic shifts which are the same share the same equivalence class.
 ///     <br/>
-///     The minimum value the equivalence class can have is 0, for the smallest partial cyclic shift, which is preceded by
-///     no other partial cyclic shift. The maximum value is the number of distinct chars in the string.
+///     The minimum value the equivalence class can have is 0, for the smallest partial cyclic shift, which is preceded
+///     by no other partial cyclic shift. The maximum value is the number of distinct chars in the string.
 ///     </para>
 /// </remarks>
 public interface ISingleCharPcsClassifier
