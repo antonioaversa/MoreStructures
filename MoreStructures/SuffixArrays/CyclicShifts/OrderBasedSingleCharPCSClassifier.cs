@@ -98,11 +98,11 @@ public class OrderBasedSingleCharPcsClassifier : ISingleCharPcsClassifier
         if (Input.Length == 0)
             return Array.Empty<int>();
 
-        var result = new int[Order.Count];
-        result[Order[0]] = 0;
+        var eqClasses = new int[Order.Count];
+        eqClasses[Order[0]] = 0;
         var currentEqClass = 0;
         for (int i = 1; i < Order.Count; i++)
-            result[Order[i]] = Input[Order[i]] == Input[Order[i - 1]] ? currentEqClass : ++currentEqClass;
-        return result;
+            eqClasses[Order[i]] = Input[Order[i]] == Input[Order[i - 1]] ? currentEqClass : ++currentEqClass;
+        return eqClasses;
     }
 }
