@@ -986,6 +986,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorter.html",
+          "hash": "q+F8TeDFy857Y1nBXhphcf1qFuDK6YuFCjoDpncYDHk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.SuffixArrays.CyclicShifts.IDoubleLengthPcsSorter.yml",
       "output": {
         ".html": {
@@ -1050,7 +1062,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.SuffixArrays.CyclicShifts.html",
-          "hash": "Pbs8Gw0ypp4zg2BlyEkfxObe5B4WVA1stp+ukduxf7M="
+          "hash": "vfUnNet5vog7qJOrhBiSndNFHJO3G1dRY5sP9Er7O9Q="
         }
       },
       "is_incremental": false,
@@ -2474,11 +2486,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorterTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorterTests.html",
+          "hash": "YmOeHXW1IElY9Z0zeK4JuIryWBmYr+cHIC9SXZSKDfw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsSorterTests.yml",
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsSorterTests.html",
-          "hash": "4ebPkbh4camrDjrKa/bX2y6+PncRzSbqphYCGLIoxUo="
+          "hash": "Ic/1hBozrs3Ue6F+tm4d61OGpIMZ5nl+coKoiWCrRgY="
         }
       },
       "is_incremental": false,
@@ -2538,7 +2562,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.SuffixArrays.CyclicShifts.html",
-          "hash": "RWwpiE4HPos2INcauw7EbzRBWYPy/NzEW30H7r9cRP4="
+          "hash": "E2ynnAKSOa/cytEeZFhpjoAJdhdSc09iAOfurNYepYg="
         }
       },
       "is_incremental": false,
@@ -3462,7 +3486,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "YVhZ1y2ttwkThGoHjF4kX98CZa9pexxrEugLydru7/4="
+          "hash": "fIaJMozOxwOLAV8qhfJbuPyWmy9MX3/bCH/WiB+oocs="
         }
       },
       "is_incremental": false,
@@ -3537,7 +3561,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 286,
+          "total_file_count": 288,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

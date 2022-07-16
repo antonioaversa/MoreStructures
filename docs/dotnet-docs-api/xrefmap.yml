@@ -3495,6 +3495,28 @@ references:
   commentId: N:MoreStructures.SuffixArrays.CyclicShifts
   fullName: MoreStructures.SuffixArrays.CyclicShifts
   nameWithType: MoreStructures.SuffixArrays.CyclicShifts
+- uid: MoreStructures.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorter
+  name: CountingSortDoubleLengthPcsSorter
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorter.html
+  commentId: T:MoreStructures.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorter
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorter
+  nameWithType: CountingSortDoubleLengthPcsSorter
+- uid: MoreStructures.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorter.Sort(System.String,System.Int32,IList{System.Int32},IList{System.Int32})
+  name: Sort(String, Int32, IList<Int32>, IList<Int32>)
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorter.html#MoreStructures_SuffixArrays_CyclicShifts_CountingSortDoubleLengthPcsSorter_Sort_System_String_System_Int32_IList_System_Int32__IList_System_Int32__
+  commentId: M:MoreStructures.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorter.Sort(System.String,System.Int32,IList{System.Int32},IList{System.Int32})
+  name.vb: Sort(String, Int32, IList(Of Int32), IList(Of Int32))
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorter.Sort(System.String, System.Int32, IList<System.Int32>, IList<System.Int32>)
+  fullName.vb: MoreStructures.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorter.Sort(System.String, System.Int32, IList(Of System.Int32), IList(Of System.Int32))
+  nameWithType: CountingSortDoubleLengthPcsSorter.Sort(String, Int32, IList<Int32>, IList<Int32>)
+  nameWithType.vb: CountingSortDoubleLengthPcsSorter.Sort(String, Int32, IList(Of Int32), IList(Of Int32))
+- uid: MoreStructures.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorter.Sort*
+  name: Sort
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorter.html#MoreStructures_SuffixArrays_CyclicShifts_CountingSortDoubleLengthPcsSorter_Sort_
+  commentId: Overload:MoreStructures.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorter.Sort
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorter.Sort
+  nameWithType: CountingSortDoubleLengthPcsSorter.Sort
 - uid: MoreStructures.SuffixArrays.CyclicShifts.IDoubleLengthPcsSorter
   name: IDoubleLengthPcsSorter
   href: api/MoreStructures.SuffixArrays.CyclicShifts.IDoubleLengthPcsSorter.html
@@ -8581,6 +8603,25 @@ references:
   commentId: N:MoreStructures.Tests.SuffixArrays.CyclicShifts
   fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts
   nameWithType: MoreStructures.Tests.SuffixArrays.CyclicShifts
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorterTests
+  name: CountingSortDoubleLengthPcsSorterTests
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorterTests.html
+  commentId: T:MoreStructures.Tests.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorterTests
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorterTests
+  nameWithType: CountingSortDoubleLengthPcsSorterTests
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorterTests.#ctor
+  name: CountingSortDoubleLengthPcsSorterTests()
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorterTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_CountingSortDoubleLengthPcsSorterTests__ctor
+  commentId: M:MoreStructures.Tests.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorterTests.#ctor
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorterTests.CountingSortDoubleLengthPcsSorterTests()
+  nameWithType: CountingSortDoubleLengthPcsSorterTests.CountingSortDoubleLengthPcsSorterTests()
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorterTests.#ctor*
+  name: CountingSortDoubleLengthPcsSorterTests
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorterTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_CountingSortDoubleLengthPcsSorterTests__ctor_
+  commentId: Overload:MoreStructures.Tests.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorterTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorterTests.CountingSortDoubleLengthPcsSorterTests
+  nameWithType: CountingSortDoubleLengthPcsSorterTests.CountingSortDoubleLengthPcsSorterTests
 - uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsSorterTests
   name: DoubleLengthPcsSorterTests
   href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsSorterTests.html
