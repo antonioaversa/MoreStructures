@@ -36,6 +36,6 @@ public abstract class DoubleLengthPcsSorterTests
     {
         var result = Sorter.Sort(input, pcsLength, order, eqClasses);
         Assert.IsTrue(expectedResult.SequenceEqual(result),
-            $"Expected [{string.Join(", ", expectedResult)}], Got: [{string.Join(", ", result)}]");
+            $"Expected: [{string.Join(", ", expectedResult)}], Actual: [{string.Join(", ", result)}]");
     }
 }

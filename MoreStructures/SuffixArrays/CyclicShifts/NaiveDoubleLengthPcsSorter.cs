@@ -37,10 +37,8 @@ public class NaiveDoubleLengthPcsSorter : IDoubleLengthPcsSorter
     ///     <inheritdoc cref="NaiveDoubleLengthPcsSorter" path="/remarks"/>
     /// </remarks>
     public IList<int> Sort(string input, int pcsLength, IList<int> order, IList<int> eqClasses) => (
-        from i in Enumerable.Range(0, input.Length)
-        let j = i + pcsLength * 2
-        let cyclicShift = j <= input.Length ? input[i..j] : input[i..] + input[0..((j - input.Length) % input.Length)]
-        orderby cyclicShift ascending
-        select i)
+        from pcsAndIndex in PcsUtils.ExtractPcsOf(input, pcsLength * 2)
+        orderby pcsAndIndex.pcs ascending
+        select pcsAndIndex.index)
         .ToList();
 }
