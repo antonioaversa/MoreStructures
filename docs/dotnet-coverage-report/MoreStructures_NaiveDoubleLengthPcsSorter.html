@@ -41,7 +41,7 @@
 <table>
 <tr>
 <th>Covered lines:</th>
-<td class="limit-width right" title="7">7</td>
+<td class="limit-width right" title="5">5</td>
 </tr>
 <tr>
 <th>Uncovered lines:</th>
@@ -49,15 +49,15 @@
 </tr>
 <tr>
 <th>Coverable lines:</th>
-<td class="limit-width right" title="7">7</td>
+<td class="limit-width right" title="5">5</td>
 </tr>
 <tr>
 <th>Total lines:</th>
-<td class="limit-width right" title="46">46</td>
+<td class="limit-width right" title="44">44</td>
 </tr>
 <tr>
 <th>Line coverage:</th>
-<td class="limit-width right" title="7 of 7">100%</td>
+<td class="limit-width right" title="5 of 5">100%</td>
 </tr>
 </table>
 </div>
@@ -66,20 +66,20 @@
 <div class="card">
 <div class="card-header">Branch coverage</div>
 <div class="card-body">
-<div class="large cardpercentagebar cardpercentagebar0">100%</div>
+<div class="large">N/A</div>
 <div class="table">
 <table>
 <tr>
 <th>Covered branches:</th>
-<td class="limit-width right" title="2">2</td>
+<td class="limit-width right" title="0">0</td>
 </tr>
 <tr>
 <th>Total branches:</th>
-<td class="limit-width right" title="2">2</td>
+<td class="limit-width right" title="0">0</td>
 </tr>
 <tr>
 <th>Branch coverage:</th>
-<td class="limit-width right" title="2 of 2">100%</td>
+<td class="limit-width right" title="N/A">N/A</td>
 </tr>
 </table>
 </div>
@@ -100,7 +100,7 @@
 <table class="overview table-fixed">
 <thead><tr><th>Method</th><th>Branch coverage <a href="https://en.wikipedia.org/wiki/Code_coverage"><i class="icon-info-circled"></i></a></th><th>Cyclomatic complexity <a href="https://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon-info-circled"></i></a></th><th>Line coverage <a href="https://en.wikipedia.org/wiki/Code_coverage"><i class="icon-info-circled"></i></a></th></tr></thead>
 <tbody>
-<tr><td title="Sort(System.String,System.Int32,System.Collections.Generic.IList`1&lt;System.Int32&gt;,System.Collections.Generic.IList`1&lt;System.Int32&gt;)"><a href="#file0_line39" class="navigatetohash">Sort(...)</a></td><td>100%</td><td>2</td><td>100%</td></tr>
+<tr><td title="Sort(System.String,System.Int32,System.Collections.Generic.IList`1&lt;System.Int32&gt;,System.Collections.Generic.IList`1&lt;System.Int32&gt;)"><a href="#file0_line39" class="navigatetohash">Sort(...)</a></td><td>100%</td><td>1</td><td>100%</td></tr>
 </tbody>
 </table>
 </div>
@@ -149,17 +149,15 @@
 <tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line37"></a><code>37</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;inheritdoc&nbsp;cref=&quot;NaiveDoubleLengthPcsSorter&quot;&nbsp;path=&quot;/remarks&quot;/&gt;</code></td></tr>
 <tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line38"></a><code>38</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;/remarks&gt;</code></td></tr>
 <tr class="coverableline" title="Covered (10 visits)" data-coverage="{'AllTestMethods': {'VC': '10', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">10</td><td class="rightmargin right"><a id="file0_line39"></a><code>39</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;IList&lt;int&gt;&nbsp;Sort(string&nbsp;input,&nbsp;int&nbsp;pcsLength,&nbsp;IList&lt;int&gt;&nbsp;order,&nbsp;IList&lt;int&gt;&nbsp;eqClasses)&nbsp;=&gt;&nbsp;(</code></td></tr>
-<tr class="coverableline" title="Covered (10 visits)" data-coverage="{'AllTestMethods': {'VC': '10', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">10</td><td class="rightmargin right"><a id="file0_line40"></a><code>40</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;i&nbsp;in&nbsp;Enumerable.Range(0,&nbsp;input.Length)</code></td></tr>
-<tr class="coverableline" title="Covered (46 visits)" data-coverage="{'AllTestMethods': {'VC': '46', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">46</td><td class="rightmargin right"><a id="file0_line41"></a><code>41</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;j&nbsp;=&nbsp;i&nbsp;+&nbsp;pcsLength&nbsp;*&nbsp;2</code></td></tr>
-<tr class="coverableline" title="Covered (46 visits, 2 of 2 branches are covered)" data-coverage="{'AllTestMethods': {'VC': '46', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">46</td><td class="rightmargin right"><a id="file0_line42"></a><code>42</code></td><td class="percentagebar percentagebar100"><i class="icon-fork"></i></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;cyclicShift&nbsp;=&nbsp;j&nbsp;&lt;=&nbsp;input.Length&nbsp;?&nbsp;input[i..j]&nbsp;:&nbsp;input[i..]&nbsp;+&nbsp;input[0..((j&nbsp;-&nbsp;input.Length)&nbsp;%&nbsp;input.Length)]</code></td></tr>
-<tr class="coverableline" title="Covered (46 visits)" data-coverage="{'AllTestMethods': {'VC': '46', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">46</td><td class="rightmargin right"><a id="file0_line43"></a><code>43</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderby&nbsp;cyclicShift&nbsp;ascending</code></td></tr>
-<tr class="coverableline" title="Covered (46 visits)" data-coverage="{'AllTestMethods': {'VC': '46', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">46</td><td class="rightmargin right"><a id="file0_line44"></a><code>44</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;select&nbsp;i)</code></td></tr>
-<tr class="coverableline" title="Covered (10 visits)" data-coverage="{'AllTestMethods': {'VC': '10', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">10</td><td class="rightmargin right"><a id="file0_line45"></a><code>45</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.ToList();</code></td></tr>
-<tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line46"></a><code>46</code></td><td></td><td class="lightgray"><code>}</code></td></tr>
+<tr class="coverableline" title="Covered (10 visits)" data-coverage="{'AllTestMethods': {'VC': '10', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">10</td><td class="rightmargin right"><a id="file0_line40"></a><code>40</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;pcsAndIndex&nbsp;in&nbsp;PcsUtils.ExtractPcsOf(input,&nbsp;pcsLength&nbsp;*&nbsp;2)</code></td></tr>
+<tr class="coverableline" title="Covered (46 visits)" data-coverage="{'AllTestMethods': {'VC': '46', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">46</td><td class="rightmargin right"><a id="file0_line41"></a><code>41</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;orderby&nbsp;pcsAndIndex.pcs&nbsp;ascending</code></td></tr>
+<tr class="coverableline" title="Covered (46 visits)" data-coverage="{'AllTestMethods': {'VC': '46', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">46</td><td class="rightmargin right"><a id="file0_line42"></a><code>42</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;select&nbsp;pcsAndIndex.index)</code></td></tr>
+<tr class="coverableline" title="Covered (10 visits)" data-coverage="{'AllTestMethods': {'VC': '10', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">10</td><td class="rightmargin right"><a id="file0_line43"></a><code>43</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.ToList();</code></td></tr>
+<tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line44"></a><code>44</code></td><td></td><td class="lightgray"><code>}</code></td></tr>
 </tbody>
 </table>
 </div>
-<div class="footer">Generated by: ReportGenerator 5.1.9.0<br />07/16/2022 - 21:07:41<br /><a href="https://github.com/danielpalme/ReportGenerator">GitHub</a> | <a href="http://www.palmmedia.de">www.palmmedia.de</a></div></div>
+<div class="footer">Generated by: ReportGenerator 5.1.9.0<br />07/17/2022 - 12:16:04<br /><a href="https://github.com/danielpalme/ReportGenerator">GitHub</a> | <a href="http://www.palmmedia.de">www.palmmedia.de</a></div></div>
 <div class="containerright">
 <div class="containerrightfixed">
 <h1>Methods/Properties</h1>
