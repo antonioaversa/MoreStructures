@@ -24,6 +24,6 @@ public abstract class SingleCharPcsClassifierTests
         var result = classifier.Classify();
         Assert.IsTrue(
             expectedResult.SequenceEqual(result), 
-            $"Expected: [{string.Join(",", expectedResult)}]. Got: [{string.Join(", ", result)}]");
+            $"Expected: [{string.Join(",", expectedResult)}], Actual: [{string.Join(", ", result)}]");
     }
 }
