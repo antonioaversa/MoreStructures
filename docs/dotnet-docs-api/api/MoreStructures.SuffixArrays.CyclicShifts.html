@@ -91,6 +91,10 @@
       <section><p>An implementation of <a class="xref" href="MoreStructures.SuffixArrays.CyclicShifts.IDoubleLengthPcsSorter.html">IDoubleLengthPcsSorter</a> using Counting Sort, to perform sorting of partial cyclic
 shifts (PCS) of length 2 * L of a string, given the order and the equivalence classes of the PCS of length L.</p>
 </section>
+      <h4><a class="xref" href="MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.html">NaiveDoubleLengthPcsClassifier</a></h4>
+      <section><p>An implementation of <a class="xref" href="MoreStructures.SuffixArrays.CyclicShifts.IDoubleLengthPcsClassifier.html">IDoubleLengthPcsClassifier</a> which solely depends on the input string, to generate
+equivalence classes.</p>
+</section>
       <h4><a class="xref" href="MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsSorter.html">NaiveDoubleLengthPcsSorter</a></h4>
       <section><p>An implementation of <a class="xref" href="MoreStructures.SuffixArrays.CyclicShifts.IDoubleLengthPcsSorter.html">IDoubleLengthPcsSorter</a> sorting of partial cyclic shifts (PCS) of length 2 * L
 of a string by generating them and sorting with the LINQ-provided QuickSort. Ignores the provided order and
@@ -103,8 +107,14 @@ equivalence classes of the PCS of length L.</p>
       <section><p>A <a class="xref" href="MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.html">ISingleCharPcsClassifier</a> implementation which uses an externally provided position list
 <a class="xref" href="MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_OrderBasedSingleCharPcsClassifier_Order">Order</a> of the 1-char PCS of the <a class="xref" href="MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_OrderBasedSingleCharPcsClassifier_Input">Input</a>, to calculate equivalence classes.</p>
 </section>
+      <h4><a class="xref" href="MoreStructures.SuffixArrays.CyclicShifts.PcsUtils.html">PcsUtils</a></h4>
+      <section><p>Static class of utilities for partial cyclic shifts (PCS) of input strings.</p>
+</section>
     <h3 id="interfaces">Interfaces
   </h3>
+      <h4><a class="xref" href="MoreStructures.SuffixArrays.CyclicShifts.IDoubleLengthPcsClassifier.html">IDoubleLengthPcsClassifier</a></h4>
+      <section><p>An algorithm defining equivalence classes for partial cyclic shifts (PCS) of length 2 * L in the input string.</p>
+</section>
       <h4><a class="xref" href="MoreStructures.SuffixArrays.CyclicShifts.IDoubleLengthPcsSorter.html">IDoubleLengthPcsSorter</a></h4>
       <section><p>An algorithm sorting in lexicographic order all the partial cyclic shifts (PCS) of length 2 * L of a string,
 given the order and the equivalence classes of the PCS of length L.</p>

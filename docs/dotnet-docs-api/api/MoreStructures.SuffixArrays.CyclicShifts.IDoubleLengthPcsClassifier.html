@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface ISingleCharPcsClassifier
+    <title>Interface IDoubleLengthPcsClassifier
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface ISingleCharPcsClassifier
+    <meta name="title" content="Interface IDoubleLengthPcsClassifier
    ">
     <meta name="generator" content="docfx 2.59.2.0">
     
@@ -78,78 +78,36 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.SuffixArrays.CyclicShifts.IDoubleLengthPcsClassifier">
   
   
-  <h1 id="MoreStructures_SuffixArrays_CyclicShifts_ISingleCharPcsClassifier" data-uid="MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier" class="text-break">Interface ISingleCharPcsClassifier
+  <h1 id="MoreStructures_SuffixArrays_CyclicShifts_IDoubleLengthPcsClassifier" data-uid="MoreStructures.SuffixArrays.CyclicShifts.IDoubleLengthPcsClassifier" class="text-break">Interface IDoubleLengthPcsClassifier
   </h1>
-  <div class="markdown level0 summary"><p>An algorithm definining equivalence classes for partial cyclic shifts (PCS) of length 1 (i.e. single chars) of a
-string.</p>
+  <div class="markdown level0 summary"><p>An algorithm defining equivalence classes for partial cyclic shifts (PCS) of length 2 * L in the input string.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.SuffixArrays.CyclicShifts.html">MoreStructures.SuffixArrays.CyclicShifts</a></h6>
   <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
-  <h5 id="MoreStructures_SuffixArrays_CyclicShifts_ISingleCharPcsClassifier_syntax">Syntax</h5>
+  <h5 id="MoreStructures_SuffixArrays_CyclicShifts_IDoubleLengthPcsClassifier_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ISingleCharPcsClassifier</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IDoubleLengthPcsClassifier</code></pre>
   </div>
-  <h5 id="MoreStructures_SuffixArrays_CyclicShifts_ISingleCharPcsClassifier_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>
-The equivalence class of a n-char partial cyclic shift c of the string T is the number of <strong>distinct</strong> 
-n-char partial cyclic shift of T which strictly precedes c in lexicographic order (i.e. all distinct chars 
-strictly smaller than c).
-<br>
-That means that two partial cyclic shifts which are the same share the same equivalence class.
-<br>
-The minimum value the equivalence class can have is 0, for the smallest partial cyclic shift, which is preceded
-by no other partial cyclic shift. The maximum value is the number of distinct chars in the string.
-</p>
+  <h5 id="MoreStructures_SuffixArrays_CyclicShifts_IDoubleLengthPcsClassifier_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>The method <a class="xref" href="MoreStructures.SuffixArrays.CyclicShifts.IDoubleLengthPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_IDoubleLengthPcsClassifier_Classify">Classify()</a> has no input parameters because the input of the algorithm depends on the
+specific implementation.</p>
 </div>
-  <h3 id="properties">Properties
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_ISingleCharPcsClassifier_Input.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.Input%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/ISingleCharPcsClassifier.cs/#L24">View Source</a>
-  </span>
-  <a id="MoreStructures_SuffixArrays_CyclicShifts_ISingleCharPcsClassifier_Input_" data-uid="MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.Input*"></a>
-  <h4 id="MoreStructures_SuffixArrays_CyclicShifts_ISingleCharPcsClassifier_Input" data-uid="MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.Input">Input</h4>
-  <div class="markdown level1 summary"><p>The input text, whose 1-char PCS have to be classified.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string Input { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_ISingleCharPcsClassifier_Classify.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.Classify%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_IDoubleLengthPcsClassifier_Classify.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.IDoubleLengthPcsClassifier.Classify%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/ISingleCharPcsClassifier.cs/#L32">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/IDoubleLengthPcsClassifier.cs/#L18">View Source</a>
   </span>
-  <a id="MoreStructures_SuffixArrays_CyclicShifts_ISingleCharPcsClassifier_Classify_" data-uid="MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.Classify*"></a>
-  <h4 id="MoreStructures_SuffixArrays_CyclicShifts_ISingleCharPcsClassifier_Classify" data-uid="MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.Classify">Classify()</h4>
-  <div class="markdown level1 summary"><p>Runs the algorithm, calculating the equivalence classes of each 1-char PCS of the <a class="xref" href="MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_ISingleCharPcsClassifier_Input">Input</a>.</p>
+  <a id="MoreStructures_SuffixArrays_CyclicShifts_IDoubleLengthPcsClassifier_Classify_" data-uid="MoreStructures.SuffixArrays.CyclicShifts.IDoubleLengthPcsClassifier.Classify*"></a>
+  <h4 id="MoreStructures_SuffixArrays_CyclicShifts_IDoubleLengthPcsClassifier_Classify" data-uid="MoreStructures.SuffixArrays.CyclicShifts.IDoubleLengthPcsClassifier.Classify">Classify()</h4>
+  <div class="markdown level1 summary"><p>Runs the algorithm, calculating the equivalence classes of all PCS of length L in the input string.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -167,7 +125,7 @@ by no other partial cyclic shift. The maximum value is the number of distinct ch
     <tbody>
       <tr>
         <td><span class="xref">IList</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
-        <td><p>A list of equivalence classes, with as many items as chars in the <a class="xref" href="MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_ISingleCharPcsClassifier_Input">Input</a>.</p>
+        <td><p>A list of equivalence classes, with as many items as PCS of length L in the input string.</p>
 </td>
       </tr>
     </tbody>
@@ -184,10 +142,10 @@ by no other partial cyclic shift. The maximum value is the number of distinct ch
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_ISingleCharPcsClassifier.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_IDoubleLengthPcsClassifier.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.IDoubleLengthPcsClassifier%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/ISingleCharPcsClassifier.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/IDoubleLengthPcsClassifier.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
