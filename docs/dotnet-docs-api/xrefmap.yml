@@ -3715,6 +3715,80 @@ references:
   isSpec: "True"
   fullName: MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.Input
   nameWithType: NaiveSingleCharPcsClassifier.Input
+- uid: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier
+  name: OrderBasedDoubleLengthPcsClassifier
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.html
+  commentId: T:MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier
+  nameWithType: OrderBasedDoubleLengthPcsClassifier
+- uid: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.#ctor(System.String,System.Int32,IList{System.Int32})
+  name: OrderBasedDoubleLengthPcsClassifier(String, Int32, IList<Int32>)
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier__ctor_System_String_System_Int32_IList_System_Int32__
+  commentId: M:MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.#ctor(System.String,System.Int32,IList{System.Int32})
+  name.vb: OrderBasedDoubleLengthPcsClassifier(String, Int32, IList(Of Int32))
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.OrderBasedDoubleLengthPcsClassifier(System.String, System.Int32, IList<System.Int32>)
+  fullName.vb: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.OrderBasedDoubleLengthPcsClassifier(System.String, System.Int32, IList(Of System.Int32))
+  nameWithType: OrderBasedDoubleLengthPcsClassifier.OrderBasedDoubleLengthPcsClassifier(String, Int32, IList<Int32>)
+  nameWithType.vb: OrderBasedDoubleLengthPcsClassifier.OrderBasedDoubleLengthPcsClassifier(String, Int32, IList(Of Int32))
+- uid: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.#ctor*
+  name: OrderBasedDoubleLengthPcsClassifier
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier__ctor_
+  commentId: Overload:MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.OrderBasedDoubleLengthPcsClassifier
+  nameWithType: OrderBasedDoubleLengthPcsClassifier.OrderBasedDoubleLengthPcsClassifier
+- uid: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.Classify
+  name: Classify()
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier_Classify
+  commentId: M:MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.Classify
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.Classify()
+  nameWithType: OrderBasedDoubleLengthPcsClassifier.Classify()
+- uid: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.Classify*
+  name: Classify
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier_Classify_
+  commentId: Overload:MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.Classify
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.Classify
+  nameWithType: OrderBasedDoubleLengthPcsClassifier.Classify
+- uid: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.Input
+  name: Input
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier_Input
+  commentId: P:MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.Input
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.Input
+  nameWithType: OrderBasedDoubleLengthPcsClassifier.Input
+- uid: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.Input*
+  name: Input
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier_Input_
+  commentId: Overload:MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.Input
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.Input
+  nameWithType: OrderBasedDoubleLengthPcsClassifier.Input
+- uid: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.Order
+  name: Order
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier_Order
+  commentId: P:MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.Order
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.Order
+  nameWithType: OrderBasedDoubleLengthPcsClassifier.Order
+- uid: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.Order*
+  name: Order
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier_Order_
+  commentId: Overload:MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.Order
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.Order
+  nameWithType: OrderBasedDoubleLengthPcsClassifier.Order
+- uid: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.PcsLength
+  name: PcsLength
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier_PcsLength
+  commentId: P:MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.PcsLength
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.PcsLength
+  nameWithType: OrderBasedDoubleLengthPcsClassifier.PcsLength
+- uid: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.PcsLength*
+  name: PcsLength
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier_PcsLength_
+  commentId: Overload:MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.PcsLength
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.PcsLength
+  nameWithType: OrderBasedDoubleLengthPcsClassifier.PcsLength
 - uid: MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier
   name: OrderBasedSingleCharPcsClassifier
   href: api/MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.html
@@ -3788,6 +3862,12 @@ references:
   commentId: M:MoreStructures.SuffixArrays.CyclicShifts.PcsUtils.ExtractPcsOf(System.String,System.Int32)
   fullName: MoreStructures.SuffixArrays.CyclicShifts.PcsUtils.ExtractPcsOf(System.String, System.Int32)
   nameWithType: PcsUtils.ExtractPcsOf(String, Int32)
+- uid: MoreStructures.SuffixArrays.CyclicShifts.PcsUtils.ExtractPcsOf(System.String,System.Int32,System.Int32)
+  name: ExtractPcsOf(String, Int32, Int32)
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.PcsUtils.html#MoreStructures_SuffixArrays_CyclicShifts_PcsUtils_ExtractPcsOf_System_String_System_Int32_System_Int32_
+  commentId: M:MoreStructures.SuffixArrays.CyclicShifts.PcsUtils.ExtractPcsOf(System.String,System.Int32,System.Int32)
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.PcsUtils.ExtractPcsOf(System.String, System.Int32, System.Int32)
+  nameWithType: PcsUtils.ExtractPcsOf(String, Int32, Int32)
 - uid: MoreStructures.SuffixArrays.CyclicShifts.PcsUtils.ExtractPcsOf*
   name: ExtractPcsOf
   href: api/MoreStructures.SuffixArrays.CyclicShifts.PcsUtils.html#MoreStructures_SuffixArrays_CyclicShifts_PcsUtils_ExtractPcsOf_
@@ -8961,6 +9041,51 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifierTests.NaiveSingleCharPcsClassifierTests
   nameWithType: NaiveSingleCharPcsClassifierTests.NaiveSingleCharPcsClassifierTests
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests
+  name: OrderBasedDoubleLengthPcsClassifierTests
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests.html
+  commentId: T:MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests
+  nameWithType: OrderBasedDoubleLengthPcsClassifierTests
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests.#ctor
+  name: OrderBasedDoubleLengthPcsClassifierTests()
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifierTests__ctor
+  commentId: M:MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests.#ctor
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests.OrderBasedDoubleLengthPcsClassifierTests()
+  nameWithType: OrderBasedDoubleLengthPcsClassifierTests.OrderBasedDoubleLengthPcsClassifierTests()
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests.#ctor*
+  name: OrderBasedDoubleLengthPcsClassifierTests
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifierTests__ctor_
+  commentId: Overload:MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests.OrderBasedDoubleLengthPcsClassifierTests
+  nameWithType: OrderBasedDoubleLengthPcsClassifierTests.OrderBasedDoubleLengthPcsClassifierTests
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests.Ctor_RaisesExceptionWhenOrderIsNotCoherentWithInput
+  name: Ctor_RaisesExceptionWhenOrderIsNotCoherentWithInput()
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifierTests_Ctor_RaisesExceptionWhenOrderIsNotCoherentWithInput
+  commentId: M:MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests.Ctor_RaisesExceptionWhenOrderIsNotCoherentWithInput
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests.Ctor_RaisesExceptionWhenOrderIsNotCoherentWithInput()
+  nameWithType: OrderBasedDoubleLengthPcsClassifierTests.Ctor_RaisesExceptionWhenOrderIsNotCoherentWithInput()
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests.Ctor_RaisesExceptionWhenOrderIsNotCoherentWithInput*
+  name: Ctor_RaisesExceptionWhenOrderIsNotCoherentWithInput
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifierTests_Ctor_RaisesExceptionWhenOrderIsNotCoherentWithInput_
+  commentId: Overload:MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests.Ctor_RaisesExceptionWhenOrderIsNotCoherentWithInput
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests.Ctor_RaisesExceptionWhenOrderIsNotCoherentWithInput
+  nameWithType: OrderBasedDoubleLengthPcsClassifierTests.Ctor_RaisesExceptionWhenOrderIsNotCoherentWithInput
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests.Ctor_RaisesExceptionWhenPcsLengthIsNotCoherentWithInput
+  name: Ctor_RaisesExceptionWhenPcsLengthIsNotCoherentWithInput()
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifierTests_Ctor_RaisesExceptionWhenPcsLengthIsNotCoherentWithInput
+  commentId: M:MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests.Ctor_RaisesExceptionWhenPcsLengthIsNotCoherentWithInput
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests.Ctor_RaisesExceptionWhenPcsLengthIsNotCoherentWithInput()
+  nameWithType: OrderBasedDoubleLengthPcsClassifierTests.Ctor_RaisesExceptionWhenPcsLengthIsNotCoherentWithInput()
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests.Ctor_RaisesExceptionWhenPcsLengthIsNotCoherentWithInput*
+  name: Ctor_RaisesExceptionWhenPcsLengthIsNotCoherentWithInput
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifierTests_Ctor_RaisesExceptionWhenPcsLengthIsNotCoherentWithInput_
+  commentId: Overload:MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests.Ctor_RaisesExceptionWhenPcsLengthIsNotCoherentWithInput
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests.Ctor_RaisesExceptionWhenPcsLengthIsNotCoherentWithInput
+  nameWithType: OrderBasedDoubleLengthPcsClassifierTests.Ctor_RaisesExceptionWhenPcsLengthIsNotCoherentWithInput
 - uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifierTests
   name: OrderBasedSingleCharPcsClassifierTests
   href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifierTests.html
