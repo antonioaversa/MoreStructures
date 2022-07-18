@@ -20,7 +20,7 @@ public abstract class DoubleLengthPcsClassifierTests
         new[] { 0, 1 })]
     [DataRow("aab", 2, new[] { 0, 1, 2 }, new[] { 0, 0, 1 }, 
         new[] { 0, 1, 2 })]
-    [DataRow("aba", 2, new[] { 0, 2, 1 }, new[] { 0, 1, 0 }, 
+    [DataRow("aba", 2, new[] { 2, 0, 1 }, new[] { 0, 1, 0 }, 
         new[] { 1, 2, 0 })]
     [DataRow("abaa", 2, new[] { 2, 3, 0, 1 }, new[] { 0, 1, 0, 0 }, 
         new[] { 1, 2, 0, 0 })]
@@ -53,6 +53,6 @@ public abstract class DoubleLengthPcsClassifierTests
         var result = classifier.Classify();
         Assert.IsTrue(
             expectedResult.SequenceEqual(result),
-            $"Expected: [{string.Join(",", expectedResult)}], Actual: [{string.Join(", ", result)}]");
+            $"Expected: [{string.Join(", ", expectedResult)}], Actual: [{string.Join(", ", result)}]");
     }
 }
