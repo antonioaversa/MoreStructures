@@ -41,7 +41,7 @@
 <table>
 <tr>
 <th>Covered lines:</th>
-<td class="limit-width right" title="4">4</td>
+<td class="limit-width right" title="6">6</td>
 </tr>
 <tr>
 <th>Uncovered lines:</th>
@@ -49,15 +49,15 @@
 </tr>
 <tr>
 <th>Coverable lines:</th>
-<td class="limit-width right" title="4">4</td>
+<td class="limit-width right" title="6">6</td>
 </tr>
 <tr>
 <th>Total lines:</th>
-<td class="limit-width right" title="29">29</td>
+<td class="limit-width right" title="48">48</td>
 </tr>
 <tr>
 <th>Line coverage:</th>
-<td class="limit-width right" title="4 of 4">100%</td>
+<td class="limit-width right" title="6 of 6">100%</td>
 </tr>
 </table>
 </div>
@@ -100,7 +100,8 @@
 <table class="overview table-fixed">
 <thead><tr><th>Method</th><th>Branch coverage <a href="https://en.wikipedia.org/wiki/Code_coverage"><i class="icon-info-circled"></i></a></th><th>Cyclomatic complexity <a href="https://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon-info-circled"></i></a></th><th>Line coverage <a href="https://en.wikipedia.org/wiki/Code_coverage"><i class="icon-info-circled"></i></a></th></tr></thead>
 <tbody>
-<tr><td title="ExtractPcsOf(System.String,System.Int32)"><a href="#file0_line25" class="navigatetohash">ExtractPcsOf(...)</a></td><td>100%</td><td>2</td><td>100%</td></tr>
+<tr><td title="ExtractPcsOf(System.String,System.Int32)"><a href="#file0_line25" class="navigatetohash">ExtractPcsOf(...)</a></td><td>100%</td><td>1</td><td>100%</td></tr>
+<tr><td title="ExtractPcsOf(System.String,System.Int32,System.Int32)"><a href="#file0_line45" class="navigatetohash">ExtractPcsOf(...)</a></td><td>100%</td><td>2</td><td>100%</td></tr>
 </tbody>
 </table>
 </div>
@@ -134,19 +135,39 @@
 <tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line22"></a><code>22</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/para&gt;</code></td></tr>
 <tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line23"></a><code>23</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;/remarks&gt;</code></td></tr>
 <tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line24"></a><code>24</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;static&nbsp;IEnumerable&lt;(string&nbsp;pcs,&nbsp;int&nbsp;index)&gt;&nbsp;ExtractPcsOf(string&nbsp;input,&nbsp;int&nbsp;pcsLength)&nbsp;=&gt;</code></td></tr>
-<tr class="coverableline" title="Covered (23 visits)" data-coverage="{'AllTestMethods': {'VC': '23', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">23</td><td class="rightmargin right"><a id="file0_line25"></a><code>25</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;i&nbsp;in&nbsp;Enumerable.Range(0,&nbsp;input.Length)</code></td></tr>
-<tr class="coverableline" title="Covered (112 visits)" data-coverage="{'AllTestMethods': {'VC': '112', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">112</td><td class="rightmargin right"><a id="file0_line26"></a><code>26</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;j&nbsp;=&nbsp;i&nbsp;+&nbsp;pcsLength</code></td></tr>
-<tr class="coverableline" title="Covered (112 visits, 2 of 2 branches are covered)" data-coverage="{'AllTestMethods': {'VC': '112', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">112</td><td class="rightmargin right"><a id="file0_line27"></a><code>27</code></td><td class="percentagebar percentagebar100"><i class="icon-fork"></i></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;cyclicShift&nbsp;=&nbsp;j&nbsp;&lt;=&nbsp;input.Length&nbsp;?&nbsp;input[i..j]&nbsp;:&nbsp;input[i..]&nbsp;+&nbsp;input[0..((j&nbsp;-&nbsp;input.Length)&nbsp;%&nbsp;input.Length)]</code></td></tr>
-<tr class="coverableline" title="Covered (135 visits)" data-coverage="{'AllTestMethods': {'VC': '135', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">135</td><td class="rightmargin right"><a id="file0_line28"></a><code>28</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;select&nbsp;(cyclicShift,&nbsp;i);</code></td></tr>
-<tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line29"></a><code>29</code></td><td></td><td class="lightgray"><code>}</code></td></tr>
+<tr class="coverableline" title="Covered (23 visits)" data-coverage="{'AllTestMethods': {'VC': '23', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">23</td><td class="rightmargin right"><a id="file0_line25"></a><code>25</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;index&nbsp;in&nbsp;Enumerable.Range(0,&nbsp;input.Length)</code></td></tr>
+<tr class="coverableline" title="Covered (112 visits)" data-coverage="{'AllTestMethods': {'VC': '112', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">112</td><td class="rightmargin right"><a id="file0_line26"></a><code>26</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;pcs&nbsp;=&nbsp;ExtractPcsOf(input,&nbsp;index,&nbsp;pcsLength)</code></td></tr>
+<tr class="coverableline" title="Covered (135 visits)" data-coverage="{'AllTestMethods': {'VC': '135', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">135</td><td class="rightmargin right"><a id="file0_line27"></a><code>27</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;select&nbsp;(pcs,&nbsp;index);</code></td></tr>
+<tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line28"></a><code>28</code></td><td></td><td class="lightgray"><code></code></td></tr>
+<tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line29"></a><code>29</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;summary&gt;</code></td></tr>
+<tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line30"></a><code>30</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;Extract&nbsp;the&nbsp;PCS&nbsp;of&nbsp;length&nbsp;&lt;paramref&nbsp;name=&quot;pcsLength&quot;/&gt;&nbsp;from&nbsp;the&nbsp;provided&nbsp;&lt;paramref&nbsp;name=&quot;input&quot;/&gt;&nbsp;string,</code></td></tr>
+<tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line31"></a><code>31</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;starting&nbsp;at&nbsp;index&nbsp;&lt;paramref&nbsp;name=&quot;index&quot;/&gt;.</code></td></tr>
+<tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line32"></a><code>32</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;/summary&gt;</code></td></tr>
+<tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line33"></a><code>33</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;param&nbsp;name=&quot;input&quot;&gt;The&nbsp;input&nbsp;string,&nbsp;to&nbsp;extract&nbsp;the&nbsp;PCS&nbsp;of&nbsp;length&nbsp;&lt;paramref&nbsp;name=&quot;pcsLength&quot;/&gt;&nbsp;of.&lt;/param&gt;</code></td></tr>
+<tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line34"></a><code>34</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;param&nbsp;name=&quot;index&quot;&gt;The&nbsp;starting&nbsp;index&nbsp;of&nbsp;the&nbsp;PCS&nbsp;to&nbsp;extract.&lt;/param&gt;</code></td></tr>
+<tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line35"></a><code>35</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;param&nbsp;name=&quot;pcsLength&quot;&gt;The&nbsp;length&nbsp;of&nbsp;the&nbsp;PCS&nbsp;to&nbsp;extract.&lt;/param&gt;</code></td></tr>
+<tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line36"></a><code>36</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;returns&gt;The&nbsp;string&nbsp;containing&nbsp;the&nbsp;PCS.&lt;/returns&gt;</code></td></tr>
+<tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line37"></a><code>37</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;remarks&gt;</code></td></tr>
+<tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line38"></a><code>38</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;para&nbsp;id=&quot;complexity&quot;&gt;</code></td></tr>
+<tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line39"></a><code>39</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COMPLEXITY</code></td></tr>
+<tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line40"></a><code>40</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;br/&gt;</code></td></tr>
+<tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line41"></a><code>41</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time&nbsp;and&nbsp;Space&nbsp;Complexity&nbsp;is&nbsp;O(L).</code></td></tr>
+<tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line42"></a><code>42</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/para&gt;</code></td></tr>
+<tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line43"></a><code>43</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;///&nbsp;&lt;/remarks&gt;</code></td></tr>
+<tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line44"></a><code>44</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;static&nbsp;string&nbsp;ExtractPcsOf(string&nbsp;input,&nbsp;int&nbsp;index,&nbsp;int&nbsp;pcsLength)&nbsp;=&gt;</code></td></tr>
+<tr class="coverableline" title="Covered (178 visits, 2 of 2 branches are covered)" data-coverage="{'AllTestMethods': {'VC': '178', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">178</td><td class="rightmargin right"><a id="file0_line45"></a><code>45</code></td><td class="percentagebar percentagebar100"><i class="icon-fork"></i></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index&nbsp;+&nbsp;pcsLength&nbsp;&lt;=&nbsp;input.Length</code></td></tr>
+<tr class="coverableline" title="Covered (178 visits)" data-coverage="{'AllTestMethods': {'VC': '178', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">178</td><td class="rightmargin right"><a id="file0_line46"></a><code>46</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;input[index..(index&nbsp;+&nbsp;pcsLength)]</code></td></tr>
+<tr class="coverableline" title="Covered (178 visits)" data-coverage="{'AllTestMethods': {'VC': '178', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">178</td><td class="rightmargin right"><a id="file0_line47"></a><code>47</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;input[index..]&nbsp;+&nbsp;input[0..((index&nbsp;+&nbsp;pcsLength&nbsp;-&nbsp;input.Length)&nbsp;%&nbsp;input.Length)];</code></td></tr>
+<tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line48"></a><code>48</code></td><td></td><td class="lightgray"><code>}</code></td></tr>
 </tbody>
 </table>
 </div>
-<div class="footer">Generated by: ReportGenerator 5.1.9.0<br />07/17/2022 - 12:16:04<br /><a href="https://github.com/danielpalme/ReportGenerator">GitHub</a> | <a href="http://www.palmmedia.de">www.palmmedia.de</a></div></div>
+<div class="footer">Generated by: ReportGenerator 5.1.9.0<br />07/18/2022 - 02:48:16<br /><a href="https://github.com/danielpalme/ReportGenerator">GitHub</a> | <a href="http://www.palmmedia.de">www.palmmedia.de</a></div></div>
 <div class="containerright">
 <div class="containerrightfixed">
 <h1>Methods/Properties</h1>
 <a href="#file0_line25" class="navigatetohash percentagebar percentagebar100" title="Line coverage: 100% - ExtractPcsOf(System.String,System.Int32)"><i class="icon-cube"></i>ExtractPcsOf(System.String,System.Int32)</a><br />
+<a href="#file0_line45" class="navigatetohash percentagebar percentagebar100" title="Line coverage: 100% - ExtractPcsOf(System.String,System.Int32,System.Int32)"><i class="icon-cube"></i>ExtractPcsOf(System.String,System.Int32,System.Int32)</a><br />
 <br/></div>
 </div></div>
 <script type="text/javascript">
