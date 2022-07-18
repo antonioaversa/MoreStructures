@@ -13,7 +13,10 @@ namespace MoreStructures.SuffixArrays.CyclicShifts;
 ///     - The externally provided ordered sequence of PCS <see cref="Order"/> is iterated over.
 ///       <br/>
 ///     - A new equivalence class is generated (increasing the current counter) every time a PCS differs from the 
-///       previous one. The equivalence class is assigned to the output at the index of the PCS.
+///       previous one. The equivalence class is assigned to the output at the index of the PCS being checked.
+///       <br/>
+///     - The comparison between a PCS and the previous one (both of length <see cref="PcsLength"/>), is done comparing
+///       the <see cref="PcsLength"/> chars of the two strings.
 ///       <br/>
 ///     - Finally, the equivalence class list is returned.
 ///     </para>
@@ -28,7 +31,7 @@ namespace MoreStructures.SuffixArrays.CyclicShifts;
 ///     - Instantiating the equivalence class list of output is also an O(n) operation.
 ///       <br/>
 ///     - Therefore, Time Complexity, as driven by the iteration over <see cref="Order"/>, is O(n * L). Space 
-///       Complexity, driven as well by iteration over <see cref="Order"/>, is O(L).
+///       Complexity, driven as well by iteration over <see cref="Order"/> storing the previous PCS, is O(n + L).
 ///     </para>
 /// </remarks>
 public class OrderBasedDoubleLengthPcsClassifier : IDoubleLengthPcsClassifier
