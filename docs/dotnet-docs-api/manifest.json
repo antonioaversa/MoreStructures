@@ -998,6 +998,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.SuffixArrays.CyclicShifts.EqClassesBasedDoubleLengthPcsClassifier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.SuffixArrays.CyclicShifts.EqClassesBasedDoubleLengthPcsClassifier.html",
+          "hash": "ySuY5dyU6Ccj8QADxTw4IN31dHEl/Xyk20PcsMo7T4M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.SuffixArrays.CyclicShifts.IDoubleLengthPcsClassifier.yml",
       "output": {
         ".html": {
@@ -1074,7 +1086,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.html",
-          "hash": "2X+B8bRW9H+3kqIfx4zEf6g8f1aGUgypt8Np6FPHEfg="
+          "hash": "hCXs2CDiaHwK9ju1nX1Idz9wF60VkS2ygDtJivHsaLg="
         }
       },
       "is_incremental": false,
@@ -1110,7 +1122,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.SuffixArrays.CyclicShifts.html",
-          "hash": "+vaUvt83HemmmW2zqXDQdQVUm5wSfEAVk7+zjC6f060="
+          "hash": "vhGtxp8G+1Ft+XjuF7pXPDONnroQWAx0kBlWTK7Dn4c="
         }
       },
       "is_incremental": false,
@@ -2562,7 +2574,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.html",
-          "hash": "nBss0I/eAkYMQX4Yd5JLMMMlgAEfSzg9YXKp5a19HCc="
+          "hash": "1Rm98jQqDrcbVV6vGFJC2uaM7zF/fszMLXRi64afEmg="
         }
       },
       "is_incremental": false,
@@ -2575,6 +2587,18 @@
         ".html": {
           "relative_path": "api/MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsSorterTests.html",
           "hash": "Ic/1hBozrs3Ue6F+tm4d61OGpIMZ5nl+coKoiWCrRgY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.SuffixArrays.CyclicShifts.EqClassesBasedDoubleLengthPcsClassifierTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.SuffixArrays.CyclicShifts.EqClassesBasedDoubleLengthPcsClassifierTests.html",
+          "hash": "k2V9cvtHlMpGiZ2BBZav7YNBOFttzom3XhEbIFM6pHA="
         }
       },
       "is_incremental": false,
@@ -2622,7 +2646,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifierTests.html",
-          "hash": "3Hm2NHgR7mNrKeDogaVpIGVHk4j8x9R4GNHEwB5R2jA="
+          "hash": "PMaF1HEnvkYbk+wgSXn8MGN9XTuNpwOemNWbfJhG4C8="
         }
       },
       "is_incremental": false,
@@ -2658,7 +2682,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.SuffixArrays.CyclicShifts.html",
-          "hash": "A6dHfk7qZzuHiJsL4iwLjQZkphiXV4pJo0Ve6TDXWZ4="
+          "hash": "E9E9KN/CYjUb2Iuz126vQUsfEzM14fWoGofpYIVit2M="
         }
       },
       "is_incremental": false,
@@ -3582,7 +3606,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "nQP1+zSRF7GiaIAyG4DNnaApSMBT9CF2g8wDeb5gWVo="
+          "hash": "2EEfO3sCKthfGwt5iTVoSM9UdHCe0x9mFQPfBjBWLQ8="
         }
       },
       "is_incremental": false,
@@ -3657,7 +3681,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 296,
+          "total_file_count": 298,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
