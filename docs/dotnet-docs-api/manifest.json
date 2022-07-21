@@ -962,6 +962,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html",
+          "hash": "OPnbMzkBfSLCPcZDCzHfhDCS8e0b05X9X/1uHez89u8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder-2.yml",
       "output": {
         ".html": {
@@ -978,7 +990,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.SuffixArrays.Builders.html",
-          "hash": "y9isRIV4Xa/3szneErdtm9MxTaXfOX3dM9qK83WpxVU="
+          "hash": "zD8AlPFOo5tsLP9p26kWzlP8hufCYcioq5RAMvb+sMk="
         }
       },
       "is_incremental": false,
@@ -1002,7 +1014,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.SuffixArrays.CyclicShifts.EqClassesBasedDoubleLengthPcsClassifier.html",
-          "hash": "ySuY5dyU6Ccj8QADxTw4IN31dHEl/Xyk20PcsMo7T4M="
+          "hash": "FlO7TUoGGlyLwhlDi2ByNx9newKRozOFWB/xJrtOegk="
         }
       },
       "is_incremental": false,
@@ -2490,7 +2502,19 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.SuffixArrays.Builders.NaiveSuffixArrayBuilderTests.html",
-          "hash": "puNNHmdubIuqInaat0B8EAFlv9WKKF/F8h1MoxELPVI="
+          "hash": "6iCC4AmxS6IOPR/2bneZl8B2XmwwFdJDvjf+4kEsYlo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderTests.html",
+          "hash": "qeNVolU8NaPfbStsjpjt9r2uwGOUeHtS7uA1Mj0SFiU="
         }
       },
       "is_incremental": false,
@@ -2502,7 +2526,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests-2.html",
-          "hash": "CsrmxVlUBoU4XSaZRH5sLV7mDImwz00jaDl6MTlXsyA="
+          "hash": "aCEUQcV/x7SPPsaXLrvq1/ukcivKjQ6z7xIcVNiOY6k="
         }
       },
       "is_incremental": false,
@@ -2538,7 +2562,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.SuffixArrays.Builders.html",
-          "hash": "5hrKy2Di6ssZxsfo7u68D0d45hU3Foa63lVdNgLAbc8="
+          "hash": "TGv5Ynhde34/kYosGxGzjSyzUyciPD5VdcnUjuMdTJM="
         }
       },
       "is_incremental": false,
@@ -2598,7 +2622,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.SuffixArrays.CyclicShifts.EqClassesBasedDoubleLengthPcsClassifierTests.html",
-          "hash": "k2V9cvtHlMpGiZ2BBZav7YNBOFttzom3XhEbIFM6pHA="
+          "hash": "KKXLrQaGLkBO47ha/EHxFwlpERPqo0E0LtKeTOXZYzs="
         }
       },
       "is_incremental": false,
@@ -3606,7 +3630,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "2EEfO3sCKthfGwt5iTVoSM9UdHCe0x9mFQPfBjBWLQ8="
+          "hash": "zOHAGwYmiyywmCv55ncauLjvcdoox9TP2wBjBnU8Dq0="
         }
       },
       "is_incremental": false,
@@ -3681,7 +3705,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 298,
+          "total_file_count": 300,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

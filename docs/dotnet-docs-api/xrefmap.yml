@@ -3412,6 +3412,67 @@ references:
   isSpec: "True"
   fullName: MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder.Text
   nameWithType: NaiveSuffixArrayBuilder.Text
+- uid: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder
+  name: PcsBasedSuffixArrayBuilder
+  href: api/MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html
+  commentId: T:MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder
+  fullName: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder
+  nameWithType: PcsBasedSuffixArrayBuilder
+- uid: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.#ctor(MoreStructures.TextWithTerminator,IDictionary{System.Char,System.Int32})
+  name: PcsBasedSuffixArrayBuilder(TextWithTerminator, IDictionary<Char, Int32>)
+  href: api/MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder__ctor_MoreStructures_TextWithTerminator_IDictionary_System_Char_System_Int32__
+  commentId: M:MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.#ctor(MoreStructures.TextWithTerminator,IDictionary{System.Char,System.Int32})
+  name.vb: PcsBasedSuffixArrayBuilder(TextWithTerminator, IDictionary(Of Char, Int32))
+  fullName: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.PcsBasedSuffixArrayBuilder(MoreStructures.TextWithTerminator, IDictionary<System.Char, System.Int32>)
+  fullName.vb: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.PcsBasedSuffixArrayBuilder(MoreStructures.TextWithTerminator, IDictionary(Of System.Char, System.Int32))
+  nameWithType: PcsBasedSuffixArrayBuilder.PcsBasedSuffixArrayBuilder(TextWithTerminator, IDictionary<Char, Int32>)
+  nameWithType.vb: PcsBasedSuffixArrayBuilder.PcsBasedSuffixArrayBuilder(TextWithTerminator, IDictionary(Of Char, Int32))
+- uid: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.#ctor*
+  name: PcsBasedSuffixArrayBuilder
+  href: api/MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder__ctor_
+  commentId: Overload:MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.PcsBasedSuffixArrayBuilder
+  nameWithType: PcsBasedSuffixArrayBuilder.PcsBasedSuffixArrayBuilder
+- uid: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Alphabet
+  name: Alphabet
+  href: api/MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Alphabet
+  commentId: P:MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Alphabet
+  fullName: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Alphabet
+  nameWithType: PcsBasedSuffixArrayBuilder.Alphabet
+- uid: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Alphabet*
+  name: Alphabet
+  href: api/MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Alphabet_
+  commentId: Overload:MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Alphabet
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Alphabet
+  nameWithType: PcsBasedSuffixArrayBuilder.Alphabet
+- uid: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Build
+  name: Build()
+  href: api/MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Build
+  commentId: M:MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Build
+  fullName: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Build()
+  nameWithType: PcsBasedSuffixArrayBuilder.Build()
+- uid: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Build*
+  name: Build
+  href: api/MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Build_
+  commentId: Overload:MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Build
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Build
+  nameWithType: PcsBasedSuffixArrayBuilder.Build
+- uid: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Text
+  name: Text
+  href: api/MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Text
+  commentId: P:MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Text
+  fullName: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Text
+  nameWithType: PcsBasedSuffixArrayBuilder.Text
+- uid: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Text*
+  name: Text
+  href: api/MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Text_
+  commentId: Overload:MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Text
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Text
+  nameWithType: PcsBasedSuffixArrayBuilder.Text
 - uid: MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2
   name: SuffixStructureBasedSuffixArrayBuilder<TEdge, TNode>
   href: api/MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder-2.html
@@ -8747,6 +8808,25 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.SuffixArrays.Builders.NaiveSuffixArrayBuilderTests.NaiveSuffixArrayBuilderTests
   nameWithType: NaiveSuffixArrayBuilderTests.NaiveSuffixArrayBuilderTests
+- uid: MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderTests
+  name: PcsBasedSuffixArrayBuilderTests
+  href: api/MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderTests.html
+  commentId: T:MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderTests
+  fullName: MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderTests
+  nameWithType: PcsBasedSuffixArrayBuilderTests
+- uid: MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderTests.#ctor
+  name: PcsBasedSuffixArrayBuilderTests()
+  href: api/MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderTests.html#MoreStructures_Tests_SuffixArrays_Builders_PcsBasedSuffixArrayBuilderTests__ctor
+  commentId: M:MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderTests.#ctor
+  fullName: MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderTests.PcsBasedSuffixArrayBuilderTests()
+  nameWithType: PcsBasedSuffixArrayBuilderTests.PcsBasedSuffixArrayBuilderTests()
+- uid: MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderTests.#ctor*
+  name: PcsBasedSuffixArrayBuilderTests
+  href: api/MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderTests.html#MoreStructures_Tests_SuffixArrays_Builders_PcsBasedSuffixArrayBuilderTests__ctor_
+  commentId: Overload:MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderTests.PcsBasedSuffixArrayBuilderTests
+  nameWithType: PcsBasedSuffixArrayBuilderTests.PcsBasedSuffixArrayBuilderTests
 - uid: MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests`2
   name: SuffixArrayBuilderTests<TEdge, TNode>
   href: api/MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests-2.html

@@ -1,0 +1,369 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PcsBasedSuffixArrayBuilder
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PcsBasedSuffixArrayBuilder
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder">
+  
+  
+  <h1 id="MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder" data-uid="MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder" class="text-break">Class PcsBasedSuffixArrayBuilder
+  </h1>
+  <div class="markdown level0 summary"><p>An algorithm for building the <span class="xref">MoreStructures.SuffixArrays.SuffixArray</span> based on fast PCS comparison.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">PcsBasedSuffixArrayBuilder</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder.html">ISuffixArrayBuilder</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.SuffixArrays.Builders.html">MoreStructures.SuffixArrays.Builders</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PcsBasedSuffixArrayBuilder : ISuffixArrayBuilder</code></pre>
+  </div>
+  <h5 id="MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+ALGORITHM
+<br>
+The algorithm is based on two lists, position list and equivalence class list, which are iteratively 
+recalculated, over and over again, for longer and longer PCS of <a class="xref" href="MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Text">Text</a>, until the full content of
+<a class="xref" href="MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Text">Text</a> is covered by the PCS.
+<br>
+More in detail:
+<br>
+- Position and equivalence class lists are first calculated for 1-char PCS, i.e. for single chars, using
+<a class="xref" href="MoreStructures.Strings.Sorting.CountingSortCharsSorter.html">CountingSortCharsSorter</a> and <a class="xref" href="MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier.html">OrderBasedSingleCharPcsClassifier</a> respectively.
+<br>
+- Position and equivalence class lists are then calculated for PCS of length double than the current one, using
+<a class="xref" href="MoreStructures.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorter.html">CountingSortDoubleLengthPcsSorter</a> and <a class="xref" href="MoreStructures.SuffixArrays.CyclicShifts.EqClassesBasedDoubleLengthPcsClassifier.html">EqClassesBasedDoubleLengthPcsClassifier</a>
+respectively.
+<br>
+- The operation is repeated until the current PCS length becomes bigger or equal than the length of 
+<a class="xref" href="MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Text">Text</a>.
+<br>
+- At this point, the last calculated order is the order of PCS which are at least as long as the full
+<a class="xref" href="MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Text">Text</a>.
+<br>
+- Because all such strings include a full suffixes of <a class="xref" href="MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Text">Text</a> terminated by a terminator, which is a
+unique char, the resulting order is the order of all suffixes of <a class="xref" href="MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Text">Text</a>, which is by definition
+the Suffix Array of <a class="xref" href="MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Text">Text</a>.
+</p>
+<p>
+COMPLEXITY
+<br>
+- The algorithm has a bootstrap part (1-char PCS) and an iterative part (doubling length PCS).
+<br>
+- It first calculates position and equivalence lists for 1-char PCS, which are respectively 
+O(n + sigma) and O(n) operations, both in Time and Space Complexity, where n is the length of 
+<a class="xref" href="MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Text">Text</a> and sigma is the size of the <a class="xref" href="MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Alphabet">Alphabet</a> of <a class="xref" href="MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Text">Text</a>.
+<br>
+- Then the iterative part is executed. The number of top-level iterations is logarithmic with n, because the
+PCS length doubles at every iteration and the termination condition is that the PCS length is at least as big
+as the length of <a class="xref" href="MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Text">Text</a>.
+<br>
+- The two operations done in the iteration loop both have linear Time and Space Complexity.
+<br>
+- Therefore, both Time and Space Complexity are O(n * log(n) + sigma).
+<br>
+- If sigma is O(n), Time and Space Complexity are O(n * log(n)).
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder__ctor_MoreStructures_TextWithTerminator_IDictionary_System_Char_System_Int32__.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.%23ctor(MoreStructures.TextWithTerminator%2CIDictionary%7BSystem.Char%2CSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/Builders/PcsBasedSuffixArrayBuilder.cs/#L80">View Source</a>
+  </span>
+  <a id="MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder__ctor_" data-uid="MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.#ctor*"></a>
+  <h4 id="MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder__ctor_MoreStructures_TextWithTerminator_IDictionary_System_Char_System_Int32__" data-uid="MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.#ctor(MoreStructures.TextWithTerminator,IDictionary{System.Char,System.Int32})">PcsBasedSuffixArrayBuilder(TextWithTerminator, IDictionary&lt;Char, Int32&gt;)</h4>
+  <div class="markdown level1 summary"><p><inheritdoc cref="T:MoreStructures.SuffixArrays.Builders.NaiveSuffixArrayBuilder" path="/summary"></inheritdoc></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PcsBasedSuffixArrayBuilder(TextWithTerminator text, IDictionary&lt;char, int&gt; alphabet)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a></td>
+        <td><span class="parametername">text</span></td>
+        <td><p><inheritdoc cref="P:MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Text" path="/summary"></inheritdoc></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IDictionary</span>&lt;<span class="xref">System.Char</span>, <span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">alphabet</span></td>
+        <td><p><inheritdoc cref="P:MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Text" path="/summary"></inheritdoc></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Alphabet.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Alphabet%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/Builders/PcsBasedSuffixArrayBuilder.cs/#L73">View Source</a>
+  </span>
+  <a id="MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Alphabet_" data-uid="MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Alphabet*"></a>
+  <h4 id="MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Alphabet" data-uid="MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Alphabet">Alphabet</h4>
+  <div class="markdown level1 summary"><p>The alphabet of <a class="xref" href="MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Text">Text</a>, i.e. the list of all <span class="xref">System.Char</span> potentially appearing in
+<a class="xref" href="MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Text">Text</a>, mapped to an alphabet index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDictionary&lt;char, int&gt; Alphabet { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IDictionary</span>&lt;<span class="xref">System.Char</span>, <span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Alphabet_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required by the Counting Sort algorithm, which builds the histogram of occurrences in the input, of all chars
+of the alphabet of the input.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Text.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Text%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/Builders/PcsBasedSuffixArrayBuilder.cs/#L63">View Source</a>
+  </span>
+  <a id="MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Text_" data-uid="MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Text*"></a>
+  <h4 id="MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Text" data-uid="MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Text">Text</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>, to build the <span class="xref">MoreStructures.SuffixArrays.SuffixArray</span> of.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextWithTerminator Text { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Build.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Build%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/Builders/PcsBasedSuffixArrayBuilder.cs/#L89">View Source</a>
+  </span>
+  <a id="MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Build_" data-uid="MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Build*"></a>
+  <h4 id="MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Build" data-uid="MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Build">Build()</h4>
+  <div class="markdown level1 summary"><p><inheritdoc cref="T:MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder" path="/summary"></inheritdoc></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SuffixArray Build()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MoreStructures.SuffixArrays.SuffixArray</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder.html">ISuffixArrayBuilder</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/Builders/PcsBasedSuffixArrayBuilder.cs/#L58" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
