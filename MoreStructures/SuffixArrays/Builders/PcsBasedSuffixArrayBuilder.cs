@@ -7,7 +7,6 @@ namespace MoreStructures.SuffixArrays.Builders;
 
 /// <summary>
 /// An algorithm for building the <see cref="SuffixArray"/> based on fast PCS comparison.
-/// TODO
 /// </summary>
 /// <remarks>
 ///     <para id="algo">
