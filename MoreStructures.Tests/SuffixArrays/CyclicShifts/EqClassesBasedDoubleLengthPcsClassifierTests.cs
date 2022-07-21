@@ -18,12 +18,6 @@ public class EqClassesBasedDoubleLengthPcsClassifierTests : DoubleLengthPcsClass
             () => new EqClassesBasedDoubleLengthPcsClassifier(-2, new[] { 0 }, new[] { 0 }));
         Assert.ThrowsException<ArgumentOutOfRangeException>(
             () => new EqClassesBasedDoubleLengthPcsClassifier(0, new[] { 0 }, new[] { 0 }));
-        Assert.ThrowsException<ArgumentOutOfRangeException>(
-            () => new EqClassesBasedDoubleLengthPcsClassifier(2, new[] { 0 }, new[] { 0 }));
-        Assert.ThrowsException<ArgumentOutOfRangeException>(
-            () => new EqClassesBasedDoubleLengthPcsClassifier(2, Array.Empty<int>(), Array.Empty<int>()));
-        Assert.ThrowsException<ArgumentOutOfRangeException>(
-            () => new EqClassesBasedDoubleLengthPcsClassifier(4, new[] { 0, 1, 2 }, new[] { 0, 1, 2 }));
     }
 
     [TestMethod]
