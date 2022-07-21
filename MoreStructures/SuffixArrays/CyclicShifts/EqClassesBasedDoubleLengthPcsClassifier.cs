@@ -13,8 +13,8 @@ namespace MoreStructures.SuffixArrays.CyclicShifts;
 ///     - Compared to <see cref="NaiveDoubleLengthPcsClassifier"/>, it has way better runtime (linear time, instead of
 ///       cubic).
 ///       <br/>
-///     - Compared <see cref="OrderBasedDoubleLengthPcsClassifier"/>, it still has better runtime (linear time, instead of
-///       quadratic).
+///     - Compared <see cref="OrderBasedDoubleLengthPcsClassifier"/>, it still has better runtime (linear time, instead
+///       of quadratic).
 ///       <br/>
 ///     - However, it requires both the position list <see cref="Order"/> and the equivalence class list 
 ///       <see cref="EqClassesPcsHalfLength"/>, to be externally provided.
@@ -73,7 +73,7 @@ public class EqClassesBasedDoubleLengthPcsClassifier : IDoubleLengthPcsClassifie
     public IList<int> Order { get; }
 
     /// <summary>
-    ///     <inheritdoc cref="OrderBasedDoubleLengthPcsClassifier"/>
+    ///     <inheritdoc cref="EqClassesBasedDoubleLengthPcsClassifier"/>
     /// </summary>
     /// <param name="pcsLength"><inheritdoc cref="PcsLength" path="/summary"/></param>
     /// <param name="eqClassesPcsHalfLength"><inheritdoc cref="EqClassesPcsHalfLength" path="/summary"/></param>
@@ -83,9 +83,9 @@ public class EqClassesBasedDoubleLengthPcsClassifier : IDoubleLengthPcsClassifie
         if (pcsLength % 2 != 0)
             throw new ArgumentException(
                 $"Must be even.", nameof(pcsLength));
-        if (pcsLength <= 0 || pcsLength > eqClassesPcsHalfLength.Count)
+        if (pcsLength <= 0)
             throw new ArgumentOutOfRangeException(
-                nameof(pcsLength), $"Must be positive and at most the length of {nameof(eqClassesPcsHalfLength)}.");
+                nameof(pcsLength), $"Must be positive.");
         if (order.Count != eqClassesPcsHalfLength.Count)
             throw new ArgumentException(
                 $"Must have the same number of items as {nameof(eqClassesPcsHalfLength)}.", nameof(order));
@@ -97,7 +97,7 @@ public class EqClassesBasedDoubleLengthPcsClassifier : IDoubleLengthPcsClassifie
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
-    ///     <inheritdoc cref="OrderBasedDoubleLengthPcsClassifier" path="/remarks"/>
+    ///     <inheritdoc cref="EqClassesBasedDoubleLengthPcsClassifier" path="/remarks"/>
     /// </remarks>
     public IList<int> Classify()
     {
