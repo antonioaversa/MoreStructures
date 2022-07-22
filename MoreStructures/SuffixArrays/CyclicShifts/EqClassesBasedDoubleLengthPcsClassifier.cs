@@ -20,6 +20,17 @@ namespace MoreStructures.SuffixArrays.CyclicShifts;
 ///       <see cref="EqClassesPcsHalfLength"/>, to be externally provided.
 ///       <br/>
 ///     - Compared to other implementations, <b>this algorithm requires <see cref="PcsLength"/> to be even.</b>
+///       <br/>
+///     - Unlike <see cref="NaiveDoubleLengthPcsClassifier"/>, this implementation requires specific data structures
+///       to be provided, in alternative to the input, to calculate equivalence classes.
+///       <br/>
+///     - However, unlike <see cref="NaiveDoubleLengthPcsClassifier"/>, it does not require to know whether 
+///       input contains a terminator or not.
+///       <br/>
+///     - This is because such piece of information would only be needed when running comparisons between PCS.
+///       <br/>
+///     - This classifier, on the other hand, uses an externally provided lists precisely in order to avoid the
+///       need for costly PCS comparisons, which are "embedded" in the externally provided data structures.
 ///     </para>
 ///     <para id="algo">
 ///     ALGORITHM
