@@ -7,17 +7,17 @@ namespace MoreStructures.Tests.SuffixArrays.CyclicShifts;
 public class NaiveDoubleLengthPcsClassifierTests : DoubleLengthPcsClassifierTests
 {
     public NaiveDoubleLengthPcsClassifierTests() 
-        : base(cbi => new NaiveDoubleLengthPcsClassifier(cbi.Input, cbi.PcsLength))
+        : base(cbi => new NaiveDoubleLengthPcsClassifier(cbi.Input, cbi.PcsLength, cbi.Terminator))
     {
     }
 
     [TestMethod]
     public void Ctor_RaisesExceptionWithInvalidPcsLength()
     {
-        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new NaiveDoubleLengthPcsClassifier("a", -1));
-        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new NaiveDoubleLengthPcsClassifier("a", 0));
-        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new NaiveDoubleLengthPcsClassifier("a", 2));
-        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new NaiveDoubleLengthPcsClassifier("", 1));
-        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new NaiveDoubleLengthPcsClassifier("abc", 4));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new NaiveDoubleLengthPcsClassifier("a", -1, false));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new NaiveDoubleLengthPcsClassifier("a", 0, false));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new NaiveDoubleLengthPcsClassifier("a", 2, false));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new NaiveDoubleLengthPcsClassifier("", 1, false));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new NaiveDoubleLengthPcsClassifier("abc", 4, false));
     }
 }
