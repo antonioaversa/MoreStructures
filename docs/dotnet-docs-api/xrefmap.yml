@@ -3731,12 +3731,12 @@ references:
   commentId: T:MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier
   fullName: MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier
   nameWithType: NaiveDoubleLengthPcsClassifier
-- uid: MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.#ctor(System.String,System.Int32)
-  name: NaiveDoubleLengthPcsClassifier(String, Int32)
-  href: api/MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsClassifier__ctor_System_String_System_Int32_
-  commentId: M:MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.#ctor(System.String,System.Int32)
-  fullName: MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.NaiveDoubleLengthPcsClassifier(System.String, System.Int32)
-  nameWithType: NaiveDoubleLengthPcsClassifier.NaiveDoubleLengthPcsClassifier(String, Int32)
+- uid: MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.#ctor(System.String,System.Int32,System.Boolean)
+  name: NaiveDoubleLengthPcsClassifier(String, Int32, Boolean)
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsClassifier__ctor_System_String_System_Int32_System_Boolean_
+  commentId: M:MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.#ctor(System.String,System.Int32,System.Boolean)
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.NaiveDoubleLengthPcsClassifier(System.String, System.Int32, System.Boolean)
+  nameWithType: NaiveDoubleLengthPcsClassifier.NaiveDoubleLengthPcsClassifier(String, Int32, Boolean)
 - uid: MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.#ctor*
   name: NaiveDoubleLengthPcsClassifier
   href: api/MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsClassifier__ctor_
@@ -8993,15 +8993,15 @@ references:
   commentId: T:MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.ClassifierBuilderInput
   fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.ClassifierBuilderInput
   nameWithType: DoubleLengthPcsClassifierTests.ClassifierBuilderInput
-- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.ClassifierBuilderInput.#ctor(System.String,System.Int32,System.Int32[],System.Int32[])
-  name: ClassifierBuilderInput(String, Int32, Int32[], Int32[])
-  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.ClassifierBuilderInput.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_DoubleLengthPcsClassifierTests_ClassifierBuilderInput__ctor_System_String_System_Int32_System_Int32___System_Int32___
-  commentId: M:MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.ClassifierBuilderInput.#ctor(System.String,System.Int32,System.Int32[],System.Int32[])
-  name.vb: ClassifierBuilderInput(String, Int32, Int32(), Int32())
-  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.ClassifierBuilderInput.ClassifierBuilderInput(System.String, System.Int32, System.Int32[], System.Int32[])
-  fullName.vb: MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.ClassifierBuilderInput.ClassifierBuilderInput(System.String, System.Int32, System.Int32(), System.Int32())
-  nameWithType: DoubleLengthPcsClassifierTests.ClassifierBuilderInput.ClassifierBuilderInput(String, Int32, Int32[], Int32[])
-  nameWithType.vb: DoubleLengthPcsClassifierTests.ClassifierBuilderInput.ClassifierBuilderInput(String, Int32, Int32(), Int32())
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.ClassifierBuilderInput.#ctor(System.String,System.Int32,System.Int32[],System.Int32[],System.Boolean)
+  name: ClassifierBuilderInput(String, Int32, Int32[], Int32[], Boolean)
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.ClassifierBuilderInput.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_DoubleLengthPcsClassifierTests_ClassifierBuilderInput__ctor_System_String_System_Int32_System_Int32___System_Int32___System_Boolean_
+  commentId: M:MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.ClassifierBuilderInput.#ctor(System.String,System.Int32,System.Int32[],System.Int32[],System.Boolean)
+  name.vb: ClassifierBuilderInput(String, Int32, Int32(), Int32(), Boolean)
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.ClassifierBuilderInput.ClassifierBuilderInput(System.String, System.Int32, System.Int32[], System.Int32[], System.Boolean)
+  fullName.vb: MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.ClassifierBuilderInput.ClassifierBuilderInput(System.String, System.Int32, System.Int32(), System.Int32(), System.Boolean)
+  nameWithType: DoubleLengthPcsClassifierTests.ClassifierBuilderInput.ClassifierBuilderInput(String, Int32, Int32[], Int32[], Boolean)
+  nameWithType.vb: DoubleLengthPcsClassifierTests.ClassifierBuilderInput.ClassifierBuilderInput(String, Int32, Int32(), Int32(), Boolean)
 - uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.ClassifierBuilderInput.#ctor*
   name: ClassifierBuilderInput
   href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.ClassifierBuilderInput.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_DoubleLengthPcsClassifierTests_ClassifierBuilderInput__ctor_
@@ -9061,15 +9061,28 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.ClassifierBuilderInput.PcsLength
   nameWithType: DoubleLengthPcsClassifierTests.ClassifierBuilderInput.PcsLength
-- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.Classify_IsCorrect(System.String,System.Int32,System.Int32[],System.Int32[],System.Int32[])
-  name: Classify_IsCorrect(String, Int32, Int32[], Int32[], Int32[])
-  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_DoubleLengthPcsClassifierTests_Classify_IsCorrect_System_String_System_Int32_System_Int32___System_Int32___System_Int32___
-  commentId: M:MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.Classify_IsCorrect(System.String,System.Int32,System.Int32[],System.Int32[],System.Int32[])
-  name.vb: Classify_IsCorrect(String, Int32, Int32(), Int32(), Int32())
-  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.Classify_IsCorrect(System.String, System.Int32, System.Int32[], System.Int32[], System.Int32[])
-  fullName.vb: MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.Classify_IsCorrect(System.String, System.Int32, System.Int32(), System.Int32(), System.Int32())
-  nameWithType: DoubleLengthPcsClassifierTests.Classify_IsCorrect(String, Int32, Int32[], Int32[], Int32[])
-  nameWithType.vb: DoubleLengthPcsClassifierTests.Classify_IsCorrect(String, Int32, Int32(), Int32(), Int32())
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.ClassifierBuilderInput.Terminator
+  name: Terminator
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.ClassifierBuilderInput.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_DoubleLengthPcsClassifierTests_ClassifierBuilderInput_Terminator
+  commentId: P:MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.ClassifierBuilderInput.Terminator
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.ClassifierBuilderInput.Terminator
+  nameWithType: DoubleLengthPcsClassifierTests.ClassifierBuilderInput.Terminator
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.ClassifierBuilderInput.Terminator*
+  name: Terminator
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.ClassifierBuilderInput.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_DoubleLengthPcsClassifierTests_ClassifierBuilderInput_Terminator_
+  commentId: Overload:MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.ClassifierBuilderInput.Terminator
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.ClassifierBuilderInput.Terminator
+  nameWithType: DoubleLengthPcsClassifierTests.ClassifierBuilderInput.Terminator
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.Classify_IsCorrect(System.String,System.Int32,System.Int32[],System.Int32[],System.Boolean,System.Int32[])
+  name: Classify_IsCorrect(String, Int32, Int32[], Int32[], Boolean, Int32[])
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_DoubleLengthPcsClassifierTests_Classify_IsCorrect_System_String_System_Int32_System_Int32___System_Int32___System_Boolean_System_Int32___
+  commentId: M:MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.Classify_IsCorrect(System.String,System.Int32,System.Int32[],System.Int32[],System.Boolean,System.Int32[])
+  name.vb: Classify_IsCorrect(String, Int32, Int32(), Int32(), Boolean, Int32())
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.Classify_IsCorrect(System.String, System.Int32, System.Int32[], System.Int32[], System.Boolean, System.Int32[])
+  fullName.vb: MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.Classify_IsCorrect(System.String, System.Int32, System.Int32(), System.Int32(), System.Boolean, System.Int32())
+  nameWithType: DoubleLengthPcsClassifierTests.Classify_IsCorrect(String, Int32, Int32[], Int32[], Boolean, Int32[])
+  nameWithType.vb: DoubleLengthPcsClassifierTests.Classify_IsCorrect(String, Int32, Int32(), Int32(), Boolean, Int32())
 - uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.Classify_IsCorrect*
   name: Classify_IsCorrect
   href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.DoubleLengthPcsClassifierTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_DoubleLengthPcsClassifierTests_Classify_IsCorrect_

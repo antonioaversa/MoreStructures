@@ -128,6 +128,20 @@ equivalence classes.</p>
   </div>
   <h5 id="MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsClassifier_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>
+ADVANTAGES AND DISADVANTAGES
+<br>
+- Unlike other implementations, such as <a class="xref" href="MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.html">OrderBasedDoubleLengthPcsClassifier</a> or 
+<a class="xref" href="MoreStructures.SuffixArrays.CyclicShifts.EqClassesBasedDoubleLengthPcsClassifier.html">EqClassesBasedDoubleLengthPcsClassifier</a>, this classifier needs to know whether the input being
+provided includes a terminator (i.e. its last char is &quot;special&quot; as it uniquely identify the end of the 
+string) or not.
+<br>
+- This information is required since this classifier performs classification by actually sorting PCS, and
+sorting PCS requires knowing whether a terminator is present or not (and which one it is).
+<br>
+- Other implementations don&apos;t require such information, since they never compare PCS against each other: they
+either use an externally provided position list or compare via the equivalence class list.
+</p>
+<p>
 ALGORITHM
 <br>
 - PCS of length L are generated as actual strings from the input string, then sorted in lexicographic order via
@@ -163,19 +177,19 @@ generating and iteration, is O(n * L).
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsClassifier__ctor_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.%23ctor(System.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsClassifier__ctor_System_String_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.%23ctor(System.String%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/NaiveDoubleLengthPcsClassifier.cs/#L59">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/NaiveDoubleLengthPcsClassifier.cs/#L80">View Source</a>
   </span>
   <a id="MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsClassifier__ctor_" data-uid="MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.#ctor*"></a>
-  <h4 id="MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsClassifier__ctor_System_String_System_Int32_" data-uid="MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.#ctor(System.String,System.Int32)">NaiveDoubleLengthPcsClassifier(String, Int32)</h4>
+  <h4 id="MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsClassifier__ctor_System_String_System_Int32_System_Boolean_" data-uid="MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.#ctor(System.String,System.Int32,System.Boolean)">NaiveDoubleLengthPcsClassifier(String, Int32, Boolean)</h4>
   <div class="markdown level1 summary"><p><inheritdoc cref="T:MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier"></inheritdoc></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NaiveDoubleLengthPcsClassifier(string input, int pcsLength)</code></pre>
+    <pre><code class="lang-csharp hljs">public NaiveDoubleLengthPcsClassifier(string input, int pcsLength, bool inputWithTerminator)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -199,6 +213,14 @@ generating and iteration, is O(n * L).
         <td><p><inheritdoc cref="P:MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.PcsLength" path="/summary"></inheritdoc></p>
 </td>
       </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">inputWithTerminator</span></td>
+        <td><p>Whether <code data-dev-comment-type="paramref" class="paramref">input</code> is terminated by a terminator char. If so, the last char of
+<code data-dev-comment-type="paramref" class="paramref">input</code> will be treated as a terminator char when comparing PCS of the input.
+Otherwise, <see cref="!:Comparer&lt;T>.Default"></see> for <span class="xref">System.String</span> will be used.</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
@@ -208,7 +230,7 @@ generating and iteration, is O(n * L).
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsClassifier_Input.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.Input%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/NaiveDoubleLengthPcsClassifier.cs/#L47">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/NaiveDoubleLengthPcsClassifier.cs/#L63">View Source</a>
   </span>
   <a id="MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsClassifier_Input_" data-uid="MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.Input*"></a>
   <h4 id="MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsClassifier_Input" data-uid="MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.Input">Input</h4>
@@ -239,7 +261,7 @@ generating and iteration, is O(n * L).
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsClassifier_PcsLength.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.PcsLength%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/NaiveDoubleLengthPcsClassifier.cs/#L52">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/NaiveDoubleLengthPcsClassifier.cs/#L68">View Source</a>
   </span>
   <a id="MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsClassifier_PcsLength_" data-uid="MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.PcsLength*"></a>
   <h4 id="MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsClassifier_PcsLength" data-uid="MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.PcsLength">PcsLength</h4>
@@ -272,7 +294,7 @@ generating and iteration, is O(n * L).
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsClassifier_Classify.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.Classify%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/NaiveDoubleLengthPcsClassifier.cs/#L73">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/NaiveDoubleLengthPcsClassifier.cs/#L117">View Source</a>
   </span>
   <a id="MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsClassifier_Classify_" data-uid="MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.Classify*"></a>
   <h4 id="MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsClassifier_Classify" data-uid="MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.Classify">Classify()</h4>
@@ -319,7 +341,7 @@ generating and iteration, is O(n * L).
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsClassifier.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/NaiveDoubleLengthPcsClassifier.cs/#L42" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/NaiveDoubleLengthPcsClassifier.cs/#L56" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
