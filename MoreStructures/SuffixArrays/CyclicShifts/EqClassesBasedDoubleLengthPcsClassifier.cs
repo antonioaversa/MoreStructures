@@ -30,7 +30,7 @@ namespace MoreStructures.SuffixArrays.CyclicShifts;
 ///     - This is because such piece of information would only be needed when running comparisons between PCS.
 ///       <br/>
 ///     - This classifier, on the other hand, uses an externally provided lists precisely in order to avoid the
-///       need for costly PCS comparisons.
+///       need for costly PCS comparisons, which are "embedded" in the externally provided data structures.
 ///     </para>
 ///     <para id="algo">
 ///     ALGORITHM
