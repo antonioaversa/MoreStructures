@@ -128,6 +128,24 @@ the PCS of length <a class="xref" href="MoreStructures.SuffixArrays.CyclicShifts
   </div>
   <h5 id="MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>
+ADVANTAGES AND DISADVANTAGES
+<br>
+- Unlike <a class="xref" href="MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.html">NaiveDoubleLengthPcsClassifier</a>, this implementation requires additional data structures
+  to be provided, in addition to the <a class="xref" href="MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier_Input">Input</a>, to calculate equivalence classes.
+<br>
+- However, unlike <a class="xref" href="MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsClassifier.html">NaiveDoubleLengthPcsClassifier</a>, it does not require to know whether 
+<a class="xref" href="MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier_Input">Input</a> contains a terminator or not.
+<br>
+- This is because such piece of information would only be needed when running comparisons between PCS.
+<br>
+- This classifier, on the other hand, uses an externally provided position list precisely in order to avoid the
+need for costly PCS comparisons, which are &quot;embedded&quot; in the externally provided position list.
+<br>
+- PCS are actually still compared for equality. However, comparison for equality, unlike comparison for
+sorting, doesn&apos;t require to know whether a char is terminator or not, since a terminator is a char, it is
+only equal to itself and different from any other char.
+</p>
+<p>
 ALGORITHM
 <br>
 - The externally provided ordered sequence of PCS <a class="xref" href="MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier_Order">Order</a> is iterated over.
@@ -161,7 +179,7 @@ Complexity, driven as well by iteration over <a class="xref" href="MoreStructure
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier__ctor_System_String_System_Int32_IList_System_Int32__.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.%23ctor(System.String%2CSystem.Int32%2CIList%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/OrderBasedDoubleLengthPcsClassifier.cs/#L61">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/OrderBasedDoubleLengthPcsClassifier.cs/#L79">View Source</a>
   </span>
   <a id="MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier__ctor_" data-uid="MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.#ctor*"></a>
   <h4 id="MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier__ctor_System_String_System_Int32_IList_System_Int32__" data-uid="MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.#ctor(System.String,System.Int32,IList{System.Int32})">OrderBasedDoubleLengthPcsClassifier(String, Int32, IList&lt;Int32&gt;)</h4>
@@ -209,7 +227,7 @@ Complexity, driven as well by iteration over <a class="xref" href="MoreStructure
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier_Input.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.Input%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/OrderBasedDoubleLengthPcsClassifier.cs/#L42">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/OrderBasedDoubleLengthPcsClassifier.cs/#L60">View Source</a>
   </span>
   <a id="MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier_Input_" data-uid="MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.Input*"></a>
   <h4 id="MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier_Input" data-uid="MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.Input">Input</h4>
@@ -240,7 +258,7 @@ Complexity, driven as well by iteration over <a class="xref" href="MoreStructure
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier_Order.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.Order%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/OrderBasedDoubleLengthPcsClassifier.cs/#L53">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/OrderBasedDoubleLengthPcsClassifier.cs/#L71">View Source</a>
   </span>
   <a id="MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier_Order_" data-uid="MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.Order*"></a>
   <h4 id="MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier_Order" data-uid="MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.Order">Order</h4>
@@ -272,7 +290,7 @@ Complexity, driven as well by iteration over <a class="xref" href="MoreStructure
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier_PcsLength.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.PcsLength%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/OrderBasedDoubleLengthPcsClassifier.cs/#L47">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/OrderBasedDoubleLengthPcsClassifier.cs/#L65">View Source</a>
   </span>
   <a id="MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier_PcsLength_" data-uid="MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.PcsLength*"></a>
   <h4 id="MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier_PcsLength" data-uid="MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.PcsLength">PcsLength</h4>
@@ -305,7 +323,7 @@ Complexity, driven as well by iteration over <a class="xref" href="MoreStructure
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier_Classify.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.Classify%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/OrderBasedDoubleLengthPcsClassifier.cs/#L79">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/OrderBasedDoubleLengthPcsClassifier.cs/#L97">View Source</a>
   </span>
   <a id="MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier_Classify_" data-uid="MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.Classify*"></a>
   <h4 id="MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier_Classify" data-uid="MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier.Classify">Classify()</h4>
@@ -352,7 +370,7 @@ Complexity, driven as well by iteration over <a class="xref" href="MoreStructure
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_OrderBasedDoubleLengthPcsClassifier.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.OrderBasedDoubleLengthPcsClassifier%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/OrderBasedDoubleLengthPcsClassifier.cs/#L37" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/OrderBasedDoubleLengthPcsClassifier.cs/#L55" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
