@@ -7,6 +7,24 @@ namespace MoreStructures.SuffixArrays.CyclicShifts;
 /// the PCS of length <see cref="PcsLength"/>, in addition to the input string, to generate equivalence classes.
 /// </summary>
 /// <remarks>
+///     <para id="advantages">
+///     ADVANTAGES AND DISADVANTAGES
+///     <br/>
+///     - Unlike <see cref="NaiveDoubleLengthPcsClassifier"/>, this implementation requires additional data structures
+///       to be provided, in addition to the <see cref="Input"/>, to calculate equivalence classes.
+///       <br/>
+///     - However, unlike <see cref="NaiveDoubleLengthPcsClassifier"/>, it does not require to know whether 
+///       <see cref="Input"/> contains a terminator or not.
+///       <br/>
+///     - This is because such piece of information would only be needed when running comparisons between PCS.
+///       <br/>
+///     - This classifier, on the other hand, uses an externally provided position list precisely in order to avoid the
+///       need for costly PCS comparisons, which are "embedded" in the externally provided position list.
+///       <br/>
+///     - PCS are actually still compared for equality. However, comparison for equality, unlike comparison for
+///       sorting, doesn't require to know whether a char is terminator or not, since a terminator is a char, it is
+///       only equal to itself and different from any other char.
+///     </para>
 ///     <para id="algo">
 ///     ALGORITHM
 ///     <br/>
