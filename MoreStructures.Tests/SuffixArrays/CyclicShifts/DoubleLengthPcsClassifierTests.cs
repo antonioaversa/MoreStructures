@@ -48,11 +48,25 @@ public abstract class DoubleLengthPcsClassifierTests
         new[] { 1, 4, 2, 6, 5, 3, 0 })]
     [DataRow("babbaab", 4, new[] { 4, 1, 5, 3, 0, 2, 6 }, new[] { 2, 1, 3, 2, 0, 1, 3 }, false,
         new[] { 3, 1, 4, 2, 0, 1, 5 })]
+    // PcsLength 4 and terminator 
+    [DataRow("abaa", 4, new[] { 2, 3, 0, 1 }, new[] { 1, 2, 0, 0 }, true,
+        new[] { 2, 3, 0, 1 })]
+    [DataRow("abac", 4, new[] { 3, 2, 0, 1 }, new[] { 2, 3, 1, 0 }, true,
+        new[] { 2, 3, 1, 0 })]
+    [DataRow("abacbba", 4, new[] { 6, 0, 2, 5, 1, 4, 3 }, new[] { 1, 3, 2, 5, 4, 3, 0 }, true,
+        new[] { 1, 4, 2, 6, 5, 3, 0 })]
+    [DataRow("babbaab", 4, new[] { 6, 2, 0, 3, 1, 5, 4 }, new[] { 1, 2, 0, 1, 3, 2, 0 }, true,
+        new[] { 2, 4, 1, 3, 5, 4, 0 })]
     // PcsLength 6
     [DataRow("abacbba", 6, new[] { 6, 0, 2, 5, 1, 4, 3 }, new[] { 6, 0, 2, 5, 1, 4, 3 }, false,
         new[] { 1, 4, 2, 6, 5, 3, 0 })]
     [DataRow("babbaab", 6, new[] { 4, 1, 5, 3, 0, 2, 6 }, new[] { 3, 1, 4, 2, 0, 1, 4 }, false,
         new[] { 4, 1, 5, 3, 0, 2, 6 })]
+    // PcsLength 6 and terminator
+    [DataRow("abacbba", 6, new[] { 6, 0, 2, 5, 1, 4, 3 }, new[] { 6, 0, 2, 5, 1, 4, 3 }, true,
+        new[] { 1, 4, 2, 6, 5, 3, 0 })]
+    [DataRow("babbaab", 6, new[] { 6, 2, 0, 3, 5, 1, 4 }, new[] { 1, 3, 0, 2, 4, 3, 0 }, true,
+        new[] { 2, 5, 1, 3, 6, 4, 0 })]
     [DataTestMethod]
     public void Classify_IsCorrect(
         string input, int pcsLength, int[] order, int[] eqClassesPcsHalfLength, bool terminator, int[] expectedResult)

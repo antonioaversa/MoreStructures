@@ -7,6 +7,20 @@ namespace MoreStructures.SuffixArrays.CyclicShifts;
 /// equivalence classes.
 /// </summary>
 /// <remarks>
+///     <para id="advantages">
+///     ADVANTAGES AND DISADVANTAGES
+///     <br/>
+///     - Unlike other implementations, such as <see cref="OrderBasedDoubleLengthPcsClassifier"/> or 
+///       <see cref="EqClassesBasedDoubleLengthPcsClassifier"/>, this classifier needs to know whether the input being
+///       provided includes a terminator (i.e. its last char is "special" as it uniquely identify the end of the 
+///       string) or not.
+///       <br/>
+///     - This information is required since this classifier performs classification by actually sorting PCS, and
+///       sorting PCS requires knowing whether a terminator is present or not (and which one it is).
+///       <br/>
+///     - Other implementations don't require such information, since they never compare PCS against each other: they
+///       either use an externally provided position list or compare via the equivalence class list.
+///     </para>
 ///     <para id="algo">
 ///     ALGORITHM
 ///     <br/>
@@ -76,7 +90,7 @@ public class NaiveDoubleLengthPcsClassifier : IDoubleLengthPcsClassifier
             : Comparer<string>.Default;
     }
 
-    private class PcsAndIndexComparer : IComparer<(string pcs, int index)>
+    private sealed class PcsAndIndexComparer : IComparer<(string pcs, int index)>
     {
         private readonly IComparer<string> PcsComparer;
         private readonly IComparer<int> IndexComparer;
