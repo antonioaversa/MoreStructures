@@ -7,6 +7,20 @@ namespace MoreStructures.SuffixArrays.CyclicShifts;
 /// equivalence classes.
 /// </summary>
 /// <remarks>
+///     <para id="advantages">
+///     ADVANTAGES AND DISADVANTAGES
+///     <br/>
+///     - Unlike other implementations, such as <see cref="OrderBasedDoubleLengthPcsClassifier"/> or 
+///       <see cref="EqClassesBasedDoubleLengthPcsClassifier"/>, this classifier needs to know whether the input being
+///       provided includes a terminator (i.e. its last char is "special" as it uniquely identify the end of the 
+///       string) or not.
+///       <br/>
+///     - This information is required since this classifier performs classification by actually sorting PCS, and
+///       sorting PCS requires knowing whether a terminator is present or not (and which one it is).
+///       <br/>
+///     - Other implementations don't require such information, since they never compare PCS against each other: they
+///       either use an externally provided position list or compare via the equivalence class list.
+///     </para>
 ///     <para id="algo">
 ///     ALGORITHM
 ///     <br/>
@@ -41,6 +55,8 @@ namespace MoreStructures.SuffixArrays.CyclicShifts;
 /// </remarks>
 public class NaiveDoubleLengthPcsClassifier : IDoubleLengthPcsClassifier
 {
+    private IComparer<string> PcsComparer { get; }
+
     /// <summary>
     /// The input text, whose PCS of length <see cref="PcsLength"/> have to be classified.
     /// </summary>
@@ -56,7 +72,12 @@ public class NaiveDoubleLengthPcsClassifier : IDoubleLengthPcsClassifier
     /// </summary>
     /// <param name="input"><inheritdoc cref="Input" path="/summary"/></param>
     /// <param name="pcsLength"><inheritdoc cref="PcsLength" path="/summary"/></param>
-    public NaiveDoubleLengthPcsClassifier(string input, int pcsLength)
+    /// <param name="inputWithTerminator">
+    /// Whether <paramref name="input"/> is terminated by a terminator char. If so, the last char of 
+    /// <paramref name="input"/> will be treated as a terminator char when comparing PCS of the input.
+    /// Otherwise, <see cref="Comparer{T}.Default"/> for <see cref="string"/> will be used.
+    /// </param>
+    public NaiveDoubleLengthPcsClassifier(string input, int pcsLength, bool inputWithTerminator)
     {
         if (pcsLength <= 0 || pcsLength > input.Length)
             throw new ArgumentOutOfRangeException(
@@ -64,6 +85,29 @@ public class NaiveDoubleLengthPcsClassifier : IDoubleLengthPcsClassifier
 
         Input = input;
         PcsLength = pcsLength;
+        PcsComparer = inputWithTerminator 
+            ? StringIncludingTerminatorComparer.Build(input[^1])
+            : Comparer<string>.Default;
+    }
+
+    private sealed class PcsAndIndexComparer : IComparer<(string pcs, int index)>
+    {
+        private readonly IComparer<string> PcsComparer;
+        private readonly IComparer<int> IndexComparer;
+
+        public PcsAndIndexComparer(IComparer<string> pcsComparer)
+        {
+            PcsComparer = pcsComparer;
+            IndexComparer = Comparer<int>.Default;
+        }
+
+        public int Compare((string pcs, int index) x, (string pcs, int index) y)
+        {
+            var pcsComparison = PcsComparer.Compare(x.pcs, y.pcs);
+            if (pcsComparison != 0)
+                return pcsComparison;
+            return IndexComparer.Compare(x.index, y.index);
+        }
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
@@ -74,7 +118,7 @@ public class NaiveDoubleLengthPcsClassifier : IDoubleLengthPcsClassifier
     {
         var (headList, tail) = PcsUtils
             .ExtractPcsOf(Input, PcsLength)
-            .OrderBy(s => s)
+            .OrderBy(s => s, new PcsAndIndexComparer(PcsComparer))
             .EnumerateExactlyFirst(1);
 
         var (firstPcs, firstIndex) = headList.Single();
