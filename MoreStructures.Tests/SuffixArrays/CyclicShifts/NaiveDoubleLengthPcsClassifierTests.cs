@@ -7,7 +7,7 @@ namespace MoreStructures.Tests.SuffixArrays.CyclicShifts;
 public class NaiveDoubleLengthPcsClassifierTests : DoubleLengthPcsClassifierTests
 {
     public NaiveDoubleLengthPcsClassifierTests() 
-        : base(cbi => new NaiveDoubleLengthPcsClassifier(cbi.Input, cbi.PcsLength, cbi.Terminator))
+        : base(cbi => new NaiveDoubleLengthPcsClassifier(cbi.Input, cbi.PcsLength, cbi.InputWithTerminator))
     {
     }
 
