@@ -6,7 +6,7 @@ namespace MoreStructures.Tests.Strings.Sorting;
 public class QuickSortCharsSorterTests : CharsSorterTests
 {
     public QuickSortCharsSorterTests()
-        : base(new QuickSortCharsSorter())
+        : base(maybeTerminator => new QuickSortCharsSorter(maybeTerminator))
     {
     }
 }

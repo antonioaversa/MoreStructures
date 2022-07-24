@@ -6,10 +6,10 @@ namespace MoreStructures.Tests.SuffixArrays.CyclicShifts;
 [TestClass]
 public class OrderBasedSingleCharPcsClassifierTests : SingleCharPcsClassifierTests
 {
-    private static ICharsSorter CharsSorter { get; } = new QuickSortCharsSorter();
-
     public OrderBasedSingleCharPcsClassifierTests() 
-        : base(cbi => new OrderBasedSingleCharPcsClassifier(cbi.Input, CharsSorter.Sort(cbi.Input)))
+        : base(cbi => new OrderBasedSingleCharPcsClassifier(
+            cbi.Input,
+            new QuickSortCharsSorter(cbi.InputWithTerminator ? cbi.Input[^1] : null).Sort(cbi.Input)))
     {
     }
 

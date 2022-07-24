@@ -21,7 +21,6 @@ public abstract class SingleCharPcsClassifierTests
     [DataRow("cabab", false, new int[] { 2, 0, 1, 0, 1 })]
     [DataRow("ccaebfaeeb", false, new int[] { 2, 2, 0, 3, 1, 4, 0, 3, 3, 1 })]
     // With terminator
-    [DataRow("", true, new int[] { })]
     [DataRow("a", true, new int[] { 0 })]
     [DataRow("aa", true, new int[] { 0, 0 })]
     [DataRow("aba", true, new int[] { 0, 1, 0 })]

@@ -6,7 +6,7 @@ namespace MoreStructures.Tests.Strings.Sorting;
 public class CountingSortCharsSorterTests : CharsSorterTests
 {
     public CountingSortCharsSorterTests() 
-        : base(new CountingSortCharsSorter(
+        : base(maybeTerminator => new CountingSortCharsSorter(
             Enumerable.Range(0, 26).ToDictionary(i => (char)('a' + i), i => i)))
     {
     }
