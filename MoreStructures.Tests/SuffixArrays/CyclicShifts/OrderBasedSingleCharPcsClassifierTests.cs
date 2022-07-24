@@ -9,7 +9,7 @@ public class OrderBasedSingleCharPcsClassifierTests : SingleCharPcsClassifierTes
     private static ICharsSorter CharsSorter { get; } = new QuickSortCharsSorter();
 
     public OrderBasedSingleCharPcsClassifierTests() 
-        : base(input => new OrderBasedSingleCharPcsClassifier(input, CharsSorter.Sort(input)))
+        : base(cbi => new OrderBasedSingleCharPcsClassifier(cbi.Input, CharsSorter.Sort(cbi.Input)))
     {
     }
 

@@ -80,6 +80,4 @@ public abstract class DoubleLengthPcsClassifierTests
             expectedResult.SequenceEqual(result),
             $"Expected: [{string.Join(", ", expectedResult)}], Actual: [{string.Join(", ", result)}]");
     }
-
-
 }

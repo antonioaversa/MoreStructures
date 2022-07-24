@@ -1,4 +1,6 @@
-﻿namespace MoreStructures.SuffixArrays.CyclicShifts;
+﻿using MoreStructures.Utilities;
+
+namespace MoreStructures.SuffixArrays.CyclicShifts;
 
 /// <summary>
 /// A <see cref="ISingleCharPcsClassifier"/> implementation which calculate equivalence classes using the definition.
@@ -40,6 +42,8 @@
 /// </remarks>
 public class NaiveSingleCharPcsClassifier : ISingleCharPcsClassifier
 {
+    private IComparer<char> CharsComparer { get; }
+
     /// <inheritdoc/>
     public string Input { get; }
 
@@ -47,12 +51,20 @@ public class NaiveSingleCharPcsClassifier : ISingleCharPcsClassifier
     ///     <inheritdoc cref="OrderBasedSingleCharPcsClassifier"/>
     /// </summary>
     /// <param name="input"><inheritdoc cref="Input" path="/summary"/></param>
-    public NaiveSingleCharPcsClassifier(string input)
+    /// <param name="inputWithTerminator">
+    /// Whether <paramref name="input"/> is terminated by a terminator char. If so, the last char of 
+    /// <paramref name="input"/> will be treated as a terminator char when comparing chars of the input.
+    /// Otherwise, <see cref="Comparer{T}.Default"/> for <see cref="char"/> will be used.
+    /// </param>
+    public NaiveSingleCharPcsClassifier(string input, bool inputWithTerminator)
     {
         Input = input;
+        CharsComparer = inputWithTerminator
+            ? CharOrTerminatorComparer.Build(input[^1])
+            : Comparer<char>.Default;
     }
 
     /// <inheritdoc/>
     public IList<int> Classify() => 
-        Input.Select(c1 => Input.Where(c2 => c2 < c1).Distinct().Count()).ToList();
+        Input.Select(c1 => Input.Where(c2 => CharsComparer.Compare(c1, c2) > 0).Distinct().Count()).ToList();
 }
