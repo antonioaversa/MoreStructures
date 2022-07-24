@@ -101,8 +101,8 @@ public class PcsBasedSuffixArrayBuilder : ISuffixArrayBuilder
         {
             pcsLength *= 2;
 
-            var doubleLengthPcsSorter = new CountingSortDoubleLengthPcsSorter();
-            order = doubleLengthPcsSorter.Sort(input, pcsLength / 2, order, eqClasses);
+            var doubleLengthPcsSorter = new CountingSortDoubleLengthPcsSorter(pcsLength / 2, order, eqClasses);
+            order = doubleLengthPcsSorter.Sort();
             var doubleLengthPcsClassifier = new EqClassesBasedDoubleLengthPcsClassifier(pcsLength, eqClasses, order);
             eqClasses = doubleLengthPcsClassifier.Classify();
         }

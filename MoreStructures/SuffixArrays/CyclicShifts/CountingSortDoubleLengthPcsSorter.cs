@@ -5,6 +5,23 @@
 /// shifts (PCS) of length 2 * L of a string, given the order and the equivalence classes of the PCS of length L.
 /// </summary>
 /// <remarks>
+///     <para id="advantages">
+///     ADVANTAGES AND DISADVANTAGES
+///     <br/>
+///     - Compared to <see cref="NaiveDoubleLengthPcsSorter"/>, this implementation has way better runtime (linear 
+///       instead of cubic).
+///       <br/>
+///     - Unlike <see cref="NaiveDoubleLengthPcsSorter"/>, this implementation requires specific data structures
+///       to be provided, in alternative to the input, to calculate the position list.
+///       <br/>
+///     - However, unlike <see cref="NaiveDoubleLengthPcsSorter"/>, it does not require to know whether 
+///       input contains a terminator or not.
+///       <br/>
+///     - This is because such piece of information would only be needed when running comparisons between PCS.
+///       <br/>
+///     - This sorter, on the other hand, uses externally provided lists precisely in order to avoid the
+///       need for costly PCS comparisons, which are "embedded" in the externally provided data structures.
+///     </para>
 ///     <para id="algo">
 ///     ALGORITHM
 ///     <br/>
@@ -53,20 +70,52 @@
 /// </remarks>
 public class CountingSortDoubleLengthPcsSorter : IDoubleLengthPcsSorter
 {
+    /// <inheritdoc/>
+    public int PcsLength { get; }
+
+    /// <summary>
+    /// The position list of the already sorted PCS of length <see name="PcsLength"/>.
+    /// </summary>
+    public IList<int> Order { get; }
+
+    /// <summary>
+    /// The equivalence classes of the already sorted PCS of length <see name="PcsLength"/>.
+    /// </summary>
+    public IList<int> EqClasses { get; }
+
+    /// <summary>
+    ///     <inheritdoc cref="CountingSortDoubleLengthPcsSorter"/>
+    /// </summary>
+    /// <param name="pcsLength"><inheritdoc cref="PcsLength" path="/summary"/></param>
+    /// <param name="order"><inheritdoc cref="Order" path="/summary"/></param>
+    /// <param name="eqClasses"><inheritdoc cref="EqClasses" path="/summary"/></param>
+    public CountingSortDoubleLengthPcsSorter(int pcsLength, IList<int> order, IList<int> eqClasses)
+    {
+        if (pcsLength <= 0)
+            throw new ArgumentOutOfRangeException(nameof(pcsLength), $"Must be positive.");
+
+        if (order.Count != eqClasses.Count)
+            throw new ArgumentException($"Must have the same number of items as {nameof(eqClasses)}.", nameof(order));
+
+        PcsLength = pcsLength;
+        Order = order;
+        EqClasses = eqClasses;
+    }
+
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     ///     <inheritdoc cref="CountingSortDoubleLengthPcsSorter" path="/remarks"/>
     /// </remarks>
-    public IList<int> Sort(string input, int pcsLength, IList<int> order, IList<int> eqClasses)
+    public IList<int> Sort()
     {
-        var n = input.Length;
-        var sigma = eqClasses[order[^1]] + 1;
+        var n = EqClasses.Count;
+        var sigma = EqClasses[Order[^1]] + 1;
 
         // Build histogram
         var counts = new int[sigma];
 
         for (var i = 0; i < n; i++)
-            counts[eqClasses[i]]++;
+            counts[EqClasses[i]]++;
 
         // Make histogram cumulative
         for (var i = 1; i < sigma; i++)
@@ -76,8 +125,8 @@ public class CountingSortDoubleLengthPcsSorter : IDoubleLengthPcsSorter
         var doublePcsOrder = new int[n];
         for (var i = n - 1; i >= 0; i--)
         {
-            var inputIndex = (n + order[i] - pcsLength) % n;
-            var alphabetIndex = eqClasses[inputIndex];
+            var inputIndex = (n + Order[i] - PcsLength) % n;
+            var alphabetIndex = EqClasses[inputIndex];
             var position = --counts[alphabetIndex];
             doublePcsOrder[position] = inputIndex;
         }

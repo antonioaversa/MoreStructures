@@ -5,7 +5,7 @@ namespace MoreStructures.Tests.SuffixArrays.CyclicShifts;
 public abstract class DoubleLengthPcsClassifierTests
 {
     public sealed record ClassifierBuilderInput(
-        string Input, int PcsLength, int[] Order, int[] EqClassesPcsHalfLength, bool Terminator);
+        string Input, int PcsLength, int[] Order, int[] EqClassesPcsHalfLength, bool InputWithTerminator);
 
     protected Func<ClassifierBuilderInput, IDoubleLengthPcsClassifier> ClassifierBuilder { get; }
 
@@ -69,10 +69,11 @@ public abstract class DoubleLengthPcsClassifierTests
         new[] { 2, 5, 1, 3, 6, 4, 0 })]
     [DataTestMethod]
     public void Classify_IsCorrect(
-        string input, int pcsLength, int[] order, int[] eqClassesPcsHalfLength, bool terminator, int[] expectedResult)
+        string input, int pcsLength, int[] order, int[] eqClassesPcsHalfLength, bool inputWithTerminator, 
+        int[] expectedResult)
     {
         var classifierBuilderInput = new ClassifierBuilderInput(
-            input, pcsLength, order, eqClassesPcsHalfLength, terminator);
+            input, pcsLength, order, eqClassesPcsHalfLength, inputWithTerminator);
         var classifier = ClassifierBuilder(classifierBuilderInput);
         var result = classifier.Classify();
         Assert.IsTrue(
