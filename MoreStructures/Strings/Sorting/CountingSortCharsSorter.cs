@@ -7,21 +7,21 @@
 ///     <para id="advantages">
 ///     ADVANTAGES
 ///     <br/>
-///     The algorithm is a Counting Sort adaptation and specialization to strings, seen as lists of chars.
-///     <br/>
-///     It leverages a runtime linear in the size of the input and its alphabet, which is better than any worst-case
-///     scenario of a comparison-based algorithm, such as QuickSort or MergeSort.
-///     <br/>
-///     However, because its runtime depends not only on the size of the input, but also on the size of the alphabet,
-///     it is suitable for scenarios of small alphabets only, or at least when there is an upper bound on the number of
-///     distinct chars in the input (and they are somehow known in advance), which is small enough to fit the histogram
-///     of occurrences in memory.
-///     <br/>
-///     For example: genome sequences can be mapped to 4-chars strings; English lower-case sentences are limited to 26
-///     chars plus space, punctuation, etc; digit sequences consist of an alphabet of 10 chars only etc.
-///     <br/>
-///     It is not a good fit for scenarios where the number of distinct values can be very high, such as an 
-///     unconstrained Unicode string.
+///     - The algorithm is a Counting Sort adaptation and specialization to strings, seen as lists of chars.
+///       <br/>
+///     - It leverages a runtime linear in the size of the input and its alphabet, which is better than any worst-case
+///       scenario of a comparison-based algorithm, such as QuickSort or MergeSort.
+///       <br/>
+///     - However, because its runtime depends not only on the size of the input, but also on the size of the alphabet,
+///       it is suitable for scenarios of small alphabets only, or at least when there is an upper bound on the number 
+///       of distinct chars in the input (and they are somehow known in advance), which is small enough to fit the 
+///       histogram of occurrences in memory.
+///       <br/>
+///     - For example: genome sequences can be mapped to 4-chars strings; English lower-case sentences are limited to 
+///       26 chars plus space, punctuation, etc; digit sequences consist of an alphabet of 10 chars only etc.
+///       <br/>
+///     - It is not a good fit for scenarios where the number of distinct values can be very high, such as an 
+///       unconstrained Unicode string.
 ///     </para>
 ///     <para id="algo">
 ///     ALGORITHM

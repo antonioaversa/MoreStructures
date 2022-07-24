@@ -6,6 +6,8 @@
 /// </summary>
 /// <remarks>
 ///     <para id="definition">
+///     DEFINITION
+///     <br/>
 ///     The equivalence class of a n-char partial cyclic shift c of the string T is the number of <b>distinct</b> 
 ///     n-char partial cyclic shift of T which strictly precedes c in lexicographic order (i.e. all distinct chars 
 ///     strictly smaller than c).

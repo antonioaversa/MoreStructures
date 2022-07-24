@@ -1,4 +1,5 @@
 ﻿using MoreLinq;
+using MoreStructures.Utilities;
 
 namespace MoreStructures.Strings.Sorting;
 
@@ -42,6 +43,25 @@ namespace MoreStructures.Strings.Sorting;
 /// </remarks>
 public class QuickSortCharsSorter : ICharsSorter
 {
+    private IComparer<char> CharsComparer { get; }
+
+    /// <summary>
+    ///     <inheritdoc cref="QuickSortCharsSorter"/>
+    /// </summary>
+    /// <param name="maybeTerminator">
+    /// The char, if any, to be treated as terminator char when comparing chars of the input. 
+    /// If not specified, <see cref="Comparer{T}.Default"/> for <see cref="char"/> will be used for char comparison.
+    /// </param>
+    /// <remarks>
+    ///     <inheritdoc cref="QuickSortCharsSorter"/>
+    /// </remarks>
+    public QuickSortCharsSorter(char? maybeTerminator)
+    {
+        CharsComparer = maybeTerminator != null
+            ? CharOrTerminatorComparer.Build(maybeTerminator.Value)
+            : Comparer<char>.Default;
+    }
+
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     ///     <inheritdoc cref="QuickSortCharsSorter" path="/remarks"/>
@@ -50,7 +70,7 @@ public class QuickSortCharsSorter : ICharsSorter
     {
         return input
             .Index()
-            .OrderBy(kvp => kvp.Value)
+            .OrderBy(kvp => kvp.Value, CharsComparer)
             .Select(kvp => kvp.Key)
             .ToList();
     }

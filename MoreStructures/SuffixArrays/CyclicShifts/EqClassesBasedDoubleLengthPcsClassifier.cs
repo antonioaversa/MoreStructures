@@ -10,6 +10,8 @@ namespace MoreStructures.SuffixArrays.CyclicShifts;
 /// </summary>
 /// <remarks>
 ///     <para id="advantages">
+///     ADVANTAGES AND DISADVANTAGES
+///     <br/>
 ///     - Compared to <see cref="NaiveDoubleLengthPcsClassifier"/>, it has way better runtime (linear time, instead of
 ///       cubic).
 ///       <br/>
