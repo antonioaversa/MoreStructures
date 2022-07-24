@@ -129,6 +129,18 @@ equivalence classes of the PCS of length L.</p>
   </div>
   <h5 id="MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsSorter_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>
+ADVANTAGES AND DISADVANTAGES
+<br>
+- Unlike other implementations, such as <a class="xref" href="MoreStructures.SuffixArrays.CyclicShifts.CountingSortDoubleLengthPcsSorter.html">CountingSortDoubleLengthPcsSorter</a>, this sorter needs to 
+  know whether the input being provided includes a terminator (i.e. its last char is &quot;special&quot; as it uniquely 
+  identify the end of the string) or not.
+<br>
+- This information is required since this sorter performs sorting by actually comparing PCS.
+<br>
+- Other implementations don&apos;t require such information, since they never compare PCS against each other: they
+use externally provided data structures, from which they infer the order.
+</p>
+<p>
 ALGORITHM
 <br>
 - For each index i of the input string, a cyclic shift starting at i and of length 2 * L is generated.
@@ -150,24 +162,27 @@ COMPLEXITY
 - Generating the output takes O(n * L) space.
 <br>
 - Therefore, Time Complexity is O(n * log(n) * L) and Space Complexity is O(n * L) space.
+<br>
+- If L is not constant, but rather O(n), Time Complexity is O(n^2 * log(n)) and Space Complexity is O(n^2). 
 </p>
 </div>
-  <h3 id="methods">Methods
+  <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsSorter_Sort_System_String_System_Int32_IList_System_Int32__IList_System_Int32__.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsSorter.Sort(System.String%2CSystem.Int32%2CIList%7BSystem.Int32%7D%2CIList%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsSorter__ctor_System_String_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsSorter.%23ctor(System.String%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/NaiveDoubleLengthPcsSorter.cs/#L39">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/NaiveDoubleLengthPcsSorter.cs/#L71">View Source</a>
   </span>
-  <a id="MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsSorter_Sort_" data-uid="MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsSorter.Sort*"></a>
-  <h4 id="MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsSorter_Sort_System_String_System_Int32_IList_System_Int32__IList_System_Int32__" data-uid="MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsSorter.Sort(System.String,System.Int32,IList{System.Int32},IList{System.Int32})">Sort(String, Int32, IList&lt;Int32&gt;, IList&lt;Int32&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsSorter__ctor_" data-uid="MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsSorter.#ctor*"></a>
+  <h4 id="MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsSorter__ctor_System_String_System_Int32_System_Boolean_" data-uid="MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsSorter.#ctor(System.String,System.Int32,System.Boolean)">NaiveDoubleLengthPcsSorter(String, Int32, Boolean)</h4>
+  <div class="markdown level1 summary"><p><inheritdoc cref="T:MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsSorter"></inheritdoc></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IList&lt;int&gt; Sort(string input, int pcsLength, IList&lt;int&gt; order, IList&lt;int&gt; eqClasses)</code></pre>
+    <pre><code class="lang-csharp hljs">public NaiveDoubleLengthPcsSorter(string input, int pcsLength, bool inputWithTerminator)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -182,25 +197,106 @@ COMPLEXITY
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">input</span></td>
-        <td></td>
+        <td><p><inheritdoc cref="P:MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsSorter.Input" path="/summary"></inheritdoc></p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">pcsLength</span></td>
-        <td></td>
+        <td><p><inheritdoc cref="P:MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsSorter.PcsLength" path="/summary"></inheritdoc></p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">IList</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
-        <td><span class="parametername">order</span></td>
-        <td></td>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">inputWithTerminator</span></td>
+        <td><p>Whether <code data-dev-comment-type="paramref" class="paramref">input</code> is terminated by a terminator char. If so, the last char of
+<code data-dev-comment-type="paramref" class="paramref">input</code> will be treated as a terminator char when comparing PCS of the input.
+Otherwise, <see cref="!:Comparer&lt;T>.Default"></see> for <span class="xref">System.String</span> will be used.</p>
+</td>
       </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsSorter_Input.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsSorter.Input%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/NaiveDoubleLengthPcsSorter.cs/#L56">View Source</a>
+  </span>
+  <a id="MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsSorter_Input_" data-uid="MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsSorter.Input*"></a>
+  <h4 id="MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsSorter_Input" data-uid="MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsSorter.Input">Input</h4>
+  <div class="markdown level1 summary"><p>The input string, whose PCS have to be sorted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Input { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td><span class="xref">IList</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
-        <td><span class="parametername">eqClasses</span></td>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsSorter_PcsLength.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsSorter.PcsLength%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/NaiveDoubleLengthPcsSorter.cs/#L59">View Source</a>
+  </span>
+  <a id="MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsSorter_PcsLength_" data-uid="MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsSorter.PcsLength*"></a>
+  <h4 id="MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsSorter_PcsLength" data-uid="MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsSorter.PcsLength">PcsLength</h4>
+  <div class="markdown level1 summary"><p>The length L of the PCS. Remark: sorting is done of PCS of length 2 * L, not L.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PcsLength { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsSorter_Sort.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsSorter.Sort%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/NaiveDoubleLengthPcsSorter.cs/#L89">View Source</a>
+  </span>
+  <a id="MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsSorter_Sort_" data-uid="MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsSorter.Sort*"></a>
+  <h4 id="MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsSorter_Sort" data-uid="MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsSorter.Sort">Sort()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;int&gt; Sort()</code></pre>
+  </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -216,7 +312,7 @@ COMPLEXITY
       </tr>
     </tbody>
   </table>
-  <h5 id="MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsSorter_Sort_System_String_System_Int32_IList_System_Int32__IList_System_Int32___remarks">Remarks</h5>
+  <h5 id="MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsSorter_Sort_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsSorter" path="/remarks"></inheritdoc></p>
 </div>
   <h3 id="implements">Implements</h3>
@@ -238,7 +334,7 @@ COMPLEXITY
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_NaiveDoubleLengthPcsSorter.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.NaiveDoubleLengthPcsSorter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/NaiveDoubleLengthPcsSorter.cs/#L33" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/NaiveDoubleLengthPcsSorter.cs/#L49" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
