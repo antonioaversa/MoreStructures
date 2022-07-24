@@ -164,19 +164,19 @@ implementation of a set.
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_NaiveSingleCharPcsClassifier__ctor_System_String_.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_NaiveSingleCharPcsClassifier__ctor_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.%23ctor(System.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/NaiveSingleCharPcsClassifier.cs/#L50">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/NaiveSingleCharPcsClassifier.cs/#L59">View Source</a>
   </span>
   <a id="MoreStructures_SuffixArrays_CyclicShifts_NaiveSingleCharPcsClassifier__ctor_" data-uid="MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.#ctor*"></a>
-  <h4 id="MoreStructures_SuffixArrays_CyclicShifts_NaiveSingleCharPcsClassifier__ctor_System_String_" data-uid="MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.#ctor(System.String)">NaiveSingleCharPcsClassifier(String)</h4>
+  <h4 id="MoreStructures_SuffixArrays_CyclicShifts_NaiveSingleCharPcsClassifier__ctor_System_String_System_Boolean_" data-uid="MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.#ctor(System.String,System.Boolean)">NaiveSingleCharPcsClassifier(String, Boolean)</h4>
   <div class="markdown level1 summary"><p><inheritdoc cref="T:MoreStructures.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifier"></inheritdoc></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NaiveSingleCharPcsClassifier(string input)</code></pre>
+    <pre><code class="lang-csharp hljs">public NaiveSingleCharPcsClassifier(string input, bool inputWithTerminator)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -194,6 +194,14 @@ implementation of a set.
         <td><p><inheritdoc cref="P:MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.Input" path="/summary"></inheritdoc></p>
 </td>
       </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">inputWithTerminator</span></td>
+        <td><p>Whether <code data-dev-comment-type="paramref" class="paramref">input</code> is terminated by a terminator char. If so, the last char of
+<code data-dev-comment-type="paramref" class="paramref">input</code> will be treated as a terminator char when comparing chars of the input.
+Otherwise, <see cref="!:Comparer&lt;T>.Default"></see> for <span class="xref">System.Char</span> will be used.</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
@@ -203,7 +211,7 @@ implementation of a set.
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_NaiveSingleCharPcsClassifier_Input.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.Input%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/NaiveSingleCharPcsClassifier.cs/#L44">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/NaiveSingleCharPcsClassifier.cs/#L48">View Source</a>
   </span>
   <a id="MoreStructures_SuffixArrays_CyclicShifts_NaiveSingleCharPcsClassifier_Input_" data-uid="MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.Input*"></a>
   <h4 id="MoreStructures_SuffixArrays_CyclicShifts_NaiveSingleCharPcsClassifier_Input" data-uid="MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.Input">Input</h4>
@@ -236,7 +244,7 @@ implementation of a set.
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_NaiveSingleCharPcsClassifier_Classify.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.Classify%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/NaiveSingleCharPcsClassifier.cs/#L56">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/NaiveSingleCharPcsClassifier.cs/#L68">View Source</a>
   </span>
   <a id="MoreStructures_SuffixArrays_CyclicShifts_NaiveSingleCharPcsClassifier_Classify_" data-uid="MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.Classify*"></a>
   <h4 id="MoreStructures_SuffixArrays_CyclicShifts_NaiveSingleCharPcsClassifier_Classify" data-uid="MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.Classify">Classify()</h4>
@@ -282,7 +290,7 @@ implementation of a set.
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_CyclicShifts_NaiveSingleCharPcsClassifier.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/NaiveSingleCharPcsClassifier.cs/#L41" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/CyclicShifts/NaiveSingleCharPcsClassifier.cs/#L43" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

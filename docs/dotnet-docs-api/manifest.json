@@ -882,7 +882,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Strings.Sorting.CountingSortCharsSorter.html",
-          "hash": "SSA7eZCM8FAjCDHQgGKvwFL2PGohhizBacMoF+60Ams="
+          "hash": "qUDKyKV7dHW7bl4IlQgxilWcz+Bpxb8Df6ErN7FHY0Q="
         }
       },
       "is_incremental": false,
@@ -906,7 +906,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Strings.Sorting.QuickSortCharsSorter.html",
-          "hash": "2jn4WKMTyLQzsv0BqBlmm/vB6C2DgxwC7Z9cQauegV8="
+          "hash": "ymyCGt94/XmgDB0a0/ndDYBJm5ykPe/RteZUkTH86wM="
         }
       },
       "is_incremental": false,
@@ -1014,7 +1014,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.SuffixArrays.CyclicShifts.EqClassesBasedDoubleLengthPcsClassifier.html",
-          "hash": "nR8568hFvHWjp6Sr5fWEcBpy7N7a+RxN3ZEmM7NBim4="
+          "hash": "xexNSv5tBkzesfX22lW6u5qa4rcd1ExGixliZcsHdx0="
         }
       },
       "is_incremental": false,
@@ -1050,7 +1050,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier.html",
-          "hash": "hXmrfLLwDJZm2AVpnYq2ZwhpY/Hh9ZZcvSbUOFcN8SU="
+          "hash": "RtS7ZYuQeunElkX8fh4UC9bLBmlZchxDbW1HdJwtsuM="
         }
       },
       "is_incremental": false,
@@ -1086,7 +1086,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.html",
-          "hash": "VqkqR4/PALPexhYAI5iOls76yhLG9p0oo8iBZUAaEos="
+          "hash": "/pTXDtqWXBldACVAVnPMo2+BbJlMwGwWTcdIIU49Z5s="
         }
       },
       "is_incremental": false,
@@ -2454,7 +2454,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Strings.Sorting.CharsSorterTests.html",
-          "hash": "3bqpn4kyVGRgtEA0otWFuqIdTieqdUGJ2yo1mWVGokg="
+          "hash": "VSDx8O4zW5mCfUPmmSfrAWo91fPpV/o27TO48tB7h1M="
         }
       },
       "is_incremental": false,
@@ -2466,7 +2466,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Strings.Sorting.CountingSortCharsSorterTests.html",
-          "hash": "Sby93SsS3XbdPdH4ZLDIKzIVx5ybMSpufP4SI4yWdPE="
+          "hash": "BW/BTNnfrCvsobgidUPr3hePoEaB6nGhbH25hV3flRc="
         }
       },
       "is_incremental": false,
@@ -2478,7 +2478,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Strings.Sorting.QuickSortCharsSorterTests.html",
-          "hash": "eleQt3QESJswFuyIi8USVevhCWe6jKzoBGTpbOa7hyM="
+          "hash": "L8b1pkT0FQpbqlTG/sjM5CQyPV/N9JEYF9yqn6VhIHk="
         }
       },
       "is_incremental": false,
@@ -2670,7 +2670,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifierTests.html",
-          "hash": "5qBa/EnpSGgc3K4dTsNc6bHWiPfDf/D1DlYqZa57dDU="
+          "hash": "uYVufN1oXtO15lSbFmhAotAMeApQGA98tNldyAOCnTQ="
         }
       },
       "is_incremental": false,
@@ -2694,7 +2694,19 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.SuffixArrays.CyclicShifts.OrderBasedSingleCharPcsClassifierTests.html",
-          "hash": "6vsIupjJM3+tYTQ8Ofll7sX9GeJjBhtj4ke8ptVpLg0="
+          "hash": "o64PodqpG6HJw6WzygcKjCuSVmC7MM6r4Wecjo9MHI0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput.html",
+          "hash": "xuKN2flaJuAKVF0t8u82+UDWmOzTLds8GY6PVYNDk1Q="
         }
       },
       "is_incremental": false,
@@ -2706,7 +2718,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.html",
-          "hash": "eA/uKxHMhO8lrji5rQ8wQESwOrqTNYlDrEUp1nr7Bdw="
+          "hash": "ka8imj+pymUBCcgH7xtoHyan1DOTirIa41yVj40sYQA="
         }
       },
       "is_incremental": false,
@@ -2718,7 +2730,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.SuffixArrays.CyclicShifts.html",
-          "hash": "W5n6l84dxglYgWiWdFEKmLqBiZOo3PJTHtnPXCBdT/g="
+          "hash": "Ose7iZFUTTHNXUVl5kVPwf8/7nRI8uBIQxrOwA/w6D0="
         }
       },
       "is_incremental": false,
@@ -3642,7 +3654,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "UcKGDEyXa/Q11RlbkV4BIXtkKk/nlaQmL3PACZnPsHI="
+          "hash": "dxcmliEQILTSVfa2tVeli4QLc3x1sKcMT9yQyGuzhE8="
         }
       },
       "is_incremental": false,
@@ -3717,7 +3729,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 301,
+          "total_file_count": 302,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

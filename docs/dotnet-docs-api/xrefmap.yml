@@ -3318,6 +3318,22 @@ references:
   commentId: T:MoreStructures.Strings.Sorting.QuickSortCharsSorter
   fullName: MoreStructures.Strings.Sorting.QuickSortCharsSorter
   nameWithType: QuickSortCharsSorter
+- uid: MoreStructures.Strings.Sorting.QuickSortCharsSorter.#ctor(System.Nullable{System.Char})
+  name: QuickSortCharsSorter(Nullable<Char>)
+  href: api/MoreStructures.Strings.Sorting.QuickSortCharsSorter.html#MoreStructures_Strings_Sorting_QuickSortCharsSorter__ctor_System_Nullable_System_Char__
+  commentId: M:MoreStructures.Strings.Sorting.QuickSortCharsSorter.#ctor(System.Nullable{System.Char})
+  name.vb: QuickSortCharsSorter(Nullable(Of Char))
+  fullName: MoreStructures.Strings.Sorting.QuickSortCharsSorter.QuickSortCharsSorter(System.Nullable<System.Char>)
+  fullName.vb: MoreStructures.Strings.Sorting.QuickSortCharsSorter.QuickSortCharsSorter(System.Nullable(Of System.Char))
+  nameWithType: QuickSortCharsSorter.QuickSortCharsSorter(Nullable<Char>)
+  nameWithType.vb: QuickSortCharsSorter.QuickSortCharsSorter(Nullable(Of Char))
+- uid: MoreStructures.Strings.Sorting.QuickSortCharsSorter.#ctor*
+  name: QuickSortCharsSorter
+  href: api/MoreStructures.Strings.Sorting.QuickSortCharsSorter.html#MoreStructures_Strings_Sorting_QuickSortCharsSorter__ctor_
+  commentId: Overload:MoreStructures.Strings.Sorting.QuickSortCharsSorter.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Strings.Sorting.QuickSortCharsSorter.QuickSortCharsSorter
+  nameWithType: QuickSortCharsSorter.QuickSortCharsSorter
 - uid: MoreStructures.Strings.Sorting.QuickSortCharsSorter.Sort(System.String)
   name: Sort(String)
   href: api/MoreStructures.Strings.Sorting.QuickSortCharsSorter.html#MoreStructures_Strings_Sorting_QuickSortCharsSorter_Sort_System_String_
@@ -3909,12 +3925,12 @@ references:
   commentId: T:MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier
   fullName: MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier
   nameWithType: NaiveSingleCharPcsClassifier
-- uid: MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.#ctor(System.String)
-  name: NaiveSingleCharPcsClassifier(String)
-  href: api/MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_NaiveSingleCharPcsClassifier__ctor_System_String_
-  commentId: M:MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.#ctor(System.String)
-  fullName: MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.NaiveSingleCharPcsClassifier(System.String)
-  nameWithType: NaiveSingleCharPcsClassifier.NaiveSingleCharPcsClassifier(String)
+- uid: MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.#ctor(System.String,System.Boolean)
+  name: NaiveSingleCharPcsClassifier(String, Boolean)
+  href: api/MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_NaiveSingleCharPcsClassifier__ctor_System_String_System_Boolean_
+  commentId: M:MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.#ctor(System.String,System.Boolean)
+  fullName: MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.NaiveSingleCharPcsClassifier(System.String, System.Boolean)
+  nameWithType: NaiveSingleCharPcsClassifier.NaiveSingleCharPcsClassifier(String, Boolean)
 - uid: MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.#ctor*
   name: NaiveSingleCharPcsClassifier
   href: api/MoreStructures.SuffixArrays.CyclicShifts.NaiveSingleCharPcsClassifier.html#MoreStructures_SuffixArrays_CyclicShifts_NaiveSingleCharPcsClassifier__ctor_
@@ -8804,12 +8820,15 @@ references:
   commentId: T:MoreStructures.Tests.Strings.Sorting.CharsSorterTests
   fullName: MoreStructures.Tests.Strings.Sorting.CharsSorterTests
   nameWithType: CharsSorterTests
-- uid: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.#ctor(MoreStructures.Strings.Sorting.ICharsSorter)
-  name: CharsSorterTests(ICharsSorter)
-  href: api/MoreStructures.Tests.Strings.Sorting.CharsSorterTests.html#MoreStructures_Tests_Strings_Sorting_CharsSorterTests__ctor_MoreStructures_Strings_Sorting_ICharsSorter_
-  commentId: M:MoreStructures.Tests.Strings.Sorting.CharsSorterTests.#ctor(MoreStructures.Strings.Sorting.ICharsSorter)
-  fullName: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.CharsSorterTests(MoreStructures.Strings.Sorting.ICharsSorter)
-  nameWithType: CharsSorterTests.CharsSorterTests(ICharsSorter)
+- uid: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.#ctor(Func{System.Nullable{System.Char},MoreStructures.Strings.Sorting.ICharsSorter})
+  name: CharsSorterTests(Func<Nullable<Char>, ICharsSorter>)
+  href: api/MoreStructures.Tests.Strings.Sorting.CharsSorterTests.html#MoreStructures_Tests_Strings_Sorting_CharsSorterTests__ctor_Func_System_Nullable_System_Char__MoreStructures_Strings_Sorting_ICharsSorter__
+  commentId: M:MoreStructures.Tests.Strings.Sorting.CharsSorterTests.#ctor(Func{System.Nullable{System.Char},MoreStructures.Strings.Sorting.ICharsSorter})
+  name.vb: CharsSorterTests(Func(Of Nullable(Of Char), ICharsSorter))
+  fullName: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.CharsSorterTests(Func<System.Nullable<System.Char>, MoreStructures.Strings.Sorting.ICharsSorter>)
+  fullName.vb: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.CharsSorterTests(Func(Of System.Nullable(Of System.Char), MoreStructures.Strings.Sorting.ICharsSorter))
+  nameWithType: CharsSorterTests.CharsSorterTests(Func<Nullable<Char>, ICharsSorter>)
+  nameWithType.vb: CharsSorterTests.CharsSorterTests(Func(Of Nullable(Of Char), ICharsSorter))
 - uid: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.#ctor*
   name: CharsSorterTests
   href: api/MoreStructures.Tests.Strings.Sorting.CharsSorterTests.html#MoreStructures_Tests_Strings_Sorting_CharsSorterTests__ctor_
@@ -8817,25 +8836,28 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.CharsSorterTests
   nameWithType: CharsSorterTests.CharsSorterTests
-- uid: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.CharsSorter
-  name: CharsSorter
-  href: api/MoreStructures.Tests.Strings.Sorting.CharsSorterTests.html#MoreStructures_Tests_Strings_Sorting_CharsSorterTests_CharsSorter
-  commentId: P:MoreStructures.Tests.Strings.Sorting.CharsSorterTests.CharsSorter
-  fullName: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.CharsSorter
-  nameWithType: CharsSorterTests.CharsSorter
-- uid: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.CharsSorter*
-  name: CharsSorter
-  href: api/MoreStructures.Tests.Strings.Sorting.CharsSorterTests.html#MoreStructures_Tests_Strings_Sorting_CharsSorterTests_CharsSorter_
-  commentId: Overload:MoreStructures.Tests.Strings.Sorting.CharsSorterTests.CharsSorter
+- uid: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.CharsSorterBuilder
+  name: CharsSorterBuilder
+  href: api/MoreStructures.Tests.Strings.Sorting.CharsSorterTests.html#MoreStructures_Tests_Strings_Sorting_CharsSorterTests_CharsSorterBuilder
+  commentId: P:MoreStructures.Tests.Strings.Sorting.CharsSorterTests.CharsSorterBuilder
+  fullName: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.CharsSorterBuilder
+  nameWithType: CharsSorterTests.CharsSorterBuilder
+- uid: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.CharsSorterBuilder*
+  name: CharsSorterBuilder
+  href: api/MoreStructures.Tests.Strings.Sorting.CharsSorterTests.html#MoreStructures_Tests_Strings_Sorting_CharsSorterTests_CharsSorterBuilder_
+  commentId: Overload:MoreStructures.Tests.Strings.Sorting.CharsSorterTests.CharsSorterBuilder
   isSpec: "True"
-  fullName: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.CharsSorter
-  nameWithType: CharsSorterTests.CharsSorter
-- uid: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.Sort_IsCorrect(System.String)
-  name: Sort_IsCorrect(String)
-  href: api/MoreStructures.Tests.Strings.Sorting.CharsSorterTests.html#MoreStructures_Tests_Strings_Sorting_CharsSorterTests_Sort_IsCorrect_System_String_
-  commentId: M:MoreStructures.Tests.Strings.Sorting.CharsSorterTests.Sort_IsCorrect(System.String)
-  fullName: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.Sort_IsCorrect(System.String)
-  nameWithType: CharsSorterTests.Sort_IsCorrect(String)
+  fullName: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.CharsSorterBuilder
+  nameWithType: CharsSorterTests.CharsSorterBuilder
+- uid: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.Sort_IsCorrect(System.String,System.Nullable{System.Char})
+  name: Sort_IsCorrect(String, Nullable<Char>)
+  href: api/MoreStructures.Tests.Strings.Sorting.CharsSorterTests.html#MoreStructures_Tests_Strings_Sorting_CharsSorterTests_Sort_IsCorrect_System_String_System_Nullable_System_Char__
+  commentId: M:MoreStructures.Tests.Strings.Sorting.CharsSorterTests.Sort_IsCorrect(System.String,System.Nullable{System.Char})
+  name.vb: Sort_IsCorrect(String, Nullable(Of Char))
+  fullName: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.Sort_IsCorrect(System.String, System.Nullable<System.Char>)
+  fullName.vb: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.Sort_IsCorrect(System.String, System.Nullable(Of System.Char))
+  nameWithType: CharsSorterTests.Sort_IsCorrect(String, Nullable<Char>)
+  nameWithType.vb: CharsSorterTests.Sort_IsCorrect(String, Nullable(Of Char))
 - uid: MoreStructures.Tests.Strings.Sorting.CharsSorterTests.Sort_IsCorrect*
   name: Sort_IsCorrect
   href: api/MoreStructures.Tests.Strings.Sorting.CharsSorterTests.html#MoreStructures_Tests_Strings_Sorting_CharsSorterTests_Sort_IsCorrect_
@@ -9576,15 +9598,15 @@ references:
   commentId: T:MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests
   fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests
   nameWithType: SingleCharPcsClassifierTests
-- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.#ctor(Func{System.String,MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier})
-  name: SingleCharPcsClassifierTests(Func<String, ISingleCharPcsClassifier>)
-  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_SingleCharPcsClassifierTests__ctor_Func_System_String_MoreStructures_SuffixArrays_CyclicShifts_ISingleCharPcsClassifier__
-  commentId: M:MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.#ctor(Func{System.String,MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier})
-  name.vb: SingleCharPcsClassifierTests(Func(Of String, ISingleCharPcsClassifier))
-  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.SingleCharPcsClassifierTests(Func<System.String, MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier>)
-  fullName.vb: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.SingleCharPcsClassifierTests(Func(Of System.String, MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier))
-  nameWithType: SingleCharPcsClassifierTests.SingleCharPcsClassifierTests(Func<String, ISingleCharPcsClassifier>)
-  nameWithType.vb: SingleCharPcsClassifierTests.SingleCharPcsClassifierTests(Func(Of String, ISingleCharPcsClassifier))
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.#ctor(Func{MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput,MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier})
+  name: SingleCharPcsClassifierTests(Func<SingleCharPcsClassifierTests.ClassifierBuilderInput, ISingleCharPcsClassifier>)
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_SingleCharPcsClassifierTests__ctor_Func_MoreStructures_Tests_SuffixArrays_CyclicShifts_SingleCharPcsClassifierTests_ClassifierBuilderInput_MoreStructures_SuffixArrays_CyclicShifts_ISingleCharPcsClassifier__
+  commentId: M:MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.#ctor(Func{MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput,MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier})
+  name.vb: SingleCharPcsClassifierTests(Func(Of SingleCharPcsClassifierTests.ClassifierBuilderInput, ISingleCharPcsClassifier))
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.SingleCharPcsClassifierTests(Func<MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput, MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier>)
+  fullName.vb: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.SingleCharPcsClassifierTests(Func(Of MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput, MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier))
+  nameWithType: SingleCharPcsClassifierTests.SingleCharPcsClassifierTests(Func<SingleCharPcsClassifierTests.ClassifierBuilderInput, ISingleCharPcsClassifier>)
+  nameWithType.vb: SingleCharPcsClassifierTests.SingleCharPcsClassifierTests(Func(Of SingleCharPcsClassifierTests.ClassifierBuilderInput, ISingleCharPcsClassifier))
 - uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.#ctor*
   name: SingleCharPcsClassifierTests
   href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_SingleCharPcsClassifierTests__ctor_
@@ -9605,15 +9627,60 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilder
   nameWithType: SingleCharPcsClassifierTests.ClassifierBuilder
-- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.Classify_IsCorrect(System.String,System.Int32[])
-  name: Classify_IsCorrect(String, Int32[])
-  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_SingleCharPcsClassifierTests_Classify_IsCorrect_System_String_System_Int32___
-  commentId: M:MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.Classify_IsCorrect(System.String,System.Int32[])
-  name.vb: Classify_IsCorrect(String, Int32())
-  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.Classify_IsCorrect(System.String, System.Int32[])
-  fullName.vb: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.Classify_IsCorrect(System.String, System.Int32())
-  nameWithType: SingleCharPcsClassifierTests.Classify_IsCorrect(String, Int32[])
-  nameWithType.vb: SingleCharPcsClassifierTests.Classify_IsCorrect(String, Int32())
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput
+  name: SingleCharPcsClassifierTests.ClassifierBuilderInput
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput.html
+  commentId: T:MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput
+  nameWithType: SingleCharPcsClassifierTests.ClassifierBuilderInput
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput.#ctor(System.String,System.Boolean)
+  name: ClassifierBuilderInput(String, Boolean)
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_SingleCharPcsClassifierTests_ClassifierBuilderInput__ctor_System_String_System_Boolean_
+  commentId: M:MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput.#ctor(System.String,System.Boolean)
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput.ClassifierBuilderInput(System.String, System.Boolean)
+  nameWithType: SingleCharPcsClassifierTests.ClassifierBuilderInput.ClassifierBuilderInput(String, Boolean)
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput.#ctor*
+  name: ClassifierBuilderInput
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_SingleCharPcsClassifierTests_ClassifierBuilderInput__ctor_
+  commentId: Overload:MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput.ClassifierBuilderInput
+  nameWithType: SingleCharPcsClassifierTests.ClassifierBuilderInput.ClassifierBuilderInput
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput.Input
+  name: Input
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_SingleCharPcsClassifierTests_ClassifierBuilderInput_Input
+  commentId: P:MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput.Input
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput.Input
+  nameWithType: SingleCharPcsClassifierTests.ClassifierBuilderInput.Input
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput.Input*
+  name: Input
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_SingleCharPcsClassifierTests_ClassifierBuilderInput_Input_
+  commentId: Overload:MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput.Input
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput.Input
+  nameWithType: SingleCharPcsClassifierTests.ClassifierBuilderInput.Input
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput.InputWithTerminator
+  name: InputWithTerminator
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_SingleCharPcsClassifierTests_ClassifierBuilderInput_InputWithTerminator
+  commentId: P:MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput.InputWithTerminator
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput.InputWithTerminator
+  nameWithType: SingleCharPcsClassifierTests.ClassifierBuilderInput.InputWithTerminator
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput.InputWithTerminator*
+  name: InputWithTerminator
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_SingleCharPcsClassifierTests_ClassifierBuilderInput_InputWithTerminator_
+  commentId: Overload:MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput.InputWithTerminator
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.ClassifierBuilderInput.InputWithTerminator
+  nameWithType: SingleCharPcsClassifierTests.ClassifierBuilderInput.InputWithTerminator
+- uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.Classify_IsCorrect(System.String,System.Boolean,System.Int32[])
+  name: Classify_IsCorrect(String, Boolean, Int32[])
+  href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_SingleCharPcsClassifierTests_Classify_IsCorrect_System_String_System_Boolean_System_Int32___
+  commentId: M:MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.Classify_IsCorrect(System.String,System.Boolean,System.Int32[])
+  name.vb: Classify_IsCorrect(String, Boolean, Int32())
+  fullName: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.Classify_IsCorrect(System.String, System.Boolean, System.Int32[])
+  fullName.vb: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.Classify_IsCorrect(System.String, System.Boolean, System.Int32())
+  nameWithType: SingleCharPcsClassifierTests.Classify_IsCorrect(String, Boolean, Int32[])
+  nameWithType.vb: SingleCharPcsClassifierTests.Classify_IsCorrect(String, Boolean, Int32())
 - uid: MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.Classify_IsCorrect*
   name: Classify_IsCorrect
   href: api/MoreStructures.Tests.SuffixArrays.CyclicShifts.SingleCharPcsClassifierTests.html#MoreStructures_Tests_SuffixArrays_CyclicShifts_SingleCharPcsClassifierTests_Classify_IsCorrect_
