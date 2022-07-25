@@ -3434,6 +3434,15 @@ references:
   commentId: T:MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder
   fullName: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder
   nameWithType: PcsBasedSuffixArrayBuilder
+- uid: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.#ctor(MoreStructures.TextWithTerminator,Func{System.String,MoreStructures.Strings.Sorting.ICharsSorter},Func{System.String,IList{System.Int32},MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier},Func{System.Int32,IList{System.Int32},IList{System.Int32},MoreStructures.SuffixArrays.CyclicShifts.IDoubleLengthPcsSorter},Func{System.Int32,IList{System.Int32},IList{System.Int32},MoreStructures.SuffixArrays.CyclicShifts.IDoubleLengthPcsClassifier})
+  name: PcsBasedSuffixArrayBuilder(TextWithTerminator, Func<String, ICharsSorter>, Func<String, IList<Int32>, ISingleCharPcsClassifier>, Func<Int32, IList<Int32>, IList<Int32>, IDoubleLengthPcsSorter>, Func<Int32, IList<Int32>, IList<Int32>, IDoubleLengthPcsClassifier>)
+  href: api/MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder__ctor_MoreStructures_TextWithTerminator_Func_System_String_MoreStructures_Strings_Sorting_ICharsSorter__Func_System_String_IList_System_Int32__MoreStructures_SuffixArrays_CyclicShifts_ISingleCharPcsClassifier__Func_System_Int32_IList_System_Int32__IList_System_Int32__MoreStructures_SuffixArrays_CyclicShifts_IDoubleLengthPcsSorter__Func_System_Int32_IList_System_Int32__IList_System_Int32__MoreStructures_SuffixArrays_CyclicShifts_IDoubleLengthPcsClassifier__
+  commentId: M:MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.#ctor(MoreStructures.TextWithTerminator,Func{System.String,MoreStructures.Strings.Sorting.ICharsSorter},Func{System.String,IList{System.Int32},MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier},Func{System.Int32,IList{System.Int32},IList{System.Int32},MoreStructures.SuffixArrays.CyclicShifts.IDoubleLengthPcsSorter},Func{System.Int32,IList{System.Int32},IList{System.Int32},MoreStructures.SuffixArrays.CyclicShifts.IDoubleLengthPcsClassifier})
+  name.vb: PcsBasedSuffixArrayBuilder(TextWithTerminator, Func(Of String, ICharsSorter), Func(Of String, IList(Of Int32), ISingleCharPcsClassifier), Func(Of Int32, IList(Of Int32), IList(Of Int32), IDoubleLengthPcsSorter), Func(Of Int32, IList(Of Int32), IList(Of Int32), IDoubleLengthPcsClassifier))
+  fullName: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.PcsBasedSuffixArrayBuilder(MoreStructures.TextWithTerminator, Func<System.String, MoreStructures.Strings.Sorting.ICharsSorter>, Func<System.String, IList<System.Int32>, MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier>, Func<System.Int32, IList<System.Int32>, IList<System.Int32>, MoreStructures.SuffixArrays.CyclicShifts.IDoubleLengthPcsSorter>, Func<System.Int32, IList<System.Int32>, IList<System.Int32>, MoreStructures.SuffixArrays.CyclicShifts.IDoubleLengthPcsClassifier>)
+  fullName.vb: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.PcsBasedSuffixArrayBuilder(MoreStructures.TextWithTerminator, Func(Of System.String, MoreStructures.Strings.Sorting.ICharsSorter), Func(Of System.String, IList(Of System.Int32), MoreStructures.SuffixArrays.CyclicShifts.ISingleCharPcsClassifier), Func(Of System.Int32, IList(Of System.Int32), IList(Of System.Int32), MoreStructures.SuffixArrays.CyclicShifts.IDoubleLengthPcsSorter), Func(Of System.Int32, IList(Of System.Int32), IList(Of System.Int32), MoreStructures.SuffixArrays.CyclicShifts.IDoubleLengthPcsClassifier))
+  nameWithType: PcsBasedSuffixArrayBuilder.PcsBasedSuffixArrayBuilder(TextWithTerminator, Func<String, ICharsSorter>, Func<String, IList<Int32>, ISingleCharPcsClassifier>, Func<Int32, IList<Int32>, IList<Int32>, IDoubleLengthPcsSorter>, Func<Int32, IList<Int32>, IList<Int32>, IDoubleLengthPcsClassifier>)
+  nameWithType.vb: PcsBasedSuffixArrayBuilder.PcsBasedSuffixArrayBuilder(TextWithTerminator, Func(Of String, ICharsSorter), Func(Of String, IList(Of Int32), ISingleCharPcsClassifier), Func(Of Int32, IList(Of Int32), IList(Of Int32), IDoubleLengthPcsSorter), Func(Of Int32, IList(Of Int32), IList(Of Int32), IDoubleLengthPcsClassifier))
 - uid: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.#ctor(MoreStructures.TextWithTerminator,IDictionary{System.Char,System.Int32})
   name: PcsBasedSuffixArrayBuilder(TextWithTerminator, IDictionary<Char, Int32>)
   href: api/MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder__ctor_MoreStructures_TextWithTerminator_IDictionary_System_Char_System_Int32__
@@ -3450,19 +3459,6 @@ references:
   isSpec: "True"
   fullName: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.PcsBasedSuffixArrayBuilder
   nameWithType: PcsBasedSuffixArrayBuilder.PcsBasedSuffixArrayBuilder
-- uid: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Alphabet
-  name: Alphabet
-  href: api/MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Alphabet
-  commentId: P:MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Alphabet
-  fullName: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Alphabet
-  nameWithType: PcsBasedSuffixArrayBuilder.Alphabet
-- uid: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Alphabet*
-  name: Alphabet
-  href: api/MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Alphabet_
-  commentId: Overload:MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Alphabet
-  isSpec: "True"
-  fullName: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Alphabet
-  nameWithType: PcsBasedSuffixArrayBuilder.Alphabet
 - uid: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Build
   name: Build()
   href: api/MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Build
@@ -3476,6 +3472,58 @@ references:
   isSpec: "True"
   fullName: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Build
   nameWithType: PcsBasedSuffixArrayBuilder.Build
+- uid: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.DoubleLengthPcsClassifierBuilder
+  name: DoubleLengthPcsClassifierBuilder
+  href: api/MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_DoubleLengthPcsClassifierBuilder
+  commentId: P:MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.DoubleLengthPcsClassifierBuilder
+  fullName: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.DoubleLengthPcsClassifierBuilder
+  nameWithType: PcsBasedSuffixArrayBuilder.DoubleLengthPcsClassifierBuilder
+- uid: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.DoubleLengthPcsClassifierBuilder*
+  name: DoubleLengthPcsClassifierBuilder
+  href: api/MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_DoubleLengthPcsClassifierBuilder_
+  commentId: Overload:MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.DoubleLengthPcsClassifierBuilder
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.DoubleLengthPcsClassifierBuilder
+  nameWithType: PcsBasedSuffixArrayBuilder.DoubleLengthPcsClassifierBuilder
+- uid: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.DoubleLengthPcsSorterBuilder
+  name: DoubleLengthPcsSorterBuilder
+  href: api/MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_DoubleLengthPcsSorterBuilder
+  commentId: P:MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.DoubleLengthPcsSorterBuilder
+  fullName: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.DoubleLengthPcsSorterBuilder
+  nameWithType: PcsBasedSuffixArrayBuilder.DoubleLengthPcsSorterBuilder
+- uid: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.DoubleLengthPcsSorterBuilder*
+  name: DoubleLengthPcsSorterBuilder
+  href: api/MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_DoubleLengthPcsSorterBuilder_
+  commentId: Overload:MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.DoubleLengthPcsSorterBuilder
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.DoubleLengthPcsSorterBuilder
+  nameWithType: PcsBasedSuffixArrayBuilder.DoubleLengthPcsSorterBuilder
+- uid: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.SingleCharPcsClassifierBuilder
+  name: SingleCharPcsClassifierBuilder
+  href: api/MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_SingleCharPcsClassifierBuilder
+  commentId: P:MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.SingleCharPcsClassifierBuilder
+  fullName: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.SingleCharPcsClassifierBuilder
+  nameWithType: PcsBasedSuffixArrayBuilder.SingleCharPcsClassifierBuilder
+- uid: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.SingleCharPcsClassifierBuilder*
+  name: SingleCharPcsClassifierBuilder
+  href: api/MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_SingleCharPcsClassifierBuilder_
+  commentId: Overload:MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.SingleCharPcsClassifierBuilder
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.SingleCharPcsClassifierBuilder
+  nameWithType: PcsBasedSuffixArrayBuilder.SingleCharPcsClassifierBuilder
+- uid: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.SingleCharPcsSorterBuilder
+  name: SingleCharPcsSorterBuilder
+  href: api/MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_SingleCharPcsSorterBuilder
+  commentId: P:MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.SingleCharPcsSorterBuilder
+  fullName: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.SingleCharPcsSorterBuilder
+  nameWithType: PcsBasedSuffixArrayBuilder.SingleCharPcsSorterBuilder
+- uid: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.SingleCharPcsSorterBuilder*
+  name: SingleCharPcsSorterBuilder
+  href: api/MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_SingleCharPcsSorterBuilder_
+  commentId: Overload:MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.SingleCharPcsSorterBuilder
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.SingleCharPcsSorterBuilder
+  nameWithType: PcsBasedSuffixArrayBuilder.SingleCharPcsSorterBuilder
 - uid: MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.Text
   name: Text
   href: api/MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html#MoreStructures_SuffixArrays_Builders_PcsBasedSuffixArrayBuilder_Text
@@ -8928,6 +8976,25 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.SuffixArrays.Builders.NaiveSuffixArrayBuilderTests.NaiveSuffixArrayBuilderTests
   nameWithType: NaiveSuffixArrayBuilderTests.NaiveSuffixArrayBuilderTests
+- uid: MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderCustomStepsTests
+  name: PcsBasedSuffixArrayBuilderCustomStepsTests
+  href: api/MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderCustomStepsTests.html
+  commentId: T:MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderCustomStepsTests
+  fullName: MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderCustomStepsTests
+  nameWithType: PcsBasedSuffixArrayBuilderCustomStepsTests
+- uid: MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderCustomStepsTests.#ctor
+  name: PcsBasedSuffixArrayBuilderCustomStepsTests()
+  href: api/MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderCustomStepsTests.html#MoreStructures_Tests_SuffixArrays_Builders_PcsBasedSuffixArrayBuilderCustomStepsTests__ctor
+  commentId: M:MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderCustomStepsTests.#ctor
+  fullName: MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderCustomStepsTests.PcsBasedSuffixArrayBuilderCustomStepsTests()
+  nameWithType: PcsBasedSuffixArrayBuilderCustomStepsTests.PcsBasedSuffixArrayBuilderCustomStepsTests()
+- uid: MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderCustomStepsTests.#ctor*
+  name: PcsBasedSuffixArrayBuilderCustomStepsTests
+  href: api/MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderCustomStepsTests.html#MoreStructures_Tests_SuffixArrays_Builders_PcsBasedSuffixArrayBuilderCustomStepsTests__ctor_
+  commentId: Overload:MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderCustomStepsTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderCustomStepsTests.PcsBasedSuffixArrayBuilderCustomStepsTests
+  nameWithType: PcsBasedSuffixArrayBuilderCustomStepsTests.PcsBasedSuffixArrayBuilderCustomStepsTests
 - uid: MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderTests
   name: PcsBasedSuffixArrayBuilderTests
   href: api/MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderTests.html

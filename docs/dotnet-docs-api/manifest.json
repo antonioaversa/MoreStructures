@@ -966,7 +966,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.SuffixArrays.Builders.PcsBasedSuffixArrayBuilder.html",
-          "hash": "OPnbMzkBfSLCPcZDCzHfhDCS8e0b05X9X/1uHez89u8="
+          "hash": "sMmIe0IBW7rIrCjGWqne8vssRCeADxnoD8upAvJhHVs="
         }
       },
       "is_incremental": false,
@@ -2510,6 +2510,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderCustomStepsTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderCustomStepsTests.html",
+          "hash": "P8eAYvuCrwxESDiXxFXX4K1CaAKgzUNs+Rxj0TWU9Z4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Tests.SuffixArrays.Builders.PcsBasedSuffixArrayBuilderTests.yml",
       "output": {
         ".html": {
@@ -2526,7 +2538,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.SuffixArrays.Builders.SuffixArrayBuilderTests-2.html",
-          "hash": "aCEUQcV/x7SPPsaXLrvq1/ukcivKjQ6z7xIcVNiOY6k="
+          "hash": "BKEiYeL7TUNIFwK+vBezHBqkqeWw/yD3dtKSC1NLUGA="
         }
       },
       "is_incremental": false,
@@ -2562,7 +2574,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.SuffixArrays.Builders.html",
-          "hash": "TGv5Ynhde34/kYosGxGzjSyzUyciPD5VdcnUjuMdTJM="
+          "hash": "4uWaG1BrpmsiexuMIordZU8xEau6hZyFq5s9UtKuiFM="
         }
       },
       "is_incremental": false,
@@ -3654,7 +3666,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "dxcmliEQILTSVfa2tVeli4QLc3x1sKcMT9yQyGuzhE8="
+          "hash": "QNxVLyTy2nXY6dMSAkoyQwtwHJS81RhLU757FqHDHqg="
         }
       },
       "is_incremental": false,
@@ -3729,7 +3741,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 302,
+          "total_file_count": 303,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
