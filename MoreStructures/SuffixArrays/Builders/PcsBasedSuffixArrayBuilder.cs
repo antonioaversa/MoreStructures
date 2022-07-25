@@ -9,6 +9,12 @@ namespace MoreStructures.SuffixArrays.Builders;
 /// An algorithm for building the <see cref="SuffixArray"/> based on fast PCS comparison.
 /// </summary>
 /// <remarks>
+///     <para id="assumptions">
+///     <b>Remark: the following analysis is based on the default implementations used for each of the four steps of
+///     the Suffix Array building algorithm, as set by 
+///     <see cref="PcsBasedSuffixArrayBuilder(TextWithTerminator, IDictionary{char, int})"/>. Using a builder different
+///     from the default for any of the step would result into a different runtime and complexity.</b>
+///     </para>
 ///     <para id="algo">
 ///     ALGORITHM
 ///     <br/>
@@ -42,7 +48,7 @@ namespace MoreStructures.SuffixArrays.Builders;
 ///       <br/>
 ///     - It first calculates position and equivalence lists for 1-char PCS, which are respectively 
 ///       O(n + sigma) and O(n) operations, both in Time and Space Complexity, where n is the length of 
-///       <see cref="Text"/> and sigma is the size of the <see cref="Alphabet"/> of <see cref="Text"/>.
+///       <see cref="Text"/> and sigma is the size of the alphabet of <see cref="Text"/>.
 ///       <br/>
 ///     - Then the iterative part is executed. The number of top-level iterations is logarithmic with n, because the
 ///       PCS length doubles at every iteration and the termination condition is that the PCS length is at least as big
@@ -63,24 +69,136 @@ public class PcsBasedSuffixArrayBuilder : ISuffixArrayBuilder
     public TextWithTerminator Text { get; }
 
     /// <summary>
-    /// The alphabet of <see cref="Text"/>, i.e. the list of all <see cref="char"/> potentially appearing in 
-    /// <see cref="Text"/>, mapped to an alphabet index.
+    /// The builder of the <see cref="ICharsSorter"/> implementation used to sort 1-char PCS in the Suffix Array 
+    /// building algorithm.
     /// </summary>
     /// <remarks>
-    /// Required by the Counting Sort algorithm, which builds the histogram of occurrences in the input, of all chars
-    /// of the alphabet of the input.
+    /// Takes as input a single <see cref="string"/> parameter, containing the input text, whose chars have to be 
+    /// sorted.
+    /// <br/>
+    /// Returns a suitable <see cref="ICharsSorter"/> implementation.
     /// </remarks>
-    public IDictionary<char, int> Alphabet { get; }
+    public Func<string, ICharsSorter> SingleCharPcsSorterBuilder { get; }
 
     /// <summary>
-    /// <inheritdoc cref="NaiveSuffixArrayBuilder" path="/summary"/>
+    /// The builder of the <see cref="ISingleCharPcsClassifier"/> implementation used to find equivalence classes of
+    /// 1-char PCS in the Suffix Array building algorithm.
     /// </summary>
-    /// <param name="text"><inheritdoc cref="Text" path="/summary"/></param>
-    /// <param name="alphabet"><inheritdoc cref="Text" path="/summary"/></param>
+    /// <remarks>
+    /// Takes as first input parameter a <see cref="string"/>, containing the input text, whose chars have to be 
+    /// classified.
+    /// <br/>
+    /// Takes as second input parameter a <see cref="IList{T}"/> of <see cref="int"/>, containing the order of the 
+    /// 1-char PCS, previously calculated.
+    /// <br/>
+    /// Returns a suitable <see cref="ISingleCharPcsClassifier"/> implementation.
+    /// </remarks>
+    public Func<string, IList<int>, ISingleCharPcsClassifier> SingleCharPcsClassifierBuilder { get; }
+
+    /// <summary>
+    /// The builder of the <see cref="IDoubleLengthPcsSorter"/> implementation used in the Suffix Array building 
+    /// algorithm, to sort PCS of length 2 * L, once PCS of length L have been sorted and classified.
+    /// </summary>
+    /// <remarks>
+    /// Takes as first input parameter a <see cref="int"/>, containing the length L of the PCS.
+    /// <br/>
+    /// Takes as second input parameter a <see cref="IList{T}"/> of <see cref="int"/>, containing the order of the 
+    /// PCS of length L, previously calculated and potentially needed to calculate the order of PCS of length 2 * L.
+    /// <br/>
+    /// Takes as third input parameter a <see cref="IList{T}"/> of <see cref="int"/>, containing the equivalence 
+    /// classes of the PCS of length L, previously calculated and potentially needed to calculate the order of PCS of 
+    /// length 2 * L.
+    /// <br/>
+    /// Returns a suitable <see cref="IDoubleLengthPcsSorter"/> implementation.
+    /// </remarks>
+    public Func<int, IList<int>, IList<int>, IDoubleLengthPcsSorter> DoubleLengthPcsSorterBuilder { get; }
+
+    /// <summary>
+    /// The builder of the <see cref="IDoubleLengthPcsClassifier"/> implementation used in the Suffix Array building 
+    /// algorithm, to classify PCS of length 2 * L, once PCS of length L have been sorted and classified and PCS of 
+    /// length 2 * L have been sorted.
+    /// </summary>
+    /// <remarks>
+    /// Takes as first input parameter a <see cref="int"/>, containing the length L of the PCS.
+    /// <br/>
+    /// Takes as second input parameter a <see cref="IList{T}"/> of <see cref="int"/>, containing the equivalence 
+    /// classes of the PCS of length L, previously calculated and potentially needed to calculate the equivalence 
+    /// classes of PCS of length 2 * L.
+    /// <br/>
+    /// Takes as third input parameter a <see cref="IList{T}"/> of <see cref="int"/>, containing the order of the 
+    /// PCS of length L, previously calculated and potentially needed to calculate the equivalence classes of PCS of 
+    /// length 2 * L.
+    /// <br/>
+    /// Returns a suitable <see cref="IDoubleLengthPcsClassifier"/> implementation.
+    /// </remarks>
+    public Func<int, IList<int>, IList<int>, IDoubleLengthPcsClassifier> DoubleLengthPcsClassifierBuilder { get; }
+
+    /// <summary>
+    ///     <inheritdoc cref="NaiveSuffixArrayBuilder" path="/summary"/>
+    /// </summary>
+    /// <remarks>
+    ///     Allows to specify the algorithm to be used for each of the four steps of the Suffix Array building 
+    ///     algorithm, each one via a dedicated builder.
+    /// </remarks>
+    /// <param name="text">
+    ///     <inheritdoc cref="Text" path="/summary"/>
+    /// </param>
+    /// <param name="singleCharPcsSorterBuilder">
+    ///     <inheritdoc cref="SingleCharPcsSorterBuilder" path="/summary"/>
+    /// </param>
+    /// <param name="singleCharPcsClassifierBuilder">
+    ///     <inheritdoc cref="SingleCharPcsClassifierBuilder" path="/summary"/>
+    /// </param>
+    /// <param name="doubleLengthPcsSorterBuilder">
+    ///     <inheritdoc cref="DoubleLengthPcsSorterBuilder" path="/summary"/>
+    /// </param>
+    /// <param name="doubleLengthPcsClassifierBuilder">
+    ///     <inheritdoc cref="DoubleLengthPcsClassifierBuilder" path="/summary"/>
+    /// </param>
+    public PcsBasedSuffixArrayBuilder(
+        TextWithTerminator text, 
+        Func<string, ICharsSorter> singleCharPcsSorterBuilder, 
+        Func<string, IList<int>, ISingleCharPcsClassifier> singleCharPcsClassifierBuilder,
+        Func<int, IList<int>, IList<int>, IDoubleLengthPcsSorter> doubleLengthPcsSorterBuilder,
+        Func<int, IList<int>, IList<int>, IDoubleLengthPcsClassifier> doubleLengthPcsClassifierBuilder)
+    {
+        Text = text;
+        SingleCharPcsSorterBuilder = singleCharPcsSorterBuilder;
+        SingleCharPcsClassifierBuilder = singleCharPcsClassifierBuilder;
+        DoubleLengthPcsSorterBuilder = doubleLengthPcsSorterBuilder;
+        DoubleLengthPcsClassifierBuilder = doubleLengthPcsClassifierBuilder;
+    }
+
+    /// <summary>
+    ///     <inheritdoc cref="NaiveSuffixArrayBuilder" path="/summary"/>
+    /// </summary>
+    /// <remarks>
+    ///     Uses the best implementations for each of the four steps of the Suffix Array building algorithm, resulting
+    ///     in an overall linear Time and Space Complexity.
+    /// </remarks>
+    /// <param name="text">
+    ///     <inheritdoc cref="Text" path="/summary"/>
+    /// </param>
+    /// <param name="alphabet">
+    /// The alphabet of <see cref="Text"/>, i.e. the list of all <see cref="char"/> potentially appearing in 
+    /// <see cref="Text"/>, mapped to an alphabet index. Required by the Counting Sort algorithm, which builds the 
+    /// histogram of occurrences in the input, of all chars of the alphabet of the input.
+    /// </param>
     public PcsBasedSuffixArrayBuilder(TextWithTerminator text, IDictionary<char, int> alphabet)
     {
         Text = text;
-        Alphabet = alphabet;
+        SingleCharPcsSorterBuilder = 
+            input => 
+                new CountingSortCharsSorter(alphabet);
+        SingleCharPcsClassifierBuilder = 
+            (input, order) => 
+                new OrderBasedSingleCharPcsClassifier(input, order);
+        DoubleLengthPcsSorterBuilder = 
+            (pcsLength, order, eqClasses) => 
+                new CountingSortDoubleLengthPcsSorter(pcsLength, order, eqClasses);
+        DoubleLengthPcsClassifierBuilder =
+            (pcsLength, eqClassesPcsHalfLength, order) => 
+                new EqClassesBasedDoubleLengthPcsClassifier(pcsLength, eqClassesPcsHalfLength, order);
     }
 
     /// <summary>
@@ -90,10 +208,10 @@ public class PcsBasedSuffixArrayBuilder : ISuffixArrayBuilder
     {
         var input = string.Concat(Text);
 
-        var singleCharPcsSorter = new CountingSortCharsSorter(Alphabet);        
+        var singleCharPcsSorter = SingleCharPcsSorterBuilder(input);        
         var order = singleCharPcsSorter.Sort(input);
 
-        var singleCharEqClassClassifier = new OrderBasedSingleCharPcsClassifier(input, order);
+        var singleCharEqClassClassifier = SingleCharPcsClassifierBuilder(input, order);
         var eqClasses = singleCharEqClassClassifier.Classify();
 
         var pcsLength = 1;
@@ -101,9 +219,9 @@ public class PcsBasedSuffixArrayBuilder : ISuffixArrayBuilder
         {
             pcsLength *= 2;
 
-            var doubleLengthPcsSorter = new CountingSortDoubleLengthPcsSorter(pcsLength / 2, order, eqClasses);
+            var doubleLengthPcsSorter = DoubleLengthPcsSorterBuilder(pcsLength / 2, order, eqClasses);
             order = doubleLengthPcsSorter.Sort();
-            var doubleLengthPcsClassifier = new EqClassesBasedDoubleLengthPcsClassifier(pcsLength, eqClasses, order);
+            var doubleLengthPcsClassifier = DoubleLengthPcsClassifierBuilder(pcsLength, eqClasses, order);
             eqClasses = doubleLengthPcsClassifier.Classify();
         }
 
