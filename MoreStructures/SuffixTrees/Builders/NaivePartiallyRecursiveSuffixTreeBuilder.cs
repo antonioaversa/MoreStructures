@@ -76,7 +76,7 @@ public class NaivePartiallyRecursiveSuffixTreeBuilder
             // Otherwise, eat prefixLength chars from the edge, move to the child pointed by the edge entirely matching
             // the beginning of the current suffix and repeat the same operation.
 
-            var prefixLength = LongestPrefixInCommon(
+            var prefixLength = LongestCommonPrefix(
                 text[suffixCurrentIndex..], edgeSame1stChar.Of(text));
 
             var oldChild = nodeChildren[edgeSame1stChar];
