@@ -1142,6 +1142,54 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.SuffixArrays.LongestCommonPrefix..yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.SuffixArrays.LongestCommonPrefix..html",
+          "hash": "5POAoG/dSfr+Yj6BCRzyImOMmvGH9RUJaQFxbXqHxto="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.SuffixArrays.LongestCommonPrefix.ILcpArrayBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.SuffixArrays.LongestCommonPrefix.ILcpArrayBuilder.html",
+          "hash": "YTCBSX6o9ys3EyLc/OyMEq84o4XpALlOM3PFHotLItU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.html",
+          "hash": "eLBH1A1WPBHSMrQdWAMjWttKD0QyFb2UG19bjuvt3e4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.SuffixArrays.LongestCommonPrefix.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.SuffixArrays.LongestCommonPrefix.html",
+          "hash": "HVNZF9haeLH39NeRGak/whH9jTSrmQ3JkqAKv5T8Dzs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.SuffixArrays.yml",
       "output": {
         ".html": {
@@ -2750,6 +2798,54 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.LcpArrayBuilderTests.LcpArrayBuilderBuilderInput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.LcpArrayBuilderTests.LcpArrayBuilderBuilderInput.html",
+          "hash": "F4TcjiMMO45uPtK5kYgtyMTbWjyiTBbfChZfvD3zt4w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.LcpArrayBuilderTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.LcpArrayBuilderTests.html",
+          "hash": "By2OS3SUHlSOXHs8zPk6DrQkydhVXLXkGouusjDNzfg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilderTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilderTests.html",
+          "hash": "ghnWRs0ScIyyBTmy/seLZElNTt003empieg0r12hvxY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.html",
+          "hash": "kAteDO9Zhd08zd759qGwSSoR7rIjDOWOWedN+o3wBEA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Tests.SuffixStructures.AdjacencyOrdersTests.yml",
       "output": {
         ".html": {
@@ -3666,7 +3762,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "QNxVLyTy2nXY6dMSAkoyQwtwHJS81RhLU757FqHDHqg="
+          "hash": "tHNkf9fqxWSLzRRwwgfRYecjD9owQ/jCbYZRt6rEopY="
         }
       },
       "is_incremental": false,
@@ -3741,7 +3837,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 303,
+          "total_file_count": 311,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
