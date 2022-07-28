@@ -128,7 +128,7 @@
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Utilities_StringUtilities_LongestPrefixInCommon_IEnumerable_System_Char__IEnumerable_System_Char__.md&amp;value=---%0Auid%3A%20MoreStructures.Utilities.StringUtilities.LongestPrefixInCommon(IEnumerable%7BSystem.Char%7D%2CIEnumerable%7BSystem.Char%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/StringUtilities.cs/#L16">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/StringUtilities.cs/#L39">View Source</a>
   </span>
   <a id="MoreStructures_Utilities_StringUtilities_LongestPrefixInCommon_" data-uid="MoreStructures.Utilities.StringUtilities.LongestPrefixInCommon*"></a>
   <h4 id="MoreStructures_Utilities_StringUtilities_LongestPrefixInCommon_IEnumerable_System_Char__IEnumerable_System_Char__" data-uid="MoreStructures.Utilities.StringUtilities.LongestPrefixInCommon(IEnumerable{System.Char},IEnumerable{System.Char})">LongestPrefixInCommon(IEnumerable&lt;Char&gt;, IEnumerable&lt;Char&gt;)</h4>
@@ -173,11 +173,34 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>An integer betwen 0 and the length of the shortest of the enumerabbles provided.</p>
+        <td><p>An integer betwen 0 and the length of the shortest of the enumerables provided.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 id="MoreStructures_Utilities_StringUtilities_LongestPrefixInCommon_IEnumerable_System_Char__IEnumerable_System_Char___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+ALGORITHM
+<br>
+- The algorithm iterates over two enumerators in parallel, one enumerator per enumerable provided.
+<br>
+- It keeps running the enumerators until one of the two is over, or the current items of the two 
+enumerators are different.
+<br>
+- It keeps a counter of the number of chars found equal from the beginning, which is returned as result.
+</p>
+<p>
+COMPLEXITY
+<br>
+- Enumerator creation, moving to next item and accessing the current item are all constant-time operations.
+<br>
+- If the two enumerables have length l1 and l2 respectively, there are at most max(l1, l2) iterations.
+<br>
+- The current item of each of the enumerable has a constant size.
+<br>
+- If l1 and l2 are O(n), Time Complexity is O(n) and Space Complexity is O(1).
+</p>
+</div>
 </article>
           </div>
           
