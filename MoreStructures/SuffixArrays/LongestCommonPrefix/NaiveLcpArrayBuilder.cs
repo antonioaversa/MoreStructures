@@ -24,8 +24,8 @@ namespace MoreStructures.SuffixArrays.LongestCommonPrefix;
 ///       <see cref="Text"/>.
 ///       <br/>
 ///     - It iterates over the first n - 1 items of the <see cref="SuffixArray"/> SA, using 
-///       <see cref="StringUtilities.LongestPrefixInCommon"/> to calculate the length of the LCP between SA[i] and its
-///       successor, SA[i + 1].
+///       <see cref="StringUtilities.LongestCommonPrefix(IEnumerable{char}, IEnumerable{char})"/> to calculate the 
+///       length of the LCP between SA[i] and its successor, SA[i + 1].
 ///       <br/>
 ///     - That represents the i-th element of the LCP Array.
 ///     </para>
@@ -37,8 +37,9 @@ namespace MoreStructures.SuffixArrays.LongestCommonPrefix;
 ///     - The algorithm runs n - 1 iterations, each one building two strings (the prefix starting at SA[i] and the one
 ///       starting at SA[i + 1]), then comparing them char by char, to find the LCP.
 ///       <br/>
-///     - Prefixes have in general O(n) length, and <see cref="StringUtilities.LongestPrefixInCommon"/> has Time 
-///       Complexity linear in the input, and constant Space Complexity.
+///     - Prefixes have in general O(n) length, and 
+///       <see cref="StringUtilities.LongestCommonPrefix(IEnumerable{char}, IEnumerable{char})"/> has Time Complexity 
+///       linear in the input, and constant Space Complexity.
 ///       <br/>
 ///     - Therefore, Time Complexity is O(n^2) and Space Complexity is O(n).
 ///     </para>
@@ -71,11 +72,11 @@ public class NaiveLcpArrayBuilder : ILcpArrayBuilder
     }
 
     /// <inheritdoc/>
-    public LcpArray Build() => 
+    public virtual LcpArray Build() => 
         new(
             from suffixIndexStartingAndNext in SuffixArray.Indexes.Zip(SuffixArray.Indexes.Skip(1))
             let suffix = Text[suffixIndexStartingAndNext.First..]
             let nextSuffix = Text[suffixIndexStartingAndNext.Second..]
-            select StringUtilities.LongestPrefixInCommon(suffix, nextSuffix)
+            select StringUtilities.LongestCommonPrefix(suffix, nextSuffix)
         );
 }

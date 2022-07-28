@@ -52,7 +52,7 @@ public static class Matcher
 
         var longestMatch = (
             from edge in node.Children.Keys
-            let length = LongestPrefixInCommon(edge.Of(text), pattern[textStart..])
+            let length = LongestCommonPrefix(edge.Of(text), pattern[textStart..])
             select new { Length = length, Edge = edge })
             .MaxBy(r => r.Length);
 
