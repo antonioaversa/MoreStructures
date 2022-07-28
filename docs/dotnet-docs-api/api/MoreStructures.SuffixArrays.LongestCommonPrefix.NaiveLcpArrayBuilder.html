@@ -144,8 +144,8 @@ ALGORITHM
 <a class="xref" href="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.html#MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_Text">Text</a>.
 <br>
 - It iterates over the first n - 1 items of the <a class="xref" href="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.html#MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_SuffixArray">SuffixArray</a> SA, using 
-<a class="xref" href="MoreStructures.Utilities.StringUtilities.html#MoreStructures_Utilities_StringUtilities_LongestPrefixInCommon_IEnumerable_System_Char__IEnumerable_System_Char__">LongestPrefixInCommon(IEnumerable&lt;Char&gt;, IEnumerable&lt;Char&gt;)</a> to calculate the length of the LCP between SA[i] and its
-successor, SA[i + 1].
+<a class="xref" href="MoreStructures.Utilities.StringUtilities.html#MoreStructures_Utilities_StringUtilities_LongestCommonPrefix_IEnumerable_System_Char__IEnumerable_System_Char__">LongestCommonPrefix(IEnumerable&lt;Char&gt;, IEnumerable&lt;Char&gt;)</a> to calculate the 
+length of the LCP between SA[i] and its successor, SA[i + 1].
 <br>
 - That represents the i-th element of the LCP Array.
 </p>
@@ -157,8 +157,9 @@ COMPLEXITY
 - The algorithm runs n - 1 iterations, each one building two strings (the prefix starting at SA[i] and the one
 starting at SA[i + 1]), then comparing them char by char, to find the LCP.
 <br>
-- Prefixes have in general O(n) length, and <a class="xref" href="MoreStructures.Utilities.StringUtilities.html#MoreStructures_Utilities_StringUtilities_LongestPrefixInCommon_IEnumerable_System_Char__IEnumerable_System_Char__">LongestPrefixInCommon(IEnumerable&lt;Char&gt;, IEnumerable&lt;Char&gt;)</a> has Time 
-Complexity linear in the input, and constant Space Complexity.
+- Prefixes have in general O(n) length, and 
+<a class="xref" href="MoreStructures.Utilities.StringUtilities.html#MoreStructures_Utilities_StringUtilities_LongestCommonPrefix_IEnumerable_System_Char__IEnumerable_System_Char__">LongestCommonPrefix(IEnumerable&lt;Char&gt;, IEnumerable&lt;Char&gt;)</a> has Time Complexity 
+linear in the input, and constant Space Complexity.
 <br>
 - Therefore, Time Complexity is O(n^2) and Space Complexity is O(n).
 </p>
@@ -170,7 +171,7 @@ Complexity linear in the input, and constant Space Complexity.
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder__ctor_MoreStructures_TextWithTerminator_MoreStructures_SuffixArrays_SuffixArray_.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.%23ctor(MoreStructures.TextWithTerminator%2CMoreStructures.SuffixArrays.SuffixArray)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/LongestCommonPrefix/NaiveLcpArrayBuilder.cs/#L67">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/LongestCommonPrefix/NaiveLcpArrayBuilder.cs/#L68">View Source</a>
   </span>
   <a id="MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder__ctor_" data-uid="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.#ctor*"></a>
   <h4 id="MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder__ctor_MoreStructures_TextWithTerminator_MoreStructures_SuffixArrays_SuffixArray_" data-uid="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.#ctor(MoreStructures.TextWithTerminator,MoreStructures.SuffixArrays.SuffixArray)">NaiveLcpArrayBuilder(TextWithTerminator, SuffixArray)</h4>
@@ -212,7 +213,7 @@ Complexity linear in the input, and constant Space Complexity.
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_SuffixArray.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.SuffixArray%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/LongestCommonPrefix/NaiveLcpArrayBuilder.cs/#L56">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/LongestCommonPrefix/NaiveLcpArrayBuilder.cs/#L57">View Source</a>
   </span>
   <a id="MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_SuffixArray_" data-uid="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.SuffixArray*"></a>
   <h4 id="MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_SuffixArray" data-uid="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.SuffixArray">SuffixArray</h4>
@@ -243,7 +244,7 @@ Complexity linear in the input, and constant Space Complexity.
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_Text.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.Text%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/LongestCommonPrefix/NaiveLcpArrayBuilder.cs/#L51">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/LongestCommonPrefix/NaiveLcpArrayBuilder.cs/#L52">View Source</a>
   </span>
   <a id="MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_Text_" data-uid="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.Text*"></a>
   <h4 id="MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_Text" data-uid="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.Text">Text</h4>
@@ -276,7 +277,7 @@ Complexity linear in the input, and constant Space Complexity.
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_Build.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.Build%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/LongestCommonPrefix/NaiveLcpArrayBuilder.cs/#L74">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/LongestCommonPrefix/NaiveLcpArrayBuilder.cs/#L75">View Source</a>
   </span>
   <a id="MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_Build_" data-uid="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.Build*"></a>
   <h4 id="MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_Build" data-uid="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.Build">Build()</h4>
@@ -285,7 +286,7 @@ Complexity linear in the input, and constant Space Complexity.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LcpArray Build()</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual LcpArray Build()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -323,7 +324,7 @@ Complexity linear in the input, and constant Space Complexity.
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/LongestCommonPrefix/NaiveLcpArrayBuilder.cs/#L46" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/LongestCommonPrefix/NaiveLcpArrayBuilder.cs/#L47" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

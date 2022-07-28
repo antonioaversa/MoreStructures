@@ -12779,19 +12779,32 @@ references:
   commentId: T:MoreStructures.Tests.Utilities.StringUtilitiesTests
   fullName: MoreStructures.Tests.Utilities.StringUtilitiesTests
   nameWithType: StringUtilitiesTests
-- uid: MoreStructures.Tests.Utilities.StringUtilitiesTests.LongestPrefixInCommon_IsCorrect(System.String,System.String,System.Int32)
-  name: LongestPrefixInCommon_IsCorrect(String, String, Int32)
-  href: api/MoreStructures.Tests.Utilities.StringUtilitiesTests.html#MoreStructures_Tests_Utilities_StringUtilitiesTests_LongestPrefixInCommon_IsCorrect_System_String_System_String_System_Int32_
-  commentId: M:MoreStructures.Tests.Utilities.StringUtilitiesTests.LongestPrefixInCommon_IsCorrect(System.String,System.String,System.Int32)
-  fullName: MoreStructures.Tests.Utilities.StringUtilitiesTests.LongestPrefixInCommon_IsCorrect(System.String, System.String, System.Int32)
-  nameWithType: StringUtilitiesTests.LongestPrefixInCommon_IsCorrect(String, String, Int32)
-- uid: MoreStructures.Tests.Utilities.StringUtilitiesTests.LongestPrefixInCommon_IsCorrect*
-  name: LongestPrefixInCommon_IsCorrect
-  href: api/MoreStructures.Tests.Utilities.StringUtilitiesTests.html#MoreStructures_Tests_Utilities_StringUtilitiesTests_LongestPrefixInCommon_IsCorrect_
-  commentId: Overload:MoreStructures.Tests.Utilities.StringUtilitiesTests.LongestPrefixInCommon_IsCorrect
+- uid: MoreStructures.Tests.Utilities.StringUtilitiesTests.LongestCommonPrefix_IsCorrect(System.String,System.String,System.Int32)
+  name: LongestCommonPrefix_IsCorrect(String, String, Int32)
+  href: api/MoreStructures.Tests.Utilities.StringUtilitiesTests.html#MoreStructures_Tests_Utilities_StringUtilitiesTests_LongestCommonPrefix_IsCorrect_System_String_System_String_System_Int32_
+  commentId: M:MoreStructures.Tests.Utilities.StringUtilitiesTests.LongestCommonPrefix_IsCorrect(System.String,System.String,System.Int32)
+  fullName: MoreStructures.Tests.Utilities.StringUtilitiesTests.LongestCommonPrefix_IsCorrect(System.String, System.String, System.Int32)
+  nameWithType: StringUtilitiesTests.LongestCommonPrefix_IsCorrect(String, String, Int32)
+- uid: MoreStructures.Tests.Utilities.StringUtilitiesTests.LongestCommonPrefix_IsCorrect*
+  name: LongestCommonPrefix_IsCorrect
+  href: api/MoreStructures.Tests.Utilities.StringUtilitiesTests.html#MoreStructures_Tests_Utilities_StringUtilitiesTests_LongestCommonPrefix_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.Utilities.StringUtilitiesTests.LongestCommonPrefix_IsCorrect
   isSpec: "True"
-  fullName: MoreStructures.Tests.Utilities.StringUtilitiesTests.LongestPrefixInCommon_IsCorrect
-  nameWithType: StringUtilitiesTests.LongestPrefixInCommon_IsCorrect
+  fullName: MoreStructures.Tests.Utilities.StringUtilitiesTests.LongestCommonPrefix_IsCorrect
+  nameWithType: StringUtilitiesTests.LongestCommonPrefix_IsCorrect
+- uid: MoreStructures.Tests.Utilities.StringUtilitiesTests.LongestCommonPrefix_RaisesExceptionWithInvalidIndexes
+  name: LongestCommonPrefix_RaisesExceptionWithInvalidIndexes()
+  href: api/MoreStructures.Tests.Utilities.StringUtilitiesTests.html#MoreStructures_Tests_Utilities_StringUtilitiesTests_LongestCommonPrefix_RaisesExceptionWithInvalidIndexes
+  commentId: M:MoreStructures.Tests.Utilities.StringUtilitiesTests.LongestCommonPrefix_RaisesExceptionWithInvalidIndexes
+  fullName: MoreStructures.Tests.Utilities.StringUtilitiesTests.LongestCommonPrefix_RaisesExceptionWithInvalidIndexes()
+  nameWithType: StringUtilitiesTests.LongestCommonPrefix_RaisesExceptionWithInvalidIndexes()
+- uid: MoreStructures.Tests.Utilities.StringUtilitiesTests.LongestCommonPrefix_RaisesExceptionWithInvalidIndexes*
+  name: LongestCommonPrefix_RaisesExceptionWithInvalidIndexes
+  href: api/MoreStructures.Tests.Utilities.StringUtilitiesTests.html#MoreStructures_Tests_Utilities_StringUtilitiesTests_LongestCommonPrefix_RaisesExceptionWithInvalidIndexes_
+  commentId: Overload:MoreStructures.Tests.Utilities.StringUtilitiesTests.LongestCommonPrefix_RaisesExceptionWithInvalidIndexes
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.StringUtilitiesTests.LongestCommonPrefix_RaisesExceptionWithInvalidIndexes
+  nameWithType: StringUtilitiesTests.LongestCommonPrefix_RaisesExceptionWithInvalidIndexes
 - uid: MoreStructures.Tests.Utilities.StringValueEnumerableTests
   name: StringValueEnumerableTests
   href: api/MoreStructures.Tests.Utilities.StringValueEnumerableTests.html
@@ -13874,22 +13887,28 @@ references:
   commentId: T:MoreStructures.Utilities.StringUtilities
   fullName: MoreStructures.Utilities.StringUtilities
   nameWithType: StringUtilities
-- uid: MoreStructures.Utilities.StringUtilities.LongestPrefixInCommon(IEnumerable{System.Char},IEnumerable{System.Char})
-  name: LongestPrefixInCommon(IEnumerable<Char>, IEnumerable<Char>)
-  href: api/MoreStructures.Utilities.StringUtilities.html#MoreStructures_Utilities_StringUtilities_LongestPrefixInCommon_IEnumerable_System_Char__IEnumerable_System_Char__
-  commentId: M:MoreStructures.Utilities.StringUtilities.LongestPrefixInCommon(IEnumerable{System.Char},IEnumerable{System.Char})
-  name.vb: LongestPrefixInCommon(IEnumerable(Of Char), IEnumerable(Of Char))
-  fullName: MoreStructures.Utilities.StringUtilities.LongestPrefixInCommon(IEnumerable<System.Char>, IEnumerable<System.Char>)
-  fullName.vb: MoreStructures.Utilities.StringUtilities.LongestPrefixInCommon(IEnumerable(Of System.Char), IEnumerable(Of System.Char))
-  nameWithType: StringUtilities.LongestPrefixInCommon(IEnumerable<Char>, IEnumerable<Char>)
-  nameWithType.vb: StringUtilities.LongestPrefixInCommon(IEnumerable(Of Char), IEnumerable(Of Char))
-- uid: MoreStructures.Utilities.StringUtilities.LongestPrefixInCommon*
-  name: LongestPrefixInCommon
-  href: api/MoreStructures.Utilities.StringUtilities.html#MoreStructures_Utilities_StringUtilities_LongestPrefixInCommon_
-  commentId: Overload:MoreStructures.Utilities.StringUtilities.LongestPrefixInCommon
+- uid: MoreStructures.Utilities.StringUtilities.LongestCommonPrefix(IEnumerable{System.Char},IEnumerable{System.Char})
+  name: LongestCommonPrefix(IEnumerable<Char>, IEnumerable<Char>)
+  href: api/MoreStructures.Utilities.StringUtilities.html#MoreStructures_Utilities_StringUtilities_LongestCommonPrefix_IEnumerable_System_Char__IEnumerable_System_Char__
+  commentId: M:MoreStructures.Utilities.StringUtilities.LongestCommonPrefix(IEnumerable{System.Char},IEnumerable{System.Char})
+  name.vb: LongestCommonPrefix(IEnumerable(Of Char), IEnumerable(Of Char))
+  fullName: MoreStructures.Utilities.StringUtilities.LongestCommonPrefix(IEnumerable<System.Char>, IEnumerable<System.Char>)
+  fullName.vb: MoreStructures.Utilities.StringUtilities.LongestCommonPrefix(IEnumerable(Of System.Char), IEnumerable(Of System.Char))
+  nameWithType: StringUtilities.LongestCommonPrefix(IEnumerable<Char>, IEnumerable<Char>)
+  nameWithType.vb: StringUtilities.LongestCommonPrefix(IEnumerable(Of Char), IEnumerable(Of Char))
+- uid: MoreStructures.Utilities.StringUtilities.LongestCommonPrefix(System.String,System.Int32,System.String,System.Int32)
+  name: LongestCommonPrefix(String, Int32, String, Int32)
+  href: api/MoreStructures.Utilities.StringUtilities.html#MoreStructures_Utilities_StringUtilities_LongestCommonPrefix_System_String_System_Int32_System_String_System_Int32_
+  commentId: M:MoreStructures.Utilities.StringUtilities.LongestCommonPrefix(System.String,System.Int32,System.String,System.Int32)
+  fullName: MoreStructures.Utilities.StringUtilities.LongestCommonPrefix(System.String, System.Int32, System.String, System.Int32)
+  nameWithType: StringUtilities.LongestCommonPrefix(String, Int32, String, Int32)
+- uid: MoreStructures.Utilities.StringUtilities.LongestCommonPrefix*
+  name: LongestCommonPrefix
+  href: api/MoreStructures.Utilities.StringUtilities.html#MoreStructures_Utilities_StringUtilities_LongestCommonPrefix_
+  commentId: Overload:MoreStructures.Utilities.StringUtilities.LongestCommonPrefix
   isSpec: "True"
-  fullName: MoreStructures.Utilities.StringUtilities.LongestPrefixInCommon
-  nameWithType: StringUtilities.LongestPrefixInCommon
+  fullName: MoreStructures.Utilities.StringUtilities.LongestCommonPrefix
+  nameWithType: StringUtilities.LongestCommonPrefix
 - uid: MoreStructures.Utilities.StringValueEnumerable
   name: StringValueEnumerable
   href: api/MoreStructures.Utilities.StringValueEnumerable.html
