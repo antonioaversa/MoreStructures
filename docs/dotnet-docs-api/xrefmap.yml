@@ -4202,6 +4202,38 @@ references:
   isSpec: "True"
   fullName: MoreStructures.SuffixArrays.LongestCommonPrefix.ILcpArrayBuilder.Build
   nameWithType: ILcpArrayBuilder.Build
+- uid: MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder
+  name: KasaiLcpArrayBuilder
+  href: api/MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder.html
+  commentId: T:MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder
+  fullName: MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder
+  nameWithType: KasaiLcpArrayBuilder
+- uid: MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder.#ctor(MoreStructures.TextWithTerminator,MoreStructures.SuffixArrays.SuffixArray)
+  name: KasaiLcpArrayBuilder(TextWithTerminator, SuffixArray)
+  href: api/MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder.html#MoreStructures_SuffixArrays_LongestCommonPrefix_KasaiLcpArrayBuilder__ctor_MoreStructures_TextWithTerminator_MoreStructures_SuffixArrays_SuffixArray_
+  commentId: M:MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder.#ctor(MoreStructures.TextWithTerminator,MoreStructures.SuffixArrays.SuffixArray)
+  fullName: MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder.KasaiLcpArrayBuilder(MoreStructures.TextWithTerminator, MoreStructures.SuffixArrays.SuffixArray)
+  nameWithType: KasaiLcpArrayBuilder.KasaiLcpArrayBuilder(TextWithTerminator, SuffixArray)
+- uid: MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder.#ctor*
+  name: KasaiLcpArrayBuilder
+  href: api/MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder.html#MoreStructures_SuffixArrays_LongestCommonPrefix_KasaiLcpArrayBuilder__ctor_
+  commentId: Overload:MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder.KasaiLcpArrayBuilder
+  nameWithType: KasaiLcpArrayBuilder.KasaiLcpArrayBuilder
+- uid: MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder.Build
+  name: Build()
+  href: api/MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder.html#MoreStructures_SuffixArrays_LongestCommonPrefix_KasaiLcpArrayBuilder_Build
+  commentId: M:MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder.Build
+  fullName: MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder.Build()
+  nameWithType: KasaiLcpArrayBuilder.Build()
+- uid: MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder.Build*
+  name: Build
+  href: api/MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder.html#MoreStructures_SuffixArrays_LongestCommonPrefix_KasaiLcpArrayBuilder_Build_
+  commentId: Overload:MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder.Build
+  isSpec: "True"
+  fullName: MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder.Build
+  nameWithType: KasaiLcpArrayBuilder.Build
 - uid: MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder
   name: NaiveLcpArrayBuilder
   href: api/MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.html
@@ -9849,6 +9881,25 @@ references:
   commentId: N:MoreStructures.Tests.SuffixArrays.LongestCommonPrefix
   fullName: MoreStructures.Tests.SuffixArrays.LongestCommonPrefix
   nameWithType: MoreStructures.Tests.SuffixArrays.LongestCommonPrefix
+- uid: MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilderTests
+  name: KasaiLcpArrayBuilderTests
+  href: api/MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilderTests.html
+  commentId: T:MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilderTests
+  fullName: MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilderTests
+  nameWithType: KasaiLcpArrayBuilderTests
+- uid: MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilderTests.#ctor
+  name: KasaiLcpArrayBuilderTests()
+  href: api/MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilderTests.html#MoreStructures_Tests_SuffixArrays_LongestCommonPrefix_KasaiLcpArrayBuilderTests__ctor
+  commentId: M:MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilderTests.#ctor
+  fullName: MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilderTests.KasaiLcpArrayBuilderTests()
+  nameWithType: KasaiLcpArrayBuilderTests.KasaiLcpArrayBuilderTests()
+- uid: MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilderTests.#ctor*
+  name: KasaiLcpArrayBuilderTests
+  href: api/MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilderTests.html#MoreStructures_Tests_SuffixArrays_LongestCommonPrefix_KasaiLcpArrayBuilderTests__ctor_
+  commentId: Overload:MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilderTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilderTests.KasaiLcpArrayBuilderTests
+  nameWithType: KasaiLcpArrayBuilderTests.KasaiLcpArrayBuilderTests
 - uid: MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.LcpArrayBuilderTests
   name: LcpArrayBuilderTests
   href: api/MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.LcpArrayBuilderTests.html

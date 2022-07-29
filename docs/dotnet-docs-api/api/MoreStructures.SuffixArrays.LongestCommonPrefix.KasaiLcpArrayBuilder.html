@@ -1,0 +1,342 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class KasaiLcpArrayBuilder
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class KasaiLcpArrayBuilder
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder">
+  
+  
+  <h1 id="MoreStructures_SuffixArrays_LongestCommonPrefix_KasaiLcpArrayBuilder" data-uid="MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder" class="text-break">Class KasaiLcpArrayBuilder
+  </h1>
+  <div class="markdown level0 summary"><p>An <a class="xref" href="MoreStructures.SuffixArrays.LongestCommonPrefix.ILcpArrayBuilder.html">ILcpArrayBuilder</a> implementation which uses the Kasai's algorithm (2001) to compute the LCP Array
+in linear time.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.html">NaiveLcpArrayBuilder</a></div>
+    <div class="level2"><span class="xref">KasaiLcpArrayBuilder</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.SuffixArrays.LongestCommonPrefix.ILcpArrayBuilder.html">ILcpArrayBuilder</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.html#MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_Text">NaiveLcpArrayBuilder.Text</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.html#MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_SuffixArray">NaiveLcpArrayBuilder.SuffixArray</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.SuffixArrays.LongestCommonPrefix.html">MoreStructures.SuffixArrays.LongestCommonPrefix</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_SuffixArrays_LongestCommonPrefix_KasaiLcpArrayBuilder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class KasaiLcpArrayBuilder : NaiveLcpArrayBuilder, ILcpArrayBuilder</code></pre>
+  </div>
+  <h5 id="MoreStructures_SuffixArrays_LongestCommonPrefix_KasaiLcpArrayBuilder_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+ADVANTAGES AND DISADVANTAGES
+<br>
+- Compared to the naive implementation following the definition of LCP Array, implemented by 
+<a class="xref" href="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.html">NaiveLcpArrayBuilder</a>, this algorithm has better runtime and equal Space Complexity.
+<br>
+- The better runtime comes at the cost of the complexity of the algorithm itself, which is harder to analyze.
+<br>
+- Moreover, unlike in the naive implementation, the construction of the array doesn&apos;t proceed in order, i.e.
+it doesn&apos;t proceed from the first element to the last element of the array.
+<br>
+- That is, the Kasai&apos;s algorithm is not online and, in its base form, cannot be easily made lazy.
+</p>
+<p>
+ALGORITHM
+<br>
+- The algorithm requires 3 data structures to operate: the text T, its Suffix Array SA and the Inverted Suffix
+  Array ISA. The three data structures have n items (chars or integers).
+<br>
+- T and SA are externally provided, whereas ISA is calculated scanning linearly SA and populating a dictionary
+of positions of SA: <code>ISA[v] = i such that SA[i] = v</code>. Because there is no better general algorithm than
+a single linear scan of the input, ISA is internally calculated, rather than externally provided.
+<br>
+- The current LCP length, named here CLCP, is initialized to 0, and the index of the current suffix in T, named
+here CS, is initialized to the first item of SA: <code>CLCP = 0; CS = SA[0]</code>. This is the setup before the
+main loop.
+<br>
+- Then n iterations are performed, filling in the resulting LPC array, named here LCPA, initialized to an empty
+array of length n - 1.
+<br>
+- At each iteration the index in SA of the current suffix (starting in T at index CS), is calculated via ISA:
+<code>k = ISA[CS]</code>.
+<br>
+- Then, the next suffix in T, named here NS, is calculated as the successor of k in SA: <code>NS = SA[k + 1]</code>.
+<br>
+- Important: if <code>ISA[CS]</code> is the last index of SA (i.e. n - 1), then CLCP is reset and the current 
+iteration skipped.
+<br>
+- A new value of CLCP is calculated as the longest common prefix between T[CS..] and T[NS..], skipping the 
+first CLCP - 1 chars, which are equal by construction.
+<br>
+- Such new value of CLCP is then assigned to LCPA at index 
+<br>
+- Finally, the index of the current suffix in T, CS, is incremented modulo n and the current iteration 
+terminates.
+<br>
+- After the loop, LCPA is fully populated and can be returned as result.
+</p>
+<p>
+COMPLEXITY
+<br>
+- Text and Suffix Array evaluation (required to have direct access by index) are O(n) operations, both in time
+  and space.
+<br>
+- Inversion of the Suffix Array is also a O(n) operation.
+<br>
+- Initialization of the current LCP and the current prefix are constant-time operations.
+<br>
+- The main loop of the algorithm runs n iterations.
+<br>
+- The only operation which doesn&apos;t take constant time in the body of the loop is the LCP between the current
+suffix, initialized at the first item of the Suffix Array and then incremented by 1 modulo n at every
+iteration, and the next suffix, calculated via Suffix Array and its inverted version.
+<br>
+- While the above is true, it should be noted that the current LCP is increased once per match and decreased 
+once per iteration. Because the current LCP cannot be bigger than n (that&apos;s the biggest number of chars a
+prefix can have, hence the bigger number of chars in common between two prefixes), the total number of 
+comparisons across all iterations is O(n).
+<br>
+- Therefore, Time and Space Complexity are O(n).
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_LongestCommonPrefix_KasaiLcpArrayBuilder__ctor_MoreStructures_TextWithTerminator_MoreStructures_SuffixArrays_SuffixArray_.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder.%23ctor(MoreStructures.TextWithTerminator%2CMoreStructures.SuffixArrays.SuffixArray)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/LongestCommonPrefix/KasaiLcpArrayBuilder.cs/#L97">View Source</a>
+  </span>
+  <a id="MoreStructures_SuffixArrays_LongestCommonPrefix_KasaiLcpArrayBuilder__ctor_" data-uid="MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder.#ctor*"></a>
+  <h4 id="MoreStructures_SuffixArrays_LongestCommonPrefix_KasaiLcpArrayBuilder__ctor_MoreStructures_TextWithTerminator_MoreStructures_SuffixArrays_SuffixArray_" data-uid="MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder.#ctor(MoreStructures.TextWithTerminator,MoreStructures.SuffixArrays.SuffixArray)">KasaiLcpArrayBuilder(TextWithTerminator, SuffixArray)</h4>
+  <div class="markdown level1 summary"><p><inheritdoc cref="T:MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder"></inheritdoc></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KasaiLcpArrayBuilder(TextWithTerminator text, SuffixArray suffixArray)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a></td>
+        <td><span class="parametername">text</span></td>
+        <td><p><inheritdoc cref="P:MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.Text" path="/summary"></inheritdoc></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">MoreStructures.SuffixArrays.SuffixArray</span></td>
+        <td><span class="parametername">suffixArray</span></td>
+        <td><p><inheritdoc cref="P:MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.SuffixArray" path="/summary"></inheritdoc></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_SuffixArrays_LongestCommonPrefix_KasaiLcpArrayBuilder__ctor_MoreStructures_TextWithTerminator_MoreStructures_SuffixArrays_SuffixArray__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder"></inheritdoc></p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_LongestCommonPrefix_KasaiLcpArrayBuilder_Build.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder.Build%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/LongestCommonPrefix/KasaiLcpArrayBuilder.cs/#L107">View Source</a>
+  </span>
+  <a id="MoreStructures_SuffixArrays_LongestCommonPrefix_KasaiLcpArrayBuilder_Build_" data-uid="MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder.Build*"></a>
+  <h4 id="MoreStructures_SuffixArrays_LongestCommonPrefix_KasaiLcpArrayBuilder_Build" data-uid="MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder.Build">Build()</h4>
+  <div class="markdown level1 summary"><p><inheritdoc></inheritdoc></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override LcpArray Build()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MoreStructures.SuffixArrays.LongestCommonPrefix.LcpArray</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.html#MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_Build">NaiveLcpArrayBuilder.Build()</a></div>
+  <h5 id="MoreStructures_SuffixArrays_LongestCommonPrefix_KasaiLcpArrayBuilder_Build_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder"></inheritdoc></p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixArrays.LongestCommonPrefix.ILcpArrayBuilder.html">ILcpArrayBuilder</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_LongestCommonPrefix_KasaiLcpArrayBuilder.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/LongestCommonPrefix/KasaiLcpArrayBuilder.cs/#L83" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1166,11 +1166,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder.html",
+          "hash": "MRx3DlAo1/drS4gmvpSVqRsfFd0Pbzt5ZLWQFuKOmHw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.yml",
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.html",
-          "hash": "ENQ3Gjsa/oluMpzGUUeA6dsrUwLwJu1TlJ51NVCW5Bo="
+          "hash": "o03mPJmPj6kz3rqk98eiWxqzEKhtA7NoV+GvPIDhCWA="
         }
       },
       "is_incremental": false,
@@ -1182,7 +1194,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.SuffixArrays.LongestCommonPrefix.html",
-          "hash": "HVNZF9haeLH39NeRGak/whH9jTSrmQ3JkqAKv5T8Dzs="
+          "hash": "TrXuZOD+wvkIRxaeCdcNMGClh2ClshzrLd9MNVYYBPU="
         }
       },
       "is_incremental": false,
@@ -2798,11 +2810,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilderTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilderTests.html",
+          "hash": "KWaeHVCaEgLz2m2l9kKfiWNGwSee8Yl6l+jxHRrtLaw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.LcpArrayBuilderTests.LcpArrayBuilderBuilderInput.yml",
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.LcpArrayBuilderTests.LcpArrayBuilderBuilderInput.html",
-          "hash": "F4TcjiMMO45uPtK5kYgtyMTbWjyiTBbfChZfvD3zt4w="
+          "hash": "w/xplK9GKs1PUglrGAQbq/vyRoO6GARh9DhgyjN3qDw="
         }
       },
       "is_incremental": false,
@@ -2814,7 +2838,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.LcpArrayBuilderTests.html",
-          "hash": "By2OS3SUHlSOXHs8zPk6DrQkydhVXLXkGouusjDNzfg="
+          "hash": "Wu8Aj/zJtaL6YWHV2ui/R4amhlx6QGx6XQsPeXrP76E="
         }
       },
       "is_incremental": false,
@@ -2838,7 +2862,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.SuffixArrays.LongestCommonPrefix.html",
-          "hash": "kAteDO9Zhd08zd759qGwSSoR7rIjDOWOWedN+o3wBEA="
+          "hash": "13Q8AAcXJGHfyEQcalqgaDQ45AlqJaVofkDR3o7oS+I="
         }
       },
       "is_incremental": false,
@@ -3762,7 +3786,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "tHNkf9fqxWSLzRRwwgfRYecjD9owQ/jCbYZRt6rEopY="
+          "hash": "z5Ab7MwCOEld8/M3Ft4E8t7EPevhLwIhYhsTuZMi6R4="
         }
       },
       "is_incremental": false,
@@ -3837,7 +3861,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 311,
+          "total_file_count": 313,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
