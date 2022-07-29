@@ -59,6 +59,9 @@ public class NaiveLcpArrayBuilder : ILcpArrayBuilder
     /// <summary>
     ///     <inheritdoc cref="NaiveLcpArrayBuilder"/>
     /// </summary>
+    /// <remarks>
+    ///     <inheritdoc cref="NaiveLcpArrayBuilder"/>
+    /// </remarks>
     /// <param name="text">
     ///     <inheritdoc cref="Text" path="/summary"/>
     /// </param>
@@ -71,7 +74,12 @@ public class NaiveLcpArrayBuilder : ILcpArrayBuilder
         SuffixArray = suffixArray;
     }
 
-    /// <inheritdoc/>
+    /// <summary>
+    ///     <inheritdoc/>
+    /// </summary>
+    /// <remarks>
+    ///     <inheritdoc cref="NaiveLcpArrayBuilder"/>
+    /// </remarks>
     public virtual LcpArray Build() => 
         new(
             from suffixIndexStartingAndNext in SuffixArray.Indexes.Zip(SuffixArray.Indexes.Skip(1))
