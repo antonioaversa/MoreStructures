@@ -59,7 +59,25 @@ namespace MoreStructures.SuffixArrays.LongestCommonPrefix;
 ///     <para id="complexity">
 ///     COMPLEXITY
 ///     <br/>
-///     - TODO
+///     - Text and Suffix Array evaluation (required to have direct access by index) are O(n) operations, both in time
+///       and space.
+///       <br/>
+///     - Inversion of the Suffix Array is also a O(n) operation.
+///       <br/>
+///     - Initialization of the current LCP and the current prefix are constant-time operations.
+///       <br/>
+///     - The main loop of the algorithm runs n iterations.
+///       <br/>
+///     - The only operation which doesn't take constant time in the body of the loop is the LCP between the current
+///       suffix, initialized at the first item of the Suffix Array and then incremented by 1 modulo n at every
+///       iteration, and the next suffix, calculated via Suffix Array and its inverted version.
+///       <br/>
+///     - While the above is true, it should be noted that the current LCP is increased once per match and decreased 
+///       once per iteration. Because the current LCP cannot be bigger than n (that's the biggest number of chars a
+///       prefix can have, hence the bigger number of chars in common between two prefixes), the total number of 
+///       comparisons across all iterations is O(n).
+///       <br/>
+///     - Therefore, Time and Space Complexity are O(n).
 ///     </para>
 /// </remarks>
 public class KasaiLcpArrayBuilder : NaiveLcpArrayBuilder
