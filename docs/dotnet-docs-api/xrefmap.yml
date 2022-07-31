@@ -5190,6 +5190,38 @@ references:
   isSpec: "True"
   fullName: MoreStructures.SuffixTrees.SuffixTreeNode.Intermediate.Intermediate
   nameWithType: SuffixTreeNode.Intermediate.Intermediate
+- uid: MoreStructures.SuffixTrees.SuffixTreeNode.Intermediate.IsEquivalentTo(MoreStructures.SuffixTrees.SuffixTreeNode,MoreStructures.TextWithTerminator[])
+  name: IsEquivalentTo(SuffixTreeNode, TextWithTerminator[])
+  href: api/MoreStructures.SuffixTrees.SuffixTreeNode.Intermediate.html#MoreStructures_SuffixTrees_SuffixTreeNode_Intermediate_IsEquivalentTo_MoreStructures_SuffixTrees_SuffixTreeNode_MoreStructures_TextWithTerminator___
+  commentId: M:MoreStructures.SuffixTrees.SuffixTreeNode.Intermediate.IsEquivalentTo(MoreStructures.SuffixTrees.SuffixTreeNode,MoreStructures.TextWithTerminator[])
+  name.vb: IsEquivalentTo(SuffixTreeNode, TextWithTerminator())
+  fullName: MoreStructures.SuffixTrees.SuffixTreeNode.Intermediate.IsEquivalentTo(MoreStructures.SuffixTrees.SuffixTreeNode, MoreStructures.TextWithTerminator[])
+  fullName.vb: MoreStructures.SuffixTrees.SuffixTreeNode.Intermediate.IsEquivalentTo(MoreStructures.SuffixTrees.SuffixTreeNode, MoreStructures.TextWithTerminator())
+  nameWithType: SuffixTreeNode.Intermediate.IsEquivalentTo(SuffixTreeNode, TextWithTerminator[])
+  nameWithType.vb: SuffixTreeNode.Intermediate.IsEquivalentTo(SuffixTreeNode, TextWithTerminator())
+- uid: MoreStructures.SuffixTrees.SuffixTreeNode.Intermediate.IsEquivalentTo*
+  name: IsEquivalentTo
+  href: api/MoreStructures.SuffixTrees.SuffixTreeNode.Intermediate.html#MoreStructures_SuffixTrees_SuffixTreeNode_Intermediate_IsEquivalentTo_
+  commentId: Overload:MoreStructures.SuffixTrees.SuffixTreeNode.Intermediate.IsEquivalentTo
+  isSpec: "True"
+  fullName: MoreStructures.SuffixTrees.SuffixTreeNode.Intermediate.IsEquivalentTo
+  nameWithType: SuffixTreeNode.Intermediate.IsEquivalentTo
+- uid: MoreStructures.SuffixTrees.SuffixTreeNode.IsEquivalentTo(MoreStructures.SuffixTrees.SuffixTreeNode,MoreStructures.TextWithTerminator[])
+  name: IsEquivalentTo(SuffixTreeNode, TextWithTerminator[])
+  href: api/MoreStructures.SuffixTrees.SuffixTreeNode.html#MoreStructures_SuffixTrees_SuffixTreeNode_IsEquivalentTo_MoreStructures_SuffixTrees_SuffixTreeNode_MoreStructures_TextWithTerminator___
+  commentId: M:MoreStructures.SuffixTrees.SuffixTreeNode.IsEquivalentTo(MoreStructures.SuffixTrees.SuffixTreeNode,MoreStructures.TextWithTerminator[])
+  name.vb: IsEquivalentTo(SuffixTreeNode, TextWithTerminator())
+  fullName: MoreStructures.SuffixTrees.SuffixTreeNode.IsEquivalentTo(MoreStructures.SuffixTrees.SuffixTreeNode, MoreStructures.TextWithTerminator[])
+  fullName.vb: MoreStructures.SuffixTrees.SuffixTreeNode.IsEquivalentTo(MoreStructures.SuffixTrees.SuffixTreeNode, MoreStructures.TextWithTerminator())
+  nameWithType: SuffixTreeNode.IsEquivalentTo(SuffixTreeNode, TextWithTerminator[])
+  nameWithType.vb: SuffixTreeNode.IsEquivalentTo(SuffixTreeNode, TextWithTerminator())
+- uid: MoreStructures.SuffixTrees.SuffixTreeNode.IsEquivalentTo*
+  name: IsEquivalentTo
+  href: api/MoreStructures.SuffixTrees.SuffixTreeNode.html#MoreStructures_SuffixTrees_SuffixTreeNode_IsEquivalentTo_
+  commentId: Overload:MoreStructures.SuffixTrees.SuffixTreeNode.IsEquivalentTo
+  isSpec: "True"
+  fullName: MoreStructures.SuffixTrees.SuffixTreeNode.IsEquivalentTo
+  nameWithType: SuffixTreeNode.IsEquivalentTo
 - uid: MoreStructures.SuffixTrees.SuffixTreeNode.Item(MoreStructures.SuffixTrees.SuffixTreeEdge)
   name: Item[SuffixTreeEdge]
   href: api/MoreStructures.SuffixTrees.SuffixTreeNode.html#MoreStructures_SuffixTrees_SuffixTreeNode_Item_MoreStructures_SuffixTrees_SuffixTreeEdge_
@@ -5225,6 +5257,22 @@ references:
   isSpec: "True"
   fullName: MoreStructures.SuffixTrees.SuffixTreeNode.Leaf.Leaf
   nameWithType: SuffixTreeNode.Leaf.Leaf
+- uid: MoreStructures.SuffixTrees.SuffixTreeNode.Leaf.IsEquivalentTo(MoreStructures.SuffixTrees.SuffixTreeNode,MoreStructures.TextWithTerminator[])
+  name: IsEquivalentTo(SuffixTreeNode, TextWithTerminator[])
+  href: api/MoreStructures.SuffixTrees.SuffixTreeNode.Leaf.html#MoreStructures_SuffixTrees_SuffixTreeNode_Leaf_IsEquivalentTo_MoreStructures_SuffixTrees_SuffixTreeNode_MoreStructures_TextWithTerminator___
+  commentId: M:MoreStructures.SuffixTrees.SuffixTreeNode.Leaf.IsEquivalentTo(MoreStructures.SuffixTrees.SuffixTreeNode,MoreStructures.TextWithTerminator[])
+  name.vb: IsEquivalentTo(SuffixTreeNode, TextWithTerminator())
+  fullName: MoreStructures.SuffixTrees.SuffixTreeNode.Leaf.IsEquivalentTo(MoreStructures.SuffixTrees.SuffixTreeNode, MoreStructures.TextWithTerminator[])
+  fullName.vb: MoreStructures.SuffixTrees.SuffixTreeNode.Leaf.IsEquivalentTo(MoreStructures.SuffixTrees.SuffixTreeNode, MoreStructures.TextWithTerminator())
+  nameWithType: SuffixTreeNode.Leaf.IsEquivalentTo(SuffixTreeNode, TextWithTerminator[])
+  nameWithType.vb: SuffixTreeNode.Leaf.IsEquivalentTo(SuffixTreeNode, TextWithTerminator())
+- uid: MoreStructures.SuffixTrees.SuffixTreeNode.Leaf.IsEquivalentTo*
+  name: IsEquivalentTo
+  href: api/MoreStructures.SuffixTrees.SuffixTreeNode.Leaf.html#MoreStructures_SuffixTrees_SuffixTreeNode_Leaf_IsEquivalentTo_
+  commentId: Overload:MoreStructures.SuffixTrees.SuffixTreeNode.Leaf.IsEquivalentTo
+  isSpec: "True"
+  fullName: MoreStructures.SuffixTrees.SuffixTreeNode.Leaf.IsEquivalentTo
+  nameWithType: SuffixTreeNode.Leaf.IsEquivalentTo
 - uid: MoreStructures.SuffixTrees.SuffixTreeNode.Leaf.LeafStart
   name: LeafStart
   href: api/MoreStructures.SuffixTrees.SuffixTreeNode.Leaf.html#MoreStructures_SuffixTrees_SuffixTreeNode_Leaf_LeafStart
@@ -11581,6 +11629,58 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.Indexer_RetrievesChild
   nameWithType: SuffixTreeNodeTests.Indexer_RetrievesChild
+- uid: MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.IsEquivalent_IsCorrectWithIntermediateWithMultipleCharsEdges
+  name: IsEquivalent_IsCorrectWithIntermediateWithMultipleCharsEdges()
+  href: api/MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.html#MoreStructures_Tests_SuffixTrees_SuffixTreeNodeTests_IsEquivalent_IsCorrectWithIntermediateWithMultipleCharsEdges
+  commentId: M:MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.IsEquivalent_IsCorrectWithIntermediateWithMultipleCharsEdges
+  fullName: MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.IsEquivalent_IsCorrectWithIntermediateWithMultipleCharsEdges()
+  nameWithType: SuffixTreeNodeTests.IsEquivalent_IsCorrectWithIntermediateWithMultipleCharsEdges()
+- uid: MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.IsEquivalent_IsCorrectWithIntermediateWithMultipleCharsEdges*
+  name: IsEquivalent_IsCorrectWithIntermediateWithMultipleCharsEdges
+  href: api/MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.html#MoreStructures_Tests_SuffixTrees_SuffixTreeNodeTests_IsEquivalent_IsCorrectWithIntermediateWithMultipleCharsEdges_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.IsEquivalent_IsCorrectWithIntermediateWithMultipleCharsEdges
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.IsEquivalent_IsCorrectWithIntermediateWithMultipleCharsEdges
+  nameWithType: SuffixTreeNodeTests.IsEquivalent_IsCorrectWithIntermediateWithMultipleCharsEdges
+- uid: MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.IsEquivalent_IsCorrectWithIntermediateWithSameChildrenButShuffledEdges
+  name: IsEquivalent_IsCorrectWithIntermediateWithSameChildrenButShuffledEdges()
+  href: api/MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.html#MoreStructures_Tests_SuffixTrees_SuffixTreeNodeTests_IsEquivalent_IsCorrectWithIntermediateWithSameChildrenButShuffledEdges
+  commentId: M:MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.IsEquivalent_IsCorrectWithIntermediateWithSameChildrenButShuffledEdges
+  fullName: MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.IsEquivalent_IsCorrectWithIntermediateWithSameChildrenButShuffledEdges()
+  nameWithType: SuffixTreeNodeTests.IsEquivalent_IsCorrectWithIntermediateWithSameChildrenButShuffledEdges()
+- uid: MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.IsEquivalent_IsCorrectWithIntermediateWithSameChildrenButShuffledEdges*
+  name: IsEquivalent_IsCorrectWithIntermediateWithSameChildrenButShuffledEdges
+  href: api/MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.html#MoreStructures_Tests_SuffixTrees_SuffixTreeNodeTests_IsEquivalent_IsCorrectWithIntermediateWithSameChildrenButShuffledEdges_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.IsEquivalent_IsCorrectWithIntermediateWithSameChildrenButShuffledEdges
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.IsEquivalent_IsCorrectWithIntermediateWithSameChildrenButShuffledEdges
+  nameWithType: SuffixTreeNodeTests.IsEquivalent_IsCorrectWithIntermediateWithSameChildrenButShuffledEdges
+- uid: MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.IsEquivalent_IsCorrectWithIntermediateWithSingleCharEdges
+  name: IsEquivalent_IsCorrectWithIntermediateWithSingleCharEdges()
+  href: api/MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.html#MoreStructures_Tests_SuffixTrees_SuffixTreeNodeTests_IsEquivalent_IsCorrectWithIntermediateWithSingleCharEdges
+  commentId: M:MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.IsEquivalent_IsCorrectWithIntermediateWithSingleCharEdges
+  fullName: MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.IsEquivalent_IsCorrectWithIntermediateWithSingleCharEdges()
+  nameWithType: SuffixTreeNodeTests.IsEquivalent_IsCorrectWithIntermediateWithSingleCharEdges()
+- uid: MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.IsEquivalent_IsCorrectWithIntermediateWithSingleCharEdges*
+  name: IsEquivalent_IsCorrectWithIntermediateWithSingleCharEdges
+  href: api/MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.html#MoreStructures_Tests_SuffixTrees_SuffixTreeNodeTests_IsEquivalent_IsCorrectWithIntermediateWithSingleCharEdges_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.IsEquivalent_IsCorrectWithIntermediateWithSingleCharEdges
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.IsEquivalent_IsCorrectWithIntermediateWithSingleCharEdges
+  nameWithType: SuffixTreeNodeTests.IsEquivalent_IsCorrectWithIntermediateWithSingleCharEdges
+- uid: MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.IsEquivalent_IsCorrectWithLeaves
+  name: IsEquivalent_IsCorrectWithLeaves()
+  href: api/MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.html#MoreStructures_Tests_SuffixTrees_SuffixTreeNodeTests_IsEquivalent_IsCorrectWithLeaves
+  commentId: M:MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.IsEquivalent_IsCorrectWithLeaves
+  fullName: MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.IsEquivalent_IsCorrectWithLeaves()
+  nameWithType: SuffixTreeNodeTests.IsEquivalent_IsCorrectWithLeaves()
+- uid: MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.IsEquivalent_IsCorrectWithLeaves*
+  name: IsEquivalent_IsCorrectWithLeaves
+  href: api/MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.html#MoreStructures_Tests_SuffixTrees_SuffixTreeNodeTests_IsEquivalent_IsCorrectWithLeaves_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.IsEquivalent_IsCorrectWithLeaves
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.IsEquivalent_IsCorrectWithLeaves
+  nameWithType: SuffixTreeNodeTests.IsEquivalent_IsCorrectWithLeaves
 - uid: MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.ToString_IsTheSameOnEquivalentTrees
   name: ToString_IsTheSameOnEquivalentTrees()
   href: api/MoreStructures.Tests.SuffixTrees.SuffixTreeNodeTests.html#MoreStructures_Tests_SuffixTrees_SuffixTreeNodeTests_ToString_IsTheSameOnEquivalentTrees

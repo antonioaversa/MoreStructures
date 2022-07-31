@@ -173,6 +173,103 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTrees_SuffixTreeNode_Intermediate_IsEquivalentTo_MoreStructures_SuffixTrees_SuffixTreeNode_MoreStructures_TextWithTerminator___.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTrees.SuffixTreeNode.Intermediate.IsEquivalentTo(MoreStructures.SuffixTrees.SuffixTreeNode%2CMoreStructures.TextWithTerminator%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/SuffixTreeNode.cs/#L46">View Source</a>
+  </span>
+  <a id="MoreStructures_SuffixTrees_SuffixTreeNode_Intermediate_IsEquivalentTo_" data-uid="MoreStructures.SuffixTrees.SuffixTreeNode.Intermediate.IsEquivalentTo*"></a>
+  <h4 id="MoreStructures_SuffixTrees_SuffixTreeNode_Intermediate_IsEquivalentTo_MoreStructures_SuffixTrees_SuffixTreeNode_MoreStructures_TextWithTerminator___" data-uid="MoreStructures.SuffixTrees.SuffixTreeNode.Intermediate.IsEquivalentTo(MoreStructures.SuffixTrees.SuffixTreeNode,MoreStructures.TextWithTerminator[])">IsEquivalentTo(SuffixTreeNode, TextWithTerminator[])</h4>
+  <div class="markdown level1 summary"><p>Determines whether this <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a> structure is equivalent to the provided
+<code data-dev-comment-type="paramref" class="paramref">other</code> structure, w.r.t. the provided <code data-dev-comment-type="paramref" class="paramref">texts</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsEquivalentTo(SuffixTreeNode other, params TextWithTerminator[] texts)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a></td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The other tree, to compare this tree against.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>[]</td>
+        <td><span class="parametername">texts</span></td>
+        <td><p>The text, based on which to evaluate the tree equivalence.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the two trees are equivalent for the provided text, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html#MoreStructures_SuffixTrees_SuffixTreeNode_IsEquivalentTo_MoreStructures_SuffixTrees_SuffixTreeNode_MoreStructures_TextWithTerminator___">SuffixTreeNode.IsEquivalentTo(SuffixTreeNode, TextWithTerminator[])</a></div>
+  <h5 id="MoreStructures_SuffixTrees_SuffixTreeNode_Intermediate_IsEquivalentTo_MoreStructures_SuffixTrees_SuffixTreeNode_MoreStructures_TextWithTerminator____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+The definition of <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a> structures equivalence depends on (a list of)
+<a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>: two trees can be equivalent for some texts, and not equivalent
+for others. This is because of the <strong>Edge Compression</strong> technique used by
+<a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a>, to store edges in O(1) space, instead of O(n).
+<br>
+Moreover, equivalence is based on the equivalence of edges and of the specific type of node.
+<br>
+- Two <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a> E1 and E2 are equivalent w.r.t. a <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a> T, 
+  if the string identified by each edge is the same: <code>T[E1] == T[E2]</code>.
+<br>
+- Two <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.Leaf.html">SuffixTreeNode.Leaf</a> L1 and L2 are equivalent if their <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.Leaf.html#MoreStructures_SuffixTrees_SuffixTreeNode_Leaf_LeafStart">LeafStart</a> is the same:
+<code>L1.LeafStart == L2.LeafStart</code>.
+<br>
+- Two <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.Intermediate.html">SuffixTreeNode.Intermediate</a> I1 and I2 are equivalent if there is a 1-to-1 correspondence between 
+children edges and child nodes pointed by such edges are equivalent: 
+<code>for each edge e1 of I1.Children there exists exactly one equivalent edge e2 of I2.Children and
+I1.Children[e1] is equivalent to I2.Children[e2] w.r.t. T</code>.
+</p>
+<p>
+- Checking for edges equivalence is a O(n) operation, where n is the number of nodes in the tree, since it 
+  requires decompressing the labels of each of the edges being compare and compare for equality the two 
+  resulting O(n) strings.
+<br>
+- Checking for leaves equivalence is a O(1) operation, since it only requires comparing 
+<a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.Leaf.html#MoreStructures_SuffixTrees_SuffixTreeNode_Leaf_LeafStart">LeafStart</a>, which has constant size.
+<br>
+- Checking for intermediate nodes equivalence is a O(n) operation, amortized cost over the total number of 
+edges in the tree, since there are O(n) edges in total in the tree, an edge is visited multiple times
+but always in the context of a single node, and the node equivalence check requires looking for the 
+equivalent edge.
+<br>
+- In conclusion Time Complexity is O(n^2) and Space Complexity is O(n).
+</p>
+</div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="MoreStructures.SuffixStructures.ISuffixStructureNode-2.html">ISuffixStructureNode&lt;TEdge, TNode&gt;</a>
