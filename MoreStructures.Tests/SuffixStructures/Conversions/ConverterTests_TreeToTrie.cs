@@ -25,8 +25,15 @@ public abstract partial class ConverterTests
         Assert.AreEqual(expectedTrieNode, trieNode);
     }
 
-    private record SingletonSuffixTreeNode(SuffixTreeEdge SingleEdge, SuffixTreeNode SingleNode) : SuffixTreeNode(
-        new Dictionary<SuffixTreeEdge, SuffixTreeNode> { [SingleEdge] = SingleNode }, null);
+    private sealed record SingletonSuffixTreeNode(SuffixTreeEdge SingleEdge, SuffixTreeNode SingleNode) 
+        : SuffixTreeNode(new Dictionary<SuffixTreeEdge, SuffixTreeNode> { [SingleEdge] = SingleNode }, null)
+    {
+        [ExcludeFromCodeCoverage]
+        public override bool IsEquivalentTo(SuffixTreeNode other, params TextWithTerminator[] texts)
+        {
+            throw new NotImplementedException();
+        }
+    }
 
     [TestMethod]
     public void TreeToTrie_OnlySupportsLeafAndIntermediateNodes_AsArgument()
