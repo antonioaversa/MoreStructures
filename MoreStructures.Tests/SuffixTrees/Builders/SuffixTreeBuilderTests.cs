@@ -35,8 +35,12 @@ public abstract class SuffixTreeBuilderTests
     [DataTestMethod]
     public void BuildTree_IsCorrectWithSingleText(BuilderEquivalences.EquivalenceId equivalenceId)
     {
-        var (text, expectedTreeNode) = BuilderEquivalences.Equivalences[equivalenceId];
-        var treeNode = Builder.BuildTree(text);
+        var (texts, expectedTreeNode) = BuilderEquivalences.Equivalences[equivalenceId];
+        var (fullText, _) = texts.GenerateFullText();
+        var treeNode = Builder.BuildTree(texts);
+        Assert.IsTrue(
+            treeNode.IsEquivalentTo(expectedTreeNode, fullText), 
+            $"Expected: {expectedTreeNode}, Actual: {treeNode}");
         Assert.AreEqual(expectedTreeNode, treeNode);
     }
 
@@ -54,9 +58,12 @@ public abstract class SuffixTreeBuilderTests
     [DataTestMethod]
     public void BuildTree_IsCorrectWithMultipleTexts(BuilderEquivalences.EquivalenceId equivalenceId)
     {
-        var (text, expectedTreeNode) = BuilderEquivalences.Equivalences[equivalenceId];
-        var treeNode = Builder.BuildTree(text);
-        Assert.AreEqual(expectedTreeNode, treeNode);
+        var (texts, expectedTreeNode) = BuilderEquivalences.Equivalences[equivalenceId];
+        var (fullText, _) = texts.GenerateFullText();
+        var treeNode = Builder.BuildTree(texts);
+        Assert.IsTrue(
+            treeNode.IsEquivalentTo(expectedTreeNode, fullText),
+            $"Expected: {expectedTreeNode}, Actual: {treeNode}");
     }
 
     [TestMethod]
@@ -135,6 +142,10 @@ public abstract class SuffixTreeBuilderTests
     [TestMethod]
     public void BuildTree_BuildsExampleTreeFromExampleText()
     {
-        Assert.AreEqual(SuffixTreeNodeTests.BuildSuffixTreeExample(), Builder.BuildTree(TestUtilities.ExampleText1));
+        var expectedTreeNode = SuffixTreeNodeTests.BuildSuffixTreeExample();
+        var treeNode = Builder.BuildTree(TestUtilities.ExampleText1);
+        Assert.IsTrue(
+            expectedTreeNode.IsEquivalentTo(treeNode, TestUtilities.ExampleText1),
+            $"Expected: {expectedTreeNode}, Actual: {treeNode}");
     }
 }
