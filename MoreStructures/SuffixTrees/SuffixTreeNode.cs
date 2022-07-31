@@ -103,6 +103,8 @@ public abstract record SuffixTreeNode(IDictionary<SuffixTreeEdge, SuffixTreeNode
     /// <returns>True if the two trees are equivalent for the provided text, false otherwise.</returns>
     /// <remarks>
     ///     <para id="definition">
+    ///     DEFINITION
+    ///     <br/>
     ///     The definition of <see cref="SuffixTreeNode"/> structures equivalence depends on (a list of)
     ///     <see cref="TextWithTerminator"/>: two trees can be equivalent for some texts, and not equivalent
     ///     for others. This is because of the <b>Edge Compression</b> technique used by
@@ -122,6 +124,8 @@ public abstract record SuffixTreeNode(IDictionary<SuffixTreeEdge, SuffixTreeNode
     ///       I1.Children[e1] is equivalent to I2.Children[e2] w.r.t. T</c>.
     ///     </para>
     ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
     ///     - Checking for edges equivalence is a O(n) operation, where n is the number of nodes in the tree, since it 
     ///       requires decompressing the labels of each of the edges being compare and compare for equality the two 
     ///       resulting O(n) strings.

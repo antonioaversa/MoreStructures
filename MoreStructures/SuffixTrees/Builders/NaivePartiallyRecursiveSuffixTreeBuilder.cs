@@ -7,15 +7,37 @@ namespace MoreStructures.SuffixTrees.Builders;
 /// Builds objects, such as edges and nodes, for <see cref="SuffixTreeNode"/> structures.
 /// </summary>
 /// <remarks>
+///     <para id="advantages">
+///     ADVANTAGES AND DISADVANTAGES
+///     <br/>
+///     - Implemented as an iteration of recursive visit of the tree being built, with as many iterations as the number 
+///       of suffixes of the input (where the longest suffix is the text itself) and one level of recursion per char of 
+///       each suffix. 
+///       <br/>
+///     - Limited by call stack depth and usable with input text of a "reasonable" length (i.e. string having a length 
+///       &lt; ~1K chars).
+///     </para>
 ///     <para id="algorithm">
 ///     ALGORITHM
 ///     <br/>
-///     Implemented as an iteration of recursive visit of the tree being built, with as many iterations as the number 
-///     of suffix of the input (where the longest suffix is the text itself) and one level of recursion per char of 
-///     each suffix. 
-///     <br/>
-///     Limited by call stack depth and usable with input text of a "reasonable" length (i.e. string having a length 
-///     &lt; ~1K chars).
+///     - For each suffix S of the input T, start from the root node N of the tree.
+///       <br/>
+///     - Compare the first char of S with the first char of each of the edges coming from N.
+///       <br/>
+///     - If there is no edge e such that <c>label(e)[0] == S[0]</c>, it means that there is no descendant of N sharing
+///       a path with S. So, create a new leaf under N, attached by an edge with a label equal to S.
+///       <br/>
+///     - Otherwise, it means that there is a path to be shared between the new leaf and at least one of the 
+///       descendants of N.
+///       <br/>
+///     - In this case, compare the current suffix and the label of such edge e, for the LCP.
+///       <br/>
+///     - If the prefix in common is shorter than the length of the label of the edge e, create an intermediate node, 
+///       push down the child pointed by the edge in the current node and add a new node for the reminder of the suffix
+///       (up to next terminator) as second child of the intermediate.
+///       <br/>
+///     - Otherwise, eat prefixLength chars from the edge, move to the child pointed by the edge entirely matching the 
+///       beginning of the current suffix and repeat the same operation.
 ///     </para>
 ///     <para id="complexity">
 ///     COMPLEXITY
@@ -69,13 +91,6 @@ public class NaivePartiallyRecursiveSuffixTreeBuilder
         }
         else
         {
-            // Compare text[suffixCurrentIndex, ...] and text[edgeSame1stChar.Start, ...] for longest edge in common.
-            // If the prefix in common is shorter than the edge with the same first char, create an intermediate node,
-            // push down the child pointed by the edge in the current node and add a new node for the reminder of
-            // text[suffixCurrentIndex, ...] (up to next terminator) as second child of the intermediate.
-            // Otherwise, eat prefixLength chars from the edge, move to the child pointed by the edge entirely matching
-            // the beginning of the current suffix and repeat the same operation.
-
             var prefixLength = LongestCommonPrefix(
                 text[suffixCurrentIndex..], edgeSame1stChar.Of(text));
 
