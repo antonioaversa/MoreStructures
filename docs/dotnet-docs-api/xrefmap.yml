@@ -5014,6 +5014,57 @@ references:
   isSpec: "True"
   fullName: MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree
   nameWithType: NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree
+- uid: MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder
+  name: SuffixAndLcpArraysBasedSuffixTreeBuilder
+  href: api/MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.html
+  commentId: T:MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder
+  fullName: MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder
+  nameWithType: SuffixAndLcpArraysBasedSuffixTreeBuilder
+- uid: MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.#ctor(Func{MoreStructures.TextWithTerminator,System.ValueTuple{MoreStructures.SuffixArrays.SuffixArray,MoreStructures.SuffixArrays.LongestCommonPrefix.LcpArray}})
+  name: SuffixAndLcpArraysBasedSuffixTreeBuilder(Func<TextWithTerminator, (SuffixArray, LcpArray)>)
+  href: api/MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.html#MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder__ctor_Func_MoreStructures_TextWithTerminator_System_ValueTuple_MoreStructures_SuffixArrays_SuffixArray_MoreStructures_SuffixArrays_LongestCommonPrefix_LcpArray___
+  commentId: M:MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.#ctor(Func{MoreStructures.TextWithTerminator,System.ValueTuple{MoreStructures.SuffixArrays.SuffixArray,MoreStructures.SuffixArrays.LongestCommonPrefix.LcpArray}})
+  name.vb: SuffixAndLcpArraysBasedSuffixTreeBuilder(Func(Of TextWithTerminator, (SuffixArray, LcpArray)(Of SuffixArray, LcpArray)))
+  fullName: MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.SuffixAndLcpArraysBasedSuffixTreeBuilder(Func<MoreStructures.TextWithTerminator, System.ValueTuple<MoreStructures.SuffixArrays.SuffixArray, MoreStructures.SuffixArrays.LongestCommonPrefix.LcpArray>>)
+  fullName.vb: MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.SuffixAndLcpArraysBasedSuffixTreeBuilder(Func(Of MoreStructures.TextWithTerminator, System.ValueTuple(Of MoreStructures.SuffixArrays.SuffixArray, MoreStructures.SuffixArrays.LongestCommonPrefix.LcpArray)))
+  nameWithType: SuffixAndLcpArraysBasedSuffixTreeBuilder.SuffixAndLcpArraysBasedSuffixTreeBuilder(Func<TextWithTerminator, (SuffixArray, LcpArray)>)
+  nameWithType.vb: SuffixAndLcpArraysBasedSuffixTreeBuilder.SuffixAndLcpArraysBasedSuffixTreeBuilder(Func(Of TextWithTerminator, (SuffixArray, LcpArray)(Of SuffixArray, LcpArray)))
+- uid: MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.#ctor*
+  name: SuffixAndLcpArraysBasedSuffixTreeBuilder
+  href: api/MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.html#MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder__ctor_
+  commentId: Overload:MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.SuffixAndLcpArraysBasedSuffixTreeBuilder
+  nameWithType: SuffixAndLcpArraysBasedSuffixTreeBuilder.SuffixAndLcpArraysBasedSuffixTreeBuilder
+- uid: MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator[])
+  name: BuildTree(TextWithTerminator[])
+  href: api/MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.html#MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator___
+  commentId: M:MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator[])
+  name.vb: BuildTree(TextWithTerminator())
+  fullName: MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator[])
+  fullName.vb: MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator())
+  nameWithType: SuffixAndLcpArraysBasedSuffixTreeBuilder.BuildTree(TextWithTerminator[])
+  nameWithType.vb: SuffixAndLcpArraysBasedSuffixTreeBuilder.BuildTree(TextWithTerminator())
+- uid: MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.BuildTree*
+  name: BuildTree
+  href: api/MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.html#MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder_BuildTree_
+  commentId: Overload:MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.BuildTree
+  isSpec: "True"
+  fullName: MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.BuildTree
+  nameWithType: SuffixAndLcpArraysBasedSuffixTreeBuilder.BuildTree
+- uid: MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.SuffixAndLcpArraysBuilder
+  name: SuffixAndLcpArraysBuilder
+  href: api/MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.html#MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder_SuffixAndLcpArraysBuilder
+  commentId: P:MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.SuffixAndLcpArraysBuilder
+  fullName: MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.SuffixAndLcpArraysBuilder
+  nameWithType: SuffixAndLcpArraysBasedSuffixTreeBuilder.SuffixAndLcpArraysBuilder
+- uid: MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.SuffixAndLcpArraysBuilder*
+  name: SuffixAndLcpArraysBuilder
+  href: api/MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.html#MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder_SuffixAndLcpArraysBuilder_
+  commentId: Overload:MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.SuffixAndLcpArraysBuilder
+  isSpec: "True"
+  fullName: MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.SuffixAndLcpArraysBuilder
+  nameWithType: SuffixAndLcpArraysBasedSuffixTreeBuilder.SuffixAndLcpArraysBuilder
 - uid: MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder
   name: UkkonenSuffixTreeBuilder
   href: api/MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.html
@@ -10852,6 +10903,25 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilderTests.NaivePartiallyRecursiveSuffixTreeBuilderTests
   nameWithType: NaivePartiallyRecursiveSuffixTreeBuilderTests.NaivePartiallyRecursiveSuffixTreeBuilderTests
+- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilderTests
+  name: SuffixAndLcpArraysBasedSuffixTreeBuilderTests
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilderTests.html
+  commentId: T:MoreStructures.Tests.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilderTests
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilderTests
+  nameWithType: SuffixAndLcpArraysBasedSuffixTreeBuilderTests
+- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilderTests.#ctor
+  name: SuffixAndLcpArraysBasedSuffixTreeBuilderTests()
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilderTests__ctor
+  commentId: M:MoreStructures.Tests.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilderTests.#ctor
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilderTests.SuffixAndLcpArraysBasedSuffixTreeBuilderTests()
+  nameWithType: SuffixAndLcpArraysBasedSuffixTreeBuilderTests.SuffixAndLcpArraysBasedSuffixTreeBuilderTests()
+- uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilderTests.#ctor*
+  name: SuffixAndLcpArraysBasedSuffixTreeBuilderTests
+  href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilderTests.html#MoreStructures_Tests_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilderTests__ctor_
+  commentId: Overload:MoreStructures.Tests.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilderTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilderTests.SuffixAndLcpArraysBasedSuffixTreeBuilderTests
+  nameWithType: SuffixAndLcpArraysBasedSuffixTreeBuilderTests.SuffixAndLcpArraysBasedSuffixTreeBuilderTests
 - uid: MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests
   name: SuffixTreeBuilderTests
   href: api/MoreStructures.Tests.SuffixTrees.Builders.SuffixTreeBuilderTests.html

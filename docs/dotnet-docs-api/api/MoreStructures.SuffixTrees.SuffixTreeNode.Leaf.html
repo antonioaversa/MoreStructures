@@ -268,6 +268,8 @@
   <div><a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html#MoreStructures_SuffixTrees_SuffixTreeNode_IsEquivalentTo_MoreStructures_SuffixTrees_SuffixTreeNode_MoreStructures_TextWithTerminator___">SuffixTreeNode.IsEquivalentTo(SuffixTreeNode, TextWithTerminator[])</a></div>
   <h5 id="MoreStructures_SuffixTrees_SuffixTreeNode_Leaf_IsEquivalentTo_MoreStructures_SuffixTrees_SuffixTreeNode_MoreStructures_TextWithTerminator____remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
+DEFINITION
+<br>
 The definition of <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a> structures equivalence depends on (a list of)
 <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>: two trees can be equivalent for some texts, and not equivalent
 for others. This is because of the <strong>Edge Compression</strong> technique used by
@@ -287,6 +289,8 @@ children edges and child nodes pointed by such edges are equivalent:
 I1.Children[e1] is equivalent to I2.Children[e2] w.r.t. T</code>.
 </p>
 <p>
+COMPLEXITY
+<br>
 - Checking for edges equivalence is a O(n) operation, where n is the number of nodes in the tree, since it 
   requires decompressing the labels of each of the edges being compare and compare for equality the two 
   resulting O(n) strings.
