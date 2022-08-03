@@ -5,7 +5,7 @@ using MoreStructures.SuffixTrees.Builders.Ukkonen;
 namespace MoreStructures.SuffixTrees.Builders;
 
 /// <summary>
-/// Builds objects, such as edges and nodes, for <see cref="SuffixTreeNode"/> structures.
+/// Builds objects, such as edges and nodes, for <see cref="SuffixTreeNode"/> structures, using the Ukkonen algorithm.
 /// </summary>
 /// <remarks>
 ///     <para id="intro">

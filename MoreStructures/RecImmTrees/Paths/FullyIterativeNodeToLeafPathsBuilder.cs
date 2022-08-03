@@ -9,10 +9,7 @@
 ///     <para id="advantages">
 ///     ADVANTAGES AND DISADVANTAGES
 ///     <br/>
-///     Implemented fully iteratively via a <see cref="Stack{T}"/>, so not limited by call stack depth but rather by 
-///     the maximum size of the stack stored in the heap.
-///     <br/>
-///     Convenient with deep trees (i.e. trees having a height &gt; ~1K nodes).
+///     <inheritdoc cref="DocFragments" path="/remarks/para[@id='fully-iterative-advantages']"/>
 ///     </para>
 ///     <para id="algo">
 ///     ALGORITHM

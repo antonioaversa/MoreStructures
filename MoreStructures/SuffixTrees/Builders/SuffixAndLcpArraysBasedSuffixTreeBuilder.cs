@@ -1,4 +1,5 @@
 ﻿using MoreLinq;
+using MoreStructures.MutableTrees;
 using MoreStructures.SuffixArrays;
 using MoreStructures.SuffixArrays.LongestCommonPrefix;
 using MoreStructures.SuffixStructures.Builders;
@@ -62,9 +63,8 @@ namespace MoreStructures.SuffixTrees.Builders;
 ///       intermediate, detach old edge going to previous leaf, attach new intermediate edge.
 ///       <br/>
 ///     - Finally, after all iterations have been executed and all suffixes of the text have been included in the 
-///       mutable tree, build the final <see cref="SuffixTreeNode"/> structure from the mutable tree, visiting it 
-///       top-down and building node by node bottom-up, trimming at the same time the edges at the first encountered 
-///       terminator.
+///       mutable tree, build the final <see cref="SuffixTreeNode"/> structure from the mutable tree, using a
+///       <see cref="MutableTrees.Conversions.FullyIterativeConversion"/>.
 ///     </para>
 ///     <para id="complexity">
 ///     COMPLEXITY
@@ -98,6 +98,9 @@ namespace MoreStructures.SuffixTrees.Builders;
 /// </remarks>
 public class SuffixAndLcpArraysBasedSuffixTreeBuilder : IBuilder<SuffixTreeEdge, SuffixTreeNode>
 {
+    private static readonly MutableTrees.Conversions.IConversion MutableTreeConversion = 
+        new MutableTrees.Conversions.FullyIterativeConversion();
+
     /// <summary>
     /// The builder to be used to construct the <see cref="SuffixArray"/> and the <see cref="LcpArray"/> of the full 
     /// text, both required by this algorithm to build the <see cref="SuffixTreeNode"/> structure.
@@ -203,72 +206,6 @@ public class SuffixAndLcpArraysBasedSuffixTreeBuilder : IBuilder<SuffixTreeEdge,
             previousLeaf = currentLeaf;
         }
 
-        return BuildFinalTreeFromMutableTree(root, fullText, terminators);
-    }
-
-    private sealed record StackFrame(
-        MutableTree.Node MutableNode,
-        SuffixTreeEdge IncomingEdge,
-        IDictionary<SuffixTreeEdge, SuffixTreeNode> ParentChildren,
-        IDictionary<SuffixTreeEdge, SuffixTreeNode>? Children);
-
-    private static SuffixTreeNode BuildFinalTreeFromMutableTree(
-        MutableTree.Node mutableNode, TextWithTerminator fullText, ISet<char> terminators)
-    {
-        var stack = new Stack<StackFrame>();
-        var rootIncomingEdge = new SuffixTreeEdge(0, 1);
-        var rootParentChildren = new Dictionary<SuffixTreeEdge, SuffixTreeNode>();
-        stack.Push(new(mutableNode, rootIncomingEdge, rootParentChildren, null));
-
-        while (stack.Count > 0)
-            ProcessStack(stack, fullText, terminators);
-
-        return rootParentChildren[rootIncomingEdge];
-    }
-
-    private static void ProcessStack(
-        Stack<StackFrame> stack, TextWithTerminator fullText, ISet<char> terminators)
-    {
-        var (mutableNode, incomingEdge, parentChildren, children) = stack.Pop();
-
-        if (!mutableNode.Children.Any())
-        {
-            // It is a leaf => generate node and store into parentChildren
-            parentChildren[incomingEdge] = new SuffixTreeNode.Leaf(mutableNode.LeafStart!.Value);
-            return;
-        }
-
-        if (children != null)
-        {
-            // Intermediate, whose children have already been processed => generate node and store into parentChildren
-            parentChildren[incomingEdge] = new SuffixTreeNode.Intermediate(children);
-            return;
-        }
-
-        // Intermediate, whose children have not been processed yet => re-push mutable node, this time with a reference
-        // to a newly created dictionary of children, then push children onto the stack, to have them processed first
-        // and populating the instantiated children dictionary.
-        children = new Dictionary<SuffixTreeEdge, SuffixTreeNode>();
-        stack.Push(new(mutableNode, incomingEdge, parentChildren, children));
-        foreach (var (childMutableEdge, childMutableNode) in mutableNode.Children.Reverse())
-        {
-            var childEdge = new SuffixTreeEdge(childMutableEdge.Start, childMutableEdge.Length);
-
-            // If the child edge contains any terminator, trim tree
-            var indexOf1stTerminator = (
-                from terminator in terminators
-                let indexOfTerminator = fullText[childEdge].IndexOf(terminator)
-                where indexOfTerminator >= 0
-                select indexOfTerminator)
-                .FirstOrDefault(-1);
-
-            if (indexOf1stTerminator >= 0)
-            {
-                childMutableNode.Children.Clear();
-                childEdge = new SuffixTreeEdge(childMutableEdge.Start, indexOf1stTerminator + 1);
-            }
-            
-            stack.Push(new(childMutableNode, childEdge, children, null));
-        }
+        return MutableTreeConversion.ConvertToSuffixTree(root, fullText, terminators);
     }
 }

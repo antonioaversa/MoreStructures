@@ -11,10 +11,7 @@
 ///     <para id="advantages">
 ///     ADVANTAGES AND DISADVANTAGES
 ///     <br/>
-///     Implemented fully iteratively via a <see cref="Stack{T}"/>, so not limited by call stack depth but rather by 
-///     the maximum size of the stack stored in the heap.
-///     <br/>
-///     Convenient with deep trees (i.e. trees having a height &gt; ~1K nodes).
+///     TODO
 ///     </para>
 /// </remarks>
 public class FullyIterativeStringifier<TEdge, TNode> 

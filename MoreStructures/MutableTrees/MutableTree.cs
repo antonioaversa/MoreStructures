@@ -1,16 +1,28 @@
-﻿namespace MoreStructures.SuffixTrees.Builders;
+﻿using MoreStructures.SuffixTrees;
+using MoreStructures.SuffixTrees.Builders;
+
+namespace MoreStructures.MutableTrees;
 
 /// <summary>
-/// An internal representation of a mutable recursive tree structure, used by algorithms building a tree iteratively
-/// by performing mutations. 
+/// An <b>internal</b> representation of a mutable, recursive, dictionary indexed, tree structure, used by algorithms 
+/// which build a tree iteratively, by performing mutations. 
 /// </summary>
 /// <remarks>
 /// - Allows mutation of each of its field and properties. 
 ///   <br/>
-/// - Its sub-collections, such as <see cref="Node.Children"/> are mutable.
+/// - Its sub-collections, such as <see cref="Node.Children"/>, which only makes sense for intermediate nodes, are 
+///   mutable. Same applies to <see cref="Node.LeafStart"/>, which only makes sense for leaves.
+///   <br/>
+/// - The <see cref="Node.Children"/> collection is initialized to an empty collection. Then, children can be added and
+///   removed at any time. That means that each node is created a leaf, but can become an intermediate node, and can be
+///   back to be leaf, by the algorithm operating on the collection of its children.
 ///   <br/>
 /// - Used by <see cref="SuffixAndLcpArraysBasedSuffixTreeBuilder"/> to build its working copy of the tree, before
 ///   producing the final <see cref="SuffixTreeNode"/> structure, which is immutable.
+///   <br/>
+/// - Not used by <see cref="UkkonenSuffixTreeBuilder"/>, as the Ukkonen algorithm for Suffix Tree construction 
+///   requires edges with a global moving end, in order to execute Rule 1 Extension at the beginning of every phase on
+///   all leaves at the same time in O(1).
 /// </remarks>
 internal static class MutableTree
 {
@@ -19,7 +31,7 @@ internal static class MutableTree
     /// <see cref="Length"/> of the label associated with the edge (a technique to efficiently store labels in a
     /// Suffix Tree also known as <b>Edge Compression</b>).
     /// </summary>
-    public struct Edge
+    public sealed class Edge
     {
         /// <summary>
         /// The index in the text of the char by which the label of this edge starts. 
@@ -101,7 +113,7 @@ internal static class MutableTree
         /// <see cref="LeafStart"/>.
         /// </summary>
         /// <returns>A <see cref="Node"/> instance.</returns>
-        public static Node BuildRoot() => 
+        public static Node BuildRoot() =>
             new(null, Edge.Build(0, 0), null);
 
         /// <summary>
@@ -119,7 +131,7 @@ internal static class MutableTree
         ///     <inheritdoc cref="LeafStart" path="/summary"/>
         /// </param>
         /// <returns>A <see cref="Node"/> instance.</returns>
-        public static Node Build(Node parentNode, Edge incomingEdge, int? leafStart) => 
+        public static Node Build(Node parentNode, Edge incomingEdge, int? leafStart) =>
             new(parentNode, incomingEdge, leafStart);
     }
 }
