@@ -20,7 +20,7 @@ namespace MoreStructures.SuffixTrees.Builders;
 ///     <para id="algorithm">
 ///     ALGORITHM
 ///     <br/>
-///     - For each suffix S of the input T, start from the root node N of the tree.
+///     - For each suffix S of the input T, start from the root node N of the tree, initialized as a simple leaf.
 ///       <br/>
 ///     - Compare the first char of S with the first char of each of the edges coming from N.
 ///       <br/>
@@ -42,12 +42,34 @@ namespace MoreStructures.SuffixTrees.Builders;
 ///     <para id="complexity">
 ///     COMPLEXITY
 ///     <br/>
-///     - Time Complexity = O(t^2 * as) and Space Complexity = O(t) where t = length of the text to match and
-///       as = size of the alphabet of the text. If the alphabet is of constant size, Time Complexity is quadratic.
+///     - The generation of the full text, done by 
+///       <see cref="TextWithTerminatorExtensions.GenerateFullText(MoreStructures.TextWithTerminator[])"/>, is a O(n)
+///       operation, where n is the sum of the length of each <see cref="TextWithTerminator"/> in the input 
+///       (terminators included).
+///       <br/>
+///     - The initial tree, just a root-leaf, is created in constant time.
+///       <br/>
+///     - The top level loop is executed n times, once per char of the full text.
+///       <br/>
+///     - Duplicating the node children dictionary, as well as finding the edge with the same first char, are
+///       O(avgEdges), where avgEdges is the average number of edges coming out of a node of the tree.
+///       <br/>
+///     - Over all the n nodes of the tree, taking into account the worst case where avgEdges is O(n), Time Complexity
+///       would become O(n^2). However, the total number of edges in a tree is O(n), so the overall cost of these 
+///       operations for the entire tree is O(n), and not O(n^2).
+///       <br/>
+///     - Finding the first index in the suffix which corresponds to a terminator, finding the LCP between the suffix
+///       and the label of the current edge and finding the number of chars up to the terminator are all O(n) 
+///       operations, since the length of a generic suffix of the text is O(n) and they all require iterating over all
+///       the chars.
+///       <br/>
+///     - In conclusion, Time Complexity = O(n^2 * as) and Space Complexity = O(n) where n = length of the text to 
+///       match and as = size of the alphabet of the text. If the alphabet is of constant size, Time Complexity is 
+///       quadratic.
 ///       <br/>
 ///     - Compared to tries, trees are more compact due to edge coalescing and edge label compression (i.e. edge 
 ///       strings stored as pair (start, length), rather than as a substring of length chars). Each recursion add a 
-///       leaf and at most one intermediate node, so Space Complexity ~ 2 * t = O(t).
+///       leaf and at most one intermediate node, so Space Complexity ~ 2 * n = O(n).
 ///     </para>
 /// </remarks>
 public class NaivePartiallyRecursiveSuffixTreeBuilder
@@ -91,14 +113,15 @@ public class NaivePartiallyRecursiveSuffixTreeBuilder
         }
         else
         {
-            var prefixLength = LongestCommonPrefix(
-                text[suffixCurrentIndex..], edgeSame1stChar.Of(text));
+            var prefixLength = LongestCommonPrefix(text[suffixCurrentIndex..], edgeSame1stChar.Of(text));
 
             var oldChild = nodeChildren[edgeSame1stChar];
             if (prefixLength < edgeSame1stChar.Length)
             {
-                var charsToNextSeparator = Enumerable.Range(0, text.Length - suffixCurrentIndex - prefixLength)
+                var charsToNextSeparator = Enumerable
+                    .Range(0, text.Length - suffixCurrentIndex - prefixLength)
                     .First(i => terminators.Contains(text[suffixCurrentIndex + prefixLength + i]));
+                
                 var newLeaf = new SuffixTreeNode.Leaf(suffixIndex);
                 var newIntermediate = new SuffixTreeNode.Intermediate(new Dictionary<SuffixTreeEdge, SuffixTreeNode>()
                 {
