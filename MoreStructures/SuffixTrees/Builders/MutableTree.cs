@@ -85,7 +85,7 @@ internal static class MutableTree
         /// <summary>
         /// The leaf start index in the text, of this node. Only applicable to leaves.
         /// </summary>
-        public int? LeafStart = null;
+        public int? LeafStart;
 
         private Node(Node? parent, Edge incomingEdge, int? leafStart)
         {
