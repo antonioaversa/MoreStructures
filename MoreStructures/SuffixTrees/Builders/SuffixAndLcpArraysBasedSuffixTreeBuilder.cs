@@ -134,9 +134,10 @@ public class SuffixAndLcpArraysBasedSuffixTreeBuilder : IBuilder<SuffixTreeEdge,
         var (suffixArrayValues, lcpArrayValues) = (suffixArray.Indexes.ToList(), lcpArray.Lengths.ToList());
 
         var firstSuffix = suffixArrayValues[0];
-        MutableNode root = new(null, null, null);
-        MutableNode previousLeaf = new (root, new(firstSuffix, n - firstSuffix), firstSuffix);
-        root.Children[previousLeaf.IncomingEdge!] = previousLeaf;
+        MutableTree.Node root = MutableTree.Node.BuildRoot();
+        MutableTree.Node previousLeaf = MutableTree.Node.Build(
+            root, MutableTree.Edge.Build(firstSuffix, n - firstSuffix), firstSuffix);
+        root.Children[previousLeaf.IncomingEdge] = previousLeaf;
 
         var previousLcp = 0;
         for (var i = 1; i < suffixArrayValues.Count; i++)
@@ -145,13 +146,13 @@ public class SuffixAndLcpArraysBasedSuffixTreeBuilder : IBuilder<SuffixTreeEdge,
             var currentSuffixLength = n - currentSuffix;
             var currentLcp = lcpArrayValues[i - 1];
 
-            MutableNode currentLeaf;
+            MutableTree.Node currentLeaf;
 
             // Case 1: move up in the tree
             while (currentLcp < previousLcp)
             {
-                previousLcp -= previousLeaf.Parent!.IncomingEdge?.Length ?? 0;
-                previousLeaf = previousLeaf.Parent!;
+                previousLcp -= previousLeaf.ParentNode.IncomingEdge.Length;
+                previousLeaf = previousLeaf.ParentNode;
             }
 
             if (currentLcp == previousLcp)
@@ -159,11 +160,11 @@ public class SuffixAndLcpArraysBasedSuffixTreeBuilder : IBuilder<SuffixTreeEdge,
                 // Case 2: new leaf sibling of previous leaf, no intermediate node
 
                 // Build current edge and leaf, for the reminder of the currentLcp.
-                var currentEdge = new MutableEdge(currentSuffix + currentLcp, currentSuffixLength - currentLcp);
-                currentLeaf = new MutableNode(previousLeaf.Parent, currentEdge, currentSuffix);
+                var currentEdge = MutableTree.Edge.Build(currentSuffix + currentLcp, currentSuffixLength - currentLcp);
+                currentLeaf = MutableTree.Node.Build(previousLeaf.ParentNode, currentEdge, currentSuffix);
 
                 // Attach to the parent of the previous leaf. Nothing happens to the previous leaf itself.
-                previousLeaf.Parent!.Children[currentEdge] = currentLeaf;
+                previousLeaf.ParentNode.Children[currentEdge] = currentLeaf;
             }
             else
             {
@@ -177,21 +178,21 @@ public class SuffixAndLcpArraysBasedSuffixTreeBuilder : IBuilder<SuffixTreeEdge,
                 // Therefore, remaining chars has to be bigger than 0.
 
                 // Build new intermediate, detach old edge going to previous leaf, attach new intermediate edge
-                var intermediateEdge = new MutableEdge(previousLeaf.IncomingEdge!.Start, matchingChars);
-                var intermediateNode = new MutableNode(previousLeaf.Parent, intermediateEdge, null);
-                previousLeaf.Parent!.Children.Remove(previousLeaf.IncomingEdge);
-                previousLeaf.Parent!.Children[intermediateEdge] = intermediateNode;
+                var intermediateEdge = MutableTree.Edge.Build(previousLeaf.IncomingEdge.Start, matchingChars);
+                var intermediateNode = MutableTree.Node.Build(previousLeaf.ParentNode, intermediateEdge, null);
+                previousLeaf.ParentNode.Children.Remove(previousLeaf.IncomingEdge);
+                previousLeaf.ParentNode.Children[intermediateEdge] = intermediateNode;
 
                 // Build current edge and leaf
-                var currentEdge = new MutableEdge(
+                var currentEdge = MutableTree.Edge.Build(
                     currentSuffix + currentLcp, 
                     currentSuffixLength - currentLcp);
-                currentLeaf = new MutableNode(intermediateNode, currentEdge, currentSuffix);
+                currentLeaf = MutableTree.Node.Build(intermediateNode, currentEdge, currentSuffix);
 
                 // Build new edge for the reminder of the previous leaf
-                var remainingEdge = new MutableEdge(
-                    previousLeaf.IncomingEdge!.Start + matchingChars, 
-                    previousLeaf.IncomingEdge!.Length - matchingChars);
+                var remainingEdge = MutableTree.Edge.Build(
+                    previousLeaf.IncomingEdge.Start + matchingChars, 
+                    previousLeaf.IncomingEdge.Length - matchingChars);
                     
                 // Attach previous leaf and current leaf to the new intermediate
                 intermediateNode.Children[remainingEdge] = previousLeaf;
@@ -205,43 +206,14 @@ public class SuffixAndLcpArraysBasedSuffixTreeBuilder : IBuilder<SuffixTreeEdge,
         return BuildFinalTreeFromMutableTree(root, fullText, terminators);
     }
 
-    private sealed class MutableEdge
-    {
-        public int Start;
-        public int Length;
-
-        public MutableEdge(int start, int length)
-        {
-            Start = start;
-            Length = length;
-        }
-    }
-
-    private sealed record MutableNode
-    {
-        public MutableNode? Parent; // Null for root node
-        public MutableEdge? IncomingEdge; // Null for root node
-        public Dictionary<MutableEdge, MutableNode> Children;
-        public int? LeafStart = null;
-
-        public MutableNode(
-            MutableNode? parent, MutableEdge? incomingEdge, int? leafStart)
-        {
-            Parent = parent;
-            IncomingEdge = incomingEdge;
-            Children = new Dictionary<MutableEdge, MutableNode>();
-            LeafStart = leafStart;
-        }
-    }
-
     private sealed record StackFrame(
-        MutableNode MutableNode,
+        MutableTree.Node MutableNode,
         SuffixTreeEdge IncomingEdge,
         IDictionary<SuffixTreeEdge, SuffixTreeNode> ParentChildren,
         IDictionary<SuffixTreeEdge, SuffixTreeNode>? Children);
 
     private static SuffixTreeNode BuildFinalTreeFromMutableTree(
-        MutableNode mutableNode, TextWithTerminator fullText, ISet<char> terminators)
+        MutableTree.Node mutableNode, TextWithTerminator fullText, ISet<char> terminators)
     {
         var stack = new Stack<StackFrame>();
         var rootIncomingEdge = new SuffixTreeEdge(0, 1);
