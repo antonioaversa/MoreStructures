@@ -11,10 +11,7 @@
 ///     <para id="advantages">
 ///     ADVANTAGES AND DISADVANTAGES
 ///     <br/>
-///     Implemented fully iteratively, so not limited by call stack depth but rather by the maximum size of the stack 
-///     stored in the heap.
-///     <br/>
-///     Convenient with deep trees (i.e. trees having a height &gt; ~1K nodes).
+///     <inheritdoc cref="DocFragments" path="/remarks/para[@id='fully-iterative-advantages']"/>
 ///     </para>
 /// </remarks>
 public class FullyIterativeBreadthFirstTraversal<TEdge, TNode> 

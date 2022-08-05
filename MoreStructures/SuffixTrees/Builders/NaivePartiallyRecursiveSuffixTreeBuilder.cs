@@ -1,4 +1,5 @@
-﻿using MoreStructures.SuffixStructures.Builders;
+﻿using MoreStructures.MutableTrees;
+using MoreStructures.SuffixStructures.Builders;
 using static MoreStructures.Utilities.StringUtilities;
 
 namespace MoreStructures.SuffixTrees.Builders;
@@ -75,6 +76,9 @@ namespace MoreStructures.SuffixTrees.Builders;
 public class NaivePartiallyRecursiveSuffixTreeBuilder
     : IBuilder<SuffixTreeEdge, SuffixTreeNode>
 {
+    private static readonly MutableTrees.Conversions.IConversion MutableTreeConversion =
+        new MutableTrees.Conversions.FullyIterativeConversion();
+
     /// <inheritdoc path="//*[not self::summary or self::remarks]"/>
     /// <summary>
     ///     <inheritdoc/>
@@ -86,20 +90,20 @@ public class NaivePartiallyRecursiveSuffixTreeBuilder
     {
         var (fullText, terminators) = texts.GenerateFullText();
 
-        SuffixTreeNode root = new SuffixTreeNode.Leaf(0);
+        var root = MutableTree.Node.BuildRoot();
 
         for (var suffixIndex = 0; suffixIndex < fullText.Length; suffixIndex++)
-            root = IncludeSuffixIntoTree(fullText, terminators, suffixIndex, suffixIndex, root);
+            IncludeSuffixIntoTree(fullText, terminators, suffixIndex, suffixIndex, root);
 
-        return root;
+        return MutableTreeConversion.ConvertToSuffixTree(root, fullText, terminators);
     }
 
-    private static SuffixTreeNode.Intermediate IncludeSuffixIntoTree(
-        TextWithTerminator text, ISet<char> terminators, int suffixCurrentIndex, int suffixIndex, SuffixTreeNode node)
+    private static void IncludeSuffixIntoTree(
+        TextWithTerminator text, ISet<char> terminators, int suffixCurrentIndex, int suffixIndex, 
+        MutableTree.Node node)
     {
-        var nodeChildren = new Dictionary<SuffixTreeEdge, SuffixTreeNode>(node.Children);
         var currentChar = text[suffixCurrentIndex];
-        var edgeSame1stChar = nodeChildren.Keys.SingleOrDefault(edge => text[edge.Start] == currentChar);
+        var edgeSame1stChar = node.Children.Keys.SingleOrDefault(edge => text[edge.Start] == currentChar);
 
         if (edgeSame1stChar == null)
         {
@@ -108,42 +112,42 @@ public class NaivePartiallyRecursiveSuffixTreeBuilder
                 .Range(suffixCurrentIndex, text.Length - suffixCurrentIndex)
                 .First(i => terminators.Contains(text[i]));
 
-            var edge = new SuffixTreeEdge(suffixCurrentIndex, index1stTerminator - suffixCurrentIndex + 1);
-            nodeChildren[edge] = new SuffixTreeNode.Leaf(suffixIndex);
+            var edge = MutableTree.Edge.Build(suffixCurrentIndex, index1stTerminator - suffixCurrentIndex + 1);
+            node.Children[edge] = MutableTree.Node.Build(node, edge, suffixIndex);
         }
         else
         {
-            var prefixLength = LongestCommonPrefix(text[suffixCurrentIndex..], edgeSame1stChar.Of(text));
+            var prefixLength = LongestCommonPrefix(
+                text[suffixCurrentIndex..], 
+                text[edgeSame1stChar.Start..(edgeSame1stChar.Start + edgeSame1stChar.Length)]);
 
-            var oldChild = nodeChildren[edgeSame1stChar];
+            var oldChild = node.Children[edgeSame1stChar];
             if (prefixLength < edgeSame1stChar.Length)
             {
                 var charsToNextSeparator = Enumerable
                     .Range(0, text.Length - suffixCurrentIndex - prefixLength)
                     .First(i => terminators.Contains(text[suffixCurrentIndex + prefixLength + i]));
+
+                var edgeToNewIntermediate = MutableTree.Edge.Build(edgeSame1stChar.Start, prefixLength);
+                var newIntermediate = MutableTree.Node.Build(node, edgeToNewIntermediate, null);
                 
-                var newLeaf = new SuffixTreeNode.Leaf(suffixIndex);
-                var newIntermediate = new SuffixTreeNode.Intermediate(new Dictionary<SuffixTreeEdge, SuffixTreeNode>()
-                {
-                    [new(
-                        edgeSame1stChar.Start + prefixLength,
-                        edgeSame1stChar.Length - prefixLength)] = oldChild,
-                    [new(
-                        suffixCurrentIndex + prefixLength,
-                        charsToNextSeparator + 1)] = newLeaf,
-                });
-                nodeChildren.Remove(edgeSame1stChar);
-                nodeChildren[new(edgeSame1stChar.Start, prefixLength)] = newIntermediate;
+                var edgeToOldChild = MutableTree.Edge.Build(
+                    edgeSame1stChar.Start + prefixLength, edgeSame1stChar.Length - prefixLength);
+                var edgeToNewLeaf = MutableTree.Edge.Build(
+                    suffixCurrentIndex + prefixLength, charsToNextSeparator + 1);
+                var newLeaf = MutableTree.Node.Build(
+                    newIntermediate, edgeToNewLeaf, suffixIndex);
+
+                newIntermediate.Children[edgeToOldChild] = oldChild;
+                newIntermediate.Children[edgeToNewLeaf] = newLeaf;
+
+                node.Children.Remove(edgeSame1stChar);
+                node.Children[edgeToNewIntermediate] = newIntermediate;
             }
             else
             {
-                var newChild = IncludeSuffixIntoTree(
-                    text, terminators, suffixCurrentIndex + prefixLength, suffixIndex, oldChild);
-                nodeChildren.Remove(edgeSame1stChar);
-                nodeChildren[edgeSame1stChar] = newChild;
+                IncludeSuffixIntoTree(text, terminators, suffixCurrentIndex + prefixLength, suffixIndex, oldChild);
             }
         }
-
-        return new SuffixTreeNode.Intermediate(nodeChildren);
     }
 }

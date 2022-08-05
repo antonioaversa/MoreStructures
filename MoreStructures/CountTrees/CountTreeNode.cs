@@ -26,9 +26,9 @@ namespace MoreStructures.CountTrees;
 ///     <para id="iterativity">
 ///     ITERATIVITY
 ///     <br/>
-///     <see cref="CountTreeNode{TEdge, TNode}"/> structure construction and properties calculation are done lazily and 
-///     fully iteratively, so the use of this structure is not limited by call stack depth but rather by the maximum 
-///     size of the stack stored in the heap. Convenient with deep trees (i.e. trees having a height > ~1K nodes).
+///     <see cref="CountTreeNode{TEdge, TNode}"/> structure construction and properties calculation are done lazily.
+///     <br/>
+///     <inheritdoc cref="DocFragments" path="/remarks/para[@id='fully-iterative-advantages']"/>
 ///     </para>
 ///     <para id="caching">
 ///     CACHING
