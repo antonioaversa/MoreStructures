@@ -1,6 +1,7 @@
 ﻿using MoreStructures.MutableTrees;
 using MoreStructures.SuffixStructures.Builders;
 using static MoreStructures.Utilities.StringUtilities;
+using static MoreStructures.MutableTrees.MutableTree;
 
 namespace MoreStructures.SuffixTrees.Builders;
 
@@ -52,21 +53,23 @@ namespace MoreStructures.SuffixTrees.Builders;
 ///       <br/>
 ///     - The top level loop is executed n times, once per char of the full text.
 ///       <br/>
-///     - Duplicating the node children dictionary, as well as finding the edge with the same first char, are
-///       O(avgEdges), where avgEdges is the average number of edges coming out of a node of the tree.
+///     - Finding the edge with the same first char is O(avgEdges), where avgEdges is the average number of edges 
+///       coming out of a node of the tree. This operation is done for all cases (leaf creation alone or leaf + 
+///       intermediate node).
 ///       <br/>
 ///     - Over all the n nodes of the tree, taking into account the worst case where avgEdges is O(n), Time Complexity
 ///       would become O(n^2). However, the total number of edges in a tree is O(n), so the overall cost of these 
 ///       operations for the entire tree is O(n), and not O(n^2).
 ///       <br/>
-///     - Finding the first index in the suffix which corresponds to a terminator, finding the LCP between the suffix
-///       and the label of the current edge and finding the number of chars up to the terminator are all O(n) 
-///       operations, since the length of a generic suffix of the text is O(n) and they all require iterating over all
-///       the chars.
+///     - Finding the LCP between the suffix and the label of the current edge are O(n) operations, since the length 
+///       of a generic suffix of the text is O(n) and they require iterating over all the chars.
 ///       <br/>
-///     - In conclusion, Time Complexity = O(n^2 * as) and Space Complexity = O(n) where n = length of the text to 
-///       match and as = size of the alphabet of the text. If the alphabet is of constant size, Time Complexity is 
-///       quadratic.
+///     - Such operations are only done when an intermediate node is required. However, in the worst case there are as
+///       many intermediate as leaves in the tree (i.e. each iteration adds an intermediate node and a leaf). 
+///       Therefore, the number of intermediate nodes is O(n), and the two O(n) operations above are to be repeated 
+///       O(n) times.
+///       <br/>
+///     - In conclusion, Time Complexity = O(n^2) and Space Complexity = O(n) where n = length of the text to match.
 ///       <br/>
 ///     - Compared to tries, trees are more compact due to edge coalescing and edge label compression (i.e. edge 
 ///       strings stored as pair (start, length), rather than as a substring of length chars). Each recursion add a 
@@ -90,7 +93,7 @@ public class NaivePartiallyRecursiveSuffixTreeBuilder
     {
         var (fullText, terminators) = texts.GenerateFullText();
 
-        var root = MutableTree.Node.BuildRoot();
+        var root = Node.BuildRoot();
 
         for (var suffixIndex = 0; suffixIndex < fullText.Length; suffixIndex++)
             IncludeSuffixIntoTree(fullText, terminators, suffixIndex, suffixIndex, root);
@@ -99,21 +102,17 @@ public class NaivePartiallyRecursiveSuffixTreeBuilder
     }
 
     private static void IncludeSuffixIntoTree(
-        TextWithTerminator text, ISet<char> terminators, int suffixCurrentIndex, int suffixIndex, 
-        MutableTree.Node node)
+        TextWithTerminator text, ISet<char> terminators, int suffixCurrentIndex, int suffixIndex, Node node)
     {
         var currentChar = text[suffixCurrentIndex];
         var edgeSame1stChar = node.Children.Keys.SingleOrDefault(edge => text[edge.Start] == currentChar);
 
         if (edgeSame1stChar == null)
         {
-            // Find first index which corresponds to a terminator
-            var index1stTerminator = Enumerable
-                .Range(suffixCurrentIndex, text.Length - suffixCurrentIndex)
-                .First(i => terminators.Contains(text[i]));
+            var edgeToNewLeaf = Edge.Build(suffixCurrentIndex, text.Length - suffixCurrentIndex);
+            var newLeaf = Node.Build(node, edgeToNewLeaf, suffixIndex);
 
-            var edge = MutableTree.Edge.Build(suffixCurrentIndex, index1stTerminator - suffixCurrentIndex + 1);
-            node.Children[edge] = MutableTree.Node.Build(node, edge, suffixIndex);
+            node.Children[edgeToNewLeaf] = newLeaf;
         }
         else
         {
@@ -124,18 +123,14 @@ public class NaivePartiallyRecursiveSuffixTreeBuilder
             var oldChild = node.Children[edgeSame1stChar];
             if (prefixLength < edgeSame1stChar.Length)
             {
-                var charsToNextSeparator = Enumerable
-                    .Range(0, text.Length - suffixCurrentIndex - prefixLength)
-                    .First(i => terminators.Contains(text[suffixCurrentIndex + prefixLength + i]));
-
-                var edgeToNewIntermediate = MutableTree.Edge.Build(edgeSame1stChar.Start, prefixLength);
-                var newIntermediate = MutableTree.Node.Build(node, edgeToNewIntermediate, null);
+                var edgeToNewIntermediate = Edge.Build(edgeSame1stChar.Start, prefixLength);
+                var newIntermediate = Node.Build(node, edgeToNewIntermediate, null);
                 
-                var edgeToOldChild = MutableTree.Edge.Build(
+                var edgeToOldChild = Edge.Build(
                     edgeSame1stChar.Start + prefixLength, edgeSame1stChar.Length - prefixLength);
-                var edgeToNewLeaf = MutableTree.Edge.Build(
-                    suffixCurrentIndex + prefixLength, charsToNextSeparator + 1);
-                var newLeaf = MutableTree.Node.Build(
+                var edgeToNewLeaf = Edge.Build(
+                    suffixCurrentIndex + prefixLength, text.Length - suffixCurrentIndex - prefixLength);
+                var newLeaf = Node.Build(
                     newIntermediate, edgeToNewLeaf, suffixIndex);
 
                 newIntermediate.Children[edgeToOldChild] = oldChild;
