@@ -8,9 +8,9 @@ namespace MoreStructures.MutableTrees.Conversions;
 internal interface IConversion
 {
     /// <summary>
-    /// Converts the provided <paramref name="mutableTree"/> to an immutable <see cref="SuffixTreeNode"/> structure.
+    /// Converts the provided <paramref name="mutableNode"/> to an immutable <see cref="SuffixTreeNode"/> structure.
     /// </summary>
-    /// <param name="mutableTree">The mutable, recursive, dictionary indexed tree to be converted.</param>
+    /// <param name="mutableNode">The mutable, recursive, dictionary indexed tree to be converted.</param>
     /// <param name="fullText">
     /// The text, the tree of which has to be converted.<br/>
     /// Required to perform trimming of edges in generalized trees.
@@ -22,5 +22,5 @@ internal interface IConversion
     /// </param>
     /// <returns>An immutable, recursive, dictionary indexed tree.</returns>
     public SuffixTreeNode ConvertToSuffixTree(
-        MutableTree.Node mutableTree, TextWithTerminator fullText, ISet<char> terminators);
+        MutableTree.Node mutableNode, TextWithTerminator fullText, ISet<char> terminators);
 }

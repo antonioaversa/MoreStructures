@@ -11,7 +11,7 @@
 ///     <para id="advantages">
 ///     ADVANTAGES AND DISADVANTAGES
 ///     <br/>
-///     TODO
+///     <inheritdoc cref="DocFragments" path="/remarks/para[@id='fully-iterative-advantages']"/>
 ///     </para>
 /// </remarks>
 public class FullyIterativeStringifier<TEdge, TNode> 
