@@ -15,14 +15,14 @@ public class TextWithTerminatorExtensionsTests
     }
 
     [DataRow("", TextWithTerminator.DefaultTerminator, new string[] { }, 
-        new char[] { TextWithTerminator.DefaultTerminator })]
-    [DataRow("", '1', new string[] { "" }, new char[] { '1' })]
-    [DataRow("1", '2', new string[] { "", "" }, new char[] { '1', '2' })]
-    [DataRow("a1a", '2', new string[] { "a", "a" }, new char[] { '1', '2' })]
-    [DataRow("a1b", '2', new string[] { "a", "b" }, new char[] { '1', '2' })]
-    [DataRow("a1b2ab", '3', new string[] { "a", "b", "ab" }, new char[] { '1', '2', '3' })]
-    [DataRow("a12ab", '3', new string[] { "a", "", "ab" }, new char[] { '1', '2', '3' })]
-    [DataRow("1a2aa3babaa", '4', new string[] { "", "a", "aa", "babaa" }, new char[] { '1', '2', '3', '4'})]
+        new[] { TextWithTerminator.DefaultTerminator })]
+    [DataRow("", '1', new[] { "" }, new[] { '1' })]
+    [DataRow("1", '2', new[] { "", "" }, new[] { '1', '2' })]
+    [DataRow("a1a", '2', new[] { "a", "a" }, new[] { '1', '2' })]
+    [DataRow("a1b", '2', new[] { "a", "b" }, new[] { '1', '2' })]
+    [DataRow("a1b2ab", '3', new[] { "a", "b", "ab" }, new[] { '1', '2', '3' })]
+    [DataRow("a12ab", '3', new[] { "a", "", "ab" }, new[] { '1', '2', '3' })]
+    [DataRow("1a2aa3babaa", '4', new[] { "", "a", "aa", "babaa" }, new[] { '1', '2', '3', '4'})]
     [DataTestMethod]
     public void GenerateFullText_IsCorrect(
         string expectedText, char expectedTerminator, string[] textContents, char[] terminators)
@@ -32,10 +32,11 @@ public class TextWithTerminatorExtensionsTests
             .Select(textAndTerminator => new TextWithTerminator(textAndTerminator.First, textAndTerminator.Second))
             .ToArray();
 
-        var text = texts.GenerateFullText();
-        Assert.AreEqual(expectedText, string.Concat(text.fullText.Text));
-        Assert.AreEqual(expectedTerminator, text.fullText.Terminator);
-        Assert.IsTrue(terminators.ToHashSet().SetEquals(text.terminators));
+        var fullText = texts.GenerateFullText();
+        Assert.AreEqual(expectedText, string.Concat(fullText.fullText.Text));
+        Assert.AreEqual(expectedTerminator, fullText.fullText.Terminator);
+        Assert.IsTrue(terminators.ToHashSet().SetEquals(fullText.terminators));
+        Assert.IsTrue(texts.All(text => terminators.Count(terminator => text.Terminator == terminator) == 1));
     }
 
     [TestMethod]
@@ -47,5 +48,25 @@ public class TextWithTerminatorExtensionsTests
         Assert.ThrowsException<ArgumentException>(
             () => new TextWithTerminator[] { new("a", '1'), new("b", '2'), new("c", '1') }
                 .GenerateFullText());
+    }
+
+    [DataRow(new[] { "1" }, new[] { 1 })]
+    [DataRow(new[] { "1", "2" }, new[] { 1, 2 })]
+    [DataRow(new[] { "a1", "a2" }, new[] { 0, 1, 1, 2 })]
+    [DataRow(new[] { "a1", "b2" }, new[] { 0, 1, 1, 2 })]
+    [DataRow(new[] { "a1", "b2", "ab3" }, new[] { 0, 1, 1, 2, 2, 2, 3 })]
+    [DataRow(new[] { "a1", "2", "ab3" }, new[] { 0, 1, 2, 2, 2, 3 })]
+    [DataRow(new[] { "1", "a2", "aa3", "babaa4" }, new[] { 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4 })]
+    [DataTestMethod]
+    public void BuildTerminatorsCDF_IsCorrect(string[] textContentsWithTerminator, int[] expectedResult)
+    {
+        var texts = textContentsWithTerminator
+            .Select(textWithTerminator => new TextWithTerminator(textWithTerminator[..^1], textWithTerminator[^1]))
+            .ToArray();
+        var (fullText, terminators) = texts.GenerateFullText();
+
+        var result = TextWithTerminatorExtensions.BuildTerminatorsCDF(fullText, terminators);
+        Assert.IsTrue(expectedResult.SequenceEqual(result),
+            $"Expected [{string.Join(", ", expectedResult)}], Got: [{string.Join(", ", result)}]");
     }
 }
