@@ -40,7 +40,7 @@ public abstract class SuffixTreeBuilderTests
         var treeNode = Builder.BuildTree(texts);
         Assert.IsTrue(
             treeNode.IsEquivalentTo(expectedTreeNode, fullText), 
-            $"Expected: {expectedTreeNode}, Actual: {treeNode}");    
+            $"Expected: {expectedTreeNode}, Actual: {treeNode}");
     }
 
     [DataRow(EmptyStrings)]
