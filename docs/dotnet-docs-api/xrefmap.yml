@@ -12350,6 +12350,22 @@ references:
   commentId: T:MoreStructures.Tests.TextWithTerminatorExtensionsTests
   fullName: MoreStructures.Tests.TextWithTerminatorExtensionsTests
   nameWithType: TextWithTerminatorExtensionsTests
+- uid: MoreStructures.Tests.TextWithTerminatorExtensionsTests.BuildTerminatorsCDF_IsCorrect(System.String[],System.Int32[])
+  name: BuildTerminatorsCDF_IsCorrect(String[], Int32[])
+  href: api/MoreStructures.Tests.TextWithTerminatorExtensionsTests.html#MoreStructures_Tests_TextWithTerminatorExtensionsTests_BuildTerminatorsCDF_IsCorrect_System_String___System_Int32___
+  commentId: M:MoreStructures.Tests.TextWithTerminatorExtensionsTests.BuildTerminatorsCDF_IsCorrect(System.String[],System.Int32[])
+  name.vb: BuildTerminatorsCDF_IsCorrect(String(), Int32())
+  fullName: MoreStructures.Tests.TextWithTerminatorExtensionsTests.BuildTerminatorsCDF_IsCorrect(System.String[], System.Int32[])
+  fullName.vb: MoreStructures.Tests.TextWithTerminatorExtensionsTests.BuildTerminatorsCDF_IsCorrect(System.String(), System.Int32())
+  nameWithType: TextWithTerminatorExtensionsTests.BuildTerminatorsCDF_IsCorrect(String[], Int32[])
+  nameWithType.vb: TextWithTerminatorExtensionsTests.BuildTerminatorsCDF_IsCorrect(String(), Int32())
+- uid: MoreStructures.Tests.TextWithTerminatorExtensionsTests.BuildTerminatorsCDF_IsCorrect*
+  name: BuildTerminatorsCDF_IsCorrect
+  href: api/MoreStructures.Tests.TextWithTerminatorExtensionsTests.html#MoreStructures_Tests_TextWithTerminatorExtensionsTests_BuildTerminatorsCDF_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.TextWithTerminatorExtensionsTests.BuildTerminatorsCDF_IsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.TextWithTerminatorExtensionsTests.BuildTerminatorsCDF_IsCorrect
+  nameWithType: TextWithTerminatorExtensionsTests.BuildTerminatorsCDF_IsCorrect
 - uid: MoreStructures.Tests.TextWithTerminatorExtensionsTests.GenerateFullText_IsCorrect(System.String,System.Char,System.String[],System.Char[])
   name: GenerateFullText_IsCorrect(String, Char, String[], Char[])
   href: api/MoreStructures.Tests.TextWithTerminatorExtensionsTests.html#MoreStructures_Tests_TextWithTerminatorExtensionsTests_GenerateFullText_IsCorrect_System_String_System_Char_System_String___System_Char___
@@ -13841,6 +13857,22 @@ references:
   commentId: T:MoreStructures.TextWithTerminatorExtensions
   fullName: MoreStructures.TextWithTerminatorExtensions
   nameWithType: TextWithTerminatorExtensions
+- uid: MoreStructures.TextWithTerminatorExtensions.BuildTerminatorsCDF(MoreStructures.TextWithTerminator,ISet{System.Char})
+  name: BuildTerminatorsCDF(TextWithTerminator, ISet<Char>)
+  href: api/MoreStructures.TextWithTerminatorExtensions.html#MoreStructures_TextWithTerminatorExtensions_BuildTerminatorsCDF_MoreStructures_TextWithTerminator_ISet_System_Char__
+  commentId: M:MoreStructures.TextWithTerminatorExtensions.BuildTerminatorsCDF(MoreStructures.TextWithTerminator,ISet{System.Char})
+  name.vb: BuildTerminatorsCDF(TextWithTerminator, ISet(Of Char))
+  fullName: MoreStructures.TextWithTerminatorExtensions.BuildTerminatorsCDF(MoreStructures.TextWithTerminator, ISet<System.Char>)
+  fullName.vb: MoreStructures.TextWithTerminatorExtensions.BuildTerminatorsCDF(MoreStructures.TextWithTerminator, ISet(Of System.Char))
+  nameWithType: TextWithTerminatorExtensions.BuildTerminatorsCDF(TextWithTerminator, ISet<Char>)
+  nameWithType.vb: TextWithTerminatorExtensions.BuildTerminatorsCDF(TextWithTerminator, ISet(Of Char))
+- uid: MoreStructures.TextWithTerminatorExtensions.BuildTerminatorsCDF*
+  name: BuildTerminatorsCDF
+  href: api/MoreStructures.TextWithTerminatorExtensions.html#MoreStructures_TextWithTerminatorExtensions_BuildTerminatorsCDF_
+  commentId: Overload:MoreStructures.TextWithTerminatorExtensions.BuildTerminatorsCDF
+  isSpec: "True"
+  fullName: MoreStructures.TextWithTerminatorExtensions.BuildTerminatorsCDF
+  nameWithType: TextWithTerminatorExtensions.BuildTerminatorsCDF
 - uid: MoreStructures.TextWithTerminatorExtensions.GenerateFullText(MoreStructures.TextWithTerminator[])
   name: GenerateFullText(TextWithTerminator[])
   href: api/MoreStructures.TextWithTerminatorExtensions.html#MoreStructures_TextWithTerminatorExtensions_GenerateFullText_MoreStructures_TextWithTerminator___
