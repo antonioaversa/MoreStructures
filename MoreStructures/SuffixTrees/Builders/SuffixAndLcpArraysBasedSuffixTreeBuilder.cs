@@ -86,12 +86,8 @@ namespace MoreStructures.SuffixTrees.Builders;
 ///       most once per iteration.
 ///       <br/>
 ///     - Final step is building the final tree from the mutable tree, which requires the traversal of the O(n) nodes 
-///       of the tree.
-///       <br/>
-///     - Tree traversal is done iteratively via a stack, where a node is visited at most twice, and each frame stack
-///       is processed in constant time. The stack then contains at most 2 * n frames, each of constant size.
-///       <br/>
-///     - That makes final tree construction a O(n) operation, both in time and space.
+///       of the tree. <see cref="MutableTrees.Conversions.FullyIterativeConversion"/> does that in O(n) time and 
+///       space, via a stack and a precomputed data structure to find the number of terminators per edge in O(1) time.
 ///       <br/>
 ///     - In conclusion, both Time and Space Complexity are O(n).
 ///     </para>

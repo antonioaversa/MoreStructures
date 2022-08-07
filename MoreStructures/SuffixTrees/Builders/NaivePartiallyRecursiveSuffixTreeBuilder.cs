@@ -22,7 +22,8 @@ namespace MoreStructures.SuffixTrees.Builders;
 ///     <para id="algorithm">
 ///     ALGORITHM
 ///     <br/>
-///     - For each suffix S of the input T, start from the root node N of the tree, initialized as a simple leaf.
+///     - For each suffix S of the input T, start from the root node N of the tree, initialized as a mutable tree made 
+///       of a simple leaf.
 ///       <br/>
 ///     - Compare the first char of S with the first char of each of the edges coming from N.
 ///       <br/>
@@ -40,6 +41,10 @@ namespace MoreStructures.SuffixTrees.Builders;
 ///       <br/>
 ///     - Otherwise, eat prefixLength chars from the edge, move to the child pointed by the edge entirely matching the 
 ///       beginning of the current suffix and repeat the same operation.
+///       <br/>
+///     - Finally, after all iterations have been executed and all suffixes of the text have been included in the 
+///       mutable tree, build the final <see cref="SuffixTreeNode"/> structure from the mutable tree, using a
+///       <see cref="MutableTrees.Conversions.FullyIterativeConversion"/>.
 ///     </para>
 ///     <para id="complexity">
 ///     COMPLEXITY
@@ -68,6 +73,10 @@ namespace MoreStructures.SuffixTrees.Builders;
 ///       many intermediate as leaves in the tree (i.e. each iteration adds an intermediate node and a leaf). 
 ///       Therefore, the number of intermediate nodes is O(n), and the two O(n) operations above are to be repeated 
 ///       O(n) times.
+///       <br/>
+///     - Final step is building the final tree from the mutable tree, which requires the traversal of the O(n) nodes 
+///       of the tree. <see cref="MutableTrees.Conversions.FullyIterativeConversion"/> does that in O(n) time and 
+///       space, via a stack and a precomputed data structure to find the number of terminators per edge in O(1) time.
 ///       <br/>
 ///     - In conclusion, Time Complexity = O(n^2) and Space Complexity = O(n) where n = length of the text to match.
 ///       <br/>

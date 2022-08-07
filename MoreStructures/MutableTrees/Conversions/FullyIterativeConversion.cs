@@ -87,8 +87,11 @@ internal class FullyIterativeConversion : IConversion
         var rootParentChildren = new Dictionary<SuffixTreeEdge, SuffixTreeNode>();
         stack.Push(new(mutableNode, rootIncomingEdge, rootParentChildren, null));
 
+        var terminatorsIndexMap = 
+            TextWithTerminatorExtensions.BuildTerminatorsIndexMap(fullText, terminators).ToList();
+
         while (stack.Count > 0)
-            ProcessStack(stack, fullText, terminators);
+            ProcessStack(stack, terminatorsIndexMap);
 
         return rootParentChildren[rootIncomingEdge];
     }
@@ -99,8 +102,7 @@ internal class FullyIterativeConversion : IConversion
             IDictionary<SuffixTreeEdge, SuffixTreeNode> ParentChildren,
             IDictionary<SuffixTreeEdge, SuffixTreeNode>? Children);
 
-    private static void ProcessStack(
-        Stack<StackFrame> stack, TextWithTerminator fullText, ISet<char> terminators)
+    private static void ProcessStack(Stack<StackFrame> stack, IList<int> terminatorsIndexMap)
     {
         var (mutableNode, incomingEdge, parentChildren, children) = stack.Pop();
 
@@ -128,17 +130,11 @@ internal class FullyIterativeConversion : IConversion
             var childEdge = new SuffixTreeEdge(childMutableEdge.Start, childMutableEdge.Length);
 
             // If the child edge contains any terminator, trim tree
-            var indexOf1stTerminator = (
-                from terminator in terminators
-                let indexOfTerminator = fullText[childEdge].IndexOf(terminator)
-                where indexOfTerminator >= 0
-                select indexOfTerminator)
-                .FirstOrDefault(-1);
-
-            if (indexOf1stTerminator >= 0)
+            if (terminatorsIndexMap[childEdge.Start + childEdge.Length - 1] != terminatorsIndexMap[childEdge.Start])
             {
                 childMutableNode.Children.Clear();
-                childEdge = new SuffixTreeEdge(childMutableEdge.Start, indexOf1stTerminator + 1);
+                childEdge = new SuffixTreeEdge(childMutableEdge.Start, 
+                    terminatorsIndexMap[childEdge.Start] - childMutableEdge.Start + 1);
             }
 
             stack.Push(new(childMutableNode, childEdge, children, null));
