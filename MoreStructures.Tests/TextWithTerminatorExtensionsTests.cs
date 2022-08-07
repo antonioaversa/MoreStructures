@@ -1,4 +1,5 @@
-﻿namespace MoreStructures.Tests;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+namespace MoreStructures.Tests;
 
 [TestClass]
 public class TextWithTerminatorExtensionsTests
@@ -66,6 +67,26 @@ public class TextWithTerminatorExtensionsTests
         var (fullText, terminators) = texts.GenerateFullText();
 
         var result = TextWithTerminatorExtensions.BuildTerminatorsCDF(fullText, terminators);
+        Assert.IsTrue(expectedResult.SequenceEqual(result),
+            $"Expected [{string.Join(", ", expectedResult)}], Got: [{string.Join(", ", result)}]");
+    }
+
+    [DataRow(new[] { "1" }, new[] { 0 })]
+    [DataRow(new[] { "1", "2" }, new[] { 0, 1 })]
+    [DataRow(new[] { "a1", "a2" }, new[] { 1, 1, 3, 3 })]
+    [DataRow(new[] { "a1", "b2" }, new[] { 1, 1, 3, 3 })]
+    [DataRow(new[] { "a1", "b2", "ab3" }, new[] { 1, 1, 3, 3, 6, 6, 6 })]
+    [DataRow(new[] { "a1", "2", "ab3" }, new[] { 1, 1, 2, 5, 5, 5 })]
+    [DataRow(new[] { "1", "a2", "aa3", "babaa4" }, new[] { 0, 2, 2, 5, 5, 5, 11, 11, 11, 11, 11, 11 })]
+    [DataTestMethod]
+    public void BuildTerminatorsIndexMap_IsCorrect(string[] textContentsWithTerminator, int[] expectedResult)
+    {
+        var texts = textContentsWithTerminator
+            .Select(textWithTerminator => new TextWithTerminator(textWithTerminator[..^1], textWithTerminator[^1]))
+            .ToArray();
+        var (fullText, terminators) = texts.GenerateFullText();
+
+        var result = TextWithTerminatorExtensions.BuildTerminatorsIndexMap(fullText, terminators);
         Assert.IsTrue(expectedResult.SequenceEqual(result),
             $"Expected [{string.Join(", ", expectedResult)}], Got: [{string.Join(", ", result)}]");
     }

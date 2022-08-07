@@ -113,7 +113,7 @@ public static class TextWithTerminatorExtensions
     /// The set of terminators of <paramref name="fullText"/>.
     /// </param>
     /// <returns>
-    /// A lazy-generated sequence of integers, representing the values of the CDF indexed by char index in 
+    /// A lazy-generated sequence of integers, representing the values of the CDF, indexed by char index in 
     /// <paramref name="fullText"/>.
     /// </returns>
     /// <remarks>
@@ -158,6 +158,81 @@ public static class TextWithTerminatorExtensions
             if (terminators.Contains(fullText[i]))
                 numberOfTerminators++;
             yield return numberOfTerminators;
+        }
+    }
+
+    /// <summary>
+    /// Builds the Terminators Index Map of the provided <paramref name="terminators"/> in the provided 
+    /// <paramref name="fullText"/>.
+    /// </summary>
+    /// <param name="fullText">
+    /// The text, composed of a single or multiple concatenated <see cref="TextWithTerminator"/>.
+    /// </param>
+    /// <param name="terminators">
+    /// The set of terminators of <paramref name="fullText"/>.
+    /// </param>
+    /// <returns>
+    /// A lazy-generated sequence of integers, representing the values of the index map, indexed by char index in 
+    /// <paramref name="fullText"/>.
+    /// </returns>
+    /// <remarks>
+    ///     <para id="definition">
+    ///     DEFINITION
+    ///     <br/>
+    ///     - The terminators index map of a text T with terminators t is a function TIM such that TIM at 
+    ///       index i is the index in T of the last encountered terminator of T up to index i included.
+    ///       <br/>
+    ///     - In other terms, <c>TIM[i] = max(j = 0 to i, isTerminator(T[j]))</c>, where 
+    ///       <c>isTerminator(c) = 1 if c is in t, 0 otherwise</c>.
+    ///     </para>
+    ///     <para id="algorithm">
+    ///     ALGORITHM
+    ///     <br/>
+    ///     - The definition is applied, iterating over the chars of <paramref name="fullText"/> and yielding the index
+    ///       of a new terminator each time one is encountered, for all indexes of the text from the one following the
+    ///       last emitted, to the current one, included.
+    ///       <br/>
+    ///     - The algorithm keeps track of the last emitted index and assumes the full text terminates with a 
+    ///       terminator (which is the case for every well-formed <see cref="TextWithTerminator"/> issued by
+    ///       <see cref="GenerateFullText(TextWithTerminator[])"/>).
+    ///       <br/>
+    ///     - The algorithm is online. However, it requires consuming the input up to the next terminator, in order to 
+    ///       emit values for indexes of chars in the text which refer to such terminator.
+    ///       <br/>
+    ///     - For example, if the text is <c>"ab1cde2fghilm3"</c>, where terminators are <c>new[] {'1', '2', '3'}</c>,
+    ///       emitting the first item of the output sequence requires consuming the input up to the terminator '1', 
+    ///       emitting the second item of the output sequence requires consuming the input up to the terminator '2',
+    ///       etc.
+    ///     </para>
+    ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
+    ///     - Time Complexity is O(n * Ttc), where n is the length of <paramref name="fullText"/> and Ttc is the time
+    ///       required to check whether a char of the text is a terminator or not.
+    ///       <br/>
+    ///     - The "terminator checking" performance depends on the implementation of <see cref="ISet{T}"/>,
+    ///       <paramref name="terminators"/> is an instance of.
+    ///       <br/>
+    ///     - If <paramref name="terminators"/> is an <see cref="HashSet{T}"/>, 
+    ///       <see cref="ICollection{T}.Contains(T)"/> is executed in constant time, and Time Complexity becomes O(n).
+    ///       <br/>
+    ///     - Space Complexity is O(n) in all cases, since the only data structure instantiated by the algorithm is the
+    ///       output, which has as many items as the input text.
+    ///     </para>
+    /// </remarks>
+    public static IEnumerable<int> BuildTerminatorsIndexMap(TextWithTerminator fullText, ISet<char> terminators)
+    {
+        var lastIndexProcessed = -1;
+        for (var i = 0; i < fullText.Length; i++)
+        {
+            if (terminators.Contains(fullText[i]))
+            {
+                for (var j = lastIndexProcessed + 1; j <= i; j++)
+                {
+                    yield return i;
+                }
+                lastIndexProcessed = i;
+            }
         }
     }
 }
