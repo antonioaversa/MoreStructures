@@ -202,12 +202,8 @@ Case 1 may seem an O(n) operation. However, due to LCP Array property, moving up
 most once per iteration.
 <br>
 - Final step is building the final tree from the mutable tree, which requires the traversal of the O(n) nodes 
-of the tree.
-<br>
-- Tree traversal is done iteratively via a stack, where a node is visited at most twice, and each frame stack
-is processed in constant time. The stack then contains at most 2 * n frames, each of constant size.
-<br>
-- That makes final tree construction a O(n) operation, both in time and space.
+of the tree. <span class="xref">MoreStructures.MutableTrees.Conversions.FullyIterativeConversion</span> does that in O(n) time and 
+space, via a stack and a precomputed data structure to find the number of terminators per edge in O(1) time.
 <br>
 - In conclusion, both Time and Space Complexity are O(n).
 </p>
@@ -219,7 +215,7 @@ is processed in constant time. The stack then contains at most 2 * n frames, eac
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder__ctor_Func_MoreStructures_TextWithTerminator_System_ValueTuple_MoreStructures_SuffixArrays_SuffixArray_MoreStructures_SuffixArrays_LongestCommonPrefix_LcpArray___.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.%23ctor(Func%7BMoreStructures.TextWithTerminator%2CSystem.ValueTuple%7BMoreStructures.SuffixArrays.SuffixArray%2CMoreStructures.SuffixArrays.LongestCommonPrefix.LcpArray%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/SuffixAndLcpArraysBasedSuffixTreeBuilder.cs/#L119">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/SuffixAndLcpArraysBasedSuffixTreeBuilder.cs/#L115">View Source</a>
   </span>
   <a id="MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder__ctor_" data-uid="MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.#ctor*"></a>
   <h4 id="MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder__ctor_Func_MoreStructures_TextWithTerminator_System_ValueTuple_MoreStructures_SuffixArrays_SuffixArray_MoreStructures_SuffixArrays_LongestCommonPrefix_LcpArray___" data-uid="MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.#ctor(Func{MoreStructures.TextWithTerminator,System.ValueTuple{MoreStructures.SuffixArrays.SuffixArray,MoreStructures.SuffixArrays.LongestCommonPrefix.LcpArray}})">SuffixAndLcpArraysBasedSuffixTreeBuilder(Func&lt;TextWithTerminator, (SuffixArray, LcpArray)&gt;)</h4>
@@ -258,7 +254,7 @@ is processed in constant time. The stack then contains at most 2 * n frames, eac
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder_SuffixAndLcpArraysBuilder.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.SuffixAndLcpArraysBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/SuffixAndLcpArraysBasedSuffixTreeBuilder.cs/#L108">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/SuffixAndLcpArraysBasedSuffixTreeBuilder.cs/#L104">View Source</a>
   </span>
   <a id="MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder_SuffixAndLcpArraysBuilder_" data-uid="MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.SuffixAndLcpArraysBuilder*"></a>
   <h4 id="MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder_SuffixAndLcpArraysBuilder" data-uid="MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.SuffixAndLcpArraysBuilder">SuffixAndLcpArraysBuilder</h4>
@@ -292,7 +288,7 @@ text, both required by this algorithm to build the <a class="xref" href="MoreStr
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator___.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/SuffixAndLcpArraysBasedSuffixTreeBuilder.cs/#L132">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/SuffixAndLcpArraysBasedSuffixTreeBuilder.cs/#L128">View Source</a>
   </span>
   <a id="MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder_BuildTree_" data-uid="MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.BuildTree*"></a>
   <h4 id="MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator___" data-uid="MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator[])">BuildTree(TextWithTerminator[])</h4>
@@ -360,7 +356,7 @@ text, both required by this algorithm to build the <a class="xref" href="MoreStr
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/SuffixAndLcpArraysBasedSuffixTreeBuilder.cs/#L99" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/SuffixAndLcpArraysBasedSuffixTreeBuilder.cs/#L95" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
