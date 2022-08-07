@@ -175,7 +175,7 @@ provided <code data-dev-comment-type="paramref" class="paramref">fullText</code>
     <tbody>
       <tr>
         <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
-        <td><p>A lazy-generated sequence of integers, representing the values of the CDF indexed by char index in
+        <td><p>A lazy-generated sequence of integers, representing the values of the CDF, indexed by char index in
 <code data-dev-comment-type="paramref" class="paramref">fullText</code>.</p>
 </td>
       </tr>
@@ -198,6 +198,109 @@ ALGORITHM
   item.
 <br>
 - The algorithm is online.
+</p>
+<p>
+COMPLEXITY
+<br>
+- Time Complexity is O(n * Ttc), where n is the length of <code data-dev-comment-type="paramref" class="paramref">fullText</code> and Ttc is the time
+  required to check whether a char of the text is a terminator or not.
+<br>
+- The &quot;terminator checking&quot; performance depends on the implementation of <see cref="!:ISet&lt;T>"></see>,
+<code data-dev-comment-type="paramref" class="paramref">terminators</code> is an instance of.
+<br>
+- If <code data-dev-comment-type="paramref" class="paramref">terminators</code> is an <see cref="!:HashSet&lt;T>"></see>, 
+<see cref="!:ICollection&lt;T>.Contains(T)"></see> is executed in constant time, and Time Complexity becomes O(n).
+<br>
+- Space Complexity is O(n) in all cases, since the only data structure instantiated by the algorithm is the
+output, which has as many items as the input text.
+</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_TextWithTerminatorExtensions_BuildTerminatorsIndexMap_MoreStructures_TextWithTerminator_ISet_System_Char__.md&amp;value=---%0Auid%3A%20MoreStructures.TextWithTerminatorExtensions.BuildTerminatorsIndexMap(MoreStructures.TextWithTerminator%2CISet%7BSystem.Char%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/TextWithTerminatorExtensions.cs/#L223">View Source</a>
+  </span>
+  <a id="MoreStructures_TextWithTerminatorExtensions_BuildTerminatorsIndexMap_" data-uid="MoreStructures.TextWithTerminatorExtensions.BuildTerminatorsIndexMap*"></a>
+  <h4 id="MoreStructures_TextWithTerminatorExtensions_BuildTerminatorsIndexMap_MoreStructures_TextWithTerminator_ISet_System_Char__" data-uid="MoreStructures.TextWithTerminatorExtensions.BuildTerminatorsIndexMap(MoreStructures.TextWithTerminator,ISet{System.Char})">BuildTerminatorsIndexMap(TextWithTerminator, ISet&lt;Char&gt;)</h4>
+  <div class="markdown level1 summary"><p>Builds the Terminators Index Map of the provided <code data-dev-comment-type="paramref" class="paramref">terminators</code> in the provided
+<code data-dev-comment-type="paramref" class="paramref">fullText</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;int&gt; BuildTerminatorsIndexMap(TextWithTerminator fullText, ISet&lt;char&gt; terminators)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a></td>
+        <td><span class="parametername">fullText</span></td>
+        <td><p>The text, composed of a single or multiple concatenated <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">ISet</span>&lt;<span class="xref">System.Char</span>&gt;</td>
+        <td><span class="parametername">terminators</span></td>
+        <td><p>The set of terminators of <code data-dev-comment-type="paramref" class="paramref">fullText</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><p>A lazy-generated sequence of integers, representing the values of the index map, indexed by char index in
+<code data-dev-comment-type="paramref" class="paramref">fullText</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_TextWithTerminatorExtensions_BuildTerminatorsIndexMap_MoreStructures_TextWithTerminator_ISet_System_Char___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+DEFINITION
+<br>
+- The terminators index map of a text T with terminators t is a function TIM such that TIM at 
+  index i is the index in T of the last encountered terminator of T up to index i included.
+<br>
+- In other terms, <code>TIM[i] = max(j = 0 to i, isTerminator(T[j]))</code>, where 
+<code>isTerminator(c) = 1 if c is in t, 0 otherwise</code>.
+</p>
+<p>
+ALGORITHM
+<br>
+- The definition is applied, iterating over the chars of <code data-dev-comment-type="paramref" class="paramref">fullText</code> and yielding the index
+  of a new terminator each time one is encountered, for all indexes of the text from the one following the
+  last emitted, to the current one, included.
+<br>
+- The algorithm keeps track of the last emitted index and assumes the full text terminates with a 
+terminator (which is the case for every well-formed <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a> issued by
+<a class="xref" href="MoreStructures.TextWithTerminatorExtensions.html#MoreStructures_TextWithTerminatorExtensions_GenerateFullText_MoreStructures_TextWithTerminator___">GenerateFullText(TextWithTerminator[])</a>).
+<br>
+- The algorithm is online. However, it requires consuming the input up to the next terminator, in order to 
+emit values for indexes of chars in the text which refer to such terminator.
+<br>
+- For example, if the text is <code>&quot;ab1cde2fghilm3&quot;</code>, where terminators are <code>new[] {&apos;1&apos;, &apos;2&apos;, &apos;3&apos;}</code>,
+emitting the first item of the output sequence requires consuming the input up to the terminator &apos;1&apos;, 
+emitting the second item of the output sequence requires consuming the input up to the terminator &apos;2&apos;,
+etc.
 </p>
 <p>
 COMPLEXITY

@@ -12366,6 +12366,22 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.TextWithTerminatorExtensionsTests.BuildTerminatorsCDF_IsCorrect
   nameWithType: TextWithTerminatorExtensionsTests.BuildTerminatorsCDF_IsCorrect
+- uid: MoreStructures.Tests.TextWithTerminatorExtensionsTests.BuildTerminatorsIndexMap_IsCorrect(System.String[],System.Int32[])
+  name: BuildTerminatorsIndexMap_IsCorrect(String[], Int32[])
+  href: api/MoreStructures.Tests.TextWithTerminatorExtensionsTests.html#MoreStructures_Tests_TextWithTerminatorExtensionsTests_BuildTerminatorsIndexMap_IsCorrect_System_String___System_Int32___
+  commentId: M:MoreStructures.Tests.TextWithTerminatorExtensionsTests.BuildTerminatorsIndexMap_IsCorrect(System.String[],System.Int32[])
+  name.vb: BuildTerminatorsIndexMap_IsCorrect(String(), Int32())
+  fullName: MoreStructures.Tests.TextWithTerminatorExtensionsTests.BuildTerminatorsIndexMap_IsCorrect(System.String[], System.Int32[])
+  fullName.vb: MoreStructures.Tests.TextWithTerminatorExtensionsTests.BuildTerminatorsIndexMap_IsCorrect(System.String(), System.Int32())
+  nameWithType: TextWithTerminatorExtensionsTests.BuildTerminatorsIndexMap_IsCorrect(String[], Int32[])
+  nameWithType.vb: TextWithTerminatorExtensionsTests.BuildTerminatorsIndexMap_IsCorrect(String(), Int32())
+- uid: MoreStructures.Tests.TextWithTerminatorExtensionsTests.BuildTerminatorsIndexMap_IsCorrect*
+  name: BuildTerminatorsIndexMap_IsCorrect
+  href: api/MoreStructures.Tests.TextWithTerminatorExtensionsTests.html#MoreStructures_Tests_TextWithTerminatorExtensionsTests_BuildTerminatorsIndexMap_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.TextWithTerminatorExtensionsTests.BuildTerminatorsIndexMap_IsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.TextWithTerminatorExtensionsTests.BuildTerminatorsIndexMap_IsCorrect
+  nameWithType: TextWithTerminatorExtensionsTests.BuildTerminatorsIndexMap_IsCorrect
 - uid: MoreStructures.Tests.TextWithTerminatorExtensionsTests.GenerateFullText_IsCorrect(System.String,System.Char,System.String[],System.Char[])
   name: GenerateFullText_IsCorrect(String, Char, String[], Char[])
   href: api/MoreStructures.Tests.TextWithTerminatorExtensionsTests.html#MoreStructures_Tests_TextWithTerminatorExtensionsTests_GenerateFullText_IsCorrect_System_String_System_Char_System_String___System_Char___
@@ -13873,6 +13889,22 @@ references:
   isSpec: "True"
   fullName: MoreStructures.TextWithTerminatorExtensions.BuildTerminatorsCDF
   nameWithType: TextWithTerminatorExtensions.BuildTerminatorsCDF
+- uid: MoreStructures.TextWithTerminatorExtensions.BuildTerminatorsIndexMap(MoreStructures.TextWithTerminator,ISet{System.Char})
+  name: BuildTerminatorsIndexMap(TextWithTerminator, ISet<Char>)
+  href: api/MoreStructures.TextWithTerminatorExtensions.html#MoreStructures_TextWithTerminatorExtensions_BuildTerminatorsIndexMap_MoreStructures_TextWithTerminator_ISet_System_Char__
+  commentId: M:MoreStructures.TextWithTerminatorExtensions.BuildTerminatorsIndexMap(MoreStructures.TextWithTerminator,ISet{System.Char})
+  name.vb: BuildTerminatorsIndexMap(TextWithTerminator, ISet(Of Char))
+  fullName: MoreStructures.TextWithTerminatorExtensions.BuildTerminatorsIndexMap(MoreStructures.TextWithTerminator, ISet<System.Char>)
+  fullName.vb: MoreStructures.TextWithTerminatorExtensions.BuildTerminatorsIndexMap(MoreStructures.TextWithTerminator, ISet(Of System.Char))
+  nameWithType: TextWithTerminatorExtensions.BuildTerminatorsIndexMap(TextWithTerminator, ISet<Char>)
+  nameWithType.vb: TextWithTerminatorExtensions.BuildTerminatorsIndexMap(TextWithTerminator, ISet(Of Char))
+- uid: MoreStructures.TextWithTerminatorExtensions.BuildTerminatorsIndexMap*
+  name: BuildTerminatorsIndexMap
+  href: api/MoreStructures.TextWithTerminatorExtensions.html#MoreStructures_TextWithTerminatorExtensions_BuildTerminatorsIndexMap_
+  commentId: Overload:MoreStructures.TextWithTerminatorExtensions.BuildTerminatorsIndexMap
+  isSpec: "True"
+  fullName: MoreStructures.TextWithTerminatorExtensions.BuildTerminatorsIndexMap
+  nameWithType: TextWithTerminatorExtensions.BuildTerminatorsIndexMap
 - uid: MoreStructures.TextWithTerminatorExtensions.GenerateFullText(MoreStructures.TextWithTerminator[])
   name: GenerateFullText(TextWithTerminator[])
   href: api/MoreStructures.TextWithTerminatorExtensions.html#MoreStructures_TextWithTerminatorExtensions_GenerateFullText_MoreStructures_TextWithTerminator___
