@@ -29,6 +29,11 @@ namespace MoreStructures.SuffixTrees.Builders;
 ///     - <b>Suffix Links</b>: all internal nodes point to another internal node sharing the suffix. This makes more
 ///       efficient traversal, because storing and jumping the suffix link when needed means traversal doesn't 
 ///       have to be done again.
+///       <br/>
+///     - <b>Terminators Index Map</b>: a function is used, mapping each index i of the full input text (consolidated 
+///       <see cref="TextWithTerminator"/> including all <see cref="TextWithTerminator"/> instances passed in the 
+///       input) to the index of the next terminator appearing in the full text not before i. Such function is used 
+///       to perform <b>edge trimming</b> of the mutable tree structure built by the Ukkonen algorithm in linear time.
 ///     </para>
 ///     <para id="algo">
 ///     ALGORITHM
@@ -49,12 +54,27 @@ namespace MoreStructures.SuffixTrees.Builders;
 ///     <para id="complexity">
 ///     COMPLEXITY
 ///     <br/>
-///     Time Complexity = O(t * as) and Space Complexity = O(2 * t) where t = length of the text to match and
-///     as = size of the alphabet of the text. If the alphabet is of constant size, Time Complexity is linear.
-///     Otherwise it is O(t * log(t)).
-///     <br/>
-///     While there are as many phases as number of chars in text (t), and there can be multiple iterations per
-///     phase (as many as the number of remaining suffixes to process), the complexity is still linear, ~ 2t.
+///     - The Time Complexity of the Ukkonen algorithm, building the mutable tree from the input texts, is O(t). 
+///       Space Complexity is O(2 * t) where t = length of the text to match.
+///       <br/>
+///     - While there are as many phases as number of chars in text (t), and there can be multiple iterations per
+///       phase (as many as the number of remaining suffixes to process), the complexity is still linear, ~ 2t.
+///       <br/>
+///     - Each node of the resulting mutable tree (there are O(n) of them, and at most 2 * n), is processed by the
+///       mutable tree conversion method at most twice: once for leaves and twice for intermediate nodes, which are
+///       re-pushed onto the stack before its children, so that they can be processed after all their children have
+///       already been converted.
+///       <br/>
+///     - Each stack frame processing by the mutable tree conversion method performs constant-time operations only:
+///       <see cref="SuffixTreeNode"/> and <see cref="SuffixTreeEdge"/> instances creation, children dictionary 
+///       instantiation and edge trimming (trimming the label of edges in generalized Suffix Trees, to the first 
+///       terminator appearing in the label, when multiple are present - i.e. when the label spans multiple 
+///       concatenated texts).
+///       <br/>
+///     - Edge trimming is a constant-time operation once the cost of calculating the Terminators Index Map is paid,
+///       which is a linear cost in time and space (linear in t).
+///       <br/>
+///     - Therefore, mutable tree conversion, and the overall algorithm, is linear in time and space over t.
 ///     </para>
 /// </remarks>
 public class UkkonenSuffixTreeBuilder
@@ -125,15 +145,18 @@ public class UkkonenSuffixTreeBuilder
         var stack = new Stack<BuildResultStackFrame>();
         var rootParentChildren = new Dictionary<SuffixTreeEdge, SuffixTreeNode>() { };
         var suffixTreeEdge = new SuffixTreeEdge(0, 1);
+        var terminatorsIndexMap = TextWithTerminatorExtensions
+            .BuildTerminatorsIndexMap(fullText, terminators)
+            .ToList();
 
         stack.Push(new(suffixTreeEdge, root, rootParentChildren, null));
         while (stack.Count > 0)
-            ProcessStack(stack, fullText, terminators);
+            ProcessStack(stack, terminatorsIndexMap);
         return rootParentChildren[suffixTreeEdge];
     }
 
     private static void ProcessStack(
-        Stack<BuildResultStackFrame> stack, TextWithTerminator fullText, ISet<char> terminators)
+        Stack<BuildResultStackFrame> stack, IList<int> terminatorsIndexMap)
     {
         var (suffixTreeEdge, mutableNode, parentChildren, nodeChildrenMaybe) = stack.Pop();
 
@@ -150,31 +173,17 @@ public class UkkonenSuffixTreeBuilder
             stack.Push(new(suffixTreeEdge, mutableNode, parentChildren, nodeChildren));
             foreach (var (childMutableEdge, childMutableNode) in mutableNode.Children)
             {
+                // If more than a terminator is included in the label of the edge, in principle we should reach
+                // the leaf and replace childMutableNode with it.
+                // However, such leaf must be unique, since each terminator appears a single time in fullText).
+                // Therefore, if the Suffix Tree is correctly built, childMutableNode has to be a leaf already
+                // (because, unlike in Suffix Tries, there can't be a non coalesced branch in a Suffix Tree).
+                var edgeStart = childMutableEdge.Start;
                 var childSuffixTreeEdge = new SuffixTreeEdge(
-                    childMutableEdge.Start, childMutableEdge.End.Value - childMutableEdge.Start + 1);
+                    edgeStart, 
+                    Math.Min(childMutableEdge.End.Value, terminatorsIndexMap[edgeStart]) - edgeStart + 1);
 
-                var firstTerminatorIndexInChildEdge = fullText[childSuffixTreeEdge]
-                    .Index()
-                    .FirstOrDefault(
-                        charAndIndex => terminators.Contains(charAndIndex.Value), 
-                        KeyValuePair.Create(-1, ' '));
-
-                if (firstTerminatorIndexInChildEdge.Key >= 0)
-                {
-                    var childSuffixTreeEdge1 = new SuffixTreeEdge(
-                        childMutableEdge.Start, firstTerminatorIndexInChildEdge.Key + 1);
-
-                    // In principle we should reach the leaf and replace childMutableNode with it.
-                    // However, such leaf must be unique, since each terminator appears a single time in fullText).
-                    // Therefore, if the Suffix Tree is correctly built, childMutableNode has to be a leaf already
-                    // (because, unlike in Suffix Tries, there can't be a non coalesced branch in a Suffix Tree).
-
-                    stack.Push(new(childSuffixTreeEdge1, childMutableNode, nodeChildren, null));
-                }
-                else
-                {
-                    stack.Push(new(childSuffixTreeEdge, childMutableNode, nodeChildren, null));
-                }
+                stack.Push(new(childSuffixTreeEdge, childMutableNode, nodeChildren, null));
             }
         }
     }
