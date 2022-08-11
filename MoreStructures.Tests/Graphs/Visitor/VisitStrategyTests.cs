@@ -1,7 +1,7 @@
 ﻿using MoreStructures.EdgeListGraphs;
-using MoreStructures.EdgeListGraphs.Visitor;
+using MoreStructures.Graphs.Visitor;
 
-namespace MoreStructures.Tests.EdgeListGraphs.Visitor;
+namespace MoreStructures.Tests.Graphs.Visitor;
 
 public abstract class VisitStrategyTests
 {

@@ -1,7 +1,7 @@
-﻿namespace MoreStructures.EdgeListGraphs.Visitor;
+﻿namespace MoreStructures.Graphs.Visitor;
 
 /// <summary>
-/// An algorithm exploring <see cref="EdgeListGraph"/> instances.
+/// An algorithm exploring <see cref="IGraph"/> instances.
 /// </summary>
 public interface IVisitStrategy
 {
@@ -10,15 +10,15 @@ public interface IVisitStrategy
     /// vertex with id <paramref name="start"/>, along the edges of the graph.
     /// </summary>
     /// <param name="graph">
-    /// The <see cref="EdgeListGraph"/> to be explored.
-    /// Can be considered directed or undirected, depending on the actual exploration implementation.
+    /// The <see cref="IGraph"/> instance to be explored.
+    /// Can be considered directed or undirected, depending on the actual exploration implementation and visit.
     /// </param>
     /// <param name="start">
     /// The <see cref="int"/> id identifying the vertex, from which the exploration has to be started.
     /// Different starting points will result into different sequences (by items and/or order) of vertices.
     /// </param>
     /// <returns>
-    /// The sequence of vertices
+    /// The sequence of vertices, lazily generated.
     /// </returns>
-    IEnumerable<int> Visit(EdgeListGraph graph, int start);
+    IEnumerable<int> Visit(IGraph graph, int start);
 }
