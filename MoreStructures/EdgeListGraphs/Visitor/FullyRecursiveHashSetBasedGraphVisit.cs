@@ -38,19 +38,22 @@ public class FullyRecursiveHashSetBasedGraphVisit : IVisitStrategy
     {
         alreadyVisited.Add(start);
 
-        Func<(int start, int end), int?> edgeSelector = DirectedGraph
-            ? edge => 
-                edge.start == start && !alreadyVisited.Contains(edge.end) ? edge.end : null
-            : edge =>
-                (edge.start == start && !alreadyVisited.Contains(edge.end)) 
-                    ? edge.end 
-                    : (edge.end == start && !alreadyVisited.Contains(edge.start)) 
-                        ? edge.start 
-                        : null;
+        var unexploredVertices = GetUnexploredAdjacentVertices(edges, alreadyVisited, start);
 
-        var unexploredVertices = edges.Select(edgeSelector).Where(uv => uv != null).Cast<int>();
-
-        foreach (var unexploredVertex in unexploredVertices)
+        foreach (var unexploredVertex in unexploredVertices.Where(uv => uv.HasValue).Cast<int>())
             RExplore(edges, alreadyVisited, unexploredVertex);
+    }
+
+    private IEnumerable<int?> GetUnexploredAdjacentVertices(
+        IList<(int start, int end)> edges, HashSet<int> alreadyVisited, int start)
+    {
+        Func<(int start, int end), int?> edgeStartCheck =
+            edge => edge.end == start && !alreadyVisited.Contains(edge.start) ? edge.start : null;
+        Func<(int start, int end), int?> edgeEndCheck =
+            edge => edge.start == start && !alreadyVisited.Contains(edge.end) ? edge.end : null;
+
+        return DirectedGraph
+            ? edges.Select(edge => edgeEndCheck(edge))
+            : edges.Select(edge => edgeEndCheck(edge) ?? edgeStartCheck(edge));
     }
 }
