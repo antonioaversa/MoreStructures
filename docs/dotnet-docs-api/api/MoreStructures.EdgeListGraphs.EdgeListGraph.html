@@ -93,6 +93,7 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a></div>
     <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="MoreStructures.EdgeListGraphs.EdgeListGraph.html">EdgeListGraph</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
@@ -123,7 +124,7 @@
   <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
   <h5 id="MoreStructures_EdgeListGraphs_EdgeListGraph_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class EdgeListGraph : IEquatable&lt;EdgeListGraph&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class EdgeListGraph : IGraph, IEquatable&lt;EdgeListGraph&gt;</code></pre>
   </div>
   <h5 id="MoreStructures_EdgeListGraphs_EdgeListGraph_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>If the edges are considered directional, i.e. (s, e) is considered as a different edge from (e, s), the resulting
@@ -136,7 +137,7 @@ graph is directed. Otherwise, the resulting graph is undirected.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_EdgeListGraphs_EdgeListGraph__ctor_System_Int32_IList_System_ValueTuple_System_Int32_System_Int32___.md&amp;value=---%0Auid%3A%20MoreStructures.EdgeListGraphs.EdgeListGraph.%23ctor(System.Int32%2CIList%7BSystem.ValueTuple%7BSystem.Int32%2CSystem.Int32%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/EdgeListGraphs/EdgeListGraph.cs/#L17">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/EdgeListGraphs/EdgeListGraph.cs/#L19">View Source</a>
   </span>
   <a id="MoreStructures_EdgeListGraphs_EdgeListGraph__ctor_" data-uid="MoreStructures.EdgeListGraphs.EdgeListGraph.#ctor*"></a>
   <h4 id="MoreStructures_EdgeListGraphs_EdgeListGraph__ctor_System_Int32_IList_System_ValueTuple_System_Int32_System_Int32___" data-uid="MoreStructures.EdgeListGraphs.EdgeListGraph.#ctor(System.Int32,IList{System.ValueTuple{System.Int32,System.Int32}})">EdgeListGraph(Int32, IList&lt;(Int32 start, Int32 end)&gt;)</h4>
@@ -183,7 +184,7 @@ graph is directed. Otherwise, the resulting graph is undirected.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_EdgeListGraphs_EdgeListGraph_Edges.md&amp;value=---%0Auid%3A%20MoreStructures.EdgeListGraphs.EdgeListGraph.Edges%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/EdgeListGraphs/EdgeListGraph.cs/#L17">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/EdgeListGraphs/EdgeListGraph.cs/#L19">View Source</a>
   </span>
   <a id="MoreStructures_EdgeListGraphs_EdgeListGraph_Edges_" data-uid="MoreStructures.EdgeListGraphs.EdgeListGraph.Edges*"></a>
   <h4 id="MoreStructures_EdgeListGraphs_EdgeListGraph_Edges" data-uid="MoreStructures.EdgeListGraphs.EdgeListGraph.Edges">Edges</h4>
@@ -213,7 +214,7 @@ graph is directed. Otherwise, the resulting graph is undirected.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_EdgeListGraphs_EdgeListGraph_NumberOfVertices.md&amp;value=---%0Auid%3A%20MoreStructures.EdgeListGraphs.EdgeListGraph.NumberOfVertices%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/EdgeListGraphs/EdgeListGraph.cs/#L17">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/EdgeListGraphs/EdgeListGraph.cs/#L19">View Source</a>
   </span>
   <a id="MoreStructures_EdgeListGraphs_EdgeListGraph_NumberOfVertices_" data-uid="MoreStructures.EdgeListGraphs.EdgeListGraph.NumberOfVertices*"></a>
   <h4 id="MoreStructures_EdgeListGraphs_EdgeListGraph_NumberOfVertices" data-uid="MoreStructures.EdgeListGraphs.EdgeListGraph.NumberOfVertices">NumberOfVertices</h4>
@@ -238,7 +239,83 @@ graph is directed. Otherwise, the resulting graph is undirected.</p>
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_EdgeListGraphs_EdgeListGraph_GetAdjacentVerticesAndEdges_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20MoreStructures.EdgeListGraphs.EdgeListGraph.GetAdjacentVerticesAndEdges(System.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/EdgeListGraphs/EdgeListGraph.cs/#L41">View Source</a>
+  </span>
+  <a id="MoreStructures_EdgeListGraphs_EdgeListGraph_GetAdjacentVerticesAndEdges_" data-uid="MoreStructures.EdgeListGraphs.EdgeListGraph.GetAdjacentVerticesAndEdges*"></a>
+  <h4 id="MoreStructures_EdgeListGraphs_EdgeListGraph_GetAdjacentVerticesAndEdges_System_Int32_System_Boolean_" data-uid="MoreStructures.EdgeListGraphs.EdgeListGraph.GetAdjacentVerticesAndEdges(System.Int32,System.Boolean)">GetAdjacentVerticesAndEdges(Int32, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;(int vertex, (int edgeStart, int edgeEnd) edge)&gt; GetAdjacentVerticesAndEdges(int start, bool takeIntoAccountEdgeDirection)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">start</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">takeIntoAccountEdgeDirection</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">System.Int32</span>&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_EdgeListGraphs_EdgeListGraph_GetAdjacentVerticesAndEdges_System_Int32_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+ALGORITHM
+<br>
+- Because the edge list is unsorted, and there is no &quot;index&quot; or additional data structure which can help
+  retrieving neighbors quickly, the algorithm has to linearly scan the entire edge list, looking for
+  neighbors.
+</p>
+<p>
+COMPLEXITY
+<br>
+- Checking whether each edge is a neighbor or not only requires comparing the edge start, when taking into
+  account edge directions, or both start and end, when considering edges as undirected.
+<br>
+- Both are constant time operations.
+<br>
+- Therefore Time Complexity is O(e), where e is the number of edges, and Space Complexity is O(1).
+</p>
+</div>
   <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a>
+  </div>
   <div>
       <span class="xref">System.IEquatable&lt;T&gt;</span>
   </div>
@@ -257,7 +334,7 @@ graph is directed. Otherwise, the resulting graph is undirected.</p>
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_EdgeListGraphs_EdgeListGraph.md&amp;value=---%0Auid%3A%20MoreStructures.EdgeListGraphs.EdgeListGraph%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/EdgeListGraphs/EdgeListGraph.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/EdgeListGraphs/EdgeListGraph.cs/#L19" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

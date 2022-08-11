@@ -78,17 +78,17 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MoreStructures.EdgeListGraphs.Visitor.IVisitStrategy">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.Graphs.Visitor.IVisitStrategy">
   
   
-  <h1 id="MoreStructures_EdgeListGraphs_Visitor_IVisitStrategy" data-uid="MoreStructures.EdgeListGraphs.Visitor.IVisitStrategy" class="text-break">Interface IVisitStrategy
+  <h1 id="MoreStructures_Graphs_Visitor_IVisitStrategy" data-uid="MoreStructures.Graphs.Visitor.IVisitStrategy" class="text-break">Interface IVisitStrategy
   </h1>
-  <div class="markdown level0 summary"><p>An algorithm exploring <a class="xref" href="MoreStructures.EdgeListGraphs.EdgeListGraph.html">EdgeListGraph</a> instances.</p>
+  <div class="markdown level0 summary"><p>An algorithm exploring <a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a> instances.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.EdgeListGraphs.Visitor.html">MoreStructures.EdgeListGraphs.Visitor</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.Graphs.Visitor.html">MoreStructures.Graphs.Visitor</a></h6>
   <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
-  <h5 id="MoreStructures_EdgeListGraphs_Visitor_IVisitStrategy_syntax">Syntax</h5>
+  <h5 id="MoreStructures_Graphs_Visitor_IVisitStrategy_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface IVisitStrategy</code></pre>
   </div>
@@ -96,20 +96,20 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_EdgeListGraphs_Visitor_IVisitStrategy_Visit_MoreStructures_EdgeListGraphs_EdgeListGraph_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.EdgeListGraphs.Visitor.IVisitStrategy.Visit(MoreStructures.EdgeListGraphs.EdgeListGraph%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Visitor_IVisitStrategy_Visit_MoreStructures_Graphs_IGraph_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Visitor.IVisitStrategy.Visit(MoreStructures.Graphs.IGraph%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/EdgeListGraphs/Visitor/IVisitStrategy.cs/#L23">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Visitor/IVisitStrategy.cs/#L23">View Source</a>
   </span>
-  <a id="MoreStructures_EdgeListGraphs_Visitor_IVisitStrategy_Visit_" data-uid="MoreStructures.EdgeListGraphs.Visitor.IVisitStrategy.Visit*"></a>
-  <h4 id="MoreStructures_EdgeListGraphs_Visitor_IVisitStrategy_Visit_MoreStructures_EdgeListGraphs_EdgeListGraph_System_Int32_" data-uid="MoreStructures.EdgeListGraphs.Visitor.IVisitStrategy.Visit(MoreStructures.EdgeListGraphs.EdgeListGraph,System.Int32)">Visit(EdgeListGraph, Int32)</h4>
+  <a id="MoreStructures_Graphs_Visitor_IVisitStrategy_Visit_" data-uid="MoreStructures.Graphs.Visitor.IVisitStrategy.Visit*"></a>
+  <h4 id="MoreStructures_Graphs_Visitor_IVisitStrategy_Visit_MoreStructures_Graphs_IGraph_System_Int32_" data-uid="MoreStructures.Graphs.Visitor.IVisitStrategy.Visit(MoreStructures.Graphs.IGraph,System.Int32)">Visit(IGraph, Int32)</h4>
   <div class="markdown level1 summary"><p>Explores the provided <code data-dev-comment-type="paramref" class="paramref">graph</code>, returning the list of vertices which are reachable from the
 vertex with id <code data-dev-comment-type="paramref" class="paramref">start</code>, along the edges of the graph.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IEnumerable&lt;int&gt; Visit(EdgeListGraph graph, int start)</code></pre>
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;int&gt; Visit(IGraph graph, int start)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,10 +122,10 @@ vertex with id <code data-dev-comment-type="paramref" class="paramref">start</co
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MoreStructures.EdgeListGraphs.EdgeListGraph.html">EdgeListGraph</a></td>
+        <td><a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a></td>
         <td><span class="parametername">graph</span></td>
-        <td><p>The <a class="xref" href="MoreStructures.EdgeListGraphs.EdgeListGraph.html">EdgeListGraph</a> to be explored.
-Can be considered directed or undirected, depending on the actual exploration implementation.</p>
+        <td><p>The <a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a> instance to be explored.
+Can be considered directed or undirected, depending on the actual exploration implementation and visit.</p>
 </td>
       </tr>
       <tr>
@@ -148,7 +148,7 @@ Different starting points will result into different sequences (by items and/or 
     <tbody>
       <tr>
         <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
-        <td><p>The sequence of vertices</p>
+        <td><p>The sequence of vertices, lazily generated.</p>
 </td>
       </tr>
     </tbody>
@@ -165,10 +165,10 @@ Different starting points will result into different sequences (by items and/or 
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_EdgeListGraphs_Visitor_IVisitStrategy.md&amp;value=---%0Auid%3A%20MoreStructures.EdgeListGraphs.Visitor.IVisitStrategy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Visitor_IVisitStrategy.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Visitor.IVisitStrategy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/EdgeListGraphs/Visitor/IVisitStrategy.cs/#L6" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Visitor/IVisitStrategy.cs/#L6" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

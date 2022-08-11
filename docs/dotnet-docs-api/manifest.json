@@ -330,43 +330,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.EdgeListGraphs.EdgeListGraph.html",
-          "hash": "MkeihD1eILSCpjveYuMb04NgZqaWQ0Sf7GAZfto5MaU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.html",
-          "hash": "Hk25FtoTncU9HxOikyZ8h8wfPbxh5zjhIibVI348L6g="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MoreStructures.EdgeListGraphs.Visitor.IVisitStrategy.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MoreStructures.EdgeListGraphs.Visitor.IVisitStrategy.html",
-          "hash": "nQBinHufXa8RxPKFlazc4LqV09oPSyGXFk2m6CU5Cno="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MoreStructures.EdgeListGraphs.Visitor.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MoreStructures.EdgeListGraphs.Visitor.html",
-          "hash": "b/z2aLbFrMGKwi8TayLQGTI339ObNfGYVELfwpaN1Qg="
+          "hash": "vhoJrCTjVZfDkTpqJOwNVK9njbVlks3rdG2VHTacAcI="
         }
       },
       "is_incremental": false,
@@ -379,6 +343,66 @@
         ".html": {
           "relative_path": "api/MoreStructures.EdgeListGraphs.html",
           "hash": "EZPbIpgPA5s+a1JwwGjly56+dzMrSJKgSIwyo7rrrs0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Graphs.IGraph.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Graphs.IGraph.html",
+          "hash": "Q7uVYJECWRk65++7b9QHzHndMrgj1uto7rlk+Calw6g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.html",
+          "hash": "pij8BOockkdBVnCLaUzIUxzOkmfLgETkvtCEz3/ioPU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Graphs.Visitor.IVisitStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Graphs.Visitor.IVisitStrategy.html",
+          "hash": "eKGXRXG+o3zsq/iIbSBIOPdaQkF5HpQ4sJKAXtrztkA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Graphs.Visitor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Graphs.Visitor.html",
+          "hash": "BEPKFAuid19s9C/ivYlFgzwvRX/voIIIBCbQogHEQmk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Graphs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Graphs.html",
+          "hash": "Pdt8FyCQa2pOlS64UMbg9XuyJMWjW11Sqa59nAzBccQ="
         }
       },
       "is_incremental": false,
@@ -2042,11 +2066,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MoreStructures.Tests.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests.yml",
+      "source_relative_path": "api/MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MoreStructures.Tests.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests.html",
-          "hash": "40Mj2hM1cR3JIRQtBW1wpXr8vKe8U8Yc7fr1UDKnQco="
+          "relative_path": "api/MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests.html",
+          "hash": "SYGpEm0OuT388fGhvWHSgDH0xzlxPOkRzVQM0a7uNwE="
         }
       },
       "is_incremental": false,
@@ -2054,11 +2078,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.yml",
+      "source_relative_path": "api/MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.html",
-          "hash": "dINmSjuKrFEQX5lCYlDupAPwuaMJlVOihHpT6i3rNao="
+          "relative_path": "api/MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.html",
+          "hash": "PcoVuR0C81MqtjIudM2+Q85W+S2/5xMruK/ph2EkOkw="
         }
       },
       "is_incremental": false,
@@ -2066,11 +2090,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MoreStructures.Tests.EdgeListGraphs.Visitor.yml",
+      "source_relative_path": "api/MoreStructures.Tests.Graphs.Visitor.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MoreStructures.Tests.EdgeListGraphs.Visitor.html",
-          "hash": "aX0VTitCxrZnaOuaQm5U3LO/+zu06bPr4Js84++Jcx0="
+          "relative_path": "api/MoreStructures.Tests.Graphs.Visitor.html",
+          "hash": "O2Vj6AV2N28QsYCOYUG2ySwn9HIh5/nNB4JEZ7VxyI8="
         }
       },
       "is_incremental": false,
@@ -3906,7 +3930,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "DF+0CLK6YtXfy+erHQVt48hIPti3g/4HKsZCZL34gLs="
+          "hash": "kLJdPTOc/P9Kv0O7ChBWvtAecISNh0oD96svSAFPGYg="
         }
       },
       "is_incremental": false,
@@ -3981,7 +4005,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 323,
+          "total_file_count": 325,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

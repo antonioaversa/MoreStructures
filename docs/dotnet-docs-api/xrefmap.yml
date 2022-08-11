@@ -1510,6 +1510,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.EdgeListGraphs.EdgeListGraph.Edges
   nameWithType: EdgeListGraph.Edges
+- uid: MoreStructures.EdgeListGraphs.EdgeListGraph.GetAdjacentVerticesAndEdges(System.Int32,System.Boolean)
+  name: GetAdjacentVerticesAndEdges(Int32, Boolean)
+  href: api/MoreStructures.EdgeListGraphs.EdgeListGraph.html#MoreStructures_EdgeListGraphs_EdgeListGraph_GetAdjacentVerticesAndEdges_System_Int32_System_Boolean_
+  commentId: M:MoreStructures.EdgeListGraphs.EdgeListGraph.GetAdjacentVerticesAndEdges(System.Int32,System.Boolean)
+  fullName: MoreStructures.EdgeListGraphs.EdgeListGraph.GetAdjacentVerticesAndEdges(System.Int32, System.Boolean)
+  nameWithType: EdgeListGraph.GetAdjacentVerticesAndEdges(Int32, Boolean)
+- uid: MoreStructures.EdgeListGraphs.EdgeListGraph.GetAdjacentVerticesAndEdges*
+  name: GetAdjacentVerticesAndEdges
+  href: api/MoreStructures.EdgeListGraphs.EdgeListGraph.html#MoreStructures_EdgeListGraphs_EdgeListGraph_GetAdjacentVerticesAndEdges_
+  commentId: Overload:MoreStructures.EdgeListGraphs.EdgeListGraph.GetAdjacentVerticesAndEdges
+  isSpec: "True"
+  fullName: MoreStructures.EdgeListGraphs.EdgeListGraph.GetAdjacentVerticesAndEdges
+  nameWithType: EdgeListGraph.GetAdjacentVerticesAndEdges
 - uid: MoreStructures.EdgeListGraphs.EdgeListGraph.NumberOfVertices
   name: NumberOfVertices
   href: api/MoreStructures.EdgeListGraphs.EdgeListGraph.html#MoreStructures_EdgeListGraphs_EdgeListGraph_NumberOfVertices
@@ -1523,75 +1536,100 @@ references:
   isSpec: "True"
   fullName: MoreStructures.EdgeListGraphs.EdgeListGraph.NumberOfVertices
   nameWithType: EdgeListGraph.NumberOfVertices
-- uid: MoreStructures.EdgeListGraphs.Visitor
-  name: MoreStructures.EdgeListGraphs.Visitor
-  href: api/MoreStructures.EdgeListGraphs.Visitor.html
-  commentId: N:MoreStructures.EdgeListGraphs.Visitor
-  fullName: MoreStructures.EdgeListGraphs.Visitor
-  nameWithType: MoreStructures.EdgeListGraphs.Visitor
-- uid: MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit
+- uid: MoreStructures.Graphs
+  name: MoreStructures.Graphs
+  href: api/MoreStructures.Graphs.html
+  commentId: N:MoreStructures.Graphs
+  fullName: MoreStructures.Graphs
+  nameWithType: MoreStructures.Graphs
+- uid: MoreStructures.Graphs.IGraph
+  name: IGraph
+  href: api/MoreStructures.Graphs.IGraph.html
+  commentId: T:MoreStructures.Graphs.IGraph
+  fullName: MoreStructures.Graphs.IGraph
+  nameWithType: IGraph
+- uid: MoreStructures.Graphs.IGraph.GetAdjacentVerticesAndEdges(System.Int32,System.Boolean)
+  name: GetAdjacentVerticesAndEdges(Int32, Boolean)
+  href: api/MoreStructures.Graphs.IGraph.html#MoreStructures_Graphs_IGraph_GetAdjacentVerticesAndEdges_System_Int32_System_Boolean_
+  commentId: M:MoreStructures.Graphs.IGraph.GetAdjacentVerticesAndEdges(System.Int32,System.Boolean)
+  fullName: MoreStructures.Graphs.IGraph.GetAdjacentVerticesAndEdges(System.Int32, System.Boolean)
+  nameWithType: IGraph.GetAdjacentVerticesAndEdges(Int32, Boolean)
+- uid: MoreStructures.Graphs.IGraph.GetAdjacentVerticesAndEdges*
+  name: GetAdjacentVerticesAndEdges
+  href: api/MoreStructures.Graphs.IGraph.html#MoreStructures_Graphs_IGraph_GetAdjacentVerticesAndEdges_
+  commentId: Overload:MoreStructures.Graphs.IGraph.GetAdjacentVerticesAndEdges
+  isSpec: "True"
+  fullName: MoreStructures.Graphs.IGraph.GetAdjacentVerticesAndEdges
+  nameWithType: IGraph.GetAdjacentVerticesAndEdges
+- uid: MoreStructures.Graphs.Visitor
+  name: MoreStructures.Graphs.Visitor
+  href: api/MoreStructures.Graphs.Visitor.html
+  commentId: N:MoreStructures.Graphs.Visitor
+  fullName: MoreStructures.Graphs.Visitor
+  nameWithType: MoreStructures.Graphs.Visitor
+- uid: MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit
   name: FullyRecursiveHashSetBasedGraphVisit
-  href: api/MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.html
-  commentId: T:MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit
-  fullName: MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit
+  href: api/MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.html
+  commentId: T:MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit
+  fullName: MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit
   nameWithType: FullyRecursiveHashSetBasedGraphVisit
-- uid: MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.#ctor(System.Boolean)
+- uid: MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.#ctor(System.Boolean)
   name: FullyRecursiveHashSetBasedGraphVisit(Boolean)
-  href: api/MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.html#MoreStructures_EdgeListGraphs_Visitor_FullyRecursiveHashSetBasedGraphVisit__ctor_System_Boolean_
-  commentId: M:MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.#ctor(System.Boolean)
-  fullName: MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.FullyRecursiveHashSetBasedGraphVisit(System.Boolean)
+  href: api/MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.html#MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit__ctor_System_Boolean_
+  commentId: M:MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.#ctor(System.Boolean)
+  fullName: MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.FullyRecursiveHashSetBasedGraphVisit(System.Boolean)
   nameWithType: FullyRecursiveHashSetBasedGraphVisit.FullyRecursiveHashSetBasedGraphVisit(Boolean)
-- uid: MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.#ctor*
+- uid: MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.#ctor*
   name: FullyRecursiveHashSetBasedGraphVisit
-  href: api/MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.html#MoreStructures_EdgeListGraphs_Visitor_FullyRecursiveHashSetBasedGraphVisit__ctor_
-  commentId: Overload:MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.#ctor
+  href: api/MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.html#MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit__ctor_
+  commentId: Overload:MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.#ctor
   isSpec: "True"
-  fullName: MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.FullyRecursiveHashSetBasedGraphVisit
+  fullName: MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.FullyRecursiveHashSetBasedGraphVisit
   nameWithType: FullyRecursiveHashSetBasedGraphVisit.FullyRecursiveHashSetBasedGraphVisit
-- uid: MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.DirectedGraph
+- uid: MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.DirectedGraph
   name: DirectedGraph
-  href: api/MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.html#MoreStructures_EdgeListGraphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_DirectedGraph
-  commentId: P:MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.DirectedGraph
-  fullName: MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.DirectedGraph
+  href: api/MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.html#MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_DirectedGraph
+  commentId: P:MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.DirectedGraph
+  fullName: MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.DirectedGraph
   nameWithType: FullyRecursiveHashSetBasedGraphVisit.DirectedGraph
-- uid: MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.DirectedGraph*
+- uid: MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.DirectedGraph*
   name: DirectedGraph
-  href: api/MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.html#MoreStructures_EdgeListGraphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_DirectedGraph_
-  commentId: Overload:MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.DirectedGraph
+  href: api/MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.html#MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_DirectedGraph_
+  commentId: Overload:MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.DirectedGraph
   isSpec: "True"
-  fullName: MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.DirectedGraph
+  fullName: MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.DirectedGraph
   nameWithType: FullyRecursiveHashSetBasedGraphVisit.DirectedGraph
-- uid: MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.Visit(MoreStructures.EdgeListGraphs.EdgeListGraph,System.Int32)
-  name: Visit(EdgeListGraph, Int32)
-  href: api/MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.html#MoreStructures_EdgeListGraphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_Visit_MoreStructures_EdgeListGraphs_EdgeListGraph_System_Int32_
-  commentId: M:MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.Visit(MoreStructures.EdgeListGraphs.EdgeListGraph,System.Int32)
-  fullName: MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.Visit(MoreStructures.EdgeListGraphs.EdgeListGraph, System.Int32)
-  nameWithType: FullyRecursiveHashSetBasedGraphVisit.Visit(EdgeListGraph, Int32)
-- uid: MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.Visit*
+- uid: MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.Visit(MoreStructures.Graphs.IGraph,System.Int32)
+  name: Visit(IGraph, Int32)
+  href: api/MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.html#MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_Visit_MoreStructures_Graphs_IGraph_System_Int32_
+  commentId: M:MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.Visit(MoreStructures.Graphs.IGraph,System.Int32)
+  fullName: MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.Visit(MoreStructures.Graphs.IGraph, System.Int32)
+  nameWithType: FullyRecursiveHashSetBasedGraphVisit.Visit(IGraph, Int32)
+- uid: MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.Visit*
   name: Visit
-  href: api/MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.html#MoreStructures_EdgeListGraphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_Visit_
-  commentId: Overload:MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.Visit
+  href: api/MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.html#MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_Visit_
+  commentId: Overload:MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.Visit
   isSpec: "True"
-  fullName: MoreStructures.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.Visit
+  fullName: MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.Visit
   nameWithType: FullyRecursiveHashSetBasedGraphVisit.Visit
-- uid: MoreStructures.EdgeListGraphs.Visitor.IVisitStrategy
+- uid: MoreStructures.Graphs.Visitor.IVisitStrategy
   name: IVisitStrategy
-  href: api/MoreStructures.EdgeListGraphs.Visitor.IVisitStrategy.html
-  commentId: T:MoreStructures.EdgeListGraphs.Visitor.IVisitStrategy
-  fullName: MoreStructures.EdgeListGraphs.Visitor.IVisitStrategy
+  href: api/MoreStructures.Graphs.Visitor.IVisitStrategy.html
+  commentId: T:MoreStructures.Graphs.Visitor.IVisitStrategy
+  fullName: MoreStructures.Graphs.Visitor.IVisitStrategy
   nameWithType: IVisitStrategy
-- uid: MoreStructures.EdgeListGraphs.Visitor.IVisitStrategy.Visit(MoreStructures.EdgeListGraphs.EdgeListGraph,System.Int32)
-  name: Visit(EdgeListGraph, Int32)
-  href: api/MoreStructures.EdgeListGraphs.Visitor.IVisitStrategy.html#MoreStructures_EdgeListGraphs_Visitor_IVisitStrategy_Visit_MoreStructures_EdgeListGraphs_EdgeListGraph_System_Int32_
-  commentId: M:MoreStructures.EdgeListGraphs.Visitor.IVisitStrategy.Visit(MoreStructures.EdgeListGraphs.EdgeListGraph,System.Int32)
-  fullName: MoreStructures.EdgeListGraphs.Visitor.IVisitStrategy.Visit(MoreStructures.EdgeListGraphs.EdgeListGraph, System.Int32)
-  nameWithType: IVisitStrategy.Visit(EdgeListGraph, Int32)
-- uid: MoreStructures.EdgeListGraphs.Visitor.IVisitStrategy.Visit*
+- uid: MoreStructures.Graphs.Visitor.IVisitStrategy.Visit(MoreStructures.Graphs.IGraph,System.Int32)
+  name: Visit(IGraph, Int32)
+  href: api/MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_Visit_MoreStructures_Graphs_IGraph_System_Int32_
+  commentId: M:MoreStructures.Graphs.Visitor.IVisitStrategy.Visit(MoreStructures.Graphs.IGraph,System.Int32)
+  fullName: MoreStructures.Graphs.Visitor.IVisitStrategy.Visit(MoreStructures.Graphs.IGraph, System.Int32)
+  nameWithType: IVisitStrategy.Visit(IGraph, Int32)
+- uid: MoreStructures.Graphs.Visitor.IVisitStrategy.Visit*
   name: Visit
-  href: api/MoreStructures.EdgeListGraphs.Visitor.IVisitStrategy.html#MoreStructures_EdgeListGraphs_Visitor_IVisitStrategy_Visit_
-  commentId: Overload:MoreStructures.EdgeListGraphs.Visitor.IVisitStrategy.Visit
+  href: api/MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_Visit_
+  commentId: Overload:MoreStructures.Graphs.Visitor.IVisitStrategy.Visit
   isSpec: "True"
-  fullName: MoreStructures.EdgeListGraphs.Visitor.IVisitStrategy.Visit
+  fullName: MoreStructures.Graphs.Visitor.IVisitStrategy.Visit
   nameWithType: IVisitStrategy.Visit
 - uid: MoreStructures.KnuthMorrisPratt.Borders
   name: MoreStructures.KnuthMorrisPratt.Borders
@@ -6775,81 +6813,81 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.CountTrees.CountTreeNodeTests.WrappedNode_IsPreserved
   nameWithType: CountTreeNodeTests.WrappedNode_IsPreserved
-- uid: MoreStructures.Tests.EdgeListGraphs.Visitor
-  name: MoreStructures.Tests.EdgeListGraphs.Visitor
-  href: api/MoreStructures.Tests.EdgeListGraphs.Visitor.html
-  commentId: N:MoreStructures.Tests.EdgeListGraphs.Visitor
-  fullName: MoreStructures.Tests.EdgeListGraphs.Visitor
-  nameWithType: MoreStructures.Tests.EdgeListGraphs.Visitor
-- uid: MoreStructures.Tests.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests
+- uid: MoreStructures.Tests.Graphs.Visitor
+  name: MoreStructures.Tests.Graphs.Visitor
+  href: api/MoreStructures.Tests.Graphs.Visitor.html
+  commentId: N:MoreStructures.Tests.Graphs.Visitor
+  fullName: MoreStructures.Tests.Graphs.Visitor
+  nameWithType: MoreStructures.Tests.Graphs.Visitor
+- uid: MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests
   name: FullyRecursiveHashSetBasedGraphVisitTests
-  href: api/MoreStructures.Tests.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests.html
-  commentId: T:MoreStructures.Tests.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests
-  fullName: MoreStructures.Tests.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests
+  href: api/MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests.html
+  commentId: T:MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests
+  fullName: MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests
   nameWithType: FullyRecursiveHashSetBasedGraphVisitTests
-- uid: MoreStructures.Tests.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests.#ctor
+- uid: MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests.#ctor
   name: FullyRecursiveHashSetBasedGraphVisitTests()
-  href: api/MoreStructures.Tests.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests.html#MoreStructures_Tests_EdgeListGraphs_Visitor_FullyRecursiveHashSetBasedGraphVisitTests__ctor
-  commentId: M:MoreStructures.Tests.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests.#ctor
-  fullName: MoreStructures.Tests.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests.FullyRecursiveHashSetBasedGraphVisitTests()
+  href: api/MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests.html#MoreStructures_Tests_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisitTests__ctor
+  commentId: M:MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests.#ctor
+  fullName: MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests.FullyRecursiveHashSetBasedGraphVisitTests()
   nameWithType: FullyRecursiveHashSetBasedGraphVisitTests.FullyRecursiveHashSetBasedGraphVisitTests()
-- uid: MoreStructures.Tests.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests.#ctor*
+- uid: MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests.#ctor*
   name: FullyRecursiveHashSetBasedGraphVisitTests
-  href: api/MoreStructures.Tests.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests.html#MoreStructures_Tests_EdgeListGraphs_Visitor_FullyRecursiveHashSetBasedGraphVisitTests__ctor_
-  commentId: Overload:MoreStructures.Tests.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests.#ctor
+  href: api/MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests.html#MoreStructures_Tests_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisitTests__ctor_
+  commentId: Overload:MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests.#ctor
   isSpec: "True"
-  fullName: MoreStructures.Tests.EdgeListGraphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests.FullyRecursiveHashSetBasedGraphVisitTests
+  fullName: MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests.FullyRecursiveHashSetBasedGraphVisitTests
   nameWithType: FullyRecursiveHashSetBasedGraphVisitTests.FullyRecursiveHashSetBasedGraphVisitTests
-- uid: MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests
+- uid: MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests
   name: VisitStrategyTests
-  href: api/MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.html
-  commentId: T:MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests
-  fullName: MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests
+  href: api/MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.html
+  commentId: T:MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests
+  fullName: MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests
   nameWithType: VisitStrategyTests
-- uid: MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.#ctor(Func{System.Boolean,MoreStructures.EdgeListGraphs.Visitor.IVisitStrategy})
+- uid: MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.#ctor(Func{System.Boolean,MoreStructures.Graphs.Visitor.IVisitStrategy})
   name: VisitStrategyTests(Func<Boolean, IVisitStrategy>)
-  href: api/MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.html#MoreStructures_Tests_EdgeListGraphs_Visitor_VisitStrategyTests__ctor_Func_System_Boolean_MoreStructures_EdgeListGraphs_Visitor_IVisitStrategy__
-  commentId: M:MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.#ctor(Func{System.Boolean,MoreStructures.EdgeListGraphs.Visitor.IVisitStrategy})
+  href: api/MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.html#MoreStructures_Tests_Graphs_Visitor_VisitStrategyTests__ctor_Func_System_Boolean_MoreStructures_Graphs_Visitor_IVisitStrategy__
+  commentId: M:MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.#ctor(Func{System.Boolean,MoreStructures.Graphs.Visitor.IVisitStrategy})
   name.vb: VisitStrategyTests(Func(Of Boolean, IVisitStrategy))
-  fullName: MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.VisitStrategyTests(Func<System.Boolean, MoreStructures.EdgeListGraphs.Visitor.IVisitStrategy>)
-  fullName.vb: MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.VisitStrategyTests(Func(Of System.Boolean, MoreStructures.EdgeListGraphs.Visitor.IVisitStrategy))
+  fullName: MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.VisitStrategyTests(Func<System.Boolean, MoreStructures.Graphs.Visitor.IVisitStrategy>)
+  fullName.vb: MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.VisitStrategyTests(Func(Of System.Boolean, MoreStructures.Graphs.Visitor.IVisitStrategy))
   nameWithType: VisitStrategyTests.VisitStrategyTests(Func<Boolean, IVisitStrategy>)
   nameWithType.vb: VisitStrategyTests.VisitStrategyTests(Func(Of Boolean, IVisitStrategy))
-- uid: MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.#ctor*
+- uid: MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.#ctor*
   name: VisitStrategyTests
-  href: api/MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.html#MoreStructures_Tests_EdgeListGraphs_Visitor_VisitStrategyTests__ctor_
-  commentId: Overload:MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.#ctor
+  href: api/MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.html#MoreStructures_Tests_Graphs_Visitor_VisitStrategyTests__ctor_
+  commentId: Overload:MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.#ctor
   isSpec: "True"
-  fullName: MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.VisitStrategyTests
+  fullName: MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.VisitStrategyTests
   nameWithType: VisitStrategyTests.VisitStrategyTests
-- uid: MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.Explore_IsCorrect(System.String,System.Int32,System.Int32[],System.Int32[],System.Int32,System.Int32[],System.Int32[])
+- uid: MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.Explore_IsCorrect(System.String,System.Int32,System.Int32[],System.Int32[],System.Int32,System.Int32[],System.Int32[])
   name: Explore_IsCorrect(String, Int32, Int32[], Int32[], Int32, Int32[], Int32[])
-  href: api/MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.html#MoreStructures_Tests_EdgeListGraphs_Visitor_VisitStrategyTests_Explore_IsCorrect_System_String_System_Int32_System_Int32___System_Int32___System_Int32_System_Int32___System_Int32___
-  commentId: M:MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.Explore_IsCorrect(System.String,System.Int32,System.Int32[],System.Int32[],System.Int32,System.Int32[],System.Int32[])
+  href: api/MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.html#MoreStructures_Tests_Graphs_Visitor_VisitStrategyTests_Explore_IsCorrect_System_String_System_Int32_System_Int32___System_Int32___System_Int32_System_Int32___System_Int32___
+  commentId: M:MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.Explore_IsCorrect(System.String,System.Int32,System.Int32[],System.Int32[],System.Int32,System.Int32[],System.Int32[])
   name.vb: Explore_IsCorrect(String, Int32, Int32(), Int32(), Int32, Int32(), Int32())
-  fullName: MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.Explore_IsCorrect(System.String, System.Int32, System.Int32[], System.Int32[], System.Int32, System.Int32[], System.Int32[])
-  fullName.vb: MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.Explore_IsCorrect(System.String, System.Int32, System.Int32(), System.Int32(), System.Int32, System.Int32(), System.Int32())
+  fullName: MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.Explore_IsCorrect(System.String, System.Int32, System.Int32[], System.Int32[], System.Int32, System.Int32[], System.Int32[])
+  fullName.vb: MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.Explore_IsCorrect(System.String, System.Int32, System.Int32(), System.Int32(), System.Int32, System.Int32(), System.Int32())
   nameWithType: VisitStrategyTests.Explore_IsCorrect(String, Int32, Int32[], Int32[], Int32, Int32[], Int32[])
   nameWithType.vb: VisitStrategyTests.Explore_IsCorrect(String, Int32, Int32(), Int32(), Int32, Int32(), Int32())
-- uid: MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.Explore_IsCorrect*
+- uid: MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.Explore_IsCorrect*
   name: Explore_IsCorrect
-  href: api/MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.html#MoreStructures_Tests_EdgeListGraphs_Visitor_VisitStrategyTests_Explore_IsCorrect_
-  commentId: Overload:MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.Explore_IsCorrect
+  href: api/MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.html#MoreStructures_Tests_Graphs_Visitor_VisitStrategyTests_Explore_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.Explore_IsCorrect
   isSpec: "True"
-  fullName: MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.Explore_IsCorrect
+  fullName: MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.Explore_IsCorrect
   nameWithType: VisitStrategyTests.Explore_IsCorrect
-- uid: MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.VisitorBuilder
+- uid: MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.VisitorBuilder
   name: VisitorBuilder
-  href: api/MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.html#MoreStructures_Tests_EdgeListGraphs_Visitor_VisitStrategyTests_VisitorBuilder
-  commentId: P:MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.VisitorBuilder
-  fullName: MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.VisitorBuilder
+  href: api/MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.html#MoreStructures_Tests_Graphs_Visitor_VisitStrategyTests_VisitorBuilder
+  commentId: P:MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.VisitorBuilder
+  fullName: MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.VisitorBuilder
   nameWithType: VisitStrategyTests.VisitorBuilder
-- uid: MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.VisitorBuilder*
+- uid: MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.VisitorBuilder*
   name: VisitorBuilder
-  href: api/MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.html#MoreStructures_Tests_EdgeListGraphs_Visitor_VisitStrategyTests_VisitorBuilder_
-  commentId: Overload:MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.VisitorBuilder
+  href: api/MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.html#MoreStructures_Tests_Graphs_Visitor_VisitStrategyTests_VisitorBuilder_
+  commentId: Overload:MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.VisitorBuilder
   isSpec: "True"
-  fullName: MoreStructures.Tests.EdgeListGraphs.Visitor.VisitStrategyTests.VisitorBuilder
+  fullName: MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.VisitorBuilder
   nameWithType: VisitStrategyTests.VisitorBuilder
 - uid: MoreStructures.Tests.KnuthMorrisPratt.Borders
   name: MoreStructures.Tests.KnuthMorrisPratt.Borders
