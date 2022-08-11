@@ -1,6 +1,6 @@
-﻿using MoreStructures.EdgeListGraphs.Visitor;
+﻿using MoreStructures.Graphs.Visitor;
 
-namespace MoreStructures.Tests.EdgeListGraphs.Visitor;
+namespace MoreStructures.Tests.Graphs.Visitor;
 
 [TestClass]
 public class FullyRecursiveHashSetBasedGraphVisitTests : VisitStrategyTests
