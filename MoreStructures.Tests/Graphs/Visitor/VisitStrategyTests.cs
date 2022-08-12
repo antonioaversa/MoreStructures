@@ -1,14 +1,18 @@
-﻿using MoreStructures.EdgeListGraphs;
+﻿using MoreStructures.Graphs;
 using MoreStructures.Graphs.Visitor;
 
 namespace MoreStructures.Tests.Graphs.Visitor;
 
 public abstract class VisitStrategyTests
 {
+    protected Func<int, IList<(int, int)>, IGraph> GraphBuilder { get; }
     protected Func<bool, IVisitStrategy> VisitorBuilder { get; }
 
-    protected VisitStrategyTests(Func<bool, IVisitStrategy> visitorBuilder)
+    protected VisitStrategyTests(
+        Func<int, IList<(int, int)>, IGraph> graphBuilder, 
+        Func<bool, IVisitStrategy> visitorBuilder)
     {
+        GraphBuilder = graphBuilder;
         VisitorBuilder = visitorBuilder;
     }
 
@@ -70,13 +74,13 @@ public abstract class VisitStrategyTests
         new int[] { 0, 1 }, new int[] { 0, 1, 2 })]
     [DataRow("3 V, 2 pointing to global sink", 3, new int[] { 0, 2 }, new int[] { 1, 1 }, 1,
         new int[] { 1 }, new int[] { 1, 0, 2 })]
-    [DataRow("4 V, 2 pointing to 2-chain jumping back", 3, new int[] { 0, 1, 2, 3 }, 
+    [DataRow("4 V, 2 pointing to 2-chain jumping back", 4, new int[] { 0, 1, 2, 3 }, 
         new int[] { 1, 3, 1, 2 }, 0, 
         new int[] { 0, 1, 3, 2 }, new int[] { 0, 1, 3, 2 })]
-    [DataRow("4 V, 2 pointing to 2-chain jumping back", 3, new int[] { 0, 1, 2, 3 },
+    [DataRow("4 V, 2 pointing to 2-chain jumping back", 4, new int[] { 0, 1, 2, 3 },
         new int[] { 1, 3, 1, 2 }, 1,
         new int[] { 1, 3, 2 }, new int[] { 1, 0, 2, 3 })]
-    [DataRow("4 V, 2 pointing to 2-chain jumping back", 3, new int[] { 0, 1, 2, 3 },
+    [DataRow("4 V, 2 pointing to 2-chain jumping back", 4, new int[] { 0, 1, 2, 3 },
         new int[] { 1, 3, 1, 2 }, 2,
         new int[] { 2, 1, 3 }, new int[] { 2, 1, 0, 3 })]
     [DataTestMethod]
@@ -84,7 +88,7 @@ public abstract class VisitStrategyTests
         string graphDescription,int numberOfVertices, int[] starts, int[] ends, int start,
         int[] expectedDirectedGraphResult, int[] expectedUndirectedGraphResult)
     {
-        var graph = new EdgeListGraph(numberOfVertices, starts.Zip(ends).ToList());
+        var graph = GraphBuilder(numberOfVertices, starts.Zip(ends).ToList());
         var directedGraphVisitor = VisitorBuilder(true);
         var directedGraphResult = directedGraphVisitor.Visit(graph, start);
         Assert.IsTrue(

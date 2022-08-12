@@ -1,4 +1,5 @@
-﻿using MoreStructures.Graphs;
+﻿using MoreStructures.AdjacencyListGraphs;
+using MoreStructures.Graphs;
 
 namespace MoreStructures.EdgeListGraphs;
 
@@ -13,9 +14,32 @@ namespace MoreStructures.EdgeListGraphs;
 /// extremes of the edge. Edges can be considered as directional or not, depending on the scenario.
 /// </param>
 /// <remarks>
-/// If the edges are considered directional, i.e. (s, e) is considered as a different edge from (e, s), the resulting
-/// graph is directed. Otherwise, the resulting graph is undirected.
+/// - If the edges are considered directional, i.e. (s, e) is considered as a different edge from (e, s), the resulting
+///   graph is directed. Otherwise, the resulting graph is undirected.
+///   <br/>
+/// - The size of this data structure is proportional to the number of edges of the graph.
+///   <br/>
+/// - So, this graph representation is particularly useful when the number is edges is smaller or proportional to the 
+///   number of vertices in the graph, i.e. when the graph is <b>sparse</b> (i.e. when e is O(v)).
+///   <br/>
+/// - It becomes an expensive representation when the graph is <b>dense</b> (i.e. when e is O(v^2)).
+///   <br/>
+/// - While having size proportional to the number of edges, <see cref="EdgeListGraph"/> is less convenient than 
+///   <see cref="AdjacencyListGraph"/> to run neighborhood-based algorithms, such as discovery, because it makes more 
+///   complex and slower to get neighbors of a vertex.
 /// </remarks>
+/// <example>
+/// The followin graph:
+/// <code>
+///  0 --> 1 &lt;==&gt; 3
+/// | ^   ^     /
+/// | |  /     /
+/// | | /     /
+/// v |/     /
+///  2 &lt;-----
+/// </code>
+/// is represented as <c>EdgeListGraph(4, new { (0, 1), (0, 2), (1, 3), (2, 0), (2, 1), (3, 1), (3, 2) })</c>.
+/// </example>
 public record EdgeListGraph(int NumberOfVertices, IList<(int start, int end)> Edges) : IGraph
 {
     /// <inheritdoc path="//*[not(self::remarks)]" />
