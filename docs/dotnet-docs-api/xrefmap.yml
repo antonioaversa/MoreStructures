@@ -61,6 +61,60 @@ references:
   isSpec: "True"
   fullName: MoreStructures.AdjacencyListGraphs.AdjacencyListGraph.Neighborhoods
   nameWithType: AdjacencyListGraph.Neighborhoods
+- uid: MoreStructures.AdjacencyMatrixGraphs
+  name: MoreStructures.AdjacencyMatrixGraphs
+  href: api/MoreStructures.AdjacencyMatrixGraphs.html
+  commentId: N:MoreStructures.AdjacencyMatrixGraphs
+  fullName: MoreStructures.AdjacencyMatrixGraphs
+  nameWithType: MoreStructures.AdjacencyMatrixGraphs
+- uid: MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph
+  name: AdjacencyMatrixGraph
+  href: api/MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.html
+  commentId: T:MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph
+  fullName: MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph
+  nameWithType: AdjacencyMatrixGraph
+- uid: MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.#ctor(System.Boolean[0:,0:])
+  name: AdjacencyMatrixGraph(Boolean[,])
+  href: api/MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.html#MoreStructures_AdjacencyMatrixGraphs_AdjacencyMatrixGraph__ctor_System_Boolean_0__0___
+  commentId: M:MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.#ctor(System.Boolean[0:,0:])
+  name.vb: AdjacencyMatrixGraph(Boolean(,))
+  fullName: MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.AdjacencyMatrixGraph(System.Boolean[,])
+  fullName.vb: MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.AdjacencyMatrixGraph(System.Boolean(,))
+  nameWithType: AdjacencyMatrixGraph.AdjacencyMatrixGraph(Boolean[,])
+  nameWithType.vb: AdjacencyMatrixGraph.AdjacencyMatrixGraph(Boolean(,))
+- uid: MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.#ctor*
+  name: AdjacencyMatrixGraph
+  href: api/MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.html#MoreStructures_AdjacencyMatrixGraphs_AdjacencyMatrixGraph__ctor_
+  commentId: Overload:MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.AdjacencyMatrixGraph
+  nameWithType: AdjacencyMatrixGraph.AdjacencyMatrixGraph
+- uid: MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.AdjacencyMatrix
+  name: AdjacencyMatrix
+  href: api/MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.html#MoreStructures_AdjacencyMatrixGraphs_AdjacencyMatrixGraph_AdjacencyMatrix
+  commentId: P:MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.AdjacencyMatrix
+  fullName: MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.AdjacencyMatrix
+  nameWithType: AdjacencyMatrixGraph.AdjacencyMatrix
+- uid: MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.AdjacencyMatrix*
+  name: AdjacencyMatrix
+  href: api/MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.html#MoreStructures_AdjacencyMatrixGraphs_AdjacencyMatrixGraph_AdjacencyMatrix_
+  commentId: Overload:MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.AdjacencyMatrix
+  isSpec: "True"
+  fullName: MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.AdjacencyMatrix
+  nameWithType: AdjacencyMatrixGraph.AdjacencyMatrix
+- uid: MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.GetAdjacentVerticesAndEdges(System.Int32,System.Boolean)
+  name: GetAdjacentVerticesAndEdges(Int32, Boolean)
+  href: api/MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.html#MoreStructures_AdjacencyMatrixGraphs_AdjacencyMatrixGraph_GetAdjacentVerticesAndEdges_System_Int32_System_Boolean_
+  commentId: M:MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.GetAdjacentVerticesAndEdges(System.Int32,System.Boolean)
+  fullName: MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.GetAdjacentVerticesAndEdges(System.Int32, System.Boolean)
+  nameWithType: AdjacencyMatrixGraph.GetAdjacentVerticesAndEdges(Int32, Boolean)
+- uid: MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.GetAdjacentVerticesAndEdges*
+  name: GetAdjacentVerticesAndEdges
+  href: api/MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.html#MoreStructures_AdjacencyMatrixGraphs_AdjacencyMatrixGraph_GetAdjacentVerticesAndEdges_
+  commentId: Overload:MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.GetAdjacentVerticesAndEdges
+  isSpec: "True"
+  fullName: MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.GetAdjacentVerticesAndEdges
+  nameWithType: AdjacencyMatrixGraph.GetAdjacentVerticesAndEdges
 - uid: MoreStructures.BurrowsWheelerTransform
   name: MoreStructures.BurrowsWheelerTransform
   href: api/MoreStructures.BurrowsWheelerTransform.html
@@ -6892,6 +6946,25 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyListGraph.FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyListGraph
   nameWithType: FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyListGraph.FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyListGraph
+- uid: MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyMatrixGraph
+  name: FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyMatrixGraph
+  href: api/MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyMatrixGraph.html
+  commentId: T:MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyMatrixGraph
+  fullName: MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyMatrixGraph
+  nameWithType: FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyMatrixGraph
+- uid: MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyMatrixGraph.#ctor
+  name: FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyMatrixGraph()
+  href: api/MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyMatrixGraph.html#MoreStructures_Tests_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyMatrixGraph__ctor
+  commentId: M:MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyMatrixGraph.#ctor
+  fullName: MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyMatrixGraph.FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyMatrixGraph()
+  nameWithType: FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyMatrixGraph.FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyMatrixGraph()
+- uid: MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyMatrixGraph.#ctor*
+  name: FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyMatrixGraph
+  href: api/MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyMatrixGraph.html#MoreStructures_Tests_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyMatrixGraph__ctor_
+  commentId: Overload:MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyMatrixGraph.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyMatrixGraph.FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyMatrixGraph
+  nameWithType: FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyMatrixGraph.FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyMatrixGraph
 - uid: MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests_WithEdgeListGraph
   name: FullyRecursiveHashSetBasedGraphVisitTests_WithEdgeListGraph
   href: api/MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests_WithEdgeListGraph.html

@@ -38,6 +38,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.AdjacencyMatrixGraphs.AdjacencyMatrixGraph.html",
+          "hash": "xldtPC2nPrGkXqPe/KYkcc8qQXT7trghmg8TvPyPDtI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.AdjacencyMatrixGraphs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.AdjacencyMatrixGraphs.html",
+          "hash": "8ywI2NZ1EEIMPQLgVULG6iUK+8zBhB3aGV9r+19Xpcw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.BurrowsWheelerTransform.BWMatrix.yml",
       "output": {
         ".html": {
@@ -2102,6 +2126,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyMatrixGraph.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests_WithAdjacencyMatrixGraph.html",
+          "hash": "UwfUShv81LIdUwmirFRqdreFOmPJ/xxX/iO6ErU+t4I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Tests.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisitTests_WithEdgeListGraph.yml",
       "output": {
         ".html": {
@@ -2118,7 +2154,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.html",
-          "hash": "vpa49foFiCoLoo5FdSFt8uwPDyvdAnNqgtVlZ1IQJqg="
+          "hash": "4KL2EcXgmntAPRK6lrl5Kbp5S7LT8I2seK2OazYIK8g="
         }
       },
       "is_incremental": false,
@@ -2130,7 +2166,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Graphs.Visitor.html",
-          "hash": "o/GBdSPVOK49MpitfD584ran+qod3A10RTpYUmUE0Ao="
+          "hash": "+OieyyPp2K7h14dRpY5dt76M27qkXCKHFGqfZBYLWkI="
         }
       },
       "is_incremental": false,
@@ -3966,7 +4002,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "FeZ3sF96cXHL9LlC99TmqsoZ7ubw0QIDN769pbaSD6k="
+          "hash": "pUMlYDxLvKsWqPDxP7J1lQupF1TfPEL8Q7PtGNTJJkk="
         }
       },
       "is_incremental": false,
@@ -4041,7 +4077,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 328,
+          "total_file_count": 331,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
