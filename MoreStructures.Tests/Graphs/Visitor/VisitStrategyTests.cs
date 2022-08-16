@@ -84,7 +84,7 @@ public abstract class VisitStrategyTests
         new int[] { 1, 3, 1, 2 }, 2,
         new int[] { 2, 1, 3 }, new int[] { 2, 1, 0, 3 })]
     [DataTestMethod]
-    public void Explore_IsCorrect(
+    public void Visit_IsCorrect(
         string graphDescription,int numberOfVertices, int[] starts, int[] ends, int start,
         int[] expectedDirectedGraphResult, int[] expectedUndirectedGraphResult)
     {
@@ -93,7 +93,7 @@ public abstract class VisitStrategyTests
         var directedGraphResult = directedGraphVisitor.Visit(graph, start);
         Assert.IsTrue(
             directedGraphResult.ToHashSet().SetEquals(expectedDirectedGraphResult.ToHashSet()), 
-            $"Failed visit of {graphDescription} as directed graph: " +
+            $"Failed {nameof(IVisitStrategy.Visit)} of {graphDescription} as directed graph: " +
             $"expected [{string.Join(", ", expectedDirectedGraphResult)}], " +
             $"actual: [{string.Join(", ", directedGraphResult)}]");
 
@@ -101,7 +101,40 @@ public abstract class VisitStrategyTests
         var undirectedGraphResult = undirectedGraphVisitor.Visit(graph, start);
         Assert.IsTrue(
             undirectedGraphResult.ToHashSet().SetEquals(expectedUndirectedGraphResult.ToHashSet()),
-            $"Failed visit of {graphDescription} as undirected graph: " +
+            $"Failed {nameof(IVisitStrategy.Visit)} of {graphDescription} as undirected graph: " +
+            $"expected [{string.Join(", ", expectedUndirectedGraphResult)}], " +
+            $"actual: [{string.Join(", ", undirectedGraphResult)}]");
+    }
+
+    [DataRow("5 V, 3 isolated, 1 source to sink", 5, new int[] { 1 }, new int[] { 3 }, 
+        new int[] { 0, 1, 3, 2, 4 }, new int[] { 0, 1, 3, 2, 4 })]
+    [DataRow("5 V, 3 isolated, 1 source to sink inverted", 5, new int[] { 3 }, new int[] { 1 },
+        new int[] { 0, 1, 2, 3, 4 }, new int[] { 0, 1, 3, 2, 4 })]
+    [DataRow("6 V, 1 isolated, 1 source to sink, 1 3-C", 6, new int[] { 2, 3, 4, 5 }, new int[] { 1, 4, 5, 3 },
+        new int[] { 0, 1, 2, 3, 4, 5 }, new int[] { 0, 1, 2, 3, 4, 5 })]
+    [DataRow("5 V, 1 isolated, 1 source to sink, 1 3-C inverted", 6, new int[] { 2, 3, 4, 5 }, new int[] { 1, 5, 3, 4 },
+        new int[] { 0, 1, 2, 3, 5, 4 }, new int[] { 0, 1, 2, 3, 4, 5 })]
+    [DataRow("5 V, 2-roots dag with central vertex", 5, new int[] { 3, 1, 2, 2 }, new int[] { 2, 2, 0, 4 },
+        new int[] { 0, 1, 2, 4, 3 }, new int[] { 0, 2, 1, 3, 4 })]
+    [DataTestMethod]
+    public void DepthFirstSearch_IsCorrect(
+        string graphDescription, int numberOfVertices, int[] starts, int[] ends,
+        int[] expectedDirectedGraphResult, int[] expectedUndirectedGraphResult)
+    {
+        var graph = GraphBuilder(numberOfVertices, starts.Zip(ends).ToList());
+        var directedGraphVisitor = VisitorBuilder(true);
+        var directedGraphResult = directedGraphVisitor.DepthFirstSearch(graph);
+        Assert.IsTrue(
+            directedGraphResult.SequenceEqual(expectedDirectedGraphResult),
+            $"Failed {nameof(IVisitStrategy.DepthFirstSearch)} of {graphDescription} as directed graph: " +
+            $"expected [{string.Join(", ", expectedDirectedGraphResult)}], " +
+            $"actual: [{string.Join(", ", directedGraphResult)}]");
+
+        var undirectedGraphVisitor = VisitorBuilder(false);
+        var undirectedGraphResult = undirectedGraphVisitor.DepthFirstSearch(graph);
+        Assert.IsTrue(
+            undirectedGraphResult.SequenceEqual(expectedUndirectedGraphResult),
+            $"Failed {nameof(IVisitStrategy.DepthFirstSearch)} of {graphDescription} as undirected graph: " +
             $"expected [{string.Join(", ", expectedUndirectedGraphResult)}], " +
             $"actual: [{string.Join(", ", undirectedGraphResult)}]");
     }

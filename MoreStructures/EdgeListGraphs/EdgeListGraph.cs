@@ -44,6 +44,12 @@ public record EdgeListGraph(int NumberOfVertices, IList<(int start, int end)> Ed
 {
     /// <inheritdoc path="//*[not(self::remarks)]" />
     /// <remarks>
+    /// In the <see cref="EdgeListGraph"/> representation, it's explicitely set in <see cref="NumberOfVertices"/>.
+    /// </remarks>
+    public int GetNumberOfVertices() => NumberOfVertices;
+
+    /// <inheritdoc path="//*[not(self::remarks)]" />
+    /// <remarks>
     ///     <para id="algorithm">
     ///     ALGORITHM
     ///     <br/>
