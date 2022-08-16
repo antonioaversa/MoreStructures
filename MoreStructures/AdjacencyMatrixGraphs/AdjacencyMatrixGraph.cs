@@ -19,6 +19,9 @@ namespace MoreStructures.AdjacencyMatrixGraphs;
 ///   the number of vertices v in the graph, and O(v) retrieval of the incoming and outgoing edges is required.
 ///   <br/>
 /// - Performance is O(v), whether <c>takeIntoAccountEdgeDirection</c> is true or not.
+///   <br/>
+/// - Notice that O(v) is worse than O(avg_e), where avg_e is the average number of edges coming out of a vertex, for
+///   sparse graphs, and comparable for dense graphs.
 /// </remarks>
 /// <example>
 /// The followin graph:
@@ -34,7 +37,39 @@ namespace MoreStructures.AdjacencyMatrixGraphs;
 /// </example>
 public record AdjacencyMatrixGraph(bool[,] AdjacencyMatrix) : IGraph
 {
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::remarks)]" />
+    /// <remarks>
+    ///     <para id="algorithm">
+    ///     ALGORITHM
+    ///     <br/>
+    ///     - Unlike the adjacency list representation, the matrix representation allows to access neighborhoods based 
+    ///       on both outgoing and incoming edges of a given vertex (the first is a row, the second is a column).
+    ///       <br/>
+    ///     - Therefore, unlike the adjacency list representation, when the value of 
+    ///       <paramref name="takeIntoAccountEdgeDirection"/> is <see langword="false"/>, a lookup of all neighborhoods
+    ///       defined in the matrix (i.e. a full matrix lookup) is not required.
+    ///       <br/>
+    ///     - Instead, a single additional lookup of the neighborhood of incoming edges, is required, in addition to 
+    ///       the lookup of the of the neighborhood of outgoing edges.
+    ///       <br/>
+    ///     - Notice that, while in the adjacency list representation the neighborhood precisely contains the number of
+    ///       neighboring vertices, avg_e, in the adjacency matrix representation the neighborhood is in the form of a
+    ///       boolean array of v items, where v is the number of vertices of the graph.
+    ///     </para>
+    ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
+    ///     - Direct accesses to the two neighborhoods of interest are constant time operations, since it is about
+    ///       retrieving a row and a column given their index, respectively.
+    ///       <br/>
+    ///     - The matrix is a square matrix of v rows and columns, so each of the neighborhoods to check has v 
+    ///       elements.
+    ///       <br/>
+    ///     - Each neighborhood has to be linearly scanned, looking for <see langword="true"/> values.
+    ///       <br/>
+    ///     - Therefore, Time and Space Complexity (when enumerated) are O(v).
+    ///     </para>
+    /// </remarks>
     public IEnumerable<(int vertex, (int edgeStart, int edgeEnd) edge)> GetAdjacentVerticesAndEdges(
         int start, bool takeIntoAccountEdgeDirection)
     {

@@ -62,7 +62,7 @@ public record AdjacencyListGraph(IList<ISet<int>> Neighborhoods) : IGraph
     ///     - Direct access to the neighborhoods list is a constant time operation.
     ///       <br/>
     ///     - Therefore, when <paramref name="takeIntoAccountEdgeDirection"/> = <see langword="true"/>, Time and Space
-    ///       Complexity (when enumerated) are O(avg_e),where avg_e is the average number of edges coming out of the 
+    ///       Complexity (when enumerated) are O(avg_e), where avg_e is the average number of edges coming out of the 
     ///       <paramref name="start"/> vertex.
     ///       <br/>
     ///     - However, when <paramref name="takeIntoAccountEdgeDirection"/> = <see langword="false"/>, Time Complexity
