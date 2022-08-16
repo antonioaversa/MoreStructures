@@ -24,6 +24,12 @@
 public interface IGraph
 {
     /// <summary>
+    /// Returns the total number of vertices of the graph.
+    /// </summary>
+    /// <returns>A non-negative integer.</returns>
+    int GetNumberOfVertices();
+
+    /// <summary>
     /// Returns the vertices of the graph which are neighbor of the <paramref name="start"/> vertex, each vertex 
     /// together with its incoming or outgoing edge, linking the vertex to the <paramref name="start"/> vertex.
     /// </summary>
@@ -33,7 +39,8 @@ public interface IGraph
     /// </param>
     /// <returns>
     /// A sequence of couples: the first item being the id of the neighboring vertex V found, and the second item being
-    /// the edge which connects the <paramref name="start"/> vertex to V, or viceversa.
+    /// the edge which connects the <paramref name="start"/> vertex to V, or viceversa. The order is <b>undefined</b>, 
+    /// and depends on the implementation.
     /// </returns>
     IEnumerable<(int vertex, (int edgeStart, int edgeEnd) edge)> GetAdjacentVerticesAndEdges(
         int start, bool takeIntoAccountEdgeDirection);
