@@ -5,7 +5,12 @@
 /// already visited vertices, while visiting the graph, and performs the visit recursively.
 /// </summary>
 /// <remarks>
-///     <para id="algoritm">
+///     <para id="advantages">
+///     ADVANTAGES AND DISADVANTAGES
+///     <br/>
+///     Implemented fully recursively, so limited by stack depth and usable with graphs of a "reasonable" size.
+///     </para>
+///     <para id="algorithm">
 ///     ALGORITHM
 ///     <br/>
 ///     - A <see cref="HashSet{T}"/> of the ids of already visited vertices is instantiated to an empty set.
@@ -45,28 +50,20 @@
 ///       and Ta and Sa are the time and space cost of retrieving the neighborhood of a given vertex.
 ///     </para>
 /// </remarks>
-public class FullyRecursiveHashSetBasedGraphVisit : IVisitStrategy
+public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
 {
-    /// <summary>
-    /// Whether the provided <see cref="IGraph"/> should be considered as directed (i.e. edges should be 
-    /// traversed from start to end) or inderected (i.e. edges should be traversed both from start to end and from
-    /// end to start).
-    /// </summary>
-    public bool DirectedGraph { get; }
-
     /// <summary>
     ///     <inheritdoc cref="FullyRecursiveHashSetBasedGraphVisit"/>
     /// </summary>
     /// <param name="directedGraph">
-    ///     <inheritdoc cref="DirectedGraph" path="/summary"/>
+    ///     <inheritdoc/>
     /// </param>
-    public FullyRecursiveHashSetBasedGraphVisit(bool directedGraph)
+    public FullyRecursiveHashSetBasedGraphVisit(bool directedGraph) : base(directedGraph)
     {
-        DirectedGraph = directedGraph;
     }
 
     /// <inheritdoc/>
-    public IEnumerable<int> Visit(IGraph graph, int start)
+    public override IEnumerable<int> Visit(IGraph graph, int start)
     {
         var alreadyVisited = new HashSet<int>(); // Populated by RExplore
         RExplore(graph, alreadyVisited, start);
