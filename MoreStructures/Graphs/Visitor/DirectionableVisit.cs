@@ -19,7 +19,7 @@ public abstract class DirectionableVisit : IVisitStrategy
     /// <param name="directedGraph">
     ///     <inheritdoc cref="DirectedGraph" path="/summary"/>
     /// </param>
-    public DirectionableVisit(bool directedGraph)
+    protected DirectionableVisit(bool directedGraph)
     {
         DirectedGraph = directedGraph;
     }
