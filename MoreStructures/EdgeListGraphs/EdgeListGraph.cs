@@ -45,6 +45,8 @@ public record EdgeListGraph(int NumberOfVertices, IList<(int start, int end)> Ed
     /// <inheritdoc path="//*[not(self::remarks)]" />
     /// <remarks>
     /// In the <see cref="EdgeListGraph"/> representation, it's explicitely set in <see cref="NumberOfVertices"/>.
+    /// <br/>
+    /// Time and Space Complexity are O(1).
     /// </remarks>
     public int GetNumberOfVertices() => NumberOfVertices;
 

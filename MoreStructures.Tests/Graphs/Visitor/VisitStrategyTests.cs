@@ -106,16 +106,23 @@ public abstract class VisitStrategyTests
             $"actual: [{string.Join(", ", undirectedGraphResult)}]");
     }
 
-    [DataRow("5 V, 3 isolated, 1 source to sink", 5, new int[] { 1 }, new int[] { 3 }, 
-        new int[] { 0, 1, 3, 2, 4 }, new int[] { 0, 1, 3, 2, 4 })]
-    [DataRow("5 V, 3 isolated, 1 source to sink inverted", 5, new int[] { 3 }, new int[] { 1 },
-        new int[] { 0, 1, 2, 3, 4 }, new int[] { 0, 1, 3, 2, 4 })]
-    [DataRow("6 V, 1 isolated, 1 source to sink, 1 3-C", 6, new int[] { 2, 3, 4, 5 }, new int[] { 1, 4, 5, 3 },
-        new int[] { 0, 1, 2, 3, 4, 5 }, new int[] { 0, 1, 2, 3, 4, 5 })]
-    [DataRow("5 V, 1 isolated, 1 source to sink, 1 3-C inverted", 6, new int[] { 2, 3, 4, 5 }, new int[] { 1, 5, 3, 4 },
-        new int[] { 0, 1, 2, 3, 5, 4 }, new int[] { 0, 1, 2, 3, 4, 5 })]
-    [DataRow("5 V, 2-roots dag with central vertex", 5, new int[] { 3, 1, 2, 2 }, new int[] { 2, 2, 0, 4 },
-        new int[] { 0, 1, 2, 4, 3 }, new int[] { 0, 2, 1, 3, 4 })]
+    [DataRow("4 V, source to 1 sink and 1 intermediate to sink", 4, new[] { 0, 0, 1 }, new[] { 1, 2, 3 },
+        new int[] { 0, 1, 3, 2 }, new[] { 0, 1, 3, 2 })]
+    [DataRow("5 V, 3 isolated, 1 source to sink", 5, new[] { 1 }, new[] { 3 }, 
+        new int[] { 0, 1, 3, 2, 4 }, new[] { 0, 1, 3, 2, 4 })]
+    [DataRow("5 V, 3 isolated, 1 source to sink inverted", 5, new[] { 3 }, new[] { 1 },
+        new int[] { 0, 1, 2, 3, 4 }, new[] { 0, 1, 3, 2, 4 })]
+    [DataRow("6 V, 1 isolated, 1 source to sink, 1 3-C", 6, new[] { 2, 3, 4, 5 }, new[] { 1, 4, 5, 3 },
+        new int[] { 0, 1, 2, 3, 4, 5 }, new[] { 0, 1, 2, 3, 4, 5 })]
+    [DataRow("5 V, 1 isolated, 1 source to sink, 1 3-C inverted", 6, new int[] { 2, 3, 4, 5 }, new[] { 1, 5, 3, 4 },
+        new int[] { 0, 1, 2, 3, 5, 4 }, new[] { 0, 1, 2, 3, 4, 5 })]
+    [DataRow("5 V, 2-roots dag with central vertex", 5, new[] { 3, 1, 2, 2 }, new[] { 2, 2, 0, 4 },
+        new int[] { 0, 1, 2, 4, 3 }, new[] { 0, 2, 1, 3, 4 })]
+    [DataRow("7 V, tree, 1 2-chain, 1 3-chain, 1 4-chain", 7, new[] { 0, 0, 0, 1, 2, 4 }, new[] { 2, 1, 5, 3, 4, 6 },
+        new int[] { 0, 1, 3, 2, 4, 6, 5 }, new[] { 0, 1, 3, 2, 4, 6, 5 })]
+    [DataRow("7 V, quasi-tree, 1 2-chain, 1 3-chain, 1 4-chain", 7, new[] { 0, 0, 0, 1, 2, 4 }, 
+        new[] { 2, 3, 5, 3, 4, 6 },
+        new int[] { 0, 2, 4, 6, 3, 5, 1 }, new[] { 0, 2, 4, 6, 3, 1, 5 })]
     [DataTestMethod]
     public void DepthFirstSearch_IsCorrect(
         string graphDescription, int numberOfVertices, int[] starts, int[] ends,
