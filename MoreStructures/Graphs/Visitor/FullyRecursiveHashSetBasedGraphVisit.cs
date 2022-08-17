@@ -17,6 +17,56 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
+    /// <remarks>
+    ///     <para id="advantages">
+    ///     ADVANTAGES AND DISADVANTAGES
+    ///     <br/>
+    ///     Implemented fully recursively, so limited by stack depth and usable with graphs of a "reasonable" size.
+    ///     </para>
+    ///     <para id="algorithm">
+    ///     ALGORITHM
+    ///     <br/>
+    ///     - A <see cref="HashSet{T}"/> of the ids of already visited vertices is instantiated to an empty set.
+    ///       <br/>
+    ///     - Vertices are iterated over, from the first (id = 0), to the last (id = v - 1, where v is the total number
+    ///       of vertices).
+    ///       <br/>
+    ///     - The total number of vertices is retrieved via <see cref="IGraph.GetNumberOfVertices"/>.
+    ///       <br/>
+    ///     - If the vertex i has not already been visited (i.e. it appears in the <see cref="HashSet{T}"/>), it is
+    ///       visited, with the same algorithm it would be visited by <see cref="Visit(IGraph, int)"/>.
+    ///       <br/>
+    ///     - The order of visit is returned as a sequence of integers.
+    ///       <br/>
+    ///     - The set of already visited vertices is updated, adding the visited vertex, every time a visit is made, 
+    ///       and it is shared by all visits of all vertices, whether they are connected to each other or not.
+    ///       <br/>
+    ///     - When the sequence of recursive visits terminates, all vertices of the graph will have been visited.
+    ///     </para>
+    ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
+    ///     - Instantiating and adding items to the set of already visited vertices are constant-time operations.
+    ///       <br/>
+    ///     - The set of already visited vertices ensures that each vertex of the graph is visited at most once.
+    ///       <br/>
+    ///     - To reach all vertices, the algorithm goes through all edges of the graph.
+    ///       <br/>
+    ///     - Because each vertex is visited at most once throughout the entire execution, edges are visited at most 
+    ///       once, when edge direction is taken into account during the visit, and twice, when it is not.
+    ///       <br/>
+    ///     - The complexity of retrieving the total number of vertices depends on  
+    ///       <see cref="IGraph.GetNumberOfVertices"/>. While being specific to the <see cref="IGraph"/>
+    ///       implementation being used, all implementation provide O(1) runtime for such operation.
+    ///       <br/>
+    ///     - Checking whether a neighbor has already been visited is a O(1) operation, because the set used is an 
+    ///       <see cref="HashSet{T}"/>.
+    ///       <br/>
+    ///     - Therefore, Time Complexity is O(v * Ta  + e) and Space Complexity is O(v * Sa  + e), where 
+    ///       v is the number of vertices, e is the number of edges and Ta and Sa are the time and space cost of 
+    ///       retrieving the neighborhood of a given vertex.
+    ///     </para>
+    /// </remarks>
     public override IEnumerable<int> DepthFirstSearch(IGraph graph)
     {
         var alreadyVisited = new HashSet<int>(); // Populated by RExplore
@@ -57,15 +107,15 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
     ///       (i.e. all vertices V for which there is a path of edges e1, e2, ..., en, connecting S to V) will 
     ///       have been visited.
     ///       <br/>
-    ///     - Vertices which are not connected to S (i.e. for which there is no path), are not included in the resulting
-    ///       sequence of vertices.
+    ///     - Vertices which are not connected to S (i.e. for which there is no path), are not included in the 
+    ///       resulting sequence of vertices.
     ///     </para>
     ///     <para id="complexity">
     ///     COMPLEXITY
     ///     <br/>
     ///     - Instantiating and adding items to the set of already visited vertices are constant-time operations.
     ///       <br/>
-    ///     - The set of already visited vertices ensures that each node of the graph is visited at most once.
+    ///     - The set of already visited vertices ensures that each vertex of the graph is visited at most once.
     ///       <br/>
     ///     - The complexity of retrieving the neighborhood of a vertex depends on the implementation of 
     ///       <see cref="IGraph.GetAdjacentVerticesAndEdges(int, bool)"/>, thus on the specific <see cref="IGraph"/>
@@ -74,8 +124,8 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
     ///     - Checking whether a neighbor has already been visited is a O(1) operation, because the set used is an 
     ///       <see cref="HashSet{T}"/>.
     ///       <br/>
-    ///     - Therefore, Time Complexity is O(v * Ta) and Space Complexity is O(v * Sa), where e is the number of vertices
-    ///       and Ta and Sa are the time and space cost of retrieving the neighborhood of a given vertex.
+    ///     - Therefore, Time Complexity is O(v * Ta) and Space Complexity is O(v * Sa), where v is the number of 
+    ///       vertices and Ta and Sa are the time and space cost of retrieving the neighborhood of a given vertex.
     ///     </para>
     /// </remarks>
     public override IEnumerable<int> Visit(IGraph graph, int start)

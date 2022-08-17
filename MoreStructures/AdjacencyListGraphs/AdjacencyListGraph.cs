@@ -43,6 +43,8 @@ public record AdjacencyListGraph(IList<ISet<int>> Neighborhoods) : IGraph
     /// <inheritdoc path="//*[not(self::remarks)]" />
     /// <remarks>
     /// In the <see cref="AdjacencyListGraph"/> representation, corresponds to number of neighborhoods.
+    /// <br/>
+    /// Time and Space Complexity are O(1).
     /// </remarks>
     public int GetNumberOfVertices() => Neighborhoods.Count;
 

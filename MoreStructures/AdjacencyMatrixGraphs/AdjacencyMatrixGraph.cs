@@ -39,7 +39,9 @@ public record AdjacencyMatrixGraph(bool[,] AdjacencyMatrix) : IGraph
 {
     /// <inheritdoc path="//*[not(self::remarks)]" />
     /// <remarks>
-    /// In the <see cref="AdjacencyMatrixGraph"/> representation, corresponds to edge of the square matrix.
+    /// In the <see cref="AdjacencyMatrixGraph"/> representation, corresponds to the edge of the square matrix.
+    /// <br/>
+    /// Time and Space Complexity are O(1).
     /// </remarks>
     public int GetNumberOfVertices() => AdjacencyMatrix.GetLength(0);
 
