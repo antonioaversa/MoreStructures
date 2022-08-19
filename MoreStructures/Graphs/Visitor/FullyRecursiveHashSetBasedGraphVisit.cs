@@ -26,7 +26,7 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
     ///     <para id="algorithm">
     ///     ALGORITHM
     ///     <br/>
-    ///     - A <see cref="HashSet{T}"/> of the ids of already visited vertices is instantiated to an empty set.
+    ///     - An <see cref="HashSet{T}"/> of the ids of already visited vertices is instantiated to an empty set.
     ///       <br/>
     ///     - Vertices are iterated over, from the first (id = 0), to the last (id = v - 1, where v is the total number
     ///       of vertices).
@@ -82,6 +82,45 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
+    /// <remarks>
+    ///     <para id="advantages">
+    ///     ADVANTAGES AND DISADVANTAGES
+    ///     <br/>
+    ///     Implemented fully recursively, so limited by stack depth and usable with graphs of a "reasonable" size.
+    ///     </para>
+    ///     <para id="algorithm">
+    ///     ALGORITHM
+    ///     <br/>
+    ///     - The algorithm is a simple variation of <see cref="DepthFirstSearch(IGraph)"/>.
+    ///       <br/>
+    ///     - All vertices from 0 to <see cref="IGraph.GetNumberOfVertices"/> - 1 are explored.
+    ///       <br/>
+    ///     - An <see cref="HashSet{T}"/> of already visited vertices is shared across all visits, to ensure that a
+    ///       vertex is not visited twice.
+    ///       <br/>
+    ///     - A current value of the connected component is instantiated at 0 and incremented every time a new 
+    ///       connected component is explored, i.e. every time the vertex i, of the top-level iteration, has not been
+    ///       visited yet, meaning that none of the connected components explored so far contains it.
+    ///       <br/>
+    ///     - The resulting mapping between vertex id and connected component value is returned as result.
+    ///     </para>
+    ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
+    ///     - The algorithm closely resembles <see cref="DepthFirstSearch(IGraph)"/>, with the added complexity of 
+    ///       instantiating and populating a <see cref="IDictionary{TKey, TValue}"/> of the mapping between vertices
+    ///       and connected component labels.
+    ///       <br/>
+    ///     - Because the <see cref="IDictionary{TKey, TValue}"/> implementation used is a 
+    ///       <see cref="Dictionary{TKey, TValue}"/>, which is hash-based, such additional operations are performed in
+    ///       constant time.
+    ///       <br/>
+    ///     - Therefore the complexity of this method is the same as <see cref="DepthFirstSearch(IGraph)"/>: Time 
+    ///       Complexity is O(v * Ta  + e) and Space Complexity is O(v * Sa  + e), where v is the number of vertices, 
+    ///       e is the number of edges and Ta and Sa are the time and space cost of retrieving the neighborhood of a 
+    ///       given vertex.
+    ///     </para>
+    /// </remarks>
     public override IDictionary<int, int> ConnectedComponents(IGraph graph)
     {
         var alreadyVisited = new HashSet<int>(); // Populated by RExplore
