@@ -82,6 +82,28 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
+    public override IDictionary<int, int> ConnectedComponents(IGraph graph)
+    {
+        var alreadyVisited = new HashSet<int>(); // Populated by RExplore
+        var numberOfVertices = graph.GetNumberOfVertices();
+
+        var connectedComponents = new Dictionary<int, int>();
+        var currentConnectedComponent = 0;
+        for (var vertex = 0; vertex < numberOfVertices; vertex++)
+        {
+            if (alreadyVisited.Contains(vertex))
+                continue;
+
+            foreach (var outputItem in RExplore(graph, alreadyVisited, vertex))
+                connectedComponents[outputItem] = currentConnectedComponent;
+
+            currentConnectedComponent++;
+        }
+
+        return connectedComponents;
+    }
+
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     ///     <para id="advantages">
     ///     ADVANTAGES AND DISADVANTAGES
