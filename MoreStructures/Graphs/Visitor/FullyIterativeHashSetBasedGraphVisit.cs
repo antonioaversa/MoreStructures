@@ -36,6 +36,36 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
+    public override IDictionary<int, int> ConnectedComponents(IGraph graph)
+    {
+        var stack = new Stack<int>();
+        var alreadyVisited = new HashSet<int>(); // Populated by ProcessStack
+        var numberOfVertices = graph.GetNumberOfVertices();
+
+        var connectedComponents = new Dictionary<int, int>();
+        var currentConnectedComponent = 0;
+        for (var vertex = 0; vertex < numberOfVertices; vertex++)
+        {
+            stack.Push(vertex);
+            bool currentConnectedComponentUsed = false;
+            while (stack.Count > 0)
+            {
+                var maybeOutputItem = ProcessStack(graph, stack, alreadyVisited);
+                if (maybeOutputItem != null)
+                {
+                    connectedComponents[maybeOutputItem.Value] = currentConnectedComponent;
+                    currentConnectedComponentUsed = true;
+                }
+            }
+
+            if (currentConnectedComponentUsed)
+                currentConnectedComponent++;
+        }
+
+        return connectedComponents;
+    }
+
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     ///     <para id="advantages">
     ///     ADVANTAGES AND DISADVANTAGES

@@ -28,5 +28,8 @@ public abstract class DirectionableVisit : IVisitStrategy
     public abstract IEnumerable<int> DepthFirstSearch(IGraph graph);
 
     /// <inheritdoc/>
+    public abstract IDictionary<int, int> ConnectedComponents(IGraph graph);
+
+    /// <inheritdoc/>
     public abstract IEnumerable<int> Visit(IGraph graph, int start);
 }

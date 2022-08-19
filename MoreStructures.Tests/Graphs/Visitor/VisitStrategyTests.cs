@@ -1,4 +1,5 @@
-﻿using MoreStructures.Graphs;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MoreStructures.Graphs;
 using MoreStructures.Graphs.Visitor;
 
 namespace MoreStructures.Tests.Graphs.Visitor;
@@ -144,6 +145,40 @@ public abstract class VisitStrategyTests
             $"Failed {nameof(IVisitStrategy.DepthFirstSearch)} of {graphDescription} as undirected graph: " +
             $"expected [{string.Join(", ", expectedUndirectedGraphResult)}], " +
             $"actual: [{string.Join(", ", undirectedGraphResult)}]");
+    }
+
+    [DataRow("1 V, 1 isolated", 1, new int[] { }, new int[] { },
+        new int[] { 0 })]
+    [DataRow("2 V, 2 isolated", 2, new int[] { }, new int[] { },
+        new int[] { 0, 1 })]
+    [DataRow("2 V, 2 isolated", 2, new int[] { 0, 1 }, new int[] { 0, 1 },
+        new int[] { 0, 1 })]
+    [DataRow("2 V, 1 2-C", 2, new int[] { 0, 1 }, new int[] { 1, 0 },
+        new int[] { 0, 0 })]
+    [DataRow("3 V, 1 3-C", 3, new int[] { 0, 1, 2 }, new int[] { 1, 2, 0 },
+        new int[] { 0, 0, 0 })]
+    [DataRow("3 V, 1 2-C, 1 isolated", 3, new int[] { 0, 1 }, new int[] { 1, 0 },
+        new int[] { 0, 0, 1 })]
+    [DataRow("3 V, 1 2-C, 1 isolated with loop", 3, new int[] { 0, 1, 2 }, new int[] { 1, 0, 2 },
+        new int[] { 0, 0, 1 })]
+    [DataRow("3 V, 1 isolated, 1 2-C", 3, new int[] { 1, 2 }, new int[] { 2, 1 },
+        new int[] { 0, 1, 1 })]
+    [DataTestMethod]
+    public void ConnectedComponents_IsCorrect(
+        string graphDescription, int numberOfVertices, int[] starts, int[] ends,
+        int[] expectedUndirectedGraphResult)
+    {
+        var graph = GraphBuilder(numberOfVertices, starts.Zip(ends).ToList());
+        var undirectedGraphVisitor = VisitorBuilder(false);
+        var undirectedGraphResult = undirectedGraphVisitor.ConnectedComponents(graph);
+        Assert.IsTrue(
+            undirectedGraphResult
+                .Select(kvp => (kvp.Value, kvp.Key))
+                .ToHashSet()
+                .SetEquals(expectedUndirectedGraphResult.Zip(Enumerable.Range(0, int.MaxValue))),
+            $"Failed {nameof(IVisitStrategy.ConnectedComponents)} of {graphDescription} as undirected graph: " +
+            $"expected [{string.Join(", ", expectedUndirectedGraphResult)}], " +
+            $"actual: [{string.Join(", ", undirectedGraphResult.OrderBy(kvp => kvp.Key).Select(kvp => kvp.Value))}]");
     }
 }
 
