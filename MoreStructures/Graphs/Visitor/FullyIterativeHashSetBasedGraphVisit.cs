@@ -74,6 +74,29 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
+    /// <remarks>
+    ///     <para id="advantages">
+    ///     ADVANTAGES AND DISADVANTAGES
+    ///     <br/>
+    ///     Implemented fully recursively, so limited by stack depth and usable with graphs of a "reasonable" size.
+    ///     </para>
+    ///     <para id="algorithm">
+    ///     ALGORITHM
+    ///     <br/>
+    ///     - The algorithm is a simple variation of <see cref="DepthFirstSearch(IGraph)"/>, with the differences
+    ///       explained in <see cref="FullyRecursiveHashSetBasedGraphVisit.ConnectedComponents(IGraph)"/>.
+    ///     </para>
+    ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
+    ///     - The analysis of complexity is done in 
+    ///       <see cref="FullyRecursiveHashSetBasedGraphVisit.ConnectedComponents(IGraph)"/>.
+    ///       <br/>
+    ///     - Time Complexity is O(v * Ta  + e) and Space Complexity is O(v * Sa  + e), where v is the number of 
+    ///       vertices, e is the number of edges and Ta and Sa are the time and space cost of retrieving the neighborhood of a 
+    ///       given vertex.
+    ///     </para>
+    /// </remarks>
     public override IDictionary<int, int> ConnectedComponents(IGraph graph)
     {
         var stack = new Stack<int>();
