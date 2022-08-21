@@ -53,4 +53,28 @@ public interface IVisitStrategy
     /// The sequence of vertices, lazily generated. Neighbors of the same vertex are visited by ascending id.
     /// </returns>
     IEnumerable<int> Visit(IGraph graph, int start);
+
+    /// <summary>
+    /// Invoked when a node is about to be visited, by <see cref="DepthFirstSearch(IGraph)"/>, 
+    /// <see cref="ConnectedComponents(IGraph)"/>, <see cref="Visit(IGraph, int)"/> or any other method exploring 
+    /// vertices of the graph.
+    /// </summary>
+    /// <remarks>
+    /// The event happens at most once per vertex per graph visit.
+    /// <br/>/
+    /// Check <see cref="VisitEventArgs"/> for the contextual information carried by the event.
+    /// </remarks>
+    event EventHandler<VisitEventArgs> VisitingVertex;
+
+    /// <summary>
+    /// Invoked just after a node has been visited, by <see cref="DepthFirstSearch(IGraph)"/>, 
+    /// <see cref="ConnectedComponents(IGraph)"/>, <see cref="Visit(IGraph, int)"/> or any other method exploring 
+    /// vertices of the graph.
+    /// </summary>
+    /// <remarks>
+    /// The event happens at most once per vertex per graph visit.
+    /// <br/>/
+    /// Check <see cref="VisitEventArgs"/> for the contextual information carried by the event.
+    /// </remarks>
+    event EventHandler<VisitEventArgs> VisitedVertex;
 }
