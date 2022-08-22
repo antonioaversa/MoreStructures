@@ -31,7 +31,7 @@ public abstract class DirectionableVisit : IVisitStrategy
     /// Invoke the <see cref="VisitingVertex"/> event with the provided <paramref name="args"/>.
     /// </summary>
     /// <param name="args">The arguments to be provided, when raising the event.</param>
-    protected virtual void RaiseVisitingVertex(VisitEventArgs args) => VisitingVertex?.Invoke(this, args);
+    protected virtual void RaiseVisitingVertex(VisitEventArgs args) => VisitingVertex.Invoke(this, args);
 
     /// <inheritdoc/>
     public event EventHandler<VisitEventArgs> VisitedVertex = delegate { };
@@ -40,7 +40,7 @@ public abstract class DirectionableVisit : IVisitStrategy
     /// Invoke the <see cref="VisitedVertex"/> event with the provided <paramref name="args"/>.
     /// </summary>
     /// <param name="args">The arguments to be provided, when raising the event.</param>
-    protected virtual void RaiseVisitedVertex(VisitEventArgs args) => VisitedVertex?.Invoke(this, args);
+    protected virtual void RaiseVisitedVertex(VisitEventArgs args) => VisitedVertex.Invoke(this, args);
 
     /// <inheritdoc/>
     public abstract IEnumerable<int> DepthFirstSearch(IGraph graph);
