@@ -180,5 +180,77 @@ public abstract class VisitStrategyTests
             $"expected [{string.Join(", ", expectedUndirectedGraphResult)}], " +
             $"actual: [{string.Join(", ", undirectedGraphResult.OrderBy(kvp => kvp.Key).Select(kvp => kvp.Value))}]");
     }
+
+    [TestMethod]
+    public void VisitEvents_InDepthFirstSearch()
+    {
+        TestVisitingEventsForMethod(
+            (graph, visitor) => MoreLinq.MoreEnumerable.Consume(visitor.DepthFirstSearch(graph)));
+    }
+
+    [TestMethod]
+    public void VisitEvents_InConnectedComponents()
+    {
+        TestVisitingEventsForMethod(
+            (graph, visitor) => MoreLinq.MoreEnumerable.Consume(visitor.ConnectedComponents(graph)));
+    }
+
+    [TestMethod]
+    public void VisitEvents_InVisit()
+    {
+        TestVisitingEventsForMethod(
+            (graph, visitor) => MoreLinq.MoreEnumerable.Consume(visitor.Visit(graph, 0)));
+    }
+
+    private enum JournalEventType { Visiting, Visited };
+
+    private void TestVisitingEventsForMethod(Action<IGraph, IVisitStrategy> visitStrategyAction)
+    {
+        var graph = GraphBuilder(3, Enumerable.Empty<(int, int)>().ToList());
+        var directedGraphVisitor = VisitorBuilder(true);
+        var visitingVertexEventInvoked = new Dictionary<int, int>();
+        var visitedVertexEventInvoked = new Dictionary<int, int>();
+        var currentClock = 0;
+        var journal = new Dictionary<(JournalEventType journalEventType, int vertex), int>();
+
+        directedGraphVisitor.VisitingVertex += (s, e) =>
+        {
+            visitingVertexEventInvoked[e.Vertex] =
+                visitingVertexEventInvoked.TryGetValue(e.Vertex, out var count) ? count + 1 : 1;
+            journal[(JournalEventType.Visiting, e.Vertex)] = currentClock++;
+        };
+
+        directedGraphVisitor.VisitedVertex += (s, e) =>
+        {
+            visitedVertexEventInvoked[e.Vertex] =
+                visitedVertexEventInvoked.TryGetValue(e.Vertex, out var count) ? count + 1 : 1;
+            journal[(JournalEventType.Visited, e.Vertex)] = currentClock++;
+        };
+
+        // Events are not invoked before the action is invoked
+        Assert.IsFalse(visitingVertexEventInvoked.Any());
+        Assert.IsFalse(visitedVertexEventInvoked.Any());
+
+        visitStrategyAction(graph, directedGraphVisitor);
+
+        // Events were invoked during action execution
+        Assert.IsTrue(visitingVertexEventInvoked.All(kvp => kvp.Value == 1));
+        Assert.IsTrue(visitedVertexEventInvoked.All(kvp => kvp.Value == 1));
+
+        // The order of events is correct
+        var verticesExplored = journal.Select(kvp => kvp.Key.vertex).Distinct().ToList();
+        foreach (var v1 in verticesExplored)
+        {
+            Assert.IsTrue(journal[(JournalEventType.Visiting, v1)] < journal[(JournalEventType.Visited, v1)]);
+            Assert.IsTrue((
+                from v2 in verticesExplored.Except(new[] { v1 } )
+                let v1s = journal[(JournalEventType.Visiting, v1)]
+                let v1e = journal[(JournalEventType.Visited, v1)]
+                let v2s = journal[(JournalEventType.Visiting, v2)]
+                let v2e = journal[(JournalEventType.Visited, v2)]
+                select v2s > v1e || v1s > v2e || (v1s < v2s && v2e < v1e) || (v2s < v1s && v1e < v2e))
+                .All(b => b));
+        }
+    }
 }
 

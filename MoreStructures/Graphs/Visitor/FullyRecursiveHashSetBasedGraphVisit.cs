@@ -199,6 +199,8 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
 
     private IEnumerable<int> RExplore(IGraph graph, HashSet<int> alreadyVisited, int start)
     {
+        RaiseVisitingVertex(new(start));
+
         alreadyVisited.Add(start);
         yield return start;
 
@@ -214,5 +216,7 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
             foreach (var outputItem in RExplore(graph, alreadyVisited, unexploredVertex))
                 yield return outputItem;
         }
+
+        RaiseVisitedVertex(new(start));
     }
 }

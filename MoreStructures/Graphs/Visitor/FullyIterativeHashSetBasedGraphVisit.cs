@@ -93,8 +93,8 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     ///       <see cref="FullyRecursiveHashSetBasedGraphVisit.ConnectedComponents(IGraph)"/>.
     ///       <br/>
     ///     - Time Complexity is O(v * Ta  + e) and Space Complexity is O(v * Sa  + e), where v is the number of 
-    ///       vertices, e is the number of edges and Ta and Sa are the time and space cost of retrieving the neighborhood of a 
-    ///       given vertex.
+    ///       vertices, e is the number of edges and Ta and Sa are the time and space cost of retrieving the 
+    ///       neighborhood of a given vertex.
     ///     </para>
     /// </remarks>
     public override IDictionary<int, int> ConnectedComponents(IGraph graph)
@@ -169,6 +169,8 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
         if (alreadyVisited.Contains(node))
             return null;
 
+        RaiseVisitingVertex(new(node));
+
         alreadyVisited.Add(node);
         var unexploredVertices = graph
             .GetAdjacentVerticesAndEdges(node, DirectedGraph)
@@ -178,6 +180,8 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
 
         foreach (var (vertex, _) in unexploredVertices)
             stack.Push(vertex);
+
+        RaiseVisitedVertex(new(node));
 
         return node;
     }
