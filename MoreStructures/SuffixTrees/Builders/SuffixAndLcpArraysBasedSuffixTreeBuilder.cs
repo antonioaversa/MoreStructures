@@ -1,5 +1,4 @@
-﻿using MoreLinq;
-using MoreStructures.MutableTrees;
+﻿using MoreStructures.MutableTrees;
 using MoreStructures.SuffixArrays;
 using MoreStructures.SuffixArrays.LongestCommonPrefix;
 using MoreStructures.SuffixStructures.Builders;
