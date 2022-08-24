@@ -78,13 +78,13 @@ public record AdjacencyMatrixGraph(bool[,] AdjacencyMatrix) : IGraph
     ///     - Therefore, Time and Space Complexity (when enumerated) are O(v).
     ///     </para>
     /// </remarks>
-    public IEnumerable<(int vertex, (int edgeStart, int edgeEnd) edge)> GetAdjacentVerticesAndEdges(
+    public IEnumerable<IGraph.Adjacency> GetAdjacentVerticesAndEdges(
         int start, bool takeIntoAccountEdgeDirection)
     {
         for (var j = 0; j < AdjacencyMatrix.GetLength(1); j++)
         {
             if (AdjacencyMatrix[start, j])
-                yield return (j, (start, j));
+                yield return new(j, start, j);
         }
 
         if (takeIntoAccountEdgeDirection)
@@ -93,7 +93,7 @@ public record AdjacencyMatrixGraph(bool[,] AdjacencyMatrix) : IGraph
         for (var i = 0; i < AdjacencyMatrix.GetLength(0); i++)
         {
             if (AdjacencyMatrix[i, start])
-                yield return (i, (i, start));
+                yield return new(i, i, start);
         }
     }
 }

@@ -70,13 +70,16 @@ public record EdgeListGraph(int NumberOfVertices, IList<(int start, int end)> Ed
     ///     - Therefore Time Complexity is O(e), where e is the number of edges, and Space Complexity is O(1).
     ///     </para>
     /// </remarks>
-    public IEnumerable<(int vertex, (int edgeStart, int edgeEnd) edge)> GetAdjacentVerticesAndEdges(
+    public IEnumerable<IGraph.Adjacency> GetAdjacentVerticesAndEdges(
         int start, bool takeIntoAccountEdgeDirection)
     {
         if (takeIntoAccountEdgeDirection)
         {
-            foreach (var edge in Edges.Where(edge => edge.start == start).Select(edge => (edge.end, edge)))
-                yield return edge;
+            var adjacencies = Edges
+                .Where(edge => edge.start == start)
+                .Select(edge => new IGraph.Adjacency(edge.end, edge.start, edge.end));
+            foreach (var adjacency in adjacencies)
+                yield return adjacency;
             yield break;
         }
 
@@ -84,12 +87,12 @@ public record EdgeListGraph(int NumberOfVertices, IList<(int start, int end)> Ed
         {
             if (edge.start == start)
             {
-                yield return (edge.end, edge);
+                yield return new(edge.end, edge.start, edge.end);
                 continue;
             }
             if (edge.end == start)
             {
-                yield return (edge.start, edge);
+                yield return new(edge.start, edge.start, edge.end);
             }
         }
     }

@@ -34,7 +34,8 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
     ///     - The total number of vertices is retrieved via <see cref="IGraph.GetNumberOfVertices"/>.
     ///       <br/>
     ///     - If the vertex i has not already been visited (i.e. it appears in the <see cref="HashSet{T}"/>), it is
-    ///       visited, with the same algorithm it would be visited by <see cref="Visit(IGraph, int)"/>.
+    ///       visited, with the same algorithm it would be visited by 
+    ///       <see cref="DepthFirstSearchFromVertex(IGraph, int)"/>.
     ///       <br/>
     ///     - The order of visit is returned as a sequence of integers.
     ///       <br/>
@@ -62,12 +63,12 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
     ///     - Checking whether a neighbor has already been visited is a O(1) operation, because the set used is an 
     ///       <see cref="HashSet{T}"/>.
     ///       <br/>
-    ///     - Therefore, Time Complexity is O(v * Ta  + e) and Space Complexity is O(v * Sa  + e), where 
+    ///     - Therefore, Time Complexity is O(v * Ta + e) and Space Complexity is O(v * Sa + e), where 
     ///       v is the number of vertices, e is the number of edges and Ta and Sa are the time and space cost of 
     ///       retrieving the neighborhood of a given vertex.
     ///     </para>
     /// </remarks>
-    public override IEnumerable<int> DepthFirstSearch(IGraph graph)
+    public override IEnumerable<int> DepthFirstSearchOfGraph(IGraph graph)
     {
         var alreadyVisited = new HashSet<int>(); // Populated by RExplore
         var numberOfVertices = graph.GetNumberOfVertices();
@@ -91,7 +92,7 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
     ///     <para id="algorithm">
     ///     ALGORITHM
     ///     <br/>
-    ///     - The algorithm is a simple variation of <see cref="DepthFirstSearch(IGraph)"/>.
+    ///     - The algorithm is a simple variation of <see cref="DepthFirstSearchOfGraph(IGraph)"/>.
     ///       <br/>
     ///     - All vertices from 0 to <see cref="IGraph.GetNumberOfVertices"/> - 1 are explored.
     ///       <br/>
@@ -107,7 +108,7 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
     ///     <para id="complexity">
     ///     COMPLEXITY
     ///     <br/>
-    ///     - The algorithm closely resembles <see cref="DepthFirstSearch(IGraph)"/>, with the added complexity of 
+    ///     - The algorithm closely resembles <see cref="DepthFirstSearchOfGraph(IGraph)"/>, with the added complexity of 
     ///       instantiating and populating a <see cref="IDictionary{TKey, TValue}"/> of the mapping between vertices
     ///       and connected component labels.
     ///       <br/>
@@ -115,10 +116,10 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
     ///       <see cref="Dictionary{TKey, TValue}"/>, which is hash-based, such additional operations are performed in
     ///       constant time.
     ///       <br/>
-    ///     - Therefore the complexity of this method is the same as <see cref="DepthFirstSearch(IGraph)"/>: Time 
-    ///       Complexity is O(v * Ta  + e) and Space Complexity is O(v * Sa  + e), where v is the number of vertices, 
-    ///       e is the number of edges and Ta and Sa are the time and space cost of retrieving the neighborhood of a 
-    ///       given vertex.
+    ///     - Therefore the complexity of this method is the same as <see cref="DepthFirstSearchOfGraph(IGraph)"/>: 
+    ///       Time Complexity is O(v * Ta + e) and Space Complexity is O(v * Sa + e), where v is the number of 
+    ///       vertices, e is the number of edges and Ta and Sa are the time and space cost of retrieving the 
+    ///       neighborhood of a given vertex.
     ///     </para>
     /// </remarks>
     public override IDictionary<int, int> ConnectedComponents(IGraph graph)
@@ -159,7 +160,10 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
     ///     - The visit starts from the specified start vertex and looks for all the neighboring edges of such vertex
     ///       (taking into account the direction of the edge or not, depending on the specified parameters).
     ///       <br/>
-    ///     - Only neighboring edges connecting the start vertex to a vertex not already visited are taken into account.
+    ///     - Only neighboring edges connecting the start vertex to a vertex not already visited are taken into 
+    ///       account.
+    ///       <br/>
+    ///     - However, to reach all relevant vertices, the algorithm may go through all edges of the graph.
     ///       <br/>
     ///     - All other vertices are skipped, since those vertices, their neighborhood, neighbors of their neighborhood 
     ///       etc. have already been visited in previous steps of the recursive visit.
@@ -185,16 +189,105 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
     ///     - Checking whether a neighbor has already been visited is a O(1) operation, because the set used is an 
     ///       <see cref="HashSet{T}"/>.
     ///       <br/>
-    ///     - Therefore, Time Complexity is O(v * Ta) and Space Complexity is O(v * Sa), where v is the number of 
-    ///       vertices and Ta and Sa are the time and space cost of retrieving the neighborhood of a given vertex.
+    ///     - Therefore, Time Complexity is O(v * Ta + e) and Space Complexity is O(v * Sa + e), where v is the number 
+    ///       of vertices, e is the number of edges and Ta and Sa are the time and space cost of retrieving the 
+    ///       neighborhood of a given vertex.
     ///     </para>
     /// </remarks>
-    public override IEnumerable<int> Visit(IGraph graph, int start)
+    public override IEnumerable<int> DepthFirstSearchFromVertex(IGraph graph, int start)
     {
         var alreadyVisited = new HashSet<int>(); // Populated by RExplore
         var lazyExploration = RExplore(graph, alreadyVisited, start);
         MoreLinq.MoreEnumerable.Consume(lazyExploration);
         return alreadyVisited;
+    }
+
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
+    /// <remarks>
+    ///     <para id="advantages">
+    ///     ADVANTAGES AND DISADVANTAGES
+    ///     <br/>
+    ///     Implemented fully recursively, so limited by stack depth and usable with graphs of a "reasonable" size.
+    ///     </para>
+    ///     <para id="algorithm">
+    ///     ALGORITHM
+    ///     <br/>
+    ///     - The algorithm closely resembles <see cref="DepthFirstSearchFromVertex(IGraph, int)"/> with one 
+    ///       foundamental difference: <b>the recursive calls to neighbors of each vertex generate 
+    ///       <see cref="IEnumerable{T}"/> which are iterated lazily and in parallel, one element of each 
+    ///       <see cref="IEnumerator{T}"/> at a time</b>, up until all enumerators are done.
+    ///       <br/>
+    ///     - Let's take as an example a graph in which neighbors of vertex 0 are 1 and 2, neighbors of vertex 1 are 3 
+    ///       and 4 and neighbors of vertex 2 are 5 and 4.
+    ///       <br/>
+    ///     - The visit of vertex 0 will first yield the vertex 0 itself.
+    ///       <br/>
+    ///     - It then yields the 1st element of the enumerable of BFS from vertex 1, which is the vertex 1 itself.
+    ///       <br/>
+    ///     - After that, it yields the 1st element of the enumerable of BFS from vertex 2, which is the vertex 2 
+    ///       itself.
+    ///       <br/>
+    ///     - After that, since there are no other neighbors of 0, moves to the 2nd elements of each of the 
+    ///       enumerators.
+    ///       <br/>
+    ///     - It yields the 2nd element of the enumerable of BFS from vertex 1, which is the vertex 3.
+    ///       <br/>
+    ///     - It then yields the 2nd element of the enumerable of BFS from vertex 2, which is the vertex 5.
+    ///       <br/>
+    ///     - Etc, until all enumerators are done (i.e. <see cref="System.Collections.IEnumerator.MoveNext"/> is
+    ///       <see langword="false"/>.
+    ///     </para>
+    ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
+    ///     - Same consideration about complexity as in <see cref="DepthFirstSearchFromVertex(IGraph, int)"/> apply.
+    ///       What is different is just the order of visit, not edges or vertices visited.
+    ///       <br/>
+    ///     - Therefore, Time Complexity is O(v * Ta + e) and Space Complexity is O(v * Sa + e), where v is the number 
+    ///       of vertices, e is the number of edges and Ta and Sa are the time and space cost of retrieving the 
+    ///       neighborhood of a given vertex.
+    ///     </para>
+    /// </remarks>
+    public override IEnumerable<int> BreadthFirstSearchFromVertex(IGraph graph, int start)
+    {
+        var alreadyVisited = new HashSet<int>();
+        return RBreadthFirstSearchFromVertex(graph, start, alreadyVisited);
+    }
+
+    private IEnumerable<int> RBreadthFirstSearchFromVertex(
+        IGraph graph, int start, HashSet<int> alreadyVisited)
+    {
+        if (alreadyVisited.Contains(start))
+            yield break;
+
+        RaiseVisitingVertex(new(start));
+
+        alreadyVisited.Add(start);
+        yield return start;
+
+        var neighborsEnumerators = graph
+            .GetAdjacentVerticesAndEdges(start, DirectedGraph)
+            .OrderBy(neighbor => neighbor.Vertex)
+            .Select(neighbor => RBreadthFirstSearchFromVertex(graph, neighbor.Vertex, alreadyVisited).GetEnumerator())
+            .ToList();
+
+        var neighborsEnumeratorsMoveNext = neighborsEnumerators
+            .Select(enumerator => enumerator.MoveNext())
+            .ToList();
+
+        while (neighborsEnumeratorsMoveNext.Any(b => b))
+        {
+            for (var i = 0; i < neighborsEnumerators.Count; i++)
+            {
+                if (neighborsEnumeratorsMoveNext[i])
+                {
+                    yield return neighborsEnumerators[i].Current;
+                    neighborsEnumeratorsMoveNext[i] = neighborsEnumerators[i].MoveNext();
+                }
+            }
+        }
+
+        RaiseVisitedVertex(new(start));
     }
 
     private IEnumerable<int> RExplore(IGraph graph, HashSet<int> alreadyVisited, int start)
@@ -204,11 +297,11 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
         alreadyVisited.Add(start);
         yield return start;
 
-        var unexploredVertices = graph
+        var neighbors = graph
             .GetAdjacentVerticesAndEdges(start, DirectedGraph)
-            .OrderBy(neighbor => neighbor.vertex);
+            .OrderBy(neighbor => neighbor.Vertex);
 
-        foreach (var (unexploredVertex, _) in unexploredVertices)
+        foreach (var (unexploredVertex, _, _) in neighbors)
         {
             if (alreadyVisited.Contains(unexploredVertex))
                 continue;
