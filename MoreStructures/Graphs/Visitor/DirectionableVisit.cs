@@ -43,11 +43,14 @@ public abstract class DirectionableVisit : IVisitStrategy
     protected virtual void RaiseVisitedVertex(VisitEventArgs args) => VisitedVertex.Invoke(this, args);
 
     /// <inheritdoc/>
-    public abstract IEnumerable<int> DepthFirstSearch(IGraph graph);
+    public abstract IEnumerable<int> DepthFirstSearchOfGraph(IGraph graph);
 
     /// <inheritdoc/>
     public abstract IDictionary<int, int> ConnectedComponents(IGraph graph);
 
     /// <inheritdoc/>
-    public abstract IEnumerable<int> Visit(IGraph graph, int start);
+    public abstract IEnumerable<int> DepthFirstSearchFromVertex(IGraph graph, int start);
+
+    /// <inheritdoc/>
+    public abstract IEnumerable<int> BreadthFirstSearchFromVertex(IGraph graph, int start);
 }

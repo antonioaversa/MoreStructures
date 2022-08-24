@@ -37,11 +37,11 @@ public abstract class VisitStrategyTests
     [DataRow("2 V, 1 2-C", 2, new int[] { 0, 1 }, new int[] { 1, 0 }, 0,
         new int[] { 0, 1 }, new int[] { 0, 1 })]
     [DataRow("2 V, 1 2-C", 2, new int[] { 0, 1 }, new int[] { 1, 0 }, 1,
-        new int[] { 1, 0 }, new int[] { 0, 1 })]
+        new int[] { 1, 0 }, new int[] { 1, 0 })]
     [DataRow("2 V, 1 inverted 2-C", 2, new int[] { 1, 0 }, new int[] { 0, 1 }, 0,
         new int[] { 0, 1 }, new int[] { 0, 1 })]
     [DataRow("2 V, 1 inverted 2-C", 2, new int[] { 1, 0 }, new int[] { 0, 1 }, 1,
-        new int[] { 1, 0 }, new int[] { 0, 1 })]
+        new int[] { 1, 0 }, new int[] { 1, 0 })]
     [DataRow("3 V, 1 L, 1 2-C", 3, new int[] { 0, 1, 2 }, new int[] { 0, 2, 1 }, 0,
         new int[] { 0 }, new int[] { 0 })]
     [DataRow("3 V, 1 L, 1 2-C", 3, new int[] { 0, 1, 2 }, new int[] { 0, 2, 1 }, 1,
@@ -51,20 +51,20 @@ public abstract class VisitStrategyTests
     [DataRow("3 V, 1 3-C", 3, new int[] { 0, 1, 2 }, new int[] { 1, 2, 0 }, 0,
         new int[] { 0, 1, 2 }, new int[] { 0, 1, 2 })]
     [DataRow("3 V, 1 3-C", 3, new int[] { 0, 1, 2 }, new int[] { 1, 2, 0 }, 1,
-        new int[] { 1, 2, 0 }, new int[] { 1, 2, 0 })]
+        new int[] { 1, 2, 0 }, new int[] { 1, 0, 2 })]
     [DataRow("3 V, 1 3-C", 3, new int[] { 0, 1, 2 }, new int[] { 1, 2, 0 }, 2,
         new int[] { 2, 0, 1 }, new int[] { 2, 0, 1 })]
     [DataRow("3 V, 3 2-C", 3, new int[] { 0, 0, 1, 1, 2, 2 }, new int[] { 1, 2, 0, 2, 0, 1 }, 0,
         new int[] { 0, 1, 2 }, new int[] { 0, 1, 2 })]
     [DataRow("3 V, 3 L, 3 2-C", 3, new int[] { 0, 0, 0, 1, 1, 1, 2, 2, 2 }, 
         new int[] { 0, 1, 2, 0, 1, 2, 0, 1, 2 }, 0, 
-        new int[] { 1, 2, 0 }, new int[] { 1, 2, 0 })]
+        new int[] { 0, 1, 2 }, new int[] { 0, 1, 2 })]
     [DataRow("3 V, 3 L, 3 2-C", 3, new int[] { 0, 0, 0, 1, 1, 1, 2, 2, 2 },
         new int[] { 0, 1, 2, 0, 1, 2, 0, 1, 2 }, 1,
-        new int[] { 2, 0, 1 }, new int[] { 2, 0, 1 })]
+        new int[] { 1, 0, 2 }, new int[] { 1, 0, 2 })]
     [DataRow("3 V, 3 L, 3 2-C", 3, new int[] { 0, 0, 0, 1, 1, 1, 2, 2, 2 },
         new int[] { 0, 1, 2, 0, 1, 2, 0, 1, 2 }, 2,
-        new int[] { 1, 0, 2 }, new int[] { 1, 0, 2 })]
+        new int[] { 2, 0, 1 }, new int[] { 2, 0, 1 })]
 
     // Sink
     [DataRow("2 V, 1 pointing to global sink", 2, new int[] { 0 }, new int[] { 1 }, 0,
@@ -77,7 +77,7 @@ public abstract class VisitStrategyTests
         new int[] { 1 }, new int[] { 1, 0, 2 })]
     [DataRow("4 V, 2 pointing to 2-chain jumping back", 4, new int[] { 0, 1, 2, 3 }, 
         new int[] { 1, 3, 1, 2 }, 0, 
-        new int[] { 0, 1, 3, 2 }, new int[] { 0, 1, 3, 2 })]
+        new int[] { 0, 1, 3, 2 }, new int[] { 0, 1, 2, 3 })]
     [DataRow("4 V, 2 pointing to 2-chain jumping back", 4, new int[] { 0, 1, 2, 3 },
         new int[] { 1, 3, 1, 2 }, 1,
         new int[] { 1, 3, 2 }, new int[] { 1, 0, 2, 3 })]
@@ -85,24 +85,121 @@ public abstract class VisitStrategyTests
         new int[] { 1, 3, 1, 2 }, 2,
         new int[] { 2, 1, 3 }, new int[] { 2, 1, 0, 3 })]
     [DataTestMethod]
-    public void Visit_IsCorrect(
-        string graphDescription,int numberOfVertices, int[] starts, int[] ends, int start,
+    public void DepthFirstSearchFromVertex_IsCorrect(
+        string graphDescription, int numberOfVertices, int[] starts, int[] ends, int start,
+        int[] expectedDirectedGraphResult, int[] expectedUndirectedGraphResult)
+    {
+        TestXFirstSearchMethod(
+            nameof(IVisitStrategy.DepthFirstSearchFromVertex),
+            (visitor, graph, start) => visitor.DepthFirstSearchFromVertex(graph, start),
+            graphDescription, numberOfVertices, starts, ends, start, 
+            expectedDirectedGraphResult, expectedUndirectedGraphResult);
+    }
+
+    // Loops and Cycles
+    [DataRow("1 V, 0 E", 1, new int[] { }, new int[] { }, 0,
+        new int[] { 0 }, new int[] { 0 })]
+    [DataRow("1 V, 1 L", 1, new int[] { 0 }, new int[] { 0 }, 0,
+        new int[] { 0 }, new int[] { 0 })]
+    [DataRow("1 V, 2 L", 1, new int[] { 0, 0 }, new int[] { 0, 0 }, 0,
+        new int[] { 0 }, new int[] { 0 })]
+    [DataRow("2 V, 0 E", 2, new int[] { }, new int[] { }, 0,
+        new int[] { 0 }, new int[] { 0 })]
+    [DataRow("2 V, 0 E", 2, new int[] { }, new int[] { }, 1,
+        new int[] { 1 }, new int[] { 1 })]
+    [DataRow("2 V, each 1 L", 2, new int[] { 0, 1 }, new int[] { 0, 1 }, 0,
+        new int[] { 0 }, new int[] { 0 })]
+    [DataRow("2 V, each 1 L", 2, new int[] { 0, 1 }, new int[] { 0, 1 }, 1,
+        new int[] { 1 }, new int[] { 1 })]
+    [DataRow("2 V, 1 2-C", 2, new int[] { 0, 1 }, new int[] { 1, 0 }, 0,
+        new int[] { 0, 1 }, new int[] { 0, 1 })]
+    [DataRow("2 V, 1 2-C", 2, new int[] { 0, 1 }, new int[] { 1, 0 }, 1,
+        new int[] { 1, 0 }, new int[] { 1, 0 })]
+    [DataRow("2 V, 1 inverted 2-C", 2, new int[] { 1, 0 }, new int[] { 0, 1 }, 0,
+        new int[] { 0, 1 }, new int[] { 0, 1 })]
+    [DataRow("2 V, 1 inverted 2-C", 2, new int[] { 1, 0 }, new int[] { 0, 1 }, 1,
+        new int[] { 1, 0 }, new int[] { 1, 0 })]
+    [DataRow("3 V, 1 L, 1 2-C", 3, new int[] { 0, 1, 2 }, new int[] { 0, 2, 1 }, 0,
+        new int[] { 0 }, new int[] { 0 })]
+    [DataRow("3 V, 1 L, 1 2-C", 3, new int[] { 0, 1, 2 }, new int[] { 0, 2, 1 }, 1,
+        new int[] { 1, 2 }, new int[] { 1, 2 })]
+    [DataRow("3 V, 1 L, 1 2-C", 3, new int[] { 0, 1, 2 }, new int[] { 0, 2, 1 }, 2,
+        new int[] { 2, 1 }, new int[] { 2, 1 })]
+    [DataRow("3 V, 1 3-C", 3, new int[] { 0, 1, 2 }, new int[] { 1, 2, 0 }, 0,
+        new int[] { 0, 1, 2 }, new int[] { 0, 1, 2 })]
+    [DataRow("3 V, 1 3-C", 3, new int[] { 0, 1, 2 }, new int[] { 1, 2, 0 }, 1,
+        new int[] { 1, 2, 0 }, new int[] { 1, 0, 2 })]
+    [DataRow("3 V, 1 3-C", 3, new int[] { 0, 1, 2 }, new int[] { 1, 2, 0 }, 2,
+        new int[] { 2, 0, 1 }, new int[] { 2, 0, 1 })]
+    [DataRow("3 V, 3 2-C", 3, new int[] { 0, 0, 1, 1, 2, 2 }, new int[] { 1, 2, 0, 2, 0, 1 }, 0,
+        new int[] { 0, 1, 2 }, new int[] { 0, 1, 2 })]
+    [DataRow("3 V, 3 L, 3 2-C", 3, new int[] { 0, 0, 0, 1, 1, 1, 2, 2, 2 },
+        new int[] { 0, 1, 2, 0, 1, 2, 0, 1, 2 }, 0,
+        new int[] { 0, 1, 2 }, new int[] { 0, 1, 2 })]
+    [DataRow("3 V, 3 L, 3 2-C", 3, new int[] { 0, 0, 0, 1, 1, 1, 2, 2, 2 },
+        new int[] { 0, 1, 2, 0, 1, 2, 0, 1, 2 }, 1,
+        new int[] { 1, 0, 2 }, new int[] { 1, 0, 2 })]
+    [DataRow("3 V, 3 L, 3 2-C", 3, new int[] { 0, 0, 0, 1, 1, 1, 2, 2, 2 },
+        new int[] { 0, 1, 2, 0, 1, 2, 0, 1, 2 }, 2,
+        new int[] { 2, 0, 1 }, new int[] { 2, 0, 1 })]
+
+    // Sink
+    [DataRow("2 V, 1 pointing to global sink", 2, new int[] { 0 }, new int[] { 1 }, 0,
+        new int[] { 0, 1 }, new int[] { 0, 1 })]
+    [DataRow("2 V, 1 pointing to global sink", 2, new int[] { 0 }, new int[] { 1 }, 1,
+        new int[] { 1 }, new int[] { 1, 0 })]
+    [DataRow("3 V, 2 pointing to global sink", 3, new int[] { 0, 2 }, new int[] { 1, 1 }, 0,
+        new int[] { 0, 1 }, new int[] { 0, 1, 2 })]
+    [DataRow("3 V, 2 pointing to global sink", 3, new int[] { 0, 2 }, new int[] { 1, 1 }, 1,
+        new int[] { 1 }, new int[] { 1, 0, 2 })]
+    [DataRow("4 V, 2 pointing to 2-chain jumping back", 
+        4, new int[] { 0, 1, 2, 3 }, new int[] { 1, 3, 1, 2 }, 0,
+        new int[] { 0, 1, 3, 2 }, new int[] { 0, 1, 2, 3 })]
+    [DataRow("4 V, 2 pointing to 2-chain jumping back", 
+        4, new int[] { 0, 1, 2, 3 }, new int[] { 1, 3, 1, 2 }, 1,
+        new int[] { 1, 3, 2 }, new int[] { 1, 0, 2, 3 })]
+
+    // BSF different from DFS
+    [DataRow("4 V, 2 pointing to 2-chain jumping back",
+        4, new int[] { 0, 1, 2, 3 }, new int[] { 1, 3, 1, 2 }, 2,
+        new int[] { 2, 1, 3 }, new int[] { 2, 1, 3, 0 })]
+    [DataRow("4 V, source pointing to leaf and 2-chain", 
+        4, new int[] { 0, 1, 0 }, new int[] { 1, 2, 3 }, 0,
+        new int[] { 0, 1, 3, 2}, new int[] { 0, 1, 3, 2 })]
+    [DataRow("4 V, source pointing to leaf and 2-chain",
+        4, new int[] { 0, 1, 3 }, new int[] { 1, 2, 0 }, 0,
+        new int[] { 0, 1, 2 }, new int[] { 0, 1, 3, 2 })]
+    [DataTestMethod]
+    public void BreadthSearchFromVertex_IsCorrect(
+        string graphDescription, int numberOfVertices, int[] starts, int[] ends, int start,
+        int[] expectedDirectedGraphResult, int[] expectedUndirectedGraphResult)
+    {
+        TestXFirstSearchMethod(
+            nameof(IVisitStrategy.BreadthFirstSearchFromVertex),
+            (visitor, graph, start) => visitor.BreadthFirstSearchFromVertex(graph, start),
+            graphDescription, numberOfVertices, starts, ends, start,
+            expectedDirectedGraphResult, expectedUndirectedGraphResult);
+    }
+
+    private void TestXFirstSearchMethod(
+        string methodName, Func<IVisitStrategy, IGraph, int, IEnumerable<int>> visitStrategyAction,
+        string graphDescription, int numberOfVertices, int[] starts, int[] ends, int start, 
         int[] expectedDirectedGraphResult, int[] expectedUndirectedGraphResult)
     {
         var graph = GraphBuilder(numberOfVertices, starts.Zip(ends).ToList());
         var directedGraphVisitor = VisitorBuilder(true);
-        var directedGraphResult = directedGraphVisitor.Visit(graph, start);
+        var directedGraphResult = visitStrategyAction(directedGraphVisitor, graph, start);
         Assert.IsTrue(
-            directedGraphResult.ToHashSet().SetEquals(expectedDirectedGraphResult.ToHashSet()), 
-            $"Failed {nameof(IVisitStrategy.Visit)} of {graphDescription} as directed graph: " +
+            directedGraphResult.SequenceEqual(expectedDirectedGraphResult),
+            $"Failed {methodName} of {graphDescription} as directed graph: " +
             $"expected [{string.Join(", ", expectedDirectedGraphResult)}], " +
             $"actual: [{string.Join(", ", directedGraphResult)}]");
 
         var undirectedGraphVisitor = VisitorBuilder(false);
-        var undirectedGraphResult = undirectedGraphVisitor.Visit(graph, start);
+        var undirectedGraphResult = visitStrategyAction(undirectedGraphVisitor, graph, start);
         Assert.IsTrue(
-            undirectedGraphResult.ToHashSet().SetEquals(expectedUndirectedGraphResult.ToHashSet()),
-            $"Failed {nameof(IVisitStrategy.Visit)} of {graphDescription} as undirected graph: " +
+            undirectedGraphResult.SequenceEqual(expectedUndirectedGraphResult),
+            $"Failed {methodName} of {graphDescription} as undirected graph: " +
             $"expected [{string.Join(", ", expectedUndirectedGraphResult)}], " +
             $"actual: [{string.Join(", ", undirectedGraphResult)}]");
     }
@@ -125,24 +222,24 @@ public abstract class VisitStrategyTests
         new[] { 2, 3, 5, 3, 4, 6 },
         new int[] { 0, 2, 4, 6, 3, 5, 1 }, new[] { 0, 2, 4, 6, 3, 1, 5 })]
     [DataTestMethod]
-    public void DepthFirstSearch_IsCorrect(
+    public void DepthFirstSearchOfGraph_IsCorrect(
         string graphDescription, int numberOfVertices, int[] starts, int[] ends,
         int[] expectedDirectedGraphResult, int[] expectedUndirectedGraphResult)
     {
         var graph = GraphBuilder(numberOfVertices, starts.Zip(ends).ToList());
         var directedGraphVisitor = VisitorBuilder(true);
-        var directedGraphResult = directedGraphVisitor.DepthFirstSearch(graph);
+        var directedGraphResult = directedGraphVisitor.DepthFirstSearchOfGraph(graph);
         Assert.IsTrue(
             directedGraphResult.SequenceEqual(expectedDirectedGraphResult),
-            $"Failed {nameof(IVisitStrategy.DepthFirstSearch)} of {graphDescription} as directed graph: " +
+            $"Failed {nameof(IVisitStrategy.DepthFirstSearchOfGraph)} of {graphDescription} as directed graph: " +
             $"expected [{string.Join(", ", expectedDirectedGraphResult)}], " +
             $"actual: [{string.Join(", ", directedGraphResult)}]");
 
         var undirectedGraphVisitor = VisitorBuilder(false);
-        var undirectedGraphResult = undirectedGraphVisitor.DepthFirstSearch(graph);
+        var undirectedGraphResult = undirectedGraphVisitor.DepthFirstSearchOfGraph(graph);
         Assert.IsTrue(
             undirectedGraphResult.SequenceEqual(expectedUndirectedGraphResult),
-            $"Failed {nameof(IVisitStrategy.DepthFirstSearch)} of {graphDescription} as undirected graph: " +
+            $"Failed {nameof(IVisitStrategy.DepthFirstSearchOfGraph)} of {graphDescription} as undirected graph: " +
             $"expected [{string.Join(", ", expectedUndirectedGraphResult)}], " +
             $"actual: [{string.Join(", ", undirectedGraphResult)}]");
     }
@@ -185,7 +282,7 @@ public abstract class VisitStrategyTests
     public void VisitEvents_InDepthFirstSearch()
     {
         TestVisitingEventsForMethod(
-            (graph, visitor) => MoreLinq.MoreEnumerable.Consume(visitor.DepthFirstSearch(graph)));
+            (graph, visitor) => MoreLinq.MoreEnumerable.Consume(visitor.DepthFirstSearchOfGraph(graph)));
     }
 
     [TestMethod]
@@ -199,7 +296,7 @@ public abstract class VisitStrategyTests
     public void VisitEvents_InVisit()
     {
         TestVisitingEventsForMethod(
-            (graph, visitor) => MoreLinq.MoreEnumerable.Consume(visitor.Visit(graph, 0)));
+            (graph, visitor) => MoreLinq.MoreEnumerable.Consume(visitor.DepthFirstSearchFromVertex(graph, 0)));
     }
 
     private enum JournalEventType { Visiting, Visited };

@@ -38,10 +38,19 @@ public interface IGraph
     /// Whether to consider the direction of edges, when looking for neighbors.
     /// </param>
     /// <returns>
-    /// A sequence of couples: the first item being the id of the neighboring vertex V found, and the second item being
-    /// the edge which connects the <paramref name="start"/> vertex to V, or viceversa. The order is <b>undefined</b>, 
+    /// A sequence of <see cref="Adjacency"/> instances, containing the id of the neighboring vertex V found, and the 
+    /// edge which connects the <paramref name="start"/> vertex to V, or viceversa. The order is <b>undefined</b>, 
     /// and depends on the implementation.
     /// </returns>
-    IEnumerable<(int vertex, (int edgeStart, int edgeEnd) edge)> GetAdjacentVerticesAndEdges(
-        int start, bool takeIntoAccountEdgeDirection);
+    IEnumerable<Adjacency> GetAdjacentVerticesAndEdges(int start, bool takeIntoAccountEdgeDirection);
+
+    /// <summary>
+    /// An adjacency in a <see cref="IGraph"/> structure to a vertex, consisting of a neighboring 
+    /// <paramref name="Vertex"/>, connected to the first vertex via edge, identified by <paramref name="EdgeStart"/> 
+    /// and <paramref name="EdgeEnd"/>.
+    /// </summary>
+    /// <param name="Vertex">The neighboring vertex.</param>
+    /// <param name="EdgeStart">The start vertex of the edge, connecting from/to the neighbor.</param>
+    /// <param name="EdgeEnd">The end vertex of the edge, connecting from/to the neighbor.</param>
+    public record struct Adjacency(int Vertex, int EdgeStart, int EdgeEnd);
 }

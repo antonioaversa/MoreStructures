@@ -78,11 +78,11 @@ public record AdjacencyListGraph(IList<ISet<int>> Neighborhoods) : IGraph
     ///       neighborhoods defined).
     ///     </para>
     /// </remarks>
-    public IEnumerable<(int vertex, (int edgeStart, int edgeEnd) edge)> GetAdjacentVerticesAndEdges(
+    public IEnumerable<IGraph.Adjacency> GetAdjacentVerticesAndEdges(
         int start, bool takeIntoAccountEdgeDirection)
     {
         foreach (var end in Neighborhoods[start])
-            yield return (end, (start, end));
+            yield return new(end, start, end);
 
         if (takeIntoAccountEdgeDirection)
             yield break;
@@ -93,7 +93,7 @@ public record AdjacencyListGraph(IList<ISet<int>> Neighborhoods) : IGraph
                 continue;
 
             if (Neighborhoods[i].Contains(start))
-                yield return (i, (i, start));
+                yield return new(i, i, start);
         }
     }
 }
