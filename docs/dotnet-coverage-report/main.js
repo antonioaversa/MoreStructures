@@ -326,6 +326,8 @@ var assemblies = [
       { "name": "MoreStructures.Utilities.ValueReadOnlyCollectionsExtensions", "rp": "MoreStructures_ValueReadOnlyCollectionsExtensions.html", "cl": 3, "ucl": 0, "cal": 3, "tl": 71, "ct": "LineCoverage", "cbm": "-", "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [] },
       { "name": "MoreStructures.Utilities.ValueReadOnlyDictionary<T1, T2>", "rp": "MoreStructures_ValueReadOnlyDictionary_2.html", "cl": 14, "ucl": 0, "cal": 14, "tl": 87, "ct": "LineCoverage", "cbm": "-", "cb": 12, "tb": 12, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [] },
       { "name": "MoreStructures.VirtuallyRotatedTextWithTerminator", "rp": "MoreStructures_VirtuallyRotatedTextWithTerminator.html", "cl": 91, "ucl": 0, "cal": 91, "tl": 107, "ct": "LineCoverage", "cbm": "-", "cb": 16, "tb": 16, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [] },
+      { "name": "MoreStructures.XifoStructures.XQueue<T>", "rp": "MoreStructures_XQueue_1.html", "cl": 4, "ucl": 0, "cal": 4, "tl": 29, "ct": "LineCoverage", "cbm": "-", "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [] },
+      { "name": "MoreStructures.XifoStructures.XStack<T>", "rp": "MoreStructures_XStack_1.html", "cl": 4, "ucl": 0, "cal": 4, "tl": 29, "ct": "LineCoverage", "cbm": "-", "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [] },
     ]},
 ];
 
