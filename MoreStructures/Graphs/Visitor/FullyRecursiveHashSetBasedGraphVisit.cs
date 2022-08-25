@@ -275,7 +275,10 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
             .Select(enumerator => enumerator.MoveNext())
             .ToList();
 
-        while (neighborsEnumeratorsMoveNext.Any(b => b))
+        var neighborsEnumeratorsMoveNextCount = neighborsEnumeratorsMoveNext
+            .Count(b => b);
+
+        while (neighborsEnumeratorsMoveNextCount > 0)
         {
             for (var i = 0; i < neighborsEnumerators.Count; i++)
             {
@@ -283,6 +286,9 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
                 {
                     yield return neighborsEnumerators[i].Current;
                     neighborsEnumeratorsMoveNext[i] = neighborsEnumerators[i].MoveNext();
+
+                    if (!neighborsEnumeratorsMoveNext[i])
+                        neighborsEnumeratorsMoveNextCount--;
                 }
             }
         }
