@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.Graphs;
+﻿using MoreStructures.Graphs;
 using MoreStructures.Graphs.Visitor;
 
 namespace MoreStructures.Tests.Graphs.Visitor;
@@ -332,6 +331,7 @@ public abstract class VisitStrategyTests
 
         // Events were invoked during action execution
         Assert.IsTrue(visitingVertexEventInvoked.All(kvp => kvp.Value == 1));
+
         Assert.IsTrue(visitedVertexEventInvoked.All(kvp => kvp.Value == 1));
 
         // The order of events is correct
