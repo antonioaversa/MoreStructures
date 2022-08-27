@@ -76,7 +76,7 @@ public class AnyPathToSinkBasedTopologicalSort : ITopologicalSort
                 var nextVertex = dag
                     .GetAdjacentVerticesAndEdges(currentVertex, true)
                     .Select(a => a.Vertex)
-                    .Where(v => v != currentVertex && remainingVertices.Contains(v))
+                    .Where(v => remainingVertices.Contains(v))
                     .FirstOrDefault(-1);
 
                 if (nextVertex < 0)
