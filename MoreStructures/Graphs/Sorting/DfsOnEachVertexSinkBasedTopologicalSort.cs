@@ -1,18 +1,37 @@
 ﻿using MoreStructures.Graphs.Visitor;
+using System.Linq;
 
 namespace MoreStructures.Graphs.Sorting;
 
 /// <summary>
 /// An <see cref="ITopologicalSort"/> implementation which assigns topological order to vertices by identifing a sink 
-/// vertex at each iteration.
+/// vertex at each iteration <b>in a deterministic way</b>, running DFS on each vertex and selecting the max sink.
 /// </summary>
 /// <remarks>
+///     <para id="advantages">
+///     ADVANTAGES AND DISADVANTAGES
+///     <br/>
+///     - This is a very naive implementation of <see cref="ITopologicalSort"/>.
+///       <br/>
+///     - Using DFS on each vertex and building a "reachability dictionary" is conceptually simple, but very 
+///       unefficient, leading to cubic runtime over the number of vertices (compared to the quadratic runtime of
+///       <see cref="AnyPathToSinkBasedTopologicalSort"/> or the linear runtime of an approach based on a single DFS 
+///       pass of the graph).
+///       <br/>
+///     - However, because all reachable vertices are retrieved, and the max is selected when looking for a sink, the
+///       final topological sort returned is easily predictable: when multiple topological sort orders are possible,
+///       the one returned is the one which has higher vertex ids at the end of the output array.
+///       <br/>
+///     - The deterministic property is not satisfied by some implementations with better runtime, such as 
+///       <see cref="AnyPathToSinkBasedTopologicalSort"/>, which starts graph exploration from "some" vertex and 
+///       follows "some" path, to get to a sink.
+///     </para>
 ///     <para id="algorithm">
 ///     ALGORITHM
 ///     <br/>
 ///     - First, all reachable vertices, from each vertex of the graph, are identified, running a 
-///       <see cref="IVisitStrategy.DepthFirstSearchFromVertex(MoreStructures.Graphs.IGraph, int)"/> via the 
-///       <see cref="VisitStrategy"/> provided in the constructor.
+///       <see cref="IVisitStrategy.DepthFirstSearchFromVertex(IGraph, int)"/> via the <see cref="VisitStrategy"/> 
+///       provided in the constructor.
 ///       <br/>
 ///     - Reachable vertices from each vertex are stored into a <see cref="Dictionary{TKey, TValue}"/> D, mapping the
 ///       <see cref="int"/> id of the vertex i to an <see cref="HashSet{T}"/> of vertices reachable from i (including
@@ -39,9 +58,14 @@ namespace MoreStructures.Graphs.Sorting;
 ///     - If such a sink is found instead, it is returned as (v - 1 - i)-th item of TS, where i is the 0-based running
 ///       index of the main loop of the algorithm, incremented by 1 at each iteration.
 ///       <br/>
+///     - Notice that not any sink is taken: <b>instead of stopping at the first sink found, the sink with the highest
+///       id is returned</b>. This makes the algorithm fully deterministic and ensures full predictability of the 
+///       result.
+///       <br/>
 ///     - Finally the array TS is returned.
 ///     </para>
 ///     <para id="complexity">
+///     COMPLEXITY
 ///     <br/>
 ///     - Getting the number of vertices via <see cref="IGraph.GetNumberOfVertices"/> is a constant-time operation in
 ///       any classical implementation of <see cref="IGraph"/>.
@@ -65,7 +89,7 @@ namespace MoreStructures.Graphs.Sorting;
 ///       be at most O(v^2) (in graphs where every vertex is connected to every other vertex).
 ///     </para>
 /// </remarks>
-public class SinkBasedTopologicalSort : ITopologicalSort
+public class DfsOnEachVertexSinkBasedTopologicalSort : ITopologicalSort
 {
     /// <summary>
     /// The visitor to be used to identify sink vertices, by running Depth First Searches on the graph.
@@ -73,20 +97,23 @@ public class SinkBasedTopologicalSort : ITopologicalSort
     public IVisitStrategy VisitStrategy { get; }
 
     /// <summary>
-    ///     <inheritdoc cref="SinkBasedTopologicalSort"/>
+    ///     <inheritdoc cref="DfsOnEachVertexSinkBasedTopologicalSort"/>
     /// </summary>
     /// <param name="visitStrategy">
     ///     <inheritdoc cref="VisitStrategy" path="/summary"/>
     /// </param>
     /// <remarks>
-    ///     <inheritdoc cref="SinkBasedTopologicalSort"/>
+    ///     <inheritdoc cref="DfsOnEachVertexSinkBasedTopologicalSort"/>
     /// </remarks>
-    public SinkBasedTopologicalSort(IVisitStrategy visitStrategy)
+    public DfsOnEachVertexSinkBasedTopologicalSort(IVisitStrategy visitStrategy)
     {
         VisitStrategy = visitStrategy;
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
+    /// <remarks>
+    ///     <inheritdoc cref="DfsOnEachVertexSinkBasedTopologicalSort"/>
+    /// </remarks>
     public IList<int> Sort(IGraph dag)
     {
         // Find reachable nodes for each vertex

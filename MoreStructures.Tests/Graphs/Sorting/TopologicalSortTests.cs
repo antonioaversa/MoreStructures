@@ -16,7 +16,6 @@ public abstract class TopologicalSortTests
     }
 
     [DataRow("1V, no edges", 1, new int[] { }, new int[] { }, new[] { 0 })]
-    [DataRow("2V, no edges", 2, new int[] { }, new int[] { }, new[] { 0, 1 })]
     [DataRow("2V, source to sink", 2, new int[] { 0 }, new int[] { 1 }, new[] { 0, 1 })]
     [DataRow("2V, sink from source", 2, new int[] { 1 }, new int[] { 0 }, new[] { 1, 0 })]
     [DataRow("4V, 1 4-chain", 4, new int[] { 0, 1, 2 }, new int[] { 1, 2, 3 }, new[] { 0, 1, 2, 3 })]
@@ -34,6 +33,7 @@ public abstract class TopologicalSortTests
             $"Actual: [{string.Join(", ", topologicalSort)}]");
     }
 
+    [DataRow("2V, no edges", 2, new int[] { }, new int[] { })]
     [DataRow("4V, 2 sources pointing each to 1 sink", 4, new int[] { 0, 1 }, new int[] { 3, 2 })]
     [DataRow("4V, 2 sources pointing both to 2 sinks", 4, new int[] { 0, 0, 1, 1 }, new int[] { 2, 3, 2, 3 })]
     [DataRow("4V, 1 source, 1 intermediate, 2 sinks", 4, new int[] { 0, 0, 0, 1, 1 }, new int[] { 1, 2, 3, 2, 3 })]
