@@ -168,6 +168,12 @@ public abstract class VisitStrategyTests
     [DataRow("4 V, source pointing to leaf and 2-chain",
         4, new int[] { 0, 1, 3 }, new int[] { 1, 2, 0 }, 0,
         new int[] { 0, 1, 2 }, new int[] { 0, 1, 3, 2 })]
+    [DataRow("6 V, 1 source, 4 intermediate, 1 sink",
+        6, new int[] { 0, 0, 0, 1, 1, 1, 2, 2, 3, 4 }, new int[] { 1, 2, 5, 2, 3, 4, 4, 5, 4, 5 }, 0,
+        new int[] { 0, 1, 2, 5, 3, 4 }, new int[] { 0, 1, 2, 5, 3, 4 })]
+    [DataRow("7 V, 1 3-C, 1 2-chain, 1 2-chain sharing leaf with 1-chain",
+        7, new int[] { 0, 0, 0, 0, 1, 3, 4, 5 }, new int[] { 1, 2, 3, 5, 2, 4, 0, 6 }, 0,
+        new int[] { 0, 1, 2, 3, 5, 4, 6 }, new int[] { 0, 1, 2, 3, 4, 5, 6 })]
     [DataTestMethod]
     public void BreadthSearchFromVertex_IsCorrect(
         string graphDescription, int numberOfVertices, int[] starts, int[] ends, int start,
@@ -187,7 +193,7 @@ public abstract class VisitStrategyTests
     {
         var graph = GraphBuilder(numberOfVertices, starts.Zip(ends).ToList());
         var directedGraphVisitor = VisitorBuilder(true);
-        var directedGraphResult = visitStrategyAction(directedGraphVisitor, graph, start);
+        var directedGraphResult = visitStrategyAction(directedGraphVisitor, graph, start).ToList();
         Assert.IsTrue(
             directedGraphResult.SequenceEqual(expectedDirectedGraphResult),
             $"Failed {methodName} of {graphDescription} as directed graph: " +
@@ -195,7 +201,7 @@ public abstract class VisitStrategyTests
             $"actual: [{string.Join(", ", directedGraphResult)}]");
 
         var undirectedGraphVisitor = VisitorBuilder(false);
-        var undirectedGraphResult = visitStrategyAction(undirectedGraphVisitor, graph, start);
+        var undirectedGraphResult = visitStrategyAction(undirectedGraphVisitor, graph, start).ToList();
         Assert.IsTrue(
             undirectedGraphResult.SequenceEqual(expectedUndirectedGraphResult),
             $"Failed {methodName} of {graphDescription} as undirected graph: " +
