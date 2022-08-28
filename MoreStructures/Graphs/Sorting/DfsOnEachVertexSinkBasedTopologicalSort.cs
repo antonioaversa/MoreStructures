@@ -1,5 +1,4 @@
 ﻿using MoreStructures.Graphs.Visitor;
-using System.Linq;
 
 namespace MoreStructures.Graphs.Sorting;
 

@@ -1,4 +1,5 @@
-﻿using MoreStructures.Graphs;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MoreStructures.Graphs;
 using MoreStructures.Graphs.Visitor;
 
 namespace MoreStructures.Tests.Graphs.Visitor;
@@ -9,7 +10,7 @@ public abstract class VisitStrategyTests
     protected Func<bool, IVisitStrategy> VisitorBuilder { get; }
 
     protected VisitStrategyTests(
-        Func<int, IList<(int, int)>, IGraph> graphBuilder, 
+        Func<int, IList<(int, int)>, IGraph> graphBuilder,
         Func<bool, IVisitStrategy> visitorBuilder)
     {
         GraphBuilder = graphBuilder;
@@ -19,7 +20,7 @@ public abstract class VisitStrategyTests
     // Legend: V = Vertex, E = Edge, L = Loop, n-C = n-Cycle
 
     // Loops and Cycles
-    [DataRow("1 V, 0 E", 1, new int[] { }, new int[] { },  0,
+    [DataRow("1 V, 0 E", 1, new int[] { }, new int[] { }, 0,
         new int[] { 0 }, new int[] { 0 })]
     [DataRow("1 V, 1 L", 1, new int[] { 0 }, new int[] { 0 }, 0,
         new int[] { 0 }, new int[] { 0 })]
@@ -55,8 +56,8 @@ public abstract class VisitStrategyTests
         new int[] { 2, 0, 1 }, new int[] { 2, 0, 1 })]
     [DataRow("3 V, 3 2-C", 3, new int[] { 0, 0, 1, 1, 2, 2 }, new int[] { 1, 2, 0, 2, 0, 1 }, 0,
         new int[] { 0, 1, 2 }, new int[] { 0, 1, 2 })]
-    [DataRow("3 V, 3 L, 3 2-C", 3, new int[] { 0, 0, 0, 1, 1, 1, 2, 2, 2 }, 
-        new int[] { 0, 1, 2, 0, 1, 2, 0, 1, 2 }, 0, 
+    [DataRow("3 V, 3 L, 3 2-C", 3, new int[] { 0, 0, 0, 1, 1, 1, 2, 2, 2 },
+        new int[] { 0, 1, 2, 0, 1, 2, 0, 1, 2 }, 0,
         new int[] { 0, 1, 2 }, new int[] { 0, 1, 2 })]
     [DataRow("3 V, 3 L, 3 2-C", 3, new int[] { 0, 0, 0, 1, 1, 1, 2, 2, 2 },
         new int[] { 0, 1, 2, 0, 1, 2, 0, 1, 2 }, 1,
@@ -74,8 +75,8 @@ public abstract class VisitStrategyTests
         new int[] { 0, 1 }, new int[] { 0, 1, 2 })]
     [DataRow("3 V, 2 pointing to global sink", 3, new int[] { 0, 2 }, new int[] { 1, 1 }, 1,
         new int[] { 1 }, new int[] { 1, 0, 2 })]
-    [DataRow("4 V, 2 pointing to 2-chain jumping back", 4, new int[] { 0, 1, 2, 3 }, 
-        new int[] { 1, 3, 1, 2 }, 0, 
+    [DataRow("4 V, 2 pointing to 2-chain jumping back", 4, new int[] { 0, 1, 2, 3 },
+        new int[] { 1, 3, 1, 2 }, 0,
         new int[] { 0, 1, 3, 2 }, new int[] { 0, 1, 2, 3 })]
     [DataRow("4 V, 2 pointing to 2-chain jumping back", 4, new int[] { 0, 1, 2, 3 },
         new int[] { 1, 3, 1, 2 }, 1,
@@ -91,7 +92,7 @@ public abstract class VisitStrategyTests
         TestXFirstSearchMethod(
             nameof(IVisitStrategy.DepthFirstSearchFromVertex),
             (visitor, graph, start) => visitor.DepthFirstSearchFromVertex(graph, start),
-            graphDescription, numberOfVertices, starts, ends, start, 
+            graphDescription, numberOfVertices, starts, ends, start,
             expectedDirectedGraphResult, expectedUndirectedGraphResult);
     }
 
@@ -151,10 +152,10 @@ public abstract class VisitStrategyTests
         new int[] { 0, 1 }, new int[] { 0, 1, 2 })]
     [DataRow("3 V, 2 pointing to global sink", 3, new int[] { 0, 2 }, new int[] { 1, 1 }, 1,
         new int[] { 1 }, new int[] { 1, 0, 2 })]
-    [DataRow("4 V, 2 pointing to 2-chain jumping back", 
+    [DataRow("4 V, 2 pointing to 2-chain jumping back",
         4, new int[] { 0, 1, 2, 3 }, new int[] { 1, 3, 1, 2 }, 0,
         new int[] { 0, 1, 3, 2 }, new int[] { 0, 1, 2, 3 })]
-    [DataRow("4 V, 2 pointing to 2-chain jumping back", 
+    [DataRow("4 V, 2 pointing to 2-chain jumping back",
         4, new int[] { 0, 1, 2, 3 }, new int[] { 1, 3, 1, 2 }, 1,
         new int[] { 1, 3, 2 }, new int[] { 1, 0, 2, 3 })]
 
@@ -162,9 +163,9 @@ public abstract class VisitStrategyTests
     [DataRow("4 V, 2 pointing to 2-chain jumping back",
         4, new int[] { 0, 1, 2, 3 }, new int[] { 1, 3, 1, 2 }, 2,
         new int[] { 2, 1, 3 }, new int[] { 2, 1, 3, 0 })]
-    [DataRow("4 V, source pointing to leaf and 2-chain", 
+    [DataRow("4 V, source pointing to leaf and 2-chain",
         4, new int[] { 0, 1, 0 }, new int[] { 1, 2, 3 }, 0,
-        new int[] { 0, 1, 3, 2}, new int[] { 0, 1, 3, 2 })]
+        new int[] { 0, 1, 3, 2 }, new int[] { 0, 1, 3, 2 })]
     [DataRow("4 V, source pointing to leaf and 2-chain",
         4, new int[] { 0, 1, 3 }, new int[] { 1, 2, 0 }, 0,
         new int[] { 0, 1, 2 }, new int[] { 0, 1, 3, 2 })]
@@ -188,7 +189,7 @@ public abstract class VisitStrategyTests
 
     private void TestXFirstSearchMethod(
         string methodName, Func<IVisitStrategy, IGraph, int, IEnumerable<int>> visitStrategyAction,
-        string graphDescription, int numberOfVertices, int[] starts, int[] ends, int start, 
+        string graphDescription, int numberOfVertices, int[] starts, int[] ends, int start,
         int[] expectedDirectedGraphResult, int[] expectedUndirectedGraphResult)
     {
         var graph = GraphBuilder(numberOfVertices, starts.Zip(ends).ToList());
@@ -211,7 +212,7 @@ public abstract class VisitStrategyTests
 
     [DataRow("4 V, source to 1 sink and 1 intermediate to sink", 4, new[] { 0, 0, 1 }, new[] { 1, 2, 3 },
         new int[] { 0, 1, 3, 2 }, new[] { 0, 1, 3, 2 })]
-    [DataRow("5 V, 3 isolated, 1 source to sink", 5, new[] { 1 }, new[] { 3 }, 
+    [DataRow("5 V, 3 isolated, 1 source to sink", 5, new[] { 1 }, new[] { 3 },
         new int[] { 0, 1, 3, 2, 4 }, new[] { 0, 1, 3, 2, 4 })]
     [DataRow("5 V, 3 isolated, 1 source to sink inverted", 5, new[] { 3 }, new[] { 1 },
         new int[] { 0, 1, 2, 3, 4 }, new[] { 0, 1, 3, 2, 4 })]
@@ -223,7 +224,7 @@ public abstract class VisitStrategyTests
         new int[] { 0, 1, 2, 4, 3 }, new[] { 0, 2, 1, 3, 4 })]
     [DataRow("7 V, tree, 1 2-chain, 1 3-chain, 1 4-chain", 7, new[] { 0, 0, 0, 1, 2, 4 }, new[] { 2, 1, 5, 3, 4, 6 },
         new int[] { 0, 1, 3, 2, 4, 6, 5 }, new[] { 0, 1, 3, 2, 4, 6, 5 })]
-    [DataRow("7 V, quasi-tree, 1 2-chain, 1 3-chain, 1 4-chain", 7, new[] { 0, 0, 0, 1, 2, 4 }, 
+    [DataRow("7 V, quasi-tree, 1 2-chain, 1 3-chain, 1 4-chain", 7, new[] { 0, 0, 0, 1, 2, 4 },
         new[] { 2, 3, 5, 3, 4, 6 },
         new int[] { 0, 2, 4, 6, 3, 5, 1 }, new[] { 0, 2, 4, 6, 3, 1, 5 })]
     [DataTestMethod]
@@ -284,24 +285,84 @@ public abstract class VisitStrategyTests
     }
 
     [TestMethod]
-    public void VisitEvents_InDepthFirstSearch()
+    public void VisitEvents_BasicChecksInDepthFirstSearch()
     {
         TestVisitingEventsForMethod(
             (graph, visitor) => MoreLinq.MoreEnumerable.Consume(visitor.DepthFirstSearchOfGraph(graph)));
     }
 
     [TestMethod]
-    public void VisitEvents_InConnectedComponents()
+    public void VisitEvents_BasicChecksInConnectedComponents()
     {
         TestVisitingEventsForMethod(
             (graph, visitor) => MoreLinq.MoreEnumerable.Consume(visitor.ConnectedComponents(graph)));
     }
 
     [TestMethod]
-    public void VisitEvents_InVisit()
+    public void VisitEvents_BasicChecksInVisit()
     {
         TestVisitingEventsForMethod(
             (graph, visitor) => MoreLinq.MoreEnumerable.Consume(visitor.DepthFirstSearchFromVertex(graph, 0)));
+    }
+
+    [DataRow("2V, source to sink", 2, new[] { 0 }, new[] { 1 })]
+    [DataRow("2V, sink to source", 2, new[] { 1 }, new[] { 0 })]
+    [DataRow("3V, source to intermediate to sink", 3, new[] { 0, 1 }, new[] { 1, 2 })]
+    [DataRow("4V, 2 sources to 1 intermediate to 1 sink", 4, new[] { 3, 0, 1 }, new[] { 1, 1, 2 })]
+    [DataRow("4V, 1 source to 2 intermediate to 1 sink", 4, new[] { 0, 0, 1, 2 }, new[] { 1, 2, 3, 3 })]
+    [DataRow("4V, 2 3-C overlapping on 2 vertices", 4, new[] { 0, 1, 2, 0, 3, 1 }, new[] { 1, 2, 0, 3, 1, 0 })]
+    [DataTestMethod]
+    public void VisitingVertex_InDepthFirstSearchOfGraphIsAccordingToOutput(
+        string graphDescription, int numberOfVertices, int[] starts, int[] ends)
+    {
+        var graph = GraphBuilder(numberOfVertices, starts.Zip(ends).ToList());
+        var visitStrategy = VisitorBuilder(true);
+
+        var preOrder = new List<int>();
+        visitStrategy.VisitingVertex += (o, e) => preOrder.Add(e.Vertex);
+
+        var visitOutput = visitStrategy.DepthFirstSearchOfGraph(graph).ToList();
+        Assert.IsTrue(
+            visitOutput.SequenceEqual(preOrder),
+            $"{graphDescription} - Expected: [{string.Join(", ", visitOutput)}], " +
+            $"Actual: [{string.Join(", ", preOrder)}]");
+    }
+
+    [DataRow("2V, source to sink", 2, new[] { 0 }, new[] { 1 },
+        new[] { 0, 1 }, new[] { 3, 2 })]
+    [DataRow("2V, sink to source", 2, new[] { 1 }, new[] { 0 },
+        new[] { 0, 2 }, new[] { 1, 3 })]
+    [DataRow("3V, source to intermediate to sink", 3, new[] { 0, 1 }, new[] { 1, 2 },
+        new[] { 0, 1, 2 }, new[] { 5, 4, 3 })]
+    [DataRow("4V, 2 sources to 1 intermediate to 1 sink", 4, new[] { 3, 0, 1 }, new[] { 1, 1, 2 },
+        new[] { 0, 1, 2, 6 }, new[] { 5, 4, 3, 7 })]
+    [DataRow("4V, 1 source to 2 intermediate to 1 sink", 4, new[] { 0, 0, 1, 2 }, new[] { 1, 2, 3, 3 },
+        new[] { 0, 1, 5, 2 }, new[] { 7, 4, 6, 3 })]
+    [DataRow("4V, 2 3-C overlapping on 2 vertices", 4, new[] { 0, 1, 2, 0, 3, 1 }, new[] { 1, 2, 0, 3, 1, 0 },
+        new[] { 0, 1, 2, 5 }, new[] { 7, 4, 3, 6 })]
+    [DataTestMethod]
+    public void VisitingAndVisitedVertex_InDepthFirstSearchOfGraph_AreCorrect(
+        string graphDescription, int numberOfVertices, int[] starts, int[] ends,
+        int[] expectedPreVisitValues, int[] expectedPostVisitValues)
+    {
+        var graph = GraphBuilder(numberOfVertices, starts.Zip(ends).ToList());
+        var visitStrategy = VisitorBuilder(true);
+
+        var preVisitValues = new int[numberOfVertices];
+        var postVisitValues = new int[numberOfVertices];
+        var counter = 0;
+        visitStrategy.VisitingVertex += (o, e) => preVisitValues[e.Vertex] = counter++;
+        visitStrategy.VisitedVertex += (o, e) => postVisitValues[e.Vertex] = counter++;
+
+        var visitOutput = visitStrategy.DepthFirstSearchOfGraph(graph).ToList();
+        Assert.IsTrue(
+            expectedPreVisitValues.SequenceEqual(preVisitValues),
+            $"{graphDescription} - Expected: [{string.Join(", ", expectedPreVisitValues)}], " +
+            $"Actual: [{string.Join(", ", preVisitValues)}]");
+        Assert.IsTrue(
+            expectedPostVisitValues.SequenceEqual(postVisitValues),
+            $"{graphDescription} - Expected: [{string.Join(", ", expectedPostVisitValues)}], " +
+            $"Actual: [{string.Join(", ", postVisitValues)}]");
     }
 
     private enum JournalEventType { Visiting, Visited };
@@ -340,7 +401,7 @@ public abstract class VisitStrategyTests
 
         Assert.IsTrue(visitedVertexEventInvoked.All(kvp => kvp.Value == 1));
 
-        // The order of events is correct
+        // Pre-post-visit intervals don't partially overlap: they are either disjoint or fully contained
         var verticesExplored = journal.Select(kvp => kvp.Key.vertex).Distinct().ToList();
         foreach (var v1 in verticesExplored)
         {

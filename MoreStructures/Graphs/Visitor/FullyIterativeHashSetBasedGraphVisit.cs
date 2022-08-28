@@ -9,6 +9,8 @@ namespace MoreStructures.Graphs.Visitor;
 /// </summary>
 public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
 {
+    private record struct XifoFrame(int Vertex, bool Processed);
+
     /// <summary>
     ///     <inheritdoc cref="FullyIterativeHashSetBasedGraphVisit"/>
     /// </summary>
@@ -24,7 +26,7 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     ///     <para id="advantages">
     ///     ADVANTAGES AND DISADVANTAGES
     ///     <br/>
-    ///     Implemented fully recursively, so limited by stack depth and usable with graphs of a "reasonable" size.
+    ///     <inheritdoc cref="DocFragments" path="/remarks/para[@id='fully-iterative-advantages']"/>
     ///     </para>
     ///     <para id="algorithm">
     ///     ALGORITHM
@@ -60,12 +62,12 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     /// </remarks>
     public override IEnumerable<int> DepthFirstSearchOfGraph(IGraph graph)
     {
-        var stack = new XStack<int>();
+        var stack = new XStack<XifoFrame>();
         var alreadyVisited = new HashSet<int>(); // Populated by ProcessXifo
         var numberOfVertices = graph.GetNumberOfVertices();
         for (var vertex = 0; vertex < numberOfVertices; vertex++)
         {
-            stack.Push(vertex);
+            stack.Push(new(vertex, false));
             while (stack.Count > 0)
             {
                 var maybeOutputItem = ProcessXifo(graph, stack, alreadyVisited, e => e.OrderByDescending(i => i));
@@ -80,13 +82,13 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     ///     <para id="advantages">
     ///     ADVANTAGES AND DISADVANTAGES
     ///     <br/>
-    ///     Implemented fully recursively, so limited by stack depth and usable with graphs of a "reasonable" size.
+    ///     <inheritdoc cref="DocFragments" path="/remarks/para[@id='fully-iterative-advantages']"/>
     ///     </para>
     ///     <para id="algorithm">
     ///     ALGORITHM
     ///     <br/>
-    ///     - The algorithm is a simple variation of <see cref="DepthFirstSearchOfGraph(IGraph)"/>, with the differences
-    ///       explained in <see cref="FullyRecursiveHashSetBasedGraphVisit.ConnectedComponents(IGraph)"/>.
+    ///     - The algorithm is a simple variation of <see cref="DepthFirstSearchOfGraph(IGraph)"/>, with the 
+    ///       differences explained in <see cref="FullyRecursiveHashSetBasedGraphVisit.ConnectedComponents(IGraph)"/>.
     ///     </para>
     ///     <para id="complexity">
     ///     COMPLEXITY
@@ -101,7 +103,7 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     /// </remarks>
     public override IDictionary<int, int> ConnectedComponents(IGraph graph)
     {
-        var stack = new XStack<int>();
+        var stack = new XStack<XifoFrame>();
         var alreadyVisited = new HashSet<int>(); // Populated by ProcessXifo
         var numberOfVertices = graph.GetNumberOfVertices();
 
@@ -109,7 +111,7 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
         var currentConnectedComponent = 0;
         for (var vertex = 0; vertex < numberOfVertices; vertex++)
         {
-            stack.Push(vertex);
+            stack.Push(new(vertex, false));
             bool currentConnectedComponentUsed = false;
             while (stack.Count > 0)
             {
@@ -157,9 +159,9 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     /// </remarks>
     public override IEnumerable<int> DepthFirstSearchFromVertex(IGraph graph, int start)
     {
-        var stack = new XStack<int>();
+        var stack = new XStack<XifoFrame>();
         var alreadyVisited = new HashSet<int>(); // Populated by ProcessXifo
-        stack.Push(start);
+        stack.Push(new(start, false));
         while (stack.Count > 0)
             if (ProcessXifo(graph, stack, alreadyVisited, e => e.OrderByDescending(i => i)) is int vertex)
                 yield return vertex;
@@ -192,20 +194,29 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     /// </remarks>
     public override IEnumerable<int> BreadthFirstSearchFromVertex(IGraph graph, int start)
     {
-        var queue = new XQueue<int>();
+        var queue = new XQueue<XifoFrame>();
         var alreadyVisited = new HashSet<int>(); // Populated by ProcessXifo
-        queue.Push(start);
+        queue.Push(new(start, false));
         while (queue.Count > 0)
             if (ProcessXifo(graph, queue, alreadyVisited, e => e.OrderBy(i => i)) is int vertex)
                 yield return vertex;
     }
 
     private int? ProcessXifo(
-        IGraph graph, IXifoStructure<int> xifo, HashSet<int> alreadyVisited, 
+        IGraph graph, IXifoStructure<XifoFrame> xifo, HashSet<int> alreadyVisited, 
         Func<IEnumerable<int>, IEnumerable<int>> neighborsProcessor)
     {
-        var vertex = xifo.Pop();
+        var (vertex, processed) = xifo.Pop();
 
+        if (processed)
+        {
+            RaiseVisitedVertex(new(vertex));
+            return null;
+        }
+
+        // Both the following check and the one in the foreach loop of neighbors are required, because a vertex may
+        // already be in the XIFO structure, even though it has not been processed yet, and therefore it's not in the
+        // alreadyVisited set.
         if (alreadyVisited.Contains(vertex))
             return null;
 
@@ -218,10 +229,11 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
             .Select(neighbor => neighbor.Vertex)
             .Distinct();
 
-        foreach (var unexploredVertex in neighborsProcessor(unexploredVertices))
-            xifo.Push(unexploredVertex);
+        xifo.Push(new(vertex, true));
 
-        RaiseVisitedVertex(new(vertex));
+        foreach (var unexploredVertex in neighborsProcessor(unexploredVertices))
+            if (!alreadyVisited.Contains(unexploredVertex))
+                xifo.Push(new(unexploredVertex, false));
 
         return vertex;
     }
