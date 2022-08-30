@@ -102,13 +102,14 @@ public class NaiveSccFinder : ISccFinder
             if (processedVertices.Contains(i))
                 continue;
 
-            foreach (var j in verticesReachableFromVertices[i].Except(processedVertices))
+            var verticesSameScc = verticesReachableFromVertices[i]
+                .Except(processedVertices)
+                .Where(j => verticesReachableFromVertices[j].Contains(i));
+
+            foreach (var j in verticesSameScc)
             {
-                if (verticesReachableFromVertices[j].Contains(i))
-                {
-                    scc[j] = currentScc;
-                    processedVertices.Add(j);
-                }
+                scc[j] = currentScc;
+                processedVertices.Add(j);
             }
 
             currentScc++;
