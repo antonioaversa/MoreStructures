@@ -30,6 +30,18 @@ public interface IVisitStrategy
     event EventHandler<VisitEventArgs> VisitedVertex;
 
     /// <summary>
+    /// Invoked when a node would be about to be visited, but it has been already visited before, and won't be visited
+    /// again.
+    /// </summary>
+    /// <remarks>
+    /// The event can happen multiple times per vertex per graph visit and can signal the presence of one or more 
+    /// cycles (if the connected component across visits is the same).
+    /// <br/>/
+    /// Check <see cref="VisitEventArgs"/> for the contextual information carried by the event.
+    /// </remarks>
+    event EventHandler<VisitEventArgs> AlreadyVisitedVertex;
+
+    /// <summary>
     /// Explores the provided <paramref name="graph"/> entirely, returning its list of vertices in the order in which
     /// they have been explored.
     /// </summary>

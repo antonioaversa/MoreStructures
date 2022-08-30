@@ -43,6 +43,15 @@ public abstract class DirectionableVisit : IVisitStrategy
     protected virtual void RaiseVisitedVertex(VisitEventArgs args) => VisitedVertex.Invoke(this, args);
 
     /// <inheritdoc/>
+    public event EventHandler<VisitEventArgs> AlreadyVisitedVertex = delegate { };
+
+    /// <summary>
+    /// Invoke the <see cref="AlreadyVisitedVertex"/> event with the provided <paramref name="args"/>.
+    /// </summary>
+    /// <param name="args">The arguments to be provided, when raising the event.</param>
+    protected virtual void RaiseAlreadyVisitedVertex(VisitEventArgs args) => AlreadyVisitedVertex.Invoke(this, args);
+
+    /// <inheritdoc/>
     public abstract IEnumerable<int> DepthFirstSearchOfGraph(IGraph graph);
 
     /// <inheritdoc/>

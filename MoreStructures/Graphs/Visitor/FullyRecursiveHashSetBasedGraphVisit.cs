@@ -16,6 +16,28 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
     {
     }
 
+    private IEnumerable<(int, int)> DepthFirstSearchAndConnectedComponentsOfGraph(IGraph graph)
+    {
+        var alreadyVisited = new HashSet<int>(); // Populated by RExplore
+        var numberOfVertices = graph.GetNumberOfVertices();
+
+        var currentConnectedComponent = 0;
+        for (var vertex = 0; vertex < numberOfVertices; vertex++)
+        {
+            // Here RaiseAlreadyVisitedVertex should not be triggered, since the vertex is not been checked due to an
+            // incoming edge from another vertex, but rather to explore vertices in connected components which haven't
+            // been explored yet.
+            if (alreadyVisited.Contains(vertex))
+                continue;
+
+            foreach (var outputItem in RDepthFirstSearchFromVertex(
+                graph, alreadyVisited, vertex, currentConnectedComponent))
+                yield return (outputItem, currentConnectedComponent);
+
+            currentConnectedComponent++;
+        }
+    }
+
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     ///     <para id="advantages">
@@ -70,16 +92,8 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
     /// </remarks>
     public override IEnumerable<int> DepthFirstSearchOfGraph(IGraph graph)
     {
-        var alreadyVisited = new HashSet<int>(); // Populated by RExplore
-        var numberOfVertices = graph.GetNumberOfVertices();
-        for (var vertex = 0; vertex < numberOfVertices; vertex++)
-        {
-            if (alreadyVisited.Contains(vertex))
-                continue;
-
-            foreach (var outputItem in RExplore(graph, alreadyVisited, vertex))
-                yield return outputItem;
-        }
+        foreach (var (vertex, _) in DepthFirstSearchAndConnectedComponentsOfGraph(graph))
+            yield return vertex;
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
@@ -108,8 +122,8 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
     ///     <para id="complexity">
     ///     COMPLEXITY
     ///     <br/>
-    ///     - The algorithm closely resembles <see cref="DepthFirstSearchOfGraph(IGraph)"/>, with the added complexity of 
-    ///       instantiating and populating a <see cref="IDictionary{TKey, TValue}"/> of the mapping between vertices
+    ///     - The algorithm closely resembles <see cref="DepthFirstSearchOfGraph(IGraph)"/>, with the added complexity 
+    ///       of instantiating and populating a <see cref="IDictionary{TKey, TValue}"/> of the mapping between vertices
     ///       and connected component labels.
     ///       <br/>
     ///     - Because the <see cref="IDictionary{TKey, TValue}"/> implementation used is a 
@@ -124,22 +138,9 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
     /// </remarks>
     public override IDictionary<int, int> ConnectedComponents(IGraph graph)
     {
-        var alreadyVisited = new HashSet<int>(); // Populated by RExplore
-        var numberOfVertices = graph.GetNumberOfVertices();
-
         var connectedComponents = new Dictionary<int, int>();
-        var currentConnectedComponent = 0;
-        for (var vertex = 0; vertex < numberOfVertices; vertex++)
-        {
-            if (alreadyVisited.Contains(vertex))
-                continue;
-
-            foreach (var outputItem in RExplore(graph, alreadyVisited, vertex))
-                connectedComponents[outputItem] = currentConnectedComponent;
-
-            currentConnectedComponent++;
-        }
-
+        foreach (var (vertex, connectedComponent) in DepthFirstSearchAndConnectedComponentsOfGraph(graph))
+            connectedComponents[vertex] = connectedComponent;
         return connectedComponents;
     }
 
@@ -197,7 +198,8 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
     public override IEnumerable<int> DepthFirstSearchFromVertex(IGraph graph, int start)
     {
         var alreadyVisited = new HashSet<int>(); // Populated by RExplore
-        var lazyExploration = RExplore(graph, alreadyVisited, start);
+        var lazyExploration = RDepthFirstSearchFromVertex(
+            graph, alreadyVisited, start, 0); // Single connected component "0"
         MoreLinq.MoreEnumerable.Consume(lazyExploration);
         return alreadyVisited;
     }
@@ -251,16 +253,44 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
     public override IEnumerable<int> BreadthFirstSearchFromVertex(IGraph graph, int start)
     {
         var alreadyVisited = new HashSet<int>();
-        return RBreadthFirstSearchFromVertex(graph, start, alreadyVisited);
+        return RBreadthFirstSearchFromVertex(graph, start, alreadyVisited, 0); // Single connected component "0"
+    }
+
+    private IEnumerable<int> RDepthFirstSearchFromVertex(
+        IGraph graph, HashSet<int> alreadyVisited, int start, int connectedComponent)
+    {
+        RaiseVisitingVertex(new(start, connectedComponent));
+
+        alreadyVisited.Add(start);
+        yield return start;
+
+        var neighbors = graph
+            .GetAdjacentVerticesAndEdges(start, DirectedGraph)
+            .OrderBy(neighbor => neighbor.Vertex);
+
+        foreach (var (unexploredVertex, _, _) in neighbors)
+        {
+            if (alreadyVisited.Contains(unexploredVertex))
+            {
+                RaiseAlreadyVisitedVertex(new(unexploredVertex, connectedComponent));
+                continue;
+            }
+
+            foreach (var outputItem in RDepthFirstSearchFromVertex(
+                graph, alreadyVisited, unexploredVertex, connectedComponent))
+                yield return outputItem;
+        }
+
+        RaiseVisitedVertex(new(start, connectedComponent));
     }
 
     private IEnumerable<int> RBreadthFirstSearchFromVertex(
-        IGraph graph, int start, HashSet<int> alreadyVisited)
+        IGraph graph, int start, HashSet<int> alreadyVisited, int connectedComponent)
     {
         if (alreadyVisited.Contains(start))
             yield break;
 
-        RaiseVisitingVertex(new(start));
+        RaiseVisitingVertex(new(start, connectedComponent));
 
         alreadyVisited.Add(start);
         yield return start;
@@ -268,7 +298,8 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
         var neighborsEnumerators = graph
             .GetAdjacentVerticesAndEdges(start, DirectedGraph)
             .OrderBy(neighbor => neighbor.Vertex)
-            .Select(neighbor => RBreadthFirstSearchFromVertex(graph, neighbor.Vertex, alreadyVisited).GetEnumerator())
+            .Select(neighbor => RBreadthFirstSearchFromVertex(
+                graph, neighbor.Vertex, alreadyVisited, connectedComponent).GetEnumerator())
             .ToList();
 
         var neighborsEnumeratorsMoveNext = neighborsEnumerators
@@ -293,29 +324,6 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
             }
         }
 
-        RaiseVisitedVertex(new(start));
-    }
-
-    private IEnumerable<int> RExplore(IGraph graph, HashSet<int> alreadyVisited, int start)
-    {
-        RaiseVisitingVertex(new(start));
-
-        alreadyVisited.Add(start);
-        yield return start;
-
-        var neighbors = graph
-            .GetAdjacentVerticesAndEdges(start, DirectedGraph)
-            .OrderBy(neighbor => neighbor.Vertex);
-
-        foreach (var (unexploredVertex, _, _) in neighbors)
-        {
-            if (alreadyVisited.Contains(unexploredVertex))
-                continue;
-
-            foreach (var outputItem in RExplore(graph, alreadyVisited, unexploredVertex))
-                yield return outputItem;
-        }
-
-        RaiseVisitedVertex(new(start));
+        RaiseVisitedVertex(new(start, connectedComponent));
     }
 }
