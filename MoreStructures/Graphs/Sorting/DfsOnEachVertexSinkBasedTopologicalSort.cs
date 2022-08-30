@@ -78,7 +78,8 @@ namespace MoreStructures.Graphs.Sorting;
 ///     - The main loop of the algorithm, executed v times, requires finding the last sink vertex, which is an 
 ///       operation quadratic in complexity. All other operations require constant time and space.
 ///       <br/>
-///     - Therefore Time Complexity is O(v * Tdfs + v^3) and Space Complexity is O(v^2 + Sdfs).
+///     - Therefore Time Complexity is O(v * Tdfs + v^3) and Space Complexity is O(v^2 + Sdfs), where Tdfs and Sdfs
+///       are Time and Space Complexity of running a DFS from a vertex.
 ///       <br/>
 ///     - Using <see cref="FullyIterativeHashSetBasedGraphVisit"/> as <see cref="VisitStrategy"/> and assuming 
 ///       <see cref="IGraph.GetAdjacentVerticesAndEdges(int, bool)"/> can be computed in constant time, Tdfs and Sdfs
