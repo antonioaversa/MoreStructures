@@ -328,6 +328,10 @@ public abstract class VisitStrategyTests
             $"Actual: [{string.Join(", ", preOrder)}]");
     }
 
+    [DataRow("1V, 1-L", 1, new[] { 0 }, new[] { 0 },
+        new[] { 0 }, new[] { 1 })]
+    [DataRow("1V, 2-L", 1, new[] { 0, 0 }, new[] { 0, 0 },
+        new[] { 0 }, new[] { 1 })]
     [DataRow("2V, source to sink", 2, new[] { 0 }, new[] { 1 },
         new[] { 0, 1 }, new[] { 3, 2 })]
     [DataRow("2V, sink to source", 2, new[] { 1 }, new[] { 0 },
@@ -379,10 +383,8 @@ public abstract class VisitStrategyTests
             postVisitConnectedComponents.ContainsKey(kvp.Key) && postVisitConnectedComponents[kvp.Key] == kvp.Value));
     }
 
-    [DataRow("2V, 1 2-C", 2, new[] { 0 }, new[] { 0 },
+    [DataRow("1V, 1-L", 1, new[] { 0 }, new[] { 0 },
         new[] { 0 }, new[] { 0 })]
-    [DataRow("2V, 1 2-C", 2, new[] { 0, 0 }, new[] { 0, 0 },
-        new[] { 0, 0 }, new[] { 0, 0 })]
     [DataRow("2V, 1 2-C", 2, new[] { 0, 1 }, new[] { 1, 0 },
         new[] { 0 }, new[] { 0 })]
     [DataRow("3V, 1 3-C", 3, new[] { 0, 1, 2 }, new[] { 1, 2, 0 },

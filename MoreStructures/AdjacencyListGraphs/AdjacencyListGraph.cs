@@ -11,6 +11,9 @@ namespace MoreStructures.AdjacencyListGraphs;
 /// A list of sets of integers, each set representing the neighborhood of the corresponding vertex.
 /// </param>
 /// <remarks>
+/// - <b>This representation doesn't support multigraphs</b>, i.e. graphs which can have multiple parallel edges 
+///   between the same two vertices.
+///   <br/>
 /// - If the graph can be considered undirected if all edges come in couples with both directions: i.e. when the 
 ///   neighborhoods list L is such that <c>if v2 belongs to L[v1], then v1 belongs to L[v2]</c>.
 ///   <br/>
