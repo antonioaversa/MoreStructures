@@ -21,7 +21,8 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     {
     }
 
-    private IEnumerable<(int, int)> DepthFirstSearchAndConnectedComponentsOfGraph(IGraph graph)
+    /// <inheritdoc/>
+    protected override IEnumerable<(int, int)> DepthFirstSearchAndConnectedComponentsOfGraph(IGraph graph)
     {
         var stack = new XStack<XifoFrame>();
         var alreadyVisited = new HashSet<int>(); // Populated by ProcessXifo
@@ -87,11 +88,7 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     ///       retrieving the neighborhood of a given vertex.
     ///     </para>
     /// </remarks>
-    public override IEnumerable<int> DepthFirstSearchOfGraph(IGraph graph)
-    {
-        foreach (var (vertex, _) in DepthFirstSearchAndConnectedComponentsOfGraph(graph))
-            yield return vertex;
-    }
+    public override IEnumerable<int> DepthFirstSearchOfGraph(IGraph graph) => base.DepthFirstSearchOfGraph(graph);
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
@@ -117,13 +114,7 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     ///       neighborhood of a given vertex.
     ///     </para>
     /// </remarks>
-    public override IDictionary<int, int> ConnectedComponents(IGraph graph)
-    {
-        var connectedComponents = new Dictionary<int, int>();
-        foreach (var (vertex, connectedComponent) in DepthFirstSearchAndConnectedComponentsOfGraph(graph))
-            connectedComponents[vertex] = connectedComponent;
-        return connectedComponents;
-    }
+    public override IDictionary<int, int> ConnectedComponents(IGraph graph) => base.ConnectedComponents(graph);
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
