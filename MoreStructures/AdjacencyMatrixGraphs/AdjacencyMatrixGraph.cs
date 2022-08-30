@@ -10,6 +10,9 @@ namespace MoreStructures.AdjacencyMatrixGraphs;
 /// A square matrix of boolean, each value representing whether a vertex is neighborhood of another one.
 /// </param>
 /// <remarks>
+/// - <b>This representation doesn't support multigraphs</b>, i.e. graphs which can have multiple parallel edges 
+///   between the same two vertices.
+///   <br/>
 /// - If the graph can be considered undirected if all edges come in couples with both directions: i.e. the matrix is
 ///   simmetrix, i.e. <c>M[i, j] == M[j, i] for all (i, j)</c>.
 ///   <br/>

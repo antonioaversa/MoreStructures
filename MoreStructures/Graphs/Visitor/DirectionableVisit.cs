@@ -43,10 +43,43 @@ public abstract class DirectionableVisit : IVisitStrategy
     protected virtual void RaiseVisitedVertex(VisitEventArgs args) => VisitedVertex.Invoke(this, args);
 
     /// <inheritdoc/>
-    public abstract IEnumerable<int> DepthFirstSearchOfGraph(IGraph graph);
+    public event EventHandler<VisitEventArgs> AlreadyVisitedVertex = delegate { };
+
+    /// <summary>
+    /// Invoke the <see cref="AlreadyVisitedVertex"/> event with the provided <paramref name="args"/>.
+    /// </summary>
+    /// <param name="args">The arguments to be provided, when raising the event.</param>
+    protected virtual void RaiseAlreadyVisitedVertex(VisitEventArgs args) => AlreadyVisitedVertex.Invoke(this, args);
+
+    /// <summary>
+    /// Runs a Depth First Search and returns vertices and related connected components.
+    /// </summary>
+    /// <param name="graph">The <see cref="IGraph"/> instance to be explored.</param>
+    /// <returns>
+    /// A sequence of couples of <see cref="int"/>, the first being the vertex id and the second being the label of the
+    /// connected component, the vertex belongs to.
+    /// </returns>
+    /// <remarks>
+    /// Generalizes both <see cref="DepthFirstSearchOfGraph(IGraph)"/> and <see cref="ConnectedComponents(IGraph)"/>
+    /// methods, which have very similar implementations. Check those two methods for further information.
+    /// </remarks>
+    protected abstract IEnumerable<(int, int)> DepthFirstSearchAndConnectedComponentsOfGraph(IGraph graph);
 
     /// <inheritdoc/>
-    public abstract IDictionary<int, int> ConnectedComponents(IGraph graph);
+    public virtual IEnumerable<int> DepthFirstSearchOfGraph(IGraph graph)
+    {
+        foreach (var (vertex, _) in DepthFirstSearchAndConnectedComponentsOfGraph(graph))
+            yield return vertex;
+    }
+
+    /// <inheritdoc/>
+    public virtual IDictionary<int, int> ConnectedComponents(IGraph graph)
+    {
+        var connectedComponents = new Dictionary<int, int>();
+        foreach (var (vertex, connectedComponent) in DepthFirstSearchAndConnectedComponentsOfGraph(graph))
+            connectedComponents[vertex] = connectedComponent;
+        return connectedComponents;
+    }
 
     /// <inheritdoc/>
     public abstract IEnumerable<int> DepthFirstSearchFromVertex(IGraph graph, int start);

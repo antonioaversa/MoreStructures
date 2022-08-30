@@ -328,6 +328,10 @@ public abstract class VisitStrategyTests
             $"Actual: [{string.Join(", ", preOrder)}]");
     }
 
+    [DataRow("1V, 1-L", 1, new[] { 0 }, new[] { 0 },
+        new[] { 0 }, new[] { 1 })]
+    [DataRow("1V, 2-L", 1, new[] { 0, 0 }, new[] { 0, 0 },
+        new[] { 0 }, new[] { 1 })]
     [DataRow("2V, source to sink", 2, new[] { 0 }, new[] { 1 },
         new[] { 0, 1 }, new[] { 3, 2 })]
     [DataRow("2V, sink to source", 2, new[] { 1 }, new[] { 0 },
@@ -349,10 +353,20 @@ public abstract class VisitStrategyTests
         var visitStrategy = VisitorBuilder(true);
 
         var preVisitValues = new int[numberOfVertices];
+        var preVisitConnectedComponents = new Dictionary<int, int>();
         var postVisitValues = new int[numberOfVertices];
+        var postVisitConnectedComponents = new Dictionary<int, int>();
         var counter = 0;
-        visitStrategy.VisitingVertex += (o, e) => preVisitValues[e.Vertex] = counter++;
-        visitStrategy.VisitedVertex += (o, e) => postVisitValues[e.Vertex] = counter++;
+        visitStrategy.VisitingVertex += (o, e) =>
+        {
+            preVisitValues[e.Vertex] = counter++;
+            preVisitConnectedComponents[e.Vertex] = e.ConnectedComponent;
+        };
+        visitStrategy.VisitedVertex += (o, e) =>
+        {
+            postVisitValues[e.Vertex] = counter++;
+            postVisitConnectedComponents[e.Vertex] = e.ConnectedComponent;
+        };
 
         var visitOutput = visitStrategy.DepthFirstSearchOfGraph(graph).ToList();
         Assert.IsTrue(
@@ -363,6 +377,44 @@ public abstract class VisitStrategyTests
             expectedPostVisitValues.SequenceEqual(postVisitValues),
             $"{graphDescription} - Expected: [{string.Join(", ", expectedPostVisitValues)}], " +
             $"Actual: [{string.Join(", ", postVisitValues)}]");
+
+        // Check connected components equality between VisitingVertex and VisitedVertex
+        Assert.IsTrue(preVisitConnectedComponents.All(kvp =>
+            postVisitConnectedComponents.ContainsKey(kvp.Key) && postVisitConnectedComponents[kvp.Key] == kvp.Value));
+    }
+
+    [DataRow("1V, 1-L", 1, new[] { 0 }, new[] { 0 },
+        new[] { 0 }, new[] { 0 })]
+    [DataRow("2V, 1 2-C", 2, new[] { 0, 1 }, new[] { 1, 0 },
+        new[] { 0 }, new[] { 0 })]
+    [DataRow("3V, 1 3-C", 3, new[] { 0, 1, 2 }, new[] { 1, 2, 0 },
+        new[] { 0 }, new[] { 0 })]
+    [DataRow("3V, 1 3-C, 1 2-C", 3, new[] { 0, 0, 1, 2 }, new[] { 1, 2, 0, 1 },
+        new[] { 0, 1 }, new[] { 0, 0 })]
+    [DataRow("5V, 1 5-C, 1 4-C, 2 3-C, 1 2-C", 5, new[] { 0, 1, 2, 3, 3, 3, 4, 4 }, new[] { 2, 3, 1, 1, 2, 4, 0, 2 },
+        new[] { 1, 2, 0, 2  }, new[] { 0, 0, 0, 0 })]
+    [DataTestMethod]
+    public void AlreadyVisitedVertex_InDepthFirstSearchOfGraph_IsCorrect(
+        string graphDescription, int numberOfVertices, int[] starts, int[] ends,
+        int[] expectedAlreadyVisitedVertices, int[] expectedAlreadyVisitedConnectedComponents)
+    {
+        var graph = GraphBuilder(numberOfVertices, starts.Zip(ends).ToList());
+        var visitStrategy = VisitorBuilder(true);
+        var alreadyVisitedVertexArgs = new List<VisitEventArgs>();
+
+        visitStrategy.AlreadyVisitedVertex += (o, e) => alreadyVisitedVertexArgs.Add(e);
+
+        MoreLinq.MoreEnumerable.Consume(visitStrategy.DepthFirstSearchOfGraph(graph));
+
+        var expectedAlreadyVisitedVertexArgs = expectedAlreadyVisitedVertices
+            .Zip(expectedAlreadyVisitedConnectedComponents)
+            .Select(p => new VisitEventArgs(p.First, p.Second))
+            .ToList();
+
+        Assert.IsTrue(
+            expectedAlreadyVisitedVertexArgs.SequenceEqual(alreadyVisitedVertexArgs),
+            $"{graphDescription} - Expected: {string.Join(", ", expectedAlreadyVisitedVertexArgs)}, " + 
+            $"Actual: {string.Join(", " , alreadyVisitedVertexArgs)}");
     }
 
     private enum JournalEventType { Visiting, Visited };

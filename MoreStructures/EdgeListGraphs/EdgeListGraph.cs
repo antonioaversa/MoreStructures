@@ -14,6 +14,9 @@ namespace MoreStructures.EdgeListGraphs;
 /// extremes of the edge. Edges can be considered as directional or not, depending on the scenario.
 /// </param>
 /// <remarks>
+/// - <b>This representation does support multigraphs</b>, i.e. graphs which can have multiple parallel edges 
+///   between the same two vertices.
+///   <br/>
 /// - If the edges are considered directional, i.e. (s, e) is considered as a different edge from (e, s), the resulting
 ///   graph is directed. Otherwise, the resulting graph is undirected.
 ///   <br/>

@@ -5,4 +5,5 @@
 /// <see cref="IVisitStrategy"/>.
 /// </summary>
 /// <param name="Vertex">The vertex being visited.</param>
-public record VisitEventArgs(int Vertex);
+/// <param name="ConnectedComponent">The label of the connected component, <paramref name="Vertex"/> is in.</param>
+public record VisitEventArgs(int Vertex, int ConnectedComponent);

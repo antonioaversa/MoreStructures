@@ -9,7 +9,7 @@ namespace MoreStructures.Graphs.Visitor;
 /// </summary>
 public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
 {
-    private record struct XifoFrame(int Vertex, bool Processed);
+    private record struct XifoFrame(int Vertex, bool Processed, int ConnectedComponent);
 
     /// <summary>
     ///     <inheritdoc cref="FullyIterativeHashSetBasedGraphVisit"/>
@@ -19,6 +19,34 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     /// </param>
     public FullyIterativeHashSetBasedGraphVisit(bool directedGraph) : base(directedGraph)
     {
+    }
+
+    /// <inheritdoc/>
+    protected override IEnumerable<(int, int)> DepthFirstSearchAndConnectedComponentsOfGraph(IGraph graph)
+    {
+        var stack = new XStack<XifoFrame>();
+        var alreadyVisited = new HashSet<int>(); // Populated by ProcessXifo
+        var numberOfVertices = graph.GetNumberOfVertices();
+
+        var currentConnectedComponent = 0;
+        for (var vertex = 0; vertex < numberOfVertices; vertex++)
+        {
+            // Here RaiseAlreadyVisitedVertex should not be triggered, since the vertex is not been checked due to an
+            // incoming edge from another vertex, but rather to explore vertices in connected components which haven't
+            // been explored yet.
+            if (alreadyVisited.Contains(vertex))
+                continue;
+
+            stack.Push(new(vertex, false, currentConnectedComponent));
+            while (stack.Count > 0)
+            {
+                var maybeOutputItem = ProcessXifo(graph, stack, alreadyVisited, e => e.OrderByDescending(i => i));
+                if (maybeOutputItem >= 0)
+                    yield return (maybeOutputItem, currentConnectedComponent);
+            }
+
+            currentConnectedComponent++;
+        }
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
@@ -60,22 +88,7 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     ///       retrieving the neighborhood of a given vertex.
     ///     </para>
     /// </remarks>
-    public override IEnumerable<int> DepthFirstSearchOfGraph(IGraph graph)
-    {
-        var stack = new XStack<XifoFrame>();
-        var alreadyVisited = new HashSet<int>(); // Populated by ProcessXifo
-        var numberOfVertices = graph.GetNumberOfVertices();
-        for (var vertex = 0; vertex < numberOfVertices; vertex++)
-        {
-            stack.Push(new(vertex, false));
-            while (stack.Count > 0)
-            {
-                var maybeOutputItem = ProcessXifo(graph, stack, alreadyVisited, e => e.OrderByDescending(i => i));
-                if (maybeOutputItem != null)
-                    yield return maybeOutputItem.Value;
-            }
-        }
-    }
+    public override IEnumerable<int> DepthFirstSearchOfGraph(IGraph graph) => base.DepthFirstSearchOfGraph(graph);
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
@@ -101,34 +114,7 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     ///       neighborhood of a given vertex.
     ///     </para>
     /// </remarks>
-    public override IDictionary<int, int> ConnectedComponents(IGraph graph)
-    {
-        var stack = new XStack<XifoFrame>();
-        var alreadyVisited = new HashSet<int>(); // Populated by ProcessXifo
-        var numberOfVertices = graph.GetNumberOfVertices();
-
-        var connectedComponents = new Dictionary<int, int>();
-        var currentConnectedComponent = 0;
-        for (var vertex = 0; vertex < numberOfVertices; vertex++)
-        {
-            stack.Push(new(vertex, false));
-            bool currentConnectedComponentUsed = false;
-            while (stack.Count > 0)
-            {
-                var maybeOutputItem = ProcessXifo(graph, stack, alreadyVisited, e => e.OrderByDescending(i => i));
-                if (maybeOutputItem != null)
-                {
-                    connectedComponents[maybeOutputItem.Value] = currentConnectedComponent;
-                    currentConnectedComponentUsed = true;
-                }
-            }
-
-            if (currentConnectedComponentUsed)
-                currentConnectedComponent++;
-        }
-
-        return connectedComponents;
-    }
+    public override IDictionary<int, int> ConnectedComponents(IGraph graph) => base.ConnectedComponents(graph);
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
@@ -161,9 +147,9 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     {
         var stack = new XStack<XifoFrame>();
         var alreadyVisited = new HashSet<int>(); // Populated by ProcessXifo
-        stack.Push(new(start, false));
+        stack.Push(new(start, false, 0)); // Single connected component "0"
         while (stack.Count > 0)
-            if (ProcessXifo(graph, stack, alreadyVisited, e => e.OrderByDescending(i => i)) is int vertex)
+            if (ProcessXifo(graph, stack, alreadyVisited, e => e.OrderByDescending(i => i)) is var vertex and >= 0)
                 yield return vertex;
     }
 
@@ -196,44 +182,45 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     {
         var queue = new XQueue<XifoFrame>();
         var alreadyVisited = new HashSet<int>(); // Populated by ProcessXifo
-        queue.Push(new(start, false));
+        queue.Push(new(start, false, 0)); // Single connected component "0"
         while (queue.Count > 0)
-            if (ProcessXifo(graph, queue, alreadyVisited, e => e.OrderBy(i => i)) is int vertex)
+            if (ProcessXifo(graph, queue, alreadyVisited, e => e.OrderBy(i => i)) is var vertex and >= 0)
                 yield return vertex;
     }
 
-    private int? ProcessXifo(
+    private int ProcessXifo(
         IGraph graph, IXifoStructure<XifoFrame> xifo, HashSet<int> alreadyVisited, 
         Func<IEnumerable<int>, IEnumerable<int>> neighborsProcessor)
     {
-        var (vertex, processed) = xifo.Pop();
+        var (vertex, processed, connectedComponent) = xifo.Pop();
 
         if (processed)
         {
-            RaiseVisitedVertex(new(vertex));
-            return null;
+            RaiseVisitedVertex(new(vertex, connectedComponent));
+            return -2;
         }
 
-        // Both the following check and the one in the foreach loop of neighbors are required, because a vertex may
-        // already be in the XIFO structure, even though it has not been processed yet, and therefore it's not in the
-        // alreadyVisited set.
+        // The following check is not done in the foreach loop of neighbors, to respect the order in which
+        // RaiseAlreadyVisitedVertex events are raised. Triggering a RaiseAlreadyVisitedVertex event directly in the
+        // loop below would produced an inverted sequence of events in DFS, where a XStack is used and children are
+        // pushed onto the stack in reversed order.
         if (alreadyVisited.Contains(vertex))
-            return null;
+        {
+            RaiseAlreadyVisitedVertex(new(vertex, connectedComponent));
+            return -1;
+        }
 
-        RaiseVisitingVertex(new(vertex));
+        RaiseVisitingVertex(new(vertex, connectedComponent));
 
         alreadyVisited.Add(vertex);
         var unexploredVertices = graph
             .GetAdjacentVerticesAndEdges(vertex, DirectedGraph)
-            .Where(neighbor => !alreadyVisited.Contains(neighbor.Vertex))
-            .Select(neighbor => neighbor.Vertex)
-            .Distinct();
+            .Select(neighbor => neighbor.Vertex);
 
-        xifo.Push(new(vertex, true));
+        xifo.Push(new(vertex, true, connectedComponent));
 
         foreach (var unexploredVertex in neighborsProcessor(unexploredVertices))
-            if (!alreadyVisited.Contains(unexploredVertex))
-                xifo.Push(new(unexploredVertex, false));
+            xifo.Push(new(unexploredVertex, false, connectedComponent));
 
         return vertex;
     }
