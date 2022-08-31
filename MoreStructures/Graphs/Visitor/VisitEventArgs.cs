@@ -6,4 +6,5 @@
 /// </summary>
 /// <param name="Vertex">The vertex being visited.</param>
 /// <param name="ConnectedComponent">The label of the connected component, <paramref name="Vertex"/> is in.</param>
-public record VisitEventArgs(int Vertex, int ConnectedComponent);
+/// <param name="PreviousVertex">The vertex whose visit led to the visit of <paramref name="Vertex"/>.</param>
+public record VisitEventArgs(int Vertex, int ConnectedComponent, int? PreviousVertex);
