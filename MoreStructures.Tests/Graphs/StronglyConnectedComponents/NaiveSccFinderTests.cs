@@ -10,7 +10,7 @@ public class NaiveSccFinderTests : SccFinderTests
     public NaiveSccFinderTests() 
         : base(
             (numberOfVertices, edges) => new EdgeListGraph(numberOfVertices, edges),
-            directedGraph => new NaiveSccFinder(new FullyIterativeHashSetBasedGraphVisit(true)))
+            () => new NaiveSccFinder(new FullyIterativeHashSetBasedGraphVisit(true)))
     {
     }
 }

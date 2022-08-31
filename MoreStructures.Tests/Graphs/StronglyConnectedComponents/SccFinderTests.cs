@@ -6,11 +6,11 @@ namespace MoreStructures.Tests.Graphs.StronglyConnectedComponents;
 public abstract class SccFinderTests
 {
     protected Func<int, IList<(int, int)>, IGraph> GraphBuilder { get; }
-    protected Func<bool, ISccFinder> FinderBuilder { get; }
+    protected Func<ISccFinder> FinderBuilder { get; }
 
     protected SccFinderTests(
         Func<int, IList<(int, int)>, IGraph> graphBuilder,
-        Func<bool, ISccFinder> finderBuilder)
+        Func<ISccFinder> finderBuilder)
     {
         GraphBuilder = graphBuilder;
         FinderBuilder = finderBuilder;
@@ -37,13 +37,13 @@ public abstract class SccFinderTests
     [DataRow("4 V, source to 3-C", 4, new int[] { 0, 0, 0, 1, 2, 3  }, new int[] { 1, 2, 3, 2, 3, 1 },
         new int[] { 0, 1, 1, 1 })]
     [DataTestMethod]
-    public void FindScc_IsCorrect(
+    public void Find_IsCorrect(
         string graphDescription, int numberOfVertices, int[] starts, int[] ends,
         int[] expectedScc)
     {
         var graph = GraphBuilder(numberOfVertices, starts.Zip(ends).ToList());
-        var directedGraphVisitor = FinderBuilder(false);
-        var scc = directedGraphVisitor.FindScc(graph);
+        var sccFinder = FinderBuilder();
+        var scc = sccFinder.Find(graph);
         Assert.IsTrue(
             expectedScc.SequenceEqual(scc),
             $"{graphDescription} - Expected [{string.Join(", ", expectedScc)}], Actual: [{string.Join(", ", scc)}]");
