@@ -34,10 +34,17 @@ public interface IVisitStrategy
     /// again.
     /// </summary>
     /// <remarks>
-    /// The event can happen multiple times per vertex per graph visit and can signal the presence of one or more 
+    /// The event may happen multiple times per vertex per graph visit and can signal the presence of one or more 
     /// cycles (if the connected component across visits is the same).
+    /// <br/>
+    /// Unlike <see cref="VisitingVertex"/> and <see cref="VisitedVertex"/>, the event may also not happen at all, for
+    /// example in trees. 
+    /// <br/>
+    /// It surely is raised at least once in graphs with cycles. However, cycles are not required for this event to 
+    /// happen: for example, a vertex is encountered multiple times in DAGs.
     /// <br/>/
-    /// Check <see cref="VisitEventArgs"/> for the contextual information carried by the event.
+    /// Check <see cref="VisitEventArgs"/> for the contextual information carried by the event (such as its connected 
+    /// component and previous vertex).
     /// </remarks>
     event EventHandler<VisitEventArgs> AlreadyVisitedVertex;
 
@@ -75,25 +82,25 @@ public interface IVisitStrategy
 
     /// <summary>
     /// Runs a partial Depth First Search of the the provided <paramref name="graph"/>, returning the list of vertices 
-    /// which are reachable from the vertex with id <paramref name="start"/>, along the edges of the graph, in the 
+    /// which are reachable from the vertex with id <paramref name="vertex"/>, along the edges of the graph, in the 
     /// order in which they have been explored.
     /// </summary>
     /// <param name="graph">
     /// The <see cref="IGraph"/> instance to be explored.
     /// Can be considered directed or undirected, depending on the actual exploration implementation and visit.
     /// </param>
-    /// <param name="start">
+    /// <param name="vertex">
     /// The <see cref="int"/> id identifying the vertex, from which the exploration has to be started.
     /// Different starting points will result into different sequences (by items and/or order) of vertices.
     /// </param>
     /// <returns>
     /// The sequence of vertices, lazily generated. Neighbors of the same vertex are visited by ascending id.
     /// </returns>
-    IEnumerable<int> DepthFirstSearchFromVertex(IGraph graph, int start);
+    IEnumerable<int> DepthFirstSearchFromVertex(IGraph graph, int vertex);
 
     /// <summary>
     /// Runs a partial Breadth First Search of the provided <paramref name="graph"/>, returning the list of vertices 
-    /// which are reachable from the vertex with id <paramref name="start"/>, along the edges of the graph, in the 
+    /// which are reachable from the vertex with id <paramref name="vertex"/>, along the edges of the graph, in the 
     /// order in which they have been explored.
     /// </summary>
     /// <param name="graph">
@@ -101,12 +108,12 @@ public interface IVisitStrategy
     /// <br/>
     /// Can be considered directed or undirected, depending on the actual exploration implementation and visit.
     /// </param>
-    /// <param name="start">
+    /// <param name="vertex">
     /// The <see cref="int"/> id identifying the vertex, from which the exploration has to be started.
     /// Different starting points will result into different sequences (by items and/or order) of vertices.
     /// </param>
     /// <returns>
     /// The sequence of vertices, lazily generated. Neighbors of the same vertex are visited by ascending id.
     /// </returns>
-    IEnumerable<int> BreadthFirstSearchFromVertex(IGraph graph, int start);
+    IEnumerable<int> BreadthFirstSearchFromVertex(IGraph graph, int vertex);
 }

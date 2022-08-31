@@ -143,14 +143,14 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     ///       neighborhood of a given vertex.
     ///     </para>
     /// </remarks>
-    public override IEnumerable<int> DepthFirstSearchFromVertex(IGraph graph, int start)
+    public override IEnumerable<int> DepthFirstSearchFromVertex(IGraph graph, int vertex)
     {
         var stack = new XStack<XifoFrame>();
         var alreadyVisited = new HashSet<int>(); // Populated by ProcessXifo
-        stack.Push(new(start, false, 0, null)); // Single connected component "0"
+        stack.Push(new(vertex, false, 0, null)); // Single connected component "0"
         while (stack.Count > 0)
-            if (ProcessXifo(graph, stack, alreadyVisited, e => e.OrderByDescending(i => i)) is var vertex and >= 0)
-                yield return vertex;
+            if (ProcessXifo(graph, stack, alreadyVisited, e => e.OrderByDescending(i => i)) is var v and >= 0)
+                yield return v;
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
@@ -178,14 +178,14 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     ///       neighborhood of a given vertex.
     ///     </para>
     /// </remarks>
-    public override IEnumerable<int> BreadthFirstSearchFromVertex(IGraph graph, int start)
+    public override IEnumerable<int> BreadthFirstSearchFromVertex(IGraph graph, int vertex)
     {
         var queue = new XQueue<XifoFrame>();
         var alreadyVisited = new HashSet<int>(); // Populated by ProcessXifo
-        queue.Push(new(start, false, 0, null)); // Single connected component "0"
+        queue.Push(new(vertex, false, 0, null)); // Single connected component "0"
         while (queue.Count > 0)
-            if (ProcessXifo(graph, queue, alreadyVisited, e => e.OrderBy(i => i)) is var vertex and >= 0)
-                yield return vertex;
+            if (ProcessXifo(graph, queue, alreadyVisited, e => e.OrderBy(i => i)) is var v and >= 0)
+                yield return v;
     }
 
     private int ProcessXifo(

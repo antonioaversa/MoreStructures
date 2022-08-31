@@ -82,8 +82,8 @@ public abstract class DirectionableVisit : IVisitStrategy
     }
 
     /// <inheritdoc/>
-    public abstract IEnumerable<int> DepthFirstSearchFromVertex(IGraph graph, int start);
+    public abstract IEnumerable<int> DepthFirstSearchFromVertex(IGraph graph, int vertex);
 
     /// <inheritdoc/>
-    public abstract IEnumerable<int> BreadthFirstSearchFromVertex(IGraph graph, int start);
+    public abstract IEnumerable<int> BreadthFirstSearchFromVertex(IGraph graph, int vertex);
 }

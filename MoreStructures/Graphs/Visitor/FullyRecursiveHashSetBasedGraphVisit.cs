@@ -186,11 +186,11 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
     ///       neighborhood of a given vertex.
     ///     </para>
     /// </remarks>
-    public override IEnumerable<int> DepthFirstSearchFromVertex(IGraph graph, int start)
+    public override IEnumerable<int> DepthFirstSearchFromVertex(IGraph graph, int vertex)
     {
         var alreadyVisited = new HashSet<int>(); // Populated by RExplore
         var lazyExploration = RDepthFirstSearchFromVertex(
-            graph, alreadyVisited, start, 0, null); // Single connected component "0"
+            graph, alreadyVisited, vertex, 0, null); // Single connected component "0"
         MoreLinq.MoreEnumerable.Consume(lazyExploration);
         return alreadyVisited;
     }
