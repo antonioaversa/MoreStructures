@@ -83,9 +83,12 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     ///     - Because each vertex is visited at most once throughout the entire execution, edges are visited at most 
     ///       once, when edge direction is taken into account during the visit, and twice, when it is not.
     ///       <br/>
-    ///     - Therefore, Time Complexity is O(v * Ta + e) and Space Complexity is O(v * Sa + e), where 
-    ///       v is the number of vertices, e is the number of edges and Ta and Sa are the time and space cost of 
-    ///       retrieving the neighborhood of a given vertex.
+    ///     - Thoughout the entire execution, a single vertex in the stack is processed at a time, while the stack can
+    ///       grow to contain up to e (directed edges) or 2 * e items (undirected edges).
+    ///       <br/>
+    ///     - Therefore, Time Complexity is O(v * Ta + e) and Space Complexity is O(v + e + Sa), where v is the number 
+    ///       of vertices, e is the number of edges and Ta and Sa are the time and space cost of retrieving the 
+    ///       neighborhood of a given vertex.
     ///     </para>
     /// </remarks>
     public override IEnumerable<int> DepthFirstSearchOfGraph(IGraph graph) => base.DepthFirstSearchOfGraph(graph);
@@ -109,7 +112,7 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     ///     - The analysis of complexity is done in 
     ///       <see cref="FullyRecursiveHashSetBasedGraphVisit.ConnectedComponents(IGraph)"/>.
     ///       <br/>
-    ///     - Time Complexity is O(v * Ta  + e) and Space Complexity is O(v * Sa  + e), where v is the number of 
+    ///     - Time Complexity is O(v * Ta  + e) and Space Complexity is O(v + e + Sa), where v is the number of 
     ///       vertices, e is the number of edges and Ta and Sa are the time and space cost of retrieving the 
     ///       neighborhood of a given vertex.
     ///     </para>
@@ -138,7 +141,7 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     ///     COMPLEXITY
     ///     <br/>
     ///     - As for <see cref="FullyRecursiveHashSetBasedGraphVisit.DepthFirstSearchFromVertex(IGraph, int)"/>, 
-    ///       Time Complexity is O(v * Ta + e) and Space Complexity is O(v * Sa + e), where v is the number of 
+    ///       Time Complexity is O(v * Ta + e) and Space Complexity is O(v + e + Sa), where v is the number of 
     ///       vertices, e is the number of edges and Ta and Sa are the time and space cost of retrieving the 
     ///       neighborhood of a given vertex.
     ///     </para>
@@ -173,7 +176,7 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     ///     - Same consideration about complexity as in <see cref="DepthFirstSearchFromVertex(IGraph, int)"/> apply.
     ///       What is different is just the order of visit, not edges or vertices visited.
     ///       <br/>
-    ///     - Therefore, Time Complexity is O(v * Ta + e) and Space Complexity is O(v * Sa + e), where v is the number
+    ///     - Therefore, Time Complexity is O(v * Ta + e) and Space Complexity is O(v + e + Sa), where v is the number
     ///       of vertices, e is the number of edges and Ta and Sa are the time and space cost of retrieving the 
     ///       neighborhood of a given vertex.
     ///     </para>
