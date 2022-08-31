@@ -86,7 +86,7 @@ public class NaiveSccFinder : ISccFinder
     /// <remarks>
     ///     <inheritdoc cref="NaiveSccFinder" path="/remarks"/>
     /// </remarks>
-    public IList<int> FindScc(IGraph graph)
+    public IList<int> Find(IGraph graph)
     {
         var numberOfVertices = graph.GetNumberOfVertices();
         var verticesReachableFromVertices = Enumerable

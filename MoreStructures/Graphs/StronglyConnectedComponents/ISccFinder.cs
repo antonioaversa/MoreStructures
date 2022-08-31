@@ -20,5 +20,5 @@ public interface ISccFinder
     /// <br/>
     /// The i-th element of the L represents the label of the SCC, the vertex i is in.
     /// </returns>
-    public IList<int> FindScc(IGraph graph);
+    public IList<int> Find(IGraph graph);
 }
