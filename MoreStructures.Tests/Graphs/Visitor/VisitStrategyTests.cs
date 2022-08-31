@@ -329,43 +329,47 @@ public abstract class VisitStrategyTests
     }
 
     [DataRow("1V, 1-L", 1, new[] { 0 }, new[] { 0 },
-        new[] { 0 }, new[] { 1 })]
-    [DataRow("1V, 2-L", 1, new[] { 0, 0 }, new[] { 0, 0 },
-        new[] { 0 }, new[] { 1 })]
+        new[] { 0 }, new[] { 1 }, new[] { -1 })]
     [DataRow("2V, source to sink", 2, new[] { 0 }, new[] { 1 },
-        new[] { 0, 1 }, new[] { 3, 2 })]
-    [DataRow("2V, sink to source", 2, new[] { 1 }, new[] { 0 },
-        new[] { 0, 2 }, new[] { 1, 3 })]
+        new[] { 0, 1 }, new[] { 3, 2 }, new[] { -1, 0 })]
+    [DataRow("2V, sink from source", 2, new[] { 1 }, new[] { 0 },
+        new[] { 0, 2 }, new[] { 1, 3 }, new[] { -1, -1 })]
     [DataRow("3V, source to intermediate to sink", 3, new[] { 0, 1 }, new[] { 1, 2 },
-        new[] { 0, 1, 2 }, new[] { 5, 4, 3 })]
+        new[] { 0, 1, 2 }, new[] { 5, 4, 3 }, new[] { -1, 0, 1 })]
     [DataRow("4V, 2 sources to 1 intermediate to 1 sink", 4, new[] { 3, 0, 1 }, new[] { 1, 1, 2 },
-        new[] { 0, 1, 2, 6 }, new[] { 5, 4, 3, 7 })]
+        new[] { 0, 1, 2, 6 }, new[] { 5, 4, 3, 7 }, new[] { -1, 0, 1, -1 })]
     [DataRow("4V, 1 source to 2 intermediate to 1 sink", 4, new[] { 0, 0, 1, 2 }, new[] { 1, 2, 3, 3 },
-        new[] { 0, 1, 5, 2 }, new[] { 7, 4, 6, 3 })]
+        new[] { 0, 1, 5, 2 }, new[] { 7, 4, 6, 3 }, new[] { -1, 0, 1, 0 })]
     [DataRow("4V, 2 3-C overlapping on 2 vertices", 4, new[] { 0, 1, 2, 0, 3, 1 }, new[] { 1, 2, 0, 3, 1, 0 },
-        new[] { 0, 1, 2, 5 }, new[] { 7, 4, 3, 6 })]
+        new[] { 0, 1, 2, 5 }, new[] { 7, 4, 3, 6 }, new[] { -1, 0, 1, 0 })]
     [DataTestMethod]
     public void VisitingAndVisitedVertex_InDepthFirstSearchOfGraph_AreCorrect(
         string graphDescription, int numberOfVertices, int[] starts, int[] ends,
-        int[] expectedPreVisitValues, int[] expectedPostVisitValues)
+        int[] expectedPreVisitValues, int[] expectedPostVisitValues,
+        int[] expectedPreviousVertices)
     {
         var graph = GraphBuilder(numberOfVertices, starts.Zip(ends).ToList());
         var visitStrategy = VisitorBuilder(true);
 
         var preVisitValues = new int[numberOfVertices];
         var preVisitConnectedComponents = new Dictionary<int, int>();
+        var preVisitPreviousVertices = new List<int>();
         var postVisitValues = new int[numberOfVertices];
         var postVisitConnectedComponents = new Dictionary<int, int>();
+        var postVisitPreviousVertices = new List<int>();
+
         var counter = 0;
         visitStrategy.VisitingVertex += (o, e) =>
         {
             preVisitValues[e.Vertex] = counter++;
             preVisitConnectedComponents[e.Vertex] = e.ConnectedComponent;
+            preVisitPreviousVertices.Add(e.PreviousVertex ?? -1);
         };
         visitStrategy.VisitedVertex += (o, e) =>
         {
             postVisitValues[e.Vertex] = counter++;
             postVisitConnectedComponents[e.Vertex] = e.ConnectedComponent;
+            postVisitPreviousVertices.Add(e.PreviousVertex ?? -1);
         };
 
         var visitOutput = visitStrategy.DepthFirstSearchOfGraph(graph).ToList();
@@ -381,22 +385,33 @@ public abstract class VisitStrategyTests
         // Check connected components equality between VisitingVertex and VisitedVertex
         Assert.IsTrue(preVisitConnectedComponents.All(kvp =>
             postVisitConnectedComponents.ContainsKey(kvp.Key) && postVisitConnectedComponents[kvp.Key] == kvp.Value));
+
+        // Check that previousVertices are the expected and the same in VisitingVertex and VisitedVertex
+        Assert.IsTrue(
+            preVisitPreviousVertices.SequenceEqual(expectedPreviousVertices),
+            $"{graphDescription} - Expected: [{string.Join(", ", preVisitPreviousVertices)}], " +
+            $"Actual: [{string.Join(", ", expectedPreviousVertices)}]");
+        Assert.IsTrue(
+            preVisitPreviousVertices.ToHashSet().SetEquals(postVisitPreviousVertices.ToHashSet()),
+            $"{graphDescription} - Expected: [{string.Join(", ", preVisitPreviousVertices)}], " +
+            $"Actual: [{string.Join(", ", postVisitPreviousVertices)}]");
     }
 
     [DataRow("1V, 1-L", 1, new[] { 0 }, new[] { 0 },
-        new[] { 0 }, new[] { 0 })]
+        new[] { 0 }, new[] { 0 }, new int[] { 0 })]
     [DataRow("2V, 1 2-C", 2, new[] { 0, 1 }, new[] { 1, 0 },
-        new[] { 0 }, new[] { 0 })]
+        new[] { 0 }, new[] { 0 }, new[] { 1 })]
     [DataRow("3V, 1 3-C", 3, new[] { 0, 1, 2 }, new[] { 1, 2, 0 },
-        new[] { 0 }, new[] { 0 })]
+        new[] { 0 }, new[] { 0 }, new[] { 2 })]
     [DataRow("3V, 1 3-C, 1 2-C", 3, new[] { 0, 0, 1, 2 }, new[] { 1, 2, 0, 1 },
-        new[] { 0, 1 }, new[] { 0, 0 })]
-    [DataRow("5V, 1 5-C, 1 4-C, 2 3-C, 1 2-C", 5, new[] { 0, 1, 2, 3, 3, 3, 4, 4 }, new[] { 2, 3, 1, 1, 2, 4, 0, 2 },
-        new[] { 1, 2, 0, 2  }, new[] { 0, 0, 0, 0 })]
+        new[] { 0, 1 }, new[] { 0, 0 }, new[] { 1, 2 })]
+    [DataRow("5V, 1 5-C, 1 4-C, 1 3-C, 1 2-C", 5, new[] { 0, 1, 2, 3, 3, 3, 4, 4 }, new[] { 2, 3, 1, 1, 2, 4, 0, 2 },
+        new[] { 1, 2, 0, 2  }, new[] { 0, 0, 0, 0 }, new[] { 3, 3, 4, 4 })]
     [DataTestMethod]
     public void AlreadyVisitedVertex_InDepthFirstSearchOfGraph_IsCorrect(
         string graphDescription, int numberOfVertices, int[] starts, int[] ends,
-        int[] expectedAlreadyVisitedVertices, int[] expectedAlreadyVisitedConnectedComponents)
+        int[] expectedAlreadyVisitedVertices, int[] expectedAlreadyVisitedConnectedComponents, 
+        int[] expectedPreviousVertices)
     {
         var graph = GraphBuilder(numberOfVertices, starts.Zip(ends).ToList());
         var visitStrategy = VisitorBuilder(true);
@@ -405,10 +420,10 @@ public abstract class VisitStrategyTests
         visitStrategy.AlreadyVisitedVertex += (o, e) => alreadyVisitedVertexArgs.Add(e);
 
         MoreLinq.MoreEnumerable.Consume(visitStrategy.DepthFirstSearchOfGraph(graph));
-
         var expectedAlreadyVisitedVertexArgs = expectedAlreadyVisitedVertices
             .Zip(expectedAlreadyVisitedConnectedComponents)
-            .Select(p => new VisitEventArgs(p.First, p.Second))
+            .Zip(expectedPreviousVertices.Select(v => v >= 0 ? v : null as int?))
+            .Select(p => new VisitEventArgs(p.First.First, p.First.Second, p.Second))
             .ToList();
 
         Assert.IsTrue(

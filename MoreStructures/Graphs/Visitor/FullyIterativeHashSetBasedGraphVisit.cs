@@ -9,7 +9,7 @@ namespace MoreStructures.Graphs.Visitor;
 /// </summary>
 public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
 {
-    private record struct XifoFrame(int Vertex, bool Processed, int ConnectedComponent);
+    private record struct XifoFrame(int Vertex, bool Processed, int ConnectedComponent, int? PreviousVertex);
 
     /// <summary>
     ///     <inheritdoc cref="FullyIterativeHashSetBasedGraphVisit"/>
@@ -37,7 +37,7 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
             if (alreadyVisited.Contains(vertex))
                 continue;
 
-            stack.Push(new(vertex, false, currentConnectedComponent));
+            stack.Push(new(vertex, false, currentConnectedComponent, null));
             while (stack.Count > 0)
             {
                 var maybeOutputItem = ProcessXifo(graph, stack, alreadyVisited, e => e.OrderByDescending(i => i));
@@ -147,7 +147,7 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     {
         var stack = new XStack<XifoFrame>();
         var alreadyVisited = new HashSet<int>(); // Populated by ProcessXifo
-        stack.Push(new(start, false, 0)); // Single connected component "0"
+        stack.Push(new(start, false, 0, null)); // Single connected component "0"
         while (stack.Count > 0)
             if (ProcessXifo(graph, stack, alreadyVisited, e => e.OrderByDescending(i => i)) is var vertex and >= 0)
                 yield return vertex;
@@ -182,7 +182,7 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     {
         var queue = new XQueue<XifoFrame>();
         var alreadyVisited = new HashSet<int>(); // Populated by ProcessXifo
-        queue.Push(new(start, false, 0)); // Single connected component "0"
+        queue.Push(new(start, false, 0, null)); // Single connected component "0"
         while (queue.Count > 0)
             if (ProcessXifo(graph, queue, alreadyVisited, e => e.OrderBy(i => i)) is var vertex and >= 0)
                 yield return vertex;
@@ -192,11 +192,11 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
         IGraph graph, IXifoStructure<XifoFrame> xifo, HashSet<int> alreadyVisited, 
         Func<IEnumerable<int>, IEnumerable<int>> neighborsProcessor)
     {
-        var (vertex, processed, connectedComponent) = xifo.Pop();
+        var (vertex, processed, connectedComponent, previousVertex) = xifo.Pop();
 
         if (processed)
         {
-            RaiseVisitedVertex(new(vertex, connectedComponent));
+            RaiseVisitedVertex(new(vertex, connectedComponent, previousVertex));
             return -2;
         }
 
@@ -206,21 +206,21 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
         // pushed onto the stack in reversed order.
         if (alreadyVisited.Contains(vertex))
         {
-            RaiseAlreadyVisitedVertex(new(vertex, connectedComponent));
+            RaiseAlreadyVisitedVertex(new(vertex, connectedComponent, previousVertex));
             return -1;
         }
 
-        RaiseVisitingVertex(new(vertex, connectedComponent));
+        RaiseVisitingVertex(new(vertex, connectedComponent, previousVertex));
 
         alreadyVisited.Add(vertex);
         var unexploredVertices = graph
             .GetAdjacentVerticesAndEdges(vertex, DirectedGraph)
             .Select(neighbor => neighbor.Vertex);
 
-        xifo.Push(new(vertex, true, connectedComponent));
+        xifo.Push(new(vertex, true, connectedComponent, previousVertex));
 
         foreach (var unexploredVertex in neighborsProcessor(unexploredVertices))
-            xifo.Push(new(unexploredVertex, false, connectedComponent));
+            xifo.Push(new(unexploredVertex, false, connectedComponent, vertex));
 
         return vertex;
     }
