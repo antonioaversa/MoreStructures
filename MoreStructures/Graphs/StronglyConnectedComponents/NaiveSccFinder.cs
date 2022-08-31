@@ -3,7 +3,8 @@
 namespace MoreStructures.Graphs.StronglyConnectedComponents;
 
 /// <summary>
-/// A simple implementation of <see cref="ISccFinder"/>.
+/// A simple implementation of <see cref="ISccFinder"/>, which builds a "reachability dictionary", by running a DFS
+/// on each vertex of the graph separately.
 /// </summary>
 /// <remarks>
 ///     <para id="advantages">
