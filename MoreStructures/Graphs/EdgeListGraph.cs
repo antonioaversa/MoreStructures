@@ -1,7 +1,4 @@
-﻿using MoreStructures.AdjacencyListGraphs;
-using MoreStructures.Graphs;
-
-namespace MoreStructures.EdgeListGraphs;
+﻿namespace MoreStructures.Graphs;
 
 /// <summary>
 /// A graph data structure, represented as an unsorted list of unlabelled edges, connecting unlabelled vertices.
@@ -96,6 +93,69 @@ public record EdgeListGraph(int NumberOfVertices, IList<(int start, int end)> Ed
             if (edge.end == start)
             {
                 yield return new(edge.start, edge.start, edge.end);
+            }
+        }
+    }
+
+    /// <inheritdoc path="//*[not(self::remarks)]" />
+    /// <remarks>
+    ///     <para id="algorithm">
+    ///     ALGORITHM
+    ///     <br/>
+    ///     - An <see cref="IGraph"/> proxy is created, wrapping this instance of <see cref="IGraph"/>.
+    ///       <br/>
+    ///     - <see cref="IGraph.GetNumberOfVertices"/> is dispatched to the proxied graph.
+    ///       <br/>
+    ///     - <see cref="IGraph.GetAdjacentVerticesAndEdges(int, bool)"/> is directly implemented, accessing
+    ///       <see cref="Edges"/> directly.
+    ///       <br/>
+    ///     - The implementation is very similar to the one of <see cref="EdgeListGraph"/>: the only difference
+    ///       is that start and end vertices of each edge are inverted.
+    ///     </para>
+    ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
+    ///     - Since this method just creates a proxy, Time and Space Complexity are O(1).
+    ///       <br/>
+    ///     - All operations on the proxy have the same Time and Space Complexity as the corresponding methods in 
+    ///       <see cref="EdgeListGraph"/>.
+    ///     </para>
+    /// </remarks>
+    public IGraph Reverse() => new ReverseGraph(this);
+
+    private class ReverseGraph : ReverseProxyGraph<EdgeListGraph>
+    {
+        public ReverseGraph(EdgeListGraph graph) : base(graph)
+        {
+        }
+
+        public override IEnumerable<IGraph.Adjacency> GetAdjacentVerticesAndEdges(
+            int start, bool takeIntoAccountEdgeDirection)
+        {
+            var edges = Proxied.Edges;
+
+            if (takeIntoAccountEdgeDirection)
+            {
+                var adjacencies = edges
+                    .Where(edge => edge.end == start)
+                    .Select(edge => new IGraph.Adjacency(edge.start, edge.end, edge.start));
+                foreach (var adjacency in adjacencies)
+                    yield return adjacency;
+                yield break;
+            }
+
+            foreach (var edge in edges)
+            {
+                if (edge.end == start)
+                {
+                    yield return new(edge.start, edge.end, edge.start);
+                }
+
+                if (edge.start == start)
+                {
+                    yield return new(edge.end, edge.end, edge.start);
+                    continue;
+                }
             }
         }
     }

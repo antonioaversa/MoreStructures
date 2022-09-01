@@ -1,6 +1,6 @@
 ﻿using MoreStructures.Graphs;
 
-namespace MoreStructures.AdjacencyMatrixGraphs;
+namespace MoreStructures.Graphs;
 
 /// <summary>
 /// A graph data structure, represented as a matrix: the (i, j) element of the matrix is true if the vertex with id i
@@ -25,6 +25,17 @@ namespace MoreStructures.AdjacencyMatrixGraphs;
 ///   <br/>
 /// - Notice that O(v) is worse than O(avg_e), where avg_e is the average number of edges coming out of a vertex, for
 ///   sparse graphs, and comparable for dense graphs.
+///   <br/>
+/// - This representation is particularly convenient when used as a directed graph and traversal has often to be done 
+///   in reversed direction, since <see cref="Reverse"/> is an O(1) operation (it just builds a proxy to the original
+///   graph) and <see cref="GetAdjacentVerticesAndEdges(int, bool)"/> has comparable O(v) complexities when traversing 
+///   edges according to their direction or in any direction.
+///   <br/>
+/// - Notice that <see cref="AdjacencyListGraph"/> has better runtime (O(avg_e)) when edges are traversed according to
+///   their direction, and worse runtime (O(avg_e + v)) when edges are traversed in any direction. 
+///   <br/>
+/// - <see cref="EdgeListGraph"/> has consistent runtime in both traversal (O(e)), but e is O(v^2) in dense graphs,
+///   leading to sensibly worse performance in such scenarios.
 /// </remarks>
 /// <example>
 /// The followin graph:
@@ -97,6 +108,60 @@ public record AdjacencyMatrixGraph(bool[,] AdjacencyMatrix) : IGraph
         {
             if (AdjacencyMatrix[i, start])
                 yield return new(i, i, start);
+        }
+    }
+
+    /// <inheritdoc path="//*[not(self::remarks)]" />
+    /// <remarks>
+    ///     <para id="algorithm">
+    ///     ALGORITHM
+    ///     <br/>
+    ///     - An <see cref="IGraph"/> proxy is created, wrapping this instance of <see cref="IGraph"/>.
+    ///       <br/>
+    ///     - <see cref="IGraph.GetNumberOfVertices"/> is dispatched to the proxied graph.
+    ///       <br/>
+    ///     - <see cref="IGraph.GetAdjacentVerticesAndEdges(int, bool)"/> is directly implemented, accessing
+    ///       <see cref="AdjacencyMatrix"/> directly.
+    ///       <br/>
+    ///     - The implementation is very similar to the one of <see cref="AdjacencyMatrixGraph"/>: the only difference
+    ///       is that columns and rows are inverted.
+    ///     </para>
+    ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
+    ///     - Since this method just creates a proxy, Time and Space Complexity are O(1).
+    ///       <br/>
+    ///     - All operations on the proxy have the same Time and Space Complexity as the corresponding methods in 
+    ///       <see cref="AdjacencyMatrixGraph"/>.
+    ///     </para>
+    /// </remarks>
+    public IGraph Reverse() => new ReverseGraph(this);
+
+    private class ReverseGraph : ReverseProxyGraph<AdjacencyMatrixGraph>
+    {
+        public ReverseGraph(AdjacencyMatrixGraph graph) : base(graph)
+        {
+        }
+
+        public override IEnumerable<IGraph.Adjacency> GetAdjacentVerticesAndEdges(
+            int start, bool takeIntoAccountEdgeDirection)
+        {
+            var adjacencyMatrix = Proxied.AdjacencyMatrix;
+
+            for (var i = 0; i < adjacencyMatrix.GetLength(0); i++)
+            {
+                if (adjacencyMatrix[i, start])
+                    yield return new(i, start, i);
+            }
+
+            if (takeIntoAccountEdgeDirection)
+                yield break;
+
+            for (var j = 0; j < adjacencyMatrix.GetLength(1); j++)
+            {
+                if (adjacencyMatrix[start, j])
+                    yield return new(j, j, start);
+            }
         }
     }
 }

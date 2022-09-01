@@ -1,4 +1,4 @@
-﻿using MoreStructures.EdgeListGraphs;
+﻿using MoreStructures.Graphs;
 using MoreStructures.Graphs.StronglyConnectedComponents;
 using MoreStructures.Graphs.Visitor;
 

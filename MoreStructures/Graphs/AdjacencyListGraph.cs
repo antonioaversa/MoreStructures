@@ -1,7 +1,4 @@
-﻿using MoreStructures.EdgeListGraphs;
-using MoreStructures.Graphs;
-
-namespace MoreStructures.AdjacencyListGraphs;
+﻿namespace MoreStructures.Graphs;
 
 /// <summary>
 /// A graph data structure, represented as an ordered list of neighborhoods: the i-th item of the list is the set of
@@ -66,6 +63,11 @@ public record AdjacencyListGraph(IList<ISet<int>> Neighborhoods) : IGraph
     ///     - In such case it would be better to have neighborhoods list already including bi-directional edges, and 
     ///       using <paramref name="takeIntoAccountEdgeDirection"/> = <see langword="true"/>. If not, the advantages of
     ///       having O(1) neighborhood lookup would be lost.
+    ///       <br/>
+    ///     - If bi-directional edges are not included in the graph, and many calls to this method need to be called
+    ///       with <paramref name="takeIntoAccountEdgeDirection"/> = <see langword="true"/>, consider reversing the
+    ///       graph using <see cref="Reverse"/>, and keep one structure for direct lookup and the other for reversed
+    ///       lookup.
     ///     </para>
     ///     <para id="complexity">
     ///     COMPLEXITY
@@ -98,5 +100,50 @@ public record AdjacencyListGraph(IList<ISet<int>> Neighborhoods) : IGraph
             if (Neighborhoods[i].Contains(start))
                 yield return new(i, i, start);
         }
+    }
+
+    /// <inheritdoc path="//*[not(self::remarks)]" />
+    /// <remarks>
+    ///     <para id="algorithm">
+    ///     ALGORITHM
+    ///     <br/>
+    ///     - Because <see cref="AdjacencyListGraph"/> has O(avg_e + v) Time Complexity when edges have to be traversed
+    ///       in reverse, rather than O(avg_e), which is much smaller on large graphs, a proxy to the original data
+    ///       structure is not used.
+    ///       <br/>
+    ///     - Instead, reversed neighborhoods RV are calculated, by iterating over all neighbors u of the neighborhood 
+    ///       N[v] of each vertex v of this graph: if u belongs to N[v] then v is added to RV[u], initially set to an
+    ///       empty <see cref="HashSet{T}"/>.
+    ///       <br/>
+    ///     - Finally a new <see cref="AdjacencyListGraph"/> is built out of RV and returned as result.
+    ///     </para>
+    ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
+    ///     - Unlike in <see cref="AdjacencyMatrixGraph.Reverse"/>, a brand new structure is built, and proxies are not
+    ///       used at all.
+    ///       <br/>
+    ///     - There are as many neighborhoods and reversed neighbors as vertices in the graph.
+    ///       <br/>
+    ///     - The cost of going through all the neighbors in all the neighborhoods is proportional to the number of 
+    ///       edges in the graph.
+    ///       <br/>
+    ///     - Therefore Time and Space Complexity are O(v + e), where v is the number of vertices and e the number of
+    ///       edges.
+    ///     </para>
+    /// </remarks>
+    public IGraph Reverse()
+    {
+        var numberOfVertices = Neighborhoods.Count;
+        var reversedNeighborhoods = new ISet<int>[numberOfVertices];
+
+        for (var vertex = 0; vertex < numberOfVertices; vertex++)
+            reversedNeighborhoods[vertex] = new HashSet<int>();
+
+        for (var vertex = 0; vertex < numberOfVertices; vertex++)
+            foreach (var neighbor in Neighborhoods[vertex])
+                reversedNeighborhoods[neighbor].Add(vertex);
+
+        return new AdjacencyListGraph(reversedNeighborhoods);
     }
 }

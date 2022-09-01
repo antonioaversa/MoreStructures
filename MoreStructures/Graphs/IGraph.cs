@@ -45,6 +45,13 @@ public interface IGraph
     IEnumerable<Adjacency> GetAdjacentVerticesAndEdges(int start, bool takeIntoAccountEdgeDirection);
 
     /// <summary>
+    /// Builds the reverse graph, i.e. a graph with the same set of vertices and reversed edges: for each edge (u, v)
+    /// of the graph G, there is one edge (v, u) in the reverse graph G^-1.
+    /// </summary>
+    /// <returns>A new instance of <see cref="IGraph"/>, representing the reverse graph.</returns>
+    IGraph Reverse();
+
+    /// <summary>
     /// An adjacency in a <see cref="IGraph"/> structure to a vertex, consisting of a neighboring 
     /// <paramref name="Vertex"/>, connected to the first vertex via edge, identified by <paramref name="EdgeStart"/> 
     /// and <paramref name="EdgeEnd"/>.
