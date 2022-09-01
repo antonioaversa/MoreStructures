@@ -137,7 +137,7 @@ public record AdjacencyMatrixGraph(bool[,] AdjacencyMatrix) : IGraph
     /// </remarks>
     public IGraph Reverse() => new ReverseGraph(this);
 
-    private class ReverseGraph : ReverseProxyGraph<AdjacencyMatrixGraph>
+    sealed private class ReverseGraph : ReverseProxyGraph<AdjacencyMatrixGraph>
     {
         public ReverseGraph(AdjacencyMatrixGraph graph) : base(graph)
         {

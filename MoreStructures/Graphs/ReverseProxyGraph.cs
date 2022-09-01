@@ -5,7 +5,7 @@ internal abstract class ReverseProxyGraph<T> : IGraph
 {
     protected T Proxied { get; }
 
-    public ReverseProxyGraph(T proxied)
+    protected ReverseProxyGraph(T proxied)
     {
         Proxied = proxied;
     }

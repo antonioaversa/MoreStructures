@@ -123,7 +123,7 @@ public record EdgeListGraph(int NumberOfVertices, IList<(int start, int end)> Ed
     /// </remarks>
     public IGraph Reverse() => new ReverseGraph(this);
 
-    private class ReverseGraph : ReverseProxyGraph<EdgeListGraph>
+    sealed private class ReverseGraph : ReverseProxyGraph<EdgeListGraph>
     {
         public ReverseGraph(EdgeListGraph graph) : base(graph)
         {
