@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.EdgeListGraphs;
+using MoreStructures.Graphs;
 using MoreStructures.Graphs.Visitor;
 
 namespace MoreStructures.Tests.Graphs.Visitor;
