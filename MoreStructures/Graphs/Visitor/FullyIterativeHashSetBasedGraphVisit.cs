@@ -90,6 +90,9 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     ///       of vertices, e is the number of edges and Ta and Sa are the time and space cost of retrieving the 
     ///       neighborhood of a given vertex.
     ///     </para>
+    ///     <inheritdoc 
+    ///         cref="FullyRecursiveHashSetBasedGraphVisit.DepthFirstSearchOfGraph" 
+    ///         path="/remarks/para[@id='complexity-and-events']"/>
     /// </remarks>
     public override IEnumerable<int> DepthFirstSearchOfGraph(IGraph graph) => base.DepthFirstSearchOfGraph(graph);
 
@@ -116,6 +119,9 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     ///       vertices, e is the number of edges and Ta and Sa are the time and space cost of retrieving the 
     ///       neighborhood of a given vertex.
     ///     </para>
+    ///     <inheritdoc 
+    ///         cref="FullyRecursiveHashSetBasedGraphVisit.DepthFirstSearchOfGraph" 
+    ///         path="/remarks/para[@id='complexity-and-events']"/>///     
     /// </remarks>
     public override IDictionary<int, int> ConnectedComponents(IGraph graph) => base.ConnectedComponents(graph);
 
@@ -145,6 +151,9 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     ///       vertices, e is the number of edges and Ta and Sa are the time and space cost of retrieving the 
     ///       neighborhood of a given vertex.
     ///     </para>
+    ///     <inheritdoc 
+    ///         cref="FullyRecursiveHashSetBasedGraphVisit.DepthFirstSearchOfGraph" 
+    ///         path="/remarks/para[@id='complexity-and-events']"/>
     /// </remarks>
     public override IEnumerable<int> DepthFirstSearchFromVertex(IGraph graph, int vertex)
     {
@@ -180,6 +189,9 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
     ///       of vertices, e is the number of edges and Ta and Sa are the time and space cost of retrieving the 
     ///       neighborhood of a given vertex.
     ///     </para>
+    ///     <inheritdoc 
+    ///         cref="FullyRecursiveHashSetBasedGraphVisit.DepthFirstSearchOfGraph" 
+    ///         path="/remarks/para[@id='complexity-and-events']"/>
     /// </remarks>
     public override IEnumerable<int> BreadthFirstSearchFromVertex(IGraph graph, int vertex)
     {

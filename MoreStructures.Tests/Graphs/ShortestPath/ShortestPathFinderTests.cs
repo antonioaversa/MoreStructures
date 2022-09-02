@@ -39,8 +39,8 @@ public abstract class ShortestPathFinderTests
         int expectedDistance, int[] expectedPath)
     {
         var graph = GraphBuilder(numberOfVertices, starts.Zip(ends).ToList());
-        var shortestPathFinder = FinderBuilder();
-        var (distance, path) = shortestPathFinder.Find(graph, start, end);
+        var finder = FinderBuilder();
+        var (distance, path) = finder.Find(graph, start, end);
         Assert.AreEqual(expectedDistance, distance);
         Assert.IsTrue(
             expectedPath.SequenceEqual(path),
