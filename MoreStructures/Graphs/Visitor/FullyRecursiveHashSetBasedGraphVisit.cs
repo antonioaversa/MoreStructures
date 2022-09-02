@@ -90,6 +90,16 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
     ///       v is the number of vertices, e is the number of edges and Ta and Sa are the time and space cost of 
     ///       retrieving the neighborhood of a given vertex.
     ///     </para>
+    ///     <para id="complexity-and-events">
+    ///     COMPLEXITY AND EVENTS
+    ///     <br/>
+    ///     - Event handlers are externally defined and have been considered O(1) in this analysis.
+    ///       <br/>
+    ///     - To include them in the analysis, it should be taken into account that 
+    ///       <see cref="IVisitStrategy.VisitingVertex"/> and <see cref="IVisitStrategy.VisitedVertex"/> happen once 
+    ///       per visited vertex, whereas <see cref="IVisitStrategy.AlreadyVisitedVertex"/> can happen globally as many
+    ///       times as the number of edges.
+    ///     </para>
     /// </remarks>
     public override IEnumerable<int> DepthFirstSearchOfGraph(IGraph graph) => base.DepthFirstSearchOfGraph(graph);
 
@@ -132,6 +142,7 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
     ///       vertices, e is the number of edges and Ta and Sa are the time and space cost of retrieving the 
     ///       neighborhood of a given vertex.
     ///     </para>
+    ///     <inheritdoc cref="DepthFirstSearchOfGraph" path="/remarks/para[@id='complexity-and-events']"/>
     /// </remarks>
     public override IDictionary<int, int> ConnectedComponents(IGraph graph) => base.ConnectedComponents(graph);
 
@@ -185,6 +196,7 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
     ///       of vertices, e is the number of edges and Ta and Sa are the time and space cost of retrieving the 
     ///       neighborhood of a given vertex.
     ///     </para>
+    ///     <inheritdoc cref="DepthFirstSearchOfGraph" path="/remarks/para[@id='complexity-and-events']"/>
     /// </remarks>
     public override IEnumerable<int> DepthFirstSearchFromVertex(IGraph graph, int vertex)
     {
@@ -240,6 +252,7 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
     ///       of vertices, e is the number of edges and Ta and Sa are the time and space cost of retrieving the 
     ///       neighborhood of a given vertex.
     ///     </para>
+    ///     <inheritdoc cref="DepthFirstSearchOfGraph" path="/remarks/para[@id='complexity-and-events']"/>
     /// </remarks>
     public override IEnumerable<int> BreadthFirstSearchFromVertex(IGraph graph, int vertex)
     {

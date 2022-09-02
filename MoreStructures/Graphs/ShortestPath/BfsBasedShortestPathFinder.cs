@@ -1,4 +1,5 @@
-﻿using MoreStructures.Graphs.Visitor;
+﻿using MoreLinq.Extensions;
+using MoreStructures.Graphs.Visitor;
 
 namespace MoreStructures.Graphs.ShortestPath;
 
@@ -21,9 +22,9 @@ namespace MoreStructures.Graphs.ShortestPath;
 ///       <see cref="IVisitStrategy.VisitingVertex"/> event, into a <see cref="IDictionary{TKey, TValue}"/> D.
 ///       <br/>
 ///     - A Breadth First Search from the start vertex is executed, running 
-///       <see cref="IVisitStrategy.DepthFirstSearchFromVertex"/>. The result of the visit is consumed (i.e. the visit
-///       is done) until either the end vertex is encountered, or when there are no more vertices reachable from the 
-///       start vertex, which haven't been visited yet.
+///       <see cref="IVisitStrategy.BreadthFirstSearchFromVertex"/>. The result of the visit is consumed (i.e. the 
+///       visit is done) until either the end vertex is encountered, or when there are no more vertices reachable from 
+///       the start vertex, which haven't been visited yet.
 ///       <br/>
 ///     - If the end vertex hasn't been discovered during the visit, it is not reachable. Therefore, a length of path 
 ///       equal to <see cref="int.MaxValue"/> and an empty path are returned.
@@ -39,11 +40,9 @@ namespace MoreStructures.Graphs.ShortestPath;
 ///     <para id="complexity">
 ///     COMPLEXITY
 ///     <br/>
-///     - Building the <see cref="IVisitStrategy"/> instance has a complexity that depends on the user-provided 
-///       <see cref="VisitStrategyBuilder"/>.
-///       <br/>
-///     - However, the instantiation of a <see cref="IVisitStrategy"/> doesn't generally depends on the size of the 
-///       graph to be visited, and can be considered O(1) work.
+///     - While building the <see cref="IVisitStrategy"/> instance has a complexity that depends on the user-provided 
+///       <see cref="VisitStrategyBuilder"/>, it doesn't generally depends on the size of the graph to be visited, and 
+///       can be considered O(1) work.
 ///       <br/>
 ///     - Instrumenting the <see cref="IVisitStrategy"/> instance and running the handler for every visited vertex are
 ///       also constant-time operations.
@@ -83,21 +82,32 @@ public class BfsBasedShortestPathFinder : IShortestPathFinder
         VisitStrategyBuilder = visitStrategyBuilder;
     }
 
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
+    /// <remarks>
+    ///     <inheritdoc cref="BfsBasedShortestPathFinder"/>
+    /// </remarks>
     public (int, IList<int>) Find(IGraph graph, int start, int end)
     {
         var visitor = VisitStrategyBuilder();
-        
+
         var previousVertices = new Dictionary<int, int?>();
         visitor.VisitingVertex += (o, e) => previousVertices[e.Vertex] = e.PreviousVertex;
 
-        var visit = visitor.BreadthFirstSearchFromVertex(graph, start);
-        MoreLinq.MoreEnumerable.Consume(visit.TakeWhile(vertex => vertex != end));
-        
+        visitor
+            .BreadthFirstSearchFromVertex(graph, start)
+            .TakeWhile(vertex => vertex != end)
+            .Consume();
+
         if (!previousVertices.ContainsKey(end))
             return (int.MaxValue, new List<int> { });
 
-        // Rebuild path from previousVertices dictionary
+        var path = BuildShortestPath(end, previousVertices);
+
+        return (path.Count - 1, path);
+    }
+
+    private static IList<int> BuildShortestPath(int end, Dictionary<int, int?> previousVertices)
+    {
         var path = new List<int>();
         int? maybeCurrentVertex = end;
         while (maybeCurrentVertex is int currentVertex)
@@ -106,7 +116,6 @@ public class BfsBasedShortestPathFinder : IShortestPathFinder
             maybeCurrentVertex = previousVertices[currentVertex];
         }
         path.Reverse();
-
-        return (path.Count - 1, path);
+        return path;
     }
 }

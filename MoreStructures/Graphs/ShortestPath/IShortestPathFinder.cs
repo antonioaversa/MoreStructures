@@ -11,7 +11,7 @@ public interface IShortestPathFinder
     /// the <paramref name="end"/> vertex.
     /// </summary>
     /// <param name="graph">The graph to traverse.</param>
-    /// <param name="start">The id of the vertex, to start traverse from.</param>
+    /// <param name="start">The id of the vertex, to start traversal from.</param>
     /// <param name="end">The id of the vertex, to end traversal at.</param>
     /// <returns>
     /// A couple. The first item of the couple is the shortest distance, as number of edges of the shortest path 
