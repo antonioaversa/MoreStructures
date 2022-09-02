@@ -110,41 +110,13 @@ public class BfsBasedShortestDistanceFinder : IShortestDistanceFinder
         };
         var downstreamVertices = new Dictionary<int, HashSet<int>>();
 
-        void updateBestPrevious(object? o, VisitEventArgs e)
-        {
-            var current = e.Vertex;
-            if (e.PreviousVertex is int previous)
-            {
-                if (!downstreamVertices.ContainsKey(previous))
-                    downstreamVertices[previous] = new HashSet<int> { current };
-                else
-                    downstreamVertices[previous].Add(current);
+        var visitor = VisitStrategyBuilder();
+        visitor.VisitingVertex += 
+            (o, e) => UpdateBestPreviousAndDownstreamVertices(o, e, distances, bestPrevious, downstreamVertices);
+        visitor.AlreadyVisitedVertex += 
+            (o, e) => UpdateBestPreviousAndDownstreamVertices(o, e, distances, bestPrevious, downstreamVertices);
 
-                var distanceFromStartToPrevious = bestPrevious[previous].distanceFromStart;
-                var distanceFromPreviousToCurrent = distances[(previous, current)];
-                var distanceFromStartToCurrent = distanceFromStartToPrevious + distanceFromPreviousToCurrent;
-
-                if (!bestPrevious.ContainsKey(current))
-                {
-                    bestPrevious[current] = (distanceFromStartToCurrent, previous);
-                }
-                else if (bestPrevious[current].distanceFromStart > distanceFromStartToCurrent)
-                {
-                    bestPrevious[current] = (distanceFromStartToCurrent, previous);
-
-                    // Update all vertices downstream (if any), which have already entries in bestPrevious
-                    if (downstreamVertices.ContainsKey(current))
-                        foreach (var downstreamVertex in downstreamVertices[current])
-                            updateBestPrevious(o, new(downstreamVertex, e.ConnectedComponent, current));
-                }
-            }
-        }
-
-        var mainVisitor = VisitStrategyBuilder();
-        mainVisitor.VisitingVertex += updateBestPrevious;
-        mainVisitor.AlreadyVisitedVertex += updateBestPrevious;
-
-        mainVisitor
+        visitor
             .BreadthFirstSearchFromVertex(graph, start)
             .Consume();
 
@@ -155,6 +127,41 @@ public class BfsBasedShortestDistanceFinder : IShortestDistanceFinder
         var shortestPath = BuildShortestPath(end, bestPrevious);
 
         return (shortestDistance, shortestPath);
+    }
+
+    private static void UpdateBestPreviousAndDownstreamVertices(
+        object? sender, VisitEventArgs eventArgs, IDictionary<(int, int), int> distances, 
+        Dictionary<int, (int distanceFromStart, int? previousVertex)> bestPrevious, 
+        Dictionary<int, HashSet<int>> downstreamVertices)
+    {
+        var current = eventArgs.Vertex;
+        if (eventArgs.PreviousVertex is not int previous)
+            return;
+
+        if (!downstreamVertices.ContainsKey(previous))
+            downstreamVertices[previous] = new HashSet<int> { current };
+        else
+            downstreamVertices[previous].Add(current);
+
+        var distanceFromStartToPrevious = bestPrevious[previous].distanceFromStart;
+        var distanceFromPreviousToCurrent = distances[(previous, current)];
+        var distanceFromStartToCurrent = distanceFromStartToPrevious + distanceFromPreviousToCurrent;
+
+        if (!bestPrevious.ContainsKey(current))
+        {
+            bestPrevious[current] = (distanceFromStartToCurrent, previous);
+        }
+        else if (bestPrevious[current].distanceFromStart > distanceFromStartToCurrent)
+        {
+            bestPrevious[current] = (distanceFromStartToCurrent, previous);
+
+            // Update all vertices downstream (if any), which have already entries in bestPrevious
+            if (downstreamVertices.ContainsKey(current))
+                foreach (var downstreamVertex in downstreamVertices[current])
+                    UpdateBestPreviousAndDownstreamVertices(
+                        sender, new(downstreamVertex, eventArgs.ConnectedComponent, current), 
+                        distances, bestPrevious, downstreamVertices);
+        }
     }
 
     private static IList<int> BuildShortestPath(
