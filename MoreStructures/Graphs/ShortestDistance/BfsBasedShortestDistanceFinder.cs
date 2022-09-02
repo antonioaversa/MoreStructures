@@ -121,7 +121,7 @@ public class BfsBasedShortestDistanceFinder : IShortestDistanceFinder
             .Consume();
 
         if (!bestPrevious.ContainsKey(end))
-            return (int.MaxValue, new List<int> { });
+            return (int.MaxValue, Array.Empty<int>());
 
         var shortestDistance = bestPrevious[end].distanceFromStart;
         var shortestPath = BuildShortestPath(end, bestPrevious);
@@ -164,7 +164,7 @@ public class BfsBasedShortestDistanceFinder : IShortestDistanceFinder
         }
     }
 
-    private static IList<int> BuildShortestPath(
+    internal static IList<int> BuildShortestPath(
         int end, 
         Dictionary<int, (int distanceFromStart, int? previousVertex)> bestPrevious)
     {
