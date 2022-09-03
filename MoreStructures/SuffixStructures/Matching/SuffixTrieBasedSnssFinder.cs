@@ -132,7 +132,7 @@ public class SuffixTrieBasedSnssFinder : SuffixStructureBasedSnssFinder
             let prefix = string.Concat(CollectPrefixChars(text1And2, visit.Node, cachedVisits).Reverse())
             select prefix;
 
-        var (firstOrEmpty, reminder) = results.EnumerateAtMostFirst(1);
+        var (firstOrEmpty, _) = results.EnumerateAtMostFirst(1);
         if (!firstOrEmpty.Any())
             return firstOrEmpty;
 

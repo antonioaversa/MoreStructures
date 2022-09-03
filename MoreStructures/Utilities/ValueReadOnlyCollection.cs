@@ -10,7 +10,7 @@ namespace MoreStructures.Utilities;
 /// Immutability can be guaranteed by cloning the provided enumerable and exposing a readonly view of it, but only 
 /// if immutability of underlying <typeparamref name="T"/> is provided, for example, by using immutable records.
 /// </remarks>
-public class ValueReadOnlyCollection<T> : ReadOnlyCollection<T>
+public class ValueReadOnlyCollection<T> : ReadOnlyCollection<T>, IEquatable<ValueReadOnlyCollection<T>>
     where T : notnull
 {
     /// <summary>
@@ -30,7 +30,11 @@ public class ValueReadOnlyCollection<T> : ReadOnlyCollection<T>
     /// True if the specified object is equal to the current collection by value; otherwise, false.
     /// </returns>
     public override bool Equals(object? obj) =>
-        obj is ValueReadOnlyCollection<T> other && this.SequenceEqual(other);
+        obj is ValueReadOnlyCollection<T> other && Equals(other);
+
+    /// <inheritdoc cref="Equals(object?)"/>
+    /// <param name="other">The <see cref="ValueReadOnlyCollection{T}"/> to compare with the current object.</param>
+    public virtual bool Equals(ValueReadOnlyCollection<T>? other) => other is not null && this.SequenceEqual(other);
 
     /// <summary>
     /// <inheritdoc/> The hash code is calculated by value, as an aggregate of the hash codes of its items.

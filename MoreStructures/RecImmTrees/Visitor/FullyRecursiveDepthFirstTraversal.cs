@@ -61,7 +61,7 @@ public class FullyRecursiveDepthFirstTraversal<TEdge, TNode>
 
     private IEnumerable<TreeTraversalVisit<TEdge, TNode>> Visit(TreeTraversalVisit<TEdge, TNode> visit)
     {
-        var (node, parentNode, incomingEdge, level) = visit;
+        var (node, _, _, level) = visit;
 
         switch (TraversalOrder)
         {

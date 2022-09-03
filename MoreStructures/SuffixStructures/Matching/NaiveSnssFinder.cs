@@ -57,7 +57,7 @@ public class NaiveSnssFinder : ISnssFinder
             where !string2.Contains(substringOfString1)
             select substringOfString1;
 
-        var (firstOrEmpty, reminder) = results.EnumerateAtMostFirst(1);
+        var (firstOrEmpty, _) = results.EnumerateAtMostFirst(1);
         var first = firstOrEmpty.Single();
         return results.TakeWhile(s => s.Length == first.Length).Prepend(first);
     }

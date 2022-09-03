@@ -88,7 +88,7 @@ public class FullyIterativeDepthFirstTraversal<TEdge, TNode>
     private TreeTraversalVisit<TEdge, TNode>? ProcessStack(Stack<StackFrame> stack)
     {
         var (visit, childrenStacked) = stack.Pop();
-        var (node, parentNode, incomingEdge, level) = visit;
+        var (node, _, _, level) = visit;
 
         if (node.IsLeaf())
         {

@@ -158,7 +158,7 @@ public class SuffixTreeBasedSnssFinder : SuffixStructureBasedSnssFinder
             orderby prefix.Length ascending
             select prefix;
 
-        var (firstOrEmpty, reminder) = results.EnumerateAtMostFirst(1);
+        var (firstOrEmpty, _) = results.EnumerateAtMostFirst(1);
         if (!firstOrEmpty.Any())
             return firstOrEmpty;
 
