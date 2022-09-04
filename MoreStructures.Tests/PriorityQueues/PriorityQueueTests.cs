@@ -194,87 +194,6 @@ public abstract class PriorityQueueTests
     }
 
     [TestMethod]
-    public void UpdatePriority_RaisesExceptionOnItemNonPresent()
-    {
-        var queue = IntQueueBuilder();
-        Assert.ThrowsException<InvalidOperationException>(() => queue.UpdatePriority(3, 1));
-        queue.Push(3, 2);
-        Assert.ThrowsException<InvalidOperationException>(() => queue.UpdatePriority(2, 3));
-    }
-
-    [TestMethod]
-    public void UpdatePriority_IsStableWithInt()
-    {
-        var queue = IntQueueBuilder();
-        queue.Push(3, 2);
-        queue.Push(3, 4);
-        queue.UpdatePriority(3, 1);
-        Assert.AreEqual(new ItemAndPriority<int>(3, 4), queue.Peek());
-        queue.UpdatePriority(3, 3);
-        Assert.AreEqual(new ItemAndPriority<int>(3, 4), queue.Peek());
-        queue.Pop();
-        Assert.AreEqual(new ItemAndPriority<int>(3, 3), queue.Peek());
-        queue.Pop();
-        Assert.AreEqual(0, queue.Count);
-    }
-
-    [TestMethod]
-    public void UpdatePriority_IsStableWithReferenceTypes()
-    {
-        var queue = RefTypeQueueBuilder();
-        var o1 = new RefType(1, new object());
-        var o2 = new RefType(2, new object());
-        var o3 = new RefType(3, new object());
-
-        queue.Push(o1, 0);
-        queue.Push(o2, 0);
-        queue.Push(o3, 0);
-
-        queue.UpdatePriority(o1, 1);
-        queue.UpdatePriority(o2, 3);
-        queue.UpdatePriority(o3, 2);
-
-        Assert.IsTrue(ReferenceEquals(o2, queue.Pop().Item));
-        Assert.IsTrue(ReferenceEquals(o3, queue.Pop().Item));
-        Assert.IsTrue(ReferenceEquals(o1, queue.Pop().Item));
-
-        queue.Push(o2, 5);
-        queue.Push(o1, 2);
-        queue.Push(o1, 2);
-        queue.Push(o1, 4);
-        queue.Push(o3, 3);
-
-        Assert.IsTrue(ReferenceEquals(o2, queue.Peek().Item));
-        queue.UpdatePriority(o1, 6);
-        Assert.IsTrue(ReferenceEquals(o1, queue.Pop().Item));
-        Assert.IsTrue(ReferenceEquals(o2, queue.Peek().Item));
-        queue.UpdatePriority(o2, 1);
-        Assert.IsTrue(ReferenceEquals(o1, queue.Peek().Item));
-        Assert.AreEqual(4, queue.Peek().Priority);
-    }
-
-    [TestMethod]
-    public void UpdatePriority_IsCorrect()
-    {
-        var queue = IntQueueBuilder();
-        queue.Push(3, 2);
-        queue.UpdatePriority(3, 1);
-        Assert.AreEqual(new ItemAndPriority<int>(3, 1), queue.Peek());
-        queue.UpdatePriority(3, 4);
-        Assert.AreEqual(new ItemAndPriority<int>(3, 4), queue.Peek());
-        queue.Push(4, 2);
-        Assert.AreEqual(new ItemAndPriority<int>(3, 4), queue.Peek());
-        queue.Push(5, 5);
-        Assert.AreEqual(new ItemAndPriority<int>(5, 5), queue.Peek());
-        queue.UpdatePriority(5, 3);
-        Assert.AreEqual(new ItemAndPriority<int>(3, 4), queue.Peek());
-        queue.Pop();
-        Assert.AreEqual(new ItemAndPriority<int>(5, 3), queue.Peek());
-        queue.Pop();
-        Assert.AreEqual(new ItemAndPriority<int>(4, 2), queue.Peek());
-    }
-
-    [TestMethod]
     public void GetEnumerator_RetrievesAllItemsAccordingToPriority()
     {
         var queue = IntQueueBuilder();
@@ -295,5 +214,24 @@ public abstract class PriorityQueueTests
             nonGenericEnumeration.Add((int)nonGenericEnumerator.Current);
 
         Assert.IsTrue(expectedSequence.SequenceEqual(nonGenericEnumeration));
+    }
+
+    [TestMethod]
+    public void GetEnumerator_DoesntAlterQueueWhenIterated()
+    {
+        var queue = IntQueueBuilder();
+        queue.Push(3, 2);
+        queue.Push(2, 3);
+        queue.Push(10, 2);
+        queue.Push(10, 5);
+        queue.Push(9, 4);
+        queue.Push(9, 6);
+        queue.Push(1, 4);
+
+        Assert.AreEqual(7, queue.Count);
+        var items = queue.ToList();
+
+        Assert.AreEqual(7, items.Count);
+        Assert.AreEqual(7, queue.Count);
     }
 }
