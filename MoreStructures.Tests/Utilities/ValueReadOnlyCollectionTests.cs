@@ -1,4 +1,5 @@
-﻿using MoreStructures.Utilities;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MoreStructures.Utilities;
 
 namespace MoreStructures.Tests.Utilities
 {
@@ -23,6 +24,14 @@ namespace MoreStructures.Tests.Utilities
             var valueList = new ValueReadOnlyCollection<string>(list);
             list.Add("c");
             Assert.AreEqual(initialCount, valueList.Count);
+        }
+
+        [TestMethod]
+        public void Equals_CheckForNull()
+        {
+            var valueList1 = new ValueReadOnlyCollection<string>(new List<string> { "a" });
+            Assert.IsFalse(valueList1.Equals(null as object));
+            Assert.IsFalse(valueList1.Equals(null));
         }
 
         [TestMethod]
