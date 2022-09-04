@@ -108,7 +108,7 @@ public class FullyIterativeBreadthFirstTraversal<TEdge, TNode>
         Queue<TreeTraversalVisit<TEdge, TNode>> traversalQueue, Queue<TreeTraversalVisit<TEdge, TNode>> visitQueue)
     {
         var visit = traversalQueue.Dequeue();
-        var (node, parentNode, incomingEdge, level) = visit;
+        var (node, _, _, level) = visit;
 
         visitQueue.Enqueue(visit);
         foreach (var child in ChildrenSorter(visit))
@@ -119,7 +119,7 @@ public class FullyIterativeBreadthFirstTraversal<TEdge, TNode>
         Queue<TreeTraversalVisit<TEdge, TNode>> traversalQueue, Stack<TreeTraversalVisit<TEdge, TNode>> visitStack)
     {
         var visit = traversalQueue.Dequeue();
-        var (node, parentNode, incomingEdge, level) = visit;
+        var (node, _, _, level) = visit;
 
         visitStack.Push(visit);
         foreach (var child in ChildrenSorter(visit).Reverse())
