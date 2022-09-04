@@ -48,6 +48,9 @@ public class QuickFindDisjointSet : IDisjointSet
     /// </remarks>
     public bool AreConnected(int first, int second)
     {
+        if (ValuesCount == 0)
+            throw new InvalidOperationException(
+                $"{nameof(AreConnected)} cannot be invoked on an empty queue.");
         if (first < 0 || first >= ValuesCount)
             throw new ArgumentException(
                 $"Must be non-negative and smaller than {nameof(ValuesCount)}.", nameof(first));
@@ -64,6 +67,9 @@ public class QuickFindDisjointSet : IDisjointSet
     /// </remarks>
     public int Find(int value)
     {
+        if (ValuesCount == 0)
+            throw new InvalidOperationException(
+                $"{nameof(AreConnected)} cannot be invoked on an empty queue.");
         if (value < 0 || value >= ValuesCount)
             throw new ArgumentException(
                 $"Must be non-negative and smaller than {nameof(ValuesCount)}.", nameof(value));

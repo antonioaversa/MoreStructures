@@ -23,6 +23,13 @@ public abstract class DisjointSetTests
     }
 
     [TestMethod]
+    public void AreConnected_RaisesExceptionOnEmptyQueue()
+    {
+        var emptyDisjointSet = Builder(0);
+        Assert.ThrowsException<InvalidOperationException>(() => emptyDisjointSet.AreConnected(0, 0));
+    }
+
+    [TestMethod]
     public void AreConnected_IsReflexive()
     {
         var disjointSet = Builder(10);
@@ -62,6 +69,13 @@ public abstract class DisjointSetTests
         Assert.ThrowsException<ArgumentException>(() => disjointSet.Find(-1));
         Assert.ThrowsException<ArgumentException>(() => disjointSet.Find(10));
         Assert.ThrowsException<ArgumentException>(() => disjointSet.Find(100));
+    }
+
+    [TestMethod]
+    public void Find_ThrowsExceptionOnEmptyQueue()
+    {
+        var emptyDisjointSet = Builder(0);
+        Assert.ThrowsException<InvalidOperationException>(() => emptyDisjointSet.Find(0));
     }
 
     [TestMethod]
