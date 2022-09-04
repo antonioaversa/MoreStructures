@@ -68,6 +68,7 @@ public abstract class PriorityQueueTests
         Assert.IsTrue(ReferenceEquals(o1, queue.Pop().Item));
     }
 
+    [TestMethod]
     public void PushAndPop_WorkWithValueTypes()
     {
         var queue = ValTypeQueueBuilder();
