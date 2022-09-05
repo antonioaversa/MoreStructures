@@ -40,7 +40,7 @@ public interface IPriorityQueue<T> : IEnumerable<T>
     /// <summary>
     /// Extracts the item of the queue with highest priority.
     /// </summary>
-    ItemAndPriority<T> Pop();
+    PrioritizedItem<T> Pop();
 
     /// <summary>
     /// The number of items currently in the queue.
@@ -53,5 +53,5 @@ public interface IPriorityQueue<T> : IEnumerable<T>
     /// <summary>
     /// Retrieves the item of the queue with highest priority, without extracting it.
     /// </summary>
-    ItemAndPriority<T> Peek();
+    PrioritizedItem<T> Peek();
 }

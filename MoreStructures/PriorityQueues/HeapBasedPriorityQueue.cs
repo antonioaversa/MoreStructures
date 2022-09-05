@@ -10,8 +10,8 @@ namespace MoreStructures.PriorityQueues;
 ///     <para id="advantages">
 ///     ADVANTAGES AND DISADVANTAGES
 ///     <br/>
-///     - The Binary Max Heap is used to store the priorities, in a way that the max priority is immediately 
-///       retrievable (making <see cref="Peek"/> a constant-time operation), and easily extractable (making 
+///     - The Binary Max Heap is used to store items with their priorities, in a way that the item with max priority is
+///       immediately retrievable (making <see cref="Peek"/> a constant-time operation), and easily extractable (making 
 ///       <see cref="Pop"/> a logarithmic-time operation).
 ///       <br/>
 ///     - This comes a cost of the <see cref="Push(T, int)"/> operation, which is O(1) in 
@@ -27,8 +27,8 @@ namespace MoreStructures.PriorityQueues;
 ///     <para id="heap-representation">
 ///     BINARY MAX HEAP REPRESENTATION
 ///     <br/>
-///     - The Binary Max Heap used for priorities is backed by a complete Binary Tree, represented as and Array List 
-///       of its items. 
+///     - The Binary Max Heap used for items and priorities is backed by a complete Binary Tree, represented as an 
+///       Array List of its items. 
 ///       <br/>
 ///     - The root of the tree is always in position 0, its children in positions 1 and 2, grand-children in positions
 ///       3, 4, 5 and 6 (where 3 and 4 are children of 1 and 5 and 6 are children of 2), etc.
@@ -57,29 +57,46 @@ namespace MoreStructures.PriorityQueues;
 ///       the highest priority in the heap, I1 is popped out of the heap before I2 is.
 ///       <br/>
 ///     - That also applies to the case where I1 and I2 are equal by value and different by reference.
+///       <br/>
+///     - Stability is achieved by keeping a "push index", i.e. a <see cref="int"/> counter set to 0 in the constructor
+///       and incremented every time a new item is introduced in the queue via a <see cref="Push(T, int)"/>.
+///       <br/>
+///     - The push index is included in the heap item record, together with the item of type 
+///       <typeparamref name="T"/> and its priority of type <see cref="int"/>.
+///       <br/>
+///     - This way two heap item records I1 and I2 with the same priority I1.Priority and I2.Priority, and potentially
+///       the same or equal items I1.Item and I2.Item, will necessarily differ by push index, I1.PushTimestamp and 
+///       I2.PushTimestamp.
+///       <br/>
+///      - Therefore a <b>total strict order</b> can be imposed.
 ///     </para>
 /// </remarks>
 public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
     where T : notnull
 {
-    private record struct TreeItem(int Priority);
+    /// <summary>
+    /// A non-negative, zero-based, monotonically strictly increasing counter, incremented at every insertion into this 
+    /// data structure by a <see cref="Push(T, int)"/>.
+    /// </summary>
+    protected int _currentPushTimestamp = 0;
 
-    private List<TreeItem> Priorities { get; }
-    private Dictionary<int, LinkedList<T>> ItemsByPriority { get; }
+    /// <summary>
+    /// The <see cref="List{T}"/> of <see cref="PrioritizedItem{T}"/> backing the binary max heap.
+    /// </summary>
+    protected List<PrioritizedItem<T>> Items { get; }
 
 
     /// <summary>
     /// Builds an empty priority queue.
     /// </summary>
     /// <remarks>
-    /// The underlying data structures for priorities and items are initialized to empty structures.
+    /// The underlying data structure for priorities and items is initialized to an empty structure.
     /// <br/>
     /// Therefore, Time and Space Complexity is O(1).
     /// </remarks>
     public HeapBasedPriorityQueue()
     {
-        Priorities = new();
-        ItemsByPriority = new();
+        Items = new();
     }
 
     /// <summary>
@@ -87,22 +104,17 @@ public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
     /// </summary>
     /// <param name="source">The <see cref="HeapBasedPriorityQueue{T}"/> instance to use as a source of data.</param>
     /// <remarks>
-    /// The underlying data structure used for priorities is shallow copied.
+    /// The underlying data structure is shallow copied.
     /// <br/>
     /// Because it is made of immutable records, a shallow-copy is enough to ensure that its mutation in 
     /// <paramref name="source"/> won't affect the new priority queue or viceversa.
     /// <br/>
-    /// The underlying data structure used for items is deep-copied instead, because it contains linked lists which
-    /// would be mutated, if either of the priority queues is changed.
-    /// <br/>
-    /// Because both data structures contain O(n) items, Time and Space Complexity are O(n), where n is the number of
+    /// Because the data structure contain O(n) items, Time and Space Complexity are O(n), where n is the number of
     /// items in <paramref name="source"/>.
     /// </remarks>
     public HeapBasedPriorityQueue(HeapBasedPriorityQueue<T> source)
     {
-        Priorities = new(source.Priorities);
-        ItemsByPriority = new(
-            source.ItemsByPriority.Select(kvp => KeyValuePair.Create(kvp.Key, new LinkedList<T>(kvp.Value))));
+        Items = new(source.Items);
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
@@ -111,7 +123,7 @@ public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
     /// <br/>
     /// Time and Space Complexity are O(1).
     /// </remarks>
-    public int Count => Priorities.Count;
+    public int Count => Items.Count;
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
@@ -141,21 +153,17 @@ public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
-    /// Peeks the max priority from the root of the priority heap.
+    /// Peeks the item with max priority from the root of the heap, if any.
     /// <br/>
-    /// Then retrieves the 1st item in the linked list of items with such priority, from the dictionary of items.
-    /// <br/>
-    /// Accessing the root of the heap, retrieving the linked list of items with a given priority and accessing the
-    /// first item of a linked list are all constant-time operations, which only require constant space.
+    /// That is located at index 0 in the underlying list, and can be accessed in constant-time.
     /// <br/>
     /// Therefore, Time and Space Complexity are O(1).
     /// </remarks>
-    public ItemAndPriority<T> Peek()
+    public PrioritizedItem<T> Peek()
     {
-        if (Priorities.Count == 0)
+        if (Items.Count == 0)
             throw new InvalidOperationException($"Can't ${nameof(Peek)} on an empty queue.");
-        var maxPriority = Priorities[0].Priority;
-        return new(ItemsByPriority[maxPriority].First!.Value, maxPriority);
+        return Items[0];
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
@@ -163,13 +171,9 @@ public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
     ///     <para id="algorithm">
     ///     ALGORITHM
     ///     <br/>
-    ///     - Peeks the first item from the queue and stores to return it as result.
+    ///     - Peeks the first item from the heap and stores to return it as result.
     ///       <br/>
-    ///     - Removes the first item from the linked list of items with max priority, as it is being popped out.
-    ///       <br/>
-    ///     - Removes the first priority from the linked list of priorities for the item, for the same reason.
-    ///       <br/>
-    ///     - Takes the last priority of the heap and moves to the root, in first position.
+    ///     - Takes the last item of the heap and moves to the root, in first position.
     ///       <br/>
     ///     - Restores heap constraints by recursively sifting down new root, as many time as needed.
     ///     </para>
@@ -187,19 +191,20 @@ public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
     ///       in-place in underlying data structures.
     ///     </para>
     /// </remarks>
-    public ItemAndPriority<T> Pop()
+    public PrioritizedItem<T> Pop()
     {
-        if (Priorities.Count == 0)
+        if (Items.Count == 0)
             throw new InvalidOperationException($"Can't ${nameof(Pop)} on an empty queue.");
-        var maxPriority = Priorities[0].Priority;
+
+        RaiseItemPopping();
         var result = Peek();
-        ItemsByPriority[maxPriority].RemoveFirst();
 
-        var lastLeaf = Priorities[^1];
-        Priorities[0] = new TreeItem(lastLeaf.Priority);
-        Priorities.RemoveAt(Priorities.Count - 1);
+        var lastIndex = Items.Count - 1;
+        Items[0] = Items[lastIndex];
+        Items.RemoveAt(lastIndex);
 
-        SiftDown(0);
+        if (Items.Count > 0)
+            SiftDown(0);
         return result;
     }
 
@@ -209,8 +214,7 @@ public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
     ///     <para id="algorithm">
     ///     ALGORITHM
     ///     <br/>
-    ///     - Adds a new leaf to the priority heap and a new item to the linked list of items with the given priority,
-    ///       creating the entry and the linked list if it doesn't exist.
+    ///     - Adds a new leaf to the heap, carrying priority, item and unique push index.
     ///       <br/>
     ///     - Restores heap constraints by recursively sifting up new leaf, as many time as needed.
     ///     </para>
@@ -224,41 +228,64 @@ public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
     ///     - So the number of "sift up" operations is logarithmic w.r.t. the input.
     ///       <br/>
     ///     - Therefore, Time Complexity is O(log(n)) and Space Complexity is O(1), since modifications are all done 
-    ///       in-place in underlying data structures.
+    ///       in-place in underlying data structure.
     ///     </para>
     /// </remarks>
     public void Push(T item, int priority)
     {
-        Priorities.Add(new(priority));
-        if (!ItemsByPriority.ContainsKey(priority))
-            ItemsByPriority[priority] = new();
-        ItemsByPriority[priority].AddLast(item);
-
-        var newLeafIndex = Priorities.Count - 1;
-        SiftUp(newLeafIndex);
+        Items.Add(new(item, priority, _currentPushTimestamp++));
+        RaiseItemPushed();
+        SiftUp(Items.Count - 1);
     }
 
-    private void SiftUp(int nodeIndex)
+    /// <summary>
+    /// Invoked just after an item has been pushed into <see cref="Items"/> (at the end of it).
+    /// </summary>
+    protected virtual void RaiseItemPushed() { }
+
+    /// <summary>
+    /// Invoked just before an item is removed from <see cref="Items"/> (at the beginning of it).
+    /// </summary>
+    protected virtual void RaiseItemPopping() { }
+
+    /// <summary>
+    /// Invoked just after two items have been swapped of position in <see cref="Items"/>.
+    /// </summary>
+    /// <param name="index1">The index of the first item swapped.</param>
+    /// <param name="index2">The index of the second item swapped.</param>
+    protected virtual void RaiseItemsSwapped(int index1, int index2) { }
+
+    /// <summary>
+    /// Restores the heap constraint on the item at the specified <paramref name="nodeIndex"/> w.r.t. its ancestors in
+    /// the tree.
+    /// </summary>
+    /// <param name="nodeIndex">The index of the item to check.</param>
+    protected virtual void SiftUp(int nodeIndex)
     {
         var parentIndex = ParentOf(nodeIndex);
 
+        // If the node doesn't have a parent, it means we reached the root of the tree, so there is nothing to sift up.
         if (parentIndex < 0)
             return;
 
-        var parentValue = Priorities[parentIndex];
-        var nodeValue = Priorities[nodeIndex];
-        if (parentValue.Priority < nodeValue.Priority)
+        var parentValue = Items[parentIndex];
+        var nodeValue = Items[nodeIndex];
+        if (parentValue.CompareTo(nodeValue) < 0)
         {
-            var newLeaf = new TreeItem(parentValue.Priority);
-            var newParent = new TreeItem(nodeValue.Priority);
-            Priorities[parentIndex] = newParent;
-            Priorities[nodeIndex] = newLeaf;
+            Items[parentIndex] = nodeValue;
+            Items[nodeIndex] = parentValue;
+            RaiseItemsSwapped(parentIndex, nodeIndex);
 
             SiftUp(parentIndex);
         }
     }
 
-    private void SiftDown(int nodeIndex)
+    /// <summary>
+    /// Restores the heap constraint on the item at the specified <paramref name="nodeIndex"/> w.r.t. its descendants 
+    /// in the tree.
+    /// </summary>
+    /// <param name="nodeIndex">The index of the item to check.</param>
+    protected virtual void SiftDown(int nodeIndex)
     {
         var leftChildIndex = LeftChildOf(nodeIndex);
 
@@ -267,33 +294,31 @@ public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
         if (leftChildIndex < 0)
             return;
 
-        var leftChildValue = Priorities[leftChildIndex];
+        var leftChildValue = Items[leftChildIndex];
 
         var rightChildIndex = RightChildOf(nodeIndex);
-        var rightChildValue = rightChildIndex >= 0 ? Priorities[rightChildIndex] : new(int.MinValue);
 
-        // Cases where heap property is respected: node >= left >= right, node >= right >= left
+        // Cases where heap property is respected: node > left > right, node > right > left
         // Cases where heap property has to be restored:
-        // - left > node and no right or left >= right => left becomes the new parent of node and right
-        // - right > node and right >= left => right becomes the new parent of left and node
-        var nodeValue = Priorities[nodeIndex];
-        if (leftChildValue.Priority > nodeValue.Priority &&
-            (rightChildIndex < 0 || leftChildValue.Priority >= rightChildValue.Priority))
+        // - left > node and no right or left > right => left becomes the new parent of node and right
+        // - right > node and right > left => right becomes the new parent of left and node
+        // Notice that TreeItem.CompareTo never gives 0 due to always increasing PushTimestamp at each Push
+        var nodeValue = Items[nodeIndex];
+        if (leftChildValue.CompareTo(nodeValue) > 0 &&
+            (rightChildIndex < 0 || leftChildValue.CompareTo(Items[rightChildIndex]) > 0))
         {
-            var newNodeValue = new TreeItem(leftChildValue.Priority);
-            var newLeftChildValue = new TreeItem(nodeValue.Priority);
-            Priorities[nodeIndex] = newNodeValue;
-            Priorities[leftChildIndex] = newLeftChildValue;
+            Items[nodeIndex] = leftChildValue;
+            Items[leftChildIndex] = nodeValue;
+            RaiseItemsSwapped(nodeIndex, leftChildIndex);
 
             SiftDown(leftChildIndex);
         }
-        else if (rightChildIndex >= 0 && 
-            rightChildValue.Priority > Math.Max(nodeValue.Priority, leftChildValue.Priority))
+        else if (rightChildIndex >= 0 &&
+            Items[rightChildIndex].CompareTo(nodeValue) > 0 && Items[rightChildIndex].CompareTo(leftChildValue) > 0)
         {
-            var newNodeValue = new TreeItem(rightChildValue.Priority);
-            var newRightChildValue = new TreeItem(nodeValue.Priority);
-            Priorities[nodeIndex] = newNodeValue;
-            Priorities[rightChildIndex] = newRightChildValue;
+            Items[nodeIndex] = Items[rightChildIndex];
+            Items[rightChildIndex] = nodeValue;
+            RaiseItemsSwapped(nodeIndex, rightChildIndex);
 
             SiftDown(rightChildIndex);
         }
@@ -302,7 +327,7 @@ public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
     private static int ParentOf(int nodeIndex) => 
         nodeIndex == 0 ? -1 : (nodeIndex - 1) / 2;
     private int LeftChildOf(int nodeIndex) => 
-        2 * nodeIndex + 1 is var result && result < Priorities.Count ? result : -1;
+        2 * nodeIndex + 1 is var result && result < Items.Count ? result : -1;
     private int RightChildOf(int nodeIndex) => 
-        2 * nodeIndex + 2 is var result && result < Priorities.Count ? result : -1;
+        2 * nodeIndex + 2 is var result && result < Items.Count ? result : -1;
 }

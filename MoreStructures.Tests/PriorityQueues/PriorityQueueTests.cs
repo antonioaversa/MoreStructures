@@ -37,17 +37,17 @@ public abstract class PriorityQueueTests
     {
         var queue = IntQueueBuilder();
         queue.Push(0, 2);
-        Assert.AreEqual(new ItemAndPriority<int>(0, 2), queue.Pop());
+        Assert.AreEqual(new PrioritizedItem<int>(0, 2, 0), queue.Pop());
         queue.Push(0, 2);
         queue.Push(1, 1);
-        Assert.AreEqual(new ItemAndPriority<int>(0, 2), queue.Pop());
-        Assert.AreEqual(new ItemAndPriority<int>(1, 1), queue.Pop());
+        Assert.AreEqual(new PrioritizedItem<int>(0, 2, 1), queue.Pop());
+        Assert.AreEqual(new PrioritizedItem<int>(1, 1, 2), queue.Pop());
         queue.Push(0, 2);
         queue.Push(1, 0);
         queue.Push(2, 1);
-        Assert.AreEqual(new ItemAndPriority<int>(0, 2), queue.Pop());
-        Assert.AreEqual(new ItemAndPriority<int>(2, 1), queue.Pop());
-        Assert.AreEqual(new ItemAndPriority<int>(1, 0), queue.Pop());
+        Assert.AreEqual(new PrioritizedItem<int>(0, 2, 3), queue.Pop());
+        Assert.AreEqual(new PrioritizedItem<int>(2, 1, 5), queue.Pop());
+        Assert.AreEqual(new PrioritizedItem<int>(1, 0, 4), queue.Pop());
     }
 
     [TestMethod]
@@ -84,6 +84,22 @@ public abstract class PriorityQueueTests
         Assert.AreEqual(o2, queue.Pop().Item);
         Assert.AreEqual(o3, queue.Pop().Item);
         Assert.AreEqual(o1, queue.Pop().Item);
+    }
+
+    [TestMethod]
+    public void PushAndPop_WithPrioritiesPartiallyOrdered()
+    {
+        var queue = IntQueueBuilder();
+        queue.Push(9, 9);
+        queue.Push(8, 8);
+        queue.Push(4, 4);
+        queue.Push(5, 5);
+        queue.Push(3, 3);
+        Assert.AreEqual(9, queue.Pop().Item);
+        Assert.AreEqual(8, queue.Pop().Item);
+        Assert.AreEqual(5, queue.Pop().Item);
+        Assert.AreEqual(4, queue.Pop().Item);
+        Assert.AreEqual(3, queue.Pop().Item);
     }
 
     [TestMethod]
@@ -172,15 +188,15 @@ public abstract class PriorityQueueTests
     {
         var queue = IntQueueBuilder();
         queue.Push(3, 2);
-        Assert.AreEqual(new ItemAndPriority<int>(3, 2), queue.Peek());
+        Assert.AreEqual(new PrioritizedItem<int>(3, 2, 0), queue.Peek());
         queue.Push(4, 3);
-        Assert.AreEqual(new ItemAndPriority<int>(4, 3), queue.Peek());
+        Assert.AreEqual(new PrioritizedItem<int>(4, 3, 1), queue.Peek());
         queue.Push(5, 1);
-        Assert.AreEqual(new ItemAndPriority<int>(4, 3), queue.Peek());
+        Assert.AreEqual(new PrioritizedItem<int>(4, 3, 1), queue.Peek());
         queue.Pop();
-        Assert.AreEqual(new ItemAndPriority<int>(3, 2), queue.Peek());
+        Assert.AreEqual(new PrioritizedItem<int>(3, 2, 0), queue.Peek());
         queue.Pop();
-        Assert.AreEqual(new ItemAndPriority<int>(5, 1), queue.Peek());
+        Assert.AreEqual(new PrioritizedItem<int>(5, 1, 2), queue.Peek());
     }
 
     [TestMethod]
@@ -188,9 +204,9 @@ public abstract class PriorityQueueTests
     {
         var queue = IntQueueBuilder();
         queue.Push(3, 2);
-        Assert.AreEqual(new ItemAndPriority<int>(3, 2), queue.Peek());
+        Assert.AreEqual(new PrioritizedItem<int>(3, 2, 0), queue.Peek());
         Assert.AreEqual(1, queue.Count);
-        Assert.AreEqual(new ItemAndPriority<int>(3, 2), queue.Peek());
+        Assert.AreEqual(new PrioritizedItem<int>(3, 2, 0), queue.Peek());
         Assert.AreEqual(1, queue.Count);
     }
 

@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.PriorityQueues;
+﻿using MoreStructures.PriorityQueues;
 
 namespace MoreStructures.Tests.PriorityQueues;
 
@@ -21,28 +20,28 @@ public abstract class UpdatablePriorityQueueTests : PriorityQueueTests
     }
 
     [TestMethod]
-    public void GetHighestPriorityOf_IsCorrect()
+    public void GetPrioritiesOf_FirstIsCorrect()
     {
         var queue = IntUpdatableQueueBuilder();
-        Assert.IsNull(queue.GetHighestPriorityOf(3));
+        Assert.AreEqual(-1, queue.GetPrioritiesOf(3).FirstOrDefault(-1));
         queue.Push(3, 2);
-        Assert.AreEqual(2, queue.GetHighestPriorityOf(3));
+        Assert.AreEqual(2, queue.GetPrioritiesOf(3).FirstOrDefault(-1));
         queue.Push(4, 0);
-        Assert.AreEqual(2, queue.GetHighestPriorityOf(3));
-        Assert.AreEqual(0, queue.GetHighestPriorityOf(4));
+        Assert.AreEqual(2, queue.GetPrioritiesOf(3).FirstOrDefault(-1));
+        Assert.AreEqual(0, queue.GetPrioritiesOf(4).FirstOrDefault(-1));
         queue.Push(3, 3);
-        Assert.AreEqual(3, queue.GetHighestPriorityOf(3));
+        Assert.AreEqual(3, queue.GetPrioritiesOf(3).FirstOrDefault(-1));
         queue.Push(3, 1);
-        Assert.AreEqual(3, queue.GetHighestPriorityOf(3));
+        Assert.AreEqual(3, queue.GetPrioritiesOf(3).FirstOrDefault(-1));
         queue.Pop();
-        Assert.AreEqual(2, queue.GetHighestPriorityOf(3));
+        Assert.AreEqual(2, queue.GetPrioritiesOf(3).FirstOrDefault(-1));
         queue.Pop();
-        Assert.AreEqual(1, queue.GetHighestPriorityOf(3));
-        Assert.AreEqual(0, queue.GetHighestPriorityOf(4));
+        Assert.AreEqual(1, queue.GetPrioritiesOf(3).FirstOrDefault(-1));
+        Assert.AreEqual(0, queue.GetPrioritiesOf(4).FirstOrDefault(-1));
         queue.Pop();
         queue.Pop();
-        Assert.IsNull(queue.GetHighestPriorityOf(3));
-        Assert.IsNull(queue.GetHighestPriorityOf(4));
+        Assert.AreEqual(-1, queue.GetPrioritiesOf(3).FirstOrDefault(-1));
+        Assert.AreEqual(-1, queue.GetPrioritiesOf(4).FirstOrDefault(-1));
     }
 
     [TestMethod]
@@ -90,11 +89,11 @@ public abstract class UpdatablePriorityQueueTests : PriorityQueueTests
         queue.Push(3, 2);
         queue.Push(3, 4);
         queue.UpdatePriority(3, 1);
-        Assert.AreEqual(new ItemAndPriority<int>(3, 4), queue.Peek());
+        Assert.AreEqual(new PrioritizedItem<int>(3, 2, 0), queue.Peek());
         queue.UpdatePriority(3, 3);
-        Assert.AreEqual(new ItemAndPriority<int>(3, 4), queue.Peek());
+        Assert.AreEqual(new PrioritizedItem<int>(3, 3, 3), queue.Peek());
         queue.Pop();
-        Assert.AreEqual(new ItemAndPriority<int>(3, 3), queue.Peek());
+        Assert.AreEqual(new PrioritizedItem<int>(3, 1, 2), queue.Peek());
         queue.Pop();
         Assert.AreEqual(0, queue.Count);
     }
@@ -130,8 +129,11 @@ public abstract class UpdatablePriorityQueueTests : PriorityQueueTests
         Assert.IsTrue(ReferenceEquals(o1, queue.Pop().Item));
         Assert.IsTrue(ReferenceEquals(o2, queue.Peek().Item));
         queue.UpdatePriority(o2, 1);
+        Assert.IsTrue(ReferenceEquals(o3, queue.Peek().Item));
+        Assert.AreEqual(3, queue.Peek().Priority);
+        queue.UpdatePriority(o3, 1);
         Assert.IsTrue(ReferenceEquals(o1, queue.Peek().Item));
-        Assert.AreEqual(4, queue.Peek().Priority);
+        Assert.AreEqual(2, queue.Peek().Priority);
     }
 
     [TestMethod]
@@ -140,19 +142,19 @@ public abstract class UpdatablePriorityQueueTests : PriorityQueueTests
         var queue = IntUpdatableQueueBuilder();
         queue.Push(3, 2);
         queue.UpdatePriority(3, 1);
-        Assert.AreEqual(new ItemAndPriority<int>(3, 1), queue.Peek());
+        Assert.AreEqual(new PrioritizedItem<int>(3, 1, 1), queue.Peek());
         queue.UpdatePriority(3, 4);
-        Assert.AreEqual(new ItemAndPriority<int>(3, 4), queue.Peek());
+        Assert.AreEqual(new PrioritizedItem<int>(3, 4, 2), queue.Peek());
         queue.Push(4, 2);
-        Assert.AreEqual(new ItemAndPriority<int>(3, 4), queue.Peek());
+        Assert.AreEqual(new PrioritizedItem<int>(3, 4, 2), queue.Peek());
         queue.Push(5, 5);
-        Assert.AreEqual(new ItemAndPriority<int>(5, 5), queue.Peek());
+        Assert.AreEqual(new PrioritizedItem<int>(5, 5, 4), queue.Peek());
         queue.UpdatePriority(5, 3);
-        Assert.AreEqual(new ItemAndPriority<int>(3, 4), queue.Peek());
+        Assert.AreEqual(new PrioritizedItem<int>(3, 4, 2), queue.Peek());
         queue.Pop();
-        Assert.AreEqual(new ItemAndPriority<int>(5, 3), queue.Peek());
+        Assert.AreEqual(new PrioritizedItem<int>(5, 3, 5), queue.Peek());
         queue.Pop();
-        Assert.AreEqual(new ItemAndPriority<int>(4, 2), queue.Peek());
+        Assert.AreEqual(new PrioritizedItem<int>(4, 2, 3), queue.Peek());
     }
 
     [TestMethod]
@@ -161,21 +163,21 @@ public abstract class UpdatablePriorityQueueTests : PriorityQueueTests
         var queue = IntUpdatableQueueBuilder();
         Assert.IsNull(queue.Remove(3));
         queue.Push(3, 2);
-        Assert.AreEqual(new ItemAndPriority<int>(3, 2), queue.Remove(3));
+        Assert.AreEqual(new PrioritizedItem<int>(3, 2, 0), queue.Remove(3));
         queue.Push(3, 2);
         queue.Push(3, 4);
         queue.Push(3, 3);
-        Assert.AreEqual(new ItemAndPriority<int>(3, 4), queue.Remove(3));
+        Assert.AreEqual(new PrioritizedItem<int>(3, 4, 2), queue.Remove(3));
         Assert.AreEqual(2, queue.Count);
-        Assert.AreEqual(new ItemAndPriority<int>(3, 3), queue.Remove(3));
+        Assert.AreEqual(new PrioritizedItem<int>(3, 3, 3), queue.Remove(3));
         Assert.AreEqual(1, queue.Count);
-        Assert.AreEqual(new ItemAndPriority<int>(3, 2), queue.Remove(3));
+        Assert.AreEqual(new PrioritizedItem<int>(3, 2, 1), queue.Remove(3));
         Assert.IsNull(queue.Remove(3));
 
         queue.Push(4, 7);
         queue.Push(5, 7);
-        Assert.AreEqual(new ItemAndPriority<int>(4, 7), queue.Remove(4));
-        Assert.AreEqual(new ItemAndPriority<int>(5, 7), queue.Peek());
+        Assert.AreEqual(new PrioritizedItem<int>(4, 7, 4), queue.Remove(4));
+        Assert.AreEqual(new PrioritizedItem<int>(5, 7, 5), queue.Peek());
     }
 
     [TestMethod]
@@ -187,9 +189,9 @@ public abstract class UpdatablePriorityQueueTests : PriorityQueueTests
         queue.Push(new RefType(1, o1), 2);
         queue.Push(new RefType(2, o1), 4);
         queue.Push(new RefType(1, o2), 3);
-        Assert.AreEqual(new ItemAndPriority<RefType>(new(2, o1), 4), queue.Remove(new RefType(2, o1)));
-        Assert.AreEqual(new ItemAndPriority<RefType>(new(1, o1), 2), queue.Remove(new RefType(1, o1)));
-        Assert.AreEqual(new ItemAndPriority<RefType>(new(1, o2), 3), queue.Remove(new RefType(1, o2)));
+        Assert.AreEqual(new PrioritizedItem<RefType>(new(2, o1), 4, 1), queue.Remove(new RefType(2, o1)));
+        Assert.AreEqual(new PrioritizedItem<RefType>(new(1, o1), 2, 0), queue.Remove(new RefType(1, o1)));
+        Assert.AreEqual(new PrioritizedItem<RefType>(new(1, o2), 3, 2), queue.Remove(new RefType(1, o2)));
     }
 
     [TestMethod]
@@ -199,9 +201,9 @@ public abstract class UpdatablePriorityQueueTests : PriorityQueueTests
         queue.Push(new ValType(1, "a"), 2);
         queue.Push(new ValType(2, "a"), 4);
         queue.Push(new ValType(1, "b"), 3);
-        Assert.AreEqual(new ItemAndPriority<ValType>(new(2, "a"), 4), queue.Remove(new ValType(2, "a")));
-        Assert.AreEqual(new ItemAndPriority<ValType>(new(1, "a"), 2), queue.Remove(new ValType(1, "a")));
-        Assert.AreEqual(new ItemAndPriority<ValType>(new(1, "b"), 3), queue.Remove(new ValType(1, "b")));
+        Assert.AreEqual(new PrioritizedItem<ValType>(new(2, "a"), 4, 1), queue.Remove(new ValType(2, "a")));
+        Assert.AreEqual(new PrioritizedItem<ValType>(new(1, "a"), 2, 0), queue.Remove(new ValType(1, "a")));
+        Assert.AreEqual(new PrioritizedItem<ValType>(new(1, "b"), 3, 2), queue.Remove(new ValType(1, "b")));
 
     }
 }

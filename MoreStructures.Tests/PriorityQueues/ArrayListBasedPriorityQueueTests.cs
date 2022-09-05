@@ -15,12 +15,12 @@ public class ArrayListBasedPriorityQueueTests : UpdatablePriorityQueueTests
     [TestMethod]
     public void Ctor_WithEnumerable()
     {
-        IEnumerable<ItemAndPriority<int>> GetNumbers()
+        IEnumerable<PrioritizedItem<int>> GetNumbers()
         {
-            yield return new(2, 1);
-            yield return new(2, 3);
-            yield return new(3, -1);
-            yield return new(1, 4);
+            yield return new(2, 1, 0);
+            yield return new(2, 3, 1);
+            yield return new(3, -1, 2);
+            yield return new(1, 4, 3);
         }
 
         var queue = new ArrayListBasedPriorityQueue<int>(GetNumbers());
@@ -32,7 +32,7 @@ public class ArrayListBasedPriorityQueueTests : UpdatablePriorityQueueTests
     [TestMethod]
     public void Ctor_WithProvidedList()
     {
-        var backingList = new List<ItemAndPriority<int>> { new(2, 1), new(2, 3), new(3, -1), new(1, 4) };
+        var backingList = new List<PrioritizedItem<int>> { new(2, 1, 0), new(2, 3, 1), new(3, -1, 2), new(1, 4, 3) };
         var queue = new ArrayListBasedPriorityQueue<int>(backingList);
         Assert.AreEqual(4, queue.Count);
         queue.Push(4, 5);
