@@ -3,7 +3,7 @@
 namespace MoreStructures.Tests.PriorityQueues;
 
 [TestClass]
-public class ArrayListBasedPriorityQueueTests : PriorityQueueTests
+public class ArrayListBasedPriorityQueueTests : UpdatablePriorityQueueTests
 {
     public ArrayListBasedPriorityQueueTests() : base(
         () => new ArrayListBasedPriorityQueue<int>(),
