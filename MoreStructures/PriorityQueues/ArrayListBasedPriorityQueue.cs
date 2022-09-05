@@ -6,6 +6,25 @@ namespace MoreStructures.PriorityQueues;
 /// An <see cref="IPriorityQueue{T}"/> implementation based on an unsorted list of its items.
 /// </summary>
 /// <typeparam name="T"><inheritdoc cref="IPriorityQueue{T}"/></typeparam>
+/// <remarks>
+///     <para id="advantages">
+///     ADVANTAGES AND DISADVANTAGES
+///     <br/>
+///     This represents one of the simplest implementations of a Priority Queue.
+///     <br/>
+///     It provides O(1) count and amortized insertion, at the cost of all other operations, which are O(n).
+///     <br/>
+///     If insertion performance is the only highly critical operation, to the point that a constant time performance 
+///     is the only acceptable runtime, and not even the logarithmic time insertion of a tree-based solution can be 
+///     applied, this implementation may be the best choice.
+///     <br/>
+///     When data extraction performance is also a concern, or the main concern, a more balanced solution in terms of
+///     complexity of its operations should be preferred.
+///     <br/>
+///     This implementation can also be useful as a benchmark baseline in tests, when comparing against more complex 
+///     solutions.
+///     </para>
+/// </remarks>
 public class ArrayListBasedPriorityQueue<T> : IPriorityQueue<T>
 {
     private List<ItemAndPriority<T>> Items { get; }
@@ -58,7 +77,7 @@ public class ArrayListBasedPriorityQueue<T> : IPriorityQueue<T>
     /// <remarks>
     /// Sorts the underlying list in descending order of priority and selects the items. 
     /// <br/>
-    /// Time and Space Complexity are O(n * log(n)) (when fully enumerated).
+    /// Time Complexity is O(n * log(n)) (when fully enumerated). Space Complexity is O(n), as required by sorting.
     /// </remarks> 
     public IEnumerator<T> GetEnumerator() => Items
         .OrderByDescending(itemAndPriority => itemAndPriority.Priority)
@@ -113,28 +132,5 @@ public class ArrayListBasedPriorityQueue<T> : IPriorityQueue<T>
     public void Push(T item, int priority)
     {
         Items.Add(new(item, priority));
-    }
-
-    /// <inheritdoc path="//*[not(self::remarks)]"/>
-    /// <remarks>
-    /// Linearly scans the underlying list looking for the index of the item equals to the provided 
-    /// <paramref name="item"/> (<see cref="object.Equals(object?, object?)"/> is used to compare the two items of type
-    /// <typeparamref name="T"/>).
-    /// <br/>
-    /// Then replaces the item at such index with the one passed as input and its <paramref name="newPriority"/>.
-    /// <br/>
-    /// Finally returns the priority of the replaced item.
-    /// <br/>
-    /// Time Complexity is O(n * Teq) and Space Complexity is O(Seq), where Teq and Seq are the time and space cost of
-    /// comparing two items of type <typeparamref name="T"/>.
-    /// </remarks> 
-    public int UpdatePriority(T item, int newPriority)
-    {
-        var indexedItemAndPriority = MoreLinq.MoreEnumerable
-            .Index(Items)
-            .First(itemAndPriority => Equals(itemAndPriority.Value.Item, item));
-
-        Items[indexedItemAndPriority.Key] = new(item, newPriority);
-        return indexedItemAndPriority.Value.Priority;
     }
 }
