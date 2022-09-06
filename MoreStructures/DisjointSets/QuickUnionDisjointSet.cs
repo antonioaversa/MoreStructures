@@ -55,64 +55,17 @@ public class QuickUnionDisjointSet : IDisjointSet
     ///       <br/>
     ///     - All items i from 0 to <see cref="ValuesCount"/> - 1 are iterated over.
     ///       <br/>
-    ///     - While iterating over the items two <see cref="HashSet{T}"/> are kept: one with the already processed 
-    ///       items, and a second one with the roots encountered so far.
-    ///       <br/>
-    ///     - Trees are traversed from each not-yet-process item upwards, up to its root, adding items to the set of 
-    ///       already processed items as they are encountered during the traversal.
-    ///       <br/>
-    ///     - If, at any point of a traversal, an item is encountered, which has already been processed before, the 
-    ///       current traversal is immediately stopped, as it would reach a root already identified by a previous 
-    ///       traversal.
-    ///       <br/>
-    ///     - At the end of all iterations, the <see cref="HashSet{T}.Count"/> of the set of roots is returned as 
-    ///       result.
+    ///     - An item i is a root if it's parent of itself: <c>Parents[i] == i</c>.
     ///     </para>
     ///     <para id="complexity">
     ///     COMPLEXITY
     ///     <br/>
-    ///     - Because a set of already-processes items is kept and used to avoid double traversal, each item is 
-    ///       traversed exactly once.
-    ///       <br/>
-    ///     - Checking whether an item has already been processed, retrieving the parent item, updating sets and 
-    ///       counting the number of items in the set of roots are all constant-time operations.
+    ///     - Checking whether an item is parent of itself is a constant-time operation.
     ///       <br/>
     ///     - Therefore, Time and Space Complexity are O(n), where n is <see cref="ValuesCount"/>.
     ///     </para>
     /// </remarks>
-    public int SetsCount
-    {
-        get 
-        {
-            var roots = new HashSet<int>();
-            var processed = new HashSet<int>();
-            for (var i = 0; i < ValuesCount; i++)
-            {
-                if (processed.Contains(i))
-                    continue;
-
-                var newRootFound = true;
-                var root = i;
-                while (Parents[root] != root)
-                {
-                    if (processed.Contains(root))
-                    {
-                        newRootFound = false;
-                        break;
-                    }
-
-                    processed.Add(root);
-                    root = Parents[root];
-                }
-
-                if (newRootFound)
-                    roots.Add(root);
-
-                processed.Add(i);
-            }
-            return roots.Count;
-        }
-    }
+    public int SetsCount => Enumerable.Range(0, ValuesCount).Count(i => Parents[i] == i);
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
@@ -141,7 +94,7 @@ public class QuickUnionDisjointSet : IDisjointSet
     {
         if (ValuesCount == 0)
             throw new InvalidOperationException(
-                $"{nameof(AreConnected)} cannot be invoked on an empty queue.");
+                $"{nameof(AreConnected)} cannot be invoked on an empty set.");
         if (first < 0 || first >= ValuesCount)
             throw new ArgumentException(
                 $"Must be non-negative and smaller than {nameof(ValuesCount)}.", nameof(first));
@@ -181,7 +134,7 @@ public class QuickUnionDisjointSet : IDisjointSet
     {
         if (ValuesCount == 0)
             throw new InvalidOperationException(
-                $"{nameof(AreConnected)} cannot be invoked on an empty queue.");
+                $"{nameof(AreConnected)} cannot be invoked on an empty set.");
         if (value < 0 || value >= ValuesCount)
             throw new ArgumentException(
                 $"Must be non-negative and smaller than {nameof(ValuesCount)}.", nameof(value));
@@ -222,7 +175,7 @@ public class QuickUnionDisjointSet : IDisjointSet
     {
         if (ValuesCount == 0)
             throw new InvalidOperationException(
-                $"{nameof(AreConnected)} cannot be invoked on an empty queue.");
+                $"{nameof(AreConnected)} cannot be invoked on an empty set.");
         if (first < 0 || first >= ValuesCount)
             throw new ArgumentException(
                 $"Must be non-negative and smaller than {nameof(ValuesCount)}.", nameof(first));
