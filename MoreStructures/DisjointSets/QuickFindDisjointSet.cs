@@ -4,6 +4,14 @@
 /// An <see cref="IDisjointSet"/> implementation based on a simple <see cref="List{T}"/> to store set ids of each of 
 /// the values stored in the Disjoint Set.
 /// </summary>
+/// <remarks>
+/// - This implementation optimizes <see cref="Find(int)"/> and <see cref="AreConnected(int, int)"/> runtime, making 
+///   them constant-time operations, at the cost of <see cref="Union(int, int)"/>, which requires a full scan of the 
+///   underlying list and hence is a O(n) operation.
+///   <br/>
+/// - Check <see cref="QuickUnionDisjointSet"/> for an alternative implementation of <see cref="IDisjointSet"/> which 
+///   does the opposite, in terms of optimization.
+/// </remarks>
 public class QuickFindDisjointSet : IDisjointSet
 {
     private int[] SetIds { get; }
@@ -13,6 +21,11 @@ public class QuickFindDisjointSet : IDisjointSet
     /// own singleton set.
     /// </summary>
     /// <param name="valuesCount"><inheritdoc cref="ValuesCount" path="/summary"/></param>
+    /// <remarks>
+    /// Requires initializing all the <paramref name="valuesCount"/> items of the underlying list.
+    /// <br/>
+    /// Time and Space Complexity are O(n).
+    /// </remarks>
     public QuickFindDisjointSet(int valuesCount)
     {
         ValuesCount = valuesCount >= 0 
@@ -24,7 +37,7 @@ public class QuickFindDisjointSet : IDisjointSet
             SetIds[i] = i;
     }
 
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     /// Set at construction time, based on the constructor parameter.
     /// <br/>
@@ -32,15 +45,15 @@ public class QuickFindDisjointSet : IDisjointSet
     /// </remarks>
     public int ValuesCount { get; }
 
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     /// Obtained as the number of distinct values in the underlying list, which is scanned linearly.
     /// <br/>
     /// Time Complexity is O(n) and Space Complexity is O(1), where n is <see cref="ValuesCount"/>.
     /// </remarks>
-    public int SetCount => SetIds.Distinct().Count();
+    public int SetsCount => SetIds.Distinct().Count();
 
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     /// Calculated in constant-time by comparing the set id of the first value with the set id of the second value.
     /// <br/>
@@ -61,7 +74,7 @@ public class QuickFindDisjointSet : IDisjointSet
         return SetIds[first] == SetIds[second];
     }
 
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     /// Calculated in constant-time by retrieving the set id at index <paramref name="value"/> in the underlying list.
     /// </remarks>
@@ -77,7 +90,7 @@ public class QuickFindDisjointSet : IDisjointSet
         return SetIds[value];
     }
 
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     /// Retrieves the set id A of <paramref name="first"/> and B of <paramref name="second"/>, via <see cref="Find"/>.
     /// <br/>

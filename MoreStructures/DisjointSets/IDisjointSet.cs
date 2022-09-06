@@ -27,7 +27,7 @@ public interface IDisjointSet
     /// <value>
     /// A non-negative <see cref="int"/>, non-bigger than <see cref="ValuesCount"/>.
     /// </value>
-    int SetCount { get; }
+    int SetsCount { get; }
 
     /// <summary>
     /// Establishes a "union" relashionship between the integer values <paramref name="first"/> and 
