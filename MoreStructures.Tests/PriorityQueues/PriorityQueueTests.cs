@@ -1,13 +1,12 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.PriorityQueues;
+﻿using MoreStructures.PriorityQueues;
 
 namespace MoreStructures.Tests.PriorityQueues;
 
+public record RefType(int Field1, object Field2);
+public record struct ValType(int Field1, string Field2);
+
 public abstract class PriorityQueueTests
 {
-    protected record RefType(int Field1, object Field2);
-    protected record struct ValType(int Field1, string Field2);
-
     protected Func<IPriorityQueue<int>> IntQueueBuilder { get; }
     protected Func<IPriorityQueue<RefType>> RefTypeQueueBuilder { get; }
     protected Func<IPriorityQueue<ValType>> ValTypeQueueBuilder { get; }
