@@ -28,7 +28,8 @@ namespace MoreStructures.PriorityQueues;
 public class ArrayListBasedPriorityQueue<T> : IUpdatablePriorityQueue<T>
     where T : notnull
 {
-    private List<ItemAndPriority<T>> Items { get; }
+    private int _currentPushTimestamp = 0;
+    private List<PrioritizedItem<T>> Items { get; }
 
     /// <summary>
     /// Builds a priority queue using the provided list as <b>direct</b> backing structure.
@@ -40,7 +41,7 @@ public class ArrayListBasedPriorityQueue<T> : IUpdatablePriorityQueue<T>
     /// Therefore, operations mutating the queue such as <see cref="Push(T, int)"/> will alter the content of the 
     /// <paramref name="items"/> list.
     /// </remarks>
-    public ArrayListBasedPriorityQueue(List<ItemAndPriority<T>> items)
+    public ArrayListBasedPriorityQueue(List<PrioritizedItem<T>> items)
     {
         Items = items;
     }
@@ -48,7 +49,7 @@ public class ArrayListBasedPriorityQueue<T> : IUpdatablePriorityQueue<T>
     /// <summary>
     /// Builds an empty priority queue.
     /// </summary>
-    public ArrayListBasedPriorityQueue() : this(new List<ItemAndPriority<T>>())
+    public ArrayListBasedPriorityQueue() : this(new List<PrioritizedItem<T>>())
     {
     }
 
@@ -62,7 +63,7 @@ public class ArrayListBasedPriorityQueue<T> : IUpdatablePriorityQueue<T>
     /// <br/>
     /// Therefore, operations mutating the queue won't alter the provided <paramref name="items"/> sequence.
     /// </remarks>
-    public ArrayListBasedPriorityQueue(IEnumerable<ItemAndPriority<T>> items) : this(items.ToList())
+    public ArrayListBasedPriorityQueue(IEnumerable<PrioritizedItem<T>> items) : this(items.ToList())
     {
     }
 
@@ -97,7 +98,7 @@ public class ArrayListBasedPriorityQueue<T> : IUpdatablePriorityQueue<T>
     /// <br/>
     /// Time Complexity is O(n). Space Complexity is O(1).
     /// </remarks> 
-    public ItemAndPriority<T> Peek() => Items.MaxBy(itemAndPriority => itemAndPriority.Priority);
+    public PrioritizedItem<T> Peek() => Items.MaxBy(itemAndPriority => itemAndPriority.Priority);
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
@@ -107,7 +108,7 @@ public class ArrayListBasedPriorityQueue<T> : IUpdatablePriorityQueue<T>
     /// <br/>
     /// Time Complexity is O(n). Space Complexity is O(1).
     /// </remarks> 
-    public ItemAndPriority<T> Pop()
+    public PrioritizedItem<T> Pop()
     {
         if (Items.Count == 0)
             throw new InvalidOperationException($"Can't ${nameof(Pop)} on an empty queue.");
@@ -132,34 +133,12 @@ public class ArrayListBasedPriorityQueue<T> : IUpdatablePriorityQueue<T>
     /// </remarks> 
     public void Push(T item, int priority)
     {
-        Items.Add(new(item, priority));
+        Items.Add(new(item, priority, _currentPushTimestamp++));
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
-    /// Linearly scans the underlying list looking for the index of the item equals to the provided 
-    /// <paramref name="item"/> (<see cref="object.Equals(object?, object?)"/> is used to compare the two items of type
-    /// <typeparamref name="T"/>) and having highest priority.
-    /// <br/>
-    /// If such an index is found, it is returned. Otherwise <see langword="null"/> is returned.
-    /// <br/>
-    /// Time Complexity is O(n * Teq) and Space Complexity is O(Seq), where Teq and Seq are the time and space cost of
-    /// comparing two items of type <typeparamref name="T"/>.
-    /// </remarks> 
-    public int? GetHighestPriorityOf(T item)
-    {
-        var indexedItemAndPriority = MoreLinq.MoreEnumerable
-            .Index(Items)
-            .Where(itemAndPriority => Equals(itemAndPriority.Value.Item, item))
-            .DefaultIfEmpty(KeyValuePair.Create(-1, new ItemAndPriority<T>()))
-            .MaxBy(itemAndPriority => itemAndPriority.Value.Priority);
-
-        return indexedItemAndPriority.Key >= 0 ? indexedItemAndPriority.Value.Priority : null;
-    }
-
-    /// <inheritdoc path="//*[not(self::remarks)]"/>
-    /// <remarks>
-    /// Linearly scans the underlying list looking for <see cref="ItemAndPriority{T}"/> having an item equals to the 
+    /// Linearly scans the underlying list looking for <see cref="PrioritizedItem{T}"/> having an item equals to the 
     /// provided <paramref name="item"/> (<see cref="object.Equals(object?, object?)"/> is used to compare the two 
     /// items of type <typeparamref name="T"/>).
     /// <br/>
@@ -171,37 +150,44 @@ public class ArrayListBasedPriorityQueue<T> : IUpdatablePriorityQueue<T>
     /// Time Complexity is O(n * Teq) and Space Complexity is O(Seq), where Teq and Seq are the time and space cost of
     /// comparing two items of type <typeparamref name="T"/>.
     /// </remarks> 
-    public IPriorityQueue<int> GetPrioritiesOf(T item)
+    public IEnumerable<int> GetPrioritiesOf(T item)
     {
-        var occurrencesOfItem =
-            from itemAndPriority in Items
-            where Equals(itemAndPriority.Item, item)
-            select new ItemAndPriority<int>(itemAndPriority.Priority, itemAndPriority.Priority);
-
-        return new ArrayListBasedPriorityQueue<int>(occurrencesOfItem);
+        var priorities = Items
+            .Where(prioritizedItem => Equals(prioritizedItem.Item, item))
+            .Select(prioritizedItem => prioritizedItem.Priority);
+        var priorityQueue = new ArrayListBasedPriorityQueue<int>();
+        foreach (var priority in priorities)
+            priorityQueue.Push(priority, priority);
+        return priorityQueue;
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     /// Linearly scans the underlying list looking for the index of the item equals to the provided 
     /// <paramref name="item"/> (<see cref="object.Equals(object?, object?)"/> is used to compare the two items of type
-    /// <typeparamref name="T"/>).
+    /// <typeparamref name="T"/>) <b>with the highest priority</b>.
     /// <br/>
-    /// Then replaces the item at such index with the one passed as input and its <paramref name="newPriority"/>.
+    /// If multiple occurrences of <paramref name="item"/> are present with the same highest priority, the one with the
+    /// lowest <see cref="PrioritizedItem{T}.PushTimestamp"/> is selected, to guarantee <b>stability</b>.
     /// <br/>
-    /// Finally returns the priority of the replaced item.
+    /// If no occurrence of <paramref name="item"/> is found, a <see cref="InvalidOperationException"/> is raised.
+    /// <br/>
+    /// Then replaces the <see cref="PrioritizedItem{T}"/> at such index with a new one having same 
+    /// <see cref="PrioritizedItem{T}.Item"/> and <see cref="PrioritizedItem{T}.PushTimestamp"/>, but 
+    /// <see cref="PrioritizedItem{T}.Priority"/> set to <paramref name="newPriority"/>.
+    /// <br/>
+    /// Finally returns the previously stored <see cref="PrioritizedItem{T}"/> at that index.
     /// <br/>
     /// Time Complexity is O(n * Teq) and Space Complexity is O(Seq), where Teq and Seq are the time and space cost of
     /// comparing two items of type <typeparamref name="T"/>.
     /// </remarks> 
-    public int UpdatePriority(T item, int newPriority)
+    public PrioritizedItem<T> UpdatePriority(T item, int newPriority)
     {
-        var indexedItemAndPriority = MoreLinq.MoreEnumerable
-            .Index(Items)
-            .First(itemAndPriority => Equals(itemAndPriority.Value.Item, item));
-
-        Items[indexedItemAndPriority.Key] = new(item, newPriority);
-        return indexedItemAndPriority.Value.Priority;
+        var oldItem = Remove(item);
+        if (oldItem == null)
+            throw new InvalidOperationException("The specified item is not in the queue.");
+        Push(item, newPriority);
+        return oldItem.Value;
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
@@ -209,6 +195,9 @@ public class ArrayListBasedPriorityQueue<T> : IUpdatablePriorityQueue<T>
     /// Linearly scans the underlying list looking for the index of the item equals to the provided 
     /// <paramref name="item"/> (<see cref="object.Equals(object?, object?)"/> is used to compare the two items of type
     /// <typeparamref name="T"/>).
+    /// <br/>
+    /// If multiple occurrences of <paramref name="item"/> are present with the same highest priority, the one with the
+    /// lowest <see cref="PrioritizedItem{T}.PushTimestamp"/> is selected, to guarantee <b>stability</b>.
     /// <br/>
     /// If no such index is found, nothing is changed and <see langword="null"/> is returned. 
     /// <br/>
@@ -217,18 +206,23 @@ public class ArrayListBasedPriorityQueue<T> : IUpdatablePriorityQueue<T>
     /// Time Complexity is O(n * Teq) and Space Complexity is O(Seq), where Teq and Seq are the time and space cost of
     /// comparing two items of type <typeparamref name="T"/>.
     /// </remarks>
-    public ItemAndPriority<T>? Remove(T item)
+    public PrioritizedItem<T>? Remove(T item)
     {
-        var indexedItemAndPriority = MoreLinq.MoreEnumerable
-            .Index(Items)
-            .Where(itemAndPriority => Equals(itemAndPriority.Value.Item, item))
-            .DefaultIfEmpty(KeyValuePair.Create(-1, new ItemAndPriority<T>()))
-            .MaxBy(itemAndPriority => itemAndPriority.Value.Priority);
+        var indexAndPrioritizedItem = FindHighestPriorityOccurrence(item);
 
-        if (indexedItemAndPriority.Key < 0)
+        if (indexAndPrioritizedItem.Key < 0)
             return null;
 
-        Items.RemoveAt(indexedItemAndPriority.Key);
-        return indexedItemAndPriority.Value;
+        Items.RemoveAt(indexAndPrioritizedItem.Key);
+        return indexAndPrioritizedItem.Value;
+    }
+
+    private KeyValuePair<int, PrioritizedItem<T>> FindHighestPriorityOccurrence(T item)
+    {
+        return MoreLinq.MoreEnumerable
+            .Index(Items)
+            .Where(kvp => Equals(kvp.Value.Item, item))
+            .DefaultIfEmpty(KeyValuePair.Create(-1, new PrioritizedItem<T>()))
+            .MaxBy(kvp => kvp.Value);
     }
 }
