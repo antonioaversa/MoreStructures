@@ -152,9 +152,12 @@ public class ArrayListBasedPriorityQueue<T> : IUpdatablePriorityQueue<T>
     /// </remarks> 
     public IEnumerable<int> GetPrioritiesOf(T item)
     {
+        var priorities = Items
+            .Where(prioritizedItem => Equals(prioritizedItem.Item, item))
+            .Select(prioritizedItem => prioritizedItem.Priority);
         var priorityQueue = new ArrayListBasedPriorityQueue<int>();
-        foreach (var occurrenceOfItem in Items.Where(prioritizedItem => Equals(prioritizedItem.Item, item)))
-            priorityQueue.Push(occurrenceOfItem.Priority, occurrenceOfItem.Priority);
+        foreach (var priority in priorities)
+            priorityQueue.Push(priority, priority);
         return priorityQueue;
     }
 
