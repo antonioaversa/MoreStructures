@@ -163,7 +163,7 @@ public class HeapBasedPriorityQueue<T> : IPeekKthPriorityQueue<T>
     public PrioritizedItem<T> Peek()
     {
         if (Items.Count == 0)
-            throw new InvalidOperationException($"Can't ${nameof(Peek)} on an empty queue.");
+            throw new InvalidOperationException($"Can't {nameof(Peek)} on an empty queue.");
         return Items[0];
     }
 
@@ -195,7 +195,7 @@ public class HeapBasedPriorityQueue<T> : IPeekKthPriorityQueue<T>
     public PrioritizedItem<T> Pop()
     {
         if (Items.Count == 0)
-            throw new InvalidOperationException($"Can't ${nameof(Pop)} on an empty queue.");
+            throw new InvalidOperationException($"Can't {nameof(Pop)} on an empty queue.");
 
         RaiseItemPopping();
         var result = Peek();
