@@ -3,7 +3,8 @@
 namespace MoreStructures.PriorityQueues;
 
 /// <summary>
-/// An <see cref="IPriorityQueue{T}"/> implementation based on a Binary Max Heap of its items.
+/// An <see cref="IPriorityQueue{T}"/> implementation based on a Binary Max Heap of its items. On top of basic 
+/// operations it also supports <see cref="IPeekKthPriorityQueue{T}"/>.
 /// </summary>
 /// <typeparam name="T"><inheritdoc cref="IPriorityQueue{T}"/></typeparam>
 /// <remarks>
@@ -71,7 +72,7 @@ namespace MoreStructures.PriorityQueues;
 ///      - Therefore a <b>total strict order</b> can be imposed.
 ///     </para>
 /// </remarks>
-public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
+public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>, IPeekKthPriorityQueue<T>
     where T : notnull
 {
     /// <summary>
@@ -233,18 +234,105 @@ public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
     /// </remarks>
     public void Push(T item, int priority)
     {
-        Items.Add(new(item, priority, _currentPushTimestamp++));
+        Push(item, priority, _currentPushTimestamp);
+        _currentPushTimestamp++;
+    }
+
+    private void Push(T item, int priority, int pushTimestamp)
+    {
+        Items.Add(new(item, priority, pushTimestamp));
         RaiseItemPushed();
         SiftUp(Items.Count - 1);
     }
 
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
+    /// <remarks>
+    ///     <para id="algorithm">
+    ///     ALGORITHM
+    ///     <br/>
+    ///     - If <paramref name="k"/> is negative, an <see cref="ArgumentException"/> is returned.
+    ///       <br/>
+    ///     - If <paramref name="k"/> is non-smaller than the <see cref="Count"/>, <see langword="null"/> is returned.
+    ///       <br/>
+    ///     - If <paramref name="k"/> is 0, <see cref="Peek"/> is returned.
+    ///       <br/>
+    ///     - Otherwise, the main algorithm loop is performed, at most <paramref name="k"/> times.
+    ///       <br/>
+    ///     - A dedicated <see cref="HeapBasedPriorityQueue{T}"/> C of <see cref="int"/> values is instantiated.
+    ///       <br/>
+    ///     - The values of C are the indexes of the underlying list of this priority queue, and identify candidates
+    ///       for the <paramref name="k"/>-th largest item.
+    ///       <br/>
+    ///     - Such candidates are sorted in C by priority and push timestamps, exactly in the same way they are
+    ///       sorted in this priority queue.
+    ///       <br/>
+    ///     - At the beginning only the root of the priority queue (i.e. index 0) is pushed to C.
+    ///       <br/>
+    ///     - At each iteration the max of C is popped from C and its left and right children (if any) are pushed into
+    ///       C.
+    ///       <br/>
+    ///     - After <paramref name="k"/> iterations, the <see cref="Peek"/> of C gives the <paramref name="k"/>-th 
+    ///       largest item.
+    ///       <br/>
+    ///     - Notice that C cannot run short of candidates (due to lack of children), because of the preconditions
+    ///       on <paramref name="k"/>.
+    ///     </para>
+    ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
+    ///     - Checks on the value of <paramref name="k"/> w.r.t. the size of this priority queue and direct access to
+    ///       the underlying list, to return the final result once the index has been found, are both done in constant 
+    ///       time.
+    ///       <br/>
+    ///     - Candidates queue instantiation and 1st push into it are also constant time operations.
+    ///       <br/>
+    ///     - The main loop consist of k iterations.
+    ///       <br/>
+    ///     - At each iteration 1 item is popped and 2 are pushed, so the candidates queue grows of 1 item per cycle.
+    ///       <br/>
+    ///     - Each <see cref="Pop"/> and <see cref="Push(T, int)"/> operation on the candidates queue has logarithmic
+    ///       run, since they are done on a <see cref="HeapBasedPriorityQueue{T}"/> instance.
+    ///       <br/>
+    ///     - Therefore, Time Complexity is O(k * log(k)) and Space Complexity is O(k).
+    ///     </para>
+    /// </remarks>
+    public PrioritizedItem<T>? PeekKth(int k)
+    {
+        if (k < 0) throw new ArgumentException("Must be non-negative.", nameof(k));
+        if (k >= Items.Count) return null;
+        if (k == 0) return Peek();
+
+        var candidates = new HeapBasedPriorityQueue<int>();
+        candidates.Push(0, Items[0].Priority, Items[0].PushTimestamp);
+        while (k > 0)
+        {
+            var maxIndex = candidates.Pop();
+
+            var leftChildIndex = LeftChildOf(maxIndex.Item);
+            if (leftChildIndex >= 0)
+                candidates.Push(
+                    leftChildIndex, Items[leftChildIndex].Priority, Items[leftChildIndex].PushTimestamp);
+
+            var rightChildIndex = RightChildOf(maxIndex.Item);
+            if (rightChildIndex >= 0)
+                candidates.Push(
+                    rightChildIndex, Items[rightChildIndex].Priority, Items[rightChildIndex].PushTimestamp);
+
+            k--;
+        }
+
+        return Items[candidates.Peek().Item];
+    }
+
     /// <summary>
-    /// Invoked just after an item has been pushed into <see cref="Items"/> (at the end of it).
+    /// Invoked just after an item has been pushed into <see cref="Items"/> (at the end of it), and before the 
+    /// "sifting up" procedure is performed.
     /// </summary>
     protected virtual void RaiseItemPushed() { }
 
     /// <summary>
-    /// Invoked just before an item is removed from <see cref="Items"/> (at the beginning of it).
+    /// Invoked just before an item is removed from <see cref="Items"/> (at the beginning of it), and before 
+    /// "sifting down" procedure is performed.
     /// </summary>
     protected virtual void RaiseItemPopping() { }
 
