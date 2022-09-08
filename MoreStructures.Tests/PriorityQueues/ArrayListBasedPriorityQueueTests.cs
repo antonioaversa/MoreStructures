@@ -63,4 +63,15 @@ public class ArrayListBasedPriorityQueueTests_AsPeekKthQueue : PeekKthPriorityQu
         () => new ArrayListBasedPriorityQueue<int>())
     {
     }
+
+    [TestMethod]
+    public void PeekKth_WorstQuickFindPivot()
+    {
+        var queue = IntQueueBuilder();
+        var numberOfItems = 10;
+        for (var i = numberOfItems - 1; i >= 0; i--)
+            queue.Push(i, i);
+        for (var i = 0; i < numberOfItems; i++)
+            Assert.AreEqual(numberOfItems - 1 - i, queue.PeekKth(i)?.Item);
+    }
 }

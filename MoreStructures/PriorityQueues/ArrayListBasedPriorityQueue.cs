@@ -252,20 +252,17 @@ public class ArrayListBasedPriorityQueue<T> : IUpdatablePriorityQueue<T>, IPeekK
 
         var list = Items.ToList();
         var index = QuickFind(list, k, 0, list.Count - 1);
-        return index >= 0 ? list[index] : null;
+        return list[index];
     }
 
     private static int QuickFind(List<PrioritizedItem<T>> list, int k, int start, int end)
     {
-        if (start > end) return -1;
         if (start == end) return start;
 
         int currentPivotIndex = Partition(list, start, end);
 
-        if (currentPivotIndex == k)
-            return currentPivotIndex;
-        if (currentPivotIndex > k)
-            return QuickFind(list, k, start, currentPivotIndex - 1);
+        if (currentPivotIndex == k) return currentPivotIndex;
+        if (currentPivotIndex > k) return QuickFind(list, k, start, currentPivotIndex - 1);
         return QuickFind(list, k, currentPivotIndex + 1, end);
     }
 
