@@ -3,9 +3,9 @@
 namespace MoreStructures.Tests.PriorityQueues;
 
 [TestClass]
-public class HeapBasedPriorityQueueTests : PriorityQueueTests
+public class HeapBasedPriorityQueueTests_AsBasicQueue : PriorityQueueTests
 {
-    public HeapBasedPriorityQueueTests() : base(
+    public HeapBasedPriorityQueueTests_AsBasicQueue() : base(
         () => new HeapBasedPriorityQueue<int>(),
         () => new HeapBasedPriorityQueue<RefType>(),
         () => new HeapBasedPriorityQueue<ValType>())

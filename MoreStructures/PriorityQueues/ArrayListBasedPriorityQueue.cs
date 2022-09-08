@@ -3,7 +3,9 @@
 namespace MoreStructures.PriorityQueues;
 
 /// <summary>
-/// An <see cref="IPriorityQueue{T}"/> implementation based on an unsorted list of its items.
+/// An <see cref="IPriorityQueue{T}"/> implementation based on an unsorted list of its items. On top of basic 
+/// operations it also supports <see cref="IUpdatablePriorityQueue{T}"/> and <see cref="IPeekKthPriorityQueue{T}"/>
+/// operations.
 /// </summary>
 /// <typeparam name="T"><inheritdoc cref="IPriorityQueue{T}"/></typeparam>
 /// <remarks>
@@ -25,11 +27,20 @@ namespace MoreStructures.PriorityQueues;
 ///     solutions.
 ///     </para>
 /// </remarks>
-public class ArrayListBasedPriorityQueue<T> : IUpdatablePriorityQueue<T>
+public class ArrayListBasedPriorityQueue<T> : IUpdatablePriorityQueue<T>, IPeekKthPriorityQueue<T>
     where T : notnull
 {
     private int _currentPushTimestamp = 0;
     private List<PrioritizedItem<T>> Items { get; }
+
+    private KeyValuePair<int, PrioritizedItem<T>> FindHighestPriorityOccurrence(T item)
+    {
+        return MoreLinq.MoreEnumerable
+            .Index(Items)
+            .Where(kvp => Equals(kvp.Value.Item, item))
+            .DefaultIfEmpty(KeyValuePair.Create(-1, new PrioritizedItem<T>()))
+            .MaxBy(kvp => kvp.Value);
+    }
 
     /// <summary>
     /// Builds a priority queue using the provided list as <b>direct</b> backing structure.
@@ -217,12 +228,59 @@ public class ArrayListBasedPriorityQueue<T> : IUpdatablePriorityQueue<T>
         return indexAndPrioritizedItem.Value;
     }
 
-    private KeyValuePair<int, PrioritizedItem<T>> FindHighestPriorityOccurrence(T item)
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
+    /// <remarks>
+    /// Uses the Quick Select algorithm to find the <paramref name="k"/>-th largest element by 
+    /// <see cref="PrioritizedItem{T}.Priority"/> in the underlying list.
+    /// <br/>
+    /// Because Quick Select requires at least partial in-place sorting, the entire content of the underlying list is
+    /// first copied into a temporary list, which is passed as target to the Quick Select procedure.
+    /// <br/>
+    /// Selected pivot is always at the end of the range of indexes in which selection is happening.
+    /// <br/>
+    /// So If input is already sorted in ascending order, Time Complexity is O(n^2), whereas in the average case Time
+    /// Complexity is O(n). Space Complexity is always O(n).
+    /// </remarks>
+    public PrioritizedItem<T>? PeekKth(int k)
     {
-        return MoreLinq.MoreEnumerable
-            .Index(Items)
-            .Where(kvp => Equals(kvp.Value.Item, item))
-            .DefaultIfEmpty(KeyValuePair.Create(-1, new PrioritizedItem<T>()))
-            .MaxBy(kvp => kvp.Value);
+        if (k < 0) 
+            throw new ArgumentException("Must be non-negative.", nameof(k));
+        if (k >= Items.Count)
+            return null;
+        if (k == 0)
+            return Peek();
+
+        var list = Items.ToList();
+        var index = QuickFind(list, k, 0, list.Count - 1);
+        return list[index];
+    }
+
+    private static int QuickFind(List<PrioritizedItem<T>> list, int k, int start, int end)
+    {
+        if (start == end) return start;
+
+        int currentPivotIndex = Partition(list, start, end);
+
+        if (currentPivotIndex == k) return currentPivotIndex;
+        if (currentPivotIndex > k) return QuickFind(list, k, start, currentPivotIndex - 1);
+        return QuickFind(list, k, currentPivotIndex + 1, end);
+    }
+
+    private static int Partition(List<PrioritizedItem<T>> list, int start, int end)
+    {
+        var pivotValue = list[end];
+        int currentPivotIndex = start - 1;
+        for (var j = start; j < end; j++) // Start included, end excluded
+        {
+            if (list[j].CompareTo(pivotValue) >= 0)
+            {
+                currentPivotIndex++;
+                (list[currentPivotIndex], list[j]) = (list[j], list[currentPivotIndex]);
+            }
+        }
+
+        currentPivotIndex++;
+        (list[currentPivotIndex], list[end]) = (list[end], list[currentPivotIndex]);
+        return currentPivotIndex;
     }
 }

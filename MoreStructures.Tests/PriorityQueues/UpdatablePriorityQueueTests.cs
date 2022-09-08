@@ -2,7 +2,7 @@
 
 namespace MoreStructures.Tests.PriorityQueues;
 
-public abstract class UpdatablePriorityQueueTests : PriorityQueueTests
+public abstract class UpdatablePriorityQueueTests
 {
     protected Func<IUpdatablePriorityQueue<int>> IntUpdatableQueueBuilder { get; }
     protected Func<IUpdatablePriorityQueue<RefType>> RefTypeUpdatableQueueBuilder { get; }
@@ -11,8 +11,7 @@ public abstract class UpdatablePriorityQueueTests : PriorityQueueTests
     protected UpdatablePriorityQueueTests(
         Func<IUpdatablePriorityQueue<int>> intUpdatableQueueBuilder, 
         Func<IUpdatablePriorityQueue<RefType>> refTypeUpdatableQueueBuilder, 
-        Func<IUpdatablePriorityQueue<ValType>> valTypeUpdatableQueueBuilder) 
-        : base(intUpdatableQueueBuilder, refTypeUpdatableQueueBuilder, valTypeUpdatableQueueBuilder)
+        Func<IUpdatablePriorityQueue<ValType>> valTypeUpdatableQueueBuilder)
     {
         IntUpdatableQueueBuilder = intUpdatableQueueBuilder;
         RefTypeUpdatableQueueBuilder = refTypeUpdatableQueueBuilder;

@@ -1,11 +1,12 @@
-﻿using MoreStructures.PriorityQueues;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MoreStructures.PriorityQueues;
 
 namespace MoreStructures.Tests.PriorityQueues;
 
 [TestClass]
-public class ArrayListBasedPriorityQueueTests : UpdatablePriorityQueueTests
+public class ArrayListBasedPriorityQueueTests_AsBasicQueue : PriorityQueueTests
 {
-    public ArrayListBasedPriorityQueueTests() : base(
+    public ArrayListBasedPriorityQueueTests_AsBasicQueue() : base(
         () => new ArrayListBasedPriorityQueue<int>(),
         () => new ArrayListBasedPriorityQueue<RefType>(),
         () => new ArrayListBasedPriorityQueue<ValType>())
@@ -41,5 +42,36 @@ public class ArrayListBasedPriorityQueueTests : UpdatablePriorityQueueTests
         Assert.AreEqual(5, backingList.Count);
         queue.Pop();
         Assert.AreEqual(4, backingList.Count);
+    }
+}
+
+[TestClass]
+public class ArrayListBasedPriorityQueueTests_AsUpdatableQueue : UpdatablePriorityQueueTests
+{
+    public ArrayListBasedPriorityQueueTests_AsUpdatableQueue() : base(
+        () => new ArrayListBasedPriorityQueue<int>(),
+        () => new ArrayListBasedPriorityQueue<RefType>(),
+        () => new ArrayListBasedPriorityQueue<ValType>())
+    {
+    }
+}
+
+[TestClass]
+public class ArrayListBasedPriorityQueueTests_AsPeekKthQueue : PeekKthPriorityQueueTests
+{
+    public ArrayListBasedPriorityQueueTests_AsPeekKthQueue() : base(
+        () => new ArrayListBasedPriorityQueue<int>())
+    {
+    }
+
+    [TestMethod]
+    public void PeekKth_WorstQuickFindPivot()
+    {
+        var queue = IntQueueBuilder();
+        var numberOfItems = 10;
+        for (var i = numberOfItems - 1; i >= 0; i--)
+            queue.Push(i, i);
+        for (var i = 0; i < numberOfItems; i++)
+            Assert.AreEqual(numberOfItems - 1 - i, queue.PeekKth(i)?.Item);
     }
 }
