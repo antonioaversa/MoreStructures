@@ -169,8 +169,8 @@ public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUp
     ///       index i, corresponding to the timestamp ts, simply by <c>L[i]</c>. <c>L[i]</c> represents the item to be
     ///       removed.
     ///       <br/>
-    ///     - The priority of <c>L[i]</c> is set to <see cref="int.MaxValue"/> and the item is made sift up to the
-    ///       root, due to its new priority being the highest in the heap.
+    ///     - The priority of <c>L[i]</c> is set to the highest priority in the queue + 1 and the item is made sift up
+    ///       to the root, due to its new priority being the highest in the heap.
     ///       <br/>
     ///     - Finally, the item, now at the root of the heap, is removed via a 
     ///       <see cref="HeapBasedPriorityQueue{T}.Pop"/>.
@@ -212,7 +212,7 @@ public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUp
 
         // Because we only change priority, and both timestamp and index remain unchanged, there is no need to invoke
         // RaiseItemX methods.
-        Items[index] = Items[index] with { Priority = int.MaxValue };
+        Items[index] = Items[index] with { Priority = Peek().Priority + 1 };
         SiftUp(index);
         Pop();
 
