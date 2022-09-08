@@ -72,7 +72,7 @@ namespace MoreStructures.PriorityQueues;
 ///      - Therefore a <b>total strict order</b> can be imposed.
 ///     </para>
 /// </remarks>
-public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>, IPeekKthPriorityQueue<T>
+public class HeapBasedPriorityQueue<T> : IPeekKthPriorityQueue<T>
     where T : notnull
 {
     /// <summary>
