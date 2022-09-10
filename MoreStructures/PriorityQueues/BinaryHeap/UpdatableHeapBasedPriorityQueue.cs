@@ -1,4 +1,4 @@
-﻿namespace MoreStructures.PriorityQueues;
+﻿namespace MoreStructures.PriorityQueues.BinaryHeap;
 
 /// <summary>
 /// A refinement of <see cref="HeapBasedPriorityQueue{T}"/> which supports <see cref="IUpdatablePriorityQueue{T}"/>
@@ -109,7 +109,7 @@ public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUp
         if (!ItemToPushTimestamps.TryGetValue(item, out var pushTimestamps))
             return Enumerable.Empty<int>();
 
-        return 
+        return
             from pushTimestamp in pushTimestamps
             where PushTimestampToIndex.ContainsKey(pushTimestamp)
             let index = PushTimestampToIndex[pushTimestamp]

@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.PriorityQueues;
+using MoreStructures.PriorityQueues.FibonacciHeap;
 
-namespace MoreStructures.Tests.PriorityQueues;
+namespace MoreStructures.Tests.PriorityQueues.FibonacciHeap;
 
 [TestClass]
 public class HeapBasedPriorityQueueTests_AsBasicQueue : PriorityQueueTests
@@ -14,11 +14,5 @@ public class HeapBasedPriorityQueueTests_AsBasicQueue : PriorityQueueTests
     }
 }
 
-[TestClass]
-public class HeapBasedPriorityQueueTests_AsPeekKthQueue : PeekKthPriorityQueueTests
-{
-    public HeapBasedPriorityQueueTests_AsPeekKthQueue() : base(
-        () => new HeapBasedPriorityQueue<int>())
-    {
-    }
-}
+
+

@@ -40,6 +40,14 @@ public interface IPriorityQueue<T> : IEnumerable<T>
     /// <summary>
     /// Extracts the item of the queue with highest priority.
     /// </summary>
+    /// <returns>
+    /// A <see cref="PrioritizedItem{T}"/> wrapping the item with the highest priority, together with its priority and
+    /// push timestamp.
+    /// </returns>
+    /// <exception cref="InvalidOperationException">Raised when the method is invoked on an empty queue.</exception>
+    /// <remarks>
+    /// Check <see cref="Pop"/> for retrieval <b>without extraction</b> of the item.
+    /// </remarks>
     PrioritizedItem<T> Pop();
 
     /// <summary>
@@ -53,5 +61,13 @@ public interface IPriorityQueue<T> : IEnumerable<T>
     /// <summary>
     /// Retrieves the item of the queue with highest priority, without extracting it.
     /// </summary>
+    /// <returns>
+    /// A <see cref="PrioritizedItem{T}"/> wrapping the item with the highest priority, together with its priority and
+    /// push timestamp.
+    /// </returns>
+    /// <exception cref="InvalidOperationException">Raised when the method is invoked on an empty queue.</exception>
+    /// <remarks>
+    /// Check <see cref="Pop"/> for retrieval <b>and extraction</b> of the item.
+    /// </remarks>
     PrioritizedItem<T> Peek();
 }

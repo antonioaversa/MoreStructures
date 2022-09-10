@@ -1,4 +1,6 @@
 ﻿using MoreStructures.PriorityQueues;
+using MoreStructures.PriorityQueues.ArrayList;
+using MoreStructures.PriorityQueues.BinaryHeap;
 using MoreStructures.PriorityQueues.Extensions;
 
 namespace MoreStructures.Tests.PriorityQueues.Extensions;
@@ -34,6 +36,16 @@ public abstract class UpdatablePriorityQueueExtensionsTests
         Assert.AreEqual(new PrioritizedItem<int>(1, 5, 4), queue.Peek());
         queue.PushOrUpdate(1, 3);
         Assert.AreEqual(new PrioritizedItem<int>(2, 4, 3), queue.Peek());
+    }
+}
+
+[TestClass]
+public class UpdatablePriorityQueueExtensionsTests_ArrayListBasedPriorityQueue
+    : UpdatablePriorityQueueExtensionsTests
+{
+    public UpdatablePriorityQueueExtensionsTests_ArrayListBasedPriorityQueue()
+        : base(() => new ArrayListBasedPriorityQueue<int>())
+    {
     }
 }
 
