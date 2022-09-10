@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace MoreStructures.PriorityQueues;
+namespace MoreStructures.PriorityQueues.ArrayList;
 
 /// <summary>
 /// An <see cref="IPriorityQueue{T}"/> implementation based on an unsorted list of its items. On top of basic 
@@ -243,7 +243,7 @@ public class ArrayListBasedPriorityQueue<T> : IUpdatablePriorityQueue<T>, IPeekK
     /// </remarks>
     public PrioritizedItem<T>? PeekKth(int k)
     {
-        if (k < 0) 
+        if (k < 0)
             throw new ArgumentException("Must be non-negative.", nameof(k));
         if (k >= Items.Count)
             return null;

@@ -1,7 +1,7 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.PriorityQueues;
+﻿using MoreStructures.PriorityQueues;
+using MoreStructures.PriorityQueues.ArrayList;
 
-namespace MoreStructures.Tests.PriorityQueues;
+namespace MoreStructures.Tests.PriorityQueues.ArrayList;
 
 [TestClass]
 public class ArrayListBasedPriorityQueueTests_AsBasicQueue : PriorityQueueTests

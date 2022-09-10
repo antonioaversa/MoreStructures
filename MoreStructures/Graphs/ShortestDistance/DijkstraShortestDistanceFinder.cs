@@ -1,4 +1,5 @@
 ﻿using MoreStructures.PriorityQueues;
+using MoreStructures.PriorityQueues.BinaryHeap;
 using MoreStructures.PriorityQueues.Extensions;
 using MoreStructures.Utilities;
 

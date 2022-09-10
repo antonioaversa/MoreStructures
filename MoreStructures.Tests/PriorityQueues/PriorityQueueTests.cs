@@ -1,4 +1,5 @@
-﻿using MoreStructures.PriorityQueues;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MoreStructures.PriorityQueues;
 
 namespace MoreStructures.Tests.PriorityQueues;
 
@@ -99,6 +100,23 @@ public abstract class PriorityQueueTests
         Assert.AreEqual(5, queue.Pop().Item);
         Assert.AreEqual(4, queue.Pop().Item);
         Assert.AreEqual(3, queue.Pop().Item);
+    }
+
+    [TestMethod]
+    public void PushAndPop_ComplexScenario()
+    {
+        var reverseIfEven = (int r, IEnumerable<int> items) => r % 2 == 0 ? items.Reverse() : items;
+
+        var numberOfValues = 1000;
+        var values = new[] { 4, 0, 3, 1, 2 }
+            .SelectMany(r => 
+                reverseIfEven(r, Enumerable.Range(0, numberOfValues).Where(i => i % 5 == r)));
+
+        var queue = IntQueueBuilder();
+        foreach (var value in values)
+            queue.Push(value, value);
+        for (var i = 0; i < numberOfValues; i++)
+            Assert.AreEqual(numberOfValues - 1 - i, queue.Pop().Item);
     }
 
     [TestMethod]

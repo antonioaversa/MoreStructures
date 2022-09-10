@@ -1,6 +1,7 @@
 ﻿using System.Collections;
+using MoreStructures.PriorityQueues.ArrayList;
 
-namespace MoreStructures.PriorityQueues;
+namespace MoreStructures.PriorityQueues.BinaryHeap;
 
 /// <summary>
 /// An <see cref="IPriorityQueue{T}"/> implementation based on a Binary Max Heap of its items. On top of basic 
@@ -412,10 +413,10 @@ public class HeapBasedPriorityQueue<T> : IPeekKthPriorityQueue<T>
         }
     }
 
-    private static int ParentOf(int nodeIndex) => 
+    private static int ParentOf(int nodeIndex) =>
         nodeIndex == 0 ? -1 : (nodeIndex - 1) / 2;
-    private int LeftChildOf(int nodeIndex) => 
+    private int LeftChildOf(int nodeIndex) =>
         2 * nodeIndex + 1 is var result && result < Items.Count ? result : -1;
-    private int RightChildOf(int nodeIndex) => 
+    private int RightChildOf(int nodeIndex) =>
         2 * nodeIndex + 2 is var result && result < Items.Count ? result : -1;
 }

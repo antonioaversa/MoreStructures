@@ -1,6 +1,6 @@
-﻿using MoreStructures.PriorityQueues;
+﻿using MoreStructures.PriorityQueues.BinaryHeap;
 
-namespace MoreStructures.Tests.PriorityQueues;
+namespace MoreStructures.Tests.PriorityQueues.BinaryHeap;
 
 [TestClass]
 public class UpdatableHeapBasedPriorityQueueTests_AsBasicQueue : PriorityQueueTests
