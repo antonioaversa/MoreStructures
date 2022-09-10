@@ -462,7 +462,7 @@ public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
     /// Performs a linear scan of the roots and update the <see cref="MaxRootsListNode"/> with a reference to the root
     /// of max priority.
     /// </summary>
-    protected virtual void UpdateMaxRootsListNode()
+    protected void UpdateMaxRootsListNode()
     {
         if (_count > 0)
         {
