@@ -17,4 +17,18 @@ internal static class TestUtilities
         foreach (var item in MedianGenerator(start, middle - 1))
             yield return item;
     }
+
+    public static IEnumerable<IList<int>> GeneratePermutations(IList<int> list)
+    {
+        if (list.Count <= 1)
+        {
+            yield return list;
+            yield break;
+        }
+
+        var head = list[0];
+        var tail = list.Skip(1);
+        for (var i = 0; i < list.Count; i++)
+            yield return tail.Take(i).Append(head).Concat(tail.Skip(i)).ToList();
+    }
 }

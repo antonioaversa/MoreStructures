@@ -12,6 +12,30 @@ public class HeapBasedPriorityQueue_TreeNodeTests : HeapBasedPriorityQueue<strin
     }
 
     [TestMethod]
+    public void IsInAHeap_IsTrueWhenARoot()
+    {
+        var treeNode = new TreeNodeMock() { PrioritizedItem = new("3", 2, 0) };
+        Assert.IsFalse(treeNode.IsInAHeap);
+
+        var roots = new LinkedList<TreeNode>();
+        treeNode.RootsListNode = roots.AddLast(treeNode);
+        Assert.IsTrue(treeNode.IsInAHeap);
+    }
+
+    [TestMethod]
+    public void IsInAHeap_IsTrueWhenAChild()
+    { 
+        var treeNode = new TreeNodeMock() { PrioritizedItem = new("3", 2, 0) };
+        Assert.IsFalse(treeNode.IsInAHeap);
+
+        var parentTreeNode = new TreeNodeMock() { PrioritizedItem = new("4", 2, 1) };
+        parentTreeNode.AddChild(treeNode);
+
+        Assert.IsTrue(treeNode.IsInAHeap);
+        Assert.IsFalse(parentTreeNode.IsInAHeap);
+    }
+
+    [TestMethod]
     public void AddChild_ThrowsExceptionIfNodeIsARoot()
     {
         var treeNode = new TreeNodeMock() { PrioritizedItem = new("3", 2, 0) };

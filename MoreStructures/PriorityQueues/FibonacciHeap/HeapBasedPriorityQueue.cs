@@ -43,99 +43,9 @@ namespace MoreStructures.PriorityQueues.FibonacciHeap;
 ///       operations, and it makes sense to optimize the former, at the cost of the latter.
 ///     </para>
 /// </remarks>
-public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
+public partial class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
     where T : notnull
 {
-    /// <summary>
-    /// A node of a tree, root or non-root, in the underlying forest representing the heap.
-    /// </summary>
-    protected class TreeNode
-    {
-        /// <summary>
-        /// The item of type <typeparamref name="T"/>, with its priority and push timestamp.
-        /// </summary>
-        public PrioritizedItem<T> PrioritizedItem { get; set; }
-
-        /// <summary>
-        /// A <see cref="LinkedList{T}"/> of the children of this node. Empty if leaf.
-        /// </summary>
-        public LinkedList<TreeNode> Children { get; private set; } = new();
-
-        /// <summary>
-        /// A back-reference to the parent node. Null if a root.
-        /// </summary>
-        public TreeNode? Parent { get; set; } = null;
-
-        /// <summary>
-        /// A back-reference to the <see cref="LinkedListNode{T}"/> wrapper, in the <see cref="LinkedList{T}"/> of 
-        /// tree roots in the underlying forest representing the heap. Null if not a root.
-        /// </summary>
-        public LinkedListNode<TreeNode>? RootsListNode { get; set; } = null;
-
-        /// <summary>
-        /// A back-reference to the <see cref="LinkedListNode{T}"/> wrapper, in the <see cref="LinkedList{T}"/> of
-        /// children of the <see cref="Parent"/> of this node. Null if a root.
-        /// </summary>
-        public LinkedListNode<TreeNode>? ParentListNode { get; set; } = null;
-
-        /// <summary>
-        /// Add the provides <paramref name="treeNode"/> to the <see cref="Children"/> of this instance.
-        /// </summary>
-        /// <param name="treeNode">The <see cref="TreeNode"/> instance to become a child.</param>
-        public void AddChild(TreeNode treeNode)
-        {
-            if (treeNode.Parent != null || treeNode.ParentListNode != null)
-                throw new InvalidOperationException($"{nameof(treeNode)} cannot be already a child of another node.");
-            if (treeNode.RootsListNode != null)
-                throw new InvalidOperationException($"{nameof(treeNode)} cannot be a root.");
-
-            treeNode.Parent = this;
-            treeNode.ParentListNode = Children.AddLast(treeNode);
-        }
-
-        /// <summary>
-        /// Removes this node from the <see cref="Children"/> of its <see cref="Parent"/>.
-        /// </summary>
-        public void DetachFromParent()
-        {
-            if (Parent == null || ParentListNode == null)
-                throw new InvalidOperationException($"This node must be child of a node.");
-            if (RootsListNode != null)
-                throw new InvalidOperationException("Incoherent state: node both a child and a root.");
-
-            Parent.Children.Remove(ParentListNode!);
-
-            Parent = null;
-            ParentListNode = null;
-        }
-
-        /// <summary>
-        /// Deep copies this <see cref="TreeNode"/> and its entire structure.
-        /// </summary>
-        /// <returns>
-        /// A new instance of <see cref="TreeNode"/>, pointing to a new, separate but equivalent structure.
-        /// </returns>
-        /// <remarks>
-        /// It doesn't copy <see cref="Parent"/> for the top-level <see cref="TreeNode"/>, nor its 
-        /// <see cref="RootsListNode"/> or <see cref="ParentListNode"/>: those have to be set, according to the 
-        /// scenario, by the caller of <see cref="DeepCopy"/>.
-        /// </remarks>
-        public TreeNode DeepCopy()
-        {
-            var copy = new TreeNode { PrioritizedItem = PrioritizedItem };
-
-            foreach (var childCopy in Children.Select(c => c.DeepCopy()))
-                copy.AddChild(childCopy);
-
-            return copy;
-        }
-    }
-
-    /// <summary>
-    /// The total number of items in this queue.
-    /// </summary>
-    private int _count;
-
     /// <summary>
     /// A <see cref="LinkedList{T}"/> of all the roots of the forest representing the heap.
     /// </summary>
@@ -148,6 +58,11 @@ public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
     protected HashSet<PrioritizedItem<T>> Losers { get; }
 
     /// <summary>
+    /// The total number of items in this queue.
+    /// </summary>
+    protected int ItemsCount { get; set; }
+
+    /// <summary>
     /// Reference to the tree root in the forest with the highest priority. Makes Peek O(1).
     /// </summary>
     protected LinkedListNode<TreeNode>? MaxRootsListNode { get; set; }
@@ -158,7 +73,6 @@ public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
     /// </summary>
     protected int CurrentPushTimestamp { get; set; }
 
-
     /// <summary>
     /// Builds an empty priority queue.
     /// </summary>
@@ -167,7 +81,7 @@ public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
         Roots = new();
         Losers = new();
 
-        _count = 0;
+        ItemsCount = 0;
         MaxRootsListNode = null;
         CurrentPushTimestamp = 0;
     }
@@ -188,10 +102,12 @@ public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
 
         Losers = new HashSet<PrioritizedItem<T>>(source.Losers);
 
-        _count = source._count;
+        ItemsCount = source.ItemsCount;
         UpdateMaxRootsListNode();
         CurrentPushTimestamp = source.CurrentPushTimestamp;
     }
+
+    #region Public API
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
@@ -199,7 +115,7 @@ public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
     /// <br/>
     /// Time and Space Complexity are O(1).
     /// </remarks>
-    public int Count => _count;
+    public virtual int Count => ItemsCount;
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
@@ -214,7 +130,7 @@ public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
     /// Space Complexity is O(n), as a copy of this queue is required as auxiliary data structure to emit elements in 
     /// the right order of priority.
     /// </remarks> 
-    public IEnumerator<T> GetEnumerator()
+    public virtual IEnumerator<T> GetEnumerator()
     {
         var copy = new HeapBasedPriorityQueue<T>(this);
         while (copy.Count > 0)
@@ -236,7 +152,7 @@ public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
     /// <br/>
     /// Therefore, Time and Space Complexity are O(1).
     /// </remarks>
-    public PrioritizedItem<T> Peek()
+    public virtual PrioritizedItem<T> Peek()
     {
         if (MaxRootsListNode == null)
             throw new InvalidOperationException($"Can't {nameof(Peek)} on an empty queue.");
@@ -274,10 +190,12 @@ public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
     ///       a Fibonacci Heap, w.r.t. an ArrayList or LinkedList solution.
     ///     </para>
     /// </remarks> 
-    public void Push(T item, int priority)
+    public virtual void Push(T item, int priority)
     {
         var prioritizedItem = new PrioritizedItem<T>(item, priority, CurrentPushTimestamp++);
-        AddRoot(new TreeNode { PrioritizedItem = prioritizedItem });
+        var newRoot = new TreeNode { PrioritizedItem = prioritizedItem };
+        AddRoot(newRoot);
+        RaiseItemPushed(newRoot);
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
@@ -333,13 +251,14 @@ public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
     ///       trees requires instantiating an array index by degrees, and max degree is O(log(n)).
     ///     </para>
     /// </remarks> 
-    public PrioritizedItem<T> Pop()
+    public virtual PrioritizedItem<T> Pop()
     {
         if (MaxRootsListNode == null)
             throw new InvalidOperationException($"Can't {nameof(Pop)} on an empty queue.");
 
+        RaiseItemPopping();
         var oldRoot = DetachFromRoots(MaxRootsListNode);
-        _count--;
+        ItemsCount--;
 
         foreach (var child in oldRoot.Children.ToList())
             PromoteChildToRoot(child);
@@ -349,6 +268,25 @@ public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
 
         return oldRoot.PrioritizedItem;
     }
+
+    #endregion
+
+    #region Hooks
+
+    /// <summary>
+    /// Invoked just after an item has been pushed into the heap (as a root).
+    /// </summary>
+    /// <param name="newRoot">The <see cref="TreeNode"/> added to the heap.</param>
+    protected virtual void RaiseItemPushed(TreeNode newRoot) { }
+
+    /// <summary>
+    /// Invoked just before an item is removed from the heap.
+    /// </summary>
+    protected virtual void RaiseItemPopping() { }
+
+    #endregion
+
+    #region Helpers
 
     /// <summary>
     /// Merges all trees of the <see cref="Roots"/> forest with the same degree (number of children of the root).
@@ -404,14 +342,14 @@ public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
 
     /// <summary>
     /// Promotes the provided <see cref="TreeNode"/>, to being a root, detaching it from its current parent. 
-    /// Also, resets the "loser" flag.
+    /// Also, resets the "loser" flag of the child .
     /// </summary>
     /// <param name="child">A child of a node of a tree in the forest.</param>
     protected virtual void PromoteChildToRoot(TreeNode child)
     {
         child.DetachFromParent();
         AttachToRoots(child);
-        Losers.Remove(child.PrioritizedItem);
+        Losers.Remove(child.PrioritizedItem);        
     }
 
     /// <summary>
@@ -421,7 +359,7 @@ public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
     private void AddRoot(TreeNode newRoot)
     {
         var newRootsListNode = AttachToRoots(newRoot);
-        _count++;
+        ItemsCount++;
         if (MaxRootsListNode == null ||
             MaxRootsListNode.Value.PrioritizedItem.CompareTo(newRoot.PrioritizedItem) < 0)
             MaxRootsListNode = newRootsListNode;
@@ -464,7 +402,7 @@ public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
     /// </summary>
     protected void UpdateMaxRootsListNode()
     {
-        if (_count > 0)
+        if (ItemsCount > 0)
         {
             LinkedListNode<TreeNode> maxRootNode = Roots.First!;
             foreach (var rootNode in Roots.AsNodes())
@@ -480,4 +418,6 @@ public class HeapBasedPriorityQueue<T> : IPriorityQueue<T>
             MaxRootsListNode = null;
         }
     }
+
+    #endregion
 }
