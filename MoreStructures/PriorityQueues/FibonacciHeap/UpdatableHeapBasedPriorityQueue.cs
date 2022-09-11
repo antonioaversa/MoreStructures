@@ -139,18 +139,16 @@ public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUp
     ///     <para id="algorithm-update">
     ///     ALGORITHM - UPDATE PART
     ///     <br/>
-    ///     - If the value of new priority is equal to the highest in the queue for that item P, nothing is done and
-    ///       the <see cref="PrioritizedItem{T}"/> returned is the one in the queue.
+    ///     - The behavior of the algorith is quite differently, when the new priority for the specified item is 
+    ///       higher or equal than P, as opposed to when it's lower.
     ///       <br/>
-    ///     - Otherwise, the algorithm is executed. The behavior is quite differently, when the new priority for the 
-    ///       specified item is higher than P, as opposed to when it's lower.
+    ///     - When the priority is higher or equal and the node is a root, there is no structural change to the heap. 
+    ///       The value of priority is updated and the reference to the max priority is checked and potentially 
+    ///       updated.
     ///       <br/>
-    ///     - When the priority is higher and the node is a root, there is no structural change to the heap. The value
-    ///       of priority is updated and the reference to the max priority is checked and potentially updated.
-    ///       <br/>
-    ///     - When the priority is higher and the node is not a root, the node is promoted to a root and its loser flag
-    ///       is reset. If the parent of the node was flagged as a loser, the parent is promoted to root too, and its
-    ///       loser flag is reset as well. That continues up to the first ancestor which is not a loser.
+    ///     - When the priority is higher or equal and the node is not a root, the node is promoted to a root and its 
+    ///       loser flag is reset. If the parent of the node was flagged as a loser, the parent is promoted to root 
+    ///       too, and its loser flag is reset as well. That continues up to the first ancestor which is not a loser.
     ///       <br/>
     ///     - When the priority is lower, the node is not promoted to a root. Its children are, instead. As in the
     ///       <see cref="HeapBasedPriorityQueue{T}.Pop"/>, merging and max root reference update take place.
@@ -161,11 +159,9 @@ public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUp
     ///     COMPLEXITY - UPDATE PART
     ///     <br/>
     ///     - The complexity is different depending on the value of new priority for the specified item being higher 
-    ///       than the highest in the queue for that item, or lower.
+    ///       or equal than the highest in the queue for that item, or lower.
     ///       <br/>
-    ///     - When the value is equal to P, Time and Space Complexity are O(1).
-    ///       <br/>
-    ///     - When the value is bigger than P, Time and Space Complexity are O(1), amortized.
+    ///     - When the value is bigger or equal than P, Time and Space Complexity are O(1), amortized.
     ///       <br/>
     ///     - When the value is smaller than P, Time Complexity and Space Complexity are both O(log(n)). Same analysis
     ///       as for <see cref="HeapBasedPriorityQueue{T}.Pop"/> applies (since very similar operations are performed).
@@ -173,9 +169,7 @@ public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUp
     ///     <para id="complexity">
     ///     COMPLEXITY - OVERALL
     ///     <br/>
-    ///     - When the value is equal to P, Time Complexity is O(dup_factor) and Space Complexity is O(1).
-    ///       <br/>
-    ///     - When the value is bigger than P, Time Complexity is O(dup_factor) and Space Complexity is O(1), 
+    ///     - When the value is bigger or equal than P, Time Complexity is O(dup_factor) and Space Complexity is O(1), 
     ///       amortized.
     ///       <br/>
     ///     - When the value is smaller than P, Time Complexity is O(log(n) + dup_factor) and Space Complexity is O(1).
@@ -251,13 +245,10 @@ public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUp
         var oldPrioritizedItem = treeNode.PrioritizedItem;
         treeNode.PrioritizedItem = newPrioritizedItem;
 
-        if (oldPrioritizedItem.CompareTo(newPrioritizedItem) == 0)
-            return oldPrioritizedItem;
-
         RaiseItemPriorityChanged(treeNode, oldPrioritizedItem);
 
         // Remark: due to push timestamps, priorities can never be equal: only strictly lower or strictly higher
-        if (oldPrioritizedItem.CompareTo(newPrioritizedItem) < 0)
+        if (oldPrioritizedItem.CompareTo(newPrioritizedItem) <= 0)
         {
             if (treeNode.RootsListNode is not null)
                 UpdateRootPriority(treeNode, newPrioritizedItem);

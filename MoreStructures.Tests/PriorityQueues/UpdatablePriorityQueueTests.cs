@@ -227,6 +227,15 @@ public abstract class UpdatablePriorityQueueTests
     }
 
     [TestMethod]
+    public void UpdatePriority_WorksWhenNewPriorityIsTheSame()
+    {
+        var queue = IntUpdatableQueueBuilder();
+        queue.Push(1, 3);
+        queue.UpdatePriority(1, 3);
+        Assert.AreEqual(3, queue.Peek().Priority);
+    }
+
+    [TestMethod]
     public void Remove_IsCorrect()
     {
         var queue = IntUpdatableQueueBuilder();
