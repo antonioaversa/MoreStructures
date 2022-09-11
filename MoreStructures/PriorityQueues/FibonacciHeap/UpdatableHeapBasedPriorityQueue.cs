@@ -260,7 +260,7 @@ public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUp
         if (oldPrioritizedItem.CompareTo(newPrioritizedItem) < 0)
         {
             if (treeNode.RootsListNode is not null)
-                UpdateRootPriority(treeNode, newPrioritizedItem, oldPrioritizedItem);
+                UpdateRootPriority(treeNode, newPrioritizedItem);
             else
                 UpdateNonRootPriority(treeNode);
         }
@@ -277,7 +277,7 @@ public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUp
     }
 
     private void UpdateRootPriority(
-        TreeNode treeNode, PrioritizedItem<T> newPrioritizedItem, PrioritizedItem<T> oldPrioritizedItem)
+        TreeNode treeNode, PrioritizedItem<T> newPrioritizedItem)
     {
         // The item is at the root of a tree and the new priority is higher => the heap constraints on the tree
         // are not violated, so just check and possibly update the reference to the root with max priority.

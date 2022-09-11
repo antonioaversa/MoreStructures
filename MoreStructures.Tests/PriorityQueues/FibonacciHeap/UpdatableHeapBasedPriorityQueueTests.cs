@@ -48,6 +48,8 @@ public class UpdatableHeapBasedPriorityQueueTests_AsUpdatableQueue : UpdatablePr
         // So updating the priority of "1" to a higher value will promote "1" as a root and trigger a chain reaction of
         // losers being update to being root nodes.
         queue.UpdatePriority(1, 1024);
+
+        Assert.AreEqual(383, queue.Peek().Item);
     }
 
 }

@@ -196,7 +196,7 @@ public abstract class UpdatablePriorityQueueTests
     public void UpdatePriority_LongChainOfUpdates(int[] values, int[] priorities, int[] updatePriorities)
     {
         var queue = IntUpdatableQueueBuilder();
-        var numberOfValues = values.Count();
+        var numberOfValues = values.Length;
         for (var i = 0; i < numberOfValues; i++)
         {
             queue.Push(values[i], priorities[i]);
@@ -205,7 +205,7 @@ public abstract class UpdatablePriorityQueueTests
             queue.Push(values[numberOfValues - 1 - i], priorities[(numberOfValues - i + 7) % numberOfValues]);
         }
 
-        for (var i = 0; i < values.Count(); i++)
+        for (var i = 0; i < values.Length; i++)
             queue.UpdatePriority(values[i], updatePriorities[i]);
 
         var sortedPriorities = new List<int>(numberOfValues);
