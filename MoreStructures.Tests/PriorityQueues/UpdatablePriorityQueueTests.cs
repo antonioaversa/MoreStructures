@@ -1,4 +1,5 @@
-﻿using MoreStructures.PriorityQueues;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MoreStructures.PriorityQueues;
 
 namespace MoreStructures.Tests.PriorityQueues;
 
@@ -154,6 +155,84 @@ public abstract class UpdatablePriorityQueueTests
         Assert.AreEqual(new PrioritizedItem<int>(5, 3, 5), queue.Peek());
         queue.Pop();
         Assert.AreEqual(new PrioritizedItem<int>(4, 2, 3), queue.Peek());
+    }
+
+    [TestMethod]
+    public void UpdatePriority_AllPermutations()
+    {
+        var numbers = Enumerable.Range(0, 5).ToArray();
+        var numberOfValues = numbers.Length;
+        foreach (var permutation in TestUtilities.GeneratePermutations(numbers))
+        {
+            var queue = IntUpdatableQueueBuilder();
+            foreach (var value in numbers)
+                queue.Push(value, (numberOfValues + value + 7) % numberOfValues);
+
+            foreach (var (value, newPriority) in numbers.Zip(permutation))
+                queue.UpdatePriority(value, newPriority);
+
+            for (var i = 0; i < numberOfValues; i++)
+                Assert.AreEqual(permutation.IndexOf(numberOfValues - 1 - i), queue.Pop().Item);
+        }
+    }
+
+    [DataRow(
+        new[] 
+        { 
+            43, 36, 46, 37, 34, 23, 43, 23, 48, 41, 31, 49, 40, 38, 4, 30, 14, 22, 47, 15, 37, 38, 46, 0, 26, 
+            30, 32, 30, 21, 40, 7, 23, 31, 27, 26, 10, 32, 30, 0, 11, 48, 41, 8, 13, 10, 44, 4, 49, 18, 3, 
+        },
+        new[]
+        {
+            48, 19, 8, 13, 1, 9, 29, 22, 34, 34, 14, 44, 32, 27, 35, 32, 39, 43, 47, 26, 12, 13, 10, 18, 18, 22, 
+            0, 31, 13, 0, 30, 39, 46, 25, 29, 32, 26, 12, 44, 46, 0, 13, 19, 46, 28, 21, 1, 32, 3, 49,
+        },
+        new[] 
+        {
+            23, 28, 1, 20, 39, 24, 34, 16, 40, 24, 16, 28, 42, 4, 38, 13, 6, 43, 43, 10, 22, 20, 27, 4, 2, 27, 22, 
+            18, 14, 4, 31, 23, 0, 6, 30, 23, 4, 24, 3, 24, 38, 14, 46, 28, 8, 12, 30, 33, 16, 23,
+        })]
+    [DataTestMethod]
+    public void UpdatePriority_LongChainOfUpdates(int[] values, int[] priorities, int[] updatePriorities)
+    {
+        var queue = IntUpdatableQueueBuilder();
+        var numberOfValues = values.Length;
+        for (var i = 0; i < numberOfValues; i++)
+        {
+            queue.Push(values[i], priorities[i]);
+            if (i % 3 == 0) 
+                queue.Pop();
+            queue.Push(values[numberOfValues - 1 - i], priorities[(numberOfValues - i + 7) % numberOfValues]);
+        }
+
+        for (var i = 0; i < values.Length; i++)
+            queue.UpdatePriority(values[i], updatePriorities[i]);
+
+        var sortedPriorities = new List<int>(numberOfValues);
+        while (queue.Count > 0)
+            sortedPriorities.Add(queue.Pop().Priority);
+        Assert.IsTrue(sortedPriorities.SequenceEqual(sortedPriorities.OrderByDescending(x => x)));
+    }
+
+    [TestMethod]
+    public void UpdatePriority_StalePushTimestamps()
+    {
+        var queue = IntUpdatableQueueBuilder();
+        queue.Push(1, 3);
+        queue.UpdatePriority(1, 2);
+        queue.UpdatePriority(1, 1);
+        queue.UpdatePriority(1, 0);
+        queue.Remove(1);
+        Assert.ThrowsException<InvalidOperationException>(() => queue.UpdatePriority(1, -1));
+    }
+
+    [TestMethod]
+    public void UpdatePriority_WorksWhenNewPriorityIsTheSame()
+    {
+        var queue = IntUpdatableQueueBuilder();
+        queue.Push(1, 3);
+        queue.UpdatePriority(1, 3);
+        Assert.AreEqual(3, queue.Peek().Priority);
     }
 
     [TestMethod]

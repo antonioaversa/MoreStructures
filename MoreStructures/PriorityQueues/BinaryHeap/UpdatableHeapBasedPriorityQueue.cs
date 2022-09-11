@@ -45,30 +45,7 @@ public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUp
     private Dictionary<T, HeapBasedPriorityQueue<int>> ItemToPushTimestamps { get; } = new();
     private Dictionary<int, int> PushTimestampToIndex { get; } = new();
 
-    /// <inheritdoc/>
-    protected override void RaiseItemPushed()
-    {
-        var index = Items.Count - 1;
-        var prioritizedItem = Items[index];
-        PushTimestampToIndex[prioritizedItem.PushTimestamp] = index;
-        if (!ItemToPushTimestamps.ContainsKey(prioritizedItem.Item))
-            ItemToPushTimestamps[prioritizedItem.Item] = new HeapBasedPriorityQueue<int>();
-        ItemToPushTimestamps[prioritizedItem.Item].Push(prioritizedItem.PushTimestamp, prioritizedItem.Priority);
-    }
-
-    /// <inheritdoc/>
-    protected override void RaiseItemPopping()
-    {
-        PushTimestampToIndex[Items[^1].PushTimestamp] = 0;
-        PushTimestampToIndex.Remove(Items[0].PushTimestamp);
-    }
-
-    /// <inheritdoc/>
-    protected override void RaiseItemsSwapped(int index1, int index2)
-    {
-        PushTimestampToIndex[Items[index1].PushTimestamp] = index1;
-        PushTimestampToIndex[Items[index2].PushTimestamp] = index2;
-    }
+    #region Public API
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
@@ -218,4 +195,35 @@ public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUp
 
         return oldItem;
     }
+
+    #endregion
+
+    #region Hooks
+
+    /// <inheritdoc/>
+    protected override void RaiseItemPushed()
+    {
+        var index = Items.Count - 1;
+        var prioritizedItem = Items[index];
+        PushTimestampToIndex[prioritizedItem.PushTimestamp] = index;
+        if (!ItemToPushTimestamps.ContainsKey(prioritizedItem.Item))
+            ItemToPushTimestamps[prioritizedItem.Item] = new HeapBasedPriorityQueue<int>();
+        ItemToPushTimestamps[prioritizedItem.Item].Push(prioritizedItem.PushTimestamp, prioritizedItem.Priority);
+    }
+
+    /// <inheritdoc/>
+    protected override void RaiseItemPopping()
+    {
+        PushTimestampToIndex[Items[^1].PushTimestamp] = 0;
+        PushTimestampToIndex.Remove(Items[0].PushTimestamp);
+    }
+
+    /// <inheritdoc/>
+    protected override void RaiseItemsSwapped(int index1, int index2)
+    {
+        PushTimestampToIndex[Items[index1].PushTimestamp] = index1;
+        PushTimestampToIndex[Items[index2].PushTimestamp] = index2;
+    }
+
+    #endregion
 }

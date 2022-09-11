@@ -80,13 +80,12 @@ public class HeapBasedPriorityQueue<T> : IPeekKthPriorityQueue<T>
     /// A non-negative, zero-based, monotonically strictly increasing counter, incremented at every insertion into this 
     /// data structure by a <see cref="Push(T, int)"/>.
     /// </summary>
-    protected int _currentPushTimestamp = 0;
+    protected int CurrentPushTimestamp { get; set; } = 0;
 
     /// <summary>
     /// The <see cref="List{T}"/> of <see cref="PrioritizedItem{T}"/> backing the binary max heap.
     /// </summary>
     protected List<PrioritizedItem<T>> Items { get; }
-
 
     /// <summary>
     /// Builds an empty priority queue.
@@ -119,13 +118,15 @@ public class HeapBasedPriorityQueue<T> : IPeekKthPriorityQueue<T>
         Items = new(source.Items);
     }
 
+    #region Public API
+
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     /// Checks the count of the underlying array list.
     /// <br/>
     /// Time and Space Complexity are O(1).
     /// </remarks>
-    public int Count => Items.Count;
+    public virtual int Count => Items.Count;
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
@@ -140,7 +141,7 @@ public class HeapBasedPriorityQueue<T> : IPeekKthPriorityQueue<T>
     /// Space Complexity is O(n), as a copy of this queue is required as auxiliary data structure to emit elements in 
     /// the right order of priority.
     /// </remarks> 
-    public IEnumerator<T> GetEnumerator()
+    public virtual IEnumerator<T> GetEnumerator()
     {
         var copy = new HeapBasedPriorityQueue<T>(this);
         while (copy.Count > 0)
@@ -161,7 +162,7 @@ public class HeapBasedPriorityQueue<T> : IPeekKthPriorityQueue<T>
     /// <br/>
     /// Therefore, Time and Space Complexity are O(1).
     /// </remarks>
-    public PrioritizedItem<T> Peek()
+    public virtual PrioritizedItem<T> Peek()
     {
         if (Items.Count == 0)
             throw new InvalidOperationException($"Can't {nameof(Peek)} on an empty queue.");
@@ -193,7 +194,7 @@ public class HeapBasedPriorityQueue<T> : IPeekKthPriorityQueue<T>
     ///       in-place in underlying data structures.
     ///     </para>
     /// </remarks>
-    public PrioritizedItem<T> Pop()
+    public virtual PrioritizedItem<T> Pop()
     {
         if (Items.Count == 0)
             throw new InvalidOperationException($"Can't {nameof(Pop)} on an empty queue.");
@@ -233,17 +234,10 @@ public class HeapBasedPriorityQueue<T> : IPeekKthPriorityQueue<T>
     ///       in-place in underlying data structure.
     ///     </para>
     /// </remarks>
-    public void Push(T item, int priority)
+    public virtual void Push(T item, int priority)
     {
-        Push(item, priority, _currentPushTimestamp);
-        _currentPushTimestamp++;
-    }
-
-    private void Push(T item, int priority, int pushTimestamp)
-    {
-        Items.Add(new(item, priority, pushTimestamp));
-        RaiseItemPushed();
-        SiftUp(Items.Count - 1);
+        Push(item, priority, CurrentPushTimestamp);
+        CurrentPushTimestamp++;
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
@@ -297,7 +291,7 @@ public class HeapBasedPriorityQueue<T> : IPeekKthPriorityQueue<T>
     ///     - Therefore, Time Complexity is O(k * log(k)) and Space Complexity is O(k).
     ///     </para>
     /// </remarks>
-    public PrioritizedItem<T>? PeekKth(int k)
+    public virtual PrioritizedItem<T>? PeekKth(int k)
     {
         if (k < 0) throw new ArgumentException("Must be non-negative.", nameof(k));
         if (k >= Items.Count) return null;
@@ -325,6 +319,10 @@ public class HeapBasedPriorityQueue<T> : IPeekKthPriorityQueue<T>
         return Items[candidates.Peek().Item];
     }
 
+    #endregion
+
+    #region Hooks
+
     /// <summary>
     /// Invoked just after an item has been pushed into <see cref="Items"/> (at the end of it), and before the 
     /// "sifting up" procedure is performed.
@@ -343,6 +341,17 @@ public class HeapBasedPriorityQueue<T> : IPeekKthPriorityQueue<T>
     /// <param name="index1">The index of the first item swapped.</param>
     /// <param name="index2">The index of the second item swapped.</param>
     protected virtual void RaiseItemsSwapped(int index1, int index2) { }
+
+    #endregion
+
+    #region Helpers
+
+    private void Push(T item, int priority, int pushTimestamp)
+    {
+        Items.Add(new(item, priority, pushTimestamp));
+        RaiseItemPushed();
+        SiftUp(Items.Count - 1);
+    }
 
     /// <summary>
     /// Restores the heap constraint on the item at the specified <paramref name="nodeIndex"/> w.r.t. its ancestors in
@@ -419,4 +428,6 @@ public class HeapBasedPriorityQueue<T> : IPeekKthPriorityQueue<T>
         2 * nodeIndex + 1 is var result && result < Items.Count ? result : -1;
     private int RightChildOf(int nodeIndex) =>
         2 * nodeIndex + 2 is var result && result < Items.Count ? result : -1;
+
+    #endregion
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MoreStructures.PriorityQueues;
+using Newtonsoft.Json.Linq;
 
 namespace MoreStructures.Tests.PriorityQueues;
 
@@ -117,6 +118,21 @@ public abstract class PriorityQueueTests
             queue.Push(value, value);
         for (var i = 0; i < numberOfValues; i++)
             Assert.AreEqual(numberOfValues - 1 - i, queue.Pop().Item);
+    }
+
+    [TestMethod]
+    public void PushAndPop_AllPermutations()
+    {
+        var numbers = Enumerable.Range(0, 5).ToArray();
+        var numberOfValues = numbers.Length;
+        foreach (var permutation in TestUtilities.GeneratePermutations(numbers))
+        {
+            var queue = IntQueueBuilder();
+            foreach (var value in permutation)
+                queue.Push(value, value);
+            for (var i = 0; i < numberOfValues; i++)
+                Assert.AreEqual(numberOfValues - 1 - i, queue.Pop().Item);
+        }
     }
 
     [TestMethod]
