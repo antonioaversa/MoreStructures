@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface ITopologicalSort
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface ITopologicalSort
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.Graphs.Sorting.ITopologicalSort">
+  
+  
+  <h1 id="MoreStructures_Graphs_Sorting_ITopologicalSort" data-uid="MoreStructures.Graphs.Sorting.ITopologicalSort" class="text-break">Interface ITopologicalSort
+  </h1>
+  <div class="markdown level0 summary"><p>An algorithm performing a <strong>topological sort</strong> on the provided <a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.Graphs.Sorting.html">MoreStructures.Graphs.Sorting</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_Graphs_Sorting_ITopologicalSort_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ITopologicalSort</code></pre>
+  </div>
+  <h5 id="MoreStructures_Graphs_Sorting_ITopologicalSort_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+DEFINITION
+<br>
+Given a DAG <code>G(V, E)</code>, where V is the set of vertices of G and E is the set of directed edges of G,
+the topological sort of G, indicated here as TS, is a <see cref="!:IList&lt;T>"></see> of the first non-negative |V| 
+<span class="xref">System.Int32</span> values, such that <code>for all couples (v1, v2) of V^2, if there is a directed path from v1 to 
+v2, then TS[v1] &lt; TS[v2]</code>. 
+<br>
+The topological sort defines a <strong>linear order</strong> of the vertices V of the DAG G.
+<br>
+The definition only makes sense when G is a DAG (Direct Acyclic Graph), because:
+- a generic graph may have cycles, which make impossible to define a topological sort for any vertex on the 
+  cycle (since such vertex would be at the same time predecessor and successor of any other vertex of the 
+  cycle);
+<br>
+- an undirected graph doesn&apos;t make distinction between the two different traversal directions of an edge, 
+making each edge a cycle of two edges (1 edge if it is a loop).
+<br>
+The topological sort is in general not unique, i.e. multiple orders are possible, which satisfy the definition
+above. Look at the documentation of the <a class="xref" href="MoreStructures.Graphs.Sorting.ITopologicalSort.html#MoreStructures_Graphs_Sorting_ITopologicalSort_Sort_MoreStructures_Graphs_IGraph_">Sort(IGraph)</a> method for some examples.
+</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Sorting_ITopologicalSort_Sort_MoreStructures_Graphs_IGraph_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Sorting.ITopologicalSort.Sort(MoreStructures.Graphs.IGraph)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Sorting/ITopologicalSort.cs/#L82">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_Sorting_ITopologicalSort_Sort_" data-uid="MoreStructures.Graphs.Sorting.ITopologicalSort.Sort*"></a>
+  <h4 id="MoreStructures_Graphs_Sorting_ITopologicalSort_Sort_MoreStructures_Graphs_IGraph_" data-uid="MoreStructures.Graphs.Sorting.ITopologicalSort.Sort(MoreStructures.Graphs.IGraph)">Sort(IGraph)</h4>
+  <div class="markdown level1 summary"><p>Performs the topological sort of the provided <code data-dev-comment-type="paramref" class="paramref">dag</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;int&gt; Sort(IGraph dag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a></td>
+        <td><span class="parametername">dag</span></td>
+        <td><p>The <a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a> instance representing a DAG (Direct Acyclic Graph).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IList</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><p>A list TS, of the first n non-negative distinct integers, where n is the number of vertices in
+<code data-dev-comment-type="paramref" class="paramref">dag</code>. TS[i] represents the position of the vertex i in the topological sort.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Graphs_Sorting_ITopologicalSort_Sort_MoreStructures_Graphs_IGraph__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.Graphs.Sorting.ITopologicalSort"></inheritdoc></p>
+</div>
+  <h5 id="MoreStructures_Graphs_Sorting_ITopologicalSort_Sort_MoreStructures_Graphs_IGraph__examples">Examples</h5>
+  <p>The followin graph:</p>
+<pre><code> 0 --> 1 &lt;==> 3
+| ^   ^     /
+| |  /     /
+| | /     /
+v |/     /
+ 2 &lt;-----</code></pre>
+<p>is NOT a DAG and doesn't have any valid topological sort.
+<br>
+<br>
+The followin graph:</p>
+<pre><code> 0 --> 1 --&lt; 3
+ |          /
+ |         /
+ |        /
+ v       /
+ 2 &lt;----</code></pre>
+<p>is a DAG and has a single valid topological sort order: <code>new[] { 0, 1, 3, 2 })</code>.
+<br>
+<br>
+The followin graph:</p>
+<pre><code> 0 --> 1 --&lt; 3
+ |
+ |
+ |
+ v
+ 2</code></pre>
+<p>is a DAG and has two valid topological sort orders:
+<br></p>
+<ul>
+<li><code>new[] { 0, 1, 3, 2 })</code>;
+<br></li>
+<li><code>new[] { 0, 2, 1, 3 })</code>.</li>
+</ul>
+
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Sorting_ITopologicalSort.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Sorting.ITopologicalSort%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Sorting/ITopologicalSort.cs/#L29" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

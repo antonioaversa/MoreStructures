@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class LastFirstPropertyBasedBuilder
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class LastFirstPropertyBasedBuilder
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder">
+  
+  
+  <h1 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstPropertyBasedBuilder" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder" class="text-break">Class LastFirstPropertyBasedBuilder
+  </h1>
+  <div class="markdown level0 summary"><p>An extension of <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.html">NaiveBuilder</a> which takes advantange of the last-first property to reduce the
+complexity of <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_IBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator_">InvertTransform(RotatedTextWithTerminator)</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.html">NaiveBuilder</a></div>
+    <div class="level2"><span class="xref">LastFirstPropertyBasedBuilder</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.html">IBuilder</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildMatrix_MoreStructures_TextWithTerminator_">NaiveBuilder.BuildMatrix(TextWithTerminator)</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildMatrix_MoreStructures_BurrowsWheelerTransform_BWTransform_">NaiveBuilder.BuildMatrix(BWTransform)</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildTransform_MoreStructures_BurrowsWheelerTransform_BWMatrix_">NaiveBuilder.BuildTransform(BWMatrix)</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildTransform_MoreStructures_TextWithTerminator_">NaiveBuilder.BuildTransform(TextWithTerminator)</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertMatrix_MoreStructures_BurrowsWheelerTransform_BWMatrix_">NaiveBuilder.InvertMatrix(BWMatrix)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.html">MoreStructures.BurrowsWheelerTransform.Builders</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstPropertyBasedBuilder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class LastFirstPropertyBasedBuilder : NaiveBuilder, IBuilder</code></pre>
+  </div>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstPropertyBasedBuilder_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>A <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html">ILastFirstFinder</a>, built by <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstPropertyBasedBuilder_FirstLastFinderBuilder">FirstLastFinderBuilder</a> is used to jump between the BWT
+and its sorted version.</p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstPropertyBasedBuilder_FirstLastFinderBuilder.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.FirstLastFinderBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstPropertyBasedBuilder.cs/#L18">View Source</a>
+  </span>
+  <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstPropertyBasedBuilder_FirstLastFinderBuilder_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.FirstLastFinderBuilder*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstPropertyBasedBuilder_FirstLastFinderBuilder" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.FirstLastFinderBuilder">FirstLastFinderBuilder</h4>
+  <div class="markdown level1 summary"><p>The strategy by which this builder finds chars in the BWT and its sorted version.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;RotatedTextWithTerminator, ILastFirstFinder&gt; FirstLastFinderBuilder { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a>, <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html">ILastFirstFinder</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstPropertyBasedBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstPropertyBasedBuilder.cs/#L70">View Source</a>
+  </span>
+  <a id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstPropertyBasedBuilder_InvertTransform_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.InvertTransform*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstPropertyBasedBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)">InvertTransform(RotatedTextWithTerminator)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override TextWithTerminator InvertTransform(RotatedTextWithTerminator lastBWMColumn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a></td>
+        <td><span class="parametername">lastBWMColumn</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator_">NaiveBuilder.InvertTransform(RotatedTextWithTerminator)</a></div>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_LastFirstPropertyBasedBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc path="/remarks/para[@id=&apos;terminator-required&apos;]"></inheritdoc></p>
+<p>
+ALGORITHM
+<br>
+This implementation inverts the BWT by using the last-first property.
+<br>
+- First column of the matrix (sBWT) is just the last column (BWT), sorted.
+<br>
+- By last-first property, the 1-st (and only) occurrence of terminator in sBWT at sBWT[0] corresponds 
+to the 1st occurrence of terminator in BWT at BWT[i0]. BWTs[i0] is the 1-st char of the text.
+<br>
+- Again by last-first property, the n-th occurrence of c in BWTs at sBWTs[i0] corresponds to the n-th
+occurrence of c in BWT at BWT[i1]. BWTs[i1] is the 2-st char of the text.
+<br>
+- And so on, until BWTs[i(n-1)], the terminator, is reached.
+</p>
+<p>
+COMPLEXITY
+<br>
+- Before any iteration, Sorted BWT is computed, taking O(n * log(n)) time, where n is the length of 
+<code data-dev-comment-type="paramref" class="paramref">lastBWMColumn</code>. If the alphabet is of constant size sigma, Counting Sort reduces 
+the overall Time Complexity of this step to O(n).
+<br>
+- After that the finder may also preallocate other supporting structures, to speed up searches (such
+the dictionary used in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.html">PrecomputedFinder</a>. Although it depends on the specific
+implementation built by <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstPropertyBasedBuilder_FirstLastFinderBuilder">FirstLastFinderBuilder</a>, we may assume this cost to also be 
+linear with n.
+<br>
+- From terminator to terminator, there are n top-level iterations. Each iteration takes m1 + m2, 
+where m1 is the cost of <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindIndexOfNthOccurrenceInBWT_System_Int32_System_Int32_">FindIndexOfNthOccurrenceInBWT(Int32, Int32)</a> 
+and m2 is the cost of <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html#MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_FindOccurrenceRankOfCharInSortedBWT_System_Int32_">FindOccurrenceRankOfCharInSortedBWT(Int32)</a>.
+<br>
+- Finally, the <see cref="!:StringBuilder"></see> used as accumulator generates the text string. At most O(n).
+<br>
+- So total Time Complexity is O(n * (m1 + m2)) and Space Complexity is O(n).
+<br>
+<br>
+Using <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.NaiveFinder.html">NaiveFinder</a>, m1 and m2 are both O(n), so Time Complexity is O(n^2).
+<br>
+Using <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.BinarySearchFinder.html">BinarySearchFinder</a>, m1 is O(n) and m2 is O(log(n)), so overall Time 
+Complexity is still O(n^2).
+<br>
+Using <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.html">PrecomputedFinder</a>, m1 is O(1), whereas m2 is O(log(n / sigma)) where 
+sigma is the size of the alphabet, so overall Time Complexity is O(n * log(n)) if sigma is constant.
+<br>
+</p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.IBuilder.html">IBuilder</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_LastFirstPropertyBasedBuilder.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.LastFirstPropertyBasedBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/LastFirstPropertyBasedBuilder.cs/#L13" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

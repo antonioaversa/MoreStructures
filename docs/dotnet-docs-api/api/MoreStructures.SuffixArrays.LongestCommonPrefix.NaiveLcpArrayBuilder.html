@@ -1,0 +1,363 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class NaiveLcpArrayBuilder
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class NaiveLcpArrayBuilder
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder">
+  
+  
+  <h1 id="MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder" data-uid="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder" class="text-break">Class NaiveLcpArrayBuilder
+  </h1>
+  <div class="markdown level0 summary"><p>An implementation of <a class="xref" href="MoreStructures.SuffixArrays.LongestCommonPrefix.ILcpArrayBuilder.html">ILcpArrayBuilder</a> which calculates the LCP Array using the definition.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">NaiveLcpArrayBuilder</span></div>
+      <div class="level2"><a class="xref" href="MoreStructures.SuffixArrays.LongestCommonPrefix.KasaiLcpArrayBuilder.html">KasaiLcpArrayBuilder</a></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.SuffixArrays.LongestCommonPrefix.ILcpArrayBuilder.html">ILcpArrayBuilder</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.SuffixArrays.LongestCommonPrefix.html">MoreStructures.SuffixArrays.LongestCommonPrefix</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class NaiveLcpArrayBuilder : ILcpArrayBuilder</code></pre>
+  </div>
+  <h5 id="MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+ADVANTAGES AND DISADVANTAGES
+<br>
+- This implementation is the most straightforward, as the algorithm closely follows the definition.
+<br>
+- As such it is easy to implement and analyze, at the cost of worse Time and Space complexity than smarter
+implementations, using, for example, specific properties of subsequent LCP items of suffixes from the 
+Suffix Array.
+<br>
+- The algorithm is also online. Therefore, values can be lazily computed.
+</p>
+<p>
+ALGORITHM
+<br>
+- The implementation uses the externally provided <a class="xref" href="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.html#MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_SuffixArray">SuffixArray</a>, in combination with the 
+<a class="xref" href="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.html#MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_Text">Text</a>.
+<br>
+- It iterates over the first n - 1 items of the <a class="xref" href="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.html#MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_SuffixArray">SuffixArray</a> SA, using 
+<a class="xref" href="MoreStructures.Utilities.StringUtilities.html#MoreStructures_Utilities_StringUtilities_LongestCommonPrefix_IEnumerable_System_Char__IEnumerable_System_Char__">LongestCommonPrefix(IEnumerable&lt;Char&gt;, IEnumerable&lt;Char&gt;)</a> to calculate the 
+length of the LCP between SA[i] and its successor, SA[i + 1].
+<br>
+- That represents the i-th element of the LCP Array.
+</p>
+<p>
+COMPLEXITY
+<br>
+- The <a class="xref" href="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.html#MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_SuffixArray">SuffixArray</a> is externally provided, so it&apos;s building cost is not included in this analysis.
+<br>
+- The algorithm runs n - 1 iterations, each one building two strings (the prefix starting at SA[i] and the one
+starting at SA[i + 1]), then comparing them char by char, to find the LCP.
+<br>
+- Prefixes have in general O(n) length, and 
+<a class="xref" href="MoreStructures.Utilities.StringUtilities.html#MoreStructures_Utilities_StringUtilities_LongestCommonPrefix_IEnumerable_System_Char__IEnumerable_System_Char__">LongestCommonPrefix(IEnumerable&lt;Char&gt;, IEnumerable&lt;Char&gt;)</a> has Time Complexity 
+linear in the input, and constant Space Complexity.
+<br>
+- Therefore, Time Complexity is O(n^2) and Space Complexity is O(n).
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder__ctor_MoreStructures_TextWithTerminator_MoreStructures_SuffixArrays_SuffixArray_.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.%23ctor(MoreStructures.TextWithTerminator%2CMoreStructures.SuffixArrays.SuffixArray)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/LongestCommonPrefix/NaiveLcpArrayBuilder.cs/#L71">View Source</a>
+  </span>
+  <a id="MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder__ctor_" data-uid="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.#ctor*"></a>
+  <h4 id="MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder__ctor_MoreStructures_TextWithTerminator_MoreStructures_SuffixArrays_SuffixArray_" data-uid="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.#ctor(MoreStructures.TextWithTerminator,MoreStructures.SuffixArrays.SuffixArray)">NaiveLcpArrayBuilder(TextWithTerminator, SuffixArray)</h4>
+  <div class="markdown level1 summary"><p><inheritdoc cref="T:MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder"></inheritdoc></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NaiveLcpArrayBuilder(TextWithTerminator text, SuffixArray suffixArray)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a></td>
+        <td><span class="parametername">text</span></td>
+        <td><p><inheritdoc cref="P:MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.Text" path="/summary"></inheritdoc></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">MoreStructures.SuffixArrays.SuffixArray</span></td>
+        <td><span class="parametername">suffixArray</span></td>
+        <td><p><inheritdoc cref="P:MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.SuffixArray" path="/summary"></inheritdoc></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder__ctor_MoreStructures_TextWithTerminator_MoreStructures_SuffixArrays_SuffixArray__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder"></inheritdoc></p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_SuffixArray.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.SuffixArray%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/LongestCommonPrefix/NaiveLcpArrayBuilder.cs/#L57">View Source</a>
+  </span>
+  <a id="MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_SuffixArray_" data-uid="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.SuffixArray*"></a>
+  <h4 id="MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_SuffixArray" data-uid="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.SuffixArray">SuffixArray</h4>
+  <div class="markdown level1 summary"><p>The Suffix Array of the <a class="xref" href="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.html#MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_Text">Text</a>, required to calculate the <span class="xref">MoreStructures.SuffixArrays.LongestCommonPrefix.LcpArray</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SuffixArray SuffixArray { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MoreStructures.SuffixArrays.SuffixArray</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_Text.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.Text%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/LongestCommonPrefix/NaiveLcpArrayBuilder.cs/#L52">View Source</a>
+  </span>
+  <a id="MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_Text_" data-uid="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.Text*"></a>
+  <h4 id="MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_Text" data-uid="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.Text">Text</h4>
+  <div class="markdown level1 summary"><p>The terminator-terminated string, to calculate the <span class="xref">MoreStructures.SuffixArrays.LongestCommonPrefix.LcpArray</span> of.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextWithTerminator Text { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_Build.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.Build%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/LongestCommonPrefix/NaiveLcpArrayBuilder.cs/#L83">View Source</a>
+  </span>
+  <a id="MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_Build_" data-uid="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.Build*"></a>
+  <h4 id="MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_Build" data-uid="MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder.Build">Build()</h4>
+  <div class="markdown level1 summary"><p><inheritdoc></inheritdoc></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual LcpArray Build()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MoreStructures.SuffixArrays.LongestCommonPrefix.LcpArray</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder_Build_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder"></inheritdoc></p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixArrays.LongestCommonPrefix.ILcpArrayBuilder.html">ILcpArrayBuilder</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_LongestCommonPrefix_NaiveLcpArrayBuilder.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.LongestCommonPrefix.NaiveLcpArrayBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/LongestCommonPrefix/NaiveLcpArrayBuilder.cs/#L47" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

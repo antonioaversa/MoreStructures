@@ -1,0 +1,700 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class FullyRecursiveHashSetBasedGraphVisit
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class FullyRecursiveHashSetBasedGraphVisit
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit">
+  
+  
+  <h1 id="MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit" data-uid="MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit" class="text-break">Class FullyRecursiveHashSetBasedGraphVisit
+  </h1>
+  <div class="markdown level0 summary"><p>A <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html">IVisitStrategy</a> implementation which uses an <see cref="!:HashSet&lt;T>"></see> of <span class="xref">System.Int32</span> to store
+already visited vertices, while visiting the graph, and performs the visit recursively.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="MoreStructures.Graphs.Visitor.DirectionableVisit.html">DirectionableVisit</a></div>
+    <div class="level2"><span class="xref">FullyRecursiveHashSetBasedGraphVisit</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html">IVisitStrategy</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="MoreStructures.Graphs.Visitor.DirectionableVisit.html#MoreStructures_Graphs_Visitor_DirectionableVisit_DirectedGraph">DirectionableVisit.DirectedGraph</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.Graphs.Visitor.DirectionableVisit.html#MoreStructures_Graphs_Visitor_DirectionableVisit_VisitingVertex">DirectionableVisit.VisitingVertex</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.Graphs.Visitor.DirectionableVisit.html#MoreStructures_Graphs_Visitor_DirectionableVisit_RaiseVisitingVertex_MoreStructures_Graphs_Visitor_VisitEventArgs_">DirectionableVisit.RaiseVisitingVertex(VisitEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.Graphs.Visitor.DirectionableVisit.html#MoreStructures_Graphs_Visitor_DirectionableVisit_VisitedVertex">DirectionableVisit.VisitedVertex</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.Graphs.Visitor.DirectionableVisit.html#MoreStructures_Graphs_Visitor_DirectionableVisit_RaiseVisitedVertex_MoreStructures_Graphs_Visitor_VisitEventArgs_">DirectionableVisit.RaiseVisitedVertex(VisitEventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.Graphs.Visitor.DirectionableVisit.html#MoreStructures_Graphs_Visitor_DirectionableVisit_AlreadyVisitedVertex">DirectionableVisit.AlreadyVisitedVertex</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.Graphs.Visitor.DirectionableVisit.html#MoreStructures_Graphs_Visitor_DirectionableVisit_RaiseAlreadyVisitedVertex_MoreStructures_Graphs_Visitor_VisitEventArgs_">DirectionableVisit.RaiseAlreadyVisitedVertex(VisitEventArgs)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.Graphs.Visitor.html">MoreStructures.Graphs.Visitor</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit, IVisitStrategy</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit__ctor_System_Boolean_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.%23ctor(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Visitor/FullyRecursiveHashSetBasedGraphVisit.cs/#L15">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit__ctor_" data-uid="MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.#ctor*"></a>
+  <h4 id="MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit__ctor_System_Boolean_" data-uid="MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.#ctor(System.Boolean)">FullyRecursiveHashSetBasedGraphVisit(Boolean)</h4>
+  <div class="markdown level1 summary"><p><inheritdoc cref="T:MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit"></inheritdoc></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FullyRecursiveHashSetBasedGraphVisit(bool directedGraph)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">directedGraph</span></td>
+        <td><p><inheritdoc></inheritdoc></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_BreadthFirstSearchFromVertex_MoreStructures_Graphs_IGraph_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.BreadthFirstSearchFromVertex(MoreStructures.Graphs.IGraph%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Visitor/FullyRecursiveHashSetBasedGraphVisit.cs/#L257">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_BreadthFirstSearchFromVertex_" data-uid="MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.BreadthFirstSearchFromVertex*"></a>
+  <h4 id="MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_BreadthFirstSearchFromVertex_MoreStructures_Graphs_IGraph_System_Int32_" data-uid="MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.BreadthFirstSearchFromVertex(MoreStructures.Graphs.IGraph,System.Int32)">BreadthFirstSearchFromVertex(IGraph, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;int&gt; BreadthFirstSearchFromVertex(IGraph graph, int vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a></td>
+        <td><span class="parametername">graph</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MoreStructures.Graphs.Visitor.DirectionableVisit.html#MoreStructures_Graphs_Visitor_DirectionableVisit_BreadthFirstSearchFromVertex_MoreStructures_Graphs_IGraph_System_Int32_">DirectionableVisit.BreadthFirstSearchFromVertex(IGraph, Int32)</a></div>
+  <h5 id="MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_BreadthFirstSearchFromVertex_MoreStructures_Graphs_IGraph_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+ADVANTAGES AND DISADVANTAGES
+<br>
+Implemented fully recursively, so limited by stack depth and usable with graphs of a &quot;reasonable&quot; size.
+</p>
+<p>
+ALGORITHM
+<br>
+- The algorithm closely resembles <a class="xref" href="MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.html#MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_DepthFirstSearchFromVertex_MoreStructures_Graphs_IGraph_System_Int32_">DepthFirstSearchFromVertex(IGraph, Int32)</a> with one 
+  foundamental difference: <strong>the recursive calls to neighbors of each vertex generate 
+<see cref="!:IEnumerable&lt;T>"></see> which are iterated lazily and in parallel, one element of each 
+<see cref="!:IEnumerator&lt;T>"></see> at a time</strong>, up until all enumerators are done.
+<br>
+- Let&apos;s take as an example a graph in which neighbors of vertex 0 are 1 and 2, neighbors of vertex 1 are 3 
+and 4 and neighbors of vertex 2 are 5 and 4.
+<br>
+- The visit of vertex 0 will first yield the vertex 0 itself.
+<br>
+- It then yields the 1st element of the enumerable of BFS from vertex 1, which is the vertex 1 itself.
+<br>
+- After that, it yields the 1st element of the enumerable of BFS from vertex 2, which is the vertex 2 
+itself.
+<br>
+- After that, since there are no other neighbors of 0, moves to the 2nd elements of each of the 
+enumerators.
+<br>
+- It yields the 2nd element of the enumerable of BFS from vertex 1, which is the vertex 3.
+<br>
+- It then yields the 2nd element of the enumerable of BFS from vertex 2, which is the vertex 5.
+<br>
+- Etc, until all enumerators are done (i.e. <span class="xref">System.Collections.IEnumerator.MoveNext</span> is
+<span class="xref">false</span>.
+</p>
+<p>
+COMPLEXITY
+<br>
+- Same consideration about complexity as in <a class="xref" href="MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.html#MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_DepthFirstSearchFromVertex_MoreStructures_Graphs_IGraph_System_Int32_">DepthFirstSearchFromVertex(IGraph, Int32)</a> apply.
+  What is different is just the order of visit, not edges or vertices visited.
+<br>
+- Therefore, Time Complexity is O(v * Ta + e) and Space Complexity is O(v * Sa + e), where v is the number 
+of vertices, e is the number of edges and Ta and Sa are the time and space cost of retrieving the 
+neighborhood of a given vertex.
+</p>
+<inheritdoc cref="M:MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.DepthFirstSearchOfGraph(MoreStructures.Graphs.IGraph)" path="/remarks/para[@id=&apos;complexity-and-events&apos;]"></inheritdoc>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_ConnectedComponents_MoreStructures_Graphs_IGraph_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.ConnectedComponents(MoreStructures.Graphs.IGraph)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Visitor/FullyRecursiveHashSetBasedGraphVisit.cs/#L147">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_ConnectedComponents_" data-uid="MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.ConnectedComponents*"></a>
+  <h4 id="MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_ConnectedComponents_MoreStructures_Graphs_IGraph_" data-uid="MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.ConnectedComponents(MoreStructures.Graphs.IGraph)">ConnectedComponents(IGraph)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IDictionary&lt;int, int&gt; ConnectedComponents(IGraph graph)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a></td>
+        <td><span class="parametername">graph</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IDictionary</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MoreStructures.Graphs.Visitor.DirectionableVisit.html#MoreStructures_Graphs_Visitor_DirectionableVisit_ConnectedComponents_MoreStructures_Graphs_IGraph_">DirectionableVisit.ConnectedComponents(IGraph)</a></div>
+  <h5 id="MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_ConnectedComponents_MoreStructures_Graphs_IGraph__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+ADVANTAGES AND DISADVANTAGES
+<br>
+Implemented fully recursively, so limited by stack depth and usable with graphs of a &quot;reasonable&quot; size.
+</p>
+<p>
+ALGORITHM
+<br>
+- The algorithm is a simple variation of <a class="xref" href="MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.html#MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_DepthFirstSearchOfGraph_MoreStructures_Graphs_IGraph_">DepthFirstSearchOfGraph(IGraph)</a>.
+<br>
+- All vertices from 0 to <a class="xref" href="MoreStructures.Graphs.IGraph.html#MoreStructures_Graphs_IGraph_GetNumberOfVertices">GetNumberOfVertices()</a> - 1 are explored.
+<br>
+- An <see cref="!:HashSet&lt;T>"></see> of already visited vertices is shared across all visits, to ensure that a
+vertex is not visited twice.
+<br>
+- A current value of the connected component is instantiated at 0 and incremented every time a new 
+connected component is explored, i.e. every time the vertex i, of the top-level iteration, has not been
+visited yet, meaning that none of the connected components explored so far contains it.
+<br>
+- The resulting mapping between vertex id and connected component value is returned as result.
+</p>
+<p>
+COMPLEXITY
+<br>
+- The algorithm closely resembles <a class="xref" href="MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.html#MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_DepthFirstSearchOfGraph_MoreStructures_Graphs_IGraph_">DepthFirstSearchOfGraph(IGraph)</a>, with the added complexity 
+  of instantiating and populating a <see cref="!:IDictionary&lt;TKey, TValue>"></see> of the mapping between vertices
+  and connected component labels.
+<br>
+- Because the <see cref="!:IDictionary&lt;TKey, TValue>"></see> implementation used is a 
+<see cref="!:Dictionary&lt;TKey, TValue>"></see>, which is hash-based, such additional operations are performed in
+constant time.
+<br>
+- Therefore the complexity of this method is the same as <a class="xref" href="MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.html#MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_DepthFirstSearchOfGraph_MoreStructures_Graphs_IGraph_">DepthFirstSearchOfGraph(IGraph)</a>: 
+Time Complexity is O(v * Ta + e) and Space Complexity is O(v * Sa + e), where v is the number of 
+vertices, e is the number of edges and Ta and Sa are the time and space cost of retrieving the 
+neighborhood of a given vertex.
+</p>
+<inheritdoc cref="M:MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.DepthFirstSearchOfGraph(MoreStructures.Graphs.IGraph)" path="/remarks/para[@id=&apos;complexity-and-events&apos;]"></inheritdoc>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_DepthFirstSearchAndConnectedComponentsOfGraph_MoreStructures_Graphs_IGraph_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.DepthFirstSearchAndConnectedComponentsOfGraph(MoreStructures.Graphs.IGraph)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Visitor/FullyRecursiveHashSetBasedGraphVisit.cs/#L20">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_DepthFirstSearchAndConnectedComponentsOfGraph_" data-uid="MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.DepthFirstSearchAndConnectedComponentsOfGraph*"></a>
+  <h4 id="MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_DepthFirstSearchAndConnectedComponentsOfGraph_MoreStructures_Graphs_IGraph_" data-uid="MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.DepthFirstSearchAndConnectedComponentsOfGraph(MoreStructures.Graphs.IGraph)">DepthFirstSearchAndConnectedComponentsOfGraph(IGraph)</h4>
+  <div class="markdown level1 summary"><p>Runs a Depth First Search and returns vertices and related connected components.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override IEnumerable&lt;(int, int)&gt; DepthFirstSearchAndConnectedComponentsOfGraph(IGraph graph)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a></td>
+        <td><span class="parametername">graph</span></td>
+        <td><p>The <a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a> instance to be explored.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><p>A sequence of couples of <span class="xref">System.Int32</span>, the first being the vertex id and the second being the label of the
+connected component, the vertex belongs to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MoreStructures.Graphs.Visitor.DirectionableVisit.html#MoreStructures_Graphs_Visitor_DirectionableVisit_DepthFirstSearchAndConnectedComponentsOfGraph_MoreStructures_Graphs_IGraph_">DirectionableVisit.DepthFirstSearchAndConnectedComponentsOfGraph(IGraph)</a></div>
+  <h5 id="MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_DepthFirstSearchAndConnectedComponentsOfGraph_MoreStructures_Graphs_IGraph__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Generalizes both <a class="xref" href="MoreStructures.Graphs.Visitor.DirectionableVisit.html#MoreStructures_Graphs_Visitor_DirectionableVisit_DepthFirstSearchOfGraph_MoreStructures_Graphs_IGraph_">DepthFirstSearchOfGraph(IGraph)</a> and <a class="xref" href="MoreStructures.Graphs.Visitor.DirectionableVisit.html#MoreStructures_Graphs_Visitor_DirectionableVisit_ConnectedComponents_MoreStructures_Graphs_IGraph_">ConnectedComponents(IGraph)</a>
+methods, which have very similar implementations. Check those two methods for further information.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_DepthFirstSearchFromVertex_MoreStructures_Graphs_IGraph_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.DepthFirstSearchFromVertex(MoreStructures.Graphs.IGraph%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Visitor/FullyRecursiveHashSetBasedGraphVisit.cs/#L201">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_DepthFirstSearchFromVertex_" data-uid="MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.DepthFirstSearchFromVertex*"></a>
+  <h4 id="MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_DepthFirstSearchFromVertex_MoreStructures_Graphs_IGraph_System_Int32_" data-uid="MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.DepthFirstSearchFromVertex(MoreStructures.Graphs.IGraph,System.Int32)">DepthFirstSearchFromVertex(IGraph, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;int&gt; DepthFirstSearchFromVertex(IGraph graph, int vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a></td>
+        <td><span class="parametername">graph</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MoreStructures.Graphs.Visitor.DirectionableVisit.html#MoreStructures_Graphs_Visitor_DirectionableVisit_DepthFirstSearchFromVertex_MoreStructures_Graphs_IGraph_System_Int32_">DirectionableVisit.DepthFirstSearchFromVertex(IGraph, Int32)</a></div>
+  <h5 id="MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_DepthFirstSearchFromVertex_MoreStructures_Graphs_IGraph_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+ADVANTAGES AND DISADVANTAGES
+<br>
+Implemented fully recursively, so limited by stack depth and usable with graphs of a &quot;reasonable&quot; size.
+</p>
+<p>
+ALGORITHM
+<br>
+- A <see cref="!:HashSet&lt;T>"></see> of the ids of already visited vertices is instantiated to an empty set.
+<br>
+- The set of already visited vertices is updated, adding the visited vertex, every time a visit is made.
+<br>
+- The visit starts from the specified start vertex and looks for all the neighboring edges of such vertex
+(taking into account the direction of the edge or not, depending on the specified parameters).
+<br>
+- Only neighboring edges connecting the start vertex to a vertex not already visited are taken into 
+account.
+<br>
+- However, to reach all relevant vertices, the algorithm may go through all edges of the graph.
+<br>
+- All other vertices are skipped, since those vertices, their neighborhood, neighbors of their neighborhood 
+etc. have already been visited in previous steps of the recursive visit.
+<br>
+- When the recursive visit terminates, all vertices directly or indirectly connected to the start vertex S
+(i.e. all vertices V for which there is a path of edges e1, e2, ..., en, connecting S to V) will 
+have been visited.
+<br>
+- Vertices which are not connected to S (i.e. for which there is no path), are not included in the 
+resulting sequence of vertices.
+</p>
+<p>
+COMPLEXITY
+<br>
+- Instantiating and adding items to the set of already visited vertices are constant-time operations.
+<br>
+- The set of already visited vertices ensures that each vertex of the graph is visited at most once.
+<br>
+- The complexity of retrieving the neighborhood of a vertex depends on the implementation of 
+<a class="xref" href="MoreStructures.Graphs.IGraph.html#MoreStructures_Graphs_IGraph_GetAdjacentVerticesAndEdges_System_Int32_System_Boolean_">GetAdjacentVerticesAndEdges(Int32, Boolean)</a>, thus on the specific <a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a>
+implementation being used.
+<br>
+- Checking whether a neighbor has already been visited is a O(1) operation, because the set used is an 
+<see cref="!:HashSet&lt;T>"></see>.
+<br>
+- Therefore, Time Complexity is O(v * Ta + e) and Space Complexity is O(v * Sa + e), where v is the number 
+of vertices, e is the number of edges and Ta and Sa are the time and space cost of retrieving the 
+neighborhood of a given vertex.
+</p>
+<inheritdoc cref="M:MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.DepthFirstSearchOfGraph(MoreStructures.Graphs.IGraph)" path="/remarks/para[@id=&apos;complexity-and-events&apos;]"></inheritdoc>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_DepthFirstSearchOfGraph_MoreStructures_Graphs_IGraph_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.DepthFirstSearchOfGraph(MoreStructures.Graphs.IGraph)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Visitor/FullyRecursiveHashSetBasedGraphVisit.cs/#L104">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_DepthFirstSearchOfGraph_" data-uid="MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.DepthFirstSearchOfGraph*"></a>
+  <h4 id="MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_DepthFirstSearchOfGraph_MoreStructures_Graphs_IGraph_" data-uid="MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.DepthFirstSearchOfGraph(MoreStructures.Graphs.IGraph)">DepthFirstSearchOfGraph(IGraph)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;int&gt; DepthFirstSearchOfGraph(IGraph graph)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a></td>
+        <td><span class="parametername">graph</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MoreStructures.Graphs.Visitor.DirectionableVisit.html#MoreStructures_Graphs_Visitor_DirectionableVisit_DepthFirstSearchOfGraph_MoreStructures_Graphs_IGraph_">DirectionableVisit.DepthFirstSearchOfGraph(IGraph)</a></div>
+  <h5 id="MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_DepthFirstSearchOfGraph_MoreStructures_Graphs_IGraph__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+ADVANTAGES AND DISADVANTAGES
+<br>
+Implemented fully recursively, so limited by stack depth and usable with graphs of a &quot;reasonable&quot; size.
+</p>
+<p>
+ALGORITHM
+<br>
+- An <see cref="!:HashSet&lt;T>"></see> of the ids of already visited vertices is instantiated to an empty set.
+<br>
+- Vertices are iterated over, from the first (id = 0), to the last (id = v - 1, where v is the total number
+of vertices).
+<br>
+- The total number of vertices is retrieved via <a class="xref" href="MoreStructures.Graphs.IGraph.html#MoreStructures_Graphs_IGraph_GetNumberOfVertices">GetNumberOfVertices()</a>.
+<br>
+- If the vertex i has not already been visited (i.e. it appears in the <see cref="!:HashSet&lt;T>"></see>), it is
+visited, with the same algorithm it would be visited by 
+<a class="xref" href="MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.html#MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_DepthFirstSearchFromVertex_MoreStructures_Graphs_IGraph_System_Int32_">DepthFirstSearchFromVertex(IGraph, Int32)</a>.
+<br>
+- The order of visit is returned as a sequence of integers.
+<br>
+- The set of already visited vertices is updated, adding the visited vertex, every time a visit is made, 
+and it is shared by all visits of all vertices, whether they are connected to each other or not.
+<br>
+- When the sequence of recursive visits terminates, all vertices of the graph will have been visited.
+</p>
+<p>
+COMPLEXITY
+<br>
+- Instantiating and adding items to the set of already visited vertices are constant-time operations.
+<br>
+- The set of already visited vertices ensures that each vertex of the graph is visited at most once.
+<br>
+- To reach all vertices, the algorithm goes through all edges of the graph.
+<br>
+- Because each vertex is visited at most once throughout the entire execution, edges are visited at most 
+once, when edge direction is taken into account during the visit, and twice, when it is not.
+<br>
+- The complexity of retrieving the total number of vertices depends on  
+<a class="xref" href="MoreStructures.Graphs.IGraph.html#MoreStructures_Graphs_IGraph_GetNumberOfVertices">GetNumberOfVertices()</a>. While being specific to the <a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a>
+implementation being used, all implementation provide O(1) runtime for such operation.
+<br>
+- Checking whether a neighbor has already been visited is a O(1) operation, because the set used is an 
+<see cref="!:HashSet&lt;T>"></see>.
+<br>
+- Therefore, Time Complexity is O(v * Ta + e) and Space Complexity is O(v * Sa + e), where 
+v is the number of vertices, e is the number of edges and Ta and Sa are the time and space cost of 
+retrieving the neighborhood of a given vertex.
+</p>
+<p>
+COMPLEXITY AND EVENTS
+<br>
+- Event handlers are externally defined and have been considered O(1) in this analysis.
+<br>
+- To include them in the analysis, it should be taken into account that 
+<a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_VisitingVertex">VisitingVertex</a> and <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_VisitedVertex">VisitedVertex</a> happen once 
+per visited vertex, whereas <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_AlreadyVisitedVertex">AlreadyVisitedVertex</a> can happen globally as many
+times as the number of edges.
+</p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html">IVisitStrategy</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Visitor/FullyRecursiveHashSetBasedGraphVisit.cs/#L7" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

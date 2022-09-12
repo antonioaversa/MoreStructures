@@ -1,0 +1,379 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SuffixStructureBasedSuffixArrayBuilder&lt;TEdge, TNode&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SuffixStructureBasedSuffixArrayBuilder&lt;TEdge, TNode&gt;
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2">
+  
+  
+  <h1 id="MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2" data-uid="MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2" class="text-break">Class SuffixStructureBasedSuffixArrayBuilder&lt;TEdge, TNode&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>An algorithm for building the <span class="xref">MoreStructures.SuffixArrays.SuffixArray</span> from an already built
+<a class="xref" href="MoreStructures.SuffixStructures.ISuffixStructureNode-2.html">ISuffixStructureNode&lt;TEdge, TNode&gt;</a> structure for the provided <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">SuffixStructureBasedSuffixArrayBuilder&lt;TEdge, TNode&gt;</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder.html">ISuffixArrayBuilder</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.SuffixArrays.Builders.html">MoreStructures.SuffixArrays.Builders</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SuffixStructureBasedSuffixArrayBuilder&lt;TEdge, TNode&gt; : ISuffixArrayBuilder where TEdge : ISuffixStructureEdge&lt;TEdge, TNode&gt; where TNode : ISuffixStructureNode&lt;TEdge, TNode&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TEdge</span></td>
+        <td><p>The type of edges of the specific structure.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TNode</span></td>
+        <td><p>The type of nodes of the specific structure.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+The Suffix Tree for the text &quot;mississippi$&quot; is:
+<pre><code>R
+- $ (11)
+- i
+  - $ (10)
+  - ssi
+    - p..$ (7)
+    - s..$ (4)
+- m..$ 
+- ...</code></pre>
+A DFS visit of the leaves of the tree, navigating edges in lexicographic order, gives { 11, 10, 7, 4, ... },
+which is the <span class="xref">MoreStructures.SuffixArrays.SuffixArray</span> of &quot;mississippi$&quot;.
+</p>
+<p>
+- The Suffix Tree of the text is provided as input, and the complexity of building or keeping it in memoery 
+  is not considered here.
+<br>
+- The DFS of the Tree is linear in m, where m is the number of nodes in the Suffix Tree. m is O(n) for Suffix 
+Trees and O(n^2) for Suffix Tries, where n is the length of the text.
+<br>
+- While DFS itself is linear in m, edges have to be sorted in lexicographic order, which is done via the LINQ 
+<see cref="!:Enumerable.OrderBy&lt;TSource, TKey>(IEnumerable&lt;TSource>, Func&lt;TSource, TKey>)"></see> method.
+<br>
+- There are O(m) edges in the tree, so sorting can be O(m * log(m)) if the alphabet of the text is O(n), using
+QuickSort or similar, and O(m) if the alphabet is constant w.r.t. to n, using Counting Sort or similar.
+<br>
+- For each visited node, constant work is done: checking whether the node is a leaf and potentially returning 
+it.
+<br>
+- Therefore Time Complexity is O(n^2 * log(n)) for a Suffix Trie with a non-constant alphabet, O(n^2) for a 
+Suffix Trie with a constant alphabet, O(n * log(n)) for a Suffix Tree with a non-constant alphabet and
+O(n) for a Suffix Tree with a constant alphabet.
+<br>
+- Space Complexity is dominated by the space required to sort edges in lexicographic order, before visiting 
+them in DFS: O(n^2) for a Suffix Trie and O(n) for a Suffix Tree.
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2__ctor_MoreStructures_TextWithTerminator__1_.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder%602.%23ctor(MoreStructures.TextWithTerminator%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/Builders/SuffixStructureBasedSuffixArrayBuilder.cs/#L76">View Source</a>
+  </span>
+  <a id="MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2__ctor_" data-uid="MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.#ctor*"></a>
+  <h4 id="MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2__ctor_MoreStructures_TextWithTerminator__1_" data-uid="MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.#ctor(MoreStructures.TextWithTerminator,`1)">SuffixStructureBasedSuffixArrayBuilder(TextWithTerminator, TNode)</h4>
+  <div class="markdown level1 summary"><p><inheritdoc cref="T:MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2" path="/summary"></inheritdoc></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SuffixStructureBasedSuffixArrayBuilder(TextWithTerminator text, TNode node)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a></td>
+        <td><span class="parametername">text</span></td>
+        <td><p><inheritdoc cref="P:MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.Text" path="/summary"></inheritdoc></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TNode</span></td>
+        <td><span class="parametername">node</span></td>
+        <td><p><inheritdoc cref="P:MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.Node" path="/summary"></inheritdoc></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2_Node.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder%602.Node%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/Builders/SuffixStructureBasedSuffixArrayBuilder.cs/#L69">View Source</a>
+  </span>
+  <a id="MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2_Node_" data-uid="MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.Node*"></a>
+  <h4 id="MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2_Node" data-uid="MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.Node">Node</h4>
+  <div class="markdown level1 summary"><p>The root node of the <a class="xref" href="MoreStructures.SuffixStructures.ISuffixStructureNode-2.html">ISuffixStructureNode&lt;TEdge, TNode&gt;</a> structure, to build the
+<span class="xref">MoreStructures.SuffixArrays.SuffixArray</span> of.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TNode Node { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TNode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2_Text.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder%602.Text%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/Builders/SuffixStructureBasedSuffixArrayBuilder.cs/#L63">View Source</a>
+  </span>
+  <a id="MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2_Text_" data-uid="MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.Text*"></a>
+  <h4 id="MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2_Text" data-uid="MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.Text">Text</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>, to build the <span class="xref">MoreStructures.SuffixArrays.SuffixArray</span> of.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextWithTerminator Text { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2_Build.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder%602.Build%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/Builders/SuffixStructureBasedSuffixArrayBuilder.cs/#L91">View Source</a>
+  </span>
+  <a id="MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2_Build_" data-uid="MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.Build*"></a>
+  <h4 id="MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2_Build" data-uid="MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder`2.Build">Build()</h4>
+  <div class="markdown level1 summary"><p>Builds the <span class="xref">MoreStructures.SuffixArrays.SuffixArray</span> for <see name="Node"></see>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SuffixArray Build()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MoreStructures.SuffixArrays.SuffixArray</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixArrays.Builders.ISuffixArrayBuilder.html">ISuffixArrayBuilder</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixArrays_Builders_SuffixStructureBasedSuffixArrayBuilder_2.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixArrays.Builders.SuffixStructureBasedSuffixArrayBuilder%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixArrays/Builders/SuffixStructureBasedSuffixArrayBuilder.cs/#L54" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

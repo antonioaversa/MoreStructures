@@ -1,0 +1,567 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class NarrowingIntervalMatcher
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class NarrowingIntervalMatcher
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher">
+  
+  
+  <h1 id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher" class="text-break">Class NarrowingIntervalMatcher
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">NarrowingIntervalMatcher</span></div>
+      <div class="level2"><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.CountBasedNarrowingIntervalMatcher.html">CountBasedNarrowingIntervalMatcher</a></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html">IMatcher</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.html">MoreStructures.BurrowsWheelerTransform.Matching</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class NarrowingIntervalMatcher : IMatcher</code></pre>
+  </div>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+    ALGORITHM
+<br>
+This is a basic implementation, narrowing the matching interval at every iteration with two linear scans of the
+<a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_BWT">BWT</a>:
+<br>
+- the first from the beginning of the current interval and up to the first char matching the current char;
+<br>
+- and the second from the end of the current interval and up to the last char matching the current char.
+</p>
+<p>
+    COMPLEXITY
+<br>
+- No precomputation cost is paid on instantiation, except for sorting of the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_BWT">BWT</a> to build the 
+<a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_SortedBWT">SortedBWT</a>, which takes O(n * log(n)) time using <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.html#MoreStructures_BurrowsWheelerTransform_BWTransform_QuickSort">QuickSort</a>, but can 
+also run in linear time for a constant size alphabet using the Counting Sort. 
+<br>
+- Either way, the predominant cost is the main narrowing interval algorithm, which runs for each char in the 
+BWT (i.e. n times) two linear scans of the BWT itself (on the order of n), resulting in quadratic time 
+execution.
+<br>
+- Therefore, Time Complexity is O(n^2) and Space Complexity is O(n).
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.%23ctor(MoreStructures.RotatedTextWithTerminator%2CMoreStructures.RotatedTextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L63">View Source</a>
+  </span>
+  <a id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher__ctor_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.#ctor*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher__ctor_MoreStructures_RotatedTextWithTerminator_MoreStructures_RotatedTextWithTerminator_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.#ctor(MoreStructures.RotatedTextWithTerminator,MoreStructures.RotatedTextWithTerminator)">NarrowingIntervalMatcher(RotatedTextWithTerminator, RotatedTextWithTerminator)</h4>
+  <div class="markdown level1 summary"><p>Builds an instance of this finder, for the provided <code data-dev-comment-type="paramref" class="paramref">bwt</code> and
+<code data-dev-comment-type="paramref" class="paramref">sbwt</code>. Because both BWT and SortedBWT are provided, no sorting happens.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NarrowingIntervalMatcher(RotatedTextWithTerminator bwt, RotatedTextWithTerminator sbwt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a></td>
+        <td><span class="parametername">bwt</span></td>
+        <td><p>The Burrows-Wheeler Transform. Corresponds to the last column of the Burrows-Wheeler Matrix.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a></td>
+        <td><span class="parametername">sbwt</span></td>
+        <td><p>The sorted version of the Burrows-Wheeler Transform.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_BWT.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.BWT%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L42">View Source</a>
+  </span>
+  <a id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_BWT_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.BWT*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_BWT" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.BWT">BWT</h4>
+  <div class="markdown level1 summary"><p>The Burrows-Wheeler Transform. Also, the last column of the Burrows-Wheeler Matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RotatedTextWithTerminator BWT { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_CharComparer.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.CharComparer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L51">View Source</a>
+  </span>
+  <a id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_CharComparer_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.CharComparer*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_CharComparer" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.CharComparer">CharComparer</h4>
+  <div class="markdown level1 summary"><p>The implementation of <see cref="!:IComparer&lt;T>"></see> of <span class="xref">System.Char</span> to be used to comparer chars of
+<a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_BWT">BWT</a> or <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_SortedBWT">SortedBWT</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IComparer&lt;char&gt; CharComparer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IComparer</span>&lt;<span class="xref">System.Char</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_OrderedAscListSearch.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.OrderedAscListSearch%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L39">View Source</a>
+  </span>
+  <a id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_OrderedAscListSearch_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.OrderedAscListSearch*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_OrderedAscListSearch" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.OrderedAscListSearch">OrderedAscListSearch</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="MoreStructures.Lists.Searching.ISearch.html">ISearch</a> implementation to be used when searching for items in lists sorted
+in ascending order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static ISearch OrderedAscListSearch { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Lists.Searching.ISearch.html">ISearch</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_SortedBWT.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.SortedBWT%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L45">View Source</a>
+  </span>
+  <a id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_SortedBWT_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.SortedBWT*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_SortedBWT" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.SortedBWT">SortedBWT</h4>
+  <div class="markdown level1 summary"><p>The sorted version of the Burrows-Wheeler Transform. Also, the first column of the Burrows-Wheeler Matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RotatedTextWithTerminator SortedBWT { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.RotatedTextWithTerminator.html">RotatedTextWithTerminator</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_BuildLastFirstFinder.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.BuildLastFirstFinder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L128">View Source</a>
+  </span>
+  <a id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_BuildLastFirstFinder_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.BuildLastFirstFinder*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_BuildLastFirstFinder" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.BuildLastFirstFinder">BuildLastFirstFinder()</h4>
+  <div class="markdown level1 summary"><p>Builds the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html">ILastFirstFinder</a> instance which is then (potentially) used by all iterations of the
+matching algorithm over the pattern to match against <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_BWT">BWT</a> and
+<a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html#MoreStructures_BurrowsWheelerTransform_Matching_IMatcher_SortedBWT">SortedBWT</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual ILastFirstFinder BuildLastFirstFinder()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html">ILastFirstFinder</a></td>
+        <td><p>An instance of <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html">ILastFirstFinder</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_BuildLastFirstFinder_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html">ILastFirstFinder</a> implementation used is <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.PrecomputedFinder.html">PrecomputedFinder</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_Match_IEnumerable_System_Char__.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.Match(IEnumerable%7BSystem.Char%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L93">View Source</a>
+  </span>
+  <a id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_Match_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.Match*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_Match_IEnumerable_System_Char__" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.Match(IEnumerable{System.Char})">Match(IEnumerable&lt;Char&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Match Match(IEnumerable&lt;char&gt; pattern)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.Char</span>&gt;</td>
+        <td><span class="parametername">pattern</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.Match.html">Match</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_Match_IEnumerable_System_Char___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The pattern matching is done via successive narrowing of a interval, defined by a start and an end index.<br></p>
+<ol>
+<li>At the beginning the interval is as big as the provided <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.html">BWTransform</a> (and its text).
+<br></li>
+<li>The algorithm proceeds in reverse: from the last char of the pattern P, P[^1] to the first, P[0].
+<br></li>
+<li>Search in Sorted BWT for the range of indexes (first1, last1) having value P[^1] via a <a class="xref" href="MoreStructures.Lists.Searching.ISearch.html">ISearch</a>
+implementation (because the input is sorted, binary search is possible).
+<br></li>
+<li>The char in BWT at indexes first1 and last1 represent the predecessor of all instances of P[^1] in P. The
+interval (first1, last1) can then be narrowed down to (first2, last2), taking into account only the chars
+in BWT which match the predecessor of P[^1], P[^2].
+<br></li>
+<li>By last-first property, new indexes (first3, last3) of the chars in Sorted BWT corresponding to first2 and
+last2 in BWT, can be found. Those are the first and last of the new narrowed range, ready for step 4.
+<br></li>
+<li>When all chars of P, up to P[0], have been consumed, all matches have been identified as an interval in
+Sorted BWT.</li>
+</ol>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_NarrowInterval_System_Char_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.NarrowInterval(System.Char%2CMoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L158">View Source</a>
+  </span>
+  <a id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_NarrowInterval_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.NarrowInterval*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_NarrowInterval_System_Char_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_System_Int32_System_Int32_" data-uid="MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher.NarrowInterval(System.Char,MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder,System.Int32,System.Int32)">NarrowInterval(Char, ILastFirstFinder, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Narrows the provided (<code data-dev-comment-type="paramref" class="paramref">startIndex</code>, <code data-dev-comment-type="paramref" class="paramref">endIndex</code>) interval, (possibly) using
+the provided <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html">ILastFirstFinder</a> <code data-dev-comment-type="paramref" class="paramref">finder</code> for last-first matching.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual (bool success, int narrowedStartIndex, int narrowedEndIndex) NarrowInterval(char currentChar, ILastFirstFinder finder, int startIndex, int endIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Char</span></td>
+        <td><span class="parametername">currentChar</span></td>
+        <td><p>The char currently being processed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MoreStructures.BurrowsWheelerTransform.Builders.LastFirstFinders.ILastFirstFinder.html">ILastFirstFinder</a></td>
+        <td><span class="parametername">finder</span></td>
+        <td><p>The finder used to perform last-first matching, if needed. When pattern matching a single instance is shared
+across all iterations over the pattern.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">startIndex</span></td>
+        <td><p>The lower extreme of the interval to be narrowed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">endIndex</span></td>
+        <td><p>The higher extreme of the interval to be narrowed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.Boolean</span>, <span class="xref">System.Int32</span>, <span class="xref">System.Int32</span>&gt;</td>
+        <td><p>An interval narrower than the one provided as input, or (-1, -1), if narrowing resulted into an empty set
+(i.e. overall matching has failed).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher_NarrowInterval_System_Char_MoreStructures_BurrowsWheelerTransform_Builders_LastFirstFinders_ILastFirstFinder_System_Int32_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Narrowing is performed in five sub-steps:
+<br></p>
+<ol>
+<li>a linear scan in BWT from <code data-dev-comment-type="paramref" class="paramref">startIndex</code> downwards is done, to identify the narrowed start;
+<br></li>
+<li>a linear scan in BWT from <code data-dev-comment-type="paramref" class="paramref">endIndex</code> upwards is done, to identify the narrowed end;
+<br></li>
+<li>a last-first of the narrowed start is done, to find the corresponding narrowed start in the Sorted BWT;
+<br></li>
+<li>a last-first of the narrowed end is done, to find the corresponding narrowed end in the Sorted BWT;
+<br></li>
+<li>the narrowed interval in Sorted BWT is returned.</li>
+</ol>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.BurrowsWheelerTransform.Matching.IMatcher.html">IMatcher</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Matching_NarrowingIntervalMatcher.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Matching.NarrowingIntervalMatcher%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Matching/NarrowingIntervalMatcher.cs/#L33" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SinkSccBasedSccFinder
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SinkSccBasedSccFinder
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.Graphs.StronglyConnectedComponents.SinkSccBasedSccFinder">
+  
+  
+  <h1 id="MoreStructures_Graphs_StronglyConnectedComponents_SinkSccBasedSccFinder" data-uid="MoreStructures.Graphs.StronglyConnectedComponents.SinkSccBasedSccFinder" class="text-break">Class SinkSccBasedSccFinder
+  </h1>
+  <div class="markdown level0 summary"><p>An efficient implementation of <a class="xref" href="MoreStructures.Graphs.StronglyConnectedComponents.ISccFinder.html">ISccFinder</a>, which runs a single DFS on the inverted graph to calculate
+post orders, and then uses the post orders to identify sink SCC.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">SinkSccBasedSccFinder</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.Graphs.StronglyConnectedComponents.ISccFinder.html">ISccFinder</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.Graphs.StronglyConnectedComponents.html">MoreStructures.Graphs.StronglyConnectedComponents</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_Graphs_StronglyConnectedComponents_SinkSccBasedSccFinder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SinkSccBasedSccFinder : ISccFinder</code></pre>
+  </div>
+  <h5 id="MoreStructures_Graphs_StronglyConnectedComponents_SinkSccBasedSccFinder_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+ADVANTANGES AND DISADVANTAGES
+<br>
+- Compared to the simple approach of <a class="xref" href="MoreStructures.Graphs.StronglyConnectedComponents.NaiveSccFinder.html">NaiveSccFinder</a>, this implementation requires more complex
+  operations, such as reversing the graph, generating and storing post order values.
+<br>
+- However, it has better runtime, approaching optimality, since it runs DFS only once, and not for every vertex
+of the graph.
+</p>
+<p>
+ALGORITHM
+<br>
+- The algorithm is based on the observation that the DFS on any vertex of a sink SCC is the sink SCC itself.
+<br>
+- So the goal at each iteration is to efficiently find a vertex which belongs to a sink SCC and run DFS on it.
+<br>
+- Such a vertex v can be found by running a single DFS on the reverse graph (graph with the same vertices and
+reversed orientation of edges) and taking the vertex with the highest post order value.
+<br>
+- After having identified v, DFS is run on v to find the sink SCC S, v is in. 
+<br>
+- All found vertices are assigned the same SCC S: a list of v items SCCs is initialized to store the result and
+SCCs[i] is set to S to indicate the vertex i is in the SCC with label S.
+<br>
+- Then the operation is repeated, identifing the vertex v with the highest post order value, among the vertices
+of the graph which haven&apos;t been assigned a SCC yet.
+<br>
+- When there are no vertices left, the SCCs list is returned as result.
+</p>
+<p>
+COMPLEXITY
+<br>
+- <a class="xref" href="MoreStructures.Graphs.IGraph.html#MoreStructures_Graphs_IGraph_Reverse">Reverse()</a> performance depends on the specific implementation of the graph.
+<br>
+- Building and instrumenting the required <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html">IVisitStrategy</a> instances and storing the post order 
+do not depend on the side of the input.
+<br>
+- The output has size equal to the number of vertices in the graph.
+<br>
+- DFS, which is at the core of this algorithm, is run in two stages.
+<br>
+- In the first stage it is executed just once, on the entire graph, calling 
+<a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_DepthFirstSearchOfGraph_MoreStructures_Graphs_IGraph_">DepthFirstSearchOfGraph(IGraph)</a>.
+<br>
+- In the second stage it is executed iteratively, on vertices not assigned an SCC yet, this time calling 
+<a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_DepthFirstSearchFromVertex_MoreStructures_Graphs_IGraph_System_Int32_">DepthFirstSearchFromVertex(IGraph, Int32)</a>.
+<br>
+- Because at each iteration chosen vertex belongs to a sink SCC (due to the fact that the vertex with the
+highest remaining post order is selected), each vertex of the graph is explored at most once thoughout the
+entire second stage.
+<br>
+- Therefore, Time Complexity is O(Trvs + Tdfs) and Space Complexity is O(Srvs + Sdfs), where Trvs and Srvs are
+the time and space required to reverse the provided <a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a> and Tdfs and Sdfs are the time and 
+space required to run DFS via the <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html">IVisitStrategy</a> provided by 
+<a class="xref" href="MoreStructures.Graphs.StronglyConnectedComponents.SinkSccBasedSccFinder.html#MoreStructures_Graphs_StronglyConnectedComponents_SinkSccBasedSccFinder_VisitStrategyBuilder">VisitStrategyBuilder</a>.
+<br>
+- In typical implementations of <a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a> and <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html">IVisitStrategy</a>, Tdfs >= Trvs, and Tdfs
+is O(v + e), which makes Time Complexity equals to O(v * Ta + e). 
+<br>
+- Space Complexity is generally at least O(v + e + Sa), if <a class="xref" href="MoreStructures.Graphs.IGraph.html#MoreStructures_Graphs_IGraph_Reverse">Reverse()</a> just builds a proxy of 
+the provided graph, but can be O(v^2) for example if <a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a> builds a separated transposed copy
+of the adjacency matrix when reversing, and v^2 > v + e (very sparse graph).
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_StronglyConnectedComponents_SinkSccBasedSccFinder__ctor_Func_MoreStructures_Graphs_Visitor_IVisitStrategy__.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.StronglyConnectedComponents.SinkSccBasedSccFinder.%23ctor(Func%7BMoreStructures.Graphs.Visitor.IVisitStrategy%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/StronglyConnectedComponents/SinkSccBasedSccFinder.cs/#L92">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_StronglyConnectedComponents_SinkSccBasedSccFinder__ctor_" data-uid="MoreStructures.Graphs.StronglyConnectedComponents.SinkSccBasedSccFinder.#ctor*"></a>
+  <h4 id="MoreStructures_Graphs_StronglyConnectedComponents_SinkSccBasedSccFinder__ctor_Func_MoreStructures_Graphs_Visitor_IVisitStrategy__" data-uid="MoreStructures.Graphs.StronglyConnectedComponents.SinkSccBasedSccFinder.#ctor(Func{MoreStructures.Graphs.Visitor.IVisitStrategy})">SinkSccBasedSccFinder(Func&lt;IVisitStrategy&gt;)</h4>
+  <div class="markdown level1 summary"><p><inheritdoc cref="T:MoreStructures.Graphs.StronglyConnectedComponents.SinkSccBasedSccFinder"></inheritdoc></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SinkSccBasedSccFinder(Func&lt;IVisitStrategy&gt; visitStrategyBuilder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html">IVisitStrategy</a>&gt;</td>
+        <td><span class="parametername">visitStrategyBuilder</span></td>
+        <td><p><inheritdoc cref="P:MoreStructures.Graphs.StronglyConnectedComponents.SinkSccBasedSccFinder.VisitStrategyBuilder" path="/summary"></inheritdoc></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Graphs_StronglyConnectedComponents_SinkSccBasedSccFinder__ctor_Func_MoreStructures_Graphs_Visitor_IVisitStrategy___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.Graphs.StronglyConnectedComponents.SinkSccBasedSccFinder"></inheritdoc></p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_StronglyConnectedComponents_SinkSccBasedSccFinder_VisitStrategyBuilder.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.StronglyConnectedComponents.SinkSccBasedSccFinder.VisitStrategyBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/StronglyConnectedComponents/SinkSccBasedSccFinder.cs/#L81">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_StronglyConnectedComponents_SinkSccBasedSccFinder_VisitStrategyBuilder_" data-uid="MoreStructures.Graphs.StronglyConnectedComponents.SinkSccBasedSccFinder.VisitStrategyBuilder*"></a>
+  <h4 id="MoreStructures_Graphs_StronglyConnectedComponents_SinkSccBasedSccFinder_VisitStrategyBuilder" data-uid="MoreStructures.Graphs.StronglyConnectedComponents.SinkSccBasedSccFinder.VisitStrategyBuilder">VisitStrategyBuilder</h4>
+  <div class="markdown level1 summary"><p>A building function able to instantiate the <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html">IVisitStrategy</a> to be used to run Depth First Searches
+of the entire graph and from vertex, via <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_DepthFirstSearchOfGraph_MoreStructures_Graphs_IGraph_">DepthFirstSearchOfGraph(IGraph)</a> and
+<a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_DepthFirstSearchFromVertex_MoreStructures_Graphs_IGraph_System_Int32_">DepthFirstSearchFromVertex(IGraph, Int32)</a> respectively.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;IVisitStrategy&gt; VisitStrategyBuilder { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html">IVisitStrategy</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_StronglyConnectedComponents_SinkSccBasedSccFinder_Find_MoreStructures_Graphs_IGraph_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.StronglyConnectedComponents.SinkSccBasedSccFinder.Find(MoreStructures.Graphs.IGraph)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/StronglyConnectedComponents/SinkSccBasedSccFinder.cs/#L101">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_StronglyConnectedComponents_SinkSccBasedSccFinder_Find_" data-uid="MoreStructures.Graphs.StronglyConnectedComponents.SinkSccBasedSccFinder.Find*"></a>
+  <h4 id="MoreStructures_Graphs_StronglyConnectedComponents_SinkSccBasedSccFinder_Find_MoreStructures_Graphs_IGraph_" data-uid="MoreStructures.Graphs.StronglyConnectedComponents.SinkSccBasedSccFinder.Find(MoreStructures.Graphs.IGraph)">Find(IGraph)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;int&gt; Find(IGraph graph)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a></td>
+        <td><span class="parametername">graph</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IList</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Graphs_StronglyConnectedComponents_SinkSccBasedSccFinder_Find_MoreStructures_Graphs_IGraph__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.Graphs.StronglyConnectedComponents.SinkSccBasedSccFinder"></inheritdoc></p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.Graphs.StronglyConnectedComponents.ISccFinder.html">ISccFinder</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_StronglyConnectedComponents_SinkSccBasedSccFinder.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.StronglyConnectedComponents.SinkSccBasedSccFinder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/StronglyConnectedComponents/SinkSccBasedSccFinder.cs/#L74" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

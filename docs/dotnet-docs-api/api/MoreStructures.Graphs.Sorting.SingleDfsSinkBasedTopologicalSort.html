@@ -1,0 +1,366 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SingleDfsSinkBasedTopologicalSort
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SingleDfsSinkBasedTopologicalSort
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.Graphs.Sorting.SingleDfsSinkBasedTopologicalSort">
+  
+  
+  <h1 id="MoreStructures_Graphs_Sorting_SingleDfsSinkBasedTopologicalSort" data-uid="MoreStructures.Graphs.Sorting.SingleDfsSinkBasedTopologicalSort" class="text-break">Class SingleDfsSinkBasedTopologicalSort
+  </h1>
+  <div class="markdown level0 summary"><p>An <a class="xref" href="MoreStructures.Graphs.Sorting.ITopologicalSort.html">ITopologicalSort</a> implementation which assigns topological order to vertices by identifing a sink
+vertex at each iteration <strong>in a deterministic way</strong>, by running DFS once on the entire graph and storing the
+post order.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">SingleDfsSinkBasedTopologicalSort</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.Graphs.Sorting.ITopologicalSort.html">ITopologicalSort</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.Graphs.Sorting.html">MoreStructures.Graphs.Sorting</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_Graphs_Sorting_SingleDfsSinkBasedTopologicalSort_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SingleDfsSinkBasedTopologicalSort : ITopologicalSort</code></pre>
+  </div>
+  <h5 id="MoreStructures_Graphs_Sorting_SingleDfsSinkBasedTopologicalSort_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+ADVANTAGES AND DISADVANTAGES
+<br>
+- This implementation is a conceptual improvement over both <a class="xref" href="MoreStructures.Graphs.Sorting.AnyPathToSinkBasedTopologicalSort.html">AnyPathToSinkBasedTopologicalSort</a> and
+<a class="xref" href="MoreStructures.Graphs.Sorting.DfsOnEachVertexSinkBasedTopologicalSort.html">DfsOnEachVertexSinkBasedTopologicalSort</a>.
+<br>
+- The optimization is based on the observation that a lot of the DFS traversal, done by 
+<a class="xref" href="MoreStructures.Graphs.Sorting.DfsOnEachVertexSinkBasedTopologicalSort.html">DfsOnEachVertexSinkBasedTopologicalSort</a> to populate its &quot;reachability dictionary&quot;, is shared 
+between many of the vertices connected together, and doesn&apos;t need to be repeated every time.
+<br>
+- For example, in a simple graph <code>A1 -> A2 -> ... -> An</code>, the DFS on A1 and the DFS on A2 share the path 
+<code>A2 -> ... -> An</code>, the DFS on A1 and A3 share the path <code>A3 -> ... -> An</code>, etc.
+<br>
+- While <a class="xref" href="MoreStructures.Graphs.Sorting.AnyPathToSinkBasedTopologicalSort.html">AnyPathToSinkBasedTopologicalSort</a> doesn&apos;t explicitely use a 
+<a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_DepthFirstSearchFromVertex_MoreStructures_Graphs_IGraph_System_Int32_">DepthFirstSearchFromVertex(IGraph, Int32)</a>, its strategy can be seen as a DFS traversal if
+the initial vertex and the path followed at each iteration are taken consistently.
+<br>
+- Therefore, this implementation is an improvement of both previously mentioned implementations.
+<br>
+- Moreover, if the DFS traversal is deterministic, this algorithm also is.
+</p>
+<p>
+ALGORITHM
+<br>
+- A full DFS traversal of the entire DAG is performed via 
+<a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_DepthFirstSearchOfGraph_MoreStructures_Graphs_IGraph_">DepthFirstSearchOfGraph(IGraph)</a> on a <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html">IVisitStrategy</a> built by the 
+<a class="xref" href="MoreStructures.Graphs.Sorting.SingleDfsSinkBasedTopologicalSort.html#MoreStructures_Graphs_Sorting_SingleDfsSinkBasedTopologicalSort_VisitStrategyBuilder">VisitStrategyBuilder</a> provided in the constructor.
+<br>
+- Before running the DFS traversal, a post-visit event handler is attached to 
+<a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_VisitedVertex">VisitedVertex</a>, running a post-order counter which is incremented at every visit.
+<br>
+- The value of the post-order counter is stored in an array TS of v integers, where v is the number of vertices
+in the graph, at a position defined by the id of the vertex.
+<br>
+- Finally, the array TS is returned.
+</p>
+<p>
+COMPLEXITY
+<br>
+- Running DFS for the entire graph via <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_DepthFirstSearchFromVertex_MoreStructures_Graphs_IGraph_System_Int32_">DepthFirstSearchFromVertex(IGraph, Int32)</a> is a
+  generally expensive operation, which has a Time and Space Complexity which depends on the specific 
+<a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html">IVisitStrategy</a> used.
+<br>
+- However, unlike in <a class="xref" href="MoreStructures.Graphs.Sorting.DfsOnEachVertexSinkBasedTopologicalSort.html">DfsOnEachVertexSinkBasedTopologicalSort</a>, it is performed once, and not for
+each vertex.
+<br>
+- Instantiating the TS array is a O(v) operation, both in time and space.
+<br>
+- Storing, updating and assigning the post-order counter to the right item of TS are all constant-time 
+operations.
+<br>
+- Therefore Time Complexity is O(Tdfs + v) and Space Complexity is O(Sdfs + v).
+<br>
+- Using <a class="xref" href="MoreStructures.Graphs.Visitor.FullyIterativeHashSetBasedGraphVisit.html">FullyIterativeHashSetBasedGraphVisit</a> as <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html">IVisitStrategy</a> and assuming 
+<a class="xref" href="MoreStructures.Graphs.IGraph.html#MoreStructures_Graphs_IGraph_GetAdjacentVerticesAndEdges_System_Int32_System_Boolean_">GetAdjacentVerticesAndEdges(Int32, Boolean)</a> can be computed in constant time, Tdfs and Sdfs
+becomes linear in v and e.
+<br>
+- In this case, Time Complexity becomes O(v + e) and Space Complexity becomes O(v).
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Sorting_SingleDfsSinkBasedTopologicalSort__ctor_Func_MoreStructures_Graphs_Visitor_IVisitStrategy__.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Sorting.SingleDfsSinkBasedTopologicalSort.%23ctor(Func%7BMoreStructures.Graphs.Visitor.IVisitStrategy%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Sorting/SingleDfsSinkBasedTopologicalSort.cs/#L88">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_Sorting_SingleDfsSinkBasedTopologicalSort__ctor_" data-uid="MoreStructures.Graphs.Sorting.SingleDfsSinkBasedTopologicalSort.#ctor*"></a>
+  <h4 id="MoreStructures_Graphs_Sorting_SingleDfsSinkBasedTopologicalSort__ctor_Func_MoreStructures_Graphs_Visitor_IVisitStrategy__" data-uid="MoreStructures.Graphs.Sorting.SingleDfsSinkBasedTopologicalSort.#ctor(Func{MoreStructures.Graphs.Visitor.IVisitStrategy})">SingleDfsSinkBasedTopologicalSort(Func&lt;IVisitStrategy&gt;)</h4>
+  <div class="markdown level1 summary"><p><inheritdoc cref="T:MoreStructures.Graphs.Sorting.SingleDfsSinkBasedTopologicalSort"></inheritdoc></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SingleDfsSinkBasedTopologicalSort(Func&lt;IVisitStrategy&gt; visitStrategyBuilder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html">IVisitStrategy</a>&gt;</td>
+        <td><span class="parametername">visitStrategyBuilder</span></td>
+        <td><p><inheritdoc cref="P:MoreStructures.Graphs.Sorting.SingleDfsSinkBasedTopologicalSort.VisitStrategyBuilder" path="/summary"></inheritdoc></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Graphs_Sorting_SingleDfsSinkBasedTopologicalSort__ctor_Func_MoreStructures_Graphs_Visitor_IVisitStrategy___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.Graphs.Sorting.SingleDfsSinkBasedTopologicalSort"></inheritdoc></p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Sorting_SingleDfsSinkBasedTopologicalSort_VisitStrategyBuilder.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Sorting.SingleDfsSinkBasedTopologicalSort.VisitStrategyBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Sorting/SingleDfsSinkBasedTopologicalSort.cs/#L77">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_Sorting_SingleDfsSinkBasedTopologicalSort_VisitStrategyBuilder_" data-uid="MoreStructures.Graphs.Sorting.SingleDfsSinkBasedTopologicalSort.VisitStrategyBuilder*"></a>
+  <h4 id="MoreStructures_Graphs_Sorting_SingleDfsSinkBasedTopologicalSort_VisitStrategyBuilder" data-uid="MoreStructures.Graphs.Sorting.SingleDfsSinkBasedTopologicalSort.VisitStrategyBuilder">VisitStrategyBuilder</h4>
+  <div class="markdown level1 summary"><p>A visitor builder, to be used to build the <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html">IVisitStrategy</a> instance needed to identify sink
+vertices, by running a Depth First Search on the graph.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;IVisitStrategy&gt; VisitStrategyBuilder { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html">IVisitStrategy</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Sorting_SingleDfsSinkBasedTopologicalSort_Sort_MoreStructures_Graphs_IGraph_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Sorting.SingleDfsSinkBasedTopologicalSort.Sort(MoreStructures.Graphs.IGraph)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Sorting/SingleDfsSinkBasedTopologicalSort.cs/#L97">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_Sorting_SingleDfsSinkBasedTopologicalSort_Sort_" data-uid="MoreStructures.Graphs.Sorting.SingleDfsSinkBasedTopologicalSort.Sort*"></a>
+  <h4 id="MoreStructures_Graphs_Sorting_SingleDfsSinkBasedTopologicalSort_Sort_MoreStructures_Graphs_IGraph_" data-uid="MoreStructures.Graphs.Sorting.SingleDfsSinkBasedTopologicalSort.Sort(MoreStructures.Graphs.IGraph)">Sort(IGraph)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;int&gt; Sort(IGraph dag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a></td>
+        <td><span class="parametername">dag</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IList</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Graphs_Sorting_SingleDfsSinkBasedTopologicalSort_Sort_MoreStructures_Graphs_IGraph__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.Graphs.Sorting.SingleDfsSinkBasedTopologicalSort"></inheritdoc></p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.Graphs.Sorting.ITopologicalSort.html">ITopologicalSort</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Sorting_SingleDfsSinkBasedTopologicalSort.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Sorting.SingleDfsSinkBasedTopologicalSort%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Sorting/SingleDfsSinkBasedTopologicalSort.cs/#L71" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

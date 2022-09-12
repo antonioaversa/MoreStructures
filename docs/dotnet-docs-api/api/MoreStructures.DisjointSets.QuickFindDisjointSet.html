@@ -1,0 +1,456 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class QuickFindDisjointSet
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class QuickFindDisjointSet
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.DisjointSets.QuickFindDisjointSet">
+  
+  
+  <h1 id="MoreStructures_DisjointSets_QuickFindDisjointSet" data-uid="MoreStructures.DisjointSets.QuickFindDisjointSet" class="text-break">Class QuickFindDisjointSet
+  </h1>
+  <div class="markdown level0 summary"><p>An <a class="xref" href="MoreStructures.DisjointSets.IDisjointSet.html">IDisjointSet</a> implementation based on a simple <see cref="!:List&lt;T>"></see> to store set ids of each of
+the values stored in the Disjoint Set.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">QuickFindDisjointSet</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.DisjointSets.IDisjointSet.html">IDisjointSet</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.DisjointSets.html">MoreStructures.DisjointSets</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_DisjointSets_QuickFindDisjointSet_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class QuickFindDisjointSet : IDisjointSet</code></pre>
+  </div>
+  <h5 id="MoreStructures_DisjointSets_QuickFindDisjointSet_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><ul>
+<li>This implementation optimizes <a class="xref" href="MoreStructures.DisjointSets.QuickFindDisjointSet.html#MoreStructures_DisjointSets_QuickFindDisjointSet_Find_System_Int32_">Find(Int32)</a> and <a class="xref" href="MoreStructures.DisjointSets.QuickFindDisjointSet.html#MoreStructures_DisjointSets_QuickFindDisjointSet_AreConnected_System_Int32_System_Int32_">AreConnected(Int32, Int32)</a> runtime, making
+them constant-time operations, at the cost of <a class="xref" href="MoreStructures.DisjointSets.QuickFindDisjointSet.html#MoreStructures_DisjointSets_QuickFindDisjointSet_Union_System_Int32_System_Int32_">Union(Int32, Int32)</a>, which requires a full scan of the
+underlying list and hence is a O(n) operation.
+<br></li>
+<li>Check <a class="xref" href="MoreStructures.DisjointSets.QuickUnionDisjointSet.html">QuickUnionDisjointSet</a> for an alternative implementation of <a class="xref" href="MoreStructures.DisjointSets.IDisjointSet.html">IDisjointSet</a> which
+does the opposite, in terms of optimization.</li>
+</ul>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_DisjointSets_QuickFindDisjointSet__ctor_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.DisjointSets.QuickFindDisjointSet.%23ctor(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/DisjointSets/QuickFindDisjointSet.cs/#L29">View Source</a>
+  </span>
+  <a id="MoreStructures_DisjointSets_QuickFindDisjointSet__ctor_" data-uid="MoreStructures.DisjointSets.QuickFindDisjointSet.#ctor*"></a>
+  <h4 id="MoreStructures_DisjointSets_QuickFindDisjointSet__ctor_System_Int32_" data-uid="MoreStructures.DisjointSets.QuickFindDisjointSet.#ctor(System.Int32)">QuickFindDisjointSet(Int32)</h4>
+  <div class="markdown level1 summary"><p>Builds a Disjoint Set structure containing <code data-dev-comment-type="paramref" class="paramref">valuesCount</code> disjoint values, each one into its
+own singleton set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QuickFindDisjointSet(int valuesCount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">valuesCount</span></td>
+        <td><p><inheritdoc cref="P:MoreStructures.DisjointSets.QuickFindDisjointSet.ValuesCount" path="/summary"></inheritdoc></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_DisjointSets_QuickFindDisjointSet__ctor_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Requires initializing all the <code data-dev-comment-type="paramref" class="paramref">valuesCount</code> items of the underlying list.
+<br>
+Time and Space Complexity are O(n).</p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_DisjointSets_QuickFindDisjointSet_SetsCount.md&amp;value=---%0Auid%3A%20MoreStructures.DisjointSets.QuickFindDisjointSet.SetsCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/DisjointSets/QuickFindDisjointSet.cs/#L54">View Source</a>
+  </span>
+  <a id="MoreStructures_DisjointSets_QuickFindDisjointSet_SetsCount_" data-uid="MoreStructures.DisjointSets.QuickFindDisjointSet.SetsCount*"></a>
+  <h4 id="MoreStructures_DisjointSets_QuickFindDisjointSet_SetsCount" data-uid="MoreStructures.DisjointSets.QuickFindDisjointSet.SetsCount">SetsCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SetsCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_DisjointSets_QuickFindDisjointSet_SetsCount_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Obtained as the number of distinct values in the underlying list, which is scanned linearly.
+<br>
+Time Complexity is O(n) and Space Complexity is O(1), where n is <a class="xref" href="MoreStructures.DisjointSets.QuickFindDisjointSet.html#MoreStructures_DisjointSets_QuickFindDisjointSet_ValuesCount">ValuesCount</a>.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_DisjointSets_QuickFindDisjointSet_ValuesCount.md&amp;value=---%0Auid%3A%20MoreStructures.DisjointSets.QuickFindDisjointSet.ValuesCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/DisjointSets/QuickFindDisjointSet.cs/#L46">View Source</a>
+  </span>
+  <a id="MoreStructures_DisjointSets_QuickFindDisjointSet_ValuesCount_" data-uid="MoreStructures.DisjointSets.QuickFindDisjointSet.ValuesCount*"></a>
+  <h4 id="MoreStructures_DisjointSets_QuickFindDisjointSet_ValuesCount" data-uid="MoreStructures.DisjointSets.QuickFindDisjointSet.ValuesCount">ValuesCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ValuesCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_DisjointSets_QuickFindDisjointSet_ValuesCount_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Set at construction time, based on the constructor parameter.
+<br>
+Time and Space Complexity are O(1).</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_DisjointSets_QuickFindDisjointSet_AreConnected_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.DisjointSets.QuickFindDisjointSet.AreConnected(System.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/DisjointSets/QuickFindDisjointSet.cs/#L62">View Source</a>
+  </span>
+  <a id="MoreStructures_DisjointSets_QuickFindDisjointSet_AreConnected_" data-uid="MoreStructures.DisjointSets.QuickFindDisjointSet.AreConnected*"></a>
+  <h4 id="MoreStructures_DisjointSets_QuickFindDisjointSet_AreConnected_System_Int32_System_Int32_" data-uid="MoreStructures.DisjointSets.QuickFindDisjointSet.AreConnected(System.Int32,System.Int32)">AreConnected(Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AreConnected(int first, int second)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">first</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">second</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_DisjointSets_QuickFindDisjointSet_AreConnected_System_Int32_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Calculated in constant-time by comparing the set id of the first value with the set id of the second value.
+<br>
+Time and Space Complexity are O(1).</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_DisjointSets_QuickFindDisjointSet_Find_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.DisjointSets.QuickFindDisjointSet.Find(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/DisjointSets/QuickFindDisjointSet.cs/#L81">View Source</a>
+  </span>
+  <a id="MoreStructures_DisjointSets_QuickFindDisjointSet_Find_" data-uid="MoreStructures.DisjointSets.QuickFindDisjointSet.Find*"></a>
+  <h4 id="MoreStructures_DisjointSets_QuickFindDisjointSet_Find_System_Int32_" data-uid="MoreStructures.DisjointSets.QuickFindDisjointSet.Find(System.Int32)">Find(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Find(int value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_DisjointSets_QuickFindDisjointSet_Find_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Calculated in constant-time by retrieving the set id at index <code data-dev-comment-type="paramref" class="paramref">value</code> in the underlying list.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_DisjointSets_QuickFindDisjointSet_Union_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.DisjointSets.QuickFindDisjointSet.Union(System.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/DisjointSets/QuickFindDisjointSet.cs/#L101">View Source</a>
+  </span>
+  <a id="MoreStructures_DisjointSets_QuickFindDisjointSet_Union_" data-uid="MoreStructures.DisjointSets.QuickFindDisjointSet.Union*"></a>
+  <h4 id="MoreStructures_DisjointSets_QuickFindDisjointSet_Union_System_Int32_System_Int32_" data-uid="MoreStructures.DisjointSets.QuickFindDisjointSet.Union(System.Int32,System.Int32)">Union(Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Union(int first, int second)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">first</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">second</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_DisjointSets_QuickFindDisjointSet_Union_System_Int32_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Retrieves the set id A of <code data-dev-comment-type="paramref" class="paramref">first</code> and B of <code data-dev-comment-type="paramref" class="paramref">second</code>, via <a class="xref" href="MoreStructures.DisjointSets.QuickFindDisjointSet.html#MoreStructures_DisjointSets_QuickFindDisjointSet_Find_System_Int32_">Find(Int32)</a>.
+<br>
+Then replaces all occurrences of B with A, in the underlying list.
+<br>
+Time Complexity is O(n) and Space Complexity is O(1).</p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.DisjointSets.IDisjointSet.html">IDisjointSet</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_DisjointSets_QuickFindDisjointSet.md&amp;value=---%0Auid%3A%20MoreStructures.DisjointSets.QuickFindDisjointSet%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/DisjointSets/QuickFindDisjointSet.cs/#L15" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

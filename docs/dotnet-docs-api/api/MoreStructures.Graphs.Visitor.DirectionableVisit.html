@@ -1,0 +1,762 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DirectionableVisit
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DirectionableVisit
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.Graphs.Visitor.DirectionableVisit">
+  
+  
+  <h1 id="MoreStructures_Graphs_Visitor_DirectionableVisit" data-uid="MoreStructures.Graphs.Visitor.DirectionableVisit" class="text-break">Class DirectionableVisit
+  </h1>
+  <div class="markdown level0 summary"><p>Any A <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html">IVisitStrategy</a> implementation which can perform the visit taking into account or not the
+direction of the edges of the graph, based on the <a class="xref" href="MoreStructures.Graphs.Visitor.DirectionableVisit.html#MoreStructures_Graphs_Visitor_DirectionableVisit_DirectedGraph">DirectedGraph</a> property.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">DirectionableVisit</span></div>
+      <div class="level2"><a class="xref" href="MoreStructures.Graphs.Visitor.FullyIterativeHashSetBasedGraphVisit.html">FullyIterativeHashSetBasedGraphVisit</a></div>
+      <div class="level2"><a class="xref" href="MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.html">FullyRecursiveHashSetBasedGraphVisit</a></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html">IVisitStrategy</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.Graphs.Visitor.html">MoreStructures.Graphs.Visitor</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_Graphs_Visitor_DirectionableVisit_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class DirectionableVisit : IVisitStrategy</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Visitor_DirectionableVisit__ctor_System_Boolean_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Visitor.DirectionableVisit.%23ctor(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Visitor/DirectionableVisit.cs/#L22">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_Visitor_DirectionableVisit__ctor_" data-uid="MoreStructures.Graphs.Visitor.DirectionableVisit.#ctor*"></a>
+  <h4 id="MoreStructures_Graphs_Visitor_DirectionableVisit__ctor_System_Boolean_" data-uid="MoreStructures.Graphs.Visitor.DirectionableVisit.#ctor(System.Boolean)">DirectionableVisit(Boolean)</h4>
+  <div class="markdown level1 summary"><p><inheritdoc cref="T:MoreStructures.Graphs.Visitor.DirectionableVisit"></inheritdoc></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected DirectionableVisit(bool directedGraph)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">directedGraph</span></td>
+        <td><p><inheritdoc cref="P:MoreStructures.Graphs.Visitor.DirectionableVisit.DirectedGraph" path="/summary"></inheritdoc></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Visitor_DirectionableVisit_DirectedGraph.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Visitor.DirectionableVisit.DirectedGraph%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Visitor/DirectionableVisit.cs/#L14">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_Visitor_DirectionableVisit_DirectedGraph_" data-uid="MoreStructures.Graphs.Visitor.DirectionableVisit.DirectedGraph*"></a>
+  <h4 id="MoreStructures_Graphs_Visitor_DirectionableVisit_DirectedGraph" data-uid="MoreStructures.Graphs.Visitor.DirectionableVisit.DirectedGraph">DirectedGraph</h4>
+  <div class="markdown level1 summary"><p>Whether the provided <a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a> should be considered as directed (i.e. edges should be
+traversed from start to end) or inderected (i.e. edges should be traversed both from start to end and from
+end to start).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DirectedGraph { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Visitor_DirectionableVisit_BreadthFirstSearchFromVertex_MoreStructures_Graphs_IGraph_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Visitor.DirectionableVisit.BreadthFirstSearchFromVertex(MoreStructures.Graphs.IGraph%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Visitor/DirectionableVisit.cs/#L88">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_Visitor_DirectionableVisit_BreadthFirstSearchFromVertex_" data-uid="MoreStructures.Graphs.Visitor.DirectionableVisit.BreadthFirstSearchFromVertex*"></a>
+  <h4 id="MoreStructures_Graphs_Visitor_DirectionableVisit_BreadthFirstSearchFromVertex_MoreStructures_Graphs_IGraph_System_Int32_" data-uid="MoreStructures.Graphs.Visitor.DirectionableVisit.BreadthFirstSearchFromVertex(MoreStructures.Graphs.IGraph,System.Int32)">BreadthFirstSearchFromVertex(IGraph, Int32)</h4>
+  <div class="markdown level1 summary"><p>Runs a partial Breadth First Search of the provided <code data-dev-comment-type="paramref" class="paramref">graph</code>, returning the list of vertices
+which are reachable from the vertex with id <code data-dev-comment-type="paramref" class="paramref">vertex</code>, along the edges of the graph, in the
+order in which they have been explored.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract IEnumerable&lt;int&gt; BreadthFirstSearchFromVertex(IGraph graph, int vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a></td>
+        <td><span class="parametername">graph</span></td>
+        <td><p>The <a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a> instance to be explored.
+<br>
+Can be considered directed or undirected, depending on the actual exploration implementation and visit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The <span class="xref">System.Int32</span> id identifying the vertex, from which the exploration has to be started.
+Different starting points will result into different sequences (by items and/or order) of vertices.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><p>The sequence of vertices, lazily generated. Neighbors of the same vertex are visited by ascending id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Visitor_DirectionableVisit_ConnectedComponents_MoreStructures_Graphs_IGraph_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Visitor.DirectionableVisit.ConnectedComponents(MoreStructures.Graphs.IGraph)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Visitor/DirectionableVisit.cs/#L76">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_Visitor_DirectionableVisit_ConnectedComponents_" data-uid="MoreStructures.Graphs.Visitor.DirectionableVisit.ConnectedComponents*"></a>
+  <h4 id="MoreStructures_Graphs_Visitor_DirectionableVisit_ConnectedComponents_MoreStructures_Graphs_IGraph_" data-uid="MoreStructures.Graphs.Visitor.DirectionableVisit.ConnectedComponents(MoreStructures.Graphs.IGraph)">ConnectedComponents(IGraph)</h4>
+  <div class="markdown level1 summary"><p>Explores the provided <code data-dev-comment-type="paramref" class="paramref">graph</code> entirely, via a Depth First Search, returning the mapping
+between the id of each vertex and the label of its connected component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IDictionary&lt;int, int&gt; ConnectedComponents(IGraph graph)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a></td>
+        <td><span class="parametername">graph</span></td>
+        <td><p>The <a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a> instance to be explored.
+<br>
+Can be considered directed or undirected, depending on the actual exploration implementation and visit.
+<br>
+However, connected components usually make sense for undirected graphs only, since a vertex can reach any other
+vertex of the same connected component only when edges can be traversed in both directions.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IDictionary</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">System.Int32</span>&gt;</td>
+        <td><p>A dictionary, mapping the id of each vertex of the graph to the label of its connected component, which is a
+non-negative integer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Visitor_DirectionableVisit_DepthFirstSearchAndConnectedComponentsOfGraph_MoreStructures_Graphs_IGraph_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Visitor.DirectionableVisit.DepthFirstSearchAndConnectedComponentsOfGraph(MoreStructures.Graphs.IGraph)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Visitor/DirectionableVisit.cs/#L66">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_Visitor_DirectionableVisit_DepthFirstSearchAndConnectedComponentsOfGraph_" data-uid="MoreStructures.Graphs.Visitor.DirectionableVisit.DepthFirstSearchAndConnectedComponentsOfGraph*"></a>
+  <h4 id="MoreStructures_Graphs_Visitor_DirectionableVisit_DepthFirstSearchAndConnectedComponentsOfGraph_MoreStructures_Graphs_IGraph_" data-uid="MoreStructures.Graphs.Visitor.DirectionableVisit.DepthFirstSearchAndConnectedComponentsOfGraph(MoreStructures.Graphs.IGraph)">DepthFirstSearchAndConnectedComponentsOfGraph(IGraph)</h4>
+  <div class="markdown level1 summary"><p>Runs a Depth First Search and returns vertices and related connected components.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract IEnumerable&lt;(int, int)&gt; DepthFirstSearchAndConnectedComponentsOfGraph(IGraph graph)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a></td>
+        <td><span class="parametername">graph</span></td>
+        <td><p>The <a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a> instance to be explored.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><p>A sequence of couples of <span class="xref">System.Int32</span>, the first being the vertex id and the second being the label of the
+connected component, the vertex belongs to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Graphs_Visitor_DirectionableVisit_DepthFirstSearchAndConnectedComponentsOfGraph_MoreStructures_Graphs_IGraph__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Generalizes both <a class="xref" href="MoreStructures.Graphs.Visitor.DirectionableVisit.html#MoreStructures_Graphs_Visitor_DirectionableVisit_DepthFirstSearchOfGraph_MoreStructures_Graphs_IGraph_">DepthFirstSearchOfGraph(IGraph)</a> and <a class="xref" href="MoreStructures.Graphs.Visitor.DirectionableVisit.html#MoreStructures_Graphs_Visitor_DirectionableVisit_ConnectedComponents_MoreStructures_Graphs_IGraph_">ConnectedComponents(IGraph)</a>
+methods, which have very similar implementations. Check those two methods for further information.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Visitor_DirectionableVisit_DepthFirstSearchFromVertex_MoreStructures_Graphs_IGraph_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Visitor.DirectionableVisit.DepthFirstSearchFromVertex(MoreStructures.Graphs.IGraph%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Visitor/DirectionableVisit.cs/#L85">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_Visitor_DirectionableVisit_DepthFirstSearchFromVertex_" data-uid="MoreStructures.Graphs.Visitor.DirectionableVisit.DepthFirstSearchFromVertex*"></a>
+  <h4 id="MoreStructures_Graphs_Visitor_DirectionableVisit_DepthFirstSearchFromVertex_MoreStructures_Graphs_IGraph_System_Int32_" data-uid="MoreStructures.Graphs.Visitor.DirectionableVisit.DepthFirstSearchFromVertex(MoreStructures.Graphs.IGraph,System.Int32)">DepthFirstSearchFromVertex(IGraph, Int32)</h4>
+  <div class="markdown level1 summary"><p>Runs a partial Depth First Search of the the provided <code data-dev-comment-type="paramref" class="paramref">graph</code>, returning the list of vertices
+which are reachable from the vertex with id <code data-dev-comment-type="paramref" class="paramref">vertex</code>, along the edges of the graph, in the
+order in which they have been explored.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract IEnumerable&lt;int&gt; DepthFirstSearchFromVertex(IGraph graph, int vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a></td>
+        <td><span class="parametername">graph</span></td>
+        <td><p>The <a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a> instance to be explored.
+Can be considered directed or undirected, depending on the actual exploration implementation and visit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The <span class="xref">System.Int32</span> id identifying the vertex, from which the exploration has to be started.
+Different starting points will result into different sequences (by items and/or order) of vertices.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><p>The sequence of vertices, lazily generated. Neighbors of the same vertex are visited by ascending id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Visitor_DirectionableVisit_DepthFirstSearchOfGraph_MoreStructures_Graphs_IGraph_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Visitor.DirectionableVisit.DepthFirstSearchOfGraph(MoreStructures.Graphs.IGraph)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Visitor/DirectionableVisit.cs/#L69">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_Visitor_DirectionableVisit_DepthFirstSearchOfGraph_" data-uid="MoreStructures.Graphs.Visitor.DirectionableVisit.DepthFirstSearchOfGraph*"></a>
+  <h4 id="MoreStructures_Graphs_Visitor_DirectionableVisit_DepthFirstSearchOfGraph_MoreStructures_Graphs_IGraph_" data-uid="MoreStructures.Graphs.Visitor.DirectionableVisit.DepthFirstSearchOfGraph(MoreStructures.Graphs.IGraph)">DepthFirstSearchOfGraph(IGraph)</h4>
+  <div class="markdown level1 summary"><p>Explores the provided <code data-dev-comment-type="paramref" class="paramref">graph</code> entirely, returning its list of vertices in the order in which
+they have been explored.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;int&gt; DepthFirstSearchOfGraph(IGraph graph)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a></td>
+        <td><span class="parametername">graph</span></td>
+        <td><p>The <a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a> instance to be explored.
+<br>
+Can be considered directed or undirected, depending on the actual exploration implementation and visit.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><p>The sequence of vertices, lazily generated. Neighbors of the same vertex are visited by ascending id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Visitor_DirectionableVisit_RaiseAlreadyVisitedVertex_MoreStructures_Graphs_Visitor_VisitEventArgs_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Visitor.DirectionableVisit.RaiseAlreadyVisitedVertex(MoreStructures.Graphs.Visitor.VisitEventArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Visitor/DirectionableVisit.cs/#L52">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_Visitor_DirectionableVisit_RaiseAlreadyVisitedVertex_" data-uid="MoreStructures.Graphs.Visitor.DirectionableVisit.RaiseAlreadyVisitedVertex*"></a>
+  <h4 id="MoreStructures_Graphs_Visitor_DirectionableVisit_RaiseAlreadyVisitedVertex_MoreStructures_Graphs_Visitor_VisitEventArgs_" data-uid="MoreStructures.Graphs.Visitor.DirectionableVisit.RaiseAlreadyVisitedVertex(MoreStructures.Graphs.Visitor.VisitEventArgs)">RaiseAlreadyVisitedVertex(VisitEventArgs)</h4>
+  <div class="markdown level1 summary"><p>Invoke the <a class="xref" href="MoreStructures.Graphs.Visitor.DirectionableVisit.html#MoreStructures_Graphs_Visitor_DirectionableVisit_AlreadyVisitedVertex">AlreadyVisitedVertex</a> event with the provided <code data-dev-comment-type="paramref" class="paramref">args</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void RaiseAlreadyVisitedVertex(VisitEventArgs args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Graphs.Visitor.VisitEventArgs.html">VisitEventArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments to be provided, when raising the event.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Visitor_DirectionableVisit_RaiseVisitedVertex_MoreStructures_Graphs_Visitor_VisitEventArgs_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Visitor.DirectionableVisit.RaiseVisitedVertex(MoreStructures.Graphs.Visitor.VisitEventArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Visitor/DirectionableVisit.cs/#L43">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_Visitor_DirectionableVisit_RaiseVisitedVertex_" data-uid="MoreStructures.Graphs.Visitor.DirectionableVisit.RaiseVisitedVertex*"></a>
+  <h4 id="MoreStructures_Graphs_Visitor_DirectionableVisit_RaiseVisitedVertex_MoreStructures_Graphs_Visitor_VisitEventArgs_" data-uid="MoreStructures.Graphs.Visitor.DirectionableVisit.RaiseVisitedVertex(MoreStructures.Graphs.Visitor.VisitEventArgs)">RaiseVisitedVertex(VisitEventArgs)</h4>
+  <div class="markdown level1 summary"><p>Invoke the <a class="xref" href="MoreStructures.Graphs.Visitor.DirectionableVisit.html#MoreStructures_Graphs_Visitor_DirectionableVisit_VisitedVertex">VisitedVertex</a> event with the provided <code data-dev-comment-type="paramref" class="paramref">args</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void RaiseVisitedVertex(VisitEventArgs args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Graphs.Visitor.VisitEventArgs.html">VisitEventArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments to be provided, when raising the event.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Visitor_DirectionableVisit_RaiseVisitingVertex_MoreStructures_Graphs_Visitor_VisitEventArgs_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Visitor.DirectionableVisit.RaiseVisitingVertex(MoreStructures.Graphs.Visitor.VisitEventArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Visitor/DirectionableVisit.cs/#L34">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_Visitor_DirectionableVisit_RaiseVisitingVertex_" data-uid="MoreStructures.Graphs.Visitor.DirectionableVisit.RaiseVisitingVertex*"></a>
+  <h4 id="MoreStructures_Graphs_Visitor_DirectionableVisit_RaiseVisitingVertex_MoreStructures_Graphs_Visitor_VisitEventArgs_" data-uid="MoreStructures.Graphs.Visitor.DirectionableVisit.RaiseVisitingVertex(MoreStructures.Graphs.Visitor.VisitEventArgs)">RaiseVisitingVertex(VisitEventArgs)</h4>
+  <div class="markdown level1 summary"><p>Invoke the <a class="xref" href="MoreStructures.Graphs.Visitor.DirectionableVisit.html#MoreStructures_Graphs_Visitor_DirectionableVisit_VisitingVertex">VisitingVertex</a> event with the provided <code data-dev-comment-type="paramref" class="paramref">args</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void RaiseVisitingVertex(VisitEventArgs args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Graphs.Visitor.VisitEventArgs.html">VisitEventArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments to be provided, when raising the event.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Visitor_DirectionableVisit_AlreadyVisitedVertex.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Visitor.DirectionableVisit.AlreadyVisitedVertex%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Visitor/DirectionableVisit.cs/#L46">View Source</a>
+  </span>
+  <h4 id="MoreStructures_Graphs_Visitor_DirectionableVisit_AlreadyVisitedVertex" data-uid="MoreStructures.Graphs.Visitor.DirectionableVisit.AlreadyVisitedVertex">AlreadyVisitedVertex</h4>
+  <div class="markdown level1 summary"><p>Invoked when a node would be about to be visited, but it has been already visited before, and won't be visited
+again.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;VisitEventArgs&gt; AlreadyVisitedVertex</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EventHandler</span>&lt;<a class="xref" href="MoreStructures.Graphs.Visitor.VisitEventArgs.html">VisitEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Graphs_Visitor_DirectionableVisit_AlreadyVisitedVertex_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The event may happen multiple times per vertex per graph visit and can signal the presence of one or more
+cycles (if the connected component across visits is the same).
+<br>
+Unlike <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_VisitingVertex">VisitingVertex</a> and <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_VisitedVertex">VisitedVertex</a>, the event may also not happen at all, for
+example in trees.
+<br>
+It surely is raised at least once in graphs with cycles. However, cycles are not required for this event to
+happen: for example, a vertex is encountered multiple times in DAGs.
+<br>/
+Check <a class="xref" href="MoreStructures.Graphs.Visitor.VisitEventArgs.html">VisitEventArgs</a> for the contextual information carried by the event (such as its connected
+component and previous vertex).</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Visitor_DirectionableVisit_VisitedVertex.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Visitor.DirectionableVisit.VisitedVertex%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Visitor/DirectionableVisit.cs/#L37">View Source</a>
+  </span>
+  <h4 id="MoreStructures_Graphs_Visitor_DirectionableVisit_VisitedVertex" data-uid="MoreStructures.Graphs.Visitor.DirectionableVisit.VisitedVertex">VisitedVertex</h4>
+  <div class="markdown level1 summary"><p>Invoked just after a node has been visited, by <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_DepthFirstSearchOfGraph_MoreStructures_Graphs_IGraph_">DepthFirstSearchOfGraph(IGraph)</a>,
+<a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_ConnectedComponents_MoreStructures_Graphs_IGraph_">ConnectedComponents(IGraph)</a>, <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_DepthFirstSearchFromVertex_MoreStructures_Graphs_IGraph_System_Int32_">DepthFirstSearchFromVertex(IGraph, Int32)</a> or any other
+method exploring vertices of the graph.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;VisitEventArgs&gt; VisitedVertex</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EventHandler</span>&lt;<a class="xref" href="MoreStructures.Graphs.Visitor.VisitEventArgs.html">VisitEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Graphs_Visitor_DirectionableVisit_VisitedVertex_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The event happens at most once per vertex per graph visit.
+<br>/
+Check <a class="xref" href="MoreStructures.Graphs.Visitor.VisitEventArgs.html">VisitEventArgs</a> for the contextual information carried by the event.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Visitor_DirectionableVisit_VisitingVertex.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Visitor.DirectionableVisit.VisitingVertex%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Visitor/DirectionableVisit.cs/#L28">View Source</a>
+  </span>
+  <h4 id="MoreStructures_Graphs_Visitor_DirectionableVisit_VisitingVertex" data-uid="MoreStructures.Graphs.Visitor.DirectionableVisit.VisitingVertex">VisitingVertex</h4>
+  <div class="markdown level1 summary"><p>Invoked when a node is about to be visited, by <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_DepthFirstSearchOfGraph_MoreStructures_Graphs_IGraph_">DepthFirstSearchOfGraph(IGraph)</a>,
+<a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_ConnectedComponents_MoreStructures_Graphs_IGraph_">ConnectedComponents(IGraph)</a>, <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_DepthFirstSearchFromVertex_MoreStructures_Graphs_IGraph_System_Int32_">DepthFirstSearchFromVertex(IGraph, Int32)</a> or any other
+method exploring vertices of the graph.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;VisitEventArgs&gt; VisitingVertex</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EventHandler</span>&lt;<a class="xref" href="MoreStructures.Graphs.Visitor.VisitEventArgs.html">VisitEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Graphs_Visitor_DirectionableVisit_VisitingVertex_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The event happens at most once per vertex per graph visit.
+<br>/
+Check <a class="xref" href="MoreStructures.Graphs.Visitor.VisitEventArgs.html">VisitEventArgs</a> for the contextual information carried by the event.</p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html">IVisitStrategy</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Visitor_DirectionableVisit.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Visitor.DirectionableVisit%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Visitor/DirectionableVisit.cs/#L7" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

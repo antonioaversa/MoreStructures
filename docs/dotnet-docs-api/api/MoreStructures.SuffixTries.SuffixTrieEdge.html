@@ -1,0 +1,389 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SuffixTrieEdge
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SuffixTrieEdge
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.SuffixTries.SuffixTrieEdge">
+  
+  
+  <h1 id="MoreStructures_SuffixTries_SuffixTrieEdge" data-uid="MoreStructures.SuffixTries.SuffixTrieEdge" class="text-break">Class SuffixTrieEdge
+  </h1>
+  <div class="markdown level0 summary"><p>The index key of the collection of children of a <a class="xref" href="MoreStructures.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a>, which identifies a single char in
+text, used as a selector to navigate the <a class="xref" href="MoreStructures.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a> in text pattern matching.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a></div>
+    <div class="level2"><span class="xref">SuffixTrieEdge</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.SuffixStructures.ISuffixStructureEdge-2.html">ISuffixStructureEdge</a>&lt;<a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a>, <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a>&gt;</div>
+    <div><a class="xref" href="MoreStructures.RecImmTrees.IRecImmDictIndexedTreeEdge-2.html">IRecImmDictIndexedTreeEdge</a>&lt;<a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a>, <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a>&gt;</div>
+    <div><span class="xref">IComparable</span>&lt;<a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a>&gt;</div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a>&gt;</div>
+    <div><a class="xref" href="MoreStructures.SuffixStructures.ISuffixStructureEdge-2.html">ISuffixStructureEdge</a>&lt;<a class="xref" href="MoreStructures.SuffixTries.SuffixTrieEdge.html">SuffixTrieEdge</a>, <a class="xref" href="MoreStructures.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a>&gt;</div>
+    <div><a class="xref" href="MoreStructures.TextWithTerminator.ISelector.html">TextWithTerminator.ISelector</a></div>
+    <div><a class="xref" href="MoreStructures.RecImmTrees.IRecImmDictIndexedTreeEdge-2.html">IRecImmDictIndexedTreeEdge</a>&lt;<a class="xref" href="MoreStructures.SuffixTries.SuffixTrieEdge.html">SuffixTrieEdge</a>, <a class="xref" href="MoreStructures.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a>&gt;</div>
+    <div><span class="xref">IComparable</span>&lt;<a class="xref" href="MoreStructures.SuffixTries.SuffixTrieEdge.html">SuffixTrieEdge</a>&gt;</div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="MoreStructures.SuffixTries.SuffixTrieEdge.html">SuffixTrieEdge</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeEdge.html#MoreStructures_SuffixTrees_SuffixTreeEdge_Start">SuffixTreeEdge.Start</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeEdge.html#MoreStructures_SuffixTrees_SuffixTreeEdge_Length">SuffixTreeEdge.Length</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeEdge.html#MoreStructures_SuffixTrees_SuffixTreeEdge_CompareTo_MoreStructures_SuffixTrees_SuffixTreeEdge_">SuffixTreeEdge.CompareTo(SuffixTreeEdge)</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeEdge.html#MoreStructures_SuffixTrees_SuffixTreeEdge_Of_MoreStructures_TextWithTerminator_">SuffixTreeEdge.Of(TextWithTerminator)</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeEdge.html#MoreStructures_SuffixTrees_SuffixTreeEdge_OfRotated_MoreStructures_RotatedTextWithTerminator_">SuffixTreeEdge.OfRotated(RotatedTextWithTerminator)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.SuffixTries.html">MoreStructures.SuffixTries</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_SuffixTries_SuffixTrieEdge_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SuffixTrieEdge : SuffixTreeEdge, ISuffixStructureEdge&lt;SuffixTreeEdge, SuffixTreeNode&gt;, IRecImmDictIndexedTreeEdge&lt;SuffixTreeEdge, SuffixTreeNode&gt;, IEquatable&lt;SuffixTreeEdge&gt;, ISuffixStructureEdge&lt;SuffixTrieEdge, SuffixTrieNode&gt;, TextWithTerminator.ISelector, IRecImmDictIndexedTreeEdge&lt;SuffixTrieEdge, SuffixTrieNode&gt;, IEquatable&lt;SuffixTrieEdge&gt;</code></pre>
+  </div>
+  <h5 id="MoreStructures_SuffixTries_SuffixTrieEdge_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Supports <see cref="!:IComparable&lt;T>"></see>, by <a class="xref" href="MoreStructures.SuffixTries.SuffixTrieEdge.html#MoreStructures_SuffixTries_SuffixTrieEdge_Index">Index</a>.</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTries_SuffixTrieEdge__ctor_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTries.SuffixTrieEdge.%23ctor(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTries/SuffixTrieEdge.cs/#L14">View Source</a>
+  </span>
+  <a id="MoreStructures_SuffixTries_SuffixTrieEdge__ctor_" data-uid="MoreStructures.SuffixTries.SuffixTrieEdge.#ctor*"></a>
+  <h4 id="MoreStructures_SuffixTries_SuffixTrieEdge__ctor_System_Int32_" data-uid="MoreStructures.SuffixTries.SuffixTrieEdge.#ctor(System.Int32)">SuffixTrieEdge(Int32)</h4>
+  <div class="markdown level1 summary"><p>The index key of the collection of children of a <a class="xref" href="MoreStructures.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a>, which identifies a single char in
+text, used as a selector to navigate the <a class="xref" href="MoreStructures.SuffixTries.SuffixTrieNode.html">SuffixTrieNode</a> in text pattern matching.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SuffixTrieEdge(int Index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">Index</span></td>
+        <td><p>The index of the character in the text.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_SuffixTries_SuffixTrieEdge__ctor_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Supports <see cref="!:IComparable&lt;T>"></see>, by <a class="xref" href="MoreStructures.SuffixTries.SuffixTrieEdge.html#MoreStructures_SuffixTries_SuffixTrieEdge_Index">Index</a>.</p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTries_SuffixTrieEdge_Index.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTries.SuffixTrieEdge.Index%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTries/SuffixTrieEdge.cs/#L14">View Source</a>
+  </span>
+  <a id="MoreStructures_SuffixTries_SuffixTrieEdge_Index_" data-uid="MoreStructures.SuffixTries.SuffixTrieEdge.Index*"></a>
+  <h4 id="MoreStructures_SuffixTries_SuffixTrieEdge_Index" data-uid="MoreStructures.SuffixTries.SuffixTrieEdge.Index">Index</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Index { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTries_SuffixTrieEdge_CompareTo_MoreStructures_SuffixTries_SuffixTrieEdge_.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTries.SuffixTrieEdge.CompareTo(MoreStructures.SuffixTries.SuffixTrieEdge)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTries/SuffixTrieEdge.cs/#L26">View Source</a>
+  </span>
+  <a id="MoreStructures_SuffixTries_SuffixTrieEdge_CompareTo_" data-uid="MoreStructures.SuffixTries.SuffixTrieEdge.CompareTo*"></a>
+  <h4 id="MoreStructures_SuffixTries_SuffixTrieEdge_CompareTo_MoreStructures_SuffixTries_SuffixTrieEdge_" data-uid="MoreStructures.SuffixTries.SuffixTrieEdge.CompareTo(MoreStructures.SuffixTries.SuffixTrieEdge)">CompareTo(SuffixTrieEdge)</h4>
+  <div class="markdown level1 summary"><p><inheritdoc></inheritdoc>
+Comparison is done by <a class="xref" href="MoreStructures.SuffixTries.SuffixTrieEdge.html#MoreStructures_SuffixTries_SuffixTrieEdge_Index">Index</a>: lower is smaller, higher is bigger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CompareTo(SuffixTrieEdge other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.SuffixTries.SuffixTrieEdge.html">SuffixTrieEdge</a></td>
+        <td><span class="parametername">other</span></td>
+        <td><p><inheritdoc></inheritdoc></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p><inheritdoc></inheritdoc></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTries_SuffixTrieEdge_ToString.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTries.SuffixTrieEdge.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTries/SuffixTrieEdge.cs/#L38">View Source</a>
+  </span>
+  <a id="MoreStructures_SuffixTries_SuffixTrieEdge_ToString_" data-uid="MoreStructures.SuffixTries.SuffixTrieEdge.ToString*"></a>
+  <h4 id="MoreStructures_SuffixTries_SuffixTrieEdge_ToString" data-uid="MoreStructures.SuffixTries.SuffixTrieEdge.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p><inheritdoc></inheritdoc>
+<br>
+Generates a string in the form &quot;(<a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeEdge.html#MoreStructures_SuffixTrees_SuffixTreeEdge_Start">Start</a>)&quot;. <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeEdge.html#MoreStructures_SuffixTrees_SuffixTreeEdge_Length">Length</a> is
+not included as in this context it is always 1.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p><inheritdoc></inheritdoc></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeEdge.html#MoreStructures_SuffixTrees_SuffixTreeEdge_ToString">SuffixTreeEdge.ToString()</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.ISuffixStructureEdge-2.html">ISuffixStructureEdge&lt;TEdge, TNode&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="MoreStructures.RecImmTrees.IRecImmDictIndexedTreeEdge-2.html">IRecImmDictIndexedTreeEdge&lt;TEdge, TNode&gt;</a>
+  </div>
+  <div>
+      <span class="xref">IComparable&lt;&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.ISuffixStructureEdge-2.html">ISuffixStructureEdge&lt;TEdge, TNode&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="MoreStructures.TextWithTerminator.ISelector.html">TextWithTerminator.ISelector</a>
+  </div>
+  <div>
+      <a class="xref" href="MoreStructures.RecImmTrees.IRecImmDictIndexedTreeEdge-2.html">IRecImmDictIndexedTreeEdge&lt;TEdge, TNode&gt;</a>
+  </div>
+  <div>
+      <span class="xref">IComparable&lt;&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTries_SuffixTrieEdge.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTries.SuffixTrieEdge%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTries/SuffixTrieEdge.cs/#L14" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

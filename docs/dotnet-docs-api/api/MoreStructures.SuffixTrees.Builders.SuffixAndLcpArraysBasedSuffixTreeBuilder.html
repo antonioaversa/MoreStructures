@@ -1,0 +1,390 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SuffixAndLcpArraysBasedSuffixTreeBuilder
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SuffixAndLcpArraysBasedSuffixTreeBuilder
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder">
+  
+  
+  <h1 id="MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder" data-uid="MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder" class="text-break">Class SuffixAndLcpArraysBasedSuffixTreeBuilder
+  </h1>
+  <div class="markdown level0 summary"><p>A <a class="xref" href="MoreStructures.SuffixStructures.Builders.IBuilder-2.html">IBuilder&lt;TEdge, TNode&gt;</a> implementation of <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a> structures, using the
+<span class="xref">MoreStructures.SuffixArrays.SuffixArray</span> and the <span class="xref">MoreStructures.SuffixArrays.LongestCommonPrefix.LcpArray</span> of the full text, to build the tree efficiently.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">SuffixAndLcpArraysBasedSuffixTreeBuilder</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.SuffixStructures.Builders.IBuilder-2.html">IBuilder</a>&lt;<a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a>, <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.SuffixTrees.Builders.html">MoreStructures.SuffixTrees.Builders</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SuffixAndLcpArraysBasedSuffixTreeBuilder : IBuilder&lt;SuffixTreeEdge, SuffixTreeNode&gt;</code></pre>
+  </div>
+  <h5 id="MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+ADVANTAGES AND DISADVANTAGES
+<br>
+- Like <a class="xref" href="MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.html">NaivePartiallyRecursiveSuffixTreeBuilder</a> and <a class="xref" href="MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.html">UkkonenSuffixTreeBuilder</a>,
+  it builds the tree one suffix of the text at a time, adding at least a leaf and potentially an intermediate 
+  node at every iteration. 
+<br>
+- Unlike them, the suffixes are not added to the tree in the order in which they appear in the text, i.e. they
+are not processed from the longest to the shortest, rather from the smallest to the biggest in lexicographic
+ascending order.
+<br>
+- It also requires the construction of the <span class="xref">MoreStructures.SuffixArrays.SuffixArray</span> and the <span class="xref">MoreStructures.SuffixArrays.LongestCommonPrefix.LcpArray</span> of the 
+input, whereas the naive and the Ukkonen implementations don&apos;t require any auxiliary structure.
+<br>
+- Compared to the naive implementation, it has better runtime, even including the cost of building auxiliary
+structures: all-round performance is less than the quadratic performance of the naive approach, but worse
+than the linear performance of the Ukkonen algorithm.
+</p>
+<p>
+ALGORITHM
+<br>
+- First, build full text, from the provided <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a> instances, and the corresponding 
+<span class="xref">MoreStructures.SuffixArrays.SuffixArray</span> SA and <span class="xref">MoreStructures.SuffixArrays.LongestCommonPrefix.LcpArray</span> LCPA, which are both fully enumerated in order to be 
+able to direct access them by index.
+<br>
+- Then, build the initial mutable tree: just the root node with a single leaf linked by an edge labelled with 
+the 1st suffix in the <span class="xref">MoreStructures.SuffixArrays.SuffixArray</span>: <code>SA[0]</code>.
+<br>
+- This represents the initial state of the mutable tree, which will be modified iteration by iteration going 
+through the Suffix Array from the 2nd to the last suffix (in lexicographic ascending order).
+<br>
+- The item of the LCP Array in position i - 1, gives the LCP of such suffix with the previous suffix: 
+<code>LCPA[i - 1] = LCP(SA[i - 1], SA[i])</code>. Such LCP value is compared with the LCP value calculated at the
+previous iteration.
+<br>
+- Different insertion strategies are applied, depending on the result of the comparison. At each iteration the 
+reference to the last inserted leaf and to the previous LCP value are kept.
+<br>
+- <strong>Case 1</strong>: if the current LCP is smaller than the previous, the root-to-leaf path of the leaf about to be
+added shares a shorter path with the previous leaf. So move up in the tree from the last inserted leaf, up 
+until the first node which makes current LCP value non smaller than the previous LCP value. Then check 
+whether it&apos;s fallbacking to Case 2 or 3.
+<br>
+- <strong>Case 2</strong>: if the current LCP is the same as the previous, the root-to-leaf path of the leaf about to be
+added shares exactly the same path with the previous leaf. Therefore the new leaf can be attached directly
+to the parent of the previous leaf, which becomes a sibling of the new leaf. No new intermediate node.
+<br>
+- <strong>Case 3</strong>: if the current LCP is bigger than the previous, a part of the previous edge is in common 
+between the previous leaf and the leaf about to be created in this iteration. Therefore, build new 
+intermediate, detach old edge going to previous leaf, attach new intermediate edge.
+<br>
+- Finally, after all iterations have been executed and all suffixes of the text have been included in the 
+mutable tree, build the final <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a> structure from the mutable tree, using a
+<span class="xref">MoreStructures.MutableTrees.Conversions.FullyIterativeConversion</span>.
+</p>
+<p>
+COMPLEXITY
+<br>
+- The complexity of building the <span class="xref">MoreStructures.SuffixArrays.SuffixArray</span> and the <span class="xref">MoreStructures.SuffixArrays.LongestCommonPrefix.LcpArray</span>, via the provided 
+<a class="xref" href="MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.html#MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder_SuffixAndLcpArraysBuilder">SuffixAndLcpArraysBuilder</a> is not included in this cost analysis. This has to be taken into 
+account when comparing this implementation of <a class="xref" href="MoreStructures.SuffixStructures.Builders.IBuilder-2.html">IBuilder&lt;TEdge, TNode&gt;</a> of 
+<a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a> structures with other implementations, such as 
+<a class="xref" href="MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.html">NaivePartiallyRecursiveSuffixTreeBuilder</a> or <a class="xref" href="MoreStructures.SuffixTrees.Builders.UkkonenSuffixTreeBuilder.html">UkkonenSuffixTreeBuilder</a>.
+<br>
+- Building the initial mutable tree requires building two nodes and an edge, which can both be done in constant
+time.
+<br>
+- Then, n - 1 iterations are performed, where n is the length of the input, executing optionally Case 1 and 
+then either Case 2 or 3.
+<br>
+- Cases 2 and 3 perform the insertion of a leaf and potentially of an intermediate node, both O(1) operations.
+Case 1 may seem an O(n) operation. However, due to LCP Array property, moving up in the tree will happen at
+most once per iteration.
+<br>
+- Final step is building the final tree from the mutable tree, which requires the traversal of the O(n) nodes 
+of the tree. <span class="xref">MoreStructures.MutableTrees.Conversions.FullyIterativeConversion</span> does that in O(n) time and 
+space, via a stack and a precomputed data structure to find the number of terminators per edge in O(1) time.
+<br>
+- In conclusion, both Time and Space Complexity are O(n).
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder__ctor_Func_MoreStructures_TextWithTerminator_System_ValueTuple_MoreStructures_SuffixArrays_SuffixArray_MoreStructures_SuffixArrays_LongestCommonPrefix_LcpArray___.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.%23ctor(Func%7BMoreStructures.TextWithTerminator%2CSystem.ValueTuple%7BMoreStructures.SuffixArrays.SuffixArray%2CMoreStructures.SuffixArrays.LongestCommonPrefix.LcpArray%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/SuffixAndLcpArraysBasedSuffixTreeBuilder.cs/#L114">View Source</a>
+  </span>
+  <a id="MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder__ctor_" data-uid="MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.#ctor*"></a>
+  <h4 id="MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder__ctor_Func_MoreStructures_TextWithTerminator_System_ValueTuple_MoreStructures_SuffixArrays_SuffixArray_MoreStructures_SuffixArrays_LongestCommonPrefix_LcpArray___" data-uid="MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.#ctor(Func{MoreStructures.TextWithTerminator,System.ValueTuple{MoreStructures.SuffixArrays.SuffixArray,MoreStructures.SuffixArrays.LongestCommonPrefix.LcpArray}})">SuffixAndLcpArraysBasedSuffixTreeBuilder(Func&lt;TextWithTerminator, (SuffixArray, LcpArray)&gt;)</h4>
+  <div class="markdown level1 summary"><p><inheritdoc cref="T:MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder"></inheritdoc></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SuffixAndLcpArraysBasedSuffixTreeBuilder(Func&lt;TextWithTerminator, (SuffixArray, LcpArray)&gt; suffixAndLcpArraysBuilder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>, <span class="xref">System.ValueTuple</span>&lt;<span class="xref">MoreStructures.SuffixArrays.SuffixArray</span>, <span class="xref">MoreStructures.SuffixArrays.LongestCommonPrefix.LcpArray</span>&gt;&gt;</td>
+        <td><span class="parametername">suffixAndLcpArraysBuilder</span></td>
+        <td><p><inheritdoc cref="P:MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.SuffixAndLcpArraysBuilder" path="/summary"></inheritdoc></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder__ctor_Func_MoreStructures_TextWithTerminator_System_ValueTuple_MoreStructures_SuffixArrays_SuffixArray_MoreStructures_SuffixArrays_LongestCommonPrefix_LcpArray____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder"></inheritdoc></p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder_SuffixAndLcpArraysBuilder.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.SuffixAndLcpArraysBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/SuffixAndLcpArraysBasedSuffixTreeBuilder.cs/#L103">View Source</a>
+  </span>
+  <a id="MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder_SuffixAndLcpArraysBuilder_" data-uid="MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.SuffixAndLcpArraysBuilder*"></a>
+  <h4 id="MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder_SuffixAndLcpArraysBuilder" data-uid="MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.SuffixAndLcpArraysBuilder">SuffixAndLcpArraysBuilder</h4>
+  <div class="markdown level1 summary"><p>The builder to be used to construct the <span class="xref">MoreStructures.SuffixArrays.SuffixArray</span> and the <span class="xref">MoreStructures.SuffixArrays.LongestCommonPrefix.LcpArray</span> of the full
+text, both required by this algorithm to build the <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a> structure.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;TextWithTerminator, (SuffixArray, LcpArray)&gt; SuffixAndLcpArraysBuilder { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>, <span class="xref">System.ValueTuple</span>&lt;<span class="xref">MoreStructures.SuffixArrays.SuffixArray</span>, <span class="xref">MoreStructures.SuffixArrays.LongestCommonPrefix.LcpArray</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator___.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/SuffixAndLcpArraysBasedSuffixTreeBuilder.cs/#L127">View Source</a>
+  </span>
+  <a id="MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder_BuildTree_" data-uid="MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.BuildTree*"></a>
+  <h4 id="MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator___" data-uid="MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator[])">BuildTree(TextWithTerminator[])</h4>
+  <div class="markdown level1 summary"><p><inheritdoc></inheritdoc></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SuffixTreeNode BuildTree(params TextWithTerminator[] texts)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>[]</td>
+        <td><span class="parametername">texts</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder" path="/remarks"></inheritdoc></p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.Builders.IBuilder-2.html">IBuilder&lt;TEdge, TNode&gt;</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.Builders.BuilderExtensions.html#MoreStructures_SuffixStructures_Builders_BuilderExtensions_BuildTree__2_MoreStructures_SuffixStructures_Builders_IBuilder___0___1__System_String_">BuilderExtensions.BuildTree&lt;TEdge, TNode&gt;(IBuilder&lt;TEdge, TNode&gt;, String)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTrees_Builders_SuffixAndLcpArraysBasedSuffixTreeBuilder.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTrees.Builders.SuffixAndLcpArraysBasedSuffixTreeBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/SuffixAndLcpArraysBasedSuffixTreeBuilder.cs/#L94" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

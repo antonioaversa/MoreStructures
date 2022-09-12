@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class NaivePartiallyRecursiveSuffixTreeBuilder
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class NaivePartiallyRecursiveSuffixTreeBuilder
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder">
+  
+  
+  <h1 id="MoreStructures_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilder" data-uid="MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder" class="text-break">Class NaivePartiallyRecursiveSuffixTreeBuilder
+  </h1>
+  <div class="markdown level0 summary"><p>Builds objects, such as edges and nodes, for <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a> structures.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">NaivePartiallyRecursiveSuffixTreeBuilder</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.SuffixStructures.Builders.IBuilder-2.html">IBuilder</a>&lt;<a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeEdge.html">SuffixTreeEdge</a>, <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.SuffixTrees.Builders.html">MoreStructures.SuffixTrees.Builders</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class NaivePartiallyRecursiveSuffixTreeBuilder : IBuilder&lt;SuffixTreeEdge, SuffixTreeNode&gt;</code></pre>
+  </div>
+  <h5 id="MoreStructures_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilder_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+ADVANTAGES AND DISADVANTAGES
+<br>
+- Implemented as an iteration of recursive visit of the tree being built, with as many iterations as the number 
+  of suffixes of the input (where the longest suffix is the text itself) and one level of recursion per char of 
+  each suffix. 
+<br>
+- Limited by call stack depth and usable with input text of a &quot;reasonable&quot; length (i.e. string having a length 
+&lt; ~1K chars).
+</p>
+<p>
+ALGORITHM
+<br>
+- For each suffix S of the input T, start from the root node N of the tree, initialized as a mutable tree made 
+  of a simple leaf.
+<br>
+- Compare the first char of S with the first char of each of the edges coming from N.
+<br>
+- If there is no edge e such that <code>label(e)[0] == S[0]</code>, it means that there is no descendant of N sharing
+a path with S. So, create a new leaf under N, attached by an edge with a label equal to S.
+<br>
+- Otherwise, it means that there is a path to be shared between the new leaf and at least one of the 
+descendants of N.
+<br>
+- In this case, compare the current suffix and the label of such edge e, for the LCP.
+<br>
+- If the prefix in common is shorter than the length of the label of the edge e, create an intermediate node, 
+push down the child pointed by the edge in the current node and add a new node for the reminder of the suffix
+(up to next terminator) as second child of the intermediate.
+<br>
+- Otherwise, eat prefixLength chars from the edge, move to the child pointed by the edge entirely matching the 
+beginning of the current suffix and repeat the same operation.
+<br>
+- Finally, after all iterations have been executed and all suffixes of the text have been included in the 
+mutable tree, build the final <a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a> structure from the mutable tree, using a
+<span class="xref">MoreStructures.MutableTrees.Conversions.FullyIterativeConversion</span>.
+</p>
+<p>
+COMPLEXITY
+<br>
+- The generation of the full text, done by 
+<a class="xref" href="MoreStructures.TextWithTerminatorExtensions.html#MoreStructures_TextWithTerminatorExtensions_GenerateFullText_MoreStructures_TextWithTerminator___">GenerateFullText(TextWithTerminator[])</a>, is a O(n)
+operation, where n is the sum of the length of each <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a> in the input 
+(terminators included).
+<br>
+- The initial tree, just a root-leaf, is created in constant time.
+<br>
+- The top level loop is executed n times, once per char of the full text.
+<br>
+- Finding the edge with the same first char is O(avgEdges), where avgEdges is the average number of edges 
+coming out of a node of the tree. This operation is done for all cases (leaf creation alone or leaf + 
+intermediate node).
+<br>
+- Over all the n nodes of the tree, taking into account the worst case where avgEdges is O(n), Time Complexity
+would become O(n^2). However, the total number of edges in a tree is O(n), so the overall cost of these 
+operations for the entire tree is O(n), and not O(n^2).
+<br>
+- Finding the LCP between the suffix and the label of the current edge are O(n) operations, since the length 
+of a generic suffix of the text is O(n) and they require iterating over all the chars.
+<br>
+- Such operations are only done when an intermediate node is required. However, in the worst case there are as
+many intermediate as leaves in the tree (i.e. each iteration adds an intermediate node and a leaf). 
+Therefore, the number of intermediate nodes is O(n), and the two O(n) operations above are to be repeated 
+O(n) times.
+<br>
+- Final step is building the final tree from the mutable tree, which requires the traversal of the O(n) nodes 
+of the tree. <span class="xref">MoreStructures.MutableTrees.Conversions.FullyIterativeConversion</span> does that in O(n) time and 
+space, via a stack and a precomputed data structure to find the number of terminators per edge in O(1) time.
+<br>
+- In conclusion, Time Complexity = O(n^2) and Space Complexity = O(n) where n = length of the text to match.
+<br>
+- Compared to tries, trees are more compact due to edge coalescing and edge label compression (i.e. edge 
+strings stored as pair (start, length), rather than as a substring of length chars). Each recursion add a 
+leaf and at most one intermediate node, so Space Complexity ~ 2 * n = O(n).
+</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator___.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/NaivePartiallyRecursiveSuffixTreeBuilder.cs/#L101">View Source</a>
+  </span>
+  <a id="MoreStructures_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilder_BuildTree_" data-uid="MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree*"></a>
+  <h4 id="MoreStructures_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator___" data-uid="MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder.BuildTree(MoreStructures.TextWithTerminator[])">BuildTree(TextWithTerminator[])</h4>
+  <div class="markdown level1 summary"><p><inheritdoc></inheritdoc></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SuffixTreeNode BuildTree(params TextWithTerminator[] texts)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>[]</td>
+        <td><span class="parametername">texts</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.SuffixTrees.SuffixTreeNode.html">SuffixTreeNode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilder_BuildTree_MoreStructures_TextWithTerminator____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder" path="/remarks"></inheritdoc></p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.Builders.IBuilder-2.html">IBuilder&lt;TEdge, TNode&gt;</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.Builders.BuilderExtensions.html#MoreStructures_SuffixStructures_Builders_BuilderExtensions_BuildTree__2_MoreStructures_SuffixStructures_Builders_IBuilder___0___1__System_String_">BuilderExtensions.BuildTree&lt;TEdge, TNode&gt;(IBuilder&lt;TEdge, TNode&gt;, String)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_SuffixTrees_Builders_NaivePartiallyRecursiveSuffixTreeBuilder.md&amp;value=---%0Auid%3A%20MoreStructures.SuffixTrees.Builders.NaivePartiallyRecursiveSuffixTreeBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/SuffixTrees/Builders/NaivePartiallyRecursiveSuffixTreeBuilder.cs/#L88" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

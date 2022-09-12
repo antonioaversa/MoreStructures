@@ -1,0 +1,388 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BfsBasedShortestDistanceFinder
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BfsBasedShortestDistanceFinder
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.Graphs.ShortestDistance.BfsBasedShortestDistanceFinder">
+  
+  
+  <h1 id="MoreStructures_Graphs_ShortestDistance_BfsBasedShortestDistanceFinder" data-uid="MoreStructures.Graphs.ShortestDistance.BfsBasedShortestDistanceFinder" class="text-break">Class BfsBasedShortestDistanceFinder
+  </h1>
+  <div class="markdown level0 summary"><p>An <a class="xref" href="MoreStructures.Graphs.ShortestDistance.IShortestDistanceFinder.html">IShortestDistanceFinder</a> which runs a BFS on the provided graph from the start vertex, to find the
+shortest distance and a shortest path to the end vertex.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">BfsBasedShortestDistanceFinder</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.Graphs.ShortestDistance.IShortestDistanceFinder.html">IShortestDistanceFinder</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.Graphs.ShortestDistance.html">MoreStructures.Graphs.ShortestDistance</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_Graphs_ShortestDistance_BfsBasedShortestDistanceFinder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class BfsBasedShortestDistanceFinder : IShortestDistanceFinder</code></pre>
+  </div>
+  <h5 id="MoreStructures_Graphs_ShortestDistance_BfsBasedShortestDistanceFinder_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+ALGORITHM
+<br>
+- First, a <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html">IVisitStrategy</a> is instantiated via the <a class="xref" href="MoreStructures.Graphs.ShortestDistance.BfsBasedShortestDistanceFinder.html#MoreStructures_Graphs_ShortestDistance_BfsBasedShortestDistanceFinder_VisitStrategyBuilder">VisitStrategyBuilder</a> provided in
+  the constructor.
+<br>
+- The <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html">IVisitStrategy</a> instance will be used to run 
+<a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_BreadthFirstSearchFromVertex_MoreStructures_Graphs_IGraph_System_Int32_">BreadthFirstSearchFromVertex(IGraph, Int32)</a> from the start vertex.
+<br>
+- Unlike the Dijkstra algorithm, the BFS visit will traverse all vertices reachable from the start vertex by
+breadth. Morever it never stops the BFS traversal, even when the current path can&apos;t possibly be shortest.
+<br>
+- The visitor is instrumented with an event handler H, attached to both 
+<a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_VisitingVertex">VisitingVertex</a> and <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_AlreadyVisitedVertex">AlreadyVisitedVertex</a>.
+<br>
+- H updates a dictionary SPs mapping each vertex v to its currently known shortest path SP from the start 
+vertex to v and the previous vertex of v in SP.
+<br>
+- H also keeps a dictionary DSs mapping each vertex v to the <see cref="!:HashSet&lt;T>"></see> of its currently visited
+downstream vertices, i.e. all vertices u visited from v during the BFS.
+<br>
+- Every time H encounters a vertex v which is not yet in SPs (i.e. it doesn&apos;t have a registered shortest path
+yet), it just adds it to SPs.
+<br>
+- Every time H encounters a vertex v which is already is SPs (i.e. it has already a registered shortest path),
+it adds it to SPs and then updates recursively the entries of SPs of all downstream vertices, using DSs.
+<br>
+- After the BFS visit is concluded, there are two possible scenarios: either the end vertex has been discovered
+by the visit or not.
+<br>
+- If the end vertex has not been discovered, it means that there is no path at all from the start to the end
+vertex. In that case, <span class="xref">System.Int32.MaxValue</span> and an emtpy <see cref="!:IList&lt;T>"></see> are returned as result.
+<br>
+- If the end vertex has been discovered, <code>SPs[end]</code> gives the shortest distance. SPs can be navigated 
+backwards, until the start vertex, to find the path with the shortest distance.
+</p>
+<p>
+COMPLEXITY
+<br>
+- While building the <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html">IVisitStrategy</a> instance has a complexity that depends on the user-provided 
+<a class="xref" href="MoreStructures.Graphs.ShortestDistance.BfsBasedShortestDistanceFinder.html#MoreStructures_Graphs_ShortestDistance_BfsBasedShortestDistanceFinder_VisitStrategyBuilder">VisitStrategyBuilder</a>, it doesn&apos;t generally depends on the size of the graph to be visited, and 
+can be considered O(1) work.
+<br>
+- Instrumenting the <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html">IVisitStrategy</a> instance is also a constant-time operation.
+<br>
+- Running the handler for every visited and already visited vertex, however, requires updating vertices 
+downstream, every time an entry SPs is updated, i.e. when a smaller distance from the start is found. That
+affects the performance of the BFS execution, increasing its Time Complexity.
+<br>
+- Because the BFS doesn&apos;t stop when the end vertex is found (as there may be longer paths with shorter distance
+from the start vertex), the downstream vertices to be recursively updated can cover then entire graph (i.e.
+O(v) vertices).
+<br>
+- The complexity of the BFS visit depends on the actual <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html">IVisitStrategy</a> implementation used.
+<br>
+- Rebuilding and reversing the path takes time and space proportional to the length of the path, which in the 
+worst case can be O(v) where v is the number of vertices of the graph.
+<br>
+- Therefore, Time Complexity is O(Tbfs * v + v) and Space Complexity is O(Sbfs + v^2).
+<br>
+- If <a class="xref" href="MoreStructures.Graphs.Visitor.FullyIterativeHashSetBasedGraphVisit.html">FullyIterativeHashSetBasedGraphVisit</a> or <a class="xref" href="MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.html">FullyRecursiveHashSetBasedGraphVisit</a>
+visits are used, with an <a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a> retrieving neighbors in constant time, Time Complexity becomes
+O((v + e) * v) and O(v^2 + e).
+<br>
+- On dense graphs, Time Complexity is O(v^3) and Space Complexity is O(v^2).
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_ShortestDistance_BfsBasedShortestDistanceFinder__ctor_Func_MoreStructures_Graphs_Visitor_IVisitStrategy__.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.ShortestDistance.BfsBasedShortestDistanceFinder.%23ctor(Func%7BMoreStructures.Graphs.Visitor.IVisitStrategy%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/ShortestDistance/BfsBasedShortestDistanceFinder.cs/#L96">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_ShortestDistance_BfsBasedShortestDistanceFinder__ctor_" data-uid="MoreStructures.Graphs.ShortestDistance.BfsBasedShortestDistanceFinder.#ctor*"></a>
+  <h4 id="MoreStructures_Graphs_ShortestDistance_BfsBasedShortestDistanceFinder__ctor_Func_MoreStructures_Graphs_Visitor_IVisitStrategy__" data-uid="MoreStructures.Graphs.ShortestDistance.BfsBasedShortestDistanceFinder.#ctor(Func{MoreStructures.Graphs.Visitor.IVisitStrategy})">BfsBasedShortestDistanceFinder(Func&lt;IVisitStrategy&gt;)</h4>
+  <div class="markdown level1 summary"><p><inheritdoc cref="T:MoreStructures.Graphs.ShortestDistance.BfsBasedShortestDistanceFinder"></inheritdoc></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BfsBasedShortestDistanceFinder(Func&lt;IVisitStrategy&gt; visitStrategyBuilder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html">IVisitStrategy</a>&gt;</td>
+        <td><span class="parametername">visitStrategyBuilder</span></td>
+        <td><p><inheritdoc cref="P:MoreStructures.Graphs.ShortestDistance.BfsBasedShortestDistanceFinder.VisitStrategyBuilder" path="/summary"></inheritdoc></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Graphs_ShortestDistance_BfsBasedShortestDistanceFinder__ctor_Func_MoreStructures_Graphs_Visitor_IVisitStrategy___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.Graphs.ShortestDistance.BfsBasedShortestDistanceFinder"></inheritdoc></p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_ShortestDistance_BfsBasedShortestDistanceFinder_VisitStrategyBuilder.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.ShortestDistance.BfsBasedShortestDistanceFinder.VisitStrategyBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/ShortestDistance/BfsBasedShortestDistanceFinder.cs/#L85">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_ShortestDistance_BfsBasedShortestDistanceFinder_VisitStrategyBuilder_" data-uid="MoreStructures.Graphs.ShortestDistance.BfsBasedShortestDistanceFinder.VisitStrategyBuilder*"></a>
+  <h4 id="MoreStructures_Graphs_ShortestDistance_BfsBasedShortestDistanceFinder_VisitStrategyBuilder" data-uid="MoreStructures.Graphs.ShortestDistance.BfsBasedShortestDistanceFinder.VisitStrategyBuilder">VisitStrategyBuilder</h4>
+  <div class="markdown level1 summary"><p>A building function able to instantiate the <a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html">IVisitStrategy</a> to be used to find the shortest
+distance, by running a Breadth First Searches from the start vertex via
+<a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_BreadthFirstSearchFromVertex_MoreStructures_Graphs_IGraph_System_Int32_">BreadthFirstSearchFromVertex(IGraph, Int32)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;IVisitStrategy&gt; VisitStrategyBuilder { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="MoreStructures.Graphs.Visitor.IVisitStrategy.html">IVisitStrategy</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_ShortestDistance_BfsBasedShortestDistanceFinder_Find_MoreStructures_Graphs_IGraph_IDictionary_System_ValueTuple_System_Int32_System_Int32__System_Int32__System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.ShortestDistance.BfsBasedShortestDistanceFinder.Find(MoreStructures.Graphs.IGraph%2CIDictionary%7BSystem.ValueTuple%7BSystem.Int32%2CSystem.Int32%7D%2CSystem.Int32%7D%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/ShortestDistance/BfsBasedShortestDistanceFinder.cs/#L105">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_ShortestDistance_BfsBasedShortestDistanceFinder_Find_" data-uid="MoreStructures.Graphs.ShortestDistance.BfsBasedShortestDistanceFinder.Find*"></a>
+  <h4 id="MoreStructures_Graphs_ShortestDistance_BfsBasedShortestDistanceFinder_Find_MoreStructures_Graphs_IGraph_IDictionary_System_ValueTuple_System_Int32_System_Int32__System_Int32__System_Int32_System_Int32_" data-uid="MoreStructures.Graphs.ShortestDistance.BfsBasedShortestDistanceFinder.Find(MoreStructures.Graphs.IGraph,IDictionary{System.ValueTuple{System.Int32,System.Int32},System.Int32},System.Int32,System.Int32)">Find(IGraph, IDictionary&lt;(Int32, Int32), Int32&gt;, Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public (int, IList&lt;int&gt;) Find(IGraph graph, IDictionary&lt;(int, int), int&gt; distances, int start, int end)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a></td>
+        <td><span class="parametername">graph</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">IDictionary</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">System.Int32</span>&gt;, <span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">distances</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">start</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">end</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">IList</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Graphs_ShortestDistance_BfsBasedShortestDistanceFinder_Find_MoreStructures_Graphs_IGraph_IDictionary_System_ValueTuple_System_Int32_System_Int32__System_Int32__System_Int32_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.Graphs.ShortestDistance.BfsBasedShortestDistanceFinder"></inheritdoc></p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.Graphs.ShortestDistance.IShortestDistanceFinder.html">IShortestDistanceFinder</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_ShortestDistance_BfsBasedShortestDistanceFinder.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.ShortestDistance.BfsBasedShortestDistanceFinder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/ShortestDistance/BfsBasedShortestDistanceFinder.cs/#L78" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

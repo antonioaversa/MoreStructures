@@ -1,0 +1,343 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TreeTraversal&lt;TEdge, TNode&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TreeTraversal&lt;TEdge, TNode&gt;
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.RecImmTrees.Visitor.TreeTraversal`2">
+  
+  
+  <h1 id="MoreStructures_RecImmTrees_Visitor_TreeTraversal_2" data-uid="MoreStructures.RecImmTrees.Visitor.TreeTraversal`2" class="text-break">Class TreeTraversal&lt;TEdge, TNode&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Base class for all tree traversal strategies, such as <a class="xref" href="MoreStructures.RecImmTrees.Visitor.DepthFirstTraversal-2.html">DepthFirstTraversal&lt;TEdge, TNode&gt;</a> and
+<a class="xref" href="MoreStructures.RecImmTrees.Visitor.BreadthFirstTraversal-2.html">BreadthFirstTraversal&lt;TEdge, TNode&gt;</a> strategies, which are different strategies of traversing a
+<a class="xref" href="MoreStructures.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</a> structure top-down.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">TreeTraversal&lt;TEdge, TNode&gt;</span></div>
+      <div class="level2"><a class="xref" href="MoreStructures.RecImmTrees.Visitor.BreadthFirstTraversal-2.html">BreadthFirstTraversal</a>&lt;TEdge, TNode&gt;</div>
+      <div class="level2"><a class="xref" href="MoreStructures.RecImmTrees.Visitor.DepthFirstTraversal-2.html">DepthFirstTraversal</a>&lt;TEdge, TNode&gt;</div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.RecImmTrees.Visitor.IVisitStrategy-2.html">IVisitStrategy</a>&lt;TNode, <a class="xref" href="MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit-2.html">TreeTraversalVisit</a>&lt;TEdge, TNode&gt;&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.RecImmTrees.Visitor.html">MoreStructures.RecImmTrees.Visitor</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class TreeTraversal&lt;TEdge, TNode&gt; : IVisitStrategy&lt;TNode, TreeTraversalVisit&lt;TEdge, TNode&gt;&gt; where TEdge : IRecImmDictIndexedTreeEdge&lt;TEdge, TNode&gt; where TNode : IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TEdge</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TNode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+TRAVERSAL VS VISIT
+<br>
+The word &quot;traversal&quot; in <a class="xref" href="MoreStructures.RecImmTrees.Visitor.TreeTraversal-2.html">TreeTraversal&lt;TEdge, TNode&gt;</a> and its derivations, is here used with 
+narrower scope than the word &quot;visit&quot; in <a class="xref" href="MoreStructures.RecImmTrees.Visitor.IVisitStrategy-2.html">IVisitStrategy&lt;TNode, TVisitContext&gt;</a>.
+<br>
+- &quot;Traversal&quot; is used here as common class between DFS and BFS, as a visit strategy that starts from the root 
+  of the tree and proceeds downwards, following edges and terminating when leafs are reached.
+<br>
+- &quot;Visit&quot; is used in a more general sense, as any algorithm which &quot;touches&quot; 0 or more nodes of the tree, 
+walking the tree in any possible way (up, down, sideways, ...).
+</p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_ChildrenSorter.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Visitor.TreeTraversal%602.ChildrenSorter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/TreeTraversal.cs/#L43">View Source</a>
+  </span>
+  <a id="MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_ChildrenSorter_" data-uid="MoreStructures.RecImmTrees.Visitor.TreeTraversal`2.ChildrenSorter*"></a>
+  <h4 id="MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_ChildrenSorter" data-uid="MoreStructures.RecImmTrees.Visitor.TreeTraversal`2.ChildrenSorter">ChildrenSorter</h4>
+  <div class="markdown level1 summary"><p>The order of visit of the children. By default <a class="xref" href="MoreStructures.RecImmTrees.IRecImmDictIndexedTreeNode-2.html#MoreStructures_RecImmTrees_IRecImmDictIndexedTreeNode_2_Children">Children</a>
+is returned as is, and no specific order is imposed to the sequence of (edge, node) couples, during the visit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;TreeTraversalVisit&lt;TEdge, TNode&gt;, IEnumerable&lt;KeyValuePair&lt;TEdge, TNode&gt;&gt;&gt; ChildrenSorter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit-2.html">TreeTraversalVisit</a>&lt;TEdge, TNode&gt;, <span class="xref">IEnumerable</span>&lt;<span class="xref">KeyValuePair</span>&lt;TEdge, TNode&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_ChildrenSorter_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Specifying a well-defined, deterministic order ensures that children are visited in a consistent and
+reproducible way across executions of the visit.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_TraversalOrder.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Visitor.TreeTraversal%602.TraversalOrder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/TreeTraversal.cs/#L33">View Source</a>
+  </span>
+  <a id="MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_TraversalOrder_" data-uid="MoreStructures.RecImmTrees.Visitor.TreeTraversal`2.TraversalOrder*"></a>
+  <h4 id="MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_TraversalOrder" data-uid="MoreStructures.RecImmTrees.Visitor.TreeTraversal`2.TraversalOrder">TraversalOrder</h4>
+  <div class="markdown level1 summary"><p>The traversal order between parent and its children, to be applied when visiting the tree. By default
+<a class="xref" href="MoreStructures.RecImmTrees.Visitor.TreeTraversalOrder.html#MoreStructures_RecImmTrees_Visitor_TreeTraversalOrder_ParentFirst">ParentFirst</a> is applied, meaning that the parent node is visited before
+its children.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TreeTraversalOrder TraversalOrder { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.RecImmTrees.Visitor.TreeTraversalOrder.html">TreeTraversalOrder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_Visit__1_.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Visitor.TreeTraversal%602.Visit(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/TreeTraversal.cs/#L53">View Source</a>
+  </span>
+  <a id="MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_Visit_" data-uid="MoreStructures.RecImmTrees.Visitor.TreeTraversal`2.Visit*"></a>
+  <h4 id="MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_Visit__1_" data-uid="MoreStructures.RecImmTrees.Visitor.TreeTraversal`2.Visit(`1)">Visit(TNode)</h4>
+  <div class="markdown level1 summary"><p><strong>Lazily</strong> visits the structure of the provided <code data-dev-comment-type="paramref" class="paramref">node</code>, returning an enumerable of the
+sequence of <a class="xref" href="MoreStructures.RecImmTrees.IRecImmDictIndexedTreeNode-2.html">IRecImmDictIndexedTreeNode&lt;TEdge, TNode&gt;</a> of the structure, in the order defined by
+this <a class="xref" href="MoreStructures.RecImmTrees.Visitor.IVisitStrategy-2.html">IVisitStrategy&lt;TNode, TVisitContext&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract IEnumerable&lt;TreeTraversalVisit&lt;TEdge, TNode&gt;&gt; Visit(TNode node)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TNode</span></td>
+        <td><span class="parametername">node</span></td>
+        <td><p>The node on where to start visit the structure.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="MoreStructures.RecImmTrees.Visitor.TreeTraversalVisit-2.html">TreeTraversalVisit</a>&lt;TEdge, TNode&gt;&gt;</td>
+        <td><p>A sequence emitting (node, visit context) couples, in the visit order defined by the visit strategy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_RecImmTrees_Visitor_TreeTraversal_2_Visit__1__examples">Examples</h5>
+  <p><inheritdoc cref="T:MoreStructures.RecImmTrees.Visitor.BreadthFirstTraversal`2" path="/example"></inheritdoc></p>
+
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.RecImmTrees.Visitor.IVisitStrategy-2.html">IVisitStrategy&lt;TNode, TVisitContext&gt;</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_RecImmTrees_Visitor_TreeTraversal_2.md&amp;value=---%0Auid%3A%20MoreStructures.RecImmTrees.Visitor.TreeTraversal%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/RecImmTrees/Visitor/TreeTraversal.cs/#L23" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

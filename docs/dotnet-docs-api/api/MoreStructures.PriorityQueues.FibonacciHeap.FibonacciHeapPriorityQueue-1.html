@@ -1,0 +1,546 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class FibonacciHeapPriorityQueue&lt;T&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class FibonacciHeapPriorityQueue&lt;T&gt;
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue`1">
+  
+  
+  <h1 id="MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1" data-uid="MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue`1" class="text-break">Class FibonacciHeapPriorityQueue&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>An <a class="xref" href="MoreStructures.PriorityQueues.IPriorityQueue-1.html">IPriorityQueue&lt;T&gt;</a> implementation based on a Fibonacci Max Heap of its items.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html">BinomialHeapPriorityQueue</a>&lt;T&gt;</div>
+    <div class="level2"><span class="xref">FibonacciHeapPriorityQueue&lt;T&gt;</span></div>
+      <div class="level3"><a class="xref" href="MoreStructures.PriorityQueues.FibonacciHeap.UpdatableFibonacciHeapPriorityQueue-1.html">UpdatableFibonacciHeapPriorityQueue&lt;T&gt;</a></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.PriorityQueues.IPriorityQueue-1.html">IPriorityQueue</a>&lt;T&gt;</div>
+    <div><span class="xref">IEnumerable</span>&lt;T&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Roots">BinomialHeapPriorityQueue&lt;T&gt;.Roots</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_ItemsCount">BinomialHeapPriorityQueue&lt;T&gt;.ItemsCount</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_MaxRootsListNode">BinomialHeapPriorityQueue&lt;T&gt;.MaxRootsListNode</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_CurrentPushTimestamp">BinomialHeapPriorityQueue&lt;T&gt;.CurrentPushTimestamp</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Count">BinomialHeapPriorityQueue&lt;T&gt;.Count</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_System_Collections_IEnumerable_GetEnumerator">BinomialHeapPriorityQueue&lt;T&gt;.IEnumerable.GetEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Peek">BinomialHeapPriorityQueue&lt;T&gt;.Peek()</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Pop">BinomialHeapPriorityQueue&lt;T&gt;.Pop()</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_RaiseItemPushed_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__">BinomialHeapPriorityQueue&lt;T&gt;.RaiseItemPushed(TreeNode&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_RaiseItemPopping_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__">BinomialHeapPriorityQueue&lt;T&gt;.RaiseItemPopping(TreeNode&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_UpdateMaxRootsListNode">BinomialHeapPriorityQueue&lt;T&gt;.UpdateMaxRootsListNode()</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_AddRoot_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__">BinomialHeapPriorityQueue&lt;T&gt;.AddRoot(TreeNode&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_AttachToRoots_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__">BinomialHeapPriorityQueue&lt;T&gt;.AttachToRoots(TreeNode&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_MergeEquiDegreeTrees">BinomialHeapPriorityQueue&lt;T&gt;.MergeEquiDegreeTrees()</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_MergeRoots_LinkedListNode_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0___LinkedListNode_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0___">BinomialHeapPriorityQueue&lt;T&gt;.MergeRoots(LinkedListNode&lt;TreeNode&lt;T&gt;&gt;, LinkedListNode&lt;TreeNode&lt;T&gt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_DetachFromRoots_LinkedListNode_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0___">BinomialHeapPriorityQueue&lt;T&gt;.DetachFromRoots(LinkedListNode&lt;TreeNode&lt;T&gt;&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.PriorityQueues.FibonacciHeap.html">MoreStructures.PriorityQueues.FibonacciHeap</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class FibonacciHeapPriorityQueue&lt;T&gt; : BinomialHeapPriorityQueue&lt;T&gt;, IPriorityQueue&lt;T&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+DEFINITION
+<br>
+- A <strong>Fibonacci Heap</strong> is a <strong>Binomial Heap</strong> which has its <strong>heap max property</strong> and <strong>binomial 
+  layout</strong> invariants always satisfied, but can have <strong>unicity of degree</strong> temporarily invalidated 
+  (until next <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Pop">Pop()</a> operation).
+<br>
+- Nodes of the heaps can be flagged as <strong>losers</strong>, meaning that they have lost at least once a children,
+after its promotion to being a new root.
+</p>
+<p>
+ADVANTAGES AND DISADVANTAGES
+<br>
+- This heap implementation is a Binomial Heap refinement which prioritises performance of <a class="xref" href="MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1_Push__0_System_Int32_">Push(T, Int32)</a> 
+  and update operations over <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Pop">Pop()</a>.
+<br>
+- It does so by taking advantage of both the linked list layout and the tree layout, pretty much like
+Binomial Heaps. 
+<br>
+- Implementations based on linked or array lists are really fast at insertion, because they don&apos;t internally 
+keep the data sorted. However, extraction becomes expensive, for the very same reason that data is unsorted.
+<br>
+- At the other end of the spectrum, trees are logarithmic at insertion, because they have to keep data at least
+partially sorted, at all time. Extraction, however, is very cheap.
+<br>
+- So the underlying idea behind Fibonacci Heaps is to combine linked lists and trees, and represent the data as 
+a forest of n-ry heap trees, exactly like Binomial Heaps, and exploit the easy insertion in linked list
+(which is not implemented by the standard Push into a Binomial Heap).
+<br>
+- In doing so, both <a class="xref" href="MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1_Push__0_System_Int32_">Push(T, Int32)</a> and update becomes extremely fast, running in O(1) and O(1) 
+amortized, respectively.
+<br>
+- However, unlike <a class="xref" href="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue-1.html">ArrayListPriorityQueue&lt;T&gt;</a>, 
+<a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Pop">Pop()</a> doesn&apos;t become a O(n) operation. Instead, it retains 
+logarithmic runtime.
+<br>
+- This proves to be the best compromise for applications such as the Dijkstra algorithm (implemented in 
+<a class="xref" href="MoreStructures.Graphs.ShortestDistance.DijkstraShortestDistanceFinder.html">DijkstraShortestDistanceFinder</a>), which uses a priority queue to find
+the next best vertex.
+<br>
+- Dijkstra algorithm performs O(e) <a class="xref" href="MoreStructures.PriorityQueues.Extensions.UpdatablePriorityQueueExtensions.html#MoreStructures_PriorityQueues_Extensions_UpdatablePriorityQueueExtensions_PushOrUpdate__1_MoreStructures_PriorityQueues_IUpdatablePriorityQueue___0____0_System_Int32_">PushOrUpdate&lt;T&gt;(IUpdatablePriorityQueue&lt;T&gt;, T, Int32)</a>
+operations and O(v) <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Pop">Pop()</a> operations, where e and v are the number 
+of edges and vertices in the graph, respectively. 
+<br>
+- In dense graphs e is O(v^2), so the number of push/update operations is way higher than the number of pop
+operations, and it makes sense to optimize the former, at the cost of the latter.
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1__ctor.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue%601.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/FibonacciHeap/FibonacciHeapPriorityQueue.cs/#L69">View Source</a>
+  </span>
+  <a id="MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1__ctor_" data-uid="MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue`1.#ctor*"></a>
+  <h4 id="MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1__ctor" data-uid="MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue`1.#ctor">FibonacciHeapPriorityQueue()</h4>
+  <div class="markdown level1 summary"><p>Builds an empty priority queue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FibonacciHeapPriorityQueue()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1__ctor_MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue__0__.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue%601.%23ctor(MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/FibonacciHeap/FibonacciHeapPriorityQueue.cs/#L83">View Source</a>
+  </span>
+  <a id="MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1__ctor_" data-uid="MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue`1.#ctor*"></a>
+  <h4 id="MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1__ctor_MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue__0__" data-uid="MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue`1.#ctor(MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue{`0})">FibonacciHeapPriorityQueue(FibonacciHeapPriorityQueue&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Builds a deep, separate copy of the provided <code data-dev-comment-type="paramref" class="paramref">source</code> priority queue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FibonacciHeapPriorityQueue(FibonacciHeapPriorityQueue&lt;T&gt; source)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue-1.html">FibonacciHeapPriorityQueue</a>&lt;T&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The priority queue to be copied over.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1__ctor_MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue__0___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Doesn't copy the items themselves, it only deep-copies the internal structure of the <code data-dev-comment-type="paramref" class="paramref">source</code>
+queue.</p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1_Losers.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue%601.Losers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/FibonacciHeap/FibonacciHeapPriorityQueue.cs/#L64">View Source</a>
+  </span>
+  <a id="MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1_Losers_" data-uid="MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue`1.Losers*"></a>
+  <h4 id="MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1_Losers" data-uid="MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue`1.Losers">Losers</h4>
+  <div class="markdown level1 summary"><p>Contains the <span class="xref">MoreStructures.PriorityQueues.PrioritizedItem&lt;T&gt;</span> whose <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html">TreeNode&lt;T&gt;</a> have lost a child since last
+reset, and will be promoted to roots next time they will lose a child.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected HashSet&lt;PrioritizedItem&lt;T&gt;&gt; Losers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">HashSet</span>&lt;<span class="xref">MoreStructures.PriorityQueues.PrioritizedItem</span>&lt;T&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1_GetEnumerator.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue%601.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/FibonacciHeap/FibonacciHeapPriorityQueue.cs/#L105">View Source</a>
+  </span>
+  <a id="MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1_GetEnumerator_" data-uid="MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue`1.GetEnumerator*"></a>
+  <h4 id="MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1_GetEnumerator" data-uid="MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue`1.GetEnumerator">GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerator&lt;T&gt; GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerator</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue&lt;T&gt;.GetEnumerator()</span></div>
+  <h5 id="MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1_GetEnumerator_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>In order to return items in heap order (i.e. the max at each step), it first copies this priority queue into a
+second temporary queue, which can be mutated without affecting the state of this queue.
+<br>
+It then iterates over the copy, calling <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Pop">Pop()</a> until it becomes empty.
+<br>
+Time Complexity is O(n * log(n)) (when fully enumerated), because a single
+<a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Pop">Pop()</a> on a Fibonacci Heap takes logarithmic time, and there are n
+items to be extracted.
+<br>
+Space Complexity is O(n), as a copy of this queue is required as auxiliary data structure to emit elements in
+the right order of priority.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1_PromoteChildToRoot_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue%601.PromoteChildToRoot(MoreStructures.PriorityQueues.BinomialHeap.TreeNode%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/FibonacciHeap/FibonacciHeapPriorityQueue.cs/#L167">View Source</a>
+  </span>
+  <a id="MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1_PromoteChildToRoot_" data-uid="MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue`1.PromoteChildToRoot*"></a>
+  <h4 id="MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1_PromoteChildToRoot_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__" data-uid="MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue`1.PromoteChildToRoot(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0})">PromoteChildToRoot(TreeNode&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Promotes the provided <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html">TreeNode&lt;T&gt;</a>, to being a root, detaching it from its current parent.
+Also, resets the &quot;loser&quot; flag of the child (behavior specific to Fibonacci Heaps).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void PromoteChildToRoot(TreeNode&lt;T&gt; child)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html">TreeNode</a>&lt;T&gt;</td>
+        <td><span class="parametername">child</span></td>
+        <td><p>A child of a node of a tree in the forest.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue&lt;T&gt;.PromoteChildToRoot(MoreStructures.PriorityQueues.BinomialHeap.TreeNode&lt;T&gt;)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1_Push__0_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue%601.Push(%600%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/FibonacciHeap/FibonacciHeapPriorityQueue.cs/#L150">View Source</a>
+  </span>
+  <a id="MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1_Push_" data-uid="MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue`1.Push*"></a>
+  <h4 id="MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1_Push__0_System_Int32_" data-uid="MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue`1.Push(`0,System.Int32)">Push(T, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Push(T item, int priority)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">priority</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue&lt;T&gt;.Push(T, System.Int32)</span></div>
+  <h5 id="MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1_Push__0_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+ALGORITHM
+<br>
+- Adds a new singleton tree T (degree 0) to the forest, wrapping the provided <code data-dev-comment-type="paramref" class="paramref">item</code> with 
+  its <code data-dev-comment-type="paramref" class="paramref">priority</code> into an object R with no children, and wrapping R into a 
+<see cref="!:LinkedListNode&lt;T>"></see> LLN, which represents the root of T.
+<br>
+- If LLN has higher priority than the root with max priority, updates the reference to the root with max 
+priority, to point to LLN.
+<br>
+- Unlike <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Push__0_System_Int32_">Push(T, Int32)</a>, it doesn&apos;t perform any rebalancing of
+the forest just yet, meaning that the binomial property may be temporarily violated until the next 
+<a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Pop">Pop()</a> operation.
+<br>
+- The delay of &quot;housekeeping&quot; operations to restore the shape property of a binomial heap, and the grouping
+of such &quot;housekeeping&quot; operations into a single batch, executed at the next 
+<a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Pop">Pop()</a>, is one of the core efficiency mechanisms of the
+Fibonacci Heap.
+</p>
+<p>
+COMPLEXITY
+<br>
+- Adding a new root to the forest of trees is a constant-time operation, since the root is added at
+  the end of the linked list representing the forest, which keeps references to both ends of the chain of 
+  nodes.
+<br>
+- Therefore, Time Complexity and Space Complexity are O(1).
+<br>
+- Notice that this operation executes in constant time at the cost of adding a new shallow tree to the 
+forest. After n <a class="xref" href="MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1_Push__0_System_Int32_">Push(T, Int32)</a> consecutive operations, the forest would be made of n trees
+of degree 0, which is the shape of a simple heap based on a linked list.
+<br>
+- This cost has to be beared by <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Pop">Pop()</a>, which runs in logarithmic 
+time but merges trees of the same degree and does so in batch.
+</p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.PriorityQueues.IPriorityQueue-1.html">IPriorityQueue&lt;T&gt;</a>
+  </div>
+  <div>
+      <span class="xref">IEnumerable&lt;&gt;</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_FibonacciHeap_FibonacciHeapPriorityQueue_1.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/FibonacciHeap/FibonacciHeapPriorityQueue.cs/#L57" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

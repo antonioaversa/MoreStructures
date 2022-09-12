@@ -1,0 +1,437 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BWMatrix
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BWMatrix
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.BurrowsWheelerTransform.BWMatrix">
+  
+  
+  <h1 id="MoreStructures_BurrowsWheelerTransform_BWMatrix" data-uid="MoreStructures.BurrowsWheelerTransform.BWMatrix" class="text-break">Class BWMatrix
+  </h1>
+  <div class="markdown level0 summary"><p>The Burrows-Wheeler Matrix (BWM) of a <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a> is the square matrix all cyclic rotations of
+the provided <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>, with rows sorted in ascending order and taking into account that
+<a class="xref" href="MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_Terminator">Terminator</a> is to be considered smaller than any other char in the text.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">BWMatrix</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.BurrowsWheelerTransform.html">MoreStructures.BurrowsWheelerTransform</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_BWMatrix_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class BWMatrix : IEquatable&lt;BWMatrix&gt;</code></pre>
+  </div>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_BWMatrix_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>This <span class="xref">langword_csharp_record</span> is a typed wrapped of the underlying <span class="xref">langword_csharp_IList{string}</span> representing
+the BWM. It guarantes immutability and strong typing, and also keeps together the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html#MoreStructures_BurrowsWheelerTransform_BWMatrix_Text">Text</a> and its
+matrix <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html#MoreStructures_BurrowsWheelerTransform_BWMatrix_Content">Content</a>, providing BWM-specific functionalities.</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_BWMatrix__ctor_MoreStructures_TextWithTerminator_IList_System_String__.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.BWMatrix.%23ctor(MoreStructures.TextWithTerminator%2CIList%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/BWMatrix.cs/#L18">View Source</a>
+  </span>
+  <a id="MoreStructures_BurrowsWheelerTransform_BWMatrix__ctor_" data-uid="MoreStructures.BurrowsWheelerTransform.BWMatrix.#ctor*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_BWMatrix__ctor_MoreStructures_TextWithTerminator_IList_System_String__" data-uid="MoreStructures.BurrowsWheelerTransform.BWMatrix.#ctor(MoreStructures.TextWithTerminator,IList{System.String})">BWMatrix(TextWithTerminator, IList&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>The Burrows-Wheeler Matrix (BWM) of a <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a> is the square matrix all cyclic rotations of
+the provided <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>, with rows sorted in ascending order and taking into account that
+<a class="xref" href="MoreStructures.TextWithTerminator.html#MoreStructures_TextWithTerminator_Terminator">Terminator</a> is to be considered smaller than any other char in the text.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BWMatrix(TextWithTerminator Text, IList&lt;string&gt; Content)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a></td>
+        <td><span class="parametername">Text</span></td>
+        <td><p>The text, corresponding to the provided BWM.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">Content</span></td>
+        <td><p>The content of the Burrows-Wheeler Matrix (BWM) of <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html#MoreStructures_BurrowsWheelerTransform_BWMatrix_Text">Text</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_BWMatrix__ctor_MoreStructures_TextWithTerminator_IList_System_String___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This <span class="xref">langword_csharp_record</span> is a typed wrapped of the underlying <span class="xref">langword_csharp_IList{string}</span> representing
+the BWM. It guarantes immutability and strong typing, and also keeps together the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html#MoreStructures_BurrowsWheelerTransform_BWMatrix_Text">Text</a> and its
+matrix <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html#MoreStructures_BurrowsWheelerTransform_BWMatrix_Content">Content</a>, providing BWM-specific functionalities.</p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_BWMatrix_Content.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.BWMatrix.Content%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/BWMatrix.cs/#L45">View Source</a>
+  </span>
+  <a id="MoreStructures_BurrowsWheelerTransform_BWMatrix_Content_" data-uid="MoreStructures.BurrowsWheelerTransform.BWMatrix.Content*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_BWMatrix_Content" data-uid="MoreStructures.BurrowsWheelerTransform.BWMatrix.Content">Content</h4>
+  <div class="markdown level1 summary"><p><inheritdoc cref="M:MoreStructures.BurrowsWheelerTransform.BWMatrix.#ctor(MoreStructures.TextWithTerminator,IList{System.String})" path="/param[@name=&apos;Content&apos;]"></inheritdoc></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;string&gt; Content { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>A readonly immutable list of strings, each one containing a row of the matrix, i.e. a string containing a
+cyclic rotation of <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html#MoreStructures_BurrowsWheelerTransform_BWMatrix_Text">Text</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_BWMatrix_Content_examples">Examples</h5>
+  <p>Code:</p>
+<pre><code>new BWTMatrix(new(&quot;ab&quot;), new string[] { &quot;$ab&quot;, &quot;ab$&quot;, &quot;b$a&quot; }).Content</code></pre>
+<p>Result:</p>
+<pre><code>{
+    &quot;$ab&quot;,
+    &quot;ab$&quot;,
+    &quot;b$a&quot;,
+}</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_BWMatrix_FirstColumn.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.BWMatrix.FirstColumn%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/BWMatrix.cs/#L92">View Source</a>
+  </span>
+  <a id="MoreStructures_BurrowsWheelerTransform_BWMatrix_FirstColumn_" data-uid="MoreStructures.BurrowsWheelerTransform.BWMatrix.FirstColumn*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_BWMatrix_FirstColumn" data-uid="MoreStructures.BurrowsWheelerTransform.BWMatrix.FirstColumn">FirstColumn</h4>
+  <div class="markdown level1 summary"><p>Returns the first column of this <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a>. Corresponds to the sorted <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html#MoreStructures_BurrowsWheelerTransform_BWMatrix_Text">Text</a> and
+also to the sorted <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html#MoreStructures_BurrowsWheelerTransform_BWMatrix_Transform">Transform</a> of this <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string FirstColumn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_BWMatrix_FirstColumn_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Unlike <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html#MoreStructures_BurrowsWheelerTransform_BWMatrix_LastColumn">LastColumn</a> and <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html#MoreStructures_BurrowsWheelerTransform_BWMatrix_Transform">Transform</a>, <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html#MoreStructures_BurrowsWheelerTransform_BWMatrix_FirstColumn">FirstColumn</a> wouldn't require
+computation of the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html#MoreStructures_BurrowsWheelerTransform_BWMatrix_Content">Content</a> of this <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a>, since the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html#MoreStructures_BurrowsWheelerTransform_BWMatrix_FirstColumn">FirstColumn</a>
+can easily be calculated by sorting the input <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html#MoreStructures_BurrowsWheelerTransform_BWMatrix_Text">Text</a>.</p>
+</div>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_BWMatrix_FirstColumn_examples">Examples</h5>
+  <p>Code:</p>
+<pre><code>new BWTMatrix(new(&quot;mississippi&quot;)).FirstColumn</code></pre>
+<p>Result:</p>
+<pre><code>&quot;$iiiimppssss&quot;</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_BWMatrix_LastColumn.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.BWMatrix.LastColumn%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/BWMatrix.cs/#L114">View Source</a>
+  </span>
+  <a id="MoreStructures_BurrowsWheelerTransform_BWMatrix_LastColumn_" data-uid="MoreStructures.BurrowsWheelerTransform.BWMatrix.LastColumn*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_BWMatrix_LastColumn" data-uid="MoreStructures.BurrowsWheelerTransform.BWMatrix.LastColumn">LastColumn</h4>
+  <div class="markdown level1 summary"><p>Returns the last column of this <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a>. Corresponds to the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.html#MoreStructures_BurrowsWheelerTransform_BWTransform_Content">Content</a>
+of the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html#MoreStructures_BurrowsWheelerTransform_BWMatrix_Transform">Transform</a> of this <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string LastColumn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_BWMatrix_LastColumn_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Requires <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html#MoreStructures_BurrowsWheelerTransform_BWMatrix_Content">Content</a> calculation.
+<inheritdoc cref="T:MoreStructures.BurrowsWheelerTransform.BWMatrix" path="/remarks/para[@id=&apos;lazy-initialization&apos;]"></inheritdoc></p>
+</div>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_BWMatrix_LastColumn_examples">Examples</h5>
+  <p>Code:</p>
+<pre><code>new BWTMatrix(new(&quot;mississippi&quot;)).LastColumn</code></pre>
+<p>Result:</p>
+<pre><code>&quot;ipssm$pissii&quot;</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_BWMatrix_Text.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.BWMatrix.Text%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/BWMatrix.cs/#L18">View Source</a>
+  </span>
+  <a id="MoreStructures_BurrowsWheelerTransform_BWMatrix_Text_" data-uid="MoreStructures.BurrowsWheelerTransform.BWMatrix.Text*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_BWMatrix_Text" data-uid="MoreStructures.BurrowsWheelerTransform.BWMatrix.Text">Text</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextWithTerminator Text { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_BWMatrix_Transform.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.BWMatrix.Transform%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/BWMatrix.cs/#L69">View Source</a>
+  </span>
+  <a id="MoreStructures_BurrowsWheelerTransform_BWMatrix_Transform_" data-uid="MoreStructures.BurrowsWheelerTransform.BWMatrix.Transform*"></a>
+  <h4 id="MoreStructures_BurrowsWheelerTransform_BWMatrix_Transform" data-uid="MoreStructures.BurrowsWheelerTransform.BWMatrix.Transform">Transform</h4>
+  <div class="markdown level1 summary"><p>Builds the Burrows-Wheeler Transform from this <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a>, which corresponds to the last column
+of the matrix, stored in <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html#MoreStructures_BurrowsWheelerTransform_BWMatrix_Content">Content</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BWTransform Transform { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.html">BWTransform</a></td>
+        <td><p>A <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.html">BWTransform</a> object wrapping the string containing the Burrows-Wheeler transform.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_BWMatrix_Transform_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Requires <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html#MoreStructures_BurrowsWheelerTransform_BWMatrix_Content">Content</a> calculation.
+<inheritdoc cref="T:MoreStructures.BurrowsWheelerTransform.BWMatrix" path="/remarks/para[@id=&apos;lazy-initialization&apos;]"></inheritdoc></p>
+</div>
+  <h5 id="MoreStructures_BurrowsWheelerTransform_BWMatrix_Transform_examples">Examples</h5>
+  <p>Code:</p>
+<pre><code>new BWTMatrix(new(&quot;mississippi&quot;)).Transform;</code></pre>
+<p>Result:</p>
+<pre><code>&quot;ipssm$pissii&quot;</code></pre>
+
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_BWMatrix.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.BWMatrix%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/BWMatrix.cs/#L18" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

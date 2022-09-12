@@ -1,0 +1,329 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IPriorityQueue&lt;T&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IPriorityQueue&lt;T&gt;
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.PriorityQueues.IPriorityQueue`1">
+  
+  
+  <h1 id="MoreStructures_PriorityQueues_IPriorityQueue_1" data-uid="MoreStructures.PriorityQueues.IPriorityQueue`1" class="text-break">Interface IPriorityQueue&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Defines the interface common to all <strong>Priority Queue</strong> implementations.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.PriorityQueues.html">MoreStructures.PriorityQueues</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_PriorityQueues_IPriorityQueue_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IPriorityQueue&lt;T&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of items, the queue is composed of.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_PriorityQueues_IPriorityQueue_1_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+DEFINITION
+<br>
+- A Priority Queue is a data structure storing items of a generic type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>, together with
+  their <strong>priority</strong>.
+<br>
+- Duplicates, both for items and their priorities, are supported.
+<br>
+- Priorities are defined as <span class="xref">System.Int32</span> values: the bigger the value, the higher is the priority of the
+item.
+<br>
+- The core operations of any Priority Queue are <strong>insertion</strong> of an item with related priority, 
+<strong>extraction</strong> of the item with the highest priority and testing for empty.
+<br>
+- Other operations are provided, such as <strong>total count</strong> of items and <strong>peeking</strong> (retrieval without
+extraction).
+<br>
+- More advanced operations, requiring auxiliary data structures for their implementation, are not specified
+by this interface: examples are <strong>priority update</strong> and <strong>removal</strong> of an item.
+<br>
+- Popular implementations make both insertion and extraction sub-linear operations (i.e. faster than O(n)).
+</p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_IPriorityQueue_1_Count.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.IPriorityQueue%601.Count%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/IPriorityQueue.cs/#L59">View Source</a>
+  </span>
+  <a id="MoreStructures_PriorityQueues_IPriorityQueue_1_Count_" data-uid="MoreStructures.PriorityQueues.IPriorityQueue`1.Count*"></a>
+  <h4 id="MoreStructures_PriorityQueues_IPriorityQueue_1_Count" data-uid="MoreStructures.PriorityQueues.IPriorityQueue`1.Count">Count</h4>
+  <div class="markdown level1 summary"><p>The number of items currently in the queue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Count { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>A non-negative value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_IPriorityQueue_1_Peek.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.IPriorityQueue%601.Peek%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/IPriorityQueue.cs/#L72">View Source</a>
+  </span>
+  <a id="MoreStructures_PriorityQueues_IPriorityQueue_1_Peek_" data-uid="MoreStructures.PriorityQueues.IPriorityQueue`1.Peek*"></a>
+  <h4 id="MoreStructures_PriorityQueues_IPriorityQueue_1_Peek" data-uid="MoreStructures.PriorityQueues.IPriorityQueue`1.Peek">Peek()</h4>
+  <div class="markdown level1 summary"><p>Retrieves the item of the queue with highest priority, without extracting it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PrioritizedItem&lt;T&gt; Peek()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MoreStructures.PriorityQueues.PrioritizedItem</span>&lt;T&gt;</td>
+        <td><p>A <span class="xref">MoreStructures.PriorityQueues.PrioritizedItem&lt;T&gt;</span> wrapping the item with the highest priority, together with its priority and
+push timestamp.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_PriorityQueues_IPriorityQueue_1_Peek_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Check <a class="xref" href="MoreStructures.PriorityQueues.IPriorityQueue-1.html#MoreStructures_PriorityQueues_IPriorityQueue_1_Pop">Pop()</a> for retrieval <strong>and extraction</strong> of the item.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_IPriorityQueue_1_Pop.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.IPriorityQueue%601.Pop%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/IPriorityQueue.cs/#L51">View Source</a>
+  </span>
+  <a id="MoreStructures_PriorityQueues_IPriorityQueue_1_Pop_" data-uid="MoreStructures.PriorityQueues.IPriorityQueue`1.Pop*"></a>
+  <h4 id="MoreStructures_PriorityQueues_IPriorityQueue_1_Pop" data-uid="MoreStructures.PriorityQueues.IPriorityQueue`1.Pop">Pop()</h4>
+  <div class="markdown level1 summary"><p>Extracts the item of the queue with highest priority.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PrioritizedItem&lt;T&gt; Pop()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MoreStructures.PriorityQueues.PrioritizedItem</span>&lt;T&gt;</td>
+        <td><p>A <span class="xref">MoreStructures.PriorityQueues.PrioritizedItem&lt;T&gt;</span> wrapping the item with the highest priority, together with its priority and
+push timestamp.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_PriorityQueues_IPriorityQueue_1_Pop_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Check <a class="xref" href="MoreStructures.PriorityQueues.IPriorityQueue-1.html#MoreStructures_PriorityQueues_IPriorityQueue_1_Pop">Pop()</a> for retrieval <strong>without extraction</strong> of the item.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_IPriorityQueue_1_Push__0_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.IPriorityQueue%601.Push(%600%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/IPriorityQueue.cs/#L38">View Source</a>
+  </span>
+  <a id="MoreStructures_PriorityQueues_IPriorityQueue_1_Push_" data-uid="MoreStructures.PriorityQueues.IPriorityQueue`1.Push*"></a>
+  <h4 id="MoreStructures_PriorityQueues_IPriorityQueue_1_Push__0_System_Int32_" data-uid="MoreStructures.PriorityQueues.IPriorityQueue`1.Push(`0,System.Int32)">Push(T, Int32)</h4>
+  <div class="markdown level1 summary"><p>Inserts the provided <code data-dev-comment-type="paramref" class="paramref">item</code> into the queue, with the provided <code data-dev-comment-type="paramref" class="paramref">priority</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Push(T item, int priority)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The item to be inserted into the queue.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>The priority to be assigned to the <code data-dev-comment-type="paramref" class="paramref">item</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_IPriorityQueue_1.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.IPriorityQueue%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/IPriorityQueue.cs/#L31" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
