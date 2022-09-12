@@ -192,7 +192,7 @@ jobs:
 
     - name: Generate API Docs
       run: |
-        Invoke-RestMethod -Uri "https://github.com/dotnet/docfx/releases/download/v2.59.2/docfx.zip" -OutFile "docfx.zip"
+        Invoke-RestMethod -Uri "https://github.com/dotnet/docfx/releases/download/v2.59.4/docfx.zip" -OutFile "docfx.zip"
         Expand-Archive "./docfx.zip" -DestinationPath "./docfx/" -Force
         cd "./docfx_project"
         & "$env:GITHUB_WORKSPACE/docfx/docfx.exe" "docfx.json"
