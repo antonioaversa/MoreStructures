@@ -6,6 +6,7 @@ namespace MoreStructures.PriorityQueues.BinomialHeap;
 /// <summary>
 /// An <see cref="IPriorityQueue{T}"/> implementation based on a Binomial Max Heap of its items.
 /// </summary>
+/// <typeparam name="T"><inheritdoc cref="IPriorityQueue{T}"/></typeparam>
 /// <remarks>
 ///     <para id="definition">
 ///     DEFINITION
@@ -263,7 +264,7 @@ public partial class BinomialHeapPriorityQueue<T> : IPriorityQueue<T>
         if (MaxRootsListNode == null)
             throw new InvalidOperationException($"Can't {nameof(Pop)} on an empty queue.");
 
-        RaiseItemPopping();
+        RaiseItemPopping(MaxRootsListNode.Value);
         var oldRoot = DetachFromRoots(MaxRootsListNode);
         ItemsCount--;
 
@@ -289,7 +290,8 @@ public partial class BinomialHeapPriorityQueue<T> : IPriorityQueue<T>
     /// <summary>
     /// Invoked just before an item is removed from the heap.
     /// </summary>
-    protected virtual void RaiseItemPopping() { }
+    /// <param name="root">The <see cref="TreeNode{T}"/> about to be removed from the heap.</param>
+    protected virtual void RaiseItemPopping(TreeNode<T> root) { }
 
     #endregion
 
