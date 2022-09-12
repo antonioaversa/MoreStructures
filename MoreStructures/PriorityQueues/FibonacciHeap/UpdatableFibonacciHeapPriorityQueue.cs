@@ -1,14 +1,16 @@
-﻿namespace MoreStructures.PriorityQueues.FibonacciHeap;
+﻿using MoreStructures.PriorityQueues.BinomialHeap;
+
+namespace MoreStructures.PriorityQueues.FibonacciHeap;
 
 /// <summary>
-/// A refinement of <see cref="HeapBasedPriorityQueue{T}"/> which supports <see cref="IUpdatablePriorityQueue{T}"/>
+/// A refinement of <see cref="FibonacciHeapPriorityQueue{T}"/> which supports <see cref="IUpdatablePriorityQueue{T}"/>
 /// operations, such as retrieval and update of priorities and removal of items.
 /// </summary>
-public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUpdatablePriorityQueue<T>
+public class UpdatableFibonacciHeapPriorityQueue<T> : FibonacciHeapPriorityQueue<T>, IUpdatablePriorityQueue<T>
     where T : notnull
 {
-    private Dictionary<T, HeapBasedPriorityQueue<int>> ItemToPushTimestamps { get; } = new();
-    private Dictionary<int, TreeNode> PushTimestampToTreeNode { get; } = new();
+    private Dictionary<T, FibonacciHeapPriorityQueue<int>> ItemToPushTimestamps { get; } = new();
+    private Dictionary<int, TreeNode<T>> PushTimestampToTreeNode { get; } = new();
 
     #region Public API
 
@@ -23,12 +25,12 @@ public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUp
     ///     - If such a queue is not found, <paramref name="item"/> is not present in the main priority queue, and an 
     ///       empty sequence is returned.
     ///       <br/>
-    ///     - Otherwise, the queue is iterated over, getting the <see cref="HeapBasedPriorityQueue{T}.TreeNode"/> 
-    ///       corresponding to each timestamp extracted from the queue, where such node is still in a heap (it may have
-    ///       been detached since).
+    ///     - Otherwise, the queue is iterated over, getting the 
+    ///       <see cref="TreeNode{T}"/> corresponding to each timestamp 
+    ///       extracted from the queue, where such node is still in a heap (it may have been detached since).
     ///       <br/>
-    ///     - The <see cref="HeapBasedPriorityQueue{T}.TreeNode"/>  is used to make a direct access to the 
-    ///       corresponding <see cref="PrioritizedItem{T}"/>. The priority is taken from 
+    ///     - The <see cref="TreeNode{T}"/>  is used to make a direct access to 
+    ///       the corresponding <see cref="PrioritizedItem{T}"/>. The priority is taken from 
     ///       <see cref="PrioritizedItem{T}.Priority"/>.
     ///     </para>
     ///     <para id="complexity">
@@ -41,8 +43,8 @@ public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUp
     ///       O(dup_factor) operation, where dup_factor is the average number of occurrences of an item in the data 
     ///       structure (1 means no duplicates, 2 means the item appears twice, etc.).
     ///       <br/>
-    ///     - Retrieving the <see cref="HeapBasedPriorityQueue{T}.TreeNode"/> from the push timestamp and the priority 
-    ///       from the <see cref="PrioritizedItem{T}"/> instance are both constant-time operations.
+    ///     - Retrieving the <see cref="TreeNode{T}"/> from the push timestamp and the priority from the 
+    ///       <see cref="PrioritizedItem{T}"/> instance are both constant-time operations.
     ///       <br/>
     ///     - Therefore Time and Space Complexity are O(dup_factor).
     ///     </para>
@@ -66,22 +68,22 @@ public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUp
     ///     ALGORITHM
     ///     <br/>
     ///     - It first retrieves the max priority P from the max priority item the queue via 
-    ///       <see cref="HeapBasedPriorityQueue{T}.Peek"/>.
+    ///       <see cref="BinomialHeapPriorityQueue{T}.Peek"/>.
     ///       <br/>
     ///     - Then, it updates the priority of the provided <paramref name="item"/> via 
-    ///       <see cref="UpdatableHeapBasedPriorityQueue{T}.UpdatePriority(T, int)"/>, setting it to P + 1 and making
+    ///       <see cref="UpdatableFibonacciHeapPriorityQueue{T}.UpdatePriority(T, int)"/>, setting it to P + 1 and making
     ///       <paramref name="item"/> the one with max priority.
     ///       <br/>
-    ///     - Finally it pops the <paramref name="item"/> via <see cref="HeapBasedPriorityQueue{T}.Pop"/>.
+    ///     - Finally it pops the <paramref name="item"/> via <see cref="BinomialHeapPriorityQueue{T}.Pop"/>.
     ///     </para>
     ///     <para id="complexity">
     ///     COMPLEXITY
     ///     <br/>
-    ///     - Both <see cref="HeapBasedPriorityQueue{T}.Peek"/> and 
-    ///       <see cref="UpdatableHeapBasedPriorityQueue{T}.UpdatePriority(T, int)"/> have constant 
+    ///     - Both <see cref="BinomialHeapPriorityQueue{T}.Peek"/> and 
+    ///       <see cref="UpdatableFibonacciHeapPriorityQueue{T}.UpdatePriority(T, int)"/> have constant 
     ///       Time and Space Complexity (update having constant amortized complexity).
     ///       <br/>
-    ///     - However, <see cref="HeapBasedPriorityQueue{T}.Pop"/> has logarithmic Time Complexity.
+    ///     - However, <see cref="BinomialHeapPriorityQueue{T}.Pop"/> has logarithmic Time Complexity.
     ///       <br/>
     ///     - Therefore, Time Complexity is O(log(n) + dup_factor) and Space Complexity is O(1), where dup_factor is 
     ///       the average number of occurrences of an item in the data structure (1 means no duplicates, 2 means the 
@@ -113,21 +115,20 @@ public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUp
     ///       <br/>
     ///     - If the priority queue is found, push timestamps are popped from it until the root of the priority queue 
     ///       contains a valid timestamp ts, i.e. a timestamp present in the dictionary mapping timestamps to
-    ///       <see cref="HeapBasedPriorityQueue{T}.TreeNode"/> instances and the 
-    ///       <see cref="HeapBasedPriorityQueue{T}.TreeNode.IsInAHeap"/>.
+    ///       <see cref="TreeNode{T}"/> instances and the <see cref="TreeNode{T}.IsInAHeap"/>.
     ///       <br/>
     ///     - If such a timestamp is not found, it means that that <paramref name="item"/> used to be present in the 
     ///       main priority, but it is not anymore. So, an <see cref="InvalidOperationException"/> is thrown.
     ///       <br/>
     ///     - If such a timestamp is found, the <see cref="PrioritizedItem{T}"/> can be accessed via the
-    ///       <see cref="HeapBasedPriorityQueue{T}.TreeNode.PrioritizedItem"/> property.
+    ///       <see cref="TreeNode{T}.PrioritizedItem"/> property.
     ///     </para>
     ///     <para id="complexity-treenode-retrieval">
     ///     COMPLEXITY - TREENODE RETRIEVAL PART
     ///     <br/>
     ///     - Retrieving the priority queue associated with the <paramref name="item"/> is a O(1) operation.
     ///       <br/>
-    ///     - Finding the right push timestamp may require a number of <see cref="HeapBasedPriorityQueue{T}.Pop"/>
+    ///     - Finding the right push timestamp may require a number of <see cref="BinomialHeapPriorityQueue{T}.Pop"/>
     ///       proportional to the number of times the priority of <paramref name="item"/> has been changed.
     ///       <br/>
     ///     - In the worst case, such number is equal to the number of insertion of <paramref name="item"/>.
@@ -151,7 +152,7 @@ public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUp
     ///       too, and its loser flag is reset as well. That continues up to the first ancestor which is not a loser.
     ///       <br/>
     ///     - When the priority is lower, the node is not promoted to a root. Its children are, instead. As in the
-    ///       <see cref="HeapBasedPriorityQueue{T}.Pop"/>, merging and max root reference update take place.
+    ///       <see cref="BinomialHeapPriorityQueue{T}.Pop"/>, merging and max root reference update take place.
     ///       <br/>
     ///     - Finally, the <see cref="PrioritizedItem{T}"/> before the update is returned as result.
     ///     </para>
@@ -164,7 +165,8 @@ public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUp
     ///     - When the value is bigger or equal than P, Time and Space Complexity are O(1), amortized.
     ///       <br/>
     ///     - When the value is smaller than P, Time Complexity and Space Complexity are both O(log(n)). Same analysis
-    ///       as for <see cref="HeapBasedPriorityQueue{T}.Pop"/> applies (since very similar operations are performed).
+    ///       as for <see cref="BinomialHeapPriorityQueue{T}.Pop"/> applies (since very similar operations are 
+    ///       performed).
     ///     </para>
     ///     <para id="complexity">
     ///     COMPLEXITY - OVERALL
@@ -186,12 +188,12 @@ public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUp
     #region Hooks
 
     /// <inheritdoc/>
-    protected override void RaiseItemPushed(TreeNode newRoot)
+    protected override void RaiseItemPushed(TreeNode<T> newRoot)
     {
         var prioritizedItem = newRoot.PrioritizedItem;
         PushTimestampToTreeNode[prioritizedItem.PushTimestamp] = newRoot;
         if (!ItemToPushTimestamps.ContainsKey(prioritizedItem.Item))
-            ItemToPushTimestamps[prioritizedItem.Item] = new HeapBasedPriorityQueue<int>();
+            ItemToPushTimestamps[prioritizedItem.Item] = new FibonacciHeapPriorityQueue<int>();
         ItemToPushTimestamps[prioritizedItem.Item].Push(prioritizedItem.PushTimestamp, prioritizedItem.Priority);
     }
 
@@ -202,12 +204,12 @@ public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUp
     }
 
     /// <summary>
-    /// Invoked just after the priority of the <see cref="PrioritizedItem{T}"/> of a 
-    /// <see cref="HeapBasedPriorityQueue{T}.TreeNode"/> in the heap has changed.
+    /// Invoked just after the priority of the <see cref="PrioritizedItem{T}"/> of a <see cref="TreeNode{T}"/> in the 
+    /// heap has changed.
     /// </summary>
     /// <param name="treeNode">The node whose item has changed priority.</param>
     /// <param name="itemBefore">The <see cref="PrioritizedItem{T}"/> as it was before the change.</param>
-    protected virtual void RaiseItemPriorityChanged(TreeNode treeNode, PrioritizedItem<T> itemBefore)
+    protected virtual void RaiseItemPriorityChanged(TreeNode<T> treeNode, PrioritizedItem<T> itemBefore)
     {
         var itemAfter = treeNode.PrioritizedItem;
         PushTimestampToTreeNode.Remove(itemBefore.PushTimestamp);
@@ -219,12 +221,12 @@ public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUp
 
     #region Helpers
 
-    private TreeNode FindTreeNode(T item)
+    private TreeNode<T> FindTreeNode(T item)
     {
         if (!ItemToPushTimestamps.TryGetValue(item, out var pushTimestamps))
             throw new InvalidOperationException("The specified item is not in the queue.");
 
-        TreeNode? treeNode = null;
+        TreeNode<T>? treeNode = null;
         while (
             pushTimestamps.Count > 0 &&
             (!PushTimestampToTreeNode.TryGetValue(pushTimestamps.Peek().Item, out treeNode) || !treeNode.IsInAHeap))
@@ -238,7 +240,7 @@ public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUp
         return treeNode!;
     }
 
-    private PrioritizedItem<T> UpdatePriority(TreeNode treeNode, int newPriority, int newPushTimestamp)
+    private PrioritizedItem<T> UpdatePriority(TreeNode<T> treeNode, int newPriority, int newPushTimestamp)
     {
         var newPrioritizedItem =
             new PrioritizedItem<T>(treeNode.PrioritizedItem.Item, newPriority, newPushTimestamp);
@@ -268,7 +270,7 @@ public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUp
     }
 
     private void UpdateRootPriority(
-        TreeNode treeNode, PrioritizedItem<T> newPrioritizedItem)
+        TreeNode<T> treeNode, PrioritizedItem<T> newPrioritizedItem)
     {
         // The item is at the root of a tree and the new priority is higher => the heap constraints on the tree
         // are not violated, so just check and possibly update the reference to the root with max priority.
@@ -276,7 +278,7 @@ public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUp
             MaxRootsListNode = treeNode.RootsListNode;
     }
 
-    private void UpdateNonRootPriority(TreeNode treeNode)
+    private void UpdateNonRootPriority(TreeNode<T> treeNode)
     {
         // The item is not at the root of a tree and the new priority is higher => the heap constraints on the
         // sub-tree of the item are not violated, by the transitivity of max.

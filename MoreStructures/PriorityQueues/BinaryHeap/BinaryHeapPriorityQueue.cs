@@ -17,7 +17,7 @@ namespace MoreStructures.PriorityQueues.BinaryHeap;
 ///       <see cref="Pop"/> a logarithmic-time operation).
 ///       <br/>
 ///     - This comes a cost of the <see cref="Push(T, int)"/> operation, which is O(1) in 
-///       <see cref="ArrayListBasedPriorityQueue{T}"/> and becomes a logarithmic-time operation in this implementation.
+///       <see cref="ArrayListPriorityQueue{T}"/> and becomes a logarithmic-time operation in this implementation.
 ///       <br/>
 ///     - So this implementation can be considered as a balanced compromise between insertion and extraction, which 
 ///       complexifies the underlying data structure and loses some performance in insertion to obtain all-around
@@ -73,7 +73,7 @@ namespace MoreStructures.PriorityQueues.BinaryHeap;
 ///      - Therefore a <b>total strict order</b> can be imposed.
 ///     </para>
 /// </remarks>
-public class HeapBasedPriorityQueue<T> : IPeekKthPriorityQueue<T>
+public class BinaryHeapPriorityQueue<T> : IPeekKthPriorityQueue<T>
     where T : notnull
 {
     /// <summary>
@@ -95,7 +95,7 @@ public class HeapBasedPriorityQueue<T> : IPeekKthPriorityQueue<T>
     /// <br/>
     /// Therefore, Time and Space Complexity is O(1).
     /// </remarks>
-    public HeapBasedPriorityQueue()
+    public BinaryHeapPriorityQueue()
     {
         Items = new();
     }
@@ -103,7 +103,7 @@ public class HeapBasedPriorityQueue<T> : IPeekKthPriorityQueue<T>
     /// <summary>
     /// Builds a new priority queue with the same items of the provided <paramref name="source"/>.
     /// </summary>
-    /// <param name="source">The <see cref="HeapBasedPriorityQueue{T}"/> instance to use as a source of data.</param>
+    /// <param name="source">The <see cref="BinaryHeapPriorityQueue{T}"/> instance to use as a source of data.</param>
     /// <remarks>
     /// The underlying data structure is shallow copied.
     /// <br/>
@@ -113,7 +113,7 @@ public class HeapBasedPriorityQueue<T> : IPeekKthPriorityQueue<T>
     /// Because the data structure contain O(n) items, Time and Space Complexity are O(n), where n is the number of
     /// items in <paramref name="source"/>.
     /// </remarks>
-    public HeapBasedPriorityQueue(HeapBasedPriorityQueue<T> source)
+    public BinaryHeapPriorityQueue(BinaryHeapPriorityQueue<T> source)
     {
         Items = new(source.Items);
     }
@@ -143,7 +143,7 @@ public class HeapBasedPriorityQueue<T> : IPeekKthPriorityQueue<T>
     /// </remarks> 
     public virtual IEnumerator<T> GetEnumerator()
     {
-        var copy = new HeapBasedPriorityQueue<T>(this);
+        var copy = new BinaryHeapPriorityQueue<T>(this);
         while (copy.Count > 0)
             yield return copy.Pop().Item;
     }
@@ -253,7 +253,7 @@ public class HeapBasedPriorityQueue<T> : IPeekKthPriorityQueue<T>
     ///       <br/>
     ///     - Otherwise, the main algorithm loop is performed, at most <paramref name="k"/> times.
     ///       <br/>
-    ///     - A dedicated <see cref="HeapBasedPriorityQueue{T}"/> C of <see cref="int"/> values is instantiated.
+    ///     - A dedicated <see cref="BinaryHeapPriorityQueue{T}"/> C of <see cref="int"/> values is instantiated.
     ///       <br/>
     ///     - The values of C are the indexes of the underlying list of this priority queue, and identify candidates
     ///       for the <paramref name="k"/>-th largest item.
@@ -286,7 +286,7 @@ public class HeapBasedPriorityQueue<T> : IPeekKthPriorityQueue<T>
     ///     - At each iteration 1 item is popped and 2 are pushed, so the candidates queue grows of 1 item per cycle.
     ///       <br/>
     ///     - Each <see cref="Pop"/> and <see cref="Push(T, int)"/> operation on the candidates queue has logarithmic
-    ///       run, since they are done on a <see cref="HeapBasedPriorityQueue{T}"/> instance.
+    ///       run, since they are done on a <see cref="BinaryHeapPriorityQueue{T}"/> instance.
     ///       <br/>
     ///     - Therefore, Time Complexity is O(k * log(k)) and Space Complexity is O(k).
     ///     </para>
@@ -297,7 +297,7 @@ public class HeapBasedPriorityQueue<T> : IPeekKthPriorityQueue<T>
         if (k >= Items.Count) return null;
         if (k == 0) return Peek();
 
-        var candidates = new HeapBasedPriorityQueue<int>();
+        var candidates = new BinaryHeapPriorityQueue<int>();
         candidates.Push(0, Items[0].Priority, Items[0].PushTimestamp);
         while (k > 0)
         {

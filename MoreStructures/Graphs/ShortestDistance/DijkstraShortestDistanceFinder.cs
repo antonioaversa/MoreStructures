@@ -103,7 +103,7 @@ public class DijkstraShortestDistanceFinder : IShortestDistanceFinder
             [start] = (0, null),
         };
         var added = new HashSet<int>() { start };
-        var vertexes = new UpdatableHeapBasedPriorityQueue<int>();
+        var vertexes = new UpdatableBinaryHeapPriorityQueue<int>();
         var lastAdded = start;
         while (lastAdded != end)
         {

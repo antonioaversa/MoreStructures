@@ -40,21 +40,21 @@ public abstract class UpdatablePriorityQueueExtensionsTests
 }
 
 [TestClass]
-public class UpdatablePriorityQueueExtensionsTests_ArrayListBasedPriorityQueue
+public class UpdatablePriorityQueueExtensionsTests_WithArrayListPriorityQueue
     : UpdatablePriorityQueueExtensionsTests
 {
-    public UpdatablePriorityQueueExtensionsTests_ArrayListBasedPriorityQueue()
-        : base(() => new ArrayListBasedPriorityQueue<int>())
+    public UpdatablePriorityQueueExtensionsTests_WithArrayListPriorityQueue()
+        : base(() => new ArrayListPriorityQueue<int>())
     {
     }
 }
 
 [TestClass]
-public class UpdatablePriorityQueueExtensionsTests_WithUpdatableHeapBasedPriorityQueue
+public class UpdatablePriorityQueueExtensionsTests_WithUpdatableBinaryHeapPriorityQueue
     : UpdatablePriorityQueueExtensionsTests
 {
-    public UpdatablePriorityQueueExtensionsTests_WithUpdatableHeapBasedPriorityQueue() 
-        : base(() => new UpdatableHeapBasedPriorityQueue<int>())
+    public UpdatablePriorityQueueExtensionsTests_WithUpdatableBinaryHeapPriorityQueue() 
+        : base(() => new UpdatableBinaryHeapPriorityQueue<int>())
     {
     }
 }

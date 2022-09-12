@@ -4,12 +4,12 @@ using MoreStructures.PriorityQueues.ArrayList;
 namespace MoreStructures.Tests.PriorityQueues.ArrayList;
 
 [TestClass]
-public class ArrayListBasedPriorityQueueTests_AsBasicQueue : PriorityQueueTests
+public class ArrayListPriorityQueueTests_AsBasicQueue : PriorityQueueTests
 {
-    public ArrayListBasedPriorityQueueTests_AsBasicQueue() : base(
-        () => new ArrayListBasedPriorityQueue<int>(),
-        () => new ArrayListBasedPriorityQueue<RefType>(),
-        () => new ArrayListBasedPriorityQueue<ValType>())
+    public ArrayListPriorityQueueTests_AsBasicQueue() : base(
+        () => new ArrayListPriorityQueue<int>(),
+        () => new ArrayListPriorityQueue<RefType>(),
+        () => new ArrayListPriorityQueue<ValType>())
     {
     }
 
@@ -24,7 +24,7 @@ public class ArrayListBasedPriorityQueueTests_AsBasicQueue : PriorityQueueTests
             yield return new(1, 4, 3);
         }
 
-        var queue = new ArrayListBasedPriorityQueue<int>(GetNumbers());
+        var queue = new ArrayListPriorityQueue<int>(GetNumbers());
         Assert.AreEqual(4, queue.Count);
 
         Assert.IsTrue(GetNumbers().OrderByDescending(e => e.Priority).Select(e => e.Item).SequenceEqual(queue));
@@ -34,7 +34,7 @@ public class ArrayListBasedPriorityQueueTests_AsBasicQueue : PriorityQueueTests
     public void Ctor_WithProvidedList()
     {
         var backingList = new List<PrioritizedItem<int>> { new(2, 1, 0), new(2, 3, 1), new(3, -1, 2), new(1, 4, 3) };
-        var queue = new ArrayListBasedPriorityQueue<int>(backingList);
+        var queue = new ArrayListPriorityQueue<int>(backingList);
         Assert.AreEqual(4, queue.Count);
         queue.Push(4, 5);
         Assert.AreEqual(5, backingList.Count);
@@ -46,21 +46,21 @@ public class ArrayListBasedPriorityQueueTests_AsBasicQueue : PriorityQueueTests
 }
 
 [TestClass]
-public class ArrayListBasedPriorityQueueTests_AsUpdatableQueue : UpdatablePriorityQueueTests
+public class ArrayListPriorityQueueTests_AsUpdatableQueue : UpdatablePriorityQueueTests
 {
-    public ArrayListBasedPriorityQueueTests_AsUpdatableQueue() : base(
-        () => new ArrayListBasedPriorityQueue<int>(),
-        () => new ArrayListBasedPriorityQueue<RefType>(),
-        () => new ArrayListBasedPriorityQueue<ValType>())
+    public ArrayListPriorityQueueTests_AsUpdatableQueue() : base(
+        () => new ArrayListPriorityQueue<int>(),
+        () => new ArrayListPriorityQueue<RefType>(),
+        () => new ArrayListPriorityQueue<ValType>())
     {
     }
 }
 
 [TestClass]
-public class ArrayListBasedPriorityQueueTests_AsPeekKthQueue : PeekKthPriorityQueueTests
+public class ArrayListPriorityQueueTests_AsPeekKthQueue : PeekKthPriorityQueueTests
 {
-    public ArrayListBasedPriorityQueueTests_AsPeekKthQueue() : base(
-        () => new ArrayListBasedPriorityQueue<int>())
+    public ArrayListPriorityQueueTests_AsPeekKthQueue() : base(
+        () => new ArrayListPriorityQueue<int>())
     {
     }
 
