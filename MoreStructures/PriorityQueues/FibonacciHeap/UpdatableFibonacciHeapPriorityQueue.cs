@@ -6,61 +6,22 @@ namespace MoreStructures.PriorityQueues.FibonacciHeap;
 /// A refinement of <see cref="FibonacciHeapPriorityQueue{T}"/> which supports <see cref="IUpdatablePriorityQueue{T}"/>
 /// operations, such as retrieval and update of priorities and removal of items.
 /// </summary>
+/// <remarks>
+/// Check <see cref="DuplicatedItemsResolution"/> for detailed informations about how the mapping between items of type
+/// <typeparamref name="T"/> and heap nodes of type <see cref="TreeNode{T}"/> is performed, in presence of duplicates.
+/// </remarks>
 public class UpdatableFibonacciHeapPriorityQueue<T> : FibonacciHeapPriorityQueue<T>, IUpdatablePriorityQueue<T>
     where T : notnull
 {
-    private Dictionary<T, FibonacciHeapPriorityQueue<int>> ItemToPushTimestamps { get; } = new();
-    private Dictionary<int, TreeNode<T>> PushTimestampToTreeNode { get; } = new();
+    private DuplicatedItemsResolution<T, FibonacciHeapPriorityQueue<int>> DuplicatedItemsResolution { get; } = new();
 
     #region Public API
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
-    ///     <para id="algorithm">
-    ///     ALGORITHM
-    ///     <br/>
-    ///     - First, the priority queue of push timestamps for the provided <paramref name="item"/> is retrieved from 
-    ///       the dictionary of per-item queues of push timestamps.
-    ///       <br/>
-    ///     - If such a queue is not found, <paramref name="item"/> is not present in the main priority queue, and an 
-    ///       empty sequence is returned.
-    ///       <br/>
-    ///     - Otherwise, the queue is iterated over, getting the 
-    ///       <see cref="TreeNode{T}"/> corresponding to each timestamp 
-    ///       extracted from the queue, where such node is still in a heap (it may have been detached since).
-    ///       <br/>
-    ///     - The <see cref="TreeNode{T}"/>  is used to make a direct access to 
-    ///       the corresponding <see cref="PrioritizedItem{T}"/>. The priority is taken from 
-    ///       <see cref="PrioritizedItem{T}.Priority"/>.
-    ///     </para>
-    ///     <para id="complexity">
-    ///     COMPLEXITY
-    ///     <br/>
-    ///     - Retrieving the priority queue of push timestamps from the dictionary of per-item priority queues is a 
-    ///       O(1) operation.
-    ///       <br/>
-    ///     - Iterating such a priority queue requires duplicating the underlying data structure, which is a 
-    ///       O(dup_factor) operation, where dup_factor is the average number of occurrences of an item in the data 
-    ///       structure (1 means no duplicates, 2 means the item appears twice, etc.).
-    ///       <br/>
-    ///     - Retrieving the <see cref="TreeNode{T}"/> from the push timestamp and the priority from the 
-    ///       <see cref="PrioritizedItem{T}"/> instance are both constant-time operations.
-    ///       <br/>
-    ///     - Therefore Time and Space Complexity are O(dup_factor).
-    ///     </para>
+    ///     <inheritdoc cref="DuplicatedItemsResolution{T, THeap}.GetPrioritiesOf(T)"/>
     /// </remarks> 
-    public IEnumerable<int> GetPrioritiesOf(T item)
-    {
-        if (!ItemToPushTimestamps.TryGetValue(item, out var pushTimestamps))
-            return Enumerable.Empty<int>();
-
-        return
-            from pushTimestamp in pushTimestamps
-            where PushTimestampToTreeNode.ContainsKey(pushTimestamp)
-            let treeNode = PushTimestampToTreeNode[pushTimestamp]
-            where treeNode.IsInAHeap
-            select treeNode.PrioritizedItem.Priority;
-    }
+    public IEnumerable<int> GetPrioritiesOf(T item) => DuplicatedItemsResolution.GetPrioritiesOf(item);
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
@@ -71,8 +32,8 @@ public class UpdatableFibonacciHeapPriorityQueue<T> : FibonacciHeapPriorityQueue
     ///       <see cref="BinomialHeapPriorityQueue{T}.Peek"/>.
     ///       <br/>
     ///     - Then, it updates the priority of the provided <paramref name="item"/> via 
-    ///       <see cref="UpdatableFibonacciHeapPriorityQueue{T}.UpdatePriority(T, int)"/>, setting it to P + 1 and making
-    ///       <paramref name="item"/> the one with max priority.
+    ///       <see cref="UpdatableFibonacciHeapPriorityQueue{T}.UpdatePriority(T, int)"/>, setting it to P + 1 and 
+    ///       making <paramref name="item"/> the one with max priority.
     ///       <br/>
     ///     - Finally it pops the <paramref name="item"/> via <see cref="BinomialHeapPriorityQueue{T}.Pop"/>.
     ///     </para>
@@ -95,7 +56,7 @@ public class UpdatableFibonacciHeapPriorityQueue<T> : FibonacciHeapPriorityQueue
         if (Count == 0)
             return null;
         var maxPrioritizedItem = Peek();
-        var treeNode = FindTreeNode(item);
+        var treeNode = DuplicatedItemsResolution.FindTreeNode(item);
         var oldPrioritizedItem = treeNode.PrioritizedItem;
         UpdatePriority(treeNode, maxPrioritizedItem.Priority + 1, oldPrioritizedItem.PushTimestamp);
         Pop();
@@ -104,39 +65,7 @@ public class UpdatableFibonacciHeapPriorityQueue<T> : FibonacciHeapPriorityQueue
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
-    ///     <para id="algorithm-treenode-retrieval">
-    ///     ALGORITHM - TREENODE RETRIEVAL PART
-    ///     <br/>
-    ///     - The priority queue of push timestamps for the provided <paramref name="item"/> is retrieved from the
-    ///       dictionary of per-item queues of push timestamps.
-    ///       <br/>
-    ///     - If such a priority queue is not found, it means that <paramref name="item"/> is not present in the main
-    ///       priority queue either. So, an <see cref="InvalidOperationException"/> is thrown.
-    ///       <br/>
-    ///     - If the priority queue is found, push timestamps are popped from it until the root of the priority queue 
-    ///       contains a valid timestamp ts, i.e. a timestamp present in the dictionary mapping timestamps to
-    ///       <see cref="TreeNode{T}"/> instances and the <see cref="TreeNode{T}.IsInAHeap"/>.
-    ///       <br/>
-    ///     - If such a timestamp is not found, it means that that <paramref name="item"/> used to be present in the 
-    ///       main priority, but it is not anymore. So, an <see cref="InvalidOperationException"/> is thrown.
-    ///       <br/>
-    ///     - If such a timestamp is found, the <see cref="PrioritizedItem{T}"/> can be accessed via the
-    ///       <see cref="TreeNode{T}.PrioritizedItem"/> property.
-    ///     </para>
-    ///     <para id="complexity-treenode-retrieval">
-    ///     COMPLEXITY - TREENODE RETRIEVAL PART
-    ///     <br/>
-    ///     - Retrieving the priority queue associated with the <paramref name="item"/> is a O(1) operation.
-    ///       <br/>
-    ///     - Finding the right push timestamp may require a number of <see cref="BinomialHeapPriorityQueue{T}.Pop"/>
-    ///       proportional to the number of times the priority of <paramref name="item"/> has been changed.
-    ///       <br/>
-    ///     - In the worst case, such number is equal to the number of insertion of <paramref name="item"/>.
-    ///       <br/>
-    ///     - Therefore, Time Complexity is O(dup_factor) and Space Complexity is O(1), where dup_factor is 
-    ///       the average number of occurrences of an item in the data structure (1 means no duplicates, 2 means the 
-    ///       item appears twice, etc.).
-    ///     </para>
+    ///     <inheritdoc cref="DuplicatedItemsResolution{T, THeap}.FindTreeNode(T)"/>
     ///     <para id="algorithm-update">
     ///     ALGORITHM - UPDATE PART
     ///     <br/>
@@ -179,7 +108,7 @@ public class UpdatableFibonacciHeapPriorityQueue<T> : FibonacciHeapPriorityQueue
     /// </remarks> 
     public PrioritizedItem<T> UpdatePriority(T item, int newPriority)
     {
-        var treeNode = FindTreeNode(item);
+        var treeNode = DuplicatedItemsResolution.FindTreeNode(item);
         return UpdatePriority(treeNode, newPriority, CurrentPushTimestamp++);
     }
 
@@ -188,20 +117,18 @@ public class UpdatableFibonacciHeapPriorityQueue<T> : FibonacciHeapPriorityQueue
     #region Hooks
 
     /// <inheritdoc/>
-    protected override void RaiseItemPushed(TreeNode<T> newRoot)
-    {
-        var prioritizedItem = newRoot.PrioritizedItem;
-        PushTimestampToTreeNode[prioritizedItem.PushTimestamp] = newRoot;
-        if (!ItemToPushTimestamps.ContainsKey(prioritizedItem.Item))
-            ItemToPushTimestamps[prioritizedItem.Item] = new FibonacciHeapPriorityQueue<int>();
-        ItemToPushTimestamps[prioritizedItem.Item].Push(prioritizedItem.PushTimestamp, prioritizedItem.Priority);
-    }
+    /// <remarks>
+    /// Hands over to <see cref="DuplicatedItemsResolution{T, THeap}.RaiseItemPushed(TreeNode{T})"/>.
+    /// </remarks>
+    protected override void RaiseItemPushed(TreeNode<T> newRoot) => 
+        DuplicatedItemsResolution.RaiseItemPushed(newRoot);
 
     /// <inheritdoc/>
-    protected override void RaiseItemPopping()
-    {
-        PushTimestampToTreeNode.Remove(MaxRootsListNode!.Value.PrioritizedItem.PushTimestamp);
-    }
+    /// <remarks>
+    /// Hands over to <see cref="DuplicatedItemsResolution{T, THeap}.RaiseItemPopping(TreeNode{T})"/>.
+    /// </remarks>
+    protected override void RaiseItemPopping(TreeNode<T> root) => 
+        DuplicatedItemsResolution.RaiseItemPopping(root);
 
     /// <summary>
     /// Invoked just after the priority of the <see cref="PrioritizedItem{T}"/> of a <see cref="TreeNode{T}"/> in the 
@@ -209,36 +136,16 @@ public class UpdatableFibonacciHeapPriorityQueue<T> : FibonacciHeapPriorityQueue
     /// </summary>
     /// <param name="treeNode">The node whose item has changed priority.</param>
     /// <param name="itemBefore">The <see cref="PrioritizedItem{T}"/> as it was before the change.</param>
-    protected virtual void RaiseItemPriorityChanged(TreeNode<T> treeNode, PrioritizedItem<T> itemBefore)
-    {
-        var itemAfter = treeNode.PrioritizedItem;
-        PushTimestampToTreeNode.Remove(itemBefore.PushTimestamp);
-        PushTimestampToTreeNode[itemAfter.PushTimestamp] = treeNode;
-        ItemToPushTimestamps[itemAfter.Item].Push(itemAfter.PushTimestamp, itemAfter.Priority);
-    }
+    /// <remarks>
+    /// Hands over to 
+    /// <see cref="DuplicatedItemsResolution{T, THeap}.RaiseItemPriorityChanged(TreeNode{T}, PrioritizedItem{T})"/>.
+    /// </remarks>
+    protected virtual void RaiseItemPriorityChanged(TreeNode<T> treeNode, PrioritizedItem<T> itemBefore) =>
+        DuplicatedItemsResolution.RaiseItemPriorityChanged(treeNode, itemBefore);
 
     #endregion
 
     #region Helpers
-
-    private TreeNode<T> FindTreeNode(T item)
-    {
-        if (!ItemToPushTimestamps.TryGetValue(item, out var pushTimestamps))
-            throw new InvalidOperationException("The specified item is not in the queue.");
-
-        TreeNode<T>? treeNode = null;
-        while (
-            pushTimestamps.Count > 0 &&
-            (!PushTimestampToTreeNode.TryGetValue(pushTimestamps.Peek().Item, out treeNode) || !treeNode.IsInAHeap))
-        {
-            pushTimestamps.Pop();
-        }
-
-        if (pushTimestamps.Count == 0)
-            throw new InvalidOperationException("The specified item is not in the queue.");
-
-        return treeNode!;
-    }
 
     private PrioritizedItem<T> UpdatePriority(TreeNode<T> treeNode, int newPriority, int newPushTimestamp)
     {
