@@ -1,7 +1,7 @@
 ﻿namespace MoreStructures.PriorityQueues.BinaryHeap;
 
 /// <summary>
-/// A refinement of <see cref="HeapBasedPriorityQueue{T}"/> which supports <see cref="IUpdatablePriorityQueue{T}"/>
+/// A refinement of <see cref="BinaryHeapPriorityQueue{T}"/> which supports <see cref="IUpdatablePriorityQueue{T}"/>
 /// operations, such as retrieval and update of priorities and removal of items.
 /// </summary>
 /// <typeparam name="T"><inheritdoc/></typeparam>
@@ -9,7 +9,7 @@
 /// In order to support updates and deletions, two additional data structures are introduced:
 /// <br/>
 /// - a <see cref="Dictionary{TKey, TValue}"/> Item2PT, mapping items <c>I</c> of type <typeparamref name="T"/> to 
-///   <see cref="HeapBasedPriorityQueue{T}"/> instances, containing <see cref="PrioritizedItem{T}.PushTimestamp"/>
+///   <see cref="BinaryHeapPriorityQueue{T}"/> instances, containing <see cref="PrioritizedItem{T}.PushTimestamp"/>
 ///   values of type <see cref="int"/>, of <see cref="PrioritizedItem{T}"/> instances containing <c>I</c>.
 ///   <br/>
 /// - a <see cref="Dictionary{TKey, TValue}"/> PT2Idx from <see cref="PrioritizedItem{T}.PushTimestamp"/> values to
@@ -37,12 +37,12 @@
 /// <br/>
 /// <br/>
 /// The two dictionaries are kept up-to-date by implementing the extensibility points provided by 
-/// <see cref="HeapBasedPriorityQueue{T}"/>, after pushing, before popping and on items swapping.
+/// <see cref="BinaryHeapPriorityQueue{T}"/>, after pushing, before popping and on items swapping.
 /// </remarks> 
-public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUpdatablePriorityQueue<T>
+public class UpdatableBinaryHeapPriorityQueue<T> : BinaryHeapPriorityQueue<T>, IUpdatablePriorityQueue<T>
     where T : notnull
 {
-    private Dictionary<T, HeapBasedPriorityQueue<int>> ItemToPushTimestamps { get; } = new();
+    private Dictionary<T, BinaryHeapPriorityQueue<int>> ItemToPushTimestamps { get; } = new();
     private Dictionary<int, int> PushTimestampToIndex { get; } = new();
 
     #region Public API
@@ -101,14 +101,14 @@ public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUp
     ///     - It first removes the provided <paramref name="item"/> from the queue via <see cref="Remove(T)"/>.
     ///       <br/>
     ///     - Then, it pushes the same <paramref name="item"/> with <paramref name="newPriority"/> via 
-    ///       <see cref="HeapBasedPriorityQueue{T}.Push(T, int)"/>.
+    ///       <see cref="BinaryHeapPriorityQueue{T}.Push(T, int)"/>.
     ///       <br/>
     ///     - Finally it returns the <see cref="PrioritizedItem{T}"/> removed in the first step.
     ///     </para>
     ///     <para id="complexity">
     ///     COMPLEXITY
     ///     <br/>
-    ///     - Both <see cref="Remove(T)"/> and <see cref="HeapBasedPriorityQueue{T}.Push(T, int)"/> have logarithmic 
+    ///     - Both <see cref="Remove(T)"/> and <see cref="BinaryHeapPriorityQueue{T}.Push(T, int)"/> have logarithmic 
     ///       Time Complexity and constant Space Complexity.
     ///       <br/>
     ///     - Therefore, Time Complexity is O(log(n) + dup_factor) and Space Complexity is O(1), where dup_factor is 
@@ -150,14 +150,14 @@ public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUp
     ///       to the root, due to its new priority being the highest in the heap.
     ///       <br/>
     ///     - Finally, the item, now at the root of the heap, is removed via a 
-    ///       <see cref="HeapBasedPriorityQueue{T}.Pop"/>.
+    ///       <see cref="BinaryHeapPriorityQueue{T}.Pop"/>.
     ///     </para>
     ///     <para id="complexity">
     ///     COMPLEXITY
     ///     <br/>
     ///     - Retrieving the priority queue associated with the <paramref name="item"/> is a O(1) operation.
     ///       <br/>
-    ///     - Finding the right push timestamp may require a number of <see cref="HeapBasedPriorityQueue{T}.Pop"/>
+    ///     - Finding the right push timestamp may require a number of <see cref="BinaryHeapPriorityQueue{T}.Pop"/>
     ///       proportional to the number of times the priority of <paramref name="item"/> has been changed.
     ///       <br/>
     ///     - In the worst case, such number is equal to the number of insertion of <paramref name="item"/>.
@@ -207,7 +207,7 @@ public class UpdatableHeapBasedPriorityQueue<T> : HeapBasedPriorityQueue<T>, IUp
         var prioritizedItem = Items[index];
         PushTimestampToIndex[prioritizedItem.PushTimestamp] = index;
         if (!ItemToPushTimestamps.ContainsKey(prioritizedItem.Item))
-            ItemToPushTimestamps[prioritizedItem.Item] = new HeapBasedPriorityQueue<int>();
+            ItemToPushTimestamps[prioritizedItem.Item] = new BinaryHeapPriorityQueue<int>();
         ItemToPushTimestamps[prioritizedItem.Item].Push(prioritizedItem.PushTimestamp, prioritizedItem.Priority);
     }
 

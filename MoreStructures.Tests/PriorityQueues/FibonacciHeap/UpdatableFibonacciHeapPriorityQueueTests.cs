@@ -4,24 +4,24 @@ using MoreStructures.PriorityQueues.FibonacciHeap;
 namespace MoreStructures.Tests.PriorityQueues.FibonacciHeap;
 
 [TestClass]
-public class UpdatableHeapBasedPriorityQueueTests_AsBasicQueue : PriorityQueueTests
+public class UpdatableFibonacciHeapPriorityQueueTests_AsBasicQueue : PriorityQueueTests
 {
-    public UpdatableHeapBasedPriorityQueueTests_AsBasicQueue() : base(
-        () => new UpdatableHeapBasedPriorityQueue<int>(),
-        () => new UpdatableHeapBasedPriorityQueue<RefType>(),
-        () => new UpdatableHeapBasedPriorityQueue<ValType>())
+    public UpdatableFibonacciHeapPriorityQueueTests_AsBasicQueue() : base(
+        () => new UpdatableFibonacciHeapPriorityQueue<int>(),
+        () => new UpdatableFibonacciHeapPriorityQueue<RefType>(),
+        () => new UpdatableFibonacciHeapPriorityQueue<ValType>())
     {
     }
 }
 
 
 [TestClass]
-public class UpdatableHeapBasedPriorityQueueTests_AsUpdatableQueue : UpdatablePriorityQueueTests
+public class UpdatableFibonacciHeapPriorityQueueTests_AsUpdatableQueue : UpdatablePriorityQueueTests
 {
-    public UpdatableHeapBasedPriorityQueueTests_AsUpdatableQueue() : base(
-        () => new UpdatableHeapBasedPriorityQueue<int>(),
-        () => new UpdatableHeapBasedPriorityQueue<RefType>(),
-        () => new UpdatableHeapBasedPriorityQueue<ValType>())
+    public UpdatableFibonacciHeapPriorityQueueTests_AsUpdatableQueue() : base(
+        () => new UpdatableFibonacciHeapPriorityQueue<int>(),
+        () => new UpdatableFibonacciHeapPriorityQueue<RefType>(),
+        () => new UpdatableFibonacciHeapPriorityQueue<ValType>())
     {
     }
 

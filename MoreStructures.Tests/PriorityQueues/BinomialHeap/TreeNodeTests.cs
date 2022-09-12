@@ -1,13 +1,12 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.PriorityQueues;
-using MoreStructures.PriorityQueues.FibonacciHeap;
+﻿using MoreStructures.PriorityQueues;
+using MoreStructures.PriorityQueues.BinomialHeap;
 
-namespace MoreStructures.Tests.PriorityQueues.FibonacciHeap;
+namespace MoreStructures.Tests.PriorityQueues.BinomialHeap;
 
 [TestClass]
-public class HeapBasedPriorityQueue_TreeNodeTests : HeapBasedPriorityQueue<string>
+public class TreeNodeTests
 {
-    protected class TreeNodeMock : TreeNode
+    protected class TreeNodeMock : TreeNode<string>
     {
     }
 
@@ -17,14 +16,14 @@ public class HeapBasedPriorityQueue_TreeNodeTests : HeapBasedPriorityQueue<strin
         var treeNode = new TreeNodeMock() { PrioritizedItem = new("3", 2, 0) };
         Assert.IsFalse(treeNode.IsInAHeap);
 
-        var roots = new LinkedList<TreeNode>();
+        var roots = new LinkedList<TreeNode<string>>();
         treeNode.RootsListNode = roots.AddLast(treeNode);
         Assert.IsTrue(treeNode.IsInAHeap);
     }
 
     [TestMethod]
     public void IsInAHeap_IsTrueWhenAChild()
-    { 
+    {
         var treeNode = new TreeNodeMock() { PrioritizedItem = new("3", 2, 0) };
         Assert.IsFalse(treeNode.IsInAHeap);
 
@@ -39,7 +38,7 @@ public class HeapBasedPriorityQueue_TreeNodeTests : HeapBasedPriorityQueue<strin
     public void AddChild_ThrowsExceptionIfNodeIsARoot()
     {
         var treeNode = new TreeNodeMock() { PrioritizedItem = new("3", 2, 0) };
-        var roots = new LinkedList<TreeNode>();
+        var roots = new LinkedList<TreeNode<string>>();
         treeNode.RootsListNode = roots.AddLast(treeNode);
 
         var parentTreeNode = new TreeNodeMock() { PrioritizedItem = new("4", 2, 1) };
@@ -114,7 +113,7 @@ public class HeapBasedPriorityQueue_TreeNodeTests : HeapBasedPriorityQueue<strin
         var parentTreeNode = new TreeNodeMock() { PrioritizedItem = new("4", 2, 1) };
         parentTreeNode.AddChild(treeNode);
 
-        var roots = new LinkedList<TreeNode>();
+        var roots = new LinkedList<TreeNode<string>>();
         treeNode.RootsListNode = roots.AddLast(treeNode);
 
         Assert.ThrowsException<InvalidOperationException>(() => treeNode.DetachFromParent());
@@ -220,7 +219,7 @@ public class HeapBasedPriorityQueue_TreeNodeTests : HeapBasedPriorityQueue<strin
         AssertParentChildrenStructure(nodeChild2, nodeChild2Copy);
     }
 
-    private static void AssertParentChildrenStructure(TreeNode nodeParent, TreeNode nodeParentCopy)
+    private static void AssertParentChildrenStructure<T>(TreeNode<T> nodeParent, TreeNode<T> nodeParentCopy)
     {
         Assert.AreNotSame(nodeParent, nodeParentCopy);
         Assert.AreEqual(nodeParent.PrioritizedItem, nodeParentCopy.PrioritizedItem);

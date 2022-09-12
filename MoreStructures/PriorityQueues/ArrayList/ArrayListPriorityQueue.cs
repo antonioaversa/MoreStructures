@@ -27,7 +27,7 @@ namespace MoreStructures.PriorityQueues.ArrayList;
 ///     solutions.
 ///     </para>
 /// </remarks>
-public class ArrayListBasedPriorityQueue<T> : IUpdatablePriorityQueue<T>, IPeekKthPriorityQueue<T>
+public class ArrayListPriorityQueue<T> : IUpdatablePriorityQueue<T>, IPeekKthPriorityQueue<T>
     where T : notnull
 {
     private int _currentPushTimestamp = 0;
@@ -52,7 +52,7 @@ public class ArrayListBasedPriorityQueue<T> : IUpdatablePriorityQueue<T>, IPeekK
     /// Therefore, operations mutating the queue such as <see cref="Push(T, int)"/> will alter the content of the 
     /// <paramref name="items"/> list.
     /// </remarks>
-    public ArrayListBasedPriorityQueue(List<PrioritizedItem<T>> items)
+    public ArrayListPriorityQueue(List<PrioritizedItem<T>> items)
     {
         Items = items;
     }
@@ -60,7 +60,7 @@ public class ArrayListBasedPriorityQueue<T> : IUpdatablePriorityQueue<T>, IPeekK
     /// <summary>
     /// Builds an empty priority queue.
     /// </summary>
-    public ArrayListBasedPriorityQueue() : this(new List<PrioritizedItem<T>>())
+    public ArrayListPriorityQueue() : this(new List<PrioritizedItem<T>>())
     {
     }
 
@@ -74,7 +74,7 @@ public class ArrayListBasedPriorityQueue<T> : IUpdatablePriorityQueue<T>, IPeekK
     /// <br/>
     /// Therefore, operations mutating the queue won't alter the provided <paramref name="items"/> sequence.
     /// </remarks>
-    public ArrayListBasedPriorityQueue(IEnumerable<PrioritizedItem<T>> items) : this(items.ToList())
+    public ArrayListPriorityQueue(IEnumerable<PrioritizedItem<T>> items) : this(items.ToList())
     {
     }
 
@@ -154,7 +154,7 @@ public class ArrayListBasedPriorityQueue<T> : IUpdatablePriorityQueue<T>, IPeekK
     /// items of type <typeparamref name="T"/>).
     /// <br/>
     /// It then selects all priorities found for <paramref name="item"/> and builds a 
-    /// <see cref="ArrayListBasedPriorityQueue{T}"/> of <see cref="int"/> values out of them.
+    /// <see cref="ArrayListPriorityQueue{T}"/> of <see cref="int"/> values out of them.
     /// <br/>
     /// Such a priority queue is returned as result.
     /// <br/>
@@ -166,7 +166,7 @@ public class ArrayListBasedPriorityQueue<T> : IUpdatablePriorityQueue<T>, IPeekK
         var priorities = Items
             .Where(prioritizedItem => Equals(prioritizedItem.Item, item))
             .Select(prioritizedItem => prioritizedItem.Priority);
-        var priorityQueue = new ArrayListBasedPriorityQueue<int>();
+        var priorityQueue = new ArrayListPriorityQueue<int>();
         foreach (var priority in priorities)
             priorityQueue.Push(priority, priority);
         return priorityQueue;
