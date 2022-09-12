@@ -16,7 +16,7 @@ namespace MoreStructures.DisjointSets;
 /// </remarks>
 public class WeightedQuickUnionDisjointSet : QuickUnionDisjointSet
 {
-    private int[] _heights;
+    private readonly int[] _heights;
 
     /// <inheritdoc path="//*[not(self::summary)]"/>
     /// <summary>
@@ -30,9 +30,9 @@ public class WeightedQuickUnionDisjointSet : QuickUnionDisjointSet
     }
 
     /// <summary>
-    /// The heights of the trees of the forest representing the Disjoint Set.
+    /// Returns a copy of the heights of the trees of the forest representing the Disjoint Set.
     /// </summary>
-    public IList<int> Heights => _heights.ToList();
+    internal IList<int> GetHeights() => _heights.ToArray();
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
