@@ -14,7 +14,7 @@ namespace MoreStructures.PriorityQueues.BinomialHeap;
 public class UpdatableBinomialHeapPriorityQueue<T> : BinomialHeapPriorityQueue<T>, IUpdatablePriorityQueue<T>
     where T : notnull
 {
-    private DuplicatedItemsResolution<T, FibonacciHeapPriorityQueue<int>> DuplicatedItemsResolution { get; } = new();
+    private DuplicatedItemsResolution<T, BinomialHeapPriorityQueue<int>> DuplicatedItemsResolution { get; } = new();
 
     #region Public API
 
@@ -46,9 +46,7 @@ public class UpdatableBinomialHeapPriorityQueue<T> : BinomialHeapPriorityQueue<T
     ///     - However, <see cref="BinomialHeapPriorityQueue{T}.Pop"/> and <see cref="UpdatePriority(T, int)"/> have 
     ///       logarithmic Time Complexity.
     ///       <br/>
-    ///     - Therefore, Time Complexity is O(log(n) + dup_factor) and Space Complexity is O(1), where dup_factor is 
-    ///       the average number of occurrences of an item in the data structure (1 means no duplicates, 2 means the 
-    ///       item appears twice, etc.).
+    ///     - Therefore, Time Complexity is O(log(n) + dup_factor) and Space Complexity is O(1).
     ///     </para>
     /// </remarks> 
     public PrioritizedItem<T>? Remove(T item)
@@ -56,9 +54,9 @@ public class UpdatableBinomialHeapPriorityQueue<T> : BinomialHeapPriorityQueue<T
         if (Count == 0)
             return null;
         var maxPrioritizedItem = Peek();
-        var treeNode = DuplicatedItemsResolution.FindTreeNode(item);
-        var oldPrioritizedItem = treeNode.PrioritizedItem;
-        UpdatePriority(treeNode, maxPrioritizedItem.Priority + 1, oldPrioritizedItem.PushTimestamp);
+        var treeNodeInBinomialHeap = DuplicatedItemsResolution.FindTreeNode(item);
+        var oldPrioritizedItem = treeNodeInBinomialHeap.PrioritizedItem;
+        UpdatePriority(treeNodeInBinomialHeap, maxPrioritizedItem.Priority + 1, oldPrioritizedItem.PushTimestamp);
         Pop();
         return oldPrioritizedItem;
     }
@@ -67,7 +65,7 @@ public class UpdatableBinomialHeapPriorityQueue<T> : BinomialHeapPriorityQueue<T
     /// <remarks>
     ///     <inheritdoc cref="DuplicatedItemsResolution{T, THeap}.FindTreeNode(T)"/>
     ///     <para id="algorithm-update">
-    ///     ALGORITHM - UPDATE PART
+    ///     ALGORITHM - BINOMIAL HEAP UPDATE PART
     ///     <br/>
     ///     - When the priority is higher or equal, the value of priority is updated and the node is sifted up the 
     ///       tree, until the heap property is restored. If the root of the tree is reached, the reference to the max 
@@ -84,7 +82,7 @@ public class UpdatableBinomialHeapPriorityQueue<T> : BinomialHeapPriorityQueue<T
     ///     - Finally, the <see cref="PrioritizedItem{T}"/> before the update is returned as result.
     ///     </para>
     ///     <para id="complexity-update">
-    ///     COMPLEXITY - UPDATE PART
+    ///     COMPLEXITY - BINOMIAL HEAP UPDATE PART
     ///     <br/>
     ///     - Sift up, sift down and linear scan of roots are all logarithmic operations in time and constant in space.
     ///       <br/>
@@ -94,12 +92,15 @@ public class UpdatableBinomialHeapPriorityQueue<T> : BinomialHeapPriorityQueue<T
     ///     COMPLEXITY - OVERALL
     ///     <br/>
     ///     - Time Complexity is O(log(n) + dup_factor) and Space Complexity is O(1).
+    ///       <br/>
+    ///     - Notice how this is higher than the Time Complexity for the corresponding functionality in a Fibonacci
+    ///       Heap, which supports both pushing and priority updating in constant time.
     ///     </para>
     /// </remarks> 
     public PrioritizedItem<T> UpdatePriority(T item, int newPriority)
     {
-        var treeNode = DuplicatedItemsResolution.FindTreeNode(item);
-        return UpdatePriority(treeNode, newPriority, CurrentPushTimestamp++);
+        var treeNodeInBinomialHeap = DuplicatedItemsResolution.FindTreeNode(item);
+        return UpdatePriority(treeNodeInBinomialHeap, newPriority, CurrentPushTimestamp++);
     }
 
     #endregion
@@ -170,7 +171,7 @@ public class UpdatableBinomialHeapPriorityQueue<T> : BinomialHeapPriorityQueue<T
     {
         var ancestor = treeNode;
         while (
-            ancestor.Parent is not null and var ancestorParent &&
+            ancestor.Parent is TreeNode<T> ancestorParent &&
             ancestorParent.PrioritizedItem.CompareTo(ancestor.PrioritizedItem) < 0)
         {
             (ancestor.PrioritizedItem, ancestorParent.PrioritizedItem) =
@@ -191,7 +192,7 @@ public class UpdatableBinomialHeapPriorityQueue<T> : BinomialHeapPriorityQueue<T
     {
         var descendant = treeNode;
         while (
-            descendant.Children.MaxBy(c => c.PrioritizedItem) is not null and var descendantMaxChild &&
+            descendant.Children.MaxBy(c => c.PrioritizedItem) is TreeNode<T> descendantMaxChild &&
             descendantMaxChild.PrioritizedItem.CompareTo(descendant.PrioritizedItem) > 0)
         {
             (descendant.PrioritizedItem, descendantMaxChild.PrioritizedItem) =

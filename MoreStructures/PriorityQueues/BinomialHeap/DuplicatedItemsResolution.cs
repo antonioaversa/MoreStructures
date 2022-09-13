@@ -75,7 +75,9 @@ public class DuplicatedItemsResolution<TItems, THeap>
     ///     - Retrieving the <see cref="TreeNode{T}"/> from the push timestamp and the priority from the 
     ///       <see cref="PrioritizedItem{T}"/> instance are both constant-time operations.
     ///       <br/>
-    ///     - Therefore Time and Space Complexity are O(dup_factor).
+    ///     - Therefore Time and Space Complexity are O(dup_factor), where dup_factor is 
+    ///       the average number of occurrences of an item in the data structure (1 means no duplicates, 2 means the 
+    ///       item appears twice, etc.).
     ///     </para>
     /// </remarks> 
     public IEnumerable<int> GetPrioritiesOf(TItems item)
