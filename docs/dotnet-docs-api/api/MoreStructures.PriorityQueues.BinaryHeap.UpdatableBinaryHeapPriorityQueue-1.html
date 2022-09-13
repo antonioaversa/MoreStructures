@@ -174,8 +174,7 @@ operations, such as retrieval and update of priorities and removal of items.</p>
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td><p><inheritdoc></inheritdoc></p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -200,15 +199,15 @@ Those push timestamps can be multiple because the same item can be added multipl
 The push timestamps are organized themselves in per-item priority queues, with the same priority as the items
 in the main priority queue.
 <br>
-This way, the push timestamp of highest priority for a given item can be peeked in constant time and extracted in
-logarithmic time.
+This way, the push timestamp of highest priority for a given item can be peeked in constant time and extracted
+in logarithmic time.
 <br>
-Once the timestamp of highest priority has been found, the corresponding index (if any) in the backing list of the
-Binary Max Heap of this priority queue can be found in constant time via the PT2Idx dictionary.
+Once the timestamp of highest priority has been found, the corresponding index (if any) in the backing list of
+the Binary Max Heap of this priority queue can be found in constant time via the PT2Idx dictionary.
 <br>
-Once the index is found, operations such as <a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.UpdatableBinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_UpdatableBinaryHeapPriorityQueue_1_Remove__0_">Remove(T)</a> and <a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.UpdatableBinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_UpdatableBinaryHeapPriorityQueue_1_UpdatePriority__0_System_Int32_">UpdatePriority(T, Int32)</a> can
-be executed in logarithmic time, since restoring heap properties after the modification of a single item of the
-heap requires a logarithmic number of sift down and/or sift up operations.
+Once the index is found, operations such as <a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.UpdatableBinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_UpdatableBinaryHeapPriorityQueue_1_Remove__0_">Remove(T)</a> and <a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.UpdatableBinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_UpdatableBinaryHeapPriorityQueue_1_UpdatePriority__0_System_Int32_">UpdatePriority(T, Int32)</a>
+can be executed in logarithmic time, since restoring heap properties after the modification of a single item of
+the heap requires a logarithmic number of sift down and/or sift up operations.
 <br>
 <br>
 The two dictionaries are kept up-to-date by implementing the extensibility points provided by

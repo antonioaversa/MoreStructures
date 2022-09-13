@@ -190,7 +190,7 @@ Caches instances.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Utilities_StringIncludingTerminatorComparer_Compare_System_String_System_String_.md&amp;value=---%0Auid%3A%20MoreStructures.Utilities.StringIncludingTerminatorComparer.Compare(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/StringIncludingTerminatorComparer.cs/#L58">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Utilities/StringIncludingTerminatorComparer.cs/#L51">View Source</a>
   </span>
   <a id="MoreStructures_Utilities_StringIncludingTerminatorComparer_Compare_" data-uid="MoreStructures.Utilities.StringIncludingTerminatorComparer.Compare*"></a>
   <h4 id="MoreStructures_Utilities_StringIncludingTerminatorComparer_Compare_System_String_System_String_" data-uid="MoreStructures.Utilities.StringIncludingTerminatorComparer.Compare(System.String,System.String)">Compare(String, String)</h4>
@@ -214,14 +214,12 @@ Caches instances.</p>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">x</span></td>
-        <td><p><inheritdoc path="/param[@name=&apos;x&apos;]"></inheritdoc></p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">y</span></td>
-        <td><p><inheritdoc path="/param[@name=&apos;y&apos;]"></inheritdoc></p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -236,21 +234,21 @@ Caches instances.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p><inheritdoc></inheritdoc></p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <h5 id="MoreStructures_Utilities_StringIncludingTerminatorComparer_Compare_System_String_System_String__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Special rules applied by <a class="xref" href="MoreStructures.Utilities.StringIncludingTerminatorComparer.html">StringIncludingTerminatorComparer</a>:</p>
-<ul><li>
-    If either string is null or empty, the standard <span class="xref">System.String.Compare(System.String,System.String)</span> is used.
-</li><li>
-If one string starts with the terminator, and the other doesn&apos;t, the one which does is smaller.
-</li><li>
-If none of the cases above applies, <span class="xref">System.String.Compare(System.String,System.String)</span> is used on the 
-substring starting from index 1 of each of the strings <code data-dev-comment-type="paramref" class="paramref">x</code> and <code data-dev-comment-type="paramref" class="paramref">y</code>.
-</li></ul>
+  <div class="markdown level1 remarks"><p>Special rules applied by <a class="xref" href="MoreStructures.Utilities.StringIncludingTerminatorComparer.html">StringIncludingTerminatorComparer</a>:
+<br></p>
+<ul>
+<li>If either string is null or empty, the standard <span class="xref">System.String.Compare(System.String,System.String)</span> is used.
+<br></li>
+<li>If one string starts with the terminator, and the other doesn't, the one which does is smaller.
+<br></li>
+<li>If none of the cases above applies, <span class="xref">System.String.Compare(System.String,System.String)</span> is used on the
+substring starting from index 1 of each of the strings <code data-dev-comment-type="paramref" class="paramref">x</code> and <code data-dev-comment-type="paramref" class="paramref">y</code>.</li>
+</ul>
 </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>

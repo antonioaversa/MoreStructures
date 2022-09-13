@@ -332,9 +332,7 @@ constant, where m = log(w, M), with w = size of a word in memory and M = size of
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildTransform_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildTransform*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_BuildTransform_MoreStructures_TextWithTerminator_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.BuildTransform(MoreStructures.TextWithTerminator)">BuildTransform(TextWithTerminator)</h4>
-  <div class="markdown level1 summary"><p>Builds Burrows-Wheeler objects, such as <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a> and <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.html">BWTransform</a> of the provided
-<a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -353,8 +351,7 @@ constant, where m = log(w, M), with w = size of a word in memory and M = size of
       <tr>
         <td><a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a></td>
         <td><span class="parametername">text</span></td>
-        <td><p>The text, whose BWT has to be calculated.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -369,8 +366,7 @@ constant, where m = log(w, M), with w = size of a word in memory and M = size of
     <tbody>
       <tr>
         <td><a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.html">BWTransform</a></td>
-        <td><p>The transform, wrapped into a <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWTransform.html">BWTransform</a> object.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -394,12 +390,11 @@ into account the rotation in its all its char-position dependent functionalities
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertMatrix_MoreStructures_BurrowsWheelerTransform_BWMatrix_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertMatrix(MoreStructures.BurrowsWheelerTransform.BWMatrix)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/NaiveBuilder.cs/#L110">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/NaiveBuilder.cs/#L112">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertMatrix_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertMatrix*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertMatrix_MoreStructures_BurrowsWheelerTransform_BWMatrix_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertMatrix(MoreStructures.BurrowsWheelerTransform.BWMatrix)">InvertMatrix(BWMatrix)</h4>
-  <div class="markdown level1 summary"><p>Rebuilds the original <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a> from the <a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a>.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -418,8 +413,7 @@ into account the rotation in its all its char-position dependent functionalities
       <tr>
         <td><a class="xref" href="MoreStructures.BurrowsWheelerTransform.BWMatrix.html">BWMatrix</a></td>
         <td><span class="parametername">matrix</span></td>
-        <td><p>The matrix, whose original text has to be calculated.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -434,13 +428,14 @@ into account the rotation in its all its char-position dependent functionalities
     <tbody>
       <tr>
         <td><a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a></td>
-        <td><p>The text which corresponds to the provided matrix.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   <h5 id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertMatrix_MoreStructures_BurrowsWheelerTransform_BWMatrix__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>
+COMPLEXITY
+<br>
 - No computation to be done, except for building the string of the <a class="xref" href="MoreStructures.TextWithTerminator.html">TextWithTerminator</a>.
 <br>
 - Time Complexity = O(n), Space Complexity = O(n), where n = edge of <code data-dev-comment-type="paramref" class="paramref">matrix</code>.
@@ -451,7 +446,7 @@ into account the rotation in its all its char-position dependent functionalities
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator_.md&amp;value=---%0Auid%3A%20MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/NaiveBuilder.cs/#L150">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/BurrowsWheelerTransform/Builders/NaiveBuilder.cs/#L152">View Source</a>
   </span>
   <a id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertTransform_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertTransform*"></a>
   <h4 id="MoreStructures_BurrowsWheelerTransform_Builders_NaiveBuilder_InvertTransform_MoreStructures_RotatedTextWithTerminator_" data-uid="MoreStructures.BurrowsWheelerTransform.Builders.NaiveBuilder.InvertTransform(MoreStructures.RotatedTextWithTerminator)">InvertTransform(RotatedTextWithTerminator)</h4>
