@@ -1,8 +1,9 @@
 ﻿namespace MoreStructures.RecImmTrees.Paths;
 
 /// <summary>
-/// <inheritdoc/>
-/// Recursive implementation.
+///     <inheritdoc/>
+///     <br/>
+///     Recursive implementation.
 /// </summary>
 /// <remarks>
 ///     <inheritdoc cref="INodeToLeafPathsBuilder" path="/remarks"/>
@@ -32,7 +33,7 @@
 /// </remarks>
 public class FullyRecursiveNodeToLeafPathsBuilder : INodeToLeafPathsBuilder
 {
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <inheritdoc cref="FullyRecursiveNodeToLeafPathsBuilder" path="/remarks"/>
     public IEnumerable<TreePath<TEdge, TNode>> GetAllNodeToLeafPaths<TEdge, TNode>(TNode node)
         where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>

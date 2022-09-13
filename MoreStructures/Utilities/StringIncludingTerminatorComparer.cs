@@ -34,27 +34,20 @@ public class StringIncludingTerminatorComparer : IComparer<string>
         return _instances.GetOrAdd(terminator, t => new StringIncludingTerminatorComparer(t));
     }
 
+    /// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
     /// <summary>
-    /// <inheritdoc/>
+    ///     <inheritdoc/>
     /// </summary>
-    /// <param name="x"><inheritdoc path="/param[@name='x']"/></param>
-    /// <param name="y"><inheritdoc path="/param[@name='y']"/></param>
     /// <remarks>
-    /// Special rules applied by <see cref="StringIncludingTerminatorComparer"/>:
-    /// <list type="bullet">
-    ///     <item>
-    ///     If either string is null or empty, the standard <see cref="string.Compare(string?, string?)"/> is used.
-    ///     </item>
-    ///     <item>
-    ///     If one string starts with the terminator, and the other doesn't, the one which does is smaller.
-    ///     </item>
-    ///     <item>
-    ///     If none of the cases above applies, <see cref="string.Compare(string?, string?)"/> is used on the 
-    ///     substring starting from index 1 of each of the strings <paramref name="x"/> and <paramref name="y"/>.
-    ///     </item>
-    /// </list>
+    ///     Special rules applied by <see cref="StringIncludingTerminatorComparer"/>:
+    ///     <br/>
+    ///     - If either string is null or empty, the standard <see cref="string.Compare(string?, string?)"/> is used.
+    ///       <br/>
+    ///     - If one string starts with the terminator, and the other doesn't, the one which does is smaller.
+    ///       <br/>
+    ///     - If none of the cases above applies, <see cref="string.Compare(string?, string?)"/> is used on the 
+    ///       substring starting from index 1 of each of the strings <paramref name="x"/> and <paramref name="y"/>.
     /// </remarks>
-    /// <returns><inheritdoc/></returns>
     public int Compare(string? x, string? y)
     {
         if (x == null || y == null || x.Length == 0 || y.Length == 0)

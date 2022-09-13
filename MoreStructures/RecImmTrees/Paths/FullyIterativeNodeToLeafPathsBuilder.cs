@@ -1,8 +1,9 @@
 ﻿namespace MoreStructures.RecImmTrees.Paths;
 
 /// <summary>
-/// <inheritdoc/>
-/// Iterative implementation.
+///     <inheritdoc/>
+///     <br/>
+///     Iterative implementation.
 /// </summary>
 /// <remarks>
 ///     <inheritdoc cref="INodeToLeafPathsBuilder" path="/remarks"/>
@@ -76,7 +77,7 @@ public class FullyIterativeNodeToLeafPathsBuilder : INodeToLeafPathsBuilder
         Queue<IEnumerable<KeyValuePair<TEdge, TNode>>> ParentNodeSubpaths,
         Queue<IEnumerable<KeyValuePair<TEdge, TNode>>>? NodeSubpaths);
 
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <inheritdoc cref="FullyIterativeNodeToLeafPathsBuilder" path="/remarks"/>
     public IEnumerable<TreePath<TEdge, TNode>> GetAllNodeToLeafPaths<TEdge, TNode>(TNode node)
         where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>
@@ -127,6 +128,5 @@ public class FullyIterativeNodeToLeafPathsBuilder : INodeToLeafPathsBuilder
                 stack.Push(new(child.Key, child.Value, nodeSubpaths, null));
             }
         }
-
     }
 }

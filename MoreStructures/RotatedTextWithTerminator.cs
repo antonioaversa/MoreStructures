@@ -140,19 +140,19 @@ public record RotatedTextWithTerminator(
         ? str.EndsWith(suffix)
         : RotatedText.TakeLast(suffix.Length).SequenceEqual(suffix);
 
+    /// <inheritdoc path="//*[not(self::summary)]"/>
     /// <summary>
     /// Returns an enumerator that iterates through the collection of chars of the underlying <see cref="RotatedText"/> 
     /// string, including the <see cref="Terminator"/> char.
     /// </summary>
-    /// <returns><inheritdoc/></returns>
     public IEnumerator<char> GetEnumerator() => 
         RotatedText.GetEnumerator();
 
+    /// <inheritdoc path="//*[not(self::summary)]"/>
     /// <summary>
     /// Returns an enumerator that iterates through the collection of chars of the underlying <see cref="RotatedText"/> 
     /// string, including the <see cref="Terminator"/> char.
     /// </summary>
-    /// <returns><inheritdoc/></returns>
     IEnumerator IEnumerable.GetEnumerator() => 
         ((IEnumerable)RotatedText).GetEnumerator();
 }

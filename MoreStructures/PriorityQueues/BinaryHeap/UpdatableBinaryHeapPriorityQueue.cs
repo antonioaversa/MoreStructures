@@ -1,43 +1,43 @@
 ﻿namespace MoreStructures.PriorityQueues.BinaryHeap;
 
+/// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
 /// <summary>
 /// A refinement of <see cref="BinaryHeapPriorityQueue{T}"/> which supports <see cref="IUpdatablePriorityQueue{T}"/>
 /// operations, such as retrieval and update of priorities and removal of items.
 /// </summary>
-/// <typeparam name="T"><inheritdoc/></typeparam>
 /// <remarks>
-/// In order to support updates and deletions, two additional data structures are introduced:
-/// <br/>
-/// - a <see cref="Dictionary{TKey, TValue}"/> Item2PT, mapping items <c>I</c> of type <typeparamref name="T"/> to 
-///   <see cref="BinaryHeapPriorityQueue{T}"/> instances, containing <see cref="PrioritizedItem{T}.PushTimestamp"/>
-///   values of type <see cref="int"/>, of <see cref="PrioritizedItem{T}"/> instances containing <c>I</c>.
-///   <br/>
-/// - a <see cref="Dictionary{TKey, TValue}"/> PT2Idx from <see cref="PrioritizedItem{T}.PushTimestamp"/> values to
-///   indexes of type <see cref="int"/>, into the backing list of the Binary Max Heap of this priority queue.
-///   <br/>
-/// <br/>
-/// Every time a request to remove or update an item <c>I</c> from the priority queue is made, Item2PT is used to
-/// retrieve all the <see cref="PrioritizedItem{T}.PushTimestamp"/> values of <see cref="PrioritizedItem{T}"/>
-/// instances with item.
-/// <br/>
-/// Those push timestamps can be multiple because the same item can be added multiple times to the queue.
-/// <br/>
-/// The push timestamps are organized themselves in per-item priority queues, with the same priority as the items
-/// in the main priority queue.
-/// <br/>
-/// This way, the push timestamp of highest priority for a given item can be peeked in constant time and extracted in 
-/// logarithmic time.
-/// <br/>
-/// Once the timestamp of highest priority has been found, the corresponding index (if any) in the backing list of the 
-/// Binary Max Heap of this priority queue can be found in constant time via the PT2Idx dictionary.
-/// <br/>
-/// Once the index is found, operations such as <see cref="Remove(T)"/> and <see cref="UpdatePriority(T, int)"/> can
-/// be executed in logarithmic time, since restoring heap properties after the modification of a single item of the
-/// heap requires a logarithmic number of sift down and/or sift up operations.
-/// <br/>
-/// <br/>
-/// The two dictionaries are kept up-to-date by implementing the extensibility points provided by 
-/// <see cref="BinaryHeapPriorityQueue{T}"/>, after pushing, before popping and on items swapping.
+///     In order to support updates and deletions, two additional data structures are introduced:
+///     <br/>
+///     - a <see cref="Dictionary{TKey, TValue}"/> Item2PT, mapping items <c>I</c> of type <typeparamref name="T"/> to 
+///       <see cref="BinaryHeapPriorityQueue{T}"/> instances, containing <see cref="PrioritizedItem{T}.PushTimestamp"/>
+///       values of type <see cref="int"/>, of <see cref="PrioritizedItem{T}"/> instances containing <c>I</c>.
+///       <br/>
+///     - a <see cref="Dictionary{TKey, TValue}"/> PT2Idx from <see cref="PrioritizedItem{T}.PushTimestamp"/> values to
+///       indexes of type <see cref="int"/>, into the backing list of the Binary Max Heap of this priority queue.
+///       <br/>
+///     <br/>
+///     Every time a request to remove or update an item <c>I</c> from the priority queue is made, Item2PT is used to
+///     retrieve all the <see cref="PrioritizedItem{T}.PushTimestamp"/> values of <see cref="PrioritizedItem{T}"/>
+///     instances with item.
+///     <br/>
+///     Those push timestamps can be multiple because the same item can be added multiple times to the queue.
+///     <br/>
+///     The push timestamps are organized themselves in per-item priority queues, with the same priority as the items
+///     in the main priority queue.
+///     <br/>
+///     This way, the push timestamp of highest priority for a given item can be peeked in constant time and extracted 
+///     in logarithmic time.
+///     <br/>
+///     Once the timestamp of highest priority has been found, the corresponding index (if any) in the backing list of
+///     the Binary Max Heap of this priority queue can be found in constant time via the PT2Idx dictionary.
+///     <br/>
+///     Once the index is found, operations such as <see cref="Remove(T)"/> and <see cref="UpdatePriority(T, int)"/> 
+///     can be executed in logarithmic time, since restoring heap properties after the modification of a single item of
+///     the heap requires a logarithmic number of sift down and/or sift up operations.
+///     <br/>
+///     <br/>
+///     The two dictionaries are kept up-to-date by implementing the extensibility points provided by 
+///     <see cref="BinaryHeapPriorityQueue{T}"/>, after pushing, before popping and on items swapping.
 /// </remarks> 
 public class UpdatableBinaryHeapPriorityQueue<T> : BinaryHeapPriorityQueue<T>, IUpdatablePriorityQueue<T>
     where T : notnull

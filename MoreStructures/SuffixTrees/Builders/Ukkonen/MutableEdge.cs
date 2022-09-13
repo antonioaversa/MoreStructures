@@ -56,13 +56,15 @@ internal class MutableEdge
     public override int GetHashCode() =>
         Start;
 
+    /// <inheritdoc path="//*[not(self::summary)]"/>
     /// <summary>
     /// In the form [<see cref="Start"/>, <see cref="End"/>] or [<see cref="Start"/>, <see cref="End"/>*], if the
     /// <see cref="End"/> of this <see cref="MutableEdge"/> is the provided <paramref name="globalEnd"/>.
     /// </summary>
-    /// <remarks>
-    /// <inheritdoc/>
-    /// </remarks>
+    /// <param name="globalEnd">The <see cref="MovingEnd"/> to stringify.</param>
+    /// <returns>
+    /// A stringified version of this edge, showing presence or absence of <paramref name="globalEnd"/>.
+    /// </returns>
     public string ToString(MovingEnd globalEnd) => 
         $"[{Start},{End}{(ReferenceEquals(End, globalEnd) ? "*" : string.Empty)}]";
 }

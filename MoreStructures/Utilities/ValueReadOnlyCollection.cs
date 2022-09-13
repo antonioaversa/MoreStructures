@@ -22,29 +22,37 @@ public class ValueReadOnlyCollection<T> : ReadOnlyCollection<T>, IEquatable<Valu
     {
     }
 
+    /// <inheritdoc path="//*[not(self::summary)]"/>
     /// <summary>
-    /// <inheritdoc/> Equality is calculated by value, i.e. on the collections items directly.
+    ///     <inheritdoc/>
+    ///     <br/>
+    ///     Equality is calculated by value, i.e. on the collections items directly.
     /// </summary>
-    /// <param name="obj"><inheritdoc cref="object.Equals(object?)" path="/param[@name='obj']"/></param>
-    /// <returns>
-    /// True if the specified object is equal to the current collection by value; otherwise, false.
-    /// </returns>
     public override bool Equals(object? obj) =>
         obj is ValueReadOnlyCollection<T> other && Equals(other);
 
-    /// <inheritdoc cref="Equals(object?)"/>
-    /// <param name="other">The <see cref="ValueReadOnlyCollection{T}"/> to compare with the current object.</param>
+    /// <inheritdoc path="//*[not(self::summary)]"/>
+    /// <summary>
+    ///     <inheritdoc/>
+    ///     <br/>
+    ///     Equality is calculated by value, i.e. on the collections items directly.
+    /// </summary>
     public virtual bool Equals(ValueReadOnlyCollection<T>? other) => other is not null && this.SequenceEqual(other);
 
+    /// <inheritdoc path="//*[not(self::summary)]"/>
     /// <summary>
-    /// <inheritdoc/> The hash code is calculated by value, as an aggregate of the hash codes of its items.
+    ///     <inheritdoc/>
+    ///     <br/>
+    ///     The hash code is calculated by value, as an aggregate of the hash codes of its items.
     /// </summary>
-    /// <returns>A 32-bit signed integer hash code.</returns>
     public override int GetHashCode() => 
         Items.Aggregate(0.GetHashCode(), (acc, item) => acc ^ item.GetHashCode());
 
+    /// <inheritdoc path="//*[not(self::summary)]"/>
     /// <summary>
-    /// <inheritdoc/> Format: "[v1, v2, ...]".
+    ///     <inheritdoc/>
+    ///     <br/>
+    ///     Format: "[v1, v2, ...]".
     /// </summary>
     public override string ToString() => 
         $"[{string.Join(", ", Items)}]";

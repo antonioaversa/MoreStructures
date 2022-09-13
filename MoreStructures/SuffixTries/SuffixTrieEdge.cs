@@ -14,12 +14,12 @@ namespace MoreStructures.SuffixTries;
 public record SuffixTrieEdge(int Index)
     : SuffixTreeEdge(Index, 1), ISuffixStructureEdge<SuffixTrieEdge, SuffixTrieNode>, IComparable<SuffixTrieEdge>
 {
+    /// <inheritdoc path="//*[not(self::summary)]"/>
     /// <summary>
-    /// <inheritdoc/>
-    /// Comparison is done by <see cref="Index"/>: lower is smaller, higher is bigger.
+    ///     <inheritdoc/>
+    ///     <br/>
+    ///     Comparison is done by <see cref="Index"/>: lower is smaller, higher is bigger.
     /// </summary>
-    /// <param name="other"><inheritdoc/></param>
-    /// <returns><inheritdoc/></returns>
     /// <exception cref="ArgumentException">
     /// Thrown when <paramref name="other"/> is not a <see cref="SuffixTrieEdge"/>.
     /// </exception>
@@ -28,12 +28,12 @@ public record SuffixTrieEdge(int Index)
         ? Index - other.Index 
         : throw new ArgumentException($"Invalid comparison: cannot compare to null.");
 
+    /// <inheritdoc path="//*[not(self::summary)]"/>
     /// <summary>
-    /// <inheritdoc/>
-    /// <br/>
-    /// Generates a string in the form "(<see cref="SuffixTreeEdge.Start"/>)". <see cref="SuffixTreeEdge.Length"/> is 
-    /// not included as in this context it is always 1.
+    ///     <inheritdoc/>
+    ///     <br/>
+    ///     Generates a string in the form "(<see cref="SuffixTreeEdge.Start"/>)". <see cref="SuffixTreeEdge.Length"/>
+    ///     is not included as in this context it is always 1.
     /// </summary>
-    /// <returns><inheritdoc/></returns>
     public override string ToString() => $"({Start})";
 }

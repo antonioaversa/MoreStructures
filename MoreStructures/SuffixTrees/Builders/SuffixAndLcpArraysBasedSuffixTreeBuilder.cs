@@ -122,7 +122,7 @@ public class SuffixAndLcpArraysBasedSuffixTreeBuilder : IBuilder<SuffixTreeEdge,
     ///     <inheritdoc/>
     /// </summary>
     /// <remarks>
-    ///     <inheritdoc cref="SuffixAndLcpArraysBasedSuffixTreeBuilder" path="/remarks"/>
+    ///     <inheritdoc cref="SuffixAndLcpArraysBasedSuffixTreeBuilder"/>
     /// </remarks>
     public SuffixTreeNode BuildTree(params TextWithTerminator[] texts)
     {

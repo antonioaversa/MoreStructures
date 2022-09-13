@@ -73,9 +73,9 @@ public class NaiveBuilder : IBuilder
     /// <inheritdoc/>
     public virtual BWTransform BuildTransform(BWMatrix matrix) => matrix.Transform;
 
-    /// <inheritdoc cref="IBuilder" path="//*[not(self::remarks)]"/>
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
-    /// <inheritdoc/>
+    ///     <inheritdoc/>
     ///     <para id="complexity">
     ///     COMPLEXITY
     ///     <br/>
@@ -99,9 +99,11 @@ public class NaiveBuilder : IBuilder
         return new(text, new(content, text.Terminator));
     }
 
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
     ///     - No computation to be done, except for building the string of the <see cref="TextWithTerminator"/>.
     ///       <br/>
     ///     - Time Complexity = O(n), Space Complexity = O(n), where n = edge of <paramref name="matrix"/>.

@@ -96,7 +96,7 @@ public class NaivePartiallyRecursiveSuffixTreeBuilder
     ///     <inheritdoc/>
     /// </summary>
     /// <remarks>
-    ///     <inheritdoc cref="NaivePartiallyRecursiveSuffixTreeBuilder" path="/remarks"/>
+    ///     <inheritdoc cref="NaivePartiallyRecursiveSuffixTreeBuilder"/>
     /// </remarks>
     public SuffixTreeNode BuildTree(params TextWithTerminator[] texts)
     {

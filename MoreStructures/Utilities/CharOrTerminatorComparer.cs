@@ -32,20 +32,18 @@ public class CharOrTerminatorComparer : IComparer<char>
         return _instances.GetOrAdd(terminator, t => new CharOrTerminatorComparer(t));
     }
 
+    /// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
     /// <summary>
-    /// <inheritdoc/>
+    ///     <inheritdoc/>
     /// </summary>
-    /// <param name="x"><inheritdoc path="/param[@name='x']"/></param>
-    /// <param name="y"><inheritdoc path="/param[@name='y']"/></param>
     /// <remarks>
-    /// Special rules applied by <see cref="CharOrTerminatorComparer"/>:
-    /// <br/>
-    /// - If one char is the terminator, and the other isn't, the one which is the terminator is smaller.
-    ///   <br/>
-    /// - If none of the cases above applies, <see cref="char.CompareTo(char)"/> is used on <paramref name="x"/> and 
-    ///   <paramref name="y"/>.
+    ///     Special rules applied by <see cref="CharOrTerminatorComparer"/>:
+    ///     <br/>
+    ///     - If one char is the terminator, and the other isn't, the one which is the terminator is smaller.
+    ///       <br/>
+    ///     - If none of the cases above applies, <see cref="char.CompareTo(char)"/> is used on <paramref name="x"/> 
+    ///       and <paramref name="y"/>.
     /// </remarks>
-    /// <returns><inheritdoc/></returns>
     public int Compare(char x, char y)
     {
         if (x == Terminator && y != Terminator)

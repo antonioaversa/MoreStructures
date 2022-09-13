@@ -1,8 +1,9 @@
 ﻿namespace MoreStructures.RecImmTrees.Conversions;
 
 /// <summary>
-/// <inheritdoc cref="IStringifier{TEdge, TNode}"/>
-/// Provides concrete properties and defaults for new line, identation and stringifiers.
+///     <inheritdoc cref="IStringifier{TEdge, TNode}"/>
+///     <br/>
+///     Provides concrete properties and defaults for new line, identation and stringifiers.
 /// </summary>
 /// <typeparam name="TEdge">The type of edges of the specific structure.</typeparam>
 /// <typeparam name="TNode">The type of nodes of the specific structure.</typeparam>

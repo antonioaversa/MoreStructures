@@ -82,13 +82,13 @@ public abstract record SuffixTreeNode(IDictionary<SuffixTreeEdge, SuffixTreeNode
                 StopIndentingLevel = 10,
             };
 
+    /// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
     /// <summary>
-    /// <inheritdoc/>
-    /// <br/>
-    /// Uses a <see cref="IStringifier{TEdge, TNode}"/> to generate the string which show the node and its underlying
-    /// structure.
+    ///     <inheritdoc/>
+    ///     <br/>
+    ///     Uses a <see cref="IStringifier{TEdge, TNode}"/> to generate the string which show the node and its 
+    ///     underlying structure.
     /// </summary>
-    /// <returns><inheritdoc/></returns>
     /// <remarks>
     /// Sealed to prevent compiler from superceding <see cref="ToString()"/> in derived record.
     /// </remarks>

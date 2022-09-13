@@ -129,7 +129,7 @@ public sealed record CountTreeNode<TEdge, TNode>(TNode WrappedNode)
         node._descendantsCount = node._children!.Sum(c => c.Value._descendantsCount!.Value + 1);
     }
 
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     /// <inheritdoc cref="CountTreeNode{TEdge, TNode}" path="/remarks/para[@id='info']"/>
     /// </remarks>

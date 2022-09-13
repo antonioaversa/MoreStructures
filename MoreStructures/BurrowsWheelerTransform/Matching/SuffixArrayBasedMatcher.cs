@@ -52,10 +52,10 @@ public class SuffixArrayBasedMatcher : IMatcher
     /// </summary>
     protected static ISearch OrderedAscListSearch { get; } = new BinarySearch();
 
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
-    ///     Unlike <see cref="SortedBWT"/>, <see cref="BWT"/> is not required to perform Pattern Matching against
-    ///     <see cref="Text"/>, and is not supported.
+    /// Unlike <see cref="SortedBWT"/>, <see cref="BWT"/> is not required to perform Pattern Matching against
+    /// <see cref="Text"/>, and is not supported.
     /// </remarks>
     public RotatedTextWithTerminator BWT => 
         throw new NotSupportedException($"{nameof(BWT)} is not defined for {nameof(SuffixArrayBasedMatcher)}");

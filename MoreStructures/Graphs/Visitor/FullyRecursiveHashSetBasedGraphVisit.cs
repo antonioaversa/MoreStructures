@@ -6,12 +6,10 @@
 /// </summary>
 public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
 {
+    /// <inheritdoc path="//*[not(self::summary)]"/>
     /// <summary>
     ///     <inheritdoc cref="FullyRecursiveHashSetBasedGraphVisit"/>
     /// </summary>
-    /// <param name="directedGraph">
-    ///     <inheritdoc/>
-    /// </param>
     public FullyRecursiveHashSetBasedGraphVisit(bool directedGraph) : base(directedGraph)
     {
     }

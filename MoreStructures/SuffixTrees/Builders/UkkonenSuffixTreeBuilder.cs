@@ -80,6 +80,7 @@ namespace MoreStructures.SuffixTrees.Builders;
 public class UkkonenSuffixTreeBuilder
     : IBuilder<SuffixTreeEdge, SuffixTreeNode>
 {
+    /// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
     /// <summary>
     ///     <inheritdoc/>
     /// </summary>
