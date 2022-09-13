@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-namespace MoreStructures.Tests;
+﻿namespace MoreStructures.Tests;
 
 [TestClass]
 public class TextWithTerminatorExtensionsTests

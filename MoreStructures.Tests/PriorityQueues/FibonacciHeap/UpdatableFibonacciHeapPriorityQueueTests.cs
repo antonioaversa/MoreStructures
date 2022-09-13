@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.PriorityQueues.FibonacciHeap;
+﻿using MoreStructures.PriorityQueues.FibonacciHeap;
 
 namespace MoreStructures.Tests.PriorityQueues.FibonacciHeap;
 

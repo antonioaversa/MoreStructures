@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.DisjointSets;
+﻿using MoreStructures.DisjointSets;
 
 namespace MoreStructures.Tests.DisjointSets;
 

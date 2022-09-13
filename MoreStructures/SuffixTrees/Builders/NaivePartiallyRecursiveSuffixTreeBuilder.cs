@@ -1,5 +1,4 @@
-﻿using MoreStructures.MutableTrees;
-using MoreStructures.SuffixStructures.Builders;
+﻿using MoreStructures.SuffixStructures.Builders;
 using static MoreStructures.Utilities.StringUtilities;
 using static MoreStructures.MutableTrees.MutableTree;
 

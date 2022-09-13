@@ -1,6 +1,4 @@
-﻿using MoreStructures.SuffixStructures;
-
-namespace MoreStructures.SuffixArrays.Builders;
+﻿namespace MoreStructures.SuffixArrays.Builders;
 
 /// <summary>
 /// An algorithm for building the <see cref="SuffixArray"/> of a text.

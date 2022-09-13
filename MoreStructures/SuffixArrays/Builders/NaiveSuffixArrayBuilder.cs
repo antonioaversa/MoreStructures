@@ -1,5 +1,4 @@
-﻿using MoreStructures.SuffixStructures;
-using MoreStructures.Utilities;
+﻿using MoreStructures.Utilities;
 
 namespace MoreStructures.SuffixArrays.Builders;
 

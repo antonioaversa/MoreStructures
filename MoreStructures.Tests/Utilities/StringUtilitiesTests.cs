@@ -1,4 +1,3 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static MoreStructures.Utilities.StringUtilities;
 
 namespace MoreStructures.Tests.Utilities;

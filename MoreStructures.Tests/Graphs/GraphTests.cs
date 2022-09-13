@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.Graphs;
+﻿using MoreStructures.Graphs;
 
 namespace MoreStructures.Tests.Graphs;
 

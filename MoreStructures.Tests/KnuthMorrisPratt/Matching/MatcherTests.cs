@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.KnuthMorrisPratt.Matching;
+﻿using MoreStructures.KnuthMorrisPratt.Matching;
 
 namespace MoreStructures.Tests.KnuthMorrisPratt.Matching;
 

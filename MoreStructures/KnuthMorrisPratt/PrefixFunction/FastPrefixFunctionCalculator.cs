@@ -1,6 +1,4 @@
-﻿using MoreStructures.KnuthMorrisPratt.Borders;
-
-namespace MoreStructures.KnuthMorrisPratt.PrefixFunction;
+﻿namespace MoreStructures.KnuthMorrisPratt.PrefixFunction;
 
 /// <inheritdoc cref="IPrefixFunctionCalculator" path="//*[not(self::summary or self::remarks)]"/>
 /// <summary>

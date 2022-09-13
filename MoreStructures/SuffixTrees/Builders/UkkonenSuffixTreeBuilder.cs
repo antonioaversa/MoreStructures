@@ -1,5 +1,4 @@
-﻿using MoreLinq;
-using MoreStructures.SuffixStructures.Builders;
+﻿using MoreStructures.SuffixStructures.Builders;
 using MoreStructures.SuffixTrees.Builders.Ukkonen;
 
 namespace MoreStructures.SuffixTrees.Builders;

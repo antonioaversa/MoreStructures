@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.SuffixArrays.CyclicShifts;
+﻿using MoreStructures.SuffixArrays.CyclicShifts;
 
 namespace MoreStructures.Tests.SuffixArrays.CyclicShifts;
 

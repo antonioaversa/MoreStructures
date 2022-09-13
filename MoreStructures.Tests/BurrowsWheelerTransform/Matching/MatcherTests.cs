@@ -1,5 +1,4 @@
-﻿using MoreStructures.BurrowsWheelerTransform.Builders;
-using MoreStructures.BurrowsWheelerTransform.Matching;
+﻿using MoreStructures.BurrowsWheelerTransform.Matching;
 
 namespace MoreStructures.Tests.BurrowsWheelerTransform.Matching;
 
