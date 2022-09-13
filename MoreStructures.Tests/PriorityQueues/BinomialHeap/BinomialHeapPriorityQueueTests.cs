@@ -1,6 +1,6 @@
 ﻿using MoreStructures.PriorityQueues.BinomialHeap;
 
-namespace MoreStructures.Tests.PriorityQueues.FibonacciHeap;
+namespace MoreStructures.Tests.PriorityQueues.BinomialHeap;
 
 [TestClass]
 public class BinomialHeapPriorityQueueTests_AsBasicQueue : PriorityQueueTests
@@ -12,6 +12,3 @@ public class BinomialHeapPriorityQueueTests_AsBasicQueue : PriorityQueueTests
     {
     }
 }
-
-
-

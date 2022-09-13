@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.XifoStructures;
+﻿using MoreStructures.XifoStructures;
 
 namespace MoreStructures.Tests.XifoStructures;
 

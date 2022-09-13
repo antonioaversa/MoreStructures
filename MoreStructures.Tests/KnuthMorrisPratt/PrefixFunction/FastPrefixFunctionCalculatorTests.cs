@@ -1,5 +1,4 @@
-﻿using MoreStructures.KnuthMorrisPratt.Borders;
-using MoreStructures.KnuthMorrisPratt.PrefixFunction;
+﻿using MoreStructures.KnuthMorrisPratt.PrefixFunction;
 
 namespace MoreStructures.Tests.KnuthMorrisPratt.PrefixFunction;
 

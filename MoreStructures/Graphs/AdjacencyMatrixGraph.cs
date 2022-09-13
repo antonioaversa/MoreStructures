@@ -1,6 +1,4 @@
-﻿using MoreStructures.Graphs;
-
-namespace MoreStructures.Graphs;
+﻿namespace MoreStructures.Graphs;
 
 /// <summary>
 /// A graph data structure, represented as a matrix: the (i, j) element of the matrix is true if the vertex with id i

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MoreStructures.Utilities;
+﻿namespace MoreStructures.Utilities;
 
 /// <summary>
 /// Extensions for <see cref="LinkedList{T}"/>.

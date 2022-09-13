@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MoreStructures.Tests.Graphs;
+﻿namespace MoreStructures.Tests.Graphs;
 
 internal static class GraphTestUtils
 {

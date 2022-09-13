@@ -1,7 +1,5 @@
 ﻿using MoreStructures.Strings.Sorting;
 using MoreStructures.SuffixArrays.CyclicShifts;
-using MoreStructures.SuffixStructures;
-using MoreStructures.Utilities;
 
 namespace MoreStructures.SuffixArrays.Builders;
 
