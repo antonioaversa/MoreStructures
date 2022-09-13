@@ -7,8 +7,9 @@ namespace MoreStructures.PriorityQueues.FibonacciHeap;
 /// operations, such as retrieval and update of priorities and removal of items.
 /// </summary>
 /// <remarks>
-/// Check <see cref="DuplicatedItemsResolution"/> for detailed informations about how the mapping between items of type
-/// <typeparamref name="T"/> and heap nodes of type <see cref="TreeNode{T}"/> is performed, in presence of duplicates.
+/// Check <see cref="DuplicatedItemsResolution{T, THeap}"/> for detailed informations about how the mapping between 
+/// items of type <typeparamref name="T"/> and heap nodes of type <see cref="TreeNode{T}"/> is performed, in presence 
+/// of duplicates.
 /// </remarks>
 public class UpdatableFibonacciHeapPriorityQueue<T> : FibonacciHeapPriorityQueue<T>, IUpdatablePriorityQueue<T>
     where T : notnull
@@ -32,17 +33,16 @@ public class UpdatableFibonacciHeapPriorityQueue<T> : FibonacciHeapPriorityQueue
     ///       <see cref="BinomialHeapPriorityQueue{T}.Peek"/>.
     ///       <br/>
     ///     - Then, it updates the priority of the provided <paramref name="item"/> via 
-    ///       <see cref="UpdatableFibonacciHeapPriorityQueue{T}.UpdatePriority(T, int)"/>, setting it to P + 1 and 
-    ///       making <paramref name="item"/> the one with max priority.
+    ///       <see cref="UpdatePriority(T, int)"/>, setting it to P + 1 and making <paramref name="item"/> the one with 
+    ///       max priority.
     ///       <br/>
     ///     - Finally it pops the <paramref name="item"/> via <see cref="BinomialHeapPriorityQueue{T}.Pop"/>.
     ///     </para>
     ///     <para id="complexity">
     ///     COMPLEXITY
     ///     <br/>
-    ///     - Both <see cref="BinomialHeapPriorityQueue{T}.Peek"/> and 
-    ///       <see cref="UpdatableFibonacciHeapPriorityQueue{T}.UpdatePriority(T, int)"/> have constant 
-    ///       Time and Space Complexity (update having constant amortized complexity).
+    ///     - Both <see cref="BinomialHeapPriorityQueue{T}.Peek"/> and <see cref="UpdatePriority(T, int)"/> have 
+    ///       constant Time and Space Complexity (update having constant amortized complexity).
     ///       <br/>
     ///     - However, <see cref="BinomialHeapPriorityQueue{T}.Pop"/> has logarithmic Time Complexity.
     ///       <br/>
@@ -69,7 +69,7 @@ public class UpdatableFibonacciHeapPriorityQueue<T> : FibonacciHeapPriorityQueue
     ///     <para id="algorithm-update">
     ///     ALGORITHM - UPDATE PART
     ///     <br/>
-    ///     - The behavior of the algorith is quite differently, when the new priority for the specified item is 
+    ///     - The algorith behaves quite differently, depending on whether the new priority for the specified item is 
     ///       higher or equal than P, as opposed to when it's lower.
     ///       <br/>
     ///     - When the priority is higher or equal and the node is a root, there is no structural change to the heap. 

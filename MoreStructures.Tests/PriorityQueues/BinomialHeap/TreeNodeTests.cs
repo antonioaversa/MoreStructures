@@ -1,4 +1,5 @@
-﻿using MoreStructures.PriorityQueues;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MoreStructures.PriorityQueues;
 using MoreStructures.PriorityQueues.BinomialHeap;
 
 namespace MoreStructures.Tests.PriorityQueues.BinomialHeap;
@@ -239,6 +240,26 @@ public class TreeNodeTests
         Assert.AreEqual(nodeChild2.PrioritizedItem, nodeChild2Copy.PrioritizedItem);
         Assert.AreSame(nodeParentCopy, nodeChild2Copy.Parent);
         Assert.AreSame(nodeParentCopy.Children.First!.Next, nodeChild2Copy.ParentListNode);
+    }
+
+    [TestMethod]
+    public void ToString_IncludesPrioritizedItem()
+    {
+        var prioritizedItem = new PrioritizedItem<string>("3", 2, 0);
+        var treeNode = new TreeNodeMock() { PrioritizedItem = prioritizedItem };
+        Assert.IsTrue(treeNode.ToString().Contains(prioritizedItem.ToString()));
+    }
+
+    [TestMethod]
+    public void ToString_IncludesIsInHeap()
+    {
+        var treeNodeNotInHeap = new TreeNodeMock() { PrioritizedItem = new("3", 2, 0) };
+
+        var treeNodeInHeap = new TreeNodeMock() { PrioritizedItem = new("3", 2, 0) };
+        var parentTreeNode = new TreeNodeMock() { PrioritizedItem = new("4", 2, 1) };
+        parentTreeNode.AddChild(treeNodeInHeap);
+
+        Assert.AreNotEqual(treeNodeNotInHeap.ToString(), treeNodeInHeap.ToString());
     }
 }
 

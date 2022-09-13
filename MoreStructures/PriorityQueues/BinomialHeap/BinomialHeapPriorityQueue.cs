@@ -298,6 +298,18 @@ public partial class BinomialHeapPriorityQueue<T> : IPriorityQueue<T>
     #region Helpers
 
     /// <summary>
+    /// Updates the reference to the max priority root to the provided <paramref name="rootsListNode"/>,
+    /// if that root has a higher priority than the value of the current max priority root.
+    /// </summary>
+    /// <param name="rootsListNode">The root whose priority has been increased.</param>
+    protected void UpdateMaxRootsListNodeAfterRootNewOrIncrease(LinkedListNode<TreeNode<T>> rootsListNode)
+    {
+        if (MaxRootsListNode == null ||
+            MaxRootsListNode.Value.PrioritizedItem.CompareTo(rootsListNode.Value.PrioritizedItem) < 0)
+            MaxRootsListNode = rootsListNode;
+    }
+
+    /// <summary>
     /// Performs a linear scan of the roots and update the <see cref="MaxRootsListNode"/> with a reference to the root
     /// of max priority.
     /// </summary>
@@ -306,7 +318,7 @@ public partial class BinomialHeapPriorityQueue<T> : IPriorityQueue<T>
         if (ItemsCount > 0)
         {
             LinkedListNode<TreeNode<T>> maxRootNode = Roots.First!;
-            foreach (var rootNode in Roots.AsNodes())
+            foreach (var rootNode in Roots.AsNodes().Skip(1))
             {
                 if (rootNode.Value.PrioritizedItem.CompareTo(maxRootNode.Value.PrioritizedItem) > 0)
                     maxRootNode = rootNode;
@@ -328,9 +340,7 @@ public partial class BinomialHeapPriorityQueue<T> : IPriorityQueue<T>
     {
         var newRootsListNode = AttachToRoots(newRoot);
         ItemsCount++;
-        if (MaxRootsListNode == null ||
-            MaxRootsListNode.Value.PrioritizedItem.CompareTo(newRoot.PrioritizedItem) < 0)
-            MaxRootsListNode = newRootsListNode;
+        UpdateMaxRootsListNodeAfterRootNewOrIncrease(newRootsListNode);
     }
 
     /// <summary>
