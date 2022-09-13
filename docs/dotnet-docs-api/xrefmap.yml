@@ -4421,103 +4421,139 @@ references:
   fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue(Of T).UpdateMaxRootsListNode
   nameWithType: BinomialHeapPriorityQueue<T>.UpdateMaxRootsListNode
   nameWithType.vb: BinomialHeapPriorityQueue(Of T).UpdateMaxRootsListNode
+- uid: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.UpdateMaxRootsListNodeAfterRootNewOrIncrease(LinkedListNode{MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0}})
+  name: UpdateMaxRootsListNodeAfterRootNewOrIncrease(LinkedListNode<TreeNode<T>>)
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_UpdateMaxRootsListNodeAfterRootNewOrIncrease_LinkedListNode_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0___
+  commentId: M:MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.UpdateMaxRootsListNodeAfterRootNewOrIncrease(LinkedListNode{MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0}})
+  name.vb: UpdateMaxRootsListNodeAfterRootNewOrIncrease(LinkedListNode(Of TreeNode(Of T)))
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue<T>.UpdateMaxRootsListNodeAfterRootNewOrIncrease(LinkedListNode<MoreStructures.PriorityQueues.BinomialHeap.TreeNode<T>>)
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue(Of T).UpdateMaxRootsListNodeAfterRootNewOrIncrease(LinkedListNode(Of MoreStructures.PriorityQueues.BinomialHeap.TreeNode(Of T)))
+  nameWithType: BinomialHeapPriorityQueue<T>.UpdateMaxRootsListNodeAfterRootNewOrIncrease(LinkedListNode<TreeNode<T>>)
+  nameWithType.vb: BinomialHeapPriorityQueue(Of T).UpdateMaxRootsListNodeAfterRootNewOrIncrease(LinkedListNode(Of TreeNode(Of T)))
+- uid: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.UpdateMaxRootsListNodeAfterRootNewOrIncrease*
+  name: UpdateMaxRootsListNodeAfterRootNewOrIncrease
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_UpdateMaxRootsListNodeAfterRootNewOrIncrease_
+  commentId: Overload:MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.UpdateMaxRootsListNodeAfterRootNewOrIncrease
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue<T>.UpdateMaxRootsListNodeAfterRootNewOrIncrease
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue(Of T).UpdateMaxRootsListNodeAfterRootNewOrIncrease
+  nameWithType: BinomialHeapPriorityQueue<T>.UpdateMaxRootsListNodeAfterRootNewOrIncrease
+  nameWithType.vb: BinomialHeapPriorityQueue(Of T).UpdateMaxRootsListNodeAfterRootNewOrIncrease
 - uid: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2
-  name: DuplicatedItemsResolution<T, THeap>
+  name: DuplicatedItemsResolution<TItems, THeap>
   href: api/MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution-2.html
   commentId: T:MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2
-  name.vb: DuplicatedItemsResolution(Of T, THeap)
-  fullName: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution<T, THeap>
-  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution(Of T, THeap)
-  nameWithType: DuplicatedItemsResolution<T, THeap>
-  nameWithType.vb: DuplicatedItemsResolution(Of T, THeap)
+  name.vb: DuplicatedItemsResolution(Of TItems, THeap)
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution<TItems, THeap>
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution(Of TItems, THeap)
+  nameWithType: DuplicatedItemsResolution<TItems, THeap>
+  nameWithType.vb: DuplicatedItemsResolution(Of TItems, THeap)
 - uid: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.FindTreeNode(`0)
-  name: FindTreeNode(T)
+  name: FindTreeNode(TItems)
   href: api/MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution-2.html#MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_FindTreeNode__0_
   commentId: M:MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.FindTreeNode(`0)
-  fullName: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution<T, THeap>.FindTreeNode(T)
-  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution(Of T, THeap).FindTreeNode(T)
-  nameWithType: DuplicatedItemsResolution<T, THeap>.FindTreeNode(T)
-  nameWithType.vb: DuplicatedItemsResolution(Of T, THeap).FindTreeNode(T)
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution<TItems, THeap>.FindTreeNode(TItems)
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution(Of TItems, THeap).FindTreeNode(TItems)
+  nameWithType: DuplicatedItemsResolution<TItems, THeap>.FindTreeNode(TItems)
+  nameWithType.vb: DuplicatedItemsResolution(Of TItems, THeap).FindTreeNode(TItems)
 - uid: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.FindTreeNode*
   name: FindTreeNode
   href: api/MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution-2.html#MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_FindTreeNode_
   commentId: Overload:MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.FindTreeNode
   isSpec: "True"
-  fullName: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution<T, THeap>.FindTreeNode
-  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution(Of T, THeap).FindTreeNode
-  nameWithType: DuplicatedItemsResolution<T, THeap>.FindTreeNode
-  nameWithType.vb: DuplicatedItemsResolution(Of T, THeap).FindTreeNode
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution<TItems, THeap>.FindTreeNode
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution(Of TItems, THeap).FindTreeNode
+  nameWithType: DuplicatedItemsResolution<TItems, THeap>.FindTreeNode
+  nameWithType.vb: DuplicatedItemsResolution(Of TItems, THeap).FindTreeNode
 - uid: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.GetPrioritiesOf(`0)
-  name: GetPrioritiesOf(T)
+  name: GetPrioritiesOf(TItems)
   href: api/MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution-2.html#MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_GetPrioritiesOf__0_
   commentId: M:MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.GetPrioritiesOf(`0)
-  fullName: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution<T, THeap>.GetPrioritiesOf(T)
-  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution(Of T, THeap).GetPrioritiesOf(T)
-  nameWithType: DuplicatedItemsResolution<T, THeap>.GetPrioritiesOf(T)
-  nameWithType.vb: DuplicatedItemsResolution(Of T, THeap).GetPrioritiesOf(T)
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution<TItems, THeap>.GetPrioritiesOf(TItems)
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution(Of TItems, THeap).GetPrioritiesOf(TItems)
+  nameWithType: DuplicatedItemsResolution<TItems, THeap>.GetPrioritiesOf(TItems)
+  nameWithType.vb: DuplicatedItemsResolution(Of TItems, THeap).GetPrioritiesOf(TItems)
 - uid: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.GetPrioritiesOf*
   name: GetPrioritiesOf
   href: api/MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution-2.html#MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_GetPrioritiesOf_
   commentId: Overload:MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.GetPrioritiesOf
   isSpec: "True"
-  fullName: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution<T, THeap>.GetPrioritiesOf
-  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution(Of T, THeap).GetPrioritiesOf
-  nameWithType: DuplicatedItemsResolution<T, THeap>.GetPrioritiesOf
-  nameWithType.vb: DuplicatedItemsResolution(Of T, THeap).GetPrioritiesOf
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution<TItems, THeap>.GetPrioritiesOf
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution(Of TItems, THeap).GetPrioritiesOf
+  nameWithType: DuplicatedItemsResolution<TItems, THeap>.GetPrioritiesOf
+  nameWithType.vb: DuplicatedItemsResolution(Of TItems, THeap).GetPrioritiesOf
 - uid: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.RaiseItemPopping(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0})
-  name: RaiseItemPopping(TreeNode<T>)
+  name: RaiseItemPopping(TreeNode<TItems>)
   href: api/MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution-2.html#MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_RaiseItemPopping_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__
   commentId: M:MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.RaiseItemPopping(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0})
-  name.vb: RaiseItemPopping(TreeNode(Of T))
-  fullName: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution<T, THeap>.RaiseItemPopping(MoreStructures.PriorityQueues.BinomialHeap.TreeNode<T>)
-  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution(Of T, THeap).RaiseItemPopping(MoreStructures.PriorityQueues.BinomialHeap.TreeNode(Of T))
-  nameWithType: DuplicatedItemsResolution<T, THeap>.RaiseItemPopping(TreeNode<T>)
-  nameWithType.vb: DuplicatedItemsResolution(Of T, THeap).RaiseItemPopping(TreeNode(Of T))
+  name.vb: RaiseItemPopping(TreeNode(Of TItems))
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution<TItems, THeap>.RaiseItemPopping(MoreStructures.PriorityQueues.BinomialHeap.TreeNode<TItems>)
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution(Of TItems, THeap).RaiseItemPopping(MoreStructures.PriorityQueues.BinomialHeap.TreeNode(Of TItems))
+  nameWithType: DuplicatedItemsResolution<TItems, THeap>.RaiseItemPopping(TreeNode<TItems>)
+  nameWithType.vb: DuplicatedItemsResolution(Of TItems, THeap).RaiseItemPopping(TreeNode(Of TItems))
 - uid: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.RaiseItemPopping*
   name: RaiseItemPopping
   href: api/MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution-2.html#MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_RaiseItemPopping_
   commentId: Overload:MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.RaiseItemPopping
   isSpec: "True"
-  fullName: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution<T, THeap>.RaiseItemPopping
-  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution(Of T, THeap).RaiseItemPopping
-  nameWithType: DuplicatedItemsResolution<T, THeap>.RaiseItemPopping
-  nameWithType.vb: DuplicatedItemsResolution(Of T, THeap).RaiseItemPopping
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution<TItems, THeap>.RaiseItemPopping
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution(Of TItems, THeap).RaiseItemPopping
+  nameWithType: DuplicatedItemsResolution<TItems, THeap>.RaiseItemPopping
+  nameWithType.vb: DuplicatedItemsResolution(Of TItems, THeap).RaiseItemPopping
 - uid: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.RaiseItemPriorityChanged(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0},MoreStructures.PriorityQueues.PrioritizedItem{`0})
-  name: RaiseItemPriorityChanged(TreeNode<T>, PrioritizedItem<T>)
+  name: RaiseItemPriorityChanged(TreeNode<TItems>, PrioritizedItem<TItems>)
   href: api/MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution-2.html#MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_RaiseItemPriorityChanged_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__MoreStructures_PriorityQueues_PrioritizedItem__0__
   commentId: M:MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.RaiseItemPriorityChanged(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0},MoreStructures.PriorityQueues.PrioritizedItem{`0})
-  name.vb: RaiseItemPriorityChanged(TreeNode(Of T), PrioritizedItem(Of T))
-  fullName: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution<T, THeap>.RaiseItemPriorityChanged(MoreStructures.PriorityQueues.BinomialHeap.TreeNode<T>, MoreStructures.PriorityQueues.PrioritizedItem<T>)
-  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution(Of T, THeap).RaiseItemPriorityChanged(MoreStructures.PriorityQueues.BinomialHeap.TreeNode(Of T), MoreStructures.PriorityQueues.PrioritizedItem(Of T))
-  nameWithType: DuplicatedItemsResolution<T, THeap>.RaiseItemPriorityChanged(TreeNode<T>, PrioritizedItem<T>)
-  nameWithType.vb: DuplicatedItemsResolution(Of T, THeap).RaiseItemPriorityChanged(TreeNode(Of T), PrioritizedItem(Of T))
+  name.vb: RaiseItemPriorityChanged(TreeNode(Of TItems), PrioritizedItem(Of TItems))
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution<TItems, THeap>.RaiseItemPriorityChanged(MoreStructures.PriorityQueues.BinomialHeap.TreeNode<TItems>, MoreStructures.PriorityQueues.PrioritizedItem<TItems>)
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution(Of TItems, THeap).RaiseItemPriorityChanged(MoreStructures.PriorityQueues.BinomialHeap.TreeNode(Of TItems), MoreStructures.PriorityQueues.PrioritizedItem(Of TItems))
+  nameWithType: DuplicatedItemsResolution<TItems, THeap>.RaiseItemPriorityChanged(TreeNode<TItems>, PrioritizedItem<TItems>)
+  nameWithType.vb: DuplicatedItemsResolution(Of TItems, THeap).RaiseItemPriorityChanged(TreeNode(Of TItems), PrioritizedItem(Of TItems))
 - uid: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.RaiseItemPriorityChanged*
   name: RaiseItemPriorityChanged
   href: api/MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution-2.html#MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_RaiseItemPriorityChanged_
   commentId: Overload:MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.RaiseItemPriorityChanged
   isSpec: "True"
-  fullName: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution<T, THeap>.RaiseItemPriorityChanged
-  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution(Of T, THeap).RaiseItemPriorityChanged
-  nameWithType: DuplicatedItemsResolution<T, THeap>.RaiseItemPriorityChanged
-  nameWithType.vb: DuplicatedItemsResolution(Of T, THeap).RaiseItemPriorityChanged
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution<TItems, THeap>.RaiseItemPriorityChanged
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution(Of TItems, THeap).RaiseItemPriorityChanged
+  nameWithType: DuplicatedItemsResolution<TItems, THeap>.RaiseItemPriorityChanged
+  nameWithType.vb: DuplicatedItemsResolution(Of TItems, THeap).RaiseItemPriorityChanged
 - uid: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.RaiseItemPushed(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0})
-  name: RaiseItemPushed(TreeNode<T>)
+  name: RaiseItemPushed(TreeNode<TItems>)
   href: api/MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution-2.html#MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_RaiseItemPushed_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__
   commentId: M:MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.RaiseItemPushed(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0})
-  name.vb: RaiseItemPushed(TreeNode(Of T))
-  fullName: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution<T, THeap>.RaiseItemPushed(MoreStructures.PriorityQueues.BinomialHeap.TreeNode<T>)
-  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution(Of T, THeap).RaiseItemPushed(MoreStructures.PriorityQueues.BinomialHeap.TreeNode(Of T))
-  nameWithType: DuplicatedItemsResolution<T, THeap>.RaiseItemPushed(TreeNode<T>)
-  nameWithType.vb: DuplicatedItemsResolution(Of T, THeap).RaiseItemPushed(TreeNode(Of T))
+  name.vb: RaiseItemPushed(TreeNode(Of TItems))
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution<TItems, THeap>.RaiseItemPushed(MoreStructures.PriorityQueues.BinomialHeap.TreeNode<TItems>)
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution(Of TItems, THeap).RaiseItemPushed(MoreStructures.PriorityQueues.BinomialHeap.TreeNode(Of TItems))
+  nameWithType: DuplicatedItemsResolution<TItems, THeap>.RaiseItemPushed(TreeNode<TItems>)
+  nameWithType.vb: DuplicatedItemsResolution(Of TItems, THeap).RaiseItemPushed(TreeNode(Of TItems))
 - uid: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.RaiseItemPushed*
   name: RaiseItemPushed
   href: api/MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution-2.html#MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_RaiseItemPushed_
   commentId: Overload:MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.RaiseItemPushed
   isSpec: "True"
-  fullName: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution<T, THeap>.RaiseItemPushed
-  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution(Of T, THeap).RaiseItemPushed
-  nameWithType: DuplicatedItemsResolution<T, THeap>.RaiseItemPushed
-  nameWithType.vb: DuplicatedItemsResolution(Of T, THeap).RaiseItemPushed
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution<TItems, THeap>.RaiseItemPushed
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution(Of TItems, THeap).RaiseItemPushed
+  nameWithType: DuplicatedItemsResolution<TItems, THeap>.RaiseItemPushed
+  nameWithType.vb: DuplicatedItemsResolution(Of TItems, THeap).RaiseItemPushed
+- uid: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.RaiseItemsSwapped(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0},MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0})
+  name: RaiseItemsSwapped(TreeNode<TItems>, TreeNode<TItems>)
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution-2.html#MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_RaiseItemsSwapped_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__
+  commentId: M:MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.RaiseItemsSwapped(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0},MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0})
+  name.vb: RaiseItemsSwapped(TreeNode(Of TItems), TreeNode(Of TItems))
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution<TItems, THeap>.RaiseItemsSwapped(MoreStructures.PriorityQueues.BinomialHeap.TreeNode<TItems>, MoreStructures.PriorityQueues.BinomialHeap.TreeNode<TItems>)
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution(Of TItems, THeap).RaiseItemsSwapped(MoreStructures.PriorityQueues.BinomialHeap.TreeNode(Of TItems), MoreStructures.PriorityQueues.BinomialHeap.TreeNode(Of TItems))
+  nameWithType: DuplicatedItemsResolution<TItems, THeap>.RaiseItemsSwapped(TreeNode<TItems>, TreeNode<TItems>)
+  nameWithType.vb: DuplicatedItemsResolution(Of TItems, THeap).RaiseItemsSwapped(TreeNode(Of TItems), TreeNode(Of TItems))
+- uid: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.RaiseItemsSwapped*
+  name: RaiseItemsSwapped
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution-2.html#MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_RaiseItemsSwapped_
+  commentId: Overload:MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.RaiseItemsSwapped
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution<TItems, THeap>.RaiseItemsSwapped
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution(Of TItems, THeap).RaiseItemsSwapped
+  nameWithType: DuplicatedItemsResolution<TItems, THeap>.RaiseItemsSwapped
+  nameWithType.vb: DuplicatedItemsResolution(Of TItems, THeap).RaiseItemsSwapped
 - uid: MoreStructures.PriorityQueues.BinomialHeap.TreeNode`1
   name: TreeNode<T>
   href: api/MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html
@@ -4681,6 +4717,155 @@ references:
   fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.TreeNode(Of T).RootsListNode
   nameWithType: TreeNode<T>.RootsListNode
   nameWithType.vb: TreeNode(Of T).RootsListNode
+- uid: MoreStructures.PriorityQueues.BinomialHeap.TreeNode`1.ToString
+  name: ToString()
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html#MoreStructures_PriorityQueues_BinomialHeap_TreeNode_1_ToString
+  commentId: M:MoreStructures.PriorityQueues.BinomialHeap.TreeNode`1.ToString
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.TreeNode<T>.ToString()
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.TreeNode(Of T).ToString()
+  nameWithType: TreeNode<T>.ToString()
+  nameWithType.vb: TreeNode(Of T).ToString()
+- uid: MoreStructures.PriorityQueues.BinomialHeap.TreeNode`1.ToString*
+  name: ToString
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html#MoreStructures_PriorityQueues_BinomialHeap_TreeNode_1_ToString_
+  commentId: Overload:MoreStructures.PriorityQueues.BinomialHeap.TreeNode`1.ToString
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.TreeNode<T>.ToString
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.TreeNode(Of T).ToString
+  nameWithType: TreeNode<T>.ToString
+  nameWithType.vb: TreeNode(Of T).ToString
+- uid: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1
+  name: UpdatableBinomialHeapPriorityQueue<T>
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue-1.html
+  commentId: T:MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1
+  name.vb: UpdatableBinomialHeapPriorityQueue(Of T)
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue<T>
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue(Of T)
+  nameWithType: UpdatableBinomialHeapPriorityQueue<T>
+  nameWithType.vb: UpdatableBinomialHeapPriorityQueue(Of T)
+- uid: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.GetPrioritiesOf(`0)
+  name: GetPrioritiesOf(T)
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_GetPrioritiesOf__0_
+  commentId: M:MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.GetPrioritiesOf(`0)
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue<T>.GetPrioritiesOf(T)
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue(Of T).GetPrioritiesOf(T)
+  nameWithType: UpdatableBinomialHeapPriorityQueue<T>.GetPrioritiesOf(T)
+  nameWithType.vb: UpdatableBinomialHeapPriorityQueue(Of T).GetPrioritiesOf(T)
+- uid: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.GetPrioritiesOf*
+  name: GetPrioritiesOf
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_GetPrioritiesOf_
+  commentId: Overload:MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.GetPrioritiesOf
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue<T>.GetPrioritiesOf
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue(Of T).GetPrioritiesOf
+  nameWithType: UpdatableBinomialHeapPriorityQueue<T>.GetPrioritiesOf
+  nameWithType.vb: UpdatableBinomialHeapPriorityQueue(Of T).GetPrioritiesOf
+- uid: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.RaiseItemPopping(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0})
+  name: RaiseItemPopping(TreeNode<T>)
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_RaiseItemPopping_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__
+  commentId: M:MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.RaiseItemPopping(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0})
+  name.vb: RaiseItemPopping(TreeNode(Of T))
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue<T>.RaiseItemPopping(MoreStructures.PriorityQueues.BinomialHeap.TreeNode<T>)
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue(Of T).RaiseItemPopping(MoreStructures.PriorityQueues.BinomialHeap.TreeNode(Of T))
+  nameWithType: UpdatableBinomialHeapPriorityQueue<T>.RaiseItemPopping(TreeNode<T>)
+  nameWithType.vb: UpdatableBinomialHeapPriorityQueue(Of T).RaiseItemPopping(TreeNode(Of T))
+- uid: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.RaiseItemPopping*
+  name: RaiseItemPopping
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_RaiseItemPopping_
+  commentId: Overload:MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.RaiseItemPopping
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue<T>.RaiseItemPopping
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue(Of T).RaiseItemPopping
+  nameWithType: UpdatableBinomialHeapPriorityQueue<T>.RaiseItemPopping
+  nameWithType.vb: UpdatableBinomialHeapPriorityQueue(Of T).RaiseItemPopping
+- uid: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.RaiseItemPriorityChanged(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0},MoreStructures.PriorityQueues.PrioritizedItem{`0})
+  name: RaiseItemPriorityChanged(TreeNode<T>, PrioritizedItem<T>)
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_RaiseItemPriorityChanged_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__MoreStructures_PriorityQueues_PrioritizedItem__0__
+  commentId: M:MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.RaiseItemPriorityChanged(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0},MoreStructures.PriorityQueues.PrioritizedItem{`0})
+  name.vb: RaiseItemPriorityChanged(TreeNode(Of T), PrioritizedItem(Of T))
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue<T>.RaiseItemPriorityChanged(MoreStructures.PriorityQueues.BinomialHeap.TreeNode<T>, MoreStructures.PriorityQueues.PrioritizedItem<T>)
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue(Of T).RaiseItemPriorityChanged(MoreStructures.PriorityQueues.BinomialHeap.TreeNode(Of T), MoreStructures.PriorityQueues.PrioritizedItem(Of T))
+  nameWithType: UpdatableBinomialHeapPriorityQueue<T>.RaiseItemPriorityChanged(TreeNode<T>, PrioritizedItem<T>)
+  nameWithType.vb: UpdatableBinomialHeapPriorityQueue(Of T).RaiseItemPriorityChanged(TreeNode(Of T), PrioritizedItem(Of T))
+- uid: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.RaiseItemPriorityChanged*
+  name: RaiseItemPriorityChanged
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_RaiseItemPriorityChanged_
+  commentId: Overload:MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.RaiseItemPriorityChanged
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue<T>.RaiseItemPriorityChanged
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue(Of T).RaiseItemPriorityChanged
+  nameWithType: UpdatableBinomialHeapPriorityQueue<T>.RaiseItemPriorityChanged
+  nameWithType.vb: UpdatableBinomialHeapPriorityQueue(Of T).RaiseItemPriorityChanged
+- uid: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.RaiseItemPushed(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0})
+  name: RaiseItemPushed(TreeNode<T>)
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_RaiseItemPushed_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__
+  commentId: M:MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.RaiseItemPushed(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0})
+  name.vb: RaiseItemPushed(TreeNode(Of T))
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue<T>.RaiseItemPushed(MoreStructures.PriorityQueues.BinomialHeap.TreeNode<T>)
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue(Of T).RaiseItemPushed(MoreStructures.PriorityQueues.BinomialHeap.TreeNode(Of T))
+  nameWithType: UpdatableBinomialHeapPriorityQueue<T>.RaiseItemPushed(TreeNode<T>)
+  nameWithType.vb: UpdatableBinomialHeapPriorityQueue(Of T).RaiseItemPushed(TreeNode(Of T))
+- uid: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.RaiseItemPushed*
+  name: RaiseItemPushed
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_RaiseItemPushed_
+  commentId: Overload:MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.RaiseItemPushed
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue<T>.RaiseItemPushed
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue(Of T).RaiseItemPushed
+  nameWithType: UpdatableBinomialHeapPriorityQueue<T>.RaiseItemPushed
+  nameWithType.vb: UpdatableBinomialHeapPriorityQueue(Of T).RaiseItemPushed
+- uid: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.RaiseItemsSwapped(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0},MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0})
+  name: RaiseItemsSwapped(TreeNode<T>, TreeNode<T>)
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_RaiseItemsSwapped_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__
+  commentId: M:MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.RaiseItemsSwapped(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0},MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0})
+  name.vb: RaiseItemsSwapped(TreeNode(Of T), TreeNode(Of T))
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue<T>.RaiseItemsSwapped(MoreStructures.PriorityQueues.BinomialHeap.TreeNode<T>, MoreStructures.PriorityQueues.BinomialHeap.TreeNode<T>)
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue(Of T).RaiseItemsSwapped(MoreStructures.PriorityQueues.BinomialHeap.TreeNode(Of T), MoreStructures.PriorityQueues.BinomialHeap.TreeNode(Of T))
+  nameWithType: UpdatableBinomialHeapPriorityQueue<T>.RaiseItemsSwapped(TreeNode<T>, TreeNode<T>)
+  nameWithType.vb: UpdatableBinomialHeapPriorityQueue(Of T).RaiseItemsSwapped(TreeNode(Of T), TreeNode(Of T))
+- uid: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.RaiseItemsSwapped*
+  name: RaiseItemsSwapped
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_RaiseItemsSwapped_
+  commentId: Overload:MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.RaiseItemsSwapped
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue<T>.RaiseItemsSwapped
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue(Of T).RaiseItemsSwapped
+  nameWithType: UpdatableBinomialHeapPriorityQueue<T>.RaiseItemsSwapped
+  nameWithType.vb: UpdatableBinomialHeapPriorityQueue(Of T).RaiseItemsSwapped
+- uid: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.Remove(`0)
+  name: Remove(T)
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_Remove__0_
+  commentId: M:MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.Remove(`0)
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue<T>.Remove(T)
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue(Of T).Remove(T)
+  nameWithType: UpdatableBinomialHeapPriorityQueue<T>.Remove(T)
+  nameWithType.vb: UpdatableBinomialHeapPriorityQueue(Of T).Remove(T)
+- uid: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.Remove*
+  name: Remove
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_Remove_
+  commentId: Overload:MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.Remove
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue<T>.Remove
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue(Of T).Remove
+  nameWithType: UpdatableBinomialHeapPriorityQueue<T>.Remove
+  nameWithType.vb: UpdatableBinomialHeapPriorityQueue(Of T).Remove
+- uid: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.UpdatePriority(`0,System.Int32)
+  name: UpdatePriority(T, Int32)
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_UpdatePriority__0_System_Int32_
+  commentId: M:MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.UpdatePriority(`0,System.Int32)
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue<T>.UpdatePriority(T, System.Int32)
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue(Of T).UpdatePriority(T, System.Int32)
+  nameWithType: UpdatableBinomialHeapPriorityQueue<T>.UpdatePriority(T, Int32)
+  nameWithType.vb: UpdatableBinomialHeapPriorityQueue(Of T).UpdatePriority(T, Int32)
+- uid: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.UpdatePriority*
+  name: UpdatePriority
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_UpdatePriority_
+  commentId: Overload:MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.UpdatePriority
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue<T>.UpdatePriority
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue(Of T).UpdatePriority
+  nameWithType: UpdatableBinomialHeapPriorityQueue<T>.UpdatePriority
+  nameWithType.vb: UpdatableBinomialHeapPriorityQueue(Of T).UpdatePriority
 - uid: MoreStructures.PriorityQueues.Extensions
   name: MoreStructures.PriorityQueues.Extensions
   href: api/MoreStructures.PriorityQueues.Extensions.html
@@ -12077,12 +12262,76 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.PriorityQueues.BinomialHeap.TreeNodeTests.IsInAHeap_IsTrueWhenARoot
   nameWithType: TreeNodeTests.IsInAHeap_IsTrueWhenARoot
+- uid: MoreStructures.Tests.PriorityQueues.BinomialHeap.TreeNodeTests.ToString_IncludesIsInHeap
+  name: ToString_IncludesIsInHeap()
+  href: api/MoreStructures.Tests.PriorityQueues.BinomialHeap.TreeNodeTests.html#MoreStructures_Tests_PriorityQueues_BinomialHeap_TreeNodeTests_ToString_IncludesIsInHeap
+  commentId: M:MoreStructures.Tests.PriorityQueues.BinomialHeap.TreeNodeTests.ToString_IncludesIsInHeap
+  fullName: MoreStructures.Tests.PriorityQueues.BinomialHeap.TreeNodeTests.ToString_IncludesIsInHeap()
+  nameWithType: TreeNodeTests.ToString_IncludesIsInHeap()
+- uid: MoreStructures.Tests.PriorityQueues.BinomialHeap.TreeNodeTests.ToString_IncludesIsInHeap*
+  name: ToString_IncludesIsInHeap
+  href: api/MoreStructures.Tests.PriorityQueues.BinomialHeap.TreeNodeTests.html#MoreStructures_Tests_PriorityQueues_BinomialHeap_TreeNodeTests_ToString_IncludesIsInHeap_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.BinomialHeap.TreeNodeTests.ToString_IncludesIsInHeap
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.BinomialHeap.TreeNodeTests.ToString_IncludesIsInHeap
+  nameWithType: TreeNodeTests.ToString_IncludesIsInHeap
+- uid: MoreStructures.Tests.PriorityQueues.BinomialHeap.TreeNodeTests.ToString_IncludesPrioritizedItem
+  name: ToString_IncludesPrioritizedItem()
+  href: api/MoreStructures.Tests.PriorityQueues.BinomialHeap.TreeNodeTests.html#MoreStructures_Tests_PriorityQueues_BinomialHeap_TreeNodeTests_ToString_IncludesPrioritizedItem
+  commentId: M:MoreStructures.Tests.PriorityQueues.BinomialHeap.TreeNodeTests.ToString_IncludesPrioritizedItem
+  fullName: MoreStructures.Tests.PriorityQueues.BinomialHeap.TreeNodeTests.ToString_IncludesPrioritizedItem()
+  nameWithType: TreeNodeTests.ToString_IncludesPrioritizedItem()
+- uid: MoreStructures.Tests.PriorityQueues.BinomialHeap.TreeNodeTests.ToString_IncludesPrioritizedItem*
+  name: ToString_IncludesPrioritizedItem
+  href: api/MoreStructures.Tests.PriorityQueues.BinomialHeap.TreeNodeTests.html#MoreStructures_Tests_PriorityQueues_BinomialHeap_TreeNodeTests_ToString_IncludesPrioritizedItem_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.BinomialHeap.TreeNodeTests.ToString_IncludesPrioritizedItem
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.BinomialHeap.TreeNodeTests.ToString_IncludesPrioritizedItem
+  nameWithType: TreeNodeTests.ToString_IncludesPrioritizedItem
 - uid: MoreStructures.Tests.PriorityQueues.BinomialHeap.TreeNodeTests.TreeNodeMock
   name: TreeNodeTests.TreeNodeMock
   href: api/MoreStructures.Tests.PriorityQueues.BinomialHeap.TreeNodeTests.TreeNodeMock.html
   commentId: T:MoreStructures.Tests.PriorityQueues.BinomialHeap.TreeNodeTests.TreeNodeMock
   fullName: MoreStructures.Tests.PriorityQueues.BinomialHeap.TreeNodeTests.TreeNodeMock
   nameWithType: TreeNodeTests.TreeNodeMock
+- uid: MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue
+  name: UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue
+  href: api/MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue.html
+  commentId: T:MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue
+  fullName: MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue
+  nameWithType: UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue
+- uid: MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue.#ctor
+  name: UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue()
+  href: api/MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue.html#MoreStructures_Tests_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue__ctor
+  commentId: M:MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue.#ctor
+  fullName: MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue.UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue()
+  nameWithType: UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue.UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue()
+- uid: MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue.#ctor*
+  name: UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue
+  href: api/MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue.html#MoreStructures_Tests_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue__ctor_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue.UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue
+  nameWithType: UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue.UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue
+- uid: MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue
+  name: UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue
+  href: api/MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue.html
+  commentId: T:MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue
+  fullName: MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue
+  nameWithType: UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue
+- uid: MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue.#ctor
+  name: UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue()
+  href: api/MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue.html#MoreStructures_Tests_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue__ctor
+  commentId: M:MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue.#ctor
+  fullName: MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue.UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue()
+  nameWithType: UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue.UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue()
+- uid: MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue.#ctor*
+  name: UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue
+  href: api/MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue.html#MoreStructures_Tests_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue__ctor_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue.UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue
+  nameWithType: UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue.UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue
 - uid: MoreStructures.Tests.PriorityQueues.Extensions
   name: MoreStructures.Tests.PriorityQueues.Extensions
   href: api/MoreStructures.Tests.PriorityQueues.Extensions.html

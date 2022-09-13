@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class DuplicatedItemsResolution&lt;T, THeap&gt;
+    <title>Class DuplicatedItemsResolution&lt;TItems, THeap&gt;
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class DuplicatedItemsResolution&lt;T, THeap&gt;
+    <meta name="title" content="Class DuplicatedItemsResolution&lt;TItems, THeap&gt;
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -81,9 +81,9 @@
             <article class="content wrap" id="_content" data-uid="MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2">
   
   
-  <h1 id="MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2" data-uid="MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2" class="text-break">Class DuplicatedItemsResolution&lt;T, THeap&gt;
+  <h1 id="MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2" data-uid="MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2" class="text-break">Class DuplicatedItemsResolution&lt;TItems, THeap&gt;
   </h1>
-  <div class="markdown level0 summary"><p>An object storing and keeping up-to-date the &quot;<code data-dev-comment-type="typeparamref" class="typeparamref">T</code> to <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html">TreeNode&lt;T&gt;</a>&quot;
+  <div class="markdown level0 summary"><p>An object storing and keeping up-to-date the &quot;<code data-dev-comment-type="typeparamref" class="typeparamref">TItems</code> to <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html">TreeNode&lt;T&gt;</a>&quot;
 back-references, necessary to find back the <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html">TreeNode&lt;T&gt;</a> in the heap with highest priority for a given
 item, without exposing iterators to the client.</p>
 </div>
@@ -91,7 +91,7 @@ item, without exposing iterators to the client.</p>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">DuplicatedItemsResolution&lt;T, THeap&gt;</span></div>
+    <div class="level1"><span class="xref">DuplicatedItemsResolution&lt;TItems, THeap&gt;</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -121,7 +121,7 @@ item, without exposing iterators to the client.</p>
   <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
   <h5 id="MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DuplicatedItemsResolution&lt;T, THeap&gt;
+    <pre><code class="lang-csharp hljs">public class DuplicatedItemsResolution&lt;TItems, THeap&gt;
     where THeap : IPriorityQueue&lt;int&gt;, new()</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
@@ -134,7 +134,7 @@ item, without exposing iterators to the client.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">T</span></td>
+        <td><span class="parametername">TItems</span></td>
         <td><p><inheritdoc cref="T:MoreStructures.PriorityQueues.IPriorityQueue`1"></inheritdoc></p>
 </td>
       </tr>
@@ -149,7 +149,7 @@ item, without exposing iterators to the client.</p>
   <div class="markdown level0 remarks"><p>In order to support updates and deletions of items, two additional data structures are introduced:
 <br></p>
 <ul>
-<li>a <see cref="!:Dictionary&lt;TKey, TValue>"></see> Item2PT, mapping items <code>I</code> of type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> to
+<li>a <see cref="!:Dictionary&lt;TKey, TValue>"></see> Item2PT, mapping items <code>I</code> of type <code data-dev-comment-type="typeparamref" class="typeparamref">TItems</code> to
 <code data-dev-comment-type="typeparamref" class="typeparamref">THeap</code> instances, containing <see cref="!:PrioritizedItem&lt;T>.PushTimestamp"></see>
 values of type <span class="xref">System.Int32</span>, of <span class="xref">MoreStructures.PriorityQueues.PrioritizedItem&lt;T&gt;</span> instances containing <code>I</code>.
 <br></li>
@@ -182,10 +182,10 @@ dictionary.</li>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_FindTreeNode__0_.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution%602.FindTreeNode(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/DuplicatedItemsResolution.cs/#L140">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/DuplicatedItemsResolution.cs/#L142">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_FindTreeNode_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.FindTreeNode*"></a>
-  <h4 id="MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_FindTreeNode__0_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.FindTreeNode(`0)">FindTreeNode(T)</h4>
+  <h4 id="MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_FindTreeNode__0_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.FindTreeNode(`0)">FindTreeNode(TItems)</h4>
   <div class="markdown level1 summary"><p>Retrieves the <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html">TreeNode&lt;T&gt;</a> associated with the provided <code data-dev-comment-type="paramref" class="paramref">item</code> in the queue,
 selecting the one of highest priority in case of duplicates (i.e. multiple occurrences of
 <code data-dev-comment-type="paramref" class="paramref">item</code> within the priority queue).</p>
@@ -193,7 +193,7 @@ selecting the one of highest priority in case of duplicates (i.e. multiple occur
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TreeNode&lt;T&gt; FindTreeNode(T item)</code></pre>
+    <pre><code class="lang-csharp hljs">public TreeNode&lt;TItems&gt; FindTreeNode(TItems item)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,7 +206,7 @@ selecting the one of highest priority in case of duplicates (i.e. multiple occur
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
+        <td><span class="xref">TItems</span></td>
         <td><span class="parametername">item</span></td>
         <td><p>The item to be mapped to a <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html">TreeNode&lt;T&gt;</a>.</p>
 </td>
@@ -223,7 +223,7 @@ selecting the one of highest priority in case of duplicates (i.e. multiple occur
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html">TreeNode</a>&lt;T&gt;</td>
+        <td><a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html">TreeNode</a>&lt;TItems&gt;</td>
         <td><p>The corresponding <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html">TreeNode&lt;T&gt;</a>.</p>
 </td>
       </tr>
@@ -269,17 +269,17 @@ item appears twice, etc.).
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_GetPrioritiesOf__0_.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution%602.GetPrioritiesOf(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/DuplicatedItemsResolution.cs/#L81">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/DuplicatedItemsResolution.cs/#L83">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_GetPrioritiesOf_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.GetPrioritiesOf*"></a>
-  <h4 id="MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_GetPrioritiesOf__0_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.GetPrioritiesOf(`0)">GetPrioritiesOf(T)</h4>
+  <h4 id="MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_GetPrioritiesOf__0_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.GetPrioritiesOf(`0)">GetPrioritiesOf(TItems)</h4>
   <div class="markdown level1 summary"><p>Returns all the priorities with which <code data-dev-comment-type="paramref" class="paramref">item</code> is registered in the queue, sorted by highest
 to smallest.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;int&gt; GetPrioritiesOf(T item)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;int&gt; GetPrioritiesOf(TItems item)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -292,10 +292,9 @@ to smallest.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
+        <td><span class="xref">TItems</span></td>
         <td><span class="parametername">item</span></td>
-        <td><p>The item, to retrieve priorities of.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -345,7 +344,9 @@ structure (1 means no duplicates, 2 means the item appears twice, etc.).
 - Retrieving the <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html">TreeNode&lt;T&gt;</a> from the push timestamp and the priority from the 
 <span class="xref">MoreStructures.PriorityQueues.PrioritizedItem&lt;T&gt;</span> instance are both constant-time operations.
 <br>
-- Therefore Time and Space Complexity are O(dup_factor).
+- Therefore Time and Space Complexity are O(dup_factor), where dup_factor is 
+the average number of occurrences of an item in the data structure (1 means no duplicates, 2 means the 
+item appears twice, etc.).
 </p>
 </div>
   <span class="small pull-right mobile-hide">
@@ -353,16 +354,16 @@ structure (1 means no duplicates, 2 means the item appears twice, etc.).
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_RaiseItemPopping_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution%602.RaiseItemPopping(MoreStructures.PriorityQueues.BinomialHeap.TreeNode%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/DuplicatedItemsResolution.cs/#L176">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/DuplicatedItemsResolution.cs/#L178">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_RaiseItemPopping_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.RaiseItemPopping*"></a>
-  <h4 id="MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_RaiseItemPopping_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__" data-uid="MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.RaiseItemPopping(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0})">RaiseItemPopping(TreeNode&lt;T&gt;)</h4>
+  <h4 id="MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_RaiseItemPopping_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__" data-uid="MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.RaiseItemPopping(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0})">RaiseItemPopping(TreeNode&lt;TItems&gt;)</h4>
   <div class="markdown level1 summary"><p>To be invoked just before the provided <code data-dev-comment-type="paramref" class="paramref">root</code> is popped from the heap.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RaiseItemPopping(TreeNode&lt;T&gt; root)</code></pre>
+    <pre><code class="lang-csharp hljs">public void RaiseItemPopping(TreeNode&lt;TItems&gt; root)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -375,7 +376,7 @@ structure (1 means no duplicates, 2 means the item appears twice, etc.).
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html">TreeNode</a>&lt;T&gt;</td>
+        <td><a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html">TreeNode</a>&lt;TItems&gt;</td>
         <td><span class="parametername">root</span></td>
         <td><p>The root about to be popped from the heap forest.</p>
 </td>
@@ -387,16 +388,16 @@ structure (1 means no duplicates, 2 means the item appears twice, etc.).
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_RaiseItemPriorityChanged_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__MoreStructures_PriorityQueues_PrioritizedItem__0__.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution%602.RaiseItemPriorityChanged(MoreStructures.PriorityQueues.BinomialHeap.TreeNode%7B%600%7D%2CMoreStructures.PriorityQueues.PrioritizedItem%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/DuplicatedItemsResolution.cs/#L186">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/DuplicatedItemsResolution.cs/#L188">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_RaiseItemPriorityChanged_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.RaiseItemPriorityChanged*"></a>
-  <h4 id="MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_RaiseItemPriorityChanged_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__MoreStructures_PriorityQueues_PrioritizedItem__0__" data-uid="MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.RaiseItemPriorityChanged(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0},MoreStructures.PriorityQueues.PrioritizedItem{`0})">RaiseItemPriorityChanged(TreeNode&lt;T&gt;, PrioritizedItem&lt;T&gt;)</h4>
+  <h4 id="MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_RaiseItemPriorityChanged_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__MoreStructures_PriorityQueues_PrioritizedItem__0__" data-uid="MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.RaiseItemPriorityChanged(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0},MoreStructures.PriorityQueues.PrioritizedItem{`0})">RaiseItemPriorityChanged(TreeNode&lt;TItems&gt;, PrioritizedItem&lt;TItems&gt;)</h4>
   <div class="markdown level1 summary"><p>To be invoked just after the priority of a <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html">TreeNode&lt;T&gt;</a> has changed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RaiseItemPriorityChanged(TreeNode&lt;T&gt; treeNode, PrioritizedItem&lt;T&gt; itemBefore)</code></pre>
+    <pre><code class="lang-csharp hljs">public void RaiseItemPriorityChanged(TreeNode&lt;TItems&gt; treeNode, PrioritizedItem&lt;TItems&gt; itemBefore)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -409,13 +410,13 @@ structure (1 means no duplicates, 2 means the item appears twice, etc.).
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html">TreeNode</a>&lt;T&gt;</td>
+        <td><a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html">TreeNode</a>&lt;TItems&gt;</td>
         <td><span class="parametername">treeNode</span></td>
         <td><p>The node in the heap which has changed priority.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">MoreStructures.PriorityQueues.PrioritizedItem</span>&lt;T&gt;</td>
+        <td><span class="xref">MoreStructures.PriorityQueues.PrioritizedItem</span>&lt;TItems&gt;</td>
         <td><span class="parametername">itemBefore</span></td>
         <td><p>The <span class="xref">MoreStructures.PriorityQueues.PrioritizedItem&lt;T&gt;</span> as it was before the priority change.</p>
 </td>
@@ -427,16 +428,16 @@ structure (1 means no duplicates, 2 means the item appears twice, etc.).
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_RaiseItemPushed_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution%602.RaiseItemPushed(MoreStructures.PriorityQueues.BinomialHeap.TreeNode%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/DuplicatedItemsResolution.cs/#L163">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/DuplicatedItemsResolution.cs/#L165">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_RaiseItemPushed_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.RaiseItemPushed*"></a>
-  <h4 id="MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_RaiseItemPushed_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__" data-uid="MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.RaiseItemPushed(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0})">RaiseItemPushed(TreeNode&lt;T&gt;)</h4>
+  <h4 id="MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_RaiseItemPushed_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__" data-uid="MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.RaiseItemPushed(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0})">RaiseItemPushed(TreeNode&lt;TItems&gt;)</h4>
   <div class="markdown level1 summary"><p>To be invoked just after a <code data-dev-comment-type="paramref" class="paramref">newRoot</code> has been pushed into the heap.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RaiseItemPushed(TreeNode&lt;T&gt; newRoot)</code></pre>
+    <pre><code class="lang-csharp hljs">public void RaiseItemPushed(TreeNode&lt;TItems&gt; newRoot)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -449,9 +450,49 @@ structure (1 means no duplicates, 2 means the item appears twice, etc.).
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html">TreeNode</a>&lt;T&gt;</td>
+        <td><a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html">TreeNode</a>&lt;TItems&gt;</td>
         <td><span class="parametername">newRoot</span></td>
         <td><p>The new root pushed into the heap forest.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_RaiseItemsSwapped_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution%602.RaiseItemsSwapped(MoreStructures.PriorityQueues.BinomialHeap.TreeNode%7B%600%7D%2CMoreStructures.PriorityQueues.BinomialHeap.TreeNode%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/DuplicatedItemsResolution.cs/#L201">View Source</a>
+  </span>
+  <a id="MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_RaiseItemsSwapped_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.RaiseItemsSwapped*"></a>
+  <h4 id="MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_RaiseItemsSwapped_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__" data-uid="MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.RaiseItemsSwapped(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0},MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0})">RaiseItemsSwapped(TreeNode&lt;TItems&gt;, TreeNode&lt;TItems&gt;)</h4>
+  <div class="markdown level1 summary"><p>Invoked just after two items have had their <span class="xref">MoreStructures.PriorityQueues.PrioritizedItem&lt;T&gt;</span> swapped.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RaiseItemsSwapped(TreeNode&lt;TItems&gt; treeNode1, TreeNode&lt;TItems&gt; treeNode2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html">TreeNode</a>&lt;TItems&gt;</td>
+        <td><span class="parametername">treeNode1</span></td>
+        <td><p>The first node.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html">TreeNode</a>&lt;TItems&gt;</td>
+        <td><span class="parametername">treeNode2</span></td>
+        <td><p>The second node.</p>
 </td>
       </tr>
     </tbody>

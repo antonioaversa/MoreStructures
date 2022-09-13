@@ -1002,7 +1002,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html",
-          "hash": "7OHsdcm1uc0Deg+yK3STAr3sfHYJSK9ObQiGVNXhEDQ="
+          "hash": "PoEZNKYyVPxytAF9/XlO1vXBAE8/8KM48DqSTMG5Dkw="
         }
       },
       "is_incremental": false,
@@ -1014,7 +1014,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution-2.html",
-          "hash": "foFSM0Rg0TIaWbTR4HutdFqJp3Vrei6MUojGlID1HTA="
+          "hash": "KiN8+hZfeRIQ/4HIsENk0c8EXO/PyqRNPJ2wCpyFwb8="
         }
       },
       "is_incremental": false,
@@ -1026,7 +1026,19 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html",
-          "hash": "JT8myxJmFtBDVatf/NWix7WRIBVB3OceN7p/QKMKRFs="
+          "hash": "q6wWjRZ1OqEBjkOAdo4e7SiEtZlR6Vu/mjjdqqO9jFQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue-1.html",
+          "hash": "3O5leSrwHxV/Wlp2S0v+l6woKjMKRSVUrxquenfs9Qc="
         }
       },
       "is_incremental": false,
@@ -1038,7 +1050,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.PriorityQueues.BinomialHeap.html",
-          "hash": "YLN7LsYmdhYggh9FMqKnPpfM37JAClmO0KK22iKJhuQ="
+          "hash": "afSKjBsD8zzuKda3nHQA66jGXfGtHNXwpmXqkcDpwJY="
         }
       },
       "is_incremental": false,
@@ -1074,7 +1086,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue-1.html",
-          "hash": "wnU/pgtQFp12dNB/VPDZytrLWdaJhEjpjlNnpomcDAU="
+          "hash": "MbAGtJt4+AXBNvZ2BoMGb+6xe92RFPbiWB9EaGr68cs="
         }
       },
       "is_incremental": false,
@@ -1086,7 +1098,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.PriorityQueues.FibonacciHeap.UpdatableFibonacciHeapPriorityQueue-1.html",
-          "hash": "wsXJ5uYMew+RqSd7+3WcdufOGXpVUwkXcqLhk0b3v+U="
+          "hash": "gNo+vdl+EnPpwUejOaXjUaogqeHGo+rkcXX8ar4OqZI="
         }
       },
       "is_incremental": false,
@@ -3366,7 +3378,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.PriorityQueues.BinomialHeap.TreeNodeTests.TreeNodeMock.html",
-          "hash": "2ERis1IrQSTJB3Do61NzwnUpq9K6btv9I1JHBT/K5Q4="
+          "hash": "eY25mO5ON6uJkVHog86Dj0Vb32yyMlPc16sAO0XRWhE="
         }
       },
       "is_incremental": false,
@@ -3378,7 +3390,31 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.PriorityQueues.BinomialHeap.TreeNodeTests.html",
-          "hash": "XR3xM2LEXFE9Q7jbiN36vgzqHVm0KnmOEfKcoz1l9lc="
+          "hash": "8q404l33Kx/AcdxDe6M2vCBRlC+bGRDNGN3KQqIqAtc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue.html",
+          "hash": "98gjPeTC53fiRdd/V9Px1MpzH1WNOzzeZcO7n+WBwYk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue.html",
+          "hash": "HQe1VXRoi1l4/Ki3/kFyu9Er21hijkA9LrP8WBXJA6E="
         }
       },
       "is_incremental": false,
@@ -3390,7 +3426,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.PriorityQueues.BinomialHeap.html",
-          "hash": "QOVs1INNNVgkBfpYUST0p05665YCz4Sc9BGkCnzac98="
+          "hash": "aEUSZYsHfdNgRj+lWZ1s412rCiMfLu/xXW6UM9+7JGQ="
         }
       },
       "is_incremental": false,
@@ -3522,7 +3558,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.PriorityQueues.PriorityQueueTests.html",
-          "hash": "UIamUxKBmZlb1xn8DkQ3mIVy5oGByh3ZRpo57Iup3ZQ="
+          "hash": "J/V47GrDvdliSLjk7uk0B/cOzHEI4DQcg4dnWiqWolI="
         }
       },
       "is_incremental": false,
@@ -3546,7 +3582,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.PriorityQueues.UpdatablePriorityQueueTests.html",
-          "hash": "nI374q3uX8P/Aqm1u2C3CPNr1wh/NxlkfIWFKLfeHoM="
+          "hash": "guMh7AY8YXuYtVUYRTvdEcUCezUbHsJVZZcE+a6GmoM="
         }
       },
       "is_incremental": false,
@@ -5286,7 +5322,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "a5EkHCBcr7JK7SfB4u/02aUtiF6MinI9X+oOL13LXOI="
+          "hash": "WijljfmwwePUHf2ZuE/bzBUSbsc6Q3LdXv2v8XA9nDo="
         }
       },
       "is_incremental": false,
@@ -5361,7 +5397,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 438,
+          "total_file_count": 441,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
