@@ -8,7 +8,8 @@
 /// <see cref="PeekKth(int)"/> can be implemented in a general way by copying the entire data structure and then
 /// performing k <see cref="IPriorityQueue{T}.Pop"/>, followed by a single <see cref="IPriorityQueue{T}.Peek"/>.
 /// <br/>
-/// This approach is however expensive both in time and space, having O(n) Time and Space Complexity.
+/// This approach is however expensive both in time and space, having O(n) Time and Space Complexity for all known 
+/// implementation of <see cref="IPriorityQueue{T}"/>..
 /// <br/>
 /// Implementing this interface can take advantage of the properties of the underlying data structure implementing the
 /// priority queue, and providing better-than-linear performance.

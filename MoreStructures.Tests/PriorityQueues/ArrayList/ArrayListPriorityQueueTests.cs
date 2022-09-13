@@ -16,7 +16,7 @@ public class ArrayListPriorityQueueTests_AsBasicQueue : PriorityQueueTests
     [TestMethod]
     public void Ctor_WithEnumerable()
     {
-        IEnumerable<PrioritizedItem<int>> GetNumbers()
+        static IEnumerable<PrioritizedItem<int>> GetNumbers()
         {
             yield return new(2, 1, 0);
             yield return new(2, 3, 1);
@@ -73,5 +73,14 @@ public class ArrayListPriorityQueueTests_AsPeekKthQueue : PeekKthPriorityQueueTe
             queue.Push(i, i);
         for (var i = 0; i < numberOfItems; i++)
             Assert.AreEqual(numberOfItems - 1 - i, queue.PeekKth(i)?.Item);
+    }
+}
+
+[TestClass]
+public class ArrayListPriorityQueueTests_AsMergeable : MergeablePriorityQueueTests<ArrayListPriorityQueue<int>>
+{
+    public ArrayListPriorityQueueTests_AsMergeable() : base(
+        () => new ArrayListPriorityQueue<int>())
+    {
     }
 }

@@ -31,10 +31,15 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+    <None Include="E:\Workspace\MoreStructures\MoreStructures\.editorconfig" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="morelinq" Version="3.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="E:\Workspace\MoreStructures\MoreStructures\.editorconfig" />
   </ItemGroup>
 
 </Project>
