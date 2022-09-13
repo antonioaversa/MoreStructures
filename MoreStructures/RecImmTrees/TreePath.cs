@@ -54,10 +54,11 @@ public record TreePath<TEdge, TNode>(IEnumerable<KeyValuePair<TEdge, TNode>> Pat
             PathSeparator = " => ",
         };
 
+    /// <inheritdoc path="//*[not(self::summary)]"/>
     /// <summary>
-    /// <inheritdoc/>
-    /// Uses a <see cref="IStringifier{TEdge, TNode}"/> to generate the string.
+    ///     <inheritdoc/>
+    ///     <br/>
+    ///     Uses a <see cref="IStringifier{TEdge, TNode}"/> to generate the string.
     /// </summary>
-    /// <returns><inheritdoc/></returns>
     public override string ToString() => Stringifier.Stringify(this);
 }

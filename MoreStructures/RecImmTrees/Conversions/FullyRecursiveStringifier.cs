@@ -1,11 +1,11 @@
 ﻿namespace MoreStructures.RecImmTrees.Conversions;
 
 /// <summary>
-/// <inheritdoc/>
-/// Recursive implementation.
+///     <inheritdoc/>
+///     Recursive implementation.
+/// </summary>
 /// <typeparam name="TEdge">The type of edges of the specific structure.</typeparam>
 /// <typeparam name="TNode">The type of nodes of the specific structure.</typeparam>
-/// </summary>
 /// <remarks>
 ///     <inheritdoc cref="IStringifier{TEdge, TNode}" path="/remarks"/>
 ///     <para id="advantages">
@@ -19,7 +19,7 @@ public class FullyRecursiveStringifier<TEdge, TNode>
     where TEdge : IRecImmDictIndexedTreeEdge<TEdge, TNode>, IComparable<TEdge>
     where TNode : IRecImmDictIndexedTreeNode<TEdge, TNode>
 {
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <inheritdoc cref="FullyRecursiveStringifier{TEdge, TNode}" path="/remarks"/>
     public FullyRecursiveStringifier(
         Func<TNode, string> rootStringifier, Func<TEdge, TNode, string> edgeAndNodeStringifier) 
@@ -27,7 +27,7 @@ public class FullyRecursiveStringifier<TEdge, TNode>
     {
     }
 
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <inheritdoc cref="FullyRecursiveStringifier{TEdge, TNode}" path="/remarks"/>
     public override string Stringify(TNode node)
     {
@@ -50,7 +50,7 @@ public class FullyRecursiveStringifier<TEdge, TNode>
     }
 
 
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <inheritdoc cref="FullyRecursiveStringifier{TEdge, TNode}" path="/remarks"/>
     public override string Stringify(TreePath<TEdge, TNode> path) => 
         string.Join(PathSeparator, Stringify(path.PathNodes));

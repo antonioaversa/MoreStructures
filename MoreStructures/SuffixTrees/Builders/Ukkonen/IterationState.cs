@@ -404,12 +404,13 @@ internal class IterationState
         RemainingSuffixes--;
     }
 
+    /// <inheritdoc path="//*[not(self::summary)]"/>
     /// <summary>
-    /// <inheritdoc/>
-    /// Visualization of the main state variables, such as <see cref="Phase"/>, <see cref="RemainingSuffixes"/>
-    /// and active point data.
+    ///     <inheritdoc/>
+    ///     <br/>
+    ///     Visualization of the main state variables, such as <see cref="Phase"/>, <see cref="RemainingSuffixes"/>
+    ///     and active point data.
     /// </summary>
-    /// <returns><inheritdoc/></returns>
     public override string ToString() =>
         string.Join(", ",
             $"{nameof(Phase)} = {Phase,-2}",

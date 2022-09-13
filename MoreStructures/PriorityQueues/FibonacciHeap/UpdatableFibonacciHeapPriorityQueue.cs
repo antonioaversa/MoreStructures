@@ -116,14 +116,14 @@ public class UpdatableFibonacciHeapPriorityQueue<T> : FibonacciHeapPriorityQueue
 
     #region Hooks
 
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     /// Hands over to <see cref="DuplicatedItemsResolution{T, THeap}.RaiseItemPushed(TreeNode{T})"/>.
     /// </remarks>
     protected override void RaiseItemPushed(TreeNode<T> newRoot) => 
         DuplicatedItemsResolution.RaiseItemPushed(newRoot);
 
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     /// Hands over to <see cref="DuplicatedItemsResolution{T, THeap}.RaiseItemPopping(TreeNode{T})"/>.
     /// </remarks>

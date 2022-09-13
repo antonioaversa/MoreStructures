@@ -11,12 +11,10 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
 {
     private record struct XifoFrame(int Vertex, bool Processed, int ConnectedComponent, int? PreviousVertex);
 
+    /// <inheritdoc path="//*[not(self::summary)]"/>
     /// <summary>
     ///     <inheritdoc cref="FullyIterativeHashSetBasedGraphVisit"/>
     /// </summary>
-    /// <param name="directedGraph">
-    ///     <inheritdoc/>
-    /// </param>
     public FullyIterativeHashSetBasedGraphVisit(bool directedGraph) : base(directedGraph)
     {
     }

@@ -20,12 +20,11 @@ internal class MovingEnd
         Value = value;
     }
 
+    /// <inheritdoc path="//*[not(self::summary)]"/>
     /// <summary>
-    /// <inheritdoc/>
-    /// Shows the undelying <see cref="Value"/>.
+    ///     <inheritdoc/>
+    ///     <br/>
+    ///     Shows the undelying <see cref="Value"/>.
     /// </summary>
-    /// <returns>
-    /// <inheritdoc/>
-    /// </returns>
     public override string ToString() => Value.ToString();
 }

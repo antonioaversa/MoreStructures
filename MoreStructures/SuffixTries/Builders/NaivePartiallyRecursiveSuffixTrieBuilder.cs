@@ -30,11 +30,12 @@ namespace MoreStructures.SuffixTries.Builders;
 public class NaivePartiallyRecursiveSuffixTrieBuilder
     : IBuilder<SuffixTrieEdge, SuffixTrieNode>
 {
+    /// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
     /// <summary>
     ///     <inheritdoc/>
     /// </summary>
     /// <remarks>
-    ///     <inheritdoc cref="NaivePartiallyRecursiveSuffixTrieBuilder" path="/remarks"/>
+    ///     <inheritdoc cref="NaivePartiallyRecursiveSuffixTrieBuilder"/>
     /// </remarks>
     public SuffixTrieNode BuildTree(params TextWithTerminator[] texts)
     {

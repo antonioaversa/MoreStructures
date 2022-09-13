@@ -19,7 +19,6 @@ public record SuffixTreeEdge(int Start, int Length)
     : ISuffixStructureEdge<SuffixTreeEdge, SuffixTreeNode>, IComparable<SuffixTreeEdge>
 {
     /// <inheritdoc/>
-    /// <inheritdoc/>
     public int Start { get; init; } = Start >= 0 
         ? Start 
         : throw new ArgumentOutOfRangeException(nameof(Start), "Must be non-negative.");
@@ -29,12 +28,13 @@ public record SuffixTreeEdge(int Start, int Length)
         ? Length
         : throw new ArgumentOutOfRangeException(nameof(Length), "Must be non-negative.");
 
+    /// <inheritdoc path="//*[not(self::summary)]"/>
     /// <summary>
-    /// <inheritdoc/>
-    /// Comparison is done by <see cref="Start"/> first, then <see cref="Length"/>: lower is smaller, higher is bigger.
+    ///     <inheritdoc/>
+    ///     <br/>
+    ///     Comparison is done by <see cref="Start"/> first, then <see cref="Length"/>: lower is smaller, higher is 
+    ///     bigger.
     /// </summary>
-    /// <param name="other"><inheritdoc/></param>
-    /// <returns><inheritdoc/></returns>
     /// <exception cref="ArgumentException">
     /// Thrown when <paramref name="other"/> is not a <see cref="SuffixTreeEdge"/>.
     /// </exception>
@@ -57,11 +57,11 @@ public record SuffixTreeEdge(int Start, int Length)
     public virtual string OfRotated(RotatedTextWithTerminator text) => 
         string.Concat(text[Start..(Start + Length)])[0..Length];
 
+    /// <inheritdoc path="//*[not(self::summary)]"/>
     /// <summary>
-    /// <inheritdoc/>
-    /// <br/>
-    /// Generates a string in the form "(<see cref="Start"/>, <see cref="Length"/>)".
+    ///     <inheritdoc/>
+    ///     <br/>
+    ///     Generates a string in the form "(<see cref="Start"/>, <see cref="Length"/>)".
     /// </summary>
-    /// <returns><inheritdoc/></returns>
     public override string ToString() => $"({Start},{Length})";
 }

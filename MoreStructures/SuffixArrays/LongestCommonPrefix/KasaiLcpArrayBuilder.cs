@@ -82,12 +82,7 @@ namespace MoreStructures.SuffixArrays.LongestCommonPrefix;
 /// </remarks>
 public class KasaiLcpArrayBuilder : NaiveLcpArrayBuilder
 {
-    /// <summary>
-    ///     <inheritdoc cref="KasaiLcpArrayBuilder"/>
-    /// </summary>
-    /// <remarks>
-    ///     <inheritdoc cref="KasaiLcpArrayBuilder"/>
-    /// </remarks>
+    /// <inheritdoc cref="KasaiLcpArrayBuilder"/>
     /// <param name="text">
     ///     <inheritdoc cref="NaiveLcpArrayBuilder.Text" path="/summary"/>
     /// </param>
@@ -98,9 +93,7 @@ public class KasaiLcpArrayBuilder : NaiveLcpArrayBuilder
     {
     }
 
-    /// <summary>
-    ///     <inheritdoc/>
-    /// </summary>
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     ///     <inheritdoc cref="KasaiLcpArrayBuilder"/>
     /// </remarks>

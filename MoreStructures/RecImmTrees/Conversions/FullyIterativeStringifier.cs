@@ -1,8 +1,9 @@
 ﻿namespace MoreStructures.RecImmTrees.Conversions;
 
 /// <summary>
-/// <inheritdoc/>
-/// Iterative implementation.
+///     <inheritdoc/>
+///     <br/>
+///     Iterative implementation.
 /// </summary>
 /// <typeparam name="TEdge">The type of edges of the specific structure.</typeparam>
 /// <typeparam name="TNode">The type of nodes of the specific structure.</typeparam>
@@ -51,7 +52,7 @@ public class FullyIterativeStringifier<TEdge, TNode>
     /// </summary>
     public bool PrependLevelAfterStopIndenting { get; set; } = true;
 
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <inheritdoc cref="FullyIterativeStringifier{TEdge, TNode}" path="/remarks"/>
     public FullyIterativeStringifier(
         Func<TNode, string> rootStringifier, Func<TEdge, TNode, string> edgeAndNodeStringifier) 
@@ -59,7 +60,7 @@ public class FullyIterativeStringifier<TEdge, TNode>
     {
     }
 
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <inheritdoc cref="FullyIterativeStringifier{TEdge, TNode}" path="/remarks"/>
     public override string Stringify(TNode node)
     {
@@ -92,7 +93,7 @@ public class FullyIterativeStringifier<TEdge, TNode>
             stack.Push((childEdge, childNode, level + 1));
     }
 
-    /// <inheritdoc/>
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <inheritdoc cref="FullyIterativeStringifier{TEdge, TNode}" path="/remarks"/>
     public override string Stringify(TreePath<TEdge, TNode> path)
     {

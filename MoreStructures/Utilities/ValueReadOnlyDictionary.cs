@@ -36,31 +36,39 @@ public class ValueReadOnlyDictionary<TKey, TValue> : ReadOnlyDictionary<TKey, TV
     { 
     }
 
+    /// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
     /// <summary>
-    /// <inheritdoc/> Equality is calculated by value, i.e. on the dictionary key-value pairs directly.
+    ///     <inheritdoc/>
+    ///     <br/>
+    ///     Equality is calculated by value, i.e. on the dictionary key-value pairs directly.
     /// </summary>
-    /// <param name="obj"><inheritdoc cref="object.Equals(object?)" path="/param[@name='obj']"/></param>
-    /// <returns>
-    /// True if the specified object is equal to the current dictionary by value; otherwise, false.
-    /// Two dictionaries are considered equal by value if they have the same set of keys and the value associated
-    /// with each of the key by the two dictionaries are equal with each other.
-    /// </returns>
+    /// <remarks>
+    /// Two dictionaries are considered equal by value if:
+    /// <br/>
+    /// - they have the same set of keys
+    ///   <br/>
+    /// - and the value associated, with each of the key by the two dictionaries are equal with each other.
+    /// </remarks>
     public override bool Equals(object? obj) => 
         obj is ValueReadOnlyDictionary<TKey, TValue> other &&
         Count == other.Count &&
         Keys.ToHashSet().SetEquals(other.Keys.ToHashSet()) &&
         Keys.All(k => Equals(this[k], other[k]));
 
+    /// <inheritdoc path="//*[not(self::summary)]"/>
     /// <summary>
-    /// <inheritdoc/> The hash code is calculated by value, as an aggregate of the hash codes of its key value 
-    /// pairs.
+    ///     <inheritdoc/>
+    ///     <br/>
+    ///     The hash code is calculated by value, as an aggregate of the hash codes of its key value pairs.
     /// </summary>
-    /// <returns>A 32-bit signed integer hash code.</returns>
     public override int GetHashCode() =>
         this.Select(kvp => kvp.GetHashCode()).Aggregate(0.GetHashCode(), (acc, v) => acc ^ v);
 
+    /// <inheritdoc path="//*[not(self::summary)]"/>
     /// <summary>
-    /// <inheritdoc/> Format: "{[k1] = v1, [k2] = v2, ...}".
+    ///     <inheritdoc/>
+    ///     <br/>
+    ///     Format: "{[k1] = v1, [k2] = v2, ...}".
     /// </summary>
     public override string ToString() => 
         $"{{{string.Join(", ", this.Select(kvp => $"[{kvp.Key}] = {kvp.Value}"))}}}";

@@ -194,19 +194,19 @@ public record TextWithTerminator(
         ? str.EndsWith(suffixStr)
         : TextAndTerminator.TakeLast(suffix.CountO1()).SequenceEqual(suffix);
 
+    /// <inheritdoc path="//*[not(self::summary)]"/>
     /// <summary>
     /// Returns an enumerator that iterates through the collection of chars of the underlying <see cref="Text"/> 
     /// string, including the <see cref="Terminator"/> char.
     /// </summary>
-    /// <returns><inheritdoc/></returns>
     public IEnumerator<char> GetEnumerator() => 
         TextAndTerminator.GetEnumerator();
 
+    /// <inheritdoc path="//*[not(self::summary)]"/>
     /// <summary>
     /// Returns an enumerator that iterates through the collection of chars of the underlying <see cref="Text"/> 
     /// string, including the <see cref="Terminator"/> char.
     /// </summary>
-    /// <returns><inheritdoc/></returns>
     IEnumerator IEnumerable.GetEnumerator() => 
         ((IEnumerable)TextAndTerminator).GetEnumerator();
 }

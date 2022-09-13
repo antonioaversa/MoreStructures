@@ -1,7 +1,7 @@
 ﻿namespace MoreStructures.Graphs.Visitor;
 
 /// <summary>
-/// Any A <see cref="IVisitStrategy"/> implementation which can perform the visit taking into account or not the
+/// A <see cref="IVisitStrategy"/> implementation which can perform the visit taking into account or not the
 /// direction of the edges of the graph, based on the <see cref="DirectedGraph"/> property.
 /// </summary>
 public abstract class DirectionableVisit : IVisitStrategy
