@@ -1,18 +1,18 @@
 ﻿namespace MoreStructures.PriorityQueues.BinomialHeap;
 
 /// <summary>
-/// An object storing and keeping up-to-date the "<typeparamref name="T"/> to <see cref="TreeNode{T}"/>" 
+/// An object storing and keeping up-to-date the "<typeparamref name="TItems"/> to <see cref="TreeNode{T}"/>" 
 /// back-references, necessary to find back the <see cref="TreeNode{T}"/> in the heap with highest priority for a given 
 /// item, without exposing iterators to the client.
 /// </summary>
-/// <typeparam name="T"><inheritdoc cref="IPriorityQueue{T}"/></typeparam>
+/// <typeparam name="TItems"><inheritdoc cref="IPriorityQueue{T}"/></typeparam>
 /// <typeparam name="THeap">
 /// A type constructor for an heap of <see cref="int"/>. Needed to store all push timestamps for each item.
 /// </typeparam>
 /// <remarks>
 /// In order to support updates and deletions of items, two additional data structures are introduced:
 /// <br/>
-/// - a <see cref="Dictionary{TKey, TValue}"/> Item2PT, mapping items <c>I</c> of type <typeparamref name="T"/> to 
+/// - a <see cref="Dictionary{TKey, TValue}"/> Item2PT, mapping items <c>I</c> of type <typeparamref name="TItems"/> to 
 ///   <typeparamref name="THeap"/> instances, containing <see cref="PrioritizedItem{T}.PushTimestamp"/>
 ///   values of type <see cref="int"/>, of <see cref="PrioritizedItem{T}"/> instances containing <c>I</c>.
 ///   <br/>
@@ -37,12 +37,12 @@
 /// backing <typeparamref name="THeap"/> structure of this priority queue can be found in constant time via the PT2Idx 
 /// dictionary.
 /// </remarks>
-public class DuplicatedItemsResolution<T, THeap>
-    where T : notnull
+public class DuplicatedItemsResolution<TItems, THeap>
+    where TItems : notnull
     where THeap : IPriorityQueue<int>, new()
 {
-    private Dictionary<T, THeap> ItemToPushTimestamps { get; } = new();
-    private Dictionary<int, TreeNode<T>> PushTimestampToTreeNode { get; } = new();
+    private Dictionary<TItems, THeap> ItemToPushTimestamps { get; } = new();
+    private Dictionary<int, TreeNode<TItems>> PushTimestampToTreeNode { get; } = new();
 
     /// <inheritdoc cref="IUpdatablePriorityQueue{T}.GetPrioritiesOf(T)" path="//*[not(self::remarks)]"/>
     /// <remarks>
@@ -75,10 +75,12 @@ public class DuplicatedItemsResolution<T, THeap>
     ///     - Retrieving the <see cref="TreeNode{T}"/> from the push timestamp and the priority from the 
     ///       <see cref="PrioritizedItem{T}"/> instance are both constant-time operations.
     ///       <br/>
-    ///     - Therefore Time and Space Complexity are O(dup_factor).
+    ///     - Therefore Time and Space Complexity are O(dup_factor), where dup_factor is 
+    ///       the average number of occurrences of an item in the data structure (1 means no duplicates, 2 means the 
+    ///       item appears twice, etc.).
     ///     </para>
     /// </remarks> 
-    public IEnumerable<int> GetPrioritiesOf(T item)
+    public IEnumerable<int> GetPrioritiesOf(TItems item)
     {
         if (!ItemToPushTimestamps.TryGetValue(item, out var pushTimestamps))
             return Enumerable.Empty<int>();
@@ -137,12 +139,12 @@ public class DuplicatedItemsResolution<T, THeap>
     ///       item appears twice, etc.).
     ///     </para>
     /// </remarks>
-    public TreeNode<T> FindTreeNode(T item)
+    public TreeNode<TItems> FindTreeNode(TItems item)
     {
         if (!ItemToPushTimestamps.TryGetValue(item, out var pushTimestamps))
             throw new InvalidOperationException("The specified item is not in the queue.");
 
-        TreeNode<T>? treeNode = null;
+        TreeNode<TItems>? treeNode = null;
         while (
             pushTimestamps.Count > 0 &&
             (!PushTimestampToTreeNode.TryGetValue(pushTimestamps.Peek().Item, out treeNode) || !treeNode.IsInAHeap))
@@ -160,20 +162,20 @@ public class DuplicatedItemsResolution<T, THeap>
     /// To be invoked just after a <paramref name="newRoot"/> has been pushed into the heap.
     /// </summary>
     /// <param name="newRoot">The new root pushed into the heap forest.</param>
-    public void RaiseItemPushed(TreeNode<T> newRoot)
+    public void RaiseItemPushed(TreeNode<TItems> newRoot)
     {
         var prioritizedItem = newRoot.PrioritizedItem;
         PushTimestampToTreeNode[prioritizedItem.PushTimestamp] = newRoot;
-        if (!ItemToPushTimestamps.ContainsKey(prioritizedItem.Item))
-            ItemToPushTimestamps[prioritizedItem.Item] = new THeap();
-        ItemToPushTimestamps[prioritizedItem.Item].Push(prioritizedItem.PushTimestamp, prioritizedItem.Priority);
+        if (!ItemToPushTimestamps.TryGetValue(prioritizedItem.Item, out var pushTimestamps))
+            ItemToPushTimestamps[prioritizedItem.Item] = pushTimestamps = new THeap();
+        pushTimestamps.Push(prioritizedItem.PushTimestamp, prioritizedItem.Priority);
     }
 
     /// <summary>
     /// To be invoked just before the provided <paramref name="root"/> is popped from the heap.
     /// </summary>
     /// <param name="root">The root about to be popped from the heap forest.</param>
-    public void RaiseItemPopping(TreeNode<T> root)
+    public void RaiseItemPopping(TreeNode<TItems> root)
     {
         PushTimestampToTreeNode.Remove(root.PrioritizedItem.PushTimestamp);
     }
@@ -183,11 +185,22 @@ public class DuplicatedItemsResolution<T, THeap>
     /// </summary>
     /// <param name="treeNode">The node in the heap which has changed priority.</param>
     /// <param name="itemBefore">The <see cref="PrioritizedItem{T}"/> as it was before the priority change.</param>
-    public void RaiseItemPriorityChanged(TreeNode<T> treeNode, PrioritizedItem<T> itemBefore)
+    public void RaiseItemPriorityChanged(TreeNode<TItems> treeNode, PrioritizedItem<TItems> itemBefore)
     {
         var itemAfter = treeNode.PrioritizedItem;
         PushTimestampToTreeNode.Remove(itemBefore.PushTimestamp);
         PushTimestampToTreeNode[itemAfter.PushTimestamp] = treeNode;
         ItemToPushTimestamps[itemAfter.Item].Push(itemAfter.PushTimestamp, itemAfter.Priority);
+    }
+
+    /// <summary>
+    /// Invoked just after two items have had their <see cref="PrioritizedItem{T}"/> swapped.
+    /// </summary>
+    /// <param name="treeNode1">The first node.</param>
+    /// <param name="treeNode2">The second node.</param>
+    public void RaiseItemsSwapped(TreeNode<TItems> treeNode1, TreeNode<TItems> treeNode2)
+    {
+        PushTimestampToTreeNode[treeNode1.PrioritizedItem.PushTimestamp] = treeNode1;
+        PushTimestampToTreeNode[treeNode2.PrioritizedItem.PushTimestamp] = treeNode2;
     }
 }

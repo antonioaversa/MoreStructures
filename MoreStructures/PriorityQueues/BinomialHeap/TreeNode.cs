@@ -96,4 +96,15 @@ public class TreeNode<T>
 
         return copy;
     }
+
+    /// <inheritdoc path="//*[not(self::summary)]"/>
+    /// <summary>
+    ///     <inheritdoc/>
+    ///     <br/>
+    ///     Includes the <see cref="PrioritizedItem"/> and <see cref="IsInAHeap"/>.
+    /// </summary>
+    public override string ToString()
+    {
+        return $"{PrioritizedItem} [{(IsInAHeap ? "In a heap" : "Not in a heap")}]";
+    }
 }
