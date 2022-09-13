@@ -11844,6 +11844,25 @@ references:
   commentId: N:MoreStructures.Tests.PriorityQueues.BinomialHeap
   fullName: MoreStructures.Tests.PriorityQueues.BinomialHeap
   nameWithType: MoreStructures.Tests.PriorityQueues.BinomialHeap
+- uid: MoreStructures.Tests.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueueTests_AsBasicQueue
+  name: BinomialHeapPriorityQueueTests_AsBasicQueue
+  href: api/MoreStructures.Tests.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueueTests_AsBasicQueue.html
+  commentId: T:MoreStructures.Tests.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueueTests_AsBasicQueue
+  fullName: MoreStructures.Tests.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueueTests_AsBasicQueue
+  nameWithType: BinomialHeapPriorityQueueTests_AsBasicQueue
+- uid: MoreStructures.Tests.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueueTests_AsBasicQueue.#ctor
+  name: BinomialHeapPriorityQueueTests_AsBasicQueue()
+  href: api/MoreStructures.Tests.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueueTests_AsBasicQueue.html#MoreStructures_Tests_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueueTests_AsBasicQueue__ctor
+  commentId: M:MoreStructures.Tests.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueueTests_AsBasicQueue.#ctor
+  fullName: MoreStructures.Tests.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueueTests_AsBasicQueue.BinomialHeapPriorityQueueTests_AsBasicQueue()
+  nameWithType: BinomialHeapPriorityQueueTests_AsBasicQueue.BinomialHeapPriorityQueueTests_AsBasicQueue()
+- uid: MoreStructures.Tests.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueueTests_AsBasicQueue.#ctor*
+  name: BinomialHeapPriorityQueueTests_AsBasicQueue
+  href: api/MoreStructures.Tests.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueueTests_AsBasicQueue.html#MoreStructures_Tests_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueueTests_AsBasicQueue__ctor_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueueTests_AsBasicQueue.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueueTests_AsBasicQueue.BinomialHeapPriorityQueueTests_AsBasicQueue
+  nameWithType: BinomialHeapPriorityQueueTests_AsBasicQueue.BinomialHeapPriorityQueueTests_AsBasicQueue
 - uid: MoreStructures.Tests.PriorityQueues.BinomialHeap.TreeNodeTests
   name: TreeNodeTests
   href: api/MoreStructures.Tests.PriorityQueues.BinomialHeap.TreeNodeTests.html
@@ -12162,25 +12181,6 @@ references:
   commentId: N:MoreStructures.Tests.PriorityQueues.FibonacciHeap
   fullName: MoreStructures.Tests.PriorityQueues.FibonacciHeap
   nameWithType: MoreStructures.Tests.PriorityQueues.FibonacciHeap
-- uid: MoreStructures.Tests.PriorityQueues.FibonacciHeap.BinomialHeapPriorityQueueTests_AsBasicQueue
-  name: BinomialHeapPriorityQueueTests_AsBasicQueue
-  href: api/MoreStructures.Tests.PriorityQueues.FibonacciHeap.BinomialHeapPriorityQueueTests_AsBasicQueue.html
-  commentId: T:MoreStructures.Tests.PriorityQueues.FibonacciHeap.BinomialHeapPriorityQueueTests_AsBasicQueue
-  fullName: MoreStructures.Tests.PriorityQueues.FibonacciHeap.BinomialHeapPriorityQueueTests_AsBasicQueue
-  nameWithType: BinomialHeapPriorityQueueTests_AsBasicQueue
-- uid: MoreStructures.Tests.PriorityQueues.FibonacciHeap.BinomialHeapPriorityQueueTests_AsBasicQueue.#ctor
-  name: BinomialHeapPriorityQueueTests_AsBasicQueue()
-  href: api/MoreStructures.Tests.PriorityQueues.FibonacciHeap.BinomialHeapPriorityQueueTests_AsBasicQueue.html#MoreStructures_Tests_PriorityQueues_FibonacciHeap_BinomialHeapPriorityQueueTests_AsBasicQueue__ctor
-  commentId: M:MoreStructures.Tests.PriorityQueues.FibonacciHeap.BinomialHeapPriorityQueueTests_AsBasicQueue.#ctor
-  fullName: MoreStructures.Tests.PriorityQueues.FibonacciHeap.BinomialHeapPriorityQueueTests_AsBasicQueue.BinomialHeapPriorityQueueTests_AsBasicQueue()
-  nameWithType: BinomialHeapPriorityQueueTests_AsBasicQueue.BinomialHeapPriorityQueueTests_AsBasicQueue()
-- uid: MoreStructures.Tests.PriorityQueues.FibonacciHeap.BinomialHeapPriorityQueueTests_AsBasicQueue.#ctor*
-  name: BinomialHeapPriorityQueueTests_AsBasicQueue
-  href: api/MoreStructures.Tests.PriorityQueues.FibonacciHeap.BinomialHeapPriorityQueueTests_AsBasicQueue.html#MoreStructures_Tests_PriorityQueues_FibonacciHeap_BinomialHeapPriorityQueueTests_AsBasicQueue__ctor_
-  commentId: Overload:MoreStructures.Tests.PriorityQueues.FibonacciHeap.BinomialHeapPriorityQueueTests_AsBasicQueue.#ctor
-  isSpec: "True"
-  fullName: MoreStructures.Tests.PriorityQueues.FibonacciHeap.BinomialHeapPriorityQueueTests_AsBasicQueue.BinomialHeapPriorityQueueTests_AsBasicQueue
-  nameWithType: BinomialHeapPriorityQueueTests_AsBasicQueue.BinomialHeapPriorityQueueTests_AsBasicQueue
 - uid: MoreStructures.Tests.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueueTests_AsBasicQueue
   name: FibonacciHeapPriorityQueueTests_AsBasicQueue
   href: api/MoreStructures.Tests.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueueTests_AsBasicQueue.html
@@ -19966,13 +19966,13 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Utilities.LinkedListExtensions.AsNodes
   nameWithType: LinkedListExtensions.AsNodes
-- uid: MoreStructures.Utilities.LinkedListExtensions.AsNodes``1(System.Collections.Generic.LinkedList{``0})
+- uid: MoreStructures.Utilities.LinkedListExtensions.AsNodes``1(LinkedList{``0})
   name: AsNodes<T>(LinkedList<T>)
-  href: api/MoreStructures.Utilities.LinkedListExtensions.html#MoreStructures_Utilities_LinkedListExtensions_AsNodes__1_System_Collections_Generic_LinkedList___0__
-  commentId: M:MoreStructures.Utilities.LinkedListExtensions.AsNodes``1(System.Collections.Generic.LinkedList{``0})
+  href: api/MoreStructures.Utilities.LinkedListExtensions.html#MoreStructures_Utilities_LinkedListExtensions_AsNodes__1_LinkedList___0__
+  commentId: M:MoreStructures.Utilities.LinkedListExtensions.AsNodes``1(LinkedList{``0})
   name.vb: AsNodes(Of T)(LinkedList(Of T))
-  fullName: MoreStructures.Utilities.LinkedListExtensions.AsNodes<T>(System.Collections.Generic.LinkedList<T>)
-  fullName.vb: MoreStructures.Utilities.LinkedListExtensions.AsNodes(Of T)(System.Collections.Generic.LinkedList(Of T))
+  fullName: MoreStructures.Utilities.LinkedListExtensions.AsNodes<T>(LinkedList<T>)
+  fullName.vb: MoreStructures.Utilities.LinkedListExtensions.AsNodes(Of T)(LinkedList(Of T))
   nameWithType: LinkedListExtensions.AsNodes<T>(LinkedList<T>)
   nameWithType.vb: LinkedListExtensions.AsNodes(Of T)(LinkedList(Of T))
 - uid: MoreStructures.Utilities.LockValueObject
