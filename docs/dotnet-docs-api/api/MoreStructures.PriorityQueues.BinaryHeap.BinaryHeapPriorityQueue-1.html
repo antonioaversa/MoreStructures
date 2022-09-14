@@ -84,7 +84,8 @@
   <h1 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1" class="text-break">Class BinaryHeapPriorityQueue&lt;T&gt;
   </h1>
   <div class="markdown level0 summary"><p>An <a class="xref" href="MoreStructures.PriorityQueues.IPriorityQueue-1.html">IPriorityQueue&lt;T&gt;</a> implementation based on a Binary Max Heap of its items. On top of basic
-operations it also supports <a class="xref" href="MoreStructures.PriorityQueues.IPeekKthPriorityQueue-1.html">IPeekKthPriorityQueue&lt;T&gt;</a>.</p>
+operations it also supports <a class="xref" href="MoreStructures.PriorityQueues.IPeekKthPriorityQueue-1.html">IPeekKthPriorityQueue&lt;T&gt;</a> and
+<a class="xref" href="MoreStructures.PriorityQueues.IMergeablePriorityQueue-2.html">IMergeablePriorityQueue&lt;T, TPQTarget&gt;</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -96,6 +97,7 @@ operations it also supports <a class="xref" href="MoreStructures.PriorityQueues.
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="MoreStructures.PriorityQueues.IPeekKthPriorityQueue-1.html">IPeekKthPriorityQueue</a>&lt;T&gt;</div>
+    <div><a class="xref" href="MoreStructures.PriorityQueues.IMergeablePriorityQueue-2.html">IMergeablePriorityQueue</a>&lt;T, <a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html">BinaryHeapPriorityQueue</a>&lt;T&gt;&gt;</div>
     <div><a class="xref" href="MoreStructures.PriorityQueues.IPriorityQueue-1.html">IPriorityQueue</a>&lt;T&gt;</div>
     <div><span class="xref">IEnumerable</span>&lt;T&gt;</div>
   </div>
@@ -127,7 +129,7 @@ operations it also supports <a class="xref" href="MoreStructures.PriorityQueues.
   <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
   <h5 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class BinaryHeapPriorityQueue&lt;T&gt; : IPeekKthPriorityQueue&lt;T&gt;, IPriorityQueue&lt;T&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class BinaryHeapPriorityQueue&lt;T&gt; : IPeekKthPriorityQueue&lt;T&gt;, IMergeablePriorityQueue&lt;T, BinaryHeapPriorityQueue&lt;T&gt;&gt;, IPriorityQueue&lt;T&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -162,6 +164,11 @@ logarithmic performance.
 <br>
 - Given the &quot;exponentially better&quot; runtime of logarithmic operations w.r.t. linear ones, such compromise makes
 sense for most scenarios.
+<br>
+- Merging two Binary Max Heap structures, however, still requires linear time. If merging performance is
+critical, a more advanced tree-based implementation, such as 
+<a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html">BinomialHeapPriorityQueue&lt;T&gt;</a>, 
+<a class="xref" href="MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue-1.html">FibonacciHeapPriorityQueue&lt;T&gt;</a> and their derivations, should be used instead.
 </p>
 <p>
 BINARY MAX HEAP REPRESENTATION
@@ -217,7 +224,7 @@ I2.PushTimestamp.
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1__ctor.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue%601.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L98">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L105">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1__ctor_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.#ctor*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1__ctor" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.#ctor">BinaryHeapPriorityQueue()</h4>
@@ -238,7 +245,7 @@ Therefore, Time and Space Complexity is O(1).</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1__ctor_MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue__0__.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue%601.%23ctor(MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L116">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L123">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1__ctor_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.#ctor*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1__ctor_MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue__0__" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.#ctor(MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue{`0})">BinaryHeapPriorityQueue(BinaryHeapPriorityQueue&lt;T&gt;)</h4>
@@ -283,7 +290,7 @@ items in <code data-dev-comment-type="paramref" class="paramref">source</code>.<
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Count.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue%601.Count%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L129">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L136">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Count_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.Count*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Count" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.Count">Count</h4>
@@ -318,7 +325,7 @@ Time and Space Complexity are O(1).</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_CurrentPushTimestamp.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue%601.CurrentPushTimestamp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L83">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L90">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_CurrentPushTimestamp_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.CurrentPushTimestamp*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_CurrentPushTimestamp" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.CurrentPushTimestamp">CurrentPushTimestamp</h4>
@@ -350,7 +357,7 @@ data structure by a <a class="xref" href="MoreStructures.PriorityQueues.BinaryHe
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Items.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue%601.Items%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L88">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L95">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Items_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.Items*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Items" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.Items">Items</h4>
@@ -383,7 +390,7 @@ data structure by a <a class="xref" href="MoreStructures.PriorityQueues.BinaryHe
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_GetEnumerator.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue%601.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L144">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L151">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_GetEnumerator_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.GetEnumerator*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_GetEnumerator" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.GetEnumerator">GetEnumerator()</h4>
@@ -422,10 +429,89 @@ the right order of priority.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Merge_MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue__0__.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue%601.Merge(MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L377">View Source</a>
+  </span>
+  <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Merge_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.Merge*"></a>
+  <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Merge_MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue__0__" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.Merge(MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue{`0})">Merge(BinaryHeapPriorityQueue&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Merge(BinaryHeapPriorityQueue&lt;T&gt; targetPriorityQueue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html">BinaryHeapPriorityQueue</a>&lt;T&gt;</td>
+        <td><span class="parametername">targetPriorityQueue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Merge_MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue__0___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+ALGORITHM
+<br>
+- Pushing all items in the <code data-dev-comment-type="paramref" class="paramref">targetPriorityQueue</code> via <a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Push__0_System_Int32_">Push(T, Int32)</a>, would 
+  result in O(m * log(m)) Time Complexity, where m is the number of items in the
+<code data-dev-comment-type="paramref" class="paramref">targetPriorityQueue</code>.
+<br>
+- Instead, each of the m items from the <code data-dev-comment-type="paramref" class="paramref">targetPriorityQueue</code> is added to the underlying 
+array list of this queue, at the end.
+<br>
+- Then, the content of <code data-dev-comment-type="paramref" class="paramref">targetPriorityQueue</code> is cleared, to respect the contract defined 
+by <a class="xref" href="MoreStructures.PriorityQueues.IMergeablePriorityQueue-2.html">IMergeablePriorityQueue&lt;T, TPQTarget&gt;</a>.
+<br>
+- Finally, the heap property is restored globally for all items in the underlying array list, by sifting
+down all items in the first half of the list, proceeding backwards from the middle of the list to its
+first item.
+<br>
+- Such global sift down is required for the first half of the items only, because the second half only 
+contains leaves of the tree, for which a sift down would do nothing (i.e. the heap property is already 
+satisfied).
+</p>
+<p>
+COMPLEXITY
+<br>
+- Appending m items has a linear cost over m.
+<br>
+- Clearing the target only takes constant time.
+<br>
+- Restoring the heap property globally would seem to take n / 2 * log(n), where n is the total number of 
+items in this queue, after the merge: the number of items to sift down plus the cost of sifting down the 
+tree. That would give O(n * log(n)) complexity: not a real improvement over the naive approach of pushing
+n items.
+<br>
+- However, the length of the path to sift down is not as big as the entire height of the tree. Instead, the
+closer the starting node is to the leave, the smaller it becomes: leaves have sift down paths of length
+0, their parent of length 1, etc., up to the root, which has sift down path of length equal to the height
+of the tree.
+<br>
+- A key observation is that in a complete and full tree there are more leaves than all nodes in other 
+levels combined, and that applies to all levels w.r.t. all smaller levels.
+<br>
+- So, sift down will cost less for way more nodes, resulting in overall O(n) Time Complexity.
+<br>
+- Space Complexity is O(m), since m items are added to the list storing the items of this queue.
+</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Peek.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue%601.Peek%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L165">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L172">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Peek_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.Peek*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Peek" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.Peek">Peek()</h4>
@@ -462,7 +548,7 @@ Therefore, Time and Space Complexity are O(1).</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_PeekKth_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue%601.PeekKth(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L294">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L301">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_PeekKth_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.PeekKth*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_PeekKth_System_Int32_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.PeekKth(System.Int32)">PeekKth(Int32)</h4>
@@ -559,7 +645,7 @@ run, since they are done on a <a class="xref" href="MoreStructures.PriorityQueue
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Pop.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue%601.Pop%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L197">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L204">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Pop_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.Pop*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Pop" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.Pop">Pop()</h4>
@@ -613,7 +699,7 @@ in-place in underlying data structures.
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Push__0_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue%601.Push(%600%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L237">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L244">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Push_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.Push*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Push__0_System_Int32_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.Push(`0,System.Int32)">Push(T, Int32)</h4>
@@ -672,7 +758,7 @@ in-place in underlying data structure.
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_RaiseItemPopping.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue%601.RaiseItemPopping%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L336">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L405">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_RaiseItemPopping_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.RaiseItemPopping*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_RaiseItemPopping" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.RaiseItemPopping">RaiseItemPopping()</h4>
@@ -689,7 +775,7 @@ in-place in underlying data structure.
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_RaiseItemPushed.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue%601.RaiseItemPushed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L330">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L399">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_RaiseItemPushed_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.RaiseItemPushed*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_RaiseItemPushed" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.RaiseItemPushed">RaiseItemPushed()</h4>
@@ -706,7 +792,7 @@ in-place in underlying data structure.
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_RaiseItemsSwapped_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue%601.RaiseItemsSwapped(System.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L343">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L412">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_RaiseItemsSwapped_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.RaiseItemsSwapped*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_RaiseItemsSwapped_System_Int32_System_Int32_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.RaiseItemsSwapped(System.Int32,System.Int32)">RaiseItemsSwapped(Int32, Int32)</h4>
@@ -746,7 +832,7 @@ in-place in underlying data structure.
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_SiftDown_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue%601.SiftDown(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L386">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L455">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_SiftDown_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.SiftDown*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_SiftDown_System_Int32_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.SiftDown(System.Int32)">SiftDown(Int32)</h4>
@@ -781,7 +867,7 @@ in the tree.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_SiftUp_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue%601.SiftUp(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L361">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L430">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_SiftUp_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.SiftUp*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_SiftUp_System_Int32_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.SiftUp(System.Int32)">SiftUp(Int32)</h4>
@@ -818,7 +904,7 @@ the tree.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_System_Collections_IEnumerable_GetEnumerator.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue%601.System%23Collections%23IEnumerable%23GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L155">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L162">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_System_Collections_IEnumerable_GetEnumerator_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.System#Collections#IEnumerable#GetEnumerator*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_System_Collections_IEnumerable_GetEnumerator" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
@@ -851,6 +937,9 @@ the tree.</p>
       <a class="xref" href="MoreStructures.PriorityQueues.IPeekKthPriorityQueue-1.html">IPeekKthPriorityQueue&lt;T&gt;</a>
   </div>
   <div>
+      <a class="xref" href="MoreStructures.PriorityQueues.IMergeablePriorityQueue-2.html">IMergeablePriorityQueue&lt;T, TPQTarget&gt;</a>
+  </div>
+  <div>
       <a class="xref" href="MoreStructures.PriorityQueues.IPriorityQueue-1.html">IPriorityQueue&lt;T&gt;</a>
   </div>
   <div>
@@ -871,7 +960,7 @@ the tree.</p>
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L76" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L82" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

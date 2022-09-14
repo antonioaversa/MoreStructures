@@ -158,7 +158,13 @@ It provides O(1) count and amortized insertion, at the cost of all other operati
 <br>
 If insertion performance is the only highly critical operation, to the point that a constant time performance 
 is the only acceptable runtime, and not even the logarithmic time insertion of a tree-based solution can be 
-applied, this implementation may be the best choice.
+applied, this implementation may be the best choice, although lazy approaches such as 
+<a class="xref" href="MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue-1.html">FibonacciHeapPriorityQueue&lt;T&gt;</a> can provide constant-time insertion performance, 
+while keeping sub-linear complexity for all other operations.
+<br>
+If merging performance is also important, a solution based on linked lists can offer constant-time merging and
+still similar simplicity of implementation, same insertion performance and same tradeoff in terms of the
+complexity of all other operations.
 <br>
 When data extraction performance is also a concern, or the main concern, a more balanced solution in terms of
 complexity of its operations should be preferred.
@@ -174,7 +180,7 @@ solutions.
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1__ctor.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue%601.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L65">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L71">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1__ctor_" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.#ctor*"></a>
   <h4 id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1__ctor" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.#ctor">ArrayListPriorityQueue()</h4>
@@ -190,7 +196,7 @@ solutions.
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1__ctor_List_MoreStructures_PriorityQueues_PrioritizedItem__0___.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue%601.%23ctor(List%7BMoreStructures.PriorityQueues.PrioritizedItem%7B%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L57">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L63">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1__ctor_" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.#ctor*"></a>
   <h4 id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1__ctor_List_MoreStructures_PriorityQueues_PrioritizedItem__0___" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.#ctor(List{MoreStructures.PriorityQueues.PrioritizedItem{`0}})">ArrayListPriorityQueue(List&lt;PrioritizedItem&lt;T&gt;&gt;)</h4>
@@ -230,7 +236,7 @@ Therefore, operations mutating the queue such as <a class="xref" href="MoreStruc
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1__ctor_System_Collections_IEnumerable_MoreStructures_PriorityQueues_PrioritizedItem__0___.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue%601.%23ctor(System.Collections.IEnumerable%7BMoreStructures.PriorityQueues.PrioritizedItem%7B%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L79">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L85">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1__ctor_" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.#ctor*"></a>
   <h4 id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1__ctor_System_Collections_IEnumerable_MoreStructures_PriorityQueues_PrioritizedItem__0___" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.#ctor(System.Collections.IEnumerable{MoreStructures.PriorityQueues.PrioritizedItem{`0}})">ArrayListPriorityQueue(IEnumerable&lt;PrioritizedItem&lt;T&gt;&gt;)</h4>
@@ -272,7 +278,7 @@ Therefore, operations mutating the queue won't alter the provided <code data-dev
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_Count.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue%601.Count%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L89">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L95">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_Count_" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.Count*"></a>
   <h4 id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_Count" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.Count">Count</h4>
@@ -309,7 +315,7 @@ Time and Space Complexity are O(1).</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_GetEnumerator.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue%601.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L97">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L103">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_GetEnumerator_" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.GetEnumerator*"></a>
   <h4 id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_GetEnumerator" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.GetEnumerator">GetEnumerator()</h4>
@@ -344,7 +350,7 @@ Time Complexity is O(n * log(n)) (when fully enumerated). Space Complexity is O(
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_GetPrioritiesOf__0_.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue%601.GetPrioritiesOf(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L166">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L172">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_GetPrioritiesOf_" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.GetPrioritiesOf*"></a>
   <h4 id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_GetPrioritiesOf__0_" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.GetPrioritiesOf(`0)">GetPrioritiesOf(T)</h4>
@@ -404,7 +410,7 @@ comparing two items of type <code data-dev-comment-type="typeparamref" class="ty
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_Merge_MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue__0__.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue%601.Merge(MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L302">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L308">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_Merge_" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.Merge*"></a>
   <h4 id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_Merge_MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue__0__" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.Merge(MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue{`0})">Merge(ArrayListPriorityQueue&lt;T&gt;)</h4>
@@ -448,7 +454,7 @@ Time and Space Complexity are O(m), where m is the number of items in the target
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_Peek.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue%601.Peek%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L114">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L120">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_Peek_" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.Peek*"></a>
   <h4 id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_Peek" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.Peek">Peek()</h4>
@@ -483,7 +489,7 @@ Time Complexity is O(n). Space Complexity is O(1).</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_PeekKth_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue%601.PeekKth(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L246">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L252">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_PeekKth_" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.PeekKth*"></a>
   <h4 id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_PeekKth_System_Int32_" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.PeekKth(System.Int32)">PeekKth(Int32)</h4>
@@ -542,7 +548,7 @@ Complexity is O(n). Space Complexity is always O(n).</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_Pop.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue%601.Pop%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L124">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L130">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_Pop_" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.Pop*"></a>
   <h4 id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_Pop" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.Pop">Pop()</h4>
@@ -579,7 +585,7 @@ Time Complexity is O(n). Space Complexity is O(1).</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_Push__0_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue%601.Push(%600%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L147">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L153">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_Push_" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.Push*"></a>
   <h4 id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_Push__0_System_Int32_" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.Push(`0,System.Int32)">Push(T, Int32)</h4>
@@ -623,7 +629,7 @@ Time Complexity is O(n). Space Complexity is O(1) (amortized over multiple execu
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_Remove__0_.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue%601.Remove(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L222">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L228">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_Remove_" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.Remove*"></a>
   <h4 id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_Remove__0_" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.Remove(`0)">Remove(T)</h4>
@@ -685,7 +691,7 @@ comparing two items of type <code data-dev-comment-type="typeparamref" class="ty
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_UpdatePriority__0_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue%601.UpdatePriority(%600%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L197">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L203">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_UpdatePriority_" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.UpdatePriority*"></a>
   <h4 id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_UpdatePriority__0_System_Int32_" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.UpdatePriority(`0,System.Int32)">UpdatePriority(T, Int32)</h4>
@@ -758,7 +764,7 @@ comparing two items of type <code data-dev-comment-type="typeparamref" class="ty
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_System_Collections_IEnumerable_GetEnumerator.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue%601.System%23Collections%23IEnumerable%23GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L106">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L112">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_System_Collections_IEnumerable_GetEnumerator_" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.System#Collections#IEnumerable#GetEnumerator*"></a>
   <h4 id="MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_System_Collections_IEnumerable_GetEnumerator" data-uid="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
@@ -820,7 +826,7 @@ comparing two items of type <code data-dev-comment-type="typeparamref" class="ty
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L31" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/ArrayList/ArrayListPriorityQueue.cs/#L37" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

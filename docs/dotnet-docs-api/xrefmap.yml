@@ -3783,6 +3783,24 @@ references:
   fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue(Of T).Items
   nameWithType: BinaryHeapPriorityQueue<T>.Items
   nameWithType.vb: BinaryHeapPriorityQueue(Of T).Items
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.Merge(MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue{`0})
+  name: Merge(BinaryHeapPriorityQueue<T>)
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Merge_MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue__0__
+  commentId: M:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.Merge(MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue{`0})
+  name.vb: Merge(BinaryHeapPriorityQueue(Of T))
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue<T>.Merge(MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue<T>)
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue(Of T).Merge(MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue(Of T))
+  nameWithType: BinaryHeapPriorityQueue<T>.Merge(BinaryHeapPriorityQueue<T>)
+  nameWithType.vb: BinaryHeapPriorityQueue(Of T).Merge(BinaryHeapPriorityQueue(Of T))
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.Merge*
+  name: Merge
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Merge_
+  commentId: Overload:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.Merge
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue<T>.Merge
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue(Of T).Merge
+  nameWithType: BinaryHeapPriorityQueue<T>.Merge
+  nameWithType.vb: BinaryHeapPriorityQueue(Of T).Merge
 - uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.Peek
   name: Peek()
   href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Peek
@@ -12029,6 +12047,25 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueueTests_AsBasicQueue.BinaryHeapPriorityQueueTests_AsBasicQueue
   nameWithType: BinaryHeapPriorityQueueTests_AsBasicQueue.BinaryHeapPriorityQueueTests_AsBasicQueue
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueueTests_AsMergeable
+  name: BinaryHeapPriorityQueueTests_AsMergeable
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueueTests_AsMergeable.html
+  commentId: T:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueueTests_AsMergeable
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueueTests_AsMergeable
+  nameWithType: BinaryHeapPriorityQueueTests_AsMergeable
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueueTests_AsMergeable.#ctor
+  name: BinaryHeapPriorityQueueTests_AsMergeable()
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueueTests_AsMergeable.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueueTests_AsMergeable__ctor
+  commentId: M:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueueTests_AsMergeable.#ctor
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueueTests_AsMergeable.BinaryHeapPriorityQueueTests_AsMergeable()
+  nameWithType: BinaryHeapPriorityQueueTests_AsMergeable.BinaryHeapPriorityQueueTests_AsMergeable()
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueueTests_AsMergeable.#ctor*
+  name: BinaryHeapPriorityQueueTests_AsMergeable
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueueTests_AsMergeable.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueueTests_AsMergeable__ctor_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueueTests_AsMergeable.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueueTests_AsMergeable.BinaryHeapPriorityQueueTests_AsMergeable
+  nameWithType: BinaryHeapPriorityQueueTests_AsMergeable.BinaryHeapPriorityQueueTests_AsMergeable
 - uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueueTests_AsPeekKthQueue
   name: BinaryHeapPriorityQueueTests_AsPeekKthQueue
   href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueueTests_AsPeekKthQueue.html

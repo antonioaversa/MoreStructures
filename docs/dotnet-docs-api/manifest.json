@@ -942,7 +942,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue-1.html",
-          "hash": "jMagWL3nPCxsqWyrVvS+Ifm08bxlMBvv9z7NvZy6pzM="
+          "hash": "xsT4ORvNUarntHEud5n7pBHPFQ7pOyOct0Px7qL+r1w="
         }
       },
       "is_incremental": false,
@@ -966,7 +966,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html",
-          "hash": "913uykUSNQS+x7Aw3JGwfuZqFNJooURvbn+SxdY/TFQ="
+          "hash": "fVYmivx9L3bZmTTFRUdLrxdmDlGN+xw0Cuvo6j3icfs="
         }
       },
       "is_incremental": false,
@@ -978,7 +978,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.PriorityQueues.BinaryHeap.UpdatableBinaryHeapPriorityQueue-1.html",
-          "hash": "Fjt7vY6Z4Lz/vXGWUIf/X7zeQM/74jvrW1VH0Q/vf1M="
+          "hash": "yZrUzbGbaeOxtXAlHiaemJGhVmsB4AtFj5udvabSeQ0="
         }
       },
       "is_incremental": false,
@@ -990,7 +990,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.PriorityQueues.BinaryHeap.html",
-          "hash": "9p5MVwmwe+uhGKa2m0iJkFNO8yRQfKiZKOw8ru/3VRI="
+          "hash": "Mv7tDihv7Zbnl+2omJSXR6BArUlncgmXvphT3UVatJ4="
         }
       },
       "is_incremental": false,
@@ -3338,6 +3338,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueueTests_AsMergeable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueueTests_AsMergeable.html",
+          "hash": "vAQ4xpz+vgpcL3ck4YE6zKOe3sWIt0HgjU7p8V6M8qE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueueTests_AsPeekKthQueue.yml",
       "output": {
         ".html": {
@@ -3378,7 +3390,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.PriorityQueues.BinaryHeap.html",
-          "hash": "pgLkSTVnFIg8hOAKXtczOKGhaC0xCttaHdJ5R2UB80g="
+          "hash": "ctQ+fjo/2kMMa5G/UcaXmVqQyxkxP0K6F8BWQSnZOqc="
         }
       },
       "is_incremental": false,
@@ -3558,7 +3570,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html",
-          "hash": "WRmAPOdHEu6KOmZfgwku2hBlcKTw/LshNUM8r8hVcnA="
+          "hash": "CGHV6BcTz3ilGSp8T+aKQNby/BIuPCB2bnPRtz116dk="
         }
       },
       "is_incremental": false,
@@ -5358,7 +5370,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "245E9clguVPyl7p7+GVvlx3/Q8SPt3MvJzMC6cfNOBM="
+          "hash": "W9ZDh2dRL7JN7cl5r7A5b6VogDNCWXl4Jelaga2eySY="
         }
       },
       "is_incremental": false,
@@ -5433,7 +5445,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 444,
+          "total_file_count": 445,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

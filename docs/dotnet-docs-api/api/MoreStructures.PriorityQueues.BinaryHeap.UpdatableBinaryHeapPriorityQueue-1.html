@@ -96,6 +96,7 @@ operations, such as retrieval and update of priorities and removal of items.</p>
   <div class="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="MoreStructures.PriorityQueues.IPeekKthPriorityQueue-1.html">IPeekKthPriorityQueue</a>&lt;T&gt;</div>
+    <div><a class="xref" href="MoreStructures.PriorityQueues.IMergeablePriorityQueue-2.html">IMergeablePriorityQueue</a>&lt;T, <a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html">BinaryHeapPriorityQueue</a>&lt;T&gt;&gt;</div>
     <div><a class="xref" href="MoreStructures.PriorityQueues.IUpdatablePriorityQueue-1.html">IUpdatablePriorityQueue</a>&lt;T&gt;</div>
     <div><a class="xref" href="MoreStructures.PriorityQueues.IPriorityQueue-1.html">IPriorityQueue</a>&lt;T&gt;</div>
     <div><span class="xref">IEnumerable</span>&lt;T&gt;</div>
@@ -130,6 +131,9 @@ operations, such as retrieval and update of priorities and removal of items.</p>
       <a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_PeekKth_System_Int32_">BinaryHeapPriorityQueue&lt;T&gt;.PeekKth(Int32)</a>
     </div>
     <div>
+      <a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Merge_MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue__0__">BinaryHeapPriorityQueue&lt;T&gt;.Merge(BinaryHeapPriorityQueue&lt;T&gt;)</a>
+    </div>
+    <div>
       <a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_SiftUp_System_Int32_">BinaryHeapPriorityQueue&lt;T&gt;.SiftUp(Int32)</a>
     </div>
     <div>
@@ -161,7 +165,7 @@ operations, such as retrieval and update of priorities and removal of items.</p>
   <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
   <h5 id="MoreStructures_PriorityQueues_BinaryHeap_UpdatableBinaryHeapPriorityQueue_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class UpdatableBinaryHeapPriorityQueue&lt;T&gt; : BinaryHeapPriorityQueue&lt;T&gt;, IPeekKthPriorityQueue&lt;T&gt;, IUpdatablePriorityQueue&lt;T&gt;, IPriorityQueue&lt;T&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class UpdatableBinaryHeapPriorityQueue&lt;T&gt; : BinaryHeapPriorityQueue&lt;T&gt;, IPeekKthPriorityQueue&lt;T&gt;, IMergeablePriorityQueue&lt;T, BinaryHeapPriorityQueue&lt;T&gt;&gt;, IUpdatablePriorityQueue&lt;T&gt;, IPriorityQueue&lt;T&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -545,6 +549,9 @@ item appears twice, etc.).
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="MoreStructures.PriorityQueues.IPeekKthPriorityQueue-1.html">IPeekKthPriorityQueue&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="MoreStructures.PriorityQueues.IMergeablePriorityQueue-2.html">IMergeablePriorityQueue&lt;T, TPQTarget&gt;</a>
   </div>
   <div>
       <a class="xref" href="MoreStructures.PriorityQueues.IUpdatablePriorityQueue-1.html">IUpdatablePriorityQueue&lt;T&gt;</a>
