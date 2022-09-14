@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.PriorityQueues;
+﻿using MoreStructures.PriorityQueues;
 
 namespace MoreStructures.Tests.PriorityQueues;
 
@@ -205,4 +204,46 @@ public abstract class MergeablePriorityQueueTests<TPriorityQueue>
         var sourceCountAfterTargetPop = source.Count;
         Assert.AreEqual(sourceCountBeforeTargetPush, sourceCountAfterTargetPop);
     }
+
+    [TestMethod]
+    public void Clear_WipesOutAllItems()
+    {
+        var queue = Builder();
+        queue.Push(1, 2);
+        queue.Push(2, -4);
+        queue.Clear();
+        Assert.AreEqual(0, queue.Count);
+
+        queue.Clear();
+        Assert.AreEqual(0, queue.Count);
+    }
+
+    [TestMethod]
+    public void Clear_QueueKeepsWorkingAfter()
+    {
+        var queue = Builder();
+        queue.Push(1, 2);
+        queue.Push(2, -4);
+        queue.Clear();
+
+        queue.Push(1, 1);
+        Assert.AreEqual(1, queue.Count);
+        Assert.AreEqual(1, queue.Peek().Item);
+        Assert.AreEqual(1, queue.Peek().Priority);
+        queue.Push(2, 2);
+        Assert.AreEqual(2, queue.Count);
+        Assert.AreEqual(2, queue.Peek().Item);
+        Assert.AreEqual(2, queue.Peek().Priority);
+        var poppedItem1 = queue.Pop();
+        Assert.AreEqual(1, queue.Count);
+        Assert.AreEqual(2, poppedItem1.Item);
+        Assert.AreEqual(2, poppedItem1.Priority);
+        Assert.AreEqual(1, queue.Peek().Item);
+        Assert.AreEqual(1, queue.Peek().Priority);
+        var poppedItem2 = queue.Pop();
+        Assert.AreEqual(0, queue.Count);
+        Assert.AreEqual(1, poppedItem2.Item);
+        Assert.AreEqual(1, poppedItem2.Priority);
+    }
 }
+

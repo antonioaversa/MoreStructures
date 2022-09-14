@@ -49,6 +49,19 @@ public class UpdatableBinaryHeapPriorityQueue<T> : BinaryHeapPriorityQueue<T>, I
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
+    /// Clears the underlying array list and the additional dictionaries introduced to support updates and deletions.
+    /// <br/>
+    /// Time and Space Complexity is O(1).
+    /// </remarks>
+    public override void Clear()
+    {
+        base.Clear();
+        ItemToPushTimestamps.Clear();
+        PushTimestampToIndex.Clear();
+    }
+
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
+    /// <remarks>
     ///     <para id="algorithm">
     ///     ALGORITHM
     ///     <br/>

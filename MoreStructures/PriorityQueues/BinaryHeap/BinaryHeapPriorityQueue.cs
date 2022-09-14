@@ -379,13 +379,25 @@ public class BinaryHeapPriorityQueue<T> : IPeekKthPriorityQueue<T>,
         foreach (var prioritizedItem in targetPriorityQueue.Items)
         {
             Items.Add(new(prioritizedItem.Item, prioritizedItem.Priority, CurrentPushTimestamp));
+            RaiseItemPushed();
             CurrentPushTimestamp++;
         }
 
-        targetPriorityQueue.Items.Clear();
+        targetPriorityQueue.Clear();
 
         for (var i = Items.Count / 2 + 1; i >= 0; i--)
             SiftDown(i);
+    }
+
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
+    /// <remarks>
+    /// Just clears the underlying array list.
+    /// <br/>
+    /// Time and Space Complexity is O(1).
+    /// </remarks>
+    public virtual void Clear()
+    {
+        Items.Clear();
     }
 
     #endregion

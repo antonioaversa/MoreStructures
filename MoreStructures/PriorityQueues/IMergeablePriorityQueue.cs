@@ -51,7 +51,7 @@
 ///       merge operation, and avoid post-merge side effects between the queues.
 ///     </para>
 /// </remarks>
-public interface IMergeablePriorityQueue<T, TPQTarget> : IPriorityQueue<T>
+public interface IMergeablePriorityQueue<T, in TPQTarget> : IPriorityQueue<T>
     where T : notnull
     where TPQTarget : IMergeablePriorityQueue<T, TPQTarget>
 {
@@ -66,4 +66,12 @@ public interface IMergeablePriorityQueue<T, TPQTarget> : IPriorityQueue<T>
     ///     <inheritdoc cref="IMergeablePriorityQueue{T, TPQTarget}"/>
     /// </remarks>
     void Merge(TPQTarget targetPriorityQueue);
+
+    /// <summary>
+    /// Clears this queue, wiping out all its items.
+    /// </summary>
+    /// <remarks>
+    /// Used by <see cref="Merge(TPQTarget)"/> on the target <see cref="IMergeablePriorityQueue{T, TPQTarget}"/>.
+    /// </remarks>
+    void Clear();
 }

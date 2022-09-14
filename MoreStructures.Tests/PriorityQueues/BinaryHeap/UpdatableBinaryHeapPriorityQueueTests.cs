@@ -24,3 +24,14 @@ public class UpdatableBinaryHeapPriorityQueueTests_AsUpdatableQueue : UpdatableP
     {
     }
 }
+
+[TestClass]
+public class UpdatableBinaryHeapPriorityQueueTests_AsMergeableAndUpdatableQueue 
+    : MergeableAndUpdatablePriorityQueueTests<UpdatableBinaryHeapPriorityQueue<int>>
+{
+    public UpdatableBinaryHeapPriorityQueueTests_AsMergeableAndUpdatableQueue() : base(
+        () => new UpdatableBinaryHeapPriorityQueue<int>())
+    {
+    }
+}
+
