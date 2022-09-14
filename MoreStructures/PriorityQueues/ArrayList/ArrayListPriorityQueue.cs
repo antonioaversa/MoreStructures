@@ -4,7 +4,8 @@ namespace MoreStructures.PriorityQueues.ArrayList;
 
 /// <summary>
 /// An <see cref="IPriorityQueue{T}"/> implementation based on an unsorted list of its items. On top of basic 
-/// operations it also supports <see cref="IUpdatablePriorityQueue{T}"/> and <see cref="IPeekKthPriorityQueue{T}"/>
+/// operations it also supports <see cref="IUpdatablePriorityQueue{T}"/>, <see cref="IPeekKthPriorityQueue{T}"/> and
+/// <see cref="IMergeablePriorityQueue{T, TPQTarget}"/>.
 /// operations.
 /// </summary>
 /// <typeparam name="T"><inheritdoc cref="IPriorityQueue{T}"/></typeparam>
@@ -27,7 +28,8 @@ namespace MoreStructures.PriorityQueues.ArrayList;
 ///     solutions.
 ///     </para>
 /// </remarks>
-public class ArrayListPriorityQueue<T> : IUpdatablePriorityQueue<T>, IPeekKthPriorityQueue<T>
+public class ArrayListPriorityQueue<T> 
+    : IUpdatablePriorityQueue<T>, IPeekKthPriorityQueue<T>, IMergeablePriorityQueue<T, ArrayListPriorityQueue<T>>
     where T : notnull
 {
     private int _currentPushTimestamp = 0;
@@ -282,5 +284,25 @@ public class ArrayListPriorityQueue<T> : IUpdatablePriorityQueue<T>, IPeekKthPri
         currentPivotIndex++;
         (list[currentPivotIndex], list[end]) = (list[end], list[currentPivotIndex]);
         return currentPivotIndex;
+    }
+
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
+    /// <remarks>
+    /// Just pushes all items in the <paramref name="targetPriorityQueue"/> via <see cref="Push(T, int)"/>, which 
+    /// appends each item to the end. 
+    /// <br/>
+    /// Then clears the content of the <paramref name="targetPriorityQueue"/>, to respect the contract defined by
+    /// <see cref="IMergeablePriorityQueue{T, TPQTarget}"/>.
+    /// <br/>
+    /// Because the underlying structures of both source and target is an array list, there isn't an effective strategy
+    /// for achieving sub-linear performance, and <see cref="Push(T, int)"/> gives the optimal linear performance.
+    /// <br/>
+    /// Time and Space Complexity are O(m), where m is the number of items in the target.
+    /// </remarks>
+    public void Merge(ArrayListPriorityQueue<T> targetPriorityQueue)
+    {
+        foreach (var prioritizedItem in targetPriorityQueue.Items)
+            Push(prioritizedItem.Item, prioritizedItem.Priority);
+        targetPriorityQueue.Items.Clear();
     }
 }
