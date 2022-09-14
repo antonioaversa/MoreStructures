@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IPeekKthPriorityQueue&lt;T&gt;
+    <title>Interface IMergeablePriorityQueue&lt;T, TPQTarget&gt;
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IPeekKthPriorityQueue&lt;T&gt;
+    <meta name="title" content="Interface IMergeablePriorityQueue&lt;T, TPQTarget&gt;
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -78,12 +78,13 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MoreStructures.PriorityQueues.IPeekKthPriorityQueue`1">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.PriorityQueues.IMergeablePriorityQueue`2">
   
   
-  <h1 id="MoreStructures_PriorityQueues_IPeekKthPriorityQueue_1" data-uid="MoreStructures.PriorityQueues.IPeekKthPriorityQueue`1" class="text-break">Interface IPeekKthPriorityQueue&lt;T&gt;
+  <h1 id="MoreStructures_PriorityQueues_IMergeablePriorityQueue_2" data-uid="MoreStructures.PriorityQueues.IMergeablePriorityQueue`2" class="text-break">Interface IMergeablePriorityQueue&lt;T, TPQTarget&gt;
   </h1>
-  <div class="markdown level0 summary"><p>An <a class="xref" href="MoreStructures.PriorityQueues.IPriorityQueue-1.html">IPriorityQueue&lt;T&gt;</a> which supports efficient peek of the item stored in the queue with the k-highest
+  <div class="markdown level0 summary"><p>An <a class="xref" href="MoreStructures.PriorityQueues.IPriorityQueue-1.html">IPriorityQueue&lt;T&gt;</a> which supports efficient merging of the items from a second
+<a class="xref" href="MoreStructures.PriorityQueues.IMergeablePriorityQueue-2.html">IMergeablePriorityQueue&lt;T, TPQTarget&gt;</a> of type <code data-dev-comment-type="typeparamref" class="typeparamref">TPQTarget</code>.
 priority.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -104,9 +105,9 @@ priority.</p>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.PriorityQueues.html">MoreStructures.PriorityQueues</a></h6>
   <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
-  <h5 id="MoreStructures_PriorityQueues_IPeekKthPriorityQueue_1_syntax">Syntax</h5>
+  <h5 id="MoreStructures_PriorityQueues_IMergeablePriorityQueue_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IPeekKthPriorityQueue&lt;T&gt; : IPriorityQueue&lt;T&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IMergeablePriorityQueue&lt;T, TPQTarget&gt; : IPriorityQueue&lt;T&gt; where TPQTarget : IMergeablePriorityQueue&lt;T, TPQTarget&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,35 +122,76 @@ priority.</p>
         <td><span class="parametername">T</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><span class="parametername">TPQTarget</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
-  <h5 id="MoreStructures_PriorityQueues_IPeekKthPriorityQueue_1_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p><a class="xref" href="MoreStructures.PriorityQueues.IPeekKthPriorityQueue-1.html#MoreStructures_PriorityQueues_IPeekKthPriorityQueue_1_PeekKth_System_Int32_">PeekKth(Int32)</a> can be implemented in a general way by copying the entire data structure and then
-performing k <a class="xref" href="MoreStructures.PriorityQueues.IPriorityQueue-1.html#MoreStructures_PriorityQueues_IPriorityQueue_1_Pop">Pop()</a>, followed by a single <a class="xref" href="MoreStructures.PriorityQueues.IPriorityQueue-1.html#MoreStructures_PriorityQueues_IPriorityQueue_1_Peek">Peek()</a>.
+  <h5 id="MoreStructures_PriorityQueues_IMergeablePriorityQueue_2_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+ADVANTAGES AND DISADVANTAGES
 <br>
-This approach is however expensive both in time and space, having O(n) Time and Space Complexity for all known
-implementation of <a class="xref" href="MoreStructures.PriorityQueues.IPriorityQueue-1.html">IPriorityQueue&lt;T&gt;</a>..
+- <a class="xref" href="MoreStructures.PriorityQueues.IMergeablePriorityQueue-2.html#MoreStructures_PriorityQueues_IMergeablePriorityQueue_2_Merge__1_">Merge(TPQTarget)</a> from a source S can be implemented in a general way by copying the entire target data 
+  structure T and then performing m <a class="xref" href="MoreStructures.PriorityQueues.IPriorityQueue-1.html#MoreStructures_PriorityQueues_IPriorityQueue_1_Pop">Pop()</a>, where m is the number of items in T, 
+  each followed by a <a class="xref" href="MoreStructures.PriorityQueues.IPriorityQueue-1.html#MoreStructures_PriorityQueues_IPriorityQueue_1_Push__0_System_Int32_">Push(T, Int32)</a> into S.
 <br>
-Implementing this interface can take advantage of the properties of the underlying data structure implementing the
-priority queue, and providing better-than-linear performance.</p>
+- This approach has the advantage of being general and not mutating the target structure when performing the 
+merge. 
+<br>
+-  It is, however, expensive both in time and space, having O(m * log(m)) Time and O(n) Space Complexity for
+all known implementation of <a class="xref" href="MoreStructures.PriorityQueues.IPriorityQueue-1.html">IPriorityQueue&lt;T&gt;</a>.
+<br>
+- Implementing this interface can take advantage of the properties of the underlying data structure 
+implementing the priority queue, and providing better performance.
+</p>
+<p>
+COMPLEXITY
+<br>
+- Notice that linear performance can be achieved by basic implementations of <a class="xref" href="MoreStructures.PriorityQueues.IPriorityQueue-1.html">IPriorityQueue&lt;T&gt;</a>, 
+  such as <a class="xref" href="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue-1.html">ArrayListPriorityQueue&lt;T&gt;</a>, by just concatenating the underlying data 
+  structures.
+<br>
+- In cases such as <a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html">BinaryHeapPriorityQueue&lt;T&gt;</a>, after concatenating, heap constraints 
+have to be restored. However, this operation too, can be performed in linear time.
+<br>
+- An implementation based on linked lists would perform the merge in O(1) time, by just concatenating the two 
+underlying structures. That is a the cost of all subsequent operations on the queue.
+<br>
+- Implementations based on forest of heap trees can do it in O(log(n)) or even O(1), when lazy, and keep 
+logarithmic time for all operations on the resulting queue.
+</p>
+<p>
+SIDE EFFECTS
+<br>
+- However, for sub-linear performance to be achieved, both with linked lists and forests of heaps, some form of
+<strong>structure sharing</strong> between source and target is required, because replicating the content of the target
+would take linear time.
+<br>
+- To avoid interferences between the queues after merge, the target is emptied out during merge. 
+<br>
+- This is an operation which usually takes sub-linear time, so it doesn&apos;t affect the overall complexity of the 
+merge operation, and avoid post-merge side effects between the queues.
+</p>
 </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_IPeekKthPriorityQueue_1_PeekKth_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.IPeekKthPriorityQueue%601.PeekKth(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_IMergeablePriorityQueue_2_Merge__1_.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.IMergeablePriorityQueue%602.Merge(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/IPeekKthPriorityQueue.cs/#L27">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/IMergeablePriorityQueue.cs/#L68">View Source</a>
   </span>
-  <a id="MoreStructures_PriorityQueues_IPeekKthPriorityQueue_1_PeekKth_" data-uid="MoreStructures.PriorityQueues.IPeekKthPriorityQueue`1.PeekKth*"></a>
-  <h4 id="MoreStructures_PriorityQueues_IPeekKthPriorityQueue_1_PeekKth_System_Int32_" data-uid="MoreStructures.PriorityQueues.IPeekKthPriorityQueue`1.PeekKth(System.Int32)">PeekKth(Int32)</h4>
-  <div class="markdown level1 summary"><p>Retrieves the item of the queue with highest priority, without extracting any of the items in the queue.</p>
+  <a id="MoreStructures_PriorityQueues_IMergeablePriorityQueue_2_Merge_" data-uid="MoreStructures.PriorityQueues.IMergeablePriorityQueue`2.Merge*"></a>
+  <h4 id="MoreStructures_PriorityQueues_IMergeablePriorityQueue_2_Merge__1_" data-uid="MoreStructures.PriorityQueues.IMergeablePriorityQueue`2.Merge(`1)">Merge(TPQTarget)</h4>
+  <div class="markdown level1 summary"><p>Merges the <code data-dev-comment-type="paramref" class="paramref">targetPriorityQueue</code> into this priority queue, emptying out the content of
+the <code data-dev-comment-type="paramref" class="paramref">targetPriorityQueue</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">PrioritizedItem&lt;T&gt;? PeekKth(int k)</code></pre>
+    <pre><code class="lang-csharp hljs">void Merge(TPQTarget targetPriorityQueue)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -162,31 +204,15 @@ priority queue, and providing better-than-linear performance.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">k</span></td>
-        <td><p>The non-negative priority rank: 0 means highest priority, 1 second highest, etc.</p>
+        <td><span class="xref">TPQTarget</span></td>
+        <td><span class="parametername">targetPriorityQueue</span></td>
+        <td><p>The <a class="xref" href="MoreStructures.PriorityQueues.IMergeablePriorityQueue-2.html">IMergeablePriorityQueue&lt;T, TPQTarget&gt;</a>, to take the items from.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">MoreStructures.PriorityQueues.PrioritizedItem</span>&lt;T&gt;&gt;</td>
-        <td><p>The <span class="xref">MoreStructures.PriorityQueues.PrioritizedItem&lt;T&gt;</span> with k-th highest priority if any. Null otherwise.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="MoreStructures_PriorityQueues_IPeekKthPriorityQueue_1_PeekKth_System_Int32__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p><a class="xref" href="MoreStructures.PriorityQueues.IPeekKthPriorityQueue-1.html#MoreStructures_PriorityQueues_IPeekKthPriorityQueue_1_PeekKth_System_Int32_">PeekKth(Int32)</a> with <code>k == 0</code> is equivalent to <a class="xref" href="MoreStructures.PriorityQueues.IPriorityQueue-1.html#MoreStructures_PriorityQueues_IPriorityQueue_1_Peek">Peek()</a>.</p>
+  <h5 id="MoreStructures_PriorityQueues_IMergeablePriorityQueue_2_Merge__1__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.PriorityQueues.IMergeablePriorityQueue`2"></inheritdoc></p>
 </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
@@ -200,10 +226,10 @@ priority queue, and providing better-than-linear performance.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_IPeekKthPriorityQueue_1.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.IPeekKthPriorityQueue%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_IMergeablePriorityQueue_2.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.IMergeablePriorityQueue%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/IPeekKthPriorityQueue.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/IMergeablePriorityQueue.cs/#L54" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
