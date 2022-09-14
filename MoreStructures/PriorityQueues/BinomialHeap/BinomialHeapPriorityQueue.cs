@@ -4,7 +4,8 @@ using System.Collections;
 namespace MoreStructures.PriorityQueues.BinomialHeap;
 
 /// <summary>
-/// An <see cref="IPriorityQueue{T}"/> implementation based on a Binomial Max Heap of its items.
+/// An <see cref="IPriorityQueue{T}"/> implementation based on a Binomial Max Heap of its items. It also supports
+/// <see cref="IMergeablePriorityQueue{T, TPQTarget}"/> operations.
 /// </summary>
 /// <typeparam name="T"><inheritdoc cref="IPriorityQueue{T}"/></typeparam>
 /// <remarks>
@@ -52,7 +53,8 @@ namespace MoreStructures.PriorityQueues.BinomialHeap;
 ///       a logarithmic operation.
 ///     </para>
 /// </remarks>
-public partial class BinomialHeapPriorityQueue<T> : IPriorityQueue<T>
+public partial class BinomialHeapPriorityQueue<T> 
+    : IPriorityQueue<T>, IMergeablePriorityQueue<T, BinomialHeapPriorityQueue<T>>
     where T : notnull
 {
     /// <summary>
@@ -277,6 +279,80 @@ public partial class BinomialHeapPriorityQueue<T> : IPriorityQueue<T>
         return oldRoot.PrioritizedItem;
     }
 
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
+    /// <remarks>
+    ///     <para id="algorithm">
+    ///     ALGORITHM
+    ///     <br/>
+    ///     - Iterates over all the roots of the target heap.
+    ///       <br/>
+    ///     - Add each root R to the linked list of roots of the source heap and increases the total items count of 
+    ///       the source heap by the number of items in R, which can be calculated without traversing, from the number 
+    ///       of immediate children c of R as 2^c, being R a binomial tree.
+    ///       tree.
+    ///       <br/>
+    ///     - For each added root, <see cref=" RaiseRootMerged(TreeNode{T})"/> is invoked.
+    ///       <br/>
+    ///     - Then binomial heap shape is restored by merging together all trees with the same degree and a new linear 
+    ///       scan of the root is done, to update the reference to the root with highest priority, exactly as in 
+    ///       <see cref="Push(T, int)"/> and <see cref="Pop"/>. 
+    ///     </para>
+    ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
+    ///     - For this analysis, events, and in particular <see cref="RaiseRootMerged(TreeNode{T})"/>, are considered
+    ///       O(1) both in Time and Space Complexity.
+    ///       <br/>
+    ///     - The number of roots of the target heap is logarithmic with the number m of items in the target heap.
+    ///       <br/>
+    ///     - Adding each root R of the target heap to the forest of the source heap and increasing the items count are
+    ///       both constant-time operations.
+    ///       <br/>
+    ///     - Housekeeping operations, done after that on the source heap, take logarithmic time, as explained in 
+    ///       <see cref="Pop"/>.
+    ///       <br/>
+    ///     - Clearing the target is also a constant-time operation.
+    ///       <br/>
+    ///     - Therefore, Time and Space Complexity are O(log(m)).
+    ///     </para>
+    /// </remarks>
+    public virtual void Merge(BinomialHeapPriorityQueue<T> targetPriorityQueue)
+    {
+        foreach (var targetRoot in targetPriorityQueue.Roots)
+        {
+            AttachToRoots(targetRoot);
+            ItemsCount += (int)Math.Pow(2, targetRoot.Children.Count);
+            RaiseRootMerged(targetRoot);
+        }
+
+        MergeEquiDegreeTrees();
+        UpdateMaxRootsListNode();
+
+        targetPriorityQueue.Clear();
+    }
+
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
+    /// <remarks>
+    /// First, calls <see cref="RaiseItemsClearing"/>.
+    /// <br/>
+    /// Then, removes all the trees from the forest, reset to the items count to 0 and set the reference to the 
+    /// max priority root to <see langword="null"/>.
+    /// <br/>
+    /// The internal push timestamp counter is not reset. Therefore, new pushes after the clear will receive push
+    /// timestamps strictly higher than the ones assigned to the items in the queue before the clear.
+    /// <br/>
+    /// Time and Space Complexity are O(1), with <see cref="RaiseItemsClearing"/> assumed to be O(1).
+    /// </remarks>
+    public virtual void Clear()
+    {
+        RaiseItemsClearing();
+
+        Roots.Clear();
+
+        ItemsCount = 0;
+        MaxRootsListNode = null;
+    }
+
     #endregion
 
     #region Hooks
@@ -285,6 +361,9 @@ public partial class BinomialHeapPriorityQueue<T> : IPriorityQueue<T>
     /// Invoked just after an item has been pushed into the heap (as a root).
     /// </summary>
     /// <param name="newRoot">The <see cref="TreeNode{T}"/> added to the heap.</param>
+    /// <remarks>
+    /// Not invoked on merging, for which <see cref="RaiseRootMerged(TreeNode{T})"/> is invoked instead.
+    /// </remarks>
     protected virtual void RaiseItemPushed(TreeNode<T> newRoot) { }
 
     /// <summary>
@@ -292,6 +371,17 @@ public partial class BinomialHeapPriorityQueue<T> : IPriorityQueue<T>
     /// </summary>
     /// <param name="root">The <see cref="TreeNode{T}"/> about to be removed from the heap.</param>
     protected virtual void RaiseItemPopping(TreeNode<T> root) { }
+
+    /// <summary>
+    /// Invoked just before the all the items in the heap are wiped out.
+    /// </summary>
+    protected virtual void RaiseItemsClearing() { }
+
+    /// <summary>
+    /// Invoked just after an heap tree has been added to the forest (root and all its descendants).
+    /// </summary>
+    /// <param name="root">The root <see cref="TreeNode{T}"/> of the heap tree added to the forest.</param>
+    protected virtual void RaiseRootMerged(TreeNode<T> root) { }
 
     #endregion
 
