@@ -79,8 +79,8 @@ namespace MoreStructures.PriorityQueues.BinaryHeap;
 ///      - Therefore a <b>total strict order</b> can be imposed.
 ///     </para>
 /// </remarks>
-public class BinaryHeapPriorityQueue<T> : IPeekKthPriorityQueue<T>, 
-    IMergeablePriorityQueue<T, BinaryHeapPriorityQueue<T>>
+public class BinaryHeapPriorityQueue<T> 
+    : IPeekKthPriorityQueue<T>, IMergeablePriorityQueue<T, BinaryHeapPriorityQueue<T>>
     where T : notnull
 {
     /// <summary>

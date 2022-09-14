@@ -54,7 +54,7 @@ namespace MoreStructures.PriorityQueues.BinomialHeap;
 ///     </para>
 /// </remarks>
 public partial class BinomialHeapPriorityQueue<T> 
-    : IPriorityQueue<T>, IMergeablePriorityQueue<T, BinomialHeapPriorityQueue<T>>
+    : IMergeablePriorityQueue<T, BinomialHeapPriorityQueue<T>>
     where T : notnull
 {
     /// <summary>
