@@ -77,9 +77,10 @@ public class ArrayListPriorityQueueTests_AsPeekKthQueue : PeekKthPriorityQueueTe
 }
 
 [TestClass]
-public class ArrayListPriorityQueueTests_AsMergeable : MergeablePriorityQueueTests<ArrayListPriorityQueue<int>>
+public class ArrayListPriorityQueueTests_AsMergeableAndUpdatable 
+    : MergeableAndUpdatablePriorityQueueTests<ArrayListPriorityQueue<int>>
 {
-    public ArrayListPriorityQueueTests_AsMergeable() : base(
+    public ArrayListPriorityQueueTests_AsMergeableAndUpdatable() : base(
         () => new ArrayListPriorityQueue<int>())
     {
     }

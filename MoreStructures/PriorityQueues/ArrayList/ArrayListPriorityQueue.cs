@@ -309,6 +309,17 @@ public class ArrayListPriorityQueue<T>
     {
         foreach (var prioritizedItem in targetPriorityQueue.Items)
             Push(prioritizedItem.Item, prioritizedItem.Priority);
-        targetPriorityQueue.Items.Clear();
+        targetPriorityQueue.Clear();
+    }
+
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
+    /// <remarks>
+    /// Just clears the underlying array list.
+    /// <br/>
+    /// Time and Space Complexity is O(1).
+    /// </remarks>
+    public void Clear()
+    {
+        Items.Clear();
     }
 }
