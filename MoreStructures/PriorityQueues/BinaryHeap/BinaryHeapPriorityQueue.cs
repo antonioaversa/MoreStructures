@@ -5,7 +5,8 @@ namespace MoreStructures.PriorityQueues.BinaryHeap;
 
 /// <summary>
 /// An <see cref="IPriorityQueue{T}"/> implementation based on a Binary Max Heap of its items. On top of basic 
-/// operations it also supports <see cref="IPeekKthPriorityQueue{T}"/>.
+/// operations it also supports <see cref="IPeekKthPriorityQueue{T}"/> and 
+/// <see cref="IMergeablePriorityQueue{T, TPQTarget}"/>.
 /// </summary>
 /// <typeparam name="T"><inheritdoc cref="IPriorityQueue{T}"/></typeparam>
 /// <remarks>
@@ -25,6 +26,11 @@ namespace MoreStructures.PriorityQueues.BinaryHeap;
 ///       <br/>
 ///     - Given the "exponentially better" runtime of logarithmic operations w.r.t. linear ones, such compromise makes
 ///       sense for most scenarios.
+///       <br/>
+///     - Merging two Binary Max Heap structures, however, still requires linear time. If merging performance is
+///       critical, a more advanced tree-based implementation, such as 
+///       <see cref="BinomialHeap.BinomialHeapPriorityQueue{T}"/>, 
+///       <see cref="FibonacciHeap.FibonacciHeapPriorityQueue{T}"/> and their derivations, should be used instead.
 ///     </para>
 ///     <para id="heap-representation">
 ///     BINARY MAX HEAP REPRESENTATION
@@ -73,7 +79,8 @@ namespace MoreStructures.PriorityQueues.BinaryHeap;
 ///      - Therefore a <b>total strict order</b> can be imposed.
 ///     </para>
 /// </remarks>
-public class BinaryHeapPriorityQueue<T> : IPeekKthPriorityQueue<T>
+public class BinaryHeapPriorityQueue<T> : IPeekKthPriorityQueue<T>, 
+    IMergeablePriorityQueue<T, BinaryHeapPriorityQueue<T>>
     where T : notnull
 {
     /// <summary>
@@ -317,6 +324,68 @@ public class BinaryHeapPriorityQueue<T> : IPeekKthPriorityQueue<T>
         }
 
         return Items[candidates.Peek().Item];
+    }
+
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
+    /// <remarks>
+    ///     <para id="algorithm">
+    ///     ALGORITHM
+    ///     <br/>
+    ///     - Pushing all items in the <paramref name="targetPriorityQueue"/> via <see cref="Push(T, int)"/>, would 
+    ///       result in O(m * log(m)) Time Complexity, where m is the number of items in the
+    ///       <paramref name="targetPriorityQueue"/>.
+    ///       <br/>
+    ///     - Instead, each of the m items from the <paramref name="targetPriorityQueue"/> is added to the underlying 
+    ///       array list of this queue, at the end.
+    ///       <br/>
+    ///     - Then, the content of <paramref name="targetPriorityQueue"/> is cleared, to respect the contract defined 
+    ///       by <see cref="IMergeablePriorityQueue{T, TPQTarget}"/>.
+    ///       <br/>
+    ///     - Finally, the heap property is restored globally for all items in the underlying array list, by sifting
+    ///       down all items in the first half of the list, proceeding backwards from the middle of the list to its
+    ///       first item.
+    ///       <br/>
+    ///     - Such global sift down is required for the first half of the items only, because the second half only 
+    ///       contains leaves of the tree, for which a sift down would do nothing (i.e. the heap property is already 
+    ///       satisfied).
+    ///     </para>
+    ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
+    ///     - Appending m items has a linear cost over m.
+    ///       <br/>
+    ///     - Clearing the target only takes constant time.
+    ///       <br/>
+    ///     - Restoring the heap property globally would seem to take n / 2 * log(n), where n is the total number of 
+    ///       items in this queue, after the merge: the number of items to sift down plus the cost of sifting down the 
+    ///       tree. That would give O(n * log(n)) complexity: not a real improvement over the naive approach of pushing
+    ///       n items.
+    ///       <br/>
+    ///     - However, the length of the path to sift down is not as big as the entire height of the tree. Instead, the
+    ///       closer the starting node is to the leave, the smaller it becomes: leaves have sift down paths of length
+    ///       0, their parent of length 1, etc., up to the root, which has sift down path of length equal to the height
+    ///       of the tree.
+    ///       <br/>
+    ///     - A key observation is that in a complete and full tree there are more leaves than all nodes in other 
+    ///       levels combined, and that applies to all levels w.r.t. all smaller levels.
+    ///       <br/>
+    ///     - So, sift down will cost less for way more nodes, resulting in overall O(n) Time Complexity.
+    ///       <br/>
+    ///     - Space Complexity is O(m), since m items are added to the list storing the items of this queue.
+    ///     </para>
+    /// </remarks>
+    public virtual void Merge(BinaryHeapPriorityQueue<T> targetPriorityQueue)
+    {
+        foreach (var prioritizedItem in targetPriorityQueue.Items)
+        {
+            Items.Add(new(prioritizedItem.Item, prioritizedItem.Priority, CurrentPushTimestamp));
+            CurrentPushTimestamp++;
+        }
+
+        targetPriorityQueue.Items.Clear();
+
+        for (var i = Items.Count / 2 + 1; i >= 0; i--)
+            SiftDown(i);
     }
 
     #endregion

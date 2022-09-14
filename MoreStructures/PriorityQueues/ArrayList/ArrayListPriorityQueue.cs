@@ -19,7 +19,13 @@ namespace MoreStructures.PriorityQueues.ArrayList;
 ///     <br/>
 ///     If insertion performance is the only highly critical operation, to the point that a constant time performance 
 ///     is the only acceptable runtime, and not even the logarithmic time insertion of a tree-based solution can be 
-///     applied, this implementation may be the best choice.
+///     applied, this implementation may be the best choice, although lazy approaches such as 
+///     <see cref="FibonacciHeap.FibonacciHeapPriorityQueue{T}"/> can provide constant-time insertion performance, 
+///     while keeping sub-linear complexity for all other operations.
+///     <br/>
+///     If merging performance is also important, a solution based on linked lists can offer constant-time merging and
+///     still similar simplicity of implementation, same insertion performance and same tradeoff in terms of the
+///     complexity of all other operations.
 ///     <br/>
 ///     When data extraction performance is also a concern, or the main concern, a more balanced solution in terms of
 ///     complexity of its operations should be preferred.
