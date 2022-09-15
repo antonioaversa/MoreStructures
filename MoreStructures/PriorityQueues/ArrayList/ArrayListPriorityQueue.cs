@@ -38,7 +38,7 @@ public class ArrayListPriorityQueue<T>
     : IUpdatablePriorityQueue<T>, IPeekKthPriorityQueue<T>, IMergeablePriorityQueue<T, ArrayListPriorityQueue<T>>
     where T : notnull
 {
-    private PushTimestampEra _currentEra = new(0);
+    private readonly PushTimestampEra _currentEra = new(0);
     private int _currentPushTimestamp = 0;
     private List<PrioritizedItem<T>> Items { get; }
 
