@@ -67,6 +67,21 @@ public abstract class MergeablePriorityQueueTests<TPriorityQueue>
     }
 
     [TestMethod]
+    public void Merge_WorksWithManyItems()
+    {
+        var numberOfItems = 2048;
+        var source = Builder();
+        for (var i = 0; i < numberOfItems; i += 2)
+            source.Push(i, i % 7);
+        var target = Builder();
+        for (var i = 1; i < numberOfItems; i += 2)
+            target.Push(i, i % 5);
+        source.Merge(target);
+        Assert.AreEqual(numberOfItems, source.Count);
+        Assert.IsTrue(Enumerable.Range(0, numberOfItems).SequenceEqual(source.OrderBy(i => i)));
+    }
+
+    [TestMethod]
     public void Merge_WorksWithDuplicates()
     {
         var source = Builder();
@@ -206,7 +221,7 @@ public abstract class MergeablePriorityQueueTests<TPriorityQueue>
     }
 
     [TestMethod]
-    public void Clear_WipesOutAllItems()
+    public void Clear_WipesAllItemsOut()
     {
         var queue = Builder();
         queue.Push(1, 2);

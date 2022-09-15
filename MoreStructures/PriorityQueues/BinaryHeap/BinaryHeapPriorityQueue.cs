@@ -79,8 +79,8 @@ namespace MoreStructures.PriorityQueues.BinaryHeap;
 ///      - Therefore a <b>total strict order</b> can be imposed.
 ///     </para>
 /// </remarks>
-public class BinaryHeapPriorityQueue<T> : IPeekKthPriorityQueue<T>, 
-    IMergeablePriorityQueue<T, BinaryHeapPriorityQueue<T>>
+public class BinaryHeapPriorityQueue<T> 
+    : IPeekKthPriorityQueue<T>, IMergeablePriorityQueue<T, BinaryHeapPriorityQueue<T>>
     where T : notnull
 {
     /// <summary>
@@ -393,7 +393,10 @@ public class BinaryHeapPriorityQueue<T> : IPeekKthPriorityQueue<T>,
     /// <remarks>
     /// Just clears the underlying array list.
     /// <br/>
-    /// Time and Space Complexity is O(1).
+    /// The internal push timestamp counter is not reset. Therefore, new pushes after the clear will receive push
+    /// timestamps strictly higher than the ones assigned to the items in the queue before the clear.
+    /// <br/>
+    /// Time and Space Complexity are O(1).
     /// </remarks>
     public virtual void Clear()
     {

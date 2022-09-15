@@ -12,3 +12,14 @@ public class BinomialHeapPriorityQueueTests_AsBasicQueue : PriorityQueueTests
     {
     }
 }
+
+[TestClass]
+public class BinomialHeapPriorityQueueTests_AsMergeableQueue 
+    : MergeablePriorityQueueTests<BinomialHeapPriorityQueue<int>>
+{
+    public BinomialHeapPriorityQueueTests_AsMergeableQueue() : base(
+        () => new BinomialHeapPriorityQueue<int>())
+    {
+    }
+}
+
