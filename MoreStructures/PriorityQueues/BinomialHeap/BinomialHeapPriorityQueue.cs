@@ -71,24 +71,7 @@ public partial class BinomialHeapPriorityQueue<T>
     /// Reference to the tree root in the forest with the highest priority. Makes Peek O(1).
     /// </summary>
     protected LinkedListNode<TreeNode<T>>? MaxRootsListNode { get; set; }
-
-    /// <summary>
-    /// The era in which all push timestamps created by this instance (e.g. on push) leave in.
-    /// </summary>
-    /// <remarks>
-    /// Depending on the implementation, may be relevant in merging.
-    /// </remarks>
-    protected PushTimestampEra CurrentEra { get; set; } = new(0);
-
-    /// <summary>
-    /// Whether items in this queue span multiple push timestamp eras, i.e. they potentially point to multiple 
-    /// instances of <see cref="PushTimestampEra"/>.
-    /// </summary>
-    /// <remarks>
-    /// Set on the source queue of a <see cref="MergeFrom(BinomialHeapPriorityQueue{T})"/> operation, since part of the
-    /// items come from the target queue, and multiple eras are used to impose strict order in sub-linear time.
-    /// </remarks>
-    protected bool SpansMultipleEras { get; set; } = false;
+    
 
     /// <summary>
     /// A non-negative, zero-based, monotonically strictly increasing counter, incremented at every insertion into this 
@@ -97,15 +80,28 @@ public partial class BinomialHeapPriorityQueue<T>
     protected int CurrentPushTimestamp { get; set; }
 
     /// <summary>
+    /// The eras in which all push timestamps created by this instance (e.g. on push), or merged into this instance,
+    /// leave in. The last in the list is the current one.
+    /// </summary>
+    /// <remarks>
+    /// By default, initialized to a singleton list containing the era "0".
+    /// <br/>
+    /// Depending on the implementation, may be relevant in merging.
+    /// </remarks>
+    protected IList<PushTimestampEra> PushTimestampEras { get; }
+
+
+    /// <summary>
     /// Builds an empty priority queue.
     /// </summary>
     public BinomialHeapPriorityQueue()
     {
         Roots = new();
-
         ItemsCount = 0;
         MaxRootsListNode = null;
+
         CurrentPushTimestamp = 0;
+        PushTimestampEras = new List<PushTimestampEra>() { new(0) };
     }
 
     /// <summary>
@@ -115,8 +111,11 @@ public partial class BinomialHeapPriorityQueue<T>
     /// <remarks>
     /// Doesn't copy the items themselves, it only deep-copies the internal structure of the <paramref name="source"/>
     /// queue.
+    /// <br/>
+    /// Warning: push timestamp eras are shared between items of the two queues! To be used only for
+    /// <see cref="GetEnumerator"/> support.
     /// </remarks>
-    public BinomialHeapPriorityQueue(BinomialHeapPriorityQueue<T> source)
+    protected BinomialHeapPriorityQueue(BinomialHeapPriorityQueue<T> source)
     {
         Roots = new LinkedList<TreeNode<T>>(source.Roots.Select(r => r.DeepCopy()));
         foreach (var rootsListNode in Roots.AsNodes())
@@ -125,6 +124,7 @@ public partial class BinomialHeapPriorityQueue<T>
         ItemsCount = source.ItemsCount;
         UpdateMaxRootsListNode();
         CurrentPushTimestamp = source.CurrentPushTimestamp;
+        PushTimestampEras = source.PushTimestampEras.Select(e => e with { }).ToList();
     }
 
     #region Public API
@@ -218,7 +218,7 @@ public partial class BinomialHeapPriorityQueue<T>
     /// </remarks> 
     public virtual void Push(T item, int priority)
     {
-        var prioritizedItem = new PrioritizedItem<T>(item, priority, CurrentPushTimestamp++, CurrentEra);
+        var prioritizedItem = new PrioritizedItem<T>(item, priority, CurrentPushTimestamp++, PushTimestampEras[^1]);
         var newRoot = new TreeNode<T> { PrioritizedItem = prioritizedItem };
         AddRoot(newRoot);
         RaiseItemPushed(newRoot);
@@ -306,18 +306,18 @@ public partial class BinomialHeapPriorityQueue<T>
     ///       conflicting timestamps from the two queues without scanning through all items, which would take a linear
     ///       amount of time.
     ///       <br/>
-    ///     - In order to do so, the max push timestamp era M, between the source and the target, is calculated. 
+    ///     - In order to do so, the max push timestamp era M, between the current era of the source and the current
+    ///       era of the target (the last in the list of eras of each), is calculated. 
     ///       <br/>
-    ///     - Then, the current push timestamp era of the target is <b>mutated</b> (i.e. by a set accessor on the 
-    ///       instance) to M + 1, so that all items of the target are considered as added after all current items of 
-    ///       the source.
+    ///     - Then, all the push timestamp eras of the target are <b>mutated</b> (i.e. by a set accessor on the 
+    ///       instance) in order (from the first = the older, to the last = the most recent) to M + 1, M + 2, ...
     ///       <br/>
-    ///     - An internal flag is set on the source, to indicate that its items come from multiple push timestamp eras,
-    ///       and that the source queue won't be usable as target of a merge.
+    ///     - This way all items of the target are considered as added after all current items of the source, and keep
+    ///       the order they had in the target between themselves, before the merge.
     ///       <br/>
-    ///     - Then, the current push timestamp era of the source is <b>replaced</b> (i.e. new instance) with a new
-    ///       push timestamp era set to M + 2, so that all items of the source coming after the merge are considered
-    ///       as added after all items of the target added during merge.
+    ///     - Then, a new current push timestamp era of the source is <b>added</b> (i.e. new instance) with a new
+    ///       push timestamp era set to M + N + 1, so that all items of the source coming after the merge are 
+    ///       considered as added after all items of the target added during merge.
     ///       <br/>
     ///     - After that, the algorithm iterates over all the roots of the target heap.
     ///       <br/>
@@ -335,8 +335,8 @@ public partial class BinomialHeapPriorityQueue<T>
     ///     - To separate avoid interferences between this queue and the <paramref name="targetPriorityQueue"/>, the
     ///       <paramref name="targetPriorityQueue"/> is cleared of all its items. 
     ///       <br/>
-    ///     - Its current push timestamp is left unchanged and the push timestamp era is set to a new instance with the
-    ///       same era value it had before the merge. This way all new items in the 
+    ///     - Its current push timestamp is left unchanged and the push timestamp eras are cleared and set to a new
+    ///       single instance with the same era value it had before the merge. This way all new items in the 
     ///       <paramref name="targetPriorityQueue"/> will share the reference to the new era object, and wont interfere
     ///       with the era object of all items moved to this priority queue.
     ///     </para>
@@ -361,18 +361,17 @@ public partial class BinomialHeapPriorityQueue<T>
     /// </remarks>
     public virtual void MergeFrom(BinomialHeapPriorityQueue<T> targetPriorityQueue)
     {
-        if (targetPriorityQueue.SpansMultipleEras)
-            throw new NotSupportedException(
-                $"{nameof(targetPriorityQueue)} spans multiple push timestamp eras, and cannot be used as target " +
-                $"unless it is cleared of all its items.");
+        var previousSourceEra = PushTimestampEras[^1].Era;
+        var previousTargetEra = targetPriorityQueue.PushTimestampEras[^1].Era;
+        var previousNextEra = Math.Max(previousSourceEra, previousTargetEra) + 1;
 
-        var previousSourceEra = CurrentEra.Era;
-        var previousTargetEra = targetPriorityQueue.CurrentEra.Era;
-        var previousMaxEra = Math.Max(previousSourceEra, previousTargetEra);
-        
-        targetPriorityQueue.CurrentEra.Era = previousMaxEra + 1;
-        CurrentEra = new PushTimestampEra(previousMaxEra + 2);
-        SpansMultipleEras = true;
+        foreach (var targetPushstampEra in targetPriorityQueue.PushTimestampEras)
+        {
+            targetPushstampEra.Era = previousNextEra++;
+            PushTimestampEras.Add(targetPushstampEra);
+        }
+
+        PushTimestampEras.Add(new PushTimestampEra(previousNextEra));
         CurrentPushTimestamp = 0;
 
         foreach (var targetRoot in targetPriorityQueue.Roots)
@@ -385,7 +384,8 @@ public partial class BinomialHeapPriorityQueue<T>
         MergeEquiDegreeTrees();
         UpdateMaxRootsListNode();
 
-        targetPriorityQueue.CurrentEra = new PushTimestampEra(previousTargetEra);
+        targetPriorityQueue.PushTimestampEras.Clear();
+        targetPriorityQueue.PushTimestampEras.Add(new PushTimestampEra(previousTargetEra));
         targetPriorityQueue.Clear();
     }
 
@@ -409,7 +409,6 @@ public partial class BinomialHeapPriorityQueue<T>
 
         ItemsCount = 0;
         MaxRootsListNode = null;
-        SpansMultipleEras = false;
     }
 
     #endregion

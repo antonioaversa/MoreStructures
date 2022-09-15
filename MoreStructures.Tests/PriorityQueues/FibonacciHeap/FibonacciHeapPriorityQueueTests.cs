@@ -13,5 +13,15 @@ public class FibonacciHeapPriorityQueueTests_AsBasicQueue : PriorityQueueTests
     }
 }
 
+[TestClass]
+public class FibonacciHeapPriorityQueueTests_AsMergeableQueue
+    : MergeablePriorityQueueTests<FibonacciHeapPriorityQueue<int>>
+{
+    public FibonacciHeapPriorityQueueTests_AsMergeableQueue() : base(
+        () => new FibonacciHeapPriorityQueue<int>())
+    {
+    }
+}
+
 
 

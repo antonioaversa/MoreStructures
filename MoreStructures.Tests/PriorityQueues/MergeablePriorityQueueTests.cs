@@ -302,6 +302,45 @@ public abstract class MergeablePriorityQueueTests<TIntPriorityQueue>
     }
 
     [TestMethod]
+    public void Merge_SourceOfAMergeCanBeUsedAsTargetOfAnotherMerge()
+    {
+        var source = IntBuilder();
+        source.Push(1, 1);
+        var target = IntBuilder();
+        target.Push(2, 2);
+        source.MergeFrom(target);
+
+        var newSource = IntBuilder();
+        newSource.Push(3, 3);
+        newSource.MergeFrom(source);
+
+        Assert.AreEqual(3, newSource.Count);
+    }
+
+    [TestMethod]
+    public void Merge_TargetOfAMergeCanBeUsedAsSourceOfAnotherMerge()
+    {
+        var source = IntBuilder();
+        var target = IntBuilder();
+        target.Push(1, 1);
+        source.MergeFrom(target);
+        target.Push(2, 2);
+
+        var newTarget = IntBuilder();
+        target.Push(3, 3);
+        target.MergeFrom(newTarget);
+
+        Assert.AreEqual(2, target.Count);
+
+        Assert.AreEqual(3, target.Peek().Item);
+        Assert.AreEqual(3, target.Peek().Priority);
+
+        target.Pop();
+        Assert.AreEqual(2, target.Peek().Item);
+        Assert.AreEqual(2, target.Peek().Priority);
+    }
+
+    [TestMethod]
     public void MergeAndClear_ComplexScenario()
     {
         var numbers1 = Enumerable.Range(0, 5).ToArray();

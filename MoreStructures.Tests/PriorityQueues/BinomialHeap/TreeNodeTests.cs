@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MoreStructures.PriorityQueues;
 using MoreStructures.PriorityQueues.BinomialHeap;
+using MoreStructures.PriorityQueues.FibonacciHeap;
 
 namespace MoreStructures.Tests.PriorityQueues.BinomialHeap;
 
@@ -261,7 +262,14 @@ public class TreeNodeTests
 
         Assert.AreNotEqual(treeNodeNotInHeap.ToString(), treeNodeInHeap.ToString());
     }
+    
+    [TestMethod]
+    public void ToString_IncludesIsALoser()
+    {
+        var treeNodeNotLoser = new TreeNodeMock() { PrioritizedItem = new("3", 2, 0), IsALoser = false };
+        var treeNodeLoser = new TreeNodeMock() { PrioritizedItem = new("3", 2, 0), IsALoser = true };
+
+        Assert.AreNotEqual(treeNodeNotLoser.ToString(), treeNodeLoser.ToString());
+    }
 }
-
-
 

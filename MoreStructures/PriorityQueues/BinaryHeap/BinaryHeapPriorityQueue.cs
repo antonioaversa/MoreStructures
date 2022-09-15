@@ -84,14 +84,6 @@ public class BinaryHeapPriorityQueue<T>
     where T : notnull
 {
     /// <summary>
-    /// The era in which all push timestamps created by this instance (e.g. on push) leave in.
-    /// </summary>
-    /// <remarks>
-    /// Depending on the implementation, may be relevant in merging.
-    /// </remarks>
-    protected PushTimestampEra CurrentEra { get; set; } = new(0);
-
-    /// <summary>
     /// A non-negative, zero-based, monotonically strictly increasing counter, incremented at every insertion into this 
     /// data structure by a <see cref="Push(T, int)"/>.
     /// </summary>
@@ -128,7 +120,7 @@ public class BinaryHeapPriorityQueue<T>
     /// Because the data structure contain O(n) items, Time and Space Complexity are O(n), where n is the number of
     /// items in <paramref name="source"/>.
     /// </remarks>
-    public BinaryHeapPriorityQueue(BinaryHeapPriorityQueue<T> source)
+    protected BinaryHeapPriorityQueue(BinaryHeapPriorityQueue<T> source)
     {
         Items = new(source.Items);
     }
@@ -386,7 +378,7 @@ public class BinaryHeapPriorityQueue<T>
     {
         foreach (var prioritizedItem in targetPriorityQueue.Items)
         {
-            Items.Add(new(prioritizedItem.Item, prioritizedItem.Priority, CurrentPushTimestamp, CurrentEra));
+            Items.Add(new(prioritizedItem.Item, prioritizedItem.Priority, CurrentPushTimestamp));
             RaiseItemPushed();
             CurrentPushTimestamp++;
         }
@@ -440,7 +432,7 @@ public class BinaryHeapPriorityQueue<T>
 
     private void Push(T item, int priority, int pushTimestamp)
     {
-        Items.Add(new(item, priority, pushTimestamp, CurrentEra));
+        Items.Add(new(item, priority, pushTimestamp));
         RaiseItemPushed();
         SiftUp(Items.Count - 1);
     }

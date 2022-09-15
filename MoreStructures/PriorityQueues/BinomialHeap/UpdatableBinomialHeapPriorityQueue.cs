@@ -11,7 +11,7 @@ namespace MoreStructures.PriorityQueues.BinomialHeap;
 /// items of type <typeparamref name="T"/> and heap nodes of type <see cref="TreeNode{T}"/> is performed, in presence 
 /// of duplicates.
 /// </remarks>
-public class UpdatableBinomialHeapPriorityQueue<T> : BinomialHeapPriorityQueue<T>, IUpdatablePriorityQueue<T>
+public sealed class UpdatableBinomialHeapPriorityQueue<T> : BinomialHeapPriorityQueue<T>, IUpdatablePriorityQueue<T>
     where T : notnull
 {
     private DuplicatedItemsResolution<T, BinomialHeapPriorityQueue<int>> DuplicatedItemsResolution { get; } = new();
@@ -150,7 +150,7 @@ public class UpdatableBinomialHeapPriorityQueue<T> : BinomialHeapPriorityQueue<T
     /// Hands over to 
     /// <see cref="DuplicatedItemsResolution{T, THeap}.RaiseItemPriorityChanged(TreeNode{T}, PrioritizedItem{T})"/>.
     /// </remarks>
-    protected virtual void RaiseItemPriorityChanged(TreeNode<T> treeNode, PrioritizedItem<T> itemBefore) =>
+    private void RaiseItemPriorityChanged(TreeNode<T> treeNode, PrioritizedItem<T> itemBefore) =>
         DuplicatedItemsResolution.RaiseItemPriorityChanged(treeNode, itemBefore);
 
     /// <summary>
@@ -162,7 +162,7 @@ public class UpdatableBinomialHeapPriorityQueue<T> : BinomialHeapPriorityQueue<T
     /// Hands over to 
     /// <see cref="DuplicatedItemsResolution{T, THeap}.RaiseItemsSwapped(TreeNode{T}, TreeNode{T})"/>.
     /// </remarks>
-    protected virtual void RaiseItemsSwapped(TreeNode<T> treeNode1, TreeNode<T> treeNode2) =>
+    private void RaiseItemsSwapped(TreeNode<T> treeNode1, TreeNode<T> treeNode2) =>
         DuplicatedItemsResolution.RaiseItemsSwapped(treeNode1, treeNode2);
 
     #endregion
@@ -172,7 +172,7 @@ public class UpdatableBinomialHeapPriorityQueue<T> : BinomialHeapPriorityQueue<T
     private PrioritizedItem<T> UpdatePriority(TreeNode<T> treeNode, int newPriority, int newPushTimestamp)
     {
         var newPrioritizedItem =
-            new PrioritizedItem<T>(treeNode.PrioritizedItem.Item, newPriority, newPushTimestamp, CurrentEra);
+            new PrioritizedItem<T>(treeNode.PrioritizedItem.Item, newPriority, newPushTimestamp, PushTimestampEras[^1]);
         var oldPrioritizedItem = treeNode.PrioritizedItem;
         treeNode.PrioritizedItem = newPrioritizedItem;
 

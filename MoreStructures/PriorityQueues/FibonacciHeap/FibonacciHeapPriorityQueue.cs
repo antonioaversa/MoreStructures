@@ -58,18 +58,11 @@ public partial class FibonacciHeapPriorityQueue<T> : BinomialHeapPriorityQueue<T
     where T : notnull
 {
     /// <summary>
-    /// Contains the <see cref="PrioritizedItem{T}"/> whose <see cref="TreeNode{T}"/> have lost a child since last 
-    /// reset, and will be promoted to roots next time they will lose a child.
-    /// </summary>
-    protected HashSet<PrioritizedItem<T>> Losers { get; }
-
-    /// <summary>
     /// Builds an empty priority queue.
     /// </summary>
     public FibonacciHeapPriorityQueue()
         :base()
     {
-        Losers = new();
     }
 
     /// <summary>
@@ -80,10 +73,9 @@ public partial class FibonacciHeapPriorityQueue<T> : BinomialHeapPriorityQueue<T
     /// Doesn't copy the items themselves, it only deep-copies the internal structure of the <paramref name="source"/>
     /// queue.
     /// </remarks>
-    public FibonacciHeapPriorityQueue(FibonacciHeapPriorityQueue<T> source)
+    protected FibonacciHeapPriorityQueue(FibonacciHeapPriorityQueue<T> source)
         :base(source)
     {
-        Losers = new HashSet<PrioritizedItem<T>>(source.Losers);
     }
 
     #region Public API
@@ -149,7 +141,7 @@ public partial class FibonacciHeapPriorityQueue<T> : BinomialHeapPriorityQueue<T
     /// </remarks> 
     public override void Push(T item, int priority)
     {
-        var prioritizedItem = new PrioritizedItem<T>(item, priority, CurrentPushTimestamp++, CurrentEra);
+        var prioritizedItem = new PrioritizedItem<T>(item, priority, CurrentPushTimestamp++, PushTimestampEras[^1]);
         var newRoot = new TreeNode<T> { PrioritizedItem = prioritizedItem };
         AddRoot(newRoot);
         RaiseItemPushed(newRoot);
@@ -167,7 +159,7 @@ public partial class FibonacciHeapPriorityQueue<T> : BinomialHeapPriorityQueue<T
     protected override void PromoteChildToRoot(TreeNode<T> child)
     {
         base.PromoteChildToRoot(child);
-        Losers.Remove(child.PrioritizedItem);        
+        child.IsALoser = false;
     }
 
     #endregion
