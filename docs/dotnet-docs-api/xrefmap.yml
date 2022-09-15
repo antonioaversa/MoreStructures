@@ -3552,24 +3552,24 @@ references:
   fullName.vb: MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue(Of T).GetPrioritiesOf
   nameWithType: ArrayListPriorityQueue<T>.GetPrioritiesOf
   nameWithType.vb: ArrayListPriorityQueue(Of T).GetPrioritiesOf
-- uid: MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.Merge(MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue{`0})
-  name: Merge(ArrayListPriorityQueue<T>)
-  href: api/MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue-1.html#MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_Merge_MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue__0__
-  commentId: M:MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.Merge(MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue{`0})
-  name.vb: Merge(ArrayListPriorityQueue(Of T))
-  fullName: MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue<T>.Merge(MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue<T>)
-  fullName.vb: MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue(Of T).Merge(MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue(Of T))
-  nameWithType: ArrayListPriorityQueue<T>.Merge(ArrayListPriorityQueue<T>)
-  nameWithType.vb: ArrayListPriorityQueue(Of T).Merge(ArrayListPriorityQueue(Of T))
-- uid: MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.Merge*
-  name: Merge
-  href: api/MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue-1.html#MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_Merge_
-  commentId: Overload:MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.Merge
+- uid: MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.MergeFrom(MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue{`0})
+  name: MergeFrom(ArrayListPriorityQueue<T>)
+  href: api/MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue-1.html#MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_MergeFrom_MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue__0__
+  commentId: M:MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.MergeFrom(MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue{`0})
+  name.vb: MergeFrom(ArrayListPriorityQueue(Of T))
+  fullName: MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue<T>.MergeFrom(MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue<T>)
+  fullName.vb: MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue(Of T).MergeFrom(MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue(Of T))
+  nameWithType: ArrayListPriorityQueue<T>.MergeFrom(ArrayListPriorityQueue<T>)
+  nameWithType.vb: ArrayListPriorityQueue(Of T).MergeFrom(ArrayListPriorityQueue(Of T))
+- uid: MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.MergeFrom*
+  name: MergeFrom
+  href: api/MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue-1.html#MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_MergeFrom_
+  commentId: Overload:MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.MergeFrom
   isSpec: "True"
-  fullName: MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue<T>.Merge
-  fullName.vb: MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue(Of T).Merge
-  nameWithType: ArrayListPriorityQueue<T>.Merge
-  nameWithType.vb: ArrayListPriorityQueue(Of T).Merge
+  fullName: MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue<T>.MergeFrom
+  fullName.vb: MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue(Of T).MergeFrom
+  nameWithType: ArrayListPriorityQueue<T>.MergeFrom
+  nameWithType.vb: ArrayListPriorityQueue(Of T).MergeFrom
 - uid: MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue`1.Peek
   name: Peek()
   href: api/MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue-1.html#MoreStructures_PriorityQueues_ArrayList_ArrayListPriorityQueue_1_Peek
@@ -3766,6 +3766,23 @@ references:
   fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue(Of T).Count
   nameWithType: BinaryHeapPriorityQueue<T>.Count
   nameWithType.vb: BinaryHeapPriorityQueue(Of T).Count
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.CurrentEra
+  name: CurrentEra
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_CurrentEra
+  commentId: P:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.CurrentEra
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue<T>.CurrentEra
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue(Of T).CurrentEra
+  nameWithType: BinaryHeapPriorityQueue<T>.CurrentEra
+  nameWithType.vb: BinaryHeapPriorityQueue(Of T).CurrentEra
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.CurrentEra*
+  name: CurrentEra
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_CurrentEra_
+  commentId: Overload:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.CurrentEra
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue<T>.CurrentEra
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue(Of T).CurrentEra
+  nameWithType: BinaryHeapPriorityQueue<T>.CurrentEra
+  nameWithType.vb: BinaryHeapPriorityQueue(Of T).CurrentEra
 - uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.CurrentPushTimestamp
   name: CurrentPushTimestamp
   href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_CurrentPushTimestamp
@@ -3817,24 +3834,24 @@ references:
   fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue(Of T).Items
   nameWithType: BinaryHeapPriorityQueue<T>.Items
   nameWithType.vb: BinaryHeapPriorityQueue(Of T).Items
-- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.Merge(MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue{`0})
-  name: Merge(BinaryHeapPriorityQueue<T>)
-  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Merge_MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue__0__
-  commentId: M:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.Merge(MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue{`0})
-  name.vb: Merge(BinaryHeapPriorityQueue(Of T))
-  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue<T>.Merge(MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue<T>)
-  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue(Of T).Merge(MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue(Of T))
-  nameWithType: BinaryHeapPriorityQueue<T>.Merge(BinaryHeapPriorityQueue<T>)
-  nameWithType.vb: BinaryHeapPriorityQueue(Of T).Merge(BinaryHeapPriorityQueue(Of T))
-- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.Merge*
-  name: Merge
-  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Merge_
-  commentId: Overload:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.Merge
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.MergeFrom(MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue{`0})
+  name: MergeFrom(BinaryHeapPriorityQueue<T>)
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_MergeFrom_MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue__0__
+  commentId: M:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.MergeFrom(MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue{`0})
+  name.vb: MergeFrom(BinaryHeapPriorityQueue(Of T))
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue<T>.MergeFrom(MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue<T>)
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue(Of T).MergeFrom(MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue(Of T))
+  nameWithType: BinaryHeapPriorityQueue<T>.MergeFrom(BinaryHeapPriorityQueue<T>)
+  nameWithType.vb: BinaryHeapPriorityQueue(Of T).MergeFrom(BinaryHeapPriorityQueue(Of T))
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.MergeFrom*
+  name: MergeFrom
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_MergeFrom_
+  commentId: Overload:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.MergeFrom
   isSpec: "True"
-  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue<T>.Merge
-  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue(Of T).Merge
-  nameWithType: BinaryHeapPriorityQueue<T>.Merge
-  nameWithType.vb: BinaryHeapPriorityQueue(Of T).Merge
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue<T>.MergeFrom
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue(Of T).MergeFrom
+  nameWithType: BinaryHeapPriorityQueue<T>.MergeFrom
+  nameWithType.vb: BinaryHeapPriorityQueue(Of T).MergeFrom
 - uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.Peek
   name: Peek()
   href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Peek
@@ -4246,6 +4263,23 @@ references:
   fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue(Of T).Count
   nameWithType: BinomialHeapPriorityQueue<T>.Count
   nameWithType.vb: BinomialHeapPriorityQueue(Of T).Count
+- uid: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.CurrentEra
+  name: CurrentEra
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_CurrentEra
+  commentId: P:MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.CurrentEra
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue<T>.CurrentEra
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue(Of T).CurrentEra
+  nameWithType: BinomialHeapPriorityQueue<T>.CurrentEra
+  nameWithType.vb: BinomialHeapPriorityQueue(Of T).CurrentEra
+- uid: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.CurrentEra*
+  name: CurrentEra
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_CurrentEra_
+  commentId: Overload:MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.CurrentEra
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue<T>.CurrentEra
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue(Of T).CurrentEra
+  nameWithType: BinomialHeapPriorityQueue<T>.CurrentEra
+  nameWithType.vb: BinomialHeapPriorityQueue(Of T).CurrentEra
 - uid: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.CurrentPushTimestamp
   name: CurrentPushTimestamp
   href: api/MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_CurrentPushTimestamp
@@ -4332,24 +4366,6 @@ references:
   fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue(Of T).MaxRootsListNode
   nameWithType: BinomialHeapPriorityQueue<T>.MaxRootsListNode
   nameWithType.vb: BinomialHeapPriorityQueue(Of T).MaxRootsListNode
-- uid: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.Merge(MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue{`0})
-  name: Merge(BinomialHeapPriorityQueue<T>)
-  href: api/MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Merge_MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue__0__
-  commentId: M:MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.Merge(MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue{`0})
-  name.vb: Merge(BinomialHeapPriorityQueue(Of T))
-  fullName: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue<T>.Merge(MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue<T>)
-  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue(Of T).Merge(MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue(Of T))
-  nameWithType: BinomialHeapPriorityQueue<T>.Merge(BinomialHeapPriorityQueue<T>)
-  nameWithType.vb: BinomialHeapPriorityQueue(Of T).Merge(BinomialHeapPriorityQueue(Of T))
-- uid: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.Merge*
-  name: Merge
-  href: api/MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Merge_
-  commentId: Overload:MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.Merge
-  isSpec: "True"
-  fullName: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue<T>.Merge
-  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue(Of T).Merge
-  nameWithType: BinomialHeapPriorityQueue<T>.Merge
-  nameWithType.vb: BinomialHeapPriorityQueue(Of T).Merge
 - uid: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.MergeEquiDegreeTrees
   name: MergeEquiDegreeTrees()
   href: api/MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_MergeEquiDegreeTrees
@@ -4367,6 +4383,24 @@ references:
   fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue(Of T).MergeEquiDegreeTrees
   nameWithType: BinomialHeapPriorityQueue<T>.MergeEquiDegreeTrees
   nameWithType.vb: BinomialHeapPriorityQueue(Of T).MergeEquiDegreeTrees
+- uid: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.MergeFrom(MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue{`0})
+  name: MergeFrom(BinomialHeapPriorityQueue<T>)
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_MergeFrom_MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue__0__
+  commentId: M:MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.MergeFrom(MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue{`0})
+  name.vb: MergeFrom(BinomialHeapPriorityQueue(Of T))
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue<T>.MergeFrom(MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue<T>)
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue(Of T).MergeFrom(MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue(Of T))
+  nameWithType: BinomialHeapPriorityQueue<T>.MergeFrom(BinomialHeapPriorityQueue<T>)
+  nameWithType.vb: BinomialHeapPriorityQueue(Of T).MergeFrom(BinomialHeapPriorityQueue(Of T))
+- uid: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.MergeFrom*
+  name: MergeFrom
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_MergeFrom_
+  commentId: Overload:MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.MergeFrom
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue<T>.MergeFrom
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue(Of T).MergeFrom
+  nameWithType: BinomialHeapPriorityQueue<T>.MergeFrom
+  nameWithType.vb: BinomialHeapPriorityQueue(Of T).MergeFrom
 - uid: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.MergeRoots(LinkedListNode{MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0}},LinkedListNode{MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0}})
   name: MergeRoots(LinkedListNode<TreeNode<T>>, LinkedListNode<TreeNode<T>>)
   href: api/MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_MergeRoots_LinkedListNode_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0___LinkedListNode_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0___
@@ -4542,6 +4576,23 @@ references:
   fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue(Of T).Roots
   nameWithType: BinomialHeapPriorityQueue<T>.Roots
   nameWithType.vb: BinomialHeapPriorityQueue(Of T).Roots
+- uid: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.SpansMultipleEras
+  name: SpansMultipleEras
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_SpansMultipleEras
+  commentId: P:MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.SpansMultipleEras
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue<T>.SpansMultipleEras
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue(Of T).SpansMultipleEras
+  nameWithType: BinomialHeapPriorityQueue<T>.SpansMultipleEras
+  nameWithType.vb: BinomialHeapPriorityQueue(Of T).SpansMultipleEras
+- uid: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.SpansMultipleEras*
+  name: SpansMultipleEras
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_SpansMultipleEras_
+  commentId: Overload:MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.SpansMultipleEras
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue<T>.SpansMultipleEras
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue(Of T).SpansMultipleEras
+  nameWithType: BinomialHeapPriorityQueue<T>.SpansMultipleEras
+  nameWithType.vb: BinomialHeapPriorityQueue(Of T).SpansMultipleEras
 - uid: MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.System#Collections#IEnumerable#GetEnumerator
   name: IEnumerable.GetEnumerator()
   href: api/MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_System_Collections_IEnumerable_GetEnumerator
@@ -4605,6 +4656,23 @@ references:
   fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution(Of TItems, THeap)
   nameWithType: DuplicatedItemsResolution<TItems, THeap>
   nameWithType.vb: DuplicatedItemsResolution(Of TItems, THeap)
+- uid: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.Clear
+  name: Clear()
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution-2.html#MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_Clear
+  commentId: M:MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.Clear
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution<TItems, THeap>.Clear()
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution(Of TItems, THeap).Clear()
+  nameWithType: DuplicatedItemsResolution<TItems, THeap>.Clear()
+  nameWithType.vb: DuplicatedItemsResolution(Of TItems, THeap).Clear()
+- uid: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.Clear*
+  name: Clear
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution-2.html#MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_Clear_
+  commentId: Overload:MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.Clear
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution<TItems, THeap>.Clear
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution(Of TItems, THeap).Clear
+  nameWithType: DuplicatedItemsResolution<TItems, THeap>.Clear
+  nameWithType.vb: DuplicatedItemsResolution(Of TItems, THeap).Clear
 - uid: MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution`2.FindTreeNode(`0)
   name: FindTreeNode(TItems)
   href: api/MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution-2.html#MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_FindTreeNode__0_
@@ -4900,6 +4968,23 @@ references:
   fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue(Of T)
   nameWithType: UpdatableBinomialHeapPriorityQueue<T>
   nameWithType.vb: UpdatableBinomialHeapPriorityQueue(Of T)
+- uid: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.Clear
+  name: Clear()
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_Clear
+  commentId: M:MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.Clear
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue<T>.Clear()
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue(Of T).Clear()
+  nameWithType: UpdatableBinomialHeapPriorityQueue<T>.Clear()
+  nameWithType.vb: UpdatableBinomialHeapPriorityQueue(Of T).Clear()
+- uid: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.Clear*
+  name: Clear
+  href: api/MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_Clear_
+  commentId: Overload:MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.Clear
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue<T>.Clear
+  fullName.vb: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue(Of T).Clear
+  nameWithType: UpdatableBinomialHeapPriorityQueue<T>.Clear
+  nameWithType.vb: UpdatableBinomialHeapPriorityQueue(Of T).Clear
 - uid: MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.GetPrioritiesOf(`0)
   name: GetPrioritiesOf(T)
   href: api/MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_GetPrioritiesOf__0_
@@ -5035,6 +5120,22 @@ references:
   commentId: T:MoreStructures.PriorityQueues.Extensions.UpdatablePriorityQueueExtensions
   fullName: MoreStructures.PriorityQueues.Extensions.UpdatablePriorityQueueExtensions
   nameWithType: UpdatablePriorityQueueExtensions
+- uid: MoreStructures.PriorityQueues.Extensions.UpdatablePriorityQueueExtensions.PopAll*
+  name: PopAll
+  href: api/MoreStructures.PriorityQueues.Extensions.UpdatablePriorityQueueExtensions.html#MoreStructures_PriorityQueues_Extensions_UpdatablePriorityQueueExtensions_PopAll_
+  commentId: Overload:MoreStructures.PriorityQueues.Extensions.UpdatablePriorityQueueExtensions.PopAll
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.Extensions.UpdatablePriorityQueueExtensions.PopAll
+  nameWithType: UpdatablePriorityQueueExtensions.PopAll
+- uid: MoreStructures.PriorityQueues.Extensions.UpdatablePriorityQueueExtensions.PopAll``1(MoreStructures.PriorityQueues.IPriorityQueue{``0})
+  name: PopAll<T>(IPriorityQueue<T>)
+  href: api/MoreStructures.PriorityQueues.Extensions.UpdatablePriorityQueueExtensions.html#MoreStructures_PriorityQueues_Extensions_UpdatablePriorityQueueExtensions_PopAll__1_MoreStructures_PriorityQueues_IPriorityQueue___0__
+  commentId: M:MoreStructures.PriorityQueues.Extensions.UpdatablePriorityQueueExtensions.PopAll``1(MoreStructures.PriorityQueues.IPriorityQueue{``0})
+  name.vb: PopAll(Of T)(IPriorityQueue(Of T))
+  fullName: MoreStructures.PriorityQueues.Extensions.UpdatablePriorityQueueExtensions.PopAll<T>(MoreStructures.PriorityQueues.IPriorityQueue<T>)
+  fullName.vb: MoreStructures.PriorityQueues.Extensions.UpdatablePriorityQueueExtensions.PopAll(Of T)(MoreStructures.PriorityQueues.IPriorityQueue(Of T))
+  nameWithType: UpdatablePriorityQueueExtensions.PopAll<T>(IPriorityQueue<T>)
+  nameWithType.vb: UpdatablePriorityQueueExtensions.PopAll(Of T)(IPriorityQueue(Of T))
 - uid: MoreStructures.PriorityQueues.Extensions.UpdatablePriorityQueueExtensions.PushOrUpdate*
   name: PushOrUpdate
   href: api/MoreStructures.PriorityQueues.Extensions.UpdatablePriorityQueueExtensions.html#MoreStructures_PriorityQueues_Extensions_UpdatablePriorityQueueExtensions_PushOrUpdate_
@@ -5301,23 +5402,23 @@ references:
   fullName.vb: MoreStructures.PriorityQueues.IMergeablePriorityQueue(Of T, TPQTarget).Clear
   nameWithType: IMergeablePriorityQueue<T, TPQTarget>.Clear
   nameWithType.vb: IMergeablePriorityQueue(Of T, TPQTarget).Clear
-- uid: MoreStructures.PriorityQueues.IMergeablePriorityQueue`2.Merge(`1)
-  name: Merge(TPQTarget)
-  href: api/MoreStructures.PriorityQueues.IMergeablePriorityQueue-2.html#MoreStructures_PriorityQueues_IMergeablePriorityQueue_2_Merge__1_
-  commentId: M:MoreStructures.PriorityQueues.IMergeablePriorityQueue`2.Merge(`1)
-  fullName: MoreStructures.PriorityQueues.IMergeablePriorityQueue<T, TPQTarget>.Merge(TPQTarget)
-  fullName.vb: MoreStructures.PriorityQueues.IMergeablePriorityQueue(Of T, TPQTarget).Merge(TPQTarget)
-  nameWithType: IMergeablePriorityQueue<T, TPQTarget>.Merge(TPQTarget)
-  nameWithType.vb: IMergeablePriorityQueue(Of T, TPQTarget).Merge(TPQTarget)
-- uid: MoreStructures.PriorityQueues.IMergeablePriorityQueue`2.Merge*
-  name: Merge
-  href: api/MoreStructures.PriorityQueues.IMergeablePriorityQueue-2.html#MoreStructures_PriorityQueues_IMergeablePriorityQueue_2_Merge_
-  commentId: Overload:MoreStructures.PriorityQueues.IMergeablePriorityQueue`2.Merge
+- uid: MoreStructures.PriorityQueues.IMergeablePriorityQueue`2.MergeFrom(`1)
+  name: MergeFrom(TPQTarget)
+  href: api/MoreStructures.PriorityQueues.IMergeablePriorityQueue-2.html#MoreStructures_PriorityQueues_IMergeablePriorityQueue_2_MergeFrom__1_
+  commentId: M:MoreStructures.PriorityQueues.IMergeablePriorityQueue`2.MergeFrom(`1)
+  fullName: MoreStructures.PriorityQueues.IMergeablePriorityQueue<T, TPQTarget>.MergeFrom(TPQTarget)
+  fullName.vb: MoreStructures.PriorityQueues.IMergeablePriorityQueue(Of T, TPQTarget).MergeFrom(TPQTarget)
+  nameWithType: IMergeablePriorityQueue<T, TPQTarget>.MergeFrom(TPQTarget)
+  nameWithType.vb: IMergeablePriorityQueue(Of T, TPQTarget).MergeFrom(TPQTarget)
+- uid: MoreStructures.PriorityQueues.IMergeablePriorityQueue`2.MergeFrom*
+  name: MergeFrom
+  href: api/MoreStructures.PriorityQueues.IMergeablePriorityQueue-2.html#MoreStructures_PriorityQueues_IMergeablePriorityQueue_2_MergeFrom_
+  commentId: Overload:MoreStructures.PriorityQueues.IMergeablePriorityQueue`2.MergeFrom
   isSpec: "True"
-  fullName: MoreStructures.PriorityQueues.IMergeablePriorityQueue<T, TPQTarget>.Merge
-  fullName.vb: MoreStructures.PriorityQueues.IMergeablePriorityQueue(Of T, TPQTarget).Merge
-  nameWithType: IMergeablePriorityQueue<T, TPQTarget>.Merge
-  nameWithType.vb: IMergeablePriorityQueue(Of T, TPQTarget).Merge
+  fullName: MoreStructures.PriorityQueues.IMergeablePriorityQueue<T, TPQTarget>.MergeFrom
+  fullName.vb: MoreStructures.PriorityQueues.IMergeablePriorityQueue(Of T, TPQTarget).MergeFrom
+  nameWithType: IMergeablePriorityQueue<T, TPQTarget>.MergeFrom
+  nameWithType.vb: IMergeablePriorityQueue(Of T, TPQTarget).MergeFrom
 - uid: MoreStructures.PriorityQueues.IPeekKthPriorityQueue`1
   name: IPeekKthPriorityQueue<T>
   href: api/MoreStructures.PriorityQueues.IPeekKthPriorityQueue-1.html
@@ -5481,6 +5582,38 @@ references:
   fullName.vb: MoreStructures.PriorityQueues.IUpdatablePriorityQueue(Of T).UpdatePriority
   nameWithType: IUpdatablePriorityQueue<T>.UpdatePriority
   nameWithType.vb: IUpdatablePriorityQueue(Of T).UpdatePriority
+- uid: MoreStructures.PriorityQueues.PushTimestampEra
+  name: PushTimestampEra
+  href: api/MoreStructures.PriorityQueues.PushTimestampEra.html
+  commentId: T:MoreStructures.PriorityQueues.PushTimestampEra
+  fullName: MoreStructures.PriorityQueues.PushTimestampEra
+  nameWithType: PushTimestampEra
+- uid: MoreStructures.PriorityQueues.PushTimestampEra.#ctor(System.Int32)
+  name: PushTimestampEra(Int32)
+  href: api/MoreStructures.PriorityQueues.PushTimestampEra.html#MoreStructures_PriorityQueues_PushTimestampEra__ctor_System_Int32_
+  commentId: M:MoreStructures.PriorityQueues.PushTimestampEra.#ctor(System.Int32)
+  fullName: MoreStructures.PriorityQueues.PushTimestampEra.PushTimestampEra(System.Int32)
+  nameWithType: PushTimestampEra.PushTimestampEra(Int32)
+- uid: MoreStructures.PriorityQueues.PushTimestampEra.#ctor*
+  name: PushTimestampEra
+  href: api/MoreStructures.PriorityQueues.PushTimestampEra.html#MoreStructures_PriorityQueues_PushTimestampEra__ctor_
+  commentId: Overload:MoreStructures.PriorityQueues.PushTimestampEra.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.PushTimestampEra.PushTimestampEra
+  nameWithType: PushTimestampEra.PushTimestampEra
+- uid: MoreStructures.PriorityQueues.PushTimestampEra.Era
+  name: Era
+  href: api/MoreStructures.PriorityQueues.PushTimestampEra.html#MoreStructures_PriorityQueues_PushTimestampEra_Era
+  commentId: P:MoreStructures.PriorityQueues.PushTimestampEra.Era
+  fullName: MoreStructures.PriorityQueues.PushTimestampEra.Era
+  nameWithType: PushTimestampEra.Era
+- uid: MoreStructures.PriorityQueues.PushTimestampEra.Era*
+  name: Era
+  href: api/MoreStructures.PriorityQueues.PushTimestampEra.html#MoreStructures_PriorityQueues_PushTimestampEra_Era_
+  commentId: Overload:MoreStructures.PriorityQueues.PushTimestampEra.Era
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.PushTimestampEra.Era
+  nameWithType: PushTimestampEra.Era
 - uid: MoreStructures.RecImmTrees
   name: MoreStructures.RecImmTrees
   href: api/MoreStructures.RecImmTrees.html
@@ -12324,6 +12457,25 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueueTests_AsMergeableQueue.BinomialHeapPriorityQueueTests_AsMergeableQueue
   nameWithType: BinomialHeapPriorityQueueTests_AsMergeableQueue.BinomialHeapPriorityQueueTests_AsMergeableQueue
+- uid: MoreStructures.Tests.PriorityQueues.BinomialHeap.DuplicatedItemsResolutionTests
+  name: DuplicatedItemsResolutionTests
+  href: api/MoreStructures.Tests.PriorityQueues.BinomialHeap.DuplicatedItemsResolutionTests.html
+  commentId: T:MoreStructures.Tests.PriorityQueues.BinomialHeap.DuplicatedItemsResolutionTests
+  fullName: MoreStructures.Tests.PriorityQueues.BinomialHeap.DuplicatedItemsResolutionTests
+  nameWithType: DuplicatedItemsResolutionTests
+- uid: MoreStructures.Tests.PriorityQueues.BinomialHeap.DuplicatedItemsResolutionTests.Clear_WipesContentOut
+  name: Clear_WipesContentOut()
+  href: api/MoreStructures.Tests.PriorityQueues.BinomialHeap.DuplicatedItemsResolutionTests.html#MoreStructures_Tests_PriorityQueues_BinomialHeap_DuplicatedItemsResolutionTests_Clear_WipesContentOut
+  commentId: M:MoreStructures.Tests.PriorityQueues.BinomialHeap.DuplicatedItemsResolutionTests.Clear_WipesContentOut
+  fullName: MoreStructures.Tests.PriorityQueues.BinomialHeap.DuplicatedItemsResolutionTests.Clear_WipesContentOut()
+  nameWithType: DuplicatedItemsResolutionTests.Clear_WipesContentOut()
+- uid: MoreStructures.Tests.PriorityQueues.BinomialHeap.DuplicatedItemsResolutionTests.Clear_WipesContentOut*
+  name: Clear_WipesContentOut
+  href: api/MoreStructures.Tests.PriorityQueues.BinomialHeap.DuplicatedItemsResolutionTests.html#MoreStructures_Tests_PriorityQueues_BinomialHeap_DuplicatedItemsResolutionTests_Clear_WipesContentOut_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.BinomialHeap.DuplicatedItemsResolutionTests.Clear_WipesContentOut
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.BinomialHeap.DuplicatedItemsResolutionTests.Clear_WipesContentOut
+  nameWithType: DuplicatedItemsResolutionTests.Clear_WipesContentOut
 - uid: MoreStructures.Tests.PriorityQueues.BinomialHeap.TreeNodeTests
   name: TreeNodeTests
   href: api/MoreStructures.Tests.PriorityQueues.BinomialHeap.TreeNodeTests.html
@@ -12589,6 +12741,38 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue.UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue
   nameWithType: UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue.UpdatableBinomialHeapPriorityQueueTests_AsBasicQueue
+- uid: MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue
+  name: UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue
+  href: api/MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue.html
+  commentId: T:MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue
+  fullName: MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue
+  nameWithType: UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue
+- uid: MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue.#ctor
+  name: UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue()
+  href: api/MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue.html#MoreStructures_Tests_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue__ctor
+  commentId: M:MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue.#ctor
+  fullName: MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue.UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue()
+  nameWithType: UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue.UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue()
+- uid: MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue.#ctor*
+  name: UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue
+  href: api/MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue.html#MoreStructures_Tests_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue__ctor_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue.UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue
+  nameWithType: UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue.UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue
+- uid: MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue.Merge_SourceOfAMergeCannotBeUsedAsTargetOfAnotherMerge
+  name: Merge_SourceOfAMergeCannotBeUsedAsTargetOfAnotherMerge()
+  href: api/MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue.html#MoreStructures_Tests_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue_Merge_SourceOfAMergeCannotBeUsedAsTargetOfAnotherMerge
+  commentId: M:MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue.Merge_SourceOfAMergeCannotBeUsedAsTargetOfAnotherMerge
+  fullName: MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue.Merge_SourceOfAMergeCannotBeUsedAsTargetOfAnotherMerge()
+  nameWithType: UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue.Merge_SourceOfAMergeCannotBeUsedAsTargetOfAnotherMerge()
+- uid: MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue.Merge_SourceOfAMergeCannotBeUsedAsTargetOfAnotherMerge*
+  name: Merge_SourceOfAMergeCannotBeUsedAsTargetOfAnotherMerge
+  href: api/MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue.html#MoreStructures_Tests_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue_Merge_SourceOfAMergeCannotBeUsedAsTargetOfAnotherMerge_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue.Merge_SourceOfAMergeCannotBeUsedAsTargetOfAnotherMerge
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue.Merge_SourceOfAMergeCannotBeUsedAsTargetOfAnotherMerge
+  nameWithType: UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue.Merge_SourceOfAMergeCannotBeUsedAsTargetOfAnotherMerge
 - uid: MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue
   name: UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue
   href: api/MoreStructures.Tests.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue.html
@@ -12649,6 +12833,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.PriorityQueues.Extensions.UpdatablePriorityQueueExtensionsTests.IntQueueBuilder
   nameWithType: UpdatablePriorityQueueExtensionsTests.IntQueueBuilder
+- uid: MoreStructures.Tests.PriorityQueues.Extensions.UpdatablePriorityQueueExtensionsTests.PopAll_ExtractsAllItems
+  name: PopAll_ExtractsAllItems()
+  href: api/MoreStructures.Tests.PriorityQueues.Extensions.UpdatablePriorityQueueExtensionsTests.html#MoreStructures_Tests_PriorityQueues_Extensions_UpdatablePriorityQueueExtensionsTests_PopAll_ExtractsAllItems
+  commentId: M:MoreStructures.Tests.PriorityQueues.Extensions.UpdatablePriorityQueueExtensionsTests.PopAll_ExtractsAllItems
+  fullName: MoreStructures.Tests.PriorityQueues.Extensions.UpdatablePriorityQueueExtensionsTests.PopAll_ExtractsAllItems()
+  nameWithType: UpdatablePriorityQueueExtensionsTests.PopAll_ExtractsAllItems()
+- uid: MoreStructures.Tests.PriorityQueues.Extensions.UpdatablePriorityQueueExtensionsTests.PopAll_ExtractsAllItems*
+  name: PopAll_ExtractsAllItems
+  href: api/MoreStructures.Tests.PriorityQueues.Extensions.UpdatablePriorityQueueExtensionsTests.html#MoreStructures_Tests_PriorityQueues_Extensions_UpdatablePriorityQueueExtensionsTests_PopAll_ExtractsAllItems_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.Extensions.UpdatablePriorityQueueExtensionsTests.PopAll_ExtractsAllItems
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.Extensions.UpdatablePriorityQueueExtensionsTests.PopAll_ExtractsAllItems
+  nameWithType: UpdatablePriorityQueueExtensionsTests.PopAll_ExtractsAllItems
 - uid: MoreStructures.Tests.PriorityQueues.Extensions.UpdatablePriorityQueueExtensionsTests.PushOrUpdate_IsCorrect
   name: PushOrUpdate_IsCorrect()
   href: api/MoreStructures.Tests.PriorityQueues.Extensions.UpdatablePriorityQueueExtensionsTests.html#MoreStructures_Tests_PriorityQueues_Extensions_UpdatablePriorityQueueExtensionsTests_PushOrUpdate_IsCorrect
@@ -12838,236 +13035,338 @@ references:
   nameWithType: MergeableAndUpdatablePriorityQueueTests<TPriorityQueue>.Merge_QueueUpdatesKeepWorkingAfter
   nameWithType.vb: MergeableAndUpdatablePriorityQueueTests(Of TPriorityQueue).Merge_QueueUpdatesKeepWorkingAfter
 - uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1
-  name: MergeablePriorityQueueTests<TPriorityQueue>
+  name: MergeablePriorityQueueTests<TIntPriorityQueue>
   href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html
   commentId: T:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1
-  name.vb: MergeablePriorityQueueTests(Of TPriorityQueue)
-  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TPriorityQueue>
-  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TPriorityQueue)
-  nameWithType: MergeablePriorityQueueTests<TPriorityQueue>
-  nameWithType.vb: MergeablePriorityQueueTests(Of TPriorityQueue)
+  name.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue)
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue)
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue)
 - uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.#ctor(Func{`0})
-  name: MergeablePriorityQueueTests(Func<TPriorityQueue>)
+  name: MergeablePriorityQueueTests(Func<TIntPriorityQueue>)
   href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1__ctor_Func__0__
   commentId: M:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.#ctor(Func{`0})
-  name.vb: MergeablePriorityQueueTests(Func(Of TPriorityQueue))
-  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TPriorityQueue>.MergeablePriorityQueueTests(Func<TPriorityQueue>)
-  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TPriorityQueue).MergeablePriorityQueueTests(Func(Of TPriorityQueue))
-  nameWithType: MergeablePriorityQueueTests<TPriorityQueue>.MergeablePriorityQueueTests(Func<TPriorityQueue>)
-  nameWithType.vb: MergeablePriorityQueueTests(Of TPriorityQueue).MergeablePriorityQueueTests(Func(Of TPriorityQueue))
+  name.vb: MergeablePriorityQueueTests(Func(Of TIntPriorityQueue))
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.MergeablePriorityQueueTests(Func<TIntPriorityQueue>)
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).MergeablePriorityQueueTests(Func(Of TIntPriorityQueue))
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.MergeablePriorityQueueTests(Func<TIntPriorityQueue>)
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).MergeablePriorityQueueTests(Func(Of TIntPriorityQueue))
 - uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.#ctor*
   name: MergeablePriorityQueueTests
   href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1__ctor_
   commentId: Overload:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.#ctor
   isSpec: "True"
-  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TPriorityQueue>.MergeablePriorityQueueTests
-  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TPriorityQueue).MergeablePriorityQueueTests
-  nameWithType: MergeablePriorityQueueTests<TPriorityQueue>.MergeablePriorityQueueTests
-  nameWithType.vb: MergeablePriorityQueueTests(Of TPriorityQueue).MergeablePriorityQueueTests
-- uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Builder
-  name: Builder
-  href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Builder
-  commentId: P:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Builder
-  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TPriorityQueue>.Builder
-  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TPriorityQueue).Builder
-  nameWithType: MergeablePriorityQueueTests<TPriorityQueue>.Builder
-  nameWithType.vb: MergeablePriorityQueueTests(Of TPriorityQueue).Builder
-- uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Builder*
-  name: Builder
-  href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Builder_
-  commentId: Overload:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Builder
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.MergeablePriorityQueueTests
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).MergeablePriorityQueueTests
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.MergeablePriorityQueueTests
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).MergeablePriorityQueueTests
+- uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Clear_DoesntResetPushTimestamps
+  name: Clear_DoesntResetPushTimestamps()
+  href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Clear_DoesntResetPushTimestamps
+  commentId: M:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Clear_DoesntResetPushTimestamps
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Clear_DoesntResetPushTimestamps()
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Clear_DoesntResetPushTimestamps()
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Clear_DoesntResetPushTimestamps()
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Clear_DoesntResetPushTimestamps()
+- uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Clear_DoesntResetPushTimestamps*
+  name: Clear_DoesntResetPushTimestamps
+  href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Clear_DoesntResetPushTimestamps_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Clear_DoesntResetPushTimestamps
   isSpec: "True"
-  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TPriorityQueue>.Builder
-  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TPriorityQueue).Builder
-  nameWithType: MergeablePriorityQueueTests<TPriorityQueue>.Builder
-  nameWithType.vb: MergeablePriorityQueueTests(Of TPriorityQueue).Builder
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Clear_DoesntResetPushTimestamps
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Clear_DoesntResetPushTimestamps
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Clear_DoesntResetPushTimestamps
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Clear_DoesntResetPushTimestamps
 - uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Clear_QueueKeepsWorkingAfter
   name: Clear_QueueKeepsWorkingAfter()
   href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Clear_QueueKeepsWorkingAfter
   commentId: M:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Clear_QueueKeepsWorkingAfter
-  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TPriorityQueue>.Clear_QueueKeepsWorkingAfter()
-  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TPriorityQueue).Clear_QueueKeepsWorkingAfter()
-  nameWithType: MergeablePriorityQueueTests<TPriorityQueue>.Clear_QueueKeepsWorkingAfter()
-  nameWithType.vb: MergeablePriorityQueueTests(Of TPriorityQueue).Clear_QueueKeepsWorkingAfter()
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Clear_QueueKeepsWorkingAfter()
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Clear_QueueKeepsWorkingAfter()
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Clear_QueueKeepsWorkingAfter()
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Clear_QueueKeepsWorkingAfter()
 - uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Clear_QueueKeepsWorkingAfter*
   name: Clear_QueueKeepsWorkingAfter
   href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Clear_QueueKeepsWorkingAfter_
   commentId: Overload:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Clear_QueueKeepsWorkingAfter
   isSpec: "True"
-  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TPriorityQueue>.Clear_QueueKeepsWorkingAfter
-  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TPriorityQueue).Clear_QueueKeepsWorkingAfter
-  nameWithType: MergeablePriorityQueueTests<TPriorityQueue>.Clear_QueueKeepsWorkingAfter
-  nameWithType.vb: MergeablePriorityQueueTests(Of TPriorityQueue).Clear_QueueKeepsWorkingAfter
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Clear_QueueKeepsWorkingAfter
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Clear_QueueKeepsWorkingAfter
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Clear_QueueKeepsWorkingAfter
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Clear_QueueKeepsWorkingAfter
 - uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Clear_WipesAllItemsOut
   name: Clear_WipesAllItemsOut()
   href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Clear_WipesAllItemsOut
   commentId: M:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Clear_WipesAllItemsOut
-  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TPriorityQueue>.Clear_WipesAllItemsOut()
-  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TPriorityQueue).Clear_WipesAllItemsOut()
-  nameWithType: MergeablePriorityQueueTests<TPriorityQueue>.Clear_WipesAllItemsOut()
-  nameWithType.vb: MergeablePriorityQueueTests(Of TPriorityQueue).Clear_WipesAllItemsOut()
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Clear_WipesAllItemsOut()
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Clear_WipesAllItemsOut()
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Clear_WipesAllItemsOut()
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Clear_WipesAllItemsOut()
 - uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Clear_WipesAllItemsOut*
   name: Clear_WipesAllItemsOut
   href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Clear_WipesAllItemsOut_
   commentId: Overload:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Clear_WipesAllItemsOut
   isSpec: "True"
-  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TPriorityQueue>.Clear_WipesAllItemsOut
-  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TPriorityQueue).Clear_WipesAllItemsOut
-  nameWithType: MergeablePriorityQueueTests<TPriorityQueue>.Clear_WipesAllItemsOut
-  nameWithType.vb: MergeablePriorityQueueTests(Of TPriorityQueue).Clear_WipesAllItemsOut
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Clear_WipesAllItemsOut
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Clear_WipesAllItemsOut
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Clear_WipesAllItemsOut
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Clear_WipesAllItemsOut
+- uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.IntBuilder
+  name: IntBuilder
+  href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_IntBuilder
+  commentId: P:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.IntBuilder
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.IntBuilder
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).IntBuilder
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.IntBuilder
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).IntBuilder
+- uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.IntBuilder*
+  name: IntBuilder
+  href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_IntBuilder_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.IntBuilder
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.IntBuilder
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).IntBuilder
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.IntBuilder
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).IntBuilder
 - uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_CanBeRepeatedWithMultipleTargets
   name: Merge_CanBeRepeatedWithMultipleTargets()
   href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Merge_CanBeRepeatedWithMultipleTargets
   commentId: M:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_CanBeRepeatedWithMultipleTargets
-  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TPriorityQueue>.Merge_CanBeRepeatedWithMultipleTargets()
-  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TPriorityQueue).Merge_CanBeRepeatedWithMultipleTargets()
-  nameWithType: MergeablePriorityQueueTests<TPriorityQueue>.Merge_CanBeRepeatedWithMultipleTargets()
-  nameWithType.vb: MergeablePriorityQueueTests(Of TPriorityQueue).Merge_CanBeRepeatedWithMultipleTargets()
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_CanBeRepeatedWithMultipleTargets()
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_CanBeRepeatedWithMultipleTargets()
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_CanBeRepeatedWithMultipleTargets()
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_CanBeRepeatedWithMultipleTargets()
 - uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_CanBeRepeatedWithMultipleTargets*
   name: Merge_CanBeRepeatedWithMultipleTargets
   href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Merge_CanBeRepeatedWithMultipleTargets_
   commentId: Overload:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_CanBeRepeatedWithMultipleTargets
   isSpec: "True"
-  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TPriorityQueue>.Merge_CanBeRepeatedWithMultipleTargets
-  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TPriorityQueue).Merge_CanBeRepeatedWithMultipleTargets
-  nameWithType: MergeablePriorityQueueTests<TPriorityQueue>.Merge_CanBeRepeatedWithMultipleTargets
-  nameWithType.vb: MergeablePriorityQueueTests(Of TPriorityQueue).Merge_CanBeRepeatedWithMultipleTargets
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_CanBeRepeatedWithMultipleTargets
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_CanBeRepeatedWithMultipleTargets
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_CanBeRepeatedWithMultipleTargets
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_CanBeRepeatedWithMultipleTargets
 - uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_ContainsElementsFromBothQueues
   name: Merge_ContainsElementsFromBothQueues()
   href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Merge_ContainsElementsFromBothQueues
   commentId: M:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_ContainsElementsFromBothQueues
-  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TPriorityQueue>.Merge_ContainsElementsFromBothQueues()
-  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TPriorityQueue).Merge_ContainsElementsFromBothQueues()
-  nameWithType: MergeablePriorityQueueTests<TPriorityQueue>.Merge_ContainsElementsFromBothQueues()
-  nameWithType.vb: MergeablePriorityQueueTests(Of TPriorityQueue).Merge_ContainsElementsFromBothQueues()
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_ContainsElementsFromBothQueues()
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_ContainsElementsFromBothQueues()
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_ContainsElementsFromBothQueues()
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_ContainsElementsFromBothQueues()
 - uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_ContainsElementsFromBothQueues*
   name: Merge_ContainsElementsFromBothQueues
   href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Merge_ContainsElementsFromBothQueues_
   commentId: Overload:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_ContainsElementsFromBothQueues
   isSpec: "True"
-  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TPriorityQueue>.Merge_ContainsElementsFromBothQueues
-  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TPriorityQueue).Merge_ContainsElementsFromBothQueues
-  nameWithType: MergeablePriorityQueueTests<TPriorityQueue>.Merge_ContainsElementsFromBothQueues
-  nameWithType.vb: MergeablePriorityQueueTests(Of TPriorityQueue).Merge_ContainsElementsFromBothQueues
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_ContainsElementsFromBothQueues
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_ContainsElementsFromBothQueues
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_ContainsElementsFromBothQueues
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_ContainsElementsFromBothQueues
+- uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_IfDifferentPrioritySortByItNoMatterIfFromSourceOrTarget
+  name: Merge_IfDifferentPrioritySortByItNoMatterIfFromSourceOrTarget()
+  href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Merge_IfDifferentPrioritySortByItNoMatterIfFromSourceOrTarget
+  commentId: M:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_IfDifferentPrioritySortByItNoMatterIfFromSourceOrTarget
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_IfDifferentPrioritySortByItNoMatterIfFromSourceOrTarget()
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_IfDifferentPrioritySortByItNoMatterIfFromSourceOrTarget()
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_IfDifferentPrioritySortByItNoMatterIfFromSourceOrTarget()
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_IfDifferentPrioritySortByItNoMatterIfFromSourceOrTarget()
+- uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_IfDifferentPrioritySortByItNoMatterIfFromSourceOrTarget*
+  name: Merge_IfDifferentPrioritySortByItNoMatterIfFromSourceOrTarget
+  href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Merge_IfDifferentPrioritySortByItNoMatterIfFromSourceOrTarget_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_IfDifferentPrioritySortByItNoMatterIfFromSourceOrTarget
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_IfDifferentPrioritySortByItNoMatterIfFromSourceOrTarget
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_IfDifferentPrioritySortByItNoMatterIfFromSourceOrTarget
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_IfDifferentPrioritySortByItNoMatterIfFromSourceOrTarget
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_IfDifferentPrioritySortByItNoMatterIfFromSourceOrTarget
+- uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_IfSamePriorityTakeItemsAfterMergeAfterTarget
+  name: Merge_IfSamePriorityTakeItemsAfterMergeAfterTarget()
+  href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Merge_IfSamePriorityTakeItemsAfterMergeAfterTarget
+  commentId: M:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_IfSamePriorityTakeItemsAfterMergeAfterTarget
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_IfSamePriorityTakeItemsAfterMergeAfterTarget()
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_IfSamePriorityTakeItemsAfterMergeAfterTarget()
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_IfSamePriorityTakeItemsAfterMergeAfterTarget()
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_IfSamePriorityTakeItemsAfterMergeAfterTarget()
+- uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_IfSamePriorityTakeItemsAfterMergeAfterTarget*
+  name: Merge_IfSamePriorityTakeItemsAfterMergeAfterTarget
+  href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Merge_IfSamePriorityTakeItemsAfterMergeAfterTarget_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_IfSamePriorityTakeItemsAfterMergeAfterTarget
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_IfSamePriorityTakeItemsAfterMergeAfterTarget
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_IfSamePriorityTakeItemsAfterMergeAfterTarget
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_IfSamePriorityTakeItemsAfterMergeAfterTarget
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_IfSamePriorityTakeItemsAfterMergeAfterTarget
+- uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_IfSamePriorityTakeItemsComingFromTargetAfterSource
+  name: Merge_IfSamePriorityTakeItemsComingFromTargetAfterSource()
+  href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Merge_IfSamePriorityTakeItemsComingFromTargetAfterSource
+  commentId: M:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_IfSamePriorityTakeItemsComingFromTargetAfterSource
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_IfSamePriorityTakeItemsComingFromTargetAfterSource()
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_IfSamePriorityTakeItemsComingFromTargetAfterSource()
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_IfSamePriorityTakeItemsComingFromTargetAfterSource()
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_IfSamePriorityTakeItemsComingFromTargetAfterSource()
+- uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_IfSamePriorityTakeItemsComingFromTargetAfterSource*
+  name: Merge_IfSamePriorityTakeItemsComingFromTargetAfterSource
+  href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Merge_IfSamePriorityTakeItemsComingFromTargetAfterSource_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_IfSamePriorityTakeItemsComingFromTargetAfterSource
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_IfSamePriorityTakeItemsComingFromTargetAfterSource
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_IfSamePriorityTakeItemsComingFromTargetAfterSource
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_IfSamePriorityTakeItemsComingFromTargetAfterSource
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_IfSamePriorityTakeItemsComingFromTargetAfterSource
+- uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_KeepsPushTimestampsUniqueWithinEras
+  name: Merge_KeepsPushTimestampsUniqueWithinEras()
+  href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Merge_KeepsPushTimestampsUniqueWithinEras
+  commentId: M:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_KeepsPushTimestampsUniqueWithinEras
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_KeepsPushTimestampsUniqueWithinEras()
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_KeepsPushTimestampsUniqueWithinEras()
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_KeepsPushTimestampsUniqueWithinEras()
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_KeepsPushTimestampsUniqueWithinEras()
+- uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_KeepsPushTimestampsUniqueWithinEras*
+  name: Merge_KeepsPushTimestampsUniqueWithinEras
+  href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Merge_KeepsPushTimestampsUniqueWithinEras_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_KeepsPushTimestampsUniqueWithinEras
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_KeepsPushTimestampsUniqueWithinEras
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_KeepsPushTimestampsUniqueWithinEras
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_KeepsPushTimestampsUniqueWithinEras
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_KeepsPushTimestampsUniqueWithinEras
 - uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_RemoveAllItemsFromTheTarget
   name: Merge_RemoveAllItemsFromTheTarget()
   href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Merge_RemoveAllItemsFromTheTarget
   commentId: M:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_RemoveAllItemsFromTheTarget
-  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TPriorityQueue>.Merge_RemoveAllItemsFromTheTarget()
-  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TPriorityQueue).Merge_RemoveAllItemsFromTheTarget()
-  nameWithType: MergeablePriorityQueueTests<TPriorityQueue>.Merge_RemoveAllItemsFromTheTarget()
-  nameWithType.vb: MergeablePriorityQueueTests(Of TPriorityQueue).Merge_RemoveAllItemsFromTheTarget()
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_RemoveAllItemsFromTheTarget()
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_RemoveAllItemsFromTheTarget()
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_RemoveAllItemsFromTheTarget()
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_RemoveAllItemsFromTheTarget()
 - uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_RemoveAllItemsFromTheTarget*
   name: Merge_RemoveAllItemsFromTheTarget
   href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Merge_RemoveAllItemsFromTheTarget_
   commentId: Overload:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_RemoveAllItemsFromTheTarget
   isSpec: "True"
-  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TPriorityQueue>.Merge_RemoveAllItemsFromTheTarget
-  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TPriorityQueue).Merge_RemoveAllItemsFromTheTarget
-  nameWithType: MergeablePriorityQueueTests<TPriorityQueue>.Merge_RemoveAllItemsFromTheTarget
-  nameWithType.vb: MergeablePriorityQueueTests(Of TPriorityQueue).Merge_RemoveAllItemsFromTheTarget
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_RemoveAllItemsFromTheTarget
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_RemoveAllItemsFromTheTarget
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_RemoveAllItemsFromTheTarget
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_RemoveAllItemsFromTheTarget
 - uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_TargetChangesDontInterfereWithSource
   name: Merge_TargetChangesDontInterfereWithSource()
   href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Merge_TargetChangesDontInterfereWithSource
   commentId: M:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_TargetChangesDontInterfereWithSource
-  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TPriorityQueue>.Merge_TargetChangesDontInterfereWithSource()
-  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TPriorityQueue).Merge_TargetChangesDontInterfereWithSource()
-  nameWithType: MergeablePriorityQueueTests<TPriorityQueue>.Merge_TargetChangesDontInterfereWithSource()
-  nameWithType.vb: MergeablePriorityQueueTests(Of TPriorityQueue).Merge_TargetChangesDontInterfereWithSource()
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_TargetChangesDontInterfereWithSource()
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_TargetChangesDontInterfereWithSource()
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_TargetChangesDontInterfereWithSource()
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_TargetChangesDontInterfereWithSource()
 - uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_TargetChangesDontInterfereWithSource*
   name: Merge_TargetChangesDontInterfereWithSource
   href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Merge_TargetChangesDontInterfereWithSource_
   commentId: Overload:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_TargetChangesDontInterfereWithSource
   isSpec: "True"
-  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TPriorityQueue>.Merge_TargetChangesDontInterfereWithSource
-  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TPriorityQueue).Merge_TargetChangesDontInterfereWithSource
-  nameWithType: MergeablePriorityQueueTests<TPriorityQueue>.Merge_TargetChangesDontInterfereWithSource
-  nameWithType.vb: MergeablePriorityQueueTests(Of TPriorityQueue).Merge_TargetChangesDontInterfereWithSource
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_TargetChangesDontInterfereWithSource
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_TargetChangesDontInterfereWithSource
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_TargetChangesDontInterfereWithSource
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_TargetChangesDontInterfereWithSource
 - uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_TargetIsUsableAfterMerge
   name: Merge_TargetIsUsableAfterMerge()
   href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Merge_TargetIsUsableAfterMerge
   commentId: M:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_TargetIsUsableAfterMerge
-  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TPriorityQueue>.Merge_TargetIsUsableAfterMerge()
-  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TPriorityQueue).Merge_TargetIsUsableAfterMerge()
-  nameWithType: MergeablePriorityQueueTests<TPriorityQueue>.Merge_TargetIsUsableAfterMerge()
-  nameWithType.vb: MergeablePriorityQueueTests(Of TPriorityQueue).Merge_TargetIsUsableAfterMerge()
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_TargetIsUsableAfterMerge()
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_TargetIsUsableAfterMerge()
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_TargetIsUsableAfterMerge()
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_TargetIsUsableAfterMerge()
 - uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_TargetIsUsableAfterMerge*
   name: Merge_TargetIsUsableAfterMerge
   href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Merge_TargetIsUsableAfterMerge_
   commentId: Overload:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_TargetIsUsableAfterMerge
   isSpec: "True"
-  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TPriorityQueue>.Merge_TargetIsUsableAfterMerge
-  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TPriorityQueue).Merge_TargetIsUsableAfterMerge
-  nameWithType: MergeablePriorityQueueTests<TPriorityQueue>.Merge_TargetIsUsableAfterMerge
-  nameWithType.vb: MergeablePriorityQueueTests(Of TPriorityQueue).Merge_TargetIsUsableAfterMerge
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_TargetIsUsableAfterMerge
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_TargetIsUsableAfterMerge
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_TargetIsUsableAfterMerge
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_TargetIsUsableAfterMerge
 - uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_WithEmptySource
   name: Merge_WithEmptySource()
   href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Merge_WithEmptySource
   commentId: M:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_WithEmptySource
-  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TPriorityQueue>.Merge_WithEmptySource()
-  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TPriorityQueue).Merge_WithEmptySource()
-  nameWithType: MergeablePriorityQueueTests<TPriorityQueue>.Merge_WithEmptySource()
-  nameWithType.vb: MergeablePriorityQueueTests(Of TPriorityQueue).Merge_WithEmptySource()
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_WithEmptySource()
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_WithEmptySource()
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_WithEmptySource()
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_WithEmptySource()
 - uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_WithEmptySource*
   name: Merge_WithEmptySource
   href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Merge_WithEmptySource_
   commentId: Overload:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_WithEmptySource
   isSpec: "True"
-  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TPriorityQueue>.Merge_WithEmptySource
-  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TPriorityQueue).Merge_WithEmptySource
-  nameWithType: MergeablePriorityQueueTests<TPriorityQueue>.Merge_WithEmptySource
-  nameWithType.vb: MergeablePriorityQueueTests(Of TPriorityQueue).Merge_WithEmptySource
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_WithEmptySource
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_WithEmptySource
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_WithEmptySource
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_WithEmptySource
 - uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_WithEmptyTarget
   name: Merge_WithEmptyTarget()
   href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Merge_WithEmptyTarget
   commentId: M:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_WithEmptyTarget
-  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TPriorityQueue>.Merge_WithEmptyTarget()
-  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TPriorityQueue).Merge_WithEmptyTarget()
-  nameWithType: MergeablePriorityQueueTests<TPriorityQueue>.Merge_WithEmptyTarget()
-  nameWithType.vb: MergeablePriorityQueueTests(Of TPriorityQueue).Merge_WithEmptyTarget()
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_WithEmptyTarget()
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_WithEmptyTarget()
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_WithEmptyTarget()
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_WithEmptyTarget()
 - uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_WithEmptyTarget*
   name: Merge_WithEmptyTarget
   href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Merge_WithEmptyTarget_
   commentId: Overload:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_WithEmptyTarget
   isSpec: "True"
-  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TPriorityQueue>.Merge_WithEmptyTarget
-  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TPriorityQueue).Merge_WithEmptyTarget
-  nameWithType: MergeablePriorityQueueTests<TPriorityQueue>.Merge_WithEmptyTarget
-  nameWithType.vb: MergeablePriorityQueueTests(Of TPriorityQueue).Merge_WithEmptyTarget
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_WithEmptyTarget
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_WithEmptyTarget
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_WithEmptyTarget
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_WithEmptyTarget
 - uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_WorksWithDuplicates
   name: Merge_WorksWithDuplicates()
   href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Merge_WorksWithDuplicates
   commentId: M:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_WorksWithDuplicates
-  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TPriorityQueue>.Merge_WorksWithDuplicates()
-  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TPriorityQueue).Merge_WorksWithDuplicates()
-  nameWithType: MergeablePriorityQueueTests<TPriorityQueue>.Merge_WorksWithDuplicates()
-  nameWithType.vb: MergeablePriorityQueueTests(Of TPriorityQueue).Merge_WorksWithDuplicates()
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_WorksWithDuplicates()
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_WorksWithDuplicates()
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_WorksWithDuplicates()
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_WorksWithDuplicates()
 - uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_WorksWithDuplicates*
   name: Merge_WorksWithDuplicates
   href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Merge_WorksWithDuplicates_
   commentId: Overload:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_WorksWithDuplicates
   isSpec: "True"
-  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TPriorityQueue>.Merge_WorksWithDuplicates
-  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TPriorityQueue).Merge_WorksWithDuplicates
-  nameWithType: MergeablePriorityQueueTests<TPriorityQueue>.Merge_WorksWithDuplicates
-  nameWithType.vb: MergeablePriorityQueueTests(Of TPriorityQueue).Merge_WorksWithDuplicates
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_WorksWithDuplicates
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_WorksWithDuplicates
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_WorksWithDuplicates
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_WorksWithDuplicates
 - uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_WorksWithManyItems
   name: Merge_WorksWithManyItems()
   href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Merge_WorksWithManyItems
   commentId: M:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_WorksWithManyItems
-  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TPriorityQueue>.Merge_WorksWithManyItems()
-  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TPriorityQueue).Merge_WorksWithManyItems()
-  nameWithType: MergeablePriorityQueueTests<TPriorityQueue>.Merge_WorksWithManyItems()
-  nameWithType.vb: MergeablePriorityQueueTests(Of TPriorityQueue).Merge_WorksWithManyItems()
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_WorksWithManyItems()
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_WorksWithManyItems()
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_WorksWithManyItems()
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_WorksWithManyItems()
 - uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_WorksWithManyItems*
   name: Merge_WorksWithManyItems
   href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_Merge_WorksWithManyItems_
   commentId: Overload:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.Merge_WorksWithManyItems
   isSpec: "True"
-  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TPriorityQueue>.Merge_WorksWithManyItems
-  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TPriorityQueue).Merge_WorksWithManyItems
-  nameWithType: MergeablePriorityQueueTests<TPriorityQueue>.Merge_WorksWithManyItems
-  nameWithType.vb: MergeablePriorityQueueTests(Of TPriorityQueue).Merge_WorksWithManyItems
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_WorksWithManyItems
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_WorksWithManyItems
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.Merge_WorksWithManyItems
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).Merge_WorksWithManyItems
+- uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.MergeAndClear_ComplexScenario
+  name: MergeAndClear_ComplexScenario()
+  href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_MergeAndClear_ComplexScenario
+  commentId: M:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.MergeAndClear_ComplexScenario
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.MergeAndClear_ComplexScenario()
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).MergeAndClear_ComplexScenario()
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.MergeAndClear_ComplexScenario()
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).MergeAndClear_ComplexScenario()
+- uid: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.MergeAndClear_ComplexScenario*
+  name: MergeAndClear_ComplexScenario
+  href: api/MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests-1.html#MoreStructures_Tests_PriorityQueues_MergeablePriorityQueueTests_1_MergeAndClear_ComplexScenario_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests`1.MergeAndClear_ComplexScenario
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests<TIntPriorityQueue>.MergeAndClear_ComplexScenario
+  fullName.vb: MoreStructures.Tests.PriorityQueues.MergeablePriorityQueueTests(Of TIntPriorityQueue).MergeAndClear_ComplexScenario
+  nameWithType: MergeablePriorityQueueTests<TIntPriorityQueue>.MergeAndClear_ComplexScenario
+  nameWithType.vb: MergeablePriorityQueueTests(Of TIntPriorityQueue).MergeAndClear_ComplexScenario
 - uid: MoreStructures.Tests.PriorityQueues.PeekKthPriorityQueueTests
   name: PeekKthPriorityQueueTests
   href: api/MoreStructures.Tests.PriorityQueues.PeekKthPriorityQueueTests.html
@@ -13161,6 +13460,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.PriorityQueues.PrioritizedItemTests.CompareTo_IsCorrect
   nameWithType: PrioritizedItemTests.CompareTo_IsCorrect
+- uid: MoreStructures.Tests.PriorityQueues.PrioritizedItemTests.CompareTo_TakesIntoAccountEras
+  name: CompareTo_TakesIntoAccountEras()
+  href: api/MoreStructures.Tests.PriorityQueues.PrioritizedItemTests.html#MoreStructures_Tests_PriorityQueues_PrioritizedItemTests_CompareTo_TakesIntoAccountEras
+  commentId: M:MoreStructures.Tests.PriorityQueues.PrioritizedItemTests.CompareTo_TakesIntoAccountEras
+  fullName: MoreStructures.Tests.PriorityQueues.PrioritizedItemTests.CompareTo_TakesIntoAccountEras()
+  nameWithType: PrioritizedItemTests.CompareTo_TakesIntoAccountEras()
+- uid: MoreStructures.Tests.PriorityQueues.PrioritizedItemTests.CompareTo_TakesIntoAccountEras*
+  name: CompareTo_TakesIntoAccountEras
+  href: api/MoreStructures.Tests.PriorityQueues.PrioritizedItemTests.html#MoreStructures_Tests_PriorityQueues_PrioritizedItemTests_CompareTo_TakesIntoAccountEras_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.PrioritizedItemTests.CompareTo_TakesIntoAccountEras
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.PrioritizedItemTests.CompareTo_TakesIntoAccountEras
+  nameWithType: PrioritizedItemTests.CompareTo_TakesIntoAccountEras
 - uid: MoreStructures.Tests.PriorityQueues.PriorityQueueTests
   name: PriorityQueueTests
   href: api/MoreStructures.Tests.PriorityQueues.PriorityQueueTests.html
