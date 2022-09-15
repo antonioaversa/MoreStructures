@@ -1,5 +1,4 @@
 ﻿using MoreStructures.PriorityQueues;
-using MoreStructures.PriorityQueues.BinaryHeap;
 using MoreStructures.PriorityQueues.Extensions;
 
 namespace MoreStructures.Graphs.ShortestDistance;
@@ -77,20 +76,42 @@ namespace MoreStructures.Graphs.ShortestDistance;
 ///     - For each edge for which a shortest distance is found (in the worst case all e edges of the graph), both BP 
 ///       and PQ have to be updated with the new shortest distance.
 ///       <br/>
-///     - Updating BP is done in O(1). Updating PQ, however, has logarithmic complexity over the number of items in
-///       PQ, which is at most v. So the processing of all edges, across all iterations, takes time proportional to
-///       e * log(v).
+///     - Updating BP is done in O(1). Updating PQ, however, has a complexity which depends on the specific
+///       <see cref="IUpdatablePriorityQueue{T}"/> implementation used.
+///       <br/>
+///     - As an example, if a <see cref="PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue{T}"/> is used, updating PQ 
+///       has logarithmic complexity over the number of items in PQ, which is at most v. So the processing of all 
+///       edges, across all iterations, takes time proportional to e * log(v).
 ///       <br/>
 ///     - Moreover, after all neighbors of each vertex are processed, a <see cref="IPriorityQueue{T}.Pop"/> is done on 
 ///       PQ, to find the next vertex to add to A. This operation too is logarithmic with the number of items in PQ.
 ///       So the total cost of all pop operations, across all iterations, takes time proportional to v * log(v).
 ///       <br/>
-///     - Therefore Time Complexity is O((v + e) * log(v)) and Space Complexity is O(v), since all structures contain 
-///       at most v items, of constant size.
+///     - Therefore, when using a <see cref="PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue{T}"/>, Time Complexity 
+///       is O((v + e) * log(v)) and Space Complexity is O(v), since all structures contain at most v items, of 
+///       constant size.
+///       <br/>
+///     - The Time Complexity may change when a different <see cref="IUpdatablePriorityQueue{T}"/> is used.
+///       For instance, if a <see cref="PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue{T}"/> is used, because
+///       push and update operations are done in constant amortized time, the complexity is reduced to
+///       O(e + v * log(v)), whereas when a <see cref="PriorityQueues.ArrayList.ArrayListPriorityQueue{T}"/> is used,
+///       the complexity increases to O((v + e) * v).
 ///     </para>
 /// </remarks>
 public class DijkstraShortestDistanceFinder : IShortestDistanceFinder
 {
+    private Func<IUpdatablePriorityQueue<int>> PriorityQueueBuilder { get; }
+
+    /// <inheritdoc cref="DijkstraShortestDistanceFinder"/>.
+    /// <param name="priorityQueueBuilder">
+    /// A builder of a <see cref="IUpdatablePriorityQueue{T}"/> of <see cref="int"/> values, used by the algorithm to
+    /// store edges with priority from the closest to the start to the farthest.
+    /// </param>
+    public DijkstraShortestDistanceFinder(Func<IUpdatablePriorityQueue<int>> priorityQueueBuilder)
+    {
+        PriorityQueueBuilder = priorityQueueBuilder;
+    }
+
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     ///     <inheritdoc cref="DijkstraShortestDistanceFinder"/>
@@ -102,7 +123,7 @@ public class DijkstraShortestDistanceFinder : IShortestDistanceFinder
             [start] = (0, null),
         };
         var added = new HashSet<int>() { start };
-        var vertexes = new UpdatableBinaryHeapPriorityQueue<int>();
+        var vertexes = PriorityQueueBuilder();
         var lastAdded = start;
         while (lastAdded != end)
         {
