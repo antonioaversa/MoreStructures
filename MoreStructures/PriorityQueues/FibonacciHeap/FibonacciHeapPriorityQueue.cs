@@ -149,7 +149,7 @@ public partial class FibonacciHeapPriorityQueue<T> : BinomialHeapPriorityQueue<T
     /// </remarks> 
     public override void Push(T item, int priority)
     {
-        var prioritizedItem = new PrioritizedItem<T>(item, priority, CurrentPushTimestamp++);
+        var prioritizedItem = new PrioritizedItem<T>(item, priority, CurrentPushTimestamp++, CurrentEra);
         var newRoot = new TreeNode<T> { PrioritizedItem = prioritizedItem };
         AddRoot(newRoot);
         RaiseItemPushed(newRoot);

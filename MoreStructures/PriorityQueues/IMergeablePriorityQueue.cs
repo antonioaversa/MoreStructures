@@ -9,7 +9,7 @@
 ///     <para id="advantages">
 ///     ADVANTAGES AND DISADVANTAGES
 ///     <br/>
-///     - <see cref="Merge"/> from a source S can be implemented in a general way by copying the entire target data 
+///     - <see cref="MergeFrom"/> from a source S can be implemented in a general way by copying the entire target data 
 ///       structure T and then performing m <see cref="IPriorityQueue{T}.Pop"/>, where m is the number of items in T, 
 ///       each followed by a <see cref="IPriorityQueue{T}.Push"/> into S.
 ///       <br/>
@@ -56,8 +56,8 @@ public interface IMergeablePriorityQueue<T, in TPQTarget> : IPriorityQueue<T>
     where TPQTarget : IMergeablePriorityQueue<T, TPQTarget>
 {
     /// <summary>
-    /// Merges the <paramref name="targetPriorityQueue"/> into this priority queue, emptying out the content of
-    /// the <paramref name="targetPriorityQueue"/>.
+    /// Merges all items the <paramref name="targetPriorityQueue"/> into this priority queue, emptying out the content 
+    /// of the <paramref name="targetPriorityQueue"/>.
     /// </summary>
     /// <param name="targetPriorityQueue">
     /// The <see cref="IMergeablePriorityQueue{T, TPQTarget}"/>, to take the items from.
@@ -65,13 +65,13 @@ public interface IMergeablePriorityQueue<T, in TPQTarget> : IPriorityQueue<T>
     /// <remarks>
     ///     <inheritdoc cref="IMergeablePriorityQueue{T, TPQTarget}"/>
     /// </remarks>
-    void Merge(TPQTarget targetPriorityQueue);
+    void MergeFrom(TPQTarget targetPriorityQueue);
 
     /// <summary>
     /// Clears this queue, wiping out all its items.
     /// </summary>
     /// <remarks>
-    /// Used by <see cref="Merge(TPQTarget)"/> on the target <see cref="IMergeablePriorityQueue{T, TPQTarget}"/>.
+    /// Used by <see cref="MergeFrom(TPQTarget)"/> on the target <see cref="IMergeablePriorityQueue{T, TPQTarget}"/>.
     /// </remarks>
     void Clear();
 }

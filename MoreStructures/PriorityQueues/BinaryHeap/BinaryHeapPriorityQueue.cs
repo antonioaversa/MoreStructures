@@ -84,6 +84,14 @@ public class BinaryHeapPriorityQueue<T>
     where T : notnull
 {
     /// <summary>
+    /// The era in which all push timestamps created by this instance (e.g. on push) leave in.
+    /// </summary>
+    /// <remarks>
+    /// Depending on the implementation, may be relevant in merging.
+    /// </remarks>
+    protected PushTimestampEra CurrentEra { get; set; } = new(0);
+
+    /// <summary>
     /// A non-negative, zero-based, monotonically strictly increasing counter, incremented at every insertion into this 
     /// data structure by a <see cref="Push(T, int)"/>.
     /// </summary>
@@ -374,11 +382,11 @@ public class BinaryHeapPriorityQueue<T>
     ///     - Space Complexity is O(m), since m items are added to the list storing the items of this queue.
     ///     </para>
     /// </remarks>
-    public virtual void Merge(BinaryHeapPriorityQueue<T> targetPriorityQueue)
+    public virtual void MergeFrom(BinaryHeapPriorityQueue<T> targetPriorityQueue)
     {
         foreach (var prioritizedItem in targetPriorityQueue.Items)
         {
-            Items.Add(new(prioritizedItem.Item, prioritizedItem.Priority, CurrentPushTimestamp));
+            Items.Add(new(prioritizedItem.Item, prioritizedItem.Priority, CurrentPushTimestamp, CurrentEra));
             RaiseItemPushed();
             CurrentPushTimestamp++;
         }
@@ -393,8 +401,8 @@ public class BinaryHeapPriorityQueue<T>
     /// <remarks>
     /// Just clears the underlying array list.
     /// <br/>
-    /// The internal push timestamp counter is not reset. Therefore, new pushes after the clear will receive push
-    /// timestamps strictly higher than the ones assigned to the items in the queue before the clear.
+    /// The internal push timestamp counter is not reset, nor the era. Therefore, new pushes after the clear will 
+    /// receive push timestamps strictly higher than the ones assigned to the items in the queue before the clear.
     /// <br/>
     /// Time and Space Complexity are O(1).
     /// </remarks>
@@ -432,7 +440,7 @@ public class BinaryHeapPriorityQueue<T>
 
     private void Push(T item, int priority, int pushTimestamp)
     {
-        Items.Add(new(item, priority, pushTimestamp));
+        Items.Add(new(item, priority, pushTimestamp, CurrentEra));
         RaiseItemPushed();
         SiftUp(Items.Count - 1);
     }

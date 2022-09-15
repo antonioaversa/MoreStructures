@@ -23,10 +23,10 @@ public class BinaryHeapPriorityQueueTests_AsPeekKthQueue : PeekKthPriorityQueueT
 }
 
 [TestClass]
-public class BinaryHeapPriorityQueueTests_AsMergeable : MergeablePriorityQueueTests<BinaryHeapPriorityQueue<int>>
+public class BinaryHeapPriorityQueueTests_AsMergeable 
+    : MergeablePriorityQueueTests<BinaryHeapPriorityQueue<int>>
 {
-    public BinaryHeapPriorityQueueTests_AsMergeable() : base(
-        () => new BinaryHeapPriorityQueue<int>())
+    public BinaryHeapPriorityQueueTests_AsMergeable() : base(() => new BinaryHeapPriorityQueue<int>())
     {
     }
 }

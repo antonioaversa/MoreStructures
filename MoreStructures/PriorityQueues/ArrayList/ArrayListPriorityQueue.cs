@@ -38,6 +38,7 @@ public class ArrayListPriorityQueue<T>
     : IUpdatablePriorityQueue<T>, IPeekKthPriorityQueue<T>, IMergeablePriorityQueue<T, ArrayListPriorityQueue<T>>
     where T : notnull
 {
+    private readonly PushTimestampEra _currentEra = new(0);
     private int _currentPushTimestamp = 0;
     private List<PrioritizedItem<T>> Items { get; }
 
@@ -152,7 +153,7 @@ public class ArrayListPriorityQueue<T>
     /// </remarks> 
     public void Push(T item, int priority)
     {
-        Items.Add(new(item, priority, _currentPushTimestamp++));
+        Items.Add(new(item, priority, _currentPushTimestamp++, _currentEra));
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
@@ -305,7 +306,7 @@ public class ArrayListPriorityQueue<T>
     /// <br/>
     /// Time and Space Complexity are O(m), where m is the number of items in the target.
     /// </remarks>
-    public void Merge(ArrayListPriorityQueue<T> targetPriorityQueue)
+    public void MergeFrom(ArrayListPriorityQueue<T> targetPriorityQueue)
     {
         foreach (var prioritizedItem in targetPriorityQueue.Items)
             Push(prioritizedItem.Item, prioritizedItem.Priority);

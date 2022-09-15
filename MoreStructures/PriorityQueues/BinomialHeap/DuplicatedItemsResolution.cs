@@ -44,6 +44,15 @@ public class DuplicatedItemsResolution<TItems, THeap>
     private Dictionary<TItems, THeap> ItemToPushTimestamps { get; } = new();
     private Dictionary<int, TreeNode<TItems>> PushTimestampToTreeNode { get; } = new();
 
+    /// <summary>
+    /// Clears the content of this object.
+    /// </summary>
+    public void Clear()
+    {
+        ItemToPushTimestamps.Clear();
+        PushTimestampToTreeNode.Clear();
+    }
+
     /// <inheritdoc cref="IUpdatablePriorityQueue{T}.GetPrioritiesOf(T)" path="//*[not(self::remarks)]"/>
     /// <remarks>
     ///     <para id="algorithm">
@@ -139,10 +148,10 @@ public class DuplicatedItemsResolution<TItems, THeap>
     ///       item appears twice, etc.).
     ///     </para>
     /// </remarks>
-    public TreeNode<TItems> FindTreeNode(TItems item)
+    public TreeNode<TItems>? FindTreeNode(TItems item)
     {
         if (!ItemToPushTimestamps.TryGetValue(item, out var pushTimestamps))
-            throw new InvalidOperationException("The specified item is not in the queue.");
+            return null;
 
         TreeNode<TItems>? treeNode = null;
         while (
@@ -153,9 +162,9 @@ public class DuplicatedItemsResolution<TItems, THeap>
         }
 
         if (pushTimestamps.Count == 0)
-            throw new InvalidOperationException("The specified item is not in the queue.");
+            return null;
 
-        return treeNode!;
+        return treeNode;
     }
 
     /// <summary>

@@ -55,6 +55,9 @@ public class UpdatableFibonacciHeapPriorityQueue<T> : FibonacciHeapPriorityQueue
             return null;
         var maxPrioritizedItem = Peek();
         var treeNodeInFibonacciHeap = DuplicatedItemsResolution.FindTreeNode(item);
+        if (treeNodeInFibonacciHeap == null)
+            return null;
+
         var oldPrioritizedItem = treeNodeInFibonacciHeap.PrioritizedItem;
         UpdatePriority(treeNodeInFibonacciHeap, maxPrioritizedItem.Priority + 1, oldPrioritizedItem.PushTimestamp);
         Pop();
@@ -107,6 +110,8 @@ public class UpdatableFibonacciHeapPriorityQueue<T> : FibonacciHeapPriorityQueue
     public PrioritizedItem<T> UpdatePriority(T item, int newPriority)
     {
         var treeNodeInFibonacciHeap = DuplicatedItemsResolution.FindTreeNode(item);
+        if (treeNodeInFibonacciHeap == null)
+            throw new InvalidOperationException("The specified item is not in the queue.");
         return UpdatePriority(treeNodeInFibonacciHeap, newPriority, CurrentPushTimestamp++);
     }
 
@@ -133,7 +138,7 @@ public class UpdatableFibonacciHeapPriorityQueue<T> : FibonacciHeapPriorityQueue
     private PrioritizedItem<T> UpdatePriority(TreeNode<T> treeNode, int newPriority, int newPushTimestamp)
     {
         var newPrioritizedItem =
-            new PrioritizedItem<T>(treeNode.PrioritizedItem.Item, newPriority, newPushTimestamp);
+            new PrioritizedItem<T>(treeNode.PrioritizedItem.Item, newPriority, newPushTimestamp, CurrentEra);
         var oldPrioritizedItem = treeNode.PrioritizedItem;
         treeNode.PrioritizedItem = newPrioritizedItem;
 
