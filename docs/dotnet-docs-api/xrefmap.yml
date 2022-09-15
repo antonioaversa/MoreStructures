@@ -3439,6 +3439,43 @@ references:
   fullName.vb: MoreStructures.Lists.Searching.LinearSearch.Nth(Of T)(IEnumerable(Of T), T, System.Int32, System.Nullable(Of IComparer(Of T)), System.Nullable(Of System.Int32), System.Nullable(Of System.Int32))
   nameWithType: LinearSearch.Nth<T>(IEnumerable<T>, T, Int32, Nullable<IComparer<T>>, Nullable<Int32>, Nullable<Int32>)
   nameWithType.vb: LinearSearch.Nth(Of T)(IEnumerable(Of T), T, Int32, Nullable(Of IComparer(Of T)), Nullable(Of Int32), Nullable(Of Int32))
+- uid: MoreStructures.Lists.Sorting
+  name: MoreStructures.Lists.Sorting
+  href: api/MoreStructures.Lists.Sorting.html
+  commentId: N:MoreStructures.Lists.Sorting
+  fullName: MoreStructures.Lists.Sorting
+  nameWithType: MoreStructures.Lists.Sorting
+- uid: MoreStructures.Lists.Sorting.Extensions
+  name: Extensions
+  href: api/MoreStructures.Lists.Sorting.Extensions.html
+  commentId: T:MoreStructures.Lists.Sorting.Extensions
+  fullName: MoreStructures.Lists.Sorting.Extensions
+  nameWithType: Extensions
+- uid: MoreStructures.Lists.Sorting.Extensions.IsSorted*
+  name: IsSorted
+  href: api/MoreStructures.Lists.Sorting.Extensions.html#MoreStructures_Lists_Sorting_Extensions_IsSorted_
+  commentId: Overload:MoreStructures.Lists.Sorting.Extensions.IsSorted
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Sorting.Extensions.IsSorted
+  nameWithType: Extensions.IsSorted
+- uid: MoreStructures.Lists.Sorting.Extensions.IsSorted``1(IList{``0})
+  name: IsSorted<T>(IList<T>)
+  href: api/MoreStructures.Lists.Sorting.Extensions.html#MoreStructures_Lists_Sorting_Extensions_IsSorted__1_IList___0__
+  commentId: M:MoreStructures.Lists.Sorting.Extensions.IsSorted``1(IList{``0})
+  name.vb: IsSorted(Of T)(IList(Of T))
+  fullName: MoreStructures.Lists.Sorting.Extensions.IsSorted<T>(IList<T>)
+  fullName.vb: MoreStructures.Lists.Sorting.Extensions.IsSorted(Of T)(IList(Of T))
+  nameWithType: Extensions.IsSorted<T>(IList<T>)
+  nameWithType.vb: Extensions.IsSorted(Of T)(IList(Of T))
+- uid: MoreStructures.Lists.Sorting.Extensions.IsSorted``1(IList{``0},IComparer{``0})
+  name: IsSorted<T>(IList<T>, IComparer<T>)
+  href: api/MoreStructures.Lists.Sorting.Extensions.html#MoreStructures_Lists_Sorting_Extensions_IsSorted__1_IList___0__IComparer___0__
+  commentId: M:MoreStructures.Lists.Sorting.Extensions.IsSorted``1(IList{``0},IComparer{``0})
+  name.vb: IsSorted(Of T)(IList(Of T), IComparer(Of T))
+  fullName: MoreStructures.Lists.Sorting.Extensions.IsSorted<T>(IList<T>, IComparer<T>)
+  fullName.vb: MoreStructures.Lists.Sorting.Extensions.IsSorted(Of T)(IList(Of T), IComparer(Of T))
+  nameWithType: Extensions.IsSorted<T>(IList<T>, IComparer<T>)
+  nameWithType.vb: Extensions.IsSorted(Of T)(IList(Of T), IComparer(Of T))
 - uid: MoreStructures.PriorityQueues
   name: MoreStructures.PriorityQueues
   href: api/MoreStructures.PriorityQueues.html
@@ -12163,6 +12200,70 @@ references:
   commentId: F:MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId.String2
   fullName: MoreStructures.Tests.Lists.Searching.SearchTests.TestCaseId.String2
   nameWithType: SearchTests.TestCaseId.String2
+- uid: MoreStructures.Tests.Lists.Sorting
+  name: MoreStructures.Tests.Lists.Sorting
+  href: api/MoreStructures.Tests.Lists.Sorting.html
+  commentId: N:MoreStructures.Tests.Lists.Sorting
+  fullName: MoreStructures.Tests.Lists.Sorting
+  nameWithType: MoreStructures.Tests.Lists.Sorting
+- uid: MoreStructures.Tests.Lists.Sorting.ExtensionsTests
+  name: ExtensionsTests
+  href: api/MoreStructures.Tests.Lists.Sorting.ExtensionsTests.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.ExtensionsTests
+  fullName: MoreStructures.Tests.Lists.Sorting.ExtensionsTests
+  nameWithType: ExtensionsTests
+- uid: MoreStructures.Tests.Lists.Sorting.ExtensionsTests.IsSorted_WithComparable_IsCorrectWithBool
+  name: IsSorted_WithComparable_IsCorrectWithBool()
+  href: api/MoreStructures.Tests.Lists.Sorting.ExtensionsTests.html#MoreStructures_Tests_Lists_Sorting_ExtensionsTests_IsSorted_WithComparable_IsCorrectWithBool
+  commentId: M:MoreStructures.Tests.Lists.Sorting.ExtensionsTests.IsSorted_WithComparable_IsCorrectWithBool
+  fullName: MoreStructures.Tests.Lists.Sorting.ExtensionsTests.IsSorted_WithComparable_IsCorrectWithBool()
+  nameWithType: ExtensionsTests.IsSorted_WithComparable_IsCorrectWithBool()
+- uid: MoreStructures.Tests.Lists.Sorting.ExtensionsTests.IsSorted_WithComparable_IsCorrectWithBool*
+  name: IsSorted_WithComparable_IsCorrectWithBool
+  href: api/MoreStructures.Tests.Lists.Sorting.ExtensionsTests.html#MoreStructures_Tests_Lists_Sorting_ExtensionsTests_IsSorted_WithComparable_IsCorrectWithBool_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.ExtensionsTests.IsSorted_WithComparable_IsCorrectWithBool
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.ExtensionsTests.IsSorted_WithComparable_IsCorrectWithBool
+  nameWithType: ExtensionsTests.IsSorted_WithComparable_IsCorrectWithBool
+- uid: MoreStructures.Tests.Lists.Sorting.ExtensionsTests.IsSorted_WithComparable_IsCorrectWithChars
+  name: IsSorted_WithComparable_IsCorrectWithChars()
+  href: api/MoreStructures.Tests.Lists.Sorting.ExtensionsTests.html#MoreStructures_Tests_Lists_Sorting_ExtensionsTests_IsSorted_WithComparable_IsCorrectWithChars
+  commentId: M:MoreStructures.Tests.Lists.Sorting.ExtensionsTests.IsSorted_WithComparable_IsCorrectWithChars
+  fullName: MoreStructures.Tests.Lists.Sorting.ExtensionsTests.IsSorted_WithComparable_IsCorrectWithChars()
+  nameWithType: ExtensionsTests.IsSorted_WithComparable_IsCorrectWithChars()
+- uid: MoreStructures.Tests.Lists.Sorting.ExtensionsTests.IsSorted_WithComparable_IsCorrectWithChars*
+  name: IsSorted_WithComparable_IsCorrectWithChars
+  href: api/MoreStructures.Tests.Lists.Sorting.ExtensionsTests.html#MoreStructures_Tests_Lists_Sorting_ExtensionsTests_IsSorted_WithComparable_IsCorrectWithChars_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.ExtensionsTests.IsSorted_WithComparable_IsCorrectWithChars
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.ExtensionsTests.IsSorted_WithComparable_IsCorrectWithChars
+  nameWithType: ExtensionsTests.IsSorted_WithComparable_IsCorrectWithChars
+- uid: MoreStructures.Tests.Lists.Sorting.ExtensionsTests.IsSorted_WithComparable_IsCorrectWithNumbers
+  name: IsSorted_WithComparable_IsCorrectWithNumbers()
+  href: api/MoreStructures.Tests.Lists.Sorting.ExtensionsTests.html#MoreStructures_Tests_Lists_Sorting_ExtensionsTests_IsSorted_WithComparable_IsCorrectWithNumbers
+  commentId: M:MoreStructures.Tests.Lists.Sorting.ExtensionsTests.IsSorted_WithComparable_IsCorrectWithNumbers
+  fullName: MoreStructures.Tests.Lists.Sorting.ExtensionsTests.IsSorted_WithComparable_IsCorrectWithNumbers()
+  nameWithType: ExtensionsTests.IsSorted_WithComparable_IsCorrectWithNumbers()
+- uid: MoreStructures.Tests.Lists.Sorting.ExtensionsTests.IsSorted_WithComparable_IsCorrectWithNumbers*
+  name: IsSorted_WithComparable_IsCorrectWithNumbers
+  href: api/MoreStructures.Tests.Lists.Sorting.ExtensionsTests.html#MoreStructures_Tests_Lists_Sorting_ExtensionsTests_IsSorted_WithComparable_IsCorrectWithNumbers_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.ExtensionsTests.IsSorted_WithComparable_IsCorrectWithNumbers
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.ExtensionsTests.IsSorted_WithComparable_IsCorrectWithNumbers
+  nameWithType: ExtensionsTests.IsSorted_WithComparable_IsCorrectWithNumbers
+- uid: MoreStructures.Tests.Lists.Sorting.ExtensionsTests.IsSorted_WithComparer_IsCorrect
+  name: IsSorted_WithComparer_IsCorrect()
+  href: api/MoreStructures.Tests.Lists.Sorting.ExtensionsTests.html#MoreStructures_Tests_Lists_Sorting_ExtensionsTests_IsSorted_WithComparer_IsCorrect
+  commentId: M:MoreStructures.Tests.Lists.Sorting.ExtensionsTests.IsSorted_WithComparer_IsCorrect
+  fullName: MoreStructures.Tests.Lists.Sorting.ExtensionsTests.IsSorted_WithComparer_IsCorrect()
+  nameWithType: ExtensionsTests.IsSorted_WithComparer_IsCorrect()
+- uid: MoreStructures.Tests.Lists.Sorting.ExtensionsTests.IsSorted_WithComparer_IsCorrect*
+  name: IsSorted_WithComparer_IsCorrect
+  href: api/MoreStructures.Tests.Lists.Sorting.ExtensionsTests.html#MoreStructures_Tests_Lists_Sorting_ExtensionsTests_IsSorted_WithComparer_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.ExtensionsTests.IsSorted_WithComparer_IsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.ExtensionsTests.IsSorted_WithComparer_IsCorrect
+  nameWithType: ExtensionsTests.IsSorted_WithComparer_IsCorrect
 - uid: MoreStructures.Tests.PriorityQueues
   name: MoreStructures.Tests.PriorityQueues
   href: api/MoreStructures.Tests.PriorityQueues.html
