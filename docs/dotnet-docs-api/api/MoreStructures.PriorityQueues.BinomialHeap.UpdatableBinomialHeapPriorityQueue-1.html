@@ -112,13 +112,10 @@ operations, such as retrieval and update of priorities and removal of items.</p>
       <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_MaxRootsListNode">BinomialHeapPriorityQueue&lt;T&gt;.MaxRootsListNode</a>
     </div>
     <div>
-      <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_CurrentEra">BinomialHeapPriorityQueue&lt;T&gt;.CurrentEra</a>
-    </div>
-    <div>
-      <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_SpansMultipleEras">BinomialHeapPriorityQueue&lt;T&gt;.SpansMultipleEras</a>
-    </div>
-    <div>
       <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_CurrentPushTimestamp">BinomialHeapPriorityQueue&lt;T&gt;.CurrentPushTimestamp</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_PushTimestampEras">BinomialHeapPriorityQueue&lt;T&gt;.PushTimestampEras</a>
     </div>
     <div>
       <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Count">BinomialHeapPriorityQueue&lt;T&gt;.Count</a>
@@ -197,7 +194,7 @@ operations, such as retrieval and update of priorities and removal of items.</p>
   <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
   <h5 id="MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class UpdatableBinomialHeapPriorityQueue&lt;T&gt; : BinomialHeapPriorityQueue&lt;T&gt;, IMergeablePriorityQueue&lt;T, BinomialHeapPriorityQueue&lt;T&gt;&gt;, IUpdatablePriorityQueue&lt;T&gt;, IPriorityQueue&lt;T&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class UpdatableBinomialHeapPriorityQueue&lt;T&gt; : BinomialHeapPriorityQueue&lt;T&gt;, IMergeablePriorityQueue&lt;T, BinomialHeapPriorityQueue&lt;T&gt;&gt;, IUpdatablePriorityQueue&lt;T&gt;, IPriorityQueue&lt;T&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -333,51 +330,6 @@ Time and Space Complexity is O(1).</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_RaiseItemPriorityChanged_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__MoreStructures_PriorityQueues_PrioritizedItem__0__.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue%601.RaiseItemPriorityChanged(MoreStructures.PriorityQueues.BinomialHeap.TreeNode%7B%600%7D%2CMoreStructures.PriorityQueues.PrioritizedItem%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/UpdatableBinomialHeapPriorityQueue.cs/#L153">View Source</a>
-  </span>
-  <a id="MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_RaiseItemPriorityChanged_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.RaiseItemPriorityChanged*"></a>
-  <h4 id="MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_RaiseItemPriorityChanged_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__MoreStructures_PriorityQueues_PrioritizedItem__0__" data-uid="MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.RaiseItemPriorityChanged(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0},MoreStructures.PriorityQueues.PrioritizedItem{`0})">RaiseItemPriorityChanged(TreeNode&lt;T&gt;, PrioritizedItem&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"><p>Invoked just after the priority of the <span class="xref">MoreStructures.PriorityQueues.PrioritizedItem&lt;T&gt;</span> of a <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html">TreeNode&lt;T&gt;</a> in the
-heap has changed.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void RaiseItemPriorityChanged(TreeNode&lt;T&gt; treeNode, PrioritizedItem&lt;T&gt; itemBefore)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html">TreeNode</a>&lt;T&gt;</td>
-        <td><span class="parametername">treeNode</span></td>
-        <td><p>The node whose item has changed priority.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">MoreStructures.PriorityQueues.PrioritizedItem</span>&lt;T&gt;</td>
-        <td><span class="parametername">itemBefore</span></td>
-        <td><p>The <span class="xref">MoreStructures.PriorityQueues.PrioritizedItem&lt;T&gt;</span> as it was before the change.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_RaiseItemPriorityChanged_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__MoreStructures_PriorityQueues_PrioritizedItem__0___remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Hands over to
-<a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution-2.html#MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_RaiseItemPriorityChanged_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__MoreStructures_PriorityQueues_PrioritizedItem__0__">RaiseItemPriorityChanged(TreeNode&lt;TItems&gt;, PrioritizedItem&lt;TItems&gt;)</a>.</p>
-</div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_RaiseItemPushed_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue%601.RaiseItemPushed(MoreStructures.PriorityQueues.BinomialHeap.TreeNode%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -412,50 +364,6 @@ heap has changed.</p>
   <div><span class="xref">MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue&lt;T&gt;.RaiseItemPushed(MoreStructures.PriorityQueues.BinomialHeap.TreeNode&lt;T&gt;)</span></div>
   <h5 id="MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_RaiseItemPushed_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0___remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Hands over to <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution-2.html#MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_RaiseItemPushed_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__">RaiseItemPushed(TreeNode&lt;TItems&gt;)</a>.</p>
-</div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_RaiseItemsSwapped_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue%601.RaiseItemsSwapped(MoreStructures.PriorityQueues.BinomialHeap.TreeNode%7B%600%7D%2CMoreStructures.PriorityQueues.BinomialHeap.TreeNode%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/UpdatableBinomialHeapPriorityQueue.cs/#L165">View Source</a>
-  </span>
-  <a id="MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_RaiseItemsSwapped_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.RaiseItemsSwapped*"></a>
-  <h4 id="MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_RaiseItemsSwapped_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__" data-uid="MoreStructures.PriorityQueues.BinomialHeap.UpdatableBinomialHeapPriorityQueue`1.RaiseItemsSwapped(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0},MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0})">RaiseItemsSwapped(TreeNode&lt;T&gt;, TreeNode&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"><p>Invoked just after two items have had their <span class="xref">MoreStructures.PriorityQueues.PrioritizedItem&lt;T&gt;</span> swapped.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void RaiseItemsSwapped(TreeNode&lt;T&gt; treeNode1, TreeNode&lt;T&gt; treeNode2)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html">TreeNode</a>&lt;T&gt;</td>
-        <td><span class="parametername">treeNode1</span></td>
-        <td><p>The first node.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html">TreeNode</a>&lt;T&gt;</td>
-        <td><span class="parametername">treeNode2</span></td>
-        <td><p>The second node.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="MoreStructures_PriorityQueues_BinomialHeap_UpdatableBinomialHeapPriorityQueue_1_RaiseItemsSwapped_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0___remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Hands over to
-<a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.DuplicatedItemsResolution-2.html#MoreStructures_PriorityQueues_BinomialHeap_DuplicatedItemsResolution_2_RaiseItemsSwapped_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__">RaiseItemsSwapped(TreeNode&lt;TItems&gt;, TreeNode&lt;TItems&gt;)</a>.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
