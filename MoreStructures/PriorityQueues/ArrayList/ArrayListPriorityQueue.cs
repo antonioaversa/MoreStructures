@@ -34,12 +34,19 @@ namespace MoreStructures.PriorityQueues.ArrayList;
 ///     solutions.
 ///     </para>
 /// </remarks>
-public class ArrayListPriorityQueue<T> 
+public sealed class ArrayListPriorityQueue<T> 
     : IUpdatablePriorityQueue<T>, IPeekKthPriorityQueue<T>, IMergeablePriorityQueue<T, ArrayListPriorityQueue<T>>
     where T : notnull
 {
-    private readonly PushTimestampEra _currentEra = new(0);
-    private int _currentPushTimestamp = 0;
+    /// <summary>
+    /// A non-negative, zero-based, monotonically strictly increasing counter, incremented at every insertion into this 
+    /// data structure by a <see cref="Push(T, int)"/>.
+    /// </summary>
+    private int CurrentPushTimestamp { get; set; } = 0;
+
+    /// <summary>
+    /// The <see cref="List{T}"/> of <see cref="PrioritizedItem{T}"/> backing the array list heap.
+    /// </summary>
     private List<PrioritizedItem<T>> Items { get; }
 
     private KeyValuePair<int, PrioritizedItem<T>> FindHighestPriorityOccurrence(T item)
@@ -153,7 +160,7 @@ public class ArrayListPriorityQueue<T>
     /// </remarks> 
     public void Push(T item, int priority)
     {
-        Items.Add(new(item, priority, _currentPushTimestamp++, _currentEra));
+        Items.Add(new(item, priority, CurrentPushTimestamp++));
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>

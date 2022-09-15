@@ -13,7 +13,6 @@ public class UpdatableFibonacciHeapPriorityQueueTests_AsBasicQueue : PriorityQue
     }
 }
 
-
 [TestClass]
 public class UpdatableFibonacciHeapPriorityQueueTests_AsUpdatableQueue : UpdatablePriorityQueueTests
 {
@@ -51,4 +50,14 @@ public class UpdatableFibonacciHeapPriorityQueueTests_AsUpdatableQueue : Updatab
         Assert.AreEqual(383, queue.Peek().Item);
     }
 
+}
+
+[TestClass]
+public class UpdatableFibonacciHeapPriorityQueueTests_AsMergeableAndUpdatableQueue
+    : MergeablePriorityQueueTests<UpdatableFibonacciHeapPriorityQueue<int>>
+{
+    public UpdatableFibonacciHeapPriorityQueueTests_AsMergeableAndUpdatableQueue() : base(
+        () => new UpdatableFibonacciHeapPriorityQueue<int>())
+    {
+    }
 }

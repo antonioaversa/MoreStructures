@@ -39,7 +39,7 @@
 ///     The two dictionaries are kept up-to-date by implementing the extensibility points provided by 
 ///     <see cref="BinaryHeapPriorityQueue{T}"/>, after pushing, before popping and on items swapping.
 /// </remarks> 
-public class UpdatableBinaryHeapPriorityQueue<T> : BinaryHeapPriorityQueue<T>, IUpdatablePriorityQueue<T>
+public sealed class UpdatableBinaryHeapPriorityQueue<T> : BinaryHeapPriorityQueue<T>, IUpdatablePriorityQueue<T>
     where T : notnull
 {
     private Dictionary<T, BinaryHeapPriorityQueue<int>> ItemToPushTimestamps { get; } = new();

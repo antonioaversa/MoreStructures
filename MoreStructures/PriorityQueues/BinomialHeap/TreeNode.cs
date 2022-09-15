@@ -33,6 +33,12 @@ public class TreeNode<T>
     public LinkedListNode<TreeNode<T>>? ParentListNode { get; set; } = null;
 
     /// <summary>
+    /// Whether this node has lost a child since last reset, and will be promoted to roots next time they will lose a 
+    /// child. Only applies to, and it is taken into account from, Fibonacci heaps.
+    /// </summary>
+    public bool IsALoser { get; set; } = false;
+
+    /// <summary>
     /// Whether this node is in the heap, either as a root or as a non-root node in a tree of the forest, or it is
     /// a dangling or detached node.
     /// </summary>
@@ -87,9 +93,10 @@ public class TreeNode<T>
     /// </remarks>
     public TreeNode<T> DeepCopy()
     {
-        // Parent and ParentListNode are taken care by the parent TreeNode
-        // RootsListNode is taken care by the top-level copy of the heap
-        var copy = new TreeNode<T> { PrioritizedItem = PrioritizedItem };
+        // Parent and ParentListNode are taken care by the parent TreeNode.
+        // RootsListNode is taken care by the top-level copy of the heap.
+        // IsInAHeap is auto-calculated based on ParentListNode and RootsListNode.
+        var copy = new TreeNode<T> { PrioritizedItem = PrioritizedItem, IsALoser = IsALoser };
 
         foreach (var childCopy in Children.Select(c => c.DeepCopy()))
             copy.AddChild(childCopy);
@@ -101,10 +108,8 @@ public class TreeNode<T>
     /// <summary>
     ///     <inheritdoc/>
     ///     <br/>
-    ///     Includes the <see cref="PrioritizedItem"/> and <see cref="IsInAHeap"/>.
+    ///     Includes the <see cref="PrioritizedItem"/>, <see cref="IsInAHeap"/> and <see cref="IsALoser"/>.
     /// </summary>
-    public override string ToString()
-    {
-        return $"{PrioritizedItem} [{(IsInAHeap ? "In a heap" : "Not in a heap")}]";
-    }
+    public override string ToString() => 
+        $"{PrioritizedItem} [{(IsInAHeap ? "In a heap" : "Not in a heap")}] [{(IsALoser ? "Loser" : "Not a loser")}]";
 }

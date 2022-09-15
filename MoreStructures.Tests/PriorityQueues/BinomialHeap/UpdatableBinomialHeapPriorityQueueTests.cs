@@ -27,22 +27,11 @@ public class UpdatableBinomialHeapPriorityQueueTests_AsUpdatableQueue : Updatabl
 
 [TestClass]
 public class UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue 
-    : MergeableAndUpdatablePriorityQueueTests<UpdatableBinomialHeapPriorityQueue<int>>
+    : MergeablePriorityQueueTests<UpdatableBinomialHeapPriorityQueue<int>>
 {
     public UpdatableBinomialHeapPriorityQueueTests_AsMergeableAndUpdatableQueue() : base(
         () => new UpdatableBinomialHeapPriorityQueue<int>())
     {
-    }
-
-    [TestMethod]
-    public void Merge_SourceOfAMergeCannotBeUsedAsTargetOfAnotherMerge()
-    {
-        var source = IntBuilder();
-        var target = IntBuilder();
-        source.MergeFrom(target);
-        
-        var newSource = IntBuilder();
-        Assert.ThrowsException<NotSupportedException>(() => newSource.MergeFrom(source));
     }
 }
 

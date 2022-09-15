@@ -11,12 +11,25 @@ namespace MoreStructures.PriorityQueues.FibonacciHeap;
 /// items of type <typeparamref name="T"/> and heap nodes of type <see cref="TreeNode{T}"/> is performed, in presence 
 /// of duplicates.
 /// </remarks>
-public class UpdatableFibonacciHeapPriorityQueue<T> : FibonacciHeapPriorityQueue<T>, IUpdatablePriorityQueue<T>
+public sealed class UpdatableFibonacciHeapPriorityQueue<T> : FibonacciHeapPriorityQueue<T>, IUpdatablePriorityQueue<T>
     where T : notnull
 {
     private DuplicatedItemsResolution<T, FibonacciHeapPriorityQueue<int>> DuplicatedItemsResolution { get; } = new();
 
     #region Public API
+
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
+    /// <remarks>
+    /// Clears the <see cref="FibonacciHeapPriorityQueue{T}"/> structures and the additional 
+    /// <see cref="DuplicatedItemsResolution{TItems, THeap}"/> object introduced to support updates and deletions.
+    /// <br/>
+    /// Time and Space Complexity is O(1).
+    /// </remarks>
+    public override void Clear()
+    {
+        base.Clear();
+        DuplicatedItemsResolution.Clear();
+    }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
@@ -128,7 +141,7 @@ public class UpdatableFibonacciHeapPriorityQueue<T> : FibonacciHeapPriorityQueue
         DuplicatedItemsResolution.RaiseItemPopping(root);
 
     /// <inheritdoc cref="UpdatableBinomialHeapPriorityQueue{T}.RaiseItemPriorityChanged"/>
-    protected virtual void RaiseItemPriorityChanged(TreeNode<T> treeNode, PrioritizedItem<T> itemBefore) =>
+    private void RaiseItemPriorityChanged(TreeNode<T> treeNode, PrioritizedItem<T> itemBefore) =>
         DuplicatedItemsResolution.RaiseItemPriorityChanged(treeNode, itemBefore);
 
     #endregion
@@ -138,7 +151,7 @@ public class UpdatableFibonacciHeapPriorityQueue<T> : FibonacciHeapPriorityQueue
     private PrioritizedItem<T> UpdatePriority(TreeNode<T> treeNode, int newPriority, int newPushTimestamp)
     {
         var newPrioritizedItem =
-            new PrioritizedItem<T>(treeNode.PrioritizedItem.Item, newPriority, newPushTimestamp, CurrentEra);
+            new PrioritizedItem<T>(treeNode.PrioritizedItem.Item, newPriority, newPushTimestamp, PushTimestampEras[^1]);
         var oldPrioritizedItem = treeNode.PrioritizedItem;
         treeNode.PrioritizedItem = newPrioritizedItem;
 
@@ -193,7 +206,7 @@ public class UpdatableFibonacciHeapPriorityQueue<T> : FibonacciHeapPriorityQueue
         var ancestorNode = parentNode;
         while (ancestorNode != null)
         {
-            if (Losers.Contains(ancestorNode.PrioritizedItem))
+            if (ancestorNode.IsALoser)
             {
                 var parentOfAncestorNode = ancestorNode.Parent;
                 if (parentOfAncestorNode == null)
@@ -204,7 +217,7 @@ public class UpdatableFibonacciHeapPriorityQueue<T> : FibonacciHeapPriorityQueue
             }
             else 
             {
-                Losers.Add(ancestorNode.PrioritizedItem);
+                ancestorNode.IsALoser = true;
                 break;
             }
         }            
