@@ -195,18 +195,64 @@ the number of edges explored in total can be as high as the total number of edge
 - For each edge for which a shortest distance is found (in the worst case all e edges of the graph), both BP 
 and PQ have to be updated with the new shortest distance.
 <br>
-- Updating BP is done in O(1). Updating PQ, however, has logarithmic complexity over the number of items in
-PQ, which is at most v. So the processing of all edges, across all iterations, takes time proportional to
-e * log(v).
+- Updating BP is done in O(1). Updating PQ, however, has a complexity which depends on the specific
+<a class="xref" href="MoreStructures.PriorityQueues.IUpdatablePriorityQueue-1.html">IUpdatablePriorityQueue&lt;T&gt;</a> implementation used.
+<br>
+- As an example, if a <a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html">BinaryHeapPriorityQueue&lt;T&gt;</a> is used, updating PQ 
+has logarithmic complexity over the number of items in PQ, which is at most v. So the processing of all 
+edges, across all iterations, takes time proportional to e * log(v).
 <br>
 - Moreover, after all neighbors of each vertex are processed, a <a class="xref" href="MoreStructures.PriorityQueues.IPriorityQueue-1.html#MoreStructures_PriorityQueues_IPriorityQueue_1_Pop">Pop()</a> is done on 
 PQ, to find the next vertex to add to A. This operation too is logarithmic with the number of items in PQ.
 So the total cost of all pop operations, across all iterations, takes time proportional to v * log(v).
 <br>
-- Therefore Time Complexity is O((v + e) * log(v)) and Space Complexity is O(v), since all structures contain 
-at most v items, of constant size.
+- Therefore, when using a <a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html">BinaryHeapPriorityQueue&lt;T&gt;</a>, Time Complexity 
+is O((v + e) * log(v)) and Space Complexity is O(v), since all structures contain at most v items, of 
+constant size.
+<br>
+- The Time Complexity may change when a different <a class="xref" href="MoreStructures.PriorityQueues.IUpdatablePriorityQueue-1.html">IUpdatablePriorityQueue&lt;T&gt;</a> is used.
+For instance, if a <a class="xref" href="MoreStructures.PriorityQueues.FibonacciHeap.FibonacciHeapPriorityQueue-1.html">FibonacciHeapPriorityQueue&lt;T&gt;</a> is used, because
+push and update operations are done in constant amortized time, the complexity is reduced to
+O(e + v * log(v)), whereas when a <a class="xref" href="MoreStructures.PriorityQueues.ArrayList.ArrayListPriorityQueue-1.html">ArrayListPriorityQueue&lt;T&gt;</a> is used,
+the complexity increases to O((v + e) * v).
 </p>
 </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_ShortestDistance_DijkstraShortestDistanceFinder__ctor_Func_MoreStructures_PriorityQueues_IUpdatablePriorityQueue_System_Int32___.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.ShortestDistance.DijkstraShortestDistanceFinder.%23ctor(Func%7BMoreStructures.PriorityQueues.IUpdatablePriorityQueue%7BSystem.Int32%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/ShortestDistance/DijkstraShortestDistanceFinder.cs/#L110">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_ShortestDistance_DijkstraShortestDistanceFinder__ctor_" data-uid="MoreStructures.Graphs.ShortestDistance.DijkstraShortestDistanceFinder.#ctor*"></a>
+  <h4 id="MoreStructures_Graphs_ShortestDistance_DijkstraShortestDistanceFinder__ctor_Func_MoreStructures_PriorityQueues_IUpdatablePriorityQueue_System_Int32___" data-uid="MoreStructures.Graphs.ShortestDistance.DijkstraShortestDistanceFinder.#ctor(Func{MoreStructures.PriorityQueues.IUpdatablePriorityQueue{System.Int32}})">DijkstraShortestDistanceFinder(Func&lt;IUpdatablePriorityQueue&lt;Int32&gt;&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DijkstraShortestDistanceFinder(Func&lt;IUpdatablePriorityQueue&lt;int&gt;&gt; priorityQueueBuilder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="MoreStructures.PriorityQueues.IUpdatablePriorityQueue-1.html">IUpdatablePriorityQueue</a>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="parametername">priorityQueueBuilder</span></td>
+        <td><p>A builder of a <a class="xref" href="MoreStructures.PriorityQueues.IUpdatablePriorityQueue-1.html">IUpdatablePriorityQueue&lt;T&gt;</a> of <span class="xref">System.Int32</span> values, used by the algorithm to
+store edges with priority from the closest to the start to the farthest.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -214,7 +260,7 @@ at most v items, of constant size.
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_ShortestDistance_DijkstraShortestDistanceFinder_Find_MoreStructures_Graphs_IGraph_IDictionary_System_ValueTuple_System_Int32_System_Int32__System_Int32__System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.ShortestDistance.DijkstraShortestDistanceFinder.Find(MoreStructures.Graphs.IGraph%2CIDictionary%7BSystem.ValueTuple%7BSystem.Int32%2CSystem.Int32%7D%2CSystem.Int32%7D%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/ShortestDistance/DijkstraShortestDistanceFinder.cs/#L98">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/ShortestDistance/DijkstraShortestDistanceFinder.cs/#L119">View Source</a>
   </span>
   <a id="MoreStructures_Graphs_ShortestDistance_DijkstraShortestDistanceFinder_Find_" data-uid="MoreStructures.Graphs.ShortestDistance.DijkstraShortestDistanceFinder.Find*"></a>
   <h4 id="MoreStructures_Graphs_ShortestDistance_DijkstraShortestDistanceFinder_Find_MoreStructures_Graphs_IGraph_IDictionary_System_ValueTuple_System_Int32_System_Int32__System_Int32__System_Int32_System_Int32_" data-uid="MoreStructures.Graphs.ShortestDistance.DijkstraShortestDistanceFinder.Find(MoreStructures.Graphs.IGraph,IDictionary{System.ValueTuple{System.Int32,System.Int32},System.Int32},System.Int32,System.Int32)">Find(IGraph, IDictionary&lt;(Int32, Int32), Int32&gt;, Int32, Int32)</h4>
@@ -293,7 +339,7 @@ at most v items, of constant size.
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_ShortestDistance_DijkstraShortestDistanceFinder.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.ShortestDistance.DijkstraShortestDistanceFinder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/ShortestDistance/DijkstraShortestDistanceFinder.cs/#L92" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/ShortestDistance/DijkstraShortestDistanceFinder.cs/#L101" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
