@@ -83,7 +83,8 @@
   
   <h1 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1" class="text-break">Class BinomialHeapPriorityQueue&lt;T&gt;
   </h1>
-  <div class="markdown level0 summary"><p>An <a class="xref" href="MoreStructures.PriorityQueues.IPriorityQueue-1.html">IPriorityQueue&lt;T&gt;</a> implementation based on a Binomial Max Heap of its items.</p>
+  <div class="markdown level0 summary"><p>An <a class="xref" href="MoreStructures.PriorityQueues.IPriorityQueue-1.html">IPriorityQueue&lt;T&gt;</a> implementation based on a Binomial Max Heap of its items. It also supports
+<a class="xref" href="MoreStructures.PriorityQueues.IMergeablePriorityQueue-2.html">IMergeablePriorityQueue&lt;T, TPQTarget&gt;</a> operations.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -95,6 +96,7 @@
   </div>
   <div class="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.PriorityQueues.IMergeablePriorityQueue-2.html">IMergeablePriorityQueue</a>&lt;T, <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html">BinomialHeapPriorityQueue</a>&lt;T&gt;&gt;</div>
     <div><a class="xref" href="MoreStructures.PriorityQueues.IPriorityQueue-1.html">IPriorityQueue</a>&lt;T&gt;</div>
     <div><span class="xref">IEnumerable</span>&lt;T&gt;</div>
   </div>
@@ -126,7 +128,7 @@
   <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
   <h5 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class BinomialHeapPriorityQueue&lt;T&gt; : IPriorityQueue&lt;T&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class BinomialHeapPriorityQueue&lt;T&gt; : IMergeablePriorityQueue&lt;T, BinomialHeapPriorityQueue&lt;T&gt;&gt;, IPriorityQueue&lt;T&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -196,7 +198,7 @@ a logarithmic operation.
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1__ctor.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%601.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L82">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L84">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1__ctor_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.#ctor*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1__ctor" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.#ctor">BinomialHeapPriorityQueue()</h4>
@@ -212,7 +214,7 @@ a logarithmic operation.
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1__ctor_MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue__0__.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%601.%23ctor(MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L99">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L101">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1__ctor_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.#ctor*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1__ctor_MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue__0__" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.#ctor(MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue{`0})">BinomialHeapPriorityQueue(BinomialHeapPriorityQueue&lt;T&gt;)</h4>
@@ -252,7 +254,7 @@ queue.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Count.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%601.Count%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L118">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L120">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Count_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.Count*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Count" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.Count">Count</h4>
@@ -287,7 +289,7 @@ Time and Space Complexity are O(1).</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_CurrentPushTimestamp.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%601.CurrentPushTimestamp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L77">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L79">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_CurrentPushTimestamp_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.CurrentPushTimestamp*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_CurrentPushTimestamp" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.CurrentPushTimestamp">CurrentPushTimestamp</h4>
@@ -319,7 +321,7 @@ data structure by a <a class="xref" href="MoreStructures.PriorityQueues.Binomial
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_ItemsCount.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%601.ItemsCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L66">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L68">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_ItemsCount_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.ItemsCount*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_ItemsCount" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.ItemsCount">ItemsCount</h4>
@@ -350,7 +352,7 @@ data structure by a <a class="xref" href="MoreStructures.PriorityQueues.Binomial
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_MaxRootsListNode.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%601.MaxRootsListNode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L71">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L73">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_MaxRootsListNode_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.MaxRootsListNode*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_MaxRootsListNode" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.MaxRootsListNode">MaxRootsListNode</h4>
@@ -381,7 +383,7 @@ data structure by a <a class="xref" href="MoreStructures.PriorityQueues.Binomial
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Roots.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%601.Roots%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L61">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L63">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Roots_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.Roots*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Roots" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.Roots">Roots</h4>
@@ -414,7 +416,7 @@ data structure by a <a class="xref" href="MoreStructures.PriorityQueues.Binomial
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_AddRoot_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%601.AddRoot(MoreStructures.PriorityQueues.BinomialHeap.TreeNode%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L339">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L429">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_AddRoot_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.AddRoot*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_AddRoot_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.AddRoot(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0})">AddRoot(TreeNode&lt;T&gt;)</h4>
@@ -448,7 +450,7 @@ data structure by a <a class="xref" href="MoreStructures.PriorityQueues.Binomial
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_AttachToRoots_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%601.AttachToRoots(MoreStructures.PriorityQueues.BinomialHeap.TreeNode%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L353">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L443">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_AttachToRoots_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.AttachToRoots*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_AttachToRoots_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.AttachToRoots(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0})">AttachToRoots(TreeNode&lt;T&gt;)</h4>
@@ -495,10 +497,36 @@ data structure by a <a class="xref" href="MoreStructures.PriorityQueues.Binomial
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Clear.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%601.Clear%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L346">View Source</a>
+  </span>
+  <a id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Clear_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.Clear*"></a>
+  <h4 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Clear" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.Clear">Clear()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Clear()</code></pre>
+  </div>
+  <h5 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Clear_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>First, calls <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_RaiseItemsClearing">RaiseItemsClearing()</a>.
+<br>
+Then, removes all the trees from the forest, reset to the items count to 0 and set the reference to the
+max priority root to <span class="xref">null</span>.
+<br>
+The internal push timestamp counter is not reset. Therefore, new pushes after the clear will receive push
+timestamps strictly higher than the ones assigned to the items in the queue before the clear.
+<br>
+Time and Space Complexity are O(1), with <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_RaiseItemsClearing">RaiseItemsClearing()</a> assumed to be O(1).</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_DetachFromRoots_LinkedListNode_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0___.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%601.DetachFromRoots(LinkedListNode%7BMoreStructures.PriorityQueues.BinomialHeap.TreeNode%7B%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L420">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L510">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_DetachFromRoots_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.DetachFromRoots*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_DetachFromRoots_LinkedListNode_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0___" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.DetachFromRoots(LinkedListNode{MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0}})">DetachFromRoots(LinkedListNode&lt;TreeNode&lt;T&gt;&gt;)</h4>
@@ -549,7 +577,7 @@ data structure by a <a class="xref" href="MoreStructures.PriorityQueues.Binomial
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_GetEnumerator.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%601.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L133">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L135">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_GetEnumerator_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.GetEnumerator*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_GetEnumerator" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.GetEnumerator">GetEnumerator()</h4>
@@ -588,10 +616,78 @@ the right order of priority.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Merge_MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue__0__.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%601.Merge(MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L319">View Source</a>
+  </span>
+  <a id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Merge_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.Merge*"></a>
+  <h4 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Merge_MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue__0__" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.Merge(MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue{`0})">Merge(BinomialHeapPriorityQueue&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Merge(BinomialHeapPriorityQueue&lt;T&gt; targetPriorityQueue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html">BinomialHeapPriorityQueue</a>&lt;T&gt;</td>
+        <td><span class="parametername">targetPriorityQueue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Merge_MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue__0___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+ALGORITHM
+<br>
+- Iterates over all the roots of the target heap.
+<br>
+- Add each root R to the linked list of roots of the source heap and increases the total items count of 
+the source heap by the number of items in R, which can be calculated without traversing, from the number 
+of immediate children c of R as 2^c, being R a binomial tree.
+tree.
+<br>
+- For each added root, <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_RaiseRootMerged_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__">RaiseRootMerged(TreeNode&lt;T&gt;)</a> is invoked.
+<br>
+- Then binomial heap shape is restored by merging together all trees with the same degree and a new linear 
+scan of the root is done, to update the reference to the root with highest priority, exactly as in 
+<a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Push__0_System_Int32_">Push(T, Int32)</a> and <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Pop">Pop()</a>. 
+</p>
+<p>
+COMPLEXITY
+<br>
+- For this analysis, events, and in particular <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_RaiseRootMerged_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__">RaiseRootMerged(TreeNode&lt;T&gt;)</a>, are considered
+  O(1) both in Time and Space Complexity.
+<br>
+- The number of roots of the target heap is logarithmic with the number m of items in the target heap.
+<br>
+- Adding each root R of the target heap to the forest of the source heap and increasing the items count are
+both constant-time operations.
+<br>
+- Housekeeping operations, done after that on the source heap, take logarithmic time, as explained in 
+<a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Pop">Pop()</a>.
+<br>
+- Clearing the target is also a constant-time operation.
+<br>
+- Therefore, Time and Space Complexity are O(log(m)).
+</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_MergeEquiDegreeTrees.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%601.MergeEquiDegreeTrees%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L363">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L453">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_MergeEquiDegreeTrees_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.MergeEquiDegreeTrees*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_MergeEquiDegreeTrees" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.MergeEquiDegreeTrees">MergeEquiDegreeTrees()</h4>
@@ -607,7 +703,7 @@ the right order of priority.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_MergeRoots_LinkedListNode_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0___LinkedListNode_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0___.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%601.MergeRoots(LinkedListNode%7BMoreStructures.PriorityQueues.BinomialHeap.TreeNode%7B%600%7D%7D%2CLinkedListNode%7BMoreStructures.PriorityQueues.BinomialHeap.TreeNode%7B%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L397">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L487">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_MergeRoots_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.MergeRoots*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_MergeRoots_LinkedListNode_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0___LinkedListNode_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0___" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.MergeRoots(LinkedListNode{MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0}},LinkedListNode{MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0}})">MergeRoots(LinkedListNode&lt;TreeNode&lt;T&gt;&gt;, LinkedListNode&lt;TreeNode&lt;T&gt;&gt;)</h4>
@@ -665,7 +761,7 @@ in the <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Peek.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%601.Peek%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L155">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L157">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Peek_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.Peek*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Peek" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.Peek">Peek()</h4>
@@ -703,7 +799,7 @@ Therefore, Time and Space Complexity are O(1).</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Pop.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%601.Pop%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L262">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L264">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Pop_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.Pop*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Pop" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.Pop">Pop()</h4>
@@ -785,7 +881,7 @@ trees requires instantiating an array index by degrees, and max degree is O(log(
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_PromoteChildToRoot_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%601.PromoteChildToRoot(MoreStructures.PriorityQueues.BinomialHeap.TreeNode%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L434">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L524">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_PromoteChildToRoot_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.PromoteChildToRoot*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_PromoteChildToRoot_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.PromoteChildToRoot(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0})">PromoteChildToRoot(TreeNode&lt;T&gt;)</h4>
@@ -820,7 +916,7 @@ its current parent.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Push__0_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%601.Push(%600%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L199">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L201">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Push_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.Push*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Push__0_System_Int32_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.Push(`0,System.Int32)">Push(T, Int32)</h4>
@@ -892,7 +988,7 @@ logarithm of the number of items in the heap, to instantiate its data structure.
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_RaiseItemPopping_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%601.RaiseItemPopping(MoreStructures.PriorityQueues.BinomialHeap.TreeNode%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L294">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L373">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_RaiseItemPopping_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.RaiseItemPopping*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_RaiseItemPopping_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.RaiseItemPopping(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0})">RaiseItemPopping(TreeNode&lt;T&gt;)</h4>
@@ -926,7 +1022,7 @@ logarithm of the number of items in the heap, to instantiate its data structure.
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_RaiseItemPushed_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%601.RaiseItemPushed(MoreStructures.PriorityQueues.BinomialHeap.TreeNode%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L288">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L367">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_RaiseItemPushed_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.RaiseItemPushed*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_RaiseItemPushed_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.RaiseItemPushed(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0})">RaiseItemPushed(TreeNode&lt;T&gt;)</h4>
@@ -955,12 +1051,65 @@ logarithm of the number of items in the heap, to instantiate its data structure.
       </tr>
     </tbody>
   </table>
+  <h5 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_RaiseItemPushed_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Not invoked on merging, for which <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_RaiseRootMerged_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__">RaiseRootMerged(TreeNode&lt;T&gt;)</a> is invoked instead.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_RaiseItemsClearing.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%601.RaiseItemsClearing%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L378">View Source</a>
+  </span>
+  <a id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_RaiseItemsClearing_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.RaiseItemsClearing*"></a>
+  <h4 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_RaiseItemsClearing" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.RaiseItemsClearing">RaiseItemsClearing()</h4>
+  <div class="markdown level1 summary"><p>Invoked just before the all the items in the heap are wiped out.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void RaiseItemsClearing()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_RaiseRootMerged_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%601.RaiseRootMerged(MoreStructures.PriorityQueues.BinomialHeap.TreeNode%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L384">View Source</a>
+  </span>
+  <a id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_RaiseRootMerged_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.RaiseRootMerged*"></a>
+  <h4 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_RaiseRootMerged_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.RaiseRootMerged(MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0})">RaiseRootMerged(TreeNode&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Invoked just after an heap tree has been added to the forest (root and all its descendants).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void RaiseRootMerged(TreeNode&lt;T&gt; root)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html">TreeNode</a>&lt;T&gt;</td>
+        <td><span class="parametername">root</span></td>
+        <td><p>The root <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html">TreeNode&lt;T&gt;</a> of the heap tree added to the forest.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_UpdateMaxRootsListNode.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%601.UpdateMaxRootsListNode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L316">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L406">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_UpdateMaxRootsListNode_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.UpdateMaxRootsListNode*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_UpdateMaxRootsListNode" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.UpdateMaxRootsListNode">UpdateMaxRootsListNode()</h4>
@@ -977,7 +1126,7 @@ of max priority.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_UpdateMaxRootsListNodeAfterRootNewOrIncrease_LinkedListNode_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0___.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%601.UpdateMaxRootsListNodeAfterRootNewOrIncrease(LinkedListNode%7BMoreStructures.PriorityQueues.BinomialHeap.TreeNode%7B%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L305">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L395">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_UpdateMaxRootsListNodeAfterRootNewOrIncrease_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.UpdateMaxRootsListNodeAfterRootNewOrIncrease*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_UpdateMaxRootsListNodeAfterRootNewOrIncrease_LinkedListNode_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0___" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.UpdateMaxRootsListNodeAfterRootNewOrIncrease(LinkedListNode{MoreStructures.PriorityQueues.BinomialHeap.TreeNode{`0}})">UpdateMaxRootsListNodeAfterRootNewOrIncrease(LinkedListNode&lt;TreeNode&lt;T&gt;&gt;)</h4>
@@ -1014,7 +1163,7 @@ if that root has a higher priority than the value of the current max priority ro
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_System_Collections_IEnumerable_GetEnumerator.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%601.System%23Collections%23IEnumerable%23GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L144">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L146">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_System_Collections_IEnumerable_GetEnumerator_" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.System#Collections#IEnumerable#GetEnumerator*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_System_Collections_IEnumerable_GetEnumerator" data-uid="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue`1.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
@@ -1044,6 +1193,9 @@ if that root has a higher priority than the value of the current max priority ro
 </div>
   <h3 id="implements">Implements</h3>
   <div>
+      <a class="xref" href="MoreStructures.PriorityQueues.IMergeablePriorityQueue-2.html">IMergeablePriorityQueue&lt;T, TPQTarget&gt;</a>
+  </div>
+  <div>
       <a class="xref" href="MoreStructures.PriorityQueues.IPriorityQueue-1.html">IPriorityQueue&lt;T&gt;</a>
   </div>
   <div>
@@ -1064,7 +1216,7 @@ if that root has a higher priority than the value of the current max priority ro
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L55" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinomialHeap/BinomialHeapPriorityQueue.cs/#L56" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

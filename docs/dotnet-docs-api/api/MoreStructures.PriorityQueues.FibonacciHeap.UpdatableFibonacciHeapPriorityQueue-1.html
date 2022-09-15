@@ -96,6 +96,7 @@ operations, such as retrieval and update of priorities and removal of items.</p>
   </div>
   <div class="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.PriorityQueues.IMergeablePriorityQueue-2.html">IMergeablePriorityQueue</a>&lt;T, <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html">BinomialHeapPriorityQueue</a>&lt;T&gt;&gt;</div>
     <div><a class="xref" href="MoreStructures.PriorityQueues.IUpdatablePriorityQueue-1.html">IUpdatablePriorityQueue</a>&lt;T&gt;</div>
     <div><a class="xref" href="MoreStructures.PriorityQueues.IPriorityQueue-1.html">IPriorityQueue</a>&lt;T&gt;</div>
     <div><span class="xref">IEnumerable</span>&lt;T&gt;</div>
@@ -137,6 +138,18 @@ operations, such as retrieval and update of priorities and removal of items.</p>
     </div>
     <div>
       <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Pop">BinomialHeapPriorityQueue&lt;T&gt;.Pop()</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Merge_MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue__0__">BinomialHeapPriorityQueue&lt;T&gt;.Merge(BinomialHeapPriorityQueue&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_Clear">BinomialHeapPriorityQueue&lt;T&gt;.Clear()</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_RaiseItemsClearing">BinomialHeapPriorityQueue&lt;T&gt;.RaiseItemsClearing()</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_RaiseRootMerged_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0__">BinomialHeapPriorityQueue&lt;T&gt;.RaiseRootMerged(TreeNode&lt;T&gt;)</a>
     </div>
     <div>
       <a class="xref" href="MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinomialHeap_BinomialHeapPriorityQueue_1_UpdateMaxRootsListNodeAfterRootNewOrIncrease_LinkedListNode_MoreStructures_PriorityQueues_BinomialHeap_TreeNode__0___">BinomialHeapPriorityQueue&lt;T&gt;.UpdateMaxRootsListNodeAfterRootNewOrIncrease(LinkedListNode&lt;TreeNode&lt;T&gt;&gt;)</a>
@@ -185,7 +198,7 @@ operations, such as retrieval and update of priorities and removal of items.</p>
   <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
   <h5 id="MoreStructures_PriorityQueues_FibonacciHeap_UpdatableFibonacciHeapPriorityQueue_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class UpdatableFibonacciHeapPriorityQueue&lt;T&gt; : FibonacciHeapPriorityQueue&lt;T&gt;, IUpdatablePriorityQueue&lt;T&gt;, IPriorityQueue&lt;T&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class UpdatableFibonacciHeapPriorityQueue&lt;T&gt; : FibonacciHeapPriorityQueue&lt;T&gt;, IMergeablePriorityQueue&lt;T, BinomialHeapPriorityQueue&lt;T&gt;&gt;, IUpdatablePriorityQueue&lt;T&gt;, IPriorityQueue&lt;T&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -544,6 +557,9 @@ COMPLEXITY - OVERALL
 </p>
 </div>
   <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.PriorityQueues.IMergeablePriorityQueue-2.html">IMergeablePriorityQueue&lt;T, TPQTarget&gt;</a>
+  </div>
   <div>
       <a class="xref" href="MoreStructures.PriorityQueues.IUpdatablePriorityQueue-1.html">IUpdatablePriorityQueue&lt;T&gt;</a>
   </div>
