@@ -240,6 +240,7 @@ public abstract class UpdatablePriorityQueueTests
         var queue = IntUpdatableQueueBuilder();
         Assert.IsNull(queue.Remove(3));
         queue.Push(3, 2);
+        Assert.IsNull(queue.Remove(4));
         Assert.AreEqual(new PrioritizedItem<int>(3, 2, 0), queue.Remove(3));
         queue.Push(3, 2);
         queue.Push(3, 4);

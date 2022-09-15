@@ -14,16 +14,16 @@ public abstract class MergeableAndUpdatablePriorityQueueTests<TPriorityQueue>
     [TestMethod]
     public void Merge_QueueUpdatesKeepWorkingAfter()
     {
-        var source = Builder();
+        var source = IntBuilder();
         source.Push(2, 0);
         source.Push(2, -4);
         source.Push(3, -2);
         
-        var target = Builder();
+        var target = IntBuilder();
         target.Push(1, 2);
         target.Push(2, -4);
 
-        source.Merge(target);
+        source.MergeFrom(target);
 
         Assert.AreEqual(0, target.GetPrioritiesOf(1).Count());
         Assert.AreEqual(0, target.GetPrioritiesOf(2).Count());
@@ -34,7 +34,7 @@ public abstract class MergeableAndUpdatablePriorityQueueTests<TPriorityQueue>
     [TestMethod]
     public void Clear_QueueUpdatesKeepWorkingAfter()
     {
-        var queue = Builder();
+        var queue = IntBuilder();
         queue.Push(1, 2);
         queue.Push(2, -4);
         Assert.IsTrue(queue.GetPrioritiesOf(1).SequenceEqual(new[] { 2 }));

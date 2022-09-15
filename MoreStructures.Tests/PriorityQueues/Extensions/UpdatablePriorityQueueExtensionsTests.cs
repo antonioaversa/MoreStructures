@@ -1,4 +1,5 @@
-﻿using MoreStructures.PriorityQueues;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MoreStructures.PriorityQueues;
 using MoreStructures.PriorityQueues.ArrayList;
 using MoreStructures.PriorityQueues.BinaryHeap;
 using MoreStructures.PriorityQueues.Extensions;
@@ -36,6 +37,25 @@ public abstract class UpdatablePriorityQueueExtensionsTests
         Assert.AreEqual(new PrioritizedItem<int>(1, 5, 4), queue.Peek());
         queue.PushOrUpdate(1, 3);
         Assert.AreEqual(new PrioritizedItem<int>(2, 4, 3), queue.Peek());
+    }
+
+    [TestMethod]
+    public void PopAll_ExtractsAllItems()
+    {
+        var queue = IntQueueBuilder();
+        queue.Push(1, 5);
+        queue.Push(2, 1);
+        queue.Push(3, 3);
+        queue.Push(4, 4);
+        queue.Push(0, 6);
+        queue.Push(1, 2);
+        var itemsCount = queue.Count;
+        var items = queue.PopAll().ToList();
+        Assert.AreEqual(itemsCount, items.Count);
+        Assert.IsTrue(
+            new[] { (0, 6), (1, 5), (4, 4), (3, 3), (1, 2), (2, 1) }.SequenceEqual(
+                items.Select(pi => (pi.Item, pi.Priority))));
+        Assert.AreEqual(0, queue.Count);
     }
 }
 

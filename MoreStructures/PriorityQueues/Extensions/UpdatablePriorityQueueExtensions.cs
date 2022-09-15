@@ -45,4 +45,17 @@ public static class UpdatablePriorityQueueExtensions
         queue.Push(item, newPriority);
         return removedItem;
     }
+
+    /// <summary>
+    /// Pops in sequence all items of the provided <paramref name="queue"/>, returning the sequence of extracted items.
+    /// </summary>
+    /// <typeparam name="T">The type of items in the queue.</typeparam>
+    /// <param name="queue">The <see cref="IPriorityQueue{T}"/>, to extract all items of.</param>
+    /// <returns>A sequence of extracted <see cref="PrioritizedItem{T}"/>, in order of priority.</returns>
+    public static IEnumerable<PrioritizedItem<T>> PopAll<T>(this IPriorityQueue<T> queue)
+        where T : notnull
+    {
+        while (queue.Count > 0)
+            yield return queue.Pop();
+    }
 }

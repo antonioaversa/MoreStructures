@@ -20,6 +20,19 @@ public class UpdatableBinomialHeapPriorityQueue<T> : BinomialHeapPriorityQueue<T
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
+    /// Clears the <see cref="BinomialHeapPriorityQueue{T}"/> structures and the additional 
+    /// <see cref="DuplicatedItemsResolution{TItems, THeap}"/> object introduced to support updates and deletions.
+    /// <br/>
+    /// Time and Space Complexity is O(1).
+    /// </remarks>
+    public override void Clear()
+    {
+        base.Clear();
+        DuplicatedItemsResolution.Clear();
+    }
+
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
+    /// <remarks>
     ///     <inheritdoc cref="DuplicatedItemsResolution{T, THeap}.GetPrioritiesOf(T)"/>
     /// </remarks> 
     public IEnumerable<int> GetPrioritiesOf(T item) => DuplicatedItemsResolution.GetPrioritiesOf(item);
@@ -53,8 +66,12 @@ public class UpdatableBinomialHeapPriorityQueue<T> : BinomialHeapPriorityQueue<T
     {
         if (Count == 0)
             return null;
+
         var maxPrioritizedItem = Peek();
         var treeNodeInBinomialHeap = DuplicatedItemsResolution.FindTreeNode(item);
+        if (treeNodeInBinomialHeap == null)
+            return null;
+
         var oldPrioritizedItem = treeNodeInBinomialHeap.PrioritizedItem;
         UpdatePriority(treeNodeInBinomialHeap, maxPrioritizedItem.Priority + 1, oldPrioritizedItem.PushTimestamp);
         Pop();
@@ -100,6 +117,8 @@ public class UpdatableBinomialHeapPriorityQueue<T> : BinomialHeapPriorityQueue<T
     public PrioritizedItem<T> UpdatePriority(T item, int newPriority)
     {
         var treeNodeInBinomialHeap = DuplicatedItemsResolution.FindTreeNode(item);
+        if (treeNodeInBinomialHeap == null)
+            throw new InvalidOperationException("The specified item is not in the queue.");
         return UpdatePriority(treeNodeInBinomialHeap, newPriority, CurrentPushTimestamp++);
     }
 
@@ -153,7 +172,7 @@ public class UpdatableBinomialHeapPriorityQueue<T> : BinomialHeapPriorityQueue<T
     private PrioritizedItem<T> UpdatePriority(TreeNode<T> treeNode, int newPriority, int newPushTimestamp)
     {
         var newPrioritizedItem =
-            new PrioritizedItem<T>(treeNode.PrioritizedItem.Item, newPriority, newPushTimestamp);
+            new PrioritizedItem<T>(treeNode.PrioritizedItem.Item, newPriority, newPushTimestamp, CurrentEra);
         var oldPrioritizedItem = treeNode.PrioritizedItem;
         treeNode.PrioritizedItem = newPrioritizedItem;
 
