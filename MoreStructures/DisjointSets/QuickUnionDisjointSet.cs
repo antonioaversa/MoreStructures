@@ -14,7 +14,12 @@
 /// </remarks>
 public class QuickUnionDisjointSet : IDisjointSet
 {
-    private int[] Parents { get; }
+    /// <summary>
+    /// Maps the i-th item of the Disjoint Set to the parent in the tree structure, they belong to.
+    /// <br/>
+    /// I-th items which are roots have parent equal to themselves (i.e. <c>i</c>).
+    /// </summary>
+    protected int[] Parents { get; }
 
     /// <summary>
     /// Builds a Disjoint Set structure containing <paramref name="valuesCount"/> disjoint values, each one into its 
@@ -44,7 +49,7 @@ public class QuickUnionDisjointSet : IDisjointSet
     /// <br/>
     /// Time and Space Complexity are O(1).
     /// </remarks>
-    public int ValuesCount { get; }
+    public virtual int ValuesCount { get; }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
@@ -65,7 +70,12 @@ public class QuickUnionDisjointSet : IDisjointSet
     ///     - Therefore, Time and Space Complexity are O(n), where n is <see cref="ValuesCount"/>.
     ///     </para>
     /// </remarks>
-    public int SetsCount => Enumerable.Range(0, ValuesCount).Count(i => Parents[i] == i);
+    public virtual int SetsCount => Enumerable.Range(0, ValuesCount).Count(i => Parents[i] == i);
+
+    /// <summary>
+    /// Returns a copy of the parents of all the values of the forest representing the Disjoint Set.
+    /// </summary>
+    internal IList<int> GetParents() => Parents.ToArray();
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
@@ -84,13 +94,16 @@ public class QuickUnionDisjointSet : IDisjointSet
     ///     <br/>
     ///     - Find the two roots takes a time proportional to the height of the two trees.
     ///       <br/>
-    ///     - Because no mechanism to keep trees flat is put in place by this data structure, the height of each tree 
-    ///       is O(n).
+    ///     - If no mechanism to keep trees flat is put in place by this data structure, the height of each is O(n) in
+    ///       the worst case.
     ///       <br/>
     ///     - Therefore, Time Complexity is O(n). Space Complexity is O(1).
+    ///       <br/>
+    ///     - If a sub-class of <see cref="QuickUnionDisjointSet"/> introduces mechanisms to keep trees flat, the 
+    ///       complexity may become sub-linear. An example is <see cref="WeightedQuickUnionDisjointSet"/>.
     ///     </para>
     /// </remarks>
-    public bool AreConnected(int first, int second)
+    public virtual bool AreConnected(int first, int second)
     {
         if (ValuesCount == 0)
             throw new InvalidOperationException(
@@ -124,13 +137,16 @@ public class QuickUnionDisjointSet : IDisjointSet
     ///     <br/>
     ///     - Find the root takes a time proportional to the height of the tree, the item is in.
     ///       <br/>
-    ///     - Because no mechanism to keep trees flat is put in place by this data structure, the height of the tree 
+    ///     - If no mechanism to keep trees flat is put in place by this data structure, the height of the tree 
     ///       is O(n) in the worst case.
     ///       <br/>
     ///     - Therefore, Time Complexity is O(n). Space Complexity is O(1).
+    ///       <br/>
+    ///     - If a sub-class of <see cref="QuickUnionDisjointSet"/> introduces mechanisms to keep trees flat, the 
+    ///       complexity may become sub-linear. An example is <see cref="WeightedQuickUnionDisjointSet"/>.
     ///     </para>
     /// </remarks>
-    public int Find(int value)
+    public virtual int Find(int value)
     {
         if (ValuesCount == 0)
             throw new InvalidOperationException(
@@ -162,16 +178,19 @@ public class QuickUnionDisjointSet : IDisjointSet
     ///     <br/>
     ///     - Find the two roots takes a time proportional to the height of the two trees.
     ///       <br/>
-    ///     - Because no mechanism to keep trees flat is put in place by this data structure, the height of each tree 
+    ///     - If no mechanism to keep trees flat is put in place by this data structure, the height of each tree 
     ///       is O(n) in the worst case.
     ///       <br/>
     ///     - Attaching one root as child of the other is a constant-time operation, since it only requires setting the
     ///       parent in the list of parents, which is O(1) work.
     ///       <br/>
     ///     - Therefore, Time Complexity is O(n). Space Complexity is O(1).
+    ///       <br/>
+    ///     - If a sub-class of <see cref="QuickUnionDisjointSet"/> introduces mechanisms to keep trees flat, the 
+    ///       complexity may become sub-linear. An example is <see cref="WeightedQuickUnionDisjointSet"/>.
     ///     </para>
     /// </remarks>
-    public void Union(int first, int second)
+    public virtual void Union(int first, int second)
     {
         if (ValuesCount == 0)
             throw new InvalidOperationException(
