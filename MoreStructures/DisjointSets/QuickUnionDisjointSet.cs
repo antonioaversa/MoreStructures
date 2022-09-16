@@ -72,6 +72,11 @@ public class QuickUnionDisjointSet : IDisjointSet
     /// </remarks>
     public virtual int SetsCount => Enumerable.Range(0, ValuesCount).Count(i => Parents[i] == i);
 
+    /// <summary>
+    /// Returns a copy of the parents of all the values of the forest representing the Disjoint Set.
+    /// </summary>
+    internal IList<int> GetParents() => Parents.ToArray();
+
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
     ///     <para id="algorithm">
