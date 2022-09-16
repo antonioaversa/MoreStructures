@@ -3476,6 +3476,74 @@ references:
   fullName.vb: MoreStructures.Lists.Sorting.Extensions.IsSorted(Of T)(IList(Of T), IComparer(Of T))
   nameWithType: Extensions.IsSorted<T>(IList<T>, IComparer<T>)
   nameWithType.vb: Extensions.IsSorted(Of T)(IList(Of T), IComparer(Of T))
+- uid: MoreStructures.Lists.Sorting.HeapSort
+  name: HeapSort
+  href: api/MoreStructures.Lists.Sorting.HeapSort.html
+  commentId: T:MoreStructures.Lists.Sorting.HeapSort
+  fullName: MoreStructures.Lists.Sorting.HeapSort
+  nameWithType: HeapSort
+- uid: MoreStructures.Lists.Sorting.HeapSort.Sort*
+  name: Sort
+  href: api/MoreStructures.Lists.Sorting.HeapSort.html#MoreStructures_Lists_Sorting_HeapSort_Sort_
+  commentId: Overload:MoreStructures.Lists.Sorting.HeapSort.Sort
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Sorting.HeapSort.Sort
+  nameWithType: HeapSort.Sort
+- uid: MoreStructures.Lists.Sorting.HeapSort.Sort``1(IList{``0})
+  name: Sort<T>(IList<T>)
+  href: api/MoreStructures.Lists.Sorting.HeapSort.html#MoreStructures_Lists_Sorting_HeapSort_Sort__1_IList___0__
+  commentId: M:MoreStructures.Lists.Sorting.HeapSort.Sort``1(IList{``0})
+  name.vb: Sort(Of T)(IList(Of T))
+  fullName: MoreStructures.Lists.Sorting.HeapSort.Sort<T>(IList<T>)
+  fullName.vb: MoreStructures.Lists.Sorting.HeapSort.Sort(Of T)(IList(Of T))
+  nameWithType: HeapSort.Sort<T>(IList<T>)
+  nameWithType.vb: HeapSort.Sort(Of T)(IList(Of T))
+- uid: MoreStructures.Lists.Sorting.HeapSort.Sort``1(IList{``0},IComparer{``0})
+  name: Sort<T>(IList<T>, IComparer<T>)
+  href: api/MoreStructures.Lists.Sorting.HeapSort.html#MoreStructures_Lists_Sorting_HeapSort_Sort__1_IList___0__IComparer___0__
+  commentId: M:MoreStructures.Lists.Sorting.HeapSort.Sort``1(IList{``0},IComparer{``0})
+  name.vb: Sort(Of T)(IList(Of T), IComparer(Of T))
+  fullName: MoreStructures.Lists.Sorting.HeapSort.Sort<T>(IList<T>, IComparer<T>)
+  fullName.vb: MoreStructures.Lists.Sorting.HeapSort.Sort(Of T)(IList(Of T), IComparer(Of T))
+  nameWithType: HeapSort.Sort<T>(IList<T>, IComparer<T>)
+  nameWithType.vb: HeapSort.Sort(Of T)(IList(Of T), IComparer(Of T))
+- uid: MoreStructures.Lists.Sorting.IInPlaceSorting
+  name: IInPlaceSorting
+  href: api/MoreStructures.Lists.Sorting.IInPlaceSorting.html
+  commentId: T:MoreStructures.Lists.Sorting.IInPlaceSorting
+  fullName: MoreStructures.Lists.Sorting.IInPlaceSorting
+  nameWithType: IInPlaceSorting
+- uid: MoreStructures.Lists.Sorting.IInPlaceSorting.Sort*
+  name: Sort
+  href: api/MoreStructures.Lists.Sorting.IInPlaceSorting.html#MoreStructures_Lists_Sorting_IInPlaceSorting_Sort_
+  commentId: Overload:MoreStructures.Lists.Sorting.IInPlaceSorting.Sort
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Sorting.IInPlaceSorting.Sort
+  nameWithType: IInPlaceSorting.Sort
+- uid: MoreStructures.Lists.Sorting.IInPlaceSorting.Sort``1(IList{``0})
+  name: Sort<T>(IList<T>)
+  href: api/MoreStructures.Lists.Sorting.IInPlaceSorting.html#MoreStructures_Lists_Sorting_IInPlaceSorting_Sort__1_IList___0__
+  commentId: M:MoreStructures.Lists.Sorting.IInPlaceSorting.Sort``1(IList{``0})
+  name.vb: Sort(Of T)(IList(Of T))
+  fullName: MoreStructures.Lists.Sorting.IInPlaceSorting.Sort<T>(IList<T>)
+  fullName.vb: MoreStructures.Lists.Sorting.IInPlaceSorting.Sort(Of T)(IList(Of T))
+  nameWithType: IInPlaceSorting.Sort<T>(IList<T>)
+  nameWithType.vb: IInPlaceSorting.Sort(Of T)(IList(Of T))
+- uid: MoreStructures.Lists.Sorting.IInPlaceSorting.Sort``1(IList{``0},IComparer{``0})
+  name: Sort<T>(IList<T>, IComparer<T>)
+  href: api/MoreStructures.Lists.Sorting.IInPlaceSorting.html#MoreStructures_Lists_Sorting_IInPlaceSorting_Sort__1_IList___0__IComparer___0__
+  commentId: M:MoreStructures.Lists.Sorting.IInPlaceSorting.Sort``1(IList{``0},IComparer{``0})
+  name.vb: Sort(Of T)(IList(Of T), IComparer(Of T))
+  fullName: MoreStructures.Lists.Sorting.IInPlaceSorting.Sort<T>(IList<T>, IComparer<T>)
+  fullName.vb: MoreStructures.Lists.Sorting.IInPlaceSorting.Sort(Of T)(IList(Of T), IComparer(Of T))
+  nameWithType: IInPlaceSorting.Sort<T>(IList<T>, IComparer<T>)
+  nameWithType.vb: IInPlaceSorting.Sort(Of T)(IList(Of T), IComparer(Of T))
+- uid: MoreStructures.Lists.Sorting.IStableSortingAlgorithm
+  name: IStableSortingAlgorithm
+  href: api/MoreStructures.Lists.Sorting.IStableSortingAlgorithm.html
+  commentId: T:MoreStructures.Lists.Sorting.IStableSortingAlgorithm
+  fullName: MoreStructures.Lists.Sorting.IStableSortingAlgorithm
+  nameWithType: IStableSortingAlgorithm
 - uid: MoreStructures.PriorityQueues
   name: MoreStructures.PriorityQueues
   href: api/MoreStructures.PriorityQueues.html
@@ -3750,6 +3818,281 @@ references:
   commentId: N:MoreStructures.PriorityQueues.BinaryHeap
   fullName: MoreStructures.PriorityQueues.BinaryHeap
   nameWithType: MoreStructures.PriorityQueues.BinaryHeap
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1
+  name: BinaryHeapListWrapper<T>
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html
+  commentId: T:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1
+  name.vb: BinaryHeapListWrapper(Of T)
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T)
+  nameWithType: BinaryHeapListWrapper<T>
+  nameWithType.vb: BinaryHeapListWrapper(Of T)
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.#ctor(IList{`0},IComparer{`0},System.Int32)
+  name: BinaryHeapListWrapper(IList<T>, IComparer<T>, Int32)
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1__ctor_IList__0__IComparer__0__System_Int32_
+  commentId: M:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.#ctor(IList{`0},IComparer{`0},System.Int32)
+  name.vb: BinaryHeapListWrapper(IList(Of T), IComparer(Of T), Int32)
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.BinaryHeapListWrapper(IList<T>, IComparer<T>, System.Int32)
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).BinaryHeapListWrapper(IList(Of T), IComparer(Of T), System.Int32)
+  nameWithType: BinaryHeapListWrapper<T>.BinaryHeapListWrapper(IList<T>, IComparer<T>, Int32)
+  nameWithType.vb: BinaryHeapListWrapper(Of T).BinaryHeapListWrapper(IList(Of T), IComparer(Of T), Int32)
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.#ctor(MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper{`0})
+  name: BinaryHeapListWrapper(BinaryHeapListWrapper<T>)
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1__ctor_MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper__0__
+  commentId: M:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.#ctor(MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper{`0})
+  name.vb: BinaryHeapListWrapper(BinaryHeapListWrapper(Of T))
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.BinaryHeapListWrapper(MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>)
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).BinaryHeapListWrapper(MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T))
+  nameWithType: BinaryHeapListWrapper<T>.BinaryHeapListWrapper(BinaryHeapListWrapper<T>)
+  nameWithType.vb: BinaryHeapListWrapper(Of T).BinaryHeapListWrapper(BinaryHeapListWrapper(Of T))
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.#ctor*
+  name: BinaryHeapListWrapper
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1__ctor_
+  commentId: Overload:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.BinaryHeapListWrapper
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).BinaryHeapListWrapper
+  nameWithType: BinaryHeapListWrapper<T>.BinaryHeapListWrapper
+  nameWithType.vb: BinaryHeapListWrapper(Of T).BinaryHeapListWrapper
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Clear
+  name: Clear()
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_Clear
+  commentId: M:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Clear
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.Clear()
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).Clear()
+  nameWithType: BinaryHeapListWrapper<T>.Clear()
+  nameWithType.vb: BinaryHeapListWrapper(Of T).Clear()
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Clear*
+  name: Clear
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_Clear_
+  commentId: Overload:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Clear
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.Clear
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).Clear
+  nameWithType: BinaryHeapListWrapper<T>.Clear
+  nameWithType.vb: BinaryHeapListWrapper(Of T).Clear
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.GetEnumerator
+  name: GetEnumerator()
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_GetEnumerator
+  commentId: M:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.GetEnumerator
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.GetEnumerator()
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).GetEnumerator()
+  nameWithType: BinaryHeapListWrapper<T>.GetEnumerator()
+  nameWithType.vb: BinaryHeapListWrapper(Of T).GetEnumerator()
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.GetEnumerator*
+  name: GetEnumerator
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_GetEnumerator_
+  commentId: Overload:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.GetEnumerator
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.GetEnumerator
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).GetEnumerator
+  nameWithType: BinaryHeapListWrapper<T>.GetEnumerator
+  nameWithType.vb: BinaryHeapListWrapper(Of T).GetEnumerator
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.HeapCount
+  name: HeapCount
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_HeapCount
+  commentId: P:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.HeapCount
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.HeapCount
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).HeapCount
+  nameWithType: BinaryHeapListWrapper<T>.HeapCount
+  nameWithType.vb: BinaryHeapListWrapper(Of T).HeapCount
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.HeapCount*
+  name: HeapCount
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_HeapCount_
+  commentId: Overload:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.HeapCount
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.HeapCount
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).HeapCount
+  nameWithType: BinaryHeapListWrapper<T>.HeapCount
+  nameWithType.vb: BinaryHeapListWrapper(Of T).HeapCount
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Item(System.Int32)
+  name: Item[Int32]
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_Item_System_Int32_
+  commentId: P:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Item(System.Int32)
+  name.vb: Item(Int32)
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.Item[System.Int32]
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).Item(System.Int32)
+  nameWithType: BinaryHeapListWrapper<T>.Item[Int32]
+  nameWithType.vb: BinaryHeapListWrapper(Of T).Item(Int32)
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Item*
+  name: Item
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_Item_
+  commentId: Overload:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Item
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.Item
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).Item
+  nameWithType: BinaryHeapListWrapper<T>.Item
+  nameWithType.vb: BinaryHeapListWrapper(Of T).Item
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.ListCount
+  name: ListCount
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_ListCount
+  commentId: P:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.ListCount
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.ListCount
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).ListCount
+  nameWithType: BinaryHeapListWrapper<T>.ListCount
+  nameWithType.vb: BinaryHeapListWrapper(Of T).ListCount
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.ListCount*
+  name: ListCount
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_ListCount_
+  commentId: Overload:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.ListCount
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.ListCount
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).ListCount
+  nameWithType: BinaryHeapListWrapper<T>.ListCount
+  nameWithType.vb: BinaryHeapListWrapper(Of T).ListCount
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Peek
+  name: Peek()
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_Peek
+  commentId: M:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Peek
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.Peek()
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).Peek()
+  nameWithType: BinaryHeapListWrapper<T>.Peek()
+  nameWithType.vb: BinaryHeapListWrapper(Of T).Peek()
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Peek*
+  name: Peek
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_Peek_
+  commentId: Overload:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Peek
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.Peek
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).Peek
+  nameWithType: BinaryHeapListWrapper<T>.Peek
+  nameWithType.vb: BinaryHeapListWrapper(Of T).Peek
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.PeekKth(System.Int32)
+  name: PeekKth(Int32)
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_PeekKth_System_Int32_
+  commentId: M:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.PeekKth(System.Int32)
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.PeekKth(System.Int32)
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).PeekKth(System.Int32)
+  nameWithType: BinaryHeapListWrapper<T>.PeekKth(Int32)
+  nameWithType.vb: BinaryHeapListWrapper(Of T).PeekKth(Int32)
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.PeekKth*
+  name: PeekKth
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_PeekKth_
+  commentId: Overload:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.PeekKth
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.PeekKth
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).PeekKth
+  nameWithType: BinaryHeapListWrapper<T>.PeekKth
+  nameWithType.vb: BinaryHeapListWrapper(Of T).PeekKth
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Pop
+  name: Pop()
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_Pop
+  commentId: M:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Pop
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.Pop()
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).Pop()
+  nameWithType: BinaryHeapListWrapper<T>.Pop()
+  nameWithType.vb: BinaryHeapListWrapper(Of T).Pop()
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Pop*
+  name: Pop
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_Pop_
+  commentId: Overload:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Pop
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.Pop
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).Pop
+  nameWithType: BinaryHeapListWrapper<T>.Pop
+  nameWithType.vb: BinaryHeapListWrapper(Of T).Pop
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.PopAll
+  name: PopAll()
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_PopAll
+  commentId: M:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.PopAll
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.PopAll()
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).PopAll()
+  nameWithType: BinaryHeapListWrapper<T>.PopAll()
+  nameWithType.vb: BinaryHeapListWrapper(Of T).PopAll()
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.PopAll*
+  name: PopAll
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_PopAll_
+  commentId: Overload:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.PopAll
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.PopAll
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).PopAll
+  nameWithType: BinaryHeapListWrapper<T>.PopAll
+  nameWithType.vb: BinaryHeapListWrapper(Of T).PopAll
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Push(`0,System.Boolean)
+  name: Push(T, Boolean)
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_Push__0_System_Boolean_
+  commentId: M:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Push(`0,System.Boolean)
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.Push(T, System.Boolean)
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).Push(T, System.Boolean)
+  nameWithType: BinaryHeapListWrapper<T>.Push(T, Boolean)
+  nameWithType.vb: BinaryHeapListWrapper(Of T).Push(T, Boolean)
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Push*
+  name: Push
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_Push_
+  commentId: Overload:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Push
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.Push
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).Push
+  nameWithType: BinaryHeapListWrapper<T>.Push
+  nameWithType.vb: BinaryHeapListWrapper(Of T).Push
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.RaiseItemPopping
+  name: RaiseItemPopping
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_RaiseItemPopping
+  commentId: P:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.RaiseItemPopping
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.RaiseItemPopping
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).RaiseItemPopping
+  nameWithType: BinaryHeapListWrapper<T>.RaiseItemPopping
+  nameWithType.vb: BinaryHeapListWrapper(Of T).RaiseItemPopping
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.RaiseItemPopping*
+  name: RaiseItemPopping
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_RaiseItemPopping_
+  commentId: Overload:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.RaiseItemPopping
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.RaiseItemPopping
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).RaiseItemPopping
+  nameWithType: BinaryHeapListWrapper<T>.RaiseItemPopping
+  nameWithType.vb: BinaryHeapListWrapper(Of T).RaiseItemPopping
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.RaiseItemPushed
+  name: RaiseItemPushed
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_RaiseItemPushed
+  commentId: P:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.RaiseItemPushed
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.RaiseItemPushed
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).RaiseItemPushed
+  nameWithType: BinaryHeapListWrapper<T>.RaiseItemPushed
+  nameWithType.vb: BinaryHeapListWrapper(Of T).RaiseItemPushed
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.RaiseItemPushed*
+  name: RaiseItemPushed
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_RaiseItemPushed_
+  commentId: Overload:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.RaiseItemPushed
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.RaiseItemPushed
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).RaiseItemPushed
+  nameWithType: BinaryHeapListWrapper<T>.RaiseItemPushed
+  nameWithType.vb: BinaryHeapListWrapper(Of T).RaiseItemPushed
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.RaiseItemsSwapped
+  name: RaiseItemsSwapped
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_RaiseItemsSwapped
+  commentId: P:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.RaiseItemsSwapped
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.RaiseItemsSwapped
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).RaiseItemsSwapped
+  nameWithType: BinaryHeapListWrapper<T>.RaiseItemsSwapped
+  nameWithType.vb: BinaryHeapListWrapper(Of T).RaiseItemsSwapped
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.RaiseItemsSwapped*
+  name: RaiseItemsSwapped
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_RaiseItemsSwapped_
+  commentId: Overload:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.RaiseItemsSwapped
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.RaiseItemsSwapped
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).RaiseItemsSwapped
+  nameWithType: BinaryHeapListWrapper<T>.RaiseItemsSwapped
+  nameWithType.vb: BinaryHeapListWrapper(Of T).RaiseItemsSwapped
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.RestoreHeapProperty
+  name: RestoreHeapProperty()
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_RestoreHeapProperty
+  commentId: M:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.RestoreHeapProperty
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.RestoreHeapProperty()
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).RestoreHeapProperty()
+  nameWithType: BinaryHeapListWrapper<T>.RestoreHeapProperty()
+  nameWithType.vb: BinaryHeapListWrapper(Of T).RestoreHeapProperty()
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.RestoreHeapProperty*
+  name: RestoreHeapProperty
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_RestoreHeapProperty_
+  commentId: Overload:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.RestoreHeapProperty
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.RestoreHeapProperty
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).RestoreHeapProperty
+  nameWithType: BinaryHeapListWrapper<T>.RestoreHeapProperty
+  nameWithType.vb: BinaryHeapListWrapper(Of T).RestoreHeapProperty
 - uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1
   name: BinaryHeapPriorityQueue<T>
   href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html
@@ -3973,14 +4316,14 @@ references:
   fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue(Of T).RaiseItemPopping
   nameWithType: BinaryHeapPriorityQueue<T>.RaiseItemPopping
   nameWithType.vb: BinaryHeapPriorityQueue(Of T).RaiseItemPopping
-- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.RaiseItemPushed
-  name: RaiseItemPushed()
-  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_RaiseItemPushed
-  commentId: M:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.RaiseItemPushed
-  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue<T>.RaiseItemPushed()
-  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue(Of T).RaiseItemPushed()
-  nameWithType: BinaryHeapPriorityQueue<T>.RaiseItemPushed()
-  nameWithType.vb: BinaryHeapPriorityQueue(Of T).RaiseItemPushed()
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.RaiseItemPushed(System.Int32)
+  name: RaiseItemPushed(Int32)
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_RaiseItemPushed_System_Int32_
+  commentId: M:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.RaiseItemPushed(System.Int32)
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue<T>.RaiseItemPushed(System.Int32)
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue(Of T).RaiseItemPushed(System.Int32)
+  nameWithType: BinaryHeapPriorityQueue<T>.RaiseItemPushed(Int32)
+  nameWithType.vb: BinaryHeapPriorityQueue(Of T).RaiseItemPushed(Int32)
 - uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.RaiseItemPushed*
   name: RaiseItemPushed
   href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_RaiseItemPushed_
@@ -4007,40 +4350,6 @@ references:
   fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue(Of T).RaiseItemsSwapped
   nameWithType: BinaryHeapPriorityQueue<T>.RaiseItemsSwapped
   nameWithType.vb: BinaryHeapPriorityQueue(Of T).RaiseItemsSwapped
-- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.SiftDown(System.Int32)
-  name: SiftDown(Int32)
-  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_SiftDown_System_Int32_
-  commentId: M:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.SiftDown(System.Int32)
-  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue<T>.SiftDown(System.Int32)
-  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue(Of T).SiftDown(System.Int32)
-  nameWithType: BinaryHeapPriorityQueue<T>.SiftDown(Int32)
-  nameWithType.vb: BinaryHeapPriorityQueue(Of T).SiftDown(Int32)
-- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.SiftDown*
-  name: SiftDown
-  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_SiftDown_
-  commentId: Overload:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.SiftDown
-  isSpec: "True"
-  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue<T>.SiftDown
-  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue(Of T).SiftDown
-  nameWithType: BinaryHeapPriorityQueue<T>.SiftDown
-  nameWithType.vb: BinaryHeapPriorityQueue(Of T).SiftDown
-- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.SiftUp(System.Int32)
-  name: SiftUp(Int32)
-  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_SiftUp_System_Int32_
-  commentId: M:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.SiftUp(System.Int32)
-  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue<T>.SiftUp(System.Int32)
-  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue(Of T).SiftUp(System.Int32)
-  nameWithType: BinaryHeapPriorityQueue<T>.SiftUp(Int32)
-  nameWithType.vb: BinaryHeapPriorityQueue(Of T).SiftUp(Int32)
-- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.SiftUp*
-  name: SiftUp
-  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_SiftUp_
-  commentId: Overload:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.SiftUp
-  isSpec: "True"
-  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue<T>.SiftUp
-  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue(Of T).SiftUp
-  nameWithType: BinaryHeapPriorityQueue<T>.SiftUp
-  nameWithType.vb: BinaryHeapPriorityQueue(Of T).SiftUp
 - uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.System#Collections#IEnumerable#GetEnumerator
   name: IEnumerable.GetEnumerator()
   href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_System_Collections_IEnumerable_GetEnumerator
@@ -4120,14 +4429,14 @@ references:
   fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.UpdatableBinaryHeapPriorityQueue(Of T).RaiseItemPopping
   nameWithType: UpdatableBinaryHeapPriorityQueue<T>.RaiseItemPopping
   nameWithType.vb: UpdatableBinaryHeapPriorityQueue(Of T).RaiseItemPopping
-- uid: MoreStructures.PriorityQueues.BinaryHeap.UpdatableBinaryHeapPriorityQueue`1.RaiseItemPushed
-  name: RaiseItemPushed()
-  href: api/MoreStructures.PriorityQueues.BinaryHeap.UpdatableBinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_UpdatableBinaryHeapPriorityQueue_1_RaiseItemPushed
-  commentId: M:MoreStructures.PriorityQueues.BinaryHeap.UpdatableBinaryHeapPriorityQueue`1.RaiseItemPushed
-  fullName: MoreStructures.PriorityQueues.BinaryHeap.UpdatableBinaryHeapPriorityQueue<T>.RaiseItemPushed()
-  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.UpdatableBinaryHeapPriorityQueue(Of T).RaiseItemPushed()
-  nameWithType: UpdatableBinaryHeapPriorityQueue<T>.RaiseItemPushed()
-  nameWithType.vb: UpdatableBinaryHeapPriorityQueue(Of T).RaiseItemPushed()
+- uid: MoreStructures.PriorityQueues.BinaryHeap.UpdatableBinaryHeapPriorityQueue`1.RaiseItemPushed(System.Int32)
+  name: RaiseItemPushed(Int32)
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.UpdatableBinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_UpdatableBinaryHeapPriorityQueue_1_RaiseItemPushed_System_Int32_
+  commentId: M:MoreStructures.PriorityQueues.BinaryHeap.UpdatableBinaryHeapPriorityQueue`1.RaiseItemPushed(System.Int32)
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.UpdatableBinaryHeapPriorityQueue<T>.RaiseItemPushed(System.Int32)
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.UpdatableBinaryHeapPriorityQueue(Of T).RaiseItemPushed(System.Int32)
+  nameWithType: UpdatableBinaryHeapPriorityQueue<T>.RaiseItemPushed(Int32)
+  nameWithType.vb: UpdatableBinaryHeapPriorityQueue(Of T).RaiseItemPushed(Int32)
 - uid: MoreStructures.PriorityQueues.BinaryHeap.UpdatableBinaryHeapPriorityQueue`1.RaiseItemPushed*
   name: RaiseItemPushed
   href: api/MoreStructures.PriorityQueues.BinaryHeap.UpdatableBinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_UpdatableBinaryHeapPriorityQueue_1_RaiseItemPushed_
@@ -12264,6 +12573,177 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Lists.Sorting.ExtensionsTests.IsSorted_WithComparer_IsCorrect
   nameWithType: ExtensionsTests.IsSorted_WithComparer_IsCorrect
+- uid: MoreStructures.Tests.Lists.Sorting.HeapSortTests
+  name: HeapSortTests
+  href: api/MoreStructures.Tests.Lists.Sorting.HeapSortTests.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.HeapSortTests
+  fullName: MoreStructures.Tests.Lists.Sorting.HeapSortTests
+  nameWithType: HeapSortTests
+- uid: MoreStructures.Tests.Lists.Sorting.HeapSortTests.#ctor
+  name: HeapSortTests()
+  href: api/MoreStructures.Tests.Lists.Sorting.HeapSortTests.html#MoreStructures_Tests_Lists_Sorting_HeapSortTests__ctor
+  commentId: M:MoreStructures.Tests.Lists.Sorting.HeapSortTests.#ctor
+  fullName: MoreStructures.Tests.Lists.Sorting.HeapSortTests.HeapSortTests()
+  nameWithType: HeapSortTests.HeapSortTests()
+- uid: MoreStructures.Tests.Lists.Sorting.HeapSortTests.#ctor*
+  name: HeapSortTests
+  href: api/MoreStructures.Tests.Lists.Sorting.HeapSortTests.html#MoreStructures_Tests_Lists_Sorting_HeapSortTests__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.HeapSortTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.HeapSortTests.HeapSortTests
+  nameWithType: HeapSortTests.HeapSortTests
+- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests
+  name: InPlaceSortingTests
+  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests
+  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests
+  nameWithType: InPlaceSortingTests
+- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.#ctor(Func{MoreStructures.Lists.Sorting.IInPlaceSorting})
+  name: InPlaceSortingTests(Func<IInPlaceSorting>)
+  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests__ctor_Func_MoreStructures_Lists_Sorting_IInPlaceSorting__
+  commentId: M:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.#ctor(Func{MoreStructures.Lists.Sorting.IInPlaceSorting})
+  name.vb: InPlaceSortingTests(Func(Of IInPlaceSorting))
+  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.InPlaceSortingTests(Func<MoreStructures.Lists.Sorting.IInPlaceSorting>)
+  fullName.vb: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.InPlaceSortingTests(Func(Of MoreStructures.Lists.Sorting.IInPlaceSorting))
+  nameWithType: InPlaceSortingTests.InPlaceSortingTests(Func<IInPlaceSorting>)
+  nameWithType.vb: InPlaceSortingTests.InPlaceSortingTests(Func(Of IInPlaceSorting))
+- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.#ctor*
+  name: InPlaceSortingTests
+  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.InPlaceSortingTests
+  nameWithType: InPlaceSortingTests.InPlaceSortingTests
+- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.CompareTo(MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.ValType1)
+  name: CompareTo(InPlaceSortingTests.ValType1)
+  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_CompareTo_MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_ValType1_
+  commentId: M:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.CompareTo(MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.ValType1)
+  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.CompareTo(MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.ValType1)
+  nameWithType: InPlaceSortingTests.CompareTo(InPlaceSortingTests.ValType1)
+- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.CompareTo*
+  name: CompareTo
+  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_CompareTo_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.CompareTo
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.CompareTo
+  nameWithType: InPlaceSortingTests.CompareTo
+- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_PlaceItemsInOrder
+  name: Sort_PlaceItemsInOrder()
+  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_PlaceItemsInOrder
+  commentId: M:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_PlaceItemsInOrder
+  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_PlaceItemsInOrder()
+  nameWithType: InPlaceSortingTests.Sort_PlaceItemsInOrder()
+- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_PlaceItemsInOrder*
+  name: Sort_PlaceItemsInOrder
+  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_PlaceItemsInOrder_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_PlaceItemsInOrder
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_PlaceItemsInOrder
+  nameWithType: InPlaceSortingTests.Sort_PlaceItemsInOrder
+- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_TakesIntoAccountComparerWithReferenceTypes
+  name: Sort_TakesIntoAccountComparerWithReferenceTypes()
+  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_TakesIntoAccountComparerWithReferenceTypes
+  commentId: M:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_TakesIntoAccountComparerWithReferenceTypes
+  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_TakesIntoAccountComparerWithReferenceTypes()
+  nameWithType: InPlaceSortingTests.Sort_TakesIntoAccountComparerWithReferenceTypes()
+- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_TakesIntoAccountComparerWithReferenceTypes*
+  name: Sort_TakesIntoAccountComparerWithReferenceTypes
+  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_TakesIntoAccountComparerWithReferenceTypes_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_TakesIntoAccountComparerWithReferenceTypes
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_TakesIntoAccountComparerWithReferenceTypes
+  nameWithType: InPlaceSortingTests.Sort_TakesIntoAccountComparerWithReferenceTypes
+- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_TakesIntoAccountComparerWithValueTypes
+  name: Sort_TakesIntoAccountComparerWithValueTypes()
+  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_TakesIntoAccountComparerWithValueTypes
+  commentId: M:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_TakesIntoAccountComparerWithValueTypes
+  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_TakesIntoAccountComparerWithValueTypes()
+  nameWithType: InPlaceSortingTests.Sort_TakesIntoAccountComparerWithValueTypes()
+- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_TakesIntoAccountComparerWithValueTypes*
+  name: Sort_TakesIntoAccountComparerWithValueTypes
+  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_TakesIntoAccountComparerWithValueTypes_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_TakesIntoAccountComparerWithValueTypes
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_TakesIntoAccountComparerWithValueTypes
+  nameWithType: InPlaceSortingTests.Sort_TakesIntoAccountComparerWithValueTypes
+- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithDuplicates
+  name: Sort_WorksWithDuplicates()
+  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_WorksWithDuplicates
+  commentId: M:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithDuplicates
+  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithDuplicates()
+  nameWithType: InPlaceSortingTests.Sort_WorksWithDuplicates()
+- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithDuplicates*
+  name: Sort_WorksWithDuplicates
+  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_WorksWithDuplicates_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithDuplicates
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithDuplicates
+  nameWithType: InPlaceSortingTests.Sort_WorksWithDuplicates
+- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithEmptyList
+  name: Sort_WorksWithEmptyList()
+  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_WorksWithEmptyList
+  commentId: M:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithEmptyList
+  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithEmptyList()
+  nameWithType: InPlaceSortingTests.Sort_WorksWithEmptyList()
+- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithEmptyList*
+  name: Sort_WorksWithEmptyList
+  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_WorksWithEmptyList_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithEmptyList
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithEmptyList
+  nameWithType: InPlaceSortingTests.Sort_WorksWithEmptyList
+- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithReferenceTypes
+  name: Sort_WorksWithReferenceTypes()
+  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_WorksWithReferenceTypes
+  commentId: M:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithReferenceTypes
+  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithReferenceTypes()
+  nameWithType: InPlaceSortingTests.Sort_WorksWithReferenceTypes()
+- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithReferenceTypes*
+  name: Sort_WorksWithReferenceTypes
+  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_WorksWithReferenceTypes_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithReferenceTypes
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithReferenceTypes
+  nameWithType: InPlaceSortingTests.Sort_WorksWithReferenceTypes
+- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithSingletonList
+  name: Sort_WorksWithSingletonList()
+  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_WorksWithSingletonList
+  commentId: M:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithSingletonList
+  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithSingletonList()
+  nameWithType: InPlaceSortingTests.Sort_WorksWithSingletonList()
+- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithSingletonList*
+  name: Sort_WorksWithSingletonList
+  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_WorksWithSingletonList_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithSingletonList
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithSingletonList
+  nameWithType: InPlaceSortingTests.Sort_WorksWithSingletonList
+- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithValueTypes
+  name: Sort_WorksWithValueTypes()
+  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_WorksWithValueTypes
+  commentId: M:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithValueTypes
+  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithValueTypes()
+  nameWithType: InPlaceSortingTests.Sort_WorksWithValueTypes()
+- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithValueTypes*
+  name: Sort_WorksWithValueTypes
+  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_WorksWithValueTypes_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithValueTypes
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithValueTypes
+  nameWithType: InPlaceSortingTests.Sort_WorksWithValueTypes
+- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sorter
+  name: Sorter
+  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sorter
+  commentId: P:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sorter
+  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sorter
+  nameWithType: InPlaceSortingTests.Sorter
+- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sorter*
+  name: Sorter
+  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sorter_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sorter
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sorter
+  nameWithType: InPlaceSortingTests.Sorter
 - uid: MoreStructures.Tests.PriorityQueues
   name: MoreStructures.Tests.PriorityQueues
   href: api/MoreStructures.Tests.PriorityQueues.html
@@ -12402,6 +12882,194 @@ references:
   commentId: N:MoreStructures.Tests.PriorityQueues.BinaryHeap
   fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap
   nameWithType: MoreStructures.Tests.PriorityQueues.BinaryHeap
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests
+  name: BinaryHeapListWrapperTests
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html
+  commentId: T:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests
+  nameWithType: BinaryHeapListWrapperTests
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Clear_JustResetsHeapCountWithReadOnlyLists
+  name: Clear_JustResetsHeapCountWithReadOnlyLists()
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_Clear_JustResetsHeapCountWithReadOnlyLists
+  commentId: M:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Clear_JustResetsHeapCountWithReadOnlyLists
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Clear_JustResetsHeapCountWithReadOnlyLists()
+  nameWithType: BinaryHeapListWrapperTests.Clear_JustResetsHeapCountWithReadOnlyLists()
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Clear_JustResetsHeapCountWithReadOnlyLists*
+  name: Clear_JustResetsHeapCountWithReadOnlyLists
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_Clear_JustResetsHeapCountWithReadOnlyLists_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Clear_JustResetsHeapCountWithReadOnlyLists
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Clear_JustResetsHeapCountWithReadOnlyLists
+  nameWithType: BinaryHeapListWrapperTests.Clear_JustResetsHeapCountWithReadOnlyLists
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Clear_WipesAllItemsOutWithNonReadOnlyLists
+  name: Clear_WipesAllItemsOutWithNonReadOnlyLists()
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_Clear_WipesAllItemsOutWithNonReadOnlyLists
+  commentId: M:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Clear_WipesAllItemsOutWithNonReadOnlyLists
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Clear_WipesAllItemsOutWithNonReadOnlyLists()
+  nameWithType: BinaryHeapListWrapperTests.Clear_WipesAllItemsOutWithNonReadOnlyLists()
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Clear_WipesAllItemsOutWithNonReadOnlyLists*
+  name: Clear_WipesAllItemsOutWithNonReadOnlyLists
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_Clear_WipesAllItemsOutWithNonReadOnlyLists_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Clear_WipesAllItemsOutWithNonReadOnlyLists
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Clear_WipesAllItemsOutWithNonReadOnlyLists
+  nameWithType: BinaryHeapListWrapperTests.Clear_WipesAllItemsOutWithNonReadOnlyLists
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_DoesntTouchItemsInBufferArea
+  name: Ctor_DoesntTouchItemsInBufferArea()
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_Ctor_DoesntTouchItemsInBufferArea
+  commentId: M:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_DoesntTouchItemsInBufferArea
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_DoesntTouchItemsInBufferArea()
+  nameWithType: BinaryHeapListWrapperTests.Ctor_DoesntTouchItemsInBufferArea()
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_DoesntTouchItemsInBufferArea*
+  name: Ctor_DoesntTouchItemsInBufferArea
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_Ctor_DoesntTouchItemsInBufferArea_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_DoesntTouchItemsInBufferArea
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_DoesntTouchItemsInBufferArea
+  nameWithType: BinaryHeapListWrapperTests.Ctor_DoesntTouchItemsInBufferArea
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_EnforcesHeapCountToBeAtMostListCount
+  name: Ctor_EnforcesHeapCountToBeAtMostListCount()
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_Ctor_EnforcesHeapCountToBeAtMostListCount
+  commentId: M:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_EnforcesHeapCountToBeAtMostListCount
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_EnforcesHeapCountToBeAtMostListCount()
+  nameWithType: BinaryHeapListWrapperTests.Ctor_EnforcesHeapCountToBeAtMostListCount()
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_EnforcesHeapCountToBeAtMostListCount*
+  name: Ctor_EnforcesHeapCountToBeAtMostListCount
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_Ctor_EnforcesHeapCountToBeAtMostListCount_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_EnforcesHeapCountToBeAtMostListCount
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_EnforcesHeapCountToBeAtMostListCount
+  nameWithType: BinaryHeapListWrapperTests.Ctor_EnforcesHeapCountToBeAtMostListCount
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_RestoresHeapPropertyWithSpecifiedComparer
+  name: Ctor_RestoresHeapPropertyWithSpecifiedComparer()
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_Ctor_RestoresHeapPropertyWithSpecifiedComparer
+  commentId: M:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_RestoresHeapPropertyWithSpecifiedComparer
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_RestoresHeapPropertyWithSpecifiedComparer()
+  nameWithType: BinaryHeapListWrapperTests.Ctor_RestoresHeapPropertyWithSpecifiedComparer()
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_RestoresHeapPropertyWithSpecifiedComparer*
+  name: Ctor_RestoresHeapPropertyWithSpecifiedComparer
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_Ctor_RestoresHeapPropertyWithSpecifiedComparer_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_RestoresHeapPropertyWithSpecifiedComparer
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_RestoresHeapPropertyWithSpecifiedComparer
+  nameWithType: BinaryHeapListWrapperTests.Ctor_RestoresHeapPropertyWithSpecifiedComparer
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_WorksOnEmptyHeap
+  name: Ctor_WorksOnEmptyHeap()
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_Ctor_WorksOnEmptyHeap
+  commentId: M:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_WorksOnEmptyHeap
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_WorksOnEmptyHeap()
+  nameWithType: BinaryHeapListWrapperTests.Ctor_WorksOnEmptyHeap()
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_WorksOnEmptyHeap*
+  name: Ctor_WorksOnEmptyHeap
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_Ctor_WorksOnEmptyHeap_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_WorksOnEmptyHeap
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_WorksOnEmptyHeap
+  nameWithType: BinaryHeapListWrapperTests.Ctor_WorksOnEmptyHeap
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.GetEnumerator_EnumeratesItemsFromHeapAndBuffer
+  name: GetEnumerator_EnumeratesItemsFromHeapAndBuffer()
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_GetEnumerator_EnumeratesItemsFromHeapAndBuffer
+  commentId: M:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.GetEnumerator_EnumeratesItemsFromHeapAndBuffer
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.GetEnumerator_EnumeratesItemsFromHeapAndBuffer()
+  nameWithType: BinaryHeapListWrapperTests.GetEnumerator_EnumeratesItemsFromHeapAndBuffer()
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.GetEnumerator_EnumeratesItemsFromHeapAndBuffer*
+  name: GetEnumerator_EnumeratesItemsFromHeapAndBuffer
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_GetEnumerator_EnumeratesItemsFromHeapAndBuffer_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.GetEnumerator_EnumeratesItemsFromHeapAndBuffer
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.GetEnumerator_EnumeratesItemsFromHeapAndBuffer
+  nameWithType: BinaryHeapListWrapperTests.GetEnumerator_EnumeratesItemsFromHeapAndBuffer
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.HeapCount_IsInstantiatedToTheSpecifiedValue
+  name: HeapCount_IsInstantiatedToTheSpecifiedValue()
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_HeapCount_IsInstantiatedToTheSpecifiedValue
+  commentId: M:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.HeapCount_IsInstantiatedToTheSpecifiedValue
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.HeapCount_IsInstantiatedToTheSpecifiedValue()
+  nameWithType: BinaryHeapListWrapperTests.HeapCount_IsInstantiatedToTheSpecifiedValue()
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.HeapCount_IsInstantiatedToTheSpecifiedValue*
+  name: HeapCount_IsInstantiatedToTheSpecifiedValue
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_HeapCount_IsInstantiatedToTheSpecifiedValue_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.HeapCount_IsInstantiatedToTheSpecifiedValue
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.HeapCount_IsInstantiatedToTheSpecifiedValue
+  nameWithType: BinaryHeapListWrapperTests.HeapCount_IsInstantiatedToTheSpecifiedValue
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.HeapCount_IsNotChangedByPeekOrPeekKth
+  name: HeapCount_IsNotChangedByPeekOrPeekKth()
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_HeapCount_IsNotChangedByPeekOrPeekKth
+  commentId: M:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.HeapCount_IsNotChangedByPeekOrPeekKth
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.HeapCount_IsNotChangedByPeekOrPeekKth()
+  nameWithType: BinaryHeapListWrapperTests.HeapCount_IsNotChangedByPeekOrPeekKth()
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.HeapCount_IsNotChangedByPeekOrPeekKth*
+  name: HeapCount_IsNotChangedByPeekOrPeekKth
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_HeapCount_IsNotChangedByPeekOrPeekKth_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.HeapCount_IsNotChangedByPeekOrPeekKth
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.HeapCount_IsNotChangedByPeekOrPeekKth
+  nameWithType: BinaryHeapListWrapperTests.HeapCount_IsNotChangedByPeekOrPeekKth
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.HeapCount_IsUpdatedOnPushAndPop
+  name: HeapCount_IsUpdatedOnPushAndPop()
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_HeapCount_IsUpdatedOnPushAndPop
+  commentId: M:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.HeapCount_IsUpdatedOnPushAndPop
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.HeapCount_IsUpdatedOnPushAndPop()
+  nameWithType: BinaryHeapListWrapperTests.HeapCount_IsUpdatedOnPushAndPop()
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.HeapCount_IsUpdatedOnPushAndPop*
+  name: HeapCount_IsUpdatedOnPushAndPop
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_HeapCount_IsUpdatedOnPushAndPop_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.HeapCount_IsUpdatedOnPushAndPop
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.HeapCount_IsUpdatedOnPushAndPop
+  nameWithType: BinaryHeapListWrapperTests.HeapCount_IsUpdatedOnPushAndPop
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Index_AccessItemsFromHeapAndBuffer
+  name: Index_AccessItemsFromHeapAndBuffer()
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_Index_AccessItemsFromHeapAndBuffer
+  commentId: M:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Index_AccessItemsFromHeapAndBuffer
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Index_AccessItemsFromHeapAndBuffer()
+  nameWithType: BinaryHeapListWrapperTests.Index_AccessItemsFromHeapAndBuffer()
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Index_AccessItemsFromHeapAndBuffer*
+  name: Index_AccessItemsFromHeapAndBuffer
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_Index_AccessItemsFromHeapAndBuffer_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Index_AccessItemsFromHeapAndBuffer
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Index_AccessItemsFromHeapAndBuffer
+  nameWithType: BinaryHeapListWrapperTests.Index_AccessItemsFromHeapAndBuffer
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Pop_DoesntLoseItems
+  name: Pop_DoesntLoseItems()
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_Pop_DoesntLoseItems
+  commentId: M:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Pop_DoesntLoseItems
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Pop_DoesntLoseItems()
+  nameWithType: BinaryHeapListWrapperTests.Pop_DoesntLoseItems()
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Pop_DoesntLoseItems*
+  name: Pop_DoesntLoseItems
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_Pop_DoesntLoseItems_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Pop_DoesntLoseItems
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Pop_DoesntLoseItems
+  nameWithType: BinaryHeapListWrapperTests.Pop_DoesntLoseItems
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Push_BeyondListCountUpdatesListCount
+  name: Push_BeyondListCountUpdatesListCount()
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_Push_BeyondListCountUpdatesListCount
+  commentId: M:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Push_BeyondListCountUpdatesListCount
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Push_BeyondListCountUpdatesListCount()
+  nameWithType: BinaryHeapListWrapperTests.Push_BeyondListCountUpdatesListCount()
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Push_BeyondListCountUpdatesListCount*
+  name: Push_BeyondListCountUpdatesListCount
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_Push_BeyondListCountUpdatesListCount_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Push_BeyondListCountUpdatesListCount
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Push_BeyondListCountUpdatesListCount
+  nameWithType: BinaryHeapListWrapperTests.Push_BeyondListCountUpdatesListCount
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.RaiseEvents_AreInvoked
+  name: RaiseEvents_AreInvoked()
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_RaiseEvents_AreInvoked
+  commentId: M:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.RaiseEvents_AreInvoked
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.RaiseEvents_AreInvoked()
+  nameWithType: BinaryHeapListWrapperTests.RaiseEvents_AreInvoked()
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.RaiseEvents_AreInvoked*
+  name: RaiseEvents_AreInvoked
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_RaiseEvents_AreInvoked_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.RaiseEvents_AreInvoked
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.RaiseEvents_AreInvoked
+  nameWithType: BinaryHeapListWrapperTests.RaiseEvents_AreInvoked
 - uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueueTests_AsBasicQueue
   name: BinaryHeapPriorityQueueTests_AsBasicQueue
   href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueueTests_AsBasicQueue.html

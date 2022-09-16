@@ -938,11 +938,47 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Lists.Sorting.HeapSort.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Lists.Sorting.HeapSort.html",
+          "hash": "R+Rm+xzKiwDxrIYmMf9pCxU7qXo8n+vPNtt+mAHLfHs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Lists.Sorting.IInPlaceSorting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Lists.Sorting.IInPlaceSorting.html",
+          "hash": "wROW2GdG0LIWHFGDO3AfSz1OWwo60UqqeXRnndmbmtc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Lists.Sorting.IStableSortingAlgorithm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Lists.Sorting.IStableSortingAlgorithm.html",
+          "hash": "DZZ8nTGFCuSL+v8aoAUdmyuBveD+3Teo/tRvZ5hFs+o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Lists.Sorting.yml",
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Lists.Sorting.html",
-          "hash": "iPe5AUB/BVy7y3RLiEiqr44t8wK/nqUj03tWH9rfbO0="
+          "hash": "vjbRzki7P9KPbI8Pz9TvRdgkw7RtI5ZarlNonJzyGog="
         }
       },
       "is_incremental": false,
@@ -986,11 +1022,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html",
+          "hash": "LG5DasQXiXcATtZ59k73mlme6UV+1JClxUetpJXtQqo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.yml",
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html",
-          "hash": "UhmJ6av1ZQ3+p8auLWKVoBfZ6FgAdF+vHVPAN7OOJFg="
+          "hash": "wpKXCmYUlo+hrx9hWReGz4FXvD49W1x74Uw2CySv5ik="
         }
       },
       "is_incremental": false,
@@ -1002,7 +1050,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.PriorityQueues.BinaryHeap.UpdatableBinaryHeapPriorityQueue-1.html",
-          "hash": "0v/Wrqeo7PGVm9Ovujb8l8vtNL6t4yELM4cWwFMz350="
+          "hash": "WOAbr0+CRYL0E8l5BcW1rpE9WqvSJa989TUlq3Ftco8="
         }
       },
       "is_incremental": false,
@@ -1014,7 +1062,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.PriorityQueues.BinaryHeap.html",
-          "hash": "Mv7tDihv7Zbnl+2omJSXR6BArUlncgmXvphT3UVatJ4="
+          "hash": "1wwXtkVmBJdncYR7HZdAETjbvzpyNrMu4RU02K+gT/Y="
         }
       },
       "is_incremental": false,
@@ -1158,7 +1206,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.PriorityQueues.IPeekKthPriorityQueue-1.html",
-          "hash": "BrGVKyKHWA+uYEecRz5oD/smREd06/gGBppCJ6D10oQ="
+          "hash": "XNPWKsjTLVThogTQzz2zEfAvO3LBNVqg0qHXgKKq/dg="
         }
       },
       "is_incremental": false,
@@ -3338,11 +3386,35 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.HeapSortTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.HeapSortTests.html",
+          "hash": "/lajfezoWx1g2qOJnsQpDW2gIQS7+DCQHv/lZ2ed5/g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html",
+          "hash": "gLOTLkm26L/MEsG/qxnXljhUN0dDh9EBssrKpBYTsC4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.yml",
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Lists.Sorting.html",
-          "hash": "wCcRF0ppmLWuomLfJdZLOG4iioGOppZn0GhoV/tws9Q="
+          "hash": "Z0VABEIm6xa66I69Gw5CDHXqv0L+RRuVS7ygozi+qDY="
         }
       },
       "is_incremental": false,
@@ -3415,6 +3487,18 @@
         ".html": {
           "relative_path": "api/MoreStructures.Tests.PriorityQueues.ArrayList.html",
           "hash": "+6ki3TnXUukpgzdt5EdY5zK2SOukevRFMXxeoaq4238="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html",
+          "hash": "T3bQkI6s40sVQOzWUf0fNnF7Ux2WS8It6RIPzzFxGu8="
         }
       },
       "is_incremental": false,
@@ -3498,7 +3582,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.PriorityQueues.BinaryHeap.html",
-          "hash": "uxJMepf6mbfU0v3hkEGCK0JLgjivjfllPm7SZsy0h0Q="
+          "hash": "OdyqE5WhaS1XJd5v7oWiWe9NeXIaViV93XzyddcMQHU="
         }
       },
       "is_incremental": false,
@@ -5550,7 +5634,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "DSGsx4N4Y8aOUJfS85s+R3pehX6UNdQ2RYG2bTE1p6M="
+          "hash": "FE4aZJ50jROxA9RnlkNAW7B9RWeKYLcnybUq95ZPj3o="
         }
       },
       "is_incremental": false,
@@ -5625,7 +5709,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 460,
+          "total_file_count": 467,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
