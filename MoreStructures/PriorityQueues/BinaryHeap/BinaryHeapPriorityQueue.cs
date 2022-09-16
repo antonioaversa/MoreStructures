@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Diagnostics.CodeAnalysis;
 using MoreStructures.PriorityQueues.ArrayList;
 
 namespace MoreStructures.PriorityQueues.BinaryHeap;
@@ -90,9 +91,9 @@ public class BinaryHeapPriorityQueue<T>
     protected int CurrentPushTimestamp { get; set; } = 0;
 
     /// <summary>
-    /// The <see cref="List{T}"/> of <see cref="PrioritizedItem{T}"/> backing the binary max heap.
+    /// The wrapped <see cref="IList{T}"/> of <see cref="PrioritizedItem{T}"/> backing the binary max heap.
     /// </summary>
-    protected List<PrioritizedItem<T>> Items { get; }
+    protected BinaryHeapListWrapper<PrioritizedItem<T>> Items { get; }
 
     /// <summary>
     /// Builds an empty priority queue.
@@ -104,7 +105,13 @@ public class BinaryHeapPriorityQueue<T>
     /// </remarks>
     public BinaryHeapPriorityQueue()
     {
-        Items = new();
+        Items = 
+            new(new List<PrioritizedItem<T>>(), Comparer<PrioritizedItem<T>>.Default, 0)
+            {
+                RaiseItemPushed = RaiseItemPushed,
+                RaiseItemPopping = RaiseItemPopping,
+                RaiseItemsSwapped = RaiseItemsSwapped,
+            };
     }
 
     /// <summary>
@@ -122,18 +129,26 @@ public class BinaryHeapPriorityQueue<T>
     /// </remarks>
     protected BinaryHeapPriorityQueue(BinaryHeapPriorityQueue<T> source)
     {
-        Items = new(source.Items);
+        Items = 
+            new(source.Items)
+            {
+                RaiseItemPushed = RaiseItemPushed,
+                RaiseItemPopping = RaiseItemPopping,
+                RaiseItemsSwapped = RaiseItemsSwapped,
+            };
     }
 
     #region Public API
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
-    /// Checks the count of the underlying array list.
+    /// Checks the count of the underlying heap.
+    /// <br/>
+    /// The size of the heap may be smaller than the size of the underlying list, if there is buffer at the end.
     /// <br/>
     /// Time and Space Complexity are O(1).
     /// </remarks>
-    public virtual int Count => Items.Count;
+    public virtual int Count => Items.HeapCount;
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
@@ -169,12 +184,7 @@ public class BinaryHeapPriorityQueue<T>
     /// <br/>
     /// Therefore, Time and Space Complexity are O(1).
     /// </remarks>
-    public virtual PrioritizedItem<T> Peek()
-    {
-        if (Items.Count == 0)
-            throw new InvalidOperationException($"Can't {nameof(Peek)} on an empty queue.");
-        return Items[0];
-    }
+    public virtual PrioritizedItem<T> Peek() => Items.Peek();
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
@@ -201,22 +211,7 @@ public class BinaryHeapPriorityQueue<T>
     ///       in-place in underlying data structures.
     ///     </para>
     /// </remarks>
-    public virtual PrioritizedItem<T> Pop()
-    {
-        if (Items.Count == 0)
-            throw new InvalidOperationException($"Can't {nameof(Pop)} on an empty queue.");
-
-        RaiseItemPopping();
-        var result = Peek();
-
-        var lastIndex = Items.Count - 1;
-        Items[0] = Items[lastIndex];
-        Items.RemoveAt(lastIndex);
-
-        if (Items.Count > 0)
-            SiftDown(0);
-        return result;
-    }
+    public virtual PrioritizedItem<T> Pop() => Items.Pop();
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
@@ -241,11 +236,7 @@ public class BinaryHeapPriorityQueue<T>
     ///       in-place in underlying data structure.
     ///     </para>
     /// </remarks>
-    public virtual void Push(T item, int priority)
-    {
-        Push(item, priority, CurrentPushTimestamp);
-        CurrentPushTimestamp++;
-    }
+    public virtual void Push(T item, int priority) => Items.Push(new(item, priority, CurrentPushTimestamp++));
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
@@ -298,33 +289,7 @@ public class BinaryHeapPriorityQueue<T>
     ///     - Therefore, Time Complexity is O(k * log(k)) and Space Complexity is O(k).
     ///     </para>
     /// </remarks>
-    public virtual PrioritizedItem<T>? PeekKth(int k)
-    {
-        if (k < 0) throw new ArgumentException("Must be non-negative.", nameof(k));
-        if (k >= Items.Count) return null;
-        if (k == 0) return Peek();
-
-        var candidates = new BinaryHeapPriorityQueue<int>();
-        candidates.Push(0, Items[0].Priority, Items[0].PushTimestamp);
-        while (k > 0)
-        {
-            var maxIndex = candidates.Pop();
-
-            var leftChildIndex = LeftChildOf(maxIndex.Item);
-            if (leftChildIndex >= 0)
-                candidates.Push(
-                    leftChildIndex, Items[leftChildIndex].Priority, Items[leftChildIndex].PushTimestamp);
-
-            var rightChildIndex = RightChildOf(maxIndex.Item);
-            if (rightChildIndex >= 0)
-                candidates.Push(
-                    rightChildIndex, Items[rightChildIndex].Priority, Items[rightChildIndex].PushTimestamp);
-
-            k--;
-        }
-
-        return Items[candidates.Peek().Item];
-    }
+    public virtual PrioritizedItem<T>? PeekKth(int k) => Items.PeekKth(k) is (var result, true) ? result : null;
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
@@ -378,15 +343,13 @@ public class BinaryHeapPriorityQueue<T>
     {
         foreach (var prioritizedItem in targetPriorityQueue.Items)
         {
-            Items.Add(new(prioritizedItem.Item, prioritizedItem.Priority, CurrentPushTimestamp));
-            RaiseItemPushed();
+            Items.Push(new(prioritizedItem.Item, prioritizedItem.Priority, CurrentPushTimestamp), false);
             CurrentPushTimestamp++;
         }
 
         targetPriorityQueue.Clear();
 
-        for (var i = Items.Count / 2 + 1; i >= 0; i--)
-            SiftDown(i);
+        Items.RestoreHeapProperty();
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
@@ -398,24 +361,25 @@ public class BinaryHeapPriorityQueue<T>
     /// <br/>
     /// Time and Space Complexity are O(1).
     /// </remarks>
-    public virtual void Clear()
-    {
-        Items.Clear();
-    }
+    public virtual void Clear() => Items.Clear();
 
     #endregion
 
     #region Hooks
 
     /// <summary>
-    /// Invoked just after an item has been pushed into <see cref="Items"/> (at the end of it), and before the 
-    /// "sifting up" procedure is performed.
+    /// Invoked just after an item has been pushed into <see cref="Items"/>.
     /// </summary>
-    protected virtual void RaiseItemPushed() { }
+    /// <remarks>
+    /// The index of the item being pushed. 
+    /// <br/>
+    /// It is equal to Count - 1 if the underlying list is fully utilized, and it's smaller than that otherwise (there
+    /// is buffer at the end of the list, after the last item of the heap).
+    /// </remarks>
+    protected virtual void RaiseItemPushed(int index) { }
 
     /// <summary>
-    /// Invoked just before an item is removed from <see cref="Items"/> (at the beginning of it), and before 
-    /// "sifting down" procedure is performed.
+    /// Invoked just before an item is removed from <see cref="Items"/>.
     /// </summary>
     protected virtual void RaiseItemPopping() { }
 
@@ -425,93 +389,6 @@ public class BinaryHeapPriorityQueue<T>
     /// <param name="index1">The index of the first item swapped.</param>
     /// <param name="index2">The index of the second item swapped.</param>
     protected virtual void RaiseItemsSwapped(int index1, int index2) { }
-
-    #endregion
-
-    #region Helpers
-
-    private void Push(T item, int priority, int pushTimestamp)
-    {
-        Items.Add(new(item, priority, pushTimestamp));
-        RaiseItemPushed();
-        SiftUp(Items.Count - 1);
-    }
-
-    /// <summary>
-    /// Restores the heap constraint on the item at the specified <paramref name="nodeIndex"/> w.r.t. its ancestors in
-    /// the tree.
-    /// </summary>
-    /// <param name="nodeIndex">The index of the item to check.</param>
-    protected virtual void SiftUp(int nodeIndex)
-    {
-        var parentIndex = ParentOf(nodeIndex);
-
-        // If the node doesn't have a parent, it means we reached the root of the tree, so there is nothing to sift up.
-        if (parentIndex < 0)
-            return;
-
-        var parentValue = Items[parentIndex];
-        var nodeValue = Items[nodeIndex];
-        if (parentValue.CompareTo(nodeValue) < 0)
-        {
-            Items[parentIndex] = nodeValue;
-            Items[nodeIndex] = parentValue;
-            RaiseItemsSwapped(parentIndex, nodeIndex);
-
-            SiftUp(parentIndex);
-        }
-    }
-
-    /// <summary>
-    /// Restores the heap constraint on the item at the specified <paramref name="nodeIndex"/> w.r.t. its descendants 
-    /// in the tree.
-    /// </summary>
-    /// <param name="nodeIndex">The index of the item to check.</param>
-    protected virtual void SiftDown(int nodeIndex)
-    {
-        var leftChildIndex = LeftChildOf(nodeIndex);
-
-        // If the node doesn't have a left child, it definitely has no right child, since the tree is complete.
-        // Therefore the node is a leaf and there is nothing to sift down.
-        if (leftChildIndex < 0)
-            return;
-
-        var leftChildValue = Items[leftChildIndex];
-
-        var rightChildIndex = RightChildOf(nodeIndex);
-
-        // Cases where heap property is respected: node > left > right, node > right > left
-        // Cases where heap property has to be restored:
-        // - left > node and no right or left > right => left becomes the new parent of node and right
-        // - right > node and right > left => right becomes the new parent of left and node
-        // Notice that TreeItem.CompareTo never gives 0 due to always increasing PushTimestamp at each Push
-        var nodeValue = Items[nodeIndex];
-        if (leftChildValue.CompareTo(nodeValue) > 0 &&
-            (rightChildIndex < 0 || leftChildValue.CompareTo(Items[rightChildIndex]) > 0))
-        {
-            Items[nodeIndex] = leftChildValue;
-            Items[leftChildIndex] = nodeValue;
-            RaiseItemsSwapped(nodeIndex, leftChildIndex);
-
-            SiftDown(leftChildIndex);
-        }
-        else if (rightChildIndex >= 0 &&
-            Items[rightChildIndex].CompareTo(nodeValue) > 0 && Items[rightChildIndex].CompareTo(leftChildValue) > 0)
-        {
-            Items[nodeIndex] = Items[rightChildIndex];
-            Items[rightChildIndex] = nodeValue;
-            RaiseItemsSwapped(nodeIndex, rightChildIndex);
-
-            SiftDown(rightChildIndex);
-        }
-    }
-
-    private static int ParentOf(int nodeIndex) =>
-        nodeIndex == 0 ? -1 : (nodeIndex - 1) / 2;
-    private int LeftChildOf(int nodeIndex) =>
-        2 * nodeIndex + 1 is var result && result < Items.Count ? result : -1;
-    private int RightChildOf(int nodeIndex) =>
-        2 * nodeIndex + 2 is var result && result < Items.Count ? result : -1;
 
     #endregion
 }

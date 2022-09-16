@@ -17,7 +17,8 @@
 public interface IPeekKthPriorityQueue<T> : IPriorityQueue<T>
 {
     /// <summary>
-    /// Retrieves the item of the queue with highest priority, without extracting any of the items in the queue.
+    /// Retrieves the item of the queue with priority <paramref name="k"/>, without extracting any of the items in the 
+    /// queue.
     /// </summary>
     /// <param name="k">The non-negative priority rank: 0 means highest priority, 1 second highest, etc.</param>
     /// <returns>The <see cref="PrioritizedItem{T}"/> with k-th highest priority if any. Null otherwise.</returns>

@@ -203,7 +203,7 @@ public sealed class UpdatableBinaryHeapPriorityQueue<T> : BinaryHeapPriorityQueu
         // Because we only change priority, and both timestamp and index remain unchanged, there is no need to invoke
         // RaiseItemX methods.
         Items[index] = Items[index] with { Priority = Peek().Priority + 1 };
-        SiftUp(index);
+        Items.SiftUp(index);
         Pop();
 
         return oldItem;
@@ -214,9 +214,8 @@ public sealed class UpdatableBinaryHeapPriorityQueue<T> : BinaryHeapPriorityQueu
     #region Hooks
 
     /// <inheritdoc/>
-    protected override void RaiseItemPushed()
+    protected override void RaiseItemPushed(int index)
     {
-        var index = Items.Count - 1;
         var prioritizedItem = Items[index];
         PushTimestampToIndex[prioritizedItem.PushTimestamp] = index;
         if (!ItemToPushTimestamps.ContainsKey(prioritizedItem.Item))
@@ -227,7 +226,7 @@ public sealed class UpdatableBinaryHeapPriorityQueue<T> : BinaryHeapPriorityQueu
     /// <inheritdoc/>
     protected override void RaiseItemPopping()
     {
-        PushTimestampToIndex[Items[^1].PushTimestamp] = 0;
+        PushTimestampToIndex[Items[Items.HeapCount - 1].PushTimestamp] = 0;
         PushTimestampToIndex.Remove(Items[0].PushTimestamp);
     }
 
