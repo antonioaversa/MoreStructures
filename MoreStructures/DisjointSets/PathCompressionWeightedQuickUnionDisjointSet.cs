@@ -2,7 +2,7 @@
 
 /// <summary>
 /// A <see cref="WeightedQuickUnionDisjointSet"/> refinement which improves the performance of the data structure by 
-/// performing a technique known as <b>edge compression</b>.
+/// performing a technique known as <b>path compression</b>.
 /// </summary>
 /// <remarks>
 /// This variant of <see cref="WeightedQuickUnionDisjointSet"/> introduces a refinement of the 
@@ -48,7 +48,7 @@ public class PathCompressionWeightedQuickUnionDisjointSet : WeightedQuickUnionDi
     ///     <br/>
     ///     - Find the root takes a time proportional to the height of the tree, the item is in.
     ///       <br/>
-    ///     - Because edge compression keeps trees very flat, incrementing the fan out, while the complexity is not
+    ///     - Because path compression keeps trees very flat, incrementing the fan out, while the complexity is not
     ///       constant and there is definitely a dependence over n, it is a sub-logarithmic dependency.
     ///       <br/>
     ///     - More precisely, Time Complexity is O(log*(n)), which can be considered "pseudo-constant" for any 
