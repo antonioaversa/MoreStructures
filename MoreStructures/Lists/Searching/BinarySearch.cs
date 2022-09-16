@@ -28,7 +28,7 @@ public class BinarySearch : ISearch
         var result = -1;
         while (start <= end)
         {
-            var middle = (start + end) / 2;
+            var middle = start + (end - start) / 2;
             var comparison = comparer.Compare(source.ElementAtO1(middle), item);
             if (comparison < 0)
             {
