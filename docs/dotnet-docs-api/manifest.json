@@ -338,6 +338,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.html",
+          "hash": "vt5pBVwJ1dLQ5cOVTHGt0jdqBtOCpZjhLw4uDrWO5mc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.DisjointSets.QuickFindDisjointSet.yml",
       "output": {
         ".html": {
@@ -354,7 +366,19 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.DisjointSets.QuickUnionDisjointSet.html",
-          "hash": "7GqUg0TJfMjO4NqAhq/oIVgFFFI8awCsYcuJ/2S4MXs="
+          "hash": "fwyNxeYgfC3fJ2fZ6y0qWe02wDTlh+3VeRCOztbh2CA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.html",
+          "hash": "/VFjDvDk9/LVRT3XRdimJbL9ezVlRpQ34Pk7ZNYIVEQ="
         }
       },
       "is_incremental": false,
@@ -366,7 +390,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.DisjointSets.html",
-          "hash": "VWAKfLqJP7bZyoR6zXcKtoUFcFxj5y8mri121+68RHQ="
+          "hash": "ankTKjZtSQvEQthyihx+O1cl/C0pZCvFcw+u1YGccVw="
         }
       },
       "is_incremental": false,
@@ -2718,7 +2742,19 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.DisjointSets.DisjointSetTests.html",
-          "hash": "v4KUVPtjdFIBSK9v5HOJg9ZoTlh/mWd0zhqGSxYrCwA="
+          "hash": "xVOtzk7oSuRZ3QWVhOVW1Subkpa43oL2dIchFX9xx6s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.DisjointSets.PathCompressionWeightedQuickUnionDisjointSetTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.DisjointSets.PathCompressionWeightedQuickUnionDisjointSetTests.html",
+          "hash": "BQIpNBVtm/UcJPn/VlyOv0N5pjf0xSBElLyFAtJyUXc="
         }
       },
       "is_incremental": false,
@@ -2750,11 +2786,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.html",
+          "hash": "SubcLXD81Z3Cm40pnV+0BYbc+9oVvgISr4NtL/ryPs4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Tests.DisjointSets.yml",
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.DisjointSets.html",
-          "hash": "AUDx8fh4vgfcCTcTx5o7zl1WfpYrciIe9sZVE32ae6s="
+          "hash": "zII0i1l+Q6q+nvU6Qt2JBgibnu5iIQ1UvwlZdle4ar0="
         }
       },
       "is_incremental": false,
@@ -5634,7 +5682,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "FE4aZJ50jROxA9RnlkNAW7B9RWeKYLcnybUq95ZPj3o="
+          "hash": "j1mLb//YqOETjw52a+TDlzGMRTMLA1hhOXo99boYTbU="
         }
       },
       "is_incremental": false,
@@ -5709,7 +5757,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 467,
+          "total_file_count": 471,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

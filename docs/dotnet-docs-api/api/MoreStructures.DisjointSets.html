@@ -87,6 +87,10 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
+      <h4><a class="xref" href="MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.html">PathCompressionWeightedQuickUnionDisjointSet</a></h4>
+      <section><p>A <a class="xref" href="MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.html">WeightedQuickUnionDisjointSet</a> refinement which improves the performance of the data structure by
+performing a technique known as <strong>path compression</strong>.</p>
+</section>
       <h4><a class="xref" href="MoreStructures.DisjointSets.QuickFindDisjointSet.html">QuickFindDisjointSet</a></h4>
       <section><p>An <a class="xref" href="MoreStructures.DisjointSets.IDisjointSet.html">IDisjointSet</a> implementation based on a simple <see cref="!:List&lt;T>"></see> to store set ids of each of
 the values stored in the Disjoint Set.</p>
@@ -94,6 +98,10 @@ the values stored in the Disjoint Set.</p>
       <h4><a class="xref" href="MoreStructures.DisjointSets.QuickUnionDisjointSet.html">QuickUnionDisjointSet</a></h4>
       <section><p>An <a class="xref" href="MoreStructures.DisjointSets.IDisjointSet.html">IDisjointSet</a> implementation based on a simple <see cref="!:List&lt;T>"></see> conceptually storing a forest
 of trees, by defining the index of the parent node, for each value stored in the data structure.</p>
+</section>
+      <h4><a class="xref" href="MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.html">WeightedQuickUnionDisjointSet</a></h4>
+      <section><p>A <a class="xref" href="MoreStructures.DisjointSets.QuickUnionDisjointSet.html">QuickUnionDisjointSet</a> refinement which improves the performance of Find by minimizing the height of
+trees in the forest when merging them in <a class="xref" href="MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.html#MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet_Union_System_Int32_System_Int32_">Union(Int32, Int32)</a>.</p>
 </section>
     <h3 id="interfaces">Interfaces
   </h3>

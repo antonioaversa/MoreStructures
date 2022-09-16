@@ -1,0 +1,359 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class WeightedQuickUnionDisjointSet
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class WeightedQuickUnionDisjointSet
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet">
+  
+  
+  <h1 id="MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet" data-uid="MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet" class="text-break">Class WeightedQuickUnionDisjointSet
+  </h1>
+  <div class="markdown level0 summary"><p>A <a class="xref" href="MoreStructures.DisjointSets.QuickUnionDisjointSet.html">QuickUnionDisjointSet</a> refinement which improves the performance of Find by minimizing the height of
+trees in the forest when merging them in <a class="xref" href="MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.html#MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet_Union_System_Int32_System_Int32_">Union(Int32, Int32)</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="MoreStructures.DisjointSets.QuickUnionDisjointSet.html">QuickUnionDisjointSet</a></div>
+    <div class="level2"><span class="xref">WeightedQuickUnionDisjointSet</span></div>
+      <div class="level3"><a class="xref" href="MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.html">PathCompressionWeightedQuickUnionDisjointSet</a></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.DisjointSets.IDisjointSet.html">IDisjointSet</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="MoreStructures.DisjointSets.QuickUnionDisjointSet.html#MoreStructures_DisjointSets_QuickUnionDisjointSet_Parents">QuickUnionDisjointSet.Parents</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.DisjointSets.QuickUnionDisjointSet.html#MoreStructures_DisjointSets_QuickUnionDisjointSet_ValuesCount">QuickUnionDisjointSet.ValuesCount</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.DisjointSets.QuickUnionDisjointSet.html#MoreStructures_DisjointSets_QuickUnionDisjointSet_SetsCount">QuickUnionDisjointSet.SetsCount</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.DisjointSets.QuickUnionDisjointSet.html#MoreStructures_DisjointSets_QuickUnionDisjointSet_AreConnected_System_Int32_System_Int32_">QuickUnionDisjointSet.AreConnected(Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.DisjointSets.QuickUnionDisjointSet.html#MoreStructures_DisjointSets_QuickUnionDisjointSet_Find_System_Int32_">QuickUnionDisjointSet.Find(Int32)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.DisjointSets.html">MoreStructures.DisjointSets</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class WeightedQuickUnionDisjointSet : QuickUnionDisjointSet, IDisjointSet</code></pre>
+  </div>
+  <h5 id="MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>By merging by rank, the increment of rank of the trees in the forest when merging is minimized, and the forest
+is kept as flat as possible after the <a class="xref" href="MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.html#MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet_Union_System_Int32_System_Int32_">Union(Int32, Int32)</a> operation.
+<br>
+Keeping trees flat is the way to ensure sub-linear, Time Complexity in
+<a class="xref" href="MoreStructures.DisjointSets.QuickUnionDisjointSet.html#MoreStructures_DisjointSets_QuickUnionDisjointSet_AreConnected_System_Int32_System_Int32_">AreConnected(Int32, Int32)</a> and <a class="xref" href="MoreStructures.DisjointSets.QuickUnionDisjointSet.html#MoreStructures_DisjointSets_QuickUnionDisjointSet_Find_System_Int32_">Find(Int32)</a>, which
+in the specific case become logarithmic in time.</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet__ctor_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.%23ctor(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/DisjointSets/WeightedQuickUnionDisjointSet.cs/#L35">View Source</a>
+  </span>
+  <a id="MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet__ctor_" data-uid="MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.#ctor*"></a>
+  <h4 id="MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet__ctor_System_Int32_" data-uid="MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.#ctor(System.Int32)">WeightedQuickUnionDisjointSet(Int32)</h4>
+  <div class="markdown level1 summary"><p><inheritdoc></inheritdoc>
+<br>
+Initializes the ranks of all singleton trees to 0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WeightedQuickUnionDisjointSet(int valuesCount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">valuesCount</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet_Ranks.md&amp;value=---%0Auid%3A%20MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.Ranks%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/DisjointSets/WeightedQuickUnionDisjointSet.cs/#L27">View Source</a>
+  </span>
+  <a id="MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet_Ranks_" data-uid="MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.Ranks*"></a>
+  <h4 id="MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet_Ranks" data-uid="MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.Ranks">Ranks</h4>
+  <div class="markdown level1 summary"><p>Maps the i-th item of the Disjoint Set to its rank in the tree structure, they belong to.
+<br>
+I-th items which are leaves have rank equal to 0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int[] Ranks { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet_Ranks_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The rank of a node in the tree is an upper bound for its height.
+<br>
+Ranks are used, instead of heights, because keeping ranks correct is easier than keeping heights correct.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet_Union_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.Union(System.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/DisjointSets/WeightedQuickUnionDisjointSet.cs/#L83">View Source</a>
+  </span>
+  <a id="MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet_Union_" data-uid="MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.Union*"></a>
+  <h4 id="MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet_Union_System_Int32_System_Int32_" data-uid="MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.Union(System.Int32,System.Int32)">Union(Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Union(int first, int second)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">first</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">second</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MoreStructures.DisjointSets.QuickUnionDisjointSet.html#MoreStructures_DisjointSets_QuickUnionDisjointSet_Union_System_Int32_System_Int32_">QuickUnionDisjointSet.Union(Int32, Int32)</a></div>
+  <h5 id="MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet_Union_System_Int32_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+ALGORITHM
+<br>
+- It first finds the root R1 of <code data-dev-comment-type="paramref" class="paramref">first</code> and the root R2 of <code data-dev-comment-type="paramref" class="paramref">second</code>, by
+  running <a class="xref" href="MoreStructures.DisjointSets.QuickUnionDisjointSet.html#MoreStructures_DisjointSets_QuickUnionDisjointSet_Find_System_Int32_">Find(Int32)</a> on each item.
+<br>
+- Then, it checks the rank of R1, H1 and R2, H2 and uses them to decide whether to attach R1 to R2 or
+viceversa.
+<br>
+- If <code>H1 >= H2</code>, it attaches R2 as immediate child of R1, by setting the parent of R2 to R1.
+<br>
+- Otherwise, it attaches R1 as immediate child of R2, by setting the parent of R1 to R2.
+<br>
+- This way the two three now are merged into a single one, which means that all items of the two trees, 
+including <code data-dev-comment-type="paramref" class="paramref">first</code> and <code data-dev-comment-type="paramref" class="paramref">second</code> are now in the same set.
+<br>
+- Moreover, by merging based on ranks H1 and H2, the rank of the resulting tree is minimized.
+<br>
+- Finally the rank of the new root (R1 or R2), is updated, to reflect the merge.
+</p> 
+<p>
+COMPLEXITY
+<br>
+- Find the two roots takes a time proportional to the rank of the two trees.
+<br>
+- Thanks to the &quot;merging by rank&quot;, unlike in <a class="xref" href="MoreStructures.DisjointSets.QuickUnionDisjointSet.html">QuickUnionDisjointSet</a>, the rank of each tree
+in the forest is not O(n) in the worst case, but O(log(n)).
+<br>
+- Attaching one root as child of the other is a constant-time operation, since it only requires setting the
+parent in the list of parents, which is O(1) work.
+<br>
+- Updating the rank of the root of the merged tree is also a constant-time operation.
+<br>
+- Therefore, Time Complexity is O(log(n)). Space Complexity is O(1).
+</p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.DisjointSets.IDisjointSet.html">IDisjointSet</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet.md&amp;value=---%0Auid%3A%20MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/DisjointSets/WeightedQuickUnionDisjointSet.cs/#L15" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

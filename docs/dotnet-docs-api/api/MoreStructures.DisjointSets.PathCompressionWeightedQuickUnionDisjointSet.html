@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PathCompressionWeightedQuickUnionDisjointSet
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PathCompressionWeightedQuickUnionDisjointSet
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet">
+  
+  
+  <h1 id="MoreStructures_DisjointSets_PathCompressionWeightedQuickUnionDisjointSet" data-uid="MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet" class="text-break">Class PathCompressionWeightedQuickUnionDisjointSet
+  </h1>
+  <div class="markdown level0 summary"><p>A <a class="xref" href="MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.html">WeightedQuickUnionDisjointSet</a> refinement which improves the performance of the data structure by
+performing a technique known as <strong>path compression</strong>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="MoreStructures.DisjointSets.QuickUnionDisjointSet.html">QuickUnionDisjointSet</a></div>
+    <div class="level2"><a class="xref" href="MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.html">WeightedQuickUnionDisjointSet</a></div>
+    <div class="level3"><span class="xref">PathCompressionWeightedQuickUnionDisjointSet</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.DisjointSets.IDisjointSet.html">IDisjointSet</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.html#MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet_Ranks">WeightedQuickUnionDisjointSet.Ranks</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.html#MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet_Union_System_Int32_System_Int32_">WeightedQuickUnionDisjointSet.Union(Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.DisjointSets.QuickUnionDisjointSet.html#MoreStructures_DisjointSets_QuickUnionDisjointSet_Parents">QuickUnionDisjointSet.Parents</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.DisjointSets.QuickUnionDisjointSet.html#MoreStructures_DisjointSets_QuickUnionDisjointSet_ValuesCount">QuickUnionDisjointSet.ValuesCount</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.DisjointSets.QuickUnionDisjointSet.html#MoreStructures_DisjointSets_QuickUnionDisjointSet_SetsCount">QuickUnionDisjointSet.SetsCount</a>
+    </div>
+    <div>
+      <a class="xref" href="MoreStructures.DisjointSets.QuickUnionDisjointSet.html#MoreStructures_DisjointSets_QuickUnionDisjointSet_AreConnected_System_Int32_System_Int32_">QuickUnionDisjointSet.AreConnected(Int32, Int32)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.DisjointSets.html">MoreStructures.DisjointSets</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_DisjointSets_PathCompressionWeightedQuickUnionDisjointSet_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PathCompressionWeightedQuickUnionDisjointSet : WeightedQuickUnionDisjointSet, IDisjointSet</code></pre>
+  </div>
+  <h5 id="MoreStructures_DisjointSets_PathCompressionWeightedQuickUnionDisjointSet_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>This variant of <a class="xref" href="MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.html">WeightedQuickUnionDisjointSet</a> introduces a refinement of the
+<a class="xref" href="MoreStructures.DisjointSets.IDisjointSet.html#MoreStructures_DisjointSets_IDisjointSet_Find_System_Int32_">Find(Int32)</a> method, inherited by its upper classes.
+<br>
+The <a class="xref" href="MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.html#MoreStructures_DisjointSets_PathCompressionWeightedQuickUnionDisjointSet_Find_System_Int32_">Find(Int32)</a> algorithm remains unchanged in its core.
+<br>
+However, it produces a flatter forest as side-effect, every time is executed on a value.
+<br>
+Check the documentation of <a class="xref" href="MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.html#MoreStructures_DisjointSets_PathCompressionWeightedQuickUnionDisjointSet_Find_System_Int32_">Find(Int32)</a> for further details.</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_DisjointSets_PathCompressionWeightedQuickUnionDisjointSet__ctor_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.%23ctor(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/DisjointSets/PathCompressionWeightedQuickUnionDisjointSet.cs/#L20">View Source</a>
+  </span>
+  <a id="MoreStructures_DisjointSets_PathCompressionWeightedQuickUnionDisjointSet__ctor_" data-uid="MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.#ctor*"></a>
+  <h4 id="MoreStructures_DisjointSets_PathCompressionWeightedQuickUnionDisjointSet__ctor_System_Int32_" data-uid="MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.#ctor(System.Int32)">PathCompressionWeightedQuickUnionDisjointSet(Int32)</h4>
+  <div class="markdown level1 summary"><p><inheritdoc></inheritdoc>
+<br>
+Initializes the ranks of all singleton trees to 0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PathCompressionWeightedQuickUnionDisjointSet(int valuesCount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">valuesCount</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_DisjointSets_PathCompressionWeightedQuickUnionDisjointSet_Find_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.Find(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/DisjointSets/PathCompressionWeightedQuickUnionDisjointSet.cs/#L61">View Source</a>
+  </span>
+  <a id="MoreStructures_DisjointSets_PathCompressionWeightedQuickUnionDisjointSet_Find_" data-uid="MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.Find*"></a>
+  <h4 id="MoreStructures_DisjointSets_PathCompressionWeightedQuickUnionDisjointSet_Find_System_Int32_" data-uid="MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.Find(System.Int32)">Find(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int Find(int value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MoreStructures.DisjointSets.QuickUnionDisjointSet.html#MoreStructures_DisjointSets_QuickUnionDisjointSet_Find_System_Int32_">QuickUnionDisjointSet.Find(Int32)</a></div>
+  <h5 id="MoreStructures_DisjointSets_PathCompressionWeightedQuickUnionDisjointSet_Find_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+ALGORITHM
+<br>
+- The algorithm is pretty much like <a class="xref" href="MoreStructures.DisjointSets.QuickUnionDisjointSet.html#MoreStructures_DisjointSets_QuickUnionDisjointSet_Find_System_Int32_">Find(Int32)</a>, with one main 
+  difference.
+<br>
+- The difference lies in <strong>path compression</strong>: once the root of the tree is found, a second traversal, 
+from the <code data-dev-comment-type="paramref" class="paramref">value</code> up to its root, is performed.
+<br>
+- During the second traversal, each node in path is directly attached to the root. 
+<br>
+- That keeps the disjoint set equivalent to its previous state, by transitivity of the equivalence 
+relationship.
+<br>
+- However, it makes the tree much more flat, and the average height of all the nodes in the forest smaller.
+<br>
+- That means that future <a class="xref" href="MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.html#MoreStructures_DisjointSets_PathCompressionWeightedQuickUnionDisjointSet_Find_System_Int32_">Find(Int32)</a>, but also <a class="xref" href="MoreStructures.DisjointSets.IDisjointSet.html#MoreStructures_DisjointSets_IDisjointSet_Union_System_Int32_System_Int32_">Union(Int32, Int32)</a> and
+<a class="xref" href="MoreStructures.DisjointSets.IDisjointSet.html#MoreStructures_DisjointSets_IDisjointSet_AreConnected_System_Int32_System_Int32_">AreConnected(Int32, Int32)</a>, will be much faster, since it&apos;s faster to reach the 
+root of each tree.
+</p> 
+<p>
+COMPLEXITY
+<br>
+- Find the root takes a time proportional to the height of the tree, the item is in.
+<br>
+- Because path compression keeps trees very flat, incrementing the fan out, while the complexity is not
+constant and there is definitely a dependence over n, it is a sub-logarithmic dependency.
+<br>
+- More precisely, Time Complexity is O(log*(n)), which can be considered &quot;pseudo-constant&quot; for any 
+&quot;real world&quot; value of n.
+<br>
+- Space Complexity remains O(1), since only a constant amount of additional space is required to run the 
+algorithm.
+</p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.DisjointSets.IDisjointSet.html">IDisjointSet</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_DisjointSets_PathCompressionWeightedQuickUnionDisjointSet.md&amp;value=---%0Auid%3A%20MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/DisjointSets/PathCompressionWeightedQuickUnionDisjointSet.cs/#L17" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

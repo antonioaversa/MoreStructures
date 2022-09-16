@@ -91,6 +91,7 @@ of trees, by defining the index of the parent node, for each value stored in the
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">QuickUnionDisjointSet</span></div>
+      <div class="level2"><a class="xref" href="MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.html">WeightedQuickUnionDisjointSet</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
@@ -143,7 +144,7 @@ does the opposite, in terms of optimization.</li>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_DisjointSets_QuickUnionDisjointSet__ctor_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.DisjointSets.QuickUnionDisjointSet.%23ctor(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/DisjointSets/QuickUnionDisjointSet.cs/#L30">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/DisjointSets/QuickUnionDisjointSet.cs/#L35">View Source</a>
   </span>
   <a id="MoreStructures_DisjointSets_QuickUnionDisjointSet__ctor_" data-uid="MoreStructures.DisjointSets.QuickUnionDisjointSet.#ctor*"></a>
   <h4 id="MoreStructures_DisjointSets_QuickUnionDisjointSet__ctor_System_Int32_" data-uid="MoreStructures.DisjointSets.QuickUnionDisjointSet.#ctor(System.Int32)">QuickUnionDisjointSet(Int32)</h4>
@@ -183,10 +184,43 @@ Time and Space Complexity are O(n).</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_DisjointSets_QuickUnionDisjointSet_Parents.md&amp;value=---%0Auid%3A%20MoreStructures.DisjointSets.QuickUnionDisjointSet.Parents%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/DisjointSets/QuickUnionDisjointSet.cs/#L22">View Source</a>
+  </span>
+  <a id="MoreStructures_DisjointSets_QuickUnionDisjointSet_Parents_" data-uid="MoreStructures.DisjointSets.QuickUnionDisjointSet.Parents*"></a>
+  <h4 id="MoreStructures_DisjointSets_QuickUnionDisjointSet_Parents" data-uid="MoreStructures.DisjointSets.QuickUnionDisjointSet.Parents">Parents</h4>
+  <div class="markdown level1 summary"><p>Maps the i-th item of the Disjoint Set to the parent in the tree structure, they belong to.
+<br>
+I-th items which are roots have parent equal to themselves (i.e. <code>i</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int[] Parents { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_DisjointSets_QuickUnionDisjointSet_SetsCount.md&amp;value=---%0Auid%3A%20MoreStructures.DisjointSets.QuickUnionDisjointSet.SetsCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/DisjointSets/QuickUnionDisjointSet.cs/#L68">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/DisjointSets/QuickUnionDisjointSet.cs/#L73">View Source</a>
   </span>
   <a id="MoreStructures_DisjointSets_QuickUnionDisjointSet_SetsCount_" data-uid="MoreStructures.DisjointSets.QuickUnionDisjointSet.SetsCount*"></a>
   <h4 id="MoreStructures_DisjointSets_QuickUnionDisjointSet_SetsCount" data-uid="MoreStructures.DisjointSets.QuickUnionDisjointSet.SetsCount">SetsCount</h4>
@@ -194,7 +228,7 @@ Time and Space Complexity are O(n).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int SetsCount { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual int SetsCount { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,7 +268,7 @@ COMPLEXITY
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_DisjointSets_QuickUnionDisjointSet_ValuesCount.md&amp;value=---%0Auid%3A%20MoreStructures.DisjointSets.QuickUnionDisjointSet.ValuesCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/DisjointSets/QuickUnionDisjointSet.cs/#L47">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/DisjointSets/QuickUnionDisjointSet.cs/#L52">View Source</a>
   </span>
   <a id="MoreStructures_DisjointSets_QuickUnionDisjointSet_ValuesCount_" data-uid="MoreStructures.DisjointSets.QuickUnionDisjointSet.ValuesCount*"></a>
   <h4 id="MoreStructures_DisjointSets_QuickUnionDisjointSet_ValuesCount" data-uid="MoreStructures.DisjointSets.QuickUnionDisjointSet.ValuesCount">ValuesCount</h4>
@@ -242,7 +276,7 @@ COMPLEXITY
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int ValuesCount { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual int ValuesCount { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -271,7 +305,7 @@ Time and Space Complexity are O(1).</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_DisjointSets_QuickUnionDisjointSet_AreConnected_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.DisjointSets.QuickUnionDisjointSet.AreConnected(System.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/DisjointSets/QuickUnionDisjointSet.cs/#L93">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/DisjointSets/QuickUnionDisjointSet.cs/#L106">View Source</a>
   </span>
   <a id="MoreStructures_DisjointSets_QuickUnionDisjointSet_AreConnected_" data-uid="MoreStructures.DisjointSets.QuickUnionDisjointSet.AreConnected*"></a>
   <h4 id="MoreStructures_DisjointSets_QuickUnionDisjointSet_AreConnected_System_Int32_System_Int32_" data-uid="MoreStructures.DisjointSets.QuickUnionDisjointSet.AreConnected(System.Int32,System.Int32)">AreConnected(Int32, Int32)</h4>
@@ -279,7 +313,7 @@ Time and Space Complexity are O(1).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool AreConnected(int first, int second)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool AreConnected(int first, int second)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -334,10 +368,13 @@ COMPLEXITY
 <br>
 - Find the two roots takes a time proportional to the height of the two trees.
 <br>
-- Because no mechanism to keep trees flat is put in place by this data structure, the height of each tree 
-is O(n).
+- If no mechanism to keep trees flat is put in place by this data structure, the height of each is O(n) in
+the worst case.
 <br>
 - Therefore, Time Complexity is O(n). Space Complexity is O(1).
+<br>
+- If a sub-class of <a class="xref" href="MoreStructures.DisjointSets.QuickUnionDisjointSet.html">QuickUnionDisjointSet</a> introduces mechanisms to keep trees flat, the 
+complexity may become sub-linear. An example is <a class="xref" href="MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.html">WeightedQuickUnionDisjointSet</a>.
 </p>
 </div>
   <span class="small pull-right mobile-hide">
@@ -345,7 +382,7 @@ is O(n).
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_DisjointSets_QuickUnionDisjointSet_Find_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.DisjointSets.QuickUnionDisjointSet.Find(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/DisjointSets/QuickUnionDisjointSet.cs/#L133">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/DisjointSets/QuickUnionDisjointSet.cs/#L149">View Source</a>
   </span>
   <a id="MoreStructures_DisjointSets_QuickUnionDisjointSet_Find_" data-uid="MoreStructures.DisjointSets.QuickUnionDisjointSet.Find*"></a>
   <h4 id="MoreStructures_DisjointSets_QuickUnionDisjointSet_Find_System_Int32_" data-uid="MoreStructures.DisjointSets.QuickUnionDisjointSet.Find(System.Int32)">Find(Int32)</h4>
@@ -353,7 +390,7 @@ is O(n).
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Find(int value)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual int Find(int value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -402,10 +439,13 @@ COMPLEXITY
 <br>
 - Find the root takes a time proportional to the height of the tree, the item is in.
 <br>
-- Because no mechanism to keep trees flat is put in place by this data structure, the height of the tree 
+- If no mechanism to keep trees flat is put in place by this data structure, the height of the tree 
 is O(n) in the worst case.
 <br>
 - Therefore, Time Complexity is O(n). Space Complexity is O(1).
+<br>
+- If a sub-class of <a class="xref" href="MoreStructures.DisjointSets.QuickUnionDisjointSet.html">QuickUnionDisjointSet</a> introduces mechanisms to keep trees flat, the 
+complexity may become sub-linear. An example is <a class="xref" href="MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.html">WeightedQuickUnionDisjointSet</a>.
 </p>
 </div>
   <span class="small pull-right mobile-hide">
@@ -413,7 +453,7 @@ is O(n) in the worst case.
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_DisjointSets_QuickUnionDisjointSet_Union_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.DisjointSets.QuickUnionDisjointSet.Union(System.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/DisjointSets/QuickUnionDisjointSet.cs/#L174">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/DisjointSets/QuickUnionDisjointSet.cs/#L193">View Source</a>
   </span>
   <a id="MoreStructures_DisjointSets_QuickUnionDisjointSet_Union_" data-uid="MoreStructures.DisjointSets.QuickUnionDisjointSet.Union*"></a>
   <h4 id="MoreStructures_DisjointSets_QuickUnionDisjointSet_Union_System_Int32_System_Int32_" data-uid="MoreStructures.DisjointSets.QuickUnionDisjointSet.Union(System.Int32,System.Int32)">Union(Int32, Int32)</h4>
@@ -421,7 +461,7 @@ is O(n) in the worst case.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Union(int first, int second)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void Union(int first, int second)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -462,13 +502,16 @@ COMPLEXITY
 <br>
 - Find the two roots takes a time proportional to the height of the two trees.
 <br>
-- Because no mechanism to keep trees flat is put in place by this data structure, the height of each tree 
+- If no mechanism to keep trees flat is put in place by this data structure, the height of each tree 
 is O(n) in the worst case.
 <br>
 - Attaching one root as child of the other is a constant-time operation, since it only requires setting the
 parent in the list of parents, which is O(1) work.
 <br>
 - Therefore, Time Complexity is O(n). Space Complexity is O(1).
+<br>
+- If a sub-class of <a class="xref" href="MoreStructures.DisjointSets.QuickUnionDisjointSet.html">QuickUnionDisjointSet</a> introduces mechanisms to keep trees flat, the 
+complexity may become sub-linear. An example is <a class="xref" href="MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.html">WeightedQuickUnionDisjointSet</a>.
 </p>
 </div>
   <h3 id="implements">Implements</h3>

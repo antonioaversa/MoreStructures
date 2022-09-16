@@ -1546,6 +1546,38 @@ references:
   isSpec: "True"
   fullName: MoreStructures.DisjointSets.IDisjointSet.ValuesCount
   nameWithType: IDisjointSet.ValuesCount
+- uid: MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet
+  name: PathCompressionWeightedQuickUnionDisjointSet
+  href: api/MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.html
+  commentId: T:MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet
+  fullName: MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet
+  nameWithType: PathCompressionWeightedQuickUnionDisjointSet
+- uid: MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.#ctor(System.Int32)
+  name: PathCompressionWeightedQuickUnionDisjointSet(Int32)
+  href: api/MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.html#MoreStructures_DisjointSets_PathCompressionWeightedQuickUnionDisjointSet__ctor_System_Int32_
+  commentId: M:MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.#ctor(System.Int32)
+  fullName: MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.PathCompressionWeightedQuickUnionDisjointSet(System.Int32)
+  nameWithType: PathCompressionWeightedQuickUnionDisjointSet.PathCompressionWeightedQuickUnionDisjointSet(Int32)
+- uid: MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.#ctor*
+  name: PathCompressionWeightedQuickUnionDisjointSet
+  href: api/MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.html#MoreStructures_DisjointSets_PathCompressionWeightedQuickUnionDisjointSet__ctor_
+  commentId: Overload:MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.PathCompressionWeightedQuickUnionDisjointSet
+  nameWithType: PathCompressionWeightedQuickUnionDisjointSet.PathCompressionWeightedQuickUnionDisjointSet
+- uid: MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.Find(System.Int32)
+  name: Find(Int32)
+  href: api/MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.html#MoreStructures_DisjointSets_PathCompressionWeightedQuickUnionDisjointSet_Find_System_Int32_
+  commentId: M:MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.Find(System.Int32)
+  fullName: MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.Find(System.Int32)
+  nameWithType: PathCompressionWeightedQuickUnionDisjointSet.Find(Int32)
+- uid: MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.Find*
+  name: Find
+  href: api/MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.html#MoreStructures_DisjointSets_PathCompressionWeightedQuickUnionDisjointSet_Find_
+  commentId: Overload:MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.Find
+  isSpec: "True"
+  fullName: MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.Find
+  nameWithType: PathCompressionWeightedQuickUnionDisjointSet.Find
 - uid: MoreStructures.DisjointSets.QuickFindDisjointSet
   name: QuickFindDisjointSet
   href: api/MoreStructures.DisjointSets.QuickFindDisjointSet.html
@@ -1675,6 +1707,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.DisjointSets.QuickUnionDisjointSet.Find
   nameWithType: QuickUnionDisjointSet.Find
+- uid: MoreStructures.DisjointSets.QuickUnionDisjointSet.Parents
+  name: Parents
+  href: api/MoreStructures.DisjointSets.QuickUnionDisjointSet.html#MoreStructures_DisjointSets_QuickUnionDisjointSet_Parents
+  commentId: P:MoreStructures.DisjointSets.QuickUnionDisjointSet.Parents
+  fullName: MoreStructures.DisjointSets.QuickUnionDisjointSet.Parents
+  nameWithType: QuickUnionDisjointSet.Parents
+- uid: MoreStructures.DisjointSets.QuickUnionDisjointSet.Parents*
+  name: Parents
+  href: api/MoreStructures.DisjointSets.QuickUnionDisjointSet.html#MoreStructures_DisjointSets_QuickUnionDisjointSet_Parents_
+  commentId: Overload:MoreStructures.DisjointSets.QuickUnionDisjointSet.Parents
+  isSpec: "True"
+  fullName: MoreStructures.DisjointSets.QuickUnionDisjointSet.Parents
+  nameWithType: QuickUnionDisjointSet.Parents
 - uid: MoreStructures.DisjointSets.QuickUnionDisjointSet.SetsCount
   name: SetsCount
   href: api/MoreStructures.DisjointSets.QuickUnionDisjointSet.html#MoreStructures_DisjointSets_QuickUnionDisjointSet_SetsCount
@@ -1714,6 +1759,51 @@ references:
   isSpec: "True"
   fullName: MoreStructures.DisjointSets.QuickUnionDisjointSet.ValuesCount
   nameWithType: QuickUnionDisjointSet.ValuesCount
+- uid: MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet
+  name: WeightedQuickUnionDisjointSet
+  href: api/MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.html
+  commentId: T:MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet
+  fullName: MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet
+  nameWithType: WeightedQuickUnionDisjointSet
+- uid: MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.#ctor(System.Int32)
+  name: WeightedQuickUnionDisjointSet(Int32)
+  href: api/MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.html#MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet__ctor_System_Int32_
+  commentId: M:MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.#ctor(System.Int32)
+  fullName: MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.WeightedQuickUnionDisjointSet(System.Int32)
+  nameWithType: WeightedQuickUnionDisjointSet.WeightedQuickUnionDisjointSet(Int32)
+- uid: MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.#ctor*
+  name: WeightedQuickUnionDisjointSet
+  href: api/MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.html#MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet__ctor_
+  commentId: Overload:MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.WeightedQuickUnionDisjointSet
+  nameWithType: WeightedQuickUnionDisjointSet.WeightedQuickUnionDisjointSet
+- uid: MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.Ranks
+  name: Ranks
+  href: api/MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.html#MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet_Ranks
+  commentId: P:MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.Ranks
+  fullName: MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.Ranks
+  nameWithType: WeightedQuickUnionDisjointSet.Ranks
+- uid: MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.Ranks*
+  name: Ranks
+  href: api/MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.html#MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet_Ranks_
+  commentId: Overload:MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.Ranks
+  isSpec: "True"
+  fullName: MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.Ranks
+  nameWithType: WeightedQuickUnionDisjointSet.Ranks
+- uid: MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.Union(System.Int32,System.Int32)
+  name: Union(Int32, Int32)
+  href: api/MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.html#MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet_Union_System_Int32_System_Int32_
+  commentId: M:MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.Union(System.Int32,System.Int32)
+  fullName: MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.Union(System.Int32, System.Int32)
+  nameWithType: WeightedQuickUnionDisjointSet.Union(Int32, Int32)
+- uid: MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.Union*
+  name: Union
+  href: api/MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.html#MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet_Union_
+  commentId: Overload:MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.Union
+  isSpec: "True"
+  fullName: MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.Union
+  nameWithType: WeightedQuickUnionDisjointSet.Union
 - uid: MoreStructures.Graphs
   name: MoreStructures.Graphs
   href: api/MoreStructures.Graphs.html
@@ -10884,6 +10974,38 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.DisjointSets.DisjointSetTests.Union_ThrowsExceptionOnInvalidValues
   nameWithType: DisjointSetTests.Union_ThrowsExceptionOnInvalidValues
+- uid: MoreStructures.Tests.DisjointSets.PathCompressionWeightedQuickUnionDisjointSetTests
+  name: PathCompressionWeightedQuickUnionDisjointSetTests
+  href: api/MoreStructures.Tests.DisjointSets.PathCompressionWeightedQuickUnionDisjointSetTests.html
+  commentId: T:MoreStructures.Tests.DisjointSets.PathCompressionWeightedQuickUnionDisjointSetTests
+  fullName: MoreStructures.Tests.DisjointSets.PathCompressionWeightedQuickUnionDisjointSetTests
+  nameWithType: PathCompressionWeightedQuickUnionDisjointSetTests
+- uid: MoreStructures.Tests.DisjointSets.PathCompressionWeightedQuickUnionDisjointSetTests.#ctor
+  name: PathCompressionWeightedQuickUnionDisjointSetTests()
+  href: api/MoreStructures.Tests.DisjointSets.PathCompressionWeightedQuickUnionDisjointSetTests.html#MoreStructures_Tests_DisjointSets_PathCompressionWeightedQuickUnionDisjointSetTests__ctor
+  commentId: M:MoreStructures.Tests.DisjointSets.PathCompressionWeightedQuickUnionDisjointSetTests.#ctor
+  fullName: MoreStructures.Tests.DisjointSets.PathCompressionWeightedQuickUnionDisjointSetTests.PathCompressionWeightedQuickUnionDisjointSetTests()
+  nameWithType: PathCompressionWeightedQuickUnionDisjointSetTests.PathCompressionWeightedQuickUnionDisjointSetTests()
+- uid: MoreStructures.Tests.DisjointSets.PathCompressionWeightedQuickUnionDisjointSetTests.#ctor*
+  name: PathCompressionWeightedQuickUnionDisjointSetTests
+  href: api/MoreStructures.Tests.DisjointSets.PathCompressionWeightedQuickUnionDisjointSetTests.html#MoreStructures_Tests_DisjointSets_PathCompressionWeightedQuickUnionDisjointSetTests__ctor_
+  commentId: Overload:MoreStructures.Tests.DisjointSets.PathCompressionWeightedQuickUnionDisjointSetTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.DisjointSets.PathCompressionWeightedQuickUnionDisjointSetTests.PathCompressionWeightedQuickUnionDisjointSetTests
+  nameWithType: PathCompressionWeightedQuickUnionDisjointSetTests.PathCompressionWeightedQuickUnionDisjointSetTests
+- uid: MoreStructures.Tests.DisjointSets.PathCompressionWeightedQuickUnionDisjointSetTests.Find_MakesTreeFlat
+  name: Find_MakesTreeFlat()
+  href: api/MoreStructures.Tests.DisjointSets.PathCompressionWeightedQuickUnionDisjointSetTests.html#MoreStructures_Tests_DisjointSets_PathCompressionWeightedQuickUnionDisjointSetTests_Find_MakesTreeFlat
+  commentId: M:MoreStructures.Tests.DisjointSets.PathCompressionWeightedQuickUnionDisjointSetTests.Find_MakesTreeFlat
+  fullName: MoreStructures.Tests.DisjointSets.PathCompressionWeightedQuickUnionDisjointSetTests.Find_MakesTreeFlat()
+  nameWithType: PathCompressionWeightedQuickUnionDisjointSetTests.Find_MakesTreeFlat()
+- uid: MoreStructures.Tests.DisjointSets.PathCompressionWeightedQuickUnionDisjointSetTests.Find_MakesTreeFlat*
+  name: Find_MakesTreeFlat
+  href: api/MoreStructures.Tests.DisjointSets.PathCompressionWeightedQuickUnionDisjointSetTests.html#MoreStructures_Tests_DisjointSets_PathCompressionWeightedQuickUnionDisjointSetTests_Find_MakesTreeFlat_
+  commentId: Overload:MoreStructures.Tests.DisjointSets.PathCompressionWeightedQuickUnionDisjointSetTests.Find_MakesTreeFlat
+  isSpec: "True"
+  fullName: MoreStructures.Tests.DisjointSets.PathCompressionWeightedQuickUnionDisjointSetTests.Find_MakesTreeFlat
+  nameWithType: PathCompressionWeightedQuickUnionDisjointSetTests.Find_MakesTreeFlat
 - uid: MoreStructures.Tests.DisjointSets.QuickFindDisjointSetTests
   name: QuickFindDisjointSetTests
   href: api/MoreStructures.Tests.DisjointSets.QuickFindDisjointSetTests.html
@@ -10922,6 +11044,99 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.DisjointSets.QuickUnionDisjointSetTests.QuickUnionDisjointSetTests
   nameWithType: QuickUnionDisjointSetTests.QuickUnionDisjointSetTests
+- uid: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests
+  name: WeightedQuickUnionDisjointSetTests
+  href: api/MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.html
+  commentId: T:MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests
+  fullName: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests
+  nameWithType: WeightedQuickUnionDisjointSetTests
+- uid: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.#ctor
+  name: WeightedQuickUnionDisjointSetTests()
+  href: api/MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.html#MoreStructures_Tests_DisjointSets_WeightedQuickUnionDisjointSetTests__ctor
+  commentId: M:MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.#ctor
+  fullName: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.WeightedQuickUnionDisjointSetTests()
+  nameWithType: WeightedQuickUnionDisjointSetTests.WeightedQuickUnionDisjointSetTests()
+- uid: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.#ctor(Func{System.Int32,MoreStructures.DisjointSets.IDisjointSet})
+  name: WeightedQuickUnionDisjointSetTests(Func<Int32, IDisjointSet>)
+  href: api/MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.html#MoreStructures_Tests_DisjointSets_WeightedQuickUnionDisjointSetTests__ctor_Func_System_Int32_MoreStructures_DisjointSets_IDisjointSet__
+  commentId: M:MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.#ctor(Func{System.Int32,MoreStructures.DisjointSets.IDisjointSet})
+  name.vb: WeightedQuickUnionDisjointSetTests(Func(Of Int32, IDisjointSet))
+  fullName: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.WeightedQuickUnionDisjointSetTests(Func<System.Int32, MoreStructures.DisjointSets.IDisjointSet>)
+  fullName.vb: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.WeightedQuickUnionDisjointSetTests(Func(Of System.Int32, MoreStructures.DisjointSets.IDisjointSet))
+  nameWithType: WeightedQuickUnionDisjointSetTests.WeightedQuickUnionDisjointSetTests(Func<Int32, IDisjointSet>)
+  nameWithType.vb: WeightedQuickUnionDisjointSetTests.WeightedQuickUnionDisjointSetTests(Func(Of Int32, IDisjointSet))
+- uid: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.#ctor*
+  name: WeightedQuickUnionDisjointSetTests
+  href: api/MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.html#MoreStructures_Tests_DisjointSets_WeightedQuickUnionDisjointSetTests__ctor_
+  commentId: Overload:MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.WeightedQuickUnionDisjointSetTests
+  nameWithType: WeightedQuickUnionDisjointSetTests.WeightedQuickUnionDisjointSetTests
+- uid: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.GetRanks_IsZeroAfterCtor
+  name: GetRanks_IsZeroAfterCtor()
+  href: api/MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.html#MoreStructures_Tests_DisjointSets_WeightedQuickUnionDisjointSetTests_GetRanks_IsZeroAfterCtor
+  commentId: M:MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.GetRanks_IsZeroAfterCtor
+  fullName: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.GetRanks_IsZeroAfterCtor()
+  nameWithType: WeightedQuickUnionDisjointSetTests.GetRanks_IsZeroAfterCtor()
+- uid: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.GetRanks_IsZeroAfterCtor*
+  name: GetRanks_IsZeroAfterCtor
+  href: api/MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.html#MoreStructures_Tests_DisjointSets_WeightedQuickUnionDisjointSetTests_GetRanks_IsZeroAfterCtor_
+  commentId: Overload:MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.GetRanks_IsZeroAfterCtor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.GetRanks_IsZeroAfterCtor
+  nameWithType: WeightedQuickUnionDisjointSetTests.GetRanks_IsZeroAfterCtor
+- uid: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.GetRanks_ReturnsCopy
+  name: GetRanks_ReturnsCopy()
+  href: api/MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.html#MoreStructures_Tests_DisjointSets_WeightedQuickUnionDisjointSetTests_GetRanks_ReturnsCopy
+  commentId: M:MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.GetRanks_ReturnsCopy
+  fullName: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.GetRanks_ReturnsCopy()
+  nameWithType: WeightedQuickUnionDisjointSetTests.GetRanks_ReturnsCopy()
+- uid: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.GetRanks_ReturnsCopy*
+  name: GetRanks_ReturnsCopy
+  href: api/MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.html#MoreStructures_Tests_DisjointSets_WeightedQuickUnionDisjointSetTests_GetRanks_ReturnsCopy_
+  commentId: Overload:MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.GetRanks_ReturnsCopy
+  isSpec: "True"
+  fullName: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.GetRanks_ReturnsCopy
+  nameWithType: WeightedQuickUnionDisjointSetTests.GetRanks_ReturnsCopy
+- uid: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.Union_MergesByRank
+  name: Union_MergesByRank()
+  href: api/MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.html#MoreStructures_Tests_DisjointSets_WeightedQuickUnionDisjointSetTests_Union_MergesByRank
+  commentId: M:MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.Union_MergesByRank
+  fullName: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.Union_MergesByRank()
+  nameWithType: WeightedQuickUnionDisjointSetTests.Union_MergesByRank()
+- uid: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.Union_MergesByRank*
+  name: Union_MergesByRank
+  href: api/MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.html#MoreStructures_Tests_DisjointSets_WeightedQuickUnionDisjointSetTests_Union_MergesByRank_
+  commentId: Overload:MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.Union_MergesByRank
+  isSpec: "True"
+  fullName: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.Union_MergesByRank
+  nameWithType: WeightedQuickUnionDisjointSetTests.Union_MergesByRank
+- uid: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.Union_MinimizesRankGrow(System.Int32)
+  name: Union_MinimizesRankGrow(Int32)
+  href: api/MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.html#MoreStructures_Tests_DisjointSets_WeightedQuickUnionDisjointSetTests_Union_MinimizesRankGrow_System_Int32_
+  commentId: M:MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.Union_MinimizesRankGrow(System.Int32)
+  fullName: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.Union_MinimizesRankGrow(System.Int32)
+  nameWithType: WeightedQuickUnionDisjointSetTests.Union_MinimizesRankGrow(Int32)
+- uid: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.Union_MinimizesRankGrow*
+  name: Union_MinimizesRankGrow
+  href: api/MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.html#MoreStructures_Tests_DisjointSets_WeightedQuickUnionDisjointSetTests_Union_MinimizesRankGrow_
+  commentId: Overload:MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.Union_MinimizesRankGrow
+  isSpec: "True"
+  fullName: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.Union_MinimizesRankGrow
+  nameWithType: WeightedQuickUnionDisjointSetTests.Union_MinimizesRankGrow
+- uid: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.Union_UpdatesRanks
+  name: Union_UpdatesRanks()
+  href: api/MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.html#MoreStructures_Tests_DisjointSets_WeightedQuickUnionDisjointSetTests_Union_UpdatesRanks
+  commentId: M:MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.Union_UpdatesRanks
+  fullName: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.Union_UpdatesRanks()
+  nameWithType: WeightedQuickUnionDisjointSetTests.Union_UpdatesRanks()
+- uid: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.Union_UpdatesRanks*
+  name: Union_UpdatesRanks
+  href: api/MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.html#MoreStructures_Tests_DisjointSets_WeightedQuickUnionDisjointSetTests_Union_UpdatesRanks_
+  commentId: Overload:MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.Union_UpdatesRanks
+  isSpec: "True"
+  fullName: MoreStructures.Tests.DisjointSets.WeightedQuickUnionDisjointSetTests.Union_UpdatesRanks
+  nameWithType: WeightedQuickUnionDisjointSetTests.Union_UpdatesRanks
 - uid: MoreStructures.Tests.Graphs
   name: MoreStructures.Tests.Graphs
   href: api/MoreStructures.Tests.Graphs.html
