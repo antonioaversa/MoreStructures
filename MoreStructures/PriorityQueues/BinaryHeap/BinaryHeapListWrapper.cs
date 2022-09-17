@@ -1,19 +1,31 @@
-﻿namespace MoreStructures.PriorityQueues.BinaryHeap;
+﻿using MoreLinq.Extensions;
+
+namespace MoreStructures.PriorityQueues.BinaryHeap;
 
 /// <summary>
-/// A wrapper around a <see cref="IList{T}"/>, which preserve the max heap property on the subset of items of the list 
-/// from index 0 to its count - 1, keeping a buffer of listCount - <see cref="HeapCount"/> items.
+/// A wrapper around a <see cref="IList{T}"/>, which preserve the max heap property on the subset of items of the list,
+/// at the beginning or at the end of it.
 /// </summary>
 /// <typeparam name="T">The type of items in the wrapped list.</typeparam>
 /// <remarks>
-/// Can be used to support HeapSort or a priority queue based on a Max Binary Heap.
+/// Heap items are either stored:
 /// <br/>
-/// In the first case the buffer are is used. In the second case it is not.
+/// - from index 0 to <see cref="HeapCount"/> - 1, i.e. at the beginning of the list,
+///   <br/>
+/// - or from index <see cref="ListCount"/> - <see cref="HeapCount"/> to <see cref="ListCount"/> - 1, i.e. at the end.
+///   <br/>
+/// That leaves a buffer of <see cref="ListCount"/> - <see cref="HeapCount"/> items, either at the end or at the
+/// beginning of the list.
+/// <br/>
+/// The functionalities of this wrapper can be used to support HeapSort or a priority queue based on a Max Binary Heap.
+/// <br/>
+/// In the first case the buffer area is used (to store already sorted items). In the second case it is not.
 /// </remarks>
 public sealed class BinaryHeapListWrapper<T>
 {
     private IList<T> Items { get; }
     private IComparer<T> Comparer { get; }
+    private bool StoreHeapAtTheEnd { get; }
     
     /// <summary>
     /// The number of items in the heap only, buffer area of the underlying list excluded.
@@ -25,16 +37,26 @@ public sealed class BinaryHeapListWrapper<T>
     public int HeapCount { get; private set; }
 
     /// <summary>
-    /// Invoked just after an item has been pushed into <see cref="Items"/> (at the end of it), and before the 
+    /// Invoked just after an item has been pushed into <see cref="Items"/> (at the end of the heap), and before the 
     /// "sifting up" procedure is performed.
     /// </summary>
+    /// <remarks>
+    /// The actual index of the item pushed will be different than <see cref="ListCount"/> - 1, if 
+    /// <see cref="ListCount"/> is different than <see cref="HeapCount"/>, or if the heap is stored in reverse.
+    /// </remarks>
     public Action<int> RaiseItemPushed { get; init; } = i => { };
 
     /// <summary>
-    /// Invoked just before an item is removed from <see cref="Items"/> (at the beginning of it), and before 
+    /// Invoked just before an item is removed from <see cref="Items"/> (at the beginning of the heap), and before 
     /// "sifting down" procedure is performed.
     /// </summary>
-    public Action RaiseItemPopping { get; init; } = () => { };
+    /// <remarks>
+    /// The actual index of the item pushed may be different than 0, if the heap is stored in reverse, in which case
+    /// it is equal to <see cref="ListCount"/> - 1. 
+    /// <br/>
+    /// Same applies to the index of the item pushed out of the heap (but still in the list, in the buffer area).
+    /// </remarks>
+    public Action<int, int> RaiseItemPopping { get; init; } = (i1, i2) => { };
 
     /// <summary>
     /// Invoked just after two items have been swapped of position in <see cref="Items"/>.
@@ -56,7 +78,12 @@ public sealed class BinaryHeapListWrapper<T>
     /// <br/>
     /// Current size must be non-bigger than the <see cref="ICollection{T}.Count"/>.
     /// </param>
-    public BinaryHeapListWrapper(IList<T> items, IComparer<T> comparer, int count)
+    /// <param name="storeHeapAtTheEnd">
+    /// Whether heap items should be stored at the beginning or at the end of the <paramref name="items"/> list.
+    /// <br/>
+    /// By default heap items are stored at the beginning (root at index 0) and buffer are is at the end.
+    /// </param>
+    public BinaryHeapListWrapper(IList<T> items, IComparer<T> comparer, int count, bool storeHeapAtTheEnd = false)
     {
         if (count < 0 || count > items.Count)
             throw new ArgumentException(
@@ -65,6 +92,7 @@ public sealed class BinaryHeapListWrapper<T>
         Items = items;
         Comparer = comparer;
         HeapCount = count;
+        StoreHeapAtTheEnd = storeHeapAtTheEnd;
 
         RestoreHeapProperty();
     }
@@ -79,6 +107,7 @@ public sealed class BinaryHeapListWrapper<T>
         Items = new List<T>(source.Items);
         Comparer = source.Comparer;
         HeapCount = source.HeapCount;
+        StoreHeapAtTheEnd = source.StoreHeapAtTheEnd;
 
         RestoreHeapProperty();
     }
@@ -89,8 +118,20 @@ public sealed class BinaryHeapListWrapper<T>
     /// </summary>
     public void RestoreHeapProperty()
     {
-        for (var i = HeapCount / 2 + 1; i >= 0; i--)
-            SiftDown(i);
+        var root = RootIndex();
+        var lastLeaf = LastLeafIndex();
+        if (StoreHeapAtTheEnd)
+        {
+            var halfHeapIndex = Math.Max(lastLeaf, lastLeaf + HeapCount / 2);
+            for (var i = halfHeapIndex; i <= root; i++)
+                SiftDown(i);
+        }
+        else
+        {
+            var halfHeapIndex = Math.Min(lastLeaf, lastLeaf / 2 + 1);
+            for (var i = halfHeapIndex; i >= root; i--)
+                SiftDown(i);
+        }
     }
 
     /// <summary>
@@ -100,7 +141,7 @@ public sealed class BinaryHeapListWrapper<T>
     {
         if (HeapCount == 0)
             throw new InvalidOperationException($"Can't {nameof(Peek)} on an empty heap.");
-        return Items[0];
+        return Items[RootIndex()];
     }
 
     /// <summary>
@@ -113,15 +154,17 @@ public sealed class BinaryHeapListWrapper<T>
         if (HeapCount == 0)
             throw new InvalidOperationException($"Can't {nameof(Pop)} on an empty heap.");
 
-        RaiseItemPopping();
-        var result = Peek();
+        var rootHeapIndex = RootIndex();
+        var lastHeapIndex = LastLeafIndex();
 
-        var lastHeapIndex = HeapCount - 1;
-        (Items[0], Items[lastHeapIndex]) = (Items[lastHeapIndex], Items[0]);
+        RaiseItemPopping(rootHeapIndex, lastHeapIndex);
+        var result = Peek();
+       
+        (Items[rootHeapIndex], Items[lastHeapIndex]) = (Items[lastHeapIndex], Items[rootHeapIndex]);
         HeapCount--;
 
         if (HeapCount > 0)
-            SiftDown(0);
+            SiftDown(rootHeapIndex);
         return result;
     }
 
@@ -137,16 +180,18 @@ public sealed class BinaryHeapListWrapper<T>
     /// </param>
     public void Push(T item, bool siftUp = true)
     {
-        int index;
-        if (HeapCount < Items.Count)
+        int index = NextLeafIndex();
+        if (HeapCount < ListCount)
         {
-            Items[HeapCount] = item;
-            index = HeapCount;
+            Items[index] = item;
         }
         else
         {
+            if (StoreHeapAtTheEnd)
+                throw new InvalidOperationException(
+                    $"Cannot {nameof(Push)} on a heap which is stored at the end, when the buffer empty.");
+
             Items.Add(item);
-            index = Items.Count - 1;
         }
         HeapCount++;
         RaiseItemPushed(index);
@@ -172,7 +217,8 @@ public sealed class BinaryHeapListWrapper<T>
         if (k == 0) return (Peek(), true);
 
         var candidates = new BinaryHeapListWrapper<(int, T)>(new List<(int, T)>(), new Item2Comparer(Comparer), 0);
-        candidates.Push((0, Items[0]));
+        var rootIndex = RootIndex();
+        candidates.Push((rootIndex, Items[rootIndex]));
         while (k > 0)
         {
             var (maxIndex, _) = candidates.Pop();
@@ -275,12 +321,42 @@ public sealed class BinaryHeapListWrapper<T>
         }
     }
 
-    private static int ParentOf(int nodeIndex) =>
-        nodeIndex == 0 ? -1 : (nodeIndex - 1) / 2;
-    private int LeftChildOf(int nodeIndex) =>
-        2 * nodeIndex + 1 is var result && result < HeapCount ? result : -1;
-    private int RightChildOf(int nodeIndex) =>
-        2 * nodeIndex + 2 is var result && result < HeapCount ? result : -1;
+    private int RootIndex() => StoreHeapAtTheEnd ? ListCount - 1 : 0;
+    private int LastLeafIndex() => StoreHeapAtTheEnd ? ListCount - HeapCount : HeapCount - 1;
+    private int NextLeafIndex() => LastLeafIndex() + (StoreHeapAtTheEnd ? -1 : +1);
+
+    private int ParentOf(int nodeIndex)
+    {
+        if (StoreHeapAtTheEnd)
+            return nodeIndex == ListCount - 1 ? -1 : ListCount - 1 - (ListCount - 1 - nodeIndex) / 2;
+        return nodeIndex == 0 ? -1 : (nodeIndex - 1) / 2;
+    }
+
+    private int LeftChildOf(int nodeIndex)
+    {
+        int childIndex;
+        if (StoreHeapAtTheEnd)
+        {
+            childIndex = ListCount - 1 - (ListCount - 1 - nodeIndex) * 2 - 1;
+            return childIndex > ListCount - HeapCount - 1 ? childIndex : -1;
+        }
+
+        childIndex = 2 * nodeIndex + 1;
+        return childIndex < HeapCount ? childIndex : -1;
+    }
+
+    private int RightChildOf(int nodeIndex)
+    {
+        int childIndex;
+        if (StoreHeapAtTheEnd)
+        {
+            childIndex = ListCount - 1 - (ListCount - 1 - nodeIndex) * 2 - 2;
+            return childIndex > ListCount - HeapCount - 1 ? childIndex : -1;
+        }
+
+        childIndex = 2 * nodeIndex + 2;
+        return childIndex < HeapCount ? childIndex : -1;
+    }
 
     #region Access to Underlying List<T>
 

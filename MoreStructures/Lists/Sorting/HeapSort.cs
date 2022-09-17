@@ -13,10 +13,13 @@ namespace MoreStructures.Lists.Sorting;
 ///       <br/>
 ///     - Given the list L to sort, it builds an heap H out of the entire list, passing L as backing structure for H.
 ///       <br/>
-///     - Then, it pops items from H, one by one, appending at the back of L, where the pop has left a hole.
+///     - H is defined at the end of L and with an inverted order, so that it always pops the current minimum from the
+///       root located at very end of the list, and leaves holes at the beginning of the list.
 ///       <br/>
-///     - For example if L is 10 items long, the first pop will leave the item at index 9 unoccupied, the second pop 
-///       will leave the item at index 8 unoccupied (the item at index 9 already is out of the picture), etc.
+///     - Then, it pops items from H, one by one, appending at the front of L, where the pop has left a hole.
+///       <br/>
+///     - For example if L is 10 items long, the first pop will leave the item at index 0 unoccupied, the second pop 
+///       will leave the item at index 1 unoccupied (the item at index 0 already is out of the picture), etc.
 ///       <br/>
 ///     - Once the last item of H is popped, the heap is empty and L is sorted in ascending order.
 ///     </para>
@@ -62,13 +65,14 @@ public class HeapSort : IInPlaceSorting
     /// </remarks>
     public void Sort<T>(IList<T> list, IComparer<T> comparer)
     {
-        var heap = new BinaryHeapListWrapper<T>(list, comparer, list.Count);
-        var bufferLastAvailableIndex = heap.ListCount - 1;
+        var reverseComparer = Comparer<T>.Create((x, y) => -comparer.Compare(x, y));
+        var heap = new BinaryHeapListWrapper<T>(list, reverseComparer, list.Count, true);
+        var bufferLastAvailableIndex = 0;
         while (heap.HeapCount > 0)
         {
             var maxItem = heap.Pop();
             heap[bufferLastAvailableIndex] = maxItem;
-            bufferLastAvailableIndex--;
+            bufferLastAvailableIndex++;
         }
     }
 }
