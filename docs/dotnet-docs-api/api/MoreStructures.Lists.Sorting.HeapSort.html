@@ -133,10 +133,13 @@ ALGORITHM
 <br>
 - Given the list L to sort, it builds an heap H out of the entire list, passing L as backing structure for H.
 <br>
-- Then, it pops items from H, one by one, appending at the back of L, where the pop has left a hole.
+- H is defined at the end of L and with an inverted order, so that it always pops the current minimum from the
+root located at very end of the list, and leaves holes at the beginning of the list.
 <br>
-- For example if L is 10 items long, the first pop will leave the item at index 9 unoccupied, the second pop 
-will leave the item at index 8 unoccupied (the item at index 9 already is out of the picture), etc.
+- Then, it pops items from H, one by one, appending at the front of L, where the pop has left a hole.
+<br>
+- For example if L is 10 items long, the first pop will leave the item at index 0 unoccupied, the second pop 
+will leave the item at index 1 unoccupied (the item at index 0 already is out of the picture), etc.
 <br>
 - Once the last item of H is popped, the heap is empty and L is sorted in ascending order.
 </p>
@@ -163,7 +166,7 @@ being sorted (which can be lower than the size of the provided list).
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Lists_Sorting_HeapSort_Sort__1_IList___0__.md&amp;value=---%0Auid%3A%20MoreStructures.Lists.Sorting.HeapSort.Sort%60%601(IList%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Sorting/HeapSort.cs/#L51">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Sorting/HeapSort.cs/#L54">View Source</a>
   </span>
   <a id="MoreStructures_Lists_Sorting_HeapSort_Sort_" data-uid="MoreStructures.Lists.Sorting.HeapSort.Sort*"></a>
   <h4 id="MoreStructures_Lists_Sorting_HeapSort_Sort__1_IList___0__" data-uid="MoreStructures.Lists.Sorting.HeapSort.Sort``1(IList{``0})">Sort&lt;T&gt;(IList&lt;T&gt;)</h4>
@@ -218,7 +221,7 @@ Uses the heapsort algorithm with the default comparer for <code data-dev-comment
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Lists_Sorting_HeapSort_Sort__1_IList___0__IComparer___0__.md&amp;value=---%0Auid%3A%20MoreStructures.Lists.Sorting.HeapSort.Sort%60%601(IList%7B%60%600%7D%2CIComparer%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Sorting/HeapSort.cs/#L63">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Sorting/HeapSort.cs/#L66">View Source</a>
   </span>
   <a id="MoreStructures_Lists_Sorting_HeapSort_Sort_" data-uid="MoreStructures.Lists.Sorting.HeapSort.Sort*"></a>
   <h4 id="MoreStructures_Lists_Sorting_HeapSort_Sort__1_IList___0__IComparer___0__" data-uid="MoreStructures.Lists.Sorting.HeapSort.Sort``1(IList{``0},IComparer{``0})">Sort&lt;T&gt;(IList&lt;T&gt;, IComparer&lt;T&gt;)</h4>
@@ -290,7 +293,7 @@ Uses the heapsort algorithm with the specified <code data-dev-comment-type="para
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Lists_Sorting_HeapSort.md&amp;value=---%0Auid%3A%20MoreStructures.Lists.Sorting.HeapSort%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Sorting/HeapSort.cs/#L39" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Sorting/HeapSort.cs/#L42" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

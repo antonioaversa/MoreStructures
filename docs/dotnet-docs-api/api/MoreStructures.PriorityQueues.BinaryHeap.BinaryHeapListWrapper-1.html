@@ -83,8 +83,8 @@
   
   <h1 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1" class="text-break">Class BinaryHeapListWrapper&lt;T&gt;
   </h1>
-  <div class="markdown level0 summary"><p>A wrapper around a <see cref="!:IList&lt;T>"></see>, which preserve the max heap property on the subset of items of the list
-from index 0 to its count - 1, keeping a buffer of listCount - <a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_HeapCount">HeapCount</a> items.</p>
+  <div class="markdown level0 summary"><p>A wrapper around a <see cref="!:IList&lt;T>"></see>, which preserve the max heap property on the subset of items of the list,
+at the beginning or at the end of it.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -139,21 +139,32 @@ from index 0 to its count - 1, keeping a buffer of listCount - <a class="xref" h
     </tbody>
   </table>
   <h5 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>Can be used to support HeapSort or a priority queue based on a Max Binary Heap.
+  <div class="markdown level0 remarks"><p>Heap items are either stored:
+<br></p>
+<ul>
+<li>from index 0 to <a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_HeapCount">HeapCount</a> - 1, i.e. at the beginning of the list,
+<br></li>
+<li>or from index <a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_ListCount">ListCount</a> - <a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_HeapCount">HeapCount</a> to <a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_ListCount">ListCount</a> - 1, i.e. at the end.
 <br>
-In the first case the buffer are is used. In the second case it is not.</p>
+That leaves a buffer of <a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_ListCount">ListCount</a> - <a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_HeapCount">HeapCount</a> items, either at the end or at the
+beginning of the list.
+<br>
+The functionalities of this wrapper can be used to support HeapSort or a priority queue based on a Max Binary Heap.
+<br>
+In the first case the buffer area is used (to store already sorted items). In the second case it is not.</li>
+</ul>
 </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1__ctor_IList__0__IComparer__0__System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper%601.%23ctor(IList%7B%600%7D%2CIComparer%7B%600%7D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1__ctor_IList__0__IComparer__0__System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper%601.%23ctor(IList%7B%600%7D%2CIComparer%7B%600%7D%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L59">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L86">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1__ctor_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.#ctor*"></a>
-  <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1__ctor_IList__0__IComparer__0__System_Int32_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.#ctor(IList{`0},IComparer{`0},System.Int32)">BinaryHeapListWrapper(IList&lt;T&gt;, IComparer&lt;T&gt;, Int32)</h4>
+  <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1__ctor_IList__0__IComparer__0__System_Int32_System_Boolean_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.#ctor(IList{`0},IComparer{`0},System.Int32,System.Boolean)">BinaryHeapListWrapper(IList&lt;T&gt;, IComparer&lt;T&gt;, Int32, Boolean)</h4>
   <div class="markdown level1 summary"><p><inheritdoc cref="T:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1"></inheritdoc>
 <br>
 Built around the provided <see cref="!:IList&lt;T>"></see> <code data-dev-comment-type="paramref" class="paramref">items</code>.</p>
@@ -161,7 +172,7 @@ Built around the provided <see cref="!:IList&lt;T>"></see> <code data-dev-commen
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BinaryHeapListWrapper(IList&lt;T&gt; items, IComparer&lt;T&gt; comparer, int count)</code></pre>
+    <pre><code class="lang-csharp hljs">public BinaryHeapListWrapper(IList&lt;T&gt; items, IComparer&lt;T&gt; comparer, int count, bool storeHeapAtTheEnd = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -195,6 +206,14 @@ Goes from index 0 to index <code data-dev-comment-type="paramref" class="paramre
 Current size must be non-bigger than the <see cref="!:ICollection&lt;T>.Count"></see>.</p>
 </td>
       </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">storeHeapAtTheEnd</span></td>
+        <td><p>Whether heap items should be stored at the beginning or at the end of the <code data-dev-comment-type="paramref" class="paramref">items</code> list.
+<br>
+By default heap items are stored at the beginning (root at index 0) and buffer are is at the end.</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
@@ -202,7 +221,7 @@ Current size must be non-bigger than the <see cref="!:ICollection&lt;T>.Count"><
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1__ctor_MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper__0__.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper%601.%23ctor(MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L77">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L105">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1__ctor_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.#ctor*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1__ctor_MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper__0__" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.#ctor(MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper{`0})">BinaryHeapListWrapper(BinaryHeapListWrapper&lt;T&gt;)</h4>
@@ -239,7 +258,7 @@ Built from the provided <a class="xref" href="MoreStructures.PriorityQueues.Bina
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_HeapCount.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper%601.HeapCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L25">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L37">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_HeapCount_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.HeapCount*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_HeapCount" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.HeapCount">HeapCount</h4>
@@ -274,7 +293,7 @@ which in turn may be smaller than the current Length of the underlying <see cref
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_Item_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper%601.Item(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L305">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L381">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_Item_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Item*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_Item_System_Int32_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Item(System.Int32)">Item[Int32]</h4>
@@ -326,7 +345,7 @@ the underlying <see cref="!:IList&lt;T>"></see>.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_ListCount.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper%601.ListCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L294">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L370">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_ListCount_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.ListCount*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_ListCount" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.ListCount">ListCount</h4>
@@ -361,17 +380,17 @@ list.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_RaiseItemPopping.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper%601.RaiseItemPopping%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L37">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L59">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_RaiseItemPopping_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.RaiseItemPopping*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_RaiseItemPopping" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.RaiseItemPopping">RaiseItemPopping</h4>
-  <div class="markdown level1 summary"><p>Invoked just before an item is removed from <span class="xref">MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Items</span> (at the beginning of it), and before
+  <div class="markdown level1 summary"><p>Invoked just before an item is removed from <span class="xref">MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Items</span> (at the beginning of the heap), and before
 &quot;sifting down&quot; procedure is performed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Action RaiseItemPopping { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Action&lt;int, int&gt; RaiseItemPopping { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -383,21 +402,27 @@ list.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Action</span></td>
+        <td><span class="xref">Action</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_RaiseItemPopping_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The actual index of the item pushed may be different than 0, if the heap is stored in reverse, in which case
+it is equal to <a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_ListCount">ListCount</a> - 1.
+<br>
+Same applies to the index of the item pushed out of the heap (but still in the list, in the buffer area).</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_RaiseItemPushed.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper%601.RaiseItemPushed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L31">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L47">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_RaiseItemPushed_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.RaiseItemPushed*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_RaiseItemPushed" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.RaiseItemPushed">RaiseItemPushed</h4>
-  <div class="markdown level1 summary"><p>Invoked just after an item has been pushed into <span class="xref">MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Items</span> (at the end of it), and before the
+  <div class="markdown level1 summary"><p>Invoked just after an item has been pushed into <span class="xref">MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Items</span> (at the end of the heap), and before the
 &quot;sifting up&quot; procedure is performed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -420,12 +445,16 @@ list.</p>
       </tr>
     </tbody>
   </table>
+  <h5 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_RaiseItemPushed_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The actual index of the item pushed will be different than <a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_ListCount">ListCount</a> - 1, if
+<a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_ListCount">ListCount</a> is different than <a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_HeapCount">HeapCount</a>, or if the heap is stored in reverse.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_RaiseItemsSwapped.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper%601.RaiseItemsSwapped%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L42">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L64">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_RaiseItemsSwapped_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.RaiseItemsSwapped*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_RaiseItemsSwapped" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.RaiseItemsSwapped">RaiseItemsSwapped</h4>
@@ -458,7 +487,7 @@ list.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_Clear.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper%601.Clear%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L316">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L392">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_Clear_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Clear*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_Clear" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Clear">Clear()</h4>
@@ -476,7 +505,7 @@ If it is readonly (e.g. an array), it just resets the <a class="xref" href="More
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_GetEnumerator.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper%601.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L329">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L405">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_GetEnumerator_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.GetEnumerator*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_GetEnumerator" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.GetEnumerator">GetEnumerator()</h4>
@@ -510,7 +539,7 @@ underlying list.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_Peek.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper%601.Peek%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L99">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L140">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_Peek_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Peek*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_Peek" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Peek">Peek()</h4>
@@ -541,7 +570,7 @@ underlying list.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_PeekKth_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper%601.PeekKth(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L168">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L213">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_PeekKth_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.PeekKth*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_PeekKth_System_Int32_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.PeekKth(System.Int32)">PeekKth(Int32)</h4>
@@ -594,7 +623,7 @@ The default for <code data-dev-comment-type="typeparamref" class="typeparamref">
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_Pop.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper%601.Pop%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L111">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L152">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_Pop_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Pop*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_Pop" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Pop">Pop()</h4>
@@ -627,7 +656,7 @@ and sifting it down until the heap property is restored.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_PopAll.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper%601.PopAll%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L198">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L244">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_PopAll_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.PopAll*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_PopAll" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.PopAll">PopAll()</h4>
@@ -659,7 +688,7 @@ and sifting it down until the heap property is restored.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_Push__0_System_Boolean_.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper%601.Push(%600%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L138">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L181">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_Push_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Push*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_Push__0_System_Boolean_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.Push(`0,System.Boolean)">Push(T, Boolean)</h4>
@@ -702,7 +731,7 @@ If it is not executed, the max heap property will be temporary violated.</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_RestoreHeapProperty.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper%601.RestoreHeapProperty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L90">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L119">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_RestoreHeapProperty_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.RestoreHeapProperty*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1_RestoreHeapProperty" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.RestoreHeapProperty">RestoreHeapProperty()</h4>
@@ -728,7 +757,7 @@ If it is not executed, the max heap property will be temporary violated.</p>
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapListWrapper.cs/#L24" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

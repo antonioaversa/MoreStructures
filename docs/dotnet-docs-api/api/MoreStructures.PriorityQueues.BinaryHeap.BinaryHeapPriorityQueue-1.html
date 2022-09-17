@@ -780,35 +780,19 @@ in-place in underlying data structure.
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_RaiseItemPopping.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue%601.RaiseItemPopping%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_RaiseItemPopping_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue%601.RaiseItemPopping(System.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L384">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L393">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_RaiseItemPopping_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.RaiseItemPopping*"></a>
-  <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_RaiseItemPopping" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.RaiseItemPopping">RaiseItemPopping()</h4>
+  <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_RaiseItemPopping_System_Int32_System_Int32_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.RaiseItemPopping(System.Int32,System.Int32)">RaiseItemPopping(Int32, Int32)</h4>
   <div class="markdown level1 summary"><p>Invoked just before an item is removed from <a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Items">Items</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void RaiseItemPopping()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_RaiseItemPushed_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue%601.RaiseItemPushed(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L379">View Source</a>
-  </span>
-  <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_RaiseItemPushed_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.RaiseItemPushed*"></a>
-  <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_RaiseItemPushed_System_Int32_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.RaiseItemPushed(System.Int32)">RaiseItemPushed(Int32)</h4>
-  <div class="markdown level1 summary"><p>Invoked just after an item has been pushed into <a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Items">Items</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void RaiseItemPushed(int index)</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual void RaiseItemPopping(int indexPopped, int indexInBufferArea)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -822,23 +806,64 @@ in-place in underlying data structure.
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">index</span></td>
-        <td></td>
+        <td><span class="parametername">indexPopped</span></td>
+        <td><p>The index of the item being popped.
+<br>
+When the heap is at the beginning of the list (which is the layout used by this queue), it is equal to 0.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">indexInBufferArea</span></td>
+        <td><p>The index of the item of the last leaf, which is going to be swapped with the root during pop.</p>
+</td>
       </tr>
     </tbody>
   </table>
-  <h5 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_RaiseItemPushed_System_Int32__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The index of the item being pushed.
-<br>
-It is equal to Count - 1 if the underlying list is fully utilized, and it's smaller than that otherwise (there
-is buffer at the end of the list, after the last item of the heap).</p>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_RaiseItemPushed_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue%601.RaiseItemPushed(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L380">View Source</a>
+  </span>
+  <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_RaiseItemPushed_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.RaiseItemPushed*"></a>
+  <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_RaiseItemPushed_System_Int32_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.RaiseItemPushed(System.Int32)">RaiseItemPushed(Int32)</h4>
+  <div class="markdown level1 summary"><p>Invoked just after an item has been pushed into <a class="xref" href="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_Items">Items</a>.</p>
 </div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void RaiseItemPushed(int indexPushed)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">indexPushed</span></td>
+        <td><p>The index of the item being pushed.
+<br>
+When the heap is at the beginning of the list (which is the layout used by this queue), it is equal to
+Count - 1 if the underlying list is fully utilized, and it's smaller than that otherwise (there is buffer at
+the end of the list, after the last item of the heap).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_RaiseItemsSwapped_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue%601.RaiseItemsSwapped(System.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L391">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/PriorityQueues/BinaryHeap/BinaryHeapPriorityQueue.cs/#L400">View Source</a>
   </span>
   <a id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_RaiseItemsSwapped_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.RaiseItemsSwapped*"></a>
   <h4 id="MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapPriorityQueue_1_RaiseItemsSwapped_System_Int32_System_Int32_" data-uid="MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue`1.RaiseItemsSwapped(System.Int32,System.Int32)">RaiseItemsSwapped(Int32, Int32)</h4>

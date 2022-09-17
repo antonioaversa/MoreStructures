@@ -966,7 +966,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Lists.Sorting.HeapSort.html",
-          "hash": "R+Rm+xzKiwDxrIYmMf9pCxU7qXo8n+vPNtt+mAHLfHs="
+          "hash": "SD2RG9KPy65ZgzD6FRQ8XK1VDKOV+AFOyax7RMhKwWs="
         }
       },
       "is_incremental": false,
@@ -1050,7 +1050,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html",
-          "hash": "LG5DasQXiXcATtZ59k73mlme6UV+1JClxUetpJXtQqo="
+          "hash": "bOjs+eabLGGNGE8GK/X9idxQT5bF1Cw+76H8jJvRPTg="
         }
       },
       "is_incremental": false,
@@ -1062,7 +1062,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueue-1.html",
-          "hash": "wpKXCmYUlo+hrx9hWReGz4FXvD49W1x74Uw2CySv5ik="
+          "hash": "qdwPSK19vDnb7nYYOLND6SvchMNrXg4x2TsXfCAwEE0="
         }
       },
       "is_incremental": false,
@@ -1074,7 +1074,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.PriorityQueues.BinaryHeap.UpdatableBinaryHeapPriorityQueue-1.html",
-          "hash": "WOAbr0+CRYL0E8l5BcW1rpE9WqvSJa989TUlq3Ftco8="
+          "hash": "PhssDiWp0SZ+vH2jpHl7Lth9pOBK75jrPuCJxTwgKEw="
         }
       },
       "is_incremental": false,
@@ -1086,7 +1086,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.PriorityQueues.BinaryHeap.html",
-          "hash": "1wwXtkVmBJdncYR7HZdAETjbvzpyNrMu4RU02K+gT/Y="
+          "hash": "OCFme//CisRvj2XLz+xVfCN2OFtvJWpnuXSAfyjSdZY="
         }
       },
       "is_incremental": false,
@@ -3546,7 +3546,31 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html",
-          "hash": "T3bQkI6s40sVQOzWUf0fNnF7Ux2WS8It6RIPzzFxGu8="
+          "hash": "aFF/aHfZtUQf8s4EGFzc0s6Gg2NlMHnlT85n9CuT3+8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_HeapAtTheBeginning.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_HeapAtTheBeginning.html",
+          "hash": "iuG6q6KDf5psTwXRAn3HHmnlTA+OURpajnqpKyyiiAQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_HeapAtTheEnd.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_HeapAtTheEnd.html",
+          "hash": "iHs0l75mxmwTrI8NulG7iG64YzegcPUXlhjy1A6GPdE="
         }
       },
       "is_incremental": false,
@@ -3630,7 +3654,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.PriorityQueues.BinaryHeap.html",
-          "hash": "OdyqE5WhaS1XJd5v7oWiWe9NeXIaViV93XzyddcMQHU="
+          "hash": "DQTOzcmy5S+Q38l5yOdTY3I3MORZOOorWq8anRZ5rMs="
         }
       },
       "is_incremental": false,
@@ -5682,7 +5706,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "j1mLb//YqOETjw52a+TDlzGMRTMLA1hhOXo99boYTbU="
+          "hash": "/ReJt8kAD9Z1pFt4cGVVUG3Sh/svloacHES+tkvTIxo="
         }
       },
       "is_incremental": false,
@@ -5757,7 +5781,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 471,
+          "total_file_count": 473,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
