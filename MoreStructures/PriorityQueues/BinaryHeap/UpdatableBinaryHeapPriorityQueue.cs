@@ -214,20 +214,20 @@ public sealed class UpdatableBinaryHeapPriorityQueue<T> : BinaryHeapPriorityQueu
     #region Hooks
 
     /// <inheritdoc/>
-    protected override void RaiseItemPushed(int index)
+    protected override void RaiseItemPushed(int indexPushed)
     {
-        var prioritizedItem = Items[index];
-        PushTimestampToIndex[prioritizedItem.PushTimestamp] = index;
+        var prioritizedItem = Items[indexPushed];
+        PushTimestampToIndex[prioritizedItem.PushTimestamp] = indexPushed;
         if (!ItemToPushTimestamps.ContainsKey(prioritizedItem.Item))
             ItemToPushTimestamps[prioritizedItem.Item] = new BinaryHeapPriorityQueue<int>();
         ItemToPushTimestamps[prioritizedItem.Item].Push(prioritizedItem.PushTimestamp, prioritizedItem.Priority);
     }
 
     /// <inheritdoc/>
-    protected override void RaiseItemPopping()
+    protected override void RaiseItemPopping(int indexPopped, int indexInBufferArea)
     {
-        PushTimestampToIndex[Items[Items.HeapCount - 1].PushTimestamp] = 0;
-        PushTimestampToIndex.Remove(Items[0].PushTimestamp);
+        PushTimestampToIndex[Items[indexInBufferArea].PushTimestamp] = 0;
+        PushTimestampToIndex.Remove(Items[indexPopped].PushTimestamp);
     }
 
     /// <inheritdoc/>

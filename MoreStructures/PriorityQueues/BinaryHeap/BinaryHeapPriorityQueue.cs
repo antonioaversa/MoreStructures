@@ -370,18 +370,27 @@ public class BinaryHeapPriorityQueue<T>
     /// <summary>
     /// Invoked just after an item has been pushed into <see cref="Items"/>.
     /// </summary>
-    /// <remarks>
+    /// <param name="indexPushed">
     /// The index of the item being pushed. 
     /// <br/>
-    /// It is equal to Count - 1 if the underlying list is fully utilized, and it's smaller than that otherwise (there
-    /// is buffer at the end of the list, after the last item of the heap).
-    /// </remarks>
-    protected virtual void RaiseItemPushed(int index) { }
+    /// When the heap is at the beginning of the list (which is the layout used by this queue), it is equal to 
+    /// Count - 1 if the underlying list is fully utilized, and it's smaller than that otherwise (there is buffer at 
+    /// the end of the list, after the last item of the heap).
+    /// </param>
+    protected virtual void RaiseItemPushed(int indexPushed) { }
 
     /// <summary>
     /// Invoked just before an item is removed from <see cref="Items"/>.
     /// </summary>
-    protected virtual void RaiseItemPopping() { }
+    /// <param name="indexPopped">
+    /// The index of the item being popped.
+    /// <br/>
+    /// When the heap is at the beginning of the list (which is the layout used by this queue), it is equal to 0.
+    /// </param>
+    /// <param name="indexInBufferArea">
+    /// The index of the item of the last leaf, which is going to be swapped with the root during pop.
+    /// </param>
+    protected virtual void RaiseItemPopping(int indexPopped, int indexInBufferArea) { }
 
     /// <summary>
     /// Invoked just after two items have been swapped of position in <see cref="Items"/>.
