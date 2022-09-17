@@ -1,4 +1,5 @@
-﻿using MoreLinq;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MoreLinq;
 using MoreStructures.Lists.Searching;
 using System.Collections;
 
@@ -105,6 +106,58 @@ public abstract class SearchTests
     }
 
     [TestMethod]
+    public void First_MiddleIndexOverflow()
+    {
+        var list = new Always42List();
+        var searchResult = Search.First(list, 42, null, int.MaxValue / 2 + 100, int.MaxValue / 2 + 100);
+        Assert.AreEqual(int.MaxValue / 2 + 100, searchResult);
+    }
+
+    [TestMethod]
+    public void First_OutOfBoundsIndexes()
+    {
+        var list = Enumerable.Range(0, 5).ToList();
+        Assert.ThrowsException<ArgumentOutOfRangeException>(
+            () => Search.First(list, 2, null, 5, 6));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(
+            () => Search.First(list, 2, null, -2, 2));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(
+            () => Search.First(list, 2, null, 0, 15));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(
+            () => Search.First(list, 2, null, 2, -1));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(
+            () => Search.First(list, 2, null, -2, -1));
+    }
+
+    [TestMethod]
+    public void Last_OutOfBoundsIndexes()
+    {
+        var list = Enumerable.Range(0, 5).ToList();
+        Assert.ThrowsException<ArgumentOutOfRangeException>(
+            () => Search.Last(list, 2, null, 5, 6));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(
+            () => Search.Last(list, 2, null, -2, 2));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(
+            () => Search.Last(list, 2, null, 0, 15));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(
+            () => Search.Last(list, 2, null, -2, -1));
+    }
+
+    [TestMethod]
+    public void FirstAll_OutOfBoundsIndexes()
+    {
+        var list = Enumerable.Range(0, 5).ToList();
+        Assert.ThrowsException<ArgumentOutOfRangeException>(
+            () => Search.FirstAll(list, null, 5, 6));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(
+            () => Search.FirstAll(list, null, -2, 2));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(
+            () => Search.FirstAll(list, null, 0, 15));
+        Assert.ThrowsException<ArgumentOutOfRangeException>(
+            () => Search.FirstAll(list, null, -2, -1));
+    }
+
+    [TestMethod]
     public void Nth_RaisesExceptionOnInvalidOccurrenceRank()
     {
         Assert.ThrowsException<ArgumentOutOfRangeException>(
@@ -160,5 +213,54 @@ public abstract class SearchTests
                 enumerable, item, currentOccurrence, Comparer<T>.Default, 0, enumerable.Count() - 1);
             Assert.AreEqual(expectedNth, nth);
         }
+    }
+
+    [ExcludeFromCodeCoverage(Justification = "Mock structure only partially used")]
+    private sealed class Always42List : IList<int>
+    {
+        public int this[int index] 
+        { 
+            get => 42; 
+            set => throw new NotSupportedException("The list is readonly and doesn't support edit."); 
+        }
+
+        public int Count => int.MaxValue;
+
+        public bool IsReadOnly => true;
+
+        public bool Contains(int item) => item == 42;
+
+        public IEnumerator<int> GetEnumerator()
+        {
+            static IEnumerable<int> GetInfinite42()
+            {
+                while (true)
+                    yield return 42;
+            }
+
+            return GetInfinite42().GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
+        public int IndexOf(int item) => item == 42 ? 0 : -1;
+
+        public void Add(int item) => 
+            throw new NotSupportedException("The list is readonly and doesn't support edit.");
+
+        public void Clear() => 
+            throw new NotSupportedException("The list is readonly and doesn't support edit.");
+
+        public void CopyTo(int[] array, int arrayIndex) => 
+            throw new NotImplementedException();
+
+        public void Insert(int index, int item) =>
+            throw new NotSupportedException("The list is readonly and doesn't support edit.");
+
+        public bool Remove(int item) =>
+            throw new NotSupportedException("The list is readonly and doesn't support edit.");
+
+        public void RemoveAt(int index) =>
+            throw new NotSupportedException("The list is readonly and doesn't support edit.");
     }
 }
