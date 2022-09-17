@@ -17,22 +17,10 @@ namespace MoreStructures.Lists.Searching;
 /// </remarks>
 public class BinarySearch : ISearch
 {
-    private static int ValidateIndexesAndGetLength<T>(IEnumerable<T> source, int? fromIndex, int? toIndex)
-    {
-        var length = source.CountO1();
-        if (fromIndex != null && (fromIndex < 0 || fromIndex > length - 1))
-            throw new ArgumentOutOfRangeException(
-                nameof(fromIndex), $"Must be within the range of valid indexes for {source}.");
-        if (toIndex != null && (toIndex < 0 || toIndex > length - 1))
-            throw new ArgumentOutOfRangeException(
-                nameof(toIndex), $"Must be within the range of valid indexes for {source}.");
-        return length;
-    }
-
     private static int Search<T>(
         IEnumerable<T> source, T item, IComparer<T>? comparer, int? fromIndex, int? toIndex, bool first)
     {
-        int length = ValidateIndexesAndGetLength(source, fromIndex, toIndex);
+        int length = SearchHelperMethods.ValidateIndexesAndGetLength(source, fromIndex, toIndex);
 
         comparer ??= Comparer<T>.Default;
 
@@ -101,7 +89,7 @@ public class BinarySearch : ISearch
         IEnumerable<T> source, IComparer<T>? comparer = null, int? fromIndex = null, int? toIndex = null)
         where T : notnull
     {
-        var length = ValidateIndexesAndGetLength(source, fromIndex, toIndex);
+        var length = SearchHelperMethods.ValidateIndexesAndGetLength(source, fromIndex, toIndex);
 
         comparer ??= Comparer<T>.Default;
 
