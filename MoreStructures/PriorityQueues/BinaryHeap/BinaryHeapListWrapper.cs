@@ -26,6 +26,7 @@ public sealed class BinaryHeapListWrapper<T>
     private IList<T> Items { get; }
     private IComparer<T> Comparer { get; }
     private bool StoreHeapAtTheEnd { get; }
+    private int IndexDelta { get; }
     
     /// <summary>
     /// The number of items in the heap only, buffer area of the underlying list excluded.
@@ -83,16 +84,28 @@ public sealed class BinaryHeapListWrapper<T>
     /// <br/>
     /// By default heap items are stored at the beginning (root at index 0) and buffer are is at the end.
     /// </param>
-    public BinaryHeapListWrapper(IList<T> items, IComparer<T> comparer, int count, bool storeHeapAtTheEnd = false)
+    /// <param name="indexDelta">
+    /// The delta, positive or negative, with which heap items will be stored in the <paramref name="items"/> list,
+    /// w.r.t. the beginning (if <paramref name="storeHeapAtTheEnd"/> is <see langword="false"/>) or the end
+    /// (if <paramref name="storeHeapAtTheEnd"/> is <see langword="true"/>) of the list.
+    /// <br/>
+    /// By default it is zero (i.e. no displacement).
+    /// </param>
+    public BinaryHeapListWrapper(
+        IList<T> items, IComparer<T> comparer, int count, bool storeHeapAtTheEnd = false, int indexDelta = 0)
     {
-        if (count < 0 || count > items.Count)
+        if (indexDelta < 0)
             throw new ArgumentException(
-                $"Must be non-negative and at most the size of {nameof(items)}", nameof(items));
+                $"Must be non-negative.", nameof(indexDelta));
+        if (count < 0 || count + indexDelta > items.Count)
+            throw new ArgumentException(
+                $"Must be non-negative and at most size of {nameof(items)} - {nameof(indexDelta)}.", nameof(items));
 
         Items = items;
         Comparer = comparer;
         HeapCount = count;
         StoreHeapAtTheEnd = storeHeapAtTheEnd;
+        IndexDelta = indexDelta;
 
         RestoreHeapProperty();
     }
@@ -108,6 +121,7 @@ public sealed class BinaryHeapListWrapper<T>
         Comparer = source.Comparer;
         HeapCount = source.HeapCount;
         StoreHeapAtTheEnd = source.StoreHeapAtTheEnd;
+        IndexDelta = source.IndexDelta;
 
         RestoreHeapProperty();
     }
@@ -118,18 +132,18 @@ public sealed class BinaryHeapListWrapper<T>
     /// </summary>
     public void RestoreHeapProperty()
     {
-        var root = RootIndex();
-        var lastLeaf = LastLeafIndex();
+        var rootIndex = RootIndex();
+        var lastLeafIndex = LastLeafIndex();
         if (StoreHeapAtTheEnd)
         {
-            var halfHeapIndex = Math.Max(lastLeaf, lastLeaf + HeapCount / 2);
-            for (var i = halfHeapIndex; i <= root; i++)
+            var halfHeapIndex = Math.Max(lastLeafIndex, rootIndex - HeapCount / 2 - 1);
+            for (var i = halfHeapIndex; i <= rootIndex; i++)
                 SiftDown(i);
         }
         else
         {
-            var halfHeapIndex = Math.Min(lastLeaf, lastLeaf / 2 + 1);
-            for (var i = halfHeapIndex; i >= root; i--)
+            var halfHeapIndex = Math.Min(lastLeafIndex, rootIndex + HeapCount / 2 + 1);
+            for (var i = halfHeapIndex; i >= rootIndex; i--)
                 SiftDown(i);
         }
     }
@@ -177,11 +191,19 @@ public sealed class BinaryHeapListWrapper<T>
     ///     Whether the sift up procedure should be executed or not. By default it is set to <see langword="true"/>.
     ///     <br/>
     ///     If it is not executed, the max heap property will be temporary violated.
+    ///     <br/>
+    ///     The push may fail if the heap is stored at the back of the list and grows backwards (which is the layout
+    ///     applied when <see cref="StoreHeapAtTheEnd"/> is set to <see langword="true"/>), if the buffer is empty
+    ///     (i.e. if the last leaf of the heap has reached the front of the list, and adding a new leaf would require
+    ///     adding an element before the position 0 of the list).
+    ///     <br/>
+    ///     The push never fails when the heap is stored at the front of the list and grows forwards, because the list
+    ///     is able to grow at the back.
     /// </param>
     public void Push(T item, bool siftUp = true)
     {
         int index = NextLeafIndex();
-        if (HeapCount < ListCount)
+        if (index >= 0 && index < ListCount)
         {
             Items[index] = item;
         }
@@ -321,41 +343,46 @@ public sealed class BinaryHeapListWrapper<T>
         }
     }
 
-    private int RootIndex() => StoreHeapAtTheEnd ? ListCount - 1 : 0;
-    private int LastLeafIndex() => StoreHeapAtTheEnd ? ListCount - HeapCount : HeapCount - 1;
+    private int RootIndex() => StoreHeapAtTheEnd ? ListCount - 1 - IndexDelta : IndexDelta;
+    private int LastLeafIndex() => RootIndex() + (StoreHeapAtTheEnd ? 1 - HeapCount : HeapCount - 1);
     private int NextLeafIndex() => LastLeafIndex() + (StoreHeapAtTheEnd ? -1 : +1);
 
     private int ParentOf(int nodeIndex)
     {
-        if (StoreHeapAtTheEnd)
-            return nodeIndex == ListCount - 1 ? -1 : ListCount - 1 - (ListCount - 1 - nodeIndex) / 2;
-        return nodeIndex == 0 ? -1 : (nodeIndex - 1) / 2;
+        var rootIndex = RootIndex();
+        if (nodeIndex == rootIndex) return -1;
+        
+        if (StoreHeapAtTheEnd) 
+            return rootIndex - (rootIndex - nodeIndex - 1) / 2;
+        return rootIndex + (nodeIndex - rootIndex - 1) / 2;
     }
 
     private int LeftChildOf(int nodeIndex)
     {
+        var rootIndex = RootIndex();
         int childIndex;
         if (StoreHeapAtTheEnd)
         {
-            childIndex = ListCount - 1 - (ListCount - 1 - nodeIndex) * 2 - 1;
-            return childIndex > ListCount - HeapCount - 1 ? childIndex : -1;
+            childIndex = rootIndex - 2 * (rootIndex - nodeIndex) - 1;
+            return childIndex > rootIndex - HeapCount ? childIndex : -1;
         }
 
-        childIndex = 2 * nodeIndex + 1;
-        return childIndex < HeapCount ? childIndex : -1;
+        childIndex = rootIndex + 2 * (nodeIndex - rootIndex) + 1;
+        return childIndex < rootIndex + HeapCount ? childIndex : -1;
     }
 
     private int RightChildOf(int nodeIndex)
     {
+        var rootIndex = RootIndex();
         int childIndex;
         if (StoreHeapAtTheEnd)
         {
-            childIndex = ListCount - 1 - (ListCount - 1 - nodeIndex) * 2 - 2;
-            return childIndex > ListCount - HeapCount - 1 ? childIndex : -1;
+            childIndex = rootIndex - 2 * (rootIndex - nodeIndex) - 2;
+            return childIndex > rootIndex - HeapCount ? childIndex : -1;
         }
 
-        childIndex = 2 * nodeIndex + 2;
-        return childIndex < HeapCount ? childIndex : -1;
+        childIndex = rootIndex + 2 * (nodeIndex - rootIndex) + 2;
+        return childIndex < rootIndex + HeapCount ? childIndex : -1;
     }
 
     #region Access to Underlying List<T>
