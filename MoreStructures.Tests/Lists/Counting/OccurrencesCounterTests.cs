@@ -113,8 +113,6 @@ public abstract class OccurrencesCounterTests
 
     private static bool AreEqual(IntCounts counts1, IntCounts counts2) =>
         counts1.All(kvp => 
-            counts2.ContainsKey(kvp.Key) && 
             kvp.Value.All(kvp2 => 
-                counts2[kvp.Key].ContainsKey(kvp2.Key) && 
                 kvp2.Value == counts2[kvp.Key][kvp2.Key]));
 }

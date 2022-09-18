@@ -382,8 +382,7 @@ public abstract class VisitStrategyTests
             $"Actual: [{string.Join(", ", postVisitValues)}]");
 
         // Check connected components equality between VisitingVertex and VisitedVertex
-        Assert.IsTrue(preVisitConnectedComponents.All(kvp =>
-            postVisitConnectedComponents.ContainsKey(kvp.Key) && postVisitConnectedComponents[kvp.Key] == kvp.Value));
+        Assert.IsTrue(preVisitConnectedComponents.All(kvp => postVisitConnectedComponents[kvp.Key] == kvp.Value));
 
         // Check that previousVertices are the expected and the same in VisitingVertex and VisitedVertex
         Assert.IsTrue(
@@ -421,7 +420,7 @@ public abstract class VisitStrategyTests
         MoreLinq.MoreEnumerable.Consume(visitStrategy.DepthFirstSearchOfGraph(graph));
         var expectedAlreadyVisitedVertexArgs = expectedAlreadyVisitedVertices
             .Zip(expectedAlreadyVisitedConnectedComponents)
-            .Zip(expectedPreviousVertices.Select(v => v >= 0 ? v : null as int?))
+            .Zip(expectedPreviousVertices)
             .Select(p => new VisitEventArgs(p.First.First, p.First.Second, p.Second))
             .ToList();
 
