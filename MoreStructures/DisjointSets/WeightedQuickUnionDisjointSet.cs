@@ -40,7 +40,7 @@ public class WeightedQuickUnionDisjointSet : QuickUnionDisjointSet
     /// <summary>
     /// Returns a copy of the ranks of the trees of the forest representing the Disjoint Set.
     /// </summary>
-    internal IList<int> GetRanks() => Ranks.ToArray();
+    public IList<int> GetRanks() => Ranks.ToArray();
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
