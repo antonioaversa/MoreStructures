@@ -1707,6 +1707,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.DisjointSets.QuickUnionDisjointSet.Find
   nameWithType: QuickUnionDisjointSet.Find
+- uid: MoreStructures.DisjointSets.QuickUnionDisjointSet.GetParents
+  name: GetParents()
+  href: api/MoreStructures.DisjointSets.QuickUnionDisjointSet.html#MoreStructures_DisjointSets_QuickUnionDisjointSet_GetParents
+  commentId: M:MoreStructures.DisjointSets.QuickUnionDisjointSet.GetParents
+  fullName: MoreStructures.DisjointSets.QuickUnionDisjointSet.GetParents()
+  nameWithType: QuickUnionDisjointSet.GetParents()
+- uid: MoreStructures.DisjointSets.QuickUnionDisjointSet.GetParents*
+  name: GetParents
+  href: api/MoreStructures.DisjointSets.QuickUnionDisjointSet.html#MoreStructures_DisjointSets_QuickUnionDisjointSet_GetParents_
+  commentId: Overload:MoreStructures.DisjointSets.QuickUnionDisjointSet.GetParents
+  isSpec: "True"
+  fullName: MoreStructures.DisjointSets.QuickUnionDisjointSet.GetParents
+  nameWithType: QuickUnionDisjointSet.GetParents
 - uid: MoreStructures.DisjointSets.QuickUnionDisjointSet.Parents
   name: Parents
   href: api/MoreStructures.DisjointSets.QuickUnionDisjointSet.html#MoreStructures_DisjointSets_QuickUnionDisjointSet_Parents
@@ -1778,6 +1791,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.WeightedQuickUnionDisjointSet
   nameWithType: WeightedQuickUnionDisjointSet.WeightedQuickUnionDisjointSet
+- uid: MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.GetRanks
+  name: GetRanks()
+  href: api/MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.html#MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet_GetRanks
+  commentId: M:MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.GetRanks
+  fullName: MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.GetRanks()
+  nameWithType: WeightedQuickUnionDisjointSet.GetRanks()
+- uid: MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.GetRanks*
+  name: GetRanks
+  href: api/MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.html#MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet_GetRanks_
+  commentId: Overload:MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.GetRanks
+  isSpec: "True"
+  fullName: MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.GetRanks
+  nameWithType: WeightedQuickUnionDisjointSet.GetRanks
 - uid: MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.Ranks
   name: Ranks
   href: api/MoreStructures.DisjointSets.WeightedQuickUnionDisjointSet.html#MoreStructures_DisjointSets_WeightedQuickUnionDisjointSet_Ranks
