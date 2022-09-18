@@ -31,4 +31,27 @@ internal static class TestUtilities
         for (var i = 0; i < list.Count; i++)
             yield return tail.Take(i).Append(head).Concat(tail.Skip(i)).ToList();
     }
+
+    public static bool AreEquivalent(IEnumerable<int> enumerable1, IEnumerable<int> enumerable2)
+    {
+        var mappings = new Dictionary<int, int>();
+        using var iterator1 = enumerable1.GetEnumerator();
+        using var iterator2 = enumerable2.GetEnumerator();
+
+        while (iterator1.MoveNext())
+        {
+            if (!iterator2.MoveNext())
+                return false;
+
+            if (!mappings.ContainsKey(iterator1.Current))
+                mappings[iterator1.Current] = iterator2.Current;
+            else if (mappings[iterator1.Current] != iterator2.Current)
+                return false;
+        }
+
+        if (iterator2.MoveNext())
+            return false;
+
+        return true;
+    }
 }

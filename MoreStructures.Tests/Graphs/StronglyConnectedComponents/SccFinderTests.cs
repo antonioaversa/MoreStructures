@@ -45,31 +45,7 @@ public abstract class SccFinderTests
         var sccFinder = FinderBuilder();
         var scc = sccFinder.Find(graph);
         Assert.IsTrue(
-            AreEquivalent(expectedScc, scc),
+            TestUtilities.AreEquivalent(expectedScc, scc),
             $"{graphDescription} - Expected [{string.Join(", ", expectedScc)}], Actual: [{string.Join(", ", scc)}]");
-    }
-
-    private static bool AreEquivalent(IEnumerable<int> enumerable1, IEnumerable<int> enumerable2)
-    {
-        var mappings = new Dictionary<int, int>();
-        using var iterator1 = enumerable1.GetEnumerator(); 
-        using var iterator2 = enumerable2.GetEnumerator();
-
-        while (iterator1.MoveNext())
-        {
-            if (!iterator2.MoveNext())
-                return false;
-
-            if (!mappings.ContainsKey(iterator1.Current))
-                mappings[iterator1.Current] = iterator2.Current;
-            else if (mappings[iterator1.Current] != iterator2.Current)
-                return false;
-        }
-
-        if (iterator2.MoveNext())
-            return false;
-
-        return true;
-
     }
 }

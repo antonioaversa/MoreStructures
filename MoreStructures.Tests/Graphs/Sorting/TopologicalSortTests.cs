@@ -80,8 +80,6 @@ public abstract class TopologicalSortTests
         string graphDescription, int numberOfVertices, int[] starts, int[] ends)
     {
         var graph = GraphBuilder(numberOfVertices, starts.Zip(ends).ToList());
-        Assert.ThrowsException<InvalidOperationException>(
-            () => Sorter.Sort(graph), 
-            $"{graphDescription}");
+        Assert.ThrowsException<InvalidOperationException>(() => Sorter.Sort(graph), graphDescription);
     }
 }

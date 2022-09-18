@@ -62,17 +62,13 @@ public class SuffixArrayBasedMatcherTests : MatcherTests
             3, // cb...
         };
 
-        IEnumerable<int> GetInts()
-        {
-            foreach (var i in suffixArrayList)
-                yield return i;
-        }
+        var suffixArrayEnumerable = suffixArrayList.Select(i => i);
 
         var text = new TextWithTerminator("abacbcabc");
         var bwtBuilder = new LastFirstPropertyBasedBuilder();
         var sbwt = BWTransform.QuickSort(new(text)).sortedText;
         var matcher1 = new SuffixArrayBasedMatcher(sbwt, text, new(suffixArrayList));
-        var matcher2 = new SuffixArrayBasedMatcher(sbwt, text, new(GetInts()));
+        var matcher2 = new SuffixArrayBasedMatcher(sbwt, text, new(suffixArrayEnumerable));
 
         Assert.AreEqual(matcher1.Match("a"), matcher2.Match("a"));
         Assert.AreEqual(matcher1.Match("ab"), matcher2.Match("ab"));
