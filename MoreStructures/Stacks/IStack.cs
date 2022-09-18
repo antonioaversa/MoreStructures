@@ -1,4 +1,4 @@
-﻿namespace MoreStructures.Stack;
+﻿namespace MoreStructures.Stacks;
 
 /// <summary>
 /// Defines the interface common to all <b>Stack</b> implementations.
@@ -8,7 +8,10 @@
 ///     <para id="definitions">
 ///     DEFINITION
 ///     <br/>
-///     - A Stack is a data structure storing items of a generic type <typeparamref name="T"/>.
+///     - A Stack is a data structure storing items of a generic type <typeparamref name="T"/> in a LIFO (Last In First
+///       Out) fashion.
+///       <br/>
+///     - Items are both inserted and extracted at the top (or begin) of the stack.
 ///       <br/>
 ///     - Items are in a total order relationship and duplicates are supported.
 ///     </para>
