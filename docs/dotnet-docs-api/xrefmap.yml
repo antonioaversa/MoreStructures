@@ -12584,6 +12584,32 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Lists.Searching.SearchTests.SearchTests
   nameWithType: SearchTests.SearchTests
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.First_MiddleIndexOverflow
+  name: First_MiddleIndexOverflow()
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_First_MiddleIndexOverflow
+  commentId: M:MoreStructures.Tests.Lists.Searching.SearchTests.First_MiddleIndexOverflow
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.First_MiddleIndexOverflow()
+  nameWithType: SearchTests.First_MiddleIndexOverflow()
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.First_MiddleIndexOverflow*
+  name: First_MiddleIndexOverflow
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_First_MiddleIndexOverflow_
+  commentId: Overload:MoreStructures.Tests.Lists.Searching.SearchTests.First_MiddleIndexOverflow
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.First_MiddleIndexOverflow
+  nameWithType: SearchTests.First_MiddleIndexOverflow
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.First_OutOfBoundsIndexes
+  name: First_OutOfBoundsIndexes()
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_First_OutOfBoundsIndexes
+  commentId: M:MoreStructures.Tests.Lists.Searching.SearchTests.First_OutOfBoundsIndexes
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.First_OutOfBoundsIndexes()
+  nameWithType: SearchTests.First_OutOfBoundsIndexes()
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.First_OutOfBoundsIndexes*
+  name: First_OutOfBoundsIndexes
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_First_OutOfBoundsIndexes_
+  commentId: Overload:MoreStructures.Tests.Lists.Searching.SearchTests.First_OutOfBoundsIndexes
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.First_OutOfBoundsIndexes
+  nameWithType: SearchTests.First_OutOfBoundsIndexes
 - uid: MoreStructures.Tests.Lists.Searching.SearchTests.FirstAll_OnCustomIntervals
   name: FirstAll_OnCustomIntervals()
   href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_FirstAll_OnCustomIntervals
@@ -12597,6 +12623,32 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Lists.Searching.SearchTests.FirstAll_OnCustomIntervals
   nameWithType: SearchTests.FirstAll_OnCustomIntervals
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.FirstAll_OutOfBoundsIndexes
+  name: FirstAll_OutOfBoundsIndexes()
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_FirstAll_OutOfBoundsIndexes
+  commentId: M:MoreStructures.Tests.Lists.Searching.SearchTests.FirstAll_OutOfBoundsIndexes
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.FirstAll_OutOfBoundsIndexes()
+  nameWithType: SearchTests.FirstAll_OutOfBoundsIndexes()
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.FirstAll_OutOfBoundsIndexes*
+  name: FirstAll_OutOfBoundsIndexes
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_FirstAll_OutOfBoundsIndexes_
+  commentId: Overload:MoreStructures.Tests.Lists.Searching.SearchTests.FirstAll_OutOfBoundsIndexes
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.FirstAll_OutOfBoundsIndexes
+  nameWithType: SearchTests.FirstAll_OutOfBoundsIndexes
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.Last_OutOfBoundsIndexes
+  name: Last_OutOfBoundsIndexes()
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_Last_OutOfBoundsIndexes
+  commentId: M:MoreStructures.Tests.Lists.Searching.SearchTests.Last_OutOfBoundsIndexes
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.Last_OutOfBoundsIndexes()
+  nameWithType: SearchTests.Last_OutOfBoundsIndexes()
+- uid: MoreStructures.Tests.Lists.Searching.SearchTests.Last_OutOfBoundsIndexes*
+  name: Last_OutOfBoundsIndexes
+  href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_Last_OutOfBoundsIndexes_
+  commentId: Overload:MoreStructures.Tests.Lists.Searching.SearchTests.Last_OutOfBoundsIndexes
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Searching.SearchTests.Last_OutOfBoundsIndexes
+  nameWithType: SearchTests.Last_OutOfBoundsIndexes
 - uid: MoreStructures.Tests.Lists.Searching.SearchTests.Nth_RaisesExceptionOnInvalidOccurrenceRank
   name: Nth_RaisesExceptionOnInvalidOccurrenceRank()
   href: api/MoreStructures.Tests.Lists.Searching.SearchTests.html#MoreStructures_Tests_Lists_Searching_SearchTests_Nth_RaisesExceptionOnInvalidOccurrenceRank
@@ -20956,6 +21008,58 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.EnumerateExactlyFirst_ReminderIsCorrect
   nameWithType: EnumerableExtensionsTests.EnumerateExactlyFirst_ReminderIsCorrect
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.SkipO1_IsCorrectWithEnumerables
+  name: SkipO1_IsCorrectWithEnumerables()
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_SkipO1_IsCorrectWithEnumerables
+  commentId: M:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.SkipO1_IsCorrectWithEnumerables
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.SkipO1_IsCorrectWithEnumerables()
+  nameWithType: EnumerableExtensionsTests.SkipO1_IsCorrectWithEnumerables()
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.SkipO1_IsCorrectWithEnumerables*
+  name: SkipO1_IsCorrectWithEnumerables
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_SkipO1_IsCorrectWithEnumerables_
+  commentId: Overload:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.SkipO1_IsCorrectWithEnumerables
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.SkipO1_IsCorrectWithEnumerables
+  nameWithType: EnumerableExtensionsTests.SkipO1_IsCorrectWithEnumerables
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.SkipO1_IsCorrectWithGenericLists
+  name: SkipO1_IsCorrectWithGenericLists()
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_SkipO1_IsCorrectWithGenericLists
+  commentId: M:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.SkipO1_IsCorrectWithGenericLists
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.SkipO1_IsCorrectWithGenericLists()
+  nameWithType: EnumerableExtensionsTests.SkipO1_IsCorrectWithGenericLists()
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.SkipO1_IsCorrectWithGenericLists*
+  name: SkipO1_IsCorrectWithGenericLists
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_SkipO1_IsCorrectWithGenericLists_
+  commentId: Overload:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.SkipO1_IsCorrectWithGenericLists
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.SkipO1_IsCorrectWithGenericLists
+  nameWithType: EnumerableExtensionsTests.SkipO1_IsCorrectWithGenericLists
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.SkipO1_IsCorrectWithNonGenericLists
+  name: SkipO1_IsCorrectWithNonGenericLists()
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_SkipO1_IsCorrectWithNonGenericLists
+  commentId: M:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.SkipO1_IsCorrectWithNonGenericLists
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.SkipO1_IsCorrectWithNonGenericLists()
+  nameWithType: EnumerableExtensionsTests.SkipO1_IsCorrectWithNonGenericLists()
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.SkipO1_IsCorrectWithNonGenericLists*
+  name: SkipO1_IsCorrectWithNonGenericLists
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_SkipO1_IsCorrectWithNonGenericLists_
+  commentId: Overload:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.SkipO1_IsCorrectWithNonGenericLists
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.SkipO1_IsCorrectWithNonGenericLists
+  nameWithType: EnumerableExtensionsTests.SkipO1_IsCorrectWithNonGenericLists
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.SkipO1_IsCorrectWithStrings
+  name: SkipO1_IsCorrectWithStrings()
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_SkipO1_IsCorrectWithStrings
+  commentId: M:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.SkipO1_IsCorrectWithStrings
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.SkipO1_IsCorrectWithStrings()
+  nameWithType: EnumerableExtensionsTests.SkipO1_IsCorrectWithStrings()
+- uid: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.SkipO1_IsCorrectWithStrings*
+  name: SkipO1_IsCorrectWithStrings
+  href: api/MoreStructures.Tests.Utilities.EnumerableExtensionsTests.html#MoreStructures_Tests_Utilities_EnumerableExtensionsTests_SkipO1_IsCorrectWithStrings_
+  commentId: Overload:MoreStructures.Tests.Utilities.EnumerableExtensionsTests.SkipO1_IsCorrectWithStrings
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.EnumerableExtensionsTests.SkipO1_IsCorrectWithStrings
+  nameWithType: EnumerableExtensionsTests.SkipO1_IsCorrectWithStrings
 - uid: MoreStructures.Tests.Utilities.LinkedListExtensionsTests
   name: LinkedListExtensionsTests
   href: api/MoreStructures.Tests.Utilities.LinkedListExtensionsTests.html
@@ -22296,6 +22400,22 @@ references:
   fullName.vb: MoreStructures.Utilities.EnumerableExtensions.EnumerateExactlyFirst(Of TSource)(System.Collections.IEnumerable(Of TSource), System.Int32)
   nameWithType: EnumerableExtensions.EnumerateExactlyFirst<TSource>(IEnumerable<TSource>, Int32)
   nameWithType.vb: EnumerableExtensions.EnumerateExactlyFirst(Of TSource)(IEnumerable(Of TSource), Int32)
+- uid: MoreStructures.Utilities.EnumerableExtensions.SkipO1*
+  name: SkipO1
+  href: api/MoreStructures.Utilities.EnumerableExtensions.html#MoreStructures_Utilities_EnumerableExtensions_SkipO1_
+  commentId: Overload:MoreStructures.Utilities.EnumerableExtensions.SkipO1
+  isSpec: "True"
+  fullName: MoreStructures.Utilities.EnumerableExtensions.SkipO1
+  nameWithType: EnumerableExtensions.SkipO1
+- uid: MoreStructures.Utilities.EnumerableExtensions.SkipO1``1(System.Collections.IEnumerable{``0},System.Int32)
+  name: SkipO1<TSource>(IEnumerable<TSource>, Int32)
+  href: api/MoreStructures.Utilities.EnumerableExtensions.html#MoreStructures_Utilities_EnumerableExtensions_SkipO1__1_System_Collections_IEnumerable___0__System_Int32_
+  commentId: M:MoreStructures.Utilities.EnumerableExtensions.SkipO1``1(System.Collections.IEnumerable{``0},System.Int32)
+  name.vb: SkipO1(Of TSource)(IEnumerable(Of TSource), Int32)
+  fullName: MoreStructures.Utilities.EnumerableExtensions.SkipO1<TSource>(System.Collections.IEnumerable<TSource>, System.Int32)
+  fullName.vb: MoreStructures.Utilities.EnumerableExtensions.SkipO1(Of TSource)(System.Collections.IEnumerable(Of TSource), System.Int32)
+  nameWithType: EnumerableExtensions.SkipO1<TSource>(IEnumerable<TSource>, Int32)
+  nameWithType.vb: EnumerableExtensions.SkipO1(Of TSource)(IEnumerable(Of TSource), Int32)
 - uid: MoreStructures.Utilities.IValueEnumerable`1
   name: IValueEnumerable<T>
   href: api/MoreStructures.Utilities.IValueEnumerable-1.html
