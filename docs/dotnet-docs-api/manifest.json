@@ -1050,7 +1050,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html",
-          "hash": "bOjs+eabLGGNGE8GK/X9idxQT5bF1Cw+76H8jJvRPTg="
+          "hash": "sZslPpCKlmPfhdWTWPggPhiu2OYV8kBNiDCHGy8q7Tg="
         }
       },
       "is_incremental": false,
@@ -3546,7 +3546,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html",
-          "hash": "aFF/aHfZtUQf8s4EGFzc0s6Gg2NlMHnlT85n9CuT3+8="
+          "hash": "7wv/APUUKFksVKUWf6XxQhXhn5BA6pMJH4lX9OX8Orw="
         }
       },
       "is_incremental": false,
@@ -3558,7 +3558,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_HeapAtTheBeginning.html",
-          "hash": "iuG6q6KDf5psTwXRAn3HHmnlTA+OURpajnqpKyyiiAQ="
+          "hash": "lrednjnUQAWtsJFVyKbcFoGRTKEv/zbtNjGtZycqitI="
         }
       },
       "is_incremental": false,
@@ -3570,7 +3570,19 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_HeapAtTheEnd.html",
-          "hash": "iHs0l75mxmwTrI8NulG7iG64YzegcPUXlhjy1A6GPdE="
+          "hash": "Y/zYVO+9cKqrU49XmKheKHMaPC15W3IwUEa9sprxqA8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_WithIndexDelta.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_WithIndexDelta.html",
+          "hash": "P8RYaImmOttQu1yF4oR3tFzoj/Gu6JL9JRWvasGx7R0="
         }
       },
       "is_incremental": false,
@@ -3654,7 +3666,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.PriorityQueues.BinaryHeap.html",
-          "hash": "DQTOzcmy5S+Q38l5yOdTY3I3MORZOOorWq8anRZ5rMs="
+          "hash": "I+HfY5wVOKtPeTEtzGWNXLuFXl7QLarXGnLeURH8dbg="
         }
       },
       "is_incremental": false,
@@ -5706,7 +5718,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "/ReJt8kAD9Z1pFt4cGVVUG3Sh/svloacHES+tkvTIxo="
+          "hash": "nU977FvVRnLg3U2VhM39qfUhQAEvXPXWTnVPLeqoUOs="
         }
       },
       "is_incremental": false,
@@ -5781,7 +5793,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 473,
+          "total_file_count": 474,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

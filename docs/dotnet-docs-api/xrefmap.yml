@@ -3917,15 +3917,15 @@ references:
   fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T)
   nameWithType: BinaryHeapListWrapper<T>
   nameWithType.vb: BinaryHeapListWrapper(Of T)
-- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.#ctor(IList{`0},IComparer{`0},System.Int32,System.Boolean)
-  name: BinaryHeapListWrapper(IList<T>, IComparer<T>, Int32, Boolean)
-  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1__ctor_IList__0__IComparer__0__System_Int32_System_Boolean_
-  commentId: M:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.#ctor(IList{`0},IComparer{`0},System.Int32,System.Boolean)
-  name.vb: BinaryHeapListWrapper(IList(Of T), IComparer(Of T), Int32, Boolean)
-  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.BinaryHeapListWrapper(IList<T>, IComparer<T>, System.Int32, System.Boolean)
-  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).BinaryHeapListWrapper(IList(Of T), IComparer(Of T), System.Int32, System.Boolean)
-  nameWithType: BinaryHeapListWrapper<T>.BinaryHeapListWrapper(IList<T>, IComparer<T>, Int32, Boolean)
-  nameWithType.vb: BinaryHeapListWrapper(Of T).BinaryHeapListWrapper(IList(Of T), IComparer(Of T), Int32, Boolean)
+- uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.#ctor(IList{`0},IComparer{`0},System.Int32,System.Boolean,System.Int32)
+  name: BinaryHeapListWrapper(IList<T>, IComparer<T>, Int32, Boolean, Int32)
+  href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1__ctor_IList__0__IComparer__0__System_Int32_System_Boolean_System_Int32_
+  commentId: M:MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.#ctor(IList{`0},IComparer{`0},System.Int32,System.Boolean,System.Int32)
+  name.vb: BinaryHeapListWrapper(IList(Of T), IComparer(Of T), Int32, Boolean, Int32)
+  fullName: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper<T>.BinaryHeapListWrapper(IList<T>, IComparer<T>, System.Int32, System.Boolean, System.Int32)
+  fullName.vb: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper(Of T).BinaryHeapListWrapper(IList(Of T), IComparer(Of T), System.Int32, System.Boolean, System.Int32)
+  nameWithType: BinaryHeapListWrapper<T>.BinaryHeapListWrapper(IList<T>, IComparer<T>, Int32, Boolean, Int32)
+  nameWithType.vb: BinaryHeapListWrapper(Of T).BinaryHeapListWrapper(IList(Of T), IComparer(Of T), Int32, Boolean, Int32)
 - uid: MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper`1.#ctor(MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper{`0})
   name: BinaryHeapListWrapper(BinaryHeapListWrapper<T>)
   href: api/MoreStructures.PriorityQueues.BinaryHeap.BinaryHeapListWrapper-1.html#MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper_1__ctor_MoreStructures_PriorityQueues_BinaryHeap_BinaryHeapListWrapper__0__
@@ -13103,12 +13103,12 @@ references:
   commentId: T:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests
   fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests
   nameWithType: BinaryHeapListWrapperTests
-- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.#ctor(System.Boolean)
-  name: BinaryHeapListWrapperTests(Boolean)
-  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests__ctor_System_Boolean_
-  commentId: M:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.#ctor(System.Boolean)
-  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.BinaryHeapListWrapperTests(System.Boolean)
-  nameWithType: BinaryHeapListWrapperTests.BinaryHeapListWrapperTests(Boolean)
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.#ctor(System.Boolean,System.Int32)
+  name: BinaryHeapListWrapperTests(Boolean, Int32)
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests__ctor_System_Boolean_System_Int32_
+  commentId: M:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.#ctor(System.Boolean,System.Int32)
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.BinaryHeapListWrapperTests(System.Boolean, System.Int32)
+  nameWithType: BinaryHeapListWrapperTests.BinaryHeapListWrapperTests(Boolean, Int32)
 - uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.#ctor*
   name: BinaryHeapListWrapperTests
   href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests__ctor_
@@ -13168,6 +13168,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_EnforcesHeapCountToBeAtMostListCount
   nameWithType: BinaryHeapListWrapperTests.Ctor_EnforcesHeapCountToBeAtMostListCount
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_EnforcesIndexDeltaToBeAtMostListCount
+  name: Ctor_EnforcesIndexDeltaToBeAtMostListCount()
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_Ctor_EnforcesIndexDeltaToBeAtMostListCount
+  commentId: M:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_EnforcesIndexDeltaToBeAtMostListCount
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_EnforcesIndexDeltaToBeAtMostListCount()
+  nameWithType: BinaryHeapListWrapperTests.Ctor_EnforcesIndexDeltaToBeAtMostListCount()
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_EnforcesIndexDeltaToBeAtMostListCount*
+  name: Ctor_EnforcesIndexDeltaToBeAtMostListCount
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_Ctor_EnforcesIndexDeltaToBeAtMostListCount_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_EnforcesIndexDeltaToBeAtMostListCount
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_EnforcesIndexDeltaToBeAtMostListCount
+  nameWithType: BinaryHeapListWrapperTests.Ctor_EnforcesIndexDeltaToBeAtMostListCount
 - uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.Ctor_RestoresHeapPropertyWithSpecifiedComparer
   name: Ctor_RestoresHeapPropertyWithSpecifiedComparer()
   href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_Ctor_RestoresHeapPropertyWithSpecifiedComparer
@@ -13362,6 +13375,38 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_HeapAtTheEnd.BinaryHeapListWrapperTests_HeapAtTheEnd
   nameWithType: BinaryHeapListWrapperTests_HeapAtTheEnd.BinaryHeapListWrapperTests_HeapAtTheEnd
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_WithIndexDelta
+  name: BinaryHeapListWrapperTests_WithIndexDelta
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_WithIndexDelta.html
+  commentId: T:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_WithIndexDelta
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_WithIndexDelta
+  nameWithType: BinaryHeapListWrapperTests_WithIndexDelta
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_WithIndexDelta.IndexDelta_IsTakenIntoAccountWhenHeapAtTheBeginning
+  name: IndexDelta_IsTakenIntoAccountWhenHeapAtTheBeginning()
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_WithIndexDelta.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_WithIndexDelta_IndexDelta_IsTakenIntoAccountWhenHeapAtTheBeginning
+  commentId: M:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_WithIndexDelta.IndexDelta_IsTakenIntoAccountWhenHeapAtTheBeginning
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_WithIndexDelta.IndexDelta_IsTakenIntoAccountWhenHeapAtTheBeginning()
+  nameWithType: BinaryHeapListWrapperTests_WithIndexDelta.IndexDelta_IsTakenIntoAccountWhenHeapAtTheBeginning()
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_WithIndexDelta.IndexDelta_IsTakenIntoAccountWhenHeapAtTheBeginning*
+  name: IndexDelta_IsTakenIntoAccountWhenHeapAtTheBeginning
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_WithIndexDelta.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_WithIndexDelta_IndexDelta_IsTakenIntoAccountWhenHeapAtTheBeginning_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_WithIndexDelta.IndexDelta_IsTakenIntoAccountWhenHeapAtTheBeginning
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_WithIndexDelta.IndexDelta_IsTakenIntoAccountWhenHeapAtTheBeginning
+  nameWithType: BinaryHeapListWrapperTests_WithIndexDelta.IndexDelta_IsTakenIntoAccountWhenHeapAtTheBeginning
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_WithIndexDelta.IndexDelta_IsTakenIntoAccountWhenHeapAtTheEnd
+  name: IndexDelta_IsTakenIntoAccountWhenHeapAtTheEnd()
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_WithIndexDelta.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_WithIndexDelta_IndexDelta_IsTakenIntoAccountWhenHeapAtTheEnd
+  commentId: M:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_WithIndexDelta.IndexDelta_IsTakenIntoAccountWhenHeapAtTheEnd
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_WithIndexDelta.IndexDelta_IsTakenIntoAccountWhenHeapAtTheEnd()
+  nameWithType: BinaryHeapListWrapperTests_WithIndexDelta.IndexDelta_IsTakenIntoAccountWhenHeapAtTheEnd()
+- uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_WithIndexDelta.IndexDelta_IsTakenIntoAccountWhenHeapAtTheEnd*
+  name: IndexDelta_IsTakenIntoAccountWhenHeapAtTheEnd
+  href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_WithIndexDelta.html#MoreStructures_Tests_PriorityQueues_BinaryHeap_BinaryHeapListWrapperTests_WithIndexDelta_IndexDelta_IsTakenIntoAccountWhenHeapAtTheEnd_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_WithIndexDelta.IndexDelta_IsTakenIntoAccountWhenHeapAtTheEnd
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapListWrapperTests_WithIndexDelta.IndexDelta_IsTakenIntoAccountWhenHeapAtTheEnd
+  nameWithType: BinaryHeapListWrapperTests_WithIndexDelta.IndexDelta_IsTakenIntoAccountWhenHeapAtTheEnd
 - uid: MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueueTests_AsBasicQueue
   name: BinaryHeapPriorityQueueTests_AsBasicQueue
   href: api/MoreStructures.Tests.PriorityQueues.BinaryHeap.BinaryHeapPriorityQueueTests_AsBasicQueue.html
