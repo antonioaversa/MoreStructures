@@ -200,4 +200,56 @@ public static class EnumerableExtensions
         while (enumerator.MoveNext())
             yield return enumerator.Current;
     }
+
+    /// <summary>
+    /// Optimized version of <see cref="Enumerable.Skip{TSource}(IEnumerable{TSource}, int)"/>, which 
+    /// runs in constant time on <paramref name="source"/> of type <see cref="string"/>, <see cref="IList{T}"/>
+    /// and <see cref="IList"/>, and calls 
+    /// <see cref="Enumerable.Skip{TSource}(IEnumerable{TSource}, int)"/> 
+    /// for any <paramref name="source"/> which cannot be assigned to either of these types.
+    /// </summary>
+    /// <typeparam name="TSource">
+    ///     <inheritdoc cref="Enumerable.Skip{TSource}(IEnumerable{TSource}, int)" 
+    ///         path="/typeparam[@name='TSource']"/>
+    /// </typeparam>
+    /// <param name="source">
+    ///     <inheritdoc cref="Enumerable.Skip{TSource}(IEnumerable{TSource}, int)" 
+    ///         path="/param[@name='source']"/>
+    /// </param>
+    /// <param name="count">
+    ///     <inheritdoc cref="Enumerable.Skip{TSource}(IEnumerable{TSource}, int)" 
+    ///         path="/param[@name='count']"/>
+    /// </param>
+    /// <returns>
+    ///     <inheritdoc cref="Enumerable.Skip{TSource}(IEnumerable{TSource}, int)" 
+    ///         path="/returns"/>
+    /// </returns>
+    public static IEnumerable<TSource> SkipO1<TSource>(this IEnumerable<TSource> source, int count)
+    {
+        count = count >= 0 ? count : 0;
+
+        if (source is string str)
+        {
+            while (count < str.Length)
+                yield return (TSource)(str[count++] as object);
+            yield break;
+        }
+
+        if (source is IList<TSource> genericList)
+        {
+            while (count < genericList.Count)
+                yield return genericList[count++];
+            yield break;
+        }
+
+        if (source is IList nonGenericList)
+        {
+            while (count < nonGenericList.Count)
+                yield return (TSource)nonGenericList[count++]!;
+            yield break;
+        }
+
+        foreach (var item in source.Skip(count))
+            yield return item;
+    }
 }

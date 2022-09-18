@@ -20,15 +20,28 @@ public class LinearSearch : ISearch
     private static IEnumerable<KeyValuePair<int, T>> GetIndexedItemsInRangeEqualTo<T>(
         IEnumerable<T> source, T item, IComparer<T>? comparer, int? fromIndex, int? toIndex, bool reverse)
     {
+        var length = SearchHelperMethods.ValidateIndexesAndGetLength(source, fromIndex, toIndex);
+        fromIndex ??= 0;
+        toIndex ??= length - 1;
+
         comparer ??= Comparer<T>.Default;
-        var indexedSource = source.Index();
+
+        var count = toIndex.Value! - fromIndex.Value! + 1;
+
+        var indexes = Enumerable.Range(fromIndex.Value!, count);
 
         if (reverse)
-            indexedSource = indexedSource.Reverse();
+        {
+            source = source.Reverse();
+            indexes = indexes.Select(i => count - 1 - i);
+        }
 
-        return indexedSource
-            .Where(e => comparer.Compare(e.Value, item) == 0)
-            .Where(e => (fromIndex == null || e.Key >= fromIndex) && (toIndex == null || e.Key <= toIndex));
+        return source
+            .SkipO1(fromIndex.Value!)
+            .Take(count)
+            .Zip(indexes)
+            .Where(c => comparer.Compare(c.First, item) == 0)
+            .Select(c => KeyValuePair.Create(c.Second, c.First));
     }
 
     /// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
@@ -88,12 +101,18 @@ public class LinearSearch : ISearch
         IEnumerable<T> source, IComparer<T>? comparer = null, int? fromIndex = null, int? toIndex = null)
         where T : notnull
     {
-        var start = fromIndex ?? 0;
-        var end = toIndex ?? source.CountO1();
+        var length = SearchHelperMethods.ValidateIndexesAndGetLength(source, fromIndex, toIndex);
+        fromIndex ??= 0;
+        toIndex ??= length - 1;
 
         var result = new Dictionary<T, int> { };
-        var index = start;
-        foreach (var item in source.Where((el, i) => i >= start && i <= end))
+
+        var sourceWindow = source
+            .SkipO1(fromIndex.Value!)
+            .Take(toIndex.Value! - fromIndex.Value! + 1);
+
+        var index = fromIndex.Value!;
+        foreach (var item in sourceWindow)
         {
             if (!result.TryGetValue(item, out var value))
                 result[item] = index;

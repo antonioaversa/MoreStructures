@@ -20,15 +20,16 @@ public class BinarySearch : ISearch
     private static int Search<T>(
         IEnumerable<T> source, T item, IComparer<T>? comparer, int? fromIndex, int? toIndex, bool first)
     {
+        int length = SearchHelperMethods.ValidateIndexesAndGetLength(source, fromIndex, toIndex);
+
         comparer ??= Comparer<T>.Default;
 
-        var length = source.CountO1();
         var start = fromIndex ?? 0;
         var end = toIndex ?? length - 1;
         var result = -1;
         while (start <= end)
         {
-            var middle = (start + end) / 2;
+            var middle = start + (end - start) / 2;
             var comparison = comparer.Compare(source.ElementAtO1(middle), item);
             if (comparison < 0)
             {
@@ -88,9 +89,10 @@ public class BinarySearch : ISearch
         IEnumerable<T> source, IComparer<T>? comparer = null, int? fromIndex = null, int? toIndex = null)
         where T : notnull
     {
+        var length = SearchHelperMethods.ValidateIndexesAndGetLength(source, fromIndex, toIndex);
+
         comparer ??= Comparer<T>.Default;
 
-        var length = source.CountO1();
         var start = fromIndex ?? 0;
         var end = toIndex ?? length;
 

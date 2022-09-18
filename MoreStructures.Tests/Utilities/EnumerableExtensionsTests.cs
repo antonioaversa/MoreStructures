@@ -1,4 +1,5 @@
-﻿using MoreStructures.Utilities;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MoreStructures.Utilities;
 
 namespace MoreStructures.Tests.Utilities;
 
@@ -273,5 +274,63 @@ public class EnumerableExtensionsTests
             new List<int> { 1, 2 }.SequenceEqual(new HashSet<int> { 1, 2 }.EnumerateAtMostFirst(3).firstNItems));
         Assert.IsTrue(
             GetBools().SequenceEqual(GetBools().EnumerateAtMostFirst(4).firstNItems));
+    }
+
+    [TestMethod]
+    public void SkipO1_IsCorrectWithGenericLists()
+    {
+        var list = new List<int>() { 1, 2, 3 };
+        Assert.IsTrue(list.SkipO1(0).SequenceEqual(new[] { 1, 2, 3 }));
+        Assert.IsTrue(list.SkipO1(-1).SequenceEqual(new[] { 1, 2, 3 }));
+        Assert.IsTrue(list.SkipO1(-10).SequenceEqual(new[] { 1, 2, 3 }));
+        Assert.IsTrue(list.SkipO1(1).SequenceEqual(new[] { 2, 3 }));
+        Assert.IsTrue(list.SkipO1(3).SequenceEqual(Array.Empty<int>()));
+        Assert.IsTrue(list.SkipO1(4).SequenceEqual(Array.Empty<int>()));
+        Assert.IsTrue(list.SkipO1(10).SequenceEqual(Array.Empty<int>()));
+    }
+
+    [TestMethod]
+    public void SkipO1_IsCorrectWithStrings()
+    {
+        var list = "abc";
+        Assert.IsTrue(list.SkipO1(0).SequenceEqual(new[] { 'a', 'b', 'c' }));
+        Assert.IsTrue(list.SkipO1(-1).SequenceEqual(new[] { 'a', 'b', 'c' }));
+        Assert.IsTrue(list.SkipO1(-10).SequenceEqual(new[] { 'a', 'b', 'c' }));
+        Assert.IsTrue(list.SkipO1(1).SequenceEqual(new[] { 'b', 'c' }));
+        Assert.IsTrue(list.SkipO1(3).SequenceEqual(Array.Empty<char>()));
+        Assert.IsTrue(list.SkipO1(4).SequenceEqual(Array.Empty<char>()));
+        Assert.IsTrue(list.SkipO1(10).SequenceEqual(Array.Empty<char>()));
+    }
+
+    [TestMethod]
+    public void SkipO1_IsCorrectWithNonGenericLists()
+    {
+        var list = new NonGenericListMock(3) { ElementReturned = 3 };
+        Assert.IsTrue(list.SkipO1(0).SequenceEqual(new[] { 3, 3, 3 }));
+        Assert.IsTrue(list.SkipO1(-1).SequenceEqual(new[] { 3, 3, 3 }));
+        Assert.IsTrue(list.SkipO1(-10).SequenceEqual(new[] { 3, 3, 3 }));
+        Assert.IsTrue(list.SkipO1(1).SequenceEqual(new[] { 3, 3 }));
+        Assert.IsTrue(list.SkipO1(3).SequenceEqual(Array.Empty<int>()));
+        Assert.IsTrue(list.SkipO1(4).SequenceEqual(Array.Empty<int>()));
+        Assert.IsTrue(list.SkipO1(10).SequenceEqual(Array.Empty<int>()));
+    }
+
+    [TestMethod]
+    public void SkipO1_IsCorrectWithEnumerables()
+    {
+        static IEnumerable<int> GetNumbers()
+        {
+            yield return 1;
+            yield return 2;
+            yield return 3;
+        }
+
+        Assert.IsTrue(GetNumbers().SkipO1(0).SequenceEqual(new[] { 1, 2, 3 }));
+        Assert.IsTrue(GetNumbers().SkipO1(-1).SequenceEqual(new[] { 1, 2, 3 }));
+        Assert.IsTrue(GetNumbers().SkipO1(-10).SequenceEqual(new[] { 1, 2, 3 }));
+        Assert.IsTrue(GetNumbers().SkipO1(1).SequenceEqual(new[] { 2, 3 }));
+        Assert.IsTrue(GetNumbers().SkipO1(3).SequenceEqual(Array.Empty<int>()));
+        Assert.IsTrue(GetNumbers().SkipO1(4).SequenceEqual(Array.Empty<int>()));
+        Assert.IsTrue(GetNumbers().SkipO1(10).SequenceEqual(Array.Empty<int>()));
     }
 }
