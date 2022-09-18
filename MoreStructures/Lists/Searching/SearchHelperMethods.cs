@@ -2,7 +2,7 @@
 
 namespace MoreStructures.Lists.Searching;
 
-internal class SearchHelperMethods
+internal static class SearchHelperMethods
 {
     public static int ValidateIndexesAndGetLength<T>(IEnumerable<T> source, int? fromIndex, int? toIndex)
     {
