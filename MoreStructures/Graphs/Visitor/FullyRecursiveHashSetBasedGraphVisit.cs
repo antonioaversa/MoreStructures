@@ -254,8 +254,32 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
     /// </remarks>
     public override IEnumerable<int> BreadthFirstSearchFromVertex(IGraph graph, int vertex)
     {
+        return BreadthFirstSearchFromVertices(graph, new[] { vertex });
+    }
+
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
+    /// <remarks>
+    ///     The algorithm is very similar to <see cref="BreadthFirstSearchFromVertex(IGraph, int)"/>, with the only
+    ///     difference that all vertices in the <paramref name="vertices"/> sequence are visited, in parallel, instead
+    ///     of a single one.
+    ///     <br/>
+    ///     Because the vertices may or may not belong to different connected components, this algorithm returns "-1"
+    ///     as connected component for all visited vertices.
+    ///     <br/>
+    ///     Time Complexity is O(v * Ta + e) and Space Complexity is O(v + e + Sa), exactly as for 
+    ///     <see cref="BreadthFirstSearchFromVertex(IGraph, int)"/>, since in the worst case the entire graph has to be
+    ///     explored.
+    /// </remarks>
+    public override IEnumerable<int> BreadthFirstSearchFromVertices(IGraph graph, IEnumerable<int> vertices)
+    {
         var alreadyVisited = new HashSet<int>();
-        return RBreadthFirstSearchFromVertex(graph, vertex, alreadyVisited, 0, null); // Single connected component "0"
+        var verticesEnumerators = vertices
+            .Select(vertex => 
+                RBreadthFirstSearchFromVertex(graph, vertex, alreadyVisited, -1, null, 0).GetEnumerator())
+            .ToList();
+
+        foreach (var (descendantVertex, _) in EnumerateInParallel(verticesEnumerators, 0))
+            yield return descendantVertex;
     }
 
     private IEnumerable<int> RDepthFirstSearchFromVertex(
@@ -286,8 +310,8 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
         RaiseVisitedVertex(new(vertex, connectedComponent, previousVertex));
     }
 
-    private IEnumerable<int> RBreadthFirstSearchFromVertex(
-        IGraph graph, int vertex, HashSet<int> alreadyVisited, int connectedComponent, int? previousVertex)
+    private IEnumerable<(int value, int level)> RBreadthFirstSearchFromVertex(
+        IGraph graph, int vertex, HashSet<int> alreadyVisited, int connectedComponent, int? previousVertex, int level)
     {
         if (alreadyVisited.Contains(vertex))
             yield break;
@@ -295,37 +319,54 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
         RaiseVisitingVertex(new(vertex, connectedComponent, previousVertex));
 
         alreadyVisited.Add(vertex);
-        yield return vertex;
+        yield return (vertex, level);
 
         var neighborsEnumerators = graph
             .GetAdjacentVerticesAndEdges(vertex, DirectedGraph)
             .OrderBy(neighbor => neighbor.Vertex)
             .Select(neighbor => RBreadthFirstSearchFromVertex(
-                graph, neighbor.Vertex, alreadyVisited, connectedComponent, vertex).GetEnumerator())
+                graph, neighbor.Vertex, alreadyVisited, connectedComponent, vertex, level + 1).GetEnumerator())
             .ToList();
 
-        var neighborsEnumeratorsMoveNext = neighborsEnumerators
-            .Select(enumerator => enumerator.MoveNext())
-            .ToList();
-
-        var neighborsEnumeratorsMoveNextCount = neighborsEnumeratorsMoveNext
-            .Count(b => b);
-
-        while (neighborsEnumeratorsMoveNextCount > 0)
-        {
-            for (var i = 0; i < neighborsEnumerators.Count; i++)
-            {
-                if (neighborsEnumeratorsMoveNext[i])
-                {
-                    yield return neighborsEnumerators[i].Current;
-                    neighborsEnumeratorsMoveNext[i] = neighborsEnumerators[i].MoveNext();
-
-                    if (!neighborsEnumeratorsMoveNext[i])
-                        neighborsEnumeratorsMoveNextCount--;
-                }
-            }
-        }
+        foreach (var descendantVertex in EnumerateInParallel(neighborsEnumerators, level + 1))
+            yield return descendantVertex;
 
         RaiseVisitedVertex(new(vertex, connectedComponent, previousVertex));
+    }
+
+    private static IEnumerable<(int value, int level)> EnumerateInParallel(
+        IList<IEnumerator<(int value, int level)>> enumerators, int level)
+    {
+        var enumeratorsMoveNext = new bool[enumerators.Count]; 
+        var enumeratorsMoveNextCount = 0;
+        for (var i = 0; i < enumerators.Count; i++)
+        {
+            enumeratorsMoveNext[i] = enumerators[i].MoveNext();
+            if (enumeratorsMoveNext[i])
+                enumeratorsMoveNextCount++;
+        }
+
+        var currentLevel = level;
+        while (enumeratorsMoveNextCount > 0)
+        {
+            var skippedBecauseOfHigherLevel = 0;
+            for (var i = 0; i < enumerators.Count; i++)
+            {
+                while (enumeratorsMoveNext[i] && enumerators[i].Current.level == currentLevel)
+                {
+                    yield return enumerators[i].Current;
+                    enumeratorsMoveNext[i] = enumerators[i].MoveNext();
+
+                    if (!enumeratorsMoveNext[i])
+                        enumeratorsMoveNextCount--;
+                }
+
+                if (enumeratorsMoveNext[i] && enumerators[i].Current.level > currentLevel)
+                    skippedBecauseOfHigherLevel++;
+            }
+
+            if (skippedBecauseOfHigherLevel == enumeratorsMoveNextCount)
+                currentLevel++;
+        }
     }
 }

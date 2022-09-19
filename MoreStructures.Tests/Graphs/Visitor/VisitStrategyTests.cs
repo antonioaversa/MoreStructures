@@ -1,4 +1,5 @@
-﻿using MoreStructures.Graphs;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MoreStructures.Graphs;
 using MoreStructures.Graphs.Visitor;
 
 namespace MoreStructures.Tests.Graphs.Visitor;
@@ -174,6 +175,10 @@ public abstract class VisitStrategyTests
     [DataRow("7 V, 1 3-C, 1 2-chain, 1 2-chain sharing leaf with 1-chain",
         7, new int[] { 0, 0, 0, 0, 1, 3, 4, 5 }, new int[] { 1, 2, 3, 5, 2, 4, 0, 6 }, 0,
         new int[] { 0, 1, 2, 3, 5, 4, 6 }, new int[] { 0, 1, 2, 3, 4, 5, 6 })]
+    [DataRow("8 V, source to 3-chain and intermediate to three leaves", 8, 
+        new int[] { 0, 0, 1, 3, 2, 2, 2 }, 
+        new int[] { 1, 2, 3, 7, 4, 5, 6 }, 0,
+        new int[] { 0, 1, 2, 3, 4, 5, 6, 7 }, new int[] { 0, 1, 2, 3, 4, 5, 6, 7 })]
     [DataTestMethod]
     public void BreadthSearchFromVertex_IsCorrect(
         string graphDescription, int numberOfVertices, int[] starts, int[] ends, int start,
@@ -183,6 +188,33 @@ public abstract class VisitStrategyTests
             nameof(IVisitStrategy.BreadthFirstSearchFromVertex),
             (visitor, graph, start) => visitor.BreadthFirstSearchFromVertex(graph, start),
             graphDescription, numberOfVertices, starts, ends, start,
+            expectedDirectedGraphResult, expectedUndirectedGraphResult);
+
+        TestXFirstSearchMethod(
+            nameof(IVisitStrategy.BreadthFirstSearchFromVertices),
+            (visitor, graph, start) => visitor.BreadthFirstSearchFromVertices(graph, new[] { start }),
+            graphDescription, numberOfVertices, starts, ends, start,
+            expectedDirectedGraphResult, expectedUndirectedGraphResult);
+    }
+
+    [DataRow("7 V, 1 3-C, 1 2-chain, 1 2-chain sharing leaf with 1-chain 1",
+        7, new int[] { 0, 0, 0, 0, 1, 3, 4, 5 }, new int[] { 1, 2, 3, 5, 2, 4, 0, 6 }, new int[] { },
+        new int[] { }, new int[] { })]
+    [DataRow("7 V, 1 3-C, 1 2-chain, 1 2-chain sharing leaf with 1-chain 2",
+        7, new int[] { 0, 0, 0, 0, 1, 3, 4, 5 }, new int[] { 1, 2, 3, 5, 2, 4, 0, 6 }, new int[] { 1, 5 },
+        new int[] { 1, 5, 2, 6 }, new int[] { 1, 5, 0, 2, 6, 3, 4 })]
+    [DataRow("7 V, 1 3-C, 1 2-chain, 1 2-chain sharing leaf with 1-chain 3",
+        7, new int[] { 0, 0, 0, 0, 1, 3, 4, 5 }, new int[] { 1, 2, 3, 5, 2, 4, 0, 6 }, new int[] { 2, 3, 5 },
+        new int[] { 2, 3, 5, 4, 6, 0, 1 }, new int[] { 2, 3, 5, 0, 1, 4, 6 })]
+    [DataTestMethod]
+    public void BreadthSearchFromVertices_IsCorrect(
+        string graphDescription, int numberOfVertices, int[] starts, int[] ends, int[] vertices,
+        int[] expectedDirectedGraphResult, int[] expectedUndirectedGraphResult)
+    {
+        TestXFirstSearchMethod(
+            nameof(IVisitStrategy.BreadthFirstSearchFromVertices),
+            (visitor, graph, _) => visitor.BreadthFirstSearchFromVertices(graph, vertices),
+            graphDescription, numberOfVertices, starts, ends, -1,
             expectedDirectedGraphResult, expectedUndirectedGraphResult);
     }
 
