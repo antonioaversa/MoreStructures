@@ -201,6 +201,30 @@ public class FullyIterativeHashSetBasedGraphVisit : DirectionableVisit
                 yield return v;
     }
 
+    /// <inheritdoc path="//*[not(self::remarks)]"/>
+    /// <remarks>
+    ///     The algorithm is very similar to <see cref="BreadthFirstSearchFromVertex(IGraph, int)"/>, with the only
+    ///     difference that all vertices in the <paramref name="vertices"/> sequence are pushed to the queue, instead 
+    ///     of a single one.
+    ///     <br/>
+    ///     Because the vertices may or may not belong to different connected components, this algorithm returns "-1"
+    ///     as connected component for all visited vertices.
+    ///     <br/>
+    ///     Time Complexity is O(v * Ta + e) and Space Complexity is O(v + e + Sa), exactly as for 
+    ///     <see cref="BreadthFirstSearchFromVertex(IGraph, int)"/>, since in the worst case the entire graph has to be
+    ///     explored.
+    /// </remarks>
+    public override IEnumerable<int> BreadthFirstSearchFromVertices(IGraph graph, IEnumerable<int> vertices)
+    {
+        var queue = new XQueue<XifoFrame>();
+        var alreadyVisited = new HashSet<int>(); // Populated by ProcessXifo
+        foreach (var vertex in vertices)
+            queue.Push(new(vertex, false, -1, null));
+        while (queue.Count > 0)
+            if (ProcessXifo(graph, queue, alreadyVisited, e => e.OrderBy(i => i)) is var v and >= 0)
+                yield return v;
+    }
+
     private int ProcessXifo(
         IGraph graph, IXifoStructure<XifoFrame> xifo, HashSet<int> alreadyVisited, 
         Func<IEnumerable<int>, IEnumerable<int>> neighborsProcessor)

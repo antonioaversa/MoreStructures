@@ -183,8 +183,7 @@ public class BellmanFordShortestDistanceFinder : IShortestDistanceFinder
             return;
 
         var visitor = VisitStrategyBuilder();
-        foreach (var vertexRelaxed in verticesRelaxedInLastIteration)
-            foreach (var reachableVertex in visitor.DepthFirstSearchFromVertex(graph, vertexRelaxed))
-                bestPreviouses[reachableVertex] = new(int.MinValue, null);
+        foreach (var reachableVertex in visitor.BreadthFirstSearchFromVertices(graph, verticesRelaxedInLastIteration))
+            bestPreviouses[reachableVertex] = new(int.MinValue, null);
     }
 }

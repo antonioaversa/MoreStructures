@@ -116,4 +116,23 @@ public interface IVisitStrategy
     /// The sequence of vertices, lazily generated. Neighbors of the same vertex are visited by ascending id.
     /// </returns>
     IEnumerable<int> BreadthFirstSearchFromVertex(IGraph graph, int vertex);
+
+    /// <summary>
+    /// Runs a partial Breadth First Search of the provided <paramref name="graph"/>, returning the list of vertices 
+    /// which are reachable from the provided <paramref name="vertices"/>, along the edges of the graph, in the 
+    /// order in which they have been explored.
+    /// </summary>
+    /// <param name="graph">
+    /// The <see cref="IGraph"/> instance to be explored.
+    /// <br/>
+    /// Can be considered directed or undirected, depending on the actual exploration implementation and visit.
+    /// </param>
+    /// <param name="vertices">
+    /// The sequence of <see cref="int"/> ids identifying the vertices, from which the exploration has to be started.
+    /// Different starting points will result into different sequences (by items and/or order) of vertices.
+    /// </param>
+    /// <returns>
+    /// The sequence of vertices, lazily generated. Neighbors of the same vertex are visited by ascending id.
+    /// </returns>
+    IEnumerable<int> BreadthFirstSearchFromVertices(IGraph graph, IEnumerable<int> vertices);
 }
