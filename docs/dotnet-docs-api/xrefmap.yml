@@ -2134,6 +2134,57 @@ references:
   commentId: N:MoreStructures.Graphs.ShortestDistance
   fullName: MoreStructures.Graphs.ShortestDistance
   nameWithType: MoreStructures.Graphs.ShortestDistance
+- uid: MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder
+  name: BellmanFordShortestDistanceFinder
+  href: api/MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.html
+  commentId: T:MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder
+  fullName: MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder
+  nameWithType: BellmanFordShortestDistanceFinder
+- uid: MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.#ctor(Func{MoreStructures.Graphs.Visitor.IVisitStrategy})
+  name: BellmanFordShortestDistanceFinder(Func<IVisitStrategy>)
+  href: api/MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.html#MoreStructures_Graphs_ShortestDistance_BellmanFordShortestDistanceFinder__ctor_Func_MoreStructures_Graphs_Visitor_IVisitStrategy__
+  commentId: M:MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.#ctor(Func{MoreStructures.Graphs.Visitor.IVisitStrategy})
+  name.vb: BellmanFordShortestDistanceFinder(Func(Of IVisitStrategy))
+  fullName: MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.BellmanFordShortestDistanceFinder(Func<MoreStructures.Graphs.Visitor.IVisitStrategy>)
+  fullName.vb: MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.BellmanFordShortestDistanceFinder(Func(Of MoreStructures.Graphs.Visitor.IVisitStrategy))
+  nameWithType: BellmanFordShortestDistanceFinder.BellmanFordShortestDistanceFinder(Func<IVisitStrategy>)
+  nameWithType.vb: BellmanFordShortestDistanceFinder.BellmanFordShortestDistanceFinder(Func(Of IVisitStrategy))
+- uid: MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.#ctor*
+  name: BellmanFordShortestDistanceFinder
+  href: api/MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.html#MoreStructures_Graphs_ShortestDistance_BellmanFordShortestDistanceFinder__ctor_
+  commentId: Overload:MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.BellmanFordShortestDistanceFinder
+  nameWithType: BellmanFordShortestDistanceFinder.BellmanFordShortestDistanceFinder
+- uid: MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.Find(MoreStructures.Graphs.IGraph,IDictionary{System.ValueTuple{System.Int32,System.Int32},System.Int32},System.Int32,System.Int32)
+  name: Find(IGraph, IDictionary<(Int32, Int32), Int32>, Int32, Int32)
+  href: api/MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.html#MoreStructures_Graphs_ShortestDistance_BellmanFordShortestDistanceFinder_Find_MoreStructures_Graphs_IGraph_IDictionary_System_ValueTuple_System_Int32_System_Int32__System_Int32__System_Int32_System_Int32_
+  commentId: M:MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.Find(MoreStructures.Graphs.IGraph,IDictionary{System.ValueTuple{System.Int32,System.Int32},System.Int32},System.Int32,System.Int32)
+  name.vb: Find(IGraph, IDictionary(Of (Int32, Int32)(Of Int32, Int32), Int32), Int32, Int32)
+  fullName: MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.Find(MoreStructures.Graphs.IGraph, IDictionary<System.ValueTuple<System.Int32, System.Int32>, System.Int32>, System.Int32, System.Int32)
+  fullName.vb: MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.Find(MoreStructures.Graphs.IGraph, IDictionary(Of System.ValueTuple(Of System.Int32, System.Int32), System.Int32), System.Int32, System.Int32)
+  nameWithType: BellmanFordShortestDistanceFinder.Find(IGraph, IDictionary<(Int32, Int32), Int32>, Int32, Int32)
+  nameWithType.vb: BellmanFordShortestDistanceFinder.Find(IGraph, IDictionary(Of (Int32, Int32)(Of Int32, Int32), Int32), Int32, Int32)
+- uid: MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.Find*
+  name: Find
+  href: api/MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.html#MoreStructures_Graphs_ShortestDistance_BellmanFordShortestDistanceFinder_Find_
+  commentId: Overload:MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.Find
+  isSpec: "True"
+  fullName: MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.Find
+  nameWithType: BellmanFordShortestDistanceFinder.Find
+- uid: MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.VisitStrategyBuilder
+  name: VisitStrategyBuilder
+  href: api/MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.html#MoreStructures_Graphs_ShortestDistance_BellmanFordShortestDistanceFinder_VisitStrategyBuilder
+  commentId: P:MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.VisitStrategyBuilder
+  fullName: MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.VisitStrategyBuilder
+  nameWithType: BellmanFordShortestDistanceFinder.VisitStrategyBuilder
+- uid: MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.VisitStrategyBuilder*
+  name: VisitStrategyBuilder
+  href: api/MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.html#MoreStructures_Graphs_ShortestDistance_BellmanFordShortestDistanceFinder_VisitStrategyBuilder_
+  commentId: Overload:MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.VisitStrategyBuilder
+  isSpec: "True"
+  fullName: MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.VisitStrategyBuilder
+  nameWithType: BellmanFordShortestDistanceFinder.VisitStrategyBuilder
 - uid: MoreStructures.Graphs.ShortestDistance.BfsBasedShortestDistanceFinder
   name: BfsBasedShortestDistanceFinder
   href: api/MoreStructures.Graphs.ShortestDistance.BfsBasedShortestDistanceFinder.html
@@ -11299,6 +11350,57 @@ references:
   commentId: N:MoreStructures.Tests.Graphs.ShortestDistance
   fullName: MoreStructures.Tests.Graphs.ShortestDistance
   nameWithType: MoreStructures.Tests.Graphs.ShortestDistance
+- uid: MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests
+  name: BellmanFordShortestDistanceFinderTests
+  href: api/MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.html
+  commentId: T:MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests
+  fullName: MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests
+  nameWithType: BellmanFordShortestDistanceFinderTests
+- uid: MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.#ctor
+  name: BellmanFordShortestDistanceFinderTests()
+  href: api/MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.html#MoreStructures_Tests_Graphs_ShortestDistance_BellmanFordShortestDistanceFinderTests__ctor
+  commentId: M:MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.#ctor
+  fullName: MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.BellmanFordShortestDistanceFinderTests()
+  nameWithType: BellmanFordShortestDistanceFinderTests.BellmanFordShortestDistanceFinderTests()
+- uid: MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.#ctor*
+  name: BellmanFordShortestDistanceFinderTests
+  href: api/MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.html#MoreStructures_Tests_Graphs_ShortestDistance_BellmanFordShortestDistanceFinderTests__ctor_
+  commentId: Overload:MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.BellmanFordShortestDistanceFinderTests
+  nameWithType: BellmanFordShortestDistanceFinderTests.BellmanFordShortestDistanceFinderTests
+- uid: MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.Find_IsCorrectWithNegativeCycles(System.String,System.Int32,System.Int32[],System.Int32[],System.Int32[],System.Int32,System.Int32,System.Int32,System.Int32[])
+  name: Find_IsCorrectWithNegativeCycles(String, Int32, Int32[], Int32[], Int32[], Int32, Int32, Int32, Int32[])
+  href: api/MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.html#MoreStructures_Tests_Graphs_ShortestDistance_BellmanFordShortestDistanceFinderTests_Find_IsCorrectWithNegativeCycles_System_String_System_Int32_System_Int32___System_Int32___System_Int32___System_Int32_System_Int32_System_Int32_System_Int32___
+  commentId: M:MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.Find_IsCorrectWithNegativeCycles(System.String,System.Int32,System.Int32[],System.Int32[],System.Int32[],System.Int32,System.Int32,System.Int32,System.Int32[])
+  name.vb: Find_IsCorrectWithNegativeCycles(String, Int32, Int32(), Int32(), Int32(), Int32, Int32, Int32, Int32())
+  fullName: MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.Find_IsCorrectWithNegativeCycles(System.String, System.Int32, System.Int32[], System.Int32[], System.Int32[], System.Int32, System.Int32, System.Int32, System.Int32[])
+  fullName.vb: MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.Find_IsCorrectWithNegativeCycles(System.String, System.Int32, System.Int32(), System.Int32(), System.Int32(), System.Int32, System.Int32, System.Int32, System.Int32())
+  nameWithType: BellmanFordShortestDistanceFinderTests.Find_IsCorrectWithNegativeCycles(String, Int32, Int32[], Int32[], Int32[], Int32, Int32, Int32, Int32[])
+  nameWithType.vb: BellmanFordShortestDistanceFinderTests.Find_IsCorrectWithNegativeCycles(String, Int32, Int32(), Int32(), Int32(), Int32, Int32, Int32, Int32())
+- uid: MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.Find_IsCorrectWithNegativeCycles*
+  name: Find_IsCorrectWithNegativeCycles
+  href: api/MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.html#MoreStructures_Tests_Graphs_ShortestDistance_BellmanFordShortestDistanceFinderTests_Find_IsCorrectWithNegativeCycles_
+  commentId: Overload:MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.Find_IsCorrectWithNegativeCycles
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.Find_IsCorrectWithNegativeCycles
+  nameWithType: BellmanFordShortestDistanceFinderTests.Find_IsCorrectWithNegativeCycles
+- uid: MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.Find_IsCorrectWithNegativeValues(System.String,System.Int32,System.Int32[],System.Int32[],System.Int32[],System.Int32,System.Int32,System.Int32,System.Int32[])
+  name: Find_IsCorrectWithNegativeValues(String, Int32, Int32[], Int32[], Int32[], Int32, Int32, Int32, Int32[])
+  href: api/MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.html#MoreStructures_Tests_Graphs_ShortestDistance_BellmanFordShortestDistanceFinderTests_Find_IsCorrectWithNegativeValues_System_String_System_Int32_System_Int32___System_Int32___System_Int32___System_Int32_System_Int32_System_Int32_System_Int32___
+  commentId: M:MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.Find_IsCorrectWithNegativeValues(System.String,System.Int32,System.Int32[],System.Int32[],System.Int32[],System.Int32,System.Int32,System.Int32,System.Int32[])
+  name.vb: Find_IsCorrectWithNegativeValues(String, Int32, Int32(), Int32(), Int32(), Int32, Int32, Int32, Int32())
+  fullName: MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.Find_IsCorrectWithNegativeValues(System.String, System.Int32, System.Int32[], System.Int32[], System.Int32[], System.Int32, System.Int32, System.Int32, System.Int32[])
+  fullName.vb: MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.Find_IsCorrectWithNegativeValues(System.String, System.Int32, System.Int32(), System.Int32(), System.Int32(), System.Int32, System.Int32, System.Int32, System.Int32())
+  nameWithType: BellmanFordShortestDistanceFinderTests.Find_IsCorrectWithNegativeValues(String, Int32, Int32[], Int32[], Int32[], Int32, Int32, Int32, Int32[])
+  nameWithType.vb: BellmanFordShortestDistanceFinderTests.Find_IsCorrectWithNegativeValues(String, Int32, Int32(), Int32(), Int32(), Int32, Int32, Int32, Int32())
+- uid: MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.Find_IsCorrectWithNegativeValues*
+  name: Find_IsCorrectWithNegativeValues
+  href: api/MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.html#MoreStructures_Tests_Graphs_ShortestDistance_BellmanFordShortestDistanceFinderTests_Find_IsCorrectWithNegativeValues_
+  commentId: Overload:MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.Find_IsCorrectWithNegativeValues
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.Find_IsCorrectWithNegativeValues
+  nameWithType: BellmanFordShortestDistanceFinderTests.Find_IsCorrectWithNegativeValues
 - uid: MoreStructures.Tests.Graphs.ShortestDistance.BfsBasedShortestDistanceFinderTests
   name: BfsBasedShortestDistanceFinderTests
   href: api/MoreStructures.Tests.Graphs.ShortestDistance.BfsBasedShortestDistanceFinderTests.html
@@ -11458,6 +11560,22 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Graphs.ShortestDistance.ShortestDistanceFinderTests.GraphBuilder
   nameWithType: ShortestDistanceFinderTests.GraphBuilder
+- uid: MoreStructures.Tests.Graphs.ShortestDistance.ShortestDistanceFinderTests.TestGraph(System.String,System.Int32,System.Int32[],System.Int32[],System.Int32[],System.Int32,System.Int32,System.Int32,System.Int32[])
+  name: TestGraph(String, Int32, Int32[], Int32[], Int32[], Int32, Int32, Int32, Int32[])
+  href: api/MoreStructures.Tests.Graphs.ShortestDistance.ShortestDistanceFinderTests.html#MoreStructures_Tests_Graphs_ShortestDistance_ShortestDistanceFinderTests_TestGraph_System_String_System_Int32_System_Int32___System_Int32___System_Int32___System_Int32_System_Int32_System_Int32_System_Int32___
+  commentId: M:MoreStructures.Tests.Graphs.ShortestDistance.ShortestDistanceFinderTests.TestGraph(System.String,System.Int32,System.Int32[],System.Int32[],System.Int32[],System.Int32,System.Int32,System.Int32,System.Int32[])
+  name.vb: TestGraph(String, Int32, Int32(), Int32(), Int32(), Int32, Int32, Int32, Int32())
+  fullName: MoreStructures.Tests.Graphs.ShortestDistance.ShortestDistanceFinderTests.TestGraph(System.String, System.Int32, System.Int32[], System.Int32[], System.Int32[], System.Int32, System.Int32, System.Int32, System.Int32[])
+  fullName.vb: MoreStructures.Tests.Graphs.ShortestDistance.ShortestDistanceFinderTests.TestGraph(System.String, System.Int32, System.Int32(), System.Int32(), System.Int32(), System.Int32, System.Int32, System.Int32, System.Int32())
+  nameWithType: ShortestDistanceFinderTests.TestGraph(String, Int32, Int32[], Int32[], Int32[], Int32, Int32, Int32, Int32[])
+  nameWithType.vb: ShortestDistanceFinderTests.TestGraph(String, Int32, Int32(), Int32(), Int32(), Int32, Int32, Int32, Int32())
+- uid: MoreStructures.Tests.Graphs.ShortestDistance.ShortestDistanceFinderTests.TestGraph*
+  name: TestGraph
+  href: api/MoreStructures.Tests.Graphs.ShortestDistance.ShortestDistanceFinderTests.html#MoreStructures_Tests_Graphs_ShortestDistance_ShortestDistanceFinderTests_TestGraph_
+  commentId: Overload:MoreStructures.Tests.Graphs.ShortestDistance.ShortestDistanceFinderTests.TestGraph
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Graphs.ShortestDistance.ShortestDistanceFinderTests.TestGraph
+  nameWithType: ShortestDistanceFinderTests.TestGraph
 - uid: MoreStructures.Tests.Graphs.ShortestPath
   name: MoreStructures.Tests.Graphs.ShortestPath
   href: api/MoreStructures.Tests.Graphs.ShortestPath.html
