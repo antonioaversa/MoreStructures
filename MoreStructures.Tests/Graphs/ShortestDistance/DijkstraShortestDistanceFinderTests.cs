@@ -1,4 +1,5 @@
-﻿using MoreStructures.Graphs;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MoreStructures.Graphs;
 using MoreStructures.Graphs.ShortestDistance;
 using MoreStructures.PriorityQueues.ArrayList;
 using MoreStructures.PriorityQueues.BinaryHeap;
@@ -50,4 +51,3 @@ public class DijkstraShortestDistanceFinderTests_WithFibonacciHeap : ShortestDis
     {
     }
 }
-
