@@ -157,13 +157,7 @@ public class BellmanFordShortestDistanceFinder : IShortestDistanceFinder
             }
         }
 
-        if (verticesRelaxedInLastIteration.Count > 0)
-        {
-            var visitor = VisitStrategyBuilder();
-            foreach (var vertexRelaxed in verticesRelaxedInLastIteration)
-                foreach (var reachableVertex in visitor.DepthFirstSearchFromVertex(graph, vertexRelaxed))
-                    bestPreviouses[reachableVertex] = new(int.MinValue, null);
-        }
+        SetToMinusInfinity(graph, bestPreviouses, verticesRelaxedInLastIteration);
 
         if (!bestPreviouses.ContainsKey(end))
             return (int.MaxValue, Array.Empty<int>());
@@ -175,5 +169,18 @@ public class BellmanFordShortestDistanceFinder : IShortestDistanceFinder
         var shortestPath = BfsBasedShortestDistanceFinder.BuildShortestPath(end, bestPreviouses);
 
         return (shortestDistance, shortestPath);
+    }
+
+    private void SetToMinusInfinity(
+        IGraph graph, Dictionary<int, (int distanceFromStart, int? previousVertex)> bestPreviouses, 
+        HashSet<int> verticesRelaxedInLastIteration)
+    {
+        if (verticesRelaxedInLastIteration.Count == 0)
+            return;
+
+        var visitor = VisitStrategyBuilder();
+        foreach (var vertexRelaxed in verticesRelaxedInLastIteration)
+            foreach (var reachableVertex in visitor.DepthFirstSearchFromVertex(graph, vertexRelaxed))
+                bestPreviouses[reachableVertex] = new(int.MinValue, null);
     }
 }
