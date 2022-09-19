@@ -2,6 +2,9 @@
 
 namespace MoreStructures.Graphs.ShortestDistance;
 
+using GraphDistances = IDictionary<(int, int), int>;
+using BestPreviouses = Dictionary<int, (int distanceFromStart, int? previousVertex)>;
+
 /// <summary>
 /// An <see cref="IShortestDistanceFinder"/> implementation based on the Bellman-Ford algorithm.
 /// </summary>
@@ -126,36 +129,14 @@ public class BellmanFordShortestDistanceFinder : IShortestDistanceFinder
     /// <remarks>
     ///     <inheritdoc cref="BellmanFordShortestDistanceFinder"/>
     /// </remarks>
-    public (int, IList<int>) Find(IGraph graph, IDictionary<(int, int), int> distances, int start, int end)
+    public (int, IList<int>) Find(IGraph graph, GraphDistances distances, int start, int end)
     {
         var numberOfVertices = graph.GetNumberOfVertices();
-        var bestPreviouses = new Dictionary<int, (int distanceFromStart, int? previousVertex)>
-        {
-            [start] = (0, null),
-        };
+        var bestPreviouses = new BestPreviouses { [start] = (0, null) };
 
         var verticesRelaxedInLastIteration = new HashSet<int>();
         for (var iteration = 1; iteration <= numberOfVertices; iteration++)
-        {
-            for (var source = 0; source < numberOfVertices; source++)
-            {
-                foreach (var (target, edgeStart, edgeEnd) in graph.GetAdjacentVerticesAndEdges(source, true))
-                {
-                    if (!bestPreviouses.TryGetValue(source, out var sourceBest))
-                        continue;
-
-                    var newTargetDistance = sourceBest.distanceFromStart + distances[(edgeStart, edgeEnd)];
-                    if (!bestPreviouses.TryGetValue(target, out var targetBest) ||
-                        targetBest.distanceFromStart > newTargetDistance)
-                    {
-                        if (iteration == numberOfVertices)
-                            verticesRelaxedInLastIteration.Add(target);
-                        else
-                            bestPreviouses[target] = new(newTargetDistance, source);
-                    }
-                }
-            }
-        }
+            RelaxEdges(graph, distances, numberOfVertices, bestPreviouses, iteration, verticesRelaxedInLastIteration);
 
         SetToMinusInfinity(graph, bestPreviouses, verticesRelaxedInLastIteration);
 
@@ -171,8 +152,31 @@ public class BellmanFordShortestDistanceFinder : IShortestDistanceFinder
         return (shortestDistance, shortestPath);
     }
 
-    private void SetToMinusInfinity(
-        IGraph graph, Dictionary<int, (int distanceFromStart, int? previousVertex)> bestPreviouses, 
+    private static void RelaxEdges(
+        IGraph graph, GraphDistances distances, int numberOfVertices,
+        BestPreviouses bestPreviouses, int iteration, HashSet<int> verticesRelaxedInLastIteration)
+    {
+        for (var source = 0; source < numberOfVertices; source++)
+        {
+            foreach (var (target, edgeStart, edgeEnd) in graph.GetAdjacentVerticesAndEdges(source, true))
+            {
+                if (!bestPreviouses.TryGetValue(source, out var sourceBest))
+                    continue;
+
+                var newTargetDistance = sourceBest.distanceFromStart + distances[(edgeStart, edgeEnd)];
+                if (!bestPreviouses.TryGetValue(target, out var targetBest) ||
+                    targetBest.distanceFromStart > newTargetDistance)
+                {
+                    if (iteration == numberOfVertices)
+                        verticesRelaxedInLastIteration.Add(target);
+                    else
+                        bestPreviouses[target] = new(newTargetDistance, source);
+                }
+            }
+        }
+    }
+
+    private void SetToMinusInfinity(IGraph graph, BestPreviouses bestPreviouses, 
         HashSet<int> verticesRelaxedInLastIteration)
     {
         if (verticesRelaxedInLastIteration.Count == 0)
