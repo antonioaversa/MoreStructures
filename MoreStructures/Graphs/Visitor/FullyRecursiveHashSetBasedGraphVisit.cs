@@ -337,36 +337,63 @@ public class FullyRecursiveHashSetBasedGraphVisit : DirectionableVisit
     private static IEnumerable<(int value, int level)> EnumerateInParallel(
         IList<IEnumerator<(int value, int level)>> enumerators, int level)
     {
-        var enumeratorsMoveNext = new bool[enumerators.Count]; 
-        var enumeratorsMoveNextCount = 0;
-        for (var i = 0; i < enumerators.Count; i++)
-        {
-            enumeratorsMoveNext[i] = enumerators[i].MoveNext();
-            if (enumeratorsMoveNext[i])
-                enumeratorsMoveNextCount++;
-        }
+        var parallelEnumeration = new ParallelEnumeration(enumerators);
 
         var currentLevel = level;
-        while (enumeratorsMoveNextCount > 0)
+        while (parallelEnumeration.MoveNextCount > 0)
         {
             var skippedBecauseOfHigherLevel = 0;
             for (var i = 0; i < enumerators.Count; i++)
             {
-                while (enumeratorsMoveNext[i] && enumerators[i].Current.level == currentLevel)
+                while (parallelEnumeration.CurrentValueDefinedAndAtLevel(i, currentLevel))
                 {
                     yield return enumerators[i].Current;
-                    enumeratorsMoveNext[i] = enumerators[i].MoveNext();
-
-                    if (!enumeratorsMoveNext[i])
-                        enumeratorsMoveNextCount--;
+                    parallelEnumeration.MoveNext(i);
                 }
 
-                if (enumeratorsMoveNext[i] && enumerators[i].Current.level > currentLevel)
+                if (parallelEnumeration.MoveNextValues[i])
                     skippedBecauseOfHigherLevel++;
             }
 
-            if (skippedBecauseOfHigherLevel == enumeratorsMoveNextCount)
+            if (skippedBecauseOfHigherLevel == parallelEnumeration.MoveNextCount)
                 currentLevel++;
+        }
+    }
+
+    private sealed class ParallelEnumeration
+    {
+        public IList<IEnumerator<(int value, int level)>> Enumerators { get; }
+        public bool[] MoveNextValues { get; }
+        public int MoveNextCount { get; private set; }
+
+        public ParallelEnumeration(IList<IEnumerator<(int value, int level)>> enumerators)
+        {
+            var moveNextValues = new bool[enumerators.Count];
+            var moveNextCount = 0;
+
+            for (var i = 0; i < enumerators.Count; i++)
+            {
+                moveNextValues[i] = enumerators[i].MoveNext();
+                if (moveNextValues[i])
+                    moveNextCount++;
+            }
+
+            Enumerators = enumerators;
+            MoveNextValues = moveNextValues;
+            MoveNextCount = moveNextCount;
+        }
+
+        public bool CurrentValueDefinedAndAtLevel(int enumeratorIndex, int level)
+        {
+            return MoveNextValues[enumeratorIndex] && Enumerators[enumeratorIndex].Current.level == level;
+        }
+
+        public void MoveNext(int enumeratorIndex)
+        {
+            MoveNextValues[enumeratorIndex] = Enumerators[enumeratorIndex].MoveNext();
+
+            if (!MoveNextValues[enumeratorIndex])
+                MoveNextCount--;
         }
     }
 }
