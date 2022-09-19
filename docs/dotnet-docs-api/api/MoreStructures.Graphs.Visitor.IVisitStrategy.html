@@ -157,6 +157,67 @@ Different starting points will result into different sequences (by items and/or 
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Visitor_IVisitStrategy_BreadthFirstSearchFromVertices_MoreStructures_Graphs_IGraph_IEnumerable_System_Int32__.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Visitor.IVisitStrategy.BreadthFirstSearchFromVertices(MoreStructures.Graphs.IGraph%2CIEnumerable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/Visitor/IVisitStrategy.cs/#L137">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_Visitor_IVisitStrategy_BreadthFirstSearchFromVertices_" data-uid="MoreStructures.Graphs.Visitor.IVisitStrategy.BreadthFirstSearchFromVertices*"></a>
+  <h4 id="MoreStructures_Graphs_Visitor_IVisitStrategy_BreadthFirstSearchFromVertices_MoreStructures_Graphs_IGraph_IEnumerable_System_Int32__" data-uid="MoreStructures.Graphs.Visitor.IVisitStrategy.BreadthFirstSearchFromVertices(MoreStructures.Graphs.IGraph,IEnumerable{System.Int32})">BreadthFirstSearchFromVertices(IGraph, IEnumerable&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"><p>Runs a partial Breadth First Search of the provided <code data-dev-comment-type="paramref" class="paramref">graph</code>, returning the list of vertices
+which are reachable from the provided <code data-dev-comment-type="paramref" class="paramref">vertices</code>, along the edges of the graph, in the
+order in which they have been explored.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;int&gt; BreadthFirstSearchFromVertices(IGraph graph, IEnumerable&lt;int&gt; vertices)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a></td>
+        <td><span class="parametername">graph</span></td>
+        <td><p>The <a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a> instance to be explored.
+<br>
+Can be considered directed or undirected, depending on the actual exploration implementation and visit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">vertices</span></td>
+        <td><p>The sequence of <span class="xref">System.Int32</span> ids identifying the vertices, from which the exploration has to be started.
+Different starting points will result into different sequences (by items and/or order) of vertices.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><p>The sequence of vertices, lazily generated. Neighbors of the same vertex are visited by ascending id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_Visitor_IVisitStrategy_ConnectedComponents_MoreStructures_Graphs_IGraph_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.Visitor.IVisitStrategy.ConnectedComponents(MoreStructures.Graphs.IGraph)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">

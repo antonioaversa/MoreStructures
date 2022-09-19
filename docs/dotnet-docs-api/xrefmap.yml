@@ -2668,6 +2668,22 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Graphs.Visitor.DirectionableVisit.BreadthFirstSearchFromVertex
   nameWithType: DirectionableVisit.BreadthFirstSearchFromVertex
+- uid: MoreStructures.Graphs.Visitor.DirectionableVisit.BreadthFirstSearchFromVertices(MoreStructures.Graphs.IGraph,IEnumerable{System.Int32})
+  name: BreadthFirstSearchFromVertices(IGraph, IEnumerable<Int32>)
+  href: api/MoreStructures.Graphs.Visitor.DirectionableVisit.html#MoreStructures_Graphs_Visitor_DirectionableVisit_BreadthFirstSearchFromVertices_MoreStructures_Graphs_IGraph_IEnumerable_System_Int32__
+  commentId: M:MoreStructures.Graphs.Visitor.DirectionableVisit.BreadthFirstSearchFromVertices(MoreStructures.Graphs.IGraph,IEnumerable{System.Int32})
+  name.vb: BreadthFirstSearchFromVertices(IGraph, IEnumerable(Of Int32))
+  fullName: MoreStructures.Graphs.Visitor.DirectionableVisit.BreadthFirstSearchFromVertices(MoreStructures.Graphs.IGraph, IEnumerable<System.Int32>)
+  fullName.vb: MoreStructures.Graphs.Visitor.DirectionableVisit.BreadthFirstSearchFromVertices(MoreStructures.Graphs.IGraph, IEnumerable(Of System.Int32))
+  nameWithType: DirectionableVisit.BreadthFirstSearchFromVertices(IGraph, IEnumerable<Int32>)
+  nameWithType.vb: DirectionableVisit.BreadthFirstSearchFromVertices(IGraph, IEnumerable(Of Int32))
+- uid: MoreStructures.Graphs.Visitor.DirectionableVisit.BreadthFirstSearchFromVertices*
+  name: BreadthFirstSearchFromVertices
+  href: api/MoreStructures.Graphs.Visitor.DirectionableVisit.html#MoreStructures_Graphs_Visitor_DirectionableVisit_BreadthFirstSearchFromVertices_
+  commentId: Overload:MoreStructures.Graphs.Visitor.DirectionableVisit.BreadthFirstSearchFromVertices
+  isSpec: "True"
+  fullName: MoreStructures.Graphs.Visitor.DirectionableVisit.BreadthFirstSearchFromVertices
+  nameWithType: DirectionableVisit.BreadthFirstSearchFromVertices
 - uid: MoreStructures.Graphs.Visitor.DirectionableVisit.ConnectedComponents(MoreStructures.Graphs.IGraph)
   name: ConnectedComponents(IGraph)
   href: api/MoreStructures.Graphs.Visitor.DirectionableVisit.html#MoreStructures_Graphs_Visitor_DirectionableVisit_ConnectedComponents_MoreStructures_Graphs_IGraph_
@@ -2816,6 +2832,22 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Graphs.Visitor.FullyIterativeHashSetBasedGraphVisit.BreadthFirstSearchFromVertex
   nameWithType: FullyIterativeHashSetBasedGraphVisit.BreadthFirstSearchFromVertex
+- uid: MoreStructures.Graphs.Visitor.FullyIterativeHashSetBasedGraphVisit.BreadthFirstSearchFromVertices(MoreStructures.Graphs.IGraph,IEnumerable{System.Int32})
+  name: BreadthFirstSearchFromVertices(IGraph, IEnumerable<Int32>)
+  href: api/MoreStructures.Graphs.Visitor.FullyIterativeHashSetBasedGraphVisit.html#MoreStructures_Graphs_Visitor_FullyIterativeHashSetBasedGraphVisit_BreadthFirstSearchFromVertices_MoreStructures_Graphs_IGraph_IEnumerable_System_Int32__
+  commentId: M:MoreStructures.Graphs.Visitor.FullyIterativeHashSetBasedGraphVisit.BreadthFirstSearchFromVertices(MoreStructures.Graphs.IGraph,IEnumerable{System.Int32})
+  name.vb: BreadthFirstSearchFromVertices(IGraph, IEnumerable(Of Int32))
+  fullName: MoreStructures.Graphs.Visitor.FullyIterativeHashSetBasedGraphVisit.BreadthFirstSearchFromVertices(MoreStructures.Graphs.IGraph, IEnumerable<System.Int32>)
+  fullName.vb: MoreStructures.Graphs.Visitor.FullyIterativeHashSetBasedGraphVisit.BreadthFirstSearchFromVertices(MoreStructures.Graphs.IGraph, IEnumerable(Of System.Int32))
+  nameWithType: FullyIterativeHashSetBasedGraphVisit.BreadthFirstSearchFromVertices(IGraph, IEnumerable<Int32>)
+  nameWithType.vb: FullyIterativeHashSetBasedGraphVisit.BreadthFirstSearchFromVertices(IGraph, IEnumerable(Of Int32))
+- uid: MoreStructures.Graphs.Visitor.FullyIterativeHashSetBasedGraphVisit.BreadthFirstSearchFromVertices*
+  name: BreadthFirstSearchFromVertices
+  href: api/MoreStructures.Graphs.Visitor.FullyIterativeHashSetBasedGraphVisit.html#MoreStructures_Graphs_Visitor_FullyIterativeHashSetBasedGraphVisit_BreadthFirstSearchFromVertices_
+  commentId: Overload:MoreStructures.Graphs.Visitor.FullyIterativeHashSetBasedGraphVisit.BreadthFirstSearchFromVertices
+  isSpec: "True"
+  fullName: MoreStructures.Graphs.Visitor.FullyIterativeHashSetBasedGraphVisit.BreadthFirstSearchFromVertices
+  nameWithType: FullyIterativeHashSetBasedGraphVisit.BreadthFirstSearchFromVertices
 - uid: MoreStructures.Graphs.Visitor.FullyIterativeHashSetBasedGraphVisit.ConnectedComponents(MoreStructures.Graphs.IGraph)
   name: ConnectedComponents(IGraph)
   href: api/MoreStructures.Graphs.Visitor.FullyIterativeHashSetBasedGraphVisit.html#MoreStructures_Graphs_Visitor_FullyIterativeHashSetBasedGraphVisit_ConnectedComponents_MoreStructures_Graphs_IGraph_
@@ -2900,6 +2932,22 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.BreadthFirstSearchFromVertex
   nameWithType: FullyRecursiveHashSetBasedGraphVisit.BreadthFirstSearchFromVertex
+- uid: MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.BreadthFirstSearchFromVertices(MoreStructures.Graphs.IGraph,IEnumerable{System.Int32})
+  name: BreadthFirstSearchFromVertices(IGraph, IEnumerable<Int32>)
+  href: api/MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.html#MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_BreadthFirstSearchFromVertices_MoreStructures_Graphs_IGraph_IEnumerable_System_Int32__
+  commentId: M:MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.BreadthFirstSearchFromVertices(MoreStructures.Graphs.IGraph,IEnumerable{System.Int32})
+  name.vb: BreadthFirstSearchFromVertices(IGraph, IEnumerable(Of Int32))
+  fullName: MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.BreadthFirstSearchFromVertices(MoreStructures.Graphs.IGraph, IEnumerable<System.Int32>)
+  fullName.vb: MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.BreadthFirstSearchFromVertices(MoreStructures.Graphs.IGraph, IEnumerable(Of System.Int32))
+  nameWithType: FullyRecursiveHashSetBasedGraphVisit.BreadthFirstSearchFromVertices(IGraph, IEnumerable<Int32>)
+  nameWithType.vb: FullyRecursiveHashSetBasedGraphVisit.BreadthFirstSearchFromVertices(IGraph, IEnumerable(Of Int32))
+- uid: MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.BreadthFirstSearchFromVertices*
+  name: BreadthFirstSearchFromVertices
+  href: api/MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.html#MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_BreadthFirstSearchFromVertices_
+  commentId: Overload:MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.BreadthFirstSearchFromVertices
+  isSpec: "True"
+  fullName: MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.BreadthFirstSearchFromVertices
+  nameWithType: FullyRecursiveHashSetBasedGraphVisit.BreadthFirstSearchFromVertices
 - uid: MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.ConnectedComponents(MoreStructures.Graphs.IGraph)
   name: ConnectedComponents(IGraph)
   href: api/MoreStructures.Graphs.Visitor.FullyRecursiveHashSetBasedGraphVisit.html#MoreStructures_Graphs_Visitor_FullyRecursiveHashSetBasedGraphVisit_ConnectedComponents_MoreStructures_Graphs_IGraph_
@@ -2977,6 +3025,22 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Graphs.Visitor.IVisitStrategy.BreadthFirstSearchFromVertex
   nameWithType: IVisitStrategy.BreadthFirstSearchFromVertex
+- uid: MoreStructures.Graphs.Visitor.IVisitStrategy.BreadthFirstSearchFromVertices(MoreStructures.Graphs.IGraph,IEnumerable{System.Int32})
+  name: BreadthFirstSearchFromVertices(IGraph, IEnumerable<Int32>)
+  href: api/MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_BreadthFirstSearchFromVertices_MoreStructures_Graphs_IGraph_IEnumerable_System_Int32__
+  commentId: M:MoreStructures.Graphs.Visitor.IVisitStrategy.BreadthFirstSearchFromVertices(MoreStructures.Graphs.IGraph,IEnumerable{System.Int32})
+  name.vb: BreadthFirstSearchFromVertices(IGraph, IEnumerable(Of Int32))
+  fullName: MoreStructures.Graphs.Visitor.IVisitStrategy.BreadthFirstSearchFromVertices(MoreStructures.Graphs.IGraph, IEnumerable<System.Int32>)
+  fullName.vb: MoreStructures.Graphs.Visitor.IVisitStrategy.BreadthFirstSearchFromVertices(MoreStructures.Graphs.IGraph, IEnumerable(Of System.Int32))
+  nameWithType: IVisitStrategy.BreadthFirstSearchFromVertices(IGraph, IEnumerable<Int32>)
+  nameWithType.vb: IVisitStrategy.BreadthFirstSearchFromVertices(IGraph, IEnumerable(Of Int32))
+- uid: MoreStructures.Graphs.Visitor.IVisitStrategy.BreadthFirstSearchFromVertices*
+  name: BreadthFirstSearchFromVertices
+  href: api/MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_BreadthFirstSearchFromVertices_
+  commentId: Overload:MoreStructures.Graphs.Visitor.IVisitStrategy.BreadthFirstSearchFromVertices
+  isSpec: "True"
+  fullName: MoreStructures.Graphs.Visitor.IVisitStrategy.BreadthFirstSearchFromVertices
+  nameWithType: IVisitStrategy.BreadthFirstSearchFromVertices
 - uid: MoreStructures.Graphs.Visitor.IVisitStrategy.ConnectedComponents(MoreStructures.Graphs.IGraph)
   name: ConnectedComponents(IGraph)
   href: api/MoreStructures.Graphs.Visitor.IVisitStrategy.html#MoreStructures_Graphs_Visitor_IVisitStrategy_ConnectedComponents_MoreStructures_Graphs_IGraph_
@@ -12106,6 +12170,22 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.BreadthSearchFromVertex_IsCorrect
   nameWithType: VisitStrategyTests.BreadthSearchFromVertex_IsCorrect
+- uid: MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.BreadthSearchFromVertices_IsCorrect(System.String,System.Int32,System.Int32[],System.Int32[],System.Int32[],System.Int32[],System.Int32[])
+  name: BreadthSearchFromVertices_IsCorrect(String, Int32, Int32[], Int32[], Int32[], Int32[], Int32[])
+  href: api/MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.html#MoreStructures_Tests_Graphs_Visitor_VisitStrategyTests_BreadthSearchFromVertices_IsCorrect_System_String_System_Int32_System_Int32___System_Int32___System_Int32___System_Int32___System_Int32___
+  commentId: M:MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.BreadthSearchFromVertices_IsCorrect(System.String,System.Int32,System.Int32[],System.Int32[],System.Int32[],System.Int32[],System.Int32[])
+  name.vb: BreadthSearchFromVertices_IsCorrect(String, Int32, Int32(), Int32(), Int32(), Int32(), Int32())
+  fullName: MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.BreadthSearchFromVertices_IsCorrect(System.String, System.Int32, System.Int32[], System.Int32[], System.Int32[], System.Int32[], System.Int32[])
+  fullName.vb: MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.BreadthSearchFromVertices_IsCorrect(System.String, System.Int32, System.Int32(), System.Int32(), System.Int32(), System.Int32(), System.Int32())
+  nameWithType: VisitStrategyTests.BreadthSearchFromVertices_IsCorrect(String, Int32, Int32[], Int32[], Int32[], Int32[], Int32[])
+  nameWithType.vb: VisitStrategyTests.BreadthSearchFromVertices_IsCorrect(String, Int32, Int32(), Int32(), Int32(), Int32(), Int32())
+- uid: MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.BreadthSearchFromVertices_IsCorrect*
+  name: BreadthSearchFromVertices_IsCorrect
+  href: api/MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.html#MoreStructures_Tests_Graphs_Visitor_VisitStrategyTests_BreadthSearchFromVertices_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.BreadthSearchFromVertices_IsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.BreadthSearchFromVertices_IsCorrect
+  nameWithType: VisitStrategyTests.BreadthSearchFromVertices_IsCorrect
 - uid: MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.ConnectedComponents_IsCorrect(System.String,System.Int32,System.Int32[],System.Int32[],System.Int32[])
   name: ConnectedComponents_IsCorrect(String, Int32, Int32[], Int32[], Int32[])
   href: api/MoreStructures.Tests.Graphs.Visitor.VisitStrategyTests.html#MoreStructures_Tests_Graphs_Visitor_VisitStrategyTests_ConnectedComponents_IsCorrect_System_String_System_Int32_System_Int32___System_Int32___System_Int32___
