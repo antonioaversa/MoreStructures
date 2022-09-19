@@ -168,11 +168,16 @@ public class BfsBasedShortestDistanceFinder : IShortestDistanceFinder
         int end, 
         Dictionary<int, (int distanceFromStart, int? previousVertex)> bestPrevious)
     {
+        var alreadyAdded = new HashSet<int>();
         var shortestPath = new List<int>();
 
         int? maybeCurrent = end;
         while (maybeCurrent is int current)
         {
+            if (alreadyAdded.Contains(current))
+                break;
+
+            alreadyAdded.Add(current);
             shortestPath.Add(current);
             maybeCurrent = bestPrevious[current].previousVertex;
         }

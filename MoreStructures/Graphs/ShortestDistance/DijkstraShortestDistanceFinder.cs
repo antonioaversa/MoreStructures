@@ -11,7 +11,8 @@ namespace MoreStructures.Graphs.ShortestDistance;
 ///     REQUIREMENTS
 ///     <br/>
 ///     - Dijkstra algorithm relies on the constraint that <b>edge distances are non-negative</b>. Therefore, there 
-///       can't be negative loops and adding edges will always result in longer distances.
+///       can't be negative loops and adding edges will always result in longer distances. If the graph has negative
+///       edges, consider using <see cref="BellmanFordShortestDistanceFinder"/> instead.
 ///       <br/>
 ///     - Moreover, given that the path P between two vertices u and v is optimal (i.e. the sum of distances over the
 ///       edges of the path is minimal), if w is a vertex in P, both the sub-path of P, P1, from u and w, and the 

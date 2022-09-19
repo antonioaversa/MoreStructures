@@ -60,7 +60,7 @@ public abstract class ShortestDistanceFinderTests
         5, new[] { 0, 2, 4, 5, 1, 3 })]
     [DataRow("7 V, source to sink, same source to 1-chain and 3-chain merging to vertex to sink", 7,
         new[] { 0, 0, 0, 1, 2, 3, 4, 5 },
-        new[] { 1, 2, 6,3, 4, 6, 5, 1 },
+        new[] { 1, 2, 6, 3, 4, 6, 5, 1 },
         new[] { 9, 1, 7, 1, 1, 1, 1, 1 }, 0, 6,
         6, new[] { 0, 2, 4, 5, 1, 3, 6 })]
     [DataRow("9 V, source to sink, same source to 1-chain and 3-chain merging to 3-chain to sink", 9,
@@ -93,12 +93,20 @@ public abstract class ShortestDistanceFinderTests
         string graphDescription, int numberOfVertices, int[] starts, int[] ends, int[] distances, int start, int end,
         int expectedDistance, int[] expectedPath)
     {
+        TestGraph(
+            graphDescription, numberOfVertices, starts, ends, distances, start, end, expectedDistance, expectedPath);
+    }
+
+    protected void TestGraph(
+        string graphDescription, int numberOfVertices, int[] starts, int[] ends, int[] distances, int start, int end,
+        int expectedDistance, int[] expectedPath)
+    {
         var graph = GraphBuilder(numberOfVertices, starts.Zip(ends).ToList());
         var distancesDict = starts.Zip(ends).Zip(distances).ToDictionary(t => t.First, t => t.Second);
 
         var finder = FinderBuilder();
         var (distance, path) = finder.Find(graph, distancesDict, start, end);
-        var message = 
+        var message =
             $"{graphDescription} - Expected [{string.Join(", ", expectedPath)}], Actual: [{string.Join(", ", path)}]";
         Assert.AreEqual(expectedDistance, distance, message);
         Assert.IsTrue(expectedPath.SequenceEqual(path), message);
