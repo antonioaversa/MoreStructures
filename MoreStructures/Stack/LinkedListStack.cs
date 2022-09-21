@@ -1,4 +1,6 @@
-﻿namespace MoreStructures.Stack;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace MoreStructures.Stack;
 
 /// <summary>
 /// A <see cref="IStack{T}"/> implementation based on a singly-linked linked list of items.
@@ -25,10 +27,10 @@ public class LinkedListStack<T> : IStack<T>
     /// </remarks>
     public T Peek()
     {
-        if (Count == 0)
+        if (Head == null)
             throw new InvalidOperationException($"Can't {nameof(Peek)} on an empty stack.");
 
-        return Head!.Value;
+        return Head.Value;
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
@@ -42,7 +44,7 @@ public class LinkedListStack<T> : IStack<T>
     public T Pop()
     {
         var head = Peek();
-        Head = Head!.Next;
+        Head = Head?.Next;
         Count--;
         return head;
     }
