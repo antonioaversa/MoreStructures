@@ -41,7 +41,7 @@
 <table>
 <tr>
 <th>Covered lines:</th>
-<td class="limit-width right" title="7">7</td>
+<td class="limit-width right" title="8">8</td>
 </tr>
 <tr>
 <th>Uncovered lines:</th>
@@ -49,15 +49,15 @@
 </tr>
 <tr>
 <th>Coverable lines:</th>
-<td class="limit-width right" title="7">7</td>
+<td class="limit-width right" title="8">8</td>
 </tr>
 <tr>
 <th>Total lines:</th>
-<td class="limit-width right" title="17">17</td>
+<td class="limit-width right" title="20">20</td>
 </tr>
 <tr>
 <th>Line coverage:</th>
-<td class="limit-width right" title="7 of 7">100%</td>
+<td class="limit-width right" title="8 of 8">100%</td>
 </tr>
 </table>
 </div>
@@ -66,20 +66,20 @@
 <div class="card">
 <div class="card-header">Branch coverage</div>
 <div class="card-body">
-<div class="large">N/A</div>
+<div class="large cardpercentagebar cardpercentagebar0">100%</div>
 <div class="table">
 <table>
 <tr>
 <th>Covered branches:</th>
-<td class="limit-width right" title="0">0</td>
+<td class="limit-width right" title="2">2</td>
 </tr>
 <tr>
 <th>Total branches:</th>
-<td class="limit-width right" title="0">0</td>
+<td class="limit-width right" title="2">2</td>
 </tr>
 <tr>
 <th>Branch coverage:</th>
-<td class="limit-width right" title="N/A">N/A</td>
+<td class="limit-width right" title="2 of 2">100%</td>
 </tr>
 </table>
 </div>
@@ -104,6 +104,7 @@
 <tr><td title=".ctor(T)"><a href="#file0_line8" class="navigatetohash">.ctor(...)</a></td><td>100%</td><td>1</td><td>100%</td></tr>
 <tr><td title="GetNumberOfVertices()"><a href="#file0_line15" class="navigatetohash">GetNumberOfVertices()</a></td><td>100%</td><td>1</td><td>100%</td></tr>
 <tr><td title="Reverse()"><a href="#file0_line16" class="navigatetohash">Reverse()</a></td><td>100%</td><td>1</td><td>100%</td></tr>
+<tr><td title="GetAllEdges()"><a href="#file0_line19" class="navigatetohash">GetAllEdges()</a></td><td>100%</td><td>2</td><td>100%</td></tr>
 </tbody>
 </table>
 </div>
@@ -118,7 +119,7 @@
 <tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line3"></a><code>3</code></td><td></td><td class="lightgray"><code>internal&nbsp;abstract&nbsp;class&nbsp;ReverseProxyGraph&lt;T&gt;&nbsp;:&nbsp;IGraph</code></td></tr>
 <tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line4"></a><code>4</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;where&nbsp;T&nbsp;:&nbsp;IGraph</code></td></tr>
 <tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line5"></a><code>5</code></td><td></td><td class="lightgray"><code>{</code></td></tr>
-<tr class="coverableline" title="Covered (187 visits)" data-coverage="{'AllTestMethods': {'VC': '187', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">187</td><td class="rightmargin right"><a id="file0_line6"></a><code>6</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;protected&nbsp;T&nbsp;Proxied&nbsp;{&nbsp;get;&nbsp;}</code></td></tr>
+<tr class="coverableline" title="Covered (219 visits)" data-coverage="{'AllTestMethods': {'VC': '219', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">219</td><td class="rightmargin right"><a id="file0_line6"></a><code>6</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;protected&nbsp;T&nbsp;Proxied&nbsp;{&nbsp;get;&nbsp;}</code></td></tr>
 <tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line7"></a><code>7</code></td><td></td><td class="lightgray"><code></code></td></tr>
 <tr class="coverableline" title="Covered (58 visits)" data-coverage="{'AllTestMethods': {'VC': '58', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">58</td><td class="rightmargin right"><a id="file0_line8"></a><code>8</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;protected&nbsp;ReverseProxyGraph(T&nbsp;proxied)</code></td></tr>
 <tr class="coverableline" title="Covered (58 visits)" data-coverage="{'AllTestMethods': {'VC': '58', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">58</td><td class="rightmargin right"><a id="file0_line9"></a><code>9</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>
@@ -129,11 +130,14 @@
 <tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line14"></a><code>14</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;start,&nbsp;bool&nbsp;takeIntoAccountEdgeDirection);</code></td></tr>
 <tr class="coverableline" title="Covered (42 visits)" data-coverage="{'AllTestMethods': {'VC': '42', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">42</td><td class="rightmargin right"><a id="file0_line15"></a><code>15</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;virtual&nbsp;int&nbsp;GetNumberOfVertices()&nbsp;=&gt;&nbsp;Proxied.GetNumberOfVertices();</code></td></tr>
 <tr class="coverableline" title="Covered (16 visits)" data-coverage="{'AllTestMethods': {'VC': '16', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">16</td><td class="rightmargin right"><a id="file0_line16"></a><code>16</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;virtual&nbsp;IGraph&nbsp;Reverse()&nbsp;=&gt;&nbsp;Proxied;</code></td></tr>
-<tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line17"></a><code>17</code></td><td></td><td class="lightgray"><code>}</code></td></tr>
+<tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line17"></a><code>17</code></td><td></td><td class="lightgray"><code></code></td></tr>
+<tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line18"></a><code>18</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;IEnumerable&lt;(int&nbsp;edgeStart,&nbsp;int&nbsp;edgeEnd)&gt;&nbsp;GetAllEdges()&nbsp;=&gt;</code></td></tr>
+<tr class="coverableline" title="Covered (124 visits, 2 of 2 branches are covered)" data-coverage="{'AllTestMethods': {'VC': '124', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">124</td><td class="rightmargin right"><a id="file0_line19"></a><code>19</code></td><td class="percentagebar percentagebar100"><i class="icon-fork"></i></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Proxied.GetAllEdges().Select(e&nbsp;=&gt;&nbsp;(e.edgeEnd,&nbsp;e.edgeStart));</code></td></tr>
+<tr class="" title="Not coverable" data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><a id="file0_line20"></a><code>20</code></td><td></td><td class="lightgray"><code>}</code></td></tr>
 </tbody>
 </table>
 </div>
-<div class="footer">Generated by: ReportGenerator 5.1.10.0<br />09/22/2022 - 19:40:36<br /><a href="https://github.com/danielpalme/ReportGenerator">GitHub</a> | <a href="http://www.palmmedia.de">www.palmmedia.de</a></div></div>
+<div class="footer">Generated by: ReportGenerator 5.1.10.0<br />09/22/2022 - 21:58:04<br /><a href="https://github.com/danielpalme/ReportGenerator">GitHub</a> | <a href="http://www.palmmedia.de">www.palmmedia.de</a></div></div>
 <div class="containerright">
 <div class="containerrightfixed">
 <h1>Methods/Properties</h1>
@@ -141,6 +145,7 @@
 <a href="#file0_line8" class="navigatetohash percentagebar percentagebar100" title="Line coverage: 100% - .ctor(T)"><i class="icon-cube"></i>.ctor(T)</a><br />
 <a href="#file0_line15" class="navigatetohash percentagebar percentagebar100" title="Line coverage: 100% - GetNumberOfVertices()"><i class="icon-cube"></i>GetNumberOfVertices()</a><br />
 <a href="#file0_line16" class="navigatetohash percentagebar percentagebar100" title="Line coverage: 100% - Reverse()"><i class="icon-cube"></i>Reverse()</a><br />
+<a href="#file0_line19" class="navigatetohash percentagebar percentagebar100" title="Line coverage: 100% - GetAllEdges()"><i class="icon-cube"></i>GetAllEdges()</a><br />
 <br/></div>
 </div></div>
 <script type="text/javascript">
