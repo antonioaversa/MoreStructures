@@ -14,4 +14,7 @@ internal abstract class ReverseProxyGraph<T> : IGraph
         int start, bool takeIntoAccountEdgeDirection);
     public virtual int GetNumberOfVertices() => Proxied.GetNumberOfVertices();
     public virtual IGraph Reverse() => Proxied;
+
+    public IEnumerable<(int edgeStart, int edgeEnd)> GetAllEdges() => 
+        Proxied.GetAllEdges().Select(e => (e.edgeEnd, e.edgeStart));
 }

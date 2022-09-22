@@ -45,6 +45,12 @@ public interface IGraph
     IEnumerable<Adjacency> GetAdjacentVerticesAndEdges(int start, bool takeIntoAccountEdgeDirection);
 
     /// <summary>
+    /// Returns all the edges of this graph.
+    /// </summary>
+    /// <returns>A sequence of couples (sourceVertex, targetVertex), each identifying an edge of the graph.</returns>
+    IEnumerable<(int edgeStart, int edgeEnd)> GetAllEdges();
+        
+    /// <summary>
     /// Builds the reverse graph, i.e. a graph with the same set of vertices and reversed edges: for each edge (u, v)
     /// of the graph G, there is one edge (v, u) in the reverse graph G^-1.
     /// </summary>

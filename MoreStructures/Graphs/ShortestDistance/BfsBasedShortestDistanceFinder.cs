@@ -104,6 +104,8 @@ public class BfsBasedShortestDistanceFinder : IShortestDistanceFinder
     /// </remarks>
     public (int, IList<int>) Find(IGraph graph, IDictionary<(int, int), int> distances, int start, int end)
     {
+        ShortestDistanceFinderHelper.ValidateParameters(graph, start, end);
+
         var bestPrevious = new Dictionary<int, (int distanceFromStart, int? previousVertex)>
         {
             [start] = (0, null),

@@ -1,4 +1,5 @@
-﻿using MoreStructures.Graphs;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MoreStructures.Graphs;
 using MoreStructures.Graphs.ShortestDistance;
 
 namespace MoreStructures.Tests.Graphs.ShortestDistance;
@@ -13,6 +14,28 @@ public abstract class ShortestDistanceFinderTests
     {
         GraphBuilder = graphBuilder;
         FinderBuilder = finderBuilder;
+    }
+
+    [DataRow("3 V, source to 2-chain and 1-chain, sharing leaf 1", 3,
+        new[] { 0, 0, 1 },
+        new[] { 1, 2, 2 },
+        new[] { 2, 3, 2 })]
+    [DataTestMethod]
+    public void Find_ThrowsExceptionWithInvalidStartOrEnd(
+        string graphDescription, int numberOfVertices, int[] starts, int[] ends, int[] distances)
+    {
+        Assert.ThrowsException<ArgumentException>(() => 
+            TestGraph(
+                graphDescription, numberOfVertices, starts, ends, distances, -1, 1, -1, Array.Empty<int>()));
+        Assert.ThrowsException<ArgumentException>(() =>
+            TestGraph(
+                graphDescription, numberOfVertices, starts, ends, distances, -1, 1, -1, Array.Empty<int>()));
+        Assert.ThrowsException<ArgumentException>(() =>
+            TestGraph(
+                graphDescription, numberOfVertices, starts, ends, distances, 1, -1, -1, Array.Empty<int>()));
+        Assert.ThrowsException<ArgumentException>(() =>
+            TestGraph(
+                graphDescription, numberOfVertices, starts, ends, distances, 1, 3, -1, Array.Empty<int>()));
     }
 
     [DataRow("1 V, 1 isolated", 1, new int[] { }, new int[] { }, new int[] { }, 0, 0,
