@@ -53,6 +53,30 @@ public record AdjacencyListGraph(IList<ISet<int>> Neighborhoods) : IGraph
     ///     <para id="algorithm">
     ///     ALGORITHM
     ///     <br/>
+    ///     - Iterates over all the neighborhoods.
+    ///       <br/>
+    ///     - For each neighbor v of the vertex u, returns the edge (u, v).
+    ///     </para>
+    ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
+    ///     - There are v neighbors in total (as many as the number of vertices in the graph).
+    ///       <br/>
+    ///     - The total number of neighbors across all neighborhoods is e (as many as the number of edges in the 
+    ///       graph).
+    ///       <br/>
+    ///     - Therefore Time Complexity is O(v + e). Space Complexity is O(1), since the iteration uses a constant 
+    ///       amount of space.
+    ///     </para>
+    /// </remarks>
+    public IEnumerable<(int edgeStart, int edgeEnd)> GetAllEdges() => 
+        Neighborhoods.SelectMany((v, i) => Enumerable.Repeat(i, v.Count).Zip(v).Select(c => c));
+
+    /// <inheritdoc path="//*[not(self::remarks)]" />
+    /// <remarks>
+    ///     <para id="algorithm">
+    ///     ALGORITHM
+    ///     <br/>
     ///     - Because the neighborhoods list is indexed by the vertex id, the algorithm has just to perform a direct 
     ///       access to the <paramref name="start"/>-th item: that is the set of neighbors of the vertex with id 
     ///       <paramref name="start"/>.

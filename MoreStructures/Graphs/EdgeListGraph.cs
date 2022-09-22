@@ -55,6 +55,23 @@ public record EdgeListGraph(int NumberOfVertices, IList<(int start, int end)> Ed
     ///     <para id="algorithm">
     ///     ALGORITHM
     ///     <br/>
+    ///     - Just returns the underlying list of edges, as is.
+    ///     </para>
+    ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
+    ///     - Time and Space Complexity are O(1).
+    ///     </para>
+    /// </remarks>
+
+    public IEnumerable<(int edgeStart, int edgeEnd)> GetAllEdges() => Edges;
+
+
+    /// <inheritdoc path="//*[not(self::remarks)]" />
+    /// <remarks>
+    ///     <para id="algorithm">
+    ///     ALGORITHM
+    ///     <br/>
     ///     - Because the edge list is unsorted, and there is no "index" or additional data structure which can help
     ///       retrieving neighbors quickly, the algorithm has to linearly scan the entire edge list, looking for
     ///       neighbors.

@@ -119,6 +119,8 @@ public class DijkstraShortestDistanceFinder : IShortestDistanceFinder
     /// </remarks>
     public (int, IList<int>) Find(IGraph graph, IDictionary<(int, int), int> distances, int start, int end)
     {
+        ShortestDistanceFinderHelper.ValidateParameters(graph, start, end);
+
         var bestPreviouses = new Dictionary<int, (int distanceFromStart, int? previousVertex)>
         {
             [start] = (0, null),
@@ -133,8 +135,13 @@ public class DijkstraShortestDistanceFinder : IShortestDistanceFinder
                 if (added.Contains(vertex))
                     continue;
 
-                var newDistance = bestPreviouses[lastAdded].distanceFromStart + distances[(edgeStart, edgeEnd)];
-                if (!bestPreviouses.TryGetValue(vertex, out var bestPrevious) || 
+                var edgeDistance = distances[(edgeStart, edgeEnd)];
+                if (edgeDistance < 0)
+                    throw new InvalidOperationException(
+                        $"Negative edges are not supported: distance of ({edgeStart}, {edgeEnd}) = {edgeDistance}.");
+
+                var newDistance = bestPreviouses[lastAdded].distanceFromStart + edgeDistance;
+                if (!bestPreviouses.TryGetValue(vertex, out var bestPrevious) ||
                     bestPrevious.distanceFromStart > newDistance)
                 {
                     bestPreviouses[vertex] = (newDistance, lastAdded);

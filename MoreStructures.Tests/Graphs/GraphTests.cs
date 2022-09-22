@@ -1,4 +1,5 @@
-﻿using MoreStructures.Graphs;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MoreStructures.Graphs;
 
 namespace MoreStructures.Tests.Graphs;
 
@@ -9,6 +10,22 @@ public abstract class GraphTests
     protected GraphTests(Func<int, IList<(int, int)>, IGraph> graphBuilder)
     {
         GraphBuilder = graphBuilder;
+    }
+
+    [DataRow(1, new int[] { }, new int[] { })]
+    [DataRow(2, new int[] { }, new int[] { })]
+    [DataRow(2, new[] { 0 }, new[] { 1 })]
+    [DataRow(2, new[] { 1 }, new[] { 0 })]
+    [DataRow(2, new[] { 0, 0, 1 }, new[] { 0, 1, 1 })]
+    [DataRow(3, new[] { 0, 0, 1 }, new[] { 1, 2, 2 })]
+    [DataRow(5, new[] { 0, 0, 1, 2, 4 }, new[] { 1, 2, 4, 3, 3 })]
+    [DataRow(9, new[] { 0, 0, 1, 2, 3, 4, 4, 5, 6, 8 }, new[] { 1, 2, 4, 3, 4, 5, 6, 8, 7, 7 })]
+    [DataTestMethod]
+    public void GetAllEdges_IsCorrect(int numberOfVertices, int[] starts, int[] ends)
+    {
+        var edges = starts.Zip(ends).ToList();
+        var graph = GraphBuilder(numberOfVertices, edges);
+        Assert.IsTrue(edges.ToHashSet().SetEquals(graph.GetAllEdges().ToHashSet()));
     }
 
     [DataRow(1, new int[] { }, new int[] { })]
@@ -33,7 +50,14 @@ public abstract class GraphTests
             // Vertices are the same
             Assert.AreEqual(graph.GetNumberOfVertices(), reverseGraph.GetNumberOfVertices());
 
-            // Edges are reversed
+            // Edges are reversed when retrieved all together
+            Assert.IsTrue(reverseGraph
+                .GetAllEdges()
+                .Select(e => (e.edgeEnd, e.edgeStart))
+                .ToHashSet()
+                .SetEquals(graph.GetAllEdges()));
+
+            // Edges are reversed when retrieved by vertex
             var neighbors = (
                 from vertex in Enumerable.Range(0, numberOfVertices)
                 select (

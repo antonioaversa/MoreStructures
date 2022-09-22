@@ -62,6 +62,30 @@ public record AdjacencyMatrixGraph(bool[,] AdjacencyMatrix) : IGraph
     ///     <para id="algorithm">
     ///     ALGORITHM
     ///     <br/>
+    ///     - Iterates over all the cells of the adjacency matrix M.
+    ///       <br/>
+    ///     - For each adjacency M[u, v] set in M, the edge (u, v) is returned.
+    ///     </para>
+    ///     <para id="complexity">
+    ///     COMPLEXITY
+    ///     <br/>
+    ///     - The adjacency matrix has v rows and v columns, where v is the number of vertices in the graph.
+    ///       <br/>
+    ///     - Therefore Time Complexity is O(v^2). Space Complexity is O(1), since the iteration uses a constant 
+    ///       amount of space.
+    ///     </para>
+    /// </remarks>
+    public IEnumerable<(int edgeStart, int edgeEnd)> GetAllEdges() =>
+        from u in Enumerable.Range(0, AdjacencyMatrix.GetLength(0))
+        from v in Enumerable.Range(0, AdjacencyMatrix.GetLength(1))
+        where AdjacencyMatrix[u, v]
+        select (u, v);
+
+    /// <inheritdoc path="//*[not(self::remarks)]" />
+    /// <remarks>
+    ///     <para id="algorithm">
+    ///     ALGORITHM
+    ///     <br/>
     ///     - Unlike the adjacency list representation, the matrix representation allows to access neighborhoods based 
     ///       on both outgoing and incoming edges of a given vertex (the first is a row, the second is a column).
     ///       <br/>

@@ -131,6 +131,8 @@ public class BellmanFordShortestDistanceFinder : IShortestDistanceFinder
     /// </remarks>
     public (int, IList<int>) Find(IGraph graph, GraphDistances distances, int start, int end)
     {
+        ShortestDistanceFinderHelper.ValidateParameters(graph, start, end);
+
         var numberOfVertices = graph.GetNumberOfVertices();
         var bestPreviouses = new BestPreviouses { [start] = (0, null) };
 
