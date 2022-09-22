@@ -283,7 +283,7 @@ v |/     /
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_AdjacencyMatrixGraph_GetAdjacentVerticesAndEdges_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.AdjacencyMatrixGraph.GetAdjacentVerticesAndEdges(System.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/AdjacencyMatrixGraph.cs/#L93">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/AdjacencyMatrixGraph.cs/#L117">View Source</a>
   </span>
   <a id="MoreStructures_Graphs_AdjacencyMatrixGraph_GetAdjacentVerticesAndEdges_" data-uid="MoreStructures.Graphs.AdjacencyMatrixGraph.GetAdjacentVerticesAndEdges*"></a>
   <h4 id="MoreStructures_Graphs_AdjacencyMatrixGraph_GetAdjacentVerticesAndEdges_System_Int32_System_Boolean_" data-uid="MoreStructures.Graphs.AdjacencyMatrixGraph.GetAdjacentVerticesAndEdges(System.Int32,System.Boolean)">GetAdjacentVerticesAndEdges(Int32, Boolean)</h4>
@@ -364,6 +364,53 @@ elements.
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_AdjacencyMatrixGraph_GetAllEdges.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.AdjacencyMatrixGraph.GetAllEdges%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/AdjacencyMatrixGraph.cs/#L78">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_AdjacencyMatrixGraph_GetAllEdges_" data-uid="MoreStructures.Graphs.AdjacencyMatrixGraph.GetAllEdges*"></a>
+  <h4 id="MoreStructures_Graphs_AdjacencyMatrixGraph_GetAllEdges" data-uid="MoreStructures.Graphs.AdjacencyMatrixGraph.GetAllEdges">GetAllEdges()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;(int edgeStart, int edgeEnd)&gt; GetAllEdges()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Graphs_AdjacencyMatrixGraph_GetAllEdges_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+ALGORITHM
+<br>
+- Iterates over all the cells of the adjacency matrix M.
+<br>
+- For each adjacency M[u, v] set in M, the edge (u, v) is returned.
+</p>
+<p>
+COMPLEXITY
+<br>
+- The adjacency matrix has v rows and v columns, where v is the number of vertices in the graph.
+<br>
+- Therefore Time Complexity is O(v^2). Space Complexity is O(1), since the iteration uses a constant 
+amount of space.
+</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_AdjacencyMatrixGraph_GetNumberOfVertices.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.AdjacencyMatrixGraph.GetNumberOfVertices%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -402,7 +449,7 @@ Time and Space Complexity are O(1).</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_AdjacencyMatrixGraph_Reverse.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.AdjacencyMatrixGraph.Reverse%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/AdjacencyMatrixGraph.cs/#L136">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/AdjacencyMatrixGraph.cs/#L160">View Source</a>
   </span>
   <a id="MoreStructures_Graphs_AdjacencyMatrixGraph_Reverse_" data-uid="MoreStructures.Graphs.AdjacencyMatrixGraph.Reverse*"></a>
   <h4 id="MoreStructures_Graphs_AdjacencyMatrixGraph_Reverse" data-uid="MoreStructures.Graphs.AdjacencyMatrixGraph.Reverse">Reverse()</h4>

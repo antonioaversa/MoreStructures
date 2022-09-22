@@ -1,0 +1,408 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class KruskalMstFinder
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class KruskalMstFinder
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder">
+  
+  
+  <h1 id="MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder" data-uid="MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder" class="text-break">Class KruskalMstFinder
+  </h1>
+  <div class="markdown level0 summary"><p>A <a class="xref" href="MoreStructures.Graphs.MinimumSpanningTree.IMstFinder.html">IMstFinder</a> based on the Kruskal's algorithm.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">KruskalMstFinder</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.Graphs.MinimumSpanningTree.IMstFinder.html">IMstFinder</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.Graphs.MinimumSpanningTree.html">MoreStructures.Graphs.MinimumSpanningTree</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class KruskalMstFinder : IMstFinder</code></pre>
+  </div>
+  <h5 id="MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+ALGORITHM
+<br>
+- First, all edges of the graph are sorted in ascending order, using the <a class="xref" href="MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.html#MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder_Sorter">Sorter</a> provided in the
+  constructor.
+<br>
+- Then, set of edges MST, which will contain the result, is initialized to an empty set (i.e. no edges included
+in the spanning tree, before the main loop).
+<br>
+- A <a class="xref" href="MoreStructures.DisjointSets.IDisjointSet.html">IDisjointSet</a> DS is also initialized to contain the v values from 0 to v - 1, each value 
+representing a vertex of the graph and at the beginning disjoint from all others. 
+<br>
+- The disjoint set DS will be used as a <strong>cycle detector</strong>, i.e. as a data structure able to determine 
+nearly in O(1) (more precisely in O(log*(n)) whether adding an edge to MST would result in a cycle.
+<br>
+- Then, the main loop of the algorithm is executed, until MST contains exactly v - 1 edges in it (any spanning
+tree has to have exactly v vertices and v - 1 edges, otherwise it would not be spanning, or it would not be 
+a tree).
+<br>
+- At each iteration, the next minimum edge e is added to MST, if it doesn&apos;t introduce a cycle. Otherwise, it is
+discarded,
+<br>
+- To verify whether e = (u, v) introduces a cycle in MST or not, it checks whether v and u are already 
+connected in DS (via <a class="xref" href="MoreStructures.DisjointSets.IDisjointSet.html#MoreStructures_DisjointSets_IDisjointSet_AreConnected_System_Int32_System_Int32_">AreConnected(Int32, Int32)</a>), i.e. whether they belong to the same
+set. 
+<br>
+- If so, it means that there is already a path (sequence of edges) in MST connecting u and v. Therefore the
+introduction of the edge e = (u, v) would give a second path from u to v, hence a cycle.
+<br>
+- Otherwise, e can safely be added to MST with no introduction of a cycle. The vertices u and v are also united
+in DS, to reflect the addition of e into MST, in DS as well.
+<br>
+- When MST contains v - 1 edges, the number of disjoint sets in DS is checked: if it is 1, it means that all
+vertices in the graph have been connected by MST, and MST is indeed a Minimum Spanning Tree.
+<br>
+- If it is not the case, and there is more than a single disjoint set, an 
+<see cref="!:InvalidOperationException"></see> is thrown, since the graph is not connected, and a single tree 
+spanning the entire graph cannot be constructed.
+</p>
+<p>
+COMPLEXITY
+<br>
+- The algorithm makes use of an <a class="xref" href="MoreStructures.Lists.Sorting.IInPlaceSorting.html">IInPlaceSorting</a> algorithm, to sort all the edges of the graph in
+  ascending order by their distance. 
+<br>
+- Since sorting edges is required by the algorithm, the overall complexity is lower bounded by 
+O(e * log(e)) = O(e * log(v)). 
+<br>
+- Such complexity can only be reduced when specific assumptions can be made, on the distance values of the 
+edges (e.g. if integer and within a small range, a non-comparison based, linear search, such as Counting 
+Sort, may be used).
+<br>
+- The algorithm also makes use of a <a class="xref" href="MoreStructures.DisjointSets.IDisjointSet.html">IDisjointSet</a> data structure, to detect loops after the 
+potential introduction of each single edge of the graph.
+<br>
+- For that reason, for the algorithm to be efficient, when building the Minimum Spanning Tree, the disjoint
+set should be able to verify connection (via <a class="xref" href="MoreStructures.DisjointSets.IDisjointSet.html#MoreStructures_DisjointSets_IDisjointSet_AreConnected_System_Int32_System_Int32_">AreConnected(Int32, Int32)</a>) and to
+merge vertices (via <a class="xref" href="MoreStructures.DisjointSets.IDisjointSet.html#MoreStructures_DisjointSets_IDisjointSet_Union_System_Int32_System_Int32_">Union(Int32, Int32)</a>) in (nearly) constant time.
+<br>
+- While this is actually possible, by using a <a class="xref" href="MoreStructures.DisjointSets.PathCompressionWeightedQuickUnionDisjointSet.html">PathCompressionWeightedQuickUnionDisjointSet</a>, the
+overall complexity is dominated by the edge sorting, which is in general linearithmic over the edges.
+<br>
+- For these reasons, Time Complexity is O(e * log(v)). Space Complexity is O(v + e), since large-enough data 
+structures are required to store sorted edges and disjoint sets of vertices.
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder__ctor_MoreStructures_Lists_Sorting_IInPlaceSorting_Func_System_Int32_MoreStructures_DisjointSets_IDisjointSet__.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.%23ctor(MoreStructures.Lists.Sorting.IInPlaceSorting%2CFunc%7BSystem.Int32%2CMoreStructures.DisjointSets.IDisjointSet%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/MinimumSpanningTree/KruskalMstFinder.cs/#L95">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder__ctor_" data-uid="MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.#ctor*"></a>
+  <h4 id="MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder__ctor_MoreStructures_Lists_Sorting_IInPlaceSorting_Func_System_Int32_MoreStructures_DisjointSets_IDisjointSet__" data-uid="MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.#ctor(MoreStructures.Lists.Sorting.IInPlaceSorting,Func{System.Int32,MoreStructures.DisjointSets.IDisjointSet})">KruskalMstFinder(IInPlaceSorting, Func&lt;Int32, IDisjointSet&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KruskalMstFinder(IInPlaceSorting sorter, Func&lt;int, IDisjointSet&gt; disjointSetBuilder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Lists.Sorting.IInPlaceSorting.html">IInPlaceSorting</a></td>
+        <td><span class="parametername">sorter</span></td>
+        <td><p><inheritdoc cref="P:MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.Sorter" path="/summary"></inheritdoc></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">System.Int32</span>, <a class="xref" href="MoreStructures.DisjointSets.IDisjointSet.html">IDisjointSet</a>&gt;</td>
+        <td><span class="parametername">disjointSetBuilder</span></td>
+        <td><p><inheritdoc cref="P:MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.DisjointSetBuilder" path="/summary"></inheritdoc></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder_DisjointSetBuilder.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.DisjointSetBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/MinimumSpanningTree/KruskalMstFinder.cs/#L86">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder_DisjointSetBuilder_" data-uid="MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.DisjointSetBuilder*"></a>
+  <h4 id="MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder_DisjointSetBuilder" data-uid="MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.DisjointSetBuilder">DisjointSetBuilder</h4>
+  <div class="markdown level1 summary"><p>A build of <a class="xref" href="MoreStructures.DisjointSets.IDisjointSet.html">IDisjointSet</a> instances, used by the algorithm to detect potential cycles in the MST.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;int, IDisjointSet&gt; DisjointSetBuilder { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">System.Int32</span>, <a class="xref" href="MoreStructures.DisjointSets.IDisjointSet.html">IDisjointSet</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder_Sorter.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.Sorter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/MinimumSpanningTree/KruskalMstFinder.cs/#L81">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder_Sorter_" data-uid="MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.Sorter*"></a>
+  <h4 id="MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder_Sorter" data-uid="MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.Sorter">Sorter</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="MoreStructures.Lists.Sorting.IInPlaceSorting.html">IInPlaceSorting</a> algorithm to be used to sort the edges of the graph.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IInPlaceSorting Sorter { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Lists.Sorting.IInPlaceSorting.html">IInPlaceSorting</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder_Find_MoreStructures_Graphs_IGraph_IDictionary_System_ValueTuple_System_Int32_System_Int32__System_Int32__.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.Find(MoreStructures.Graphs.IGraph%2CIDictionary%7BSystem.ValueTuple%7BSystem.Int32%2CSystem.Int32%7D%2CSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/MinimumSpanningTree/KruskalMstFinder.cs/#L108">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder_Find_" data-uid="MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.Find*"></a>
+  <h4 id="MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder_Find_MoreStructures_Graphs_IGraph_IDictionary_System_ValueTuple_System_Int32_System_Int32__System_Int32__" data-uid="MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.Find(MoreStructures.Graphs.IGraph,IDictionary{System.ValueTuple{System.Int32,System.Int32},System.Int32})">Find(IGraph, IDictionary&lt;(Int32, Int32), Int32&gt;)</h4>
+  <div class="markdown level1 summary"><p>Finds the Minimum Spanning Tree (MST) of the provided <code data-dev-comment-type="paramref" class="paramref">graph</code> using the Kruskal's algorithm.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISet&lt;(int, int)&gt; Find(IGraph graph, IDictionary&lt;(int, int), int&gt; distances)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a></td>
+        <td><span class="parametername">graph</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">IDictionary</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">System.Int32</span>&gt;, <span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">distances</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ISet</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder_Find_MoreStructures_Graphs_IGraph_IDictionary_System_ValueTuple_System_Int32_System_Int32__System_Int32___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder"></inheritdoc></p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.Graphs.MinimumSpanningTree.IMstFinder.html">IMstFinder</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/MinimumSpanningTree/KruskalMstFinder.cs/#L76" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

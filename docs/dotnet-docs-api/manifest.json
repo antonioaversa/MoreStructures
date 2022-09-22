@@ -402,7 +402,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Graphs.AdjacencyListGraph.html",
-          "hash": "hl52LLzA7kDSi9UFAzijbqAr1oVoUluqqFoLoDwAsLg="
+          "hash": "G0BHyIU1SNp+Y8AB0/b67wmWJ3KUN/lZanCkyvoVO4U="
         }
       },
       "is_incremental": false,
@@ -414,7 +414,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Graphs.AdjacencyMatrixGraph.html",
-          "hash": "2G9bdapO1A+6LxHcrC5eEDX9jjWxaI93qcu2o3Mv7wI="
+          "hash": "Mwk4jYqYq3qUZuH49G42qjf/n7V77K/TfyLy/evGUaI="
         }
       },
       "is_incremental": false,
@@ -426,7 +426,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Graphs.EdgeListGraph.html",
-          "hash": "4pDMfm8j1gWbcEY8TBiHllZaznmdEFhtV0Phk7yTolg="
+          "hash": "91vr/svFA1StWNFU/y8lSbUbF2vDE2ZZhOdlbQhVMLM="
         }
       },
       "is_incremental": false,
@@ -438,7 +438,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Graphs.IGraph..html",
-          "hash": "4DxI/9gq3NdKApUtbAKFlCE45qcA7Cs66ZVxubQKgck="
+          "hash": "C6fDzKs/8Mn8NIX5exM5U+dWtQ4K/ClwFK+iLyHt5Fo="
         }
       },
       "is_incremental": false,
@@ -450,7 +450,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Graphs.IGraph.Adjacency.html",
-          "hash": "IDjKEzCdo/Dvfkm9/kzxaqhlNWxVTM0E09kfptDYAu4="
+          "hash": "v5QH8d5shYOS1qKioT/J+IleXdNzMagx/CXovP1VhGA="
         }
       },
       "is_incremental": false,
@@ -462,7 +462,43 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Graphs.IGraph.html",
-          "hash": "Vlpy9oZI0EorlhHqdSISm2pPOns+NBAg3i9615+nC/M="
+          "hash": "TFHtZVofPAR2hvnZWrB2D0svxfYMQs/Lw/clWkar75g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Graphs.MinimumSpanningTree.IMstFinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Graphs.MinimumSpanningTree.IMstFinder.html",
+          "hash": "ZItFkoE9hnD7Hbf1ua3oXaLppYr1T26r4N9PKTdzTMY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.html",
+          "hash": "HGwmcsxvG9wrtdxMjpwPf0zfDu8QgwFXjpWqUEoSBwY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Graphs.MinimumSpanningTree.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Graphs.MinimumSpanningTree.html",
+          "hash": "JY5ugnd9RTFylaVn5BtQhYOhCmQeWYAUIEjLkCJl6dE="
         }
       },
       "is_incremental": false,
@@ -2862,7 +2898,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Graphs.AdjacencyListGraphTests.html",
-          "hash": "4guBXf0SiK2tg13S7pedBF9HanatZx0+y/GqCWfDzDk="
+          "hash": "U3EnmXYc5Wj7uxr+KMy3pl5/hp8BgalAb0IIWufsN1w="
         }
       },
       "is_incremental": false,
@@ -2874,7 +2910,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Graphs.AdjacencyMatrixGraphTests.html",
-          "hash": "FagVv6x9I7B3pEhrfihDGR+oNZJtqx/A3zhvl10yr5Y="
+          "hash": "Uo+xKBLfG0E6SpUCVmdo6+/Cy7DL5q1QBqJBbO7eJt8="
         }
       },
       "is_incremental": false,
@@ -2886,7 +2922,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Graphs.EdgeListGraphTests.html",
-          "hash": "IDi1W+Gc7g+mBrEU+T+Q7t3xmiZWxs7cg0tGzvht1wo="
+          "hash": "rVubLzWgxeZKcEBdxVPoWLnM2Kwk5rjsyHoOSHkMo28="
         }
       },
       "is_incremental": false,
@@ -2898,7 +2934,43 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Graphs.GraphTests.html",
-          "hash": "TorcDTdWPMqehl1BYVHngxr+MLdtkzESoDqQZt3S9Mg="
+          "hash": "tQwgmSB3aSxUaffYp2HLgqnMHaOwgKwE7KJ1D4SBh4c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Graphs.MinimumSpanningTree.KruskalMstFinderTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Graphs.MinimumSpanningTree.KruskalMstFinderTests.html",
+          "hash": "QZ88QdqDwG3EaVubEyhDjqxM7bVEDWQ7w0KeNwmaX3k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Graphs.MinimumSpanningTree.MstFinderTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Graphs.MinimumSpanningTree.MstFinderTests.html",
+          "hash": "qsvkjuV7UpA/HO8J86emmdHO/l/RyXpUmYcTijhkP54="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Graphs.MinimumSpanningTree.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Graphs.MinimumSpanningTree.html",
+          "hash": "jsY58IzMIa7ZSFM/yMVtQ7+B7DdYhhc1BTu3w4B5Als="
         }
       },
       "is_incremental": false,
@@ -2910,7 +2982,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Graphs.ShortestDistance.BellmanFordShortestDistanceFinderTests.html",
-          "hash": "Q0AOiej7a4ntqAecYFbgrTZknLVIENhHKjKan8vKq+k="
+          "hash": "fL2Y7YZrSQtyQQGrrKxmXWR5KLYSVtNML7vpk6mLwwk="
         }
       },
       "is_incremental": false,
@@ -2922,7 +2994,19 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Graphs.ShortestDistance.BfsBasedShortestDistanceFinderTests.html",
-          "hash": "WAOVoOAOkVpaNyEBWwC6+Arbl6GUG4rJuskayXm9Uqc="
+          "hash": "sX6PX9IwVREiQDLsrUi0Pyvk9NdzfZKIeSukIBmFilg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Graphs.ShortestDistance.DijkstraShortestDistanceFinderTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Graphs.ShortestDistance.DijkstraShortestDistanceFinderTests.html",
+          "hash": "8Ul8lWVw3Hr7i87Ie6whhg9p22q+uIVkYAyJ+Tat1og="
         }
       },
       "is_incremental": false,
@@ -2934,7 +3018,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Graphs.ShortestDistance.DijkstraShortestDistanceFinderTests_WithArrayList.html",
-          "hash": "6Fxfpy/WDMC95mNAOfkGM/dxeJVXo9medBpXZLY+ohQ="
+          "hash": "ZYmLMJYBzSLCRiPivwElPz/naySE1i1/g/M+ZNfO2ic="
         }
       },
       "is_incremental": false,
@@ -2946,7 +3030,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Graphs.ShortestDistance.DijkstraShortestDistanceFinderTests_WithBinaryHeap.html",
-          "hash": "OOCyjC+elbyqF0u38AjC2DBlM48gJzO7XPGW2E4mZnA="
+          "hash": "ZE75B4/AytZdzDxyw+KqIAcG6BhF8Ek2nCsYI3TMyMg="
         }
       },
       "is_incremental": false,
@@ -2958,7 +3042,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Graphs.ShortestDistance.DijkstraShortestDistanceFinderTests_WithBinomialHeap.html",
-          "hash": "l5z0MgmTCvsinGc8/Jgu9uuBv8DTYngRSeRe6V+02j8="
+          "hash": "KehuaeGTqL7mDJBWOzW50d0YS8WkMICe5zXp2wjFa64="
         }
       },
       "is_incremental": false,
@@ -2970,7 +3054,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Graphs.ShortestDistance.DijkstraShortestDistanceFinderTests_WithFibonacciHeap.html",
-          "hash": "gJzUHJeSxTuYeGf54JccDz3K0xpwSe9boxhoxkE0hEY="
+          "hash": "MdO6yrymtnd4xSPNU+2mfB5+EossC7vj6YiD4sPRhwI="
         }
       },
       "is_incremental": false,
@@ -2982,7 +3066,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Graphs.ShortestDistance.ShortestDistanceFinderTests.html",
-          "hash": "TKQvGYXc4kSliFJ93WK2Tm3NdMTwju7kSeMXo8Zld8o="
+          "hash": "8Pz7zUQaZUz76zIoNZc4TgRmRfW2gVkuchGK5YcL2r4="
         }
       },
       "is_incremental": false,
@@ -2994,7 +3078,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Graphs.ShortestDistance.html",
-          "hash": "5b3EcqnSgNQxH1942CxUBm3ZehLT7VLC3K1nf25GMcM="
+          "hash": "pVJizd0h+Fy2psJaY6CA97o4GSpLazvUwi6MRdfegbc="
         }
       },
       "is_incremental": false,
@@ -5814,7 +5898,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "BB8+7d1rG3U3I+Z9GemlO4AnBBp2WYl36jVhmtIMlxI="
+          "hash": "+aqy4AWTlAuwCgTIQt6t085wl1pfQKjRFDB2p9g36RY="
         }
       },
       "is_incremental": false,
@@ -5889,7 +5973,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 482,
+          "total_file_count": 489,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
