@@ -130,7 +130,7 @@ public class KruskalMstFinder : IMstFinder
         return mst;
     }
 
-    private class EdgesComparer : IComparer<(int, int)>
+    private sealed class EdgesComparer : IComparer<(int, int)>
     {
         private IDictionary<(int, int), int> Distances { get; }
 

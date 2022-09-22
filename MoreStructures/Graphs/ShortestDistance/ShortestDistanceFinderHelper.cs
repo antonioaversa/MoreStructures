@@ -1,6 +1,6 @@
 ﻿namespace MoreStructures.Graphs.ShortestDistance;
 
-internal class ShortestDistanceFinderHelper
+internal static class ShortestDistanceFinderHelper
 {
     public static void ValidateParameters(IGraph graph, int start, int end)
     {
