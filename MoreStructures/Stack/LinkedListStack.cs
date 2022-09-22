@@ -43,8 +43,11 @@ public class LinkedListStack<T> : IStack<T>
     /// </remarks>
     public T Pop()
     {
-        var head = Peek();
-        Head = Head?.Next;
+        if (Head == null)
+            throw new InvalidOperationException($"Can't {nameof(Pop)} on an empty stack.");
+
+        var head = Head.Value;
+        Head = Head.Next;
         Count--;
         return head;
     }
