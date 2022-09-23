@@ -1,7 +1,7 @@
 ﻿namespace MoreStructures.Stacks;
 
 /// <summary>
-/// Defines the interface common to all <b>Stack</b> implementations.
+/// Defines the interface common to all <b>Stack</b> implementations  for items of type <typeparamref name="T"/>.
 /// </summary>
 /// <typeparam name="T">The type of items, the stack is composed of.</typeparam>
 /// <remarks>
@@ -12,6 +12,14 @@
 ///       Out) fashion.
 ///       <br/>
 ///     - Items are both inserted and extracted at the top (or begin) of the stack.
+///       <br/>
+///     - Unlike array lists, general random access doesn't come as a easy, performant operation. 
+///       <br/>
+///     - Because data insertion and extraction at a single specific spot is priviledged over any other position in the
+///       data structure, O(1) non amortized cost of insertion and extraction can be provided in some implementations.
+///       <br/>
+///     - However, arrays and array lists can be used as a backing structure for a stack, and still have O(1) amortized
+///       cost within array boundaries and O(1) amortized cost to remove array boundaries constraints.
 ///       <br/>
 ///     - Items are in a total order relationship and duplicates are supported.
 ///     </para>

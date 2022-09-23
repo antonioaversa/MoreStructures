@@ -8,8 +8,8 @@ namespace MoreStructures.Stacks;
 ///     <para id="advantages">
 ///     ADVANTAGES AND DISADVANTAGES
 ///     <br/>
-///     - Compared to an implementation based on an array list, it has the advantage of not requiring contiguous 
-///       memory, for the backing structure storing the items to be allocated.
+///     - Compared to an implementation based on an array list, such as <see cref="ArrayListStack{T}"/>, it has the 
+///       advantage of not requiring contiguous memory, for the backing structure storing the items to be allocated.
 ///       <br/>
 ///     - Items of the linked list are allocated on the heap on demand, one by one, each on requiring only the space
 ///       to store the value of the item (whose size depends on the definition of the type <typeparamref name="T"/>),
@@ -17,7 +17,8 @@ namespace MoreStructures.Stacks;
 ///       architecture: typically either 32 or 64 bits).
 ///       <br/>
 ///     - That minimizes the risk of <see cref="OutOfMemoryException"/>, due to memory fragmentation, when dealing with
-///       large queues.
+///       large queues. Moreover, it makes the work required for insertion constant and independent from the size of
+///       the stack.
 ///       <br/>
 ///     - The downside is the number of object allocations, which is constant on an array-based implementation, and as 
 ///       high as the number of items when using a linked list. 
