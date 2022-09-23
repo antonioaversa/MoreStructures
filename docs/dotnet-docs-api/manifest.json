@@ -1694,11 +1694,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Stacks.ArrayListStack-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Stacks.ArrayListStack-1.html",
+          "hash": "3a9TWYQBQOivw8iNlkosg6lKEU3pvbyrkP5pQg3J30o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Stacks.IStack-1.yml",
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Stacks.IStack-1.html",
-          "hash": "XKugbaGnqaXa2SJ5SbxbaCvfBgTqcsQL0xoBrt9Exnk="
+          "hash": "HydUTIx8TA1ols8vDL1w0pPajn0XbPDpGoRvypMTxCk="
         }
       },
       "is_incremental": false,
@@ -1710,7 +1722,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Stacks.LinkedListStack-1.html",
-          "hash": "5BvLBs+cBWeMub/6dCPLv1FJXBe+aVMIgd7mRSLJzI8="
+          "hash": "dedm5IRKSEAGQkaNh6NVsYVnGaPzuSis9gVQRm35tsQ="
         }
       },
       "is_incremental": false,
@@ -1722,7 +1734,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Stacks.html",
-          "hash": "+MksI72y158w3ZHnIki+/RCUL/7aTfoZFNg6lGWl2tQ="
+          "hash": "bcpP/6zRUaPkzBvSIl+GOD8kZrcZniTyWhj3mxK/1Bk="
         }
       },
       "is_incremental": false,
@@ -4514,6 +4526,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Stack.ArrayListStackTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Stack.ArrayListStackTests.html",
+          "hash": "/M9g5W7jrltaHVLRjCQKrcWARRnVq7TOPXLOOIYSx6U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Tests.Stack.LinkedListStackTests.yml",
       "output": {
         ".html": {
@@ -4530,7 +4554,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Stack.StackTests.html",
-          "hash": "1N3AUA/XedUn4v06Lr3KNebS1ds9FUac4ykjgGGUbPI="
+          "hash": "9rWJEhsBEqB2hAt0K+xTWGlRDNhYLm3HCFhyWNF81N0="
         }
       },
       "is_incremental": false,
@@ -4542,7 +4566,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Stack.html",
-          "hash": "n1kNMPSt2us85Z7JVvaCER45k3n8VSfDkUJGRuCSEWI="
+          "hash": "bQTxBxf3Tz5h7vPAIYAYTW3zKWbOAA7rEO5vMHfpGQY="
         }
       },
       "is_incremental": false,
@@ -5970,7 +5994,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "M80VwEY8yN7OP2U9ZB2/MkZ8B+MZWN4PL7jpimKYTx8="
+          "hash": "RXZOxMXXcaYBeT0MtX+/2GKfmtsMSPZ0rrTCEaZHagc="
         }
       },
       "is_incremental": false,
@@ -6045,7 +6069,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 495,
+          "total_file_count": 497,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

@@ -145,8 +145,8 @@
   <div class="markdown level0 remarks"><p>
 ADVANTAGES AND DISADVANTAGES
 <br>
-- Compared to an implementation based on an array list, it has the advantage of not requiring contiguous 
-  memory, for the backing structure storing the items to be allocated.
+- Compared to an implementation based on an array list, such as <a class="xref" href="MoreStructures.Stacks.ArrayListStack-1.html">ArrayListStack&lt;T&gt;</a>, it has the 
+  advantage of not requiring contiguous memory, for the backing structure storing the items to be allocated.
 <br>
 - Items of the linked list are allocated on the heap on demand, one by one, each on requiring only the space
 to store the value of the item (whose size depends on the definition of the type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>),
@@ -154,7 +154,8 @@ and the reference to the next node in the list (whose size depends on the bit pa
 architecture: typically either 32 or 64 bits).
 <br>
 - That minimizes the risk of <see cref="!:OutOfMemoryException"></see>, due to memory fragmentation, when dealing with
-large queues.
+large queues. Moreover, it makes the work required for insertion constant and independent from the size of
+the stack.
 <br>
 - The downside is the number of object allocations, which is constant on an array-based implementation, and as 
 high as the number of items when using a linked list. 
@@ -175,7 +176,7 @@ references.
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Stacks_LinkedListStack_1_Count.md&amp;value=---%0Auid%3A%20MoreStructures.Stacks.LinkedListStack%601.Count%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stacks/LinkedListStack.cs/#L46">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stacks/LinkedListStack.cs/#L47">View Source</a>
   </span>
   <a id="MoreStructures_Stacks_LinkedListStack_1_Count_" data-uid="MoreStructures.Stacks.LinkedListStack`1.Count*"></a>
   <h4 id="MoreStructures_Stacks_LinkedListStack_1_Count" data-uid="MoreStructures.Stacks.LinkedListStack`1.Count">Count</h4>
@@ -212,7 +213,7 @@ Time and Space Complexity are O(1).</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Stacks_LinkedListStack_1_Peek.md&amp;value=---%0Auid%3A%20MoreStructures.Stacks.LinkedListStack%601.Peek%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stacks/LinkedListStack.cs/#L54">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stacks/LinkedListStack.cs/#L55">View Source</a>
   </span>
   <a id="MoreStructures_Stacks_LinkedListStack_1_Peek_" data-uid="MoreStructures.Stacks.LinkedListStack`1.Peek*"></a>
   <h4 id="MoreStructures_Stacks_LinkedListStack_1_Peek" data-uid="MoreStructures.Stacks.LinkedListStack`1.Peek">Peek()</h4>
@@ -247,7 +248,7 @@ Time and Space Complexity are O(1).</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Stacks_LinkedListStack_1_Pop.md&amp;value=---%0Auid%3A%20MoreStructures.Stacks.LinkedListStack%601.Pop%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stacks/LinkedListStack.cs/#L72">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stacks/LinkedListStack.cs/#L73">View Source</a>
   </span>
   <a id="MoreStructures_Stacks_LinkedListStack_1_Pop_" data-uid="MoreStructures.Stacks.LinkedListStack`1.Pop*"></a>
   <h4 id="MoreStructures_Stacks_LinkedListStack_1_Pop" data-uid="MoreStructures.Stacks.LinkedListStack`1.Pop">Pop()</h4>
@@ -286,7 +287,7 @@ Time and Space Complexity are O(1).</p>
     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Stacks_LinkedListStack_1_Push__0_.md&amp;value=---%0Auid%3A%20MoreStructures.Stacks.LinkedListStack%601.Push(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stacks/LinkedListStack.cs/#L90">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stacks/LinkedListStack.cs/#L91">View Source</a>
   </span>
   <a id="MoreStructures_Stacks_LinkedListStack_1_Push_" data-uid="MoreStructures.Stacks.LinkedListStack`1.Push*"></a>
   <h4 id="MoreStructures_Stacks_LinkedListStack_1_Push__0_" data-uid="MoreStructures.Stacks.LinkedListStack`1.Push(`0)">Push(T)</h4>
@@ -338,7 +339,7 @@ Time and Space Complexity are O(1).</p>
                     <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Stacks_LinkedListStack_1.md&amp;value=---%0Auid%3A%20MoreStructures.Stacks.LinkedListStack%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stacks/LinkedListStack.cs/#L34" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stacks/LinkedListStack.cs/#L35" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

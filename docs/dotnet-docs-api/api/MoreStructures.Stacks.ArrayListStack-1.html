@@ -1,0 +1,533 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ArrayListStack&lt;T&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ArrayListStack&lt;T&gt;
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.Stacks.ArrayListStack`1">
+  
+  
+  <h1 id="MoreStructures_Stacks_ArrayListStack_1" data-uid="MoreStructures.Stacks.ArrayListStack`1" class="text-break">Class ArrayListStack&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>A <a class="xref" href="MoreStructures.Stacks.IStack-1.html">IStack&lt;T&gt;</a> implementation based on an array list of items.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ArrayListStack&lt;T&gt;</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.Stacks.IStack-1.html">IStack</a>&lt;T&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.Stacks.html">MoreStructures.Stacks</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_Stacks_ArrayListStack_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ArrayListStack&lt;T&gt; : IStack&lt;T&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p><inheritdoc cref="T:MoreStructures.Stacks.IStack`1"></inheritdoc></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Stacks_ArrayListStack_1_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+ADVANTAGES AND DISADVANTAGES
+<br>
+- Compared to an implementation based on a linked list, such as <a class="xref" href="MoreStructures.Stacks.LinkedListStack-1.html">LinkedListStack&lt;T&gt;</a>, it has a 
+  lower memory footprint and a lower cost of memory management, due to the fact that a single object made of a
+  contiguous area in memory is used, to store all items.
+<br>
+- In particular, no need for per-item additional space is required, as it happens for &quot;next&quot; references and
+objects overhead in linked list-based solutions.
+<br>
+- On the flip side, the requirement for a potentially large contiguous chunk of memory in the heap may produce
+<see cref="!:OutOfMemoryException"></see> when trying to instantiate or resize stacks of large capacity, especially
+when the memory is heavily fragmented.
+<br>
+- Moreover, each insert which happens when the underlying array has been fully occupied requires work 
+proportional to the current size of the stack, since the underlying array cannot be extended without 
+instantiating a larger array and performing a full copy from the old to the new one.
+<br>
+- That means that insertion cost won&apos;t be O(1) all the time, but only in average, as amortized complexity over
+n operations (assuming that <a class="xref" href="MoreStructures.Stacks.ArrayListStack-1.html#MoreStructures_Stacks_ArrayListStack_1_IncreasingFactor">IncreasingFactor</a> is left to its default value 
+<a class="xref" href="MoreStructures.Stacks.ArrayListStack-1.html#MoreStructures_Stacks_ArrayListStack_1_DefaultIncreasingFactor">DefaultIncreasingFactor</a>, or chosen sensibly). 
+<br>
+- That can be a significant drawback in realtime systems where insertion cost has to be highly predictable and 
+also very low.
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Stacks_ArrayListStack_1__ctor_System_Int32_System_Double_.md&amp;value=---%0Auid%3A%20MoreStructures.Stacks.ArrayListStack%601.%23ctor(System.Int32%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stacks/ArrayListStack.cs/#L69">View Source</a>
+  </span>
+  <a id="MoreStructures_Stacks_ArrayListStack_1__ctor_" data-uid="MoreStructures.Stacks.ArrayListStack`1.#ctor*"></a>
+  <h4 id="MoreStructures_Stacks_ArrayListStack_1__ctor_System_Int32_System_Double_" data-uid="MoreStructures.Stacks.ArrayListStack`1.#ctor(System.Int32,System.Double)">ArrayListStack(Int32, Double)</h4>
+  <div class="markdown level1 summary"><p>Initializes a stack with an array list of initial capacity equals to the provided <code data-dev-comment-type="paramref" class="paramref">capacity</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ArrayListStack(int capacity = 16, double increasingFactor = 2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">capacity</span></td>
+        <td><p>The initial capacity of the backing array. If not specified, <a class="xref" href="MoreStructures.Stacks.ArrayListStack-1.html#MoreStructures_Stacks_ArrayListStack_1_DefaultInitialCapacity">DefaultInitialCapacity</a> is used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">increasingFactor</span></td>
+        <td><p><inheritdoc cref="P:MoreStructures.Stacks.ArrayListStack`1.IncreasingFactor" path="/summary"></inheritdoc></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Stacks_ArrayListStack_1_DefaultIncreasingFactor.md&amp;value=---%0Auid%3A%20MoreStructures.Stacks.ArrayListStack%601.DefaultIncreasingFactor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stacks/ArrayListStack.cs/#L48">View Source</a>
+  </span>
+  <h4 id="MoreStructures_Stacks_ArrayListStack_1_DefaultIncreasingFactor" data-uid="MoreStructures.Stacks.ArrayListStack`1.DefaultIncreasingFactor">DefaultIncreasingFactor</h4>
+  <div class="markdown level1 summary"><p>The default value for <a class="xref" href="MoreStructures.Stacks.ArrayListStack-1.html#MoreStructures_Stacks_ArrayListStack_1_IncreasingFactor">IncreasingFactor</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const double DefaultIncreasingFactor = 2</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Stacks_ArrayListStack_1_DefaultInitialCapacity.md&amp;value=---%0Auid%3A%20MoreStructures.Stacks.ArrayListStack%601.DefaultInitialCapacity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stacks/ArrayListStack.cs/#L43">View Source</a>
+  </span>
+  <h4 id="MoreStructures_Stacks_ArrayListStack_1_DefaultInitialCapacity" data-uid="MoreStructures.Stacks.ArrayListStack`1.DefaultInitialCapacity">DefaultInitialCapacity</h4>
+  <div class="markdown level1 summary"><p>The default initial size of the array backing the stack.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int DefaultInitialCapacity = 16</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Stacks_ArrayListStack_1_DefaultInitialCapacity_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>In an array initialized with capacity x, up to x executions of <a class="xref" href="MoreStructures.Stacks.ArrayListStack-1.html#MoreStructures_Stacks_ArrayListStack_1_Push__0_">Push(T)</a> can be done in constant
+time, with no need for array resizing.</p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Stacks_ArrayListStack_1_Count.md&amp;value=---%0Auid%3A%20MoreStructures.Stacks.ArrayListStack%601.Count%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stacks/ArrayListStack.cs/#L87">View Source</a>
+  </span>
+  <a id="MoreStructures_Stacks_ArrayListStack_1_Count_" data-uid="MoreStructures.Stacks.ArrayListStack`1.Count*"></a>
+  <h4 id="MoreStructures_Stacks_ArrayListStack_1_Count" data-uid="MoreStructures.Stacks.ArrayListStack`1.Count">Count</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Stacks_ArrayListStack_1_Count_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Stored and updated in constant time at each <a class="xref" href="MoreStructures.Stacks.ArrayListStack-1.html#MoreStructures_Stacks_ArrayListStack_1_Push__0_">Push(T)</a> and <a class="xref" href="MoreStructures.Stacks.ArrayListStack-1.html#MoreStructures_Stacks_ArrayListStack_1_Pop">Pop()</a>.
+<br>
+Time and Space Complexity are O(1).</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Stacks_ArrayListStack_1_IncreasingFactor.md&amp;value=---%0Auid%3A%20MoreStructures.Stacks.ArrayListStack%601.IncreasingFactor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stacks/ArrayListStack.cs/#L58">View Source</a>
+  </span>
+  <a id="MoreStructures_Stacks_ArrayListStack_1_IncreasingFactor_" data-uid="MoreStructures.Stacks.ArrayListStack`1.IncreasingFactor*"></a>
+  <h4 id="MoreStructures_Stacks_ArrayListStack_1_IncreasingFactor" data-uid="MoreStructures.Stacks.ArrayListStack`1.IncreasingFactor">IncreasingFactor</h4>
+  <div class="markdown level1 summary"><p>The multiplicative factor used to resize the underlying array, every time it gets full.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double IncreasingFactor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Stacks_ArrayListStack_1_IncreasingFactor_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required to be bigger than 1.0.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Stacks_ArrayListStack_1_Peek.md&amp;value=---%0Auid%3A%20MoreStructures.Stacks.ArrayListStack%601.Peek%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stacks/ArrayListStack.cs/#L98">View Source</a>
+  </span>
+  <a id="MoreStructures_Stacks_ArrayListStack_1_Peek_" data-uid="MoreStructures.Stacks.ArrayListStack`1.Peek*"></a>
+  <h4 id="MoreStructures_Stacks_ArrayListStack_1_Peek" data-uid="MoreStructures.Stacks.ArrayListStack`1.Peek">Peek()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T Peek()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Stacks_ArrayListStack_1_Peek_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Checks and returns the item of the underlying array list at the last index set (which is
+<a class="xref" href="MoreStructures.Stacks.ArrayListStack-1.html#MoreStructures_Stacks_ArrayListStack_1_Count">Count</a> - 1), if it exists.
+<br>
+Throws a <see cref="!:InvalidOperationException"></see> if the underlying array is empty.
+<br>
+Time and Space Complexity are O(1).</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Stacks_ArrayListStack_1_Pop.md&amp;value=---%0Auid%3A%20MoreStructures.Stacks.ArrayListStack%601.Pop%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stacks/ArrayListStack.cs/#L122">View Source</a>
+  </span>
+  <a id="MoreStructures_Stacks_ArrayListStack_1_Pop_" data-uid="MoreStructures.Stacks.ArrayListStack`1.Pop*"></a>
+  <h4 id="MoreStructures_Stacks_ArrayListStack_1_Pop" data-uid="MoreStructures.Stacks.ArrayListStack`1.Pop">Pop()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T Pop()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Stacks_ArrayListStack_1_Pop_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>First, it retrieves the item of the last item set in the underlying array list (which is the one at index
+<a class="xref" href="MoreStructures.Stacks.ArrayListStack-1.html#MoreStructures_Stacks_ArrayListStack_1_Count">Count</a> - 1).
+<br>
+Then, it reset the value of the last item and decreases the <a class="xref" href="MoreStructures.Stacks.ArrayListStack-1.html#MoreStructures_Stacks_ArrayListStack_1_Count">Count</a> by 1.
+<br>
+Then, if the new <a class="xref" href="MoreStructures.Stacks.ArrayListStack-1.html#MoreStructures_Stacks_ArrayListStack_1_Count">Count</a> is smaller than the current capacity by more than twice the
+<a class="xref" href="MoreStructures.Stacks.ArrayListStack-1.html#MoreStructures_Stacks_ArrayListStack_1_IncreasingFactor">IncreasingFactor</a> compoundly (i.e. capacity * increasingFactor^2), the underlying array list is
+resized to have a new capacity equal to the old capacity times the increasing factor.
+<br>
+Finally, it returns the retrieved item as result.
+<br>
+Raises an <see cref="!:InvalidOperationException"></see> if the array list is empty.
+<br>
+Time and Space Complexity are O(1).</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Stacks_ArrayListStack_1_Push__0_.md&amp;value=---%0Auid%3A%20MoreStructures.Stacks.ArrayListStack%601.Push(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stacks/ArrayListStack.cs/#L152">View Source</a>
+  </span>
+  <a id="MoreStructures_Stacks_ArrayListStack_1_Push_" data-uid="MoreStructures.Stacks.ArrayListStack`1.Push*"></a>
+  <h4 id="MoreStructures_Stacks_ArrayListStack_1_Push__0_" data-uid="MoreStructures.Stacks.ArrayListStack`1.Push(`0)">Push(T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Push(T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Stacks_ArrayListStack_1_Push__0__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If there is available room in the underlying array, the new <code data-dev-comment-type="paramref" class="paramref">item</code> is stored in the first
+available location and the <a class="xref" href="MoreStructures.Stacks.ArrayListStack-1.html#MoreStructures_Stacks_ArrayListStack_1_Count">Count</a> is increased by 1.
+<br>
+Otherwise the underlying array is resized by the <a class="xref" href="MoreStructures.Stacks.ArrayListStack-1.html#MoreStructures_Stacks_ArrayListStack_1_IncreasingFactor">IncreasingFactor</a>, as many times as needed to
+accomodate the new <code data-dev-comment-type="paramref" class="paramref">item</code>.
+<br>
+Time and Space Complexity are O(1) if <a class="xref" href="MoreStructures.Stacks.ArrayListStack-1.html#MoreStructures_Stacks_ArrayListStack_1_Count">Count</a> before insertion is strictly smaller than the current
+capacity.
+<br>
+Time and Space Complexity are O(n) if <a class="xref" href="MoreStructures.Stacks.ArrayListStack-1.html#MoreStructures_Stacks_ArrayListStack_1_Count">Count</a> before insertion is equal to the current capacity.
+<br>
+If the <a class="xref" href="MoreStructures.Stacks.ArrayListStack-1.html#MoreStructures_Stacks_ArrayListStack_1_IncreasingFactor">IncreasingFactor</a> is set to a sensible value (e.g. 2.0), the amortized cost over n
+insertions becomes O(1).</p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.Stacks.IStack-1.html">IStack&lt;T&gt;</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Stacks_ArrayListStack_1.md&amp;value=---%0Auid%3A%20MoreStructures.Stacks.ArrayListStack%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stacks/ArrayListStack.cs/#L34" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
