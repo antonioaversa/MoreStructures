@@ -161,14 +161,7 @@ public class ArrayListStack<T> : IStack<T>
     private void ResizeItems(double factor)
     {
         var oldItems = Items;
-        var newSize = oldItems.Length;
-        
-        do
-        {
-            newSize = (int)Math.Ceiling(newSize * factor);
-        }
-        while (Count > newSize);
-
+        var newSize = (int)Math.Ceiling(oldItems.Length * factor);
         Array.Resize(ref oldItems, newSize);
         Items = oldItems;
     }
