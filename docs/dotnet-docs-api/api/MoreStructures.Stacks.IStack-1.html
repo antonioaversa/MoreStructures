@@ -78,17 +78,17 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MoreStructures.Stack.IStack`1">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.Stacks.IStack`1">
   
   
-  <h1 id="MoreStructures_Stack_IStack_1" data-uid="MoreStructures.Stack.IStack`1" class="text-break">Interface IStack&lt;T&gt;
+  <h1 id="MoreStructures_Stacks_IStack_1" data-uid="MoreStructures.Stacks.IStack`1" class="text-break">Interface IStack&lt;T&gt;
   </h1>
   <div class="markdown level0 summary"><p>Defines the interface common to all <strong>Stack</strong> implementations.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.Stack.html">MoreStructures.Stack</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.Stacks.html">MoreStructures.Stacks</a></h6>
   <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
-  <h5 id="MoreStructures_Stack_IStack_1_syntax">Syntax</h5>
+  <h5 id="MoreStructures_Stacks_IStack_1_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface IStack&lt;T&gt;</code></pre>
   </div>
@@ -108,11 +108,14 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="MoreStructures_Stack_IStack_1_remarks"><strong>Remarks</strong></h5>
+  <h5 id="MoreStructures_Stacks_IStack_1_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>
 DEFINITION
 <br>
-- A Stack is a data structure storing items of a generic type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>.
+- A Stack is a data structure storing items of a generic type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> in a LIFO (Last In First
+  Out) fashion.
+<br>
+- Items are both inserted and extracted at the top (or begin) of the stack.
 <br>
 - Items are in a total order relationship and duplicates are supported.
 </p>
@@ -121,13 +124,13 @@ DEFINITION
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Stack_IStack_1_Count.md&amp;value=---%0Auid%3A%20MoreStructures.Stack.IStack%601.Count%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Stacks_IStack_1_Count.md&amp;value=---%0Auid%3A%20MoreStructures.Stacks.IStack%601.Count%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stack/Stack.cs/#L21">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stacks/IStack.cs/#L24">View Source</a>
   </span>
-  <a id="MoreStructures_Stack_IStack_1_Count_" data-uid="MoreStructures.Stack.IStack`1.Count*"></a>
-  <h4 id="MoreStructures_Stack_IStack_1_Count" data-uid="MoreStructures.Stack.IStack`1.Count">Count</h4>
+  <a id="MoreStructures_Stacks_IStack_1_Count_" data-uid="MoreStructures.Stacks.IStack`1.Count*"></a>
+  <h4 id="MoreStructures_Stacks_IStack_1_Count" data-uid="MoreStructures.Stacks.IStack`1.Count">Count</h4>
   <div class="markdown level1 summary"><p>The number of items currently in the stack.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -154,13 +157,13 @@ DEFINITION
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Stack_IStack_1_Peek.md&amp;value=---%0Auid%3A%20MoreStructures.Stack.IStack%601.Peek%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Stacks_IStack_1_Peek.md&amp;value=---%0Auid%3A%20MoreStructures.Stacks.IStack%601.Peek%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stack/Stack.cs/#L27">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stacks/IStack.cs/#L30">View Source</a>
   </span>
-  <a id="MoreStructures_Stack_IStack_1_Peek_" data-uid="MoreStructures.Stack.IStack`1.Peek*"></a>
-  <h4 id="MoreStructures_Stack_IStack_1_Peek" data-uid="MoreStructures.Stack.IStack`1.Peek">Peek()</h4>
+  <a id="MoreStructures_Stacks_IStack_1_Peek_" data-uid="MoreStructures.Stacks.IStack`1.Peek*"></a>
+  <h4 id="MoreStructures_Stacks_IStack_1_Peek" data-uid="MoreStructures.Stacks.IStack`1.Peek">Peek()</h4>
   <div class="markdown level1 summary"><p>Returns the item on top of the stack, without popping it out from the stack.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -186,13 +189,13 @@ DEFINITION
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Stack_IStack_1_Pop.md&amp;value=---%0Auid%3A%20MoreStructures.Stack.IStack%601.Pop%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Stacks_IStack_1_Pop.md&amp;value=---%0Auid%3A%20MoreStructures.Stacks.IStack%601.Pop%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stack/Stack.cs/#L46">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stacks/IStack.cs/#L49">View Source</a>
   </span>
-  <a id="MoreStructures_Stack_IStack_1_Pop_" data-uid="MoreStructures.Stack.IStack`1.Pop*"></a>
-  <h4 id="MoreStructures_Stack_IStack_1_Pop" data-uid="MoreStructures.Stack.IStack`1.Pop">Pop()</h4>
+  <a id="MoreStructures_Stacks_IStack_1_Pop_" data-uid="MoreStructures.Stacks.IStack`1.Pop*"></a>
+  <h4 id="MoreStructures_Stacks_IStack_1_Pop" data-uid="MoreStructures.Stacks.IStack`1.Pop">Pop()</h4>
   <div class="markdown level1 summary"><p>Pops the item out from the top of the stack and returns it as a result.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -216,19 +219,19 @@ DEFINITION
       </tr>
     </tbody>
   </table>
-  <h5 id="MoreStructures_Stack_IStack_1_Pop_remarks">Remarks</h5>
+  <h5 id="MoreStructures_Stacks_IStack_1_Pop_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>The item which was on second position at the top of the stack goes on the top after the item on top is popped
 out.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Stack_IStack_1_Push__0_.md&amp;value=---%0Auid%3A%20MoreStructures.Stack.IStack%601.Push(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Stacks_IStack_1_Push__0_.md&amp;value=---%0Auid%3A%20MoreStructures.Stacks.IStack%601.Push(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stack/Stack.cs/#L36">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stacks/IStack.cs/#L39">View Source</a>
   </span>
-  <a id="MoreStructures_Stack_IStack_1_Push_" data-uid="MoreStructures.Stack.IStack`1.Push*"></a>
-  <h4 id="MoreStructures_Stack_IStack_1_Push__0_" data-uid="MoreStructures.Stack.IStack`1.Push(`0)">Push(T)</h4>
+  <a id="MoreStructures_Stacks_IStack_1_Push_" data-uid="MoreStructures.Stacks.IStack`1.Push*"></a>
+  <h4 id="MoreStructures_Stacks_IStack_1_Push__0_" data-uid="MoreStructures.Stacks.IStack`1.Push(`0)">Push(T)</h4>
   <div class="markdown level1 summary"><p>Push the provided <code data-dev-comment-type="paramref" class="paramref">item</code> onto the top of the stack.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -254,7 +257,7 @@ out.</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="MoreStructures_Stack_IStack_1_Push__0__remarks">Remarks</h5>
+  <h5 id="MoreStructures_Stacks_IStack_1_Push__0__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>The item which was on top of the stack before this push is pushed down onto second position.</p>
 </div>
   <h3 id="extensionmethods">Extension Methods</h3>
@@ -269,10 +272,10 @@ out.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Stack_IStack_1.md&amp;value=---%0Auid%3A%20MoreStructures.Stack.IStack%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Stacks_IStack_1.md&amp;value=---%0Auid%3A%20MoreStructures.Stacks.IStack%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stack/Stack.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Stacks/IStack.cs/#L19" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

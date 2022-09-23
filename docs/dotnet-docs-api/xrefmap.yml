@@ -6280,6 +6280,166 @@ references:
   isSpec: "True"
   fullName: MoreStructures.PriorityQueues.PushTimestampEra.Era
   nameWithType: PushTimestampEra.Era
+- uid: MoreStructures.Queues
+  name: MoreStructures.Queues
+  href: api/MoreStructures.Queues.html
+  commentId: N:MoreStructures.Queues
+  fullName: MoreStructures.Queues
+  nameWithType: MoreStructures.Queues
+- uid: MoreStructures.Queues.IQueue`1
+  name: IQueue<T>
+  href: api/MoreStructures.Queues.IQueue-1.html
+  commentId: T:MoreStructures.Queues.IQueue`1
+  name.vb: IQueue(Of T)
+  fullName: MoreStructures.Queues.IQueue<T>
+  fullName.vb: MoreStructures.Queues.IQueue(Of T)
+  nameWithType: IQueue<T>
+  nameWithType.vb: IQueue(Of T)
+- uid: MoreStructures.Queues.IQueue`1.Count
+  name: Count
+  href: api/MoreStructures.Queues.IQueue-1.html#MoreStructures_Queues_IQueue_1_Count
+  commentId: P:MoreStructures.Queues.IQueue`1.Count
+  fullName: MoreStructures.Queues.IQueue<T>.Count
+  fullName.vb: MoreStructures.Queues.IQueue(Of T).Count
+  nameWithType: IQueue<T>.Count
+  nameWithType.vb: IQueue(Of T).Count
+- uid: MoreStructures.Queues.IQueue`1.Count*
+  name: Count
+  href: api/MoreStructures.Queues.IQueue-1.html#MoreStructures_Queues_IQueue_1_Count_
+  commentId: Overload:MoreStructures.Queues.IQueue`1.Count
+  isSpec: "True"
+  fullName: MoreStructures.Queues.IQueue<T>.Count
+  fullName.vb: MoreStructures.Queues.IQueue(Of T).Count
+  nameWithType: IQueue<T>.Count
+  nameWithType.vb: IQueue(Of T).Count
+- uid: MoreStructures.Queues.IQueue`1.Dequeue
+  name: Dequeue()
+  href: api/MoreStructures.Queues.IQueue-1.html#MoreStructures_Queues_IQueue_1_Dequeue
+  commentId: M:MoreStructures.Queues.IQueue`1.Dequeue
+  fullName: MoreStructures.Queues.IQueue<T>.Dequeue()
+  fullName.vb: MoreStructures.Queues.IQueue(Of T).Dequeue()
+  nameWithType: IQueue<T>.Dequeue()
+  nameWithType.vb: IQueue(Of T).Dequeue()
+- uid: MoreStructures.Queues.IQueue`1.Dequeue*
+  name: Dequeue
+  href: api/MoreStructures.Queues.IQueue-1.html#MoreStructures_Queues_IQueue_1_Dequeue_
+  commentId: Overload:MoreStructures.Queues.IQueue`1.Dequeue
+  isSpec: "True"
+  fullName: MoreStructures.Queues.IQueue<T>.Dequeue
+  fullName.vb: MoreStructures.Queues.IQueue(Of T).Dequeue
+  nameWithType: IQueue<T>.Dequeue
+  nameWithType.vb: IQueue(Of T).Dequeue
+- uid: MoreStructures.Queues.IQueue`1.Enqueue(`0)
+  name: Enqueue(T)
+  href: api/MoreStructures.Queues.IQueue-1.html#MoreStructures_Queues_IQueue_1_Enqueue__0_
+  commentId: M:MoreStructures.Queues.IQueue`1.Enqueue(`0)
+  fullName: MoreStructures.Queues.IQueue<T>.Enqueue(T)
+  fullName.vb: MoreStructures.Queues.IQueue(Of T).Enqueue(T)
+  nameWithType: IQueue<T>.Enqueue(T)
+  nameWithType.vb: IQueue(Of T).Enqueue(T)
+- uid: MoreStructures.Queues.IQueue`1.Enqueue*
+  name: Enqueue
+  href: api/MoreStructures.Queues.IQueue-1.html#MoreStructures_Queues_IQueue_1_Enqueue_
+  commentId: Overload:MoreStructures.Queues.IQueue`1.Enqueue
+  isSpec: "True"
+  fullName: MoreStructures.Queues.IQueue<T>.Enqueue
+  fullName.vb: MoreStructures.Queues.IQueue(Of T).Enqueue
+  nameWithType: IQueue<T>.Enqueue
+  nameWithType.vb: IQueue(Of T).Enqueue
+- uid: MoreStructures.Queues.IQueue`1.Peek
+  name: Peek()
+  href: api/MoreStructures.Queues.IQueue-1.html#MoreStructures_Queues_IQueue_1_Peek
+  commentId: M:MoreStructures.Queues.IQueue`1.Peek
+  fullName: MoreStructures.Queues.IQueue<T>.Peek()
+  fullName.vb: MoreStructures.Queues.IQueue(Of T).Peek()
+  nameWithType: IQueue<T>.Peek()
+  nameWithType.vb: IQueue(Of T).Peek()
+- uid: MoreStructures.Queues.IQueue`1.Peek*
+  name: Peek
+  href: api/MoreStructures.Queues.IQueue-1.html#MoreStructures_Queues_IQueue_1_Peek_
+  commentId: Overload:MoreStructures.Queues.IQueue`1.Peek
+  isSpec: "True"
+  fullName: MoreStructures.Queues.IQueue<T>.Peek
+  fullName.vb: MoreStructures.Queues.IQueue(Of T).Peek
+  nameWithType: IQueue<T>.Peek
+  nameWithType.vb: IQueue(Of T).Peek
+- uid: MoreStructures.Queues.LinkedListQueue`1
+  name: LinkedListQueue<T>
+  href: api/MoreStructures.Queues.LinkedListQueue-1.html
+  commentId: T:MoreStructures.Queues.LinkedListQueue`1
+  name.vb: LinkedListQueue(Of T)
+  fullName: MoreStructures.Queues.LinkedListQueue<T>
+  fullName.vb: MoreStructures.Queues.LinkedListQueue(Of T)
+  nameWithType: LinkedListQueue<T>
+  nameWithType.vb: LinkedListQueue(Of T)
+- uid: MoreStructures.Queues.LinkedListQueue`1.Count
+  name: Count
+  href: api/MoreStructures.Queues.LinkedListQueue-1.html#MoreStructures_Queues_LinkedListQueue_1_Count
+  commentId: P:MoreStructures.Queues.LinkedListQueue`1.Count
+  fullName: MoreStructures.Queues.LinkedListQueue<T>.Count
+  fullName.vb: MoreStructures.Queues.LinkedListQueue(Of T).Count
+  nameWithType: LinkedListQueue<T>.Count
+  nameWithType.vb: LinkedListQueue(Of T).Count
+- uid: MoreStructures.Queues.LinkedListQueue`1.Count*
+  name: Count
+  href: api/MoreStructures.Queues.LinkedListQueue-1.html#MoreStructures_Queues_LinkedListQueue_1_Count_
+  commentId: Overload:MoreStructures.Queues.LinkedListQueue`1.Count
+  isSpec: "True"
+  fullName: MoreStructures.Queues.LinkedListQueue<T>.Count
+  fullName.vb: MoreStructures.Queues.LinkedListQueue(Of T).Count
+  nameWithType: LinkedListQueue<T>.Count
+  nameWithType.vb: LinkedListQueue(Of T).Count
+- uid: MoreStructures.Queues.LinkedListQueue`1.Dequeue
+  name: Dequeue()
+  href: api/MoreStructures.Queues.LinkedListQueue-1.html#MoreStructures_Queues_LinkedListQueue_1_Dequeue
+  commentId: M:MoreStructures.Queues.LinkedListQueue`1.Dequeue
+  fullName: MoreStructures.Queues.LinkedListQueue<T>.Dequeue()
+  fullName.vb: MoreStructures.Queues.LinkedListQueue(Of T).Dequeue()
+  nameWithType: LinkedListQueue<T>.Dequeue()
+  nameWithType.vb: LinkedListQueue(Of T).Dequeue()
+- uid: MoreStructures.Queues.LinkedListQueue`1.Dequeue*
+  name: Dequeue
+  href: api/MoreStructures.Queues.LinkedListQueue-1.html#MoreStructures_Queues_LinkedListQueue_1_Dequeue_
+  commentId: Overload:MoreStructures.Queues.LinkedListQueue`1.Dequeue
+  isSpec: "True"
+  fullName: MoreStructures.Queues.LinkedListQueue<T>.Dequeue
+  fullName.vb: MoreStructures.Queues.LinkedListQueue(Of T).Dequeue
+  nameWithType: LinkedListQueue<T>.Dequeue
+  nameWithType.vb: LinkedListQueue(Of T).Dequeue
+- uid: MoreStructures.Queues.LinkedListQueue`1.Enqueue(`0)
+  name: Enqueue(T)
+  href: api/MoreStructures.Queues.LinkedListQueue-1.html#MoreStructures_Queues_LinkedListQueue_1_Enqueue__0_
+  commentId: M:MoreStructures.Queues.LinkedListQueue`1.Enqueue(`0)
+  fullName: MoreStructures.Queues.LinkedListQueue<T>.Enqueue(T)
+  fullName.vb: MoreStructures.Queues.LinkedListQueue(Of T).Enqueue(T)
+  nameWithType: LinkedListQueue<T>.Enqueue(T)
+  nameWithType.vb: LinkedListQueue(Of T).Enqueue(T)
+- uid: MoreStructures.Queues.LinkedListQueue`1.Enqueue*
+  name: Enqueue
+  href: api/MoreStructures.Queues.LinkedListQueue-1.html#MoreStructures_Queues_LinkedListQueue_1_Enqueue_
+  commentId: Overload:MoreStructures.Queues.LinkedListQueue`1.Enqueue
+  isSpec: "True"
+  fullName: MoreStructures.Queues.LinkedListQueue<T>.Enqueue
+  fullName.vb: MoreStructures.Queues.LinkedListQueue(Of T).Enqueue
+  nameWithType: LinkedListQueue<T>.Enqueue
+  nameWithType.vb: LinkedListQueue(Of T).Enqueue
+- uid: MoreStructures.Queues.LinkedListQueue`1.Peek
+  name: Peek()
+  href: api/MoreStructures.Queues.LinkedListQueue-1.html#MoreStructures_Queues_LinkedListQueue_1_Peek
+  commentId: M:MoreStructures.Queues.LinkedListQueue`1.Peek
+  fullName: MoreStructures.Queues.LinkedListQueue<T>.Peek()
+  fullName.vb: MoreStructures.Queues.LinkedListQueue(Of T).Peek()
+  nameWithType: LinkedListQueue<T>.Peek()
+  nameWithType.vb: LinkedListQueue(Of T).Peek()
+- uid: MoreStructures.Queues.LinkedListQueue`1.Peek*
+  name: Peek
+  href: api/MoreStructures.Queues.LinkedListQueue-1.html#MoreStructures_Queues_LinkedListQueue_1_Peek_
+  commentId: Overload:MoreStructures.Queues.LinkedListQueue`1.Peek
+  isSpec: "True"
+  fullName: MoreStructures.Queues.LinkedListQueue<T>.Peek
+  fullName.vb: MoreStructures.Queues.LinkedListQueue(Of T).Peek
+  nameWithType: LinkedListQueue<T>.Peek
+  nameWithType.vb: LinkedListQueue(Of T).Peek
 - uid: MoreStructures.RecImmTrees
   name: MoreStructures.RecImmTrees
   href: api/MoreStructures.RecImmTrees.html
@@ -7433,164 +7593,164 @@ references:
   isSpec: "True"
   fullName: MoreStructures.RotatedTextWithTerminator.ValidateInput
   nameWithType: RotatedTextWithTerminator.ValidateInput
-- uid: MoreStructures.Stack
-  name: MoreStructures.Stack
-  href: api/MoreStructures.Stack.html
-  commentId: N:MoreStructures.Stack
-  fullName: MoreStructures.Stack
-  nameWithType: MoreStructures.Stack
-- uid: MoreStructures.Stack.IStack`1
+- uid: MoreStructures.Stacks
+  name: MoreStructures.Stacks
+  href: api/MoreStructures.Stacks.html
+  commentId: N:MoreStructures.Stacks
+  fullName: MoreStructures.Stacks
+  nameWithType: MoreStructures.Stacks
+- uid: MoreStructures.Stacks.IStack`1
   name: IStack<T>
-  href: api/MoreStructures.Stack.IStack-1.html
-  commentId: T:MoreStructures.Stack.IStack`1
+  href: api/MoreStructures.Stacks.IStack-1.html
+  commentId: T:MoreStructures.Stacks.IStack`1
   name.vb: IStack(Of T)
-  fullName: MoreStructures.Stack.IStack<T>
-  fullName.vb: MoreStructures.Stack.IStack(Of T)
+  fullName: MoreStructures.Stacks.IStack<T>
+  fullName.vb: MoreStructures.Stacks.IStack(Of T)
   nameWithType: IStack<T>
   nameWithType.vb: IStack(Of T)
-- uid: MoreStructures.Stack.IStack`1.Count
+- uid: MoreStructures.Stacks.IStack`1.Count
   name: Count
-  href: api/MoreStructures.Stack.IStack-1.html#MoreStructures_Stack_IStack_1_Count
-  commentId: P:MoreStructures.Stack.IStack`1.Count
-  fullName: MoreStructures.Stack.IStack<T>.Count
-  fullName.vb: MoreStructures.Stack.IStack(Of T).Count
+  href: api/MoreStructures.Stacks.IStack-1.html#MoreStructures_Stacks_IStack_1_Count
+  commentId: P:MoreStructures.Stacks.IStack`1.Count
+  fullName: MoreStructures.Stacks.IStack<T>.Count
+  fullName.vb: MoreStructures.Stacks.IStack(Of T).Count
   nameWithType: IStack<T>.Count
   nameWithType.vb: IStack(Of T).Count
-- uid: MoreStructures.Stack.IStack`1.Count*
+- uid: MoreStructures.Stacks.IStack`1.Count*
   name: Count
-  href: api/MoreStructures.Stack.IStack-1.html#MoreStructures_Stack_IStack_1_Count_
-  commentId: Overload:MoreStructures.Stack.IStack`1.Count
+  href: api/MoreStructures.Stacks.IStack-1.html#MoreStructures_Stacks_IStack_1_Count_
+  commentId: Overload:MoreStructures.Stacks.IStack`1.Count
   isSpec: "True"
-  fullName: MoreStructures.Stack.IStack<T>.Count
-  fullName.vb: MoreStructures.Stack.IStack(Of T).Count
+  fullName: MoreStructures.Stacks.IStack<T>.Count
+  fullName.vb: MoreStructures.Stacks.IStack(Of T).Count
   nameWithType: IStack<T>.Count
   nameWithType.vb: IStack(Of T).Count
-- uid: MoreStructures.Stack.IStack`1.Peek
+- uid: MoreStructures.Stacks.IStack`1.Peek
   name: Peek()
-  href: api/MoreStructures.Stack.IStack-1.html#MoreStructures_Stack_IStack_1_Peek
-  commentId: M:MoreStructures.Stack.IStack`1.Peek
-  fullName: MoreStructures.Stack.IStack<T>.Peek()
-  fullName.vb: MoreStructures.Stack.IStack(Of T).Peek()
+  href: api/MoreStructures.Stacks.IStack-1.html#MoreStructures_Stacks_IStack_1_Peek
+  commentId: M:MoreStructures.Stacks.IStack`1.Peek
+  fullName: MoreStructures.Stacks.IStack<T>.Peek()
+  fullName.vb: MoreStructures.Stacks.IStack(Of T).Peek()
   nameWithType: IStack<T>.Peek()
   nameWithType.vb: IStack(Of T).Peek()
-- uid: MoreStructures.Stack.IStack`1.Peek*
+- uid: MoreStructures.Stacks.IStack`1.Peek*
   name: Peek
-  href: api/MoreStructures.Stack.IStack-1.html#MoreStructures_Stack_IStack_1_Peek_
-  commentId: Overload:MoreStructures.Stack.IStack`1.Peek
+  href: api/MoreStructures.Stacks.IStack-1.html#MoreStructures_Stacks_IStack_1_Peek_
+  commentId: Overload:MoreStructures.Stacks.IStack`1.Peek
   isSpec: "True"
-  fullName: MoreStructures.Stack.IStack<T>.Peek
-  fullName.vb: MoreStructures.Stack.IStack(Of T).Peek
+  fullName: MoreStructures.Stacks.IStack<T>.Peek
+  fullName.vb: MoreStructures.Stacks.IStack(Of T).Peek
   nameWithType: IStack<T>.Peek
   nameWithType.vb: IStack(Of T).Peek
-- uid: MoreStructures.Stack.IStack`1.Pop
+- uid: MoreStructures.Stacks.IStack`1.Pop
   name: Pop()
-  href: api/MoreStructures.Stack.IStack-1.html#MoreStructures_Stack_IStack_1_Pop
-  commentId: M:MoreStructures.Stack.IStack`1.Pop
-  fullName: MoreStructures.Stack.IStack<T>.Pop()
-  fullName.vb: MoreStructures.Stack.IStack(Of T).Pop()
+  href: api/MoreStructures.Stacks.IStack-1.html#MoreStructures_Stacks_IStack_1_Pop
+  commentId: M:MoreStructures.Stacks.IStack`1.Pop
+  fullName: MoreStructures.Stacks.IStack<T>.Pop()
+  fullName.vb: MoreStructures.Stacks.IStack(Of T).Pop()
   nameWithType: IStack<T>.Pop()
   nameWithType.vb: IStack(Of T).Pop()
-- uid: MoreStructures.Stack.IStack`1.Pop*
+- uid: MoreStructures.Stacks.IStack`1.Pop*
   name: Pop
-  href: api/MoreStructures.Stack.IStack-1.html#MoreStructures_Stack_IStack_1_Pop_
-  commentId: Overload:MoreStructures.Stack.IStack`1.Pop
+  href: api/MoreStructures.Stacks.IStack-1.html#MoreStructures_Stacks_IStack_1_Pop_
+  commentId: Overload:MoreStructures.Stacks.IStack`1.Pop
   isSpec: "True"
-  fullName: MoreStructures.Stack.IStack<T>.Pop
-  fullName.vb: MoreStructures.Stack.IStack(Of T).Pop
+  fullName: MoreStructures.Stacks.IStack<T>.Pop
+  fullName.vb: MoreStructures.Stacks.IStack(Of T).Pop
   nameWithType: IStack<T>.Pop
   nameWithType.vb: IStack(Of T).Pop
-- uid: MoreStructures.Stack.IStack`1.Push(`0)
+- uid: MoreStructures.Stacks.IStack`1.Push(`0)
   name: Push(T)
-  href: api/MoreStructures.Stack.IStack-1.html#MoreStructures_Stack_IStack_1_Push__0_
-  commentId: M:MoreStructures.Stack.IStack`1.Push(`0)
-  fullName: MoreStructures.Stack.IStack<T>.Push(T)
-  fullName.vb: MoreStructures.Stack.IStack(Of T).Push(T)
+  href: api/MoreStructures.Stacks.IStack-1.html#MoreStructures_Stacks_IStack_1_Push__0_
+  commentId: M:MoreStructures.Stacks.IStack`1.Push(`0)
+  fullName: MoreStructures.Stacks.IStack<T>.Push(T)
+  fullName.vb: MoreStructures.Stacks.IStack(Of T).Push(T)
   nameWithType: IStack<T>.Push(T)
   nameWithType.vb: IStack(Of T).Push(T)
-- uid: MoreStructures.Stack.IStack`1.Push*
+- uid: MoreStructures.Stacks.IStack`1.Push*
   name: Push
-  href: api/MoreStructures.Stack.IStack-1.html#MoreStructures_Stack_IStack_1_Push_
-  commentId: Overload:MoreStructures.Stack.IStack`1.Push
+  href: api/MoreStructures.Stacks.IStack-1.html#MoreStructures_Stacks_IStack_1_Push_
+  commentId: Overload:MoreStructures.Stacks.IStack`1.Push
   isSpec: "True"
-  fullName: MoreStructures.Stack.IStack<T>.Push
-  fullName.vb: MoreStructures.Stack.IStack(Of T).Push
+  fullName: MoreStructures.Stacks.IStack<T>.Push
+  fullName.vb: MoreStructures.Stacks.IStack(Of T).Push
   nameWithType: IStack<T>.Push
   nameWithType.vb: IStack(Of T).Push
-- uid: MoreStructures.Stack.LinkedListStack`1
+- uid: MoreStructures.Stacks.LinkedListStack`1
   name: LinkedListStack<T>
-  href: api/MoreStructures.Stack.LinkedListStack-1.html
-  commentId: T:MoreStructures.Stack.LinkedListStack`1
+  href: api/MoreStructures.Stacks.LinkedListStack-1.html
+  commentId: T:MoreStructures.Stacks.LinkedListStack`1
   name.vb: LinkedListStack(Of T)
-  fullName: MoreStructures.Stack.LinkedListStack<T>
-  fullName.vb: MoreStructures.Stack.LinkedListStack(Of T)
+  fullName: MoreStructures.Stacks.LinkedListStack<T>
+  fullName.vb: MoreStructures.Stacks.LinkedListStack(Of T)
   nameWithType: LinkedListStack<T>
   nameWithType.vb: LinkedListStack(Of T)
-- uid: MoreStructures.Stack.LinkedListStack`1.Count
+- uid: MoreStructures.Stacks.LinkedListStack`1.Count
   name: Count
-  href: api/MoreStructures.Stack.LinkedListStack-1.html#MoreStructures_Stack_LinkedListStack_1_Count
-  commentId: P:MoreStructures.Stack.LinkedListStack`1.Count
-  fullName: MoreStructures.Stack.LinkedListStack<T>.Count
-  fullName.vb: MoreStructures.Stack.LinkedListStack(Of T).Count
+  href: api/MoreStructures.Stacks.LinkedListStack-1.html#MoreStructures_Stacks_LinkedListStack_1_Count
+  commentId: P:MoreStructures.Stacks.LinkedListStack`1.Count
+  fullName: MoreStructures.Stacks.LinkedListStack<T>.Count
+  fullName.vb: MoreStructures.Stacks.LinkedListStack(Of T).Count
   nameWithType: LinkedListStack<T>.Count
   nameWithType.vb: LinkedListStack(Of T).Count
-- uid: MoreStructures.Stack.LinkedListStack`1.Count*
+- uid: MoreStructures.Stacks.LinkedListStack`1.Count*
   name: Count
-  href: api/MoreStructures.Stack.LinkedListStack-1.html#MoreStructures_Stack_LinkedListStack_1_Count_
-  commentId: Overload:MoreStructures.Stack.LinkedListStack`1.Count
+  href: api/MoreStructures.Stacks.LinkedListStack-1.html#MoreStructures_Stacks_LinkedListStack_1_Count_
+  commentId: Overload:MoreStructures.Stacks.LinkedListStack`1.Count
   isSpec: "True"
-  fullName: MoreStructures.Stack.LinkedListStack<T>.Count
-  fullName.vb: MoreStructures.Stack.LinkedListStack(Of T).Count
+  fullName: MoreStructures.Stacks.LinkedListStack<T>.Count
+  fullName.vb: MoreStructures.Stacks.LinkedListStack(Of T).Count
   nameWithType: LinkedListStack<T>.Count
   nameWithType.vb: LinkedListStack(Of T).Count
-- uid: MoreStructures.Stack.LinkedListStack`1.Peek
+- uid: MoreStructures.Stacks.LinkedListStack`1.Peek
   name: Peek()
-  href: api/MoreStructures.Stack.LinkedListStack-1.html#MoreStructures_Stack_LinkedListStack_1_Peek
-  commentId: M:MoreStructures.Stack.LinkedListStack`1.Peek
-  fullName: MoreStructures.Stack.LinkedListStack<T>.Peek()
-  fullName.vb: MoreStructures.Stack.LinkedListStack(Of T).Peek()
+  href: api/MoreStructures.Stacks.LinkedListStack-1.html#MoreStructures_Stacks_LinkedListStack_1_Peek
+  commentId: M:MoreStructures.Stacks.LinkedListStack`1.Peek
+  fullName: MoreStructures.Stacks.LinkedListStack<T>.Peek()
+  fullName.vb: MoreStructures.Stacks.LinkedListStack(Of T).Peek()
   nameWithType: LinkedListStack<T>.Peek()
   nameWithType.vb: LinkedListStack(Of T).Peek()
-- uid: MoreStructures.Stack.LinkedListStack`1.Peek*
+- uid: MoreStructures.Stacks.LinkedListStack`1.Peek*
   name: Peek
-  href: api/MoreStructures.Stack.LinkedListStack-1.html#MoreStructures_Stack_LinkedListStack_1_Peek_
-  commentId: Overload:MoreStructures.Stack.LinkedListStack`1.Peek
+  href: api/MoreStructures.Stacks.LinkedListStack-1.html#MoreStructures_Stacks_LinkedListStack_1_Peek_
+  commentId: Overload:MoreStructures.Stacks.LinkedListStack`1.Peek
   isSpec: "True"
-  fullName: MoreStructures.Stack.LinkedListStack<T>.Peek
-  fullName.vb: MoreStructures.Stack.LinkedListStack(Of T).Peek
+  fullName: MoreStructures.Stacks.LinkedListStack<T>.Peek
+  fullName.vb: MoreStructures.Stacks.LinkedListStack(Of T).Peek
   nameWithType: LinkedListStack<T>.Peek
   nameWithType.vb: LinkedListStack(Of T).Peek
-- uid: MoreStructures.Stack.LinkedListStack`1.Pop
+- uid: MoreStructures.Stacks.LinkedListStack`1.Pop
   name: Pop()
-  href: api/MoreStructures.Stack.LinkedListStack-1.html#MoreStructures_Stack_LinkedListStack_1_Pop
-  commentId: M:MoreStructures.Stack.LinkedListStack`1.Pop
-  fullName: MoreStructures.Stack.LinkedListStack<T>.Pop()
-  fullName.vb: MoreStructures.Stack.LinkedListStack(Of T).Pop()
+  href: api/MoreStructures.Stacks.LinkedListStack-1.html#MoreStructures_Stacks_LinkedListStack_1_Pop
+  commentId: M:MoreStructures.Stacks.LinkedListStack`1.Pop
+  fullName: MoreStructures.Stacks.LinkedListStack<T>.Pop()
+  fullName.vb: MoreStructures.Stacks.LinkedListStack(Of T).Pop()
   nameWithType: LinkedListStack<T>.Pop()
   nameWithType.vb: LinkedListStack(Of T).Pop()
-- uid: MoreStructures.Stack.LinkedListStack`1.Pop*
+- uid: MoreStructures.Stacks.LinkedListStack`1.Pop*
   name: Pop
-  href: api/MoreStructures.Stack.LinkedListStack-1.html#MoreStructures_Stack_LinkedListStack_1_Pop_
-  commentId: Overload:MoreStructures.Stack.LinkedListStack`1.Pop
+  href: api/MoreStructures.Stacks.LinkedListStack-1.html#MoreStructures_Stacks_LinkedListStack_1_Pop_
+  commentId: Overload:MoreStructures.Stacks.LinkedListStack`1.Pop
   isSpec: "True"
-  fullName: MoreStructures.Stack.LinkedListStack<T>.Pop
-  fullName.vb: MoreStructures.Stack.LinkedListStack(Of T).Pop
+  fullName: MoreStructures.Stacks.LinkedListStack<T>.Pop
+  fullName.vb: MoreStructures.Stacks.LinkedListStack(Of T).Pop
   nameWithType: LinkedListStack<T>.Pop
   nameWithType.vb: LinkedListStack(Of T).Pop
-- uid: MoreStructures.Stack.LinkedListStack`1.Push(`0)
+- uid: MoreStructures.Stacks.LinkedListStack`1.Push(`0)
   name: Push(T)
-  href: api/MoreStructures.Stack.LinkedListStack-1.html#MoreStructures_Stack_LinkedListStack_1_Push__0_
-  commentId: M:MoreStructures.Stack.LinkedListStack`1.Push(`0)
-  fullName: MoreStructures.Stack.LinkedListStack<T>.Push(T)
-  fullName.vb: MoreStructures.Stack.LinkedListStack(Of T).Push(T)
+  href: api/MoreStructures.Stacks.LinkedListStack-1.html#MoreStructures_Stacks_LinkedListStack_1_Push__0_
+  commentId: M:MoreStructures.Stacks.LinkedListStack`1.Push(`0)
+  fullName: MoreStructures.Stacks.LinkedListStack<T>.Push(T)
+  fullName.vb: MoreStructures.Stacks.LinkedListStack(Of T).Push(T)
   nameWithType: LinkedListStack<T>.Push(T)
   nameWithType.vb: LinkedListStack(Of T).Push(T)
-- uid: MoreStructures.Stack.LinkedListStack`1.Push*
+- uid: MoreStructures.Stacks.LinkedListStack`1.Push*
   name: Push
-  href: api/MoreStructures.Stack.LinkedListStack-1.html#MoreStructures_Stack_LinkedListStack_1_Push_
-  commentId: Overload:MoreStructures.Stack.LinkedListStack`1.Push
+  href: api/MoreStructures.Stacks.LinkedListStack-1.html#MoreStructures_Stacks_LinkedListStack_1_Push_
+  commentId: Overload:MoreStructures.Stacks.LinkedListStack`1.Push
   isSpec: "True"
-  fullName: MoreStructures.Stack.LinkedListStack<T>.Push
-  fullName.vb: MoreStructures.Stack.LinkedListStack(Of T).Push
+  fullName: MoreStructures.Stacks.LinkedListStack<T>.Push
+  fullName.vb: MoreStructures.Stacks.LinkedListStack(Of T).Push
   nameWithType: LinkedListStack<T>.Push
   nameWithType.vb: LinkedListStack(Of T).Push
 - uid: MoreStructures.Strings.Matching
@@ -15959,6 +16119,121 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.PriorityQueues.UpdatablePriorityQueueTests.ValTypeUpdatableQueueBuilder
   nameWithType: UpdatablePriorityQueueTests.ValTypeUpdatableQueueBuilder
+- uid: MoreStructures.Tests.Queues
+  name: MoreStructures.Tests.Queues
+  href: api/MoreStructures.Tests.Queues.html
+  commentId: N:MoreStructures.Tests.Queues
+  fullName: MoreStructures.Tests.Queues
+  nameWithType: MoreStructures.Tests.Queues
+- uid: MoreStructures.Tests.Queues.LinkedListQueueTests
+  name: LinkedListQueueTests
+  href: api/MoreStructures.Tests.Queues.LinkedListQueueTests.html
+  commentId: T:MoreStructures.Tests.Queues.LinkedListQueueTests
+  fullName: MoreStructures.Tests.Queues.LinkedListQueueTests
+  nameWithType: LinkedListQueueTests
+- uid: MoreStructures.Tests.Queues.LinkedListQueueTests.Build*
+  name: Build
+  href: api/MoreStructures.Tests.Queues.LinkedListQueueTests.html#MoreStructures_Tests_Queues_LinkedListQueueTests_Build_
+  commentId: Overload:MoreStructures.Tests.Queues.LinkedListQueueTests.Build
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Queues.LinkedListQueueTests.Build
+  nameWithType: LinkedListQueueTests.Build
+- uid: MoreStructures.Tests.Queues.LinkedListQueueTests.Build``1
+  name: Build<T>()
+  href: api/MoreStructures.Tests.Queues.LinkedListQueueTests.html#MoreStructures_Tests_Queues_LinkedListQueueTests_Build__1
+  commentId: M:MoreStructures.Tests.Queues.LinkedListQueueTests.Build``1
+  name.vb: Build(Of T)()
+  fullName: MoreStructures.Tests.Queues.LinkedListQueueTests.Build<T>()
+  fullName.vb: MoreStructures.Tests.Queues.LinkedListQueueTests.Build(Of T)()
+  nameWithType: LinkedListQueueTests.Build<T>()
+  nameWithType.vb: LinkedListQueueTests.Build(Of T)()
+- uid: MoreStructures.Tests.Queues.QueueTests
+  name: QueueTests
+  href: api/MoreStructures.Tests.Queues.QueueTests.html
+  commentId: T:MoreStructures.Tests.Queues.QueueTests
+  fullName: MoreStructures.Tests.Queues.QueueTests
+  nameWithType: QueueTests
+- uid: MoreStructures.Tests.Queues.QueueTests.Build*
+  name: Build
+  href: api/MoreStructures.Tests.Queues.QueueTests.html#MoreStructures_Tests_Queues_QueueTests_Build_
+  commentId: Overload:MoreStructures.Tests.Queues.QueueTests.Build
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Queues.QueueTests.Build
+  nameWithType: QueueTests.Build
+- uid: MoreStructures.Tests.Queues.QueueTests.Build``1
+  name: Build<T>()
+  href: api/MoreStructures.Tests.Queues.QueueTests.html#MoreStructures_Tests_Queues_QueueTests_Build__1
+  commentId: M:MoreStructures.Tests.Queues.QueueTests.Build``1
+  name.vb: Build(Of T)()
+  fullName: MoreStructures.Tests.Queues.QueueTests.Build<T>()
+  fullName.vb: MoreStructures.Tests.Queues.QueueTests.Build(Of T)()
+  nameWithType: QueueTests.Build<T>()
+  nameWithType.vb: QueueTests.Build(Of T)()
+- uid: MoreStructures.Tests.Queues.QueueTests.Count_IsCorrect
+  name: Count_IsCorrect()
+  href: api/MoreStructures.Tests.Queues.QueueTests.html#MoreStructures_Tests_Queues_QueueTests_Count_IsCorrect
+  commentId: M:MoreStructures.Tests.Queues.QueueTests.Count_IsCorrect
+  fullName: MoreStructures.Tests.Queues.QueueTests.Count_IsCorrect()
+  nameWithType: QueueTests.Count_IsCorrect()
+- uid: MoreStructures.Tests.Queues.QueueTests.Count_IsCorrect*
+  name: Count_IsCorrect
+  href: api/MoreStructures.Tests.Queues.QueueTests.html#MoreStructures_Tests_Queues_QueueTests_Count_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.Queues.QueueTests.Count_IsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Queues.QueueTests.Count_IsCorrect
+  nameWithType: QueueTests.Count_IsCorrect
+- uid: MoreStructures.Tests.Queues.QueueTests.Dequeue_RaisesExceptionOnEmptyQueue
+  name: Dequeue_RaisesExceptionOnEmptyQueue()
+  href: api/MoreStructures.Tests.Queues.QueueTests.html#MoreStructures_Tests_Queues_QueueTests_Dequeue_RaisesExceptionOnEmptyQueue
+  commentId: M:MoreStructures.Tests.Queues.QueueTests.Dequeue_RaisesExceptionOnEmptyQueue
+  fullName: MoreStructures.Tests.Queues.QueueTests.Dequeue_RaisesExceptionOnEmptyQueue()
+  nameWithType: QueueTests.Dequeue_RaisesExceptionOnEmptyQueue()
+- uid: MoreStructures.Tests.Queues.QueueTests.Dequeue_RaisesExceptionOnEmptyQueue*
+  name: Dequeue_RaisesExceptionOnEmptyQueue
+  href: api/MoreStructures.Tests.Queues.QueueTests.html#MoreStructures_Tests_Queues_QueueTests_Dequeue_RaisesExceptionOnEmptyQueue_
+  commentId: Overload:MoreStructures.Tests.Queues.QueueTests.Dequeue_RaisesExceptionOnEmptyQueue
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Queues.QueueTests.Dequeue_RaisesExceptionOnEmptyQueue
+  nameWithType: QueueTests.Dequeue_RaisesExceptionOnEmptyQueue
+- uid: MoreStructures.Tests.Queues.QueueTests.EnqueueAndDequeue_AreCorrect
+  name: EnqueueAndDequeue_AreCorrect()
+  href: api/MoreStructures.Tests.Queues.QueueTests.html#MoreStructures_Tests_Queues_QueueTests_EnqueueAndDequeue_AreCorrect
+  commentId: M:MoreStructures.Tests.Queues.QueueTests.EnqueueAndDequeue_AreCorrect
+  fullName: MoreStructures.Tests.Queues.QueueTests.EnqueueAndDequeue_AreCorrect()
+  nameWithType: QueueTests.EnqueueAndDequeue_AreCorrect()
+- uid: MoreStructures.Tests.Queues.QueueTests.EnqueueAndDequeue_AreCorrect*
+  name: EnqueueAndDequeue_AreCorrect
+  href: api/MoreStructures.Tests.Queues.QueueTests.html#MoreStructures_Tests_Queues_QueueTests_EnqueueAndDequeue_AreCorrect_
+  commentId: Overload:MoreStructures.Tests.Queues.QueueTests.EnqueueAndDequeue_AreCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Queues.QueueTests.EnqueueAndDequeue_AreCorrect
+  nameWithType: QueueTests.EnqueueAndDequeue_AreCorrect
+- uid: MoreStructures.Tests.Queues.QueueTests.Peek_IsCorrect
+  name: Peek_IsCorrect()
+  href: api/MoreStructures.Tests.Queues.QueueTests.html#MoreStructures_Tests_Queues_QueueTests_Peek_IsCorrect
+  commentId: M:MoreStructures.Tests.Queues.QueueTests.Peek_IsCorrect
+  fullName: MoreStructures.Tests.Queues.QueueTests.Peek_IsCorrect()
+  nameWithType: QueueTests.Peek_IsCorrect()
+- uid: MoreStructures.Tests.Queues.QueueTests.Peek_IsCorrect*
+  name: Peek_IsCorrect
+  href: api/MoreStructures.Tests.Queues.QueueTests.html#MoreStructures_Tests_Queues_QueueTests_Peek_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.Queues.QueueTests.Peek_IsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Queues.QueueTests.Peek_IsCorrect
+  nameWithType: QueueTests.Peek_IsCorrect
+- uid: MoreStructures.Tests.Queues.QueueTests.Peek_RaisesExceptionOnEmptyQueue
+  name: Peek_RaisesExceptionOnEmptyQueue()
+  href: api/MoreStructures.Tests.Queues.QueueTests.html#MoreStructures_Tests_Queues_QueueTests_Peek_RaisesExceptionOnEmptyQueue
+  commentId: M:MoreStructures.Tests.Queues.QueueTests.Peek_RaisesExceptionOnEmptyQueue
+  fullName: MoreStructures.Tests.Queues.QueueTests.Peek_RaisesExceptionOnEmptyQueue()
+  nameWithType: QueueTests.Peek_RaisesExceptionOnEmptyQueue()
+- uid: MoreStructures.Tests.Queues.QueueTests.Peek_RaisesExceptionOnEmptyQueue*
+  name: Peek_RaisesExceptionOnEmptyQueue
+  href: api/MoreStructures.Tests.Queues.QueueTests.html#MoreStructures_Tests_Queues_QueueTests_Peek_RaisesExceptionOnEmptyQueue_
+  commentId: Overload:MoreStructures.Tests.Queues.QueueTests.Peek_RaisesExceptionOnEmptyQueue
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Queues.QueueTests.Peek_RaisesExceptionOnEmptyQueue
+  nameWithType: QueueTests.Peek_RaisesExceptionOnEmptyQueue
 - uid: MoreStructures.Tests.RecImmTrees
   name: MoreStructures.Tests.RecImmTrees
   href: api/MoreStructures.Tests.RecImmTrees.html
@@ -17713,13 +17988,13 @@ references:
   commentId: T:MoreStructures.Tests.Stack.StackTests
   fullName: MoreStructures.Tests.Stack.StackTests
   nameWithType: StackTests
-- uid: MoreStructures.Tests.Stack.StackTests.#ctor(Func{MoreStructures.Stack.IStack{System.Int32}})
+- uid: MoreStructures.Tests.Stack.StackTests.#ctor(Func{MoreStructures.Stacks.IStack{System.Int32}})
   name: StackTests(Func<IStack<Int32>>)
-  href: api/MoreStructures.Tests.Stack.StackTests.html#MoreStructures_Tests_Stack_StackTests__ctor_Func_MoreStructures_Stack_IStack_System_Int32___
-  commentId: M:MoreStructures.Tests.Stack.StackTests.#ctor(Func{MoreStructures.Stack.IStack{System.Int32}})
+  href: api/MoreStructures.Tests.Stack.StackTests.html#MoreStructures_Tests_Stack_StackTests__ctor_Func_MoreStructures_Stacks_IStack_System_Int32___
+  commentId: M:MoreStructures.Tests.Stack.StackTests.#ctor(Func{MoreStructures.Stacks.IStack{System.Int32}})
   name.vb: StackTests(Func(Of IStack(Of Int32)))
-  fullName: MoreStructures.Tests.Stack.StackTests.StackTests(Func<MoreStructures.Stack.IStack<System.Int32>>)
-  fullName.vb: MoreStructures.Tests.Stack.StackTests.StackTests(Func(Of MoreStructures.Stack.IStack(Of System.Int32)))
+  fullName: MoreStructures.Tests.Stack.StackTests.StackTests(Func<MoreStructures.Stacks.IStack<System.Int32>>)
+  fullName.vb: MoreStructures.Tests.Stack.StackTests.StackTests(Func(Of MoreStructures.Stacks.IStack(Of System.Int32)))
   nameWithType: StackTests.StackTests(Func<IStack<Int32>>)
   nameWithType.vb: StackTests.StackTests(Func(Of IStack(Of Int32)))
 - uid: MoreStructures.Tests.Stack.StackTests.#ctor*
