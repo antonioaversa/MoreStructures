@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.Stack;
+﻿using MoreStructures.Stacks;
 
 namespace MoreStructures.Tests.Stack;
 

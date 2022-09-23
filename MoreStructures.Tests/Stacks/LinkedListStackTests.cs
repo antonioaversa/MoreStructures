@@ -1,4 +1,4 @@
-﻿using MoreStructures.Stack;
+﻿using MoreStructures.Stacks;
 
 namespace MoreStructures.Tests.Stack;
 
