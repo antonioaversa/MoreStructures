@@ -79,7 +79,7 @@ public class LinkedListQueue<T> : IQueue<T>
     /// </remarks>
     public void Enqueue(T item)
     {
-        var node = new Node(item, Head); ;
+        var node = new Node(item, Head);
         if (Last == null)
         {
             Last = Head = node;
