@@ -8,7 +8,7 @@
 ///     <para id="advantages">
 ///     ADVANTAGES AND DISADVANTAGES
 ///     <br/>
-///     - The advantages an disadvantages of using a linked list over an array-based implementation are the same 
+///     - The advantages and disadvantages of using a linked list over an array-based implementation are the same 
 ///       described in <see cref="Stacks.LinkedListStack{T}"/>.
 ///     </para>
 /// </remarks>
