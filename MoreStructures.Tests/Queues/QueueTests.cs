@@ -91,4 +91,29 @@ public abstract class QueueTests
             i >= numberOfValues - numberOfRemainingItems && 
             i < numberOfValues));
     }
+
+    [TestMethod]
+    public void EnqueueAndDequeue_WorkWhenExecutedInBursts()
+    {
+        var queue = Build<(int, int)>();
+        for (var i = 0; i < 6; i++)
+        {
+            for (var k = i; k > 0; k--)
+            {
+                Assert.AreEqual(0, queue.Count);
+
+                for (var j = 0; j < Math.Pow(2, k); j++)
+                    queue.Enqueue((j, j));
+                for (var j = 0; j < Math.Pow(2, k - 1); j++)
+                    Assert.AreEqual(j, queue.Dequeue().Item1);
+                for (var j = 0; j < Math.Pow(2, k - 1); j++)
+                    queue.Enqueue((j, j));
+                for (var j = 0; j < Math.Pow(2, k); j++)
+                    Assert.AreEqual(j % (int)Math.Pow(2, k - 1), queue.Dequeue().Item1 % (int)Math.Pow(2, k - 1));
+
+                Assert.AreEqual(0, queue.Count);
+            }
+        }
+
+    }
 }

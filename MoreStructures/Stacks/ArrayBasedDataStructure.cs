@@ -43,7 +43,7 @@ public abstract class ArrayBasedDataStructure<T>
     /// <param name="increasingFactor">
     ///     <inheritdoc cref="IncreasingFactor" path="/summary"/>
     /// </param>
-    public ArrayBasedDataStructure(
+    protected ArrayBasedDataStructure(
         int capacity = DefaultInitialCapacity, double increasingFactor = DefaultIncreasingFactor)
     {
         if (capacity <= 0)
