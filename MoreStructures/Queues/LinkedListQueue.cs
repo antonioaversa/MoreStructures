@@ -9,7 +9,7 @@
 ///     ADVANTAGES AND DISADVANTAGES
 ///     <br/>
 ///     - The advantages and disadvantages of using a linked list over an array-based implementation are the same 
-///       described in <see cref="Stacks.LinkedListStack{T}"/>.
+///       as the ones described in <see cref="Stacks.LinkedListStack{T}"/>.
 ///     </para>
 /// </remarks>
 public class LinkedListQueue<T> : IQueue<T>
@@ -79,7 +79,7 @@ public class LinkedListQueue<T> : IQueue<T>
     /// </remarks>
     public void Enqueue(T item)
     {
-        var node = new Node(item, Head);
+        var node = new Node(item, null);
         if (Last == null)
         {
             Last = Head = node;

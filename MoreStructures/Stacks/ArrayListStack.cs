@@ -24,58 +24,19 @@
 ///       instantiating a larger array and performing a full copy from the old to the new one.
 ///       <br/>
 ///     - That means that insertion cost won't be O(1) all the time, but only in average, as amortized complexity over
-///       n operations (assuming that <see cref="IncreasingFactor"/> is left to its default value 
-///       <see cref="DefaultIncreasingFactor"/>, or chosen sensibly). 
+///       n operations (assuming that <see cref="ArrayBasedDataStructure{T}.IncreasingFactor"/> is left to its default
+///       value <see cref="ArrayBasedDataStructure{T}.DefaultIncreasingFactor"/>, or chosen sensibly). 
 ///       <br/>
 ///     - That can be a significant drawback in realtime systems where insertion cost has to be highly predictable and 
 ///       also very low.
 ///     </para>
 /// </remarks>
-public class ArrayListStack<T> : IStack<T>
+public class ArrayListStack<T> : ArrayBasedDataStructure<T>, IStack<T>
 {
-    /// <summary>
-    /// The default initial size of the array backing the stack.
-    /// </summary>
-    /// <remarks>
-    /// In an array initialized with capacity x, up to x executions of <see cref="Push(T)"/> can be done in constant 
-    /// time, with no need for array resizing.
-    /// </remarks>
-    public const int DefaultInitialCapacity = 16;
-
-    /// <summary>
-    /// The default value for <see cref="IncreasingFactor"/>.
-    /// </summary>
-    public const double DefaultIncreasingFactor = 2;
-
-    private T?[] Items { get; set; }
-
-    /// <summary>
-    /// The multiplicative factor used to resize the underlying array, every time it gets full.
-    /// </summary>
-    /// <remarks>
-    /// Required to be bigger than 1.0.
-    /// </remarks>
-    public double IncreasingFactor { get; }
-
-    /// <summary>
-    /// Initializes a stack with an array list of initial capacity equals to the provided <paramref name="capacity"/>.
-    /// </summary>
-    /// <param name="capacity">
-    /// The initial capacity of the backing array. If not specified, <see cref="DefaultInitialCapacity"/> is used.
-    /// </param>
-    /// <param name="increasingFactor">
-    ///     <inheritdoc cref="IncreasingFactor" path="/summary"/>
-    /// </param>
-    public ArrayListStack(int capacity = DefaultInitialCapacity, double increasingFactor = DefaultIncreasingFactor)
+    /// <inheritdoc/>
+    public ArrayListStack(int capacity = DefaultInitialCapacity, double increasingFactor = DefaultIncreasingFactor) 
+        : base(capacity, increasingFactor)
     {
-        if (capacity <= 0)
-            throw new ArgumentOutOfRangeException(nameof(capacity), "Must be positive.");
-
-        if (increasingFactor <= 1)
-            throw new ArgumentOutOfRangeException(nameof(increasingFactor), "Must be strictly bigger than 1.");
-
-        Items = new T[capacity];
-        IncreasingFactor = increasingFactor;
     }
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
@@ -104,14 +65,14 @@ public class ArrayListStack<T> : IStack<T>
 
     /// <inheritdoc path="//*[not(self::remarks)]"/>
     /// <remarks>
-    /// First, it retrieves the item of the last item set in the underlying array list (which is the one at index 
+    /// First, it retrieves the last item set into the underlying array list (which is the one at index 
     /// <see cref="Count"/> - 1).
     /// <br/>
     /// Then, it reset the value of the last item and decreases the <see cref="Count"/> by 1.
     /// <br/>
     /// Then, if the new <see cref="Count"/> is smaller than the current capacity by more than twice the 
-    /// <see cref="IncreasingFactor"/> compoundly (i.e. capacity * increasingFactor^2), the underlying array list is
-    /// resized to have a new capacity equal to the old capacity times the increasing factor.
+    /// <see cref="ArrayBasedDataStructure{T}.IncreasingFactor"/> compoundly (i.e. capacity * increasingFactor^2), the
+    /// underlying array list is resized to have a new capacity equal to the old capacity times the increasing factor.
     /// <br/>
     /// Finally, it returns the retrieved item as result.
     /// <br/>
@@ -138,7 +99,7 @@ public class ArrayListStack<T> : IStack<T>
     /// If there is available room in the underlying array, the new <paramref name="item"/> is stored in the first 
     /// available location and the <see cref="Count"/> is increased by 1.
     /// <br/>
-    /// Otherwise the underlying array is resized by the <see cref="IncreasingFactor"/>, as many times as needed to
+    /// Otherwise the underlying array is resized by the <see cref="ArrayBasedDataStructure{T}.IncreasingFactor"/>, to
     /// accomodate the new <paramref name="item"/>.
     /// <br/>
     /// Time and Space Complexity are O(1) if <see cref="Count"/> before insertion is strictly smaller than the current 
@@ -146,8 +107,8 @@ public class ArrayListStack<T> : IStack<T>
     /// <br/>
     /// Time and Space Complexity are O(n) if <see cref="Count"/> before insertion is equal to the current capacity.
     /// <br/>
-    /// If the <see cref="IncreasingFactor"/> is set to a sensible value (e.g. 2.0), the amortized cost over n 
-    /// insertions becomes O(1).
+    /// If the <see cref="ArrayBasedDataStructure{T}.IncreasingFactor"/> is set to a sensible value (e.g. 2.0), the 
+    /// amortized cost over n insertions becomes O(1).
     /// </remarks>
     public void Push(T item)
     {
@@ -156,13 +117,5 @@ public class ArrayListStack<T> : IStack<T>
 
         Items[Count] = item;
         Count++;
-    }
-
-    private void ResizeItems(double factor)
-    {
-        var oldItems = Items;
-        var newSize = (int)Math.Ceiling(oldItems.Length * factor);
-        Array.Resize(ref oldItems, newSize);
-        Items = oldItems;
     }
 }
