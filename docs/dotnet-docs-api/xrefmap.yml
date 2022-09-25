@@ -6286,6 +6286,117 @@ references:
   commentId: N:MoreStructures.Queues
   fullName: MoreStructures.Queues
   nameWithType: MoreStructures.Queues
+- uid: MoreStructures.Queues.ArrayListQueue`1
+  name: ArrayListQueue<T>
+  href: api/MoreStructures.Queues.ArrayListQueue-1.html
+  commentId: T:MoreStructures.Queues.ArrayListQueue`1
+  name.vb: ArrayListQueue(Of T)
+  fullName: MoreStructures.Queues.ArrayListQueue<T>
+  fullName.vb: MoreStructures.Queues.ArrayListQueue(Of T)
+  nameWithType: ArrayListQueue<T>
+  nameWithType.vb: ArrayListQueue(Of T)
+- uid: MoreStructures.Queues.ArrayListQueue`1.#ctor(System.Int32,System.Double)
+  name: ArrayListQueue(Int32, Double)
+  href: api/MoreStructures.Queues.ArrayListQueue-1.html#MoreStructures_Queues_ArrayListQueue_1__ctor_System_Int32_System_Double_
+  commentId: M:MoreStructures.Queues.ArrayListQueue`1.#ctor(System.Int32,System.Double)
+  fullName: MoreStructures.Queues.ArrayListQueue<T>.ArrayListQueue(System.Int32, System.Double)
+  fullName.vb: MoreStructures.Queues.ArrayListQueue(Of T).ArrayListQueue(System.Int32, System.Double)
+  nameWithType: ArrayListQueue<T>.ArrayListQueue(Int32, Double)
+  nameWithType.vb: ArrayListQueue(Of T).ArrayListQueue(Int32, Double)
+- uid: MoreStructures.Queues.ArrayListQueue`1.#ctor*
+  name: ArrayListQueue
+  href: api/MoreStructures.Queues.ArrayListQueue-1.html#MoreStructures_Queues_ArrayListQueue_1__ctor_
+  commentId: Overload:MoreStructures.Queues.ArrayListQueue`1.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Queues.ArrayListQueue<T>.ArrayListQueue
+  fullName.vb: MoreStructures.Queues.ArrayListQueue(Of T).ArrayListQueue
+  nameWithType: ArrayListQueue<T>.ArrayListQueue
+  nameWithType.vb: ArrayListQueue(Of T).ArrayListQueue
+- uid: MoreStructures.Queues.ArrayListQueue`1.Count
+  name: Count
+  href: api/MoreStructures.Queues.ArrayListQueue-1.html#MoreStructures_Queues_ArrayListQueue_1_Count
+  commentId: P:MoreStructures.Queues.ArrayListQueue`1.Count
+  fullName: MoreStructures.Queues.ArrayListQueue<T>.Count
+  fullName.vb: MoreStructures.Queues.ArrayListQueue(Of T).Count
+  nameWithType: ArrayListQueue<T>.Count
+  nameWithType.vb: ArrayListQueue(Of T).Count
+- uid: MoreStructures.Queues.ArrayListQueue`1.Count*
+  name: Count
+  href: api/MoreStructures.Queues.ArrayListQueue-1.html#MoreStructures_Queues_ArrayListQueue_1_Count_
+  commentId: Overload:MoreStructures.Queues.ArrayListQueue`1.Count
+  isSpec: "True"
+  fullName: MoreStructures.Queues.ArrayListQueue<T>.Count
+  fullName.vb: MoreStructures.Queues.ArrayListQueue(Of T).Count
+  nameWithType: ArrayListQueue<T>.Count
+  nameWithType.vb: ArrayListQueue(Of T).Count
+- uid: MoreStructures.Queues.ArrayListQueue`1.Dequeue
+  name: Dequeue()
+  href: api/MoreStructures.Queues.ArrayListQueue-1.html#MoreStructures_Queues_ArrayListQueue_1_Dequeue
+  commentId: M:MoreStructures.Queues.ArrayListQueue`1.Dequeue
+  fullName: MoreStructures.Queues.ArrayListQueue<T>.Dequeue()
+  fullName.vb: MoreStructures.Queues.ArrayListQueue(Of T).Dequeue()
+  nameWithType: ArrayListQueue<T>.Dequeue()
+  nameWithType.vb: ArrayListQueue(Of T).Dequeue()
+- uid: MoreStructures.Queues.ArrayListQueue`1.Dequeue*
+  name: Dequeue
+  href: api/MoreStructures.Queues.ArrayListQueue-1.html#MoreStructures_Queues_ArrayListQueue_1_Dequeue_
+  commentId: Overload:MoreStructures.Queues.ArrayListQueue`1.Dequeue
+  isSpec: "True"
+  fullName: MoreStructures.Queues.ArrayListQueue<T>.Dequeue
+  fullName.vb: MoreStructures.Queues.ArrayListQueue(Of T).Dequeue
+  nameWithType: ArrayListQueue<T>.Dequeue
+  nameWithType.vb: ArrayListQueue(Of T).Dequeue
+- uid: MoreStructures.Queues.ArrayListQueue`1.Enqueue(`0)
+  name: Enqueue(T)
+  href: api/MoreStructures.Queues.ArrayListQueue-1.html#MoreStructures_Queues_ArrayListQueue_1_Enqueue__0_
+  commentId: M:MoreStructures.Queues.ArrayListQueue`1.Enqueue(`0)
+  fullName: MoreStructures.Queues.ArrayListQueue<T>.Enqueue(T)
+  fullName.vb: MoreStructures.Queues.ArrayListQueue(Of T).Enqueue(T)
+  nameWithType: ArrayListQueue<T>.Enqueue(T)
+  nameWithType.vb: ArrayListQueue(Of T).Enqueue(T)
+- uid: MoreStructures.Queues.ArrayListQueue`1.Enqueue*
+  name: Enqueue
+  href: api/MoreStructures.Queues.ArrayListQueue-1.html#MoreStructures_Queues_ArrayListQueue_1_Enqueue_
+  commentId: Overload:MoreStructures.Queues.ArrayListQueue`1.Enqueue
+  isSpec: "True"
+  fullName: MoreStructures.Queues.ArrayListQueue<T>.Enqueue
+  fullName.vb: MoreStructures.Queues.ArrayListQueue(Of T).Enqueue
+  nameWithType: ArrayListQueue<T>.Enqueue
+  nameWithType.vb: ArrayListQueue(Of T).Enqueue
+- uid: MoreStructures.Queues.ArrayListQueue`1.Peek
+  name: Peek()
+  href: api/MoreStructures.Queues.ArrayListQueue-1.html#MoreStructures_Queues_ArrayListQueue_1_Peek
+  commentId: M:MoreStructures.Queues.ArrayListQueue`1.Peek
+  fullName: MoreStructures.Queues.ArrayListQueue<T>.Peek()
+  fullName.vb: MoreStructures.Queues.ArrayListQueue(Of T).Peek()
+  nameWithType: ArrayListQueue<T>.Peek()
+  nameWithType.vb: ArrayListQueue(Of T).Peek()
+- uid: MoreStructures.Queues.ArrayListQueue`1.Peek*
+  name: Peek
+  href: api/MoreStructures.Queues.ArrayListQueue-1.html#MoreStructures_Queues_ArrayListQueue_1_Peek_
+  commentId: Overload:MoreStructures.Queues.ArrayListQueue`1.Peek
+  isSpec: "True"
+  fullName: MoreStructures.Queues.ArrayListQueue<T>.Peek
+  fullName.vb: MoreStructures.Queues.ArrayListQueue(Of T).Peek
+  nameWithType: ArrayListQueue<T>.Peek
+  nameWithType.vb: ArrayListQueue(Of T).Peek
+- uid: MoreStructures.Queues.ArrayListQueue`1.ResizeItems(System.Double)
+  name: ResizeItems(Double)
+  href: api/MoreStructures.Queues.ArrayListQueue-1.html#MoreStructures_Queues_ArrayListQueue_1_ResizeItems_System_Double_
+  commentId: M:MoreStructures.Queues.ArrayListQueue`1.ResizeItems(System.Double)
+  fullName: MoreStructures.Queues.ArrayListQueue<T>.ResizeItems(System.Double)
+  fullName.vb: MoreStructures.Queues.ArrayListQueue(Of T).ResizeItems(System.Double)
+  nameWithType: ArrayListQueue<T>.ResizeItems(Double)
+  nameWithType.vb: ArrayListQueue(Of T).ResizeItems(Double)
+- uid: MoreStructures.Queues.ArrayListQueue`1.ResizeItems*
+  name: ResizeItems
+  href: api/MoreStructures.Queues.ArrayListQueue-1.html#MoreStructures_Queues_ArrayListQueue_1_ResizeItems_
+  commentId: Overload:MoreStructures.Queues.ArrayListQueue`1.ResizeItems
+  isSpec: "True"
+  fullName: MoreStructures.Queues.ArrayListQueue<T>.ResizeItems
+  fullName.vb: MoreStructures.Queues.ArrayListQueue(Of T).ResizeItems
+  nameWithType: ArrayListQueue<T>.ResizeItems
+  nameWithType.vb: ArrayListQueue(Of T).ResizeItems
 - uid: MoreStructures.Queues.IQueue`1
   name: IQueue<T>
   href: api/MoreStructures.Queues.IQueue-1.html
@@ -7599,6 +7710,99 @@ references:
   commentId: N:MoreStructures.Stacks
   fullName: MoreStructures.Stacks
   nameWithType: MoreStructures.Stacks
+- uid: MoreStructures.Stacks.ArrayBasedDataStructure`1
+  name: ArrayBasedDataStructure<T>
+  href: api/MoreStructures.Stacks.ArrayBasedDataStructure-1.html
+  commentId: T:MoreStructures.Stacks.ArrayBasedDataStructure`1
+  name.vb: ArrayBasedDataStructure(Of T)
+  fullName: MoreStructures.Stacks.ArrayBasedDataStructure<T>
+  fullName.vb: MoreStructures.Stacks.ArrayBasedDataStructure(Of T)
+  nameWithType: ArrayBasedDataStructure<T>
+  nameWithType.vb: ArrayBasedDataStructure(Of T)
+- uid: MoreStructures.Stacks.ArrayBasedDataStructure`1.#ctor(System.Int32,System.Double)
+  name: ArrayBasedDataStructure(Int32, Double)
+  href: api/MoreStructures.Stacks.ArrayBasedDataStructure-1.html#MoreStructures_Stacks_ArrayBasedDataStructure_1__ctor_System_Int32_System_Double_
+  commentId: M:MoreStructures.Stacks.ArrayBasedDataStructure`1.#ctor(System.Int32,System.Double)
+  fullName: MoreStructures.Stacks.ArrayBasedDataStructure<T>.ArrayBasedDataStructure(System.Int32, System.Double)
+  fullName.vb: MoreStructures.Stacks.ArrayBasedDataStructure(Of T).ArrayBasedDataStructure(System.Int32, System.Double)
+  nameWithType: ArrayBasedDataStructure<T>.ArrayBasedDataStructure(Int32, Double)
+  nameWithType.vb: ArrayBasedDataStructure(Of T).ArrayBasedDataStructure(Int32, Double)
+- uid: MoreStructures.Stacks.ArrayBasedDataStructure`1.#ctor*
+  name: ArrayBasedDataStructure
+  href: api/MoreStructures.Stacks.ArrayBasedDataStructure-1.html#MoreStructures_Stacks_ArrayBasedDataStructure_1__ctor_
+  commentId: Overload:MoreStructures.Stacks.ArrayBasedDataStructure`1.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Stacks.ArrayBasedDataStructure<T>.ArrayBasedDataStructure
+  fullName.vb: MoreStructures.Stacks.ArrayBasedDataStructure(Of T).ArrayBasedDataStructure
+  nameWithType: ArrayBasedDataStructure<T>.ArrayBasedDataStructure
+  nameWithType.vb: ArrayBasedDataStructure(Of T).ArrayBasedDataStructure
+- uid: MoreStructures.Stacks.ArrayBasedDataStructure`1.DefaultIncreasingFactor
+  name: DefaultIncreasingFactor
+  href: api/MoreStructures.Stacks.ArrayBasedDataStructure-1.html#MoreStructures_Stacks_ArrayBasedDataStructure_1_DefaultIncreasingFactor
+  commentId: F:MoreStructures.Stacks.ArrayBasedDataStructure`1.DefaultIncreasingFactor
+  fullName: MoreStructures.Stacks.ArrayBasedDataStructure<T>.DefaultIncreasingFactor
+  fullName.vb: MoreStructures.Stacks.ArrayBasedDataStructure(Of T).DefaultIncreasingFactor
+  nameWithType: ArrayBasedDataStructure<T>.DefaultIncreasingFactor
+  nameWithType.vb: ArrayBasedDataStructure(Of T).DefaultIncreasingFactor
+- uid: MoreStructures.Stacks.ArrayBasedDataStructure`1.DefaultInitialCapacity
+  name: DefaultInitialCapacity
+  href: api/MoreStructures.Stacks.ArrayBasedDataStructure-1.html#MoreStructures_Stacks_ArrayBasedDataStructure_1_DefaultInitialCapacity
+  commentId: F:MoreStructures.Stacks.ArrayBasedDataStructure`1.DefaultInitialCapacity
+  fullName: MoreStructures.Stacks.ArrayBasedDataStructure<T>.DefaultInitialCapacity
+  fullName.vb: MoreStructures.Stacks.ArrayBasedDataStructure(Of T).DefaultInitialCapacity
+  nameWithType: ArrayBasedDataStructure<T>.DefaultInitialCapacity
+  nameWithType.vb: ArrayBasedDataStructure(Of T).DefaultInitialCapacity
+- uid: MoreStructures.Stacks.ArrayBasedDataStructure`1.IncreasingFactor
+  name: IncreasingFactor
+  href: api/MoreStructures.Stacks.ArrayBasedDataStructure-1.html#MoreStructures_Stacks_ArrayBasedDataStructure_1_IncreasingFactor
+  commentId: P:MoreStructures.Stacks.ArrayBasedDataStructure`1.IncreasingFactor
+  fullName: MoreStructures.Stacks.ArrayBasedDataStructure<T>.IncreasingFactor
+  fullName.vb: MoreStructures.Stacks.ArrayBasedDataStructure(Of T).IncreasingFactor
+  nameWithType: ArrayBasedDataStructure<T>.IncreasingFactor
+  nameWithType.vb: ArrayBasedDataStructure(Of T).IncreasingFactor
+- uid: MoreStructures.Stacks.ArrayBasedDataStructure`1.IncreasingFactor*
+  name: IncreasingFactor
+  href: api/MoreStructures.Stacks.ArrayBasedDataStructure-1.html#MoreStructures_Stacks_ArrayBasedDataStructure_1_IncreasingFactor_
+  commentId: Overload:MoreStructures.Stacks.ArrayBasedDataStructure`1.IncreasingFactor
+  isSpec: "True"
+  fullName: MoreStructures.Stacks.ArrayBasedDataStructure<T>.IncreasingFactor
+  fullName.vb: MoreStructures.Stacks.ArrayBasedDataStructure(Of T).IncreasingFactor
+  nameWithType: ArrayBasedDataStructure<T>.IncreasingFactor
+  nameWithType.vb: ArrayBasedDataStructure(Of T).IncreasingFactor
+- uid: MoreStructures.Stacks.ArrayBasedDataStructure`1.Items
+  name: Items
+  href: api/MoreStructures.Stacks.ArrayBasedDataStructure-1.html#MoreStructures_Stacks_ArrayBasedDataStructure_1_Items
+  commentId: P:MoreStructures.Stacks.ArrayBasedDataStructure`1.Items
+  fullName: MoreStructures.Stacks.ArrayBasedDataStructure<T>.Items
+  fullName.vb: MoreStructures.Stacks.ArrayBasedDataStructure(Of T).Items
+  nameWithType: ArrayBasedDataStructure<T>.Items
+  nameWithType.vb: ArrayBasedDataStructure(Of T).Items
+- uid: MoreStructures.Stacks.ArrayBasedDataStructure`1.Items*
+  name: Items
+  href: api/MoreStructures.Stacks.ArrayBasedDataStructure-1.html#MoreStructures_Stacks_ArrayBasedDataStructure_1_Items_
+  commentId: Overload:MoreStructures.Stacks.ArrayBasedDataStructure`1.Items
+  isSpec: "True"
+  fullName: MoreStructures.Stacks.ArrayBasedDataStructure<T>.Items
+  fullName.vb: MoreStructures.Stacks.ArrayBasedDataStructure(Of T).Items
+  nameWithType: ArrayBasedDataStructure<T>.Items
+  nameWithType.vb: ArrayBasedDataStructure(Of T).Items
+- uid: MoreStructures.Stacks.ArrayBasedDataStructure`1.ResizeItems(System.Double)
+  name: ResizeItems(Double)
+  href: api/MoreStructures.Stacks.ArrayBasedDataStructure-1.html#MoreStructures_Stacks_ArrayBasedDataStructure_1_ResizeItems_System_Double_
+  commentId: M:MoreStructures.Stacks.ArrayBasedDataStructure`1.ResizeItems(System.Double)
+  fullName: MoreStructures.Stacks.ArrayBasedDataStructure<T>.ResizeItems(System.Double)
+  fullName.vb: MoreStructures.Stacks.ArrayBasedDataStructure(Of T).ResizeItems(System.Double)
+  nameWithType: ArrayBasedDataStructure<T>.ResizeItems(Double)
+  nameWithType.vb: ArrayBasedDataStructure(Of T).ResizeItems(Double)
+- uid: MoreStructures.Stacks.ArrayBasedDataStructure`1.ResizeItems*
+  name: ResizeItems
+  href: api/MoreStructures.Stacks.ArrayBasedDataStructure-1.html#MoreStructures_Stacks_ArrayBasedDataStructure_1_ResizeItems_
+  commentId: Overload:MoreStructures.Stacks.ArrayBasedDataStructure`1.ResizeItems
+  isSpec: "True"
+  fullName: MoreStructures.Stacks.ArrayBasedDataStructure<T>.ResizeItems
+  fullName.vb: MoreStructures.Stacks.ArrayBasedDataStructure(Of T).ResizeItems
+  nameWithType: ArrayBasedDataStructure<T>.ResizeItems
+  nameWithType.vb: ArrayBasedDataStructure(Of T).ResizeItems
 - uid: MoreStructures.Stacks.ArrayListStack`1
   name: ArrayListStack<T>
   href: api/MoreStructures.Stacks.ArrayListStack-1.html
@@ -7642,39 +7846,6 @@ references:
   fullName.vb: MoreStructures.Stacks.ArrayListStack(Of T).Count
   nameWithType: ArrayListStack<T>.Count
   nameWithType.vb: ArrayListStack(Of T).Count
-- uid: MoreStructures.Stacks.ArrayListStack`1.DefaultIncreasingFactor
-  name: DefaultIncreasingFactor
-  href: api/MoreStructures.Stacks.ArrayListStack-1.html#MoreStructures_Stacks_ArrayListStack_1_DefaultIncreasingFactor
-  commentId: F:MoreStructures.Stacks.ArrayListStack`1.DefaultIncreasingFactor
-  fullName: MoreStructures.Stacks.ArrayListStack<T>.DefaultIncreasingFactor
-  fullName.vb: MoreStructures.Stacks.ArrayListStack(Of T).DefaultIncreasingFactor
-  nameWithType: ArrayListStack<T>.DefaultIncreasingFactor
-  nameWithType.vb: ArrayListStack(Of T).DefaultIncreasingFactor
-- uid: MoreStructures.Stacks.ArrayListStack`1.DefaultInitialCapacity
-  name: DefaultInitialCapacity
-  href: api/MoreStructures.Stacks.ArrayListStack-1.html#MoreStructures_Stacks_ArrayListStack_1_DefaultInitialCapacity
-  commentId: F:MoreStructures.Stacks.ArrayListStack`1.DefaultInitialCapacity
-  fullName: MoreStructures.Stacks.ArrayListStack<T>.DefaultInitialCapacity
-  fullName.vb: MoreStructures.Stacks.ArrayListStack(Of T).DefaultInitialCapacity
-  nameWithType: ArrayListStack<T>.DefaultInitialCapacity
-  nameWithType.vb: ArrayListStack(Of T).DefaultInitialCapacity
-- uid: MoreStructures.Stacks.ArrayListStack`1.IncreasingFactor
-  name: IncreasingFactor
-  href: api/MoreStructures.Stacks.ArrayListStack-1.html#MoreStructures_Stacks_ArrayListStack_1_IncreasingFactor
-  commentId: P:MoreStructures.Stacks.ArrayListStack`1.IncreasingFactor
-  fullName: MoreStructures.Stacks.ArrayListStack<T>.IncreasingFactor
-  fullName.vb: MoreStructures.Stacks.ArrayListStack(Of T).IncreasingFactor
-  nameWithType: ArrayListStack<T>.IncreasingFactor
-  nameWithType.vb: ArrayListStack(Of T).IncreasingFactor
-- uid: MoreStructures.Stacks.ArrayListStack`1.IncreasingFactor*
-  name: IncreasingFactor
-  href: api/MoreStructures.Stacks.ArrayListStack-1.html#MoreStructures_Stacks_ArrayListStack_1_IncreasingFactor_
-  commentId: Overload:MoreStructures.Stacks.ArrayListStack`1.IncreasingFactor
-  isSpec: "True"
-  fullName: MoreStructures.Stacks.ArrayListStack<T>.IncreasingFactor
-  fullName.vb: MoreStructures.Stacks.ArrayListStack(Of T).IncreasingFactor
-  nameWithType: ArrayListStack<T>.IncreasingFactor
-  nameWithType.vb: ArrayListStack(Of T).IncreasingFactor
 - uid: MoreStructures.Stacks.ArrayListStack`1.Peek
   name: Peek()
   href: api/MoreStructures.Stacks.ArrayListStack-1.html#MoreStructures_Stacks_ArrayListStack_1_Peek
@@ -16252,6 +16423,28 @@ references:
   commentId: N:MoreStructures.Tests.Queues
   fullName: MoreStructures.Tests.Queues
   nameWithType: MoreStructures.Tests.Queues
+- uid: MoreStructures.Tests.Queues.ArrayListQueueTests
+  name: ArrayListQueueTests
+  href: api/MoreStructures.Tests.Queues.ArrayListQueueTests.html
+  commentId: T:MoreStructures.Tests.Queues.ArrayListQueueTests
+  fullName: MoreStructures.Tests.Queues.ArrayListQueueTests
+  nameWithType: ArrayListQueueTests
+- uid: MoreStructures.Tests.Queues.ArrayListQueueTests.Build*
+  name: Build
+  href: api/MoreStructures.Tests.Queues.ArrayListQueueTests.html#MoreStructures_Tests_Queues_ArrayListQueueTests_Build_
+  commentId: Overload:MoreStructures.Tests.Queues.ArrayListQueueTests.Build
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Queues.ArrayListQueueTests.Build
+  nameWithType: ArrayListQueueTests.Build
+- uid: MoreStructures.Tests.Queues.ArrayListQueueTests.Build``1
+  name: Build<T>()
+  href: api/MoreStructures.Tests.Queues.ArrayListQueueTests.html#MoreStructures_Tests_Queues_ArrayListQueueTests_Build__1
+  commentId: M:MoreStructures.Tests.Queues.ArrayListQueueTests.Build``1
+  name.vb: Build(Of T)()
+  fullName: MoreStructures.Tests.Queues.ArrayListQueueTests.Build<T>()
+  fullName.vb: MoreStructures.Tests.Queues.ArrayListQueueTests.Build(Of T)()
+  nameWithType: ArrayListQueueTests.Build<T>()
+  nameWithType.vb: ArrayListQueueTests.Build(Of T)()
 - uid: MoreStructures.Tests.Queues.LinkedListQueueTests
   name: LinkedListQueueTests
   href: api/MoreStructures.Tests.Queues.LinkedListQueueTests.html
@@ -16335,6 +16528,19 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Queues.QueueTests.EnqueueAndDequeue_AreCorrect
   nameWithType: QueueTests.EnqueueAndDequeue_AreCorrect
+- uid: MoreStructures.Tests.Queues.QueueTests.EnqueueAndDequeue_WorkWhenExecutedInBursts
+  name: EnqueueAndDequeue_WorkWhenExecutedInBursts()
+  href: api/MoreStructures.Tests.Queues.QueueTests.html#MoreStructures_Tests_Queues_QueueTests_EnqueueAndDequeue_WorkWhenExecutedInBursts
+  commentId: M:MoreStructures.Tests.Queues.QueueTests.EnqueueAndDequeue_WorkWhenExecutedInBursts
+  fullName: MoreStructures.Tests.Queues.QueueTests.EnqueueAndDequeue_WorkWhenExecutedInBursts()
+  nameWithType: QueueTests.EnqueueAndDequeue_WorkWhenExecutedInBursts()
+- uid: MoreStructures.Tests.Queues.QueueTests.EnqueueAndDequeue_WorkWhenExecutedInBursts*
+  name: EnqueueAndDequeue_WorkWhenExecutedInBursts
+  href: api/MoreStructures.Tests.Queues.QueueTests.html#MoreStructures_Tests_Queues_QueueTests_EnqueueAndDequeue_WorkWhenExecutedInBursts_
+  commentId: Overload:MoreStructures.Tests.Queues.QueueTests.EnqueueAndDequeue_WorkWhenExecutedInBursts
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Queues.QueueTests.EnqueueAndDequeue_WorkWhenExecutedInBursts
+  nameWithType: QueueTests.EnqueueAndDequeue_WorkWhenExecutedInBursts
 - uid: MoreStructures.Tests.Queues.QueueTests.Peek_IsCorrect
   name: Peek_IsCorrect()
   href: api/MoreStructures.Tests.Queues.QueueTests.html#MoreStructures_Tests_Queues_QueueTests_Peek_IsCorrect

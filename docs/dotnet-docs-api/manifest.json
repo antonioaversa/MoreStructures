@@ -1334,6 +1334,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Queues.ArrayListQueue-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Queues.ArrayListQueue-1.html",
+          "hash": "ulHpkQ9IS8ZfYR3Gw5u0VJOihAkH/pOXGImYCy80gmc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Queues.IQueue-1.yml",
       "output": {
         ".html": {
@@ -1350,7 +1362,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Queues.LinkedListQueue-1.html",
-          "hash": "QB5LV+ff8H9Hkrik+W/gF3k19xc5m6zanoXqKJm0Vlc="
+          "hash": "hjXYwtRbq0sVA76IaYeFyk9ZgH/lzyPZSIP8hGMbuxg="
         }
       },
       "is_incremental": false,
@@ -1362,7 +1374,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Queues.html",
-          "hash": "2am03SOR/usSgt/EptkbE3FyBZwIIG1Qgkk6SAMJHDc="
+          "hash": "+ZCaJ/snrdJp9+49/EdiO+RiDVx0QjSB36+FieKAeYA="
         }
       },
       "is_incremental": false,
@@ -1694,11 +1706,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Stacks.ArrayBasedDataStructure-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Stacks.ArrayBasedDataStructure-1.html",
+          "hash": "YQHMulsuVhyspY3N+QsfnwNsr0qW4eXziG9YluB3WTM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Stacks.ArrayListStack-1.yml",
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Stacks.ArrayListStack-1.html",
-          "hash": "3a9TWYQBQOivw8iNlkosg6lKEU3pvbyrkP5pQg3J30o="
+          "hash": "+sD+WBHLgpqK46e2Wfxg2ptd//a68GckL0DsGF9SjHo="
         }
       },
       "is_incremental": false,
@@ -1734,7 +1758,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Stacks.html",
-          "hash": "bcpP/6zRUaPkzBvSIl+GOD8kZrcZniTyWhj3mxK/1Bk="
+          "hash": "hrfCVCgOd/IYme5hEucVR5sGYiM28PF4+99czdlzwL8="
         }
       },
       "is_incremental": false,
@@ -4190,11 +4214,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Queues.ArrayListQueueTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Queues.ArrayListQueueTests.html",
+          "hash": "mtGBj1QEZURwuiLrWpjyDdzDFDVpldqT1mL69nQyrv0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Tests.Queues.LinkedListQueueTests.yml",
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Queues.LinkedListQueueTests.html",
-          "hash": "pQW1a3WJRoQI9H0yuvxYn7N14y/dEMN7jVqZDZaa8FE="
+          "hash": "+Zzwx0FlLdM7ybgRBeR8f75gOiGhRe/ksynWlHfv0YE="
         }
       },
       "is_incremental": false,
@@ -4206,7 +4242,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Queues.QueueTests.html",
-          "hash": "Z7hhejA53DD0uEK0PymN6tR//7aHxB9eqO6x3MG2fhM="
+          "hash": "vGdQMIlYPm7iV9LKF3PESoC4bYH6Ffrlx26XJfUf8aU="
         }
       },
       "is_incremental": false,
@@ -4218,7 +4254,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Queues.html",
-          "hash": "cBkf17iybAyQ0awtaaipAoYmBCJ+pBAQE/2xDaEpTpo="
+          "hash": "PntDM06p9MxK8GL7mKn+oHive1oalke15PU6D0VPoqc="
         }
       },
       "is_incremental": false,
@@ -5994,7 +6030,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "RXZOxMXXcaYBeT0MtX+/2GKfmtsMSPZ0rrTCEaZHagc="
+          "hash": "OiM8IsstTLb6LwarCxNZBh76XQCWIxGmRdNneHAuQb4="
         }
       },
       "is_incremental": false,
@@ -6069,7 +6105,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 497,
+          "total_file_count": 500,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
