@@ -73,11 +73,7 @@ public abstract class QueueTests
         foreach (var i in Enumerable.Range(0, numberOfValues))
         {
             queue.Enqueue(i);
-            if (i % 2 == 0)
-                Assert.AreEqual(j++, queue.Dequeue());
-            else if (i % 3 == 0)
-                Assert.AreEqual(j++, queue.Dequeue());
-            else if (i % 5 == 0)
+            if (i % 2 == 0 || i % 3 == 0 || i % 5 == 0)
                 Assert.AreEqual(j++, queue.Dequeue());
         }
 
@@ -114,6 +110,5 @@ public abstract class QueueTests
                 Assert.AreEqual(0, queue.Count);
             }
         }
-
     }
 }
