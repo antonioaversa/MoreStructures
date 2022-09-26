@@ -5,12 +5,11 @@ env:
   NUGET_SOURCE: https://api.nuget.org/v3/index.json
   NUGET_API_KEY: ${{secrets.NUGET_API_KEY}}
   DOTNET_CONFIGURATION: Release
-  PROJECT_NAME: MoreStructures
+  PROJECT_NAME: MoreStructures  
 
 on:
-  push:
-    branches: [ main ]
-    tags: [ v* ]
+  release:
+    types: [ published ]
 
 jobs:
 
@@ -27,12 +26,15 @@ jobs:
         
     - name: Build NuGet Package and Symbol Package
       run: |
+        PACKAGE_VERSION=${{ github.event.release.tag_name }}
+        echo "PACKAGE_VERSION=${PACKAGE_VERSION#v}" >> $GITHUB_ENV
         dotnet pack ${{ env.PROJECT_NAME }} \
           --output nupkgs \
-          --configuration ${{ env.DOTNET_CONFIGURATION }}
+          --configuration ${{ env.DOTNET_CONFIGURATION }} \
+          -p:PackageVersion=${{ env.PACKAGE_VERSION }}
 
     - name: Publish NuGet Package
-      run: |
+      run: |      
         dotnet nuget push ./nupkgs/*.nupkg \
           --source ${{ env.NUGET_SOURCE }} \
           --api-key ${{ env.NUGET_API_KEY }}
