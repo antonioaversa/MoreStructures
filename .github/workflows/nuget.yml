@@ -31,7 +31,7 @@ jobs:
         dotnet pack ${{ env.PROJECT_NAME }} \
           --output nupkgs \
           --configuration ${{ env.DOTNET_CONFIGURATION }} \
-          -p:PackageVersion=${{ env.PACKAGE_VERSION }}
+          -p:PackageVersion=${PACKAGE_VERSION}
 
     - name: Publish NuGet Package
       run: |      
