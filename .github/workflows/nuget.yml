@@ -1,0 +1,44 @@
+name: .NET Publication
+
+env:
+  DOTNET_VERSION: 6.0.x
+  NUGET_SOURCE: https://api.nuget.org/v3/index.json
+  NUGET_API_KEY: ${{secrets.NUGET_API_KEY}}
+  DOTNET_CONFIGURATION: Release
+  PROJECT_NAME: MoreStructures
+
+on:
+  push:
+    branches: [ main ]
+    tags: [ v* ]
+
+jobs:
+
+  # Publish on nuget.org
+  dotnet-publish:
+    name: NuGet Publication
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version:  ${{ env.DOTNET_VERSION }}
+        
+    - name: Build NuGet Package and Symbol Package
+      run: |
+        dotnet pack ${{ env.PROJECT_NAME }} \
+          --output nupkgs \
+          --configuration ${{ env.DOTNET_CONFIGURATION }}
+
+    - name: Publish NuGet Package
+      run: |
+        dotnet nuget push ./nupkgs/*.nupkg \
+          --source ${{ env.NUGET_SOURCE }} \
+          --api-key ${{ env.NUGET_API_KEY }}
+
+    - name: Publish NuGet Symbol Package
+      run: |
+        dotnet nuget push ./nupkgs/*.snupkg \
+          --source ${{ env.NUGET_SOURCE }} \
+          --api-key ${{ env.NUGET_API_KEY }}
