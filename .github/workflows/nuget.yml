@@ -26,12 +26,11 @@ jobs:
         
     - name: Build NuGet Package and Symbol Package
       run: |
-        PACKAGE_VERSION=${{ github.event.release.tag_name }}
-        echo "PACKAGE_VERSION=${PACKAGE_VERSION#v}" >> $GITHUB_ENV
+        TAG_NAME=${{ github.event.release.tag_name }}
         dotnet pack ${{ env.PROJECT_NAME }} \
           --output nupkgs \
           --configuration ${{ env.DOTNET_CONFIGURATION }} \
-          -p:PackageVersion=${PACKAGE_VERSION}
+          -p:PackageVersion=$(echo $TAG_NAME | sed -e 's/^v//')
 
     - name: Publish NuGet Package
       run: |      
