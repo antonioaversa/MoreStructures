@@ -6,7 +6,7 @@ MoreStructures is a library of classical algorithms and data structures, written
 
 Built for fun and education, it has been implemented with __readability__ and __maintenability__ in mind, minimizing external dependencies and trying to make it easy for everybody to modify and extend.
 
-All its public API are [documented](https://antonioaversa.github.io/MoreStructures/dotnet-docs-api/api/) and it is fully [unit tested](https://antonioaversa.github.io/MoreStructures/dotnet-tests-report/), with more than 2400 test scenarios and 100% line and branch coverage.
+All its public API are [documented](https://antonioaversa.github.io/MoreStructures/dotnet-docs-api/api/) and it is fully [unit tested](https://antonioaversa.github.io/MoreStructures/dotnet-tests-report/), with more than 2400 test scenarios and 100% line and branch [coverage](https://antonioaversa.github.io/MoreStructures/dotnet-coverage-report/).
 
 Data structures implemented include:
 - __Stacks__: array-list, linked-list;
@@ -35,6 +35,19 @@ Algorithms implemented include:
 - __Suffix Trees matching__: exact pattern matching, shortest non-shared substring;
 - __Suffix Tries construction__: naive;
 - __Suffix Tries matching__: exact pattern matching.
+
+## Install
+[![.NET6 Nuget](https://img.shields.io/nuget/v/MoreStructures)](https://www.nuget.org/packages/MoreStructures/)
+
+Via NuGet Package Manager:
+```console
+Install-Package MoreStructures
+```
+
+Via `dotnet` CLI:
+```console
+dotnet add package MoreStructures
+```
 
 ## Build
 ![.NET6 Build and Test](https://img.shields.io/github/workflow/status/antonioaversa/MoreStructures/.NET%20Build%20and%20Test)
