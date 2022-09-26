@@ -14,6 +14,54 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Benchmarks.BenchmarkUtilities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Benchmarks.BenchmarkUtilities.html",
+          "hash": "5ExChyY79KwIGLlEJ9Cpv/FGfpiGIsa3rOOT0ynvyNI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.html",
+          "hash": "OJBy7GWpYC9ExWOmX4cYuw4BRFBjoLQfB3oRTIhM8h0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Benchmarks.Lists.Sorting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Benchmarks.Lists.Sorting.html",
+          "hash": "59kmfMHyARmTy2ZnuBTqrZkwTNy3BclOTZnWGYlrl58="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Benchmarks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Benchmarks.html",
+          "hash": "aX69VpcAVGV/sH+/QrS5o5vd6ZLIl3Ez9E9tzl4PLVU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.BurrowsWheelerTransform.BWMatrix.yml",
       "output": {
         ".html": {
@@ -1046,11 +1094,47 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Lists.Sorting.InsertionSort.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Lists.Sorting.InsertionSort.html",
+          "hash": "Tr/IsY/1MCVPPVdQYdzFg67h3YU6OcVCtXlYBf85u8M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Lists.Sorting.SelectionSort.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Lists.Sorting.SelectionSort.html",
+          "hash": "ZKafd+iqtW8Hl4t0SL2PkBwAZIXYT40XHv/G3tryJXg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Lists.Sorting.ShellSort.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Lists.Sorting.ShellSort.html",
+          "hash": "pY8qY10zj4OEH46/RyFtwbIKzUJghuYtUo5lJjAEx28="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Lists.Sorting.yml",
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Lists.Sorting.html",
-          "hash": "vjbRzki7P9KPbI8Pz9TvRdgkw7RtI5ZarlNonJzyGog="
+          "hash": "Q8hiw7mciLBip4SAaTh5hhGKfHcLa5vbop0oxBNBqDs="
         }
       },
       "is_incremental": false,
@@ -3666,7 +3750,79 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html",
-          "hash": "gLOTLkm26L/MEsG/qxnXljhUN0dDh9EBssrKpBYTsC4="
+          "hash": "8q49kqNDWuYla3DRfI6aON7qYTl6yMF1u0a11tTgLTA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.InsertionSortTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.InsertionSortTests.html",
+          "hash": "+1TY504OEKSpGxv2TLDRh4gpxB6DVuI+FbmIurHO0+A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.SelectionSortTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.SelectionSortTests.html",
+          "hash": "ErOvKGv9+redGcncHsWZVLpHnr1v8TDks2elI18xRuY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsCiura01.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsCiura01.html",
+          "hash": "E1AZ1h9mdvejLpSpbDonDJ9EHfRmiO7EH9s015RylY4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPositiveInts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPositiveInts.html",
+          "hash": "KFChWTz90sylRKX0gVOlAj9/tjVKm+KeqrIsrmiNTY4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPowerOf2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPowerOf2.html",
+          "hash": "m1P27m81S4tA39mAk9p1+KfDW0idvGQ7cMqLWXwa15Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsSedgewick82.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsSedgewick82.html",
+          "hash": "JRPljm5SulbezoKc7UKb9X4nU5F6r7TFyA30EKUVcoQ="
         }
       },
       "is_incremental": false,
@@ -3678,7 +3834,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Lists.Sorting.html",
-          "hash": "Z0VABEIm6xa66I69Gw5CDHXqv0L+RRuVS7ygozi+qDY="
+          "hash": "wzH+K1fTMK1p4S83Kb8MhFb8stSsws6ufUDCEdbJAhI="
         }
       },
       "is_incremental": false,
@@ -6030,7 +6186,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "OiM8IsstTLb6LwarCxNZBh76XQCWIxGmRdNneHAuQb4="
+          "hash": "zae8HGcrlHVAawrV8Kz4pl+WX6aL2UkwhmwaafuFVHs="
         }
       },
       "is_incremental": false,
@@ -6105,7 +6261,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 500,
+          "total_file_count": 513,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

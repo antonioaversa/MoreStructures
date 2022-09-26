@@ -7,6 +7,140 @@ references:
   commentId: N:MoreStructures
   fullName: MoreStructures
   nameWithType: MoreStructures
+- uid: MoreStructures.Benchmarks
+  name: MoreStructures.Benchmarks
+  href: api/MoreStructures.Benchmarks.html
+  commentId: N:MoreStructures.Benchmarks
+  fullName: MoreStructures.Benchmarks
+  nameWithType: MoreStructures.Benchmarks
+- uid: MoreStructures.Benchmarks.BenchmarkUtilities
+  name: BenchmarkUtilities
+  href: api/MoreStructures.Benchmarks.BenchmarkUtilities.html
+  commentId: T:MoreStructures.Benchmarks.BenchmarkUtilities
+  fullName: MoreStructures.Benchmarks.BenchmarkUtilities
+  nameWithType: BenchmarkUtilities
+- uid: MoreStructures.Benchmarks.BenchmarkUtilities.TestDataRandomIntsFrom0To1000
+  name: TestDataRandomIntsFrom0To1000
+  href: api/MoreStructures.Benchmarks.BenchmarkUtilities.html#MoreStructures_Benchmarks_BenchmarkUtilities_TestDataRandomIntsFrom0To1000
+  commentId: F:MoreStructures.Benchmarks.BenchmarkUtilities.TestDataRandomIntsFrom0To1000
+  fullName: MoreStructures.Benchmarks.BenchmarkUtilities.TestDataRandomIntsFrom0To1000
+  nameWithType: BenchmarkUtilities.TestDataRandomIntsFrom0To1000
+- uid: MoreStructures.Benchmarks.Lists.Sorting
+  name: MoreStructures.Benchmarks.Lists.Sorting
+  href: api/MoreStructures.Benchmarks.Lists.Sorting.html
+  commentId: N:MoreStructures.Benchmarks.Lists.Sorting
+  fullName: MoreStructures.Benchmarks.Lists.Sorting
+  nameWithType: MoreStructures.Benchmarks.Lists.Sorting
+- uid: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences
+  name: ShellSortGapSequences
+  href: api/MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.html
+  commentId: T:MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences
+  fullName: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences
+  nameWithType: ShellSortGapSequences
+- uid: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.#ctor
+  name: ShellSortGapSequences()
+  href: api/MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.html#MoreStructures_Benchmarks_Lists_Sorting_ShellSortGapSequences__ctor
+  commentId: M:MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.#ctor
+  fullName: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.ShellSortGapSequences()
+  nameWithType: ShellSortGapSequences.ShellSortGapSequences()
+- uid: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.#ctor*
+  name: ShellSortGapSequences
+  href: api/MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.html#MoreStructures_Benchmarks_Lists_Sorting_ShellSortGapSequences__ctor_
+  commentId: Overload:MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.ShellSortGapSequences
+  nameWithType: ShellSortGapSequences.ShellSortGapSequences
+- uid: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsCiura01
+  name: GapsCiura01()
+  href: api/MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.html#MoreStructures_Benchmarks_Lists_Sorting_ShellSortGapSequences_GapsCiura01
+  commentId: M:MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsCiura01
+  fullName: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsCiura01()
+  nameWithType: ShellSortGapSequences.GapsCiura01()
+- uid: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsCiura01*
+  name: GapsCiura01
+  href: api/MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.html#MoreStructures_Benchmarks_Lists_Sorting_ShellSortGapSequences_GapsCiura01_
+  commentId: Overload:MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsCiura01
+  isSpec: "True"
+  fullName: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsCiura01
+  nameWithType: ShellSortGapSequences.GapsCiura01
+- uid: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsPositiveInts
+  name: GapsPositiveInts()
+  href: api/MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.html#MoreStructures_Benchmarks_Lists_Sorting_ShellSortGapSequences_GapsPositiveInts
+  commentId: M:MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsPositiveInts
+  fullName: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsPositiveInts()
+  nameWithType: ShellSortGapSequences.GapsPositiveInts()
+- uid: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsPositiveInts*
+  name: GapsPositiveInts
+  href: api/MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.html#MoreStructures_Benchmarks_Lists_Sorting_ShellSortGapSequences_GapsPositiveInts_
+  commentId: Overload:MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsPositiveInts
+  isSpec: "True"
+  fullName: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsPositiveInts
+  nameWithType: ShellSortGapSequences.GapsPositiveInts
+- uid: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsPowerOf2
+  name: GapsPowerOf2()
+  href: api/MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.html#MoreStructures_Benchmarks_Lists_Sorting_ShellSortGapSequences_GapsPowerOf2
+  commentId: M:MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsPowerOf2
+  fullName: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsPowerOf2()
+  nameWithType: ShellSortGapSequences.GapsPowerOf2()
+- uid: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsPowerOf2*
+  name: GapsPowerOf2
+  href: api/MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.html#MoreStructures_Benchmarks_Lists_Sorting_ShellSortGapSequences_GapsPowerOf2_
+  commentId: Overload:MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsPowerOf2
+  isSpec: "True"
+  fullName: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsPowerOf2
+  nameWithType: ShellSortGapSequences.GapsPowerOf2
+- uid: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsSedgewick82
+  name: GapsSedgewick82()
+  href: api/MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.html#MoreStructures_Benchmarks_Lists_Sorting_ShellSortGapSequences_GapsSedgewick82
+  commentId: M:MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsSedgewick82
+  fullName: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsSedgewick82()
+  nameWithType: ShellSortGapSequences.GapsSedgewick82()
+- uid: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsSedgewick82*
+  name: GapsSedgewick82
+  href: api/MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.html#MoreStructures_Benchmarks_Lists_Sorting_ShellSortGapSequences_GapsSedgewick82_
+  commentId: Overload:MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsSedgewick82
+  isSpec: "True"
+  fullName: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsSedgewick82
+  nameWithType: ShellSortGapSequences.GapsSedgewick82
+- uid: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsSingleInsertionSort
+  name: GapsSingleInsertionSort()
+  href: api/MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.html#MoreStructures_Benchmarks_Lists_Sorting_ShellSortGapSequences_GapsSingleInsertionSort
+  commentId: M:MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsSingleInsertionSort
+  fullName: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsSingleInsertionSort()
+  nameWithType: ShellSortGapSequences.GapsSingleInsertionSort()
+- uid: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsSingleInsertionSort*
+  name: GapsSingleInsertionSort
+  href: api/MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.html#MoreStructures_Benchmarks_Lists_Sorting_ShellSortGapSequences_GapsSingleInsertionSort_
+  commentId: Overload:MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsSingleInsertionSort
+  isSpec: "True"
+  fullName: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.GapsSingleInsertionSort
+  nameWithType: ShellSortGapSequences.GapsSingleInsertionSort
+- uid: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.NumberOfChunks
+  name: NumberOfChunks
+  href: api/MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.html#MoreStructures_Benchmarks_Lists_Sorting_ShellSortGapSequences_NumberOfChunks
+  commentId: P:MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.NumberOfChunks
+  fullName: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.NumberOfChunks
+  nameWithType: ShellSortGapSequences.NumberOfChunks
+- uid: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.NumberOfChunks*
+  name: NumberOfChunks
+  href: api/MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.html#MoreStructures_Benchmarks_Lists_Sorting_ShellSortGapSequences_NumberOfChunks_
+  commentId: Overload:MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.NumberOfChunks
+  isSpec: "True"
+  fullName: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.NumberOfChunks
+  nameWithType: ShellSortGapSequences.NumberOfChunks
+- uid: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.NumberOfItems
+  name: NumberOfItems
+  href: api/MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.html#MoreStructures_Benchmarks_Lists_Sorting_ShellSortGapSequences_NumberOfItems
+  commentId: P:MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.NumberOfItems
+  fullName: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.NumberOfItems
+  nameWithType: ShellSortGapSequences.NumberOfItems
+- uid: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.NumberOfItems*
+  name: NumberOfItems
+  href: api/MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.html#MoreStructures_Benchmarks_Lists_Sorting_ShellSortGapSequences_NumberOfItems_
+  commentId: Overload:MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.NumberOfItems
+  isSpec: "True"
+  fullName: MoreStructures.Benchmarks.Lists.Sorting.ShellSortGapSequences.NumberOfItems
+  nameWithType: ShellSortGapSequences.NumberOfItems
 - uid: MoreStructures.BurrowsWheelerTransform
   name: MoreStructures.BurrowsWheelerTransform
   href: api/MoreStructures.BurrowsWheelerTransform.html
@@ -3913,12 +4047,134 @@ references:
   fullName.vb: MoreStructures.Lists.Sorting.IInPlaceSorting.Sort(Of T)(IList(Of T), IComparer(Of T))
   nameWithType: IInPlaceSorting.Sort<T>(IList<T>, IComparer<T>)
   nameWithType.vb: IInPlaceSorting.Sort(Of T)(IList(Of T), IComparer(Of T))
+- uid: MoreStructures.Lists.Sorting.InsertionSort
+  name: InsertionSort
+  href: api/MoreStructures.Lists.Sorting.InsertionSort.html
+  commentId: T:MoreStructures.Lists.Sorting.InsertionSort
+  fullName: MoreStructures.Lists.Sorting.InsertionSort
+  nameWithType: InsertionSort
+- uid: MoreStructures.Lists.Sorting.InsertionSort.Sort*
+  name: Sort
+  href: api/MoreStructures.Lists.Sorting.InsertionSort.html#MoreStructures_Lists_Sorting_InsertionSort_Sort_
+  commentId: Overload:MoreStructures.Lists.Sorting.InsertionSort.Sort
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Sorting.InsertionSort.Sort
+  nameWithType: InsertionSort.Sort
+- uid: MoreStructures.Lists.Sorting.InsertionSort.Sort``1(IList{``0})
+  name: Sort<T>(IList<T>)
+  href: api/MoreStructures.Lists.Sorting.InsertionSort.html#MoreStructures_Lists_Sorting_InsertionSort_Sort__1_IList___0__
+  commentId: M:MoreStructures.Lists.Sorting.InsertionSort.Sort``1(IList{``0})
+  name.vb: Sort(Of T)(IList(Of T))
+  fullName: MoreStructures.Lists.Sorting.InsertionSort.Sort<T>(IList<T>)
+  fullName.vb: MoreStructures.Lists.Sorting.InsertionSort.Sort(Of T)(IList(Of T))
+  nameWithType: InsertionSort.Sort<T>(IList<T>)
+  nameWithType.vb: InsertionSort.Sort(Of T)(IList(Of T))
+- uid: MoreStructures.Lists.Sorting.InsertionSort.Sort``1(IList{``0},IComparer{``0})
+  name: Sort<T>(IList<T>, IComparer<T>)
+  href: api/MoreStructures.Lists.Sorting.InsertionSort.html#MoreStructures_Lists_Sorting_InsertionSort_Sort__1_IList___0__IComparer___0__
+  commentId: M:MoreStructures.Lists.Sorting.InsertionSort.Sort``1(IList{``0},IComparer{``0})
+  name.vb: Sort(Of T)(IList(Of T), IComparer(Of T))
+  fullName: MoreStructures.Lists.Sorting.InsertionSort.Sort<T>(IList<T>, IComparer<T>)
+  fullName.vb: MoreStructures.Lists.Sorting.InsertionSort.Sort(Of T)(IList(Of T), IComparer(Of T))
+  nameWithType: InsertionSort.Sort<T>(IList<T>, IComparer<T>)
+  nameWithType.vb: InsertionSort.Sort(Of T)(IList(Of T), IComparer(Of T))
 - uid: MoreStructures.Lists.Sorting.IStableSortingAlgorithm
   name: IStableSortingAlgorithm
   href: api/MoreStructures.Lists.Sorting.IStableSortingAlgorithm.html
   commentId: T:MoreStructures.Lists.Sorting.IStableSortingAlgorithm
   fullName: MoreStructures.Lists.Sorting.IStableSortingAlgorithm
   nameWithType: IStableSortingAlgorithm
+- uid: MoreStructures.Lists.Sorting.SelectionSort
+  name: SelectionSort
+  href: api/MoreStructures.Lists.Sorting.SelectionSort.html
+  commentId: T:MoreStructures.Lists.Sorting.SelectionSort
+  fullName: MoreStructures.Lists.Sorting.SelectionSort
+  nameWithType: SelectionSort
+- uid: MoreStructures.Lists.Sorting.SelectionSort.Sort*
+  name: Sort
+  href: api/MoreStructures.Lists.Sorting.SelectionSort.html#MoreStructures_Lists_Sorting_SelectionSort_Sort_
+  commentId: Overload:MoreStructures.Lists.Sorting.SelectionSort.Sort
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Sorting.SelectionSort.Sort
+  nameWithType: SelectionSort.Sort
+- uid: MoreStructures.Lists.Sorting.SelectionSort.Sort``1(IList{``0})
+  name: Sort<T>(IList<T>)
+  href: api/MoreStructures.Lists.Sorting.SelectionSort.html#MoreStructures_Lists_Sorting_SelectionSort_Sort__1_IList___0__
+  commentId: M:MoreStructures.Lists.Sorting.SelectionSort.Sort``1(IList{``0})
+  name.vb: Sort(Of T)(IList(Of T))
+  fullName: MoreStructures.Lists.Sorting.SelectionSort.Sort<T>(IList<T>)
+  fullName.vb: MoreStructures.Lists.Sorting.SelectionSort.Sort(Of T)(IList(Of T))
+  nameWithType: SelectionSort.Sort<T>(IList<T>)
+  nameWithType.vb: SelectionSort.Sort(Of T)(IList(Of T))
+- uid: MoreStructures.Lists.Sorting.SelectionSort.Sort``1(IList{``0},IComparer{``0})
+  name: Sort<T>(IList<T>, IComparer<T>)
+  href: api/MoreStructures.Lists.Sorting.SelectionSort.html#MoreStructures_Lists_Sorting_SelectionSort_Sort__1_IList___0__IComparer___0__
+  commentId: M:MoreStructures.Lists.Sorting.SelectionSort.Sort``1(IList{``0},IComparer{``0})
+  name.vb: Sort(Of T)(IList(Of T), IComparer(Of T))
+  fullName: MoreStructures.Lists.Sorting.SelectionSort.Sort<T>(IList<T>, IComparer<T>)
+  fullName.vb: MoreStructures.Lists.Sorting.SelectionSort.Sort(Of T)(IList(Of T), IComparer(Of T))
+  nameWithType: SelectionSort.Sort<T>(IList<T>, IComparer<T>)
+  nameWithType.vb: SelectionSort.Sort(Of T)(IList(Of T), IComparer(Of T))
+- uid: MoreStructures.Lists.Sorting.ShellSort
+  name: ShellSort
+  href: api/MoreStructures.Lists.Sorting.ShellSort.html
+  commentId: T:MoreStructures.Lists.Sorting.ShellSort
+  fullName: MoreStructures.Lists.Sorting.ShellSort
+  nameWithType: ShellSort
+- uid: MoreStructures.Lists.Sorting.ShellSort.#ctor(IEnumerable{System.Int32})
+  name: ShellSort(IEnumerable<Int32>)
+  href: api/MoreStructures.Lists.Sorting.ShellSort.html#MoreStructures_Lists_Sorting_ShellSort__ctor_IEnumerable_System_Int32__
+  commentId: M:MoreStructures.Lists.Sorting.ShellSort.#ctor(IEnumerable{System.Int32})
+  name.vb: ShellSort(IEnumerable(Of Int32))
+  fullName: MoreStructures.Lists.Sorting.ShellSort.ShellSort(IEnumerable<System.Int32>)
+  fullName.vb: MoreStructures.Lists.Sorting.ShellSort.ShellSort(IEnumerable(Of System.Int32))
+  nameWithType: ShellSort.ShellSort(IEnumerable<Int32>)
+  nameWithType.vb: ShellSort.ShellSort(IEnumerable(Of Int32))
+- uid: MoreStructures.Lists.Sorting.ShellSort.#ctor*
+  name: ShellSort
+  href: api/MoreStructures.Lists.Sorting.ShellSort.html#MoreStructures_Lists_Sorting_ShellSort__ctor_
+  commentId: Overload:MoreStructures.Lists.Sorting.ShellSort.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Sorting.ShellSort.ShellSort
+  nameWithType: ShellSort.ShellSort
+- uid: MoreStructures.Lists.Sorting.ShellSort.GapGenerator
+  name: GapGenerator
+  href: api/MoreStructures.Lists.Sorting.ShellSort.html#MoreStructures_Lists_Sorting_ShellSort_GapGenerator
+  commentId: P:MoreStructures.Lists.Sorting.ShellSort.GapGenerator
+  fullName: MoreStructures.Lists.Sorting.ShellSort.GapGenerator
+  nameWithType: ShellSort.GapGenerator
+- uid: MoreStructures.Lists.Sorting.ShellSort.GapGenerator*
+  name: GapGenerator
+  href: api/MoreStructures.Lists.Sorting.ShellSort.html#MoreStructures_Lists_Sorting_ShellSort_GapGenerator_
+  commentId: Overload:MoreStructures.Lists.Sorting.ShellSort.GapGenerator
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Sorting.ShellSort.GapGenerator
+  nameWithType: ShellSort.GapGenerator
+- uid: MoreStructures.Lists.Sorting.ShellSort.Sort*
+  name: Sort
+  href: api/MoreStructures.Lists.Sorting.ShellSort.html#MoreStructures_Lists_Sorting_ShellSort_Sort_
+  commentId: Overload:MoreStructures.Lists.Sorting.ShellSort.Sort
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Sorting.ShellSort.Sort
+  nameWithType: ShellSort.Sort
+- uid: MoreStructures.Lists.Sorting.ShellSort.Sort``1(IList{``0})
+  name: Sort<T>(IList<T>)
+  href: api/MoreStructures.Lists.Sorting.ShellSort.html#MoreStructures_Lists_Sorting_ShellSort_Sort__1_IList___0__
+  commentId: M:MoreStructures.Lists.Sorting.ShellSort.Sort``1(IList{``0})
+  name.vb: Sort(Of T)(IList(Of T))
+  fullName: MoreStructures.Lists.Sorting.ShellSort.Sort<T>(IList<T>)
+  fullName.vb: MoreStructures.Lists.Sorting.ShellSort.Sort(Of T)(IList(Of T))
+  nameWithType: ShellSort.Sort<T>(IList<T>)
+  nameWithType.vb: ShellSort.Sort(Of T)(IList(Of T))
+- uid: MoreStructures.Lists.Sorting.ShellSort.Sort``1(IList{``0},IComparer{``0})
+  name: Sort<T>(IList<T>, IComparer<T>)
+  href: api/MoreStructures.Lists.Sorting.ShellSort.html#MoreStructures_Lists_Sorting_ShellSort_Sort__1_IList___0__IComparer___0__
+  commentId: M:MoreStructures.Lists.Sorting.ShellSort.Sort``1(IList{``0},IComparer{``0})
+  name.vb: Sort(Of T)(IList(Of T), IComparer(Of T))
+  fullName: MoreStructures.Lists.Sorting.ShellSort.Sort<T>(IList<T>, IComparer<T>)
+  fullName.vb: MoreStructures.Lists.Sorting.ShellSort.Sort(Of T)(IList(Of T), IComparer(Of T))
+  nameWithType: ShellSort.Sort<T>(IList<T>, IComparer<T>)
+  nameWithType.vb: ShellSort.Sort(Of T)(IList(Of T), IComparer(Of T))
 - uid: MoreStructures.PriorityQueues
   name: MoreStructures.PriorityQueues
   href: api/MoreStructures.PriorityQueues.html
@@ -14172,6 +14428,172 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sorter
   nameWithType: InPlaceSortingTests.Sorter
+- uid: MoreStructures.Tests.Lists.Sorting.InsertionSortTests
+  name: InsertionSortTests
+  href: api/MoreStructures.Tests.Lists.Sorting.InsertionSortTests.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.InsertionSortTests
+  fullName: MoreStructures.Tests.Lists.Sorting.InsertionSortTests
+  nameWithType: InsertionSortTests
+- uid: MoreStructures.Tests.Lists.Sorting.InsertionSortTests.#ctor
+  name: InsertionSortTests()
+  href: api/MoreStructures.Tests.Lists.Sorting.InsertionSortTests.html#MoreStructures_Tests_Lists_Sorting_InsertionSortTests__ctor
+  commentId: M:MoreStructures.Tests.Lists.Sorting.InsertionSortTests.#ctor
+  fullName: MoreStructures.Tests.Lists.Sorting.InsertionSortTests.InsertionSortTests()
+  nameWithType: InsertionSortTests.InsertionSortTests()
+- uid: MoreStructures.Tests.Lists.Sorting.InsertionSortTests.#ctor*
+  name: InsertionSortTests
+  href: api/MoreStructures.Tests.Lists.Sorting.InsertionSortTests.html#MoreStructures_Tests_Lists_Sorting_InsertionSortTests__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InsertionSortTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.InsertionSortTests.InsertionSortTests
+  nameWithType: InsertionSortTests.InsertionSortTests
+- uid: MoreStructures.Tests.Lists.Sorting.SelectionSortTests
+  name: SelectionSortTests
+  href: api/MoreStructures.Tests.Lists.Sorting.SelectionSortTests.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.SelectionSortTests
+  fullName: MoreStructures.Tests.Lists.Sorting.SelectionSortTests
+  nameWithType: SelectionSortTests
+- uid: MoreStructures.Tests.Lists.Sorting.SelectionSortTests.#ctor
+  name: SelectionSortTests()
+  href: api/MoreStructures.Tests.Lists.Sorting.SelectionSortTests.html#MoreStructures_Tests_Lists_Sorting_SelectionSortTests__ctor
+  commentId: M:MoreStructures.Tests.Lists.Sorting.SelectionSortTests.#ctor
+  fullName: MoreStructures.Tests.Lists.Sorting.SelectionSortTests.SelectionSortTests()
+  nameWithType: SelectionSortTests.SelectionSortTests()
+- uid: MoreStructures.Tests.Lists.Sorting.SelectionSortTests.#ctor*
+  name: SelectionSortTests
+  href: api/MoreStructures.Tests.Lists.Sorting.SelectionSortTests.html#MoreStructures_Tests_Lists_Sorting_SelectionSortTests__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.SelectionSortTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.SelectionSortTests.SelectionSortTests
+  nameWithType: SelectionSortTests.SelectionSortTests
+- uid: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsCiura01
+  name: ShellSortTests_GapsCiura01
+  href: api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsCiura01.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsCiura01
+  fullName: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsCiura01
+  nameWithType: ShellSortTests_GapsCiura01
+- uid: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsCiura01.#ctor
+  name: ShellSortTests_GapsCiura01()
+  href: api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsCiura01.html#MoreStructures_Tests_Lists_Sorting_ShellSortTests_GapsCiura01__ctor
+  commentId: M:MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsCiura01.#ctor
+  fullName: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsCiura01.ShellSortTests_GapsCiura01()
+  nameWithType: ShellSortTests_GapsCiura01.ShellSortTests_GapsCiura01()
+- uid: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsCiura01.#ctor*
+  name: ShellSortTests_GapsCiura01
+  href: api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsCiura01.html#MoreStructures_Tests_Lists_Sorting_ShellSortTests_GapsCiura01__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsCiura01.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsCiura01.ShellSortTests_GapsCiura01
+  nameWithType: ShellSortTests_GapsCiura01.ShellSortTests_GapsCiura01
+- uid: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsCiura01.Sequence
+  name: Sequence()
+  href: api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsCiura01.html#MoreStructures_Tests_Lists_Sorting_ShellSortTests_GapsCiura01_Sequence
+  commentId: M:MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsCiura01.Sequence
+  fullName: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsCiura01.Sequence()
+  nameWithType: ShellSortTests_GapsCiura01.Sequence()
+- uid: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsCiura01.Sequence*
+  name: Sequence
+  href: api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsCiura01.html#MoreStructures_Tests_Lists_Sorting_ShellSortTests_GapsCiura01_Sequence_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsCiura01.Sequence
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsCiura01.Sequence
+  nameWithType: ShellSortTests_GapsCiura01.Sequence
+- uid: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPositiveInts
+  name: ShellSortTests_GapsPositiveInts
+  href: api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPositiveInts.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPositiveInts
+  fullName: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPositiveInts
+  nameWithType: ShellSortTests_GapsPositiveInts
+- uid: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPositiveInts.#ctor
+  name: ShellSortTests_GapsPositiveInts()
+  href: api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPositiveInts.html#MoreStructures_Tests_Lists_Sorting_ShellSortTests_GapsPositiveInts__ctor
+  commentId: M:MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPositiveInts.#ctor
+  fullName: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPositiveInts.ShellSortTests_GapsPositiveInts()
+  nameWithType: ShellSortTests_GapsPositiveInts.ShellSortTests_GapsPositiveInts()
+- uid: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPositiveInts.#ctor*
+  name: ShellSortTests_GapsPositiveInts
+  href: api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPositiveInts.html#MoreStructures_Tests_Lists_Sorting_ShellSortTests_GapsPositiveInts__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPositiveInts.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPositiveInts.ShellSortTests_GapsPositiveInts
+  nameWithType: ShellSortTests_GapsPositiveInts.ShellSortTests_GapsPositiveInts
+- uid: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPositiveInts.Sequence
+  name: Sequence()
+  href: api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPositiveInts.html#MoreStructures_Tests_Lists_Sorting_ShellSortTests_GapsPositiveInts_Sequence
+  commentId: M:MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPositiveInts.Sequence
+  fullName: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPositiveInts.Sequence()
+  nameWithType: ShellSortTests_GapsPositiveInts.Sequence()
+- uid: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPositiveInts.Sequence*
+  name: Sequence
+  href: api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPositiveInts.html#MoreStructures_Tests_Lists_Sorting_ShellSortTests_GapsPositiveInts_Sequence_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPositiveInts.Sequence
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPositiveInts.Sequence
+  nameWithType: ShellSortTests_GapsPositiveInts.Sequence
+- uid: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPowerOf2
+  name: ShellSortTests_GapsPowerOf2
+  href: api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPowerOf2.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPowerOf2
+  fullName: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPowerOf2
+  nameWithType: ShellSortTests_GapsPowerOf2
+- uid: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPowerOf2.#ctor
+  name: ShellSortTests_GapsPowerOf2()
+  href: api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPowerOf2.html#MoreStructures_Tests_Lists_Sorting_ShellSortTests_GapsPowerOf2__ctor
+  commentId: M:MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPowerOf2.#ctor
+  fullName: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPowerOf2.ShellSortTests_GapsPowerOf2()
+  nameWithType: ShellSortTests_GapsPowerOf2.ShellSortTests_GapsPowerOf2()
+- uid: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPowerOf2.#ctor*
+  name: ShellSortTests_GapsPowerOf2
+  href: api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPowerOf2.html#MoreStructures_Tests_Lists_Sorting_ShellSortTests_GapsPowerOf2__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPowerOf2.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPowerOf2.ShellSortTests_GapsPowerOf2
+  nameWithType: ShellSortTests_GapsPowerOf2.ShellSortTests_GapsPowerOf2
+- uid: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPowerOf2.Sequence
+  name: Sequence()
+  href: api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPowerOf2.html#MoreStructures_Tests_Lists_Sorting_ShellSortTests_GapsPowerOf2_Sequence
+  commentId: M:MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPowerOf2.Sequence
+  fullName: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPowerOf2.Sequence()
+  nameWithType: ShellSortTests_GapsPowerOf2.Sequence()
+- uid: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPowerOf2.Sequence*
+  name: Sequence
+  href: api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPowerOf2.html#MoreStructures_Tests_Lists_Sorting_ShellSortTests_GapsPowerOf2_Sequence_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPowerOf2.Sequence
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPowerOf2.Sequence
+  nameWithType: ShellSortTests_GapsPowerOf2.Sequence
+- uid: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsSedgewick82
+  name: ShellSortTests_GapsSedgewick82
+  href: api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsSedgewick82.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsSedgewick82
+  fullName: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsSedgewick82
+  nameWithType: ShellSortTests_GapsSedgewick82
+- uid: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsSedgewick82.#ctor
+  name: ShellSortTests_GapsSedgewick82()
+  href: api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsSedgewick82.html#MoreStructures_Tests_Lists_Sorting_ShellSortTests_GapsSedgewick82__ctor
+  commentId: M:MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsSedgewick82.#ctor
+  fullName: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsSedgewick82.ShellSortTests_GapsSedgewick82()
+  nameWithType: ShellSortTests_GapsSedgewick82.ShellSortTests_GapsSedgewick82()
+- uid: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsSedgewick82.#ctor*
+  name: ShellSortTests_GapsSedgewick82
+  href: api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsSedgewick82.html#MoreStructures_Tests_Lists_Sorting_ShellSortTests_GapsSedgewick82__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsSedgewick82.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsSedgewick82.ShellSortTests_GapsSedgewick82
+  nameWithType: ShellSortTests_GapsSedgewick82.ShellSortTests_GapsSedgewick82
+- uid: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsSedgewick82.Sequence
+  name: Sequence()
+  href: api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsSedgewick82.html#MoreStructures_Tests_Lists_Sorting_ShellSortTests_GapsSedgewick82_Sequence
+  commentId: M:MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsSedgewick82.Sequence
+  fullName: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsSedgewick82.Sequence()
+  nameWithType: ShellSortTests_GapsSedgewick82.Sequence()
+- uid: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsSedgewick82.Sequence*
+  name: Sequence
+  href: api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsSedgewick82.html#MoreStructures_Tests_Lists_Sorting_ShellSortTests_GapsSedgewick82_Sequence_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsSedgewick82.Sequence
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsSedgewick82.Sequence
+  nameWithType: ShellSortTests_GapsSedgewick82.Sequence
 - uid: MoreStructures.Tests.PriorityQueues
   name: MoreStructures.Tests.PriorityQueues
   href: api/MoreStructures.Tests.PriorityQueues.html

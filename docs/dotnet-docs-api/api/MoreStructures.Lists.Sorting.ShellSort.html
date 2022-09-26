@@ -1,0 +1,435 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ShellSort
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ShellSort
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.Lists.Sorting.ShellSort">
+  
+  
+  <h1 id="MoreStructures_Lists_Sorting_ShellSort" data-uid="MoreStructures.Lists.Sorting.ShellSort" class="text-break">Class ShellSort
+  </h1>
+  <div class="markdown level0 summary"><p>An <a class="xref" href="MoreStructures.Lists.Sorting.IInPlaceSorting.html">IInPlaceSorting</a> implementation based on Shell sort.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ShellSort</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.Lists.Sorting.IInPlaceSorting.html">IInPlaceSorting</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.Lists.Sorting.html">MoreStructures.Lists.Sorting</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_Lists_Sorting_ShellSort_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ShellSort : IInPlaceSorting</code></pre>
+  </div>
+  <h5 id="MoreStructures_Lists_Sorting_ShellSort_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+ADVANTAGES AND DISADVANTAGES
+<br>
+- Compared to <a class="xref" href="MoreStructures.Lists.Sorting.InsertionSort.html">InsertionSort</a>, it has better runtime, because it reduces the total number of 
+  swapping operations performed.
+<br>
+- That comes the cost of its complexity, which is higher than <a class="xref" href="MoreStructures.Lists.Sorting.InsertionSort.html">InsertionSort</a> since Shell sort 
+requires execution of <a class="xref" href="MoreStructures.Lists.Sorting.InsertionSort.html">InsertionSort</a> on multiple interleaved lists.
+<br>
+- However, its performance heavily depends on the chosen gap sequence, with best cases being O(n * log(n)) and 
+worst cases being O(n^2), depending on the gap sequence.
+<br>
+- Its average complexity characterization is to this day an open problem, and its lack of predictability is
+one of its main drawbacks. 
+<br>
+- Unlike <a class="xref" href="MoreStructures.Lists.Sorting.InsertionSort.html">InsertionSort</a>, it is not stable, i.e. it doesn&apos;t preserve the order of items in the 
+input with the same sorting key. This is due to the fact that the algorithm performs sorting of the subset of
+the input with the highest gap first, potentially skipping first occurrences of some of the duplicated items.
+</p>
+<p>
+ALGORITHM
+<br>
+- This sorting algorithm runs the basic insertion sort algorithm, multiple times and with multiple steps.
+<br>
+- In a standard insertion sort, comparisons and swapping at the iteration i of the main loop of the algorithm 
+are always made between items at consecutive locations, going back until the i-th item is placed in order
+w.r.t. all preceding items.
+<br>
+- That means that large items appearing early in the input will be swapped many times, before reaching their 
+final position in the input.
+<br>
+- For example the items 5 to 9 in the input [5, 6, 7, 8, 9, 0, 1, 2, 3, 4] are swapped to make room for the
+items 0 to 4. After 4 iterations, the iteration with i = 5 places 0 correctly by shifting from 9 all the way 
+down to 5. Same with all following iterations, with a total of 5 * 5 = 25 swapping operations before the 
+value 9 gets into its final place.
+<br>
+- The idea behind Shell sort is that it gives the chance to bigger values to be placed closer to their final 
+position, faster than insertion sort. 
+<br>
+- It does that by sorting via insertion sort not just once and for the entire input, but multiple times and on
+different sub-sets of it. Sub-sets are appropriately chosen, in a way that bigger values require less 
+swapping before getting to their final place.
+<br>
+- The first sub-set of indexes sorted is defined by all locations of the input which are at a relative distance
+equal to the gap. The gap is first set at its highest value and then decreased at every iteration.
+<br>
+- Gap sequence is externally provided. For example, if the sequence provided is the powers of 2, the actual gap
+sequence used for an input of 10 items is [8, 4, 2, 1] (8 is the highest power of 2 smaller than 10).
+<br>
+- After the 1st run of insertion sort (gap = 8), the list is [2, 6, 7, 8, 9, 0, 1, 5, 3, 4].
+<br>
+- After the 2nd run of insertion sort (gap = 4), the list is [2, 6, 7, 8, 4, 0, 1, 5, 3, 9].
+<br>
+- As visible from the example, after only 3 comparisons, both the smallest and biggest items are already in 
+place.
+</p>
+<p>
+COMPLEXITY
+<br>
+- Space Complexity is always O(1), since the algorithm runs in place.
+<br>
+- Time Complexity, however, is strictly connected to the gap sequence selected.
+<br>
+- Worst-case performance is O(n^2), assuming worst-case gap sequence, and O(n * log^2(n)), assuming best-case
+gap sequence.
+<br>
+- Best-case performance is O(n * log^2(n)), assuming worst-case gap sequence, and O(n * log(n)), assuming
+best-case gap sequence.
+<br>
+- Best-case performance is still O(n * log(n)) for most gap sequences in general.
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Lists_Sorting_ShellSort__ctor_IEnumerable_System_Int32__.md&amp;value=---%0Auid%3A%20MoreStructures.Lists.Sorting.ShellSort.%23ctor(IEnumerable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Sorting/ShellSort.cs/#L91">View Source</a>
+  </span>
+  <a id="MoreStructures_Lists_Sorting_ShellSort__ctor_" data-uid="MoreStructures.Lists.Sorting.ShellSort.#ctor*"></a>
+  <h4 id="MoreStructures_Lists_Sorting_ShellSort__ctor_IEnumerable_System_Int32__" data-uid="MoreStructures.Lists.Sorting.ShellSort.#ctor(IEnumerable{System.Int32})">ShellSort(IEnumerable&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ShellSort(IEnumerable&lt;int&gt; gapGenerator)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">gapGenerator</span></td>
+        <td><p><inheritdoc cref="P:MoreStructures.Lists.Sorting.ShellSort.GapGenerator" path="/summary"></inheritdoc></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Lists_Sorting_ShellSort_GapGenerator.md&amp;value=---%0Auid%3A%20MoreStructures.Lists.Sorting.ShellSort.GapGenerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Sorting/ShellSort.cs/#L85">View Source</a>
+  </span>
+  <a id="MoreStructures_Lists_Sorting_ShellSort_GapGenerator_" data-uid="MoreStructures.Lists.Sorting.ShellSort.GapGenerator*"></a>
+  <h4 id="MoreStructures_Lists_Sorting_ShellSort_GapGenerator" data-uid="MoreStructures.Lists.Sorting.ShellSort.GapGenerator">GapGenerator</h4>
+  <div class="markdown level1 summary"><p>A generator of a monotonically strictly increasing sequence of <span class="xref">System.Int32</span>, each representing a gap
+between locations of the input.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IEnumerable&lt;int&gt; GapGenerator { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Lists_Sorting_ShellSort_Sort__1_IList___0__.md&amp;value=---%0Auid%3A%20MoreStructures.Lists.Sorting.ShellSort.Sort%60%601(IList%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Sorting/ShellSort.cs/#L106">View Source</a>
+  </span>
+  <a id="MoreStructures_Lists_Sorting_ShellSort_Sort_" data-uid="MoreStructures.Lists.Sorting.ShellSort.Sort*"></a>
+  <h4 id="MoreStructures_Lists_Sorting_ShellSort_Sort__1_IList___0__" data-uid="MoreStructures.Lists.Sorting.ShellSort.Sort``1(IList{``0})">Sort&lt;T&gt;(IList&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p><inheritdoc></inheritdoc>
+<br>
+Uses the Shell sort algorithm with the default comparer for <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>, given by
+<see cref="!:Comparer&lt;T>.Default"></see>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Sort&lt;T&gt;(IList&lt;T&gt; list)
+    where T : IComparable&lt;T&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IList</span>&lt;T&gt;</td>
+        <td><span class="parametername">list</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Lists_Sorting_ShellSort_Sort__1_IList___0___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.Lists.Sorting.ShellSort"></inheritdoc></p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Lists_Sorting_ShellSort_Sort__1_IList___0__IComparer___0__.md&amp;value=---%0Auid%3A%20MoreStructures.Lists.Sorting.ShellSort.Sort%60%601(IList%7B%60%600%7D%2CIComparer%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Sorting/ShellSort.cs/#L118">View Source</a>
+  </span>
+  <a id="MoreStructures_Lists_Sorting_ShellSort_Sort_" data-uid="MoreStructures.Lists.Sorting.ShellSort.Sort*"></a>
+  <h4 id="MoreStructures_Lists_Sorting_ShellSort_Sort__1_IList___0__IComparer___0__" data-uid="MoreStructures.Lists.Sorting.ShellSort.Sort``1(IList{``0},IComparer{``0})">Sort&lt;T&gt;(IList&lt;T&gt;, IComparer&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p><inheritdoc></inheritdoc>
+<br>
+Uses the Shell sort algorithm with the specified <code data-dev-comment-type="paramref" class="paramref">comparer</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Sort&lt;T&gt;(IList&lt;T&gt; list, IComparer&lt;T&gt; comparer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IList</span>&lt;T&gt;</td>
+        <td><span class="parametername">list</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">IComparer</span>&lt;T&gt;</td>
+        <td><span class="parametername">comparer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Lists_Sorting_ShellSort_Sort__1_IList___0__IComparer___0___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.Lists.Sorting.ShellSort"></inheritdoc></p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.Lists.Sorting.IInPlaceSorting.html">IInPlaceSorting</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Lists_Sorting_ShellSort.md&amp;value=---%0Auid%3A%20MoreStructures.Lists.Sorting.ShellSort%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Sorting/ShellSort.cs/#L79" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
