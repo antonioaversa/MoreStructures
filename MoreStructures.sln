@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoreStructures", "MoreStruc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoreStructures.Tests", "MoreStructures.Tests\MoreStructures.Tests.csproj", "{68CC0053-F8B8-4CAC-985A-0EC1EBD02A8F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreStructures.Benchmarks", "MoreStructures.Benchmarks\MoreStructures.Benchmarks.csproj", "{28501C1C-EABC-454E-BC7C-8DC9EF9CDF2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{68CC0053-F8B8-4CAC-985A-0EC1EBD02A8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68CC0053-F8B8-4CAC-985A-0EC1EBD02A8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68CC0053-F8B8-4CAC-985A-0EC1EBD02A8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28501C1C-EABC-454E-BC7C-8DC9EF9CDF2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28501C1C-EABC-454E-BC7C-8DC9EF9CDF2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28501C1C-EABC-454E-BC7C-8DC9EF9CDF2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28501C1C-EABC-454E-BC7C-8DC9EF9CDF2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
