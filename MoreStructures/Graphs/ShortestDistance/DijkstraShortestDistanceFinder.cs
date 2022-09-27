@@ -106,7 +106,7 @@ public class DijkstraShortestDistanceFinder : IShortestDistanceFinder
     /// <inheritdoc cref="DijkstraShortestDistanceFinder"/>.
     /// <param name="priorityQueueBuilder">
     /// A builder of a <see cref="IUpdatablePriorityQueue{T}"/> of <see cref="int"/> values, used by the algorithm to
-    /// store edges with priority from the closest to the start to the farthest.
+    /// store edges with priority from the closest to the start, to the farthest.
     /// </param>
     public DijkstraShortestDistanceFinder(Func<IUpdatablePriorityQueue<int>> priorityQueueBuilder)
     {
