@@ -41,6 +41,7 @@ jobs:
           --api-key ${{ env.NUGET_API_KEY }}
 
     - name: Publish to github.com
+      run: |
         dotnet nuget push ./nupkgs/*.nupkg \
           --source ${{ env.GITHUB_NUGET_SOURCE }} \
           --api-key ${{ env.GITHUB_NUGET_API_KEY }}
