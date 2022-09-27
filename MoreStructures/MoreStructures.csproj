@@ -7,7 +7,6 @@
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
 	<EmbedAllSources>True</EmbedAllSources>
-	<DebugType>embedded</DebugType>
     <Description>MoreStructures is a library of classical algorithms and data structures, written 100% in (safe, managed) C# 10, for .NET 6 and above.
 Data structures - Stacks, Queues, Priority Queues, Disjoint Sets, Trees, Graphs, Suffix Trees, Suffix Tries.
 Algorithms - Strings sorting and matching. Lists searching and sorting. Trees augmentation and visit. 
