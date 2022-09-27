@@ -5,7 +5,7 @@ env:
   NUGET_SOURCE: https://api.nuget.org/v3/index.json
   NUGET_API_KEY: ${{secrets.NUGET_API_KEY}}
   GITHUB_NUGET_SOURCE: https://nuget.pkg.github.com/antonioaversa/index.json
-  GITHUB_NUGET_API_KEY: ${{secrets.GITHUB_TOKEN}}
+  GITHUB_NUGET_API_KEY: ${{secrets.PAT_GITHUB_PACKAGE}}
   DOTNET_CONFIGURATION: Release
   PROJECT_NAME: MoreStructures  
 
