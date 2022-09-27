@@ -6,17 +6,18 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <Description>
-		MoreStructures is a library of classical algorithms and data structures, written 100% in (safe, managed) C# 10,
-		for .NET 6 and above.
-		Data structures - Stacks, Queues, Priority Queues, Disjoint Sets, Trees, Graphs, Suffix Trees, Suffix Tries.
-		Algorithms - Strings sorting and matching. Lists searching and sorting. Trees augmentation and visit. 
-		Graphs: visits, minimum spanning tree, shortest distance, shortest path, topological sorting, strongly 
-		connected components. Suffix Trees construction and matching. Suffix Tries construction and matching.
+	<EmbedAllSources>True</EmbedAllSources>
+	<DebugType>embedded</DebugType>
+    <Description>MoreStructures is a library of classical algorithms and data structures, written 100% in (safe, managed) C# 10, for .NET 6 and above.
+Data structures - Stacks, Queues, Priority Queues, Disjoint Sets, Trees, Graphs, Suffix Trees, Suffix Tries.
+Algorithms - Strings sorting and matching. Lists searching and sorting. Trees augmentation and visit. 
+Graphs: visits, minimum spanning tree, shortest distance, shortest path, topological sorting, strongly connected components. 
+Suffix Trees and Tries construction and matching.
 	</Description>
     <PackageProjectUrl>https://github.com/antonioaversa/MoreStructures</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/antonioaversa/MoreStructures</RepositoryUrl>
+	<PublishRepositoryUrl>True</PublishRepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>
 		algorithms, data-structures, structures, data, lists, trees, graphs, stacks, queues, priority queues, heaps, 
@@ -29,6 +30,7 @@
   <PropertyGroup>
   	<IncludeSymbols>true</IncludeSymbols>
   	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  	<PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -37,6 +39,11 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+	<Deterministic>True</Deterministic>
+    <ContinuousIntegrationBuild>True</ContinuousIntegrationBuild>
   </PropertyGroup>
 
   <ItemGroup>
@@ -49,12 +56,20 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Include="E:\Workspace\MoreStructures\MoreStructures\.editorconfig" />
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+	<None Include=".\.editorconfig" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="morelinq" Version="3.3.2" />
   </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>	
 
   <ItemGroup>
     <EditorConfigFiles Remove="E:\Workspace\MoreStructures\MoreStructures\.editorconfig" />

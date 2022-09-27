@@ -38,6 +38,7 @@ Algorithms implemented include:
 
 ## Install
 [![.NET6 Nuget](https://img.shields.io/nuget/v/MoreStructures)](https://www.nuget.org/packages/MoreStructures/)
+[![.NET6 Nuget Pre](https://img.shields.io/nuget/vpre/MoreStructures)](https://www.nuget.org/packages/MoreStructures/)
 
 Via NuGet Package Manager:
 ```console
