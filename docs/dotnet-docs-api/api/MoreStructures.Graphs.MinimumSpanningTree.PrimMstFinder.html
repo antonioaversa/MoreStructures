@@ -1,0 +1,324 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PrimMstFinder
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PrimMstFinder
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder">
+  
+  
+  <h1 id="MoreStructures_Graphs_MinimumSpanningTree_PrimMstFinder" data-uid="MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder" class="text-break">Class PrimMstFinder
+  </h1>
+  <div class="markdown level0 summary"><p>A <a class="xref" href="MoreStructures.Graphs.MinimumSpanningTree.IMstFinder.html">IMstFinder</a> implementing Prim's algorithm.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">PrimMstFinder</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.Graphs.MinimumSpanningTree.IMstFinder.html">IMstFinder</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.Graphs.MinimumSpanningTree.html">MoreStructures.Graphs.MinimumSpanningTree</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_Graphs_MinimumSpanningTree_PrimMstFinder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PrimMstFinder : IMstFinder</code></pre>
+  </div>
+  <h5 id="MoreStructures_Graphs_MinimumSpanningTree_PrimMstFinder_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+ALGORITHM
+<br>
+- The algorithm closely resembles Dijkstra&apos;s algorithm for shortest distance finding. It is a gready algorithm
+  selecting a vertex and the corresponding edge at each iteration, and doing that efficiently thanks to the use
+  of a priority queue and a dictionary of mappings from vertices to edges of shortest distance.
+<br>
+- The core idea is to split the vertices of the graph into two sets: the set A of vertices already added to the 
+Minimum Spanning Tree MST, and the set NA of vertices which haven&apos;t been added yet to the MST.
+<br>
+- At the beginning an arbitrary vertex (id = 0), is included in A and set as last added vertex LA, to bootstrap
+the process. The set of edges representing the Minimum Spanning Tree, MST, is set to an empty set. The
+dictionary mapping vertices to shortest distance edges BP is set to an empty dictionary. A min priority queue
+of vertices, PQ, is also instantiated.
+<br>
+- After that the main loop of the algorithm is executed, adding a single vertex LA to A and a single edge to 
+MST at each iteration, and stopping only when A contains v vertices (i.e. when MST is spanning the entire 
+graph).
+<br>
+- At each iteration, all edges e, outgoing from and incoming into LA, and connecting LA to a vertex V not yet 
+in A are checked.
+<br>
+- If the distance of e, d(e), is strictly smaller than the smallest known edge for V, BP[V], BP is updated and
+pushed or updated in PQ.
+<br>
+- After all edges of LA are checked, the vertex V&apos; connected to A via an edge E&apos; of shortest distance is 
+extracted from PQ, assigned to LA and added to A. E&apos; is added to MST.
+<br>
+- After v - 1 iterations, MST is returned as result.
+</p>
+<p>
+COMPLEXITY
+<br>
+- All data structures initialization (A, NA, PQ, BP, MST) takes constant amount of time.
+<br>
+- During the v - 1 iterations, all edges are visited at most twice: once from the source side and once from the
+target side.
+<br>
+- While checking and updating BP and A take a constant amount of time, pushing or updating the priority in PQ
+has a runtime which depends on the specific implementation of <a class="xref" href="MoreStructures.PriorityQueues.IUpdatablePriorityQueue-1.html">IUpdatablePriorityQueue&lt;T&gt;</a> used.
+<br>
+- The analysis of the impact of the priority queue on the overall performance of the algorithm is similar to 
+the one done in <a class="xref" href="MoreStructures.Graphs.ShortestDistance.DijkstraShortestDistanceFinder.html">DijkstraShortestDistanceFinder</a>. Check that analysis for
+further details.
+<br>
+- In conclusion, Time Complexity is O(e + v * log(v)) with the best available implementation of an
+<a class="xref" href="MoreStructures.PriorityQueues.IUpdatablePriorityQueue-1.html">IUpdatablePriorityQueue&lt;T&gt;</a> and O((v + e) * e) with a naive implementation. 
+<br>
+- Space Complexity is O(v), since all data structures contains O(v) items, all of constant size.
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_MinimumSpanningTree_PrimMstFinder__ctor_Func_MoreStructures_PriorityQueues_IUpdatablePriorityQueue_System_Int32___.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder.%23ctor(Func%7BMoreStructures.PriorityQueues.IUpdatablePriorityQueue%7BSystem.Int32%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/MinimumSpanningTree/PrimMstFinder.cs/#L71">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_MinimumSpanningTree_PrimMstFinder__ctor_" data-uid="MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder.#ctor*"></a>
+  <h4 id="MoreStructures_Graphs_MinimumSpanningTree_PrimMstFinder__ctor_Func_MoreStructures_PriorityQueues_IUpdatablePriorityQueue_System_Int32___" data-uid="MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder.#ctor(Func{MoreStructures.PriorityQueues.IUpdatablePriorityQueue{System.Int32}})">PrimMstFinder(Func&lt;IUpdatablePriorityQueue&lt;Int32&gt;&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PrimMstFinder(Func&lt;IUpdatablePriorityQueue&lt;int&gt;&gt; priorityQueueBuilder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="MoreStructures.PriorityQueues.IUpdatablePriorityQueue-1.html">IUpdatablePriorityQueue</a>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td><span class="parametername">priorityQueueBuilder</span></td>
+        <td><p>A builder of a <a class="xref" href="MoreStructures.PriorityQueues.IUpdatablePriorityQueue-1.html">IUpdatablePriorityQueue&lt;T&gt;</a> of <span class="xref">System.Int32</span> values, used by the algorithm to
+store edges with priority from the closest to any of the vertices of the MST, to the farthest.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_MinimumSpanningTree_PrimMstFinder_Find_MoreStructures_Graphs_IGraph_IDictionary_System_ValueTuple_System_Int32_System_Int32__System_Int32__.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder.Find(MoreStructures.Graphs.IGraph%2CIDictionary%7BSystem.ValueTuple%7BSystem.Int32%2CSystem.Int32%7D%2CSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/MinimumSpanningTree/PrimMstFinder.cs/#L83">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_MinimumSpanningTree_PrimMstFinder_Find_" data-uid="MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder.Find*"></a>
+  <h4 id="MoreStructures_Graphs_MinimumSpanningTree_PrimMstFinder_Find_MoreStructures_Graphs_IGraph_IDictionary_System_ValueTuple_System_Int32_System_Int32__System_Int32__" data-uid="MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder.Find(MoreStructures.Graphs.IGraph,IDictionary{System.ValueTuple{System.Int32,System.Int32},System.Int32})">Find(IGraph, IDictionary&lt;(Int32, Int32), Int32&gt;)</h4>
+  <div class="markdown level1 summary"><p>Finds the Minimum Spanning Tree (MST) of the provided <code data-dev-comment-type="paramref" class="paramref">graph</code> using the Prim's algorithm.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISet&lt;(int, int)&gt; Find(IGraph graph, IDictionary&lt;(int, int), int&gt; distances)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a></td>
+        <td><span class="parametername">graph</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">IDictionary</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">System.Int32</span>&gt;, <span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">distances</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ISet</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Graphs_MinimumSpanningTree_PrimMstFinder_Find_MoreStructures_Graphs_IGraph_IDictionary_System_ValueTuple_System_Int32_System_Int32__System_Int32___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc cref="T:MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder"></inheritdoc></p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.Graphs.MinimumSpanningTree.IMstFinder.html">IMstFinder</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_MinimumSpanningTree_PrimMstFinder.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/MinimumSpanningTree/PrimMstFinder.cs/#L62" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

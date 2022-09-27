@@ -542,11 +542,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder.html",
+          "hash": "LWK2vwPnndVJfjzTI7kQkyW87iCJnw4Wr7z+PqcZ4ns="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Graphs.MinimumSpanningTree.yml",
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Graphs.MinimumSpanningTree.html",
-          "hash": "JY5ugnd9RTFylaVn5BtQhYOhCmQeWYAUIEjLkCJl6dE="
+          "hash": "XY3MKuqBOEHF3I+0TGOlE+HBPNT7mwYaL5Kh63HRd8k="
         }
       },
       "is_incremental": false,
@@ -582,7 +594,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Graphs.ShortestDistance.DijkstraShortestDistanceFinder.html",
-          "hash": "8vgg0y/7uU80Vlw+LjacRb0L3iNidq2lHVvV0DOW7zA="
+          "hash": "cGa/MTmNmyK52UWBDD1w2Fi0T5NOxhn+JdTJ5wq3qmU="
         }
       },
       "is_incremental": false,
@@ -3114,7 +3126,19 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Graphs.MinimumSpanningTree.MstFinderTests.html",
-          "hash": "qsvkjuV7UpA/HO8J86emmdHO/l/RyXpUmYcTijhkP54="
+          "hash": "cnnEC5xUxOaj8pJZ8nUa/tq+jNp35AY33NYHE6OnFe4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Graphs.MinimumSpanningTree.PrimMstFinderTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Graphs.MinimumSpanningTree.PrimMstFinderTests.html",
+          "hash": "/r6Ej7I/5cbHGUzX7K1UZPMhl0pzNvnG/ZFPy06d2w8="
         }
       },
       "is_incremental": false,
@@ -3126,7 +3150,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Graphs.MinimumSpanningTree.html",
-          "hash": "jsY58IzMIa7ZSFM/yMVtQ7+B7DdYhhc1BTu3w4B5Als="
+          "hash": "rop7o4wamDkCakl2mUvOlyWM4dfdULAlj+1zivqh/Ak="
         }
       },
       "is_incremental": false,
@@ -6186,7 +6210,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "zae8HGcrlHVAawrV8Kz4pl+WX6aL2UkwhmwaafuFVHs="
+          "hash": "Abpi5Fkt5S6jUTgAYjKJXURVrGyIbnCiDD/Mpvl+FRs="
         }
       },
       "is_incremental": false,
@@ -6261,7 +6285,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 513,
+          "total_file_count": 515,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

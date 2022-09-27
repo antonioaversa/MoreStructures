@@ -2406,6 +2406,44 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.Sorter
   nameWithType: KruskalMstFinder.Sorter
+- uid: MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder
+  name: PrimMstFinder
+  href: api/MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder.html
+  commentId: T:MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder
+  fullName: MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder
+  nameWithType: PrimMstFinder
+- uid: MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder.#ctor(Func{MoreStructures.PriorityQueues.IUpdatablePriorityQueue{System.Int32}})
+  name: PrimMstFinder(Func<IUpdatablePriorityQueue<Int32>>)
+  href: api/MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder.html#MoreStructures_Graphs_MinimumSpanningTree_PrimMstFinder__ctor_Func_MoreStructures_PriorityQueues_IUpdatablePriorityQueue_System_Int32___
+  commentId: M:MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder.#ctor(Func{MoreStructures.PriorityQueues.IUpdatablePriorityQueue{System.Int32}})
+  name.vb: PrimMstFinder(Func(Of IUpdatablePriorityQueue(Of Int32)))
+  fullName: MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder.PrimMstFinder(Func<MoreStructures.PriorityQueues.IUpdatablePriorityQueue<System.Int32>>)
+  fullName.vb: MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder.PrimMstFinder(Func(Of MoreStructures.PriorityQueues.IUpdatablePriorityQueue(Of System.Int32)))
+  nameWithType: PrimMstFinder.PrimMstFinder(Func<IUpdatablePriorityQueue<Int32>>)
+  nameWithType.vb: PrimMstFinder.PrimMstFinder(Func(Of IUpdatablePriorityQueue(Of Int32)))
+- uid: MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder.#ctor*
+  name: PrimMstFinder
+  href: api/MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder.html#MoreStructures_Graphs_MinimumSpanningTree_PrimMstFinder__ctor_
+  commentId: Overload:MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder.PrimMstFinder
+  nameWithType: PrimMstFinder.PrimMstFinder
+- uid: MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder.Find(MoreStructures.Graphs.IGraph,IDictionary{System.ValueTuple{System.Int32,System.Int32},System.Int32})
+  name: Find(IGraph, IDictionary<(Int32, Int32), Int32>)
+  href: api/MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder.html#MoreStructures_Graphs_MinimumSpanningTree_PrimMstFinder_Find_MoreStructures_Graphs_IGraph_IDictionary_System_ValueTuple_System_Int32_System_Int32__System_Int32__
+  commentId: M:MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder.Find(MoreStructures.Graphs.IGraph,IDictionary{System.ValueTuple{System.Int32,System.Int32},System.Int32})
+  name.vb: Find(IGraph, IDictionary(Of (Int32, Int32)(Of Int32, Int32), Int32))
+  fullName: MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder.Find(MoreStructures.Graphs.IGraph, IDictionary<System.ValueTuple<System.Int32, System.Int32>, System.Int32>)
+  fullName.vb: MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder.Find(MoreStructures.Graphs.IGraph, IDictionary(Of System.ValueTuple(Of System.Int32, System.Int32), System.Int32))
+  nameWithType: PrimMstFinder.Find(IGraph, IDictionary<(Int32, Int32), Int32>)
+  nameWithType.vb: PrimMstFinder.Find(IGraph, IDictionary(Of (Int32, Int32)(Of Int32, Int32), Int32))
+- uid: MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder.Find*
+  name: Find
+  href: api/MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder.html#MoreStructures_Graphs_MinimumSpanningTree_PrimMstFinder_Find_
+  commentId: Overload:MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder.Find
+  isSpec: "True"
+  fullName: MoreStructures.Graphs.MinimumSpanningTree.PrimMstFinder.Find
+  nameWithType: PrimMstFinder.Find
 - uid: MoreStructures.Graphs.ShortestDistance
   name: MoreStructures.Graphs.ShortestDistance
   href: api/MoreStructures.Graphs.ShortestDistance.html
@@ -12547,6 +12585,25 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Graphs.MinimumSpanningTree.MstFinderTests.GraphBuilder
   nameWithType: MstFinderTests.GraphBuilder
+- uid: MoreStructures.Tests.Graphs.MinimumSpanningTree.PrimMstFinderTests
+  name: PrimMstFinderTests
+  href: api/MoreStructures.Tests.Graphs.MinimumSpanningTree.PrimMstFinderTests.html
+  commentId: T:MoreStructures.Tests.Graphs.MinimumSpanningTree.PrimMstFinderTests
+  fullName: MoreStructures.Tests.Graphs.MinimumSpanningTree.PrimMstFinderTests
+  nameWithType: PrimMstFinderTests
+- uid: MoreStructures.Tests.Graphs.MinimumSpanningTree.PrimMstFinderTests.#ctor
+  name: PrimMstFinderTests()
+  href: api/MoreStructures.Tests.Graphs.MinimumSpanningTree.PrimMstFinderTests.html#MoreStructures_Tests_Graphs_MinimumSpanningTree_PrimMstFinderTests__ctor
+  commentId: M:MoreStructures.Tests.Graphs.MinimumSpanningTree.PrimMstFinderTests.#ctor
+  fullName: MoreStructures.Tests.Graphs.MinimumSpanningTree.PrimMstFinderTests.PrimMstFinderTests()
+  nameWithType: PrimMstFinderTests.PrimMstFinderTests()
+- uid: MoreStructures.Tests.Graphs.MinimumSpanningTree.PrimMstFinderTests.#ctor*
+  name: PrimMstFinderTests
+  href: api/MoreStructures.Tests.Graphs.MinimumSpanningTree.PrimMstFinderTests.html#MoreStructures_Tests_Graphs_MinimumSpanningTree_PrimMstFinderTests__ctor_
+  commentId: Overload:MoreStructures.Tests.Graphs.MinimumSpanningTree.PrimMstFinderTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Graphs.MinimumSpanningTree.PrimMstFinderTests.PrimMstFinderTests
+  nameWithType: PrimMstFinderTests.PrimMstFinderTests
 - uid: MoreStructures.Tests.Graphs.ShortestDistance
   name: MoreStructures.Tests.Graphs.ShortestDistance
   href: api/MoreStructures.Tests.Graphs.ShortestDistance.html
