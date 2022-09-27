@@ -38,8 +38,3 @@ jobs:
           --source ${{ env.NUGET_SOURCE }} \
           --api-key ${{ env.NUGET_API_KEY }}
 
-    - name: Publish NuGet Symbol Package
-      run: |
-        dotnet nuget push ./nupkgs/*.snupkg \
-          --source ${{ env.NUGET_SOURCE }} \
-          --api-key ${{ env.NUGET_API_KEY }}
