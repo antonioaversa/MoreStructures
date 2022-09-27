@@ -4,6 +4,8 @@ env:
   DOTNET_VERSION: 6.0.x
   NUGET_SOURCE: https://api.nuget.org/v3/index.json
   NUGET_API_KEY: ${{secrets.NUGET_API_KEY}}
+  GITHUB_NUGET_SOURCE: https://nuget.pkg.github.com/antonioaversa/index.json
+  GITHUB_NUGET_API_KEY: ${{secrets.GITHUB_TOKEN}}
   DOTNET_CONFIGURATION: Release
   PROJECT_NAME: MoreStructures  
 
@@ -13,7 +15,7 @@ on:
 
 jobs:
 
-  # Publish on nuget.org
+  # Publish to github.com and nuget.org
   dotnet-publish:
     name: NuGet Publication
     runs-on: ubuntu-latest
@@ -24,7 +26,7 @@ jobs:
       with:
         dotnet-version:  ${{ env.DOTNET_VERSION }}
         
-    - name: Build NuGet Package and Symbol Package
+    - name: Build Package and Symbol Package
       run: |
         TAG_NAME=${{ github.event.release.tag_name }}
         dotnet pack ${{ env.PROJECT_NAME }} \
@@ -32,9 +34,14 @@ jobs:
           --configuration ${{ env.DOTNET_CONFIGURATION }} \
           -p:PackageVersion=$(echo $TAG_NAME | sed -e 's/^v//')
 
-    - name: Publish NuGet Package
+    - name: Publish to nuget.org
       run: |      
         dotnet nuget push ./nupkgs/*.nupkg \
           --source ${{ env.NUGET_SOURCE }} \
           --api-key ${{ env.NUGET_API_KEY }}
+
+    - name: Publish to github.com
+        dotnet nuget push ./nupkgs/*.nupkg \
+          --source ${{ env.GITHUB_NUGET_SOURCE }} \
+          --api-key ${{ env.GITHUB_NUGET_API_KEY }}
 
