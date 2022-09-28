@@ -3,6 +3,8 @@ using MoreStructures.Graphs.Visitor;
 
 namespace MoreStructures.Graphs.ShortestDistance;
 
+using GraphDistances = IDictionary<(int, int), int>;
+
 /// <summary>
 /// An <see cref="IShortestDistanceFinder"/> which runs a BFS on the provided graph from the start vertex, to find the
 /// shortest distance and a shortest path to the end vertex.
@@ -102,39 +104,35 @@ public class BfsBasedShortestDistanceFinder : IShortestDistanceFinder
     /// <remarks>
     ///     <inheritdoc cref="BfsBasedShortestDistanceFinder"/>
     /// </remarks>
-    public (int, IList<int>) Find(IGraph graph, IDictionary<(int, int), int> distances, int start, int end)
+    public (int, IList<int>) Find(IGraph graph, GraphDistances distances, int start, int end)
     {
         ShortestDistanceFinderHelper.ValidateParameters(graph, start, end);
 
-        var bestPrevious = new Dictionary<int, (int distanceFromStart, int? previousVertex)>
-        {
-            [start] = (0, null),
-        };
+        var bestPreviouses = new BestPreviouses(new() { [start] = new(0, -1) });
         var downstreamVertices = new Dictionary<int, HashSet<int>>();
 
         var visitor = VisitStrategyBuilder();
         visitor.VisitingVertex += 
-            (o, e) => UpdateBestPreviousAndDownstreamVertices(o, e, distances, bestPrevious, downstreamVertices);
+            (o, e) => UpdateBestPreviousAndDownstreamVertices(o, e, distances, bestPreviouses, downstreamVertices);
         visitor.AlreadyVisitedVertex += 
-            (o, e) => UpdateBestPreviousAndDownstreamVertices(o, e, distances, bestPrevious, downstreamVertices);
+            (o, e) => UpdateBestPreviousAndDownstreamVertices(o, e, distances, bestPreviouses, downstreamVertices);
 
         visitor
             .BreadthFirstSearchFromVertex(graph, start)
             .Consume();
 
-        if (!bestPrevious.ContainsKey(end))
+        if (!bestPreviouses.Values.ContainsKey(end))
             return (int.MaxValue, Array.Empty<int>());
 
-        var shortestDistance = bestPrevious[end].distanceFromStart;
-        var shortestPath = BuildShortestPath(end, bestPrevious);
+        var shortestDistance = bestPreviouses.Values[end].DistanceFromStart;
+        var shortestPath = ShortestDistanceFinderHelper.BuildShortestPath(end, bestPreviouses);
 
         return (shortestDistance, shortestPath);
     }
 
     private static void UpdateBestPreviousAndDownstreamVertices(
-        object? sender, VisitEventArgs eventArgs, IDictionary<(int, int), int> distances, 
-        Dictionary<int, (int distanceFromStart, int? previousVertex)> bestPrevious, 
-        Dictionary<int, HashSet<int>> downstreamVertices)
+        object? sender, VisitEventArgs eventArgs,
+        GraphDistances distances, BestPreviouses bestPreviouses, Dictionary<int, HashSet<int>> downstreamVertices)
     {
         var current = eventArgs.Vertex;
         if (eventArgs.PreviousVertex is not int previous)
@@ -145,41 +143,24 @@ public class BfsBasedShortestDistanceFinder : IShortestDistanceFinder
         else
             downstreamVertices[previous].Add(current);
 
-        var distanceFromStartToPrevious = bestPrevious[previous].distanceFromStart;
+        var distanceFromStartToPrevious = bestPreviouses.Values[previous].DistanceFromStart;
         var distanceFromPreviousToCurrent = distances[(previous, current)];
         var distanceFromStartToCurrent = distanceFromStartToPrevious + distanceFromPreviousToCurrent;
 
-        if (!bestPrevious.ContainsKey(current))
+        if (!bestPreviouses.Values.ContainsKey(current))
         {
-            bestPrevious[current] = (distanceFromStartToCurrent, previous);
+            bestPreviouses.Values[current] = new(distanceFromStartToCurrent, previous);
         }
-        else if (bestPrevious[current].distanceFromStart > distanceFromStartToCurrent)
+        else if (bestPreviouses.Values[current].DistanceFromStart > distanceFromStartToCurrent)
         {
-            bestPrevious[current] = (distanceFromStartToCurrent, previous);
+            bestPreviouses.Values[current] = new(distanceFromStartToCurrent, previous);
 
-            // Update all vertices downstream (if any), which have already entries in bestPrevious
+            // Update all vertices downstream (if any), which have already entries in bestPreviouses
             if (downstreamVertices.ContainsKey(current))
                 foreach (var downstreamVertex in downstreamVertices[current])
                     UpdateBestPreviousAndDownstreamVertices(
                         sender, new(downstreamVertex, eventArgs.ConnectedComponent, current), 
-                        distances, bestPrevious, downstreamVertices);
+                        distances, bestPreviouses, downstreamVertices);
         }
-    }
-
-    internal static IList<int> BuildShortestPath(
-        int end, 
-        Dictionary<int, (int distanceFromStart, int? previousVertex)> bestPrevious)
-    {
-        var shortestPath = new List<int>();
-
-        int? maybeCurrent = end;
-        while (maybeCurrent is int current)
-        {
-            shortestPath.Add(current);
-            maybeCurrent = bestPrevious[current].previousVertex;
-        }
-
-        shortestPath.Reverse();
-        return shortestPath;
     }
 }
