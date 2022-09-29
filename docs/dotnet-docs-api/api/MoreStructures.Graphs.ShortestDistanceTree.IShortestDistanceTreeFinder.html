@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IShortestDistanceTreeFinder
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IShortestDistanceTreeFinder
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder">
+  
+  
+  <h1 id="MoreStructures_Graphs_ShortestDistanceTree_IShortestDistanceTreeFinder" data-uid="MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder" class="text-break">Interface IShortestDistanceTreeFinder
+  </h1>
+  <div class="markdown level0 summary"><p>An algorithm that, given a start vertex on a <strong>weighted</strong> directed graph, finds the <strong>shortest distance</strong>
+from the start to any other vertex in the graph, and a path for each vertex of the graph having such a total
+distance.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.Graphs.ShortestDistanceTree.html">MoreStructures.Graphs.ShortestDistanceTree</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_Graphs_ShortestDistanceTree_IShortestDistanceTreeFinder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IShortestDistanceTreeFinder</code></pre>
+  </div>
+  <h5 id="MoreStructures_Graphs_ShortestDistanceTree_IShortestDistanceTreeFinder_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>It differs from <a class="xref" href="MoreStructures.Graphs.ShortestDistance.IShortestDistanceFinder.html">IShortestDistanceFinder</a> and its implementation in this class of
+algorithms finds the shortest distance from all vertices of the graph, whereas
+<a class="xref" href="MoreStructures.Graphs.ShortestDistance.IShortestDistanceFinder.html">IShortestDistanceFinder</a> algorithms find the distance between the provided couple of
+vertices only.
+<br>
+<a class="xref" href="MoreStructures.Graphs.ShortestDistance.IShortestDistanceFinder.html">IShortestDistanceFinder</a> implementations can provide the best performance when the
+shortest distance search is between two fixed points.
+<br>
+If shortest distance has to be found from (or to) a given vertex to any other vertex, the class of algorithms
+implementing <a class="xref" href="MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.html">IShortestDistanceTreeFinder</a> can provide better performance, since all distances are
+computed in a single execution of the algorithm.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_ShortestDistanceTree_IShortestDistanceTreeFinder_Find_MoreStructures_Graphs_IGraph_IDictionary_System_ValueTuple_System_Int32_System_Int32__System_Int32__System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.Find(MoreStructures.Graphs.IGraph%2CIDictionary%7BSystem.ValueTuple%7BSystem.Int32%2CSystem.Int32%7D%2CSystem.Int32%7D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/ShortestDistanceTree/IShortestDistanceTreeFinder.cs/#L44">View Source</a>
+  </span>
+  <a id="MoreStructures_Graphs_ShortestDistanceTree_IShortestDistanceTreeFinder_Find_" data-uid="MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.Find*"></a>
+  <h4 id="MoreStructures_Graphs_ShortestDistanceTree_IShortestDistanceTreeFinder_Find_MoreStructures_Graphs_IGraph_IDictionary_System_ValueTuple_System_Int32_System_Int32__System_Int32__System_Int32_" data-uid="MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.Find(MoreStructures.Graphs.IGraph,IDictionary{System.ValueTuple{System.Int32,System.Int32},System.Int32},System.Int32)">Find(IGraph, IDictionary&lt;(Int32, Int32), Int32&gt;, Int32)</h4>
+  <div class="markdown level1 summary"><p>Finds the shortest distance and path in the provided <code data-dev-comment-type="paramref" class="paramref">graph</code> from the <code data-dev-comment-type="paramref" class="paramref">start</code>
+vertex to each vertex of the <code data-dev-comment-type="paramref" class="paramref">graph</code>, i.e. a path such that the sum of distances of all the
+edges on the path is non-bigger than the one of any other path from the provided <code data-dev-comment-type="paramref" class="paramref">start</code> to
+the vertex.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">BestPreviouses Find(IGraph graph, IDictionary&lt;(int, int), int&gt; distances, int start)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a></td>
+        <td><span class="parametername">graph</span></td>
+        <td><p>The graph to traverse.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IDictionary</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">System.Int32</span>&gt;, <span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">distances</span></td>
+        <td><p>A map between each edge of <code data-dev-comment-type="paramref" class="paramref">graph</code> and its distance.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">start</span></td>
+        <td><p>The id of the vertex, to start traversal from.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Graphs.ShortestDistance.BestPreviouses.html">BestPreviouses</a></td>
+        <td><p>A <a class="xref" href="MoreStructures.Graphs.ShortestDistance.BestPreviouses.html">BestPreviouses</a> instance, wrapping a dictionary, mapping:
+<br></p>
+<ul>
+<li>the id of each vertex v of the graph
+<br></li>
+<li>to the shortest distance S from <code data-dev-comment-type="paramref" class="paramref">start</code>,
+<br></li>
+<li>and to the id of the vertex preceeding v on a path from <code data-dev-comment-type="paramref" class="paramref">start</code> to v having total distance
+S.</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_ShortestDistanceTree_IShortestDistanceTreeFinder.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/ShortestDistanceTree/IShortestDistanceTreeFinder.cs/#L23" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
