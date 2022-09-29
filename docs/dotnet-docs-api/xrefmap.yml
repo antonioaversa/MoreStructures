@@ -2658,6 +2658,57 @@ references:
   commentId: N:MoreStructures.Graphs.ShortestDistanceTree
   fullName: MoreStructures.Graphs.ShortestDistanceTree
   nameWithType: MoreStructures.Graphs.ShortestDistanceTree
+- uid: MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder
+  name: BellmanFordShortestDistanceTreeFinder
+  href: api/MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder.html
+  commentId: T:MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder
+  fullName: MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder
+  nameWithType: BellmanFordShortestDistanceTreeFinder
+- uid: MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder.#ctor(Func{MoreStructures.Graphs.Visitor.IVisitStrategy})
+  name: BellmanFordShortestDistanceTreeFinder(Func<IVisitStrategy>)
+  href: api/MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder.html#MoreStructures_Graphs_ShortestDistanceTree_BellmanFordShortestDistanceTreeFinder__ctor_Func_MoreStructures_Graphs_Visitor_IVisitStrategy__
+  commentId: M:MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder.#ctor(Func{MoreStructures.Graphs.Visitor.IVisitStrategy})
+  name.vb: BellmanFordShortestDistanceTreeFinder(Func(Of IVisitStrategy))
+  fullName: MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder.BellmanFordShortestDistanceTreeFinder(Func<MoreStructures.Graphs.Visitor.IVisitStrategy>)
+  fullName.vb: MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder.BellmanFordShortestDistanceTreeFinder(Func(Of MoreStructures.Graphs.Visitor.IVisitStrategy))
+  nameWithType: BellmanFordShortestDistanceTreeFinder.BellmanFordShortestDistanceTreeFinder(Func<IVisitStrategy>)
+  nameWithType.vb: BellmanFordShortestDistanceTreeFinder.BellmanFordShortestDistanceTreeFinder(Func(Of IVisitStrategy))
+- uid: MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder.#ctor*
+  name: BellmanFordShortestDistanceTreeFinder
+  href: api/MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder.html#MoreStructures_Graphs_ShortestDistanceTree_BellmanFordShortestDistanceTreeFinder__ctor_
+  commentId: Overload:MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder.BellmanFordShortestDistanceTreeFinder
+  nameWithType: BellmanFordShortestDistanceTreeFinder.BellmanFordShortestDistanceTreeFinder
+- uid: MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder.FindTree(MoreStructures.Graphs.IGraph,IDictionary{System.ValueTuple{System.Int32,System.Int32},System.Int32},System.Int32)
+  name: FindTree(IGraph, IDictionary<(Int32, Int32), Int32>, Int32)
+  href: api/MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder.html#MoreStructures_Graphs_ShortestDistanceTree_BellmanFordShortestDistanceTreeFinder_FindTree_MoreStructures_Graphs_IGraph_IDictionary_System_ValueTuple_System_Int32_System_Int32__System_Int32__System_Int32_
+  commentId: M:MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder.FindTree(MoreStructures.Graphs.IGraph,IDictionary{System.ValueTuple{System.Int32,System.Int32},System.Int32},System.Int32)
+  name.vb: FindTree(IGraph, IDictionary(Of (Int32, Int32)(Of Int32, Int32), Int32), Int32)
+  fullName: MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder.FindTree(MoreStructures.Graphs.IGraph, IDictionary<System.ValueTuple<System.Int32, System.Int32>, System.Int32>, System.Int32)
+  fullName.vb: MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder.FindTree(MoreStructures.Graphs.IGraph, IDictionary(Of System.ValueTuple(Of System.Int32, System.Int32), System.Int32), System.Int32)
+  nameWithType: BellmanFordShortestDistanceTreeFinder.FindTree(IGraph, IDictionary<(Int32, Int32), Int32>, Int32)
+  nameWithType.vb: BellmanFordShortestDistanceTreeFinder.FindTree(IGraph, IDictionary(Of (Int32, Int32)(Of Int32, Int32), Int32), Int32)
+- uid: MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder.FindTree*
+  name: FindTree
+  href: api/MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder.html#MoreStructures_Graphs_ShortestDistanceTree_BellmanFordShortestDistanceTreeFinder_FindTree_
+  commentId: Overload:MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder.FindTree
+  isSpec: "True"
+  fullName: MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder.FindTree
+  nameWithType: BellmanFordShortestDistanceTreeFinder.FindTree
+- uid: MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder.VisitStrategyBuilder
+  name: VisitStrategyBuilder
+  href: api/MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder.html#MoreStructures_Graphs_ShortestDistanceTree_BellmanFordShortestDistanceTreeFinder_VisitStrategyBuilder
+  commentId: P:MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder.VisitStrategyBuilder
+  fullName: MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder.VisitStrategyBuilder
+  nameWithType: BellmanFordShortestDistanceTreeFinder.VisitStrategyBuilder
+- uid: MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder.VisitStrategyBuilder*
+  name: VisitStrategyBuilder
+  href: api/MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder.html#MoreStructures_Graphs_ShortestDistanceTree_BellmanFordShortestDistanceTreeFinder_VisitStrategyBuilder_
+  commentId: Overload:MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder.VisitStrategyBuilder
+  isSpec: "True"
+  fullName: MoreStructures.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder.VisitStrategyBuilder
+  nameWithType: BellmanFordShortestDistanceTreeFinder.VisitStrategyBuilder
 - uid: MoreStructures.Graphs.ShortestDistanceTree.DijkstraShortestDistanceTreeFinder
   name: DijkstraShortestDistanceTreeFinder
   href: api/MoreStructures.Graphs.ShortestDistanceTree.DijkstraShortestDistanceTreeFinder.html
@@ -2680,44 +2731,44 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Graphs.ShortestDistanceTree.DijkstraShortestDistanceTreeFinder.DijkstraShortestDistanceTreeFinder
   nameWithType: DijkstraShortestDistanceTreeFinder.DijkstraShortestDistanceTreeFinder
-- uid: MoreStructures.Graphs.ShortestDistanceTree.DijkstraShortestDistanceTreeFinder.Find(MoreStructures.Graphs.IGraph,IDictionary{System.ValueTuple{System.Int32,System.Int32},System.Int32},System.Int32)
-  name: Find(IGraph, IDictionary<(Int32, Int32), Int32>, Int32)
-  href: api/MoreStructures.Graphs.ShortestDistanceTree.DijkstraShortestDistanceTreeFinder.html#MoreStructures_Graphs_ShortestDistanceTree_DijkstraShortestDistanceTreeFinder_Find_MoreStructures_Graphs_IGraph_IDictionary_System_ValueTuple_System_Int32_System_Int32__System_Int32__System_Int32_
-  commentId: M:MoreStructures.Graphs.ShortestDistanceTree.DijkstraShortestDistanceTreeFinder.Find(MoreStructures.Graphs.IGraph,IDictionary{System.ValueTuple{System.Int32,System.Int32},System.Int32},System.Int32)
-  name.vb: Find(IGraph, IDictionary(Of (Int32, Int32)(Of Int32, Int32), Int32), Int32)
-  fullName: MoreStructures.Graphs.ShortestDistanceTree.DijkstraShortestDistanceTreeFinder.Find(MoreStructures.Graphs.IGraph, IDictionary<System.ValueTuple<System.Int32, System.Int32>, System.Int32>, System.Int32)
-  fullName.vb: MoreStructures.Graphs.ShortestDistanceTree.DijkstraShortestDistanceTreeFinder.Find(MoreStructures.Graphs.IGraph, IDictionary(Of System.ValueTuple(Of System.Int32, System.Int32), System.Int32), System.Int32)
-  nameWithType: DijkstraShortestDistanceTreeFinder.Find(IGraph, IDictionary<(Int32, Int32), Int32>, Int32)
-  nameWithType.vb: DijkstraShortestDistanceTreeFinder.Find(IGraph, IDictionary(Of (Int32, Int32)(Of Int32, Int32), Int32), Int32)
-- uid: MoreStructures.Graphs.ShortestDistanceTree.DijkstraShortestDistanceTreeFinder.Find*
-  name: Find
-  href: api/MoreStructures.Graphs.ShortestDistanceTree.DijkstraShortestDistanceTreeFinder.html#MoreStructures_Graphs_ShortestDistanceTree_DijkstraShortestDistanceTreeFinder_Find_
-  commentId: Overload:MoreStructures.Graphs.ShortestDistanceTree.DijkstraShortestDistanceTreeFinder.Find
+- uid: MoreStructures.Graphs.ShortestDistanceTree.DijkstraShortestDistanceTreeFinder.FindTree(MoreStructures.Graphs.IGraph,IDictionary{System.ValueTuple{System.Int32,System.Int32},System.Int32},System.Int32)
+  name: FindTree(IGraph, IDictionary<(Int32, Int32), Int32>, Int32)
+  href: api/MoreStructures.Graphs.ShortestDistanceTree.DijkstraShortestDistanceTreeFinder.html#MoreStructures_Graphs_ShortestDistanceTree_DijkstraShortestDistanceTreeFinder_FindTree_MoreStructures_Graphs_IGraph_IDictionary_System_ValueTuple_System_Int32_System_Int32__System_Int32__System_Int32_
+  commentId: M:MoreStructures.Graphs.ShortestDistanceTree.DijkstraShortestDistanceTreeFinder.FindTree(MoreStructures.Graphs.IGraph,IDictionary{System.ValueTuple{System.Int32,System.Int32},System.Int32},System.Int32)
+  name.vb: FindTree(IGraph, IDictionary(Of (Int32, Int32)(Of Int32, Int32), Int32), Int32)
+  fullName: MoreStructures.Graphs.ShortestDistanceTree.DijkstraShortestDistanceTreeFinder.FindTree(MoreStructures.Graphs.IGraph, IDictionary<System.ValueTuple<System.Int32, System.Int32>, System.Int32>, System.Int32)
+  fullName.vb: MoreStructures.Graphs.ShortestDistanceTree.DijkstraShortestDistanceTreeFinder.FindTree(MoreStructures.Graphs.IGraph, IDictionary(Of System.ValueTuple(Of System.Int32, System.Int32), System.Int32), System.Int32)
+  nameWithType: DijkstraShortestDistanceTreeFinder.FindTree(IGraph, IDictionary<(Int32, Int32), Int32>, Int32)
+  nameWithType.vb: DijkstraShortestDistanceTreeFinder.FindTree(IGraph, IDictionary(Of (Int32, Int32)(Of Int32, Int32), Int32), Int32)
+- uid: MoreStructures.Graphs.ShortestDistanceTree.DijkstraShortestDistanceTreeFinder.FindTree*
+  name: FindTree
+  href: api/MoreStructures.Graphs.ShortestDistanceTree.DijkstraShortestDistanceTreeFinder.html#MoreStructures_Graphs_ShortestDistanceTree_DijkstraShortestDistanceTreeFinder_FindTree_
+  commentId: Overload:MoreStructures.Graphs.ShortestDistanceTree.DijkstraShortestDistanceTreeFinder.FindTree
   isSpec: "True"
-  fullName: MoreStructures.Graphs.ShortestDistanceTree.DijkstraShortestDistanceTreeFinder.Find
-  nameWithType: DijkstraShortestDistanceTreeFinder.Find
+  fullName: MoreStructures.Graphs.ShortestDistanceTree.DijkstraShortestDistanceTreeFinder.FindTree
+  nameWithType: DijkstraShortestDistanceTreeFinder.FindTree
 - uid: MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder
   name: IShortestDistanceTreeFinder
   href: api/MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.html
   commentId: T:MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder
   fullName: MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder
   nameWithType: IShortestDistanceTreeFinder
-- uid: MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.Find(MoreStructures.Graphs.IGraph,IDictionary{System.ValueTuple{System.Int32,System.Int32},System.Int32},System.Int32)
-  name: Find(IGraph, IDictionary<(Int32, Int32), Int32>, Int32)
-  href: api/MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.html#MoreStructures_Graphs_ShortestDistanceTree_IShortestDistanceTreeFinder_Find_MoreStructures_Graphs_IGraph_IDictionary_System_ValueTuple_System_Int32_System_Int32__System_Int32__System_Int32_
-  commentId: M:MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.Find(MoreStructures.Graphs.IGraph,IDictionary{System.ValueTuple{System.Int32,System.Int32},System.Int32},System.Int32)
-  name.vb: Find(IGraph, IDictionary(Of (Int32, Int32)(Of Int32, Int32), Int32), Int32)
-  fullName: MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.Find(MoreStructures.Graphs.IGraph, IDictionary<System.ValueTuple<System.Int32, System.Int32>, System.Int32>, System.Int32)
-  fullName.vb: MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.Find(MoreStructures.Graphs.IGraph, IDictionary(Of System.ValueTuple(Of System.Int32, System.Int32), System.Int32), System.Int32)
-  nameWithType: IShortestDistanceTreeFinder.Find(IGraph, IDictionary<(Int32, Int32), Int32>, Int32)
-  nameWithType.vb: IShortestDistanceTreeFinder.Find(IGraph, IDictionary(Of (Int32, Int32)(Of Int32, Int32), Int32), Int32)
-- uid: MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.Find*
-  name: Find
-  href: api/MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.html#MoreStructures_Graphs_ShortestDistanceTree_IShortestDistanceTreeFinder_Find_
-  commentId: Overload:MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.Find
+- uid: MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.FindTree(MoreStructures.Graphs.IGraph,IDictionary{System.ValueTuple{System.Int32,System.Int32},System.Int32},System.Int32)
+  name: FindTree(IGraph, IDictionary<(Int32, Int32), Int32>, Int32)
+  href: api/MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.html#MoreStructures_Graphs_ShortestDistanceTree_IShortestDistanceTreeFinder_FindTree_MoreStructures_Graphs_IGraph_IDictionary_System_ValueTuple_System_Int32_System_Int32__System_Int32__System_Int32_
+  commentId: M:MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.FindTree(MoreStructures.Graphs.IGraph,IDictionary{System.ValueTuple{System.Int32,System.Int32},System.Int32},System.Int32)
+  name.vb: FindTree(IGraph, IDictionary(Of (Int32, Int32)(Of Int32, Int32), Int32), Int32)
+  fullName: MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.FindTree(MoreStructures.Graphs.IGraph, IDictionary<System.ValueTuple<System.Int32, System.Int32>, System.Int32>, System.Int32)
+  fullName.vb: MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.FindTree(MoreStructures.Graphs.IGraph, IDictionary(Of System.ValueTuple(Of System.Int32, System.Int32), System.Int32), System.Int32)
+  nameWithType: IShortestDistanceTreeFinder.FindTree(IGraph, IDictionary<(Int32, Int32), Int32>, Int32)
+  nameWithType.vb: IShortestDistanceTreeFinder.FindTree(IGraph, IDictionary(Of (Int32, Int32)(Of Int32, Int32), Int32), Int32)
+- uid: MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.FindTree*
+  name: FindTree
+  href: api/MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.html#MoreStructures_Graphs_ShortestDistanceTree_IShortestDistanceTreeFinder_FindTree_
+  commentId: Overload:MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.FindTree
   isSpec: "True"
-  fullName: MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.Find
-  nameWithType: IShortestDistanceTreeFinder.Find
+  fullName: MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.FindTree
+  nameWithType: IShortestDistanceTreeFinder.FindTree
 - uid: MoreStructures.Graphs.ShortestPath
   name: MoreStructures.Graphs.ShortestPath
   href: api/MoreStructures.Graphs.ShortestPath.html
@@ -13002,6 +13053,57 @@ references:
   commentId: N:MoreStructures.Tests.Graphs.ShortestDistanceTree
   fullName: MoreStructures.Tests.Graphs.ShortestDistanceTree
   nameWithType: MoreStructures.Tests.Graphs.ShortestDistanceTree
+- uid: MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests
+  name: BellmanFordShortestDistanceTreeFinderTests
+  href: api/MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests.html
+  commentId: T:MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests
+  fullName: MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests
+  nameWithType: BellmanFordShortestDistanceTreeFinderTests
+- uid: MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests.#ctor
+  name: BellmanFordShortestDistanceTreeFinderTests()
+  href: api/MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests.html#MoreStructures_Tests_Graphs_ShortestDistanceTree_BellmanFordShortestDistanceTreeFinderTests__ctor
+  commentId: M:MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests.#ctor
+  fullName: MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests.BellmanFordShortestDistanceTreeFinderTests()
+  nameWithType: BellmanFordShortestDistanceTreeFinderTests.BellmanFordShortestDistanceTreeFinderTests()
+- uid: MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests.#ctor*
+  name: BellmanFordShortestDistanceTreeFinderTests
+  href: api/MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests.html#MoreStructures_Tests_Graphs_ShortestDistanceTree_BellmanFordShortestDistanceTreeFinderTests__ctor_
+  commentId: Overload:MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests.BellmanFordShortestDistanceTreeFinderTests
+  nameWithType: BellmanFordShortestDistanceTreeFinderTests.BellmanFordShortestDistanceTreeFinderTests
+- uid: MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests.Find_IsCorrectWithNegativeCycles(System.String,System.Int32,System.Int32[],System.Int32[],System.Int32[])
+  name: Find_IsCorrectWithNegativeCycles(String, Int32, Int32[], Int32[], Int32[])
+  href: api/MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests.html#MoreStructures_Tests_Graphs_ShortestDistanceTree_BellmanFordShortestDistanceTreeFinderTests_Find_IsCorrectWithNegativeCycles_System_String_System_Int32_System_Int32___System_Int32___System_Int32___
+  commentId: M:MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests.Find_IsCorrectWithNegativeCycles(System.String,System.Int32,System.Int32[],System.Int32[],System.Int32[])
+  name.vb: Find_IsCorrectWithNegativeCycles(String, Int32, Int32(), Int32(), Int32())
+  fullName: MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests.Find_IsCorrectWithNegativeCycles(System.String, System.Int32, System.Int32[], System.Int32[], System.Int32[])
+  fullName.vb: MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests.Find_IsCorrectWithNegativeCycles(System.String, System.Int32, System.Int32(), System.Int32(), System.Int32())
+  nameWithType: BellmanFordShortestDistanceTreeFinderTests.Find_IsCorrectWithNegativeCycles(String, Int32, Int32[], Int32[], Int32[])
+  nameWithType.vb: BellmanFordShortestDistanceTreeFinderTests.Find_IsCorrectWithNegativeCycles(String, Int32, Int32(), Int32(), Int32())
+- uid: MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests.Find_IsCorrectWithNegativeCycles*
+  name: Find_IsCorrectWithNegativeCycles
+  href: api/MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests.html#MoreStructures_Tests_Graphs_ShortestDistanceTree_BellmanFordShortestDistanceTreeFinderTests_Find_IsCorrectWithNegativeCycles_
+  commentId: Overload:MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests.Find_IsCorrectWithNegativeCycles
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests.Find_IsCorrectWithNegativeCycles
+  nameWithType: BellmanFordShortestDistanceTreeFinderTests.Find_IsCorrectWithNegativeCycles
+- uid: MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests.Find_IsCorrectWithNegativeValues(System.String,System.Int32,System.Int32[],System.Int32[],System.Int32[])
+  name: Find_IsCorrectWithNegativeValues(String, Int32, Int32[], Int32[], Int32[])
+  href: api/MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests.html#MoreStructures_Tests_Graphs_ShortestDistanceTree_BellmanFordShortestDistanceTreeFinderTests_Find_IsCorrectWithNegativeValues_System_String_System_Int32_System_Int32___System_Int32___System_Int32___
+  commentId: M:MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests.Find_IsCorrectWithNegativeValues(System.String,System.Int32,System.Int32[],System.Int32[],System.Int32[])
+  name.vb: Find_IsCorrectWithNegativeValues(String, Int32, Int32(), Int32(), Int32())
+  fullName: MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests.Find_IsCorrectWithNegativeValues(System.String, System.Int32, System.Int32[], System.Int32[], System.Int32[])
+  fullName.vb: MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests.Find_IsCorrectWithNegativeValues(System.String, System.Int32, System.Int32(), System.Int32(), System.Int32())
+  nameWithType: BellmanFordShortestDistanceTreeFinderTests.Find_IsCorrectWithNegativeValues(String, Int32, Int32[], Int32[], Int32[])
+  nameWithType.vb: BellmanFordShortestDistanceTreeFinderTests.Find_IsCorrectWithNegativeValues(String, Int32, Int32(), Int32(), Int32())
+- uid: MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests.Find_IsCorrectWithNegativeValues*
+  name: Find_IsCorrectWithNegativeValues
+  href: api/MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests.html#MoreStructures_Tests_Graphs_ShortestDistanceTree_BellmanFordShortestDistanceTreeFinderTests_Find_IsCorrectWithNegativeValues_
+  commentId: Overload:MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests.Find_IsCorrectWithNegativeValues
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Graphs.ShortestDistanceTree.BellmanFordShortestDistanceTreeFinderTests.Find_IsCorrectWithNegativeValues
+  nameWithType: BellmanFordShortestDistanceTreeFinderTests.Find_IsCorrectWithNegativeValues
 - uid: MoreStructures.Tests.Graphs.ShortestDistanceTree.DijkstraShortestDistanceTreeFinderTests
   name: DijkstraShortestDistanceTreeFinderTests
   href: api/MoreStructures.Tests.Graphs.ShortestDistanceTree.DijkstraShortestDistanceTreeFinderTests.html

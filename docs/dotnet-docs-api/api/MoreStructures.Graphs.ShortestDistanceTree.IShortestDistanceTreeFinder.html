@@ -111,13 +111,13 @@ computed in a single execution of the algorithm.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_ShortestDistanceTree_IShortestDistanceTreeFinder_Find_MoreStructures_Graphs_IGraph_IDictionary_System_ValueTuple_System_Int32_System_Int32__System_Int32__System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.Find(MoreStructures.Graphs.IGraph%2CIDictionary%7BSystem.ValueTuple%7BSystem.Int32%2CSystem.Int32%7D%2CSystem.Int32%7D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_ShortestDistanceTree_IShortestDistanceTreeFinder_FindTree_MoreStructures_Graphs_IGraph_IDictionary_System_ValueTuple_System_Int32_System_Int32__System_Int32__System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.FindTree(MoreStructures.Graphs.IGraph%2CIDictionary%7BSystem.ValueTuple%7BSystem.Int32%2CSystem.Int32%7D%2CSystem.Int32%7D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/ShortestDistanceTree/IShortestDistanceTreeFinder.cs/#L44">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/ShortestDistanceTree/IShortestDistanceTreeFinder.cs/#L53">View Source</a>
   </span>
-  <a id="MoreStructures_Graphs_ShortestDistanceTree_IShortestDistanceTreeFinder_Find_" data-uid="MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.Find*"></a>
-  <h4 id="MoreStructures_Graphs_ShortestDistanceTree_IShortestDistanceTreeFinder_Find_MoreStructures_Graphs_IGraph_IDictionary_System_ValueTuple_System_Int32_System_Int32__System_Int32__System_Int32_" data-uid="MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.Find(MoreStructures.Graphs.IGraph,IDictionary{System.ValueTuple{System.Int32,System.Int32},System.Int32},System.Int32)">Find(IGraph, IDictionary&lt;(Int32, Int32), Int32&gt;, Int32)</h4>
+  <a id="MoreStructures_Graphs_ShortestDistanceTree_IShortestDistanceTreeFinder_FindTree_" data-uid="MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.FindTree*"></a>
+  <h4 id="MoreStructures_Graphs_ShortestDistanceTree_IShortestDistanceTreeFinder_FindTree_MoreStructures_Graphs_IGraph_IDictionary_System_ValueTuple_System_Int32_System_Int32__System_Int32__System_Int32_" data-uid="MoreStructures.Graphs.ShortestDistanceTree.IShortestDistanceTreeFinder.FindTree(MoreStructures.Graphs.IGraph,IDictionary{System.ValueTuple{System.Int32,System.Int32},System.Int32},System.Int32)">FindTree(IGraph, IDictionary&lt;(Int32, Int32), Int32&gt;, Int32)</h4>
   <div class="markdown level1 summary"><p>Finds the shortest distance and path in the provided <code data-dev-comment-type="paramref" class="paramref">graph</code> from the <code data-dev-comment-type="paramref" class="paramref">start</code>
 vertex to each vertex of the <code data-dev-comment-type="paramref" class="paramref">graph</code>, i.e. a path such that the sum of distances of all the
 edges on the path is non-bigger than the one of any other path from the provided <code data-dev-comment-type="paramref" class="paramref">start</code> to
@@ -126,7 +126,7 @@ the vertex.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">BestPreviouses Find(IGraph graph, IDictionary&lt;(int, int), int&gt; distances, int start)</code></pre>
+    <pre><code class="lang-csharp hljs">BestPreviouses FindTree(IGraph graph, IDictionary&lt;(int, int), int&gt; distances, int start)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,7 +177,16 @@ the vertex.</p>
 <li>to the shortest distance S from <code data-dev-comment-type="paramref" class="paramref">start</code>,
 <br></li>
 <li>and to the id of the vertex preceeding v on a path from <code data-dev-comment-type="paramref" class="paramref">start</code> to v having total distance
-S.</li>
+S.
+<br>
+This represents a tree T of v' vertices and v' - 1 edges, where v' is at most v, if <code data-dev-comment-type="paramref" class="paramref">graph</code> is
+connected, and strictly lower, if <code data-dev-comment-type="paramref" class="paramref">graph</code> has multiple connected components.
+<br>
+The tree T is rooted in <code data-dev-comment-type="paramref" class="paramref">start</code> and its edges are weighted by the distance of the edges
+minimizing the total distance from the root.
+<br>
+The distance over a path from the root <code data-dev-comment-type="paramref" class="paramref">start</code> to any node of the tree v is the shortest
+distance from <code data-dev-comment-type="paramref" class="paramref">start</code> to v, over a directed path of the <code data-dev-comment-type="paramref" class="paramref">graph</code>.</li>
 </ul>
 </td>
       </tr>
