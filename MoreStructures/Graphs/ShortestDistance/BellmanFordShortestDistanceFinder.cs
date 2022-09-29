@@ -3,7 +3,6 @@
 namespace MoreStructures.Graphs.ShortestDistance;
 
 using GraphDistances = IDictionary<(int, int), int>;
-using BestPreviouses = Dictionary<int, (int distanceFromStart, int? previousVertex)>;
 
 /// <summary>
 /// An <see cref="IShortestDistanceFinder"/> implementation based on the Bellman-Ford algorithm.
@@ -134,7 +133,7 @@ public class BellmanFordShortestDistanceFinder : IShortestDistanceFinder
         ShortestDistanceFinderHelper.ValidateParameters(graph, start, end);
 
         var numberOfVertices = graph.GetNumberOfVertices();
-        var bestPreviouses = new BestPreviouses { [start] = (0, null) };
+        var bestPreviouses = new BestPreviouses(new() { [start] = new(0, -1) });
 
         var verticesRelaxedInLastIteration = new HashSet<int>();
         for (var iteration = 1; iteration <= numberOfVertices; iteration++)
@@ -142,14 +141,14 @@ public class BellmanFordShortestDistanceFinder : IShortestDistanceFinder
 
         SetToMinusInfinity(graph, bestPreviouses, verticesRelaxedInLastIteration);
 
-        if (!bestPreviouses.ContainsKey(end))
+        if (!bestPreviouses.Values.ContainsKey(end))
             return (int.MaxValue, Array.Empty<int>());
 
-        var shortestDistance = bestPreviouses[end].distanceFromStart;
+        var shortestDistance = bestPreviouses.Values[end].DistanceFromStart;
         if (shortestDistance == int.MinValue)
             return (int.MinValue, Array.Empty<int>());
 
-        var shortestPath = BfsBasedShortestDistanceFinder.BuildShortestPath(end, bestPreviouses);
+        var shortestPath = ShortestDistanceFinderHelper.BuildShortestPath(end, bestPreviouses);
 
         return (shortestDistance, shortestPath);
     }
@@ -162,17 +161,17 @@ public class BellmanFordShortestDistanceFinder : IShortestDistanceFinder
         {
             foreach (var (target, edgeStart, edgeEnd) in graph.GetAdjacentVerticesAndEdges(source, true))
             {
-                if (!bestPreviouses.TryGetValue(source, out var sourceBest))
+                if (!bestPreviouses.Values.TryGetValue(source, out var sourceBest))
                     continue;
 
-                var newTargetDistance = sourceBest.distanceFromStart + distances[(edgeStart, edgeEnd)];
-                if (!bestPreviouses.TryGetValue(target, out var targetBest) ||
-                    targetBest.distanceFromStart > newTargetDistance)
+                var newTargetDistance = sourceBest.DistanceFromStart + distances[(edgeStart, edgeEnd)];
+                if (!bestPreviouses.Values.TryGetValue(target, out var targetBest) ||
+                    targetBest.DistanceFromStart > newTargetDistance)
                 {
                     if (iteration == numberOfVertices)
                         verticesRelaxedInLastIteration.Add(target);
                     else
-                        bestPreviouses[target] = new(newTargetDistance, source);
+                        bestPreviouses.Values[target] = new(newTargetDistance, source);
                 }
             }
         }
@@ -186,6 +185,6 @@ public class BellmanFordShortestDistanceFinder : IShortestDistanceFinder
 
         var visitor = VisitStrategyBuilder();
         foreach (var reachableVertex in visitor.BreadthFirstSearchFromVertices(graph, verticesRelaxedInLastIteration))
-            bestPreviouses[reachableVertex] = new(int.MinValue, null);
+            bestPreviouses.Values[reachableVertex] = new(int.MinValue, -1);
     }
 }

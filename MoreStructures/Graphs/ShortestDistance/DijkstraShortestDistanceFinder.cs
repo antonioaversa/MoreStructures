@@ -3,6 +3,8 @@ using MoreStructures.PriorityQueues.Extensions;
 
 namespace MoreStructures.Graphs.ShortestDistance;
 
+using GraphDistances = IDictionary<(int, int), int>;
+
 /// <summary>
 /// An <see cref="IShortestDistanceFinder"/> implementation based on the Dijkstra algorithm.
 /// </summary>
@@ -117,37 +119,18 @@ public class DijkstraShortestDistanceFinder : IShortestDistanceFinder
     /// <remarks>
     ///     <inheritdoc cref="DijkstraShortestDistanceFinder"/>
     /// </remarks>
-    public (int, IList<int>) Find(IGraph graph, IDictionary<(int, int), int> distances, int start, int end)
+    public (int, IList<int>) Find(IGraph graph, GraphDistances distances, int start, int end)
     {
         ShortestDistanceFinderHelper.ValidateParameters(graph, start, end);
 
-        var bestPreviouses = new Dictionary<int, (int distanceFromStart, int? previousVertex)>
-        {
-            [start] = (0, null),
-        };
+        var bestPreviouses = new BestPreviouses(new() { [start] = new(0, -1) });
         var added = new HashSet<int>() { start };
         var vertexes = PriorityQueueBuilder();
         var lastAdded = start;
         while (lastAdded != end)
         {
-            foreach (var (vertex, edgeStart, edgeEnd) in graph.GetAdjacentVerticesAndEdges(lastAdded, true))
-            {
-                if (added.Contains(vertex))
-                    continue;
-
-                var edgeDistance = distances[(edgeStart, edgeEnd)];
-                if (edgeDistance < 0)
-                    throw new InvalidOperationException(
-                        $"Negative edges are not supported: distance of ({edgeStart}, {edgeEnd}) = {edgeDistance}.");
-
-                var newDistance = bestPreviouses[lastAdded].distanceFromStart + edgeDistance;
-                if (!bestPreviouses.TryGetValue(vertex, out var bestPrevious) ||
-                    bestPrevious.distanceFromStart > newDistance)
-                {
-                    bestPreviouses[vertex] = (newDistance, lastAdded);
-                    vertexes.PushOrUpdate(vertex, -newDistance);
-                }
-            }
+            ShortestDistanceFinderHelper.RelaxOutgoingEdgesOfVertex(
+                graph, distances, bestPreviouses, added, vertexes, lastAdded);
 
             if (vertexes.Count == 0)
                 break;
@@ -156,11 +139,11 @@ public class DijkstraShortestDistanceFinder : IShortestDistanceFinder
             added.Add(lastAdded);
         }
 
-        if (!bestPreviouses.ContainsKey(end))
+        if (!bestPreviouses.Values.ContainsKey(end))
             return (int.MaxValue, Array.Empty<int>());
 
-        var shortestDistance = bestPreviouses[end].distanceFromStart;
-        var shortestPath = BfsBasedShortestDistanceFinder.BuildShortestPath(end, bestPreviouses);
+        var shortestDistance = bestPreviouses.Values[end].DistanceFromStart;
+        var shortestPath = ShortestDistanceFinderHelper.BuildShortestPath(end, bestPreviouses);
 
         return (shortestDistance, shortestPath);
     }
