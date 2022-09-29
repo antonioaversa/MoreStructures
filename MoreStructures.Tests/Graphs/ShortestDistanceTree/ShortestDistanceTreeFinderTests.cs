@@ -29,8 +29,7 @@ public abstract class ShortestDistanceTreeFinderTests
         string graphDescription, int numberOfVertices, int[] starts, int[] ends, int[] distances)
     {
         for (var start = 0; start < numberOfVertices; start++)
-            TestGraph(
-                graphDescription, numberOfVertices, starts, ends, distances, start);
+            TestGraph(graphDescription, numberOfVertices, starts, ends, distances, start);
     }
 
     protected void TestGraph(
@@ -40,7 +39,7 @@ public abstract class ShortestDistanceTreeFinderTests
         var distancesDict = starts.Zip(ends).Zip(distances).ToDictionary(t => t.First, t => t.Second);
 
         var finder = FinderBuilder();
-        var bestPreviouses = finder.Find(graph, distancesDict, start).Values;
+        var bestPreviouses = finder.FindTree(graph, distancesDict, start).Values;
         var bestDistances =
             from bp in bestPreviouses
             orderby bp.Key
@@ -61,10 +60,19 @@ public abstract class ShortestDistanceTreeFinderTests
         {
             var path = new LinkedList<int>();
             var current = vertex;
+            var witnessFound = false;
             while (current >= 0 && bestPreviouses.TryGetValue(current, out var bestPrevious))
             {
                 path.AddFirst(current);
                 current = bestPrevious.PreviousVertex;
+                if (bestPrevious.DistanceFromStart == int.MinValue)
+                    witnessFound = true;
+            }
+
+            if (witnessFound)
+            {
+                Assert.AreEqual(int.MinValue, bestPreviouses[vertex].DistanceFromStart);
+                continue;
             }
 
             if (path.First == null)

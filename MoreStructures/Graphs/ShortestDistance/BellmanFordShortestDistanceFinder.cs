@@ -132,14 +132,8 @@ public class BellmanFordShortestDistanceFinder : IShortestDistanceFinder
     {
         ShortestDistanceFinderHelper.ValidateParameters(graph, start, end);
 
-        var numberOfVertices = graph.GetNumberOfVertices();
-        var bestPreviouses = new BestPreviouses(new() { [start] = new(0, -1) });
-
-        var verticesRelaxedInLastIteration = new HashSet<int>();
-        for (var iteration = 1; iteration <= numberOfVertices; iteration++)
-            RelaxEdges(graph, distances, numberOfVertices, bestPreviouses, iteration, verticesRelaxedInLastIteration);
-
-        SetToMinusInfinity(graph, bestPreviouses, verticesRelaxedInLastIteration);
+        var treeFinder = new ShortestDistanceTree.BellmanFordShortestDistanceTreeFinder(VisitStrategyBuilder);
+        var bestPreviouses = treeFinder.FindTree(graph, distances, start);
 
         if (!bestPreviouses.Values.ContainsKey(end))
             return (int.MaxValue, Array.Empty<int>());
@@ -151,40 +145,5 @@ public class BellmanFordShortestDistanceFinder : IShortestDistanceFinder
         var shortestPath = ShortestDistanceFinderHelper.BuildShortestPath(end, bestPreviouses);
 
         return (shortestDistance, shortestPath);
-    }
-
-    private static void RelaxEdges(
-        IGraph graph, GraphDistances distances, int numberOfVertices,
-        BestPreviouses bestPreviouses, int iteration, HashSet<int> verticesRelaxedInLastIteration)
-    {
-        for (var source = 0; source < numberOfVertices; source++)
-        {
-            foreach (var (target, edgeStart, edgeEnd) in graph.GetAdjacentVerticesAndEdges(source, true))
-            {
-                if (!bestPreviouses.Values.TryGetValue(source, out var sourceBest))
-                    continue;
-
-                var newTargetDistance = sourceBest.DistanceFromStart + distances[(edgeStart, edgeEnd)];
-                if (!bestPreviouses.Values.TryGetValue(target, out var targetBest) ||
-                    targetBest.DistanceFromStart > newTargetDistance)
-                {
-                    if (iteration == numberOfVertices)
-                        verticesRelaxedInLastIteration.Add(target);
-                    else
-                        bestPreviouses.Values[target] = new(newTargetDistance, source);
-                }
-            }
-        }
-    }
-
-    private void SetToMinusInfinity(IGraph graph, BestPreviouses bestPreviouses, 
-        HashSet<int> verticesRelaxedInLastIteration)
-    {
-        if (verticesRelaxedInLastIteration.Count == 0)
-            return;
-
-        var visitor = VisitStrategyBuilder();
-        foreach (var reachableVertex in visitor.BreadthFirstSearchFromVertices(graph, verticesRelaxedInLastIteration))
-            bestPreviouses.Values[reachableVertex] = new(int.MinValue, -1);
     }
 }

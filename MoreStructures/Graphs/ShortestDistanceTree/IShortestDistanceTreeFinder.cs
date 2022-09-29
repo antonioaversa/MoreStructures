@@ -40,6 +40,15 @@ public interface IShortestDistanceTreeFinder
     ///   <br/>
     /// - and to the id of the vertex preceeding v on a path from <paramref name="start"/> to v having total distance 
     ///   S.
+    ///   <br/>
+    /// This represents a tree T of v' vertices and v' - 1 edges, where v' is at most v, if <paramref name="graph"/> is
+    /// connected, and strictly lower, if <paramref name="graph"/> has multiple connected components.
+    /// <br/>
+    /// The tree T is rooted in <paramref name="start"/> and its edges are weighted by the distance of the edges 
+    /// minimizing the total distance from the root.
+    /// <br/>
+    /// The distance over a path from the root <paramref name="start"/> to any node of the tree v is the shortest 
+    /// distance from <paramref name="start"/> to v, over a directed path of the <paramref name="graph"/>.
     /// </returns>
-    BestPreviouses Find(IGraph graph, IDictionary<(int, int), int> distances, int start);
+    BestPreviouses FindTree(IGraph graph, IDictionary<(int, int), int> distances, int start);
 }
