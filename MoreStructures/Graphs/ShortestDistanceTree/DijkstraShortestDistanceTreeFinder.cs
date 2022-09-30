@@ -68,12 +68,13 @@ public class DijkstraShortestDistanceTreeFinder : IShortestDistanceTreeFinder
         var added = new HashSet<int>() { start };
         var vertexes = PriorityQueueBuilder();
         var numberOfVertices = graph.GetNumberOfVertices();
+        var distancesFunc = (int edgeStart, int edgeEnd) => distances[(edgeStart, edgeEnd)];
 
         var lastAdded = start;
         while (added.Count < numberOfVertices)
         {
             ShortestDistanceFinderHelper.RelaxOutgoingEdgesOfVertex(
-                graph, distances, bestPreviouses, added, vertexes, lastAdded);
+                graph, distancesFunc, bestPreviouses, added, vertexes, lastAdded);
 
             if (vertexes.Count == 0)
                 break;

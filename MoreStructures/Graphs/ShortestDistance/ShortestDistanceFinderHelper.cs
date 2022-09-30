@@ -3,8 +3,6 @@ using MoreStructures.PriorityQueues.Extensions;
 
 namespace MoreStructures.Graphs.ShortestDistance;
 
-using GraphDistances = IDictionary<(int, int), int>;
-
 internal static class ShortestDistanceFinderHelper
 {
     public static void ValidateParameters(IGraph graph, int start, int? end = null)
@@ -18,7 +16,7 @@ internal static class ShortestDistanceFinderHelper
                 "Must be non-negative and smaller than the total number of vertices in the graph.", nameof(end));
     }
 
-    public static IList<int> BuildShortestPath(int end, BestPreviouses bestPreviouses)
+    public static IList<int> BuildShortestPath(int end, BestPreviouses bestPreviouses, bool reverse = true)
     {
         var shortestPath = new List<int> { end };
 
@@ -32,13 +30,14 @@ internal static class ShortestDistanceFinderHelper
             shortestPath.Add(current);
         }
 
-        shortestPath.Reverse();
+        if (reverse)
+            shortestPath.Reverse();
         return shortestPath;
     }
 
     public static void RelaxOutgoingEdgesOfVertex(
         IGraph graph, 
-        GraphDistances distances, 
+        Func<int, int, int> distancesFunc, 
         BestPreviouses bestPreviouses, 
         HashSet<int> added, IUpdatablePriorityQueue<int> vertexes, int lastAdded)
     {
@@ -47,7 +46,7 @@ internal static class ShortestDistanceFinderHelper
             if (added.Contains(vertex))
                 continue;
 
-            var edgeDistance = distances[(edgeStart, edgeEnd)];
+            var edgeDistance = distancesFunc(edgeStart, edgeEnd);
             if (edgeDistance < 0)
                 throw new InvalidOperationException(
                     $"Negative edges are not supported: distance of ({edgeStart}, {edgeEnd}) = {edgeDistance}.");
