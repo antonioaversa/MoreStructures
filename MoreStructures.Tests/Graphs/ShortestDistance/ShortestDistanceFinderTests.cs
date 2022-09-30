@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MoreStructures.Graphs;
+﻿using MoreStructures.Graphs;
 using MoreStructures.Graphs.ShortestDistance;
 
 namespace MoreStructures.Tests.Graphs.ShortestDistance;
@@ -71,6 +70,21 @@ public abstract class ShortestDistanceFinderTests
         new[] { 1, 2, 4, 3, 3 },
         new[] { 3, 1, 1, 5, 1 }, 0, 3,
         5, new[] { 0, 1, 4, 3 })]
+    [DataRow("5 V, source to 4-chain with edge bypassing middle vertex", 5,
+        new[] { 0, 1, 1, 2, 3 },
+        new[] { 1, 2, 3, 3, 4 },
+        new[] { 1, 2, 3, 2, 1 }, 0, 4,
+        5, new[] { 0, 1, 3, 4 })]
+    [DataRow("5 V, source to 4-chain with edge bypassing 3 vertices in the middle", 5,
+        new[] { 0, 0, 1, 2, 3 },
+        new[] { 1, 4, 2, 3, 4 },
+        new[] { 1, 5, 2, 2, 1 }, 0, 4,
+        5, new[] { 0, 4 })]
+    [DataRow("5 V, 2 connected components: source to sink and source to intermediate to sink", 5,
+        new[] { 0, 2, 3 },
+        new[] { 1, 3, 4 },
+        new[] { 1, 1, 1 }, 0, 4,
+        int.MaxValue, new int[] { })]
     [DataRow("6 V, 5-C of vertices at distance 0, each to sink", 6,
         new[] { 0, 0, 1, 1, 2, 2, 3, 3, 4, 4 },
         new[] { 1, 5, 2, 5, 3, 5, 4, 5, 0, 5 },
@@ -81,6 +95,16 @@ public abstract class ShortestDistanceFinderTests
         new[] { 1, 2, 3, 4, 5, 1 },
         new[] { 9, 1, 1, 1, 1, 1 }, 0, 3,
         5, new[] { 0, 2, 4, 5, 1, 3 })]
+    [DataRow("6 V, source to 4-chain and 2-chain merging to sink, sink meeting point found going forward", 6,
+        new[] { 0, 0, 1, 2, 3, 4 },
+        new[] { 1, 2, 5, 3, 4, 5 },
+        new[] { 1, 10, 5, 1, 1, 1 }, 0, 5,
+        6, new[] { 0, 1, 5 })]
+    [DataRow("6 V, source to 4-chain and 2-chain merging to sink, source meeting point found going backward", 6,
+        new[] { 0, 0, 1, 2, 3, 4 },
+        new[] { 1, 2, 5, 3, 4, 5 },
+        new[] { 5, 1, 1, 1, 1, 10 }, 0, 5,
+        6, new[] { 0, 1, 5 })]
     [DataRow("7 V, source to sink, same source to 1-chain and 3-chain merging to vertex to sink", 7,
         new[] { 0, 0, 0, 1, 2, 3, 4, 5 },
         new[] { 1, 2, 6, 3, 4, 6, 5, 1 },

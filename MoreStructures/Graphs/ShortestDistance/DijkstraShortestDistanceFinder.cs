@@ -6,7 +6,7 @@ namespace MoreStructures.Graphs.ShortestDistance;
 using GraphDistances = IDictionary<(int, int), int>;
 
 /// <summary>
-/// An <see cref="IShortestDistanceFinder"/> implementation based on the Dijkstra algorithm.
+/// A <see cref="IShortestDistanceFinder"/> implementation based on the Dijkstra algorithm.
 /// </summary>
 /// <remarks>
 ///     <para id="requirements">
@@ -126,11 +126,13 @@ public class DijkstraShortestDistanceFinder : IShortestDistanceFinder
         var bestPreviouses = new BestPreviouses(new() { [start] = new(0, -1) });
         var added = new HashSet<int>() { start };
         var vertexes = PriorityQueueBuilder();
+        var distancesFunc = (int edgeStart, int edgeEnd) => distances[(edgeStart, edgeEnd)];
+
         var lastAdded = start;
         while (lastAdded != end)
         {
             ShortestDistanceFinderHelper.RelaxOutgoingEdgesOfVertex(
-                graph, distances, bestPreviouses, added, vertexes, lastAdded);
+                graph, distancesFunc, bestPreviouses, added, vertexes, lastAdded);
 
             if (vertexes.Count == 0)
                 break;
