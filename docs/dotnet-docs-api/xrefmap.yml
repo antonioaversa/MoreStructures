@@ -2592,6 +2592,44 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Graphs.ShortestDistance.BfsBasedShortestDistanceFinder.VisitStrategyBuilder
   nameWithType: BfsBasedShortestDistanceFinder.VisitStrategyBuilder
+- uid: MoreStructures.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinder
+  name: BidirectionalDijkstraShortestDistanceFinder
+  href: api/MoreStructures.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinder.html
+  commentId: T:MoreStructures.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinder
+  fullName: MoreStructures.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinder
+  nameWithType: BidirectionalDijkstraShortestDistanceFinder
+- uid: MoreStructures.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinder.#ctor(Func{MoreStructures.PriorityQueues.IUpdatablePriorityQueue{System.Int32}})
+  name: BidirectionalDijkstraShortestDistanceFinder(Func<IUpdatablePriorityQueue<Int32>>)
+  href: api/MoreStructures.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinder.html#MoreStructures_Graphs_ShortestDistance_BidirectionalDijkstraShortestDistanceFinder__ctor_Func_MoreStructures_PriorityQueues_IUpdatablePriorityQueue_System_Int32___
+  commentId: M:MoreStructures.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinder.#ctor(Func{MoreStructures.PriorityQueues.IUpdatablePriorityQueue{System.Int32}})
+  name.vb: BidirectionalDijkstraShortestDistanceFinder(Func(Of IUpdatablePriorityQueue(Of Int32)))
+  fullName: MoreStructures.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinder.BidirectionalDijkstraShortestDistanceFinder(Func<MoreStructures.PriorityQueues.IUpdatablePriorityQueue<System.Int32>>)
+  fullName.vb: MoreStructures.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinder.BidirectionalDijkstraShortestDistanceFinder(Func(Of MoreStructures.PriorityQueues.IUpdatablePriorityQueue(Of System.Int32)))
+  nameWithType: BidirectionalDijkstraShortestDistanceFinder.BidirectionalDijkstraShortestDistanceFinder(Func<IUpdatablePriorityQueue<Int32>>)
+  nameWithType.vb: BidirectionalDijkstraShortestDistanceFinder.BidirectionalDijkstraShortestDistanceFinder(Func(Of IUpdatablePriorityQueue(Of Int32)))
+- uid: MoreStructures.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinder.#ctor*
+  name: BidirectionalDijkstraShortestDistanceFinder
+  href: api/MoreStructures.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinder.html#MoreStructures_Graphs_ShortestDistance_BidirectionalDijkstraShortestDistanceFinder__ctor_
+  commentId: Overload:MoreStructures.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinder.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinder.BidirectionalDijkstraShortestDistanceFinder
+  nameWithType: BidirectionalDijkstraShortestDistanceFinder.BidirectionalDijkstraShortestDistanceFinder
+- uid: MoreStructures.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinder.Find(MoreStructures.Graphs.IGraph,IDictionary{System.ValueTuple{System.Int32,System.Int32},System.Int32},System.Int32,System.Int32)
+  name: Find(IGraph, IDictionary<(Int32, Int32), Int32>, Int32, Int32)
+  href: api/MoreStructures.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinder.html#MoreStructures_Graphs_ShortestDistance_BidirectionalDijkstraShortestDistanceFinder_Find_MoreStructures_Graphs_IGraph_IDictionary_System_ValueTuple_System_Int32_System_Int32__System_Int32__System_Int32_System_Int32_
+  commentId: M:MoreStructures.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinder.Find(MoreStructures.Graphs.IGraph,IDictionary{System.ValueTuple{System.Int32,System.Int32},System.Int32},System.Int32,System.Int32)
+  name.vb: Find(IGraph, IDictionary(Of (Int32, Int32)(Of Int32, Int32), Int32), Int32, Int32)
+  fullName: MoreStructures.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinder.Find(MoreStructures.Graphs.IGraph, IDictionary<System.ValueTuple<System.Int32, System.Int32>, System.Int32>, System.Int32, System.Int32)
+  fullName.vb: MoreStructures.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinder.Find(MoreStructures.Graphs.IGraph, IDictionary(Of System.ValueTuple(Of System.Int32, System.Int32), System.Int32), System.Int32, System.Int32)
+  nameWithType: BidirectionalDijkstraShortestDistanceFinder.Find(IGraph, IDictionary<(Int32, Int32), Int32>, Int32, Int32)
+  nameWithType.vb: BidirectionalDijkstraShortestDistanceFinder.Find(IGraph, IDictionary(Of (Int32, Int32)(Of Int32, Int32), Int32), Int32, Int32)
+- uid: MoreStructures.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinder.Find*
+  name: Find
+  href: api/MoreStructures.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinder.html#MoreStructures_Graphs_ShortestDistance_BidirectionalDijkstraShortestDistanceFinder_Find_
+  commentId: Overload:MoreStructures.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinder.Find
+  isSpec: "True"
+  fullName: MoreStructures.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinder.Find
+  nameWithType: BidirectionalDijkstraShortestDistanceFinder.Find
 - uid: MoreStructures.Graphs.ShortestDistance.DijkstraShortestDistanceFinder
   name: DijkstraShortestDistanceFinder
   href: api/MoreStructures.Graphs.ShortestDistance.DijkstraShortestDistanceFinder.html
@@ -12837,6 +12875,25 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Graphs.ShortestDistance.BfsBasedShortestDistanceFinderTests.BfsBasedShortestDistanceFinderTests
   nameWithType: BfsBasedShortestDistanceFinderTests.BfsBasedShortestDistanceFinderTests
+- uid: MoreStructures.Tests.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinderTests_WithFibonacciHeap
+  name: BidirectionalDijkstraShortestDistanceFinderTests_WithFibonacciHeap
+  href: api/MoreStructures.Tests.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinderTests_WithFibonacciHeap.html
+  commentId: T:MoreStructures.Tests.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinderTests_WithFibonacciHeap
+  fullName: MoreStructures.Tests.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinderTests_WithFibonacciHeap
+  nameWithType: BidirectionalDijkstraShortestDistanceFinderTests_WithFibonacciHeap
+- uid: MoreStructures.Tests.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinderTests_WithFibonacciHeap.#ctor
+  name: BidirectionalDijkstraShortestDistanceFinderTests_WithFibonacciHeap()
+  href: api/MoreStructures.Tests.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinderTests_WithFibonacciHeap.html#MoreStructures_Tests_Graphs_ShortestDistance_BidirectionalDijkstraShortestDistanceFinderTests_WithFibonacciHeap__ctor
+  commentId: M:MoreStructures.Tests.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinderTests_WithFibonacciHeap.#ctor
+  fullName: MoreStructures.Tests.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinderTests_WithFibonacciHeap.BidirectionalDijkstraShortestDistanceFinderTests_WithFibonacciHeap()
+  nameWithType: BidirectionalDijkstraShortestDistanceFinderTests_WithFibonacciHeap.BidirectionalDijkstraShortestDistanceFinderTests_WithFibonacciHeap()
+- uid: MoreStructures.Tests.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinderTests_WithFibonacciHeap.#ctor*
+  name: BidirectionalDijkstraShortestDistanceFinderTests_WithFibonacciHeap
+  href: api/MoreStructures.Tests.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinderTests_WithFibonacciHeap.html#MoreStructures_Tests_Graphs_ShortestDistance_BidirectionalDijkstraShortestDistanceFinderTests_WithFibonacciHeap__ctor_
+  commentId: Overload:MoreStructures.Tests.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinderTests_WithFibonacciHeap.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinderTests_WithFibonacciHeap.BidirectionalDijkstraShortestDistanceFinderTests_WithFibonacciHeap
+  nameWithType: BidirectionalDijkstraShortestDistanceFinderTests_WithFibonacciHeap.BidirectionalDijkstraShortestDistanceFinderTests_WithFibonacciHeap
 - uid: MoreStructures.Tests.Graphs.ShortestDistance.DijkstraShortestDistanceFinderTests
   name: DijkstraShortestDistanceFinderTests
   href: api/MoreStructures.Tests.Graphs.ShortestDistance.DijkstraShortestDistanceFinderTests.html
