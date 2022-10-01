@@ -105,7 +105,7 @@ public class KruskalMstFinder : IMstFinder
     /// <remarks>
     ///     <inheritdoc cref="KruskalMstFinder"/>
     /// </remarks>
-    public ISet<(int, int)> Find(IGraph graph, IDictionary<(int, int), int> distances)
+    public ISet<(int, int)> Find(IGraph graph, IGraphDistances distances)
     {
         var edges = graph.GetAllEdges().ToList();
         Sorter.Sort(edges, new EdgesComparer(distances));
@@ -132,9 +132,9 @@ public class KruskalMstFinder : IMstFinder
 
     private sealed class EdgesComparer : IComparer<(int, int)>
     {
-        private IDictionary<(int, int), int> Distances { get; }
+        private IGraphDistances Distances { get; }
 
-        public EdgesComparer(IDictionary<(int, int), int> distances)
+        public EdgesComparer(IGraphDistances distances)
         {
             Distances = distances;
         }

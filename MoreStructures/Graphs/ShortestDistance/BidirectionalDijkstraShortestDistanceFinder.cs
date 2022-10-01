@@ -2,8 +2,6 @@
 
 namespace MoreStructures.Graphs.ShortestDistance;
 
-using GraphDistances = IDictionary<(int, int), int>;
-
 /// <summary>
 /// A <see cref="IShortestDistanceFinder"/> implementation based on a refinement of the Dijkstra algorithm, running
 /// search in two parallel inversed flows: from the start vertext to the end vertex and viceversa.
@@ -161,7 +159,7 @@ public class BidirectionalDijkstraShortestDistanceFinder : IShortestDistanceFind
     /// <remarks>
     ///     <inheritdoc cref="BidirectionalDijkstraShortestDistanceFinder"/>
     /// </remarks>
-    public (int, IList<int>) Find(IGraph graph, GraphDistances distances, int start, int end)
+    public (int, IList<int>) Find(IGraph graph, IGraphDistances distances, int start, int end)
     {
         ShortestDistanceFinderHelper.ValidateParameters(graph, start, end);
 

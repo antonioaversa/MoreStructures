@@ -3,8 +3,6 @@ using MoreStructures.Graphs.Visitor;
 
 namespace MoreStructures.Graphs.ShortestDistance;
 
-using GraphDistances = IDictionary<(int, int), int>;
-
 /// <summary>
 /// An <see cref="IShortestDistanceFinder"/> which runs a BFS on the provided graph from the start vertex, to find the
 /// shortest distance and a shortest path to the end vertex.
@@ -104,7 +102,7 @@ public class BfsBasedShortestDistanceFinder : IShortestDistanceFinder
     /// <remarks>
     ///     <inheritdoc cref="BfsBasedShortestDistanceFinder"/>
     /// </remarks>
-    public (int, IList<int>) Find(IGraph graph, GraphDistances distances, int start, int end)
+    public (int, IList<int>) Find(IGraph graph, IGraphDistances distances, int start, int end)
     {
         ShortestDistanceFinderHelper.ValidateParameters(graph, start, end);
 
@@ -132,7 +130,7 @@ public class BfsBasedShortestDistanceFinder : IShortestDistanceFinder
 
     private static void UpdateBestPreviousAndDownstreamVertices(
         object? sender, VisitEventArgs eventArgs,
-        GraphDistances distances, BestPreviouses bestPreviouses, Dictionary<int, HashSet<int>> downstreamVertices)
+        IGraphDistances distances, BestPreviouses bestPreviouses, Dictionary<int, HashSet<int>> downstreamVertices)
     {
         var current = eventArgs.Vertex;
         if (eventArgs.PreviousVertex is not int previous)

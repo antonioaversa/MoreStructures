@@ -50,5 +50,5 @@ public interface IShortestDistanceTreeFinder
     /// The distance over a path from the root <paramref name="start"/> to any node of the tree v is the shortest 
     /// distance from <paramref name="start"/> to v, over a directed path of the <paramref name="graph"/>.
     /// </returns>
-    BestPreviouses FindTree(IGraph graph, IDictionary<(int, int), int> distances, int start);
+    BestPreviouses FindTree(IGraph graph, IGraphDistances distances, int start);
 }

@@ -48,12 +48,12 @@ public interface IMstFinder
     /// </summary>
     /// <param name="graph">The <see cref="IGraph"/>, to find the MST of.</param>
     /// <param name="distances">
-    /// The dictionary mapping each edge of <paramref name="graph"/> to its weight, which represents the "distance"
+    /// The mapping of each edge of <paramref name="graph"/> to its weight, which represents the "distance"
     /// from the start vertex of the edge to the end vertex.
     /// </param>
     /// <returns>The set of edges, in the form (source, target), identifying the MST.</returns>
     /// <remarks>
     ///     <inheritdoc cref="IMstFinder"/>
     /// </remarks>
-    public ISet<(int, int)> Find(IGraph graph, IDictionary<(int, int), int> distances);
+    public ISet<(int, int)> Find(IGraph graph, IGraphDistances distances);
 }

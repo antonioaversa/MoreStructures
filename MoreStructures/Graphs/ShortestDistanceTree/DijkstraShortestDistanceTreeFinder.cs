@@ -60,7 +60,7 @@ public class DijkstraShortestDistanceTreeFinder : IShortestDistanceTreeFinder
     /// <remarks>
     ///     <inheritdoc cref="DijkstraShortestDistanceTreeFinder"/>
     /// </remarks>
-    public BestPreviouses FindTree(IGraph graph, IDictionary<(int, int), int> distances, int start)
+    public BestPreviouses FindTree(IGraph graph, IGraphDistances distances, int start)
     {
         ShortestDistanceFinderHelper.ValidateParameters(graph, start, null);
 
