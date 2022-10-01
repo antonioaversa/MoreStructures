@@ -91,6 +91,11 @@
       <section><p>Represents the best estimate of the shortest distance of a vertex in a graph, from a given start vertex.
 Includes the id of the previous vertex, to reconstruct a path of such shortest distance.</p>
 </section>
+      <h4><a class="xref" href="MoreStructures.Graphs.ShortestDistance.AStarShortestDistanceFinder.html">AStarShortestDistanceFinder</a></h4>
+      <section><p>A <a class="xref" href="MoreStructures.Graphs.ShortestDistance.IShortestDistanceFinder.html">IShortestDistanceFinder</a> implementation based on the A* algorithm, which is a refinement of
+the Dijkstra's algorithm, introducing a goal-oriented heuristic, driving the search in the direction of the end
+vertex.</p>
+</section>
       <h4><a class="xref" href="MoreStructures.Graphs.ShortestDistance.BellmanFordShortestDistanceFinder.html">BellmanFordShortestDistanceFinder</a></h4>
       <section><p>An <a class="xref" href="MoreStructures.Graphs.ShortestDistance.IShortestDistanceFinder.html">IShortestDistanceFinder</a> implementation based on the Bellman-Ford algorithm.</p>
 </section>
@@ -101,6 +106,11 @@ Includes the id of the previous vertex, to reconstruct a path of such shortest d
       <section><p>An <a class="xref" href="MoreStructures.Graphs.ShortestDistance.IShortestDistanceFinder.html">IShortestDistanceFinder</a> which runs a BFS on the provided graph from the start vertex, to find the
 shortest distance and a shortest path to the end vertex.</p>
 </section>
+      <h4><a class="xref" href="MoreStructures.Graphs.ShortestDistance.BidirectionalAStarShortestDistanceFinder.html">BidirectionalAStarShortestDistanceFinder</a></h4>
+      <section><p>A <a class="xref" href="MoreStructures.Graphs.ShortestDistance.IPotentialBasedShortestDistanceFinder.html">IPotentialBasedShortestDistanceFinder</a> implementation based on the bidirectional A* algorithm,
+which combines the goal-oriented heuristic of the A* algorithm and the double search approach of the bidirectional
+Dijkstra's algorithm.</p>
+</section>
       <h4><a class="xref" href="MoreStructures.Graphs.ShortestDistance.BidirectionalDijkstraShortestDistanceFinder.html">BidirectionalDijkstraShortestDistanceFinder</a></h4>
       <section><p>A <a class="xref" href="MoreStructures.Graphs.ShortestDistance.IShortestDistanceFinder.html">IShortestDistanceFinder</a> implementation based on a refinement of the Dijkstra algorithm, running
 search in two parallel inversed flows: from the start vertext to the end vertex and viceversa.</p>
@@ -108,8 +118,17 @@ search in two parallel inversed flows: from the start vertext to the end vertex 
       <h4><a class="xref" href="MoreStructures.Graphs.ShortestDistance.DijkstraShortestDistanceFinder.html">DijkstraShortestDistanceFinder</a></h4>
       <section><p>A <a class="xref" href="MoreStructures.Graphs.ShortestDistance.IShortestDistanceFinder.html">IShortestDistanceFinder</a> implementation based on the Dijkstra algorithm.</p>
 </section>
+      <h4><a class="xref" href="MoreStructures.Graphs.ShortestDistance.PotentialBasedShortestDistanceFinder.html">PotentialBasedShortestDistanceFinder</a></h4>
+      <section><p>An <a class="xref" href="MoreStructures.Graphs.ShortestDistance.IPotentialBasedShortestDistanceFinder.html">IPotentialBasedShortestDistanceFinder</a> implementation, wrapping a
+<a class="xref" href="MoreStructures.Graphs.ShortestDistance.IShortestDistanceFinder.html">IShortestDistanceFinder</a> algorithm and using a potential function as a heuristic to enhance graph
+exploration.</p>
+</section>
     <h3 id="interfaces">Interfaces
   </h3>
+      <h4><a class="xref" href="MoreStructures.Graphs.ShortestDistance.IPotentialBasedShortestDistanceFinder.html">IPotentialBasedShortestDistanceFinder</a></h4>
+      <section><p>A <a class="xref" href="MoreStructures.Graphs.ShortestDistance.IShortestDistanceFinder.html">IShortestDistanceFinder</a> conceptual extension which introduces a <strong>potential function</strong>
+heuristic, to better drive the exploration of vertices of the graph, when searching for the end vertex.</p>
+</section>
       <h4><a class="xref" href="MoreStructures.Graphs.ShortestDistance.IShortestDistanceFinder.html">IShortestDistanceFinder</a></h4>
       <section><p>An algorithm that, given starting and ending vertices on a <strong>weighted</strong> directed graph, finds the <strong>shortest
 distance</strong> from the start to the end vertex, and a path on the graph having such a total distance.</p>

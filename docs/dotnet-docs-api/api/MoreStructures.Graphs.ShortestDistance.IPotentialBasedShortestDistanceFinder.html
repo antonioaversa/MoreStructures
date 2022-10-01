@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IShortestDistanceFinder
+    <title>Interface IPotentialBasedShortestDistanceFinder
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IShortestDistanceFinder
+    <meta name="title" content="Interface IPotentialBasedShortestDistanceFinder
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -78,40 +78,69 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MoreStructures.Graphs.ShortestDistance.IShortestDistanceFinder">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.Graphs.ShortestDistance.IPotentialBasedShortestDistanceFinder">
   
   
-  <h1 id="MoreStructures_Graphs_ShortestDistance_IShortestDistanceFinder" data-uid="MoreStructures.Graphs.ShortestDistance.IShortestDistanceFinder" class="text-break">Interface IShortestDistanceFinder
+  <h1 id="MoreStructures_Graphs_ShortestDistance_IPotentialBasedShortestDistanceFinder" data-uid="MoreStructures.Graphs.ShortestDistance.IPotentialBasedShortestDistanceFinder" class="text-break">Interface IPotentialBasedShortestDistanceFinder
   </h1>
-  <div class="markdown level0 summary"><p>An algorithm that, given starting and ending vertices on a <strong>weighted</strong> directed graph, finds the <strong>shortest
-distance</strong> from the start to the end vertex, and a path on the graph having such a total distance.</p>
+  <div class="markdown level0 summary"><p>A <a class="xref" href="MoreStructures.Graphs.ShortestDistance.IShortestDistanceFinder.html">IShortestDistanceFinder</a> conceptual extension which introduces a <strong>potential function</strong>
+heuristic, to better drive the exploration of vertices of the graph, when searching for the end vertex.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="MoreStructures.Graphs.ShortestDistance.IShortestDistanceFinder.html#MoreStructures_Graphs_ShortestDistance_IShortestDistanceFinder_Find_MoreStructures_Graphs_IGraph_MoreStructures_Graphs_IGraphDistances_System_Int32_System_Int32_">IShortestDistanceFinder.Find(IGraph, IGraphDistances, Int32, Int32)</a>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.Graphs.ShortestDistance.html">MoreStructures.Graphs.ShortestDistance</a></h6>
   <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
-  <h5 id="MoreStructures_Graphs_ShortestDistance_IShortestDistanceFinder_syntax">Syntax</h5>
+  <h5 id="MoreStructures_Graphs_ShortestDistance_IPotentialBasedShortestDistanceFinder_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IShortestDistanceFinder</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IPotentialBasedShortestDistanceFinder : IShortestDistanceFinder</code></pre>
   </div>
-  <h5 id="MoreStructures_Graphs_ShortestDistance_IShortestDistanceFinder_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>It differs from <a class="xref" href="MoreStructures.Graphs.ShortestPath.IShortestPathFinder.html">IShortestPathFinder</a> and its implementation because this class of
-algorithms takes into account <strong>weight of edges</strong> (i.e. distances between vertices).
+  <h5 id="MoreStructures_Graphs_ShortestDistance_IPotentialBasedShortestDistanceFinder_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+DEFINITION
 <br>
-By contrast, the class of algorithm implementing <a class="xref" href="MoreStructures.Graphs.ShortestPath.IShortestPathFinder.html">IShortestPathFinder</a> only takes into
-account presence or absence of an edge: i.e. each edge is weighted &quot;1&quot;, and vertex v is at distance 1 from vertex u
-if there is a direct edge from v to u, and at distance infinity, if there is no path from v to u.</p>
+In order for the potential function to be correct and possibly improve (and not decrease) algorithm 
+performance, the function P should have a few properties. Some are mandatory, some are recommended. 
+listed below.
+<br>
+- It must be <strong>deterministic</strong>, i.e. an actual matematical function, yielding the same output for a
+  given input, every time it is called.
+<br>
+- It must be <strong>feasible</strong>, i.e. it should not make distances negative when applied to edge distances on 
+the graph, <u>if Dijkstra is used as shortest path finder</u>. If distances become negative, Dijkstra 
+cannot be applied, as its main requirement would be broken.
+Notice how it is not enough for the potential function to be non-negative, since the distance d(u, v) of 
+an edge (u, v) of the graph is shifted by the potential difference, i.e. by P(v) - P(u), which can be 
+negative and can make the overall edge cost, d(u, v) + P(v) - P(u), negative.
+<br>
+- It should be <strong>quick</strong> to calculate the potential, not to have an impact on the overall runtime of the
+algorithm. Tipically O(1).
+<br>
+- It should be <strong>minimal at the end vertex</strong>, so that Dijkstra would be incentivized to go towards that 
+direction, while exploring the graph.
+<br>
+- It should become <strong>higher as the distance from the end vertex increases</strong>, so that Dijkstra would be 
+disincentivized from getting farther from the end vertex.
+<br>
+- It tipically is defined as <strong>a lower bound for the shortest distance</strong>: e.g. the euclidean distance on
+the map in a road network.
+</p>
 </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_ShortestDistance_IShortestDistanceFinder_Find_MoreStructures_Graphs_IGraph_MoreStructures_Graphs_IGraphDistances_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.ShortestDistance.IShortestDistanceFinder.Find(MoreStructures.Graphs.IGraph%2CMoreStructures.Graphs.IGraphDistances%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_ShortestDistance_IPotentialBasedShortestDistanceFinder_Find_MoreStructures_Graphs_IGraph_MoreStructures_Graphs_IGraphDistances_Func_System_Int32_System_Int32__System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.ShortestDistance.IPotentialBasedShortestDistanceFinder.Find(MoreStructures.Graphs.IGraph%2CMoreStructures.Graphs.IGraphDistances%2CFunc%7BSystem.Int32%2CSystem.Int32%7D%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/ShortestDistance/IShortestDistanceFinder.cs/#L34">View Source</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/ShortestDistance/IPotentialBasedShortestDistanceFinder.cs/#L61">View Source</a>
   </span>
-  <a id="MoreStructures_Graphs_ShortestDistance_IShortestDistanceFinder_Find_" data-uid="MoreStructures.Graphs.ShortestDistance.IShortestDistanceFinder.Find*"></a>
-  <h4 id="MoreStructures_Graphs_ShortestDistance_IShortestDistanceFinder_Find_MoreStructures_Graphs_IGraph_MoreStructures_Graphs_IGraphDistances_System_Int32_System_Int32_" data-uid="MoreStructures.Graphs.ShortestDistance.IShortestDistanceFinder.Find(MoreStructures.Graphs.IGraph,MoreStructures.Graphs.IGraphDistances,System.Int32,System.Int32)">Find(IGraph, IGraphDistances, Int32, Int32)</h4>
+  <a id="MoreStructures_Graphs_ShortestDistance_IPotentialBasedShortestDistanceFinder_Find_" data-uid="MoreStructures.Graphs.ShortestDistance.IPotentialBasedShortestDistanceFinder.Find*"></a>
+  <h4 id="MoreStructures_Graphs_ShortestDistance_IPotentialBasedShortestDistanceFinder_Find_MoreStructures_Graphs_IGraph_MoreStructures_Graphs_IGraphDistances_Func_System_Int32_System_Int32__System_Int32_System_Int32_" data-uid="MoreStructures.Graphs.ShortestDistance.IPotentialBasedShortestDistanceFinder.Find(MoreStructures.Graphs.IGraph,MoreStructures.Graphs.IGraphDistances,Func{System.Int32,System.Int32},System.Int32,System.Int32)">Find(IGraph, IGraphDistances, Func&lt;Int32, Int32&gt;, Int32, Int32)</h4>
   <div class="markdown level1 summary"><p>Finds the shortest distance and path in the provided <code data-dev-comment-type="paramref" class="paramref">graph</code> from the <code data-dev-comment-type="paramref" class="paramref">start</code>
 vertex to the <code data-dev-comment-type="paramref" class="paramref">end</code> vertex, i.e. a path such that the sum of distances of all the edges on the
 path is non-bigger than the one of any other path from the provided <code data-dev-comment-type="paramref" class="paramref">start</code> and
@@ -120,7 +149,7 @@ path is non-bigger than the one of any other path from the provided <code data-d
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">(int, IList&lt;int&gt;) Find(IGraph graph, IGraphDistances distances, int start, int end)</code></pre>
+    <pre><code class="lang-csharp hljs">(int, IList&lt;int&gt;) Find(IGraph graph, IGraphDistances distances, Func&lt;int, int&gt; potentials, int start, int end)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -135,25 +164,36 @@ path is non-bigger than the one of any other path from the provided <code data-d
       <tr>
         <td><a class="xref" href="MoreStructures.Graphs.IGraph.html">IGraph</a></td>
         <td><span class="parametername">graph</span></td>
-        <td><p>The graph to traverse.</p>
+        <td><p><inheritdoc cref="M:MoreStructures.Graphs.ShortestDistance.IShortestDistanceFinder.Find(MoreStructures.Graphs.IGraph,MoreStructures.Graphs.IGraphDistances,System.Int32,System.Int32)"></inheritdoc></p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="MoreStructures.Graphs.IGraphDistances.html">IGraphDistances</a></td>
         <td><span class="parametername">distances</span></td>
-        <td><p>A map between each edge of <code data-dev-comment-type="paramref" class="paramref">graph</code> and its distance.</p>
+        <td><p><inheritdoc cref="M:MoreStructures.Graphs.ShortestDistance.IShortestDistanceFinder.Find(MoreStructures.Graphs.IGraph,MoreStructures.Graphs.IGraphDistances,System.Int32,System.Int32)"></inheritdoc></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">potentials</span></td>
+        <td><p>A function mapping each vertex of the provided graph to a <span class="xref">System.Int32</span>, providing an heuristic for
+&quot;how far&quot; the vertex is from the end vertex, to drive the <a class="xref" href="MoreStructures.Graphs.ShortestDistance.IPotentialBasedShortestDistanceFinder.html">IPotentialBasedShortestDistanceFinder</a>
+towards an earlier, rather than late, discovery of the end vertex.
+<br>
+Check the general documentation of <a class="xref" href="MoreStructures.Graphs.ShortestDistance.IPotentialBasedShortestDistanceFinder.html">IPotentialBasedShortestDistanceFinder</a> for further information
+about how to define a correct and good potential function.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">start</span></td>
-        <td><p>The id of the vertex, to start traversal from.</p>
+        <td><p><inheritdoc cref="M:MoreStructures.Graphs.ShortestDistance.IShortestDistanceFinder.Find(MoreStructures.Graphs.IGraph,MoreStructures.Graphs.IGraphDistances,System.Int32,System.Int32)"></inheritdoc></p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">end</span></td>
-        <td><p>The id of the vertex, to end traversal at.</p>
+        <td><p><inheritdoc cref="M:MoreStructures.Graphs.ShortestDistance.IShortestDistanceFinder.Find(MoreStructures.Graphs.IGraph,MoreStructures.Graphs.IGraphDistances,System.Int32,System.Int32)"></inheritdoc></p>
 </td>
       </tr>
     </tbody>
@@ -190,10 +230,10 @@ shortest path.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_ShortestDistance_IShortestDistanceFinder.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.ShortestDistance.IShortestDistanceFinder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_ShortestDistance_IPotentialBasedShortestDistanceFinder.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.ShortestDistance.IPotentialBasedShortestDistanceFinder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/ShortestDistance/IShortestDistanceFinder.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/ShortestDistance/IPotentialBasedShortestDistanceFinder.cs/#L38" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
