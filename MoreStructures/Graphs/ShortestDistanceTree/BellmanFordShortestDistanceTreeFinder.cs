@@ -3,8 +3,6 @@ using MoreStructures.Graphs.Visitor;
 
 namespace MoreStructures.Graphs.ShortestDistanceTree;
 
-using GraphDistances = IDictionary<(int, int), int>;
-
 /// <summary>
 /// A <see cref="IShortestDistanceFinder"/> implementation based on the Bellman-Ford algorithm.
 /// </summary>
@@ -70,7 +68,7 @@ public class BellmanFordShortestDistanceTreeFinder : IShortestDistanceTreeFinder
     /// <remarks>
     ///     <inheritdoc cref="BellmanFordShortestDistanceFinder"/>
     /// </remarks>
-    public BestPreviouses FindTree(IGraph graph, GraphDistances distances, int start)
+    public BestPreviouses FindTree(IGraph graph, IGraphDistances distances, int start)
     {
         ShortestDistanceFinderHelper.ValidateParameters(graph, start, null);
 
@@ -86,7 +84,7 @@ public class BellmanFordShortestDistanceTreeFinder : IShortestDistanceTreeFinder
     }
 
     private static void RelaxEdges(
-        IGraph graph, GraphDistances distances, int numberOfVertices,
+        IGraph graph, IGraphDistances distances, int numberOfVertices,
         BestPreviouses bestPreviouses, int iteration, HashSet<int> verticesRelaxedInLastIteration)
     {
         for (var source = 0; source < numberOfVertices; source++)

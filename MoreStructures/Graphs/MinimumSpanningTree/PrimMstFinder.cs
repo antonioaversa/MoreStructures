@@ -80,7 +80,7 @@ public class PrimMstFinder : IMstFinder
     /// <remarks>
     ///     <inheritdoc cref="PrimMstFinder"/>
     /// </remarks>
-    public ISet<(int, int)> Find(IGraph graph, IDictionary<(int, int), int> distances)
+    public ISet<(int, int)> Find(IGraph graph, IGraphDistances distances)
     {
         var numberOfVertices = graph.GetNumberOfVertices();
         if (numberOfVertices == 0)

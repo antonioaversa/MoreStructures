@@ -31,5 +31,5 @@ public interface IShortestDistanceFinder
     /// The second item of the couple is the sequence of vertices of the <paramref name="graph"/>, identifying the 
     /// shortest path.
     /// </returns>
-    (int, IList<int>) Find(IGraph graph, IDictionary<(int, int), int> distances, int start, int end);
+    (int, IList<int>) Find(IGraph graph, IGraphDistances distances, int start, int end);
 }

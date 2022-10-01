@@ -149,10 +149,11 @@ public abstract class ShortestDistanceFinderTests
         int expectedDistance, int[] expectedPath)
     {
         var graph = GraphBuilder(numberOfVertices, starts.Zip(ends).ToList());
-        var distancesDict = starts.Zip(ends).Zip(distances).ToDictionary(t => t.First, t => t.Second);
+        var graphDistances = new DictionaryAdapterGraphDistances(
+            starts.Zip(ends).Zip(distances).ToDictionary(t => t.First, t => t.Second));
 
         var finder = FinderBuilder();
-        var (distance, path) = finder.Find(graph, distancesDict, start, end);
+        var (distance, path) = finder.Find(graph, graphDistances, start, end);
         var message =
             $"{graphDescription} - Expected [{string.Join(", ", expectedPath)}], Actual: [{string.Join(", ", path)}]";
         Assert.AreEqual(expectedDistance, distance, message);

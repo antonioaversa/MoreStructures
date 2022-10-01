@@ -76,7 +76,8 @@ public abstract class MstFinderTests
         var finder = FinderBuilder();
 
         var distancesDict = starts.Zip(ends).Zip(distances).ToDictionary(t => t.First, t => t.Second);
-        var mst = finder.Find(graph, distancesDict);
+        var graphDistances = new DictionaryAdapterGraphDistances(distancesDict);
+        var mst = finder.Find(graph, graphDistances);
 
         // If numberOfVertices == 0 => 0 edges in MST, 0 distinct vertices in MST, 0 connected components
         if (numberOfVertices > 1)
@@ -119,7 +120,8 @@ public abstract class MstFinderTests
         var finder = FinderBuilder();
 
         var distancesDict = starts.Zip(ends).Zip(distances).ToDictionary(t => t.First, t => t.Second);
+        var graphDistances = new DictionaryAdapterGraphDistances(distancesDict);
 
-        Assert.ThrowsException<InvalidOperationException>(() => finder.Find(graph, distancesDict), graphDescription);
+        Assert.ThrowsException<InvalidOperationException>(() => finder.Find(graph, graphDistances), graphDescription);
     }
 }

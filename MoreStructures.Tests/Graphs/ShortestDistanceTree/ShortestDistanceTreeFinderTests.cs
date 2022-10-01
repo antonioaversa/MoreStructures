@@ -36,10 +36,11 @@ public abstract class ShortestDistanceTreeFinderTests
         string graphDescription, int numberOfVertices, int[] starts, int[] ends, int[] distances, int start)
     {
         var graph = GraphBuilder(numberOfVertices, starts.Zip(ends).ToList());
-        var distancesDict = starts.Zip(ends).Zip(distances).ToDictionary(t => t.First, t => t.Second);
+        var graphDistances = new DictionaryAdapterGraphDistances(
+            starts.Zip(ends).Zip(distances).ToDictionary(t => t.First, t => t.Second));
 
         var finder = FinderBuilder();
-        var bestPreviouses = finder.FindTree(graph, distancesDict, start).Values;
+        var bestPreviouses = finder.FindTree(graph, graphDistances, start).Values;
         var bestDistances =
             from bp in bestPreviouses
             orderby bp.Key
@@ -48,7 +49,7 @@ public abstract class ShortestDistanceTreeFinderTests
         var singlePathFinder = SinglePathFinderBuilder();
         var expectedBestDistances = Enumerable
             .Range(0, numberOfVertices)
-            .Select(v => singlePathFinder.Find(graph, distancesDict, start, v).Item1)
+            .Select(v => singlePathFinder.Find(graph, graphDistances, start, v).Item1)
             .Where(d => d < int.MaxValue);
 
         var message =
@@ -80,7 +81,7 @@ public abstract class ShortestDistanceTreeFinderTests
 
             Assert.IsTrue(path.First.Value == start);
 
-            var expectedPathDistance = path.Zip(path.Skip(1)).Sum(e => distancesDict[e]);
+            var expectedPathDistance = path.Zip(path.Skip(1)).Sum(e => graphDistances[e]);
             Assert.AreEqual(bestPreviouses[vertex].DistanceFromStart, expectedPathDistance);
         }
     }

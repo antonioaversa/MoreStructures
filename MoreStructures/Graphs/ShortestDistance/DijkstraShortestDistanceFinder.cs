@@ -3,8 +3,6 @@ using MoreStructures.PriorityQueues.Extensions;
 
 namespace MoreStructures.Graphs.ShortestDistance;
 
-using GraphDistances = IDictionary<(int, int), int>;
-
 /// <summary>
 /// A <see cref="IShortestDistanceFinder"/> implementation based on the Dijkstra algorithm.
 /// </summary>
@@ -119,7 +117,7 @@ public class DijkstraShortestDistanceFinder : IShortestDistanceFinder
     /// <remarks>
     ///     <inheritdoc cref="DijkstraShortestDistanceFinder"/>
     /// </remarks>
-    public (int, IList<int>) Find(IGraph graph, GraphDistances distances, int start, int end)
+    public (int, IList<int>) Find(IGraph graph, IGraphDistances distances, int start, int end)
     {
         ShortestDistanceFinderHelper.ValidateParameters(graph, start, end);
 

@@ -2,8 +2,6 @@
 
 namespace MoreStructures.Graphs.ShortestDistance;
 
-using GraphDistances = IDictionary<(int, int), int>;
-
 /// <summary>
 /// An <see cref="IShortestDistanceFinder"/> implementation based on the Bellman-Ford algorithm.
 /// </summary>
@@ -128,7 +126,7 @@ public class BellmanFordShortestDistanceFinder : IShortestDistanceFinder
     /// <remarks>
     ///     <inheritdoc cref="BellmanFordShortestDistanceFinder"/>
     /// </remarks>
-    public (int, IList<int>) Find(IGraph graph, GraphDistances distances, int start, int end)
+    public (int, IList<int>) Find(IGraph graph, IGraphDistances distances, int start, int end)
     {
         ShortestDistanceFinderHelper.ValidateParameters(graph, start, end);
 
