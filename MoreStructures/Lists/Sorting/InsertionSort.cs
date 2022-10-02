@@ -1,7 +1,7 @@
 ﻿namespace MoreStructures.Lists.Sorting;
 
 /// <summary>
-/// An <see cref="IInPlaceSorting"/> implementation based on insertion sort.
+/// An <see cref="IInputMutatingSort"/> implementation based on insertion sort.
 /// </summary>
 /// <remarks>
 ///     <para id="algorithm">
@@ -38,7 +38,7 @@
 ///       hence only requires additional constant space to perform the sorting.
 ///     </para>
 /// </remarks>
-public class InsertionSort : IInPlaceSorting
+public class InsertionSort : IInputMutatingSort
 {
     /// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
     /// <summary>

@@ -49,7 +49,7 @@ namespace MoreStructures.Graphs.MinimumSpanningTree;
 ///     <para id="complexity">
 ///     COMPLEXITY
 ///     <br/>
-///     - The algorithm makes use of an <see cref="IInPlaceSorting"/> algorithm, to sort all the edges of the graph in
+///     - The algorithm makes use of an <see cref="IInputMutatingSort"/> algorithm, to sort all the edges of the graph in
 ///       ascending order by their distance. 
 ///       <br/>
 ///     - Since sorting edges is required by the algorithm, the overall complexity is lower bounded by 
@@ -76,9 +76,9 @@ namespace MoreStructures.Graphs.MinimumSpanningTree;
 public class KruskalMstFinder : IMstFinder
 {
     /// <summary>
-    /// The <see cref="IInPlaceSorting"/> algorithm to be used to sort the edges of the graph.
+    /// The <see cref="IInputMutatingSort"/> algorithm to be used to sort the edges of the graph.
     /// </summary>
-    public IInPlaceSorting Sorter { get; }
+    public IInputMutatingSort Sorter { get; }
 
     /// <summary>
     /// A build of <see cref="IDisjointSet"/> instances, used by the algorithm to detect potential cycles in the MST.
@@ -92,7 +92,7 @@ public class KruskalMstFinder : IMstFinder
     /// <param name="disjointSetBuilder">
     ///     <inheritdoc cref="DisjointSetBuilder" path="/summary"/>
     /// </param>
-    public KruskalMstFinder(IInPlaceSorting sorter, Func<int, IDisjointSet> disjointSetBuilder)
+    public KruskalMstFinder(IInputMutatingSort sorter, Func<int, IDisjointSet> disjointSetBuilder)
     {
         Sorter = sorter;
         DisjointSetBuilder = disjointSetBuilder;

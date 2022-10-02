@@ -1,7 +1,7 @@
 ﻿namespace MoreStructures.Lists.Sorting;
 
 /// <summary>
-/// An <see cref="IInPlaceSorting"/> implementation based on Shell sort.
+/// An <see cref="IInputMutatingSort"/> implementation based on Shell sort.
 /// </summary>
 /// <remarks>
 ///     <para id="advantages">
@@ -76,7 +76,7 @@
 ///     - Best-case performance is still O(n * log(n)) for most gap sequences in general.
 ///     </para>
 /// </remarks>
-public class ShellSort : IInPlaceSorting
+public class ShellSort : IInputMutatingSort
 {
     /// <summary>
     /// A generator of a monotonically strictly increasing sequence of <see cref="int"/>, each representing a gap 

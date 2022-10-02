@@ -3,7 +3,7 @@
 namespace MoreStructures.Tests.Lists.Sorting;
 
 [TestClass]
-public class InsertionSortTests : InPlaceSortingTests
+public class InsertionSortTests : InputSortingTests
 {
     public InsertionSortTests() : base(() => new InsertionSort())
     {
