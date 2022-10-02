@@ -27,7 +27,7 @@ Algorithms implemented include:
 - __Tree visit__: DFS, BFS, in iterative and recursive forms;
 - __Graphs visits__: DFS, BFS, in iterative and recursive forms;
 - __Graphs minimum spanning tree__: Kruskal, Prim;
-- __Graphs shortest distance__: Dijkstra, bidirectional Dijkstra, Bellman-Ford, BFS-based;
+- __Graphs shortest distance__: Dijkstra, bidirectional Dijkstra, Bellman-Ford, BFS-based, A*, bidirectional A*;
 - __Graphs shortest path__: BFS-based;
 - __Graphs topological sorting__: DFS on each vertex, any path to sink, single DFS sink-based;
 - __Graphs strongly connected components__: sink-based;
