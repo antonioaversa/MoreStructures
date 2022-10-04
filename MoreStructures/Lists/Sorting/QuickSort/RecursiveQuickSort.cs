@@ -27,8 +27,8 @@
 ///       the cost of comparison can be quite high, depending on the <see cref="IComparable{T}"/> or on the 
 ///       <see cref="IComparer{T}"/> implementation used.
 ///       <br/>
-///     - A disadvantage is that, for it to have consistently good performances, it has to be randomized. In such
-///       setup, it is <b>not deterministic</b>.
+///     - Compared to most other comparison-based algorithms, a disadvantage of quicksort is that, for it to have 
+///       consistently good performances, it has to be randomized. In such setup, it is <b>not deterministic</b>.
 ///     </para>
 ///     <para id="algorithm">
 ///     ALGORITHM

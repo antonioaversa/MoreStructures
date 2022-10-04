@@ -15,5 +15,6 @@ public class IdentityShuffleStrategy : IShuffleStrategy
     /// </remarks>
     public void Shuffle<T>(IList<T> list, int start, int end)
     {
+        // Does nothing
     }
 }

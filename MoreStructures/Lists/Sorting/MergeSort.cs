@@ -114,9 +114,10 @@ public class MergeSort : IInputMutatingSort
             return;
         
         var middleIndex = startIndex + (endIndex - startIndex) / 2;
-        RecursiveSort(temp, list, comparer, startIndex, middleIndex);
-        RecursiveSort(temp, list, comparer, middleIndex + 1, endIndex);
-        Merge(list, temp, comparer, startIndex, middleIndex, endIndex);
+        (temp, list) = (list, temp); // Swap roles of list and temp
+        RecursiveSort(list, temp, comparer, startIndex, middleIndex);
+        RecursiveSort(list, temp, comparer, middleIndex + 1, endIndex);
+        Merge(temp, list, comparer, startIndex, middleIndex, endIndex);
     }
 
     private static void Merge<T>(
