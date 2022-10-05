@@ -1398,7 +1398,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.PriorityQueues.BinomialHeap.BinomialHeapPriorityQueue-1.html",
-          "hash": "rv+/wV4eNDvojW+SgQrTOsiINaSGDy+pVQSKG6LdBiA="
+          "hash": "ZgmERgj1AO27iqp1MQCAYZfQKDdcBo/pMR4l9FAtg8U="
         }
       },
       "is_incremental": false,
@@ -1422,7 +1422,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.PriorityQueues.BinomialHeap.TreeNode-1.html",
-          "hash": "u2SuHvdQLeP75UC/GJP3JvKO2bBuIUnekeraM3KDLYU="
+          "hash": "7JQTxULejME22v4Z+sC6uR24hGUQmop/731lMJw2Pn4="
         }
       },
       "is_incremental": false,
@@ -1555,6 +1555,30 @@
         ".html": {
           "relative_path": "api/MoreStructures.PriorityQueues.IUpdatablePriorityQueue-1.html",
           "hash": "KRzxdue6QGmby4V7/QR+Q1eQI3x3Fn/t7ORgc1VYLAA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html",
+          "hash": "ODzyt2kalM7CMsZ+vjOWbfVGW0gzrumfEbT7qYtgiJA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.PriorityQueues.LinkedList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.PriorityQueues.LinkedList.html",
+          "hash": "mbvDXuchUqYTyLORdQHjdb25R172iXjjnSJEkEz/+DY="
         }
       },
       "is_incremental": false,
@@ -4586,11 +4610,71 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue.html",
+          "hash": "3AR2F0RCY6QOhOwnkVUryoFiTzURNBeaiNdupOLDUJw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsMergeableAndUpdatable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsMergeableAndUpdatable.html",
+          "hash": "sRD6GheVwwh3UgpAW7hNA4cvYc4t1dZd+l8ekUr+gFg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsPeekKthQueue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsPeekKthQueue.html",
+          "hash": "lyAVo9DqNnyTJPhP8hZUOCH7G5XfPPduu/1W81vxZaE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsUpdatableQueue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsUpdatableQueue.html",
+          "hash": "uHk+3XrKVgnulBRiHOUYZjQHWOFeiPMpzoKiWoustjo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.PriorityQueues.LinkedList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.PriorityQueues.LinkedList.html",
+          "hash": "HM8ZronEYF9Azq3w1wCGoTK9Xyu+0pioZgqLRGzOed4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Tests.PriorityQueues.MergeableAndUpdatablePriorityQueueTests-1.yml",
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.PriorityQueues.MergeableAndUpdatablePriorityQueueTests-1.html",
-          "hash": "811+wKJj7HU08YUrL07CL32WN8Ncl6n+AiJaDzRDtsk="
+          "hash": "qBB98VstvT4Zpfd+Cc6hyTr5zCJTxXxPs2/qKDsWTD4="
         }
       },
       "is_incremental": false,
@@ -4614,7 +4698,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.PriorityQueues.PeekKthPriorityQueueTests.html",
-          "hash": "lU9XWUz6AKuWxCXwb8/LP7kubD1sTdoEVxujJx2TP/8="
+          "hash": "6T1q6fGQM62vknLVlf78DQwRA9GPPbL4BgfR1iXLW4Q="
         }
       },
       "is_incremental": false,
@@ -4638,7 +4722,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.PriorityQueues.PriorityQueueTests.html",
-          "hash": "J/V47GrDvdliSLjk7uk0B/cOzHEI4DQcg4dnWiqWolI="
+          "hash": "JY7rTTt8lLRyS6ls7zLWY9N/tK8BMPITGMg7jwM2gy8="
         }
       },
       "is_incremental": false,
@@ -4662,7 +4746,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.PriorityQueues.UpdatablePriorityQueueTests.html",
-          "hash": "/40mlwHo/9BkxPFXjeckZaVs/ETvvicGRdb673SigKQ="
+          "hash": "9K4/cSJ+lpcQ7dGsUrtxp68GJkD+MDW6r0ZWxxm9FHE="
         }
       },
       "is_incremental": false,
@@ -6498,7 +6582,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "1lghlXsTpfLOuqXxY1AupnYaPlHqZzsYyQjf5AoWpcg="
+          "hash": "FMiUl+e5NahSNlMY0VWxkP2T34pPYHZ4vnVsVfglYJY="
         }
       },
       "is_incremental": false,
@@ -6573,7 +6657,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 539,
+          "total_file_count": 546,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

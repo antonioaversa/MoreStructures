@@ -6884,6 +6884,263 @@ references:
   fullName.vb: MoreStructures.PriorityQueues.IUpdatablePriorityQueue(Of T).UpdatePriority
   nameWithType: IUpdatablePriorityQueue<T>.UpdatePriority
   nameWithType.vb: IUpdatablePriorityQueue(Of T).UpdatePriority
+- uid: MoreStructures.PriorityQueues.LinkedList
+  name: MoreStructures.PriorityQueues.LinkedList
+  href: api/MoreStructures.PriorityQueues.LinkedList.html
+  commentId: N:MoreStructures.PriorityQueues.LinkedList
+  fullName: MoreStructures.PriorityQueues.LinkedList
+  nameWithType: MoreStructures.PriorityQueues.LinkedList
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1
+  name: SortedLinkedListPriorityQueue<T>
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html
+  commentId: T:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1
+  name.vb: SortedLinkedListPriorityQueue(Of T)
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T)
+  nameWithType: SortedLinkedListPriorityQueue<T>
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T)
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.#ctor
+  name: SortedLinkedListPriorityQueue()
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1__ctor
+  commentId: M:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.#ctor
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.SortedLinkedListPriorityQueue()
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).SortedLinkedListPriorityQueue()
+  nameWithType: SortedLinkedListPriorityQueue<T>.SortedLinkedListPriorityQueue()
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).SortedLinkedListPriorityQueue()
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.#ctor(MoreStructures.PriorityQueues.LinkedList{MoreStructures.PriorityQueues.PrioritizedItem{`0}})
+  name: SortedLinkedListPriorityQueue(LinkedList<PrioritizedItem<T>>)
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1__ctor_MoreStructures_PriorityQueues_LinkedList_MoreStructures_PriorityQueues_PrioritizedItem__0___
+  commentId: M:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.#ctor(MoreStructures.PriorityQueues.LinkedList{MoreStructures.PriorityQueues.PrioritizedItem{`0}})
+  name.vb: SortedLinkedListPriorityQueue(LinkedList(Of PrioritizedItem(Of T)))
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.SortedLinkedListPriorityQueue(MoreStructures.PriorityQueues.LinkedList<MoreStructures.PriorityQueues.PrioritizedItem<T>>)
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).SortedLinkedListPriorityQueue(MoreStructures.PriorityQueues.LinkedList(Of MoreStructures.PriorityQueues.PrioritizedItem(Of T)))
+  nameWithType: SortedLinkedListPriorityQueue<T>.SortedLinkedListPriorityQueue(LinkedList<PrioritizedItem<T>>)
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).SortedLinkedListPriorityQueue(LinkedList(Of PrioritizedItem(Of T)))
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.#ctor(System.Collections.IEnumerable{MoreStructures.PriorityQueues.PrioritizedItem{`0}})
+  name: SortedLinkedListPriorityQueue(IEnumerable<PrioritizedItem<T>>)
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1__ctor_System_Collections_IEnumerable_MoreStructures_PriorityQueues_PrioritizedItem__0___
+  commentId: M:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.#ctor(System.Collections.IEnumerable{MoreStructures.PriorityQueues.PrioritizedItem{`0}})
+  name.vb: SortedLinkedListPriorityQueue(IEnumerable(Of PrioritizedItem(Of T)))
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.SortedLinkedListPriorityQueue(System.Collections.IEnumerable<MoreStructures.PriorityQueues.PrioritizedItem<T>>)
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).SortedLinkedListPriorityQueue(System.Collections.IEnumerable(Of MoreStructures.PriorityQueues.PrioritizedItem(Of T)))
+  nameWithType: SortedLinkedListPriorityQueue<T>.SortedLinkedListPriorityQueue(IEnumerable<PrioritizedItem<T>>)
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).SortedLinkedListPriorityQueue(IEnumerable(Of PrioritizedItem(Of T)))
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.#ctor*
+  name: SortedLinkedListPriorityQueue
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1__ctor_
+  commentId: Overload:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.SortedLinkedListPriorityQueue
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).SortedLinkedListPriorityQueue
+  nameWithType: SortedLinkedListPriorityQueue<T>.SortedLinkedListPriorityQueue
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).SortedLinkedListPriorityQueue
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.Clear
+  name: Clear()
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1_Clear
+  commentId: M:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.Clear
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.Clear()
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).Clear()
+  nameWithType: SortedLinkedListPriorityQueue<T>.Clear()
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).Clear()
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.Clear*
+  name: Clear
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1_Clear_
+  commentId: Overload:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.Clear
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.Clear
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).Clear
+  nameWithType: SortedLinkedListPriorityQueue<T>.Clear
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).Clear
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.Count
+  name: Count
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1_Count
+  commentId: P:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.Count
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.Count
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).Count
+  nameWithType: SortedLinkedListPriorityQueue<T>.Count
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).Count
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.Count*
+  name: Count
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1_Count_
+  commentId: Overload:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.Count
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.Count
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).Count
+  nameWithType: SortedLinkedListPriorityQueue<T>.Count
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).Count
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.GetEnumerator
+  name: GetEnumerator()
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1_GetEnumerator
+  commentId: M:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.GetEnumerator
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.GetEnumerator()
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).GetEnumerator()
+  nameWithType: SortedLinkedListPriorityQueue<T>.GetEnumerator()
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).GetEnumerator()
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.GetEnumerator*
+  name: GetEnumerator
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1_GetEnumerator_
+  commentId: Overload:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.GetEnumerator
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.GetEnumerator
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).GetEnumerator
+  nameWithType: SortedLinkedListPriorityQueue<T>.GetEnumerator
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).GetEnumerator
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.GetPrioritiesOf(`0)
+  name: GetPrioritiesOf(T)
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1_GetPrioritiesOf__0_
+  commentId: M:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.GetPrioritiesOf(`0)
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.GetPrioritiesOf(T)
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).GetPrioritiesOf(T)
+  nameWithType: SortedLinkedListPriorityQueue<T>.GetPrioritiesOf(T)
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).GetPrioritiesOf(T)
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.GetPrioritiesOf*
+  name: GetPrioritiesOf
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1_GetPrioritiesOf_
+  commentId: Overload:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.GetPrioritiesOf
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.GetPrioritiesOf
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).GetPrioritiesOf
+  nameWithType: SortedLinkedListPriorityQueue<T>.GetPrioritiesOf
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).GetPrioritiesOf
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.MergeFrom(MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue{`0})
+  name: MergeFrom(SortedLinkedListPriorityQueue<T>)
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1_MergeFrom_MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue__0__
+  commentId: M:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.MergeFrom(MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue{`0})
+  name.vb: MergeFrom(SortedLinkedListPriorityQueue(Of T))
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.MergeFrom(MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>)
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).MergeFrom(MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T))
+  nameWithType: SortedLinkedListPriorityQueue<T>.MergeFrom(SortedLinkedListPriorityQueue<T>)
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).MergeFrom(SortedLinkedListPriorityQueue(Of T))
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.MergeFrom*
+  name: MergeFrom
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1_MergeFrom_
+  commentId: Overload:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.MergeFrom
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.MergeFrom
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).MergeFrom
+  nameWithType: SortedLinkedListPriorityQueue<T>.MergeFrom
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).MergeFrom
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.Peek
+  name: Peek()
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1_Peek
+  commentId: M:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.Peek
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.Peek()
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).Peek()
+  nameWithType: SortedLinkedListPriorityQueue<T>.Peek()
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).Peek()
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.Peek*
+  name: Peek
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1_Peek_
+  commentId: Overload:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.Peek
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.Peek
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).Peek
+  nameWithType: SortedLinkedListPriorityQueue<T>.Peek
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).Peek
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.PeekKth(System.Int32)
+  name: PeekKth(Int32)
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1_PeekKth_System_Int32_
+  commentId: M:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.PeekKth(System.Int32)
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.PeekKth(System.Int32)
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).PeekKth(System.Int32)
+  nameWithType: SortedLinkedListPriorityQueue<T>.PeekKth(Int32)
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).PeekKth(Int32)
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.PeekKth*
+  name: PeekKth
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1_PeekKth_
+  commentId: Overload:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.PeekKth
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.PeekKth
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).PeekKth
+  nameWithType: SortedLinkedListPriorityQueue<T>.PeekKth
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).PeekKth
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.Pop
+  name: Pop()
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1_Pop
+  commentId: M:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.Pop
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.Pop()
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).Pop()
+  nameWithType: SortedLinkedListPriorityQueue<T>.Pop()
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).Pop()
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.Pop*
+  name: Pop
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1_Pop_
+  commentId: Overload:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.Pop
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.Pop
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).Pop
+  nameWithType: SortedLinkedListPriorityQueue<T>.Pop
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).Pop
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.Push(`0,System.Int32)
+  name: Push(T, Int32)
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1_Push__0_System_Int32_
+  commentId: M:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.Push(`0,System.Int32)
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.Push(T, System.Int32)
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).Push(T, System.Int32)
+  nameWithType: SortedLinkedListPriorityQueue<T>.Push(T, Int32)
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).Push(T, Int32)
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.Push*
+  name: Push
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1_Push_
+  commentId: Overload:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.Push
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.Push
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).Push
+  nameWithType: SortedLinkedListPriorityQueue<T>.Push
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).Push
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.Remove(`0)
+  name: Remove(T)
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1_Remove__0_
+  commentId: M:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.Remove(`0)
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.Remove(T)
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).Remove(T)
+  nameWithType: SortedLinkedListPriorityQueue<T>.Remove(T)
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).Remove(T)
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.Remove*
+  name: Remove
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1_Remove_
+  commentId: Overload:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.Remove
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.Remove
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).Remove
+  nameWithType: SortedLinkedListPriorityQueue<T>.Remove
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).Remove
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.System.Collections.IEnumerable.GetEnumerator()
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: SortedLinkedListPriorityQueue<T>.IEnumerable.GetEnumerator()
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).System.Collections.IEnumerable.GetEnumerator()
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.System#Collections#IEnumerable#GetEnumerator*
+  name: IEnumerable.GetEnumerator
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.System#Collections#IEnumerable#GetEnumerator
+  isSpec: "True"
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.System.Collections.IEnumerable.GetEnumerator
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).System.Collections.IEnumerable.GetEnumerator
+  nameWithType: SortedLinkedListPriorityQueue<T>.IEnumerable.GetEnumerator
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).System.Collections.IEnumerable.GetEnumerator
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.UpdatePriority(`0,System.Int32)
+  name: UpdatePriority(T, Int32)
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1_UpdatePriority__0_System_Int32_
+  commentId: M:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.UpdatePriority(`0,System.Int32)
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.UpdatePriority(T, System.Int32)
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).UpdatePriority(T, System.Int32)
+  nameWithType: SortedLinkedListPriorityQueue<T>.UpdatePriority(T, Int32)
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).UpdatePriority(T, Int32)
+- uid: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.UpdatePriority*
+  name: UpdatePriority
+  href: api/MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue-1.html#MoreStructures_PriorityQueues_LinkedList_SortedLinkedListPriorityQueue_1_UpdatePriority_
+  commentId: Overload:MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue`1.UpdatePriority
+  isSpec: "True"
+  fullName: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue<T>.UpdatePriority
+  fullName.vb: MoreStructures.PriorityQueues.LinkedList.SortedLinkedListPriorityQueue(Of T).UpdatePriority
+  nameWithType: SortedLinkedListPriorityQueue<T>.UpdatePriority
+  nameWithType.vb: SortedLinkedListPriorityQueue(Of T).UpdatePriority
 - uid: MoreStructures.PriorityQueues.PushTimestampEra
   name: PushTimestampEra
   href: api/MoreStructures.PriorityQueues.PushTimestampEra.html
@@ -16529,6 +16786,114 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.PriorityQueues.FibonacciHeap.UpdatableFibonacciHeapPriorityQueueTests_AsUpdatableQueue.UpdatePriority_TriggersAChainOfLosers
   nameWithType: UpdatableFibonacciHeapPriorityQueueTests_AsUpdatableQueue.UpdatePriority_TriggersAChainOfLosers
+- uid: MoreStructures.Tests.PriorityQueues.LinkedList
+  name: MoreStructures.Tests.PriorityQueues.LinkedList
+  href: api/MoreStructures.Tests.PriorityQueues.LinkedList.html
+  commentId: N:MoreStructures.Tests.PriorityQueues.LinkedList
+  fullName: MoreStructures.Tests.PriorityQueues.LinkedList
+  nameWithType: MoreStructures.Tests.PriorityQueues.LinkedList
+- uid: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue
+  name: SortedLinkedListPriorityQueueTests_AsBasicQueue
+  href: api/MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue.html
+  commentId: T:MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue
+  fullName: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue
+  nameWithType: SortedLinkedListPriorityQueueTests_AsBasicQueue
+- uid: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue.#ctor
+  name: SortedLinkedListPriorityQueueTests_AsBasicQueue()
+  href: api/MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue.html#MoreStructures_Tests_PriorityQueues_LinkedList_SortedLinkedListPriorityQueueTests_AsBasicQueue__ctor
+  commentId: M:MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue.#ctor
+  fullName: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue.SortedLinkedListPriorityQueueTests_AsBasicQueue()
+  nameWithType: SortedLinkedListPriorityQueueTests_AsBasicQueue.SortedLinkedListPriorityQueueTests_AsBasicQueue()
+- uid: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue.#ctor*
+  name: SortedLinkedListPriorityQueueTests_AsBasicQueue
+  href: api/MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue.html#MoreStructures_Tests_PriorityQueues_LinkedList_SortedLinkedListPriorityQueueTests_AsBasicQueue__ctor_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue.SortedLinkedListPriorityQueueTests_AsBasicQueue
+  nameWithType: SortedLinkedListPriorityQueueTests_AsBasicQueue.SortedLinkedListPriorityQueueTests_AsBasicQueue
+- uid: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue.Ctor_WithEnumerable
+  name: Ctor_WithEnumerable()
+  href: api/MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue.html#MoreStructures_Tests_PriorityQueues_LinkedList_SortedLinkedListPriorityQueueTests_AsBasicQueue_Ctor_WithEnumerable
+  commentId: M:MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue.Ctor_WithEnumerable
+  fullName: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue.Ctor_WithEnumerable()
+  nameWithType: SortedLinkedListPriorityQueueTests_AsBasicQueue.Ctor_WithEnumerable()
+- uid: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue.Ctor_WithEnumerable*
+  name: Ctor_WithEnumerable
+  href: api/MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue.html#MoreStructures_Tests_PriorityQueues_LinkedList_SortedLinkedListPriorityQueueTests_AsBasicQueue_Ctor_WithEnumerable_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue.Ctor_WithEnumerable
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue.Ctor_WithEnumerable
+  nameWithType: SortedLinkedListPriorityQueueTests_AsBasicQueue.Ctor_WithEnumerable
+- uid: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue.Ctor_WithProvidedLinkedList
+  name: Ctor_WithProvidedLinkedList()
+  href: api/MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue.html#MoreStructures_Tests_PriorityQueues_LinkedList_SortedLinkedListPriorityQueueTests_AsBasicQueue_Ctor_WithProvidedLinkedList
+  commentId: M:MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue.Ctor_WithProvidedLinkedList
+  fullName: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue.Ctor_WithProvidedLinkedList()
+  nameWithType: SortedLinkedListPriorityQueueTests_AsBasicQueue.Ctor_WithProvidedLinkedList()
+- uid: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue.Ctor_WithProvidedLinkedList*
+  name: Ctor_WithProvidedLinkedList
+  href: api/MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue.html#MoreStructures_Tests_PriorityQueues_LinkedList_SortedLinkedListPriorityQueueTests_AsBasicQueue_Ctor_WithProvidedLinkedList_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue.Ctor_WithProvidedLinkedList
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsBasicQueue.Ctor_WithProvidedLinkedList
+  nameWithType: SortedLinkedListPriorityQueueTests_AsBasicQueue.Ctor_WithProvidedLinkedList
+- uid: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsMergeableAndUpdatable
+  name: SortedLinkedListPriorityQueueTests_AsMergeableAndUpdatable
+  href: api/MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsMergeableAndUpdatable.html
+  commentId: T:MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsMergeableAndUpdatable
+  fullName: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsMergeableAndUpdatable
+  nameWithType: SortedLinkedListPriorityQueueTests_AsMergeableAndUpdatable
+- uid: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsMergeableAndUpdatable.#ctor
+  name: SortedLinkedListPriorityQueueTests_AsMergeableAndUpdatable()
+  href: api/MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsMergeableAndUpdatable.html#MoreStructures_Tests_PriorityQueues_LinkedList_SortedLinkedListPriorityQueueTests_AsMergeableAndUpdatable__ctor
+  commentId: M:MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsMergeableAndUpdatable.#ctor
+  fullName: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsMergeableAndUpdatable.SortedLinkedListPriorityQueueTests_AsMergeableAndUpdatable()
+  nameWithType: SortedLinkedListPriorityQueueTests_AsMergeableAndUpdatable.SortedLinkedListPriorityQueueTests_AsMergeableAndUpdatable()
+- uid: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsMergeableAndUpdatable.#ctor*
+  name: SortedLinkedListPriorityQueueTests_AsMergeableAndUpdatable
+  href: api/MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsMergeableAndUpdatable.html#MoreStructures_Tests_PriorityQueues_LinkedList_SortedLinkedListPriorityQueueTests_AsMergeableAndUpdatable__ctor_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsMergeableAndUpdatable.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsMergeableAndUpdatable.SortedLinkedListPriorityQueueTests_AsMergeableAndUpdatable
+  nameWithType: SortedLinkedListPriorityQueueTests_AsMergeableAndUpdatable.SortedLinkedListPriorityQueueTests_AsMergeableAndUpdatable
+- uid: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsPeekKthQueue
+  name: SortedLinkedListPriorityQueueTests_AsPeekKthQueue
+  href: api/MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsPeekKthQueue.html
+  commentId: T:MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsPeekKthQueue
+  fullName: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsPeekKthQueue
+  nameWithType: SortedLinkedListPriorityQueueTests_AsPeekKthQueue
+- uid: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsPeekKthQueue.#ctor
+  name: SortedLinkedListPriorityQueueTests_AsPeekKthQueue()
+  href: api/MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsPeekKthQueue.html#MoreStructures_Tests_PriorityQueues_LinkedList_SortedLinkedListPriorityQueueTests_AsPeekKthQueue__ctor
+  commentId: M:MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsPeekKthQueue.#ctor
+  fullName: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsPeekKthQueue.SortedLinkedListPriorityQueueTests_AsPeekKthQueue()
+  nameWithType: SortedLinkedListPriorityQueueTests_AsPeekKthQueue.SortedLinkedListPriorityQueueTests_AsPeekKthQueue()
+- uid: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsPeekKthQueue.#ctor*
+  name: SortedLinkedListPriorityQueueTests_AsPeekKthQueue
+  href: api/MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsPeekKthQueue.html#MoreStructures_Tests_PriorityQueues_LinkedList_SortedLinkedListPriorityQueueTests_AsPeekKthQueue__ctor_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsPeekKthQueue.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsPeekKthQueue.SortedLinkedListPriorityQueueTests_AsPeekKthQueue
+  nameWithType: SortedLinkedListPriorityQueueTests_AsPeekKthQueue.SortedLinkedListPriorityQueueTests_AsPeekKthQueue
+- uid: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsUpdatableQueue
+  name: SortedLinkedListPriorityQueueTests_AsUpdatableQueue
+  href: api/MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsUpdatableQueue.html
+  commentId: T:MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsUpdatableQueue
+  fullName: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsUpdatableQueue
+  nameWithType: SortedLinkedListPriorityQueueTests_AsUpdatableQueue
+- uid: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsUpdatableQueue.#ctor
+  name: SortedLinkedListPriorityQueueTests_AsUpdatableQueue()
+  href: api/MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsUpdatableQueue.html#MoreStructures_Tests_PriorityQueues_LinkedList_SortedLinkedListPriorityQueueTests_AsUpdatableQueue__ctor
+  commentId: M:MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsUpdatableQueue.#ctor
+  fullName: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsUpdatableQueue.SortedLinkedListPriorityQueueTests_AsUpdatableQueue()
+  nameWithType: SortedLinkedListPriorityQueueTests_AsUpdatableQueue.SortedLinkedListPriorityQueueTests_AsUpdatableQueue()
+- uid: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsUpdatableQueue.#ctor*
+  name: SortedLinkedListPriorityQueueTests_AsUpdatableQueue
+  href: api/MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsUpdatableQueue.html#MoreStructures_Tests_PriorityQueues_LinkedList_SortedLinkedListPriorityQueueTests_AsUpdatableQueue__ctor_
+  commentId: Overload:MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsUpdatableQueue.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.PriorityQueues.LinkedList.SortedLinkedListPriorityQueueTests_AsUpdatableQueue.SortedLinkedListPriorityQueueTests_AsUpdatableQueue
+  nameWithType: SortedLinkedListPriorityQueueTests_AsUpdatableQueue.SortedLinkedListPriorityQueueTests_AsUpdatableQueue
 - uid: MoreStructures.Tests.PriorityQueues.MergeableAndUpdatablePriorityQueueTests`1
   name: MergeableAndUpdatablePriorityQueueTests<TPriorityQueue>
   href: api/MoreStructures.Tests.PriorityQueues.MergeableAndUpdatablePriorityQueueTests-1.html
