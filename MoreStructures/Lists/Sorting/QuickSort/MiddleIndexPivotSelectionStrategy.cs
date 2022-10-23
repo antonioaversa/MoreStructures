@@ -1,4 +1,6 @@
-﻿namespace MoreStructures.Lists.Sorting.QuickSort;
+﻿using MoreStructures.Utilities;
+
+namespace MoreStructures.Lists.Sorting.QuickSort;
 
 /// <summary>
 /// A <see cref="IPivotSelectionStrategy"/> always picking the index of the window in the middle.
@@ -23,5 +25,5 @@ public class MiddleIndexPivotSelectionStrategy : IPivotSelectionStrategy
     /// This specific implementation always picks the <paramref name="end"/> index.
     /// </remarks>
     public int Select<T>(IList<T> list, IComparer<T> comparer, int start, int end) => 
-        start + (end - start) / 2;
+        (start, end).Middle();
 }

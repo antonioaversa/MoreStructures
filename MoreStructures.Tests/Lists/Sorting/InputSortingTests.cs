@@ -31,7 +31,6 @@ public abstract class InputSortingTests
         var numbers = new[] { 1, 2, 2, 3, 3, 3, 4 };
         foreach (var permutation in TestUtilities.GeneratePermutations(numbers))
         {
-            var copy = permutation.ToArray();
             sorter.Sort(permutation);
             Assert.AreEqual(permutation.Count, numbers.Length);
             Assert.IsTrue(permutation.IsSorted());
