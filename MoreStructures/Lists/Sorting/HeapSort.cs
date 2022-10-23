@@ -3,7 +3,7 @@
 namespace MoreStructures.Lists.Sorting;
 
 /// <summary>
-/// An <see cref="IInPlaceSorting"/> implementation based on heapsort.
+/// An <see cref="IInputMutatingSort"/> implementation based on heapsort.
 /// </summary>
 /// <remarks>
 ///     <para id="algorithm">
@@ -39,7 +39,7 @@ namespace MoreStructures.Lists.Sorting;
 ///       being sorted (which can be lower than the size of the provided list).
 ///     </para>
 /// </remarks>
-public class HeapSort : IInPlaceSorting
+public class HeapSort : IInputMutatingSort
 {
     /// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
     /// <summary>

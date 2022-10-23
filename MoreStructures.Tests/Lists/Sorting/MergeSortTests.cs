@@ -3,9 +3,9 @@
 namespace MoreStructures.Tests.Lists.Sorting;
 
 [TestClass]
-public class HeapSortTests : InputSortingTests
+public class MergeSortTests : InputSortingTests
 {
-    public HeapSortTests() : base(() => new HeapSort())
+    public MergeSortTests() : base(() => new MergeSort())
     {
     }
 }

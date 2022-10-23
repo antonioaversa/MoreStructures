@@ -1,7 +1,7 @@
 ﻿namespace MoreStructures.Lists.Sorting;
 
 /// <summary>
-/// An <see cref="IInPlaceSorting"/> implementation based on selection sort.
+/// An <see cref="IInputMutatingSort"/> implementation based on selection sort.
 /// </summary>
 /// <remarks>
 ///     <para id="advantages">
@@ -53,7 +53,7 @@
 ///     - Therefore, Time Complexity is O(n^2) and Space Complexity is O(1), since the algorithm runs in place.
 ///     </para>
 /// </remarks>
-public class SelectionSort : IInPlaceSorting
+public class SelectionSort : IInputMutatingSort
 {
     /// <inheritdoc path="//*[not(self::summary or self::remarks)]"/>
     /// <summary>

@@ -3,7 +3,7 @@
 namespace MoreStructures.Tests.Lists.Sorting;
 
 [TestClass]
-public class ShellSortTests_GapsPowerOf2 : InPlaceSortingTests
+public class ShellSortTests_GapsPowerOf2 : InputSortingTests
 {
     public static IEnumerable<int> Sequence() =>
         Enumerable.Range(0, int.MaxValue).Select(i => (int)Math.Pow(2, i));
@@ -14,7 +14,7 @@ public class ShellSortTests_GapsPowerOf2 : InPlaceSortingTests
 }
 
 [TestClass]
-public class ShellSortTests_GapsPositiveInts : InPlaceSortingTests
+public class ShellSortTests_GapsPositiveInts : InputSortingTests
 {
     public static IEnumerable<int> Sequence() =>
         Enumerable.Range(1, int.MaxValue);
@@ -25,7 +25,7 @@ public class ShellSortTests_GapsPositiveInts : InPlaceSortingTests
 }
 
 [TestClass]
-public class ShellSortTests_GapsSedgewick82 : InPlaceSortingTests
+public class ShellSortTests_GapsSedgewick82 : InputSortingTests
 {
     public static IEnumerable<int> Sequence()
     {
@@ -40,7 +40,7 @@ public class ShellSortTests_GapsSedgewick82 : InPlaceSortingTests
 }
 
 [TestClass]
-public class ShellSortTests_GapsCiura01 : InPlaceSortingTests
+public class ShellSortTests_GapsCiura01 : InputSortingTests
 {
     public static IEnumerable<int> Sequence() =>
         new[] { 1, 4, 10, 23, 57, 132, 301, 701 };

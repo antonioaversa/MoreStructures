@@ -2,11 +2,11 @@
 
 namespace MoreStructures.Tests.Lists.Sorting;
 
-public abstract class InPlaceSortingTests
+public abstract class InputSortingTests
 {
-    protected Func<IInPlaceSorting> Sorter { get; }
+    protected Func<IInputMutatingSort> Sorter { get; }
 
-    protected InPlaceSortingTests(Func<IInPlaceSorting> sorter)
+    protected InputSortingTests(Func<IInputMutatingSort> sorter)
     {
         Sorter = sorter;
     }
@@ -20,7 +20,7 @@ public abstract class InPlaceSortingTests
         {
             sorter.Sort(permutation);
             Assert.AreEqual(permutation.Count, numbers.Count);
-            Assert.IsTrue(permutation.IsSorted());
+            Assert.IsTrue(permutation.IsSorted(), $"Not sorted: [{string.Join(", ", permutation)}]");
         }
     }
 
