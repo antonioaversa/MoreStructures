@@ -168,7 +168,7 @@ spanning the entire graph cannot be constructed.
 <p>
 COMPLEXITY
 <br>
-- The algorithm makes use of an <a class="xref" href="MoreStructures.Lists.Sorting.IInPlaceSorting.html">IInPlaceSorting</a> algorithm, to sort all the edges of the graph in
+- The algorithm makes use of an <a class="xref" href="MoreStructures.Lists.Sorting.IInputMutatingSort.html">IInputMutatingSort</a> algorithm, to sort all the edges of the graph in
   ascending order by their distance. 
 <br>
 - Since sorting edges is required by the algorithm, the overall complexity is lower bounded by 
@@ -196,18 +196,18 @@ structures are required to store sorted edges and disjoint sets of vertices.
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder__ctor_MoreStructures_Lists_Sorting_IInPlaceSorting_Func_System_Int32_MoreStructures_DisjointSets_IDisjointSet__.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.%23ctor(MoreStructures.Lists.Sorting.IInPlaceSorting%2CFunc%7BSystem.Int32%2CMoreStructures.DisjointSets.IDisjointSet%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder__ctor_MoreStructures_Lists_Sorting_IInputMutatingSort_Func_System_Int32_MoreStructures_DisjointSets_IDisjointSet__.md&amp;value=---%0Auid%3A%20MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.%23ctor(MoreStructures.Lists.Sorting.IInputMutatingSort%2CFunc%7BSystem.Int32%2CMoreStructures.DisjointSets.IDisjointSet%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Graphs/MinimumSpanningTree/KruskalMstFinder.cs/#L95">View Source</a>
   </span>
   <a id="MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder__ctor_" data-uid="MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.#ctor*"></a>
-  <h4 id="MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder__ctor_MoreStructures_Lists_Sorting_IInPlaceSorting_Func_System_Int32_MoreStructures_DisjointSets_IDisjointSet__" data-uid="MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.#ctor(MoreStructures.Lists.Sorting.IInPlaceSorting,Func{System.Int32,MoreStructures.DisjointSets.IDisjointSet})">KruskalMstFinder(IInPlaceSorting, Func&lt;Int32, IDisjointSet&gt;)</h4>
+  <h4 id="MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder__ctor_MoreStructures_Lists_Sorting_IInputMutatingSort_Func_System_Int32_MoreStructures_DisjointSets_IDisjointSet__" data-uid="MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.#ctor(MoreStructures.Lists.Sorting.IInputMutatingSort,Func{System.Int32,MoreStructures.DisjointSets.IDisjointSet})">KruskalMstFinder(IInputMutatingSort, Func&lt;Int32, IDisjointSet&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KruskalMstFinder(IInPlaceSorting sorter, Func&lt;int, IDisjointSet&gt; disjointSetBuilder)</code></pre>
+    <pre><code class="lang-csharp hljs">public KruskalMstFinder(IInputMutatingSort sorter, Func&lt;int, IDisjointSet&gt; disjointSetBuilder)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -220,7 +220,7 @@ structures are required to store sorted edges and disjoint sets of vertices.
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MoreStructures.Lists.Sorting.IInPlaceSorting.html">IInPlaceSorting</a></td>
+        <td><a class="xref" href="MoreStructures.Lists.Sorting.IInputMutatingSort.html">IInputMutatingSort</a></td>
         <td><span class="parametername">sorter</span></td>
         <td><p><inheritdoc cref="P:MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.Sorter" path="/summary"></inheritdoc></p>
 </td>
@@ -275,12 +275,12 @@ structures are required to store sorted edges and disjoint sets of vertices.
   </span>
   <a id="MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder_Sorter_" data-uid="MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.Sorter*"></a>
   <h4 id="MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder_Sorter" data-uid="MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.Sorter">Sorter</h4>
-  <div class="markdown level1 summary"><p>The <a class="xref" href="MoreStructures.Lists.Sorting.IInPlaceSorting.html">IInPlaceSorting</a> algorithm to be used to sort the edges of the graph.</p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="MoreStructures.Lists.Sorting.IInputMutatingSort.html">IInputMutatingSort</a> algorithm to be used to sort the edges of the graph.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IInPlaceSorting Sorter { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IInputMutatingSort Sorter { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -292,7 +292,7 @@ structures are required to store sorted edges and disjoint sets of vertices.
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MoreStructures.Lists.Sorting.IInPlaceSorting.html">IInPlaceSorting</a></td>
+        <td><a class="xref" href="MoreStructures.Lists.Sorting.IInputMutatingSort.html">IInputMutatingSort</a></td>
         <td></td>
       </tr>
     </tbody>

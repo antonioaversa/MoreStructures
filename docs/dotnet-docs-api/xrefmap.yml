@@ -2405,15 +2405,15 @@ references:
   commentId: T:MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder
   fullName: MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder
   nameWithType: KruskalMstFinder
-- uid: MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.#ctor(MoreStructures.Lists.Sorting.IInPlaceSorting,Func{System.Int32,MoreStructures.DisjointSets.IDisjointSet})
-  name: KruskalMstFinder(IInPlaceSorting, Func<Int32, IDisjointSet>)
-  href: api/MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.html#MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder__ctor_MoreStructures_Lists_Sorting_IInPlaceSorting_Func_System_Int32_MoreStructures_DisjointSets_IDisjointSet__
-  commentId: M:MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.#ctor(MoreStructures.Lists.Sorting.IInPlaceSorting,Func{System.Int32,MoreStructures.DisjointSets.IDisjointSet})
-  name.vb: KruskalMstFinder(IInPlaceSorting, Func(Of Int32, IDisjointSet))
-  fullName: MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.KruskalMstFinder(MoreStructures.Lists.Sorting.IInPlaceSorting, Func<System.Int32, MoreStructures.DisjointSets.IDisjointSet>)
-  fullName.vb: MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.KruskalMstFinder(MoreStructures.Lists.Sorting.IInPlaceSorting, Func(Of System.Int32, MoreStructures.DisjointSets.IDisjointSet))
-  nameWithType: KruskalMstFinder.KruskalMstFinder(IInPlaceSorting, Func<Int32, IDisjointSet>)
-  nameWithType.vb: KruskalMstFinder.KruskalMstFinder(IInPlaceSorting, Func(Of Int32, IDisjointSet))
+- uid: MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.#ctor(MoreStructures.Lists.Sorting.IInputMutatingSort,Func{System.Int32,MoreStructures.DisjointSets.IDisjointSet})
+  name: KruskalMstFinder(IInputMutatingSort, Func<Int32, IDisjointSet>)
+  href: api/MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.html#MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder__ctor_MoreStructures_Lists_Sorting_IInputMutatingSort_Func_System_Int32_MoreStructures_DisjointSets_IDisjointSet__
+  commentId: M:MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.#ctor(MoreStructures.Lists.Sorting.IInputMutatingSort,Func{System.Int32,MoreStructures.DisjointSets.IDisjointSet})
+  name.vb: KruskalMstFinder(IInputMutatingSort, Func(Of Int32, IDisjointSet))
+  fullName: MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.KruskalMstFinder(MoreStructures.Lists.Sorting.IInputMutatingSort, Func<System.Int32, MoreStructures.DisjointSets.IDisjointSet>)
+  fullName.vb: MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.KruskalMstFinder(MoreStructures.Lists.Sorting.IInputMutatingSort, Func(Of System.Int32, MoreStructures.DisjointSets.IDisjointSet))
+  nameWithType: KruskalMstFinder.KruskalMstFinder(IInputMutatingSort, Func<Int32, IDisjointSet>)
+  nameWithType.vb: KruskalMstFinder.KruskalMstFinder(IInputMutatingSort, Func(Of Int32, IDisjointSet))
 - uid: MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.#ctor*
   name: KruskalMstFinder
   href: api/MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.html#MoreStructures_Graphs_MinimumSpanningTree_KruskalMstFinder__ctor_
@@ -4396,37 +4396,37 @@ references:
   fullName.vb: MoreStructures.Lists.Sorting.HeapSort.Sort(Of T)(IList(Of T), IComparer(Of T))
   nameWithType: HeapSort.Sort<T>(IList<T>, IComparer<T>)
   nameWithType.vb: HeapSort.Sort(Of T)(IList(Of T), IComparer(Of T))
-- uid: MoreStructures.Lists.Sorting.IInPlaceSorting
-  name: IInPlaceSorting
-  href: api/MoreStructures.Lists.Sorting.IInPlaceSorting.html
-  commentId: T:MoreStructures.Lists.Sorting.IInPlaceSorting
-  fullName: MoreStructures.Lists.Sorting.IInPlaceSorting
-  nameWithType: IInPlaceSorting
-- uid: MoreStructures.Lists.Sorting.IInPlaceSorting.Sort*
+- uid: MoreStructures.Lists.Sorting.IInputMutatingSort
+  name: IInputMutatingSort
+  href: api/MoreStructures.Lists.Sorting.IInputMutatingSort.html
+  commentId: T:MoreStructures.Lists.Sorting.IInputMutatingSort
+  fullName: MoreStructures.Lists.Sorting.IInputMutatingSort
+  nameWithType: IInputMutatingSort
+- uid: MoreStructures.Lists.Sorting.IInputMutatingSort.Sort*
   name: Sort
-  href: api/MoreStructures.Lists.Sorting.IInPlaceSorting.html#MoreStructures_Lists_Sorting_IInPlaceSorting_Sort_
-  commentId: Overload:MoreStructures.Lists.Sorting.IInPlaceSorting.Sort
+  href: api/MoreStructures.Lists.Sorting.IInputMutatingSort.html#MoreStructures_Lists_Sorting_IInputMutatingSort_Sort_
+  commentId: Overload:MoreStructures.Lists.Sorting.IInputMutatingSort.Sort
   isSpec: "True"
-  fullName: MoreStructures.Lists.Sorting.IInPlaceSorting.Sort
-  nameWithType: IInPlaceSorting.Sort
-- uid: MoreStructures.Lists.Sorting.IInPlaceSorting.Sort``1(IList{``0})
+  fullName: MoreStructures.Lists.Sorting.IInputMutatingSort.Sort
+  nameWithType: IInputMutatingSort.Sort
+- uid: MoreStructures.Lists.Sorting.IInputMutatingSort.Sort``1(IList{``0})
   name: Sort<T>(IList<T>)
-  href: api/MoreStructures.Lists.Sorting.IInPlaceSorting.html#MoreStructures_Lists_Sorting_IInPlaceSorting_Sort__1_IList___0__
-  commentId: M:MoreStructures.Lists.Sorting.IInPlaceSorting.Sort``1(IList{``0})
+  href: api/MoreStructures.Lists.Sorting.IInputMutatingSort.html#MoreStructures_Lists_Sorting_IInputMutatingSort_Sort__1_IList___0__
+  commentId: M:MoreStructures.Lists.Sorting.IInputMutatingSort.Sort``1(IList{``0})
   name.vb: Sort(Of T)(IList(Of T))
-  fullName: MoreStructures.Lists.Sorting.IInPlaceSorting.Sort<T>(IList<T>)
-  fullName.vb: MoreStructures.Lists.Sorting.IInPlaceSorting.Sort(Of T)(IList(Of T))
-  nameWithType: IInPlaceSorting.Sort<T>(IList<T>)
-  nameWithType.vb: IInPlaceSorting.Sort(Of T)(IList(Of T))
-- uid: MoreStructures.Lists.Sorting.IInPlaceSorting.Sort``1(IList{``0},IComparer{``0})
+  fullName: MoreStructures.Lists.Sorting.IInputMutatingSort.Sort<T>(IList<T>)
+  fullName.vb: MoreStructures.Lists.Sorting.IInputMutatingSort.Sort(Of T)(IList(Of T))
+  nameWithType: IInputMutatingSort.Sort<T>(IList<T>)
+  nameWithType.vb: IInputMutatingSort.Sort(Of T)(IList(Of T))
+- uid: MoreStructures.Lists.Sorting.IInputMutatingSort.Sort``1(IList{``0},IComparer{``0})
   name: Sort<T>(IList<T>, IComparer<T>)
-  href: api/MoreStructures.Lists.Sorting.IInPlaceSorting.html#MoreStructures_Lists_Sorting_IInPlaceSorting_Sort__1_IList___0__IComparer___0__
-  commentId: M:MoreStructures.Lists.Sorting.IInPlaceSorting.Sort``1(IList{``0},IComparer{``0})
+  href: api/MoreStructures.Lists.Sorting.IInputMutatingSort.html#MoreStructures_Lists_Sorting_IInputMutatingSort_Sort__1_IList___0__IComparer___0__
+  commentId: M:MoreStructures.Lists.Sorting.IInputMutatingSort.Sort``1(IList{``0},IComparer{``0})
   name.vb: Sort(Of T)(IList(Of T), IComparer(Of T))
-  fullName: MoreStructures.Lists.Sorting.IInPlaceSorting.Sort<T>(IList<T>, IComparer<T>)
-  fullName.vb: MoreStructures.Lists.Sorting.IInPlaceSorting.Sort(Of T)(IList(Of T), IComparer(Of T))
-  nameWithType: IInPlaceSorting.Sort<T>(IList<T>, IComparer<T>)
-  nameWithType.vb: IInPlaceSorting.Sort(Of T)(IList(Of T), IComparer(Of T))
+  fullName: MoreStructures.Lists.Sorting.IInputMutatingSort.Sort<T>(IList<T>, IComparer<T>)
+  fullName.vb: MoreStructures.Lists.Sorting.IInputMutatingSort.Sort(Of T)(IList(Of T), IComparer(Of T))
+  nameWithType: IInputMutatingSort.Sort<T>(IList<T>, IComparer<T>)
+  nameWithType.vb: IInputMutatingSort.Sort(Of T)(IList(Of T), IComparer(Of T))
 - uid: MoreStructures.Lists.Sorting.InsertionSort
   name: InsertionSort
   href: api/MoreStructures.Lists.Sorting.InsertionSort.html
@@ -4464,6 +4464,337 @@ references:
   commentId: T:MoreStructures.Lists.Sorting.IStableSortingAlgorithm
   fullName: MoreStructures.Lists.Sorting.IStableSortingAlgorithm
   nameWithType: IStableSortingAlgorithm
+- uid: MoreStructures.Lists.Sorting.MergeSort
+  name: MergeSort
+  href: api/MoreStructures.Lists.Sorting.MergeSort.html
+  commentId: T:MoreStructures.Lists.Sorting.MergeSort
+  fullName: MoreStructures.Lists.Sorting.MergeSort
+  nameWithType: MergeSort
+- uid: MoreStructures.Lists.Sorting.MergeSort.Sort*
+  name: Sort
+  href: api/MoreStructures.Lists.Sorting.MergeSort.html#MoreStructures_Lists_Sorting_MergeSort_Sort_
+  commentId: Overload:MoreStructures.Lists.Sorting.MergeSort.Sort
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Sorting.MergeSort.Sort
+  nameWithType: MergeSort.Sort
+- uid: MoreStructures.Lists.Sorting.MergeSort.Sort``1(IList{``0})
+  name: Sort<T>(IList<T>)
+  href: api/MoreStructures.Lists.Sorting.MergeSort.html#MoreStructures_Lists_Sorting_MergeSort_Sort__1_IList___0__
+  commentId: M:MoreStructures.Lists.Sorting.MergeSort.Sort``1(IList{``0})
+  name.vb: Sort(Of T)(IList(Of T))
+  fullName: MoreStructures.Lists.Sorting.MergeSort.Sort<T>(IList<T>)
+  fullName.vb: MoreStructures.Lists.Sorting.MergeSort.Sort(Of T)(IList(Of T))
+  nameWithType: MergeSort.Sort<T>(IList<T>)
+  nameWithType.vb: MergeSort.Sort(Of T)(IList(Of T))
+- uid: MoreStructures.Lists.Sorting.MergeSort.Sort``1(IList{``0},IComparer{``0})
+  name: Sort<T>(IList<T>, IComparer<T>)
+  href: api/MoreStructures.Lists.Sorting.MergeSort.html#MoreStructures_Lists_Sorting_MergeSort_Sort__1_IList___0__IComparer___0__
+  commentId: M:MoreStructures.Lists.Sorting.MergeSort.Sort``1(IList{``0},IComparer{``0})
+  name.vb: Sort(Of T)(IList(Of T), IComparer(Of T))
+  fullName: MoreStructures.Lists.Sorting.MergeSort.Sort<T>(IList<T>, IComparer<T>)
+  fullName.vb: MoreStructures.Lists.Sorting.MergeSort.Sort(Of T)(IList(Of T), IComparer(Of T))
+  nameWithType: MergeSort.Sort<T>(IList<T>, IComparer<T>)
+  nameWithType.vb: MergeSort.Sort(Of T)(IList(Of T), IComparer(Of T))
+- uid: MoreStructures.Lists.Sorting.QuickSort
+  name: MoreStructures.Lists.Sorting.QuickSort
+  href: api/MoreStructures.Lists.Sorting.QuickSort.html
+  commentId: N:MoreStructures.Lists.Sorting.QuickSort
+  fullName: MoreStructures.Lists.Sorting.QuickSort
+  nameWithType: MoreStructures.Lists.Sorting.QuickSort
+- uid: MoreStructures.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategy
+  name: EndIndexPivotSelectionStrategy
+  href: api/MoreStructures.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategy.html
+  commentId: T:MoreStructures.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategy
+  fullName: MoreStructures.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategy
+  nameWithType: EndIndexPivotSelectionStrategy
+- uid: MoreStructures.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategy.Select*
+  name: Select
+  href: api/MoreStructures.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategy.html#MoreStructures_Lists_Sorting_QuickSort_EndIndexPivotSelectionStrategy_Select_
+  commentId: Overload:MoreStructures.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategy.Select
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategy.Select
+  nameWithType: EndIndexPivotSelectionStrategy.Select
+- uid: MoreStructures.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategy.Select``1(IList{``0},IComparer{``0},System.Int32,System.Int32)
+  name: Select<T>(IList<T>, IComparer<T>, Int32, Int32)
+  href: api/MoreStructures.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategy.html#MoreStructures_Lists_Sorting_QuickSort_EndIndexPivotSelectionStrategy_Select__1_IList___0__IComparer___0__System_Int32_System_Int32_
+  commentId: M:MoreStructures.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategy.Select``1(IList{``0},IComparer{``0},System.Int32,System.Int32)
+  name.vb: Select(Of T)(IList(Of T), IComparer(Of T), Int32, Int32)
+  fullName: MoreStructures.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategy.Select<T>(IList<T>, IComparer<T>, System.Int32, System.Int32)
+  fullName.vb: MoreStructures.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategy.Select(Of T)(IList(Of T), IComparer(Of T), System.Int32, System.Int32)
+  nameWithType: EndIndexPivotSelectionStrategy.Select<T>(IList<T>, IComparer<T>, Int32, Int32)
+  nameWithType.vb: EndIndexPivotSelectionStrategy.Select(Of T)(IList(Of T), IComparer(Of T), Int32, Int32)
+- uid: MoreStructures.Lists.Sorting.QuickSort.IdentityShuffleStrategy
+  name: IdentityShuffleStrategy
+  href: api/MoreStructures.Lists.Sorting.QuickSort.IdentityShuffleStrategy.html
+  commentId: T:MoreStructures.Lists.Sorting.QuickSort.IdentityShuffleStrategy
+  fullName: MoreStructures.Lists.Sorting.QuickSort.IdentityShuffleStrategy
+  nameWithType: IdentityShuffleStrategy
+- uid: MoreStructures.Lists.Sorting.QuickSort.IdentityShuffleStrategy.Shuffle*
+  name: Shuffle
+  href: api/MoreStructures.Lists.Sorting.QuickSort.IdentityShuffleStrategy.html#MoreStructures_Lists_Sorting_QuickSort_IdentityShuffleStrategy_Shuffle_
+  commentId: Overload:MoreStructures.Lists.Sorting.QuickSort.IdentityShuffleStrategy.Shuffle
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Sorting.QuickSort.IdentityShuffleStrategy.Shuffle
+  nameWithType: IdentityShuffleStrategy.Shuffle
+- uid: MoreStructures.Lists.Sorting.QuickSort.IdentityShuffleStrategy.Shuffle``1(IList{``0},System.Int32,System.Int32)
+  name: Shuffle<T>(IList<T>, Int32, Int32)
+  href: api/MoreStructures.Lists.Sorting.QuickSort.IdentityShuffleStrategy.html#MoreStructures_Lists_Sorting_QuickSort_IdentityShuffleStrategy_Shuffle__1_IList___0__System_Int32_System_Int32_
+  commentId: M:MoreStructures.Lists.Sorting.QuickSort.IdentityShuffleStrategy.Shuffle``1(IList{``0},System.Int32,System.Int32)
+  name.vb: Shuffle(Of T)(IList(Of T), Int32, Int32)
+  fullName: MoreStructures.Lists.Sorting.QuickSort.IdentityShuffleStrategy.Shuffle<T>(IList<T>, System.Int32, System.Int32)
+  fullName.vb: MoreStructures.Lists.Sorting.QuickSort.IdentityShuffleStrategy.Shuffle(Of T)(IList(Of T), System.Int32, System.Int32)
+  nameWithType: IdentityShuffleStrategy.Shuffle<T>(IList<T>, Int32, Int32)
+  nameWithType.vb: IdentityShuffleStrategy.Shuffle(Of T)(IList(Of T), Int32, Int32)
+- uid: MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy
+  name: IPivotSelectionStrategy
+  href: api/MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy.html
+  commentId: T:MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy
+  fullName: MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy
+  nameWithType: IPivotSelectionStrategy
+- uid: MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy.Select*
+  name: Select
+  href: api/MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy.html#MoreStructures_Lists_Sorting_QuickSort_IPivotSelectionStrategy_Select_
+  commentId: Overload:MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy.Select
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy.Select
+  nameWithType: IPivotSelectionStrategy.Select
+- uid: MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy.Select``1(IList{``0},IComparer{``0},System.Int32,System.Int32)
+  name: Select<T>(IList<T>, IComparer<T>, Int32, Int32)
+  href: api/MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy.html#MoreStructures_Lists_Sorting_QuickSort_IPivotSelectionStrategy_Select__1_IList___0__IComparer___0__System_Int32_System_Int32_
+  commentId: M:MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy.Select``1(IList{``0},IComparer{``0},System.Int32,System.Int32)
+  name.vb: Select(Of T)(IList(Of T), IComparer(Of T), Int32, Int32)
+  fullName: MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy.Select<T>(IList<T>, IComparer<T>, System.Int32, System.Int32)
+  fullName.vb: MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy.Select(Of T)(IList(Of T), IComparer(Of T), System.Int32, System.Int32)
+  nameWithType: IPivotSelectionStrategy.Select<T>(IList<T>, IComparer<T>, Int32, Int32)
+  nameWithType.vb: IPivotSelectionStrategy.Select(Of T)(IList(Of T), IComparer(Of T), Int32, Int32)
+- uid: MoreStructures.Lists.Sorting.QuickSort.IShuffleStrategy
+  name: IShuffleStrategy
+  href: api/MoreStructures.Lists.Sorting.QuickSort.IShuffleStrategy.html
+  commentId: T:MoreStructures.Lists.Sorting.QuickSort.IShuffleStrategy
+  fullName: MoreStructures.Lists.Sorting.QuickSort.IShuffleStrategy
+  nameWithType: IShuffleStrategy
+- uid: MoreStructures.Lists.Sorting.QuickSort.IShuffleStrategy.Shuffle*
+  name: Shuffle
+  href: api/MoreStructures.Lists.Sorting.QuickSort.IShuffleStrategy.html#MoreStructures_Lists_Sorting_QuickSort_IShuffleStrategy_Shuffle_
+  commentId: Overload:MoreStructures.Lists.Sorting.QuickSort.IShuffleStrategy.Shuffle
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Sorting.QuickSort.IShuffleStrategy.Shuffle
+  nameWithType: IShuffleStrategy.Shuffle
+- uid: MoreStructures.Lists.Sorting.QuickSort.IShuffleStrategy.Shuffle``1(IList{``0},System.Int32,System.Int32)
+  name: Shuffle<T>(IList<T>, Int32, Int32)
+  href: api/MoreStructures.Lists.Sorting.QuickSort.IShuffleStrategy.html#MoreStructures_Lists_Sorting_QuickSort_IShuffleStrategy_Shuffle__1_IList___0__System_Int32_System_Int32_
+  commentId: M:MoreStructures.Lists.Sorting.QuickSort.IShuffleStrategy.Shuffle``1(IList{``0},System.Int32,System.Int32)
+  name.vb: Shuffle(Of T)(IList(Of T), Int32, Int32)
+  fullName: MoreStructures.Lists.Sorting.QuickSort.IShuffleStrategy.Shuffle<T>(IList<T>, System.Int32, System.Int32)
+  fullName.vb: MoreStructures.Lists.Sorting.QuickSort.IShuffleStrategy.Shuffle(Of T)(IList(Of T), System.Int32, System.Int32)
+  nameWithType: IShuffleStrategy.Shuffle<T>(IList<T>, Int32, Int32)
+  nameWithType.vb: IShuffleStrategy.Shuffle(Of T)(IList(Of T), Int32, Int32)
+- uid: MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy
+  name: IThreeWayPartitionStrategy
+  href: api/MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy.html
+  commentId: T:MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy
+  fullName: MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy
+  nameWithType: IThreeWayPartitionStrategy
+- uid: MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy.Partition*
+  name: Partition
+  href: api/MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy.html#MoreStructures_Lists_Sorting_QuickSort_IThreeWayPartitionStrategy_Partition_
+  commentId: Overload:MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy.Partition
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy.Partition
+  nameWithType: IThreeWayPartitionStrategy.Partition
+- uid: MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy.Partition``1(IList{``0},IComparer{``0},System.Int32,System.Int32)
+  name: Partition<T>(IList<T>, IComparer<T>, Int32, Int32)
+  href: api/MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy.html#MoreStructures_Lists_Sorting_QuickSort_IThreeWayPartitionStrategy_Partition__1_IList___0__IComparer___0__System_Int32_System_Int32_
+  commentId: M:MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy.Partition``1(IList{``0},IComparer{``0},System.Int32,System.Int32)
+  name.vb: Partition(Of T)(IList(Of T), IComparer(Of T), Int32, Int32)
+  fullName: MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy.Partition<T>(IList<T>, IComparer<T>, System.Int32, System.Int32)
+  fullName.vb: MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy.Partition(Of T)(IList(Of T), IComparer(Of T), System.Int32, System.Int32)
+  nameWithType: IThreeWayPartitionStrategy.Partition<T>(IList<T>, IComparer<T>, Int32, Int32)
+  nameWithType.vb: IThreeWayPartitionStrategy.Partition(Of T)(IList(Of T), IComparer(Of T), Int32, Int32)
+- uid: MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy
+  name: LomutoThreeWayPartitionStrategy
+  href: api/MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.html
+  commentId: T:MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy
+  fullName: MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy
+  nameWithType: LomutoThreeWayPartitionStrategy
+- uid: MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.#ctor(MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy)
+  name: LomutoThreeWayPartitionStrategy(IPivotSelectionStrategy)
+  href: api/MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.html#MoreStructures_Lists_Sorting_QuickSort_LomutoThreeWayPartitionStrategy__ctor_MoreStructures_Lists_Sorting_QuickSort_IPivotSelectionStrategy_
+  commentId: M:MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.#ctor(MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy)
+  fullName: MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.LomutoThreeWayPartitionStrategy(MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy)
+  nameWithType: LomutoThreeWayPartitionStrategy.LomutoThreeWayPartitionStrategy(IPivotSelectionStrategy)
+- uid: MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.#ctor*
+  name: LomutoThreeWayPartitionStrategy
+  href: api/MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.html#MoreStructures_Lists_Sorting_QuickSort_LomutoThreeWayPartitionStrategy__ctor_
+  commentId: Overload:MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.LomutoThreeWayPartitionStrategy
+  nameWithType: LomutoThreeWayPartitionStrategy.LomutoThreeWayPartitionStrategy
+- uid: MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.Partition*
+  name: Partition
+  href: api/MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.html#MoreStructures_Lists_Sorting_QuickSort_LomutoThreeWayPartitionStrategy_Partition_
+  commentId: Overload:MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.Partition
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.Partition
+  nameWithType: LomutoThreeWayPartitionStrategy.Partition
+- uid: MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.Partition``1(IList{``0},IComparer{``0},System.Int32,System.Int32)
+  name: Partition<T>(IList<T>, IComparer<T>, Int32, Int32)
+  href: api/MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.html#MoreStructures_Lists_Sorting_QuickSort_LomutoThreeWayPartitionStrategy_Partition__1_IList___0__IComparer___0__System_Int32_System_Int32_
+  commentId: M:MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.Partition``1(IList{``0},IComparer{``0},System.Int32,System.Int32)
+  name.vb: Partition(Of T)(IList(Of T), IComparer(Of T), Int32, Int32)
+  fullName: MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.Partition<T>(IList<T>, IComparer<T>, System.Int32, System.Int32)
+  fullName.vb: MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.Partition(Of T)(IList(Of T), IComparer(Of T), System.Int32, System.Int32)
+  nameWithType: LomutoThreeWayPartitionStrategy.Partition<T>(IList<T>, IComparer<T>, Int32, Int32)
+  nameWithType.vb: LomutoThreeWayPartitionStrategy.Partition(Of T)(IList(Of T), IComparer(Of T), Int32, Int32)
+- uid: MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.PivotSelectionStrategy
+  name: PivotSelectionStrategy
+  href: api/MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.html#MoreStructures_Lists_Sorting_QuickSort_LomutoThreeWayPartitionStrategy_PivotSelectionStrategy
+  commentId: P:MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.PivotSelectionStrategy
+  fullName: MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.PivotSelectionStrategy
+  nameWithType: LomutoThreeWayPartitionStrategy.PivotSelectionStrategy
+- uid: MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.PivotSelectionStrategy*
+  name: PivotSelectionStrategy
+  href: api/MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.html#MoreStructures_Lists_Sorting_QuickSort_LomutoThreeWayPartitionStrategy_PivotSelectionStrategy_
+  commentId: Overload:MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.PivotSelectionStrategy
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.PivotSelectionStrategy
+  nameWithType: LomutoThreeWayPartitionStrategy.PivotSelectionStrategy
+- uid: MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy
+  name: LomutoTwoWayPartitionStrategy
+  href: api/MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.html
+  commentId: T:MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy
+  fullName: MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy
+  nameWithType: LomutoTwoWayPartitionStrategy
+- uid: MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.#ctor(MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy)
+  name: LomutoTwoWayPartitionStrategy(IPivotSelectionStrategy)
+  href: api/MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.html#MoreStructures_Lists_Sorting_QuickSort_LomutoTwoWayPartitionStrategy__ctor_MoreStructures_Lists_Sorting_QuickSort_IPivotSelectionStrategy_
+  commentId: M:MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.#ctor(MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy)
+  fullName: MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.LomutoTwoWayPartitionStrategy(MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy)
+  nameWithType: LomutoTwoWayPartitionStrategy.LomutoTwoWayPartitionStrategy(IPivotSelectionStrategy)
+- uid: MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.#ctor*
+  name: LomutoTwoWayPartitionStrategy
+  href: api/MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.html#MoreStructures_Lists_Sorting_QuickSort_LomutoTwoWayPartitionStrategy__ctor_
+  commentId: Overload:MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.LomutoTwoWayPartitionStrategy
+  nameWithType: LomutoTwoWayPartitionStrategy.LomutoTwoWayPartitionStrategy
+- uid: MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.Partition*
+  name: Partition
+  href: api/MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.html#MoreStructures_Lists_Sorting_QuickSort_LomutoTwoWayPartitionStrategy_Partition_
+  commentId: Overload:MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.Partition
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.Partition
+  nameWithType: LomutoTwoWayPartitionStrategy.Partition
+- uid: MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.Partition``1(IList{``0},IComparer{``0},System.Int32,System.Int32)
+  name: Partition<T>(IList<T>, IComparer<T>, Int32, Int32)
+  href: api/MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.html#MoreStructures_Lists_Sorting_QuickSort_LomutoTwoWayPartitionStrategy_Partition__1_IList___0__IComparer___0__System_Int32_System_Int32_
+  commentId: M:MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.Partition``1(IList{``0},IComparer{``0},System.Int32,System.Int32)
+  name.vb: Partition(Of T)(IList(Of T), IComparer(Of T), Int32, Int32)
+  fullName: MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.Partition<T>(IList<T>, IComparer<T>, System.Int32, System.Int32)
+  fullName.vb: MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.Partition(Of T)(IList(Of T), IComparer(Of T), System.Int32, System.Int32)
+  nameWithType: LomutoTwoWayPartitionStrategy.Partition<T>(IList<T>, IComparer<T>, Int32, Int32)
+  nameWithType.vb: LomutoTwoWayPartitionStrategy.Partition(Of T)(IList(Of T), IComparer(Of T), Int32, Int32)
+- uid: MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.PivotSelectionStrategy
+  name: PivotSelectionStrategy
+  href: api/MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.html#MoreStructures_Lists_Sorting_QuickSort_LomutoTwoWayPartitionStrategy_PivotSelectionStrategy
+  commentId: P:MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.PivotSelectionStrategy
+  fullName: MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.PivotSelectionStrategy
+  nameWithType: LomutoTwoWayPartitionStrategy.PivotSelectionStrategy
+- uid: MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.PivotSelectionStrategy*
+  name: PivotSelectionStrategy
+  href: api/MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.html#MoreStructures_Lists_Sorting_QuickSort_LomutoTwoWayPartitionStrategy_PivotSelectionStrategy_
+  commentId: Overload:MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.PivotSelectionStrategy
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.PivotSelectionStrategy
+  nameWithType: LomutoTwoWayPartitionStrategy.PivotSelectionStrategy
+- uid: MoreStructures.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategy
+  name: MiddleIndexPivotSelectionStrategy
+  href: api/MoreStructures.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategy.html
+  commentId: T:MoreStructures.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategy
+  fullName: MoreStructures.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategy
+  nameWithType: MiddleIndexPivotSelectionStrategy
+- uid: MoreStructures.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategy.Select*
+  name: Select
+  href: api/MoreStructures.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategy.html#MoreStructures_Lists_Sorting_QuickSort_MiddleIndexPivotSelectionStrategy_Select_
+  commentId: Overload:MoreStructures.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategy.Select
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategy.Select
+  nameWithType: MiddleIndexPivotSelectionStrategy.Select
+- uid: MoreStructures.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategy.Select``1(IList{``0},IComparer{``0},System.Int32,System.Int32)
+  name: Select<T>(IList<T>, IComparer<T>, Int32, Int32)
+  href: api/MoreStructures.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategy.html#MoreStructures_Lists_Sorting_QuickSort_MiddleIndexPivotSelectionStrategy_Select__1_IList___0__IComparer___0__System_Int32_System_Int32_
+  commentId: M:MoreStructures.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategy.Select``1(IList{``0},IComparer{``0},System.Int32,System.Int32)
+  name.vb: Select(Of T)(IList(Of T), IComparer(Of T), Int32, Int32)
+  fullName: MoreStructures.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategy.Select<T>(IList<T>, IComparer<T>, System.Int32, System.Int32)
+  fullName.vb: MoreStructures.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategy.Select(Of T)(IList(Of T), IComparer(Of T), System.Int32, System.Int32)
+  nameWithType: MiddleIndexPivotSelectionStrategy.Select<T>(IList<T>, IComparer<T>, Int32, Int32)
+  nameWithType.vb: MiddleIndexPivotSelectionStrategy.Select(Of T)(IList(Of T), IComparer(Of T), Int32, Int32)
+- uid: MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort
+  name: RecursiveQuickSort
+  href: api/MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort.html
+  commentId: T:MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort
+  fullName: MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort
+  nameWithType: RecursiveQuickSort
+- uid: MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort.#ctor(MoreStructures.Lists.Sorting.QuickSort.IShuffleStrategy,MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy)
+  name: RecursiveQuickSort(IShuffleStrategy, IThreeWayPartitionStrategy)
+  href: api/MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort.html#MoreStructures_Lists_Sorting_QuickSort_RecursiveQuickSort__ctor_MoreStructures_Lists_Sorting_QuickSort_IShuffleStrategy_MoreStructures_Lists_Sorting_QuickSort_IThreeWayPartitionStrategy_
+  commentId: M:MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort.#ctor(MoreStructures.Lists.Sorting.QuickSort.IShuffleStrategy,MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy)
+  fullName: MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort.RecursiveQuickSort(MoreStructures.Lists.Sorting.QuickSort.IShuffleStrategy, MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy)
+  nameWithType: RecursiveQuickSort.RecursiveQuickSort(IShuffleStrategy, IThreeWayPartitionStrategy)
+- uid: MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort.#ctor*
+  name: RecursiveQuickSort
+  href: api/MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort.html#MoreStructures_Lists_Sorting_QuickSort_RecursiveQuickSort__ctor_
+  commentId: Overload:MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort.RecursiveQuickSort
+  nameWithType: RecursiveQuickSort.RecursiveQuickSort
+- uid: MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort.Sort*
+  name: Sort
+  href: api/MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort.html#MoreStructures_Lists_Sorting_QuickSort_RecursiveQuickSort_Sort_
+  commentId: Overload:MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort.Sort
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort.Sort
+  nameWithType: RecursiveQuickSort.Sort
+- uid: MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort.Sort``1(IList{``0})
+  name: Sort<T>(IList<T>)
+  href: api/MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort.html#MoreStructures_Lists_Sorting_QuickSort_RecursiveQuickSort_Sort__1_IList___0__
+  commentId: M:MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort.Sort``1(IList{``0})
+  name.vb: Sort(Of T)(IList(Of T))
+  fullName: MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort.Sort<T>(IList<T>)
+  fullName.vb: MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort.Sort(Of T)(IList(Of T))
+  nameWithType: RecursiveQuickSort.Sort<T>(IList<T>)
+  nameWithType.vb: RecursiveQuickSort.Sort(Of T)(IList(Of T))
+- uid: MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort.Sort``1(IList{``0},IComparer{``0})
+  name: Sort<T>(IList<T>, IComparer<T>)
+  href: api/MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort.html#MoreStructures_Lists_Sorting_QuickSort_RecursiveQuickSort_Sort__1_IList___0__IComparer___0__
+  commentId: M:MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort.Sort``1(IList{``0},IComparer{``0})
+  name.vb: Sort(Of T)(IList(Of T), IComparer(Of T))
+  fullName: MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort.Sort<T>(IList<T>, IComparer<T>)
+  fullName.vb: MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort.Sort(Of T)(IList(Of T), IComparer(Of T))
+  nameWithType: RecursiveQuickSort.Sort<T>(IList<T>, IComparer<T>)
+  nameWithType.vb: RecursiveQuickSort.Sort(Of T)(IList(Of T), IComparer(Of T))
+- uid: MoreStructures.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategy
+  name: StartIndexPivotSelectionStrategy
+  href: api/MoreStructures.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategy.html
+  commentId: T:MoreStructures.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategy
+  fullName: MoreStructures.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategy
+  nameWithType: StartIndexPivotSelectionStrategy
+- uid: MoreStructures.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategy.Select*
+  name: Select
+  href: api/MoreStructures.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategy.html#MoreStructures_Lists_Sorting_QuickSort_StartIndexPivotSelectionStrategy_Select_
+  commentId: Overload:MoreStructures.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategy.Select
+  isSpec: "True"
+  fullName: MoreStructures.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategy.Select
+  nameWithType: StartIndexPivotSelectionStrategy.Select
+- uid: MoreStructures.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategy.Select``1(IList{``0},IComparer{``0},System.Int32,System.Int32)
+  name: Select<T>(IList<T>, IComparer<T>, Int32, Int32)
+  href: api/MoreStructures.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategy.html#MoreStructures_Lists_Sorting_QuickSort_StartIndexPivotSelectionStrategy_Select__1_IList___0__IComparer___0__System_Int32_System_Int32_
+  commentId: M:MoreStructures.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategy.Select``1(IList{``0},IComparer{``0},System.Int32,System.Int32)
+  name.vb: Select(Of T)(IList(Of T), IComparer(Of T), Int32, Int32)
+  fullName: MoreStructures.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategy.Select<T>(IList<T>, IComparer<T>, System.Int32, System.Int32)
+  fullName.vb: MoreStructures.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategy.Select(Of T)(IList(Of T), IComparer(Of T), System.Int32, System.Int32)
+  nameWithType: StartIndexPivotSelectionStrategy.Select<T>(IList<T>, IComparer<T>, Int32, Int32)
+  nameWithType.vb: StartIndexPivotSelectionStrategy.Select(Of T)(IList(Of T), IComparer(Of T), Int32, Int32)
 - uid: MoreStructures.Lists.Sorting.SelectionSort
   name: SelectionSort
   href: api/MoreStructures.Lists.Sorting.SelectionSort.html
@@ -15308,158 +15639,158 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Lists.Sorting.HeapSortTests.HeapSortTests
   nameWithType: HeapSortTests.HeapSortTests
-- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests
-  name: InPlaceSortingTests
-  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html
-  commentId: T:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests
-  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests
-  nameWithType: InPlaceSortingTests
-- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.#ctor(Func{MoreStructures.Lists.Sorting.IInPlaceSorting})
-  name: InPlaceSortingTests(Func<IInPlaceSorting>)
-  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests__ctor_Func_MoreStructures_Lists_Sorting_IInPlaceSorting__
-  commentId: M:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.#ctor(Func{MoreStructures.Lists.Sorting.IInPlaceSorting})
-  name.vb: InPlaceSortingTests(Func(Of IInPlaceSorting))
-  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.InPlaceSortingTests(Func<MoreStructures.Lists.Sorting.IInPlaceSorting>)
-  fullName.vb: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.InPlaceSortingTests(Func(Of MoreStructures.Lists.Sorting.IInPlaceSorting))
-  nameWithType: InPlaceSortingTests.InPlaceSortingTests(Func<IInPlaceSorting>)
-  nameWithType.vb: InPlaceSortingTests.InPlaceSortingTests(Func(Of IInPlaceSorting))
-- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.#ctor*
-  name: InPlaceSortingTests
-  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests__ctor_
-  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.#ctor
+- uid: MoreStructures.Tests.Lists.Sorting.InputSortingTests
+  name: InputSortingTests
+  href: api/MoreStructures.Tests.Lists.Sorting.InputSortingTests.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.InputSortingTests
+  fullName: MoreStructures.Tests.Lists.Sorting.InputSortingTests
+  nameWithType: InputSortingTests
+- uid: MoreStructures.Tests.Lists.Sorting.InputSortingTests.#ctor(Func{MoreStructures.Lists.Sorting.IInputMutatingSort})
+  name: InputSortingTests(Func<IInputMutatingSort>)
+  href: api/MoreStructures.Tests.Lists.Sorting.InputSortingTests.html#MoreStructures_Tests_Lists_Sorting_InputSortingTests__ctor_Func_MoreStructures_Lists_Sorting_IInputMutatingSort__
+  commentId: M:MoreStructures.Tests.Lists.Sorting.InputSortingTests.#ctor(Func{MoreStructures.Lists.Sorting.IInputMutatingSort})
+  name.vb: InputSortingTests(Func(Of IInputMutatingSort))
+  fullName: MoreStructures.Tests.Lists.Sorting.InputSortingTests.InputSortingTests(Func<MoreStructures.Lists.Sorting.IInputMutatingSort>)
+  fullName.vb: MoreStructures.Tests.Lists.Sorting.InputSortingTests.InputSortingTests(Func(Of MoreStructures.Lists.Sorting.IInputMutatingSort))
+  nameWithType: InputSortingTests.InputSortingTests(Func<IInputMutatingSort>)
+  nameWithType.vb: InputSortingTests.InputSortingTests(Func(Of IInputMutatingSort))
+- uid: MoreStructures.Tests.Lists.Sorting.InputSortingTests.#ctor*
+  name: InputSortingTests
+  href: api/MoreStructures.Tests.Lists.Sorting.InputSortingTests.html#MoreStructures_Tests_Lists_Sorting_InputSortingTests__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InputSortingTests.#ctor
   isSpec: "True"
-  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.InPlaceSortingTests
-  nameWithType: InPlaceSortingTests.InPlaceSortingTests
-- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.CompareTo(MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.ValType1)
-  name: CompareTo(InPlaceSortingTests.ValType1)
-  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_CompareTo_MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_ValType1_
-  commentId: M:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.CompareTo(MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.ValType1)
-  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.CompareTo(MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.ValType1)
-  nameWithType: InPlaceSortingTests.CompareTo(InPlaceSortingTests.ValType1)
-- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.CompareTo*
+  fullName: MoreStructures.Tests.Lists.Sorting.InputSortingTests.InputSortingTests
+  nameWithType: InputSortingTests.InputSortingTests
+- uid: MoreStructures.Tests.Lists.Sorting.InputSortingTests.CompareTo(MoreStructures.Tests.Lists.Sorting.InputSortingTests.ValType1)
+  name: CompareTo(InputSortingTests.ValType1)
+  href: api/MoreStructures.Tests.Lists.Sorting.InputSortingTests.html#MoreStructures_Tests_Lists_Sorting_InputSortingTests_CompareTo_MoreStructures_Tests_Lists_Sorting_InputSortingTests_ValType1_
+  commentId: M:MoreStructures.Tests.Lists.Sorting.InputSortingTests.CompareTo(MoreStructures.Tests.Lists.Sorting.InputSortingTests.ValType1)
+  fullName: MoreStructures.Tests.Lists.Sorting.InputSortingTests.CompareTo(MoreStructures.Tests.Lists.Sorting.InputSortingTests.ValType1)
+  nameWithType: InputSortingTests.CompareTo(InputSortingTests.ValType1)
+- uid: MoreStructures.Tests.Lists.Sorting.InputSortingTests.CompareTo*
   name: CompareTo
-  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_CompareTo_
-  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.CompareTo
+  href: api/MoreStructures.Tests.Lists.Sorting.InputSortingTests.html#MoreStructures_Tests_Lists_Sorting_InputSortingTests_CompareTo_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InputSortingTests.CompareTo
   isSpec: "True"
-  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.CompareTo
-  nameWithType: InPlaceSortingTests.CompareTo
-- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_PlaceItemsInOrder
+  fullName: MoreStructures.Tests.Lists.Sorting.InputSortingTests.CompareTo
+  nameWithType: InputSortingTests.CompareTo
+- uid: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_PlaceItemsInOrder
   name: Sort_PlaceItemsInOrder()
-  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_PlaceItemsInOrder
-  commentId: M:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_PlaceItemsInOrder
-  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_PlaceItemsInOrder()
-  nameWithType: InPlaceSortingTests.Sort_PlaceItemsInOrder()
-- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_PlaceItemsInOrder*
+  href: api/MoreStructures.Tests.Lists.Sorting.InputSortingTests.html#MoreStructures_Tests_Lists_Sorting_InputSortingTests_Sort_PlaceItemsInOrder
+  commentId: M:MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_PlaceItemsInOrder
+  fullName: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_PlaceItemsInOrder()
+  nameWithType: InputSortingTests.Sort_PlaceItemsInOrder()
+- uid: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_PlaceItemsInOrder*
   name: Sort_PlaceItemsInOrder
-  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_PlaceItemsInOrder_
-  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_PlaceItemsInOrder
+  href: api/MoreStructures.Tests.Lists.Sorting.InputSortingTests.html#MoreStructures_Tests_Lists_Sorting_InputSortingTests_Sort_PlaceItemsInOrder_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_PlaceItemsInOrder
   isSpec: "True"
-  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_PlaceItemsInOrder
-  nameWithType: InPlaceSortingTests.Sort_PlaceItemsInOrder
-- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_TakesIntoAccountComparerWithReferenceTypes
+  fullName: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_PlaceItemsInOrder
+  nameWithType: InputSortingTests.Sort_PlaceItemsInOrder
+- uid: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_TakesIntoAccountComparerWithReferenceTypes
   name: Sort_TakesIntoAccountComparerWithReferenceTypes()
-  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_TakesIntoAccountComparerWithReferenceTypes
-  commentId: M:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_TakesIntoAccountComparerWithReferenceTypes
-  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_TakesIntoAccountComparerWithReferenceTypes()
-  nameWithType: InPlaceSortingTests.Sort_TakesIntoAccountComparerWithReferenceTypes()
-- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_TakesIntoAccountComparerWithReferenceTypes*
+  href: api/MoreStructures.Tests.Lists.Sorting.InputSortingTests.html#MoreStructures_Tests_Lists_Sorting_InputSortingTests_Sort_TakesIntoAccountComparerWithReferenceTypes
+  commentId: M:MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_TakesIntoAccountComparerWithReferenceTypes
+  fullName: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_TakesIntoAccountComparerWithReferenceTypes()
+  nameWithType: InputSortingTests.Sort_TakesIntoAccountComparerWithReferenceTypes()
+- uid: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_TakesIntoAccountComparerWithReferenceTypes*
   name: Sort_TakesIntoAccountComparerWithReferenceTypes
-  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_TakesIntoAccountComparerWithReferenceTypes_
-  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_TakesIntoAccountComparerWithReferenceTypes
+  href: api/MoreStructures.Tests.Lists.Sorting.InputSortingTests.html#MoreStructures_Tests_Lists_Sorting_InputSortingTests_Sort_TakesIntoAccountComparerWithReferenceTypes_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_TakesIntoAccountComparerWithReferenceTypes
   isSpec: "True"
-  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_TakesIntoAccountComparerWithReferenceTypes
-  nameWithType: InPlaceSortingTests.Sort_TakesIntoAccountComparerWithReferenceTypes
-- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_TakesIntoAccountComparerWithValueTypes
+  fullName: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_TakesIntoAccountComparerWithReferenceTypes
+  nameWithType: InputSortingTests.Sort_TakesIntoAccountComparerWithReferenceTypes
+- uid: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_TakesIntoAccountComparerWithValueTypes
   name: Sort_TakesIntoAccountComparerWithValueTypes()
-  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_TakesIntoAccountComparerWithValueTypes
-  commentId: M:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_TakesIntoAccountComparerWithValueTypes
-  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_TakesIntoAccountComparerWithValueTypes()
-  nameWithType: InPlaceSortingTests.Sort_TakesIntoAccountComparerWithValueTypes()
-- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_TakesIntoAccountComparerWithValueTypes*
+  href: api/MoreStructures.Tests.Lists.Sorting.InputSortingTests.html#MoreStructures_Tests_Lists_Sorting_InputSortingTests_Sort_TakesIntoAccountComparerWithValueTypes
+  commentId: M:MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_TakesIntoAccountComparerWithValueTypes
+  fullName: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_TakesIntoAccountComparerWithValueTypes()
+  nameWithType: InputSortingTests.Sort_TakesIntoAccountComparerWithValueTypes()
+- uid: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_TakesIntoAccountComparerWithValueTypes*
   name: Sort_TakesIntoAccountComparerWithValueTypes
-  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_TakesIntoAccountComparerWithValueTypes_
-  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_TakesIntoAccountComparerWithValueTypes
+  href: api/MoreStructures.Tests.Lists.Sorting.InputSortingTests.html#MoreStructures_Tests_Lists_Sorting_InputSortingTests_Sort_TakesIntoAccountComparerWithValueTypes_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_TakesIntoAccountComparerWithValueTypes
   isSpec: "True"
-  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_TakesIntoAccountComparerWithValueTypes
-  nameWithType: InPlaceSortingTests.Sort_TakesIntoAccountComparerWithValueTypes
-- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithDuplicates
+  fullName: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_TakesIntoAccountComparerWithValueTypes
+  nameWithType: InputSortingTests.Sort_TakesIntoAccountComparerWithValueTypes
+- uid: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithDuplicates
   name: Sort_WorksWithDuplicates()
-  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_WorksWithDuplicates
-  commentId: M:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithDuplicates
-  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithDuplicates()
-  nameWithType: InPlaceSortingTests.Sort_WorksWithDuplicates()
-- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithDuplicates*
+  href: api/MoreStructures.Tests.Lists.Sorting.InputSortingTests.html#MoreStructures_Tests_Lists_Sorting_InputSortingTests_Sort_WorksWithDuplicates
+  commentId: M:MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithDuplicates
+  fullName: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithDuplicates()
+  nameWithType: InputSortingTests.Sort_WorksWithDuplicates()
+- uid: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithDuplicates*
   name: Sort_WorksWithDuplicates
-  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_WorksWithDuplicates_
-  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithDuplicates
+  href: api/MoreStructures.Tests.Lists.Sorting.InputSortingTests.html#MoreStructures_Tests_Lists_Sorting_InputSortingTests_Sort_WorksWithDuplicates_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithDuplicates
   isSpec: "True"
-  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithDuplicates
-  nameWithType: InPlaceSortingTests.Sort_WorksWithDuplicates
-- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithEmptyList
+  fullName: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithDuplicates
+  nameWithType: InputSortingTests.Sort_WorksWithDuplicates
+- uid: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithEmptyList
   name: Sort_WorksWithEmptyList()
-  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_WorksWithEmptyList
-  commentId: M:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithEmptyList
-  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithEmptyList()
-  nameWithType: InPlaceSortingTests.Sort_WorksWithEmptyList()
-- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithEmptyList*
+  href: api/MoreStructures.Tests.Lists.Sorting.InputSortingTests.html#MoreStructures_Tests_Lists_Sorting_InputSortingTests_Sort_WorksWithEmptyList
+  commentId: M:MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithEmptyList
+  fullName: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithEmptyList()
+  nameWithType: InputSortingTests.Sort_WorksWithEmptyList()
+- uid: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithEmptyList*
   name: Sort_WorksWithEmptyList
-  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_WorksWithEmptyList_
-  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithEmptyList
+  href: api/MoreStructures.Tests.Lists.Sorting.InputSortingTests.html#MoreStructures_Tests_Lists_Sorting_InputSortingTests_Sort_WorksWithEmptyList_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithEmptyList
   isSpec: "True"
-  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithEmptyList
-  nameWithType: InPlaceSortingTests.Sort_WorksWithEmptyList
-- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithReferenceTypes
+  fullName: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithEmptyList
+  nameWithType: InputSortingTests.Sort_WorksWithEmptyList
+- uid: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithReferenceTypes
   name: Sort_WorksWithReferenceTypes()
-  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_WorksWithReferenceTypes
-  commentId: M:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithReferenceTypes
-  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithReferenceTypes()
-  nameWithType: InPlaceSortingTests.Sort_WorksWithReferenceTypes()
-- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithReferenceTypes*
+  href: api/MoreStructures.Tests.Lists.Sorting.InputSortingTests.html#MoreStructures_Tests_Lists_Sorting_InputSortingTests_Sort_WorksWithReferenceTypes
+  commentId: M:MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithReferenceTypes
+  fullName: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithReferenceTypes()
+  nameWithType: InputSortingTests.Sort_WorksWithReferenceTypes()
+- uid: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithReferenceTypes*
   name: Sort_WorksWithReferenceTypes
-  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_WorksWithReferenceTypes_
-  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithReferenceTypes
+  href: api/MoreStructures.Tests.Lists.Sorting.InputSortingTests.html#MoreStructures_Tests_Lists_Sorting_InputSortingTests_Sort_WorksWithReferenceTypes_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithReferenceTypes
   isSpec: "True"
-  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithReferenceTypes
-  nameWithType: InPlaceSortingTests.Sort_WorksWithReferenceTypes
-- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithSingletonList
+  fullName: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithReferenceTypes
+  nameWithType: InputSortingTests.Sort_WorksWithReferenceTypes
+- uid: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithSingletonList
   name: Sort_WorksWithSingletonList()
-  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_WorksWithSingletonList
-  commentId: M:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithSingletonList
-  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithSingletonList()
-  nameWithType: InPlaceSortingTests.Sort_WorksWithSingletonList()
-- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithSingletonList*
+  href: api/MoreStructures.Tests.Lists.Sorting.InputSortingTests.html#MoreStructures_Tests_Lists_Sorting_InputSortingTests_Sort_WorksWithSingletonList
+  commentId: M:MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithSingletonList
+  fullName: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithSingletonList()
+  nameWithType: InputSortingTests.Sort_WorksWithSingletonList()
+- uid: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithSingletonList*
   name: Sort_WorksWithSingletonList
-  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_WorksWithSingletonList_
-  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithSingletonList
+  href: api/MoreStructures.Tests.Lists.Sorting.InputSortingTests.html#MoreStructures_Tests_Lists_Sorting_InputSortingTests_Sort_WorksWithSingletonList_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithSingletonList
   isSpec: "True"
-  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithSingletonList
-  nameWithType: InPlaceSortingTests.Sort_WorksWithSingletonList
-- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithValueTypes
+  fullName: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithSingletonList
+  nameWithType: InputSortingTests.Sort_WorksWithSingletonList
+- uid: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithValueTypes
   name: Sort_WorksWithValueTypes()
-  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_WorksWithValueTypes
-  commentId: M:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithValueTypes
-  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithValueTypes()
-  nameWithType: InPlaceSortingTests.Sort_WorksWithValueTypes()
-- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithValueTypes*
+  href: api/MoreStructures.Tests.Lists.Sorting.InputSortingTests.html#MoreStructures_Tests_Lists_Sorting_InputSortingTests_Sort_WorksWithValueTypes
+  commentId: M:MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithValueTypes
+  fullName: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithValueTypes()
+  nameWithType: InputSortingTests.Sort_WorksWithValueTypes()
+- uid: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithValueTypes*
   name: Sort_WorksWithValueTypes
-  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sort_WorksWithValueTypes_
-  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithValueTypes
+  href: api/MoreStructures.Tests.Lists.Sorting.InputSortingTests.html#MoreStructures_Tests_Lists_Sorting_InputSortingTests_Sort_WorksWithValueTypes_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithValueTypes
   isSpec: "True"
-  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sort_WorksWithValueTypes
-  nameWithType: InPlaceSortingTests.Sort_WorksWithValueTypes
-- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sorter
+  fullName: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sort_WorksWithValueTypes
+  nameWithType: InputSortingTests.Sort_WorksWithValueTypes
+- uid: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sorter
   name: Sorter
-  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sorter
-  commentId: P:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sorter
-  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sorter
-  nameWithType: InPlaceSortingTests.Sorter
-- uid: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sorter*
+  href: api/MoreStructures.Tests.Lists.Sorting.InputSortingTests.html#MoreStructures_Tests_Lists_Sorting_InputSortingTests_Sorter
+  commentId: P:MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sorter
+  fullName: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sorter
+  nameWithType: InputSortingTests.Sorter
+- uid: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sorter*
   name: Sorter
-  href: api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html#MoreStructures_Tests_Lists_Sorting_InPlaceSortingTests_Sorter_
-  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sorter
+  href: api/MoreStructures.Tests.Lists.Sorting.InputSortingTests.html#MoreStructures_Tests_Lists_Sorting_InputSortingTests_Sorter_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sorter
   isSpec: "True"
-  fullName: MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.Sorter
-  nameWithType: InPlaceSortingTests.Sorter
+  fullName: MoreStructures.Tests.Lists.Sorting.InputSortingTests.Sorter
+  nameWithType: InputSortingTests.Sorter
 - uid: MoreStructures.Tests.Lists.Sorting.InsertionSortTests
   name: InsertionSortTests
   href: api/MoreStructures.Tests.Lists.Sorting.InsertionSortTests.html
@@ -15479,6 +15810,492 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Lists.Sorting.InsertionSortTests.InsertionSortTests
   nameWithType: InsertionSortTests.InsertionSortTests
+- uid: MoreStructures.Tests.Lists.Sorting.MergeSortTests
+  name: MergeSortTests
+  href: api/MoreStructures.Tests.Lists.Sorting.MergeSortTests.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.MergeSortTests
+  fullName: MoreStructures.Tests.Lists.Sorting.MergeSortTests
+  nameWithType: MergeSortTests
+- uid: MoreStructures.Tests.Lists.Sorting.MergeSortTests.#ctor
+  name: MergeSortTests()
+  href: api/MoreStructures.Tests.Lists.Sorting.MergeSortTests.html#MoreStructures_Tests_Lists_Sorting_MergeSortTests__ctor
+  commentId: M:MoreStructures.Tests.Lists.Sorting.MergeSortTests.#ctor
+  fullName: MoreStructures.Tests.Lists.Sorting.MergeSortTests.MergeSortTests()
+  nameWithType: MergeSortTests.MergeSortTests()
+- uid: MoreStructures.Tests.Lists.Sorting.MergeSortTests.#ctor*
+  name: MergeSortTests
+  href: api/MoreStructures.Tests.Lists.Sorting.MergeSortTests.html#MoreStructures_Tests_Lists_Sorting_MergeSortTests__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.MergeSortTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.MergeSortTests.MergeSortTests
+  nameWithType: MergeSortTests.MergeSortTests
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort
+  name: MoreStructures.Tests.Lists.Sorting.QuickSort
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.html
+  commentId: N:MoreStructures.Tests.Lists.Sorting.QuickSort
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort
+  nameWithType: MoreStructures.Tests.Lists.Sorting.QuickSort
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategyTests
+  name: EndIndexPivotSelectionStrategyTests
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategyTests.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategyTests
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategyTests
+  nameWithType: EndIndexPivotSelectionStrategyTests
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategyTests.#ctor
+  name: EndIndexPivotSelectionStrategyTests()
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSort_EndIndexPivotSelectionStrategyTests__ctor
+  commentId: M:MoreStructures.Tests.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategyTests.#ctor
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategyTests.EndIndexPivotSelectionStrategyTests()
+  nameWithType: EndIndexPivotSelectionStrategyTests.EndIndexPivotSelectionStrategyTests()
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategyTests.#ctor*
+  name: EndIndexPivotSelectionStrategyTests
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSort_EndIndexPivotSelectionStrategyTests__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategyTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategyTests.EndIndexPivotSelectionStrategyTests
+  nameWithType: EndIndexPivotSelectionStrategyTests.EndIndexPivotSelectionStrategyTests
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotEndIndex
+  name: LomutoThreeWayPartitionStrategyTests_PivotEndIndex
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotEndIndex.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotEndIndex
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotEndIndex
+  nameWithType: LomutoThreeWayPartitionStrategyTests_PivotEndIndex
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotEndIndex.#ctor
+  name: LomutoThreeWayPartitionStrategyTests_PivotEndIndex()
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotEndIndex.html#MoreStructures_Tests_Lists_Sorting_QuickSort_LomutoThreeWayPartitionStrategyTests_PivotEndIndex__ctor
+  commentId: M:MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotEndIndex.#ctor
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotEndIndex.LomutoThreeWayPartitionStrategyTests_PivotEndIndex()
+  nameWithType: LomutoThreeWayPartitionStrategyTests_PivotEndIndex.LomutoThreeWayPartitionStrategyTests_PivotEndIndex()
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotEndIndex.#ctor*
+  name: LomutoThreeWayPartitionStrategyTests_PivotEndIndex
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotEndIndex.html#MoreStructures_Tests_Lists_Sorting_QuickSort_LomutoThreeWayPartitionStrategyTests_PivotEndIndex__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotEndIndex.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotEndIndex.LomutoThreeWayPartitionStrategyTests_PivotEndIndex
+  nameWithType: LomutoThreeWayPartitionStrategyTests_PivotEndIndex.LomutoThreeWayPartitionStrategyTests_PivotEndIndex
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotMiddleIndex
+  name: LomutoThreeWayPartitionStrategyTests_PivotMiddleIndex
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotMiddleIndex.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotMiddleIndex
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotMiddleIndex
+  nameWithType: LomutoThreeWayPartitionStrategyTests_PivotMiddleIndex
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotMiddleIndex.#ctor
+  name: LomutoThreeWayPartitionStrategyTests_PivotMiddleIndex()
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotMiddleIndex.html#MoreStructures_Tests_Lists_Sorting_QuickSort_LomutoThreeWayPartitionStrategyTests_PivotMiddleIndex__ctor
+  commentId: M:MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotMiddleIndex.#ctor
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotMiddleIndex.LomutoThreeWayPartitionStrategyTests_PivotMiddleIndex()
+  nameWithType: LomutoThreeWayPartitionStrategyTests_PivotMiddleIndex.LomutoThreeWayPartitionStrategyTests_PivotMiddleIndex()
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotMiddleIndex.#ctor*
+  name: LomutoThreeWayPartitionStrategyTests_PivotMiddleIndex
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotMiddleIndex.html#MoreStructures_Tests_Lists_Sorting_QuickSort_LomutoThreeWayPartitionStrategyTests_PivotMiddleIndex__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotMiddleIndex.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotMiddleIndex.LomutoThreeWayPartitionStrategyTests_PivotMiddleIndex
+  nameWithType: LomutoThreeWayPartitionStrategyTests_PivotMiddleIndex.LomutoThreeWayPartitionStrategyTests_PivotMiddleIndex
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotStartIndex
+  name: LomutoThreeWayPartitionStrategyTests_PivotStartIndex
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotStartIndex.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotStartIndex
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotStartIndex
+  nameWithType: LomutoThreeWayPartitionStrategyTests_PivotStartIndex
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotStartIndex.#ctor
+  name: LomutoThreeWayPartitionStrategyTests_PivotStartIndex()
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotStartIndex.html#MoreStructures_Tests_Lists_Sorting_QuickSort_LomutoThreeWayPartitionStrategyTests_PivotStartIndex__ctor
+  commentId: M:MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotStartIndex.#ctor
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotStartIndex.LomutoThreeWayPartitionStrategyTests_PivotStartIndex()
+  nameWithType: LomutoThreeWayPartitionStrategyTests_PivotStartIndex.LomutoThreeWayPartitionStrategyTests_PivotStartIndex()
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotStartIndex.#ctor*
+  name: LomutoThreeWayPartitionStrategyTests_PivotStartIndex
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotStartIndex.html#MoreStructures_Tests_Lists_Sorting_QuickSort_LomutoThreeWayPartitionStrategyTests_PivotStartIndex__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotStartIndex.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotStartIndex.LomutoThreeWayPartitionStrategyTests_PivotStartIndex
+  nameWithType: LomutoThreeWayPartitionStrategyTests_PivotStartIndex.LomutoThreeWayPartitionStrategyTests_PivotStartIndex
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotEndIndex
+  name: LomutoTwoWayPartitionStrategyTests_PivotEndIndex
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotEndIndex.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotEndIndex
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotEndIndex
+  nameWithType: LomutoTwoWayPartitionStrategyTests_PivotEndIndex
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotEndIndex.#ctor
+  name: LomutoTwoWayPartitionStrategyTests_PivotEndIndex()
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotEndIndex.html#MoreStructures_Tests_Lists_Sorting_QuickSort_LomutoTwoWayPartitionStrategyTests_PivotEndIndex__ctor
+  commentId: M:MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotEndIndex.#ctor
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotEndIndex.LomutoTwoWayPartitionStrategyTests_PivotEndIndex()
+  nameWithType: LomutoTwoWayPartitionStrategyTests_PivotEndIndex.LomutoTwoWayPartitionStrategyTests_PivotEndIndex()
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotEndIndex.#ctor*
+  name: LomutoTwoWayPartitionStrategyTests_PivotEndIndex
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotEndIndex.html#MoreStructures_Tests_Lists_Sorting_QuickSort_LomutoTwoWayPartitionStrategyTests_PivotEndIndex__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotEndIndex.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotEndIndex.LomutoTwoWayPartitionStrategyTests_PivotEndIndex
+  nameWithType: LomutoTwoWayPartitionStrategyTests_PivotEndIndex.LomutoTwoWayPartitionStrategyTests_PivotEndIndex
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotMiddleIndex
+  name: LomutoTwoWayPartitionStrategyTests_PivotMiddleIndex
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotMiddleIndex.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotMiddleIndex
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotMiddleIndex
+  nameWithType: LomutoTwoWayPartitionStrategyTests_PivotMiddleIndex
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotMiddleIndex.#ctor
+  name: LomutoTwoWayPartitionStrategyTests_PivotMiddleIndex()
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotMiddleIndex.html#MoreStructures_Tests_Lists_Sorting_QuickSort_LomutoTwoWayPartitionStrategyTests_PivotMiddleIndex__ctor
+  commentId: M:MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotMiddleIndex.#ctor
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotMiddleIndex.LomutoTwoWayPartitionStrategyTests_PivotMiddleIndex()
+  nameWithType: LomutoTwoWayPartitionStrategyTests_PivotMiddleIndex.LomutoTwoWayPartitionStrategyTests_PivotMiddleIndex()
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotMiddleIndex.#ctor*
+  name: LomutoTwoWayPartitionStrategyTests_PivotMiddleIndex
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotMiddleIndex.html#MoreStructures_Tests_Lists_Sorting_QuickSort_LomutoTwoWayPartitionStrategyTests_PivotMiddleIndex__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotMiddleIndex.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotMiddleIndex.LomutoTwoWayPartitionStrategyTests_PivotMiddleIndex
+  nameWithType: LomutoTwoWayPartitionStrategyTests_PivotMiddleIndex.LomutoTwoWayPartitionStrategyTests_PivotMiddleIndex
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotStartIndex
+  name: LomutoTwoWayPartitionStrategyTests_PivotStartIndex
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotStartIndex.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotStartIndex
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotStartIndex
+  nameWithType: LomutoTwoWayPartitionStrategyTests_PivotStartIndex
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotStartIndex.#ctor
+  name: LomutoTwoWayPartitionStrategyTests_PivotStartIndex()
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotStartIndex.html#MoreStructures_Tests_Lists_Sorting_QuickSort_LomutoTwoWayPartitionStrategyTests_PivotStartIndex__ctor
+  commentId: M:MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotStartIndex.#ctor
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotStartIndex.LomutoTwoWayPartitionStrategyTests_PivotStartIndex()
+  nameWithType: LomutoTwoWayPartitionStrategyTests_PivotStartIndex.LomutoTwoWayPartitionStrategyTests_PivotStartIndex()
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotStartIndex.#ctor*
+  name: LomutoTwoWayPartitionStrategyTests_PivotStartIndex
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotStartIndex.html#MoreStructures_Tests_Lists_Sorting_QuickSort_LomutoTwoWayPartitionStrategyTests_PivotStartIndex__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotStartIndex.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotStartIndex.LomutoTwoWayPartitionStrategyTests_PivotStartIndex
+  nameWithType: LomutoTwoWayPartitionStrategyTests_PivotStartIndex.LomutoTwoWayPartitionStrategyTests_PivotStartIndex
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategyTests
+  name: MiddleIndexPivotSelectionStrategyTests
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategyTests.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategyTests
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategyTests
+  nameWithType: MiddleIndexPivotSelectionStrategyTests
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategyTests.#ctor
+  name: MiddleIndexPivotSelectionStrategyTests()
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSort_MiddleIndexPivotSelectionStrategyTests__ctor
+  commentId: M:MoreStructures.Tests.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategyTests.#ctor
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategyTests.MiddleIndexPivotSelectionStrategyTests()
+  nameWithType: MiddleIndexPivotSelectionStrategyTests.MiddleIndexPivotSelectionStrategyTests()
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategyTests.#ctor*
+  name: MiddleIndexPivotSelectionStrategyTests
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSort_MiddleIndexPivotSelectionStrategyTests__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategyTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategyTests.MiddleIndexPivotSelectionStrategyTests
+  nameWithType: MiddleIndexPivotSelectionStrategyTests.MiddleIndexPivotSelectionStrategyTests
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests
+  name: PivotSelectionStrategyTests
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests
+  nameWithType: PivotSelectionStrategyTests
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests.#ctor(MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy)
+  name: PivotSelectionStrategyTests(IPivotSelectionStrategy)
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSort_PivotSelectionStrategyTests__ctor_MoreStructures_Lists_Sorting_QuickSort_IPivotSelectionStrategy_
+  commentId: M:MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests.#ctor(MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy)
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests.PivotSelectionStrategyTests(MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy)
+  nameWithType: PivotSelectionStrategyTests.PivotSelectionStrategyTests(IPivotSelectionStrategy)
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests.#ctor*
+  name: PivotSelectionStrategyTests
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSort_PivotSelectionStrategyTests__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests.PivotSelectionStrategyTests
+  nameWithType: PivotSelectionStrategyTests.PivotSelectionStrategyTests
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests.Select_GivesAnIndexWithinTheBoundariesOfTheWindow
+  name: Select_GivesAnIndexWithinTheBoundariesOfTheWindow()
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSort_PivotSelectionStrategyTests_Select_GivesAnIndexWithinTheBoundariesOfTheWindow
+  commentId: M:MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests.Select_GivesAnIndexWithinTheBoundariesOfTheWindow
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests.Select_GivesAnIndexWithinTheBoundariesOfTheWindow()
+  nameWithType: PivotSelectionStrategyTests.Select_GivesAnIndexWithinTheBoundariesOfTheWindow()
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests.Select_GivesAnIndexWithinTheBoundariesOfTheWindow*
+  name: Select_GivesAnIndexWithinTheBoundariesOfTheWindow
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSort_PivotSelectionStrategyTests_Select_GivesAnIndexWithinTheBoundariesOfTheWindow_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests.Select_GivesAnIndexWithinTheBoundariesOfTheWindow
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests.Select_GivesAnIndexWithinTheBoundariesOfTheWindow
+  nameWithType: PivotSelectionStrategyTests.Select_GivesAnIndexWithinTheBoundariesOfTheWindow
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests.Strategy
+  name: Strategy
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSort_PivotSelectionStrategyTests_Strategy
+  commentId: P:MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests.Strategy
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests.Strategy
+  nameWithType: PivotSelectionStrategyTests.Strategy
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests.Strategy*
+  name: Strategy
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSort_PivotSelectionStrategyTests_Strategy_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests.Strategy
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests.Strategy
+  nameWithType: PivotSelectionStrategyTests.Strategy
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotEndIndex
+  name: RecursiveQuickSortTests_WithLomutoThree_PivotEndIndex
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotEndIndex.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotEndIndex
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotEndIndex
+  nameWithType: RecursiveQuickSortTests_WithLomutoThree_PivotEndIndex
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotEndIndex.#ctor
+  name: RecursiveQuickSortTests_WithLomutoThree_PivotEndIndex()
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotEndIndex.html#MoreStructures_Tests_Lists_Sorting_QuickSort_RecursiveQuickSortTests_WithLomutoThree_PivotEndIndex__ctor
+  commentId: M:MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotEndIndex.#ctor
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotEndIndex.RecursiveQuickSortTests_WithLomutoThree_PivotEndIndex()
+  nameWithType: RecursiveQuickSortTests_WithLomutoThree_PivotEndIndex.RecursiveQuickSortTests_WithLomutoThree_PivotEndIndex()
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotEndIndex.#ctor*
+  name: RecursiveQuickSortTests_WithLomutoThree_PivotEndIndex
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotEndIndex.html#MoreStructures_Tests_Lists_Sorting_QuickSort_RecursiveQuickSortTests_WithLomutoThree_PivotEndIndex__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotEndIndex.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotEndIndex.RecursiveQuickSortTests_WithLomutoThree_PivotEndIndex
+  nameWithType: RecursiveQuickSortTests_WithLomutoThree_PivotEndIndex.RecursiveQuickSortTests_WithLomutoThree_PivotEndIndex
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotMiddleIndex
+  name: RecursiveQuickSortTests_WithLomutoThree_PivotMiddleIndex
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotMiddleIndex.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotMiddleIndex
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotMiddleIndex
+  nameWithType: RecursiveQuickSortTests_WithLomutoThree_PivotMiddleIndex
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotMiddleIndex.#ctor
+  name: RecursiveQuickSortTests_WithLomutoThree_PivotMiddleIndex()
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotMiddleIndex.html#MoreStructures_Tests_Lists_Sorting_QuickSort_RecursiveQuickSortTests_WithLomutoThree_PivotMiddleIndex__ctor
+  commentId: M:MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotMiddleIndex.#ctor
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotMiddleIndex.RecursiveQuickSortTests_WithLomutoThree_PivotMiddleIndex()
+  nameWithType: RecursiveQuickSortTests_WithLomutoThree_PivotMiddleIndex.RecursiveQuickSortTests_WithLomutoThree_PivotMiddleIndex()
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotMiddleIndex.#ctor*
+  name: RecursiveQuickSortTests_WithLomutoThree_PivotMiddleIndex
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotMiddleIndex.html#MoreStructures_Tests_Lists_Sorting_QuickSort_RecursiveQuickSortTests_WithLomutoThree_PivotMiddleIndex__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotMiddleIndex.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotMiddleIndex.RecursiveQuickSortTests_WithLomutoThree_PivotMiddleIndex
+  nameWithType: RecursiveQuickSortTests_WithLomutoThree_PivotMiddleIndex.RecursiveQuickSortTests_WithLomutoThree_PivotMiddleIndex
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotStartIndex
+  name: RecursiveQuickSortTests_WithLomutoThree_PivotStartIndex
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotStartIndex.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotStartIndex
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotStartIndex
+  nameWithType: RecursiveQuickSortTests_WithLomutoThree_PivotStartIndex
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotStartIndex.#ctor
+  name: RecursiveQuickSortTests_WithLomutoThree_PivotStartIndex()
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotStartIndex.html#MoreStructures_Tests_Lists_Sorting_QuickSort_RecursiveQuickSortTests_WithLomutoThree_PivotStartIndex__ctor
+  commentId: M:MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotStartIndex.#ctor
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotStartIndex.RecursiveQuickSortTests_WithLomutoThree_PivotStartIndex()
+  nameWithType: RecursiveQuickSortTests_WithLomutoThree_PivotStartIndex.RecursiveQuickSortTests_WithLomutoThree_PivotStartIndex()
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotStartIndex.#ctor*
+  name: RecursiveQuickSortTests_WithLomutoThree_PivotStartIndex
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotStartIndex.html#MoreStructures_Tests_Lists_Sorting_QuickSort_RecursiveQuickSortTests_WithLomutoThree_PivotStartIndex__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotStartIndex.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotStartIndex.RecursiveQuickSortTests_WithLomutoThree_PivotStartIndex
+  nameWithType: RecursiveQuickSortTests_WithLomutoThree_PivotStartIndex.RecursiveQuickSortTests_WithLomutoThree_PivotStartIndex
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotEndIndex
+  name: RecursiveQuickSortTests_WithLomutoTwo_PivotEndIndex
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotEndIndex.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotEndIndex
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotEndIndex
+  nameWithType: RecursiveQuickSortTests_WithLomutoTwo_PivotEndIndex
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotEndIndex.#ctor
+  name: RecursiveQuickSortTests_WithLomutoTwo_PivotEndIndex()
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotEndIndex.html#MoreStructures_Tests_Lists_Sorting_QuickSort_RecursiveQuickSortTests_WithLomutoTwo_PivotEndIndex__ctor
+  commentId: M:MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotEndIndex.#ctor
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotEndIndex.RecursiveQuickSortTests_WithLomutoTwo_PivotEndIndex()
+  nameWithType: RecursiveQuickSortTests_WithLomutoTwo_PivotEndIndex.RecursiveQuickSortTests_WithLomutoTwo_PivotEndIndex()
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotEndIndex.#ctor*
+  name: RecursiveQuickSortTests_WithLomutoTwo_PivotEndIndex
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotEndIndex.html#MoreStructures_Tests_Lists_Sorting_QuickSort_RecursiveQuickSortTests_WithLomutoTwo_PivotEndIndex__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotEndIndex.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotEndIndex.RecursiveQuickSortTests_WithLomutoTwo_PivotEndIndex
+  nameWithType: RecursiveQuickSortTests_WithLomutoTwo_PivotEndIndex.RecursiveQuickSortTests_WithLomutoTwo_PivotEndIndex
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotMiddleIndex
+  name: RecursiveQuickSortTests_WithLomutoTwo_PivotMiddleIndex
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotMiddleIndex.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotMiddleIndex
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotMiddleIndex
+  nameWithType: RecursiveQuickSortTests_WithLomutoTwo_PivotMiddleIndex
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotMiddleIndex.#ctor
+  name: RecursiveQuickSortTests_WithLomutoTwo_PivotMiddleIndex()
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotMiddleIndex.html#MoreStructures_Tests_Lists_Sorting_QuickSort_RecursiveQuickSortTests_WithLomutoTwo_PivotMiddleIndex__ctor
+  commentId: M:MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotMiddleIndex.#ctor
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotMiddleIndex.RecursiveQuickSortTests_WithLomutoTwo_PivotMiddleIndex()
+  nameWithType: RecursiveQuickSortTests_WithLomutoTwo_PivotMiddleIndex.RecursiveQuickSortTests_WithLomutoTwo_PivotMiddleIndex()
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotMiddleIndex.#ctor*
+  name: RecursiveQuickSortTests_WithLomutoTwo_PivotMiddleIndex
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotMiddleIndex.html#MoreStructures_Tests_Lists_Sorting_QuickSort_RecursiveQuickSortTests_WithLomutoTwo_PivotMiddleIndex__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotMiddleIndex.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotMiddleIndex.RecursiveQuickSortTests_WithLomutoTwo_PivotMiddleIndex
+  nameWithType: RecursiveQuickSortTests_WithLomutoTwo_PivotMiddleIndex.RecursiveQuickSortTests_WithLomutoTwo_PivotMiddleIndex
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotStartIndex
+  name: RecursiveQuickSortTests_WithLomutoTwo_PivotStartIndex
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotStartIndex.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotStartIndex
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotStartIndex
+  nameWithType: RecursiveQuickSortTests_WithLomutoTwo_PivotStartIndex
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotStartIndex.#ctor
+  name: RecursiveQuickSortTests_WithLomutoTwo_PivotStartIndex()
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotStartIndex.html#MoreStructures_Tests_Lists_Sorting_QuickSort_RecursiveQuickSortTests_WithLomutoTwo_PivotStartIndex__ctor
+  commentId: M:MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotStartIndex.#ctor
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotStartIndex.RecursiveQuickSortTests_WithLomutoTwo_PivotStartIndex()
+  nameWithType: RecursiveQuickSortTests_WithLomutoTwo_PivotStartIndex.RecursiveQuickSortTests_WithLomutoTwo_PivotStartIndex()
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotStartIndex.#ctor*
+  name: RecursiveQuickSortTests_WithLomutoTwo_PivotStartIndex
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotStartIndex.html#MoreStructures_Tests_Lists_Sorting_QuickSort_RecursiveQuickSortTests_WithLomutoTwo_PivotStartIndex__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotStartIndex.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotStartIndex.RecursiveQuickSortTests_WithLomutoTwo_PivotStartIndex
+  nameWithType: RecursiveQuickSortTests_WithLomutoTwo_PivotStartIndex.RecursiveQuickSortTests_WithLomutoTwo_PivotStartIndex
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategyTests
+  name: StartIndexPivotSelectionStrategyTests
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategyTests.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategyTests
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategyTests
+  nameWithType: StartIndexPivotSelectionStrategyTests
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategyTests.#ctor
+  name: StartIndexPivotSelectionStrategyTests()
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSort_StartIndexPivotSelectionStrategyTests__ctor
+  commentId: M:MoreStructures.Tests.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategyTests.#ctor
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategyTests.StartIndexPivotSelectionStrategyTests()
+  nameWithType: StartIndexPivotSelectionStrategyTests.StartIndexPivotSelectionStrategyTests()
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategyTests.#ctor*
+  name: StartIndexPivotSelectionStrategyTests
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSort_StartIndexPivotSelectionStrategyTests__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategyTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategyTests.StartIndexPivotSelectionStrategyTests
+  nameWithType: StartIndexPivotSelectionStrategyTests.StartIndexPivotSelectionStrategyTests
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests
+  name: ThreeWayPartitionStrategyTests
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests
+  nameWithType: ThreeWayPartitionStrategyTests
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests.#ctor(MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy)
+  name: ThreeWayPartitionStrategyTests(IThreeWayPartitionStrategy)
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSort_ThreeWayPartitionStrategyTests__ctor_MoreStructures_Lists_Sorting_QuickSort_IThreeWayPartitionStrategy_
+  commentId: M:MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests.#ctor(MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy)
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests.ThreeWayPartitionStrategyTests(MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy)
+  nameWithType: ThreeWayPartitionStrategyTests.ThreeWayPartitionStrategyTests(IThreeWayPartitionStrategy)
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests.#ctor*
+  name: ThreeWayPartitionStrategyTests
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSort_ThreeWayPartitionStrategyTests__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests.ThreeWayPartitionStrategyTests
+  nameWithType: ThreeWayPartitionStrategyTests.ThreeWayPartitionStrategyTests
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests.Partition_IsCorrect
+  name: Partition_IsCorrect()
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSort_ThreeWayPartitionStrategyTests_Partition_IsCorrect
+  commentId: M:MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests.Partition_IsCorrect
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests.Partition_IsCorrect()
+  nameWithType: ThreeWayPartitionStrategyTests.Partition_IsCorrect()
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests.Partition_IsCorrect*
+  name: Partition_IsCorrect
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSort_ThreeWayPartitionStrategyTests_Partition_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests.Partition_IsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests.Partition_IsCorrect
+  nameWithType: ThreeWayPartitionStrategyTests.Partition_IsCorrect
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests.Strategy
+  name: Strategy
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSort_ThreeWayPartitionStrategyTests_Strategy
+  commentId: P:MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests.Strategy
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests.Strategy
+  nameWithType: ThreeWayPartitionStrategyTests.Strategy
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests.Strategy*
+  name: Strategy
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSort_ThreeWayPartitionStrategyTests_Strategy_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests.Strategy
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests.Strategy
+  nameWithType: ThreeWayPartitionStrategyTests.Strategy
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSortp
+  name: MoreStructures.Tests.Lists.Sorting.QuickSortp
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSortp.html
+  commentId: N:MoreStructures.Tests.Lists.Sorting.QuickSortp
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSortp
+  nameWithType: MoreStructures.Tests.Lists.Sorting.QuickSortp
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSortp.IdentityShuffleStrategyTests
+  name: IdentityShuffleStrategyTests
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSortp.IdentityShuffleStrategyTests.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.QuickSortp.IdentityShuffleStrategyTests
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSortp.IdentityShuffleStrategyTests
+  nameWithType: IdentityShuffleStrategyTests
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSortp.IdentityShuffleStrategyTests.#ctor
+  name: IdentityShuffleStrategyTests()
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSortp.IdentityShuffleStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSortp_IdentityShuffleStrategyTests__ctor
+  commentId: M:MoreStructures.Tests.Lists.Sorting.QuickSortp.IdentityShuffleStrategyTests.#ctor
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSortp.IdentityShuffleStrategyTests.IdentityShuffleStrategyTests()
+  nameWithType: IdentityShuffleStrategyTests.IdentityShuffleStrategyTests()
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSortp.IdentityShuffleStrategyTests.#ctor*
+  name: IdentityShuffleStrategyTests
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSortp.IdentityShuffleStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSortp_IdentityShuffleStrategyTests__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.QuickSortp.IdentityShuffleStrategyTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSortp.IdentityShuffleStrategyTests.IdentityShuffleStrategyTests
+  nameWithType: IdentityShuffleStrategyTests.IdentityShuffleStrategyTests
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests
+  name: ShuffleStrategyTests
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.html
+  commentId: T:MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests
+  nameWithType: ShuffleStrategyTests
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.#ctor(MoreStructures.Lists.Sorting.QuickSort.IShuffleStrategy)
+  name: ShuffleStrategyTests(IShuffleStrategy)
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSortp_ShuffleStrategyTests__ctor_MoreStructures_Lists_Sorting_QuickSort_IShuffleStrategy_
+  commentId: M:MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.#ctor(MoreStructures.Lists.Sorting.QuickSort.IShuffleStrategy)
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.ShuffleStrategyTests(MoreStructures.Lists.Sorting.QuickSort.IShuffleStrategy)
+  nameWithType: ShuffleStrategyTests.ShuffleStrategyTests(IShuffleStrategy)
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.#ctor*
+  name: ShuffleStrategyTests
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSortp_ShuffleStrategyTests__ctor_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.#ctor
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.ShuffleStrategyTests
+  nameWithType: ShuffleStrategyTests.ShuffleStrategyTests
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.Shuffle_DoesNothingWhenWindowIsEmptyOrSingleton
+  name: Shuffle_DoesNothingWhenWindowIsEmptyOrSingleton()
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSortp_ShuffleStrategyTests_Shuffle_DoesNothingWhenWindowIsEmptyOrSingleton
+  commentId: M:MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.Shuffle_DoesNothingWhenWindowIsEmptyOrSingleton
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.Shuffle_DoesNothingWhenWindowIsEmptyOrSingleton()
+  nameWithType: ShuffleStrategyTests.Shuffle_DoesNothingWhenWindowIsEmptyOrSingleton()
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.Shuffle_DoesNothingWhenWindowIsEmptyOrSingleton*
+  name: Shuffle_DoesNothingWhenWindowIsEmptyOrSingleton
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSortp_ShuffleStrategyTests_Shuffle_DoesNothingWhenWindowIsEmptyOrSingleton_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.Shuffle_DoesNothingWhenWindowIsEmptyOrSingleton
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.Shuffle_DoesNothingWhenWindowIsEmptyOrSingleton
+  nameWithType: ShuffleStrategyTests.Shuffle_DoesNothingWhenWindowIsEmptyOrSingleton
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.Shuffle_PreservesTheContentOfTheInput(System.Int32[])
+  name: Shuffle_PreservesTheContentOfTheInput(Int32[])
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSortp_ShuffleStrategyTests_Shuffle_PreservesTheContentOfTheInput_System_Int32___
+  commentId: M:MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.Shuffle_PreservesTheContentOfTheInput(System.Int32[])
+  name.vb: Shuffle_PreservesTheContentOfTheInput(Int32())
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.Shuffle_PreservesTheContentOfTheInput(System.Int32[])
+  fullName.vb: MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.Shuffle_PreservesTheContentOfTheInput(System.Int32())
+  nameWithType: ShuffleStrategyTests.Shuffle_PreservesTheContentOfTheInput(Int32[])
+  nameWithType.vb: ShuffleStrategyTests.Shuffle_PreservesTheContentOfTheInput(Int32())
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.Shuffle_PreservesTheContentOfTheInput*
+  name: Shuffle_PreservesTheContentOfTheInput
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSortp_ShuffleStrategyTests_Shuffle_PreservesTheContentOfTheInput_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.Shuffle_PreservesTheContentOfTheInput
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.Shuffle_PreservesTheContentOfTheInput
+  nameWithType: ShuffleStrategyTests.Shuffle_PreservesTheContentOfTheInput
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.Strategy
+  name: Strategy
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSortp_ShuffleStrategyTests_Strategy
+  commentId: P:MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.Strategy
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.Strategy
+  nameWithType: ShuffleStrategyTests.Strategy
+- uid: MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.Strategy*
+  name: Strategy
+  href: api/MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.html#MoreStructures_Tests_Lists_Sorting_QuickSortp_ShuffleStrategyTests_Strategy_
+  commentId: Overload:MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.Strategy
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.Strategy
+  nameWithType: ShuffleStrategyTests.Strategy
 - uid: MoreStructures.Tests.Lists.Sorting.SelectionSortTests
   name: SelectionSortTests
   href: api/MoreStructures.Tests.Lists.Sorting.SelectionSortTests.html
@@ -24206,6 +25023,25 @@ references:
   isSpec: "True"
   fullName: MoreStructures.Tests.Utilities.LockValueObjectTests.GetHashCode_IsByValue
   nameWithType: LockValueObjectTests.GetHashCode_IsByValue
+- uid: MoreStructures.Tests.Utilities.NumericUtilitiesTests
+  name: NumericUtilitiesTests
+  href: api/MoreStructures.Tests.Utilities.NumericUtilitiesTests.html
+  commentId: T:MoreStructures.Tests.Utilities.NumericUtilitiesTests
+  fullName: MoreStructures.Tests.Utilities.NumericUtilitiesTests
+  nameWithType: NumericUtilitiesTests
+- uid: MoreStructures.Tests.Utilities.NumericUtilitiesTests.Middle_IsCorrect
+  name: Middle_IsCorrect()
+  href: api/MoreStructures.Tests.Utilities.NumericUtilitiesTests.html#MoreStructures_Tests_Utilities_NumericUtilitiesTests_Middle_IsCorrect
+  commentId: M:MoreStructures.Tests.Utilities.NumericUtilitiesTests.Middle_IsCorrect
+  fullName: MoreStructures.Tests.Utilities.NumericUtilitiesTests.Middle_IsCorrect()
+  nameWithType: NumericUtilitiesTests.Middle_IsCorrect()
+- uid: MoreStructures.Tests.Utilities.NumericUtilitiesTests.Middle_IsCorrect*
+  name: Middle_IsCorrect
+  href: api/MoreStructures.Tests.Utilities.NumericUtilitiesTests.html#MoreStructures_Tests_Utilities_NumericUtilitiesTests_Middle_IsCorrect_
+  commentId: Overload:MoreStructures.Tests.Utilities.NumericUtilitiesTests.Middle_IsCorrect
+  isSpec: "True"
+  fullName: MoreStructures.Tests.Utilities.NumericUtilitiesTests.Middle_IsCorrect
+  nameWithType: NumericUtilitiesTests.Middle_IsCorrect
 - uid: MoreStructures.Tests.Utilities.StringUtilitiesTests
   name: StringUtilitiesTests
   href: api/MoreStructures.Tests.Utilities.StringUtilitiesTests.html
@@ -25496,6 +26332,28 @@ references:
   commentId: T:MoreStructures.Utilities.LockValueObject
   fullName: MoreStructures.Utilities.LockValueObject
   nameWithType: LockValueObject
+- uid: MoreStructures.Utilities.NumericUtilities
+  name: NumericUtilities
+  href: api/MoreStructures.Utilities.NumericUtilities.html
+  commentId: T:MoreStructures.Utilities.NumericUtilities
+  fullName: MoreStructures.Utilities.NumericUtilities
+  nameWithType: NumericUtilities
+- uid: MoreStructures.Utilities.NumericUtilities.Middle(System.ValueTuple{System.Int32,System.Int32})
+  name: Middle((Int32 lower, Int32 higher))
+  href: api/MoreStructures.Utilities.NumericUtilities.html#MoreStructures_Utilities_NumericUtilities_Middle_System_ValueTuple_System_Int32_System_Int32__
+  commentId: M:MoreStructures.Utilities.NumericUtilities.Middle(System.ValueTuple{System.Int32,System.Int32})
+  name.vb: Middle((lower As Int32, higher As Int32)(Of Int32, Int32))
+  fullName: MoreStructures.Utilities.NumericUtilities.Middle(System.ValueTuple<System.Int32, System.Int32>)
+  fullName.vb: MoreStructures.Utilities.NumericUtilities.Middle(System.ValueTuple(Of System.Int32, System.Int32))
+  nameWithType: NumericUtilities.Middle((Int32 lower, Int32 higher))
+  nameWithType.vb: NumericUtilities.Middle((lower As Int32, higher As Int32)(Of Int32, Int32))
+- uid: MoreStructures.Utilities.NumericUtilities.Middle*
+  name: Middle
+  href: api/MoreStructures.Utilities.NumericUtilities.html#MoreStructures_Utilities_NumericUtilities_Middle_
+  commentId: Overload:MoreStructures.Utilities.NumericUtilities.Middle
+  isSpec: "True"
+  fullName: MoreStructures.Utilities.NumericUtilities.Middle
+  nameWithType: NumericUtilities.Middle
 - uid: MoreStructures.Utilities.StringIncludingTerminatorComparer
   name: StringIncludingTerminatorComparer
   href: api/MoreStructures.Utilities.StringIncludingTerminatorComparer.html

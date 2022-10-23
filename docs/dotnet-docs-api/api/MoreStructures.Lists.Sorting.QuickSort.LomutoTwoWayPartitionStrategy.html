@@ -1,0 +1,408 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class LomutoTwoWayPartitionStrategy
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class LomutoTwoWayPartitionStrategy
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy">
+  
+  
+  <h1 id="MoreStructures_Lists_Sorting_QuickSort_LomutoTwoWayPartitionStrategy" data-uid="MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy" class="text-break">Class LomutoTwoWayPartitionStrategy
+  </h1>
+  <div class="markdown level0 summary"><p>A <a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy.html">IThreeWayPartitionStrategy</a> implementing the Lomuto partition scheme into three segments, the
+middle always being a single pivot.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">LomutoTwoWayPartitionStrategy</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy.html">IThreeWayPartitionStrategy</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.html">MoreStructures.Lists.Sorting.QuickSort</a></h6>
+  <h6><strong>Assembly</strong>: MoreStructures.dll</h6>
+  <h5 id="MoreStructures_Lists_Sorting_QuickSort_LomutoTwoWayPartitionStrategy_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class LomutoTwoWayPartitionStrategy : IThreeWayPartitionStrategy</code></pre>
+  </div>
+  <h5 id="MoreStructures_Lists_Sorting_QuickSort_LomutoTwoWayPartitionStrategy_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+ADVANTAGES
+<br>
+- Compared to <a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.html">LomutoThreeWayPartitionStrategy</a> and HoareTwoWayPartitionStrategy, it 
+  is simpler, since it only requires a single pointer.
+<br>
+- However it makes quicksort quadratic when many duplicates are present, because it places all the duplicates 
+of the pivot in the right segment.
+<br>
+- Notice that the same would happen if the strict inequality on the comparison result done in partitioning 
+would have been replaced by a non-strict inequality, because in that scenarios all duplicates would have been
+placed in the left segment.
+<br>
+- Only a randomized strategy, not implemented by this strategy, could have distributed evenly pivots in the two
+partitions.
+<br>
+- <a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.html">LomutoThreeWayPartitionStrategy</a> solves this problem differently, by placing all pivots in the 
+middle segment. That, however, requires 2 indices and its more complex because it generates three segments 
+which can contain more than 1 element each, including the middle segment.
+<br>
+- HoareTwoWayPartitionStrategy addresses the problem by still using two pointers, but running 
+from the two extremes of the window, inwards. That distributes the duplicates evenly (in average, over non 
+pathological input lists) and only generates two segments, with the middle segment empty.
+<br>
+- Both <a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.html">LomutoTwoWayPartitionStrategy</a> and <a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.html">LomutoThreeWayPartitionStrategy</a> perform 
+three times more swaps than HoareTwoWayPartitionStrategy on average.
+<br>
+</p>
+<p>
+ALGORITHM
+<br>
+- First, the index ip, of the item of the list acting as pivot, is selected, using the provided 
+<a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.html#MoreStructures_Lists_Sorting_QuickSort_LomutoTwoWayPartitionStrategy_PivotSelectionStrategy">PivotSelectionStrategy</a>.
+<br>
+- L[ip] is swapped with L[end], i.e. the pivot is moved at the end of the window.
+<br>
+- Then, the value of the pivot p is taken from the list being sorted L, from the last item of the window, where
+it has just been placed.
+<br>
+- A pointer i is defined, to point to the frontier between values smaller than p, and more precisely to the 
+last index of the left segment, which is also the index before the first index of the current middle segment.
+<br>
+- Its initial value is start - 1, since at the beginning the left segment is empty.
+<br>
+- A running pointer j goes from the start index to the index before the end (the end index contains the pivot).
+<br>
+- For each item L[j] smaller than the pivot, i is increased, to augment the left segment of one item, and items
+at positions i and j are swapped, to accomodate L[j] in the left segment, since it is smaller than the pivot.
+<br>
+- That moves the previous L[i] beyond the frontier, and that is correct, since it is non-smaller than the 
+pivot. 
+<br>
+- By the time j will have run through all indices except the last, all items except the last will have been 
+partitioned into a left and right segments.
+<br>
+- By incrementing i one more time and swapping L[i] with L[end], the pivot goes into the right position, and 
+the three segments are in place: the left going from start to i - 1, the middle from i to i (single item) and
+the right going from i + 1 to end.
+<br>
+- So, <code>(i, i)</code> is returned as result.
+</p>
+<p>
+COMPLEXITY
+<br>
+- Pivot selection complexity depends on the specific <a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy.html">IPivotSelectionStrategy</a> strategy 
+  used, and is not included in this analysis (i.e. it is assumed to be O(1)).
+<br>
+- Pivot swapping, before and after the main loop, are both constant-time operations.
+<br>
+- The main loop goes through n - 1 items, where n is the number of items in the window.
+<br>
+- At each iteration, at most a swap and two increments are performed (j and possibly i).
+<br>
+- Therefore Time Complexity is O(n) and Space Complexity is O(1), since all swaps happen in-place on L.
+</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Lists_Sorting_QuickSort_LomutoTwoWayPartitionStrategy__ctor_MoreStructures_Lists_Sorting_QuickSort_IPivotSelectionStrategy_.md&amp;value=---%0Auid%3A%20MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.%23ctor(MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Sorting/QuickSort/LomutoTwoWayPartitionStrategy.cs/#L97">View Source</a>
+  </span>
+  <a id="MoreStructures_Lists_Sorting_QuickSort_LomutoTwoWayPartitionStrategy__ctor_" data-uid="MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.#ctor*"></a>
+  <h4 id="MoreStructures_Lists_Sorting_QuickSort_LomutoTwoWayPartitionStrategy__ctor_MoreStructures_Lists_Sorting_QuickSort_IPivotSelectionStrategy_" data-uid="MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.#ctor(MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy)">LomutoTwoWayPartitionStrategy(IPivotSelectionStrategy)</h4>
+  <div class="markdown level1 summary"><p>Builds a Lomuto 2-way partitioner with the provided <code data-dev-comment-type="paramref" class="paramref">pivotSelectionStrategy</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LomutoTwoWayPartitionStrategy(IPivotSelectionStrategy pivotSelectionStrategy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy.html">IPivotSelectionStrategy</a></td>
+        <td><span class="parametername">pivotSelectionStrategy</span></td>
+        <td><p><inheritdoc cref="P:MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.PivotSelectionStrategy"></inheritdoc></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Lists_Sorting_QuickSort_LomutoTwoWayPartitionStrategy_PivotSelectionStrategy.md&amp;value=---%0Auid%3A%20MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.PivotSelectionStrategy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Sorting/QuickSort/LomutoTwoWayPartitionStrategy.cs/#L89">View Source</a>
+  </span>
+  <a id="MoreStructures_Lists_Sorting_QuickSort_LomutoTwoWayPartitionStrategy_PivotSelectionStrategy_" data-uid="MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.PivotSelectionStrategy*"></a>
+  <h4 id="MoreStructures_Lists_Sorting_QuickSort_LomutoTwoWayPartitionStrategy_PivotSelectionStrategy" data-uid="MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.PivotSelectionStrategy">PivotSelectionStrategy</h4>
+  <div class="markdown level1 summary"><p>The strategy to select the pivot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IPivotSelectionStrategy PivotSelectionStrategy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy.html">IPivotSelectionStrategy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Lists_Sorting_QuickSort_LomutoTwoWayPartitionStrategy_Partition__1_IList___0__IComparer___0__System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.Partition%60%601(IList%7B%60%600%7D%2CIComparer%7B%60%600%7D%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Sorting/QuickSort/LomutoTwoWayPartitionStrategy.cs/#L107">View Source</a>
+  </span>
+  <a id="MoreStructures_Lists_Sorting_QuickSort_LomutoTwoWayPartitionStrategy_Partition_" data-uid="MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.Partition*"></a>
+  <h4 id="MoreStructures_Lists_Sorting_QuickSort_LomutoTwoWayPartitionStrategy_Partition__1_IList___0__IComparer___0__System_Int32_System_Int32_" data-uid="MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.Partition``1(IList{``0},IComparer{``0},System.Int32,System.Int32)">Partition&lt;T&gt;(IList&lt;T&gt;, IComparer&lt;T&gt;, Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public (int, int) Partition&lt;T&gt;(IList&lt;T&gt; list, IComparer&lt;T&gt; comparer, int start, int end)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IList</span>&lt;T&gt;</td>
+        <td><span class="parametername">list</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">IComparer</span>&lt;T&gt;</td>
+        <td><span class="parametername">comparer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">start</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">end</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MoreStructures_Lists_Sorting_QuickSort_LomutoTwoWayPartitionStrategy_Partition__1_IList___0__IComparer___0__System_Int32_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><inheritdoc></inheritdoc>
+<inheritdoc cref="T:MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy"></inheritdoc></p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy.html">IThreeWayPartitionStrategy</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="MoreStructures.SuffixStructures.SuffixStructureNodeExtensions.html#MoreStructures_SuffixStructures_SuffixStructureNodeExtensions_GetAllSuffixesFor__2___1_MoreStructures_TextWithTerminator_">SuffixStructureNodeExtensions.GetAllSuffixesFor&lt;TEdge, TNode&gt;(TNode, TextWithTerminator)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/new/main/apiSpec/new?filename=MoreStructures_Lists_Sorting_QuickSort_LomutoTwoWayPartitionStrategy.md&amp;value=---%0Auid%3A%20MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/antonioaversa/MoreStructures/blob/main/MoreStructures/Lists/Sorting/QuickSort/LomutoTwoWayPartitionStrategy.cs/#L84" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

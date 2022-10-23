@@ -558,7 +558,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Graphs.MinimumSpanningTree.KruskalMstFinder.html",
-          "hash": "UG2N1x2bEaVKgEzKauUzodcOTVMpCIgnE93bsoozdX4="
+          "hash": "S5ptZSIHiU45zX61YCaOmrgwiXct8X1R073Lbnzwhdg="
         }
       },
       "is_incremental": false,
@@ -1230,7 +1230,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Lists.Sorting.HeapSort.html",
-          "hash": "SD2RG9KPy65ZgzD6FRQ8XK1VDKOV+AFOyax7RMhKwWs="
+          "hash": "96WC68xCzrDtaYYe1vL/NQTU5lGCl39HhEV/yB3q/80="
         }
       },
       "is_incremental": false,
@@ -1238,11 +1238,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MoreStructures.Lists.Sorting.IInPlaceSorting.yml",
+      "source_relative_path": "api/MoreStructures.Lists.Sorting.IInputMutatingSort.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MoreStructures.Lists.Sorting.IInPlaceSorting.html",
-          "hash": "wROW2GdG0LIWHFGDO3AfSz1OWwo60UqqeXRnndmbmtc="
+          "relative_path": "api/MoreStructures.Lists.Sorting.IInputMutatingSort.html",
+          "hash": "9CICDkfcDp3q7RyGY44WQTAgOXpB20rllEaEJbj/0YI="
         }
       },
       "is_incremental": false,
@@ -1266,7 +1266,151 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Lists.Sorting.InsertionSort.html",
-          "hash": "Tr/IsY/1MCVPPVdQYdzFg67h3YU6OcVCtXlYBf85u8M="
+          "hash": "L4tGxjmIx4nqhTxF5NWlRjE5xmmEQsEHMYK9hqPfF2g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Lists.Sorting.MergeSort.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Lists.Sorting.MergeSort.html",
+          "hash": "DUwJ4gmN06CGmJ15TFLPwadtL5uSlVRtdUQsRLiYRQQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategy.html",
+          "hash": "hG13mnBQqSeAtRncoux99o4Jk7LZOV4yQPNqmN2u/jQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy.html",
+          "hash": "6zZqQvQyDvS00hUPiyo1PrFbULIf05dD+fvRcsn6III="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Lists.Sorting.QuickSort.IShuffleStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Lists.Sorting.QuickSort.IShuffleStrategy.html",
+          "hash": "hmgdIkivYOgpvp6vvZ6w0RxX9ZZaUIqZznHlOOIU2uw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy.html",
+          "hash": "JPfDVhmRCtVb/cANruasmWs/f3CsSHLGyCRmy7SgOsc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Lists.Sorting.QuickSort.IdentityShuffleStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Lists.Sorting.QuickSort.IdentityShuffleStrategy.html",
+          "hash": "VhSNUsi4D3eeQuZx5ZsKsJKYpRrhbb/scR++XdEILZk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.html",
+          "hash": "iwC4k6wNZi/qtmyJEAprdxV300Rlt4SvQzx5cDHzY5I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.html",
+          "hash": "FbKW/wvu/msXATUzNJoguwPPl15cysaGVMtVFHL8hVQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategy.html",
+          "hash": "Vw8ZbiVCmlnatWMotJFBnEQCCMr6mws/Zb3W9T0LE9M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort.html",
+          "hash": "PYRjM24gQJjPFS6r7gROD12UEVbnxrS89Q4ImZcDy/Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategy.html",
+          "hash": "7LqiNEO0/khvMTWdUQLF8CGFA1BgfiOyyapCTanx7cw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Lists.Sorting.QuickSort.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Lists.Sorting.QuickSort.html",
+          "hash": "/oquS8ffgnt7lYJgDVZhy/XHaCAx/7XmR0e4qSfWBNE="
         }
       },
       "is_incremental": false,
@@ -1278,7 +1422,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Lists.Sorting.SelectionSort.html",
-          "hash": "ZKafd+iqtW8Hl4t0SL2PkBwAZIXYT40XHv/G3tryJXg="
+          "hash": "ZhEuKS5kkRssGLMRghVrgYTTZr+RF7i8SqQcDkQ5410="
         }
       },
       "is_incremental": false,
@@ -1290,7 +1434,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Lists.Sorting.ShellSort.html",
-          "hash": "pY8qY10zj4OEH46/RyFtwbIKzUJghuYtUo5lJjAEx28="
+          "hash": "ENTxqdP7VCm6fuVElddEOre8CYH8vxNwRIJaq1kBPf0="
         }
       },
       "is_incremental": false,
@@ -1302,7 +1446,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Lists.Sorting.html",
-          "hash": "Q8hiw7mciLBip4SAaTh5hhGKfHcLa5vbop0oxBNBqDs="
+          "hash": "x0KdzfhMEIQtGAU/ggt3rrasGysJHT0T7D5rnPqcHo8="
         }
       },
       "is_incremental": false,
@@ -4074,7 +4218,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Lists.Sorting.HeapSortTests.html",
-          "hash": "/lajfezoWx1g2qOJnsQpDW2gIQS7+DCQHv/lZ2ed5/g="
+          "hash": "QVaMjqDxMSRGD2ZtQWDUWiCvqIMSdGoaB2rO4WAD9E8="
         }
       },
       "is_incremental": false,
@@ -4082,11 +4226,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.yml",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.InputSortingTests.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.InPlaceSortingTests.html",
-          "hash": "8q49kqNDWuYla3DRfI6aON7qYTl6yMF1u0a11tTgLTA="
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.InputSortingTests.html",
+          "hash": "qE4vevrjnPBnQfGN2sfY3hBUwGYxclc4XHcaEFmeQMU="
         }
       },
       "is_incremental": false,
@@ -4098,7 +4242,271 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Lists.Sorting.InsertionSortTests.html",
-          "hash": "+1TY504OEKSpGxv2TLDRh4gpxB6DVuI+FbmIurHO0+A="
+          "hash": "asxXgEokAQaA8THi5583qTDqVmRFDnEFMUsUo9dLdEI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.MergeSortTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.MergeSortTests.html",
+          "hash": "sS3mS8kCFBG3utP9pDRES2r+epy7NM3SXhD01VTif0M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategyTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategyTests.html",
+          "hash": "reUvq6bkmQfCbWRKi8K/GLJvadStC90/0NPTC0mKxMA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotEndIndex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotEndIndex.html",
+          "hash": "PQtFXUGj7Eue7kdwOTbi8tQqMY+oZBOI/T8L9Ei1igI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotMiddleIndex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotMiddleIndex.html",
+          "hash": "2ztNFSO674Mzef5LtjnmBk3chKDmT5fNty/XMTOCRLY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotStartIndex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategyTests_PivotStartIndex.html",
+          "hash": "er0yl4VHGIQYOfAzddTyvJjLS5ZFd7CYKX2DctRHsuE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotEndIndex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotEndIndex.html",
+          "hash": "OPcZtMhdxM2N4mnyhyjR0rdqJmYLLxZ1P+6qt/kxSJs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotMiddleIndex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotMiddleIndex.html",
+          "hash": "DUPDWV08qLQJVIr2rtnPiKQkevUDHZtULWKDULh3Kso="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotStartIndex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategyTests_PivotStartIndex.html",
+          "hash": "idvLvB3gKnokQ+j2S61mJfkZuI2bVgwhVZA5Y7CvcKI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategyTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategyTests.html",
+          "hash": "lI3lsmkezT0jiv/P13bSCz5JFCzN7nS3p2dvQ8Nw1vU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.PivotSelectionStrategyTests.html",
+          "hash": "SJtmk4doTAqGI+wHesImydtesfMsQxfuzwPXv+kE1QU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotEndIndex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotEndIndex.html",
+          "hash": "oAkcF8NdKwUYnIpwgEBsVfcs68Y8dtTjzIbcAQpFvYQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotMiddleIndex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotMiddleIndex.html",
+          "hash": "tIHqVD5ZDtWBiP+M9PMAjSHK5ZHzlUenE6SqRtj4iNE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotStartIndex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoThree_PivotStartIndex.html",
+          "hash": "V6FLCIW/Oo/1vskfNlaPd3QdizGJhNXq7GFv90dzAKI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotEndIndex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotEndIndex.html",
+          "hash": "TE69uC3bxb/UIU2EJHSpWVcaTl/LjC7e8MwygdjcaOs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotMiddleIndex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotMiddleIndex.html",
+          "hash": "Ew6t7i+Tm/Y3L6vR4danqda0K+JPZLM5P+6Usy7lK8A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotStartIndex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.RecursiveQuickSortTests_WithLomutoTwo_PivotStartIndex.html",
+          "hash": "JXdUvd9ncMgRzFotCN68LzVA+ooT8SJo+lQs6wUqWhI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategyTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategyTests.html",
+          "hash": "+68qiJdTubZf3eUHIxoxboQvZNPwVuJkVYlwKPDn3Sg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.ThreeWayPartitionStrategyTests.html",
+          "hash": "9/qTcj4et4+Z2MD4U5Efv1/yGHe/IZrl5QUNUYWTjLw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSort.html",
+          "hash": "iohKdlEbTIT5H+X0obYH5rZf+yrByvqx2sbqP6CjHnU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSortp.IdentityShuffleStrategyTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSortp.IdentityShuffleStrategyTests.html",
+          "hash": "GZI14gmXNQr4ieLmOFQEebh10+GvZzzCnHeBX63pyf4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSortp.ShuffleStrategyTests.html",
+          "hash": "jZ90pFwc9kxTpIh4ivMTWv4YBTatoMLBIWtA2WNYaBc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSortp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Lists.Sorting.QuickSortp.html",
+          "hash": "/6Yd9cLZJ+0tRNi1DNu3KtviYtchkJDUDgGmyAPfrok="
         }
       },
       "is_incremental": false,
@@ -4110,7 +4518,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Lists.Sorting.SelectionSortTests.html",
-          "hash": "ErOvKGv9+redGcncHsWZVLpHnr1v8TDks2elI18xRuY="
+          "hash": "43UXrJabrx7AFkZZ3D9uIIrAcG2ax7R3xHsVnRfsm70="
         }
       },
       "is_incremental": false,
@@ -4122,7 +4530,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsCiura01.html",
-          "hash": "E1AZ1h9mdvejLpSpbDonDJ9EHfRmiO7EH9s015RylY4="
+          "hash": "j2TH8mjzg+h/BqrYjXZspfIm2R9JPfT39sDwPoWmbxg="
         }
       },
       "is_incremental": false,
@@ -4134,7 +4542,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPositiveInts.html",
-          "hash": "KFChWTz90sylRKX0gVOlAj9/tjVKm+KeqrIsrmiNTY4="
+          "hash": "j1Nrbl9ld7z7imdLTLbJxgZHog4YVja8io+BHBkHXN0="
         }
       },
       "is_incremental": false,
@@ -4146,7 +4554,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsPowerOf2.html",
-          "hash": "m1P27m81S4tA39mAk9p1+KfDW0idvGQ7cMqLWXwa15Q="
+          "hash": "tpG1ks6mIWrdfVS+5IqjH55Khq+FnSf8QChNvrZJ+Xc="
         }
       },
       "is_incremental": false,
@@ -4158,7 +4566,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Lists.Sorting.ShellSortTests_GapsSedgewick82.html",
-          "hash": "JRPljm5SulbezoKc7UKb9X4nU5F6r7TFyA30EKUVcoQ="
+          "hash": "sxWt8mrSxi/X/uRqaGb/W8ta9pzliDjqQLTFY22BP4k="
         }
       },
       "is_incremental": false,
@@ -4170,7 +4578,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Lists.Sorting.html",
-          "hash": "wzH+K1fTMK1p4S83Kb8MhFb8stSsws6ufUDCEdbJAhI="
+          "hash": "nt4andzIj8pQEDE4QSiVrExbWw6iD5PVbPa4Gkook+A="
         }
       },
       "is_incremental": false,
@@ -6122,6 +6530,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Tests.Utilities.NumericUtilitiesTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Tests.Utilities.NumericUtilitiesTests.html",
+          "hash": "1W6nhpYl/dzehzdVAJnDtBeuYUDKeMHZtuXSs2aCiVQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Tests.Utilities.StringUtilitiesTests.yml",
       "output": {
         ".html": {
@@ -6210,7 +6630,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Tests.Utilities.html",
-          "hash": "NjltgvUOz7Wh54lFtphfD6JhkdyV3wCpJpwB17J8xB0="
+          "hash": "dUtO26CVMkFZTV/l7soRWKnxh9k/NRRr2Odm6l/3Yqs="
         }
       },
       "is_incremental": false,
@@ -6386,6 +6806,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MoreStructures.Utilities.NumericUtilities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MoreStructures.Utilities.NumericUtilities.html",
+          "hash": "aCNVANKqyStNA2mdR/wOfJTk34c3pWiIpVWeRH8n3bE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MoreStructures.Utilities.StringIncludingTerminatorComparer.yml",
       "output": {
         ".html": {
@@ -6486,7 +6918,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MoreStructures.Utilities.html",
-          "hash": "J50OXcCUrDDGfX0UIYX7qLcLoD+VMmgG7hsiOLsbfI8="
+          "hash": "K6dwggqEya0RnCLkigOEbcaXiIuKiE9kEzRpoIFeq6U="
         }
       },
       "is_incremental": false,
@@ -6582,7 +7014,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "FMiUl+e5NahSNlMY0VWxkP2T34pPYHZ4vnVsVfglYJY="
+          "hash": "3rYyL+358E41kbm9/G6PYVmgFlLvtRDV++pf7uOHOiY="
         }
       },
       "is_incremental": false,
@@ -6657,7 +7089,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 546,
+          "total_file_count": 582,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

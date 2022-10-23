@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace MoreStructures.Lists.Sorting
+    <title>Namespace MoreStructures.Lists.Sorting.QuickSort
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace MoreStructures.Lists.Sorting
+    <meta name="title" content="Namespace MoreStructures.Lists.Sorting.QuickSort
    ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -78,41 +78,57 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MoreStructures.Lists.Sorting">
+            <article class="content wrap" id="_content" data-uid="MoreStructures.Lists.Sorting.QuickSort">
   
-  <h1 id="MoreStructures_Lists_Sorting" data-uid="MoreStructures.Lists.Sorting" class="text-break">Namespace MoreStructures.Lists.Sorting
+  <h1 id="MoreStructures_Lists_Sorting_QuickSort" data-uid="MoreStructures.Lists.Sorting.QuickSort" class="text-break">Namespace MoreStructures.Lists.Sorting.QuickSort
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="MoreStructures.Lists.Sorting.Extensions.html">Extensions</a></h4>
-      <section><p>Extensions methods for <see cref="!:IList&lt;T>"></see>, in the context of list sorting.</p>
+      <h4><a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.EndIndexPivotSelectionStrategy.html">EndIndexPivotSelectionStrategy</a></h4>
+      <section><p>A <a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy.html">IPivotSelectionStrategy</a> always picking the highest index of the window.</p>
 </section>
-      <h4><a class="xref" href="MoreStructures.Lists.Sorting.HeapSort.html">HeapSort</a></h4>
-      <section><p>An <a class="xref" href="MoreStructures.Lists.Sorting.IInputMutatingSort.html">IInputMutatingSort</a> implementation based on heapsort.</p>
+      <h4><a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.IdentityShuffleStrategy.html">IdentityShuffleStrategy</a></h4>
+      <section><p>A <a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.IShuffleStrategy.html">IShuffleStrategy</a> which does nothing to its input, and returns it as it is.</p>
 </section>
-      <h4><a class="xref" href="MoreStructures.Lists.Sorting.InsertionSort.html">InsertionSort</a></h4>
-      <section><p>An <a class="xref" href="MoreStructures.Lists.Sorting.IInputMutatingSort.html">IInputMutatingSort</a> implementation based on insertion sort.</p>
+      <h4><a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.LomutoThreeWayPartitionStrategy.html">LomutoThreeWayPartitionStrategy</a></h4>
+      <section><p>A <a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy.html">IThreeWayPartitionStrategy</a> implementing the Lomuto partition scheme into three segments, the
+middle containing only and all the items equals to the pivot.</p>
 </section>
-      <h4><a class="xref" href="MoreStructures.Lists.Sorting.MergeSort.html">MergeSort</a></h4>
-      <section><p>An <a class="xref" href="MoreStructures.Lists.Sorting.IInputMutatingSort.html">IInputMutatingSort</a> implementation based on the merge sort algorithm.</p>
+      <h4><a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.LomutoTwoWayPartitionStrategy.html">LomutoTwoWayPartitionStrategy</a></h4>
+      <section><p>A <a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy.html">IThreeWayPartitionStrategy</a> implementing the Lomuto partition scheme into three segments, the
+middle always being a single pivot.</p>
 </section>
-      <h4><a class="xref" href="MoreStructures.Lists.Sorting.SelectionSort.html">SelectionSort</a></h4>
-      <section><p>An <a class="xref" href="MoreStructures.Lists.Sorting.IInputMutatingSort.html">IInputMutatingSort</a> implementation based on selection sort.</p>
+      <h4><a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.MiddleIndexPivotSelectionStrategy.html">MiddleIndexPivotSelectionStrategy</a></h4>
+      <section><p>A <a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy.html">IPivotSelectionStrategy</a> always picking the index of the window in the middle.</p>
 </section>
-      <h4><a class="xref" href="MoreStructures.Lists.Sorting.ShellSort.html">ShellSort</a></h4>
-      <section><p>An <a class="xref" href="MoreStructures.Lists.Sorting.IInputMutatingSort.html">IInputMutatingSort</a> implementation based on Shell sort.</p>
+      <h4><a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.RecursiveQuickSort.html">RecursiveQuickSort</a></h4>
+      <section><p>An <a class="xref" href="MoreStructures.Lists.Sorting.IInputMutatingSort.html">IInputMutatingSort</a> implementation based on the quicksort algorithm.</p>
+</section>
+      <h4><a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.StartIndexPivotSelectionStrategy.html">StartIndexPivotSelectionStrategy</a></h4>
+      <section><p>A <a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy.html">IPivotSelectionStrategy</a> always picking the lowest index of the window.</p>
 </section>
     <h3 id="interfaces">Interfaces
   </h3>
-      <h4><a class="xref" href="MoreStructures.Lists.Sorting.IInputMutatingSort.html">IInputMutatingSort</a></h4>
-      <section><p>An algorithm sorting the given list, directly modifying the list given in input and using such list
-as &quot;workspace&quot;, rather than generating a brand new list sorted.</p>
+      <h4><a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.IPivotSelectionStrategy.html">IPivotSelectionStrategy</a></h4>
+      <section><p>An algorithm to select the pivot from the provided window of a list, to be used by a
+<a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy.html">IThreeWayPartitionStrategy</a>, to partition the window into three segments.</p>
 </section>
-      <h4><a class="xref" href="MoreStructures.Lists.Sorting.IStableSortingAlgorithm.html">IStableSortingAlgorithm</a></h4>
-      <section><p>Used to mark sorting algorithms (in place or not), which are <strong>stable</strong>. Just for marking and information.</p>
+      <h4><a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.IShuffleStrategy.html">IShuffleStrategy</a></h4>
+      <section><p>An algorithm shuffling the specified window of the provided list.</p>
+</section>
+      <h4><a class="xref" href="MoreStructures.Lists.Sorting.QuickSort.IThreeWayPartitionStrategy.html">IThreeWayPartitionStrategy</a></h4>
+      <section><p>An algorithm partitioning the specified window of the provided list &quot;3-way&quot;, i.e. into three adjacent segments:
+<br></p>
+<ul>
+<li>the first, named left segment, containing all items smaller or equal than the pivot,
+<br></li>
+<li>the second, named middle segment, containing all items equals to the pivot,
+<br></li>
+<li>and the third, named right segment, containing all items bigger or equal than the pivot.</li>
+</ul>
 </section>
 </article>
           </div>
