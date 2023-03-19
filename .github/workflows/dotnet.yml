@@ -274,6 +274,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          TESTRESULTS_FILENAME: test-results.trx
           COVERAGE_FILENAME: coverage-opencover.xml
         shell: powershell
         run: |
@@ -282,14 +283,18 @@ jobs:
             /o:"antonioaversa" `
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}" `
             /d:sonar.host.url="https://sonarcloud.io" `
-            /d:sonar.cs.opencover.reportsPaths="$env:COVERAGE_FILENAME"
+            /d:sonar.cs.opencover.reportsPaths="$env:COVERAGE_FILENAME" `
+            /d:sonar.cs.vstest.reportsPaths="$env:TESTRESULTS_FILENAME"
           dotnet restore
           dotnet build --no-restore --configuration ${{ env.DOTNET_CONFIGURATION }}
           dotnet test --no-build --verbosity normal --configuration ${{ env.DOTNET_CONFIGURATION }} `
+            --logger "trx;logfilename=${{ env.TESTRESULTS_FILENAME }}" `
+            --results-directory "$env:GITHUB_WORKSPACE" `
             /p:CollectCoverage=true `
             /p:CoverletOutputFormat=opencover `
             /p:CoverletOutput="$env:GITHUB_WORKSPACE/$env:COVERAGE_FILENAME"
-          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+          .\.sonar\scanner\dotnet-sonarscanner end `
+            /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
 
   # Checks aggregator
   dotnet-success:
