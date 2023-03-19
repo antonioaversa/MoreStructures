@@ -288,7 +288,7 @@ jobs:
           dotnet restore
           dotnet build --no-restore --configuration ${{ env.DOTNET_CONFIGURATION }}
           dotnet test --no-build --verbosity normal --configuration ${{ env.DOTNET_CONFIGURATION }} `
-            --logger ""trx;logfilename=${{ env.TESTRESULTS_FILENAME }}"" `
+            --logger "trx;logfilename=${{ env.TESTRESULTS_FILENAME }}" `
             --results-directory "$env:GITHUB_WORKSPACE" `
             /p:CollectCoverage=true `
             /p:CoverletOutputFormat=opencover `
